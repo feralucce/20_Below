@@ -21,6 +21,10 @@ There is no master list of skills. Skills in the real world number in the millio
 - Players and GMs are encouraged to invent new skills as needed, at any point — during character creation or during play.
 - The GM adjudicates scope: a skill should be specific enough to mean something, but not so narrow it's useless outside one exact scenario (exact boundaries TBD as premades are drafted).
 
+## Skill Breadth: Broad, Not Narrow
+
+Skills default to being **broad** (e.g. one "Science" skill, one "Craft" skill, one "Piloting" skill) rather than split into many narrow sub-skills (e.g. separate "Chemistry," "Physics," "Biology" skills). Specialties are what narrow a broad skill down to a specific application, so the breadth doesn't come at the cost of precision — and it's reinforced by the fact that specialties can also be bought outright (see Specialties below), not just earned automatically at high rank.
+
 ## Specialties
 
 When a character becomes particularly adept at a skill, they gain **specialties** — a one- or two-word descriptor narrowing the skill to a specific application (e.g. *Computer Programming: Python*).
@@ -36,9 +40,11 @@ When a character becomes particularly adept at a skill, they gain **specialties*
 
 - Specialty choice belongs to the player, subject to GM approval for fit.
 - Advantage from a specialty does not stack with other sources of Advantage (per the core Advantage/Disadvantage rule) — having two applicable specialties on one roll still just grants Advantage once.
+- Specialties beyond the automatic ones can also be **purchased separately** — cost/currency TBD (see Open Questions). This means a character isn't limited to 3 specialties per skill capped by rank; extra ones are available as long as the player is willing to pay for them.
 
 ## Open Questions
 
 - Once a GM accepts a skill+attribute pairing for a given kind of situation, does it become a standing default for that character, or is it re-argued every time?
 - What's the process/format for creating a new skill mid-session — any guardrails on scope (too broad vs. too narrow)?
 - Do specialties ever apply outside of Advantage (e.g. a flat bonus in non-roll contexts, unlocking narrative options)?
+- What currency/cost is used to purchase extra specialties (XP, character points, in-fiction training time)? Is there a cap on how many a character can buy beyond the 3 automatic ones?
