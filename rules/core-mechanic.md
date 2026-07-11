@@ -51,9 +51,17 @@ Regardless of modifiers or the clamped target number:
 
 This keeps a 5% chance of critical success and a 5% chance of critical failure "live" at every roll, even when the modified target number is pushed below 1 (normally impossible) or above 20 (normally automatic).
 
+**Extra effects beyond the auto-success/auto-failure are narrated by the GM.** The system is purposely designed around social interaction and GM authority over the fiction, so there is no fixed mechanical table for what a critical result does on top of succeeding/failing — the GM narrates a fitting extra effect (a boon on a crit success, a complication on a crit failure) in the moment.
+
+**Combat is the exception.** Combat has its own fixed critical effects rather than pure GM narration:
+
+- **Critical success**: double damage, plus an additional GM-narrated effect.
+- **Critical failure**: effect TBD (see [combat.md](combat.md), deferred until after skills are finished).
+- **Called shots** impose a difficulty modifier (exact value TBD, see [combat.md](combat.md)).
+
 ## Open Questions
 
 - What scale (if any) do Perks use, if not 1-10?
-- What do critical success/failure actually *do* mechanically (beyond "succeed/fail")? E.g. extra effect, degree of success, complication.
 - Do advantage and disadvantage from different sources cancel, or does disadvantage override advantage (or vice versa)?
 - Full list of triggers that grant advantage/disadvantage.
+- Combat critical failure effect, and the exact called-shot difficulty modifier — deferred to combat design.
