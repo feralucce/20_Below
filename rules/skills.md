@@ -40,7 +40,7 @@ When a character becomes particularly adept at a skill, they gain **specialties*
 
 - Specialty choice belongs to the player, subject to GM approval for fit.
 - Advantage from a specialty does not stack with other sources of Advantage (per the core Advantage/Disadvantage rule) — having two applicable specialties on one roll still just grants Advantage once.
-- Specialties beyond the automatic ones can also be **purchased separately** — cost/currency TBD (see Open Questions). This means a character isn't limited to 3 specialties per skill capped by rank; extra ones are available as long as the player is willing to pay for them.
+- Specialties beyond the automatic ones can also be **purchased separately** with XP, same as any other advancement purchase (see [character-creation/overview.md](../character-creation/overview.md)). This means a character isn't limited to 3 specialties per skill capped by rank; extra ones are available as long as the player is willing to spend the XP. Exact XP cost TBD.
 
 ## Open Questions
 
