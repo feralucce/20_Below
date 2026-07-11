@@ -4,7 +4,9 @@ A starting-point skill list compiled from **Old World of Darkness** (Storyteller
 
 Per [skills.md](skills.md), none of these are locked to an attribute — the groupings below are just for browsability. Players and GMs should freely add, split, merge, or rename entries to fit the campaign. Skills marked **(genre)** are strongly setting-flavored and should be included or dropped as a group depending on the campaign's premise.
 
-## Combat & Physical
+## Combat (deferred)
+
+Set aside until combat mechanics are designed — see [combat.md](combat.md). Listed here so they aren't lost, not finalized.
 
 | Skill | Notes |
 |---|---|
@@ -14,6 +16,11 @@ Per [skills.md](skills.md), none of these are locked to an attribute — the gro
 | Archery / Thrown Weapons | Bows, crossbows, thrown blades |
 | Heavy Weapons | Siege engines, artillery, vehicle-mounted weapons |
 | Dodge / Evasion | Avoiding attacks and hazards |
+
+## Physical
+
+| Skill | Notes |
+|---|---|
 | Athletics | Running, jumping, climbing, lifting |
 | Acrobatics | Balance, tumbling, controlled falls |
 | Swimming | |
