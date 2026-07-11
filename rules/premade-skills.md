@@ -58,7 +58,7 @@ Set aside until combat mechanics are designed — see [combat.md](combat.md). Li
 | Law | |
 | Politics | |
 | Religion / Theology | |
-| Science | Split by discipline (Physics, Chemistry, Biology, etc.) if desired |
+| Science | Broad by default; narrow with specialties (e.g. *Chemistry*, *Astrophysics*) rather than splitting into separate skills |
 | Psychology | Reading/understanding minds and behavior |
 | Engineering | Theoretical/design knowledge |
 | Cosmology / Astronomy | |
@@ -73,11 +73,11 @@ Set aside until combat mechanics are designed — see [combat.md](combat.md). Li
 
 | Skill | Notes |
 |---|---|
-| Crafting | Specify material/trade (Smithing, Carpentry, Tailoring, etc.) |
+| Crafting | Broad by default; narrow with specialties (e.g. *Smithing*, *Tailoring*) rather than splitting into separate skills |
 | Mechanics | Repair and maintenance of machinery |
 | Electronics | |
 | Computer Use | General computing, and/or hacking |
-| Piloting | Specify vehicle type (Ground, Air, Sea, Space) |
+| Piloting | Broad by default; narrow with specialties (e.g. *Ground Vehicles*, *Starships*) rather than splitting into separate skills |
 | Driving | |
 | Demolitions | |
 | Alchemy **(genre)** | |
@@ -114,5 +114,4 @@ Set aside until combat mechanics are designed — see [combat.md](combat.md). Li
 
 ## Open Questions
 
-- Should broad skills (Science, Craft, Knowledge, Piloting) be single skills with player-defined specialties, or split into separate skills per subtype (e.g. "Science: Chemistry" as its own skill vs. one "Science" skill with a Chemistry specialty)? This interacts directly with the specialty rule in [skills.md](skills.md).
 - Which genre-flagged skills (Occult, Mythos, Alchemy) ship as defaults vs. GM-added modules per campaign?
