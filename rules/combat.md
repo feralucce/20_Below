@@ -15,6 +15,19 @@ _In active design as of 2026-07-12._
 3. **Resolve actions in (forward) initiative order** — highest initiative acts first.
 4. Repeat every round.
 
+**Round length: 3 seconds** (confirmed). Chosen over the more common 6-second round (D&D/Pathfinder standard) deliberately — a shorter round means more rounds cycle per real fight, which fits the "reflects reality better, more can happen quickly" goal, and reinforces why re-rolling initiative every round makes sense (the battlefield genuinely can shift that fast). This also anchors movement distance-per-round and gives concrete meaning to vague Gift-duration wording ("briefly," "a short while") once those get their detail pass.
+
+## Action Economy (in progress)
+
+Adapting D&D 5e's **Move / Action / Bonus Action / Reaction** framework as the baseline structure, rather than inventing a new one from scratch:
+
+- **Move** — reposition up to your speed.
+- **Action** — the one primary thing you're doing this round (attack, use a Gift, dash, disengage, hide, ready, etc.).
+- **Bonus Action** — a smaller supplementary action, only available if a specific Skill/Perk/Gift grants one.
+- **Reaction** — a triggered response usable on someone else's turn, once per round (resets each round).
+
+**Open design question this raises**: our **Declaring** step (see above) commits a character to "a specific action and target." Does that declaration cover just the primary **Action**, or the **Action + Bonus Action** together? And does **Move** need to be declared at all, or is it handled more freely as part of executing your turn (since it's positioning, not a committed effect against a target)? Reaction almost certainly can't be pre-declared the way Action/Bonus Action can, since by definition it triggers off someone else's move — it should probably work like D&D's (available reactively, once per round, no advance declaration).
+
 ### Initiative — confirmed
 
 - **Target number**: `(higher of Body or Mind) + Perception`. Fixed formula, not re-argued per-roll like a normal Skill+Attribute pairing — initiative needs to resolve fast every round, so it doesn't go through the usual negotiation.

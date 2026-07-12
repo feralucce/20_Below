@@ -11,9 +11,13 @@ This file is a **summary for thinking, not a source of truth** — the individua
 - [x] Round structure: roll initiative every round → declare actions in reverse initiative order → resolve in forward initiative order → repeat.
 - [x] Initiative roll mechanic: roll `(higher of Body or Mind) + Perception` first (crits determined here), then apply Gift/Perk modifiers to the resulting Degree, then rank.
 - [x] Declaring commits a character to a specific action and target (full commitment). Free re-declare (action + target) if a faster character's action invalidates the declared plan — no lost turn.
+- [x] Round length: 3 seconds.
+- [x] Action economy baseline: D&D 5e-style Move / Action / Bonus Action / Reaction.
+- [ ] Does the Declaring step's commitment cover just Action, or Action + Bonus Action together? How does Move factor in — declared, or handled freely?
+- [ ] Confirm the exact list of available Actions/Bonus Actions (adopt D&D 5e's list as a baseline, or build our own?).
 - [ ] Confirm attack/defense reuses Resisted Rolls as-is (attacker vs. defender, DoS/DoF comparison).
 - [ ] **Damage**: how it's determined on a hit (fixed weapon value? scales with attacker's Degree of Success? separate roll?) and how it's tracked (hit points vs. wound/health-level track).
-- [ ] **Movement**: distance per turn, whether it costs a full action, how range/distance is abstracted.
+- [ ] **Movement**: distance per turn (now anchored to a 3-second round), whether it costs a full action, how range/distance is abstracted.
 - [ ] Critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.).
 - [ ] Exact difficulty modifier for called shots — flat value, or scaled by target size/body part?
 - [ ] How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
