@@ -76,17 +76,14 @@ A more desperate, reactive version of Dodge: if a character is attacked **before
 
 ### Multiple Actions — confirmed
 
-Inspired by White Wolf's split-dice-pool multiple actions rule, adapted to our target-number system: a character can attempt more than one Action in a round by accepting an escalating penalty to their target number on each action after the first.
+Inspired by White Wolf's split-dice-pool multiple actions rule, adapted to our target-number system: a character can attempt more than one Action in a round by accepting an escalating penalty to their target number — starting on the very first action, not just the second. This is deliberately a gamble, not a free extra swing.
 
-- **1st action**: rolled at the character's normal, unmodified target number.
-- **2nd action**: target number reduced by **5**.
-- **3rd action**: target number reduced by **10**.
-- **Nth action**: target number reduced by `5 × (N − 1)`, same flat-modifier convention as everywhere else in the system (clamped 1-20, crits always live).
+- **Declared during the Declaring step**, like any other action — a character commits to the whole intended chain (each action and target) up front, and resolves them in sequence during their initiative slot.
+- **Nth action**: target number reduced by `3 × N` (so 1st action is already at −3, 2nd at −6, 3rd at −9, etc.), same flat-modifier convention as everywhere else in the system (clamped 1-20, crits always live).
 - **The chain stops at the first failure** — a failed action ends the character's turn; no further action attempts are allowed after that.
+- **Expanded critical failure range, starting on the 2nd action**: on the Nth action (N ≥ 2), a natural roll of `21 − N` or higher is an automatic critical failure, regardless of target number — 2nd action crit-fails on 19-20, 3rd on 18-20, 4th on 17-20, and so on. This is separate from the target penalty above and mostly matters for skilled characters: a natural 19 would normally succeed for someone with a high target number, but on their 2nd action it's an automatic critical failure anyway, overriding the normal success — same logic as natural 20 always failing, just expanded to more numbers the deeper into the chain a character pushes.
 
-**Why 5**: for a representative "average" character (target number 10 — Attribute 5 + Skill 5, the midpoint of the 1-20 range), this gives the 1st action a 50% chance, the 2nd a 25% chance (a real, meaningful chance, as intended), and the 3rd and beyond collapse to the 5% floor (only a natural 1 succeeds) — "extremely unlikely," exactly as intended. It also isn't a new number: 5 is already the system's standard max flat modifier (see [probability-reference.md](probability-reference.md)), so this reuses existing math instead of introducing a new constant. Weaker characters collapse faster; stronger characters can chain further — which tracks.
-
-**Open question this raises**: how does declaring multiple actions interact with the Declaring step, which normally commits a character to one specific action and target? Likely answer: a character declares their *entire* intended chain (each action and target) up front during Declaring, and resolves them in sequence during their initiative slot, stopping at the first failure — but this isn't confirmed yet.
+**Why 3**: for a representative "average" character (target number 10 — Attribute 5 + Skill 5, the midpoint of the 1-20 range), this gives the 1st action a 35% chance (down from a clean 50% — the real cost of committing to the gamble), the 2nd a 20% chance, and the 3rd and beyond collapse to the 5% floor (only a natural 1 succeeds). Lighter than an earlier draft's flat −5 (which left the 1st action unpenalized), deliberately, since a −3-from-the-start curve limits how often the chain gets used at all while still leaving the 2nd action a real, if worse, option. Weaker characters collapse faster; stronger characters can chain further.
 
 ## Still to Design
 
@@ -108,4 +105,3 @@ Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md
 - How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
 - **TODO: a mechanism for forcing the GM to use one of their banked rolls in a given situation** — presumes the GM also keeps a Pre-Rolled Combat Dice bank (see above) and players get some way to compel a specific banked result to be used rather than letting the GM choose freely. Not designed yet — needs a trigger (what earns this leverage: a Perk, a Gift, spending some resource, a specific in-fiction condition?) and a scope (force *which* roll gets used, or just force *a* roll to come from the bank instead of live?).
 - **Special Maneuvers need defining** — grapple, disarm, called shot, etc. are named as an Action category but no specific maneuvers have been designed yet.
-- How declaring a Multiple Actions chain interacts with the Declaring step (declare the whole chain up front, or decide action-by-action?).
