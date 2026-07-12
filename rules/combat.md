@@ -55,6 +55,39 @@ So: 1 Move (freeform) + 1 Action (declared) + 1 Reaction (not declared, unless a
 **Still proposed, not yet confirmed:**
 - Attack/defense reuses [Resisted Rolls](core-mechanic.md#resisted-rolls) directly: attacker rolls Attribute + weapon Skill, defender rolls Attribute + Dodge (or other relevant defense), Degree compared, ties favor the defender.
 
+## Actions — in progress
+
+Available Actions for the round: **Attack**, **Special Maneuvers** (grapple, disarm, called shot, etc. — not yet defined, see Open Questions), **Use a Skill**, **Use a Gift**, and **Dodge**.
+
+### Dodge — confirmed
+
+Defense is a normal, automatic part of every attack (a Resisted Roll — see above), but a character can also spend their turn actively defending instead of acting, for a major boost:
+
+- **Effect**: while Dodging, the character's **Degree of Success on defense rolls this round is multiplied by 1.5 (round up)** — not a flat bonus. A flat bonus would only average out to "50% higher" for one assumed baseline target number; multiplying DoS directly guarantees exactly 50% higher on every individual roll, for any character, regardless of their target number. (Full derivation in the design log.) Applies only when the defense roll actually succeeds (has a DoS) — a failed defense roll gets no help from Dodge.
+- **Cost**: Dodge takes the character's **Action** for the round. Declared normally, like any other action.
+
+### Abort to Dodge — confirmed
+
+A more desperate, reactive version of Dodge: if a character is attacked **before their own turn comes up** in the round (i.e. a faster character targets them), they can abandon whatever they'd declared and dodge instead.
+
+- Same effect as standard Dodge: **DoS on defense this round × 1.5 (round up)**.
+- **Cost is total**: Abort to Dodge consumes the character's **Move, Action, and Reaction** for the round — all three. This is a full-body scramble to survive, not a controlled defensive stance, and costs accordingly. (Standard, pre-declared Dodge only costs the Action — Move and Reaction are untouched.)
+- The character can take **no other action** this round once they abort to dodge — they are purely, desperately defending themselves.
+
+### Multiple Actions — confirmed
+
+Inspired by White Wolf's split-dice-pool multiple actions rule, adapted to our target-number system: a character can attempt more than one Action in a round by accepting an escalating penalty to their target number on each action after the first.
+
+- **1st action**: rolled at the character's normal, unmodified target number.
+- **2nd action**: target number reduced by **5**.
+- **3rd action**: target number reduced by **10**.
+- **Nth action**: target number reduced by `5 × (N − 1)`, same flat-modifier convention as everywhere else in the system (clamped 1-20, crits always live).
+- **The chain stops at the first failure** — a failed action ends the character's turn; no further action attempts are allowed after that.
+
+**Why 5**: for a representative "average" character (target number 10 — Attribute 5 + Skill 5, the midpoint of the 1-20 range), this gives the 1st action a 50% chance, the 2nd a 25% chance (a real, meaningful chance, as intended), and the 3rd and beyond collapse to the 5% floor (only a natural 1 succeeds) — "extremely unlikely," exactly as intended. It also isn't a new number: 5 is already the system's standard max flat modifier (see [probability-reference.md](probability-reference.md)), so this reuses existing math instead of introducing a new constant. Weaker characters collapse faster; stronger characters can chain further — which tracks.
+
+**Open question this raises**: how does declaring multiple actions interact with the Declaring step, which normally commits a character to one specific action and target? Likely answer: a character declares their *entire* intended chain (each action and target) up front during Declaring, and resolves them in sequence during their initiative slot, stopping at the first failure — but this isn't confirmed yet.
+
 ## Still to Design
 
 - **Damage**: how damage is determined once a hit lands (fixed weapon value? scales with the attacker's Degree of Success, tying into the running "DoS drives magnitude" theme? a separate damage roll?), and how it's tracked (hit points vs. a wound/health-level track with escalating penalties, à la Storyteller/WFRP).
@@ -74,3 +107,5 @@ Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md
 - Exact difficulty modifier for called shots — flat value, or scaled by target size/body part?
 - How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
 - **TODO: a mechanism for forcing the GM to use one of their banked rolls in a given situation** — presumes the GM also keeps a Pre-Rolled Combat Dice bank (see above) and players get some way to compel a specific banked result to be used rather than letting the GM choose freely. Not designed yet — needs a trigger (what earns this leverage: a Perk, a Gift, spending some resource, a specific in-fiction condition?) and a scope (force *which* roll gets used, or just force *a* roll to come from the bank instead of live?).
+- **Special Maneuvers need defining** — grapple, disarm, called shot, etc. are named as an Action category but no specific maneuvers have been designed yet.
+- How declaring a Multiple Actions chain interacts with the Declaring step (declare the whole chain up front, or decide action-by-action?).
