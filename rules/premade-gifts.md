@@ -4,6 +4,8 @@ Source material and a fully worked catalog for [gifts.md](gifts.md), pulled from
 
 Every Gift below has all **5 levels** defined per [gifts.md](gifts.md): cumulative, sequential, each level a specific new capability rather than a bigger number. These are starting points, not commandments — a player and GM can still adjust wording to fit a specific character or setting.
 
+**TODO — detail pass pending combat.** Several entries (e.g. *Fleet-Footed Fury*) are still too vague to run at the table as-is. Once [combat.md](combat.md) is worked out, every Gift here needs a pass to apply that logic concretely (specific ranges, durations, action costs, etc.) instead of the current soft narrative phrasing. Not blocking for now — the catalog is still useful for scope and flavor — but flagged so it isn't forgotten.
+
 ## Source Cross-Reference
 
 - **Werewolf: The Apocalypse** (Gifts, taught by spirits): heightened senses, physical enhancement (claws, speed, resilience), small-scale elemental control, fear/awe effects, camouflage, healing, shapeshifting refinements, spirit communication, pack-coordination effects.
@@ -18,10 +20,115 @@ Every Gift below has all **5 levels** defined per [gifts.md](gifts.md): cumulati
 - **In Nomine** (angelic/demonic Songs): super speed/flight (Motion), universal communication (Tongues), light manipulation, social charm/harmony, protective shielding, superhuman body (Numinous Corpus), shapeshifting (the Skin), destructive force (Thunder), healing/vigor, purification/revival (Salvation).
 - **Hero System** (point-buy comic-book powers): the standard superhero archetype list — energy blast, super strength, flight, invulnerability, telepathy, telekinesis, stretching, shapeshifting, speedster powers, mental control, force fields, teleportation, regeneration, size change, elemental control, illusion, luck powers.
 - **Heroes Unlimited** (Palladium): Mutant/Bio-Manipulation/Psionics/Robotic/Alien categories — notably strong on cybernetics/bionics and a clean Physical/Sensitive/Super split for psychic powers (self-healing & biofeedback; empathy & clairvoyance; telekinesis & telepathy & mind-bolt).
+- **D&D 5e classes** (Druid, Ranger, Rogue, Barbarian, Monk): class-defining features reframed as Gifts rather than a level-gated class chart — Wild Shape and terrain-bond magic (Druid), quarry-marking and wilderness mastery (Ranger), exploiting openings and shrugging off harm (Rogue), battle-fury and reflexive instinct (Barbarian), and body/mind mastery through discipline (Monk). See the **Class-Inspired Gifts** section below.
 
 ## Cybernetics — Note
 
 **TODO** (also tracked in [gifts.md](gifts.md) Open Questions): cybernetics is currently represented only by *Grafted Steel* below. It likely deserves more entries and a decision on whether it needs its own acquisition rules (surgery, cost, installation risk) rather than the standard Gift creation process, since it's typically bought and installed rather than trained or awakened into.
+
+## Class-Inspired Gifts (D&D 5e)
+
+Two signature Gifts per class, reframing each class's core identity as freestanding Gifts rather than a level-gated feature chart. Same "TODO — detail pass pending combat" caveat applies here as everywhere else in this catalog.
+
+### Druid
+
+#### Many Shapes (Wild Shape)
+| Level | Capability |
+|---|---|
+| 1 | Briefly take on one minor trait of a familiar animal — its senses, its gait — without fully changing shape. |
+| 2 | Fully transform into any one of a small handful of animal forms you've bonded with, retaining your mind. |
+| 3 | Add meaningfully to your repertoire of animal forms, and shift between them more quickly. |
+| 4 | Transform into more formidable and exotic animal forms, with faster, near-instant shifting. |
+| 5 | Take the shape of virtually any animal you've ever encountered, shifting as easily as drawing breath. |
+
+#### Elemental Communion (terrain-bonded nature magic)
+| Level | Capability |
+|---|---|
+| 1 | Sense the health and mood of the natural terrain you call home. |
+| 2 | Draw a small, fitting boon from your home terrain — cooling shade in a forest, sure footing on stone, calm water underfoot. |
+| 3 | Call on a real, useful effect drawn from your terrain's nature when you truly need it. |
+| 4 | Extend that communion to terrain similar to your own, not just your exact home ground. |
+| 5 | Draw deeply on the land itself, calling forth a significant effect fitting whatever wild terrain you currently stand on. |
+
+### Ranger
+
+#### Marked for the Hunt (Hunter's Mark / Favored Enemy)
+| Level | Capability |
+|---|---|
+| 1 | Mark a target in your mind — you always have a rough sense of the direction they went. |
+| 2 | Tracking a marked target is noticeably easier, even over difficult ground or time. |
+| 3 | You anticipate a marked target's moves, making you harder for them to surprise or lose. |
+| 4 | Strikes and effort spent against a marked target land with real, escalating advantage. |
+| 5 | A marked target has nowhere they can truly hide from you, and nothing they do catches you off guard. |
+
+#### One with the Wild (terrain mastery / stealth)
+| Level | Capability |
+|---|---|
+| 1 | Move through natural terrain — brush, undergrowth, rough ground — without it slowing you down. |
+| 2 | Leave little to no trace of your passage through the wild. |
+| 3 | Blend into natural surroundings well enough to go unnoticed while still and quiet. |
+| 4 | Move through the wild almost totally untraceable, even under active pursuit. |
+| 5 | In natural terrain, you are effectively unfindable and untrackable unless you choose to be found. |
+
+### Rogue
+
+#### Opportunist's Edge (Sneak Attack / Cunning Action)
+| Level | Capability |
+|---|---|
+| 1 | You notice an opening in a moment others would miss — a distraction, an exposed flank. |
+| 2 | Capitalize on a genuine opening with a swift, precise follow-up. |
+| 3 | Move and act with a burst of speed and unpredictability others can't match, exploiting the confusion. |
+| 4 | Turn any real opening into a decisive advantage, reliably. |
+| 5 | You are always positioned to exploit an opening the instant it appears, faster than anyone can react. |
+
+#### Untouchable (Uncanny Dodge / Evasion / Slippery Mind)
+| Level | Capability |
+|---|---|
+| 1 | You instinctively flinch away from harm a beat before it lands, softening the blow. |
+| 2 | Shrug off an attack that should have caught you square, more often than not. |
+| 3 | Escape the worst of an effect that catches an area, coming away far better than it should allow. |
+| 4 | Shake off mental intrusion or coercion as readily as physical harm. |
+| 5 | Very little — physical or mental — manages to truly catch you off guard or land its full effect. |
+
+### Barbarian
+
+#### Undying Fury (Rage)
+| Level | Capability |
+|---|---|
+| 1 | When your temper rises, minor pain and fatigue stop registering. |
+| 2 | In the heat of real danger or anger, you shrug off harm that would stagger someone else. |
+| 3 | Sustain that fury through a serious, prolonged fight without slowing down. |
+| 4 | Your fury lets you keep fighting through injury that should have put you down. |
+| 5 | While truly enraged, you are nearly impossible to stop — harm barely slows you, and you refuse to fall. |
+
+#### Reckless Instinct (Feral Instinct / Reckless Attack)
+| Level | Capability |
+|---|---|
+| 1 | In sudden danger, you react before you've consciously registered the threat. |
+| 2 | Throw caution to the wind for a burst of genuinely overwhelming offense, at real risk to yourself. |
+| 3 | Act first in a sudden crisis more often than not, however it breaks out. |
+| 4 | Your reckless offense lands harder and more reliably, even as you take the risk. |
+| 5 | When danger erupts, you're already moving — decisively, ferociously, and first. |
+
+### Monk
+
+#### Body as Weapon (Martial Arts / Unarmored Defense / Deflect Missiles / Slow Fall)
+| Level | Capability |
+|---|---|
+| 1 | Your unarmed strikes and bare instincts are genuinely dangerous, no weapon required. |
+| 2 | Your body alone is enough protection that you don't miss wearing armor. |
+| 3 | Land safely from falls that should hurt, through sheer trained control. |
+| 4 | Knock aside or catch a thrown or fired projectile aimed at you. |
+| 5 | Your body is a complete weapon and shield in its own right — nothing thrown, dropped, or swung catches you unprepared. |
+
+#### Empty Body (inner mastery / transcendence)
+| Level | Capability |
+|---|---|
+| 1 | Total stillness and focus let you ignore minor pain, cold, hunger, or distraction entirely. |
+| 2 | Slow your own heartbeat and breath to near-nothing, appearing to onlookers as barely alive. |
+| 3 | Become extraordinarily difficult to sense — sight, sound, even touch barely register you. |
+| 4 | For a short while, become genuinely intangible, physical harm passing through you without effect. |
+| 5 | Step fully outside the physical world for a time, unseen, untouched, and unbound by it. |
 
 ## Gift Catalog
 
