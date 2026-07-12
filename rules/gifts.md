@@ -22,7 +22,7 @@ Every Gift has exactly **5 levels**. This replaces the general 1-10 scale used f
 
 When a Gift's effect is imposed on an **unwilling target**, resolve it as a **Resisted Roll** instead (see [core-mechanic.md](core-mechanic.md#resisted-rolls)): the Gift-user rolls Power Level + Attribute as normal, the target rolls their own relevant Attribute + Skill/Gift, and margins are compared to determine the outcome.
 
-**Power Level is scored 1-10**, same scale as Body/Mind/Soul.
+**Power Level is scored 1-10**, same scale as Body/Mind/Soul, and is its **own independently-assigned statistic** — not a figured/derived characteristic calculated from Body, Mind, Soul, or any combination of them (see [core-mechanic.md](core-mechanic.md#power-level)). It's bought and advanced on its own, the same way an Attribute is.
 
 **A Gift's own Level (1-5) governs scope, not magnitude.** It's a pure gate on *what a character can attempt* — which named effects exist and are available to them — with no numeric weight in the roll itself. How well/powerfully an attempted effect comes off is entirely down to the Power Level + Attribute roll (and its margin), not the Gift's Level. In short: **Gift Level = what you can do, Power Level = how good you are at doing it.**
 
@@ -39,15 +39,12 @@ Players can create new Gifts, but it's an **intensive discussion with the GM** �
 - Thematic and setting fit.
 - Any resource cost, cooldown, or drawback attached to using it.
 
-## Research Sources for Premade Gifts
+## Example Gifts
 
-In addition to Hero System, OWoD, D&D feats/spells, Mutants & Masterminds, Trinity, and Aberrant (used for the resolution-mechanic research above), the following are earmarked for compiling an actual example Gift list later: **Changeling: The Dreaming**, **Werewolf: The Apocalypse** (whose power category is literally also called "Gifts"), **Mage: The Ascension** (Spheres), **Wraith: The Oblivion** (Arcanoi), and **Hunter: The Reckoning** (Edges). No list has been compiled yet — deferred until requested.
+Compiled from Changeling: The Dreaming, Werewolf: The Apocalypse, Mage: The Ascension, Wraith: The Oblivion, and Hunter: The Reckoning — see [premade-gifts.md](premade-gifts.md) for the source cross-reference and three fully worked example Gifts (all 5 levels defined) demonstrating the format.
 
 ## Open Questions
 
-- Is Power Level a fourth core Attribute usable elsewhere (e.g. could a Skill ever pair with it?), or is it exclusively for Gift rolls?
-- Does Power Level advance on its own, separately from individual Gift levels?
-- Final name for "Power Level" (placeholder).
 - Does new Gift creation happen only **between sessions** (like new Skills), or can it also happen at character creation?
 - Cost to acquire/raise a Gift level (points at creation, XP after) — flat per level, or a scaling cost curve (WoD-style, where level 5 costs much more than level 1)?
 - Do Gifts require an in-fiction source or origin (bloodline, pact, training, mutation) to justify taking them, or is that left purely to player narrative flavor?
