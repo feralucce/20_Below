@@ -12,6 +12,12 @@ Every Gift has exactly **5 levels**. This replaces the general 1-10 scale used f
 - Each level **explicitly defines what the character can now do**, building on the previous level's capability — this mirrors how World of Darkness Disciplines work (e.g. Celerity, Obfuscate, Potence), where each dot unlocks a specific, named power rather than just a bigger number.
 - When a Gift is created (see below), **all 5 levels must be defined up front** — what level 1 lets you do, what level 2 adds, and so on through level 5.
 
+## Resolution
+
+Using a Gift rolls **Attribute + Gift Level** against the standard roll-under d20 mechanic — same as Skills (see [core-mechanic.md](core-mechanic.md)), just with a lower ceiling (max target 10 + 5 = 15, since Gift levels only go to 5).
+
+When a Gift's effect is imposed on an **unwilling target**, resolve it as a **Resisted Roll** instead (see [core-mechanic.md](core-mechanic.md#resisted-rolls)): the Gift-user rolls Attribute + Gift Level as normal, the target rolls their own relevant Attribute + Skill/Gift, and margins are compared to determine the outcome.
+
 ## Uniqueness of Scope
 
 Gifts are deliberately narrow and non-overlapping. Two Gifts shouldn't cover substantially the same ground — if a player wants to do something a bit differently than an existing Gift already covers, that's more likely a case for advancing that Gift's levels or negotiating scope on an existing one than for creating a whole new one from scratch.
@@ -27,7 +33,6 @@ Players can create new Gifts, but it's an **intensive discussion with the GM** �
 
 ## Open Questions
 
-- **Resolution mechanic**: does using a Gift roll Attribute + Gift level against the standard roll-under d20 (same as Skills), just with a lower max total (10 + 5 = 15 instead of 10 + 10 = 20)? Or does it work differently — a resource cost, automatic effects at high levels with no roll, etc.?
 - Does new Gift creation happen only **between sessions** (like new Skills), or can it also happen at character creation?
 - Cost to acquire/raise a Gift level (points at creation, XP after) — flat per level, or a scaling cost curve (WoD-style, where level 5 costs much more than level 1)?
 - Do Gifts require an in-fiction source or origin (bloodline, pact, training, mutation) to justify taking them, or is that left purely to player narrative flavor?
