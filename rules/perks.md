@@ -7,6 +7,8 @@ Perks are a **grab bag** — small advantages that don't fit under Skills (learn
 - **Have no levels or ranks.** A character either has a Perk or doesn't — there's no 1-10 scale, no dots, no tiers.
 - **Do not grant numerical bonuses in most cases.** A Perk is usually a rule exception, an unlocked narrative option, or a standing fact about the character's resources/reputation/body — not a flat +N to some roll. (A handful of edge cases may genuinely need a small numeric effect; treat those as rare exceptions, not the norm — flagged below where relevant.)
 
+Perks have a mirror-image counterpart: **[Flaws](flaws.md)**, character-creation disadvantages built the same way (no levels, mostly non-numeric).
+
 ## Sources Reviewed
 
 Compiled and reorganized from three very different traditions, deduplicated:

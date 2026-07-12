@@ -22,7 +22,9 @@ Every Gift has exactly **5 levels**. This replaces the general 1-10 scale used f
 
 When a Gift's effect is imposed on an **unwilling target**, resolve it as a **Resisted Roll** instead (see [core-mechanic.md](core-mechanic.md#resisted-rolls)): the Gift-user rolls Power Level + Attribute as normal, the target rolls their own relevant Attribute + Skill/Gift, and margins are compared to determine the outcome.
 
-**Not yet decided:** exactly how a Gift's own Level (1-5) factors into this roll, if at all — options include it acting as a hard cap on the maximum tier of effect attemptable (mirroring how Mage's Sphere ratings cap spell magnitude even though Arete is what's rolled), a flat modifier, or purely a gate on which named effects exist with no other mechanical weight. See Open Questions.
+**Power Level is scored 1-10**, same scale as Body/Mind/Soul.
+
+**A Gift's own Level (1-5) governs scope, not magnitude.** It's a pure gate on *what a character can attempt* — which named effects exist and are available to them — with no numeric weight in the roll itself. How well/powerfully an attempted effect comes off is entirely down to the Power Level + Attribute roll (and its margin), not the Gift's Level. In short: **Gift Level = what you can do, Power Level = how good you are at doing it.**
 
 ## Uniqueness of Scope
 
@@ -37,10 +39,12 @@ Players can create new Gifts, but it's an **intensive discussion with the GM** �
 - Thematic and setting fit.
 - Any resource cost, cooldown, or drawback attached to using it.
 
+## Research Sources for Premade Gifts
+
+In addition to Hero System, OWoD, D&D feats/spells, Mutants & Masterminds, Trinity, and Aberrant (used for the resolution-mechanic research above), the following are earmarked for compiling an actual example Gift list later: **Changeling: The Dreaming**, **Werewolf: The Apocalypse** (whose power category is literally also called "Gifts"), **Mage: The Ascension** (Spheres), **Wraith: The Oblivion** (Arcanoi), and **Hunter: The Reckoning** (Edges). No list has been compiled yet — deferred until requested.
+
 ## Open Questions
 
-- How does a Gift's own Level (1-5) factor into the roll — hard cap on max effect tier (Mage Sphere-style), flat modifier, pure narrative gate, or something else?
-- Is **Power Level** scored 1-10 like Body/Mind/Soul, or a different scale?
 - Is Power Level a fourth core Attribute usable elsewhere (e.g. could a Skill ever pair with it?), or is it exclusively for Gift rolls?
 - Does Power Level advance on its own, separately from individual Gift levels?
 - Final name for "Power Level" (placeholder).
