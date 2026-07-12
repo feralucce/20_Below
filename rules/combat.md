@@ -102,7 +102,16 @@ Every maneuver below reuses existing machinery — flat target modifiers, the Do
 **Attack-modifying maneuvers** (a normal attack, at a flat target penalty, for a special effect instead of/alongside damage):
 
 4. **Disarm** — attack roll at **−5** to target number. On a hit, no damage — instead the target's held weapon/item is knocked away.
-5. **Called Shot** — attack roll at **−5** to target number (this resolves the long-open "exact called shot modifier" question — same value as Disarm, the system's standard "hard, precise" penalty). On a hit, apply a chosen location effect (the actual list of location effects is still TBD — see Open Questions).
+5. **Called Shot** — attack roll at **−5** to target number (locked — this resolves the long-open "exact called shot modifier" question, same value as Disarm, the system's standard "hard, precise" penalty). On a hit, apply a chosen **location effect**:
+
+   **Proposed location effects** (inspired by Hero System 6e's hit location table — but adapted, since Hero scales its OCV penalty and STUN/BODY multiplier per location while ours keeps the flat −5 across all locations; the useful lesson isn't the numeric scaling, it's the *shape* of the payoff: extremities impair or disable rather than just dealing more damage):
+   - **Head** — target is **Stunned** (effect TBD, likely interacts with Reaction — see the note on Reactions below).
+   - **Eyes** — target is **Blinded**: Disadvantage on anything requiring sight until treated.
+   - **Arms / Hands** — target is **Disarmed** or **Impaired**: weapon/item dropped, or Disadvantage on actions using that limb until healed.
+   - **Legs / Feet** — target's **Move is reduced** (Prone-adjacent) until treated.
+   - **Torso / Vitals** — reserved for extra damage once the damage subsystem exists; nothing to define yet.
+
+   Not yet confirmed — proposal only.
 
 **Defense-sacrificing maneuvers** (reuse Dodge's DoS-multiplier convention, inverted for offense):
 
@@ -114,7 +123,19 @@ Every maneuver below reuses existing machinery — flat target modifiers, the Do
 8. **Charge** — requires moving at least half the character's Move directly toward the target before attacking. Grants **Advantage** on this round's attack. Cost: **Disadvantage on defense** until the character's next turn — committed momentum, hard to change direction or brace.
 9. **Brace / Aim** — spend the Action steadying instead of attacking. Grants **Advantage** on the character's next Attack roll (made on a later turn). Cost: **Disadvantage on defense** this round, since focus is entirely on the aim, not on self-protection.
 10. **Help / Assist** — spend the Action to grant an ally **Advantage** on their next roll before the helper's own next turn. Direct reuse of the existing Advantage mechanic, same as D&D's Help action.
-11. **Disengage** — spend the Action so that this round's Move doesn't trigger any reactive/opportunity-style Reaction from others. (Presumes some form of reactive "attack of opportunity" exists via the Reaction resource — not yet formally defined; see Open Questions on Reaction triggers.)
+
+**Removed**: Disengage — cut. It only existed to counter a reactive "attack of opportunity"-style Reaction trigger that was never formally defined, and Reactions themselves may be removed from the system entirely (see below) — no point keeping a maneuver whose entire purpose is countering a mechanic that might not exist.
+
+### Open reconsideration: Reactions may be removed entirely
+
+Not yet decided. If Reactions are cut as a resource, the following all need revisiting:
+
+- **Action Economy** (above): currently 1 Move + 1 Action + 1 Reaction — would drop to just 1 Move + 1 Action.
+- **Abort to Dodge**: currently costs Move + Action + Reaction — would cost Move + Action only.
+- **All-Out Attack**: currently forfeits the Reaction as its cost — would need a different cost, or the maneuver's downside would just be the defenselessness itself with nothing forfeited.
+- **Haymaker**: currently forfeits Move + Reaction — would need re-costing the same way.
+
+Flagged rather than actioned — waiting on a final call before touching all four.
 
 ## Still to Design
 
@@ -132,8 +153,8 @@ Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md
 ## Open Questions
 
 - What is the critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.)?
-- List of specific Called Shot location effects (the −5 penalty is locked; what you actually get for paying it is not).
+- Confirm the proposed Called Shot location effects (Head/Eyes/Arms-Hands/Legs-Feet/Torso-Vitals) — see Special Maneuvers above.
 - How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
 - **TODO: a mechanism for forcing the GM to use one of their banked rolls in a given situation** — presumes the GM also keeps a Pre-Rolled Combat Dice bank (see above) and players get some way to compel a specific banked result to be used rather than letting the GM choose freely. Not designed yet — needs a trigger (what earns this leverage: a Perk, a Gift, spending some resource, a specific in-fiction condition?) and a scope (force *which* roll gets used, or just force *a* roll to come from the bank instead of live?).
-- Formal definition of a reactive "attack of opportunity"-style Reaction trigger (Disengage's rule presumes this exists but it hasn't been designed).
 - Exact grappling-relevant Skill for the Grapple maneuver's attacker side (does it use an existing Skill, or is a new one needed?).
+- **Are Reactions being removed entirely?** See "Open reconsideration" under Special Maneuvers above — affects Action Economy, Abort to Dodge, All-Out Attack, and Haymaker if so.

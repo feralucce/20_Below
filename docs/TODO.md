@@ -19,12 +19,11 @@ This file is a **summary for thinking, not a source of truth** — the individua
 - [x] Dodge: multiplies defense DoS by 1.5 (round up), costs the Action.
 - [x] Abort to Dodge: same ×1.5 DoS effect, reactive (triggered when attacked before your turn), costs Move + Action + Reaction (all three).
 - [x] Multiple Actions: declared during Declaring as a full chain; target drops by 3×N per action (1st = −3); chain stops at first failure; expanded critical failure range starting 2nd action (natural roll ≥ 21−N auto-crit-fails).
-- [x] **Special Maneuvers fully mechanized** (11, from D&D 5e/Hero 6e/White Wolf): Grapple/Trip/Escape (Resisted Rolls, status effects, no damage); Disarm/Called Shot (attack at −5 target penalty); All-Out Attack/Haymaker (Dodge-style DoS ×1.5/×2, defenseless 1 round vs. until next turn); Charge/Brace/Help (grant Advantage); Disengage (prevents a Reaction-trigger response).
+- [x] **Special Maneuvers fully mechanized** (now 10, from D&D 5e/Hero 6e/White Wolf): Grapple/Trip/Escape (Resisted Rolls, status effects, no damage); Disarm/Called Shot (attack at −5 target penalty); All-Out Attack/Haymaker (Dodge-style DoS ×1.5/×2, defenseless 1 round vs. until next turn); Charge/Brace/Help (grant Advantage). Disengage removed.
 - [x] Called shot difficulty modifier: locked at **−5**.
-- [ ] Called Shot's specific location-effect list (what you get for the −5, beyond "something happens").
-- [ ] Formal definition of a reactive "attack of opportunity"-style Reaction trigger (Disengage's rule presumes this exists but it hasn't been designed).
+- [x] Called Shot location-effects proposal drafted (Hero 6e hit-location-inspired): Head (Stunned, TBD), Eyes (Blinded), Arms/Hands (Disarmed/Impaired), Legs/Feet (Move reduced), Torso/Vitals (reserved for later). Not yet confirmed.
 - [ ] Exact grappling-relevant Skill for Grapple's attacker side.
-- [ ] What triggers/uses are valid for the Reaction, generally (beyond opportunity-attack-style interrupts)?
+- [ ] **Are Reactions being removed entirely?** Cascades into Action Economy, Abort to Dodge, All-Out Attack, and Haymaker if so.
 - [ ] Confirm attack/defense reuses Resisted Rolls as-is (attacker vs. defender, DoS/DoF comparison).
 - [ ] **Damage**: how it's determined on a hit (fixed weapon value? scales with attacker's Degree of Success? separate roll?) and how it's tracked (hit points vs. wound/health-level track).
 - [ ] **Movement**: distance per turn (now anchored to a 3-second round), whether it costs a full action, how range/distance is abstracted.
