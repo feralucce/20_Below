@@ -41,7 +41,7 @@ Players can create new Gifts, but it's an **intensive discussion with the GM** �
 
 ## Example Gifts
 
-Compiled from eleven systems (Werewolf, Mage, Changeling, Wraith, Hunter, Exalted, Adventure!, Pendragon, Scion, In Nomine, Hero System, Heroes Unlimited) plus general comic book/anime/fantasy/sci-fi convention — see [premade-gifts.md](premade-gifts.md) for the full source cross-reference, a broad breadth-first catalog of ~50 Gift concepts organized by theme, and six fully worked example Gifts (all 5 levels defined) demonstrating the format.
+Compiled from eleven systems (Werewolf, Mage, Changeling, Wraith, Hunter, Exalted, Adventure!, Pendragon, Scion, In Nomine, Hero System, Heroes Unlimited) plus general comic book/anime/fantasy/sci-fi convention — see [premade-gifts.md](premade-gifts.md) for the full source cross-reference and a complete catalog of **66 Gifts across 13 themed categories, every one with all 5 levels fully defined** (Physical Enhancement, Elemental & Energy, Mental/Psychic, Biological/Shapeshifting, Social/Charisma, Movement & Spatial, Temporal, Fate/Luck, Light/Darkness/Illusion, Sound & Vibration, Life/Death/Spirit, Technology/Bio-Tech, Cosmic/Divine). Ready to hand a player at the table as-is.
 
 ## Open Questions
 
