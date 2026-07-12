@@ -17,6 +17,18 @@ _In active design as of 2026-07-12._
 
 **Round length: 3 seconds** (confirmed). Chosen over the more common 6-second round (D&D/Pathfinder standard) deliberately — a shorter round means more rounds cycle per real fight, which fits the "reflects reality better, more can happen quickly" goal, and reinforces why re-rolling initiative every round makes sense (the battlefield genuinely can shift that fast). This also anchors movement distance-per-round and gives concrete meaning to vague Gift-duration wording ("briefly," "a short while") once those get their detail pass.
 
+## Pre-Rolled Combat Dice — confirmed
+
+A table-speed tool, since initiative re-rolling every 3-second round means a lot of d20 rolls over the course of a fight:
+
+- At the **start of each game session**, every player rolls **1d20 ten times** and writes the results down. This is a per-*session* ritual, not per-combat or per-character-encounter.
+- These 10 results are a **bank the player draws from for every d20 roll made in combat** (attacks, defense, initiative, Gift use, anything that calls for a d20 roll during a fight) — **not** for non-combat rolls, which are still rolled live as normal.
+- The player picks **which banked result to spend on which roll, in any order** — full control over which of their 10 numbers gets used where, not a fixed sequence.
+- **Mandatory, not optional**: a player must exhaust all 10 banked rolls before they're allowed to roll live in combat again.
+- The bank is **discarded at the end of the session** — no carryover. A fresh 10 are rolled at the start of the next session.
+
+This means once a player runs through their 10, further combat rolls that session go back to live rolling — the bank is a speed-up for the *bulk* of combat rolls, not a full replacement forever.
+
 ## Action Economy — confirmed
 
 Three resources per round, not D&D's four — **Bonus Action is merged into Reaction** rather than kept as a separate category:
