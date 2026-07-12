@@ -14,6 +14,7 @@ This file is a **summary for thinking, not a source of truth** — the individua
 - [x] Round length: 3 seconds.
 - [x] Action economy: 1 Move (freeform, split any way around the Action) + 1 Action (declared, with target) + 1 Reaction (not declared by default; Bonus Action merged into Reaction rather than kept separate).
 - [x] Pre-Rolled Combat Dice: 10 d20s banked per player at session start, spent on combat rolls in any order, mandatory before live rolling resumes, discarded at session end.
+- [ ] **Mechanism to force the GM to use one of their banked rolls** in a given situation — presumes the GM keeps a bank too. Needs a trigger (Perk/Gift/resource spend/in-fiction condition?) and a scope (force *which* roll, or just force *a* roll to come from the bank?).
 - [ ] Confirm the exact list of available Actions (adopt D&D 5e's list as a baseline, or build our own?), and what triggers/uses are valid for the Reaction.
 - [ ] Confirm attack/defense reuses Resisted Rolls as-is (attacker vs. defender, DoS/DoF comparison).
 - [ ] **Damage**: how it's determined on a hit (fixed weapon value? scales with attacker's Degree of Success? separate roll?) and how it's tracked (hit points vs. wound/health-level track).
