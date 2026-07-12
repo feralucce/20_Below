@@ -15,11 +15,17 @@ _In active design as of 2026-07-12._
 3. **Resolve actions in (forward) initiative order** — highest initiative acts first.
 4. Repeat every round.
 
-**Proposed, not yet confirmed:**
-- Initiative roll reuses [Degree of Success/Failure](core-mechanic.md#degree-of-success--degree-of-failure) math rather than a separate mechanic: everyone rolls Perception + Attribute against their own target number, rank by DoS (highest first), crits override (nat 1 vaults to the top).
+### Initiative — confirmed
+
+- **Target number**: `(higher of Body or Mind) + Perception`, modified by any applicable Gifts or Perks (e.g. *Reckless Instinct*, *Danger Sense*). Fixed formula, not re-argued per-roll like a normal Skill+Attribute pairing — initiative needs to resolve fast every round, so it doesn't go through the usual negotiation.
+- Roll 1d20 against that target number, compute **Degree** (see [Degree of Success/Failure](core-mechanic.md#degree-of-success--degree-of-failure)).
+- **Rank all participants by Degree, highest first.** That ranking is both the declare order (reverse) and the resolve order (forward) for the round.
+- Crits still apply as normal (nat 1 auto-top of the order; nat 20 auto-bottom).
+
+**Still proposed, not yet confirmed:**
 - Declaring commits a character to a specific action *and target*, not just an action type — this is what creates the tactical tension of the reverse-declare order. (Softer alternative: declare action type only, target revealed at resolution.)
 - If a declared target becomes invalid before a character's turn resolves (e.g. already killed), that character gets to freely redirect the action rather than losing the turn.
-- Attack/defense reuses [Resisted Rolls](core-mechanic.md#resisted-rolls) directly: attacker rolls Attribute + weapon Skill, defender rolls Attribute + Dodge (or other relevant defense), DoS/DoF compared, ties favor the defender.
+- Attack/defense reuses [Resisted Rolls](core-mechanic.md#resisted-rolls) directly: attacker rolls Attribute + weapon Skill, defender rolls Attribute + Dodge (or other relevant defense), Degree compared, ties favor the defender.
 
 ## Still to Design
 
