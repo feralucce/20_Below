@@ -85,6 +85,26 @@ Inspired by White Wolf's split-dice-pool multiple actions rule, adapted to our t
 
 **Why 3**: for a representative "average" character (target number 10 — Attribute 5 + Skill 5, the midpoint of the 1-20 range), this gives the 1st action a 35% chance (down from a clean 50% — the real cost of committing to the gamble), the 2nd a 20% chance, and the 3rd and beyond collapse to the 5% floor (only a natural 1 succeeds). Lighter than an earlier draft's flat −5 (which left the 1st action unpenalized), deliberately, since a −3-from-the-start curve limits how often the chain gets used at all while still leaving the 2nd action a real, if worse, option. Weaker characters collapse faster; stronger characters can chain further.
 
+### Special Maneuvers — concepts compiled, not yet numbered
+
+Compiled and deduplicated from **D&D 5e** (Grapple, Shove, Disengage, Dash, Help, Hide, Ready, Two-Weapon Fighting, Opportunity Attack, and the common DMG variant rules Called Shot/Disarm), **Hero System 6e** (which has an explicit universal Combat Maneuvers table available to everyone, no purchase required: Block, Brace, Disarm, Dodge, Grab, Grab By, Haymaker, Move By, Move Through, Multiple Attack, Set, Strike, Throw, Trip, Escape — its purchasable Martial Arts maneuvers like Killing Strike/Choke Hold are closer to our Gifts/Perks than a base Action), and **White Wolf/Storyteller** (Dodge, Block/Parry, Grapple/Clinch, Disarm, Called Shot/Aimed Blow, and **All-Out Attack** — give up your ability to defend entirely for a significant offensive bonus).
+
+**Block/Parry was cut** — already covered by the basic defense mechanic (every attack is a Resisted Roll where the defender rolls to resist; that roll *is* the block/parry/dodge-adjacent defense, no separate maneuver needed for it).
+
+Concepts only below — no target penalties or bonus sizes assigned yet, same stage Dodge and Multiple Actions were at before their numbers pass:
+
+1. **Grapple** — seize and hold a target, restricting their movement/actions.
+2. **Disarm** — attempt to knock a held weapon or item out of a target's grip.
+3. **Trip / Shove** — attempt to knock a target prone or push them back.
+4. **Called Shot** — target a specific body part or held item for a bonus effect at increased difficulty.
+5. **All-Out Attack** — sacrifice your ability to defend this round for a significant offensive bonus.
+6. **Charge (Move By / Move Through)** — attack while moving into or past a target, trading risk for a bonus effect.
+7. **Haymaker** — a heavily telegraphed, slower attack that trades speed/defense for significantly greater effect.
+8. **Brace / Aim** — spend the turn steadying for a future attack, trading mobility/defense for accuracy.
+9. **Disengage** — withdraw from melee without giving the opponent a free shot at you.
+10. **Help / Assist** — aid an ally's action, granting them a bonus.
+11. **Escape / Break Free** — attempt to break out of a Grapple.
+
 ## Still to Design
 
 - **Damage**: how damage is determined once a hit lands (fixed weapon value? scales with the attacker's Degree of Success, tying into the running "DoS drives magnitude" theme? a separate damage roll?), and how it's tracked (hit points vs. a wound/health-level track with escalating penalties, à la Storyteller/WFRP).
@@ -104,4 +124,4 @@ Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md
 - Exact difficulty modifier for called shots — flat value, or scaled by target size/body part?
 - How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
 - **TODO: a mechanism for forcing the GM to use one of their banked rolls in a given situation** — presumes the GM also keeps a Pre-Rolled Combat Dice bank (see above) and players get some way to compel a specific banked result to be used rather than letting the GM choose freely. Not designed yet — needs a trigger (what earns this leverage: a Perk, a Gift, spending some resource, a specific in-fiction condition?) and a scope (force *which* roll gets used, or just force *a* roll to come from the bank instead of live?).
-- **Special Maneuvers need defining** — grapple, disarm, called shot, etc. are named as an Action category but no specific maneuvers have been designed yet.
+- **Special Maneuvers need numbers** — 11 concepts compiled above (Grapple, Disarm, Trip/Shove, Called Shot, All-Out Attack, Charge, Haymaker, Brace/Aim, Disengage, Help/Assist, Escape/Break Free), but none have target penalties or bonus sizes assigned yet.

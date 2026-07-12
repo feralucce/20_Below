@@ -19,7 +19,8 @@ This file is a **summary for thinking, not a source of truth** — the individua
 - [x] Dodge: multiplies defense DoS by 1.5 (round up), costs the Action.
 - [x] Abort to Dodge: same ×1.5 DoS effect, reactive (triggered when attacked before your turn), costs Move + Action + Reaction (all three).
 - [x] Multiple Actions: declared during Declaring as a full chain; target drops by 3×N per action (1st = −3); chain stops at first failure; expanded critical failure range starting 2nd action (natural roll ≥ 21−N auto-crit-fails).
-- [ ] Special Maneuvers still need defining (grapple, disarm, called shot, etc.).
+- [x] Special Maneuvers concepts compiled (11, from D&D 5e/Hero 6e/White Wolf): Grapple, Disarm, Trip/Shove, Called Shot, All-Out Attack, Charge, Haymaker, Brace/Aim, Disengage, Help/Assist, Escape/Break Free.
+- [ ] Special Maneuvers still need numbers (target penalties, bonus sizes) — none assigned yet.
 - [ ] What triggers/uses are valid for the Reaction?
 - [ ] Confirm attack/defense reuses Resisted Rolls as-is (attacker vs. defender, DoS/DoF comparison).
 - [ ] **Damage**: how it's determined on a hit (fixed weapon value? scales with attacker's Degree of Success? separate roll?) and how it's tracked (hit points vs. wound/health-level track).
