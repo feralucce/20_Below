@@ -20,11 +20,11 @@ Every Gift has exactly **5 levels**. This replaces the general 1-10 scale used f
 - **Power Level governs HOW POWERFUL** a character is at using Gifts in general — one stat, not tracked per-Gift.
 - To use a Gift, roll **Power Level + Body/Mind/Soul** (whichever Attribute best fits the specific use, negotiated the same way Skill+Attribute pairings are — see [skills.md](skills.md)) against the standard roll-under d20.
 
-When a Gift's effect is imposed on an **unwilling target**, resolve it as a **Resisted Roll** instead (see [core-mechanic.md](core-mechanic.md#resisted-rolls)): the Gift-user rolls Power Level + Attribute as normal, the target rolls their own relevant Attribute + Skill/Gift, and margins are compared to determine the outcome.
+When a Gift's effect is imposed on an **unwilling target**, resolve it as a **Resisted Roll** instead (see [core-mechanic.md](core-mechanic.md#resisted-rolls)): the Gift-user rolls Power Level + Attribute as normal, the target rolls their own relevant Attribute + Skill/Gift, and Degree of Success/Failure is compared to determine the outcome.
 
 **Power Level is scored 1-10**, same scale as Body/Mind/Soul, and is its **own independently-assigned statistic** — not a figured/derived characteristic calculated from Body, Mind, Soul, or any combination of them (see [core-mechanic.md](core-mechanic.md#power-level)). It's bought and advanced on its own, the same way an Attribute is.
 
-**A Gift's own Level (1-5) governs scope, not magnitude.** It's a pure gate on *what a character can attempt* — which named effects exist and are available to them — with no numeric weight in the roll itself. How well/powerfully an attempted effect comes off is entirely down to the Power Level + Attribute roll (and its margin), not the Gift's Level. In short: **Gift Level = what you can do, Power Level = how good you are at doing it.**
+**A Gift's own Level (1-5) governs scope, not magnitude.** It's a pure gate on *what a character can attempt* — which named effects exist and are available to them — with no numeric weight in the roll itself. How well/powerfully an attempted effect comes off is entirely down to the Power Level + Attribute roll (and its Degree of Success), not the Gift's Level. In short: **Gift Level = what you can do, Power Level = how good you are at doing it.**
 
 ## Uniqueness of Scope
 

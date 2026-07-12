@@ -6,7 +6,15 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 ## Combat (the big one — most other systems are waiting on this)
 
-- [ ] Core combat resolution — hasn't been designed at all yet.
+**In active design as of 2026-07-12** — see [combat.md](../rules/combat.md) for full detail.
+
+- [x] Round structure: roll initiative every round → declare actions in reverse initiative order → resolve in forward initiative order → repeat.
+- [ ] Confirm initiative roll mechanic (proposed: Perception + Attribute, ranked by Degree of Success).
+- [ ] Confirm what "declaring" commits a character to (proposed: action + target, full commitment).
+- [ ] Confirm the invalidated-target rule (proposed: free redirect, no lost turn).
+- [ ] Confirm attack/defense reuses Resisted Rolls as-is (attacker vs. defender, DoS/DoF comparison).
+- [ ] **Damage**: how it's determined on a hit (fixed weapon value? scales with attacker's Degree of Success? separate roll?) and how it's tracked (hit points vs. wound/health-level track).
+- [ ] **Movement**: distance per turn, whether it costs a full action, how range/distance is abstracted.
 - [ ] Critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.).
 - [ ] Exact difficulty modifier for called shots — flat value, or scaled by target size/body part?
 - [ ] How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
