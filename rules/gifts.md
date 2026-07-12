@@ -41,7 +41,7 @@ Players can create new Gifts, but it's an **intensive discussion with the GM** �
 
 ## Example Gifts
 
-Compiled from [source redacted] — see [premade-gifts.md](premade-gifts.md) for the source cross-reference and three fully worked example Gifts (all 5 levels defined) demonstrating the format.
+Compiled from eleven systems ([source redacted]) plus general comic book/anime/fantasy/sci-fi convention — see [premade-gifts.md](premade-gifts.md) for the full source cross-reference, a broad breadth-first catalog of ~50 Gift concepts organized by theme, and six fully worked example Gifts (all 5 levels defined) demonstrating the format.
 
 ## Open Questions
 
