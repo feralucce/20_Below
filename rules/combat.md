@@ -6,7 +6,7 @@ _In active design as of 2026-07-12._
 
 - **Critical success**: double damage, plus an additional GM-narrated effect.
 - **Critical failure**: always fails (per core mechanic); combat-specific extra effect TBD.
-- **Called shots**: impose a difficulty modifier on the attack roll (exact value TBD).
+- **Called shots**: impose a **−5** difficulty modifier on the attack roll (see Special Maneuvers below).
 
 ## Round Structure (in progress)
 
@@ -85,25 +85,36 @@ Inspired by White Wolf's split-dice-pool multiple actions rule, adapted to our t
 
 **Why 3**: for a representative "average" character (target number 10 — Attribute 5 + Skill 5, the midpoint of the 1-20 range), this gives the 1st action a 35% chance (down from a clean 50% — the real cost of committing to the gamble), the 2nd a 20% chance, and the 3rd and beyond collapse to the 5% floor (only a natural 1 succeeds). Lighter than an earlier draft's flat −5 (which left the 1st action unpenalized), deliberately, since a −3-from-the-start curve limits how often the chain gets used at all while still leaving the 2nd action a real, if worse, option. Weaker characters collapse faster; stronger characters can chain further.
 
-### Special Maneuvers — concepts compiled, not yet numbered
+### Special Maneuvers — confirmed
 
 Compiled and deduplicated from **D&D 5e** (Grapple, Shove, Disengage, Dash, Help, Hide, Ready, Two-Weapon Fighting, Opportunity Attack, and the common DMG variant rules Called Shot/Disarm), **Hero System 6e** (which has an explicit universal Combat Maneuvers table available to everyone, no purchase required: Block, Brace, Disarm, Dodge, Grab, Grab By, Haymaker, Move By, Move Through, Multiple Attack, Set, Strike, Throw, Trip, Escape — its purchasable Martial Arts maneuvers like Killing Strike/Choke Hold are closer to our Gifts/Perks than a base Action), and **White Wolf/Storyteller** (Dodge, Block/Parry, Grapple/Clinch, Disarm, Called Shot/Aimed Blow, and **All-Out Attack** — give up your ability to defend entirely for a significant offensive bonus).
 
 **Block/Parry was cut** — already covered by the basic defense mechanic (every attack is a Resisted Roll where the defender rolls to resist; that roll *is* the block/parry/dodge-adjacent defense, no separate maneuver needed for it).
 
-Concepts only below — no target penalties or bonus sizes assigned yet, same stage Dodge and Multiple Actions were at before their numbers pass:
+Every maneuver below reuses existing machinery — flat target modifiers, the Dodge-style DoS multiplier, Advantage/Disadvantage, or a straight Resisted Roll — rather than introducing new subsystems per maneuver. All cost the **Action** unless noted otherwise.
 
-1. **Grapple** — seize and hold a target, restricting their movement/actions.
-2. **Disarm** — attempt to knock a held weapon or item out of a target's grip.
-3. **Trip / Shove** — attempt to knock a target prone or push them back.
-4. **Called Shot** — target a specific body part or held item for a bonus effect at increased difficulty.
-5. **All-Out Attack** — sacrifice your ability to defend this round for a significant offensive bonus.
-6. **Charge (Move By / Move Through)** — attack while moving into or past a target, trading risk for a bonus effect.
-7. **Haymaker** — a heavily telegraphed, slower attack that trades speed/defense for significantly greater effect.
-8. **Brace / Aim** — spend the turn steadying for a future attack, trading mobility/defense for accuracy.
-9. **Disengage** — withdraw from melee without giving the opponent a free shot at you.
-10. **Help / Assist** — aid an ally's action, granting them a bonus.
-11. **Escape / Break Free** — attempt to break out of a Grapple.
+**Contest-based maneuvers** (replace a normal attack roll with a straight Resisted Roll — no damage dealt, a status effect instead):
+
+1. **Grapple** — Resisted Roll: attacker's Body + a grappling-relevant Skill vs. defender's choice of Body + Athletics, Body + Acrobatics, or Escapology. Win: target is **Grappled** — their Move drops to 0 until they escape or are released. While grappling, the grappler's own Move is halved unless dragging the target along at that reduced speed.
+2. **Trip / Shove** — same contest structure as Grapple. Win: attacker's choice — target is knocked **Prone** (Disadvantage on their own attacks; melee attackers get Advantage against them until they stand back up) or pushed back a short distance.
+3. **Escape / Break Free** — the Grappled character's turn to act: Resisted Roll, same skills as Grapple, roles reversed (the Grappled character is the "attacker" of this contest). Win: free of the Grapple.
+
+**Attack-modifying maneuvers** (a normal attack, at a flat target penalty, for a special effect instead of/alongside damage):
+
+4. **Disarm** — attack roll at **−5** to target number. On a hit, no damage — instead the target's held weapon/item is knocked away.
+5. **Called Shot** — attack roll at **−5** to target number (this resolves the long-open "exact called shot modifier" question — same value as Disarm, the system's standard "hard, precise" penalty). On a hit, apply a chosen location effect (the actual list of location effects is still TBD — see Open Questions).
+
+**Defense-sacrificing maneuvers** (reuse Dodge's DoS-multiplier convention, inverted for offense):
+
+6. **All-Out Attack** — this round's attack's **DoS × 1.5** (round up), same math as Dodge. Cost: forfeits the **Reaction**; for the rest of this round, the character cannot defend — any attack against them automatically wins the Resisted Roll (no defense roll made).
+7. **Haymaker** — a bigger, slower version of All-Out Attack: this round's attack's **DoS × 2**. Cost: forfeits **Move and Reaction**, and the defenseless window extends **until the character's next turn** (not just this round) — a much larger commitment for a much larger payoff.
+
+**Movement/Advantage maneuvers**:
+
+8. **Charge** — requires moving at least half the character's Move directly toward the target before attacking. Grants **Advantage** on this round's attack. Cost: **Disadvantage on defense** until the character's next turn — committed momentum, hard to change direction or brace.
+9. **Brace / Aim** — spend the Action steadying instead of attacking. Grants **Advantage** on the character's next Attack roll (made on a later turn). Cost: **Disadvantage on defense** this round, since focus is entirely on the aim, not on self-protection.
+10. **Help / Assist** — spend the Action to grant an ally **Advantage** on their next roll before the helper's own next turn. Direct reuse of the existing Advantage mechanic, same as D&D's Help action.
+11. **Disengage** — spend the Action so that this round's Move doesn't trigger any reactive/opportunity-style Reaction from others. (Presumes some form of reactive "attack of opportunity" exists via the Reaction resource — not yet formally defined; see Open Questions on Reaction triggers.)
 
 ## Still to Design
 
@@ -121,7 +132,8 @@ Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md
 ## Open Questions
 
 - What is the critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.)?
-- Exact difficulty modifier for called shots — flat value, or scaled by target size/body part?
+- List of specific Called Shot location effects (the −5 penalty is locked; what you actually get for paying it is not).
 - How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
 - **TODO: a mechanism for forcing the GM to use one of their banked rolls in a given situation** — presumes the GM also keeps a Pre-Rolled Combat Dice bank (see above) and players get some way to compel a specific banked result to be used rather than letting the GM choose freely. Not designed yet — needs a trigger (what earns this leverage: a Perk, a Gift, spending some resource, a specific in-fiction condition?) and a scope (force *which* roll gets used, or just force *a* roll to come from the bank instead of live?).
-- **Special Maneuvers need numbers** — 11 concepts compiled above (Grapple, Disarm, Trip/Shove, Called Shot, All-Out Attack, Charge, Haymaker, Brace/Aim, Disengage, Help/Assist, Escape/Break Free), but none have target penalties or bonus sizes assigned yet.
+- Formal definition of a reactive "attack of opportunity"-style Reaction trigger (Disengage's rule presumes this exists but it hasn't been designed).
+- Exact grappling-relevant Skill for the Grapple maneuver's attacker side (does it use an existing Skill, or is a new one needed?).

@@ -19,14 +19,16 @@ This file is a **summary for thinking, not a source of truth** — the individua
 - [x] Dodge: multiplies defense DoS by 1.5 (round up), costs the Action.
 - [x] Abort to Dodge: same ×1.5 DoS effect, reactive (triggered when attacked before your turn), costs Move + Action + Reaction (all three).
 - [x] Multiple Actions: declared during Declaring as a full chain; target drops by 3×N per action (1st = −3); chain stops at first failure; expanded critical failure range starting 2nd action (natural roll ≥ 21−N auto-crit-fails).
-- [x] Special Maneuvers concepts compiled (11, from D&D 5e/Hero 6e/White Wolf): Grapple, Disarm, Trip/Shove, Called Shot, All-Out Attack, Charge, Haymaker, Brace/Aim, Disengage, Help/Assist, Escape/Break Free.
-- [ ] Special Maneuvers still need numbers (target penalties, bonus sizes) — none assigned yet.
-- [ ] What triggers/uses are valid for the Reaction?
+- [x] **Special Maneuvers fully mechanized** (11, from D&D 5e/Hero 6e/White Wolf): Grapple/Trip/Escape (Resisted Rolls, status effects, no damage); Disarm/Called Shot (attack at −5 target penalty); All-Out Attack/Haymaker (Dodge-style DoS ×1.5/×2, defenseless 1 round vs. until next turn); Charge/Brace/Help (grant Advantage); Disengage (prevents a Reaction-trigger response).
+- [x] Called shot difficulty modifier: locked at **−5**.
+- [ ] Called Shot's specific location-effect list (what you get for the −5, beyond "something happens").
+- [ ] Formal definition of a reactive "attack of opportunity"-style Reaction trigger (Disengage's rule presumes this exists but it hasn't been designed).
+- [ ] Exact grappling-relevant Skill for Grapple's attacker side.
+- [ ] What triggers/uses are valid for the Reaction, generally (beyond opportunity-attack-style interrupts)?
 - [ ] Confirm attack/defense reuses Resisted Rolls as-is (attacker vs. defender, DoS/DoF comparison).
 - [ ] **Damage**: how it's determined on a hit (fixed weapon value? scales with attacker's Degree of Success? separate roll?) and how it's tracked (hit points vs. wound/health-level track).
 - [ ] **Movement**: distance per turn (now anchored to a 3-second round), whether it costs a full action, how range/distance is abstracted.
 - [ ] Critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.).
-- [ ] Exact difficulty modifier for called shots — flat value, or scaled by target size/body part?
 - [ ] How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
 - [ ] The 6 deferred combat Skills (Melee, Unarmed, Firearms, Archery/Thrown, Heavy Weapons, Dodge) — [premade-skills.md](../rules/premade-skills.md)
 - [ ] The 3 deferred combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — [perks.md](../rules/perks.md)
