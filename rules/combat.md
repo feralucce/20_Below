@@ -23,9 +23,12 @@ _In active design as of 2026-07-12._
 - **Rank all participants by (modified) Degree, highest first.** That ranking is both the declare order (reverse) and the resolve order (forward) for the round.
 - Crit status still applies as normal on top of the ranking (nat 1 auto-top of the order; nat 20 auto-bottom), regardless of Degree modifiers.
 
+### Declaring — confirmed
+
+- Declaring commits a character to a **specific action and target** — full commitment, not just an action type. This is what creates the tactical tension of the reverse-declare order: low-initiative characters commit blind, high-initiative characters react to everything already on the table.
+- **Free re-declare rule**: if a faster (higher-initiative) character's action does something that prevents a slower character from carrying out their declared action as declared — the target is removed, moved out of reach, the environment changes, whatever the specific reason — that slower character gets to **freely re-declare both their action and target** when their turn comes up. No penalty, no lost turn.
+
 **Still proposed, not yet confirmed:**
-- Declaring commits a character to a specific action *and target*, not just an action type — this is what creates the tactical tension of the reverse-declare order. (Softer alternative: declare action type only, target revealed at resolution.)
-- If a declared target becomes invalid before a character's turn resolves (e.g. already killed), that character gets to freely redirect the action rather than losing the turn.
 - Attack/defense reuses [Resisted Rolls](core-mechanic.md#resisted-rolls) directly: attacker rolls Attribute + weapon Skill, defender rolls Attribute + Dodge (or other relevant defense), Degree compared, ties favor the defender.
 
 ## Still to Design

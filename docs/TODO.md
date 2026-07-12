@@ -10,8 +10,7 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 - [x] Round structure: roll initiative every round → declare actions in reverse initiative order → resolve in forward initiative order → repeat.
 - [x] Initiative roll mechanic: roll `(higher of Body or Mind) + Perception` first (crits determined here), then apply Gift/Perk modifiers to the resulting Degree, then rank.
-- [ ] Confirm what "declaring" commits a character to (proposed: action + target, full commitment).
-- [ ] Confirm the invalidated-target rule (proposed: free redirect, no lost turn).
+- [x] Declaring commits a character to a specific action and target (full commitment). Free re-declare (action + target) if a faster character's action invalidates the declared plan — no lost turn.
 - [ ] Confirm attack/defense reuses Resisted Rolls as-is (attacker vs. defender, DoS/DoF comparison).
 - [ ] **Damage**: how it's determined on a hit (fixed weapon value? scales with attacker's Degree of Success? separate roll?) and how it's tracked (hit points vs. wound/health-level track).
 - [ ] **Movement**: distance per turn, whether it costs a full action, how range/distance is abstracted.
