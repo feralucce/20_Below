@@ -12,6 +12,14 @@ Three base attribute categories:
 
 Attributes are scored **1-10** (1 = lowest, 10 = highest).
 
+## Power Level
+
+**Power Level** is a fourth statistic, separate from Body/Mind/Soul, that governs magnitude when using [Gifts](gifts.md) (Power Level + Attribute vs. roll-under d20). It is scored **1-10**, same scale as the three core Attributes.
+
+Critically, **Power Level is its own independently-assigned statistic — not a "figured" characteristic derived or calculated from Body, Mind, Soul, or any combination of them.** It's bought and advanced on its own, the same way an Attribute is.
+
+(Name is a placeholder — see [gifts.md](gifts.md) Open Questions.)
+
 ## Character Capabilities
 
 - **Skills** — learned abilities. Scored 1-10.
