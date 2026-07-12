@@ -17,10 +17,11 @@ _In active design as of 2026-07-12._
 
 ### Initiative — confirmed
 
-- **Target number**: `(higher of Body or Mind) + Perception`, modified by any applicable Gifts or Perks (e.g. *Reckless Instinct*, *Danger Sense*). Fixed formula, not re-argued per-roll like a normal Skill+Attribute pairing — initiative needs to resolve fast every round, so it doesn't go through the usual negotiation.
-- Roll 1d20 against that target number, compute **Degree** (see [Degree of Success/Failure](core-mechanic.md#degree-of-success--degree-of-failure)).
-- **Rank all participants by Degree, highest first.** That ranking is both the declare order (reverse) and the resolve order (forward) for the round.
-- Crits still apply as normal (nat 1 auto-top of the order; nat 20 auto-bottom).
+- **Target number**: `(higher of Body or Mind) + Perception`. Fixed formula, not re-argued per-roll like a normal Skill+Attribute pairing — initiative needs to resolve fast every round, so it doesn't go through the usual negotiation.
+- **Roll first**: roll 1d20 against that unmodified target number, and compute the base **Degree** (see [Degree of Success/Failure](core-mechanic.md#degree-of-success--degree-of-failure)) — this is also where crits are determined (nat 1/nat 20), off the raw, unmodified roll.
+- **Then apply Gift/Perk modifiers to the Degree itself** (e.g. *Reckless Instinct*, *Danger Sense*) — not to the target number before rolling. Modifying Degree after the fact shifts a character's place in the order without touching their odds of success or of critting.
+- **Rank all participants by (modified) Degree, highest first.** That ranking is both the declare order (reverse) and the resolve order (forward) for the round.
+- Crit status still applies as normal on top of the ranking (nat 1 auto-top of the order; nat 20 auto-bottom), regardless of Degree modifiers.
 
 **Still proposed, not yet confirmed:**
 - Declaring commits a character to a specific action *and target*, not just an action type — this is what creates the tactical tension of the reverse-declare order. (Softer alternative: declare action type only, target revealed at resolution.)
