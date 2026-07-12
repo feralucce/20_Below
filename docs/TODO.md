@@ -12,9 +12,8 @@ This file is a **summary for thinking, not a source of truth** — the individua
 - [x] Initiative roll mechanic: roll `(higher of Body or Mind) + Perception` first (crits determined here), then apply Gift/Perk modifiers to the resulting Degree, then rank.
 - [x] Declaring commits a character to a specific action and target (full commitment). Free re-declare (action + target) if a faster character's action invalidates the declared plan — no lost turn.
 - [x] Round length: 3 seconds.
-- [x] Action economy baseline: D&D 5e-style Move / Action / Bonus Action / Reaction.
-- [ ] Does the Declaring step's commitment cover just Action, or Action + Bonus Action together? How does Move factor in — declared, or handled freely?
-- [ ] Confirm the exact list of available Actions/Bonus Actions (adopt D&D 5e's list as a baseline, or build our own?).
+- [x] Action economy: 1 Move (freeform, split any way around the Action) + 1 Action (declared, with target) + 1 Reaction (not declared by default; Bonus Action merged into Reaction rather than kept separate).
+- [ ] Confirm the exact list of available Actions (adopt D&D 5e's list as a baseline, or build our own?), and what triggers/uses are valid for the Reaction.
 - [ ] Confirm attack/defense reuses Resisted Rolls as-is (attacker vs. defender, DoS/DoF comparison).
 - [ ] **Damage**: how it's determined on a hit (fixed weapon value? scales with attacker's Degree of Success? separate roll?) and how it's tracked (hit points vs. wound/health-level track).
 - [ ] **Movement**: distance per turn (now anchored to a 3-second round), whether it costs a full action, how range/distance is abstracted.

@@ -17,16 +17,15 @@ _In active design as of 2026-07-12._
 
 **Round length: 3 seconds** (confirmed). Chosen over the more common 6-second round (D&D/Pathfinder standard) deliberately — a shorter round means more rounds cycle per real fight, which fits the "reflects reality better, more can happen quickly" goal, and reinforces why re-rolling initiative every round makes sense (the battlefield genuinely can shift that fast). This also anchors movement distance-per-round and gives concrete meaning to vague Gift-duration wording ("briefly," "a short while") once those get their detail pass.
 
-## Action Economy (in progress)
+## Action Economy — confirmed
 
-Adapting D&D 5e's **Move / Action / Bonus Action / Reaction** framework as the baseline structure, rather than inventing a new one from scratch:
+Three resources per round, not D&D's four — **Bonus Action is merged into Reaction** rather than kept as a separate category:
 
-- **Move** — reposition up to your speed.
-- **Action** — the one primary thing you're doing this round (attack, use a Gift, dash, disengage, hide, ready, etc.).
-- **Bonus Action** — a smaller supplementary action, only available if a specific Skill/Perk/Gift grants one.
-- **Reaction** — a triggered response usable on someone else's turn, once per round (resets each round).
+- **Move** — reposition up to your speed. **Freeform**: not declared as part of the Declaring step, and not locked to a single moment in the turn. A character can take their move all at once, or split it around their Action any way they like — move then act, act then move, or move partway, act, then finish the move.
+- **Action** — the one primary thing a character is doing this round (attack, use a Gift, dash, disengage, hide, ready, etc.). This is what gets declared, with a specific target, per the Declaring rule above.
+- **Reaction** — everyone gets exactly one per round. **Not declared by default** — used opportunistically as needed (an interrupt, a triggered response, a supplementary action off a Skill/Perk/Gift), the same way D&D's reaction works, unless a specific Perk or Gift explicitly says its use must be declared instead.
 
-**Open design question this raises**: our **Declaring** step (see above) commits a character to "a specific action and target." Does that declaration cover just the primary **Action**, or the **Action + Bonus Action** together? And does **Move** need to be declared at all, or is it handled more freely as part of executing your turn (since it's positioning, not a committed effect against a target)? Reaction almost certainly can't be pre-declared the way Action/Bonus Action can, since by definition it triggers off someone else's move — it should probably work like D&D's (available reactively, once per round, no advance declaration).
+So: 1 Move (freeform) + 1 Action (declared) + 1 Reaction (not declared, unless a Perk/Gift says otherwise) per character per round.
 
 ### Initiative — confirmed
 
