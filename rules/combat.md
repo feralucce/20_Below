@@ -6,7 +6,7 @@ _In active design as of 2026-07-12._
 
 - **Critical success**: double damage, plus an additional GM-narrated effect.
 - **Critical failure**: always fails (per core mechanic); combat-specific extra effect TBD.
-- **Called shots**: impose a **−5** difficulty modifier on the attack roll (see Special Maneuvers below).
+- **Called shots**: impose a size-dependent difficulty modifier on the attack roll (see Special Maneuvers below).
 
 ## Round Structure (in progress)
 
@@ -31,13 +31,12 @@ This means once a player runs through their 10, further combat rolls that sessio
 
 ## Action Economy — confirmed
 
-Three resources per round, not D&D's four — **Bonus Action is merged into Reaction** rather than kept as a separate category:
+Two resources per round — **no Reaction**. Reactions were considered (merging D&D's Bonus Action into a single Reaction resource), then **removed from the system entirely**:
 
 - **Move** — reposition up to your speed. **Freeform**: not declared as part of the Declaring step, and not locked to a single moment in the turn. A character can take their move all at once, or split it around their Action any way they like — move then act, act then move, or move partway, act, then finish the move.
-- **Action** — the one primary thing a character is doing this round (attack, use a Gift, dash, disengage, hide, ready, etc.). This is what gets declared, with a specific target, per the Declaring rule above.
-- **Reaction** — everyone gets exactly one per round. **Not declared by default** — used opportunistically as needed (an interrupt, a triggered response, a supplementary action off a Skill/Perk/Gift), the same way D&D's reaction works, unless a specific Perk or Gift explicitly says its use must be declared instead.
+- **Action** — the one primary thing a character is doing this round (attack, use a Gift, dash, hide, ready, etc.). This is what gets declared, with a specific target, per the Declaring rule above.
 
-So: 1 Move (freeform) + 1 Action (declared) + 1 Reaction (not declared, unless a Perk/Gift says otherwise) per character per round.
+So: 1 Move (freeform) + 1 Action (declared) per character per round. No Reaction, no Bonus Action, no interrupts outside of the Abort to Dodge rule below.
 
 ### Initiative — confirmed
 
@@ -71,7 +70,7 @@ Defense is a normal, automatic part of every attack (a Resisted Roll — see abo
 A more desperate, reactive version of Dodge: if a character is attacked **before their own turn comes up** in the round (i.e. a faster character targets them), they can abandon whatever they'd declared and dodge instead.
 
 - Same effect as standard Dodge: **DoS on defense this round × 1.5 (round up)**.
-- **Cost is total**: Abort to Dodge consumes the character's **Move, Action, and Reaction** for the round — all three. This is a full-body scramble to survive, not a controlled defensive stance, and costs accordingly. (Standard, pre-declared Dodge only costs the Action — Move and Reaction are untouched.)
+- **Cost is total**: Abort to Dodge consumes the character's **Move and Action** for the round — both. This is a full-body scramble to survive, not a controlled defensive stance, and costs accordingly. (Standard, pre-declared Dodge only costs the Action — Move is untouched.)
 - The character can take **no other action** this round once they abort to dodge — they are purely, desperately defending themselves.
 
 ### Multiple Actions — confirmed
@@ -101,22 +100,25 @@ Every maneuver below reuses existing machinery — flat target modifiers, the Do
 
 **Attack-modifying maneuvers** (a normal attack, at a flat target penalty, for a special effect instead of/alongside damage):
 
-4. **Disarm** — attack roll at **−5** to target number. On a hit, no damage — instead the target's held weapon/item is knocked away.
-5. **Called Shot** — attack roll at **−5** to target number (locked — this resolves the long-open "exact called shot modifier" question, same value as Disarm, the system's standard "hard, precise" penalty). On a hit, apply a chosen **location effect**:
+4. **Disarm** — attack roll at **−5** to target number (targets the hands, a small target — see the size-dependent penalty below). On a hit, no damage — instead the target's held weapon/item is knocked away.
+5. **Called Shot** — attack roll at a **size-dependent** target penalty (confirmed — resolves the long-open "exact called shot modifier" question). **Center of mass (torso) is the default target for any normal attack** — no penalty, and no longer a Called Shot option, since it's just what an ordinary attack already targets. Called Shot lets the attacker aim at something smaller/more specific instead, for a special effect on a hit:
+   - **−5**: small/precise targets — **Head**, **Hands**, or similarly sized.
+   - **−3**: larger targets — **Arms**, **Legs**, or similarly sized.
 
-   **Proposed location effects** (inspired by Hero System 6e's hit location table — but adapted, since Hero scales its OCV penalty and STUN/BODY multiplier per location while ours keeps the flat −5 across all locations; the useful lesson isn't the numeric scaling, it's the *shape* of the payoff: extremities impair or disable rather than just dealing more damage):
-   - **Head** — target is **Stunned** (effect TBD, likely interacts with Reaction — see the note on Reactions below).
+   **Proposed location effects** (inspired by Hero System 6e's hit location table — but adapted, since Hero scales its OCV penalty and STUN/BODY multiplier per location while ours only scales the target penalty by size class; the useful lesson isn't Hero's exact numeric scaling, it's the *shape* of the payoff: extremities impair or disable rather than just dealing more damage):
+   - **Head** — target is **Stunned** (effect TBD).
    - **Eyes** — target is **Blinded**: Disadvantage on anything requiring sight until treated.
    - **Arms / Hands** — target is **Disarmed** or **Impaired**: weapon/item dropped, or Disadvantage on actions using that limb until healed.
    - **Legs / Feet** — target's **Move is reduced** (Prone-adjacent) until treated.
-   - **Torso / Vitals** — reserved for extra damage once the damage subsystem exists; nothing to define yet.
+
+   **Damage multipliers per location are wanted** (Hero-style — hit harder in a called location, not just get a status effect) **but can't be assigned until the damage subsystem exists.** Flagged for that pass, not designed yet.
 
    Not yet confirmed — proposal only.
 
 **Defense-sacrificing maneuvers** (reuse Dodge's DoS-multiplier convention, inverted for offense):
 
-6. **All-Out Attack** — this round's attack's **DoS × 1.5** (round up), same math as Dodge. Cost: forfeits the **Reaction**; for the rest of this round, the character cannot defend — any attack against them automatically wins the Resisted Roll (no defense roll made).
-7. **Haymaker** — a bigger, slower version of All-Out Attack: this round's attack's **DoS × 2**. Cost: forfeits **Move and Reaction**, and the defenseless window extends **until the character's next turn** (not just this round) — a much larger commitment for a much larger payoff.
+6. **All-Out Attack** — this round's attack's **DoS × 1.5** (round up), same math as Dodge. Cost: for the rest of this round, the character cannot defend — any attack against them automatically wins the Resisted Roll (no defense roll made).
+7. **Haymaker** — a bigger, slower version of All-Out Attack: this round's attack's **DoS × 2**. Cost: forfeits **Move**, and the defenseless window extends **until the character's next turn** (not just this round) — a much larger commitment for a much larger payoff.
 
 **Movement/Advantage maneuvers**:
 
@@ -124,22 +126,11 @@ Every maneuver below reuses existing machinery — flat target modifiers, the Do
 9. **Brace / Aim** — spend the Action steadying instead of attacking. Grants **Advantage** on the character's next Attack roll (made on a later turn). Cost: **Disadvantage on defense** this round, since focus is entirely on the aim, not on self-protection.
 10. **Help / Assist** — spend the Action to grant an ally **Advantage** on their next roll before the helper's own next turn. Direct reuse of the existing Advantage mechanic, same as D&D's Help action.
 
-**Removed**: Disengage — cut. It only existed to counter a reactive "attack of opportunity"-style Reaction trigger that was never formally defined, and Reactions themselves may be removed from the system entirely (see below) — no point keeping a maneuver whose entire purpose is countering a mechanic that might not exist.
-
-### Open reconsideration: Reactions may be removed entirely
-
-Not yet decided. If Reactions are cut as a resource, the following all need revisiting:
-
-- **Action Economy** (above): currently 1 Move + 1 Action + 1 Reaction — would drop to just 1 Move + 1 Action.
-- **Abort to Dodge**: currently costs Move + Action + Reaction — would cost Move + Action only.
-- **All-Out Attack**: currently forfeits the Reaction as its cost — would need a different cost, or the maneuver's downside would just be the defenselessness itself with nothing forfeited.
-- **Haymaker**: currently forfeits Move + Reaction — would need re-costing the same way.
-
-Flagged rather than actioned — waiting on a final call before touching all four.
+**Removed**: Disengage — cut, since it only existed to counter a reactive Reaction-trigger mechanic, and **Reactions have been removed from the system entirely** (see Action Economy above — no Reaction resource, no Bonus Action, no interrupts outside Abort to Dodge).
 
 ## Still to Design
 
-- **Damage**: how damage is determined once a hit lands (fixed weapon value? scales with the attacker's Degree of Success, tying into the running "DoS drives magnitude" theme? a separate damage roll?), and how it's tracked (hit points vs. a wound/health-level track with escalating penalties, à la Storyteller/WFRP).
+- **Damage**: how damage is determined once a hit lands (fixed weapon value? scales with the attacker's Degree of Success, tying into the running "DoS drives magnitude" theme? a separate damage roll?), and how it's tracked (hit points vs. a wound/health-level track with escalating penalties, à la Storyteller/WFRP). **Once this exists, Called Shot locations need a damage multiplier added (Hero-style) — flagged above, not designed yet.**
 - **Movement**: how far a character can move in a turn, whether movement costs a full action or is bundled with other actions, how range/distance is abstracted (grid, zones, narrative distance bands).
 
 ## Deferred Skills
@@ -153,8 +144,8 @@ Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md
 ## Open Questions
 
 - What is the critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.)?
-- Confirm the proposed Called Shot location effects (Head/Eyes/Arms-Hands/Legs-Feet/Torso-Vitals) — see Special Maneuvers above.
+- Confirm the proposed Called Shot location effects (Head/Eyes/Arms-Hands/Legs-Feet) — see Special Maneuvers above.
+- Damage multiplier per Called Shot location — blocked on the damage subsystem existing first.
 - How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
 - **TODO: a mechanism for forcing the GM to use one of their banked rolls in a given situation** — presumes the GM also keeps a Pre-Rolled Combat Dice bank (see above) and players get some way to compel a specific banked result to be used rather than letting the GM choose freely. Not designed yet — needs a trigger (what earns this leverage: a Perk, a Gift, spending some resource, a specific in-fiction condition?) and a scope (force *which* roll gets used, or just force *a* roll to come from the bank instead of live?).
 - Exact grappling-relevant Skill for the Grapple maneuver's attacker side (does it use an existing Skill, or is a new one needed?).
-- **Are Reactions being removed entirely?** See "Open reconsideration" under Special Maneuvers above — affects Action Economy, Abort to Dodge, All-Out Attack, and Haymaker if so.
