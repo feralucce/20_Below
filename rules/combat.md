@@ -73,3 +73,4 @@ Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md
 - What is the critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.)?
 - Exact difficulty modifier for called shots — flat value, or scaled by target size/body part?
 - How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
+- **TODO: a mechanism for forcing the GM to use one of their banked rolls in a given situation** — presumes the GM also keeps a Pre-Rolled Combat Dice bank (see above) and players get some way to compel a specific banked result to be used rather than letting the GM choose freely. Not designed yet — needs a trigger (what earns this leverage: a Perk, a Gift, spending some resource, a specific in-fiction condition?) and a scope (force *which* roll gets used, or just force *a* roll to come from the bank instead of live?).
