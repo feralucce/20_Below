@@ -18,9 +18,8 @@ This file is a **summary for thinking, not a source of truth** — the individua
 - [x] Actions list: Attack, Special Maneuvers (not yet defined), Use a Skill, Use a Gift, Dodge.
 - [x] Dodge: multiplies defense DoS by 1.5 (round up), costs the Action.
 - [x] Abort to Dodge: same ×1.5 DoS effect, reactive (triggered when attacked before your turn), costs Move + Action + Reaction (all three).
-- [x] Multiple Actions: 1st action normal, each subsequent action's target drops by 5×(N−1), chain stops at first failure.
+- [x] Multiple Actions: declared during Declaring as a full chain; target drops by 3×N per action (1st = −3); chain stops at first failure; expanded critical failure range starting 2nd action (natural roll ≥ 21−N auto-crit-fails).
 - [ ] Special Maneuvers still need defining (grapple, disarm, called shot, etc.).
-- [ ] How does declaring a Multiple Actions chain interact with the Declaring step (whole chain up front, or action-by-action)?
 - [ ] What triggers/uses are valid for the Reaction?
 - [ ] Confirm attack/defense reuses Resisted Rolls as-is (attacker vs. defender, DoS/DoF comparison).
 - [ ] **Damage**: how it's determined on a hit (fixed weapon value? scales with attacker's Degree of Success? separate roll?) and how it's tracked (hit points vs. wound/health-level track).
