@@ -8,6 +8,14 @@ _Deferred — to be designed after the skill system is finished._
 - **Critical failure**: always fails (per core mechanic); combat-specific extra effect TBD.
 - **Called shots**: impose a difficulty modifier on the attack roll (exact value TBD).
 
+## Deferred Skills
+
+Combat skills (Melee, Unarmed, Firearms, Archery/Thrown, Heavy Weapons, Dodge) — see [premade-skills.md](premade-skills.md).
+
+## Deferred Perks
+
+Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md](perks.md).
+
 ## Open Questions
 
 - What is the critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.)?

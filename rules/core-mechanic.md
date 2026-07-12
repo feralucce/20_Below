@@ -15,7 +15,7 @@ Attributes are scored **1-10** (1 = lowest, 10 = highest).
 ## Character Capabilities
 
 - **Skills** — learned abilities. Scored 1-10.
-- **Perks** — small advantages, greater than a skill but not extraordinary. *Not* scored on the 1-10 scale (scale TBD — see Open Questions).
+- **Perks** — small advantages, greater than a skill but not extraordinary. Have **no levels or ranks** — a character either has a Perk or doesn't. Usually a rule exception or unlocked narrative option rather than a numeric bonus. See [perks.md](perks.md).
 - **Gifts** — abilities that make a character truly exceptional. Scored 1-10.
 
 ## Resolution
