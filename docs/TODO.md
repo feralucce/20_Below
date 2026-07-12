@@ -9,7 +9,7 @@ This file is a **summary for thinking, not a source of truth** — the individua
 **In active design as of 2026-07-12** — see [combat.md](../rules/combat.md) for full detail.
 
 - [x] Round structure: roll initiative every round → declare actions in reverse initiative order → resolve in forward initiative order → repeat.
-- [ ] Confirm initiative roll mechanic (proposed: Perception + Attribute, ranked by Degree of Success).
+- [x] Initiative roll mechanic: `(higher of Body or Mind) + Perception`, modified by applicable Gifts/Perks, ranked by Degree.
 - [ ] Confirm what "declaring" commits a character to (proposed: action + target, full commitment).
 - [ ] Confirm the invalidated-target rule (proposed: free redirect, no lost turn).
 - [ ] Confirm attack/defense reuses Resisted Rolls as-is (attacker vs. defender, DoS/DoF comparison).
