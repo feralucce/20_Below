@@ -51,8 +51,16 @@ So: 1 Move (freeform) + 1 Action (declared) per character per round. No Reaction
 - Declaring commits a character to a **specific action and target** — full commitment, not just an action type. This is what creates the tactical tension of the reverse-declare order: low-initiative characters commit blind, high-initiative characters react to everything already on the table.
 - **Free re-declare rule**: if a faster (higher-initiative) character's action does something that prevents a slower character from carrying out their declared action as declared — the target is removed, moved out of reach, the environment changes, whatever the specific reason — that slower character gets to **freely re-declare both their action and target** when their turn comes up. No penalty, no lost turn.
 
-**Still proposed, not yet confirmed:**
-- Attack/defense reuses [Resisted Rolls](core-mechanic.md#resisted-rolls) directly: attacker rolls Attribute + weapon Skill, defender rolls Attribute + Dodge (or other relevant defense), Degree compared, ties favor the defender.
+### Attack Resolution — confirmed
+
+Ordinary attacks are **not** a Resisted Roll. They use the [Defense](core-mechanic.md#calculated-defensive-traits) trait instead, for speed — one roll total, not two:
+
+1. Attacker rolls once, normally (Attribute + weapon Skill + modifiers), and computes DoS.
+2. If **DoS > the target's Defense** (Mind ÷ 2, round up), the attack connects and deals damage.
+3. If **DoS ≤ Defense**, the attack doesn't connect — no damage. (Narration is flexible: dodged, deflected, armor absorbed it entirely — whatever fits the defender's build; see the armor discussion in the design log.)
+4. If it connects, **Soak** (armor-driven damage reduction — not yet numerically designed, waiting on an equipment subsystem) further reduces the damage actually applied to the target's current Health Level.
+
+Special-Maneuver Resisted Rolls (Grapple, Trip, Escape — see below) are unaffected by this change; those stay full Resisted Rolls since they're genuinely mutual contests, not one-sided attacks.
 
 ## Actions — in progress
 
@@ -60,16 +68,16 @@ Available Actions for the round: **Attack**, **Special Maneuvers** (grapple, dis
 
 ### Dodge — confirmed
 
-Defense is a normal, automatic part of every attack (a Resisted Roll — see above), but a character can also spend their turn actively defending instead of acting, for a major boost:
+A character can spend their turn actively defending instead of acting, for a major boost. Since attack resolution no longer involves a defense roll (see Attack Resolution above), Dodge now boosts the **Defense stat itself**, not a rolled DoS:
 
-- **Effect**: while Dodging, the character's **Degree of Success on defense rolls this round is multiplied by 1.5 (round up)** — not a flat bonus. A flat bonus would only average out to "50% higher" for one assumed baseline target number; multiplying DoS directly guarantees exactly 50% higher on every individual roll, for any character, regardless of their target number. (Full derivation in the design log.) Applies only when the defense roll actually succeeds (has a DoS) — a failed defense roll gets no help from Dodge.
+- **Effect**: while Dodging, the character's **Defense is multiplied by 1.5 (round up)** for the round.
 - **Cost**: Dodge takes the character's **Action** for the round. Declared normally, like any other action.
 
 ### Abort to Dodge — confirmed
 
 A more desperate, reactive version of Dodge: if a character is attacked **before their own turn comes up** in the round (i.e. a faster character targets them), they can abandon whatever they'd declared and dodge instead.
 
-- Same effect as standard Dodge: **DoS on defense this round × 1.5 (round up)**.
+- Same effect as standard Dodge: **Defense × 1.5 (round up)** for the round.
 - **Cost is total**: Abort to Dodge consumes the character's **Move and Action** for the round — both. This is a full-body scramble to survive, not a controlled defensive stance, and costs accordingly. (Standard, pre-declared Dodge only costs the Action — Move is untouched.)
 - The character can take **no other action** this round once they abort to dodge — they are purely, desperately defending themselves.
 
@@ -117,13 +125,13 @@ Every maneuver below reuses existing machinery — flat target modifiers, the Do
 
 **Defense-sacrificing maneuvers** (reuse Dodge's DoS-multiplier convention, inverted for offense):
 
-6. **All-Out Attack** — this round's attack's **DoS × 1.5** (round up), same math as Dodge. Cost: for the rest of this round, the character cannot defend — any attack against them automatically wins the Resisted Roll (no defense roll made).
-7. **Haymaker** — a bigger, slower version of All-Out Attack: this round's attack's **DoS × 2**. Cost: forfeits **Move**, and the defenseless window extends **until the character's next turn** (not just this round) — a much larger commitment for a much larger payoff.
+6. **All-Out Attack** — this round's attack's **DoS × 1.5** (round up), same math as Dodge. Cost: for the rest of this round, the character's **Defense is treated as 0** — any attack that connects at all (DoS > 0) hits them.
+7. **Haymaker** — a bigger, slower version of All-Out Attack: this round's attack's **DoS × 2**. Cost: forfeits **Move**, and **Defense is treated as 0 until the character's next turn** (not just this round) — a much larger commitment for a much larger payoff.
 
 **Movement/Advantage maneuvers**:
 
-8. **Charge** — requires moving at least half the character's Move directly toward the target before attacking. Grants **Advantage** on this round's attack. Cost: **Disadvantage on defense** until the character's next turn — committed momentum, hard to change direction or brace.
-9. **Brace / Aim** — spend the Action steadying instead of attacking. Grants **Advantage** on the character's next Attack roll (made on a later turn). Cost: **Disadvantage on defense** this round, since focus is entirely on the aim, not on self-protection.
+8. **Charge** — requires moving at least half the character's Move directly toward the target before attacking. Grants **Advantage** on this round's attack. Cost: **Defense is halved (round up)** until the character's next turn — committed momentum, hard to change direction or brace.
+9. **Brace / Aim** — spend the Action steadying instead of attacking. Grants **Advantage** on the character's next Attack roll (made on a later turn). Cost: **Defense is halved (round up)** this round, since focus is entirely on the aim, not on self-protection.
 10. **Help / Assist** — spend the Action to grant an ally **Advantage** on their next roll before the helper's own next turn. Direct reuse of the existing Advantage mechanic, same as D&D's Help action.
 
 **Removed**: Disengage — cut, since it only existed to counter a reactive Reaction-trigger mechanic, and **Reactions have been removed from the system entirely** (see Action Economy above — no Reaction resource, no Bonus Action, no interrupts outside Abort to Dodge).
@@ -160,7 +168,7 @@ A hybrid of D&D-style numeric HP and White Wolf-style escalating wound penalties
 
 - Damage is applied to the character's **current** Health Level's container. When that container empties, the character drops to the next level down and any further damage applies there.
 - **No overflow**: a single hit can only ever deplete the current container, down to a minimum of 0 — excess damage beyond what's left in that container is wasted, not carried into the next level. A single hit never drops a character more than one Health Level, no matter how large. Deliberate — "big damn hero" durability (see [design-log.md](../docs/design-log.md)).
-- The penalty at each level is **applied to the character's rolls "across the board"** — this reuses the system's existing flat-modifier convention (−1, −3, −5 are not new numbers: −3 already means something as the Multiple Actions step, and −5 is already the system's standard max modifier elsewhere). Whether this includes defense rolls (creating an intentional death-spiral as a wounded character gets hit more) depends on the pending flat-Defense-stat decision above — not fully resolved until that's settled.
+- The penalty at each level is **applied to the character's rolls "across the board"** — this reuses the system's existing flat-modifier convention (−1, −3, −5 are not new numbers: −3 already means something as the Multiple Actions step, and −5 is already the system's standard max modifier elsewhere). Since Defense is a calculated trait rather than a roll, "across the board" penalties don't directly reduce it as written — whether a wounded character's Defense should *also* degrade (an intentional death-spiral) is a separate, still-open question, not automatically implied by the existing wording.
 - **Incapacitated** has no buffer: no actions, and any further damage is fatal. No dying/stabilizing state currently exists — this is a deliberate lethality choice, not yet reconfirmed as final.
 - **Round up** universally (per [core-mechanic.md](core-mechanic.md#rounding--ties)) applies to the Wounded/Suffering HP calculation.
 
@@ -172,8 +180,8 @@ A hybrid of D&D-style numeric HP and White Wolf-style escalating wound penalties
 ## Still to Design
 
 - **Damage**: how damage is determined once a hit lands — fixed weapon value? scales with the attacker's Degree of Success (tying into the running "DoS drives magnitude" theme)? a separate damage roll? Health Levels (above) answer *how damage is tracked*, but not yet *how much damage a hit deals*. **Once this exists, Called Shot locations need a damage multiplier added (Hero-style) — flagged above, not designed yet.**
-- **Attack/Defense resolution**: flat Defense stat vs. Resisted Roll — paused mid-decision, see [TODO.md](../docs/TODO.md).
-- **Movement**: how far a character can move in a turn, whether movement costs a full action or is bundled with other actions, how range/distance is abstracted (grid, zones, narrative distance bands).
+- **Soak**: armor-driven damage reduction, applied after a hit connects via Defense — conceptually gear-based (see [core-mechanic.md](core-mechanic.md#calculated-defensive-traits)), not numerically designed, waiting on an equipment subsystem.
+- **Movement**: how far a character can move in a turn, whether movement costs a full action or is bundled with other actions, how range/distance is abstracted (grid, zones, narrative distance bands). Formula shape likely Body-driven, matching Defense/Resolve's pattern — exact numbers not yet decided.
 
 ## Deferred Skills
 
@@ -191,3 +199,5 @@ Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md
 - How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
 - **TODO: a mechanism for forcing the GM to use one of their banked rolls in a given situation** — presumes the GM also keeps a Pre-Rolled Combat Dice bank (see above) and players get some way to compel a specific banked result to be used rather than letting the GM choose freely. Not designed yet — needs a trigger (what earns this leverage: a Perk, a Gift, spending some resource, a specific in-fiction condition?) and a scope (force *which* roll gets used, or just force *a* roll to come from the bank instead of live?).
 - Exact grappling-relevant Skill for the Grapple maneuver's attacker side (does it use an existing Skill, or is a new one needed?).
+- Whether a wounded character's Defense should also degrade under the Health Level penalty (an intentional death-spiral), now that Defense is a calculated trait rather than a roll — not automatically implied by the existing "across the board" wording.
+- Confirm "Defense halved (round up)" as the substitute for "Disadvantage on defense" (Charge, Brace/Aim) — Advantage/Disadvantage only applies to dice rolls, and Defense isn't rolled anymore, so this is a proposed fix, not a confirmed one.

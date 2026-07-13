@@ -4,15 +4,23 @@ A consolidated view of every open question across the ruleset, pulled from each 
 
 This file is a **summary for thinking, not a source of truth** — the individual rule docs are canonical. If this list and a rule doc's own Open Questions ever disagree, trust the rule doc and update this file to match.
 
-## ⬆️ Pick up here next session (2026-07-12, paused mid-decision)
+## ⬆️ Pick up here next session (2026-07-12)
 
-**Decide: flat Defense stat vs. Resisted Roll for ordinary attacks.** Resisted Rolls on every attack are two rolls per exchange — a real cost given initiative rerolls every round and fights can have several combatants. The alternative: every character has a precomputed flat **Defense stat**; an attacker rolls once, and the defender's Defense is subtracted from the attacker's DoS (result < 0 = the attack doesn't connect). Cuts ordinary attacks to one roll.
+**Attack/Defense/Resolve decision is resolved** — see [core-mechanic.md](../rules/core-mechanic.md#calculated-defensive-traits):
+- **Defense** = Mind ÷ 2 (round up). Ordinary attacks: attacker rolls once, DoS > Defense → hit; else no damage. Replaces Resisted Rolls for one-sided attacks.
+- **Resolve** = Soul ÷ 2 (round up). Same logic, for Soul-targeted Gift impositions (fear, domination, charm, etc.) — **mostly**, not absolute; some Gifts still warrant a full Resisted Roll, decided case by case.
+- **Soak** (armor-driven damage reduction after a hit connects) is conceptually gear-based, not Attribute-derived — not yet numerically designed, waiting on an equipment subsystem.
+- Resisted Rolls are now scoped down to genuinely mutual contests (Grapple, Trip, Escape, contests of will) plus case-by-case Gift exceptions.
+- Dodge/Abort to Dodge/All-Out Attack/Haymaker/Charge/Brace all updated in `combat.md` to reference Defense instead of a rolled defense DoS.
 
-- If adopted, **Dodge and Abort to Dodge need redefining** — they currently multiply a rolled defense DoS by 1.5, but there's no defense roll under this model. Would need to instead multiply/boost the Defense *stat* itself for the round.
-- Also need to decide **scope**: does this replace only ordinary Attack resolution, or also the Resisted-Roll-based maneuvers (Grapple, Trip, Escape)? Leaning toward keeping those as full Resisted Rolls (occasional, weightier) while ordinary attacks (highest roll volume) get the fast treatment — not confirmed.
+**Still open from this decision:**
+- Confirm "Defense halved, round up" as the substitute for Charge/Brace's old "Disadvantage on defense" — proposed, not locked (Advantage/Disadvantage only applies to rolls, and Defense isn't rolled).
+- Does a wounded character's Defense also degrade under the Health Level penalty (an intentional death-spiral)? Not automatically implied by the existing wording — separate decision.
+- Every Gift with an unwilling-target use case needs a case-by-case pass: does it use the Resolve default, or genuinely need a full Resisted Roll? Not started (`gifts.md` Open Questions).
+- Movement formula still undecided (likely Body-driven, same pattern as Defense/Resolve, but exact numbers and distance units not set).
 
-**Health Levels are now written up** — see [combat.md](../rules/combat.md#health-levels--confirmed): Healthy (Body×2, no penalty) → Sore (Body, no penalty) → Battered (Body, −1) → Wounded (Body÷2, −3) → Suffering (Body÷2, −5) → Incapacitated (0 HP, no actions, any damage kills). Total pool = 5×Body (+1 if Body is odd). No overflow between containers. Full Body 1-10 reference table included.
-- **Still open**: is Incapacitated's "any damage kills, no buffer" the intended lethality (no dying/stabilizing state)? Healing mechanism (how a character moves back up a level) isn't designed at all yet. Whether the per-level penalty applies to defense too depends on the still-pending flat-Defense-stat decision above.
+**Health Levels** — see [combat.md](../rules/combat.md#health-levels--confirmed): Healthy (Body×2, no penalty) → Sore (Body, no penalty) → Battered (Body, −1) → Wounded (Body÷2, −3) → Suffering (Body÷2, −5) → Incapacitated (0 HP, no actions, any damage kills). Total pool = 5×Body (+1 if Body is odd). No overflow between containers.
+- **Still open**: is Incapacitated's "any damage kills, no buffer" the intended lethality? Healing mechanism isn't designed at all yet.
 
 ## Combat (the big one — most other systems are waiting on this)
 
@@ -26,8 +34,8 @@ This file is a **summary for thinking, not a source of truth** — the individua
 - [x] Pre-Rolled Combat Dice: 10 d20s banked per player at session start, spent on combat rolls in any order, mandatory before live rolling resumes, discarded at session end.
 - [ ] **Mechanism to force the GM to use one of their banked rolls** in a given situation — presumes the GM keeps a bank too. Needs a trigger (Perk/Gift/resource spend/in-fiction condition?) and a scope (force *which* roll, or just force *a* roll to come from the bank?).
 - [x] Actions list: Attack, Special Maneuvers (not yet defined), Use a Skill, Use a Gift, Dodge.
-- [x] Dodge: multiplies defense DoS by 1.5 (round up), costs the Action.
-- [x] Abort to Dodge: same ×1.5 DoS effect, reactive (triggered when attacked before your turn), costs Move + Action (Reaction removed from its cost).
+- [x] Dodge: multiplies the Defense trait by 1.5 (round up), costs the Action.
+- [x] Abort to Dodge: same ×1.5 Defense effect, reactive (triggered when attacked before your turn), costs Move + Action (Reaction removed from its cost).
 - [x] Multiple Actions: declared during Declaring as a full chain; target drops by 3×N per action (1st = −3); chain stops at first failure; expanded critical failure range starting 2nd action (natural roll ≥ 21−N auto-crit-fails).
 - [x] **Special Maneuvers fully mechanized** (10, from D&D 5e/Hero 6e/White Wolf): Grapple/Trip/Escape (Resisted Rolls, status effects, no damage); Disarm/Called Shot (attack at a size-dependent target penalty); All-Out Attack/Haymaker (Dodge-style DoS ×1.5/×2, defenseless 1 round vs. until next turn); Charge/Brace/Help (grant Advantage). Disengage removed.
 - [x] Called shot difficulty modifier: **size-dependent** — −5 for small/precise targets (Head, Hands), −3 for larger ones (Arms, Legs). Torso removed as an option — center of mass is the default target for any ordinary attack, no penalty.
@@ -35,7 +43,7 @@ This file is a **summary for thinking, not a source of truth** — the individua
 - [ ] Damage multiplier per Called Shot location (Hero-style) — wanted, but blocked until the damage subsystem exists.
 - [ ] Exact grappling-relevant Skill for Grapple's attacker side.
 - [x] **Reactions removed entirely** — confirmed, not just flagged. Action Economy, Abort to Dodge, All-Out Attack, and Haymaker all updated accordingly.
-- [ ] Confirm attack/defense reuses Resisted Rolls as-is (attacker vs. defender, DoS/DoF comparison).
+- [x] Attack/Defense resolution: **Defense trait (Mind ÷ 2), not Resisted Rolls** — see the top of this file.
 - [ ] **Damage**: how it's determined on a hit (fixed weapon value? scales with attacker's Degree of Success? separate roll?) and how it's tracked (hit points vs. wound/health-level track). Needed before Called Shot damage multipliers can be assigned.
 - [ ] **Movement**: distance per turn (now anchored to a 3-second round), whether it costs a full action, how range/distance is abstracted.
 - [ ] Critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.).
@@ -88,6 +96,7 @@ This file is a **summary for thinking, not a source of truth** — the individua
 - [ ] Resource costs or drawbacks on use (mana, fatigue, corruption, backlash) — universal system, or defined per-Gift?
 - [ ] **Cybernetics needs fuller treatment** — currently only one catalog entry ("Grafted Steel"). Needs more concepts, and a decision on whether it needs its own acquisition rules (surgery, cost, installation risk) instead of standard Gift creation.
 - [ ] **Detail pass pending combat** (see Combat section above) — the whole 76-Gift catalog is written at a soft narrative level right now.
+- [ ] **Resisted-Roll-vs-Resolve triage**: every unwilling-target Gift needs a case-by-case pass to decide whether it uses the new Resolve default or genuinely needs a full Resisted Roll. Not started.
 - ([gifts.md](../rules/gifts.md), [premade-gifts.md](../rules/premade-gifts.md))
 
 ## Not Yet Started
