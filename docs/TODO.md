@@ -12,6 +12,8 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 **Advantage/Disadvantage vs. the bank is resolved**: net Advantage lets a character choose live-roll or a banked die; net Disadvantage forces a live roll regardless of bank status — see [combat.md](../rules/combat.md#pre-rolled-combat-dice--confirmed).
 
+**Movement/Speed is resolved**: Speed = 5m + (Body ÷ 2, round up), a flat base plus a Body bonus rather than a pure Body-derived value, so a Body-1 character still moves at a normal walking pace — see [combat.md](../rules/combat.md#movement--speed--confirmed).
+
 See the Combat section below for what's still open in this area.
 
 ## Previous session (2026-07-12)
@@ -27,7 +29,6 @@ See the Combat section below for what's still open in this area.
 - Confirm "Defense halved, round up" as the substitute for Charge/Brace's old "Disadvantage on defense" — proposed, not locked (Advantage/Disadvantage only applies to rolls, and Defense isn't rolled).
 - Does a wounded character's Defense also degrade under the Health Level penalty (an intentional death-spiral)? Not automatically implied by the existing wording — separate decision.
 - Every Gift with an unwilling-target use case needs a case-by-case pass: does it use the Resolve default, or genuinely need a full Resisted Roll? Not started (`gifts.md` Open Questions).
-- Movement formula still undecided (likely Body-driven, same pattern as Defense/Resolve, but exact numbers and distance units not set).
 
 **Health Levels** — see [combat.md](../rules/combat.md#health-levels--confirmed): Healthy (Body×2, no penalty) → Sore (Body, no penalty) → Battered (Body, −1) → Wounded (Body÷2, −3) → Suffering (Body÷2, −5) → Incapacitated (0 HP, no actions, any damage kills). Total pool = 5×Body (+1 if Body is odd). No overflow between containers.
 - **Still open**: is Incapacitated's "any damage kills, no buffer" the intended lethality? Healing mechanism isn't designed at all yet.
@@ -55,7 +56,7 @@ See the Combat section below for what's still open in this area.
 - [x] **Reactions removed entirely** — confirmed, not just flagged. Action Economy, Abort to Dodge, All-Out Attack, and Haymaker all updated accordingly.
 - [x] Attack/Defense resolution: **Defense trait (Mind ÷ 2), not Resisted Rolls** — see the top of this file.
 - [ ] **Damage**: how it's determined on a hit (fixed weapon value? scales with attacker's Degree of Success? separate roll?) and how it's tracked (hit points vs. wound/health-level track). Needed before Called Shot damage multipliers can be assigned.
-- [ ] **Movement**: distance per turn (now anchored to a 3-second round), whether it costs a full action, how range/distance is abstracted.
+- [x] **Movement**: Speed = 5m + (Body ÷ 2, round up); a Move lets a character reposition up to Speed, freeform as already defined in Action Economy. Not costed as a full action — see [combat.md](../rules/combat.md#movement--speed--confirmed).
 - [ ] Critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.).
 - [ ] How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
 - [ ] The 6 deferred combat Skills (Melee, Unarmed, Firearms, Archery/Thrown, Heavy Weapons, Dodge) — [premade-skills.md](../rules/premade-skills.md)
