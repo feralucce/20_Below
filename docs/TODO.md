@@ -14,7 +14,9 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 **Movement/Speed is resolved**: Speed = 5m + (Body ÷ 2, round up), a flat base plus a Body bonus rather than a pure Body-derived value, so a Body-1 character still moves at a normal walking pace — see [combat.md](../rules/combat.md#movement--speed--confirmed).
 
-**Ties now go to the aggressor everywhere, superseding "ties go to the defender"** — see [core-mechanic.md](../rules/core-mechanic.md#rounding--ties). DoS exactly equal to Defense/Resolve is now a hit, not a miss. Consistent with the system's existing unconventional-favors-the-active-side choices (round up, roll low). In progress toward a Damage formula: this is what lets weapon damage be a small fixed base (can be as low as +0 leftover DoS on a tied hit) plus leftover `DoS − Defense` on top — see the Combat section below.
+**Ties now go to the aggressor everywhere, superseding "ties go to the defender"** — see [core-mechanic.md](../rules/core-mechanic.md#rounding--ties). DoS exactly equal to Defense/Resolve is now a hit, not a miss. Consistent with the system's existing unconventional-favors-the-active-side choices (round up, roll low).
+
+**Damage is resolved**: `Weapon Base (1-10, by weapon class) + (DoS − Defense)`, doubled on a crit. A 10-tier weapon class ladder (Unarmed through Siege/Cataclysmic) where melee and ranged weapons of comparable weight share the same base, representing real-world firearm lethality as range rather than extra damage. Only the top two tiers (Ordnance, Siege/Cataclysmic) can spill damage across Health Levels. See [combat.md](../rules/combat.md#damage--confirmed).
 
 See the Combat section below for what's still open in this area.
 
@@ -53,11 +55,11 @@ See the Combat section below for what's still open in this area.
 - [x] **Special Maneuvers fully mechanized** (10, from D&D 5e/Hero 6e/White Wolf): Grapple/Trip/Escape (Resisted Rolls, status effects, no damage); Disarm/Called Shot (attack at a size-dependent target penalty); All-Out Attack/Haymaker (Dodge-style DoS ×1.5/×2, defenseless 1 round vs. until next turn); Charge/Brace/Help (grant Advantage). Disengage removed.
 - [x] Called shot difficulty modifier: **size-dependent** — −5 for small/precise targets (Head, Hands), −3 for larger ones (Arms, Legs). Torso removed as an option — center of mass is the default target for any ordinary attack, no penalty.
 - [x] Called Shot location-effects proposal drafted (Hero 6e hit-location-inspired): Head (Stunned, TBD), Eyes (Blinded), Arms/Hands (Disarmed/Impaired), Legs/Feet (Move reduced). Not yet confirmed.
-- [ ] Damage multiplier per Called Shot location (Hero-style) — wanted, but blocked until the damage subsystem exists.
+- [ ] Damage multiplier per Called Shot location (Hero-style) — no longer blocked now that Damage exists, just not designed yet.
 - [ ] Exact grappling-relevant Skill for Grapple's attacker side.
 - [x] **Reactions removed entirely** — confirmed, not just flagged. Action Economy, Abort to Dodge, All-Out Attack, and Haymaker all updated accordingly.
 - [x] Attack/Defense resolution: **Defense trait (Mind ÷ 2), not Resisted Rolls** — see the top of this file.
-- [ ] **Damage**: how it's determined on a hit (fixed weapon value? scales with attacker's Degree of Success? separate roll?) and how it's tracked (hit points vs. wound/health-level track). Needed before Called Shot damage multipliers can be assigned.
+- [x] **Damage** (resolved 2026-07-13): `Weapon Base (1-10, by weapon class) + (DoS − Defense)`, doubled on a crit. Weapon Base is a 10-tier class ladder (Unarmed through Siege/Cataclysmic) where melee and ranged weapons of comparable weight share the same base — real-world firearm lethality is represented via range, not extra damage. Only the top two tiers (Ordnance, Siege/Cataclysmic) can spill damage across Health Levels; every other class is capped by the existing No Overflow rule. See [combat.md](../rules/combat.md#damage--confirmed).
 - [x] **Movement**: Speed = 5m + (Body ÷ 2, round up); a Move lets a character reposition up to Speed, freeform as already defined in Action Economy. Not costed as a full action — see [combat.md](../rules/combat.md#movement--speed--confirmed).
 - [ ] Critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.).
 - [ ] How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?

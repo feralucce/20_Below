@@ -8,6 +8,7 @@ _In active design as of 2026-07-12._
 - **Critical failure**: always fails (per core mechanic); combat-specific extra effect TBD.
 - **Called shots**: impose a size-dependent difficulty modifier on the attack roll (see Special Maneuvers below).
 - **Spark**: a per-player, per-session checkbox resource for forcing a bad banked roll onto the GM, granting yourself Advantage, or gifting a banked die to another player — see [core-mechanic.md](core-mechanic.md#spark--confirmed).
+- **Damage**: Weapon Base (1-10, by weapon class) + (DoS − Defense), doubled on a crit — see [Damage](#damage--confirmed) below.
 
 ## Round Structure (in progress)
 
@@ -196,7 +197,7 @@ A hybrid of D&D-style numeric HP and White Wolf-style escalating wound penalties
 **Rules:**
 
 - Damage is applied to the character's **current** Health Level's container. When that container empties, the character drops to the next level down and any further damage applies there.
-- **No overflow**: a single hit can only ever deplete the current container, down to a minimum of 0 — excess damage beyond what's left in that container is wasted, not carried into the next level. A single hit never drops a character more than one Health Level, no matter how large. Deliberate — "big damn hero" durability (see [design-log.md](../docs/design-log.md)).
+- **No overflow, with an exception**: a single hit can only ever deplete the current container, down to a minimum of 0 — excess damage beyond what's left in that container is wasted, not carried into the next level. A single hit never drops a character more than one Health Level, no matter how large. Deliberate — "big damn hero" durability (see [design-log.md](../docs/design-log.md)). **Exception: hits from Ordnance or Siege/Cataclysmic weapons (Weapon Base +9 or +10, see [Damage](#damage--confirmed)) do carry excess damage into subsequent Health Levels** — these tiers (heavy weapons, anti-materiel rifles, explosives, mounted/vehicle weapons) are explicitly allowed to blow through more than one Health Level in a single hit, unlike every other weapon class.
 - The penalty at each level is **applied to the character's rolls "across the board"** — this reuses the system's existing flat-modifier convention (−1, −3, −5 are not new numbers: −3 already means something as the Multiple Actions step, and −5 is already the system's standard max modifier elsewhere). Since Defense is a calculated trait rather than a roll, "across the board" penalties don't directly reduce it as written — whether a wounded character's Defense should *also* degrade (an intentional death-spiral) is a separate, still-open question, not automatically implied by the existing wording.
 - **Incapacitated** has no buffer: no actions, and any further damage is fatal. No dying/stabilizing state currently exists — this is a deliberate lethality choice, not yet reconfirmed as final.
 - **Round up** universally (per [core-mechanic.md](core-mechanic.md#rounding--ties)) applies to the Wounded/Suffering HP calculation.
@@ -206,9 +207,50 @@ A hybrid of D&D-style numeric HP and White Wolf-style escalating wound penalties
 - **Healing** — how a character moves back up a Health Level (recovers HP in a lower container) isn't designed at all yet.
 - Whether Incapacitated's all-or-nothing lethality is final, or wants a last-gasp buffer state.
 
+## Damage — confirmed
+
+**Damage = Weapon Base + (DoS − Defense)**, doubled on a critical success (per the existing combat crit rule). No separate damage roll — this reuses the attack roll's own DoS, continuing the system's "DoS drives magnitude" theme (see [core-mechanic.md](core-mechanic.md#degree-of-success--degree-of-failure)) instead of adding a second roll that would also break the Pre-Rolled Combat Dice bank (a second, non-d20 damage die doesn't fit the bank at all).
+
+Because [ties now go to the aggressor](core-mechanic.md#rounding--ties), a hit requires `DoS ≥ Defense`, so `DoS − Defense` is always ≥ 0 on a connecting hit — a bare/tied hit still deals the weapon's full base damage, never less.
+
+**Weapon Base** is a flat integer, 1-10 (matching the system's universal 1-10 Attribute/Skill scale), assigned by weapon class rather than a per-weapon catalog:
+
+| Base | Class | Melee examples | Ranged examples |
+|---|---|---|---|
+| +1 | Unarmed | fists, bite, claws | — |
+| +2 | Improvised | broken bottles, chairs, brass knuckles | thrown rocks |
+| +3 | Light | daggers, knives | pistols, thrown weapons |
+| +4 | Simple | hatchets, clubs, batons | slings, light bows |
+| +5 | Medium | swords, axes, maces | SMGs, crossbows |
+| +6 | Martial | spears, flails, war-picks | carbines, hunting rifles |
+| +7 | Heavy | greatswords, polearms, warhammers | battle rifles, shotguns |
+| +8 | Superheavy | mauls, siege blades | sniper rifles, LMGs |
+| +9 | **Ordnance** | (rare — magic/ritual-grade melee) | heavy weapons, anti-materiel rifles, grenade launchers |
+| +10 | **Siege/Cataclysmic** | (rare — magic/ritual-grade melee) | explosives, rocket launchers, mounted/vehicle weapons |
+
+Melee and ranged weapons of comparable "weight class" share the same base — a dagger and a pistol both sit at Light — rather than firearms being a flatly higher-damage ladder. This is a deliberate abstraction: real-world trauma data shows gunshot wounds run meaningfully more lethal than blade wounds (see [design-log.md](../docs/design-log.md)), but the system chose to represent guns' real advantage as **range**, not raw damage, keeping melee and ranged combat comparably dangerous once a fight closes to any distance.
+
+**Only Ordnance (+9) and Siege/Cataclysmic (+10) can spill damage across Health Levels** — every other weapon class is bound by the standard No Overflow rule above (a hit caps at whatever's left in the current container). This keeps the top two tiers meaningfully catastrophic without making every heavy weapon a one-shot machine.
+
+Calibration check, average character (Body 5, Mind 5 → Defense 3, Healthy pool 10 HP), average leftover DoS on a connecting hit ≈ 3:
+
+| Base | Avg dmg | Effect on a Healthy (10 HP) target |
+|---|---|---|
+| +1 | 4 | ~2-3 hits to drain |
+| +2 | 5 | ~2 hits |
+| +3 | 6 | ~1-2 hits |
+| +4 | 7 | ~1-2 hits |
+| +5 | 8 | ~1-2 hits |
+| +6 | 9 | ~1 hit |
+| +7 | 10 | exactly drains Healthy in 1 hit |
+| +8 | 11 | drains Healthy, no spillover (capped) |
+| +9 | 12 | drains Healthy, **spills into Sore** |
+| +10 | 13 | drops **multiple** Health Levels in one hit |
+
+**Once this exists, Called Shot locations need a damage multiplier added (Hero-style)** — flagged above, not designed yet.
+
 ## Still to Design
 
-- **Damage**: how damage is determined once a hit lands — fixed weapon value? scales with the attacker's Degree of Success (tying into the running "DoS drives magnitude" theme)? a separate damage roll? Health Levels (above) answer *how damage is tracked*, but not yet *how much damage a hit deals*. **Once this exists, Called Shot locations need a damage multiplier added (Hero-style) — flagged above, not designed yet.**
 - **Soak**: armor-driven damage reduction, applied after a hit connects via Defense — conceptually gear-based (see [core-mechanic.md](core-mechanic.md#calculated-defensive-traits)), not numerically designed, waiting on an equipment subsystem.
 
 ## Deferred Skills
