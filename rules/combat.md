@@ -348,7 +348,7 @@ Dropped from consideration, not forgotten: Social and Skill-check fumble tables 
 
 ## Combat Skills — confirmed
 
-No longer deferred (2026-07-13) — see [premade-skills.md](premade-skills.md#combat--confirmed) for the finalized list (Melee Combat, Unarmed Combat, Firearms, Archery/Thrown Weapons, Heavy Weapons, Dodge/Evasion).
+No longer deferred (2026-07-13, revised 2026-07-13) — see [premade-skills.md](premade-skills.md#combat--confirmed) for the finalized list: Melee Combat, Unarmed Combat, Firearms/Archery (merged), Special Weapons (now an exception Skill for a single exotic/siege-class weapon rather than a broad category). Dodge/Evasion was dropped as a Skill — avoiding attacks is handled by the Defense trait instead.
 
 ## Deferred Perks
 

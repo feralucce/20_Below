@@ -71,7 +71,7 @@ See the Combat section below for what's still open in this area.
 - [x] **Movement**: Speed = 5m + (Body ÷ 2, round up); a Move lets a character reposition up to Speed, freeform as already defined in Action Economy. Not costed as a full action — see [combat.md](../rules/combat.md#movement--speed--confirmed).
 - [x] **Critical Failure resolved** (2026-07-13): combat gets a category × severity-tier table (Weapon Mishap, Self-Injury, Positional, Defensive, Team). Severity keyed off `|DoF|` (`20 − target`, simplified to always use the nat-20 case even for Multiple Actions' expanded crit-fail range), same tier bands as Called Shot's DoS tiers. GM picks whichever category fits the fiction. Social/Skill/Magical fumble tables explicitly excluded — those stay pure GM narration outside combat, per the core mechanic's existing philosophy. See [combat.md](../rules/combat.md#critical-failure--confirmed).
 - [x] **Combat follows the same free skill+attribute pairing rule as everything else** (resolved 2026-07-13) — situational, re-argued per attempt, no combat-specific lock-in (e.g. a feinting melee attack could argue Mind instead of Body).
-- [x] **The 6 combat Skills are finalized, no longer deferred** (2026-07-13): Melee Combat, Unarmed Combat, Firearms, Archery/Thrown Weapons, Heavy Weapons, Dodge/Evasion — see [premade-skills.md](../rules/premade-skills.md#combat--confirmed).
+- [x] **The combat Skills are finalized, no longer deferred** (2026-07-13, revised 2026-07-13): now 4 — Melee Combat, Unarmed Combat, Firearms/Archery (merged), Special Weapons (exception Skill for a single exotic/siege-class weapon, not a broad category). Dodge/Evasion dropped as a Skill — covered by the Defense trait instead. See [premade-skills.md](../rules/premade-skills.md#combat--confirmed).
 - [ ] The 3 deferred combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — still deferred, coming back to these soon — [perks.md](../rules/perks.md)
 - [ ] **Big downstream TODO**: once combat exists, the entire 76-Gift catalog needs a detail pass to convert soft narrative phrasing into concrete mechanics (ranges, durations, action costs) — [gifts.md](../rules/gifts.md), [premade-gifts.md](../rules/premade-gifts.md)
 
@@ -93,7 +93,7 @@ See the Combat section below for what's still open in this area.
 
 ## Skills
 
-- [ ] Which genre-flagged skills (Occult, Mythos, Alchemy) ship as defaults vs. GM-added modules per campaign? — [skills.md](../rules/skills.md), [premade-skills.md](../rules/premade-skills.md)
+- [x] **Genre-flagged skills (Occult, Mythos, Alchemy) ship as defaults, GM discretion to drop** (resolved 2026-07-13) — see [skills.md](../rules/skills.md), [premade-skills.md](../rules/premade-skills.md).
 
 ## Perks
 

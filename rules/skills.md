@@ -44,5 +44,8 @@ When a character becomes particularly adept at a skill, they gain **specialties*
 
 ## Open Questions
 
-- Which genre-flagged skills (Occult, Mythos, Alchemy — see [premade-skills.md](premade-skills.md)) ship as defaults vs. GM-added modules per campaign?
 - Exact XP cost for raising a skill, and for purchasing an extra specialty (numbers/balance — deferred until character creation is designed).
+
+## Resolved
+
+- **Genre-flagged skills ship as defaults, GM discretion to drop** (2026-07-13): Occult, Mythos, and Alchemy (see [premade-skills.md](premade-skills.md)) are included by default rather than opt-in modules, but the GM can drop any that don't fit the campaign's premise.
