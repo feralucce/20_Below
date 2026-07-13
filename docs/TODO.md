@@ -106,3 +106,7 @@ Bigger pieces that haven't been touched at all yet:
 - [ ] Combat mechanics (see above — everything else is waiting on this).
 - [ ] Character creation step-by-step process (the *procedure*, not just the point economy above).
 - [ ] Anything beyond character creation and advancement — session structure, downtime, equipment/gear rules, etc., haven't come up yet.
+
+## 🔁 Full Revision Pass — planned, after everything above is done
+
+Once every open item on this list is resolved and the system has a complete first draft, do a full pass back over **everything already written** — not just what's still open. A lot has been proposed, corrected, and revised as we went (Multiple Actions' penalty, Called Shot's modifier, Reactions being removed entirely, the whole Defense/Resolve rework), and earlier docs may still carry stale wording, outdated cross-references, or assumptions that got superseded later without every mention being caught. This pass is specifically for reconciling and polishing the finished whole, not for making new design decisions.
