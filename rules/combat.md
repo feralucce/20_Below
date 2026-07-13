@@ -5,7 +5,7 @@ _In active design as of 2026-07-12._
 ## Decided so far
 
 - **Critical success**: double damage, plus an additional GM-narrated effect.
-- **Critical failure**: always fails (per core mechanic); combat-specific extra effect TBD.
+- **Critical failure**: always fails (per core mechanic); combat gets a category × severity-tier table, keyed off `|DoF|` — see [Critical Failure](#critical-failure--confirmed) below.
 - **Called shots**: impose a size-dependent difficulty modifier on the attack roll (see Special Maneuvers below).
 - **Spark**: a per-player, per-session checkbox resource for forcing a bad banked roll onto the GM, granting yourself Advantage, or gifting a banked die to another player — see [core-mechanic.md](core-mechanic.md#spark--confirmed).
 - **Damage**: Weapon Base (1-10, by weapon class) + (DoS − Defense); only the Weapon Base doubles on a crit — see [Damage](#damage--confirmed) below.
@@ -280,6 +280,68 @@ Calibration check, average character (Body 5, Mind 5 → Defense 3, Healthy pool
 
 **Called Shot locations no longer need a separate damage multiplier** — superseded by the DoS-tiered location effects above (see Special Maneuvers), which scale severity off the same leftover-DoS number instead of a second numeric multiplier.
 
+## Critical Failure — confirmed
+
+Triggers on a natural 20 (or, in a Multiple Actions chain, any roll in the expanded crit-fail range already defined). Outside combat, a critical failure stays pure GM narration (per [core-mechanic.md](core-mechanic.md#critical-results)) — this table is combat-only, mirroring how Called Shot's location effects are also combat-only.
+
+**Severity tier reuses the same bands as Called Shot's location effects**, keyed off Degree of Failure instead of DoS:
+
+- **`DoF = target − 20`, always** — simplified, not `target − (actual triggering die)`. Even when a Multiple Actions chain triggers the crit-fail on a roll below 20 (per its expanded range), DoF is still computed as if the die were 20. One number, no need to track which specific roll in the chain triggered it.
+- Tier is set by `|DoF|` (`20 − target`):
+
+| Tier | \|DoF\| (`20 − target`) |
+|---|---|
+| Minor | 0-2 |
+| Moderate | 3-5 |
+| Severe | 6-8 |
+| Catastrophic | 9+ |
+
+Lower-skilled characters (low target number) land more severe fumbles; a highly-skilled character's nat 20 is already close to their target, so it fumbles lightly.
+
+**GM picks whichever category below best fits the fiction** — melee/ranged mishap, self-injury, positional, defensive, or (with an ally in the line of fire) team — same as they already pick a Called Shot location.
+
+**Weapon Mishap** (melee or ranged — one table covers both; the mechanical shape doesn't need to differ by weapon type):
+| Tier | Effect |
+|---|---|
+| Minor | Grip slips / shot goes wide — Disadvantage on your next attack |
+| Moderate | Weapon dropped or jams — lose your next Action recovering it |
+| Severe | Weapon damaged — unusable for the rest of the fight |
+| Catastrophic | Weapon destroyed, and the backfire hits you: take damage equal to your own Weapon Base (no leftover) |
+
+**Self-Injury**:
+| Tier | Effect |
+|---|---|
+| Minor | Disadvantage on your next roll |
+| Moderate | You strike yourself for your Weapon Base (no leftover) — reuses the Damage formula directly |
+| Severe | As Moderate, and you're knocked Prone |
+| Catastrophic | You strike yourself for `Weapon Base × 2`, as if critically hit |
+
+**Positional Failure**:
+| Tier | Effect |
+|---|---|
+| Minor | Lose 2m off your remaining Move this round |
+| Moderate | Knocked Prone |
+| Severe | Knocked Prone, and lose your next Move entirely |
+| Catastrophic | GM narrates a real environmental consequence (off a ledge, into a hazard) — open-ended, same as any GM-narrated extra |
+
+**Defensive Failure**:
+| Tier | Effect |
+|---|---|
+| Minor | The next attack against you gains a source of Advantage |
+| Moderate | Your Defense is halved (round up) until your next turn — reuses Charge/Brace's convention |
+| Severe | Your Defense is treated as 0 until your next turn — reuses All-Out Attack/Haymaker's convention |
+| Catastrophic | As Severe, and you're knocked Prone |
+
+**Team Mishap** (friendly fire — only relevant with an ally in the line of fire):
+| Tier | Effect |
+|---|---|
+| Minor | An ally must adjust position — GM narrates the inconvenience |
+| Moderate | An ally takes Disadvantage on their next roll |
+| Severe | An ally takes damage equal to your Weapon Base (no leftover) |
+| Catastrophic | An ally takes `Weapon Base × 2` damage, as if you'd critically hit them by mistake |
+
+Dropped from consideration, not forgotten: Social and Skill-check fumble tables (Athletics, Stealth, Thievery, etc.) and Magical Mishaps. Those stay under the existing "GM narrates a fitting complication" rule for non-combat rolls — only combat gets a fixed table, per the core mechanic's own design philosophy. Magical Mishaps specifically will be revisited once the Gift catalog gets its combat detail pass.
+
 ## Still to Design
 
 - **Soak**: armor-driven damage reduction, applied after a hit connects via Defense — conceptually gear-based (see [core-mechanic.md](core-mechanic.md#calculated-defensive-traits)), not numerically designed, waiting on an equipment subsystem.
@@ -294,7 +356,6 @@ Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md
 
 ## Open Questions
 
-- What is the critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.)?
 - Formally define the "Standard NPC" vs. "Named NPC/PC" distinction introduced by Catastrophic Head — currently just a GM judgment call, no mechanical criteria written anywhere.
 - How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
 - Exact grappling-relevant Skill for the Grapple maneuver's attacker side (does it use an existing Skill, or is a new one needed?).

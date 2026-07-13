@@ -20,6 +20,8 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 **Called Shot location effects are resolved and tiered by severity** — Head, Arms/Hands, Legs/Feet each get a 4-tier (Minor/Moderate/Severe/Catastrophic) effect table, keyed off leftover DoS (`DoS − Defense`, the same number driving bonus damage). Catastrophic Head kills a Standard NPC outright; against a Named NPC/PC it drains the current Health Level and spills into the next (added to the Ordnance/Siege overflow exception), with no autokill beyond the normal Incapacitated rule. Introduces a new (informal, GM-judgment) Standard vs. Named NPC distinction. See [combat.md](../rules/combat.md#special-maneuvers--confirmed).
 
+**Combat Critical Failure is resolved**: same tier shape as Called Shot (Minor/Moderate/Severe/Catastrophic), keyed off `|DoF| = 20 − target`. Five categories (Weapon Mishap, Self-Injury, Positional, Defensive, Team), GM picks whichever fits. Non-combat crit-fails stay pure GM narration, unchanged. See [combat.md](../rules/combat.md#critical-failure--confirmed).
+
 See the Combat section below for what's still open in this area.
 
 ## Previous session (2026-07-12)
@@ -63,7 +65,7 @@ See the Combat section below for what's still open in this area.
 - [x] Attack/Defense resolution: **Defense trait (Mind ÷ 2), not Resisted Rolls** — see the top of this file.
 - [x] **Damage** (resolved 2026-07-13): `Weapon Base (1-10, by weapon class) + (DoS − Defense)`; only the Weapon Base doubles on a crit. Weapon Base is a 10-tier class ladder (Unarmed through Siege/Cataclysmic) where melee and ranged weapons of comparable weight share the same base — real-world firearm lethality is represented via range, not extra damage. Only the top two tiers (Ordnance, Siege/Cataclysmic), plus Catastrophic Head vs. a Named NPC/PC, can spill damage across Health Levels; every other class is capped by the existing No Overflow rule. See [combat.md](../rules/combat.md#damage--confirmed).
 - [x] **Movement**: Speed = 5m + (Body ÷ 2, round up); a Move lets a character reposition up to Speed, freeform as already defined in Action Economy. Not costed as a full action — see [combat.md](../rules/combat.md#movement--speed--confirmed).
-- [ ] Critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.).
+- [x] **Critical Failure resolved** (2026-07-13): combat gets a category × severity-tier table (Weapon Mishap, Self-Injury, Positional, Defensive, Team). Severity keyed off `|DoF|` (`20 − target`, simplified to always use the nat-20 case even for Multiple Actions' expanded crit-fail range), same tier bands as Called Shot's DoS tiers. GM picks whichever category fits the fiction. Social/Skill/Magical fumble tables explicitly excluded — those stay pure GM narration outside combat, per the core mechanic's existing philosophy. See [combat.md](../rules/combat.md#critical-failure--confirmed).
 - [ ] How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
 - [ ] The 6 deferred combat Skills (Melee, Unarmed, Firearms, Archery/Thrown, Heavy Weapons, Dodge) — [premade-skills.md](../rules/premade-skills.md)
 - [ ] The 3 deferred combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — [perks.md](../rules/perks.md)
