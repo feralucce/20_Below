@@ -128,9 +128,51 @@ Every maneuver below reuses existing machinery — flat target modifiers, the Do
 
 **Removed**: Disengage — cut, since it only existed to counter a reactive Reaction-trigger mechanic, and **Reactions have been removed from the system entirely** (see Action Economy above — no Reaction resource, no Bonus Action, no interrupts outside Abort to Dodge).
 
+## Health Levels — confirmed
+
+A hybrid of D&D-style numeric HP and White Wolf-style escalating wound penalties, without needing WoD's separate soak/dice-pool machinery. HP is a **numeric pool** (so weapon damage, Degree of Success, criticals, and Called Shot multipliers can all scale it cleanly), but the pool is subdivided into five active **Health Levels**, each a "container" of HP with its own capacity and its own penalty to the character's rolls once entered.
+
+| Level | Name | HP Capacity | Penalty |
+|---|---|---|---|
+| 1 | **Healthy** | Body × 2 | none |
+| 2 | **Sore** | Body | none |
+| 3 | **Battered** | Body | −1 |
+| 4 | **Wounded** | Body ÷ 2 (round up) | −3 |
+| 5 | **Suffering** | Body ÷ 2 (round up) | −5 |
+| 6 | **Incapacitated** | 0 | no actions possible; any further damage kills |
+
+**Total HP pool = 5 × Body**, plus 1 if Body is odd (from rounding the two half-Body containers up). Reference table:
+
+| Body | Healthy | Sore | Battered | Wounded | Suffering | **Total** |
+|---|---|---|---|---|---|---|
+| 1 | 2 | 1 | 1 | 1 | 1 | **6** |
+| 2 | 4 | 2 | 2 | 1 | 1 | **10** |
+| 3 | 6 | 3 | 3 | 2 | 2 | **16** |
+| 4 | 8 | 4 | 4 | 2 | 2 | **20** |
+| 5 | 10 | 5 | 5 | 3 | 3 | **26** |
+| 6 | 12 | 6 | 6 | 3 | 3 | **30** |
+| 7 | 14 | 7 | 7 | 4 | 4 | **36** |
+| 8 | 16 | 8 | 8 | 4 | 4 | **40** |
+| 9 | 18 | 9 | 9 | 5 | 5 | **46** |
+| 10 | 20 | 10 | 10 | 5 | 5 | **50** |
+
+**Rules:**
+
+- Damage is applied to the character's **current** Health Level's container. When that container empties, the character drops to the next level down and any further damage applies there.
+- **No overflow**: a single hit can only ever deplete the current container, down to a minimum of 0 — excess damage beyond what's left in that container is wasted, not carried into the next level. A single hit never drops a character more than one Health Level, no matter how large. Deliberate — "big damn hero" durability (see [design-log.md](../docs/design-log.md)).
+- The penalty at each level is **applied to the character's rolls "across the board"** — this reuses the system's existing flat-modifier convention (−1, −3, −5 are not new numbers: −3 already means something as the Multiple Actions step, and −5 is already the system's standard max modifier elsewhere). Whether this includes defense rolls (creating an intentional death-spiral as a wounded character gets hit more) depends on the pending flat-Defense-stat decision above — not fully resolved until that's settled.
+- **Incapacitated** has no buffer: no actions, and any further damage is fatal. No dying/stabilizing state currently exists — this is a deliberate lethality choice, not yet reconfirmed as final.
+- **Round up** universally (per [core-mechanic.md](core-mechanic.md#rounding--ties)) applies to the Wounded/Suffering HP calculation.
+
+**Not yet designed:**
+
+- **Healing** — how a character moves back up a Health Level (recovers HP in a lower container) isn't designed at all yet.
+- Whether Incapacitated's all-or-nothing lethality is final, or wants a last-gasp buffer state.
+
 ## Still to Design
 
-- **Damage**: how damage is determined once a hit lands (fixed weapon value? scales with the attacker's Degree of Success, tying into the running "DoS drives magnitude" theme? a separate damage roll?), and how it's tracked (hit points vs. a wound/health-level track with escalating penalties, à la Storyteller/WFRP). **Once this exists, Called Shot locations need a damage multiplier added (Hero-style) — flagged above, not designed yet.**
+- **Damage**: how damage is determined once a hit lands — fixed weapon value? scales with the attacker's Degree of Success (tying into the running "DoS drives magnitude" theme)? a separate damage roll? Health Levels (above) answer *how damage is tracked*, but not yet *how much damage a hit deals*. **Once this exists, Called Shot locations need a damage multiplier added (Hero-style) — flagged above, not designed yet.**
+- **Attack/Defense resolution**: flat Defense stat vs. Resisted Roll — paused mid-decision, see [TODO.md](../docs/TODO.md).
 - **Movement**: how far a character can move in a turn, whether movement costs a full action or is bundled with other actions, how range/distance is abstracted (grid, zones, narrative distance bands).
 
 ## Deferred Skills

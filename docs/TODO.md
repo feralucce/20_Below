@@ -11,10 +11,8 @@ This file is a **summary for thinking, not a source of truth** — the individua
 - If adopted, **Dodge and Abort to Dodge need redefining** — they currently multiply a rolled defense DoS by 1.5, but there's no defense roll under this model. Would need to instead multiply/boost the Defense *stat* itself for the round.
 - Also need to decide **scope**: does this replace only ordinary Attack resolution, or also the Resisted-Roll-based maneuvers (Grapple, Trip, Escape)? Leaning toward keeping those as full Resisted Rolls (occasional, weightier) while ordinary attacks (highest roll volume) get the fast treatment — not confirmed.
 
-**Also mid-design: the hybrid HP/Health Levels damage system.** Drafted but not yet written into `combat.md`:
-- Health Levels: Healthy (Body×2, no penalty) → Sore (Body, no penalty) → Battered (Body, −1) → Wounded (Body/2, −3) → Suffering (Body/2, −5) → Incapacitated (0 HP, no actions, any damage kills). Total pool = 5×Body.
-- **Confirmed**: round up is now a universal system rule (see [core-mechanic.md](../rules/core-mechanic.md#rounding--ties)); damage does not overflow between containers (a hit can only deplete the current level, never skip levels — deliberate "big damn hero" durability); ties go to the defender is now a general system-wide convention, not just Resisted Rolls.
-- **Still open**: is Incapacitated's "any damage kills, no buffer" the intended lethality (no dying/stabilizing state)? Healing mechanism (how a character moves back up a level) isn't designed at all yet.
+**Health Levels are now written up** — see [combat.md](../rules/combat.md#health-levels--confirmed): Healthy (Body×2, no penalty) → Sore (Body, no penalty) → Battered (Body, −1) → Wounded (Body÷2, −3) → Suffering (Body÷2, −5) → Incapacitated (0 HP, no actions, any damage kills). Total pool = 5×Body (+1 if Body is odd). No overflow between containers. Full Body 1-10 reference table included.
+- **Still open**: is Incapacitated's "any damage kills, no buffer" the intended lethality (no dying/stabilizing state)? Healing mechanism (how a character moves back up a level) isn't designed at all yet. Whether the per-level penalty applies to defense too depends on the still-pending flat-Defense-stat decision above.
 
 ## Combat (the big one — most other systems are waiting on this)
 
