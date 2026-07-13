@@ -14,6 +14,8 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 **Movement/Speed is resolved**: Speed = 5m + (Body ÷ 2, round up), a flat base plus a Body bonus rather than a pure Body-derived value, so a Body-1 character still moves at a normal walking pace — see [combat.md](../rules/combat.md#movement--speed--confirmed).
 
+**Ties now go to the aggressor everywhere, superseding "ties go to the defender"** — see [core-mechanic.md](../rules/core-mechanic.md#rounding--ties). DoS exactly equal to Defense/Resolve is now a hit, not a miss. Consistent with the system's existing unconventional-favors-the-active-side choices (round up, roll low). In progress toward a Damage formula: this is what lets weapon damage be a small fixed base (can be as low as +0 leftover DoS on a tied hit) plus leftover `DoS − Defense` on top — see the Combat section below.
+
 See the Combat section below for what's still open in this area.
 
 ## Previous session (2026-07-12)
