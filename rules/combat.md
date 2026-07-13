@@ -132,7 +132,7 @@ Every maneuver below reuses existing machinery — flat target modifiers, the Do
 
 **Contest-based maneuvers** (replace a normal attack roll with a straight Resisted Roll — no damage dealt, a status effect instead):
 
-1. **Grapple** — Resisted Roll: attacker's Body + a grappling-relevant Skill vs. defender's choice of Body + Athletics, Body + Acrobatics, or Escapology. Win: target is **Grappled** — their Move drops to 0 until they escape or are released. While grappling, the grappler's own Move is halved unless dragging the target along at that reduced speed.
+1. **Grapple** — Resisted Roll: attacker's Body + **Unarmed Combat** (resolved 2026-07-13 — see [premade-skills.md](premade-skills.md#combat--confirmed)) vs. defender's choice of Body + Athletics, Body + Acrobatics, or Escapology. Win: target is **Grappled** — their Move drops to 0 until they escape or are released. While grappling, the grappler's own Move is halved unless dragging the target along at that reduced speed.
 2. **Trip / Shove** — same contest structure as Grapple. Win: attacker's choice — target is knocked **Prone** (Disadvantage on their own attacks; melee attackers get Advantage against them until they stand back up) or pushed back a short distance.
 3. **Escape / Break Free** — the Grappled character's turn to act: Resisted Roll, same skills as Grapple, roles reversed (the Grappled character is the "attacker" of this contest). Win: free of the Grapple.
 
@@ -346,9 +346,9 @@ Dropped from consideration, not forgotten: Social and Skill-check fumble tables 
 
 - **Soak**: armor-driven damage reduction, applied after a hit connects via Defense — conceptually gear-based (see [core-mechanic.md](core-mechanic.md#calculated-defensive-traits)), not numerically designed, waiting on an equipment subsystem.
 
-## Deferred Skills
+## Combat Skills — confirmed
 
-Combat skills (Melee, Unarmed, Firearms, Archery/Thrown, Heavy Weapons, Dodge) — see [premade-skills.md](premade-skills.md).
+No longer deferred (2026-07-13) — see [premade-skills.md](premade-skills.md#combat--confirmed) for the finalized list (Melee Combat, Unarmed Combat, Firearms, Archery/Thrown Weapons, Heavy Weapons, Dodge/Evasion).
 
 ## Deferred Perks
 
@@ -356,8 +356,13 @@ Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md
 
 ## Open Questions
 
-- Formally define the "Standard NPC" vs. "Named NPC/PC" distinction introduced by Catastrophic Head — currently just a GM judgment call, no mechanical criteria written anywhere.
-- How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
-- Exact grappling-relevant Skill for the Grapple maneuver's attacker side (does it use an existing Skill, or is a new one needed?).
-- Whether a wounded character's Defense should also degrade under the Health Level penalty (an intentional death-spiral), now that Defense is a calculated trait rather than a roll — not automatically implied by the existing "across the board" wording.
-- Confirm "Defense halved (round up)" as the substitute for "Disadvantage on defense" (Charge, Brace/Aim) — Advantage/Disadvantage only applies to dice rolls, and Defense isn't rolled anymore, so this is a proposed fix, not a confirmed one.
+- Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — deferred, coming back to these soon.
+
+## Resolved (2026-07-13)
+
+- **"Standard NPC" vs. "Named NPC/PC"**, introduced by Catastrophic Head, is now defined: **Standard NPCs** are general-purpose threats pulled straight from a rogues' gallery or bestiary — disposable, no special mechanical access. **Named NPCs** have access to the same mechanisms as PCs (Health Levels, Damage, Called Shot, etc.) **except Spark and forcing dice from the bank** — those stay player-only. Named NPCs are typically BBEGs or their significant henchmen.
+- **Combat follows the same free skill+attribute pairing rule as everything else** — no combat-specific lock-in. It's situational and re-argued per attempt, same as any Skill+Attribute pairing (see [skills.md](skills.md)): a Melee Combat attack most often pairs with Body, but a sufficiently clever character could argue a feinting attack pairs with Mind instead, subject to the GM's usual case-by-case approval.
+- **Grapple's attacker Skill is Unarmed Combat** — see [premade-skills.md](premade-skills.md#combat--confirmed).
+- **Confirmed: "Defense halved (round up)" stands** as Charge/Brace's cost, substituting for the old "Disadvantage on defense" now that Defense is a calculated trait rather than a roll.
+- **A wounded character's Defense does NOT degrade under the Health Level penalty.** Defense stays level regardless of Health Level — only the −1/−3/−5 "across the board" penalty applies to actual rolls. Deliberate: letting Defense also degrade would create a death-spiral severe enough to cripple a wounded character's ability to avoid follow-up hits entirely.
+- **Incapacitated lethality, partially resolved**: "any further damage kills" now requires the damage to be **intentional** — an attacker specifically trying to kill the Incapacitated character. Incidental/unintentional damage does not trigger death. **First Aid introduced as the first piece of the Healing mechanism**: a First Aid Skill roll (see [premade-skills.md](premade-skills.md#medical)) that, on success, restores HP equal to DoS — capped so it **cannot raise the character above Suffering**. Healing beyond Suffering (back to Battered/Sore/Healthy) is still undesigned, presumably requiring real medical treatment, rest, or other means not yet written.
