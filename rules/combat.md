@@ -41,10 +41,31 @@ This means once a player runs through their 10, further combat rolls that sessio
 
 Two resources per round — **no Reaction**. Reactions were considered (merging D&D's Bonus Action into a single Reaction resource), then **removed from the system entirely**:
 
-- **Move** — reposition up to your speed. **Freeform**: not declared as part of the Declaring step, and not locked to a single moment in the turn. A character can take their move all at once, or split it around their Action any way they like — move then act, act then move, or move partway, act, then finish the move.
+- **Move** — reposition up to your **Speed** (see below). **Freeform**: not declared as part of the Declaring step, and not locked to a single moment in the turn. A character can take their move all at once, or split it around their Action any way they like — move then act, act then move, or move partway, act, then finish the move.
 - **Action** — the one primary thing a character is doing this round (attack, use a Gift, dash, hide, ready, etc.). This is what gets declared, with a specific target, per the Declaring rule above.
 
 So: 1 Move (freeform) + 1 Action (declared) per character per round. No Reaction, no Bonus Action, no interrupts outside of the Abort to Dodge rule below.
+
+### Movement / Speed — confirmed
+
+**Speed = 5m + (Body ÷ 2, round up)**, measured in meters. A **Move** (above) lets a character reposition up to their Speed.
+
+The formula is deliberately a **flat base plus a Body bonus**, not a pure Body-derived value like Defense/Resolve — a Body-1 character still needs to move at a recognizable human walking pace, not be reduced to a token step. The 5m base is anchored to a real-world walking pace (~1.5 m/s) scaled down to this system's 3-second round (D&D's ~30ft/6-round baseline works out to ~4.5m over 3 seconds, rounded to a clean 5m). The Body bonus represents the swing above that baseline from raw physical capability:
+
+| Body | Speed |
+|---|---|
+| 1 | 6m |
+| 2 | 6m |
+| 3 | 7m |
+| 4 | 7m |
+| 5 | 8m |
+| 6 | 8m |
+| 7 | 9m |
+| 8 | 9m |
+| 9 | 10m |
+| 10 | 10m |
+
+**Gifts may modify Speed** (flat or multiplicative, e.g. supernatural fleetness or teleportation-flavored movement) — not designed in detail yet, left as a hook for the Gift catalog's eventual combat detail pass (see [gifts.md](gifts.md)).
 
 ### Initiative — confirmed
 
@@ -189,7 +210,6 @@ A hybrid of D&D-style numeric HP and White Wolf-style escalating wound penalties
 
 - **Damage**: how damage is determined once a hit lands — fixed weapon value? scales with the attacker's Degree of Success (tying into the running "DoS drives magnitude" theme)? a separate damage roll? Health Levels (above) answer *how damage is tracked*, but not yet *how much damage a hit deals*. **Once this exists, Called Shot locations need a damage multiplier added (Hero-style) — flagged above, not designed yet.**
 - **Soak**: armor-driven damage reduction, applied after a hit connects via Defense — conceptually gear-based (see [core-mechanic.md](core-mechanic.md#calculated-defensive-traits)), not numerically designed, waiting on an equipment subsystem.
-- **Movement**: how far a character can move in a turn, whether movement costs a full action or is bundled with other actions, how range/distance is abstracted (grid, zones, narrative distance bands). Formula shape likely Body-driven, matching Defense/Resolve's pattern — exact numbers not yet decided.
 
 ## Deferred Skills
 
