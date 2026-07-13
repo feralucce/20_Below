@@ -20,6 +20,24 @@ Critically, **Power Level is its own independently-assigned statistic — not a 
 
 (Name is a placeholder — see [gifts.md](gifts.md) Open Questions.)
 
+## Calculated Defensive Traits
+
+Three fixed-formula traits, one per Attribute, each `Attribute ÷ 2 (round up)`. Not purchased, not rolled — computed once and updated when the underlying Attribute changes, the same way Initiative is a fixed formula rather than a negotiated Skill+Attribute pairing. Deliberately scaled small (1-5 for Attribute 1-10) because they're compared against **Degree of Success**, not against a fresh d20 roll, and DoS realistically clusters in the single digits — a trait drawn from the full 1-20 scale (like Power Level + Attribute) would make hitting anyone nearly impossible.
+
+This gives every Attribute a matching defensive trait, without overloading any one of them:
+
+| Attribute | Defensive Trait | Formula | Governs |
+|---|---|---|---|
+| Body | **Health Levels** (HP pool) | 5 × Body (see [combat.md](combat.md#health-levels--confirmed)) | Physical punishment absorbed before going down |
+| Mind | **Defense** | Mind ÷ 2, round up | Whether a physical attack connects at all |
+| Soul | **Resolve** | Soul ÷ 2, round up | Resistance to Soul-targeted impositions — fear, domination, charm, corruption, possession, and similar mind/spirit-affecting effects |
+
+**How Defense and Resolve resolve an attack**: the attacker/imposer rolls once, normally, and computes DoS. If **DoS > the target's Defense (or Resolve)**, the effect connects; if DoS ≤ Defense/Resolve, it doesn't — no second roll from the defending side. This replaces a Resisted Roll for the common case of one character imposing something on another.
+
+**Resisted Rolls are still used**, but now reserved for genuinely mutual contests where both sides are actively straining against each other (a Grapple, a contest of wills) rather than every one-sided attack or imposition. Individual Gifts may still specify a full Resisted Roll instead of the Resolve default where that fits better — **decided case by case, not as a blanket rule** (see [gifts.md](gifts.md)).
+
+**Soak** (armor-driven damage reduction, applied after a hit connects via Defense) is conceptually gear-based, not Attribute-derived — see [combat.md](combat.md) for the reasoning. Not yet numerically designed; waiting on an equipment subsystem.
+
 ## Character Capabilities
 
 - **Skills** — learned abilities. Scored 1-10.
@@ -82,7 +100,7 @@ Because it's one signed number line, DoS and DoF can always be compared directly
 
 ## Resisted Rolls
 
-Some rolls aren't against a static difficulty — they're opposed by another character actively resisting (e.g. a Gift used against an unwilling target, a grapple, a social contest of wills). Resisted Rolls reuse the standard roll: no new dice mechanic, just a way to compare two normal rolls against each other using Degree of Success/Failure.
+Some rolls aren't against a static difficulty — they're opposed by another character actively resisting. Since [Defense and Resolve](#calculated-defensive-traits) now handle the common one-sided case (an attack or imposition against an unwilling target), Resisted Rolls are reserved for genuinely **mutual** contests — both sides actively straining against each other (a Grapple, a contest of wills) — plus any specific Gift that calls for one on a case-by-case basis. Resisted Rolls reuse the standard roll: no new dice mechanic, just a way to compare two normal rolls against each other using Degree of Success/Failure.
 
 1. Both sides build a target number as normal (Attribute + Skill/Gift/Perk-adjacent bonus + any modifiers) and roll 1d20 against it.
 2. Each side computes their own **Degree** (DoS if positive, DoF if negative) as defined above.
