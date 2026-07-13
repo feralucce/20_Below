@@ -7,6 +7,7 @@ _In active design as of 2026-07-12._
 - **Critical success**: double damage, plus an additional GM-narrated effect.
 - **Critical failure**: always fails (per core mechanic); combat-specific extra effect TBD.
 - **Called shots**: impose a size-dependent difficulty modifier on the attack roll (see Special Maneuvers below).
+- **Spark**: a per-player, per-session checkbox resource for forcing a bad banked roll onto the GM, granting yourself Advantage, or gifting a banked die to another player — see [core-mechanic.md](core-mechanic.md#spark--confirmed).
 
 ## Round Structure (in progress)
 
@@ -28,6 +29,8 @@ A table-speed tool, since initiative re-rolling every 3-second round means a lot
 - The bank is **discarded at the end of the session** — no carryover. A fresh 10 are rolled at the start of the next session.
 
 This means once a player runs through their 10, further combat rolls that session go back to live rolling — the bank is a speed-up for the *bulk* of combat rolls, not a full replacement forever.
+
+**Bank access outside a Spark spend**: players don't touch their bank except to spend it on a combat d20 roll, or as part of spending [Spark](core-mechanic.md#spark--confirmed) (forcing a banked result onto the GM, or gifting one to another player's bank).
 
 ## Action Economy — confirmed
 
@@ -197,7 +200,6 @@ Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md
 - Confirm the proposed Called Shot location effects (Head/Eyes/Arms-Hands/Legs-Feet) — see Special Maneuvers above.
 - Damage multiplier per Called Shot location — blocked on the damage subsystem existing first.
 - How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
-- **TODO: a mechanism for forcing the GM to use one of their banked rolls in a given situation** — presumes the GM also keeps a Pre-Rolled Combat Dice bank (see above) and players get some way to compel a specific banked result to be used rather than letting the GM choose freely. Not designed yet — needs a trigger (what earns this leverage: a Perk, a Gift, spending some resource, a specific in-fiction condition?) and a scope (force *which* roll gets used, or just force *a* roll to come from the bank instead of live?).
 - Exact grappling-relevant Skill for the Grapple maneuver's attacker side (does it use an existing Skill, or is a new one needed?).
 - Whether a wounded character's Defense should also degrade under the Health Level penalty (an intentional death-spiral), now that Defense is a calculated trait rather than a roll — not automatically implied by the existing "across the board" wording.
 - Confirm "Defense halved (round up)" as the substitute for "Disadvantage on defense" (Charge, Brace/Aim) — Advantage/Disadvantage only applies to dice rolls, and Defense isn't rolled anymore, so this is a proposed fix, not a confirmed one.
