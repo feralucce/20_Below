@@ -8,7 +8,7 @@ _In active design as of 2026-07-12._
 - **Critical failure**: always fails (per core mechanic); combat-specific extra effect TBD.
 - **Called shots**: impose a size-dependent difficulty modifier on the attack roll (see Special Maneuvers below).
 - **Spark**: a per-player, per-session checkbox resource for forcing a bad banked roll onto the GM, granting yourself Advantage, or gifting a banked die to another player — see [core-mechanic.md](core-mechanic.md#spark--confirmed).
-- **Damage**: Weapon Base (1-10, by weapon class) + (DoS − Defense), doubled on a crit — see [Damage](#damage--confirmed) below.
+- **Damage**: Weapon Base (1-10, by weapon class) + (DoS − Defense); only the Weapon Base doubles on a crit — see [Damage](#damage--confirmed) below.
 
 ## Round Structure (in progress)
 
@@ -143,14 +143,42 @@ Every maneuver below reuses existing machinery — flat target modifiers, the Do
    - **−5**: small/precise targets — **Head**, **Hands**, or similarly sized.
    - **−3**: larger targets — **Arms**, **Legs**, or similarly sized.
 
-   **Proposed location effects** (inspired by Hero System 6e's hit location table — but adapted, since Hero scales its OCV penalty and STUN/BODY multiplier per location while ours only scales the target penalty by size class; the useful lesson isn't Hero's exact numeric scaling, it's the *shape* of the payoff: extremities impair or disable rather than just dealing more damage):
-   - **Head** — target is **Stunned** (effect TBD).
-   - **Arms / Hands** — target is **Disarmed** or **Impaired**: weapon/item dropped, or Disadvantage on actions using that limb until healed.
-   - **Legs / Feet** — target's **Move is reduced** (Prone-adjacent) until treated.
+   **Location effects — confirmed**, tiered by severity (inspired by Hero System 6e's hit location table, and by the broader convention shared by Rolemaster/Mythras/WFRP/Cyberpunk RED/Fallout of scaling crit tables from minor setbacks to permanent/lethal injuries — adapted here to reuse mechanics the system already has, not import new subsystems like attribute drain or exhaustion tracks). **Severity tier is set by leftover DoS — `DoS − Defense`, the exact same number that already drives bonus [Damage](#damage--confirmed)** — so this adds no new roll or number to track:
 
-   **Damage multipliers per location are wanted** (Hero-style — hit harder in a called location, not just get a status effect) **but can't be assigned until the damage subsystem exists.** Flagged for that pass, not designed yet.
+   | Tier | Leftover DoS (`DoS − Defense`) |
+   |---|---|
+   | Minor | 0-2 |
+   | Moderate | 3-5 |
+   | Severe | 6-8 |
+   | Catastrophic | 9+ |
 
-   Not yet confirmed — proposal only.
+   **Head** (−5 penalty):
+   | Tier | Effect |
+   |---|---|
+   | Minor | Dazed — Disadvantage on the target's next roll |
+   | Moderate | Stunned — target loses their next Action (keeps Move) |
+   | Severe | Concussed — target is knocked Prone, loses their entire next turn (Move + Action), Disadvantage on rolls until end of that turn |
+   | Catastrophic | On a **Standard NPC**: killed outright, regardless of remaining HP. On a **Named NPC or PC**: the hit drains whatever's left in the target's current Health Level container and carries the excess into the next level down (added to the overflow exception below, alongside Ordnance/Siege) — a Healthy target is dropped to Sore and takes further damage there; a Suffering target drops to Incapacitated. **No autokill beyond the normal Incapacitated rule** — dropping *into* Incapacitated this way doesn't itself kill; a target already *at* Incapacitated who takes any further damage still dies, same as always. |
+
+   **Arms / Hands** (−5 penalty):
+   | Tier | Effect |
+   |---|---|
+   | Minor | Grip slips — Disadvantage on the target's next roll using that arm |
+   | Moderate | **Disarmed** — held item/weapon knocked away (same effect as the Disarm maneuver above) |
+   | Severe | Arm impaired — Disadvantage on all actions using that arm until treated |
+   | Catastrophic | Arm disabled — unusable for the rest of the fight until treated |
+
+   **Legs / Feet** (−3 penalty):
+   | Tier | Effect |
+   |---|---|
+   | Minor | Stumble — Disadvantage on the target's next Move this round |
+   | Moderate | Speed halved (round up) until treated |
+   | Severe | Knocked Prone, and Speed halved until treated |
+   | Catastrophic | Speed drops to 0 — can't Move under their own power until treated |
+
+   **"Standard" vs. "Named" NPC** is a new distinction, introduced here for the first time — not otherwise defined elsewhere in the system yet. Intent: Standard NPCs are disposable/mook-tier threats (dying outright to a called headshot is a deliberate genre convention, not a bug); Named NPCs are recurring/significant characters (including BBEGs) who play by the same Health Level rules as PCs. No formal mechanical definition of the split exists yet — GM judgment call until/unless one gets written.
+
+   **Every "until treated" effect depends on the Healing mechanic**, which isn't designed yet (open TODO item) — the effects are real, but open-ended in duration until that exists.
 
 **Defense-sacrificing maneuvers** (reuse Dodge's DoS-multiplier convention, inverted for offense):
 
@@ -196,7 +224,9 @@ A hybrid of D&D-style numeric HP and White Wolf-style escalating wound penalties
 **Rules:**
 
 - Damage is applied to the character's **current** Health Level's container. When that container empties, the character drops to the next level down and any further damage applies there.
-- **No overflow, with an exception**: a single hit can only ever deplete the current container, down to a minimum of 0 — excess damage beyond what's left in that container is wasted, not carried into the next level. A single hit never drops a character more than one Health Level, no matter how large. Deliberate — "big damn hero" durability (see [design-log.md](../docs/design-log.md)). **Exception: hits from Ordnance or Siege/Cataclysmic weapons (Weapon Base +9 or +10, see [Damage](#damage--confirmed)) do carry excess damage into subsequent Health Levels** — these tiers (heavy weapons, anti-materiel rifles, explosives, mounted/vehicle weapons) are explicitly allowed to blow through more than one Health Level in a single hit, unlike every other weapon class.
+- **No overflow, with exceptions**: a single hit can only ever deplete the current container, down to a minimum of 0 — excess damage beyond what's left in that container is wasted, not carried into the next level. A single hit never drops a character more than one Health Level, no matter how large. Deliberate — "big damn hero" durability (see [design-log.md](../docs/design-log.md)). **Exceptions that do carry excess damage into subsequent Health Levels:**
+  - Hits from **Ordnance or Siege/Cataclysmic weapons** (Weapon Base +9 or +10, see [Damage](#damage--confirmed)) — heavy weapons, anti-materiel rifles, explosives, mounted/vehicle weapons.
+  - A **Catastrophic Called Shot to the Head against a Named NPC or PC** (see Special Maneuvers above).
 - The penalty at each level is **applied to the character's rolls "across the board"** — this reuses the system's existing flat-modifier convention (−1, −3, −5 are not new numbers: −3 already means something as the Multiple Actions step, and −5 is already the system's standard max modifier elsewhere). Since Defense is a calculated trait rather than a roll, "across the board" penalties don't directly reduce it as written — whether a wounded character's Defense should *also* degrade (an intentional death-spiral) is a separate, still-open question, not automatically implied by the existing wording.
 - **Incapacitated** has no buffer: no actions, and any further damage is fatal. No dying/stabilizing state currently exists — this is a deliberate lethality choice, not yet reconfirmed as final.
 - **Round up** universally (per [core-mechanic.md](core-mechanic.md#rounding--ties)) applies to the Wounded/Suffering HP calculation.
@@ -208,7 +238,9 @@ A hybrid of D&D-style numeric HP and White Wolf-style escalating wound penalties
 
 ## Damage — confirmed
 
-**Damage = Weapon Base + (DoS − Defense)**, doubled on a critical success (per the existing combat crit rule). No separate damage roll — this reuses the attack roll's own DoS, continuing the system's "DoS drives magnitude" theme (see [core-mechanic.md](core-mechanic.md#degree-of-success--degree-of-failure)) instead of adding a second roll that would also break the Pre-Rolled Combat Dice bank (a second, non-d20 damage die doesn't fit the bank at all).
+**Damage = Weapon Base + (DoS − Defense)**. No separate damage roll — this reuses the attack roll's own DoS, continuing the system's "DoS drives magnitude" theme (see [core-mechanic.md](core-mechanic.md#degree-of-success--degree-of-failure)) instead of adding a second roll that would also break the Pre-Rolled Combat Dice bank (a second, non-d20 damage die doesn't fit the bank at all).
+
+**On a critical success, only the Weapon Base doubles: `(Weapon Base × 2) + (DoS − Defense)`** — not the whole total. A crit already guarantees the hit outright (natural 1) and the leftover-DoS term is already unbounded/variable; doubling that variable term too would compound two sources of swing on top of each other. Doubling just the fixed, known component keeps crits hit noticeably harder without becoming degenerate.
 
 Because [ties now go to the aggressor](core-mechanic.md#rounding--ties), a hit requires `DoS ≥ Defense`, so `DoS − Defense` is always ≥ 0 on a connecting hit — a bare/tied hit still deals the weapon's full base damage, never less.
 
@@ -246,7 +278,7 @@ Calibration check, average character (Body 5, Mind 5 → Defense 3, Healthy pool
 | +9 | 12 | drains Healthy, **spills into Sore** |
 | +10 | 13 | drops **multiple** Health Levels in one hit |
 
-**Once this exists, Called Shot locations need a damage multiplier added (Hero-style)** — flagged above, not designed yet.
+**Called Shot locations no longer need a separate damage multiplier** — superseded by the DoS-tiered location effects above (see Special Maneuvers), which scale severity off the same leftover-DoS number instead of a second numeric multiplier.
 
 ## Still to Design
 
@@ -263,8 +295,7 @@ Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md
 ## Open Questions
 
 - What is the critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.)?
-- Confirm the proposed Called Shot location effects (Head/Arms-Hands/Legs-Feet) — see Special Maneuvers above.
-- Damage multiplier per Called Shot location — blocked on the damage subsystem existing first.
+- Formally define the "Standard NPC" vs. "Named NPC/PC" distinction introduced by Catastrophic Head — currently just a GM judgment call, no mechanical criteria written anywhere.
 - How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
 - Exact grappling-relevant Skill for the Grapple maneuver's attacker side (does it use an existing Skill, or is a new one needed?).
 - Whether a wounded character's Defense should also degrade under the Health Level penalty (an intentional death-spiral), now that Defense is a calculated trait rather than a roll — not automatically implied by the existing "across the board" wording.
