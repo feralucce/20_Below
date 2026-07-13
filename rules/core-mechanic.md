@@ -32,7 +32,7 @@ This gives every Attribute a matching defensive trait, without overloading any o
 | Mind | **Defense** | Mind ÷ 2, round up | Whether a physical attack connects at all |
 | Soul | **Resolve** | Soul ÷ 2, round up | Resistance to Soul-targeted impositions — fear, domination, charm, corruption, possession, and similar mind/spirit-affecting effects |
 
-**How Defense and Resolve resolve an attack**: the attacker/imposer rolls once, normally, and computes DoS. If **DoS > the target's Defense (or Resolve)**, the effect connects; if DoS ≤ Defense/Resolve, it doesn't — no second roll from the defending side. This replaces a Resisted Roll for the common case of one character imposing something on another.
+**How Defense and Resolve resolve an attack**: the attacker/imposer rolls once, normally, and computes DoS. If **DoS ≥ the target's Defense (or Resolve)**, the effect connects; if DoS < Defense/Resolve, it doesn't — no second roll from the defending side. The tie case (DoS exactly equal to Defense/Resolve) is a hit, per [ties go to the aggressor](#rounding--ties). This replaces a Resisted Roll for the common case of one character imposing something on another.
 
 **Resisted Rolls are still used**, but now reserved for genuinely mutual contests where both sides are actively straining against each other (a Grapple, a contest of wills) rather than every one-sided attack or imposition. Individual Gifts may still specify a full Resisted Roll instead of the Resolve default where that fits better — **decided case by case, not as a blanket rule** (see [gifts.md](gifts.md)).
 
@@ -131,7 +131,7 @@ Some rolls aren't against a static difficulty — they're opposed by another cha
 4. Critical results override Degree, same hierarchy as normal rolls:
    - A natural 1 (critical success) wins outright over anything except another natural 1.
    - A natural 20 (critical failure) loses outright to anything except another natural 20.
-   - If both sides land the same critical result, or DoS/DoF are exactly tied, **the defender wins ties** — the side being resisted needs to actually overcome the resistance, not just match it. ("Defender" = whichever side didn't initiate the contest; GM calls it if that's ambiguous.)
+   - If both sides land the same critical result, or DoS/DoF are exactly tied, **the aggressor wins ties** — see [Rounding & Ties](#rounding--ties). ("Aggressor" = whichever side initiated the contest; GM calls it if that's ambiguous.)
 
 Advantage/Disadvantage and flat modifiers apply per side as normal before DoS/DoF is computed — a side rolling with Advantage just resolves their own 2d20-take-lower first, then that becomes the die result used for their DoS/DoF.
 
@@ -140,7 +140,7 @@ Advantage/Disadvantage and flat modifiers apply per side as normal before DoS/Do
 Two universal conventions, used anywhere the system needs them, not just in the specific rules that first introduced them:
 
 - **Always round up.** Any time a calculation produces a fraction (e.g. Dodge's ×1.5 DoS, or a Health Level's HP), round up. One rounding rule everywhere, no case-by-case exceptions.
-- **Ties go to the defender.** Established for Resisted Rolls (see above), but stated here as the general rule for any tie the system produces, not just Resisted Rolls specifically. Where there's no clear "defender" role (e.g. a multi-way tie), the GM calls it.
+- **Ties go to the aggressor** (superseded 2026-07-13; was "ties go to the defender"). Applies anywhere the system produces a tie, not just Resisted Rolls — including a plain attack roll landing DoS exactly equal to the target's Defense/Resolve (see [Calculated Defensive Traits](#calculated-defensive-traits)): that's a hit, not a miss. "Aggressor" = whichever side initiated the roll/contest; where there's no clear aggressor (e.g. a multi-way tie), the GM calls it. Deliberately keeps the same "unusual, not textbook-RPG" character as rounding up and rolling low: this system already breaks from the norm in the attacker's favor in two other places, so ties join them instead of reverting to the more conventional defender-favored default.
 
 ## Open Questions
 
