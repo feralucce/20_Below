@@ -8,16 +8,16 @@ Per [skills.md](skills.md), none of these are locked to an attribute — the gro
 
 ## Combat — confirmed
 
-Finalized 2026-07-13, now that [combat.md](combat.md) exists. Same as every other Skill, none of these are locked to an Attribute — Melee Combat most often pairs with Body, but a sufficiently clever character can argue a different pairing (e.g. a feinting attack using Mind) case by case, same as any Skill+Attribute negotiation.
+Finalized 2026-07-13, revised 2026-07-13, now that [combat.md](combat.md) exists. Same as every other Skill, none of these are locked to an Attribute — Melee Combat most often pairs with Body, but a sufficiently clever character can argue a different pairing (e.g. a feinting attack using Mind) case by case, same as any Skill+Attribute negotiation.
 
 | Skill | Notes |
 |---|---|
 | Melee Combat | Bladed, blunt, or improvised weapons. |
 | Unarmed Combat | Brawling, martial arts. Also the attacker's Skill for the [Grapple](combat.md#special-maneuvers--confirmed) maneuver. |
-| Firearms | Split into categories (Handguns, Long Guns, Heavy Weapons) if desired. |
-| Archery / Thrown Weapons | Bows, crossbows, thrown blades. |
-| Heavy Weapons | Siege engines, artillery, vehicle-mounted weapons. |
-| Dodge / Evasion | Avoiding attacks and hazards. |
+| Firearms / Archery | Guns, bows, crossbows, and thrown blades — merged into one ranged-combat Skill. Split into categories (Handguns, Long Guns, Bows, etc.) via Specialty if desired. |
+| Special Weapons | An exception to the broad-skill norm: covers a single specific exotic/siege-class weapon (e.g. a particular artillery piece, superweapon, or vehicle-mounted system) rather than a general category. Defined per campaign/character as the exotic weapon comes up, not a default everyone has. |
+
+Dodge is no longer a Skill — avoiding attacks is handled by the **Defense** trait (see [combat.md](combat.md#calculated-defensive-traits)), not a rolled Skill.
 
 ## Physical
 
@@ -182,4 +182,8 @@ Finalized 2026-07-13, now that [combat.md](combat.md) exists. Same as every othe
 
 ## Open Questions
 
-- Which genre-flagged skills (Occult, Mythos, Alchemy) ship as defaults vs. GM-added modules per campaign?
+None remaining — see Resolved below.
+
+## Resolved
+
+- **Genre-flagged skills ship as defaults, GM discretion to drop** (2026-07-13): Occult, Mythos, and Alchemy are included by default rather than opt-in modules, but the GM can drop any that don't fit the campaign's premise.
