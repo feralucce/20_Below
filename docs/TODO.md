@@ -4,7 +4,11 @@ A consolidated view of every open question across the ruleset, pulled from each 
 
 This file is a **summary for thinking, not a source of truth** — the individual rule docs are canonical. If this list and a rule doc's own Open Questions ever disagree, trust the rule doc and update this file to match.
 
-## ⬆️ Pick up here next session (2026-07-12)
+## ⬆️ Pick up here next session (2026-07-13)
+
+**Spark is resolved** — see [core-mechanic.md](../rules/core-mechanic.md#spark--confirmed). See the Combat section below for what's still open in this area.
+
+## Previous session (2026-07-12)
 
 **Attack/Defense/Resolve decision is resolved** — see [core-mechanic.md](../rules/core-mechanic.md#calculated-defensive-traits):
 - **Defense** = Mind ÷ 2 (round up). Ordinary attacks: attacker rolls once, DoS > Defense → hit; else no damage. Replaces Resisted Rolls for one-sided attacks.
@@ -32,7 +36,7 @@ This file is a **summary for thinking, not a source of truth** — the individua
 - [x] Round length: 3 seconds.
 - [x] Action economy: **1 Move (freeform, split any way around the Action) + 1 Action (declared, with target) only — no Reaction.** Reactions were considered, then removed from the system entirely.
 - [x] Pre-Rolled Combat Dice: 10 d20s banked per player at session start, spent on combat rolls in any order, mandatory before live rolling resumes, discarded at session end.
-- [ ] **Mechanism to force the GM to use one of their banked rolls** in a given situation — presumes the GM keeps a bank too. Needs a trigger (Perk/Gift/resource spend/in-fiction condition?) and a scope (force *which* roll, or just force *a* roll to come from the bank?).
+- [x] **Spark** (resolved 2026-07-13): a per-player, per-session checkbox resource, not combat-specific itself but two of its three uses depend on the combat-only dice bank — see [core-mechanic.md](../rules/core-mechanic.md#spark--confirmed). Spends: force a banked roll onto the GM, grant yourself Advantage, or gift a banked die to another player. Regains at session start, or mid-session at GM discretion for standout play (5e Inspiration model). Small open questions remain (redirecting an award when already full; how Advantage interacts with a banked roll) — flagged in the doc itself.
 - [x] Actions list: Attack, Special Maneuvers (not yet defined), Use a Skill, Use a Gift, Dodge.
 - [x] Dodge: multiplies the Defense trait by 1.5 (round up), costs the Action.
 - [x] Abort to Dodge: same ×1.5 Defense effect, reactive (triggered when attacked before your turn), costs Move + Action (Reaction removed from its cost).

@@ -38,6 +38,25 @@ This gives every Attribute a matching defensive trait, without overloading any o
 
 **Soak** (armor-driven damage reduction, applied after a hit connects via Defense) is conceptually gear-based, not Attribute-derived — see [combat.md](combat.md) for the reasoning. Not yet numerically designed; waiting on an equipment subsystem.
 
+## Spark — confirmed
+
+A **binary, table-wide resource** — a single checkbox per player, not a pool (contrast with [Pre-Rolled Combat Dice](combat.md#pre-rolled-combat-dice--confirmed), which *is* a pool). Every player starts each session with Spark checked. This is the answer to the combat.md TODO on forcing the GM's hand with a banked roll.
+
+**Spending Spark** does one of the following, then it's checked off until regained:
+
+1. **Force one of your own bad banked rolls onto the GM.** Hand the GM one of the results from your own Pre-Rolled Combat Dice bank; they must use it for the roll in question instead of their own banked/live result. Declare it **after the roll is attempted but before its effect resolves** — you know a roll is happening and can see how the fiction is shaping up, but you're committing Spark before the numeric outcome is revealed, not after seeing it and deciding it's bad for you. **Combat-only**, since it depends on the bank existing.
+2. **Grant yourself Advantage** on a d20 roll (2d20, take lower, per the core Advantage rule above). Not combat-restricted — usable on any roll, in or out of combat.
+3. **Give one of your banked Pre-Rolled Combat Dice results to another player**, adding it to their bank. **Combat-only**, same reason as #1.
+
+**Bank access is restricted to combat and to Spark spends** — outside of combat, and outside of spending Spark, players don't touch the Pre-Rolled Combat Dice bank at all.
+
+**Regaining Spark** (confirmed): refills automatically at the **start of each session**, same timing as the Pre-Rolled Combat Dice bank reset. If a player has already spent their Spark mid-session, the **GM may hand it back** for standout roleplay, heroism, or clever play — discretionary, no fixed formula, judged in the moment (same model as D&D 5e Inspiration; the DMG's rough pacing guideline is about once per session per player).
+
+**Open questions**:
+- If a player still has an unspent Spark when the GM would otherwise award one, does the award do nothing, or can it be redirected to another player (mirroring 5e's Inspiration-gifting)?
+- For use #2 (Advantage), if the roll being boosted is a banked roll rather than a live one, does the player reveal two banked results and take the lower, or roll one fresh d20 alongside the single banked result and take the lower of those? Not yet decided.
+- Does unspent Spark carry over indefinitely session to session, or is there ever a reason to cap/reset it beyond "always topped up at session start"?
+
 ## Character Capabilities
 
 - **Skills** — learned abilities. Scored 1-10.
