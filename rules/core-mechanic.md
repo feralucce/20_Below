@@ -94,6 +94,13 @@ Some rolls aren't against a static difficulty — they're opposed by another cha
 
 Advantage/Disadvantage and flat modifiers apply per side as normal before DoS/DoF is computed — a side rolling with Advantage just resolves their own 2d20-take-lower first, then that becomes the die result used for their DoS/DoF.
 
+## Rounding & Ties
+
+Two universal conventions, used anywhere the system needs them, not just in the specific rules that first introduced them:
+
+- **Always round up.** Any time a calculation produces a fraction (e.g. Dodge's ×1.5 DoS, or a Health Level's HP), round up. One rounding rule everywhere, no case-by-case exceptions.
+- **Ties go to the defender.** Established for Resisted Rolls (see above), but stated here as the general rule for any tie the system produces, not just Resisted Rolls specifically. Where there's no clear "defender" role (e.g. a multi-way tie), the GM calls it.
+
 ## Open Questions
 
 - Do advantage and disadvantage from different sources cancel, or does disadvantage override advantage (or vice versa)?
