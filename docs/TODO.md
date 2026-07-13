@@ -6,7 +6,13 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 ## ⬆️ Pick up here next session (2026-07-13)
 
-**Spark is resolved** — see [core-mechanic.md](../rules/core-mechanic.md#spark--confirmed). See the Combat section below for what's still open in this area.
+**Spark is resolved**, including overflow (already-full Spark gain converts to Advantage) — see [core-mechanic.md](../rules/core-mechanic.md#spark--confirmed).
+
+**Advantage/Disadvantage stacking is resolved**: numeric ±1 per source, net sign picks Advantage/Disadvantage/normal — see [core-mechanic.md](../rules/core-mechanic.md#advantage--disadvantage--confirmed).
+
+**Advantage/Disadvantage vs. the bank is resolved**: net Advantage lets a character choose live-roll or a banked die; net Disadvantage forces a live roll regardless of bank status — see [combat.md](../rules/combat.md#pre-rolled-combat-dice--confirmed).
+
+See the Combat section below for what's still open in this area.
 
 ## Previous session (2026-07-12)
 
@@ -58,7 +64,7 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 ## Core Mechanic
 
-- [ ] Do Advantage and Disadvantage cancel when both apply from different sources, or does one override the other? — [core-mechanic.md](../rules/core-mechanic.md)
+- [x] **Advantage/Disadvantage stacking resolved** (2026-07-13): each source is worth ±1, net summed, sign determines Advantage/Disadvantage/normal — see [core-mechanic.md](../rules/core-mechanic.md#advantage--disadvantage--confirmed).
 - [ ] Full list of triggers that grant Advantage/Disadvantage — [core-mechanic.md](../rules/core-mechanic.md)
 
 ## Character Creation & Advancement (economy — likely unlocks a lot of other answers at once)
