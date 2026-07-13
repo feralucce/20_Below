@@ -22,6 +22,8 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 **Combat Critical Failure is resolved**: same tier shape as Called Shot (Minor/Moderate/Severe/Catastrophic), keyed off `|DoF| = 20 − target`. Five categories (Weapon Mishap, Self-Injury, Positional, Defensive, Team), GM picks whichever fits. Non-combat crit-fails stay pure GM narration, unchanged. See [combat.md](../rules/combat.md#critical-failure--confirmed).
 
+**A round of small Combat loose ends resolved**: Grapple's attacker Skill (Unarmed Combat); Standard vs. Named NPC formally defined; combat skill+attribute pairing confirmed free/situational like every other Skill; the 6 combat Skills finalized (no longer deferred); "Defense halved" locked for Charge/Brace; wounded Defense does NOT degrade under Health Level penalties; Incapacitated lethality now requires intentional damage, and First Aid was introduced as the first piece of Healing (restores HP = DoS, capped at Suffering). See [combat.md](../rules/combat.md#resolved-2026-07-13).
+
 See the Combat section below for what's still open in this area.
 
 ## Previous session (2026-07-12)
@@ -34,12 +36,14 @@ See the Combat section below for what's still open in this area.
 - Dodge/Abort to Dodge/All-Out Attack/Haymaker/Charge/Brace all updated in `combat.md` to reference Defense instead of a rolled defense DoS.
 
 **Still open from this decision:**
-- Confirm "Defense halved, round up" as the substitute for Charge/Brace's old "Disadvantage on defense" — proposed, not locked (Advantage/Disadvantage only applies to rolls, and Defense isn't rolled).
-- Does a wounded character's Defense also degrade under the Health Level penalty (an intentional death-spiral)? Not automatically implied by the existing wording — separate decision.
 - Every Gift with an unwilling-target use case needs a case-by-case pass: does it use the Resolve default, or genuinely need a full Resisted Roll? Not started (`gifts.md` Open Questions).
 
-**Health Levels** — see [combat.md](../rules/combat.md#health-levels--confirmed): Healthy (Body×2, no penalty) → Sore (Body, no penalty) → Battered (Body, −1) → Wounded (Body÷2, −3) → Suffering (Body÷2, −5) → Incapacitated (0 HP, no actions, any damage kills). Total pool = 5×Body (+1 if Body is odd). No overflow between containers.
-- **Still open**: is Incapacitated's "any damage kills, no buffer" the intended lethality? Healing mechanism isn't designed at all yet.
+**Resolved 2026-07-13**:
+- **"Defense halved, round up" confirmed** as Charge/Brace's cost, not just proposed.
+- **A wounded character's Defense does NOT degrade** under the Health Level penalty — Defense stays level; only the flat roll penalty (−1/−3/−5) applies to actual rolls. Deliberate: full death-spiral on top of the roll penalty would be too crippling.
+- **Incapacitated lethality, partially resolved**: "any further damage kills" now requires **intentional** damage — incidental damage doesn't kill. **First Aid introduced** as the first piece of Healing: a First Aid roll restores HP equal to DoS, capped at the Suffering Health Level (can't fully heal via field first aid). Healing beyond Suffering is still undesigned.
+
+**Health Levels** — see [combat.md](../rules/combat.md#health-levels--confirmed): Healthy (Body×2, no penalty) → Sore (Body, no penalty) → Battered (Body, −1) → Wounded (Body÷2, −3) → Suffering (Body÷2, −5) → Incapacitated (0 HP, no actions, intentional further damage kills). Total pool = 5×Body (+1 if Body is odd). No overflow between containers (except Catastrophic Head vs. a Named NPC/PC, and Ordnance/Siege weapons).
 
 ## Combat (the big one — most other systems are waiting on this)
 
@@ -59,16 +63,16 @@ See the Combat section below for what's still open in this area.
 - [x] **Special Maneuvers fully mechanized** (10, from D&D 5e/Hero 6e/White Wolf): Grapple/Trip/Escape (Resisted Rolls, status effects, no damage); Disarm/Called Shot (attack at a size-dependent target penalty); All-Out Attack/Haymaker (Dodge-style DoS ×1.5/×2, defenseless 1 round vs. until next turn); Charge/Brace/Help (grant Advantage). Disengage removed.
 - [x] Called shot difficulty modifier: **size-dependent** — −5 for small/precise targets (Head, Hands), −3 for larger ones (Arms, Legs). Torso removed as an option — center of mass is the default target for any ordinary attack, no penalty.
 - [x] **Called Shot location effects resolved and confirmed** (2026-07-13, superseding the earlier proposal): Head/Arms-Hands/Legs-Feet each get a 4-tier severity table (Minor/Moderate/Severe/Catastrophic) keyed off leftover DoS. No separate damage multiplier needed — severity does that job instead. Catastrophic Head: outright kill on a Standard NPC; drains + spills a Health Level on a Named NPC/PC (no autokill beyond the normal Incapacitated rule). See [combat.md](../rules/combat.md#special-maneuvers--confirmed).
-- [ ] Exact grappling-relevant Skill for Grapple's attacker side.
-- [ ] Formally define "Standard NPC" vs. "Named NPC/PC" — introduced by Catastrophic Head, currently just a GM judgment call.
+- [x] **Grapple's attacker Skill is Unarmed Combat** (resolved 2026-07-13) — see [premade-skills.md](../rules/premade-skills.md#combat--confirmed).
+- [x] **"Standard NPC" vs. "Named NPC/PC" formally defined** (resolved 2026-07-13): Standard NPCs are disposable rogues'-gallery/bestiary threats with no special mechanical access. Named NPCs (BBEGs, significant henchmen) use the same mechanisms as PCs **except Spark and forcing dice from the bank**. See [combat.md](../rules/combat.md#resolved-2026-07-13).
 - [x] **Reactions removed entirely** — confirmed, not just flagged. Action Economy, Abort to Dodge, All-Out Attack, and Haymaker all updated accordingly.
 - [x] Attack/Defense resolution: **Defense trait (Mind ÷ 2), not Resisted Rolls** — see the top of this file.
 - [x] **Damage** (resolved 2026-07-13): `Weapon Base (1-10, by weapon class) + (DoS − Defense)`; only the Weapon Base doubles on a crit. Weapon Base is a 10-tier class ladder (Unarmed through Siege/Cataclysmic) where melee and ranged weapons of comparable weight share the same base — real-world firearm lethality is represented via range, not extra damage. Only the top two tiers (Ordnance, Siege/Cataclysmic), plus Catastrophic Head vs. a Named NPC/PC, can spill damage across Health Levels; every other class is capped by the existing No Overflow rule. See [combat.md](../rules/combat.md#damage--confirmed).
 - [x] **Movement**: Speed = 5m + (Body ÷ 2, round up); a Move lets a character reposition up to Speed, freeform as already defined in Action Economy. Not costed as a full action — see [combat.md](../rules/combat.md#movement--speed--confirmed).
 - [x] **Critical Failure resolved** (2026-07-13): combat gets a category × severity-tier table (Weapon Mishap, Self-Injury, Positional, Defensive, Team). Severity keyed off `|DoF|` (`20 − target`, simplified to always use the nat-20 case even for Multiple Actions' expanded crit-fail range), same tier bands as Called Shot's DoS tiers. GM picks whichever category fits the fiction. Social/Skill/Magical fumble tables explicitly excluded — those stay pure GM narration outside combat, per the core mechanic's existing philosophy. See [combat.md](../rules/combat.md#critical-failure--confirmed).
-- [ ] How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
-- [ ] The 6 deferred combat Skills (Melee, Unarmed, Firearms, Archery/Thrown, Heavy Weapons, Dodge) — [premade-skills.md](../rules/premade-skills.md)
-- [ ] The 3 deferred combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — [perks.md](../rules/perks.md)
+- [x] **Combat follows the same free skill+attribute pairing rule as everything else** (resolved 2026-07-13) — situational, re-argued per attempt, no combat-specific lock-in (e.g. a feinting melee attack could argue Mind instead of Body).
+- [x] **The 6 combat Skills are finalized, no longer deferred** (2026-07-13): Melee Combat, Unarmed Combat, Firearms, Archery/Thrown Weapons, Heavy Weapons, Dodge/Evasion — see [premade-skills.md](../rules/premade-skills.md#combat--confirmed).
+- [ ] The 3 deferred combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — still deferred, coming back to these soon — [perks.md](../rules/perks.md)
 - [ ] **Big downstream TODO**: once combat exists, the entire 76-Gift catalog needs a detail pass to convert soft narrative phrasing into concrete mechanics (ranges, durations, action costs) — [gifts.md](../rules/gifts.md), [premade-gifts.md](../rules/premade-gifts.md)
 
 ## Core Mechanic

@@ -6,18 +6,18 @@ Per [skills.md](skills.md), none of these are locked to an attribute — the gro
 
 **A note on list length vs. Rifts:** Rifts hits 263 skills partly by splitting single domains into many narrow skills (separate skills per vehicle type, per science, per mechanical trade). That conflicts with this system's [broad-skills-not-narrow](skills.md#skill-breadth-broad-not-narrow) decision, so this list stays deliberately broader-and-shorter than Rifts' — granularity within a skill (a specific science, a specific vehicle, a specific trade) belongs in a **Specialty**, not a new Skill. What follows is still a large, genuinely varied list — just built the way this system wants skills built.
 
-## Combat (deferred)
+## Combat — confirmed
 
-Set aside until combat mechanics are designed — see [combat.md](combat.md). Listed here so they aren't lost, not finalized.
+Finalized 2026-07-13, now that [combat.md](combat.md) exists. Same as every other Skill, none of these are locked to an Attribute — Melee Combat most often pairs with Body, but a sufficiently clever character can argue a different pairing (e.g. a feinting attack using Mind) case by case, same as any Skill+Attribute negotiation.
 
 | Skill | Notes |
 |---|---|
-| Melee Combat | Bladed, blunt, or improvised weapons |
-| Unarmed Combat | Brawling, martial arts |
-| Firearms | Split into categories (Handguns, Long Guns, Heavy Weapons) if desired |
-| Archery / Thrown Weapons | Bows, crossbows, thrown blades |
-| Heavy Weapons | Siege engines, artillery, vehicle-mounted weapons |
-| Dodge / Evasion | Avoiding attacks and hazards |
+| Melee Combat | Bladed, blunt, or improvised weapons. |
+| Unarmed Combat | Brawling, martial arts. Also the attacker's Skill for the [Grapple](combat.md#special-maneuvers--confirmed) maneuver. |
+| Firearms | Split into categories (Handguns, Long Guns, Heavy Weapons) if desired. |
+| Archery / Thrown Weapons | Bows, crossbows, thrown blades. |
+| Heavy Weapons | Siege engines, artillery, vehicle-mounted weapons. |
+| Dodge / Evasion | Avoiding attacks and hazards. |
 
 ## Physical
 
@@ -153,7 +153,7 @@ Set aside until combat mechanics are designed — see [combat.md](combat.md). Li
 
 | Skill | Definition |
 |---|---|
-| First Aid | Immediate, field-level treatment. |
+| First Aid | Immediate, field-level treatment. **Mechanical effect (confirmed 2026-07-13, see [combat.md](combat.md#health-levels--confirmed)):** a successful First Aid roll restores HP equal to DoS, capped so it cannot raise the target above the Suffering Health Level. |
 | Medicine | Surgery, diagnosis, and long-term treatment. |
 | Psychoanalysis | Therapy and treating mental trauma. |
 | Holistic Medicine | Herbal remedies, folk medicine, and non-clinical healing traditions. |
