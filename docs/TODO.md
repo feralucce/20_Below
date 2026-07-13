@@ -54,7 +54,7 @@ See the Combat section below for what's still open in this area.
 - [x] Multiple Actions: declared during Declaring as a full chain; target drops by 3×N per action (1st = −3); chain stops at first failure; expanded critical failure range starting 2nd action (natural roll ≥ 21−N auto-crit-fails).
 - [x] **Special Maneuvers fully mechanized** (10, from D&D 5e/Hero 6e/White Wolf): Grapple/Trip/Escape (Resisted Rolls, status effects, no damage); Disarm/Called Shot (attack at a size-dependent target penalty); All-Out Attack/Haymaker (Dodge-style DoS ×1.5/×2, defenseless 1 round vs. until next turn); Charge/Brace/Help (grant Advantage). Disengage removed.
 - [x] Called shot difficulty modifier: **size-dependent** — −5 for small/precise targets (Head, Hands), −3 for larger ones (Arms, Legs). Torso removed as an option — center of mass is the default target for any ordinary attack, no penalty.
-- [x] Called Shot location-effects proposal drafted (Hero 6e hit-location-inspired): Head (Stunned, TBD), Eyes (Blinded), Arms/Hands (Disarmed/Impaired), Legs/Feet (Move reduced). Not yet confirmed.
+- [x] Called Shot location-effects proposal drafted (Hero 6e hit-location-inspired): Head (Stunned, TBD), Arms/Hands (Disarmed/Impaired), Legs/Feet (Move reduced). Eyes removed as a location (2026-07-13). Not yet confirmed.
 - [ ] Damage multiplier per Called Shot location (Hero-style) — no longer blocked now that Damage exists, just not designed yet.
 - [ ] Exact grappling-relevant Skill for Grapple's attacker side.
 - [x] **Reactions removed entirely** — confirmed, not just flagged. Action Economy, Abort to Dodge, All-Out Attack, and Haymaker all updated accordingly.

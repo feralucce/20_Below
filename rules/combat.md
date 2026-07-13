@@ -145,7 +145,6 @@ Every maneuver below reuses existing machinery — flat target modifiers, the Do
 
    **Proposed location effects** (inspired by Hero System 6e's hit location table — but adapted, since Hero scales its OCV penalty and STUN/BODY multiplier per location while ours only scales the target penalty by size class; the useful lesson isn't Hero's exact numeric scaling, it's the *shape* of the payoff: extremities impair or disable rather than just dealing more damage):
    - **Head** — target is **Stunned** (effect TBD).
-   - **Eyes** — target is **Blinded**: Disadvantage on anything requiring sight until treated.
    - **Arms / Hands** — target is **Disarmed** or **Impaired**: weapon/item dropped, or Disadvantage on actions using that limb until healed.
    - **Legs / Feet** — target's **Move is reduced** (Prone-adjacent) until treated.
 
@@ -264,7 +263,7 @@ Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md
 ## Open Questions
 
 - What is the critical failure effect in combat (weapon drop/break, self-harm, exposed position, etc.)?
-- Confirm the proposed Called Shot location effects (Head/Eyes/Arms-Hands/Legs-Feet) — see Special Maneuvers above.
+- Confirm the proposed Called Shot location effects (Head/Arms-Hands/Legs-Feet) — see Special Maneuvers above.
 - Damage multiplier per Called Shot location — blocked on the damage subsystem existing first.
 - How does combat interact with the free skill+attribute pairing rule (e.g. is "Melee Weapons" always Body, or can it pair with other attributes too)?
 - Exact grappling-relevant Skill for the Grapple maneuver's attacker side (does it use an existing Skill, or is a new one needed?).
