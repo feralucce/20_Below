@@ -32,6 +32,11 @@ This means once a player runs through their 10, further combat rolls that sessio
 
 **Bank access outside a Spark spend**: players don't touch their bank except to spend it on a combat d20 roll, or as part of spending [Spark](core-mechanic.md#spark--confirmed) (forcing a banked result onto the GM, or gifting one to another player's bank).
 
+**Advantage/Disadvantage vs. the bank** (confirmed): banked results are known values, picked from a list the player wrote down at session start — not a fresh gamble. That asymmetry governs how [Advantage/Disadvantage](core-mechanic.md#advantage--disadvantage--confirmed) interacts with the "mandatory until exhausted" rule above:
+
+- **Net Advantage**: the character may *choose* — either roll live (2d20, take the lower), or simply spend one banked die as normal. Advantage grants the option to bypass the bank-exhaustion mandate for that one roll; it doesn't force a live roll.
+- **Net Disadvantage**: the character **must roll live** (2d20, take the higher), even if their bank isn't exhausted. A banked die — a known, pre-selected value — can't be used to dodge a Disadvantaged roll; Disadvantage forces genuine live randomness.
+
 ## Action Economy — confirmed
 
 Two resources per round — **no Reaction**. Reactions were considered (merging D&D's Bonus Action into a single Reaction resource), then **removed from the system entirely**:

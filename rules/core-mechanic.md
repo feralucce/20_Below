@@ -52,9 +52,9 @@ A **binary, table-wide resource** — a single checkbox per player, not a pool (
 
 **Regaining Spark** (confirmed): refills automatically at the **start of each session**, same timing as the Pre-Rolled Combat Dice bank reset. If a player has already spent their Spark mid-session, the **GM may hand it back** for standout roleplay, heroism, or clever play — discretionary, no fixed formula, judged in the moment (same model as D&D 5e Inspiration; the DMG's rough pacing guideline is about once per session per player).
 
+**Overflow** (confirmed): Spark is binary, so a character can't hold two. Any time a character would gain Spark while already holding it — in practice, a GM award landing on a full character — they gain **Advantage on their next roll** instead, per the numeric [Advantage/Disadvantage](#advantage--disadvantage--confirmed) rule above (+1 to that roll's net).
+
 **Open questions**:
-- If a player still has an unspent Spark when the GM would otherwise award one, does the award do nothing, or can it be redirected to another player (mirroring 5e's Inspiration-gifting)?
-- For use #2 (Advantage), if the roll being boosted is a banked roll rather than a live one, does the player reveal two banked results and take the lower, or roll one fresh d20 alongside the single banked result and take the lower of those? Not yet decided.
 - Does unspent Spark carry over indefinitely session to session, or is there ever a reason to cap/reset it beyond "always topped up at session start"?
 
 ## Character Capabilities
@@ -79,13 +79,17 @@ The GM may apply a flat modifier of **-5 to +5** to the target number.
 - Each point of modifier is worth exactly **5% probability**, since the die and the target scale are both 1-20 (1:1 correspondence). A ±5 modifier is therefore a ±25 percentage-point swing — meaningful, but not so large that it trivializes a roll except at the natural extremes of the target range.
 - The modified target number is clamped to **1-20** for the purposes of rolling, but see Critical Results below — the extremes stay "live" regardless of clamping.
 
-### Advantage / Disadvantage
+### Advantage / Disadvantage — confirmed
 
-A separate, binary tool from flat modifiers. Reserved for specific triggers (e.g. certain Gifts, called shots, or GM calling a situation "genuinely uncertain") rather than everyday circumstance stacking.
+A separate tool from flat modifiers. Reserved for specific triggers (e.g. certain Gifts, called shots, spending [Spark](#spark--confirmed), or GM calling a situation "genuinely uncertain") rather than everyday circumstance stacking.
 
-- **Advantage**: roll 2d20, take the lower result.
-- **Disadvantage**: roll 2d20, take the higher result.
-- Does not stack — multiple sources of advantage (or disadvantage) still just apply once. If a roll has both advantage and disadvantage from different sources, they cancel and the roll is made normally (default assumption — confirm if a different interaction is wanted).
+**Stacking is numeric; the roll itself stays binary.** Each source of Advantage is worth **+1**, each source of Disadvantage is worth **-1**. Sum every source that applies to the roll into one net value:
+
+- **Net positive** → roll with Advantage: 2d20, take the lower.
+- **Net negative** → roll with Disadvantage: 2d20, take the higher.
+- **Net zero** → roll normally, 1d20 (equal sources cancel out).
+
+Only the sign matters, not the magnitude — three sources of Advantage against two of Disadvantage nets to +1, which is an ordinary single Advantage roll (2d20 take lower), not a stronger one. There's no "double Advantage"; the count just decides which side of zero, if either, the roll lands on.
 
 ### Critical Results
 
