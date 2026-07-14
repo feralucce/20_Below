@@ -63,9 +63,28 @@ Two consistent patterns: a starting/competent character has real investment in r
 
 **Skill pool size is resolved.** Perk/Gift pool sizes are still open.
 
+**Step 4 (2026-07-14): Perk pool size, confirmed.** **10 points.** Individual Perk costs aren't set yet — [perks.md](../rules/perks.md#resolved) already established that cost scales with a Perk's strength rather than being flat/uniform, but the exact per-Perk numbers are deferred to a later pass. The pool size is fixed regardless of those numbers; it just bounds the total a character can spend on Perks at creation.
+
+**Perk pool size is resolved.** Individual Perk costs and Gift pool size are still open.
+
+**Step 5 (2026-07-14): Gift pool size, confirmed.** **8 points.** Checked against the same family of sources, narrowed this time to the systems with a **dotted 1-5 supernatural power scale** — the closest structural analog to Gifts' own 5-level design, rather than the full premade-gifts.md source list (Hero System's point-buy and Exalted's per-Charm-pick structures don't reduce to a comparable "dots at creation" number):
+
+| Source | Starting power-dot budget | Relevance |
+|---|---|---|
+| **OWoD Mage: the Ascension** | **5 dots** across Spheres at creation (plus Arete starting at 1) | The **direct acknowledged inspiration** for this system's own Power Level/Gift Level split (see [gifts.md](../rules/gifts.md#resolution)) — Arete governs raw potency the way Power Level does here, Spheres gate *what's possible* the way Gift Levels do. The single most relevant comparison. |
+| **OWoD Vampire** | 3 dots in Disciplines at creation | Lower budget, reflecting a "just Embraced" starting power level — this system isn't going for that low a floor (consistent with the Attribute/Skill pools already being more generous than their WoD equivalents). |
+| **OWoD Changeling** | ~5 dots combined across Arts/Realms | Similar range to Mage. |
+
+An 8-point Gift pool is **1.6× Mage's 5-dot baseline** — inside the same generosity range this system has already used relative to WoD elsewhere (Attribute pool is ~3.3× WoD's starting Attribute cap, Skill pool ~1.3× WoD's starting dot total), so 8 is consistent with the pattern rather than an outlier.
+
+**Confirms the specialization/generalization claim mathematically**, assuming the still-open "flat vs. scaling Gift-level cost" question (see [gifts.md](../rules/gifts.md) Open Questions) resolves flat, matching every other pool: max Gift Level is 5, so 8 points supports **one maxed Gift (5) plus a solid secondary (3)** on the specialist end, or **up to 4 Gifts at Level 2 each** (or thinner spreads, e.g. up to 8 different Gifts at Level 1) on the generalist end — a real spectrum between depth and breadth, not just in theory. **If Gift cost ends up on a scaling curve instead** (level 5 costing disproportionately more than level 1, WoD Discipline-style), these specific breakdowns would shift even though the 8-point pool total wouldn't need to change — flagged as a dependency, not a blocker.
+
+**Gift pool size is resolved.** Individual Perk/Gift costs and the flat-vs-scaling Gift cost question are still open.
+
 ## Open Questions
 
-- Size of the Perk/Gift pools (Attribute pool resolved at 10, Skill pool resolved at 35 — see [Calibration](#calibration) above).
+- Individual Perk costs (see [perks.md](../rules/perks.md#resolved) — cost scales with strength, exact numbers not set).
+- Individual Gift costs, and whether Gift-level cost is flat or a scaling curve (see [gifts.md](../rules/gifts.md) Open Questions) — affects how the 8-point Gift pool breaks down in practice, not the pool size itself.
 - **Whether Freebie Points can be spent on all four categories, or only some** — assumed all four (OWoD-style) but not explicitly confirmed.
 - **Freebie Point conversion rate** — how many Freebies buy one rank of Attribute vs. Skill vs. Perk vs. Gift (OWoD itself uses a different rate per category, e.g. an Attribute dot costs more Freebies than a Skill dot).
 - XP cost per rank for the same, during advancement (flat cost, or scaling with current rank/cost curve?).
