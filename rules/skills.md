@@ -1,5 +1,11 @@
 # Skills
 
+## Scoring — confirmed
+
+Skills are scored **0-10** system-wide (see [core-mechanic.md](core-mechanic.md#character-capabilities)). **0 means untrained and unusable** — a character needs at least **1** in a Skill to roll it at all; there's no "roll on the raw Attribute" fallback for a Skill you've never learned. This is a deliberate floor of 0, unlike Attributes' floor of 1 — everyone has *some* baseline physical/mental/spiritual capability, but not everyone has learned every Skill.
+
+**Character-creation cap, confirmed 2026-07-14**: a Skill may not exceed **6** at character creation, even though the system-wide ceiling is 10 — a starting character cannot begin the game with a maxed-out Skill. Reaching 7-10 is advancement-only, spent with XP after creation like any other improvement.
+
 ## Skills Are Not Attribute-Locked
 
 Skills are not tied to a fixed attribute. Any skill can be paired with any attribute, provided the player can argue the pairing to the GM's satisfaction. The GM has final say on whether a proposed pairing is reasonable for the situation. In practice, that argument is usually grounded in one of the character's own [Attribute Descriptors](core-mechanic.md#descriptors--confirmed) — a specific chosen flavor of the Attribute (e.g. *Agile* under Body) rather than an improvised justification from scratch.
