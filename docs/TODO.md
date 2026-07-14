@@ -79,7 +79,7 @@ See the Combat section below for what's still open in this area.
 ## Core Mechanic
 
 - [x] **Advantage/Disadvantage stacking resolved** (2026-07-13): each source is worth ±1, net summed, sign determines Advantage/Disadvantage/normal — see [core-mechanic.md](../rules/core-mechanic.md#advantage--disadvantage--confirmed).
-- [ ] Full list of triggers that grant Advantage/Disadvantage — [core-mechanic.md](../rules/core-mechanic.md)
+- [x] **Full trigger list resolved as deliberately non-exhaustive** (2026-07-14): compiled an illustrative candidate list from OWoD, Pathfinder 1e, CoC 7e, Exalted, Adventure!, Scion, Pendragon, Hero System, and Rifts (flanking, higher ground, surprise, teamwork, right tool/environment, narrative stunts, Passion-driven moments, Leadership-style rallying) — GM can recognize others as they arise. See [core-mechanic.md](../rules/core-mechanic.md#advantage-trigger-examples--non-exhaustive).
 
 ## Character Creation & Advancement (economy — likely unlocks a lot of other answers at once)
 

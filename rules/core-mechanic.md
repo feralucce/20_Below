@@ -91,6 +91,26 @@ A separate tool from flat modifiers. Reserved for specific triggers (e.g. certai
 
 Only the sign matters, not the magnitude — three sources of Advantage against two of Disadvantage nets to +1, which is an ordinary single Advantage roll (2d20 take lower), not a stronger one. There's no "double Advantage"; the count just decides which side of zero, if either, the roll lands on.
 
+#### Advantage Trigger Examples — non-exhaustive
+
+Compiled from situational-bonus mechanics across the systems referenced elsewhere in this project (OWoD, Pathfinder 1e, Call of Cthulhu 7e, Exalted, Adventure!, Scion, Pendragon, Hero System, Rifts). This list is **illustrative, not exclusive** — the GM can recognize any other genuinely fitting trigger as it comes up in play, same spirit as the existing "GM calls a situation genuinely uncertain" trigger. Already-confirmed mechanical triggers (Specialty match, spending Spark, Spark overflow, Charge, Brace/Aim, Help/Assist, attacking a Prone target, winning Trip/Shove) aren't repeated here.
+
+- **Positional / Tactical**
+  - Flanking a target with an ally on the opposite side.
+  - Fighting from higher ground or otherwise favorable terrain.
+  - Attacking an unaware or surprised target.
+  - Using your own cover to set up a shot the target can't easily answer.
+- **Teamwork**
+  - An ally actively assisting outside of combat (the non-combat counterpart to Help/Assist).
+- **Preparation / Right Tool**
+  - Having exactly the right tool or equipment for the task at hand.
+  - A favorable environment or setup for the task (a proper workshop vs. improvising in the field).
+- **Narrative / Roleplay-Driven**
+  - A vividly or cleverly described action ("stunting," Exalted/Scion/Adventure!-style) — rewards descriptive engagement, distinct from the GM's general "genuinely uncertain" call.
+  - A character's Passion, Flaw, or defining motivation directly driving the moment (Pendragon-style).
+- **Morale / Inspiration**
+  - Being rallied by an ally's Leadership-type Skill use, distinct from a single-target Help/Assist.
+
 ### Critical Results
 
 Regardless of modifiers or the clamped target number:
@@ -144,6 +164,9 @@ Two universal conventions, used anywhere the system needs them, not just in the 
 
 ## Open Questions
 
-- Do advantage and disadvantage from different sources cancel, or does disadvantage override advantage (or vice versa)?
-- Full list of triggers that grant advantage/disadvantage.
 - Combat critical failure effect, and the exact called-shot difficulty modifier — deferred to combat design.
+
+## Resolved
+
+- **Advantage/disadvantage stacking** (2026-07-13): numeric, not override-based — see [Advantage/Disadvantage](#advantage--disadvantage--confirmed) above.
+- **"Full list of triggers" resolved as deliberately non-exhaustive** (2026-07-14): rather than a closed list, [Advantage Trigger Examples](#advantage-trigger-examples--non-exhaustive) above compiles illustrative triggers pulled from the systems referenced elsewhere in this project; the GM can recognize other fitting triggers as they arise in play.
