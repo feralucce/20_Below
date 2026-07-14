@@ -77,18 +77,16 @@ Resolved 2026-07-14, now that combat mechanics exist — see [combat.md](combat.
 |---|---|
 | Combat Reflexes | **+5 to the Initiative Degree** (not the target number) — applied the same way as any other Gift/Perk Initiative modifier, per the existing convention in [combat.md](combat.md#initiative--confirmed): raw roll and crit status are determined first, off the unmodified target number, then Perk modifiers shift the resulting Degree before ranking. |
 | Quick Draw | Readying a weapon costs nothing — normally an Action (see the Action examples in [combat.md](combat.md#action-economy--confirmed)), this Perk makes it free, foldable into the same turn as an attack. |
-| Alertness | Cannot be surprised while conscious, unless under a mind-altering effect that would specifically allow it. |
-
-**Flagged**: Alertness is the first thing in the system to reference "surprise" as a concept — combat.md doesn't yet define what being surprised actually does mechanically (no Initiative penalty, no free hit, etc. currently exists). This Perk grants immunity to a condition that itself still needs to be designed.
+| Alertness | Immune to being Surprised while conscious, unless under a mind-altering effect that would specifically allow it — see [Surprise](combat.md#surprise--confirmed) for what that immunity actually covers (Advantage to attackers, -5 Initiative Degree for the first round). |
 
 ## Open Questions
 
 - **Exact cost numbers** for acquiring a Perk (points at creation, XP afterward), and the exact premium multiplier for acquiring a new Perk after character creation — both deferred to the broader point/XP economy design (see [character-creation/overview.md](../character-creation/overview.md) and the Character Creation & Advancement TODO).
 - **Exact per-level definitions for the 7 Leveled (Resource) Perks** (Wealth, Fringe Benefit, Contacts, Base, Notable Vehicle, Followers, Fame) — the 1-5 structure is confirmed, the content of each level is not written yet.
-- What does "surprised" actually do mechanically? (Raised by Alertness — tracked in the TODO list, not repeated here.)
 
 ## Resolved
 
+- **What "Surprised" does mechanically, resolved** (2026-07-14): Advantage to attacks against the surprised character, plus -5 to their Initiative Degree for the first round of combat. See [Surprise](combat.md#surprise--confirmed) — Alertness's immunity now has a defined effect to be immune to.
 - **Cost scales with Perk strength** (2026-07-14): not a flat cost across all Perks — a bigger rule exception or a higher-scope resource costs more than a minor one. Exact numbers are still TBD as part of the overall point/XP economy (shared open question with Skills and Gifts).
 - **No cap on Perks** (2026-07-14), but **acquiring a new Perk after character creation costs a premium** over the equivalent creation-time cost — buying one during play should be the harder path, not equally easy. Exact premium multiplier TBD alongside the cost numbers above.
 - **No prerequisites** (2026-07-14): a Perk grants its own standing rather than requiring it already exist in the fiction — e.g. taking Fringe Benefit is what creates the license/membership/clearance, not a reward for already having it.

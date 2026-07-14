@@ -12,7 +12,13 @@ Three base attribute categories:
 
 Attributes are scored **1-10** (1 = lowest, 10 = highest).
 
-## Power Level
+### Descriptors — confirmed
+
+**Resolved 2026-07-14**: for **every point invested in an Attribute, the character gains one Descriptor** — a short player-chosen word or phrase capturing one specific flavor of that Attribute for this character. Example: Body 3 might be *Agile, Fast, Durable* — three distinct physical qualities, not three copies of "strong." A character doesn't have to spend every Descriptor on a different flavor, but the more varied the set, the more situations it covers.
+
+**Descriptors are how a player argues a [Skill+Attribute pairing](skills.md#skills-are-not-attribute-locked)**: instead of improvising a justification from scratch each time, the player points to one of their character's own chosen Descriptors as the concrete hook — "I'm using Body here because I'm being *Agile*," not just "I'm using Body because it feels right." This doesn't replace the GM's final say on whether the pairing fits the situation (still re-argued per attempt, not banked as precedent, per the existing rule) — it grounds the argument in a pre-established character fact instead of a fresh improvisation every time.
+
+Descriptors are chosen when the Attribute point is bought — at character creation, and again whenever the Attribute is raised during advancement.
 
 **Power Level** is a fourth statistic, separate from Body/Mind/Soul, that governs magnitude when using [Gifts](gifts.md) (Power Level + Attribute vs. roll-under d20). It is scored **1-10**, same scale as the three core Attributes.
 
