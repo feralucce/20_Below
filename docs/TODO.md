@@ -72,8 +72,7 @@ See the Combat section below for what's still open in this area.
 - [x] **Critical Failure resolved** (2026-07-13): combat gets a category × severity-tier table (Weapon Mishap, Self-Injury, Positional, Defensive, Team). Severity keyed off `|DoF|` (`20 − target`, simplified to always use the nat-20 case even for Multiple Actions' expanded crit-fail range), same tier bands as Called Shot's DoS tiers. GM picks whichever category fits the fiction. Social/Skill/Magical fumble tables explicitly excluded — those stay pure GM narration outside combat, per the core mechanic's existing philosophy. See [combat.md](../rules/combat.md#critical-failure--confirmed).
 - [x] **Combat follows the same free skill+attribute pairing rule as everything else** (resolved 2026-07-13) — situational, re-argued per attempt, no combat-specific lock-in (e.g. a feinting melee attack could argue Mind instead of Body).
 - [x] **The combat Skills are finalized, no longer deferred** (2026-07-13, revised 2026-07-13): now 4 — Melee Combat, Unarmed Combat, Firearms/Archery (merged), Special Weapons (exception Skill for a single exotic/siege-class weapon, not a broad category). Dodge/Evasion dropped as a Skill — covered by the Defense trait instead. See [premade-skills.md](../rules/premade-skills.md#combat--confirmed).
-- [x] **The 3 combat-adjacent Perks are resolved** (2026-07-14): Combat Reflexes (+5 to the Initiative Degree, per the existing Perk-modifies-Degree convention), Quick Draw (readying a weapon costs no Action), Alertness (cannot be surprised while conscious, barring a mind-altering effect that allows it). See [perks.md](../rules/perks.md#combat-adjacent--confirmed).
-- [ ] **New from Alertness**: "surprised" isn't itself mechanically defined anywhere in combat.md yet — Alertness grants immunity to a condition that still needs designing.
+- [x] **The 3 combat-adjacent Perks are resolved** (2026-07-14): Combat Reflexes (+5 to the Initiative Degree, per the existing Perk-modifies-Degree convention), Quick Draw (readying a weapon costs no Action), Alertness (cannot be surprised while conscious, barring a mind-altering effect that allows it). Raised a new gap, tracked under Perks below: "surprised" isn't itself mechanically defined anywhere in combat.md yet. See [perks.md](../rules/perks.md#combat-adjacent--confirmed).
 - [ ] **Big downstream TODO**: once combat exists, the entire 76-Gift catalog needs a detail pass to convert soft narrative phrasing into concrete mechanics (ranges, durations, action costs) — [gifts.md](../rules/gifts.md), [premade-gifts.md](../rules/premade-gifts.md)
 
 ## Core Mechanic
@@ -99,10 +98,13 @@ See the Combat section below for what's still open in this area.
 
 ## Perks
 
-- [ ] Flat cost to acquire a Perk — same currency as Skills, but uniform across all Perks or varies by strength?
-- [ ] Is there a cap on how many Perks a character can take?
-- [ ] Do any Perks have prerequisites (e.g. Fringe Benefit requiring an established social position)?
-- [ ] How to handle the genuine numeric-edge-case Perks (Wealth, and anything found later) without breaking the "no numeric bonus" rule of thumb.
+- [x] **Perk cost scales with strength, not flat** (resolved 2026-07-14) — exact numbers deferred to the point/XP economy, same as Skills/Gifts.
+- [x] **No cap on Perks, but acquiring one after character creation costs a premium** (resolved 2026-07-14) — exact premium TBD alongside cost numbers.
+- [x] **No prerequisites — a Perk grants its own standing** (resolved 2026-07-14): e.g. Fringe Benefit is what creates the license/clearance, not a reward for already having it.
+- [x] **Numeric edge-case Perks resolved**: Wealth and similar are a resource/currency pool, not a roll bonus, so they don't break the "no numeric bonus" rule (resolved 2026-07-14).
+- [x] **Addendum: 7 Perks (Wealth, Fringe Benefit, Contacts, Base, Notable Vehicle, Followers, Fame) now use the same 1-5 level scale as Gifts** instead of being binary (resolved 2026-07-14) — exact per-level content not yet written.
+- [ ] **New**: exact per-level definitions for the 7 Leveled (Resource) Perks above — same scale of work as the Gift catalog's level tables.
+- [ ] **New**: what does "surprised" actually do mechanically? (Raised by the Alertness Perk — see [perks.md](../rules/perks.md#combat-adjacent--confirmed).)
 - ([perks.md](../rules/perks.md))
 
 ## Flaws
