@@ -65,15 +65,17 @@ Overtly supernatural material from any of these three sources (spirit mentors, m
 | Followers | A small group loyal to you |
 | Wealth | Meaningfully more disposable resources than an average person *(edge case — may need a light numeric guideline; see Open Questions)* |
 
-### Combat-Adjacent (deferred)
+### Combat-Adjacent — confirmed
 
-Set aside alongside combat skills until combat mechanics are designed — see [combat.md](combat.md).
+Resolved 2026-07-14, now that combat mechanics exist — see [combat.md](combat.md).
 
 | Perk | Effect |
 |---|---|
-| Combat Reflexes | Act on threats other people wouldn't have time to react to |
-| Quick Draw | Ready a weapon with no delay |
-| Alertness | Very hard to catch off guard |
+| Combat Reflexes | **+5 to the Initiative Degree** (not the target number) — applied the same way as any other Gift/Perk Initiative modifier, per the existing convention in [combat.md](combat.md#initiative--confirmed): raw roll and crit status are determined first, off the unmodified target number, then Perk modifiers shift the resulting Degree before ranking. |
+| Quick Draw | Readying a weapon costs nothing — normally an Action (see the Action examples in [combat.md](combat.md#action-economy--confirmed)), this Perk makes it free, foldable into the same turn as an attack. |
+| Alertness | Cannot be surprised while conscious, unless under a mind-altering effect that would specifically allow it. |
+
+**Flagged**: Alertness is the first thing in the system to reference "surprise" as a concept — combat.md doesn't yet define what being surprised actually does mechanically (no Initiative penalty, no free hit, etc. currently exists). This Perk grants immunity to a condition that itself still needs to be designed.
 
 ## Open Questions
 
@@ -81,3 +83,4 @@ Set aside alongside combat skills until combat mechanics are designed — see [c
 - Is there a cap on how many Perks a character can take?
 - Do any Perks have prerequisites (e.g. Fringe Benefit requiring an appropriate social position established in the fiction)?
 - How to handle the genuine numeric-edge-case Perks (Wealth, and anything found later) without breaking the "no numeric bonus" rule of thumb — a small fixed exception list, or reframe them as pure narrative facts instead?
+- **New**: what does "surprised" actually do mechanically? (Raised by Alertness — see above.)
