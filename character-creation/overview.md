@@ -49,9 +49,23 @@ This lands deliberately **short of "all three average"**: if Average = 5 (the mi
 
 **Attribute pool size is resolved.** Skill/Perk/Gift pool sizes are still open.
 
+**Step 3 (2026-07-14): Skill pool size, confirmed.** **35 points.** Derived by surveying the same source list used for [premade-skills.md](../rules/premade-skills.md) for two comparable data points despite their very different skill economies (dots vs. percentiles vs. skill points):
+
+| Source | Starting skill investment |
+|---|---|
+| OWoD | 27 dots total (13/9/5 priority split), capped at 3 of a max-5 scale (60%) at creation |
+| Call of Cthulhu 7e | Occupation points (≈ EDU×20) spread across ~8 occupation skills, typically reaching 40-70% |
+| Pathfinder 1e | 2-8 points/level, landing ranks in ~6-8 skills at low levels |
+| Hero System | A deliberate minority of build points, typically 5-10 selected skills |
+| Exalted | Ability dots spread across ~8-12 abilities with real investment |
+
+Two consistent patterns: a starting/competent character has real investment in roughly **8-10 skills**, and their "good" skills sit around **60-67% of that system's starting cap** (not the absolute ceiling — that's earned later). Applied to this system's **6-point creation cap** (not the system-wide max of 10, per [skills.md](../rules/skills.md#scoring--confirmed)): a "slightly above average" character invests in **9 skills** at an average rank of **4** (67% of 6) → **9 × 4 = 36**, cross-checked against OWoD's 27 dots scaled by the ratio of creation caps (6 ÷ 5 = 1.2) → **27 × 1.2 = 32**. Both land in the low-to-mid 30s; **35** was chosen as the final number to keep the system's existing **1/3/5/10 numeric convention** (flat modifiers ±1-5, Gift levels 1-5, Power Level/Attributes 1-10) rather than landing on an arbitrary in-between value.
+
+**Skill pool size is resolved.** Perk/Gift pool sizes are still open.
+
 ## Open Questions
 
-- Size of the Skill/Perk/Gift pools (Attribute pool is resolved at 10, see [Calibration](#calibration) above) — presumably different sizes per category, not one shared number.
+- Size of the Perk/Gift pools (Attribute pool resolved at 10, Skill pool resolved at 35 — see [Calibration](#calibration) above).
 - **Whether Freebie Points can be spent on all four categories, or only some** — assumed all four (OWoD-style) but not explicitly confirmed.
 - **Freebie Point conversion rate** — how many Freebies buy one rank of Attribute vs. Skill vs. Perk vs. Gift (OWoD itself uses a different rate per category, e.g. an Attribute dot costs more Freebies than a Skill dot).
 - XP cost per rank for the same, during advancement (flat cost, or scaling with current rank/cost curve?).

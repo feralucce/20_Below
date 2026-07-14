@@ -65,7 +65,7 @@ A **binary, table-wide resource** — a single checkbox per player, not a pool (
 
 ## Character Capabilities
 
-- **Skills** — learned abilities. Scored 1-10.
+- **Skills** — learned abilities. Scored **0-10**, system-wide. Unlike Attributes (floor of 1 — everyone has *some* baseline physical/mental/spiritual capability), Skills have a **floor of 0**: a character with 0 in a Skill hasn't learned it at all and **cannot roll it** — a minimum of 1 is required to attempt anything with that Skill. See [skills.md](skills.md) for the character-creation-time cap.
 - **Perks** — small advantages, greater than a skill but not extraordinary. Have **no levels or ranks** — a character either has a Perk or doesn't. Usually a rule exception or unlocked narrative option rather than a numeric bonus. See [perks.md](perks.md).
 - **Gifts** — abilities that make a character truly exceptional. Scored **1-5**, not 1-10 — each Gift is unique/narrow in scope, and each of its 5 levels is a specific, cumulative, defined capability (World of Darkness Discipline-style). See [gifts.md](gifts.md).
 
