@@ -56,15 +56,24 @@ Overtly supernatural drawbacks (a curse, a bound spirit, a magical weakness) wer
 
 | Flaw | Effect |
 |---|---|
-| Notoriety | Recognized for something bad — the mirror of the Leveled Perk Fame |
-| Enemy | A specific person or group actively works against the character |
 | Rival | Someone locked in constant competition with the character |
 | Secret | Something the character desperately doesn't want revealed |
 | Dependent | Someone relies on the character and must be protected or provided for |
 | Intolerance | Others hold a specific prejudice against the character (species, background, origin, etc.) |
 | Speech Impediment | A stutter, accent, or other trait that hampers verbal communication |
-| Hunted | An authority, organization, or individual actively pursues the character — legal or otherwise |
 | Vow | A binding oath or obligation that restricts the character's choices |
+
+### Leveled (Resource) Flaws — confirmed
+
+**Resolved 2026-07-14**, mirroring [Perks' Leveled (Resource) Perks](perks.md#leveled-resource-perks--confirmed): these Flaws represent a scalable liability rather than a binary yes/no trait, so they use the same **1-5 level scale as Gifts** — each level a cumulative, defined step up in severity, not a numeric roll penalty. A minor Enemy is a nuisance; a level-5 Enemy is a nemesis with real reach.
+
+| Flaw | What Scales by Level |
+|---|---|
+| Notoriety | How widely and how badly the character is known — the direct mirror of the Leveled Perk Fame |
+| Enemy | How capable, resourced, and motivated the specific person or group working against the character is |
+| Hunted | How determined and far-reaching the pursuing authority, organization, or individual is |
+
+**Exact per-level definitions are not yet written** — same flagged gap as the Leveled (Resource) Perks, deferred to the same future pass.
 
 ### Combat-Adjacent
 
@@ -75,16 +84,17 @@ Unlike Perks, these don't need to be deferred — combat mechanics already exist
 | Berserk | Once triggered, must keep fighting at full intensity until no threats remain — can't disengage or hold back |
 | Combat Paralysis | Freezes instead of acting when sudden violence breaks out |
 | Code Against Killing | Refuses to use lethal force, even when it would be the easier or safer choice |
-| Reduced Reactions | Slower than most to recognize and respond to danger — the mirror of Alertness/Combat Reflexes |
+| Reduced Reactions | Slower than most to recognize and respond to danger — the mirror of Alertness/Combat Reflexes. No immunity to being [Surprised](combat.md#surprise--confirmed), and GMs may rule borderline "were they surprised?" calls against this character more readily. |
 | Slow Hands | Takes longer than normal to ready a weapon — the mirror of Quick Draw |
 
 ## Open Questions
 
-- What does taking a Flaw grant the player (extra build points at creation), and is the amount uniform per Flaw or does it vary by severity?
 - Is there a cap on how many Flaws a character can take?
-- Can a Flaw ever be bought off or removed during play (through XP, or a significant in-fiction event), or is it fixed for the character's lifetime once chosen?
-- **New**: should some Flaws (Notoriety, Enemy, Hunted, and similar) mirror Perks' [Leveled (Resource) Perks](perks.md#leveled-resource-perks--confirmed) and use a 1-5 scale instead of being binary — a minor Enemy vs. a nemesis, a local Notoriety vs. an infamous one?
+- **Exact per-level definitions** for the 3 Leveled (Resource) Flaws (Notoriety, Enemy, Hunted) — same gap as the Leveled (Resource) Perks.
+- **Exact point amount** a Flaw grants at creation, and the exact scaling curve by severity — deferred to the broader point/XP economy (Character Creation & Advancement), same as Perk/Skill/Gift costs.
 
 ## Resolved
 
 - **Flaw list compiled** (2026-07-14): see Flaw List above, sourced from OWoD, Hero System, and D&D 3.5e Flaws (numeric-penalty entries excluded, mirroring how Perks excluded numeric-bonus Feats).
+- **Addendum: introduced Leveled (Resource) Flaws** (2026-07-14): Notoriety, Enemy, and Hunted mirror Perks' Leveled (Resource) treatment — 1-5 scale instead of binary. See Leveled (Resource) Flaws above.
+- **Flaw economy confirmed** (2026-07-14): taking a Flaw grants the player extra build points to spend elsewhere **at character creation only** — confirms Flaws aren't picked up mid-campaign (already stated above) and, since the exchange is a one-time creation-time transaction, **a Flaw is fixed for the character's lifetime once chosen** — there's no mechanism to buy one off later. By the same "cost scales with strength" logic already established for Perks, **the points granted should scale with a Flaw's severity** rather than being uniform — flagged as inferred by symmetry, not separately confirmed by exact numbers, which wait on the broader economy (see Open Questions).

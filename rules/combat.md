@@ -76,6 +76,17 @@ The formula is deliberately a **flat base plus a Body bonus**, not a pure Body-d
 - **Rank all participants by (modified) Degree, highest first.** That ranking is both the declare order (reverse) and the resolve order (forward) for the round.
 - Crit status still applies as normal on top of the ranking (nat 1 auto-top of the order; nat 20 auto-bottom), regardless of Degree modifiers.
 
+### Surprise — confirmed
+
+**Resolved 2026-07-14** (Option C from the research pass, plus an added Initiative penalty): who is surprised is a **GM call based on the fiction** (an ambush, an unseen threat, a scene that opens mid-danger) — no dedicated roll to determine it, consistent with this system's general GM-authority philosophy over narrative framing. A surprised character:
+
+- **Grants Advantage to attacks made against them** — reuses the existing [Advantage/Disadvantage](core-mechanic.md#advantage--disadvantage--confirmed) mechanic rather than a new subsystem; "attacking an unaware or surprised target" was already listed as a candidate Advantage trigger (see [core-mechanic.md](core-mechanic.md#advantage-trigger-examples--non-exhaustive)), so this locks that candidate in as a confirmed trigger specifically for Surprise.
+- **Takes -5 to their Initiative Degree, for the first round of combat only** — applied the same way as Combat Reflexes' +5 (a flat shift to the rolled Degree, not the target number, per the existing Initiative-modifier convention above). After the first round, this penalty no longer applies even if the fight continues.
+
+Researched D&D 5e (lose your action/movement entirely on the surprise round), Pathfinder 1e (flat-footed, no surprise-round action), Hero System (Surprise Attack: attacker OCV bonus, target loses DCV), and Rifts/OWoD (surprised side loses the initiative contest or acts last) before settling on this combination — it reuses two mechanics the system already has (Advantage/Disadvantage, Degree modifiers) rather than inventing a new "lose your turn" rule, while still being a meaningfully harder hit than either piece alone.
+
+**[Alertness](perks.md#combat-adjacent--confirmed)** grants immunity to both effects above while conscious, unless a mind-altering effect specifically allows the surprise. **[Reduced Reactions](flaws.md#combat-adjacent)** is the mirror — no immunity, and GMs may treat borderline "was this character surprised?" calls against that character more readily.
+
 ### Declaring — confirmed
 
 - Declaring commits a character to a **specific action and target** — full commitment, not just an action type. This is what creates the tactical tension of the reverse-declare order: low-initiative characters commit blind, high-initiative characters react to everything already on the table.

@@ -2,7 +2,7 @@
 
 ## Skills Are Not Attribute-Locked
 
-Skills are not tied to a fixed attribute. Any skill can be paired with any attribute, provided the player can argue the pairing to the GM's satisfaction. The GM has final say on whether a proposed pairing is reasonable for the situation.
+Skills are not tied to a fixed attribute. Any skill can be paired with any attribute, provided the player can argue the pairing to the GM's satisfaction. The GM has final say on whether a proposed pairing is reasonable for the situation. In practice, that argument is usually grounded in one of the character's own [Attribute Descriptors](core-mechanic.md#descriptors--confirmed) — a specific chosen flavor of the Attribute (e.g. *Agile* under Body) rather than an improvised justification from scratch.
 
 **Example:** Dave wants to intimidate an NPC who is built like a sasquatch. Normally he'd roll Intimidation + Body. But he's not going to out-muscle this NPC, so he argues for an alternative:
 

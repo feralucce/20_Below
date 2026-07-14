@@ -72,7 +72,8 @@ See the Combat section below for what's still open in this area.
 - [x] **Critical Failure resolved** (2026-07-13): combat gets a category × severity-tier table (Weapon Mishap, Self-Injury, Positional, Defensive, Team). Severity keyed off `|DoF|` (`20 − target`, simplified to always use the nat-20 case even for Multiple Actions' expanded crit-fail range), same tier bands as Called Shot's DoS tiers. GM picks whichever category fits the fiction. Social/Skill/Magical fumble tables explicitly excluded — those stay pure GM narration outside combat, per the core mechanic's existing philosophy. See [combat.md](../rules/combat.md#critical-failure--confirmed).
 - [x] **Combat follows the same free skill+attribute pairing rule as everything else** (resolved 2026-07-13) — situational, re-argued per attempt, no combat-specific lock-in (e.g. a feinting melee attack could argue Mind instead of Body).
 - [x] **The combat Skills are finalized, no longer deferred** (2026-07-13, revised 2026-07-13): now 4 — Melee Combat, Unarmed Combat, Firearms/Archery (merged), Special Weapons (exception Skill for a single exotic/siege-class weapon, not a broad category). Dodge/Evasion dropped as a Skill — covered by the Defense trait instead. See [premade-skills.md](../rules/premade-skills.md#combat--confirmed).
-- [x] **The 3 combat-adjacent Perks are resolved** (2026-07-14): Combat Reflexes (+5 to the Initiative Degree, per the existing Perk-modifies-Degree convention), Quick Draw (readying a weapon costs no Action), Alertness (cannot be surprised while conscious, barring a mind-altering effect that allows it). Raised a new gap, tracked under Perks below: "surprised" isn't itself mechanically defined anywhere in combat.md yet. See [perks.md](../rules/perks.md#combat-adjacent--confirmed).
+- [x] **The 3 combat-adjacent Perks are resolved** (2026-07-14): Combat Reflexes (+5 to the Initiative Degree, per the existing Perk-modifies-Degree convention), Quick Draw (readying a weapon costs no Action), Alertness (immune to Surprise, see below). See [perks.md](../rules/perks.md#combat-adjacent--confirmed).
+- [x] **Surprise resolved** (2026-07-14): Advantage to attacks against the surprised character, plus -5 to their Initiative Degree for the first round of combat only; who is surprised is a GM call based on the fiction. See [combat.md](../rules/combat.md#surprise--confirmed).
 - [ ] **Big downstream TODO**: once combat exists, the entire 76-Gift catalog needs a detail pass to convert soft narrative phrasing into concrete mechanics (ranges, durations, action costs) — [gifts.md](../rules/gifts.md), [premade-gifts.md](../rules/premade-gifts.md)
 
 ## Core Mechanic
@@ -83,13 +84,19 @@ See the Combat section below for what's still open in this area.
 
 ## Character Creation & Advancement (economy — likely unlocks a lot of other answers at once)
 
-- [ ] Size of the starting point pool.
-- [ ] Point cost per rank for Attributes, Skills, Perks, Gifts at creation.
+- [x] **Creation order and pool structure resolved** (2026-07-14): Attributes → Skills → Perks → Gifts → Flaws (grant Freebie Points) → spend Freebies. The first four are separate, siloed point pools — no cross-spending between them. Freebies are the flexible final pass. See [character-creation/overview.md](../character-creation/overview.md#creation-order--confirmed).
+- [x] **Addendum: Attribute Descriptors introduced** (2026-07-14): every point in an Attribute grants a player-chosen Descriptor (a specific flavor of that Attribute, e.g. Body 3 = *Agile, Fast, Durable*), and Descriptors are now how a Skill+Attribute pairing gets argued. See [core-mechanic.md](../rules/core-mechanic.md#descriptors--confirmed).
+- [x] **Point cost per rank confirmed flat 1:1** (2026-07-14): 1 pool point = 1 rank, for all four dedicated pools, no scaling curve.
+- [x] **Calibration step 1 done**: derived a comparable raw target number for "average human, average task" by anchoring to D&D and Hero System's shared "10 = human average" convention — three reference conversions land in a 10-13 range, recommending **10** as the working baseline (see [character-creation/overview.md](../character-creation/overview.md#calibration)). This is an input to pool sizing, not the pool size itself.
+- [x] **Attribute pool size resolved** (2026-07-14): **10 points**, Attributes start at 1 each (free floor), max distributable total 13 across Body/Mind/Soul. Deliberately less than 15 (three flat "average" 5s), so an all-average build is arithmetically impossible — forces at least one above-average and one below-average Attribute, reproducing the original "one above, one average, one below" goal via the budget itself rather than hardcoded tiers. See [character-creation/overview.md](../character-creation/overview.md#calibration).
+- [x] **No separate starting-creation cap on Attributes** (2026-07-14): unlike WoD's "max 3 at creation," this system only bounds Attributes by their normal min 1/max 10 range plus what the 10-point pool can afford — no redundant lower ceiling on top of that.
+- [ ] Size of the Skill/Perk/Gift pools — likely different per category, still open.
+- [ ] **New**: whether Freebie Points can be spent on all four categories or only some, and their conversion rate per category — assumed all four (OWoD-style) but not confirmed.
 - [ ] XP cost per rank for the same, during advancement — flat cost, or a scaling curve?
 - [ ] How XP is earned (per session, per milestone, GM discretion?).
 - [ ] Does advancement require in-fiction justification (training montage, mentor, relevant use in play), or is it free-form?
 - [ ] Exact XP cost for purchasing an extra Skill Specialty.
-- [ ] What taking a Flaw grants the player, whether it's uniform or varies by severity, and whether there's a cap on how many can be taken.
+- [ ] **New**: whether a new Attribute Descriptor can be reassigned/added without a fresh Attribute purchase.
 - ([character-creation/overview.md](../character-creation/overview.md))
 
 ## Skills
@@ -104,16 +111,16 @@ See the Combat section below for what's still open in this area.
 - [x] **Numeric edge-case Perks resolved**: Wealth and similar are a resource/currency pool, not a roll bonus, so they don't break the "no numeric bonus" rule (resolved 2026-07-14).
 - [x] **Addendum: 7 Perks (Wealth, Fringe Benefit, Contacts, Base, Notable Vehicle, Followers, Fame) now use the same 1-5 level scale as Gifts** instead of being binary (resolved 2026-07-14) — exact per-level content not yet written.
 - [ ] **New**: exact per-level definitions for the 7 Leveled (Resource) Perks above — same scale of work as the Gift catalog's level tables.
-- [ ] **New**: what does "surprised" actually do mechanically? (Raised by the Alertness Perk — see [perks.md](../rules/perks.md#combat-adjacent--confirmed).)
+- [x] **"Surprised" resolved** (2026-07-14): Advantage to attacks against the surprised character, plus -5 to their Initiative Degree for the first round of combat only. Who is surprised is a GM call based on the fiction, no dedicated roll. See [combat.md](../rules/combat.md#surprise--confirmed).
 - ([perks.md](../rules/perks.md))
 
 ## Flaws
 
-- [x] **Flaw list compiled** (resolved 2026-07-14): sourced from OWoD, Hero System, and D&D 3.5e Flaws (numeric-penalty entries excluded, mirroring Perks' exclusion of numeric-bonus Feats). Categories: Physical, Mental/Cognitive, Social, Combat-Adjacent. See [flaws.md](../rules/flaws.md#flaw-list).
-- [ ] What does taking a Flaw grant the player, and is the amount uniform or severity-based?
+- [x] **Flaw list compiled** (resolved 2026-07-14): sourced from OWoD, Hero System, and D&D 3.5e Flaws (numeric-penalty entries excluded, mirroring Perks' exclusion of numeric-bonus Feats). Categories: Physical, Mental/Cognitive, Social, Leveled (Resource), Combat-Adjacent. See [flaws.md](../rules/flaws.md#flaw-list).
+- [x] **Addendum: Notoriety/Enemy/Hunted mirror Perks' Leveled (Resource) Perks** (resolved 2026-07-14) — 1-5 scale instead of binary, exact per-level content not yet written. See [flaws.md](../rules/flaws.md#leveled-resource-flaws--confirmed).
+- [x] **Flaw economy confirmed** (resolved 2026-07-14): Flaws are taken only at character creation and grant extra build points to spend elsewhere. Since it's a one-time creation-time transaction, a Flaw is fixed for the character's lifetime once chosen — no buy-off mechanism. Points granted should scale with severity, by symmetry with Perk cost scaling — exact numbers still deferred to the point/XP economy.
 - [ ] Is there a cap on how many Flaws a character can take?
-- [ ] Can a Flaw ever be bought off or removed during play, or is it fixed once chosen at creation?
-- [ ] **New**: should Notoriety/Enemy/Hunted mirror Perks' Leveled (Resource) Perks and use a 1-5 scale instead of binary?
+- [ ] **New**: exact per-level definitions for the 3 Leveled (Resource) Flaws.
 - ([flaws.md](../rules/flaws.md))
 
 ## Gifts
