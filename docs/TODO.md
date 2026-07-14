@@ -109,10 +109,11 @@ See the Combat section below for what's still open in this area.
 
 ## Flaws
 
+- [x] **Flaw list compiled** (resolved 2026-07-14): sourced from OWoD, Hero System, and D&D 3.5e Flaws (numeric-penalty entries excluded, mirroring Perks' exclusion of numeric-bonus Feats). Categories: Physical, Mental/Cognitive, Social, Combat-Adjacent. See [flaws.md](../rules/flaws.md#flaw-list).
 - [ ] What does taking a Flaw grant the player, and is the amount uniform or severity-based?
 - [ ] Is there a cap on how many Flaws a character can take?
 - [ ] Can a Flaw ever be bought off or removed during play, or is it fixed once chosen at creation?
-- [ ] Compile an example Flaw list (mirroring premade-skills.md/perks.md), drawn from WoD Merits & Flaws — not started yet.
+- [ ] **New**: should Notoriety/Enemy/Hunted mirror Perks' Leveled (Resource) Perks and use a 1-5 scale instead of binary?
 - ([flaws.md](../rules/flaws.md))
 
 ## Gifts
