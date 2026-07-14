@@ -80,6 +80,7 @@ See the Combat section below for what's still open in this area.
 
 - [x] **Advantage/Disadvantage stacking resolved** (2026-07-13): each source is worth ±1, net summed, sign determines Advantage/Disadvantage/normal — see [core-mechanic.md](../rules/core-mechanic.md#advantage--disadvantage--confirmed).
 - [x] **Full trigger list resolved as deliberately non-exhaustive** (2026-07-14): compiled an illustrative candidate list from OWoD, Pathfinder 1e, CoC 7e, Exalted, Adventure!, Scion, Pendragon, Hero System, and Rifts (flanking, higher ground, surprise, teamwork, right tool/environment, narrative stunts, Passion-driven moments, Leadership-style rallying) — GM can recognize others as they arise. See [core-mechanic.md](../rules/core-mechanic.md#advantage-trigger-examples--non-exhaustive).
+- [x] **Disadvantage trigger list resolved the same way** (2026-07-14): mirrored candidate list — being flanked/outnumbered, unfavorable terrain, surprised, wrong tool/hostile environment, acting against a Passion/Flaw, being intimidated/demoralized. "Rushing" isn't on the list, but not dropped as a poor fit — it's already covered by the existing Multiple Actions mechanism. See [core-mechanic.md](../rules/core-mechanic.md#disadvantage-trigger-examples--non-exhaustive).
 
 ## Character Creation & Advancement (economy — likely unlocks a lot of other answers at once)
 

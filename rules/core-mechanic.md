@@ -111,6 +111,28 @@ Compiled from situational-bonus mechanics across the systems referenced elsewher
 - **Morale / Inspiration**
   - Being rallied by an ally's Leadership-type Skill use, distinct from a single-target Help/Assist.
 
+#### Disadvantage Trigger Examples — non-exhaustive
+
+The mirror of the Advantage list above, same sourcing and same caveat: **illustrative, not exclusive** — the GM can recognize other fitting triggers as they come up. Already-confirmed mechanical triggers (net Disadvantage forcing a live roll against the dice bank, Prone against the target's own attacks, the specific Dazed/Concussed/Grip-slips/Arm-impaired/Stumble/Team-mishap effects from Called Shots and Critical Failures, and [Multiple Actions](combat.md#multiple-actions--confirmed) — which already covers "rushing," via its per-action target penalty rather than Disadvantage) aren't repeated here, since those are already locked into combat.md rather than open triggers.
+
+- **Positional / Tactical**
+  - Being flanked by two or more opponents.
+  - Fighting from lower ground or otherwise unfavorable terrain.
+  - Being caught unaware or surprised (the target's own Disadvantage, as opposed to the attacker's Advantage for causing it).
+  - The enemy exploiting cover you can't answer.
+- **Outnumbered / Overwhelmed**
+  - Being mobbed or surrounded by multiple opponents at once (Hero System, Rifts).
+- **Preparation / Wrong Tool**
+  - Missing or improvising without the right tool or equipment for the task.
+  - A hostile or poor environment for the task (darkness, cramped quarters, a storm).
+- **Narrative / Roleplay-Driven**
+  - Acting directly against a character's own Passion, Flaw, or defining motivation (Pendragon-style — the inverse of a Passion driving the moment for Advantage).
+  - A Flaw actively working against the character in the moment (a triggered phobia, exploited prejudice, etc.).
+- **Morale / Intimidation**
+  - Being intimidated or demoralized by an enemy's Leadership- or Intimidation-type Skill use, mirroring the ally-rally Advantage trigger.
+
+**"Rushing" isn't on this list** — not dropped as a poor fit (unlike "taking extra time" on the Advantage side), but because it's already mechanized: [Multiple Actions](combat.md#multiple-actions--confirmed) already covers acting fast/rushed via its own per-action target penalty, so it doesn't need a second treatment as a Disadvantage trigger.
+
 ### Critical Results
 
 Regardless of modifiers or the clamped target number:
