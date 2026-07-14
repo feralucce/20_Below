@@ -20,7 +20,7 @@ This is the same paradigm both at creation and during play — the only differen
 5. **Flaws** — chosen last among the "acquiring" steps. Taking a Flaw doesn't cost anything; it **grants Freebie Points** instead (see [flaws.md](../rules/flaws.md)).
 6. **Spend Freebies** — the Freebie Points earned from step 5 are spent last, as a final flexible top-up pass.
 
-**The four dedicated pools (Attributes/Skills/Perks/Gifts) are siloed**: points from the Attribute pool can only buy Attributes, Skill pool points can only buy Skills, and so on — nothing carries over or converts between them. **Freebie Points are the exception** — the flexible currency, spent last, presumably usable across any of the four categories to round out the build (mirroring how OWoD's own Freebie Points work) — flagged below as inferred, not yet explicitly confirmed.
+**The four dedicated pools (Attributes/Skills/Perks/Gifts) are siloed**: points from the Attribute pool can only buy Attributes, Skill pool points can only buy Skills, and so on — nothing carries over or converts between them. **Freebie Points are the exception, confirmed 2026-07-14** — the flexible currency, spent last, usable across all four categories at the per-category rates set out in [Step 6](#calibration) below.
 
 ## Resolves
 
@@ -81,12 +81,23 @@ An 8-point Gift pool is **1.6× Mage's 5-dot baseline** — inside the same gene
 
 **Gift pool size and creation-time cost are both resolved.** Individual Perk costs and the XP cost to raise a Gift level after creation are still open.
 
+**Step 6 (2026-07-14): Freebie Points, confirmed.** A **starting pool of 15**, granted automatically regardless of Flaws taken — matching OWoD's own classic (Revised-edition) Freebie allotment, since the per-category costs below are also a direct import of OWoD's ratio. Flaws **add to** this pool on top (see below); Freebies aren't Flaw-gated the way the four dedicated pools are creation-order-gated.
+
+| Category | Cost per level (Freebies) | Cap via Freebies |
+|---|---|---|
+| Attribute | **7** | Max 2 levels (14 Freebies) |
+| Skill | **1** | None beyond the normal 6-point creation cap |
+| Perk | **3** | None stated |
+| Gift | **5** | Max 3 levels (15 Freebies) |
+
+**Notable interaction**: the 15-point baseline is just barely enough to hit *either* the Attribute cap (14, leaving 1 spare) *or* the Gift cap (exactly 15, leaving nothing) on its own — not both. Reaching both caps, or reaching either cap while still having Freebies left for Skills/Perks, requires additional Freebies from Flaws.
+
+**Flaws grant Freebies on top of the 15 baseline**: non-Leveled Flaws grant **1-7 Freebies** (OWoD's own severity range, GM/player negotiated per Flaw based on how much it actually constrains the character in play), and the 3 Leveled (Resource) Flaws grant **2 × the Flaw's level** (a level-3 Enemy grants 6 Freebies).
+
 ## Open Questions
 
-- Individual Perk costs (see [perks.md](../rules/perks.md#resolved) — cost scales with strength, exact numbers not set).
+- Individual Perk costs *within the dedicated Perk pool* (see [perks.md](../rules/perks.md#resolved) — cost scales with strength, exact numbers not set; the Freebie cost of 3/Perk above is a separate, already-resolved number).
 - XP cost to raise a Gift level **after** character creation, and whether it's flat or a scaling curve (see [gifts.md](../rules/gifts.md) Open Questions) — creation-time cost is resolved at flat 1:1.
-- **Whether Freebie Points can be spent on all four categories, or only some** — assumed all four (OWoD-style) but not explicitly confirmed.
-- **Freebie Point conversion rate** — how many Freebies buy one rank of Attribute vs. Skill vs. Perk vs. Gift (OWoD itself uses a different rate per category, e.g. an Attribute dot costs more Freebies than a Skill dot).
 - XP cost per rank for the same, during advancement (flat cost, or scaling with current rank/cost curve?).
 - How XP is earned (per session, per milestone, GM discretion?).
 - Does advancement require in-fiction justification (training montage, mentor, relevant use in play) or is it free-form?
