@@ -94,8 +94,9 @@ See the Combat section below for what's still open in this area.
 - [x] **Skill pool size resolved: 35 points** (2026-07-14): derived from OWoD/CoC7e/Pathfinder/Hero/Exalted starting-skill data (≈8-10 skills with real investment, at ≈60-67% of that system's starting cap) — converts to ≈9 skills at rank 4 (of the 6-point creation cap) ≈ 32-36 points, rounded to 35 to match the system's existing 1/3/5/10 numeric convention. See [character-creation/overview.md](../character-creation/overview.md#calibration).
 - [x] **Perk pool size resolved: 10 points** (2026-07-14) — individual Perk costs still TBD (cost scales with strength per [perks.md](../rules/perks.md#resolved)), but the pool total is fixed regardless. See [character-creation/overview.md](../character-creation/overview.md#calibration).
 - [x] **Gift pool size resolved: 8 points** (2026-07-14): checked against WoD Mage's Sphere-dot budget (5, and the acknowledged direct inspiration for the Power Level/Gift Level split), Vampire's Discipline budget (3), and Changeling's Arts/Realms budget (~5) — 8 is ~1.6× Mage's baseline, consistent with how generous the Attribute/Skill pools already are relative to WoD. Confirms the pool supports both specialization (one maxed Gift at 5 + a secondary at 3) and generalization (up to 4 Gifts at Level 2, or thinner spreads), assuming flat per-level cost. See [character-creation/overview.md](../character-creation/overview.md#calibration).
+- [x] **Gift-level cost at character creation confirmed flat 1:1** (2026-07-14): 1 pool point = 1 Gift level, same convention as the other three pools. Confirms the 8-point pool's specialization/generalization math rather than that math being contingent on an assumption. XP cost to raise a Gift level after creation is still open. See [gifts.md](../rules/gifts.md#resolved).
 - [ ] Individual Perk costs (per-Perk numbers, now that the pool total is set).
-- [ ] Individual Gift costs, and whether Gift-level cost is flat or a scaling curve — affects how the 8-point pool breaks down, not the pool size itself.
+- [ ] XP cost to raise a Gift level **after** character creation — flat or a scaling curve?
 - [ ] **New**: whether Freebie Points can be spent on all four categories or only some, and their conversion rate per category — assumed all four (OWoD-style) but not confirmed.
 - [ ] XP cost per rank for the same, during advancement — flat cost, or a scaling curve?
 - [ ] How XP is earned (per session, per milestone, GM discretion?).
@@ -130,8 +131,9 @@ See the Combat section below for what's still open in this area.
 
 ## Gifts
 
+- [x] **Gift level cost at character creation confirmed flat 1:1** (2026-07-14) — see Character Creation & Advancement above.
 - [ ] Does new Gift creation happen only between sessions (like new Skills), or can it also happen at character creation?
-- [ ] Cost to acquire/raise a Gift level — flat per level, or a scaling curve (WoD-style, level 5 costs much more than level 1)?
+- [ ] XP cost to raise a Gift level after character creation — flat per level, or a scaling curve (WoD-style, level 5 costs much more than level 1)?
 - [ ] Do Gifts require an in-fiction source/origin (bloodline, pact, training, mutation), or is that left to player flavor?
 - [ ] Resource costs or drawbacks on use (mana, fatigue, corruption, backlash) — universal system, or defined per-Gift?
 - [ ] **Cybernetics needs fuller treatment** — currently only one catalog entry ("Grafted Steel"). Needs more concepts, and a decision on whether it needs its own acquisition rules (surgery, cost, installation risk) instead of standard Gift creation.

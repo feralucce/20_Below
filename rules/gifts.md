@@ -48,9 +48,13 @@ Compiled from eleven systems (Werewolf, Mage, Changeling, Wraith, Hunter, Exalte
 ## Open Questions
 
 - Does new Gift creation happen only **between sessions** (like new Skills), or can it also happen at character creation?
-- Cost to acquire/raise a Gift level (points at creation, XP after) — flat per level, or a scaling cost curve (WoD-style, where level 5 costs much more than level 1)?
+- **Cost to raise a Gift level during advancement (XP)** — flat per level, or a scaling cost curve (WoD-style, where level 5 costs much more than level 1)? (Character-creation cost is resolved — see Resolved below.)
 - Do Gifts require an in-fiction source or origin (bloodline, pact, training, mutation) to justify taking them, or is that left purely to player narrative flavor?
 - Resource costs or drawbacks on use (mana, fatigue, corruption, backlash) — a universal system that applies to all Gifts, or defined per-Gift alongside its 5 levels?
 - **TODO: Cybernetics needs fuller treatment.** Currently only lightly represented by one catalog entry ("Grafted Steel" in [premade-gifts.md](premade-gifts.md)). Needs: more concepts (sensory augments, subdermal armor, combat-adjacent implants, neural interfaces, etc.) and a decision on whether cybernetics should follow the standard Gift creation process as-is, or needs its own acquisition rules (surgery, monetary cost, installation time/risk, rejection/compatibility) given it's typically bought and installed rather than trained or awakened into.
 - **TODO: Detail pass pending combat.** The whole catalog (e.g. *Fleet-Footed Fury*) is written at a soft narrative level of detail. Once [combat.md](combat.md) is designed, every Gift needs a pass applying that logic concretely — specific ranges, durations, action costs — instead of the current phrasing.
 - **TODO: Resisted-Roll-vs-Resolve triage.** Now that Resolve-vs-DoS is the default for one-sided Gift impositions, every existing Gift with an unwilling-target use case needs a pass to decide, case by case, whether it fits the default or genuinely needs a full Resisted Roll instead. Not started.
+
+## Resolved
+
+- **Gift level cost at character creation, confirmed 2026-07-14**: **flat 1:1** from the Gift pool — 1 pool point buys 1 Gift level, same convention as Attributes/Skills/Perks. This confirms the specialization/generalization math worked out for the [8-point Gift pool](character-creation/overview.md#calibration) (one maxed Gift + a secondary, or several Gifts at lower levels) rather than that math being contingent on an unresolved assumption. XP cost to raise a Gift level **after** creation is still open — see Open Questions above.

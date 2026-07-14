@@ -77,14 +77,14 @@ Two consistent patterns: a starting/competent character has real investment in r
 
 An 8-point Gift pool is **1.6× Mage's 5-dot baseline** — inside the same generosity range this system has already used relative to WoD elsewhere (Attribute pool is ~3.3× WoD's starting Attribute cap, Skill pool ~1.3× WoD's starting dot total), so 8 is consistent with the pattern rather than an outlier.
 
-**Confirms the specialization/generalization claim mathematically**, assuming the still-open "flat vs. scaling Gift-level cost" question (see [gifts.md](../rules/gifts.md) Open Questions) resolves flat, matching every other pool: max Gift Level is 5, so 8 points supports **one maxed Gift (5) plus a solid secondary (3)** on the specialist end, or **up to 4 Gifts at Level 2 each** (or thinner spreads, e.g. up to 8 different Gifts at Level 1) on the generalist end — a real spectrum between depth and breadth, not just in theory. **If Gift cost ends up on a scaling curve instead** (level 5 costing disproportionately more than level 1, WoD Discipline-style), these specific breakdowns would shift even though the 8-point pool total wouldn't need to change — flagged as a dependency, not a blocker.
+**Confirms the specialization/generalization claim mathematically.** Gift-level cost at character creation is now confirmed **flat 1:1** (see [gifts.md](../rules/gifts.md#resolved)), matching every other pool. Since max Gift Level is 5, 8 points supports **one maxed Gift (5) plus a solid secondary (3)** on the specialist end, or **up to 4 Gifts at Level 2 each** (or thinner spreads, e.g. up to 8 different Gifts at Level 1) on the generalist end — a real spectrum between depth and breadth, confirmed rather than assumed.
 
-**Gift pool size is resolved.** Individual Perk/Gift costs and the flat-vs-scaling Gift cost question are still open.
+**Gift pool size and creation-time cost are both resolved.** Individual Perk costs and the XP cost to raise a Gift level after creation are still open.
 
 ## Open Questions
 
 - Individual Perk costs (see [perks.md](../rules/perks.md#resolved) — cost scales with strength, exact numbers not set).
-- Individual Gift costs, and whether Gift-level cost is flat or a scaling curve (see [gifts.md](../rules/gifts.md) Open Questions) — affects how the 8-point Gift pool breaks down in practice, not the pool size itself.
+- XP cost to raise a Gift level **after** character creation, and whether it's flat or a scaling curve (see [gifts.md](../rules/gifts.md) Open Questions) — creation-time cost is resolved at flat 1:1.
 - **Whether Freebie Points can be spent on all four categories, or only some** — assumed all four (OWoD-style) but not explicitly confirmed.
 - **Freebie Point conversion rate** — how many Freebies buy one rank of Attribute vs. Skill vs. Perk vs. Gift (OWoD itself uses a different rate per category, e.g. an Attribute dot costs more Freebies than a Skill dot).
 - XP cost per rank for the same, during advancement (flat cost, or scaling with current rank/cost curve?).
