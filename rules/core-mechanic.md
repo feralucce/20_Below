@@ -12,17 +12,25 @@ Three base attribute categories:
 
 Attributes are scored **1-10** (1 = lowest, 10 = highest).
 
+**XP cost to raise an Attribute during Advancement, confirmed 2026-07-14**: `current rating × 9`. Deliberately the single most expensive scaling cost anywhere in the system — more than Power Level (×7) or a Gift level (×5) — because an Attribute touches nearly everything: Health Levels, Defense, Resolve, Initiative, Speed, every Skill roll via pairing, and Descriptors. Raising an Attribute from 1 to 10 costs `9 × (1+2+...+9)` = **405 XP** total. See [docs/TODO.md](../docs/TODO.md#advancement-xp-economy--character-progression-post-creation) for the still-open question of how much XP a character actually earns to spend against this.
+
 ### Descriptors — confirmed
 
 **Resolved 2026-07-14**: for **every point invested in an Attribute, the character gains one Descriptor** — a short player-chosen word or phrase capturing one specific flavor of that Attribute for this character. Example: Body 3 might be *Agile, Fast, Durable* — three distinct physical qualities, not three copies of "strong." A character doesn't have to spend every Descriptor on a different flavor, but the more varied the set, the more situations it covers.
 
 **Descriptors are how a player argues a [Skill+Attribute pairing](skills.md#skills-are-not-attribute-locked)**: instead of improvising a justification from scratch each time, the player points to one of their character's own chosen Descriptors as the concrete hook — "I'm using Body here because I'm being *Agile*," not just "I'm using Body because it feels right." This doesn't replace the GM's final say on whether the pairing fits the situation (still re-argued per attempt, not banked as precedent, per the existing rule) — it grounds the argument in a pre-established character fact instead of a fresh improvisation every time.
 
-Descriptors are chosen when the Attribute point is bought — at character creation, and again whenever the Attribute is raised during advancement.
+**No reassignment, confirmed 2026-07-14**: Descriptors are **free at character creation** (one per Attribute point, no separate cost) and **fixed once chosen** — a character doesn't get to drift away from a Descriptor later.
+
+**Buying an extra Descriptor, confirmed 2026-07-14**: after creation, a character can gain an **additional** Descriptor on an Attribute they already have **without raising the Attribute's score** — a standalone XP purchase, priced below the cost of a full Attribute raise, that adds versatility (another angle to argue a Skill+Attribute pairing from) without touching the underlying number. This is separate from — and cheaper than — the "raise the Attribute, gain a Descriptor" path above; a player who just wants more ways to justify pairings doesn't have to pay the full Attribute-raise price to get one. **Cost, confirmed 2026-07-14**: `current number of Descriptors on that Attribute × 1` XP — deliberately cheap and gently scaling, nowhere near the ×9 cost of an actual Attribute raise.
 
 **Power Level** is a fourth statistic, separate from Body/Mind/Soul, that governs magnitude when using [Gifts](gifts.md) (Power Level + Attribute vs. roll-under d20). It is scored **1-10**, same scale as the three core Attributes.
 
 Critically, **Power Level is its own independently-assigned statistic — not a "figured" characteristic derived or calculated from Body, Mind, Soul, or any combination of them.** It's bought and advanced on its own, the same way an Attribute is.
+
+**Unlike Attributes/Skills/Perks/Gifts, Power Level gets no dedicated pool at character creation.** **Starting value and Freebie cost, confirmed 2026-07-14**: every character begins with **Power Level 1**, raised only with Freebie Points (at creation) or XP (afterward) — **3 Freebies per level**, the same rate as Perks.
+
+**XP cost to raise Power Level during Advancement, confirmed 2026-07-14**: `current rating × 7`. Second-most-expensive scaling cost in the system, below Attributes (×9) but above a Gift level (×5) — Power Level governs the potency of *every* Gift a character has, a narrower reach than an Attribute (which touches non-Gift rolls too) but still broad within its own domain.
 
 (Name is a placeholder — see [gifts.md](gifts.md) Open Questions.)
 
@@ -44,24 +52,41 @@ This gives every Attribute a matching defensive trait, without overloading any o
 
 **Soak** (armor-driven damage reduction, applied after a hit connects via Defense) is conceptually gear-based, not Attribute-derived — see [combat.md](combat.md) for the reasoning. Not yet numerically designed; waiting on an equipment subsystem.
 
-## Spark — confirmed
+## Resonance — confirmed
 
-A **binary, table-wide resource** — a single checkbox per player, not a pool (contrast with [Pre-Rolled Combat Dice](combat.md#pre-rolled-combat-dice--confirmed), which *is* a pool). Every player starts each session with Spark checked. This is the answer to the combat.md TODO on forcing the GM's hand with a banked roll.
+**Named 2026-07-14** (superseding the "Willpower" placeholder, which itself superseded Spark). Resonance is a **pool scored 1-10**, same scale as an Attribute or Power Level — not a binary checkbox, and not every spend costs the same amount. **Starting value and acquisition, confirmed 2026-07-14**: every character begins with **Resonance 1**, raised only with Freebie Points (at creation) or XP (afterward) — **3 Freebies per level**, same rate as Power Level and Perks. It gets no dedicated creation pool, same as Power Level.
 
-**Spending Spark** does one of the following, then it's checked off until regained:
+### Spending Resonance — confirmed
 
-1. **Force one of your own bad banked rolls onto the GM.** Hand the GM one of the results from your own Pre-Rolled Combat Dice bank; they must use it for the roll in question instead of their own banked/live result. Declare it **after the roll is attempted but before its effect resolves** — you know a roll is happening and can see how the fiction is shaping up, but you're committing Spark before the numeric outcome is revealed, not after seeing it and deciding it's bad for you. **Combat-only**, since it depends on the bank existing.
-2. **Grant yourself Advantage** on a d20 roll (2d20, take lower, per the core Advantage rule above). Not combat-restricted — usable on any roll, in or out of combat.
-3. **Give one of your banked Pre-Rolled Combat Dice results to another player**, adding it to their bank. **Combat-only**, same reason as #1.
+**Resolved 2026-07-14**: replaces the old Spark-derived menu entirely with a full cost-tiered list. Each effect below costs a different number of Resonance points, spent from the current pool:
 
-**Bank access is restricted to combat and to Spark spends** — outside of combat, and outside of spending Spark, players don't touch the Pre-Rolled Combat Dice bank at all.
+| Cost | Effect |
+|---|---|
+| 1 | Grant yourself Advantage on one roll. |
+| 2 | Reroll after seeing the result. Can stack with Advantage, but if the first roll was already made at Advantage, using this on the *second* roll costs another Resonance point of its own. |
+| 1 | Cancel the effects of a critical failure, turning it into a normal failure. |
+| **X** | **Activate a Gift.** Every Gift costs Resonance to use — exact amount **not yet decided**, flagged below. |
+| 2 | When a hit would drop you a Health Level, spend a point to refill that Health Level instead of losing it. |
+| 1 | Stabilize automatically when dying — moves a character from Incapacitated back to Suffering. |
+| 1 | Gain an extra Action this round, **not** subject to the Multiple Actions penalty. Usable **once per round** only. |
+| 2 | Add a d6 to your own Degree of Success. |
+| 3 | Add a d6 to an NPC's Degree of Failure. |
+| 3 | Force the GM to reroll a result after seeing it. |
 
-**Regaining Spark** (confirmed): refills automatically at the **start of each session**, same timing as the Pre-Rolled Combat Dice bank reset. If a player has already spent their Spark mid-session, the **GM may hand it back** for standout roleplay, heroism, or clever play — discretionary, no fixed formula, judged in the moment (same model as D&D 5e Inspiration; the DMG's rough pacing guideline is about once per session per player).
+This is a deliberate mix the old Spark menu never had: several of these are **defensive/reactive saves** (cancel a crit-fail, auto-stabilize, refill a Health Level) rather than purely proactive plays — closing the exact gap flagged when the source-system research was done (OWoD/Pathfinder/Exalted all give their Willpower-equivalents a defensive use that Spark lacked).
 
-**Overflow** (confirmed): Spark is binary, so a character can't hold two. Any time a character would gain Spark while already holding it — in practice, a GM award landing on a full character — they gain **Advantage on their next roll** instead, per the numeric [Advantage/Disadvantage](#advantage--disadvantage--confirmed) rule above (+1 to that roll's net).
+### Regaining Resonance — confirmed
+
+**Resolved 2026-07-14**, addressing the fact that Resonance is a genuinely **fluid pool** — with this many cheap, frequently-useful spends, a refill scheme built only around "between adventures" would leave it dry for long stretches of play. Three regain triggers:
+
+1. **A small trickle at the start of each session** — regain **1 Resonance** automatically (capped at the character's max), so a multi-session adventure doesn't leave the pool empty the whole way through. Deliberately much smaller than Spark's old "full refill every session" — this keeps Resonance precious while still being usable.
+2. **Full refill between adventures** — a larger story boundary than a single session (a completed arc, a return to safety/downtime, whatever the GM designates as the edge of "an adventure").
+3. **Discretionary GM award for standout play** — heroism, cleverness, or great roleplay grants back Resonance points mid-adventure, judged in the moment (same model as D&D 5e Inspiration) — not necessarily a full refill unless the GM says so.
+
+**Overflow** (confirmed, carried over from Spark): if an award would push a character above their maximum, they gain **Advantage on their next roll** instead, per the numeric [Advantage/Disadvantage](#advantage--disadvantage--confirmed) rule above (+1 to that roll's net).
 
 **Open questions**:
-- Does unspent Spark carry over indefinitely session to session, or is there ever a reason to cap/reset it beyond "always topped up at session start"?
+- **Gift activation cost (the "X" above)** — not yet decided. A natural direction worth considering: scale it with the Gift's own Level (a Level-1 Gift costs less Resonance to fire than a Level-5 one), but this is flagged, not settled.
 
 ## Character Capabilities
 

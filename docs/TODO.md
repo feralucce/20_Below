@@ -6,7 +6,7 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 ## ⬆️ Pick up here next session (2026-07-13)
 
-**Spark is resolved**, including overflow (already-full Spark gain converts to Advantage) — see [core-mechanic.md](../rules/core-mechanic.md#spark--confirmed).
+**Spark is resolved** *(superseded 2026-07-14 — Spark was eliminated and folded into [Willpower](../rules/core-mechanic.md#willpower--confirmed), see below)*, including overflow (already-full Spark gain converts to Advantage).
 
 **Advantage/Disadvantage stacking is resolved**: numeric ±1 per source, net sign picks Advantage/Disadvantage/normal — see [core-mechanic.md](../rules/core-mechanic.md#advantage--disadvantage--confirmed).
 
@@ -82,7 +82,7 @@ See the Combat section below for what's still open in this area.
 - [x] **Full trigger list resolved as deliberately non-exhaustive** (2026-07-14): compiled an illustrative candidate list from OWoD, Pathfinder 1e, CoC 7e, Exalted, Adventure!, Scion, Pendragon, Hero System, and Rifts (flanking, higher ground, surprise, teamwork, right tool/environment, narrative stunts, Passion-driven moments, Leadership-style rallying) — GM can recognize others as they arise. See [core-mechanic.md](../rules/core-mechanic.md#advantage-trigger-examples--non-exhaustive).
 - [x] **Disadvantage trigger list resolved the same way** (2026-07-14): mirrored candidate list — being flanked/outnumbered, unfavorable terrain, surprised, wrong tool/hostile environment, acting against a Passion/Flaw, being intimidated/demoralized. "Rushing" isn't on the list, but not dropped as a poor fit — it's already covered by the existing Multiple Actions mechanism. See [core-mechanic.md](../rules/core-mechanic.md#disadvantage-trigger-examples--non-exhaustive).
 
-## Character Creation & Advancement (economy — likely unlocks a lot of other answers at once)
+## Character Creation (the point-buy economy — largely resolved)
 
 - [x] **Creation order and pool structure resolved** (2026-07-14): Attributes → Skills → Perks → Gifts → Flaws (grant Freebie Points) → spend Freebies. The first four are separate, siloed point pools — no cross-spending between them. Freebies are the flexible final pass. See [character-creation/overview.md](../character-creation/overview.md#creation-order--confirmed).
 - [x] **Addendum: Attribute Descriptors introduced** (2026-07-14): every point in an Attribute grants a player-chosen Descriptor (a specific flavor of that Attribute, e.g. Body 3 = *Agile, Fast, Durable*), and Descriptors are now how a Skill+Attribute pairing gets argued. See [core-mechanic.md](../rules/core-mechanic.md#descriptors--confirmed).
@@ -94,15 +94,39 @@ See the Combat section below for what's still open in this area.
 - [x] **Skill pool size resolved: 35 points** (2026-07-14): derived from OWoD/CoC7e/Pathfinder/Hero/Exalted starting-skill data (≈8-10 skills with real investment, at ≈60-67% of that system's starting cap) — converts to ≈9 skills at rank 4 (of the 6-point creation cap) ≈ 32-36 points, rounded to 35 to match the system's existing 1/3/5/10 numeric convention. See [character-creation/overview.md](../character-creation/overview.md#calibration).
 - [x] **Perk pool size resolved: 10 points** (2026-07-14) — individual Perk costs still TBD (cost scales with strength per [perks.md](../rules/perks.md#resolved)), but the pool total is fixed regardless. See [character-creation/overview.md](../character-creation/overview.md#calibration).
 - [x] **Gift pool size resolved: 8 points** (2026-07-14): checked against WoD Mage's Sphere-dot budget (5, and the acknowledged direct inspiration for the Power Level/Gift Level split), Vampire's Discipline budget (3), and Changeling's Arts/Realms budget (~5) — 8 is ~1.6× Mage's baseline, consistent with how generous the Attribute/Skill pools already are relative to WoD. Confirms the pool supports both specialization (one maxed Gift at 5 + a secondary at 3) and generalization (up to 4 Gifts at Level 2, or thinner spreads), assuming flat per-level cost. See [character-creation/overview.md](../character-creation/overview.md#calibration).
-- [x] **Gift-level cost at character creation confirmed flat 1:1** (2026-07-14): 1 pool point = 1 Gift level, same convention as the other three pools. Confirms the 8-point pool's specialization/generalization math rather than that math being contingent on an assumption. XP cost to raise a Gift level after creation is still open. See [gifts.md](../rules/gifts.md#resolved).
+- [x] **Gift-level cost at character creation confirmed flat 1:1** (2026-07-14): 1 pool point = 1 Gift level, same convention as the other three pools. Confirms the 8-point pool's specialization/generalization math rather than that math being contingent on an assumption. See [gifts.md](../rules/gifts.md#resolved).
 - [x] **Freebie Points fully resolved** (2026-07-14): starting pool of **15** (flat, regardless of Flaws), spendable across all four categories at **Attribute 7/level (cap 2 levels), Skill 1/level (no extra cap), Perk 3/Perk (no cap), Gift 5/level (cap 3 levels)**. Flaws add to the 15 baseline: **1-7 Freebies** per non-Leveled Flaw (OWoD's severity range, negotiated), or **2 × level** for the 3 Leveled (Resource) Flaws. The 15 baseline alone can hit either the Attribute cap (14) or the Gift cap (15) but not both. See [character-creation/overview.md](../character-creation/overview.md#calibration).
-- [ ] Individual Perk costs *within the dedicated Perk pool* (separate from the now-resolved Freebie cost of 3/Perk).
-- [ ] XP cost to raise a Gift level **after** character creation — flat or a scaling curve?
-- [ ] XP cost per rank for the same, during advancement — flat cost, or a scaling curve?
-- [ ] How XP is earned (per session, per milestone, GM discretion?).
+- [x] **Individual Perk costs resolved: 3-tier system** (2026-07-14): Minor 1 / Moderate 2 / Major 3 points, GM/player negotiated per Perk (same spirit as Flaw severity negotiation); Leveled (Resource) Perks are a flat 1 point/level. Assigning a tier to every specific Perk in the catalog is still a follow-up content pass, same shape as the Leveled Perk/Flaw level tables. See [perks.md](../rules/perks.md#resolved).
+- [x] **No Attribute Descriptor reassignment** (2026-07-14): Descriptors are free at creation (one per Attribute point) and fixed once chosen — no drifting. A new Descriptor is only gained by raising the Attribute again, which after creation means spending XP during Advancement. See [core-mechanic.md](../rules/core-mechanic.md#descriptors--confirmed).
+- **Character creation (the point-buy economy) is now fully resolved.**
+- ([character-creation/overview.md](../character-creation/overview.md))
+
+## Advancement (XP economy — character progression, post-creation)
+
+Split out from Character Creation above (2026-07-14) since it's a genuinely separate phase — XP governs what happens *after* a character exists, not how one is built.
+
+**XP spend costs, confirmed 2026-07-14** — a WoD-style `current rating × multiplier` scaling model, ratios deliberately weighted by how much systemic reach each category has:
+
+| Item | Formula | X |
+|---|---|---|
+| Attribute | current × X | **9** (highest in the system — touches nearly everything) |
+| Power Level | current × X | **7** |
+| Gift level | current level × X | **5** |
+| Skill | current × X | **2** |
+| New Gift (0→1) | flat | **7** |
+| New Skill (0→1) | flat | **3** |
+| Attribute Descriptor (extra) | # descriptors × X | **1** |
+| Skill Specialty (extra) | # specialties × X | **1** |
+| New Perk | flat, by tier | **Tier × 3** (Minor 3 / Moderate 6 / Major 9) |
+| Resonance | current × X | **TBD** — Freebie cost is resolved (3/level), but the XP-during-advancement multiplier isn't set yet |
+
+- [x] **XP cost per rank for Attributes/Skills/Perks/Gifts, resolved** (2026-07-14) — see table above and [core-mechanic.md](../rules/core-mechanic.md), [skills.md](../rules/skills.md#resolved), [gifts.md](../rules/gifts.md#resolved), [perks.md](../rules/perks.md#resolved).
+- [ ] **How much XP is a character actually awarded** (per session, per milestone, GM discretion?) — the costs above are only ratios until this is set; researched D&D 5e's DMG pacing as a reference point (see the 2026-07-14 design-log entry) but haven't yet back-calculated an award rate from it.
 - [ ] Does advancement require in-fiction justification (training montage, mentor, relevant use in play), or is it free-form?
-- [ ] Exact XP cost for purchasing an extra Skill Specialty.
-- [ ] **New**: whether a new Attribute Descriptor can be reassigned/added without a fresh Attribute purchase.
+- [x] **Spark eliminated, folded into Resonance** (named 2026-07-14, superseding an interim "Willpower" placeholder): a full cost-tiered spend menu (1-3 Resonance per effect: Advantage, reroll, cancel a crit-fail, refill a lost Health Level, auto-stabilize, a bonus Action, boost your own DoS or an NPC's DoF, force a GM reroll) replaces Spark's old flat 3-option menu entirely. Regains on three triggers: a small 1-point trickle every session, a full refill between adventures, and the same discretionary GM award Spark had. See [core-mechanic.md](../rules/core-mechanic.md#resonance--confirmed).
+- [x] **Power Level and Resonance starting value + Freebie cost, resolved** (2026-07-14): both start at **1** at character creation, raised only with Freebie Points (**3/level**, at creation) or XP (afterward) — neither gets a dedicated creation pool. See [core-mechanic.md](../rules/core-mechanic.md#power-level) and [core-mechanic.md](../rules/core-mechanic.md#resonance--confirmed).
+- [ ] **New (2026-07-14)**: **Resonance's XP-during-advancement multiplier** (the "current × X" cost to raise it after creation) — Freebie cost is set, this isn't yet.
+- [ ] **New (2026-07-14)**: **Gift activation cost in Resonance** — every Gift now costs Resonance to use, exact amount undecided. One direction floated: scale with the Gift's own Level.
 - ([character-creation/overview.md](../character-creation/overview.md))
 
 ## Skills
@@ -112,7 +136,7 @@ See the Combat section below for what's still open in this area.
 ## Perks
 
 - [x] **Perk cost scales with strength, not flat** (resolved 2026-07-14) — exact numbers deferred to the point/XP economy, same as Skills/Gifts.
-- [x] **No cap on Perks, but acquiring one after character creation costs a premium** (resolved 2026-07-14) — exact premium TBD alongside cost numbers.
+- [x] **No cap on Perks, but acquiring one after character creation costs a premium** (resolved 2026-07-14) — premium is now quantified at **tier × 3 XP** (Minor 3 / Moderate 6 / Major 9), see Advancement section above.
 - [x] **No prerequisites — a Perk grants its own standing** (resolved 2026-07-14): e.g. Fringe Benefit is what creates the license/clearance, not a reward for already having it.
 - [x] **Numeric edge-case Perks resolved**: Wealth and similar are a resource/currency pool, not a roll bonus, so they don't break the "no numeric bonus" rule (resolved 2026-07-14).
 - [x] **Addendum: 7 Perks (Wealth, Fringe Benefit, Contacts, Base, Notable Vehicle, Followers, Fame) now use the same 1-5 level scale as Gifts** instead of being binary (resolved 2026-07-14) — exact per-level content not yet written.
@@ -131,9 +155,9 @@ See the Combat section below for what's still open in this area.
 
 ## Gifts
 
-- [x] **Gift level cost at character creation confirmed flat 1:1** (2026-07-14) — see Character Creation & Advancement above.
+- [x] **Gift level cost at character creation confirmed flat 1:1** (2026-07-14) — see Character Creation above.
+- [x] **XP costs resolved** (2026-07-14): new Gift flat 7 XP, raising an existing Gift's level costs current level × 5. See Advancement section above and [gifts.md](../rules/gifts.md#resolved).
 - [ ] Does new Gift creation happen only between sessions (like new Skills), or can it also happen at character creation?
-- [ ] XP cost to raise a Gift level after character creation — flat per level, or a scaling curve (WoD-style, level 5 costs much more than level 1)?
 - [ ] Do Gifts require an in-fiction source/origin (bloodline, pact, training, mutation), or is that left to player flavor?
 - [ ] Resource costs or drawbacks on use (mana, fatigue, corruption, backlash) — universal system, or defined per-Gift?
 - [ ] **Cybernetics needs fuller treatment** — currently only one catalog entry ("Grafted Steel"). Needs more concepts, and a decision on whether it needs its own acquisition rules (surgery, cost, installation risk) instead of standard Gift creation.

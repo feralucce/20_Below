@@ -94,12 +94,13 @@ An 8-point Gift pool is **1.6× Mage's 5-dot baseline** — inside the same gene
 
 **Flaws grant Freebies on top of the 15 baseline**: non-Leveled Flaws grant **1-7 Freebies** (OWoD's own severity range, GM/player negotiated per Flaw based on how much it actually constrains the character in play), and the 3 Leveled (Resource) Flaws grant **2 × the Flaw's level** (a level-3 Enemy grants 6 Freebies).
 
+**Character creation is now fully resolved.** Everything below is Advancement (XP economy) — tracked separately in [docs/TODO.md](../docs/TODO.md#advancement-xp-economy--character-progression-post-creation), not repeated here.
+
 ## Open Questions
 
-- Individual Perk costs *within the dedicated Perk pool* (see [perks.md](../rules/perks.md#resolved) — cost scales with strength, exact numbers not set; the Freebie cost of 3/Perk above is a separate, already-resolved number).
-- XP cost to raise a Gift level **after** character creation, and whether it's flat or a scaling curve (see [gifts.md](../rules/gifts.md) Open Questions) — creation-time cost is resolved at flat 1:1.
-- XP cost per rank for the same, during advancement (flat cost, or scaling with current rank/cost curve?).
-- How XP is earned (per session, per milestone, GM discretion?).
-- Does advancement require in-fiction justification (training montage, mentor, relevant use in play) or is it free-form?
-- Exact XP cost for purchasing an extra specialty.
-- Whether a new Attribute Descriptor is chosen only when the point is first bought, or can be reassigned/added later without a fresh Attribute purchase.
+None remaining for character creation itself. See the Advancement TODO for what's still open on the XP side (per-rank cost, how XP is earned, justification requirement, Specialty cost, and the after-creation Gift-level cost curve).
+
+## Resolved (creation-specific, not already covered above)
+
+- **Individual Perk costs within the dedicated Perk pool** (2026-07-14): a 3-tier system (Minor 1 / Moderate 2 / Major 3 points), plus flat 1 point per level for the 7 Leveled (Resource) Perks. See [perks.md](../rules/perks.md#resolved).
+- **No Attribute Descriptor reassignment, but extra ones are purchasable** (2026-07-14): Descriptors are free at creation (one per Attribute point) and **fixed once chosen** — no drifting away from one later. Post-creation, a character can buy an **additional** Descriptor on an Attribute they already have, as its own XP purchase priced below a full Attribute raise — more versatility without the exorbitant cost of raising the underlying score. Exact XP cost is an Advancement-economy question. See [core-mechanic.md](../rules/core-mechanic.md#descriptors--confirmed).

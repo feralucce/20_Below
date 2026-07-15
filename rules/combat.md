@@ -7,7 +7,7 @@ _In active design as of 2026-07-12._
 - **Critical success**: double damage, plus an additional GM-narrated effect.
 - **Critical failure**: always fails (per core mechanic); combat gets a category × severity-tier table, keyed off `|DoF|` — see [Critical Failure](#critical-failure--confirmed) below.
 - **Called shots**: impose a size-dependent difficulty modifier on the attack roll (see Special Maneuvers below).
-- **Spark**: a per-player, per-session checkbox resource for forcing a bad banked roll onto the GM, granting yourself Advantage, or gifting a banked die to another player — see [core-mechanic.md](core-mechanic.md#spark--confirmed).
+- **Resonance**: a per-player 1-10 pool (supersedes Spark, named 2026-07-14) with a full cost-tiered spend menu — Advantage, rerolls, canceling a critical failure, refilling a lost Health Level, auto-stabilizing, a bonus Action, boosting DoS/an NPC's DoF, and forcing a GM reroll — see [core-mechanic.md](core-mechanic.md#resonance--confirmed).
 - **Damage**: Weapon Base (1-10, by weapon class) + (DoS − Defense); only the Weapon Base doubles on a crit — see [Damage](#damage--confirmed) below.
 
 ## Round Structure (in progress)
@@ -31,7 +31,7 @@ A table-speed tool, since initiative re-rolling every 3-second round means a lot
 
 This means once a player runs through their 10, further combat rolls that session go back to live rolling — the bank is a speed-up for the *bulk* of combat rolls, not a full replacement forever.
 
-**Bank access outside a Spark spend**: players don't touch their bank except to spend it on a combat d20 roll, or as part of spending [Spark](core-mechanic.md#spark--confirmed) (forcing a banked result onto the GM, or gifting one to another player's bank).
+**Bank access**: players only touch their bank to spend a result on a combat d20 roll. **Updated 2026-07-14**: earlier drafts had Spark/Willpower interact directly with the bank (forcing a banked result onto the GM, gifting one to another player) — [Resonance's spend menu](core-mechanic.md#resonance--confirmed) replaced those with different effects (rerolls, forcing a GM reroll, etc.) that don't touch the bank at all, so Resonance and the dice bank are now fully independent systems.
 
 **Advantage/Disadvantage vs. the bank** (confirmed): banked results are known values, picked from a list the player wrote down at session start — not a fresh gamble. That asymmetry governs how [Advantage/Disadvantage](core-mechanic.md#advantage--disadvantage--confirmed) interacts with the "mandatory until exhausted" rule above:
 
@@ -371,7 +371,7 @@ Combat-adjacent Perks (Combat Reflexes, Quick Draw, Alertness) — see [perks.md
 
 ## Resolved (2026-07-13)
 
-- **"Standard NPC" vs. "Named NPC/PC"**, introduced by Catastrophic Head, is now defined: **Standard NPCs** are general-purpose threats pulled straight from a rogues' gallery or bestiary — disposable, no special mechanical access. **Named NPCs** have access to the same mechanisms as PCs (Health Levels, Damage, Called Shot, etc.) **except Spark and forcing dice from the bank** — those stay player-only. Named NPCs are typically BBEGs or their significant henchmen.
+- **"Standard NPC" vs. "Named NPC/PC"**, introduced by Catastrophic Head, is now defined: **Standard NPCs** are general-purpose threats pulled straight from a rogues' gallery or bestiary — disposable, no special mechanical access. **Named NPCs** have access to the same mechanisms as PCs (Health Levels, Damage, Called Shot, etc.) **except Resonance** — that stays player-only. Named NPCs are typically BBEGs or their significant henchmen.
 - **Combat follows the same free skill+attribute pairing rule as everything else** — no combat-specific lock-in. It's situational and re-argued per attempt, same as any Skill+Attribute pairing (see [skills.md](skills.md)): a Melee Combat attack most often pairs with Body, but a sufficiently clever character could argue a feinting attack pairs with Mind instead, subject to the GM's usual case-by-case approval.
 - **Grapple's attacker Skill is Unarmed Combat** — see [premade-skills.md](premade-skills.md#combat--confirmed).
 - **Confirmed: "Defense halved (round up)" stands** as Charge/Brace's cost, substituting for the old "Disadvantage on defense" now that Defense is a calculated trait rather than a roll.

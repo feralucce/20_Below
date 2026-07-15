@@ -6,6 +6,8 @@ Skills are scored **0-10** system-wide (see [core-mechanic.md](core-mechanic.md#
 
 **Character-creation cap, confirmed 2026-07-14**: a Skill may not exceed **6** at character creation, even though the system-wide ceiling is 10 — a starting character cannot begin the game with a maxed-out Skill. Reaching 7-10 is advancement-only, spent with XP after creation like any other improvement.
 
+**XP costs during Advancement, confirmed 2026-07-14**: raising an existing Skill costs `current rating × 2` (a direct import of WoD's Ability cost — see [core-mechanic.md](core-mechanic.md) for the Attribute/Power Level/Gift equivalents). Learning a **brand-new Skill** (0→1) costs a **flat 3 XP**, reusing WoD's own "new Ability" override for the same reason WoD needed one: the ×2 formula breaks down at a starting rating of 0.
+
 ## Skills Are Not Attribute-Locked
 
 Skills are not tied to a fixed attribute. Any skill can be paired with any attribute, provided the player can argue the pairing to the GM's satisfaction. The GM has final say on whether a proposed pairing is reasonable for the situation. In practice, that argument is usually grounded in one of the character's own [Attribute Descriptors](core-mechanic.md#descriptors--confirmed) — a specific chosen flavor of the Attribute (e.g. *Agile* under Body) rather than an improvised justification from scratch.
@@ -46,12 +48,13 @@ When a character becomes particularly adept at a skill, they gain **specialties*
 - Specialty choice belongs to the player, subject to GM approval for fit.
 - Advantage from a specialty does not stack with other sources of Advantage (per the core Advantage/Disadvantage rule) — having two applicable specialties on one roll still just grants Advantage once.
 - **Advantage is the entire mechanical effect of a specialty** — no flat bonus, no auto-success, nothing beyond Advantage on an applicable roll.
-- Specialties beyond the automatic ones can also be **purchased separately** with XP between sessions, same as any other advancement purchase, subject to GM approval (see [character-creation/overview.md](../character-creation/overview.md)). This means a character isn't limited to 3 specialties per skill capped by rank; extra ones are available as long as the player is willing to spend the XP. Exact XP cost TBD (a numbers/balance question for later).
+- Specialties beyond the automatic ones can also be **purchased separately** with XP between sessions, same as any other advancement purchase, subject to GM approval (see [character-creation/overview.md](../character-creation/overview.md)). This means a character isn't limited to 3 specialties per skill capped by rank; extra ones are available as long as the player is willing to spend the XP. **Cost, confirmed 2026-07-14**: `current number of specialties on that skill × 1` XP — cheap and gently scaling, same treatment as an extra Attribute Descriptor.
 
 ## Open Questions
 
-- Exact XP cost for raising a skill, and for purchasing an extra specialty (numbers/balance — deferred until character creation is designed).
+None remaining specific to this doc — see [docs/TODO.md](../docs/TODO.md#advancement-xp-economy--character-progression-post-creation) for the still-open Advancement questions that apply system-wide (how much XP is earned, justification requirements).
 
 ## Resolved
 
 - **Genre-flagged skills ship as defaults, GM discretion to drop** (2026-07-13): Occult, Mythos, and Alchemy (see [premade-skills.md](premade-skills.md)) are included by default rather than opt-in modules, but the GM can drop any that don't fit the campaign's premise.
+- **XP costs, confirmed 2026-07-14**: raising a Skill costs `current rating × 2`; a brand-new Skill costs a flat 3 XP; an extra Specialty costs `current specialty count × 1` XP. See Scoring and Specialties sections above.
