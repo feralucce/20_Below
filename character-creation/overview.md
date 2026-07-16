@@ -94,11 +94,32 @@ An 8-point Gift pool is **1.6× Mage's 5-dot baseline** — inside the same gene
 
 **Flaws grant Freebies on top of the 15 baseline**: non-Leveled Flaws grant **1-7 Freebies** (OWoD's own severity range, GM/player negotiated per Flaw based on how much it actually constrains the character in play), and the 3 Leveled (Resource) Flaws grant **2 × the Flaw's level** (a level-3 Enemy grants 6 Freebies).
 
-**Character creation is now fully resolved.** Everything below is Advancement (XP economy) — tracked separately in [docs/TODO.md](../docs/TODO.md#advancement-xp-economy--character-progression-post-creation), not repeated here.
+**Character creation is now fully resolved.**
+
+## Advancement
+
+XP spend costs (the `current × multiplier` table) are documented per-category in each rule doc — see [core-mechanic.md](../rules/core-mechanic.md), [skills.md](../rules/skills.md#resolved), [gifts.md](../rules/gifts.md#resolved), [perks.md](../rules/perks.md#resolved) — and summarized in [docs/TODO.md](../docs/TODO.md#advancement-xp-economy--character-progression-post-creation).
+
+**XP award rate, confirmed 2026-07-14: 5 XP per session.** Derived by comparing our own cost multipliers against their sources rather than picking a number in isolation: most of them are **direct WoD imports** (Skill ×2 = WoD Ability ×2, Gift level ×5 = WoD Discipline ×5, New Perk tiers ≈ WoD Background pricing) — the one deliberate outlier is **Attribute ×9 vs. WoD's own Attribute ×4**, a 2.25× markup matching the earlier "Attributes need to be really hard" decision. Since WoD itself awards **up to 5 XP/session** (confirmed via its own category checklist), reusing that same rate directly means every WoD-imported cost advances at WoD's own well-tested pace, and Attributes automatically end up 2.25× slower than WoD's — the intended outcome, achieved by the multiplier alone with no separate tuning needed.
+
+**Award categories, confirmed 2026-07-14** — a WoD/Pathfinder blend, up to 5 XP awarded per session:
+
+| Category | XP | Source |
+|---|---|---|
+| Attendance / Participation | 1 | WoD baseline |
+| Good Roleplaying | 1 | WoD (confirmed category) |
+| Heroism / Risk Faced | 1 | WoD (confirmed category) |
+| Learning / Discovery | 1 | WoD-style — learned something significant about the character, plot, or world |
+| Standout Moment (GM discretion) | 1 | WoD's occasional bonus point — same discretionary trigger already used for Resonance's mid-adventure regain |
+
+**Story Awards** (Pathfinder-style, separate from the per-session cap): occasional larger lump-sum XP grants for completing a major arc, defeating a significant villain, or hitting a defined campaign milestone — the D&D/Pathfinder half of the blend, rewarding big narrative payoffs without inflating the weekly baseline.
+
+**What 5 XP/session buys, illustrated**: a New Skill (3 XP) or a Gift level 1→2 raise (5 XP) is affordable in a single session; raising an Attribute from 1→2 (9 XP) takes under 2 sessions; but climbing a single Attribute from 1 all the way to 10 costs **405 XP total — roughly 81 sessions**, around a year and a half of weekly play. Early growth is fast and satisfying (mirrors D&D's fast early levels); maxing an Attribute is a genuine campaign-spanning commitment (mirrors D&D's brutal high-level XP curve, and delivers on "really hard" without needing a separate difficulty knob).
 
 ## Open Questions
 
-None remaining for character creation itself. See the Advancement TODO for what's still open on the XP side (per-rank cost, how XP is earned, justification requirement, Specialty cost, and the after-creation Gift-level cost curve).
+- Does advancement require in-fiction justification (training montage, mentor, relevant use in play), or is it free-form?
+- Resonance's XP-during-advancement multiplier, and the exact Resonance cost to activate a Gift — both still open, tracked in [docs/TODO.md](../docs/TODO.md#advancement-xp-economy--character-progression-post-creation).
 
 ## Resolved (creation-specific, not already covered above)
 

@@ -56,6 +56,8 @@ This gives every Attribute a matching defensive trait, without overloading any o
 
 **Named 2026-07-14** (superseding the "Willpower" placeholder, which itself superseded Spark). Resonance is a **pool scored 1-10**, same scale as an Attribute or Power Level — not a binary checkbox, and not every spend costs the same amount. **Starting value and acquisition, confirmed 2026-07-14**: every character begins with **Resonance 1**, raised only with Freebie Points (at creation) or XP (afterward) — **3 Freebies per level**, same rate as Power Level and Perks. It gets no dedicated creation pool, same as Power Level.
 
+**XP cost to raise Resonance during Advancement, confirmed 2026-07-14**: `current rating × 7` — matching Power Level exactly. Resonance is priced as a "meta" stat, not WoD's own cheap Willpower rate (×1): it gates **all** Gift activation and backs a 10-effect toolkit reaching well beyond Gifts, a scope closer to Power Level's than to a narrow resistance stat. It doesn't reach Attribute's ×9 because raising Resonance only grows *pool capacity* — every individual use still costs its own 1-3 points, and the pool refills slowly, so the always-on-bonus logic that justifies Attribute's premium doesn't fully apply here.
+
 ### Spending Resonance — confirmed
 
 **Resolved 2026-07-14**: replaces the old Spark-derived menu entirely with a full cost-tiered list. Each effect below costs a different number of Resonance points, spent from the current pool:
@@ -77,11 +79,14 @@ This is a deliberate mix the old Spark menu never had: several of these are **de
 
 ### Regaining Resonance — confirmed
 
-**Resolved 2026-07-14**, addressing the fact that Resonance is a genuinely **fluid pool** — with this many cheap, frequently-useful spends, a refill scheme built only around "between adventures" would leave it dry for long stretches of play. Three regain triggers:
+**Resolved 2026-07-14**, addressing the fact that Resonance is a genuinely **fluid pool** — with this many cheap, frequently-useful spends, a refill scheme built only around "between adventures" would leave it dry for long stretches of play. Six regain triggers:
 
-1. **A small trickle at the start of each session** — regain **1 Resonance** automatically (capped at the character's max), so a multi-session adventure doesn't leave the pool empty the whole way through. Deliberately much smaller than Spark's old "full refill every session" — this keeps Resonance precious while still being usable.
+1. **A full night's rest** — regain `max Resonance ÷ 4, rounded up`. **Supersedes the earlier flat "1 per session" trickle** — this scales with the character's actual pool size instead of being a flat number, and ties the recovery to an in-fiction event (a real rest, GM-adjudicated the same way a "full night's rest" would be in any system with one) rather than a pure metagame session boundary. A starting character (max 1) still recovers 1; a character with max 10 recovers 3.
 2. **Full refill between adventures** — a larger story boundary than a single session (a completed arc, a return to safety/downtime, whatever the GM designates as the edge of "an adventure").
 3. **Discretionary GM award for standout play** — heroism, cleverness, or great roleplay grants back Resonance points mid-adventure, judged in the moment (same model as D&D 5e Inspiration) — not necessarily a full refill unless the GM says so.
+4. **Compel a Flaw** (Fate Core import) — regain **1 Resonance** when the GM invokes one of a character's Flaws to create a genuine complication in the fiction and the player leans into it instead of narrating around it. Gives Flaws ongoing weight during play instead of mattering only once, at creation, for a Freebie grant.
+5. **Critical Success** — regain **1 Resonance** on a natural 1. A small, unconditional trickle tied to a moment of good fortune, fitting the name.
+6. **Ritual / deliberate downtime** — regain **2 Resonance** for spending real in-fiction time and narrative spotlight on something that fits Resonance's framing (meditation, prayer, attunement, training). Priced above the passive/reactive triggers above since it costs the player actual scene time to invoke, not just a lucky roll or an accepted complication.
 
 **Overflow** (confirmed, carried over from Spark): if an award would push a character above their maximum, they gain **Advantage on their next roll** instead, per the numeric [Advantage/Disadvantage](#advantage--disadvantage--confirmed) rule above (+1 to that roll's net).
 
