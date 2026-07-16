@@ -88,7 +88,7 @@ Two signature Gifts per class, reframing each class's core identity as freestand
 | 2 | An attack that should have caught you square meets empty air more often than it should, your body simply not being where it needs to be. | Free | Self | Instant | Power Level + Body |
 | 3 | An effect that catches everyone else in an area barely touches you — you come away from it far better off than it should ever allow. | Free | Self | Instant | Power Level + Body |
 | 4 | Mental intrusion and coercion break against you exactly like physical harm does — your mind is just as slippery as your body. | Free | Self | Instant | Power Level + Mind vs. the intruding effect |
-| 5 | Very little, physical or mental, manages to truly catch you off guard or land its full effect anymore — you're simply never quite where the danger expects you to be. | Free | Self | Passive | — (no roll, passive) |
+| 5 | Very little, physical or mental, manages to truly catch you off guard or land its full effect anymore — you're simply never quite where the danger expects you to be. | Free | Self | Passive | Power Level + Body vs. the intruding effect |
 
 ### Barbarian
 
@@ -104,7 +104,7 @@ Two signature Gifts per class, reframing each class's core identity as freestand
 #### Reckless Instinct (Feral Instinct / Reckless Attack)
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Sudden danger gets a reaction out of you before your conscious mind has even caught up to what's happening. | Free | Self | Instant | — (no roll, passive) |
+| 1 | Sudden danger gets a flicker of a head start out of you — not full awareness, just enough of an edge that your body's already tensing before your mind's caught up. | Free | Self | Instant | — (no roll, passive) |
 | 2 | You throw caution away entirely for one burst of genuinely overwhelming offense, accepting the real risk that comes with it. | Action | Close | Instant | Power Level + Body |
 | 3 | In a sudden crisis, you're the one who acts first, more often than not, no matter how the danger actually breaks. | Free | Self | Instant | Power Level + Body |
 | 4 | The recklessness pays off more reliably now — your offense lands harder even as you keep leaning into the same risk. | Action | Close | Instant | Power Level + Body |
@@ -375,7 +375,7 @@ Organized by theme. Every entry has all 5 levels defined.
 | 1 | You want the room's attention and you get it — a look, a word, and the noise drops. | Action | Close | Instant | Power Level + Soul |
 | 2 | Walk into an ambiguous situation and people default to deferring to you, without anyone quite deciding to. | Free | Close | Scene | — (no roll, passive) |
 | 3 | An order given in the heat of the moment gets followed, no hesitation, no second-guessing — your voice cuts through the chaos clean. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 4 | A group on the edge of breaking finds its nerve again because you gave them a reason to — a rally that actually holds. | Action | Medium | Scene | Power Level + Soul |
+| 4 | A group on the edge of breaking finds its nerve again because you gave them a reason to — a rally that actually holds. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
 | 5 | A crowd's attention and obedience are yours, even pulling against their own instincts — command, in the fullest sense of the word. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
 
 #### Silver Tongue
@@ -601,7 +601,7 @@ Organized by theme. Every entry has all 5 levels defined.
 | 1 | A hummed tune under your breath steadies your own nerves, quietly, every time. | Free | Self | Instant | — (no roll, passive) |
 | 2 | Your voice or music noticeably calms or stirs a small audience — nothing forced, just people willing to be moved, genuinely moved. | Action | Close | Scene | — (no roll, passive) |
 | 3 | You reach a specific listener's mood directly through music or voice, and it shifts even against some real resistance. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 4 | A real crowd's mood bends to your performance, deliberately, reliably — a room you can read and then rewrite. | Action | Medium | Scene | Power Level + Soul |
+| 4 | A real crowd's mood bends to your performance, deliberately, reliably — a room you can read and then rewrite. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
 | 5 | Your voice or music carries a force that borders on supernatural — anyone who hears it feels it, whether they meant to or not. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
 
 ### Life, Death & Spirit
@@ -736,7 +736,7 @@ Organized by theme. Every entry has all 5 levels defined.
 | 2 | You can let it show now — a glow, a shimmer, a weight to your presence that wasn't visible before, entirely at your choosing. | Free | Self | Scene | — (no roll, passive) |
 | 3 | That mark carries weight — deference, awe, a flicker of genuine reverence from anyone who sees it. | Free | Close | Scene | Power Level + Soul |
 | 4 | Your marked presence alone can settle a crowd, cow it into silence, or lift it toward something braver — sight, nothing more. | Action | Medium | Instant | Power Level + Soul vs. Resolve |
-| 5 | There's no mistaking it anymore — your presence is unmistakably, undeniably touched by something greater, and everyone who sees it knows it in their bones. | Free | Medium | Scene | Power Level + Soul |
+| 5 | There's no mistaking it anymore — your presence is unmistakably, undeniably touched by something greater, and everyone who sees it knows it in their bones. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
 
 #### Worldwalker
 | Level | Capability | Action | Range | Duration | Resolution |

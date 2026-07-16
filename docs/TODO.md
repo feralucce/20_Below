@@ -30,6 +30,8 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 **Only Cybernetics' fuller treatment remains open** in the Gifts section — more catalog entries, and a decision on whether cybernetics needs its own acquisition rules (surgery, cost, installation risk) instead of standard Gift creation.
 
+**Cross-Gift power/scale consistency review done** (2026-07-15) — fixed 4 spots where a Gift's mechanical columns didn't match its power-curve neighbors (Untouchable L5, Commanding Presence L4, Song Unheard L4, Reckless Instinct L1; Mantle of the Divine L5 also aligned to its Social-category equivalent). See [design-log.md](design-log.md) for detail; [premade-gifts.md](../rules/premade-gifts.md) has the fixes.
+
 **"Freebie Points" renamed to "Wildcard Points"** (2026-07-15, same mechanic) — see [design-log.md](design-log.md).
 
 ## Previous session (2026-07-13)
