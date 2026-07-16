@@ -28,7 +28,9 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 **New Gift creation timing and in-fiction source, both resolved 2026-07-15**: new Gifts are created only between sessions (same as new Skills, GM approval required); Gifts need no in-fiction source or origin — a character simply has one, the setting's own "the world is weird" premise doing the explanatory work instead. See [gifts.md](../rules/gifts.md#resolved).
 
-**Only Cybernetics' fuller treatment remains open** in the Gifts section — more catalog entries, and a decision on whether cybernetics needs its own acquisition rules (surgery, cost, installation risk) instead of standard Gift creation.
+**Cybernetics marked for a future expansion** rather than a near-term open item — zero catalog representation for now, picked back up later. See [gifts.md](../rules/gifts.md#deferred--future-expansion).
+
+**Soak resolved via a new Gift, Bulwark** (76th Gift) — flat Soak +1/Level, Hero System Special Effect convention (fixed mechanic, any fictional source: tough skin, mystic ward, subdermal plating, etc.). No equipment subsystem needed. See [combat.md](../rules/combat.md#soak--confirmed).
 
 **Cross-Gift power/scale consistency review done** (2026-07-15) — fixed 4 spots where a Gift's mechanical columns didn't match its power-curve neighbors (Untouchable L5, Commanding Presence L4, Song Unheard L4, Reckless Instinct L1; Mantle of the Divine L5 also aligned to its Social-category equivalent). See [design-log.md](design-log.md) for detail; [premade-gifts.md](../rules/premade-gifts.md) has the fixes.
 
@@ -61,7 +63,7 @@ See the Combat section below for what's still open in this area.
 **Attack/Defense/Resolve decision is resolved** — see [core-mechanic.md](../rules/core-mechanic.md#calculated-defensive-traits):
 - **Defense** = Mind ÷ 2 (round up). Ordinary attacks: attacker rolls once, DoS > Defense → hit; else no damage. Replaces Resisted Rolls for one-sided attacks.
 - **Resolve** = Soul ÷ 2 (round up). Same logic, for Soul-targeted Gift impositions (fear, domination, charm, etc.) — **mostly**, not absolute; some Gifts still warrant a full Resisted Roll, decided case by case.
-- **Soak** (armor-driven damage reduction after a hit connects) is conceptually gear-based, not Attribute-derived — not yet numerically designed, waiting on an equipment subsystem.
+- **Soak** (a flat integer, reduces damage after a hit connects) resolved 2026-07-15 — not gear/Attribute-derived after all, but granted by the new **Bulwark** Gift (+1 Soak/Level, Hero System Special Effect convention: player picks the fictional source — tough skin, mystic ward, subdermal plating — same fixed numbers regardless). See [combat.md](../rules/combat.md#soak--confirmed).
 - Resisted Rolls are now scoped down to genuinely mutual contests (Grapple, Trip, Escape, contests of will) plus case-by-case Gift exceptions.
 - Dodge/Abort to Dodge/All-Out Attack/Haymaker/Charge/Brace all updated in `combat.md` to reference Defense instead of a rolled defense DoS.
 
@@ -193,18 +195,18 @@ Split out from Character Creation above (2026-07-14) since it's a genuinely sepa
 - [x] **New Gift creation happens only between sessions, resolved 2026-07-15** — same timing as new Skill creation, GM approval required. Picking an existing catalog Gift at character creation is unaffected. See [gifts.md](../rules/gifts.md#resolved).
 - [x] **Gifts require no in-fiction source or origin, resolved 2026-07-15** — a character simply has a Gift, no bloodline/pact/training/mutation needed to justify it. See [gifts.md](../rules/gifts.md#resolved).
 - [x] **Resource cost on use, partially resolved** (2026-07-14): every Gift costs Resonance to activate — a universal system, not per-Gift. Exact amount is in active playtesting, tracked under Advancement above (Gift activation cost in Resonance).
-- [ ] **Cybernetics needs fuller treatment** — currently only one catalog entry ("Grafted Steel"). Needs more concepts, and a decision on whether it needs its own acquisition rules (surgery, cost, installation risk) instead of standard Gift creation.
 - [x] **Detail pass complete, and Resisted-Roll-vs-Resolve triage resolved** (both 2026-07-15) — every Gift's 5 levels now have an Action cost, Range, Duration, and Resolution (Resolve default or flagged Resisted Roll, decided per-Gift as part of this same pass). See [gifts.md](../rules/gifts.md#resolved) and [premade-gifts.md](../rules/premade-gifts.md).
-- [x] **Grafted Steel removed, cybernetics now has no catalog representation** (2026-07-15) — catalog total is **75 Gifts**. Still open: whether cybernetics needs its own acquisition rules before it's added back. See [premade-gifts.md](../rules/premade-gifts.md#cybernetics--note).
+- [x] **Grafted Steel removed, cybernetics now has no catalog representation** (2026-07-15) — catalog total is **75 Gifts**.
+- [ ] **Cybernetics — deferred to a future expansion** (marked 2026-07-15), not tracked as a near-term open item. When picked back up: needs more concepts, and a decision on whether it needs its own acquisition rules (surgery, cost, installation risk) instead of standard Gift creation. See [gifts.md](../rules/gifts.md#deferred--future-expansion).
+- [x] **Bulwark added, 76th Gift** (2026-07-15) — grants Soak (flat damage reduction, +1/Level), Hero System Special Effect convention (fixed mechanic, player-chosen fictional source). Resolves the long-standing Soak open item without needing an equipment subsystem. See [combat.md](../rules/combat.md#soak--confirmed) and [premade-gifts.md](../rules/premade-gifts.md#bulwark-damage-resistance).
 - ([gifts.md](../rules/gifts.md), [premade-gifts.md](../rules/premade-gifts.md))
 
 ## Not Yet Started
 
 Bigger pieces that haven't been touched at all yet:
 
-- [ ] Combat mechanics (see above — everything else is waiting on this).
 - [ ] Character creation step-by-step process (the *procedure*, not just the point economy above).
-- [ ] Anything beyond character creation and advancement — session structure, downtime, equipment/gear rules, etc., haven't come up yet.
+- [ ] Session structure, downtime, and a proper equipment/gear subsystem (Bulwark covers Soak without one, but weapons/general gear economy still isn't designed) — haven't come up yet.
 
 ## 🔁 Full Revision Pass — planned, after everything above is done
 

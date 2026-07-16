@@ -50,7 +50,7 @@ This gives every Attribute a matching defensive trait, without overloading any o
 
 **Resisted Rolls are still used**, but now reserved for genuinely mutual contests where both sides are actively straining against each other (a Grapple, a contest of wills) rather than every one-sided attack or imposition. Individual Gifts may still specify a full Resisted Roll instead of the Resolve default where that fits better — **decided case by case, not as a blanket rule** (see [gifts.md](gifts.md)).
 
-**Soak** (armor-driven damage reduction, applied after a hit connects via Defense) is conceptually gear-based, not Attribute-derived — see [combat.md](combat.md) for the reasoning. Not yet numerically designed; waiting on an equipment subsystem.
+**Soak** (a flat integer, applied after a hit connects via Defense) is not Attribute-derived — it comes from the [Bulwark](gifts.md) Gift (+1 per Level, Hero System Special Effect convention: any fictional source, same fixed numbers), not a dedicated equipment subsystem. See [combat.md](combat.md#soak--confirmed) for the full mechanic.
 
 ## Resonance — confirmed
 

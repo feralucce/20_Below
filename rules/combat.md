@@ -99,7 +99,7 @@ Ordinary attacks are **not** a Resisted Roll. They use the [Defense](core-mechan
 1. Attacker rolls once, normally (Attribute + weapon Skill + modifiers), and computes DoS.
 2. If **DoS > the target's Defense** (Mind ÷ 2, round up), the attack connects and deals damage.
 3. If **DoS ≤ Defense**, the attack doesn't connect — no damage. (Narration is flexible: dodged, deflected, armor absorbed it entirely — whatever fits the defender's build; see the armor discussion in the design log.)
-4. If it connects, **Soak** (armor-driven damage reduction — not yet numerically designed, waiting on an equipment subsystem) further reduces the damage actually applied to the target's current Health Level.
+4. If it connects, **Soak** (a flat integer that reduces the damage actually applied — see [Soak](#soak--confirmed) below) further reduces the damage actually applied to the target's current Health Level.
 
 Special-Maneuver Resisted Rolls (Grapple, Trip, Escape — see below) are unaffected by this change; those stay full Resisted Rolls since they're genuinely mutual contests, not one-sided attacks.
 
@@ -291,6 +291,14 @@ Calibration check, average character (Body 5, Mind 5 → Defense 3, Healthy pool
 
 **Called Shot locations no longer need a separate damage multiplier** — superseded by the DoS-tiered location effects above (see Special Maneuvers), which scale severity off the same leftover-DoS number instead of a second numeric multiplier.
 
+## Soak — confirmed
+
+**Resolved 2026-07-15**: Soak is a **flat integer**, applied as `Damage − Soak` after Weapon Base has already doubled on a crit, with **no minimum-damage floor** — if Soak meets or exceeds total Damage, the hit deals 0. This mirrors GURPS/Hero System/Cyberpunk RED's flat-subtraction convention rather than [Health Levels'](#health-levels--confirmed) explicitly-avoided WoD soak-dice-pool model.
+
+**Source: the [Bulwark](premade-gifts.md#bulwark-damage-resistance) Gift**, not a dedicated equipment subsystem (which doesn't exist yet). Bulwark grants flat Soak `+1` per Level (1-5), using Hero System's **Special Effect** convention: the mechanic is fixed, but the fictional source is the player's choice at creation — tough skin, a mystic ward, subdermal plating, hardened chi, whatever fits the character — and the GM may let that fictional flavor matter narratively (a ward can be dispelled, skin can't) without changing the numbers. If/when a full equipment subsystem gets designed later, gear-based armor could layer on as an additional, independent Soak source rather than replacing Bulwark — not decided yet, flagged as a future consideration.
+
+Calibration against the existing Damage table (average character, leftover DoS ≈ 3): a Bulwark 4 (Soak +4) fully stops a Light weapon (+3 base, ~6 avg damage reduced to ~2) and meaningfully blunts a Medium one, while even Bulwark 5 (Soak +5) still lets a Heavy weapon (+7 base, ~10 avg damage) through for a real hit (~5) — armor-equivalent Soak blunts the top of the weapon ladder rather than neutralizing it.
+
 ## Critical Failure — confirmed
 
 Triggers on a natural 20 (or, in a Multiple Actions chain, any roll in the expanded crit-fail range already defined). Outside combat, a critical failure stays pure GM narration (per [core-mechanic.md](core-mechanic.md#critical-results)) — this table is combat-only, mirroring how Called Shot's location effects are also combat-only.
@@ -352,10 +360,6 @@ Lower-skilled characters (low target number) land more severe fumbles; a highly-
 | Catastrophic | An ally takes `Weapon Base × 2` damage, as if you'd critically hit them by mistake |
 
 Dropped from consideration, not forgotten: Social and Skill-check fumble tables (Athletics, Stealth, Thievery, etc.) and Magical Mishaps. Those stay under the existing "GM narrates a fitting complication" rule for non-combat rolls — only combat gets a fixed table, per the core mechanic's own design philosophy. Magical Mishaps specifically will be revisited once the Gift catalog gets its combat detail pass.
-
-## Still to Design
-
-- **Soak**: armor-driven damage reduction, applied after a hit connects via Defense — conceptually gear-based (see [core-mechanic.md](core-mechanic.md#calculated-defensive-traits)), not numerically designed, waiting on an equipment subsystem.
 
 ## Combat Skills — confirmed
 
