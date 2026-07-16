@@ -209,6 +209,8 @@ Degree = target number − die result
 
 Because it's one signed number line, DoS and DoF can always be compared directly — higher is simply better, no separate rules needed for comparing a success to a failure. This isn't just flavor: it's what Resisted Rolls compare (below), and it's expected to drive magnitude of effect elsewhere in the system (e.g. combat initiative, combat damage) as those subsystems get built.
 
+**Flat DoS/DoF bonus steps, confirmed 2026-07-16**: when a Gift, Perk, or other source grants an escalating flat bonus to Degree of Success (or imposes one on an opponent's Degree of Failure) across multiple tiers or Gift Levels, the bonus steps through **1 → 3 → 5**, not an arbitrary sequence. This reuses the system's existing **1/3/5/10 numeric convention** (flat modifiers ±1-5, Perk tiers, Gift Levels 1-5) rather than inventing a new scale per Gift — keeps a 3-tier escalating combat bonus (e.g. a Hunter's Mark-style effect) from creeping into "obscene" territory (+2/+5/+8 was flagged and walked back) while still feeling like real, escalating growth.
+
 ## Resisted Rolls
 
 Some rolls aren't against a static difficulty — they're opposed by another character actively resisting. Since [Defense and Resolve](#calculated-defensive-traits) now handle the common one-sided case (an attack or imposition against an unwilling target), Resisted Rolls are reserved for genuinely **mutual** contests — both sides actively straining against each other (a Grapple, a contest of wills) — plus any specific Gift that calls for one on a case-by-case basis. Resisted Rolls reuse the standard roll: no new dice mechanic, just a way to compare two normal rolls against each other using Degree of Success/Failure.

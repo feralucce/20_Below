@@ -1,909 +1,787 @@
 # Premade Gifts
 
-Source material and a fully worked catalog for [gifts.md](gifts.md), pulled from eleven power systems plus general comic book / anime / fantasy / sci-fi genre conventions. Everything below is inspiration and raw material, paraphrased rather than reproduced — none of it is a literal port of another game's rules.
+A fully worked catalog for [gifts.md](gifts.md): every Gift a player can take, organized by
+category.
 
-Every Gift below has all **5 levels** defined per [gifts.md](gifts.md): cumulative, sequential, each level a specific new capability rather than a bigger number. These are starting points, not commandments — a player and GM can still adjust wording to fit a specific character or setting.
+Every Gift below has all **5 levels** defined per [gifts.md](gifts.md): cumulative,
+sequential, each level a specific new capability rather than a bigger number. These are
+starting points, not commandments — a player and GM can still adjust wording to fit a
+specific character or setting.
 
 **Detail pass complete (2026-07-15).** Every Gift level below now carries five mechanical columns alongside its flavor text — Action cost, Range, Duration, and Resolution (Power Level + Attribute vs. the target's Resolve by default, or a full Resisted Roll where flagged, resolving the [Resisted-Roll-vs-Resolve triage](gifts.md#open-questions) per-Gift as part of this pass rather than as a separate future one). Resonance's activation cost is deliberately *not* pinned to a number in the tables below — it's referenced generically as "per the Gift's Level" in [core-mechanic.md](core-mechanic.md#gift-activation-cost--in-playtesting), since that formula is still being playtested; once it's locked, it applies uniformly rather than needing a second pass through every entry here.
 
-## Source Cross-Reference
+**Concrete-mechanics pass complete (2026-07-16).** Every Gift level now carries a bolded, named sub-ability plus a real mechanic drawn from the system's own vocabulary (DoS/DoF bonus-penalty steps, Advantage/Disadvantage, Resisted Rolls, Health Levels, the Weapon Base damage table) instead of narrative-only prose. See [flavor-writing-style.md](../docs/flavor-writing-style.md) for the ruleset that governed this pass, and [gift-review-progress.md](../docs/gift-review-progress.md) for the full log of merges, overlap checks, and design decisions made along the way.
 
-- **Werewolf: The Apocalypse** (Gifts, taught by spirits): heightened senses, physical enhancement (claws, speed, resilience), small-scale elemental control, fear/awe effects, camouflage, healing, shapeshifting refinements, spirit communication, pack-coordination effects.
-- **Mage: The Ascension** (Spheres, nine broad reality-affecting domains each rated 1-5): matter/object transformation, life/biological manipulation, mind/thought influence, forces/energy manipulation, spirit-world interaction, time perception and manipulation, space/distance manipulation, raw magical essence, fate/probability. The closest structural match to our 5-level Gift model.
-- **Changeling: The Dreaming** (Arts applied to Realms): illusion/deception, object charming, nature/wild magic, movement and travel, fate-reading, dream-crafting, true-name binding.
-- **Wraith: The Oblivion** (Arcanoi, also 5-level power trees — another close structural match): incorporeal movement, possession of objects or the living, emotional/fear projection, fate perception, memory manipulation, spectral combat, reshaping one's own form, drawing power from the living world.
-- **Hunter: The Reckoning** (Edges, granted by conviction): truth-sensing, supernatural perception, resilience, minor protective wards, self-healing, righteous fury, compelling honesty.
-- **Exalted** (Charms, tightly-scoped trees tied to an Ability + Essence): wuxia/anime-flavored escalating special moves — perfect defenses, read-intentions social Charms, instant mastercraft creation, total-recall investigation, elemental aspects (Fire/Water/Earth/Wood/Air) for Dragon-Blooded-style characters.
-- **Adventure!** (pulp heroes — Dynamism, Dark Tomorrow, Enigma origins): peak physical prowess, gadgeteering/inventing, mentalism (mind-reading, illusion), mesmerism, heroic luck/destiny effects (danger sense, catching a bullet).
-- **Pendragon**: contributes less raw power material (mostly Traits/Passions and limited high-tier magic), but the core idea — an emotional Passion fueling an extraordinary feat — is worth carrying forward as a Gift *trigger* concept, plus faith-based blessings/healing.
-- **Scion** (Purviews granting Boons to demigods): Epic Attributes (superhuman Strength/Dexterity/Stamina etc.), elemental/weather domains (Fire, Frost, Sky), Illusion, Health, Darkness/Death, Chaos, Guardian (wards/protection), Journeys (fast travel/teleport), Animal (command/shapeshift), Fate-adjacent Moon/Stars purviews.
-- **In Nomine** (angelic/demonic Songs): super speed/flight (Motion), universal communication (Tongues), light manipulation, social charm/harmony, protective shielding, superhuman body (Numinous Corpus), shapeshifting (the Skin), destructive force (Thunder), healing/vigor, purification/revival (Salvation).
-- **Hero System** (point-buy comic-book powers): the standard superhero archetype list — energy blast, super strength, flight, invulnerability, telepathy, telekinesis, stretching, shapeshifting, speedster powers, mental control, force fields, teleportation, regeneration, size change, elemental control, illusion, luck powers.
-- **Heroes Unlimited** (Palladium): Mutant/Bio-Manipulation/Psionics/Robotic/Alien categories — notably strong on cybernetics/bionics and a clean Physical/Sensitive/Super split for psychic powers (self-healing & biofeedback; empathy & clairvoyance; telekinesis & telepathy & mind-bolt).
-- **D&D 5e classes** (Druid, Ranger, Rogue, Barbarian, Monk): class-defining features reframed as Gifts rather than a level-gated class chart — Wild Shape and terrain-bond magic (Druid), quarry-marking and wilderness mastery (Ranger), exploiting openings and shrugging off harm (Rogue), battle-fury and reflexive instinct (Barbarian), and body/mind mastery through discipline (Monk). See the **Class-Inspired Gifts** section below.
+**Reorganized (2026-07-16):** all Gifts now live in one flat set of categories, alphabetized by category name and by Gift name within each category.
 
 ## Cybernetics — Note
 
 **Removed 2026-07-15**: the sole cybernetics entry, *Grafted Steel*, was cut from the catalog. Cybernetics currently has **no representation** in the Gift catalog, and is **deliberately deferred to a future expansion** rather than tracked as a near-term open item. When it's picked back up, it still carries the same open question flagged before removal — whether it needs its own acquisition rules (surgery, cost, installation risk) rather than the standard Gift creation process, since it's typically bought and installed rather than trained or awakened into. See [gifts.md](gifts.md#deferred--future-expansion).
 
-## Class-Inspired Gifts (D&D 5e)
-
-Two signature Gifts per class, reframing each class's core identity as freestanding Gifts rather than a level-gated feature chart. Same detail-pass treatment applies here as everywhere else in this catalog.
-
-### Druid
-
-#### Many Shapes (Wild Shape)
-The old boundary between human and animal was never really built for you — your body remembers shapes it's never worn, and slips into them like putting on a coat.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | A familiar animal's trait bleeds briefly into you — its keener senses, its loping gait — without your shape ever actually changing. | Action | Self | Scene | — (no roll, passive) |
-| 2 | You go down and come back up as one of a small handful of bonded animal forms, full and complete, your own mind unmistakably still behind its eyes. | Action | Self | Scene | — (no roll, passive) |
-| 3 | Your repertoire of forms grows meaningfully, and moving between the ones you know comes faster now, smoother. | Action | Self | Scene | — (no roll, passive) |
-| 4 | More formidable, more exotic forms open up to you, and the shift itself is nearly instant now — barely a breath between one shape and the next. | Free | Self | Scene | — (no roll, passive) |
-| 5 | Virtually any animal you've ever laid eyes on is a shape you can take, and taking it costs you no more effort than drawing breath. | Free | Self | Scene | — (no roll, passive) |
-
-#### Elemental Communion (terrain-bonded nature magic)
-One patch of wild ground has claimed you as much as you've claimed it — a living bond that answers your need with whatever the land itself has to give.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Your home terrain speaks to you — its health, its mood, whether something's wrong long before it would be obvious to anyone else. | Free | Self | Scene | — (no roll, passive) |
-| 2 | The land offers you something small and fitting in return for your bond — cool shade in deep forest, sure footing on bare stone, calm water underfoot when you need it. | Free | Self | Scene | — (no roll, passive) |
-| 3 | When you truly need it, your home terrain answers with something real — a useful, tangible effect drawn straight from its nature. | Action | Self | Instant | Power Level + Soul |
-| 4 | That communion reaches further now — terrain similar to your own answers you almost as readily as your exact home ground does. | Action | Self | Instant | Power Level + Soul |
-| 5 | You draw deep on the land itself, calling forth something significant that fits whatever wild terrain you happen to be standing on, home ground or not. | Action | Self | Instant | Power Level + Soul |
-
-### Ranger
-
-#### Marked for the Hunt (Hunter's Mark / Favored Enemy)
-Once you've fixed on a quarry, the hunt stops being a matter of chance — some part of you is always tracking them, whether you're consciously thinking about it or not.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Once you've marked a target in your mind, you always carry a rough sense of the direction they went — a compass needle pointed at one person. | Action | Close | Scene (extended) | Power Level + Mind |
-| 2 | A marked target leaves a trail you can't lose — tracking them stays easy even over difficult ground or after real time has passed. | Free | Self | Scene (extended) | — (no roll, passive) |
-| 3 | You start anticipating a marked target's next move before they make it — hard to surprise, harder still to shake. | Free | Self | Scene (extended) | — (no roll, passive) |
-| 4 | Effort spent against a marked target compounds — every strike, every attempt, lands with real, escalating advantage the longer the hunt runs. | Free | Self | Scene (extended) | — (no roll, passive) |
-| 5 | A marked target has nowhere left to truly hide, and nothing they try catches you off guard — the hunt is effectively already over. | Free | Self | Scene (extended) | — (no roll, passive) |
-
-#### One with the Wild (terrain mastery / stealth)
-The wilderness stops being an obstacle and starts being an ally — ground that would slow or expose anyone else just quietly lets you pass.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Brush, undergrowth, rough footing — natural terrain simply stops slowing you down, as though it recognized you as one of its own. | Free | Self | Scene | — (no roll, passive) |
-| 2 | You move through the wild and leave almost nothing behind — no bent grass, no disturbed leaves, barely a trace for anyone to follow. | Free | Self | Scene | — (no roll, passive) |
-| 3 | Hold still, stay quiet, and natural surroundings simply absorb you — genuinely unnoticed, not just unremarkable. | Free | Self | Scene | Power Level + Body |
-| 4 | Even under active pursuit, the wild swallows your trail almost entirely — hunters lose you in terrain that should have given you away. | Free | Self | Scene | Power Level + Body |
-| 5 | In natural terrain, you are effectively unfindable and untrackable unless you decide otherwise — the wild is, for all purposes, yours to hide in. | Free | Self | Scene | — (no roll, passive) |
-
-### Rogue
-
-#### Opportunist's Edge (Sneak Attack / Cunning Action)
-You don't create openings so much as recognize them a half-second before everyone else — and by the time anyone else catches up, you've already acted on it.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | An opening registers to you in the instant it appears — a distraction, an exposed flank — a moment most people would let pass entirely unnoticed. | Free | Close | Instant | — (no roll, passive) |
-| 2 | A genuine opening meets a swift, precise follow-up from you, capitalized on before it has the chance to close. | Free | Close | Instant | Power Level + Body |
-| 3 | You move and act with a burst nobody else in the room can match, weaponizing the confusion you leave in your own wake. | Action | Close | Instant | Power Level + Body |
-| 4 | Any real opening becomes a decisive advantage in your hands, reliably, every time one presents itself. | Free | Close | Instant | Power Level + Body |
-| 5 | You're always already positioned to exploit an opening the instant it appears — faster than anyone watching can react to what just happened. | Free | Close | Instant | Power Level + Body |
-
-#### Untouchable (Uncanny Dodge / Evasion / Slippery Mind)
-Harm has a hard time finding purchase on you — body or mind, whatever's coming for you tends to arrive a beat too late or an inch too wide.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Some instinct pulls you half out of the way a beat before harm lands, softening a blow that should have connected clean. | Free | Self | Instant | — (no roll, passive) |
-| 2 | An attack that should have caught you square meets empty air more often than it should, your body simply not being where it needs to be. | Free | Self | Instant | Power Level + Body |
-| 3 | An effect that catches everyone else in an area barely touches you — you come away from it far better off than it should ever allow. | Free | Self | Instant | Power Level + Body |
-| 4 | Mental intrusion and coercion break against you exactly like physical harm does — your mind is just as slippery as your body. | Free | Self | Instant | Power Level + Mind vs. the intruding effect |
-| 5 | Very little, physical or mental, manages to truly catch you off guard or land its full effect anymore — you're simply never quite where the danger expects you to be. | Free | Self | Passive | Power Level + Body vs. the intruding effect |
-
-### Barbarian
-
-#### Undying Fury (Rage)
-Something in you refuses to stay down once your temper is truly lit — pain, fatigue, and injury all take a back seat to the fury carrying you forward.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Your temper rises and the small stuff just stops registering — minor pain, creeping fatigue, none of it slows you down anymore. | Free | Self | Scene | — (no roll, passive) |
-| 2 | In the heat of real danger or real anger, harm that should stagger someone else barely earns a flinch from you. | Free | Self | Scene | Power Level + Body |
-| 3 | The fury holds through a long, brutal fight — no fading, no slowing, just the same relentless pace from the first exchange to the last. | Free | Self | Scene | — (no roll, passive) |
-| 4 | Injury that should have put you down instead becomes something you fight through — your fury doesn't leave room for falling. | Free | Self | Scene | Power Level + Body |
-| 5 | Truly enraged, you become nearly impossible to stop — harm barely registers, and falling simply isn't something you're willing to do. | Free | Self | Scene | Power Level + Body |
-
-#### Reckless Instinct (Feral Instinct / Reckless Attack)
-You lead with instinct instead of thought when danger erupts — a gamble that pays off more often than caution ever would.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Sudden danger gets a flicker of a head start out of you — not full awareness, just enough of an edge that your body's already tensing before your mind's caught up. | Free | Self | Instant | — (no roll, passive) |
-| 2 | You throw caution away entirely for one burst of genuinely overwhelming offense, accepting the real risk that comes with it. | Action | Close | Instant | Power Level + Body |
-| 3 | In a sudden crisis, you're the one who acts first, more often than not, no matter how the danger actually breaks. | Free | Self | Instant | Power Level + Body |
-| 4 | The recklessness pays off more reliably now — your offense lands harder even as you keep leaning into the same risk. | Action | Close | Instant | Power Level + Body |
-| 5 | When danger erupts, you're already moving — decisive, ferocious, and first every single time. | Free | Self | Instant | — (no roll, passive) |
-
-### Monk
-
-#### Body as Weapon (Martial Arts / Unarmored Defense / Deflect Missiles / Slow Fall)
-Years of discipline have made your own body the only tool and the only armor you've ever really needed.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Bare hands and trained instinct are all you need — your unarmed strikes carry real, genuine danger, no weapon required. | Free | Self | Passive | — (no roll, passive) |
-| 2 | Your own body, trained and disciplined, is protection enough — you don't miss armor, because you were never really unprotected. | Free | Self | Passive | — (no roll, passive) |
-| 3 | A fall that should break bones instead ends with you landing clean, trained control taking the impact your body never has to. | Free | Self | Instant | — (no roll, passive) |
-| 4 | A thrown or fired projectile aimed at you meets a hand that's already there — knocked aside, or caught outright. | Free | Self | Instant | Power Level + Body |
-| 5 | Your body is a complete weapon and shield in its own right — nothing thrown, dropped, or swung at you finds you unprepared for it. | Free | Self | Passive | — (no roll, passive) |
-
-#### Empty Body (inner mastery / transcendence)
-Discipline taken far enough stops looking like training and starts looking like transcendence — the line between your body and the physical world getting thinner the deeper you go.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Total stillness and total focus let you set aside minor pain, cold, hunger, or distraction entirely — present, but untouched by any of it. | Free | Self | Scene | — (no roll, passive) |
-| 2 | You slow your own heartbeat and breath down to almost nothing, appearing to anyone watching as barely alive at all. | Action | Self | Scene | — (no roll, passive) |
-| 3 | Sight, sound, even touch barely register you now — you become extraordinarily difficult to sense by any means at all. | Action | Self | Scene | Power Level + Soul |
-| 4 | For a short while, you step halfway out of the physical world entirely — genuinely intangible, harm passing through you without effect. | Action | Self | Scene | Power Level + Soul |
-| 5 | You step fully outside the physical world for a time — unseen, untouched, and entirely unbound by the rules that hold everyone else in place. | Action | Self | Scene | Power Level + Soul |
-
 ## Gift Catalog
 
-Organized by theme. Every entry has all 5 levels defined.
+### Biological & Shapeshifting
 
-### Physical Enhancement
-
-#### Overwhelming Might
-Whatever ordinary strength is supposed to top out at, yours doesn't — a raw physical power that keeps finding more room to grow.
+#### Adaptive Flesh (environmental adaptation)
+Your body treats hostile environments as a problem to be solved, not a threat to be endured. It quietly reshapes itself to whatever the moment demands.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Your grip closes on stone and it groans before it gives. A locked door isn't an obstacle so much as a suggestion — you shoulder through debris, wrench open jammed metal, hoist what two people should need a dolly for, and barely feel it. | Action | Touch | Instant | Power Level + Body |
-| 2 | For one explosive heartbeat, restraint drops away entirely — a door doesn't creak, it detonates off its hinges; a boulder rolled into your path becomes a boulder rolled *out* of it; a collapsing beam meets a shoulder that doesn't yield. | Action | Touch | Instant | Power Level + Body |
-| 3 | Where lesser arms would burn out and shake, yours settle into a rhythm — you can hold a beam off a trapped ally for as long as the scene demands, haul on a line all night, or trade blows in a contest of pure force without your strength ever thinning. | Free (passive while exerting) | Self | Scene | — (no roll, passive) |
-| 4 | The scale of what "shouldn't be possible" quietly redraws itself around you — you match a feat of strength that ought to belong to something twice your size, arm-wrestle a foe built like a wall, and don't lose. | Action | Touch | Instant | Power Level + Body, vs. Resisted Roll if opposing another's active effort (e.g. a strength contest) |
-| 5 | This is the strength of collapsing buildings and derailed trains — you plant your feet and hold a wall from falling, you flip a vehicle off a pinned victim, you put your shoulder into a failing structure and buy everyone inside the seconds they need. | Action | Touch | Instant | Power Level + Body |
+| 1 | **Early Warning.** You can't be caught unaware by an environmental hazard, cold, gas, unstable ground, radiation, whatever the source. If you're about to walk into one without knowing it's there, you sense it in time to stop before you do. This is scoped to environmental hazards specifically — it doesn't grant immunity to Surprise from an ambush or other combat threat. | Free | Self | Instant | — (no roll, passive) |
+| 2 | **Rolls Off You.** A chill that should ache, a fume that should sting: a mild hazard leaves no mark on you at all. | Free | Self | Scene | — (no roll, passive) |
+| 3 | **Adjusted.** Take a moment to let your body adjust, and it holds, geared for one specific hostile environment for as long as the scene demands. | Action | Self | Scene | Power Level + Body |
+| 4 | **Comfortable, Not Surviving.** Deep cold, crushing pressure, a lungful of poison air: genuinely dangerous conditions, and you're comfortable in them. | Free | Self | Scene | — (no roll, passive) |
+| 5 | **Reshaped and Ready.** Given a moment to prepare, there's almost no environment your body can't be reshaped to survive. | Action | Self | Scene | Power Level + Body |
 
-#### Unbreakable
-Your body simply refuses to cooperate with the idea that it should be broken — injuries that should end a fight instead barely slow you down.
+#### Many Shapes
+You have an affinity for animals. You have learned how they move and think. Years of observation have given you the ability to take on aspects and forms of the animals you have studied.
 
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Bruises fade before they bloom. A fall that should leave you limping is a fall you shake off standing, and a blow that should stagger you barely turns your head. | Free | Self | Passive | — (no roll, passive) |
-| 2 | Cold that numbs fingers, heat that blisters skin, pressure that makes ears pop — all of it slides off you now, an ordinary body's fragility quietly no longer applying. | Free | Self | Passive | — (no roll, passive) |
-| 3 | You plant a foot, take one breath, and a wound that should have folded you closes ranks — hurting, maybe, but upright and moving under your own power again. | Action | Self | Instant | Power Level + Body |
-| 4 | A blow lands that should have ended things right there — and doesn't. You stagger, you bleed, but you're still standing, still in the fight, when everyone watching expected you on the ground. | Free | Self | Instant | — (no roll, passive) |
-| 5 | Your body has simply stopped agreeing to break. Circumstances that would kill almost anyone else leave you scarred, exhausted, furious — and alive. | Free | Self | Passive | — (no roll, passive) |
-
-#### Fleet-Footed Fury
-Speed lives in you at a level that has nothing to do with training — a body that simply outpaces what anyone watching thinks is possible.
+*Note: shapeshifting is this Gift's whole domain — the old separate "Skin of the Beast" entry was merged into it 2026-07-16, since the two covered near-identical ground.*
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Your stride eats distance faster than a frame like yours has any right to — a sprint that should leave you winded barely raises your pulse. | Free | Self | Scene | — (no roll, passive) |
-| 2 | The world seems to slow a half-step around you — a thrown punch, a swerving car, a closing door all arrive with just enough warning that you're already moving. | Free | Self | Instant | — (no roll, passive) |
-| 3 | Where an ordinary sprint burns out in seconds, yours just keeps going — full speed, no fade, for as long as the chase demands. | Free | Self | Scene | — (no roll, passive) |
-| 4 | You run down what shouldn't be catchable on foot — a fleeing car over open ground, a startled animal, anything that isn't purpose-built to outrun you. | Action | Self | Instant | Power Level + Body |
-| 5 | For one heartbeat you close the space between "here" and "there" without the run in between ever quite registering — a blur, a gust, and you're simply somewhere else. | Action | Close | Instant | Power Level + Body |
+| 1 | **Beast's Senses.** Choose one animal when you take this Gift — your first. Gain Advantage on any perception roll matching that animal's signature sense (a wolf's scent-tracking, an owl's night vision, a spider's vibration-sense). | Free | Self | Scene | — (no roll, passive) |
+| 2 | **Partial Shift.** Choose a second animal you've studied (you now know 2 total). Spend **1 Resonance** to shift one body part at a time into a feature drawn from an animal you know: claws, a tail, webbed hands, toughened hide. If the shifted part is offensive (claws, fangs), it deals damage as an Improvised weapon (**Base +2**). | Action | Self | Scene | — (no roll, passive) |
+| 3 | **The Bonded Shape.** Choose a third animal (3 known). Spend **1 Resonance** to fully transform into one animal you know: its full profile, natural weapons (claws, bite) dealing damage as a Light weapon (**Base +3**), its natural movement mode (swim, climb, and so on). Your own mind stays in control. | Action | Self | Scene | — (no roll, passive) |
+| 4 | **Any Beast.** Choose a fourth animal (4 known). The Bonded Shape's cost and effect are unchanged, but the shift is now nearly instant, and for the scene's duration you can lend a partial trait (claws, senses, a burst of speed) to an ally by touch at no extra cost. | Free | Self (or Touch, to share) | Scene | — (no roll, passive) |
+| 5 | **War-Form.** Choose a fifth animal (5 known, your full roster). Spend **3 Resonance** for a hybrid form blending traits from up to three animals you know at once. Natural weapon damage rises to **Base +6**. | Action | Self | Scene | — (no roll, passive) |
 
-#### Iron Lungs
-The ordinary limits of breath, thirst, hunger, and sleep loosen their grip on you a little more with every level — your body running on reserves nobody else has access to.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | A held breath stretches on long past the point it should burn, and food, water, and sleep can all wait far longer than your body has any business allowing. | Free | Self | Scene | — (no roll, passive) |
-| 2 | Smoke that should choke you, thin mountain air, a faintly toxic haze — you breathe through all of it like it's nothing worth mentioning. | Free | Self | Scene | — (no roll, passive) |
-| 3 | You seal your lungs and simply stop needing air at all, for as long as the situation demands — underwater, in a sealed room, in smoke too thick to see through. | Free | Self | Scene | — (no roll, passive) |
-| 4 | Vacuum-adjacent cold, crushing deep-water pressure, a lungful of something that should be lethal — your body endures it, functioning, for a real stretch of time. | Free | Self | Scene | — (no roll, passive) |
-| 5 | Breathing becomes a formality you can dispense with entirely — air, food, water, sleep, none of it is a requirement for you anymore, only a comfort. | Free | Self | Passive | — (no roll, passive) |
-
-#### Second Wind
-Recovery, for you, moves at a completely different pace than it does for anyone else — exhaustion and setback that should linger for days instead burn off in a fraction of the time.
+#### Mimic's Gift
+**Reframed 2026-07-16** from physical trait mimicry (which overlapped with [Many Shapes](#many-shapes)) to ability mimicry. Watch someone closely enough, and what makes them exceptional becomes borrowable. Not their body. Whatever it is that actually makes the trick work.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | A short rest does for you what a full night does for anyone else — exhaustion that should linger for hours simply isn't there when you stand back up. | Free | Self | Instant | — (no roll, passive) |
-| 2 | Fatigue that should stop you cold just... doesn't, for a while longer than it has any right to — your body borrows against tomorrow and doesn't seem to mind. | Free | Self | Scene | — (no roll, passive) |
-| 3 | One steadying breath and exhaustion simply lets go of you entirely — no lingering ache, no heavy limbs, just ready again. | Action | Self | Instant | — (no roll, passive) |
-| 4 | A wound, a poison, a bad fall — the kind of setback that should sideline you for days instead costs you an afternoon, your body working overtime to put itself back together. | Free | Self | Scene | Power Level + Body |
-| 5 | Nothing physical keeps you down for long. You get back up — bruised, maybe furious, but back up — faster than anyone watching thinks should be possible. | Free | Self | Instant | — (no roll, passive) |
+| 1 | **A Borrowed Trait.** Watch a target use a Skill, then use that same Skill yourself for the scene, at your own Power Level instead of theirs. Costs **1 Resonance**. | Action | Close | Scene | Power Level + Soul |
+| 2 | **Something Functional.** Watch a target's Perk in action, then gain that Perk's benefit yourself for the scene. Costs **1 Resonance**. | Action | Close | Scene | Power Level + Soul |
+| 3 | **The Trick of It.** Watch a target use a Gift, then mimic its **Level 1** capability for the scene. If it's offensive, it deals damage as a Light weapon (**Base +3**). Costs **2 Resonance**. | Action | Close | Scene | Power Level + Soul |
+| 4 | **It Sticks.** The mimicked Gift capability can now go as high as **Level 3**, and lasts a full day. Costs **3 Resonance**. | Action | Close | Day | Power Level + Soul |
+| 5 | **Nothing Held Back.** Mimic a Gift capability up to its full **Level 5**, or hold a Skill, a Perk, and a Gift capability all mimicked at once, for a full day. Costs **5 Resonance**. | Action | Close | Day | Power Level + Soul |
 
-#### Titan's Grip
-What should require a forklift or a crane instead just requires you — mass and weight stop being the obstacle they are for anyone else.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | You shoulder a load that should have you staggering and just keep walking — a strain your frame absorbs without a second thought. | Free | Self | Scene | — (no roll, passive) |
-| 2 | A stuck vehicle, a fallen beam, a boulder blocking the only way through — you get a grip, plant your feet, and it moves. | Action | Touch | Instant | Power Level + Body |
-| 3 | Something heavy leaves your hands with real force and real aim — thrown, not dropped, and it lands exactly where you meant it to. | Action | Close | Instant | Power Level + Body |
-| 4 | You get your arms around something the size of a small vehicle and it comes with you — off a trapped victim, out of a doorway, wherever it needs to go. | Action | Touch | Instant | Power Level + Body |
-| 5 | What should require a crane or a winch instead requires you — you move or hurl something on a scale that makes onlookers question what they just saw. | Action | Touch | Instant | Power Level + Body |
-
-#### Bulwark (damage resistance)
-**Special Effect note** (Hero System convention): the mechanic below — a flat **Soak** value that reduces incoming Damage after a hit connects, per [combat.md](combat.md#damage--confirmed) — is fixed regardless of fictional source. A player picks the justification when taking this Gift: unnaturally tough skin, a mystic ward woven into a tattoo, subdermal scales, a personal kinetic barrier, hardened chi, whatever fits the character. The numbers never change based on the choice, but the GM may let the fictional source matter narratively (a ward-flavored Bulwark might falter against a dispelling effect; a skin-flavored one might not) without touching the mechanic itself.
+#### Regeneration
+**Renamed from "Living Mend," 2026-07-16.** Damage that should linger on you instead gets treated like an inconvenience. Your body works to undo harm at a pace nothing ordinary can match. (For a body that simply doesn't go down or break in the first place, see [Bulwark](#bulwark-damage-resistance--toughness) instead.)
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Something about you takes the edge off harm before it really lands — a blow that should leave a mark barely does. **Soak +1.** | Free | Self | Passive | — (no roll, passive) |
-| 2 | The effect deepens — whatever protects you is doing real, noticeable work now, not just softening the odd glancing hit. **Soak +2.** | Free | Self | Passive | — (no roll, passive) |
-| 3 | A solid, committed blow that should draw blood instead draws a bruise. **Soak +3.** | Free | Self | Passive | — (no roll, passive) |
-| 4 | Attacks that should stagger anyone else barely register — whatever's between you and harm is doing the work of real armor now. **Soak +4.** | Free | Self | Passive | — (no roll, passive) |
-| 5 | You shrug off blows that should be devastating — whatever protects you has become a genuine wall between you and the world's harm. **Soak +5.** | Free | Self | Passive | — (no roll, passive) |
+| 1 | **Stable, and Topped Off.** If you'd drop to Incapacitated, you stabilize at Suffering instead, once per scene, automatically. Spend **1 Resonance** to refill your current Health Level's container back to full. | Free | Self | Instant | — (no roll, passive) |
+| 2 | **A Level Regained.** Spend **1 Resonance** to recover a full Health Level outright, not just top off the container. | Free | Self | Instant | — (no roll, passive) |
+| 3 | **It Just Closes.** Lost HP in your current Health Level container refills on its own, no Resonance spent, at a rate of **Body ÷ 2 per minute**. This does not recover a fully lost Health Level. | Free | Self | Scene | — (no roll, passive) |
+| 4 | **Regrowth.** Spend **1 Resonance** to regrow a severed limb, heal a broken bone, or regenerate a lost eye, outright. | Action | Self | Instant | — (no roll, passive) |
+| 5 | **Faster Still, and Total Recovery.** The passive regen rate rises to **Body ÷ 2 per turn**. Spend **3 Resonance** to recover every lost Health Level at once. | Free | Self | Instant | — (no roll, passive) |
+
+#### Undying Vigor (disease/poison resistance)
+Poison, sickness, and exhaustion all treat your body as unusually hostile territory. They lose more often than they win.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **No Purchase.** Advantage on any roll to resist poison. Immune outright to ordinary (non-exotic) disease. Fatigue-based exhaustion takes twice as long to set in. | Free | Self | Scene | — (no roll, automatic) |
+| 2 | **Shrug It Off.** The Advantage above extends to real, dangerous poisons and illnesses too, not just minor ones, and any roll to resist or recover from one gets **+1 DoS**. | Free | Self | Scene | — (no roll, automatic) |
+| 3 | **Expel It.** Spend **1 Resonance** to purge an active poison or disease from your system outright, no roll needed, on your terms. | Action | Self | Instant | — (no roll, automatic) |
+| 4 | **Refuses to Comply.** Even a serious toxin or a genuine plague, the kind that should be lethal, doesn't take hold. The resist/recover bonus rises to **+3 DoS**, and fatigue-based exhaustion stops accumulating from ordinary causes entirely. Expel It can now purge a serious disease or toxin too, at a cost of **2 Resonance**. | Free | Self | Scene | — (no roll, automatic) |
+| 5 | **Stopped Negotiating.** Immune outright to poison, disease, and exhaustion of natural origin, full stop, no roll needed. A mystical or supernatural affliction can still take hold, but Expel It purges it for **3 Resonance**. | Free | Self | Passive | — (no roll, automatic) |
+
+### Combat & Martial Techniques
+
+#### Body as Weapon
+Years of discipline made your own body the only tool and the only armor you've ever needed.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Bare-Handed, Not Unarmed.** Your fists, feet, and elbows count as a real weapon for every purpose: no penalty for going in without one, and nothing can Disarm you. Deals damage as an Unarmed weapon (**Base +1**). | Free | Self | Passive | — (no roll, passive) |
+| 2 | **Trained Reflexes.** Years of discipline sharpen your instincts in a fight: **+1 to Defense**, always. | Free | Self | Passive | — (no roll, passive) |
+| 3 | **Soft Landing.** A fall that should break bones costs you nothing: treat any fall as though it were half its actual height. | Free | Self | Instant | — (no roll, passive) |
+| 4 | **Catch or Deflect.** Once per round, contest an incoming ranged attack as a Free action: win, and it's knocked aside or caught outright. | Free | Self | Instant | Resisted Roll: Power Level + Body vs. the attacker's roll |
+| 5 | **Nothing Gets Through.** Catch or Deflect no longer costs an action and can answer more than one attack in the same round if it comes to that. | — | Self | Passive | Resisted Roll: Power Level + Body vs. the attacker's roll |
+
+*Note: meditative-discipline concealment (stillness, going unsensed) lives in [Unseen](#unseen-concealment--evasion) (Illusion & Concealment) as a Special Effect option — the old separate "Empty Body" entry was merged into it 2026-07-16. Its higher-level intangibility (stepping halfway or fully out of the physical world) lives in [Through the Cracks](#through-the-cracks-phasing) instead, since that's a defensive/movement power, not concealment.*
+
+#### Marked for the Hunt
+Once you've marked someone, the hunt runs on its own. Part of your attention stays fixed on them even when you're doing something else entirely.
+
+*Natural opposite of [Unseen](#unseen-concealment--evasion): when a marked target evades using that Gift, resolve it as a Resisted Roll — this Gift's DoS bonus and the other's tracking-penalty both apply to their respective sides before comparing margins, rather than either Gift simply overriding the other.*
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Mark the Quarry.** Spend **1 Resonance** to mark a target you can see. You always know their rough direction, like a compass that only points at one person, and gain Advantage on any roll made to track or locate them specifically. | Action | Close | Scene (extended) | — (no roll, passive) |
+| 2 | **The Hunter's Edge.** Any roll made directly against your marked target (an attack, a contested Skill use) gets **+1 to your Degree of Success**. | Free | Self | Scene (extended) | — (no roll, passive) |
+| 3 | **Nowhere to Hide.** Your tracking Advantage extends further: the marked target's attempts to hide, disguise themselves, or slip away from you specifically suffer Disadvantage. You also gain Advantage to avoid being surprised by them. | Free | Self | Scene (extended) | — (no roll, passive) |
+| 4 | **The Mark Deepens.** The DoS bonus against your marked target rises to **+3**, and the mark itself no longer needs renewing: it holds until the target is dealt with or you deliberately release it, not just for a scene. | Free | Self | Until released | — (no roll, passive) |
+| 5 | **The Hunt Is Already Over.** Spend **1 Resonance** to pinpoint your marked target's exact location regardless of concealment, stealth, or any means of hiding they're using. The DoS bonus against them rises to **+5**. | Action | Self | Instant | — (no roll, passive) |
+
+#### Opportunist's Edge
+You spot the gap before anyone else does. By the time it registers for them, you've already moved through it.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Read the Gap.** You automatically notice when a target within Close range is surprised, flanked, or distracted, even if it's not obvious. Gain Advantage on your next roll against them. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **Cash It In.** Act against a target with an opening (surprised, flanked, or distracted, per Read the Gap) and your roll gets **+1 to Degree of Success**. | Free | Close | Instant | Power Level + Body |
+| 3 | **Cunning Step.** Once per round, take an extra Move, or Hide, without spending your Action on it. | Free | Self | Instant | — (no roll, passive) |
+| 4 | **No Wasted Openings.** The bonus against an exploitable target rises to **+3 DoS**. | Free | Close | Instant | Power Level + Body |
+| 5 | **Already Gone.** The bonus rises to **+5 DoS**. When you use Cunning Step, you may also make an attack without spending an action, once per scene. | Free | Close | Instant | Power Level + Body |
+
+#### Reckless Instinct
+You lead with instinct instead of thought when danger erupts. It's a gamble, and it pays off more than caution ever would.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Already Tensing.** You can't be caught flat-footed by a surprise attack. Act with Advantage the instant danger erupts. | Free | Self | Instant | — (no roll, passive) |
+| 2 | **All In.** Once per round, go Reckless as an Action: Advantage on your next attack, but attacks against you gain Advantage too until your next turn. | Action | Self | Instant | Power Level + Body |
+| 3 | **First Every Time.** The surprise immunity now covers Gift- and Perk-based ambushes too, not just mundane ones. | Free | Self | Instant | — (no roll, passive) |
+| 4 | **The Gamble Pays.** Reckless's offense becomes a flat **+3 DoS** instead of Advantage, though the enemy still gets Advantage against you. | Action | Self | Instant | Power Level + Body |
+| 5 | **No Hesitation.** The bonus rises to **+5 DoS**, and triggering Reckless costs a Free action instead of your whole turn. | Free | Self | Instant | Power Level + Body |
+
+#### Undying Fury
+Once your temper truly lights, something in you refuses to go down. Pain, fatigue, and injury all take a back seat to the fury carrying you forward.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Burn It Off.** Minor pain and fatigue stop imposing Disadvantage on you while your temper's up. | Free | Self | Scene | — (no roll, passive) |
+| 2 | **Rising Heat.** Enter a rage as a Free action: physical attacks against you suffer **-1 DoS**, and your own melee attacks gain **+1 DoS**, for the scene. | Free | Self | Scene | — (no roll, passive) |
+| 3 | **No Fade.** The rage holds at full strength for the whole scene. No sustain roll, no falling off partway through a long fight. | Free | Self | Scene | — (no roll, passive) |
+| 4 | **Fight Through It.** Both bonuses rise to **-3 / +3 DoS**. Once per scene, ignore a hit that would drop you a Health Level. | Free | Self | Scene | — (no roll, passive) |
+| 5 | **Refuse to Fall.** Both bonuses rise to **-5 / +5 DoS**. While raging, no single hit can take you below 1 Health Level. | Free | Self | Scene | — (no roll, passive) |
+
+#### Untouchable
+**Merged with Iron Mind, 2026-07-16.** Harm has trouble landing on you. Whatever's coming, body or mind, tends to arrive a beat late or an inch wide.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Half a Step Ahead.** Any attack or mental intrusion aimed at you suffers **-1 to its Degree of Success**. | Free | Self | Instant | — (no roll, passive) |
+| 2 | **Doesn't Stick.** Minor coercion, a passing suggestion or a low-grade compulsion, fails against you outright. | Free | Self | Instant | — (no roll, passive) |
+| 3 | **Throw It Back.** Once per scene, force an active mental intrusion already inside your head back out. | Action | Self | Instant | Resisted Roll: Power Level + Mind vs. the intruder |
+| 4 | **Barely There.** The penalty on attacks and intrusions against you rises to **-3 DoS**, and it now applies to area effects too, not just single targets. | Free | Self | Instant | — (no roll, passive) |
+| 5 | **Locked Door.** The penalty rises to **-5 DoS**. Body or mind, almost nothing finds its mark on you anymore. | Free | Self | Passive | — (no roll, passive) |
 
 ### Elemental & Energy Manipulation
 
 #### Ember Touch (fire)
-Fire recognizes you as kin — flame bends toward your will the way it bends toward fuel and air, an old and willing partnership.
+Fire treats you like kin. Flame bends toward your will the way it bends toward fuel and air.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | You know a room's flames before you see them — a guttering candle, a dying ember, the ghost-warmth of a fire long since put out, all of it plain to you at a glance. | Free | Close | Instant | — (no roll, passive) |
-| 2 | A flame leans toward your will before you've consciously asked it to — flaring, dimming, bending around a corner, or catching on something already begging to burn. | Action | Close | Instant | Power Level + Soul |
-| 3 | Flame blooms in your open palm from nothing at all, and holds — a torch you never have to relight, a shape you can bend and hold as long as you concentrate. | Action | Self | Scene | Power Level + Soul |
-| 4 | Fire leaves your hand as a weapon — a controlled burst that catches what you aim it at, or a shove of will that bends an already-raging blaze somewhere else entirely. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 5 | A wildfire answers to you like a trained animal — you can bend its front, starve its heart, or snuff it dead in an instant, and you can conjure a blaze at genuinely dangerous scale from nothing at all. | Action | Medium | Instant | Power Level + Soul |
+| 1 | **Know Fire.** A guttering candle, a dying ember, the ghost-warmth of a fire long put out: all of it plain to you at a glance. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **Coax the Flame.** A flame flares, dims, bends around a corner, or catches on something already ready to burn, at your suggestion. | Action | Close | Instant | Power Level + Soul |
+| 3 | **Kindle and Hold.** Flame blooms in your open palm from nothing and holds as long as you concentrate: a torch you never have to relight. | Action | Self | Scene | Power Level + Soul |
+| 4 | **Burning Strike.** Fire leaves your hand as a real attack, or shoves an already-raging blaze somewhere else entirely. Deals damage as a Martial weapon (**Base +6**). | Action | Close | Instant | Power Level + Soul vs. Defense |
+| 5 | **Wildfire's Master.** Bend an existing fire's front, starve its heart, or snuff it dead in an instant. Conjure a blast at devastating scale instead: **Base +9**, able to spill across Health Levels like Ordnance. | Action | Medium | Instant | Power Level + Soul vs. Defense |
 
 #### Frostbound (cold/ice)
-Winter never really left you — cold and ice answer to something in your blood the way they'd answer to the deepest part of the year.
+Winter never really left you. Cold and ice answer to something in your blood.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Ice tells you its story on contact — how long it's held its shape, how deep the cold runs, whether it's natural or something else's doing. | Free | Close | Instant | — (no roll, passive) |
-| 2 | The air around you takes on a bite it didn't have a moment ago, or a thaw already underway slows to a crawl at your say-so. | Action | Close | Instant | Power Level + Soul |
-| 3 | Standing water stiffens and locks at your command, or a bare surface goes slick with ice thick enough to matter. | Action | Close | Instant | Power Level + Soul |
-| 4 | Cold pours off you hard enough to freeze a target solid where they stand, or lock down a modest area in a hard, sudden frost. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 5 | You can lock a room in ice thick enough to seal every door, or thaw one instantly with a thought — winter itself answers to you at real scale. | Action | Medium | Instant | Power Level + Soul |
-
-#### Storm's Herald (wind/lightning/weather)
-The sky above you is never entirely neutral — wind, rain, and lightning all lean a little closer to whatever you're feeling, ready to answer if you ask.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | The sky tells you its plans before the first cloud rolls in — a shift in pressure, a change in the wind, a storm hours off that no one else has noticed yet. | Free | Self | Scene | — (no roll, passive) |
-| 2 | A restless wind settles at your word, or a still afternoon picks up a breeze that wasn't there a moment ago — small, local, entirely yours to shape. | Action | Close | Instant | Power Level + Soul |
-| 3 | You reach up and pull down what wasn't building — a hard gust from nowhere, a sudden downpour, a single crack of lightning out of a clear sky. | Action | Medium | Instant | Power Level + Soul |
-| 4 | A real storm gathers at your call and holds — wind, rain, and lightning that don't dissipate, and that you can aim like a weapon for as long as it lasts. | Action | Long | Scene | Power Level + Soul |
-| 5 | The sky over a significant stretch of ground is yours to write on — its path, its intensity, whether it rages or breaks, all of it bends to your intent. | Action | Long | Scene | Power Level + Soul |
-
-#### Tidecaller (water)
-Water moves for you the way it moves for the moon — a pull it was always going to answer, whether it's a puddle or the open sea.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Water speaks to you before you touch it — its purity, its current, its depth, its motion, even from well out of sight. | Free | Medium | Instant | — (no roll, passive) |
-| 2 | A puddle ripples without wind, a stream's flow bends a little at your suggestion — nudges, not commands, but water listens. | Action | Close | Instant | Power Level + Soul |
-| 3 | A real volume of water answers you directly — a stream redirected around an obstacle, a wave raised in a still pool, water that moves because you told it to. | Action | Close | Instant | Power Level + Soul |
-| 4 | A strong current bends to your will, or a localized flood rises where you need it — water at a scale that can genuinely change a fight or a rescue. | Action | Medium | Instant | Power Level + Soul |
-| 5 | You shape a wave, hold back a flood, or part standing water clean down to the bottom — the sea itself, for a moment, does what you say. | Action | Long | Instant | Power Level + Soul |
-
-#### Stoneheart (earth)
-The ground under your feet has never really been separate from you — earth and stone shift, hold, and yield according to something closer to conversation than command.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | The ground under your feet tells you what it's made of and how stable it is — a hollow beneath the soil, a crack running through bedrock, all of it plain to you. | Free | Self | Instant | — (no roll, passive) |
-| 2 | Loose soil firms into packed earth at your touch, or firm ground goes soft and yielding — small adjustments, but exactly the ones you meant to make. | Action | Touch | Instant | Power Level + Body |
-| 3 | You raise a wall of packed dirt where there was none, or seal a crack in stone shut as though it had never opened. | Action | Close | Instant | Power Level + Body |
-| 4 | A real mass of stone moves at your will, or shatters outright — enough to open a path or bring one down. | Action | Close | Instant | Power Level + Body |
-| 5 | You raise or collapse a structure's worth of earth and stone in a single act of will — a wall, a rockslide, a foundation, all yours to command. | Action | Medium | Instant | Power Level + Body |
-
-#### Voltaic Pulse (electricity)
-Current runs through the world in more places than most people notice, and it all speaks a language you happen to understand natively.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Current hums to you before you see its source — live wiring behind a wall, the charge building in a storm cloud, a battery's last dregs. | Free | Close | Instant | — (no roll, passive) |
-| 2 | A spark jumps from your fingertip, controlled and precise — a jolt to startle, a static kiss to drain or top off something small. | Action | Touch | Instant | Power Level + Mind |
-| 3 | A real jolt leaves your hand, enough to fry a simple circuit or drop someone to their knees, gasping. | Action | Touch | Instant | Power Level + Mind vs. Resolve |
-| 4 | You send a serious discharge through a target directly, or along whatever conductive path happens to be lying around — wire, water, rebar, it's all a route to you now. | Action | Close | Instant | Power Level + Mind vs. Resolve |
-| 5 | A building's power dies at your word, or a discharge leaves your hands at a scale that could stop a heart — electricity, at real scale, is a language you speak fluently. | Action | Medium | Instant | Power Level + Mind |
+| 1 | **Read the Ice.** How long it's held its shape, how deep the cold runs, whether it's natural or something else's doing: ice tells you its story on contact. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **Bite the Air.** The air around you picks up a cold it didn't have a moment ago, and a thaw already underway slows to a crawl at your say-so. | Action | Close | Instant | Power Level + Soul |
+| 3 | **Lock It Down.** Standing water stiffens and locks at your command. A bare surface goes slick with ice thick enough that anyone crossing it suffers Disadvantage on the attempt. | Action | Close | Instant | Power Level + Soul |
+| 4 | **Flash Freeze.** Cold pours off you hard enough to freeze a target solid where they stand: their Move drops to 0 until they break free with a Resisted Roll (their Body vs. your Power Level + Soul). If you'd rather hurt than hold, it deals damage as a Martial weapon instead (**Base +6**). | Action | Close | Instant | Power Level + Soul vs. Defense |
+| 5 | **Winter's Reach.** Lock a room in ice thick enough to seal every door, or thaw one instantly with a thought. Turned on a person, the freezing blast deals **Base +9**. | Action | Medium | Instant | Power Level + Soul vs. Defense |
 
 #### Radiant Burst (light/energy)
-Light gathers to you the way it gathers to any source — except the source, in this case, is you, and the light knows it.
+Light gathers to you the way it gathers to any source. The source, in this case, is you, and the light knows it.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | A soft glow rises off your skin or gathers in your palm, steady and entirely under your control — a lantern that never runs out. | Free | Self | Scene | — (no roll, passive) |
-| 2 | Light in a room bends to your intent — brighter, dimmer, gone entirely, all with a thought. | Action | Close | Instant | Power Level + Soul |
-| 3 | A real flash bursts from you, bright enough to blind for a moment, or a beam bright enough to signal clean across a valley. | Action | Medium | Instant | Power Level + Soul vs. Resolve |
-| 4 | Light leaves your hands as a genuine weapon — focused enough to burn skin or cut through what it touches. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 5 | You unleash a wave bright enough to blind a crowd outright, or hold a beam steady long enough to cut through steel — light and raw energy, yours at real scale. | Action | Medium | Instant | Power Level + Soul |
+| 1 | **Steady Light.** A soft glow rises off your skin or gathers in your palm, entirely under your control. A lantern that never runs out. | Free | Self | Scene | — (no roll, passive) |
+| 2 | **Bend the Light.** Light in a room bends to your intent: brighter, dimmer, gone entirely, all with a thought. | Action | Close | Instant | Power Level + Soul |
+| 3 | **Flash.** A flash bursts from you bright enough to blind for a moment (the target suffers Disadvantage on their next roll), or a beam bright enough to signal clean across a valley. | Action | Medium | Instant | Power Level + Soul vs. Defense |
+| 4 | **Cutting Beam.** Light leaves your hands as a real attack, focused enough to burn skin or cut through what it touches. Deals damage as a Martial weapon (**Base +6**). | Action | Close | Instant | Power Level + Soul vs. Defense |
+| 5 | **Blinding Wave.** Unleash a wave bright enough to blind a crowd outright (Disadvantage on their next roll, all at once), or hold a beam steady enough to cut through steel: **Base +9**. | Action | Medium | Instant | Power Level + Soul vs. Defense |
 
-### Mental / Psychic
-
-#### Mind's Whisper (telepathy)
-Other minds have never been entirely closed books to you — the walls people put up around their thoughts are thinner than they think, at least where you're concerned.
+#### Stoneheart (earth)
+The ground under your feet has never really been separate from you. Earth and stone shift, hold, and yield according to something closer to conversation than command.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | A mind nearby registers to you the way a lit window registers in a dark street — present, and its general mood plain even through a closed door. | Free | Close | Instant | — (no roll, passive) |
-| 2 | Unguarded thoughts drift off a nearby mind like heat off pavement, and you catch them without really trying — nothing hidden, just whatever's sitting on the surface. | Action | Close | Instant | Power Level + Mind |
-| 3 | A thought or image leaves your mind and lands whole in someone else's, no words needed — a warning, a picture, an idea planted clean. | Action | Close | Instant | Power Level + Mind |
-| 4 | Distance stops mattering. You hold a real, two-way conversation entirely in silence with someone you can't see and couldn't shout to. | Action | Long | Scene | Power Level + Mind |
-| 5 | Once a mind has touched yours, it's never entirely out of reach again — you can find it across any distance and read past the surface to what's actually being felt underneath. | Action | Self (target: anyone met before) | Instant | Power Level + Mind vs. Resolve |
+| 1 | **Ground Truth.** A hollow beneath the soil, a crack running through bedrock: the ground under your feet tells you what it's made of and how stable it is. | Free | Self | Instant | — (no roll, passive) |
+| 2 | **A Word to the Earth.** Loose soil firms into packed earth at your touch, or firm ground goes soft and yielding. Small, exact adjustments. | Action | Touch | Instant | Power Level + Body |
+| 3 | **Raise and Seal.** Raise a wall of packed dirt where there was none, or seal a crack in stone shut as though it had never opened. A raised wall grants Advantage to anyone using it as cover. | Action | Close | Instant | Power Level + Body |
+| 4 | **Break the Earth.** A real mass of stone moves at your will, or shatters outright, enough to open a path or bring one down. Hurled at a target, it deals damage as a Martial weapon (**Base +6**). | Action | Close | Instant | Power Level + Body vs. Defense |
+| 5 | **Foundation's Will.** Raise or collapse a structure's worth of earth and stone in a single act of will. Directed at a person instead, it deals **Base +9**. | Action | Medium | Instant | Power Level + Body vs. Defense |
 
-#### Iron Mind (mental resistance)
-Your own thoughts are territory nobody gets to walk through uninvited — an instinctive, trained defense against anything trying to get inside your head.
+#### Storm's Herald (wind/lightning/weather)
+The sky above you is never entirely neutral. Wind, rain, and lightning lean a little closer to whatever you're feeling, ready to answer if you ask.
 
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Something brushes against your thoughts and you feel it immediately, like a hand on a doorknob you didn't invite in. | Free | Self | Instant | — (no roll, passive) |
-| 2 | A suggestion slides off you before it can take root — minor coercion just doesn't stick the way it's supposed to. | Free | Self | Instant | Power Level + Mind vs. the intruding effect |
-| 3 | Something's already inside, actively pulling at your thoughts — and you throw it back out, deliberately and by force of will. | Action | Self | Instant | Power Level + Mind vs. the intruding effect |
-| 4 | Real coercion, real fear, a genuine attempt at domination — all of it breaks against you and you're still standing, still yourself. | Free | Self | Instant | Power Level + Mind vs. the intruding effect |
-| 5 | Your mind is a locked door with the only key on your side — nothing gets past it that you haven't chosen to let in. | Free | Self | Passive | Power Level + Mind vs. the intruding effect |
-
-#### Silent Push (telekinesis)
-Your will reaches past your own hands — objects move because you decided they should, no touch required.
+*Checked against [Voltaic Pulse](#voltaic-pulse-electricity), 2026-07-16: both touch "lightning," but not the same capability. This Gift's lightning is weather, summoned as part of a wider storm, needs open sky, and answers to Soul. It can't reach a circuit through a wall or ride a wire indoors. Kept separate.*
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | A coin skitters off a table, a door eases shut, a light object drifts an inch to the left — small, but undeniably not you touching it. | Action | Close | Instant | Power Level + Mind |
-| 2 | A light object lifts clean off the ground and goes exactly where you point it — precise, controlled, deliberate. | Action | Close | Instant | Power Level + Mind |
-| 3 | Real weight answers to your will now — a chair, a body, a stack of crates, all of it moves because you decided it should. | Action | Medium | Instant | Power Level + Mind |
-| 4 | Invisible force becomes a weapon in your hands — a shove hard enough to strike, a grip hard enough to restrain, force enough to hurl something heavy across a room. | Action | Medium | Instant | Power Level + Mind vs. Resolve |
-| 5 | You hold several things aloft at once, or something genuinely massive, all of it under total, effortless control. | Action | Medium | Instant | Power Level + Mind |
+| 1 | **Weather Sense.** A shift in pressure, a change in the wind, a storm hours off that no one else has noticed yet: the sky tells you its plans before the first cloud rolls in. | Free | Self | Scene | — (no roll, passive) |
+| 2 | **Restless Wind.** A still afternoon picks up a breeze that wasn't there a moment ago, small and local, entirely yours to shape. | Action | Close | Instant | Power Level + Soul |
+| 3 | **Called Down.** You reach up and pull down what wasn't building: a hard gust from nowhere, a sudden downpour, or a single crack of lightning out of a clear sky. Aimed at a target, the bolt deals damage as a Light weapon (**Base +3**). | Action | Medium | Instant | Power Level + Soul vs. Defense |
+| 4 | **The Storm Holds.** A real storm gathers at your call and holds: wind, rain, and lightning that don't dissipate, aimable like a weapon for as long as it lasts. A bolt aimed at a target deals **Base +6**. | Action | Long | Scene | Power Level + Soul vs. Defense |
+| 5 | **Write on the Sky.** The sky over a significant stretch of ground is yours to write on: its path, its intensity, whether it rages or breaks. A bolt aimed at a target now deals **Base +9**. | Action | Long | Scene | Power Level + Soul vs. Defense |
 
-#### Borrowed Feeling (empathy)
-Emotion in a room isn't background noise to you — it's information, clear as spoken words, and sometimes something you can reach out and touch.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Walk into a room and you already know its temperature — tension coiled in a corner, warmth between two people, dread nobody's said out loud yet. | Free | Close | Instant | — (no roll, passive) |
-| 2 | A carefully composed face doesn't fool you — you feel what's actually sitting underneath the mask someone's wearing. | Action | Close | Instant | Power Level + Soul |
-| 3 | A mood already leaning somewhere just needs a nudge, and you're the one who gives it — easing someone further toward calm, or fear, or resolve they were already drifting toward. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 4 | You reach in and take hold of a specific, strong emotion directly — calming a rage, provoking a courage, steering a feeling that wasn't ready to move on its own. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 5 | A crowd's mood bends at your will, or a single person's emotional state gives way entirely, if only for a moment — the room feels what you decide it should feel. | Action | Medium | Instant | Power Level + Soul vs. Resolve |
-
-#### Second Sight (clairvoyance/precognition)
-Time and distance are more porous for you than for most — glimpses of what's coming, or what's hidden, arrive whether or not you go looking for them.
+#### Tidecaller (water)
+Water moves for you the way it moves for the moon. It was always going to answer, whether it's a puddle or the open sea.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Something flickers at the edge of perception — a feeling, an afterimage — hinting at a near future or a fact nobody's told you yet. | Free | Self | Instant | Power Level + Mind |
-| 2 | You can point that flicker somewhere specific now — ask a real question, and the vague impression sharpens to answer it. | Action | Self | Instant | Power Level + Mind |
-| 3 | A short, clear vision plays out behind your eyes — a likely near-future event, vivid enough to describe in real detail. | Action | Self | Instant | Power Level + Mind |
-| 4 | The vision reaches further — deeper into what's coming, or back into what already happened — and it comes through sharp, not hazy. | Action | Self | Instant | Power Level + Mind |
-| 5 | You reach out deliberately for something distant or significant and pull back a detailed, coherent vision of it, on demand rather than by chance. | Action | Self | Instant | Power Level + Mind |
+| 1 | **Water's Voice.** Its purity, its current, its depth, its motion: water speaks to you before you touch it, even from well out of sight. | Free | Medium | Instant | — (no roll, passive) |
+| 2 | **A Suggestion to the Current.** A puddle ripples without wind. A stream's flow bends a little at your suggestion. Not commands yet, just nudges, but water listens. | Action | Close | Instant | Power Level + Soul |
+| 3 | **Water Answers.** A real volume of water moves because you told it to: a stream redirected, a wave raised in a still pool. Turned against a person, contest it as a Trip/Shove to knock them down or push them back. | Action | Close | Instant | Resisted Roll: Power Level + Soul vs. the target |
+| 4 | **The Current Bends.** A strong current bends to your will, or a localized flood rises where you need it. Slammed directly into a target, it deals damage as a Martial weapon (**Base +6**). | Action | Medium | Instant | Power Level + Soul vs. Defense |
+| 5 | **The Sea Obeys.** Shape a wave, hold back a flood, or part standing water clean to the bottom. Turned into a weapon, the wave deals **Base +9**. | Action | Long | Instant | Power Level + Soul vs. Defense |
 
-#### Ghost in the Wires (technopathy)
-Electronics were never truly closed systems to you — circuits and code have a rhythm you can hear, and once you're listening, you can talk back.
+#### Voltaic Pulse (electricity)
+Current runs through the world in more places than most people notice, and it all speaks a language you understand natively.
 
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Active electronics hum at the edge of your awareness — a camera panning, a phone buzzing in a pocket, a server room's quiet churn, all legible to you at a glance. | Free | Close | Instant | — (no roll, passive) |
-| 2 | Your thoughts slip into a simple device without a cable or a login — a lock, a lightswitch, a basic terminal, answering you like it was always yours. | Action | Touch | Instant | Power Level + Mind |
-| 3 | A straightforward device or system opens fully to you from a distance — cameras, doors, simple networks, all of it under your remote hand. | Action | Medium | Instant | Power Level + Mind |
-| 4 | A complex networked system stops being a wall of code and becomes a space you move through — navigating and rewriting it as naturally as walking a hallway. | Action | Long | Scene | Power Level + Mind |
-| 5 | A building's systems, a fleet of devices, an entire network — scale stops being a limit, and it's all yours to command at once. | Action | Long | Scene | Power Level + Mind |
-
-### Biological / Shapeshifting & Regeneration
-
-#### Skin of the Beast (shapeshifting)
-Something animal lives under your human shape, close enough to the surface that it doesn't take much to let it through.
+*Checked against [Storm's Herald](#storms-herald-windlightningweather), 2026-07-16: both touch "lightning," but not the same capability. This Gift is a precise current delivered by touch or along a conductor, wire, water, rebar, indoors or out, no sky required, and answers to Mind. It can't call a bolt down from a clear sky. Kept separate.*
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Something animal flickers under the surface — eyes that catch light wrong, senses sharper than they should be, a faint edge to your nails — subtle enough that only a close look would ever catch it. | Free | Self | Scene | — (no roll, passive) |
-| 2 | Claws lengthen, fangs drop, fur ripples across skin and vanishes again — a partial shift you can call up and dismiss without your silhouette ever changing. | Action | Self | Scene | — (no roll, passive) |
-| 3 | You go down on all fours and come up something else entirely — a single bonded animal form, full and complete, your mind unmistakably still your own behind its eyes. | Action | Self | Scene | — (no roll, passive) |
-| 4 | The shift comes faster now, barely a breath, and there's a form between your two — a hybrid war-shape, more animal muscle riding a human frame. | Action | Self | Scene | — (no roll, passive) |
-| 5 | The change is instantaneous, total mastery over the shift — and for a little while you can lend a lesser taste of it to someone standing beside you, a borrowed edge of claw or speed or sense. | Free | Self (or Touch, to share) | Scene | — (no roll, passive) |
-
-#### Living Mend (regeneration)
-Damage that should linger on you instead gets treated like an inconvenience — your body working to undo harm at a pace nothing ordinary can match.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | A cut that should scab over by tomorrow is closed and forgotten before the hour's out — minor damage just doesn't linger on you. | Free | Self | Scene | — (no roll, passive) |
-| 2 | Rest does more for you than it should — a real wound that would keep someone abed for a week mends in a fraction of that time. | Free | Self | Scene | — (no roll, passive) |
-| 3 | You close your eyes, focus, and a serious wound knits itself shut before the scene's even over — not painless, but done. | Action | Self | Scene | Power Level + Body |
-| 4 | Damage that should have crippled you for good instead resolves in short order, function and all — a shattered limb walks again sooner than it has any right to. | Free | Self | Scene | Power Level + Body |
-| 5 | Given a few moments, almost nothing physical keeps you down — even a wound that should have killed you gets the chance to be wrong about that. | Action | Self | Instant | Power Level + Body |
-
-#### Adaptive Flesh (environmental adaptation)
-Your body treats hostile environments as a problem to be solved rather than a threat to be endured — quietly reshaping itself to whatever the moment demands.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Your body flags a hostile environment — creeping cold, thinning air, something toxic on the wind — well before it would trouble anyone else. | Free | Self | Instant | — (no roll, passive) |
-| 2 | A mild hazard just rolls off you — a chill that should ache, a fume that should sting, none of it leaving a mark. | Free | Self | Scene | — (no roll, passive) |
-| 3 | You take a moment to let your body adjust, and it holds — geared for one specific hostile environment for as long as the scene demands. | Action | Self | Scene | Power Level + Body |
-| 4 | Deep cold, crushing pressure, a lungful of poison air — genuinely dangerous conditions and you're comfortable in them, not just surviving. | Free | Self | Scene | — (no roll, passive) |
-| 5 | Given a moment to prepare, there's almost no environment your body can't be reshaped to survive — you walk in ready for wherever you're headed. | Action | Self | Scene | Power Level + Body |
-
-#### Mimic's Gift (trait mimicry)
-Watch something closely enough and part of it becomes borrowable — a trait lifted whole from another creature and worn as your own for a while.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Watch closely enough and you can borrow it — a distinctive gait, the exact pitch of someone's voice, a small physical trait worn briefly like a coat. | Action | Close | Scene | Power Level + Body |
-| 2 | A capability you've witnessed in another creature settles onto you for a while — nothing dramatic yet, but genuinely borrowed, genuinely functional. | Action | Close | Scene | Power Level + Body |
-| 3 | Claws, gills, eyes that see in the dark — a real, useful trait taken whole from something you've observed, yours to use for the length of a scene. | Action | Close | Scene | Power Level + Body |
-| 4 | What you borrow sticks around longer now, or reaches for something more significant — a trait worth holding onto past a single scene. | Action | Close | Scene (extended) | Power Level + Body |
-| 5 | Several traits at once, or one truly exceptional one, held for exactly as long as you need it — mimicry with nothing held back. | Action | Close | Scene (extended) | Power Level + Body |
-
-#### Undying Vigor (disease/poison resistance)
-Poison, sickness, and exhaustion all treat your body as unusually hostile territory — and lose more often than they win.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | A little poison, a little sickness, the ordinary fatigue that wears everyone else down — none of it gets real purchase on you. | Free | Self | Scene | — (no roll, passive) |
-| 2 | A real dose of poison, a real illness — your body shrugs through it, weathering what should have laid you flat. | Free | Self | Scene | Power Level + Body |
-| 3 | You bear down and simply expel it — an active poison or disease purged from your system outright, on your terms. | Action | Self | Instant | Power Level + Body |
-| 4 | Something that should be lethal — a serious toxin, a genuine plague — meets a body that refuses to go along with it. | Free | Self | Scene | Power Level + Body |
-| 5 | Poison, disease, exhaustion — none of it takes hold in you anymore, full stop. Your body has simply stopped negotiating with them. | Free | Self | Passive | — (no roll, passive) |
-
-### Social / Charisma / Emotional
-
-#### Chorus of Concord (social harmony)
-Conflict and tension don't have to win by default — you have a real gift for finding the thread that pulls people back toward each other.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | You walk into a room and read it instantly — the tension nobody's naming, the warmth between two people, the hostility hiding behind a polite smile. | Free | Close | Instant | — (no roll, passive) |
-| 2 | Your voice drops half a register and the air changes with it — people willing to let go of their tension find it easier to, around you. | Action | Close | Instant | Power Level + Soul |
-| 3 | You sit with someone's anger, fear, or grief and gently talk it down, even when part of them doesn't want to let go of it yet. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 4 | Two people willing to try can mend what's broken between them with you in the room — a rift closed deep enough to survive past the conversation itself. | Action | Close | Scene | Power Level + Soul |
-| 5 | A mob's temper breaks against you like a wave against a seawall — you can calm a crowd outright, or forge real consensus out of a room ready to tear itself apart. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
-
-#### Commanding Presence
-A room organizes itself around you without anyone quite deciding to let it happen — attention, deference, and obedience following you like a natural law.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | You want the room's attention and you get it — a look, a word, and the noise drops. | Action | Close | Instant | Power Level + Soul |
-| 2 | Walk into an ambiguous situation and people default to deferring to you, without anyone quite deciding to. | Free | Close | Scene | — (no roll, passive) |
-| 3 | An order given in the heat of the moment gets followed, no hesitation, no second-guessing — your voice cuts through the chaos clean. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 4 | A group on the edge of breaking finds its nerve again because you gave them a reason to — a rally that actually holds. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
-| 5 | A crowd's attention and obedience are yours, even pulling against their own instincts — command, in the fullest sense of the word. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
-
-#### Silver Tongue
-Words move differently when they leave your mouth — persuasion that should take real effort instead seems to just happen, almost on its own.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Your words carry a little more weight than they should — people extend you the benefit of the doubt before you've even earned it. | Free | Close | Scene | — (no roll, passive) |
-| 2 | A minor suspicion, a small objection — you talk right past it, and it doesn't stick. | Action | Close | Instant | Power Level + Mind |
-| 3 | Someone genuinely reluctant walks away agreeing anyway, and can't quite pin down when you turned them around. | Action | Close | Instant | Power Level + Mind vs. Resolve |
-| 4 | A situation that should be a dead end opens back up because you kept talking and didn't stop until it did. | Action | Close | Instant | Power Level + Mind vs. Resolve |
-| 5 | Given the chance to actually speak, there's almost nothing you can't talk someone into believing. | Action | Close | Instant | Power Level + Mind vs. Resolve |
-
-#### Read the Room
-People give more away than they realize, and you're built to notice — the truth under the performance is rarely as hidden from you as they think.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Tension, deception, a hidden agenda — you clock all of it in a group the moment you walk in, before a word's been exchanged. | Free | Close | Instant | — (no roll, passive) |
-| 2 | In a conversation, you know who's actually running things and who's lying about something, usually before they've finished their first sentence. | Free | Close | Instant | Power Level + Mind |
-| 3 | Someone's real goal comes into focus for you, pieced together from what they do rather than what they say, no matter how hard they're working to hide it. | Action | Close | Instant | Power Level + Mind vs. Resolve |
-| 4 | An elaborate deception or a genuinely gifted liar doesn't get past you — the seams show, even when they shouldn't. | Action | Close | Instant | Power Level + Mind vs. Resolve |
-| 5 | A room or a person opens up to you almost completely — very little stays hidden once you've decided to really look. | Action | Close | Instant | Power Level + Mind vs. Resolve |
-
-#### Bound by Oath
-A promise made to you is never quite as easy to walk away from as an ordinary promise — something in the exchange takes on real, felt weight.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | A promise made to you doesn't fade the way promises usually do — it sticks in the mind of whoever made it, vivid and hard to shake. | Free | Close | Scene | — (no roll, passive) |
-| 2 | Even a small promise made to you settles onto the one who made it with real, felt weight — not a threat, just a fact they can't quite ignore. | Action | Close | Scene | Power Level + Soul |
-| 3 | A significant oath sworn to you becomes genuinely hard to break — the swearer feels the pull of it every time they consider walking away. | Action | Close | Scene (extended) | Power Level + Soul vs. Resolve |
-| 4 | Break an oath made to you and something happens — real, unavoidable, and entirely out of the oathbreaker's control. | Free | Close | Scene (extended) | Power Level + Soul vs. Resolve |
-| 5 | An oath sworn to you is, for all practical purposes, unbreakable — the swearer simply cannot walk away from it, not really. | Action | Close | Scene (extended) | Power Level + Soul vs. Resolve |
-
-### Movement & Spatial
-
-#### Step Between (short teleport)
-Distance is more of a suggestion to you than a fixed rule — the space between two points collapsible whenever you actually need it to be.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | The shortest safe line between two points draws itself in your mind's eye — through the crowd, around the guard, past the rubble, no matter what's actually in the way. | Free | Medium | Instant | — (no roll, passive) |
-| 2 | A locked door, a chasm, a gap that should stop you cold — cease to matter, so long as you've laid eyes on both sides of it. | Action | Close | Instant | Power Level + Mind |
-| 3 | You blink out of existence and back in somewhere else — a short hop to any spot you can currently lay eyes on. | Action | Close | Instant | Power Level + Mind |
-| 4 | You don't need to see it anymore — a place you know well enough is a place you can simply arrive at. | Action | Long | Instant | Power Level + Mind |
-| 5 | Distance stops being the obstacle it once was — almost anywhere you've ever stood is a single thought away from you again. | Action | Long | Instant | Power Level + Mind |
-
-#### Weightless (flight)
-Gravity's hold on you has always been a little negotiable — and the more you practice, the more room there is to negotiate.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | A fall that should hurt slows on the way down, and you land like it was nothing — shaken, maybe, but never broken. | Free | Self | Instant | — (no roll, passive) |
-| 2 | You lift a few inches off the ground and hang there, weightless for a breath or two, before gravity remembers you. | Action | Self | Instant | — (no roll, passive) |
-| 3 | You leave the ground properly now — slow, careful, deliberate, but genuinely flying under your own power. | Action | Self | Scene | — (no roll, passive) |
-| 4 | Speed and control both arrive at once — you bank, dive, and climb like flight was always yours to begin with. | Action | Self | Scene | — (no roll, passive) |
-| 5 | The sky is as natural to you now as the ground used to be — real altitude, real speed, no more effort than walking across a room. | Free | Self | Scene | — (no roll, passive) |
-
-#### Through the Cracks (phasing)
-Solid matter isn't quite as solid to you as it is to everyone else — a wall, a door, a hull, all of it slightly more theoretical when you decide it should be.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | A gap that should be far too small for you stops being a problem — you fold through it like the rules briefly forgot to apply. | Action | Self | Instant | — (no roll, passive) |
-| 2 | A solid surface brushes against you and, just for an instant, doesn't quite manage to stop you — a flicker, gone before anyone's sure they saw it. | Free | Self | Instant | — (no roll, passive) |
-| 3 | Your hand or arm sinks into something solid and comes back out the other side, whole, a heartbeat later. | Action | Touch | Instant | Power Level + Body |
-| 4 | Your entire body follows — a wall, a door, a hull, none of it stops you for the few moments you need to be somewhere it isn't. | Action | Touch | Instant | Power Level + Body |
-| 5 | Solid matter simply stops being an obstacle, for as long as you need it to — you move through it as freely as you move through open air. | Action | Self | Scene | Power Level + Body |
-
-#### Long Road Home (fast travel)
-The road itself seems to want you to arrive — journeys under your feet just go smoother, faster, and shorter than they logically should.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Turned around, lost, disoriented — it doesn't matter. Some part of you always knows which way leads back toward safety or home. | Free | Self | Instant | — (no roll, passive) |
-| 2 | Your journeys just go right — the traffic clears, the trail stays dry, the connection is never missed, more often than luck should allow. | Free | Self | Scene | — (no roll, passive) |
-| 3 | You find the route nobody else would think to take, and it saves real time on a long journey — a shortcut that shouldn't exist, but does for you. | Action | Self | Scene | Power Level + Mind |
-| 4 | A significant distance collapses into a fraction of the time it should take — the road bends to get you there faster. | Action | Self | Scene | Power Level + Mind |
-| 5 | Vast distances close in almost no time at all, so long as you're still moving under your own power — the world gets smaller wherever you're headed. | Action | Self | Scene | Power Level + Mind |
-
-#### Wall-Runner
-Footing has always been a little more flexible for you than for anyone standing on two feet has any right to expect — vertical, upside-down, it barely matters.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Ice, loose gravel, a beam an inch wide — your footing holds on surfaces that should have you flat on your back. | Free | Self | Scene | — (no roll, passive) |
-| 2 | You hit a vertical wall at a dead run and get a few real strides out of it before gravity remembers to argue. | Action | Self | Instant | Power Level + Body |
-| 3 | A sheer vertical surface is no different to you than a flat street — you climb it at a walk, without strain, without a second thought. | Free | Self | Scene | — (no roll, passive) |
-| 4 | Ceilings, overhangs, surfaces that shouldn't hold a person at all — you move across them with total, unhurried control. | Free | Self | Scene | — (no roll, passive) |
-| 5 | Footing and gravity stop being rules that apply to you, for as long as you're in motion — up, down, and sideways all become the same direction. | Free | Self | Scene | — (no roll, passive) |
-
-### Temporal
-
-#### Stolen Moment (speed/reaction)
-Time doesn't pass at quite the same rate for you as it does for everyone else — a small, private head start built into how you move through the world.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Everything happens just a fraction slower than it does for everyone else in the room — not dramatic, but you notice the details others' eyes slide right past. | Free | Self | Scene | — (no roll, passive) |
-| 2 | When it actually matters, you're a half-step ahead — the punch you saw coming, the door you got through, the word you got in first. | Free | Self | Instant | — (no roll, passive) |
-| 3 | Several real seconds of thought and motion collapse into what feels, to everyone watching, like a single blink. | Action | Self | Instant | Power Level + Mind |
-| 4 | For a moment, the world simply stops keeping pace with you — you move and act freely while everyone else is caught somewhere between one heartbeat and the next. | Action | Self | Instant | Power Level + Mind |
-| 5 | You step onto your own clock entirely, a genuine slice of time that belongs to you alone, while the world outside crawls by at its normal pace. | Action | Self | Instant | Power Level + Mind |
-
-#### Echo of What Was (psychometry)
-The past doesn't fully leave a place or an object — it lingers in a residue only you can read, waiting for a touch to bring it back.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Lay a hand on an object or stand in a place, and its recent past bleeds through, faint and general — something happened here, and you can feel the shape of it. | Free | Touch | Instant | — (no roll, passive) |
-| 2 | The impression sharpens into something you can actually describe — hazy, but tied to a specific past event, not just a vague feeling. | Action | Touch | Instant | Power Level + Mind |
-| 3 | A clear echo plays out for you — something that happened here recently, witnessed almost as though you'd been standing there yourself. | Action | Touch | Instant | Power Level + Mind |
-| 4 | You reach further back and the echo comes through sharp regardless — the past doesn't blur just because it's old. | Action | Touch | Instant | Power Level + Mind |
-| 5 | Any object or place, any distance of years, and you can call up a vivid, fully detailed echo of what happened there — history laid bare on demand. | Action | Touch | Instant | Power Level + Mind |
-
-#### Borrowed Time (delay effects)
-Consequences aren't as fixed to their moment as they seem — you have a real, if limited, ability to make something bad wait its turn.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | A beat before something bad happens, you feel it coming — not what, not always why, but enough warning to brace. | Free | Self | Instant | — (no roll, passive) |
-| 2 | A minor consequence hangs in the air just long enough for you to actually do something about it before it lands. | Action | Close | Instant | Power Level + Mind |
-| 3 | You buy real time against a looming effect or deadline — not forever, but enough to matter, and it holds until you say otherwise. | Action | Close | Scene | Power Level + Mind |
-| 4 | Something significant — an injury's onset, a trap already sprung, a deadline already breached — gets meaningfully postponed at your word. | Action | Close | Scene | Power Level + Mind vs. Resolve |
-| 5 | A major consequence simply waits, held off entirely for as long as you can keep pouring effort into holding it there. | Action | Close | Scene (sustained) | Power Level + Mind vs. Resolve |
-
-#### Frozen Instant (localized time-stop)
-Time, for one narrow slice of the world, is something you can reach out and grab hold of — pausing it just long enough to change what happens next.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | A falling glass, a swinging door — small, simple things hang in the air a beat longer than they should, giving you just enough time. | Action | Close | Instant | Power Level + Mind |
-| 2 | Something slows, briefly and noticeably, handing you or an ally the split-second edge you needed. | Action | Close | Instant | Power Level + Mind |
-| 3 | A single small object or effect stops dead in place, held there for a few real moments before time remembers it exists. | Action | Close | Instant | Power Level + Mind |
-| 4 | Something with real stakes — a person mid-motion, a mechanism about to trigger — freezes in place at your word, if only briefly. | Action | Close | Instant | Power Level + Mind vs. Resolve |
-| 5 | You bring something to a complete, genuine stop, and it stays that way for as long as you hold your concentration on it. | Action | Close | Scene (sustained) | Power Level + Mind vs. Resolve |
+| 1 | **Live Current.** Live wiring behind a wall, the charge building in a storm cloud, a battery's last dregs: current hums to you before you see its source. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **Controlled Spark.** A spark jumps from your fingertip, controlled and precise: a jolt to startle, a static kiss to drain or top off something small. | Action | Touch | Instant | Power Level + Mind |
+| 3 | **Real Jolt.** A real jolt leaves your hand, enough to fry a simple circuit or drop someone to their knees. Deals damage as a Light weapon (**Base +3**). | Action | Touch | Instant | Power Level + Mind vs. Defense |
+| 4 | **Conductive Path.** Send a serious discharge through a target directly, or along whatever conductive path is lying around: wire, water, rebar, all a route to you now. Deals **Base +6**. | Action | Close | Instant | Power Level + Mind vs. Defense |
+| 5 | **Stop a Heart.** A building's power dies at your word, or a discharge leaves your hands at lethal scale: **Base +9**, able to spill across Health Levels like Ordnance. | Action | Medium | Instant | Power Level + Mind vs. Defense |
 
 ### Fate, Luck & Probability
 
 #### Fortune's Favor
-Luck has always had a soft spot for you — not a guarantee, never a sure thing, but a real, persistent lean in your direction when it matters.
+**Merged with Twist of Fate, 2026-07-16.** Luck has always had a soft spot for you. Sometimes it's raw probability tipping your way; sometimes it's the right coincidence landing at the right second. Either way, it's a real, persistent lean in your direction when it matters.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Small things just seem to go your way — the light turns green, the coin lands right, the dropped item bounces somewhere convenient. | Free | Self | Scene | — (no roll, passive) |
-| 2 | When it actually counts, you lean into the uncertainty and it tips your way — a small, deliberate nudge on an outcome that was genuinely up in the air. | Action | Self | Instant | Power Level + Soul |
-| 3 | A near-miss doesn't stay a near-miss — every so often, you can pull a genuine success right out of what should have fallen just short. | Action | Self | Instant | Power Level + Soul |
-| 4 | At the moment it matters most, a significant outcome bends your way — not guaranteed, but far more likely than it has any right to be. | Action | Self | Instant | Power Level + Soul |
-| 5 | When the stakes are high enough, probability itself seems to lean in and take your side — the universe, just this once, rooting for you. | Action | Self | Instant | Power Level + Soul |
+| 1 | **A Beat of Warning.** The light turns green, the coin lands right, the dropped item bounces somewhere convenient. You feel a coincidence coalescing a beat before it lands. | Free | Self | Scene | — (no roll, passive) |
+| 2 | **A Small Lean.** Once per scene, grant yourself Advantage on one roll, or conjure a minor coincidence that grants an ally Advantage instead. | Action | Self | Instant | Power Level + Soul |
+| 3 | **Pull Through.** Once per scene, turn a roll (yours or an ally's) into a real success by adding **+3 DoS** after seeing the result, or force a useful coincidence into being: the right door already unlocked, the right distraction, right on cue. | Action | Close | Instant | Power Level + Soul |
+| 4 | **A Real Stroke.** Once per scene, bend a significant outcome your way with **+5 DoS** to a roll after it's made, or arrange a real stroke of luck, the right person, the right item, with no roll needed at all. | Action | Medium | Instant | Power Level + Soul |
+| 5 | **Fate Rewritten.** Once per session, force a single roll, yours, an ally's, or an enemy's, into an automatic critical success or failure as needed. | Action | Medium | Instant | — (no roll, automatic) |
 
 #### Ill Omen
-Fortune's soft spot for you has a mirror image — a knack for making bad luck land on someone else, right when it counts.
+Fortune's soft spot for you has a mirror image. You have a knack for making bad luck land on someone else, right when it counts.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | You can feel it on someone before it happens — a run of bad luck circling, waiting for its moment to land. | Free | Close | Instant | — (no roll, passive) |
-| 2 | A small, uncertain outcome tips against someone else, with just enough of a push from you. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 3 | Someone's near-success curdles into a real failure, every so often, right when it would sting the most. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 4 | You saddle someone with a genuine streak of bad luck that follows them around for a real stretch of time. | Action | Close | Scene (extended) | Power Level + Soul vs. Resolve |
-| 5 | When it truly matters, fate leans hard against one specific person at your will — bad luck made personal and deliberate. | Action | Close | Instant | Power Level + Soul vs. Resolve |
+| 1 | **Felt Coming.** You can feel it on someone before it happens: a run of bad luck circling, waiting for its moment to land. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **A Small Push.** Once per scene, impose Disadvantage on a single roll someone else is about to make. | Action | Close | Instant | Power Level + Soul vs. Resolve |
+| 3 | **Curdled Success.** Once per scene, turn a target's roll that would have succeeded into a failure with **-3 DoS** after seeing the result. | Action | Close | Instant | Power Level + Soul vs. Resolve |
+| 4 | **A Genuine Streak.** A target carries Disadvantage on every roll for the rest of the scene. | Action | Close | Scene (extended) | Power Level + Soul vs. Resolve |
+| 5 | **Bad Luck, Made Personal.** Once per session, force a single roll of a chosen target's into an automatic critical failure. | Action | Close | Instant | Power Level + Soul vs. Resolve |
 
-#### Threadreader
-The future isn't entirely dark to you — the threads a decision might pull loose are visible enough, if you know how to look for them.
+*Note: decision-outcome reading lives in [Second Sight](#second-sight-clairvoyanceprecognition--decision-reading) (Mental & Psychic) — the old separate "Threadreader" entry was merged into it 2026-07-16. Coincidence-engineering lives entirely in [Fortune's Favor](#fortunes-favor) above — the old separate "Twist of Fate" entry was merged into it the same day.*
 
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | A small decision hangs in front of you and you get a vague sense of which way it tips — not certainty, just a lean. | Free | Self | Instant | Power Level + Mind |
-| 2 | Ask a specific question about a specific choice, and you get a real answer about where it's likely to lead. | Action | Self | Instant | Power Level + Mind |
-| 3 | Several possible outcomes of a choice lay themselves out clearly enough that you can actually weigh them against each other. | Action | Self | Instant | Power Level + Mind |
-| 4 | A significant decision's consequences trace out several steps ahead of you, clear enough to plan around. | Action | Self | Instant | Power Level + Mind |
-| 5 | A major decision's likely shape comes into real focus, far enough out that the knowledge actually matters. | Action | Self | Instant | Power Level + Mind |
-
-#### Twist of Fate
-Coincidence isn't always an accident when you're involved — you have a way of nudging the right thing into happening at the right moment.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | You feel a coincidence coalescing a beat before it lands — just enough warning to notice it's about to matter. | Free | Self | Instant | — (no roll, passive) |
-| 2 | A minor coincidence arrives exactly when you need it — nothing dramatic, just convenient timing that wasn't really an accident. | Action | Close | Instant | Power Level + Soul |
-| 3 | At a critical moment, a genuinely useful coincidence forces its way into being — the right door unlocked, the right distraction, right on cue. | Action | Close | Instant | Power Level + Soul |
-| 4 | You arrange a real stroke of luck — the right person walking by at the right second, the right item within reach when you need it most. | Action | Medium | Instant | Power Level + Soul |
-| 5 | When the stakes are at their absolute highest, you force a dramatic, decisive coincidence into being — fate rewritten in your favor, once, when it counts. | Action | Medium | Instant | Power Level + Soul |
-
-### Light, Darkness & Illusion
-
-#### Trick of the Light
-What people see isn't always what's actually there — you have a subtle, growing talent for putting something else in front of their eyes instead.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | A shadow falls a little wrong, a glint catches where it shouldn't — small, deniable, and enough to make someone's eye slide past what's really there. | Action | Close | Instant | Power Level + Mind |
-| 2 | A false glint, a misplaced shadow — a genuine minor illusion, simple but real, sitting where you put it. | Action | Close | Instant | Power Level + Mind |
-| 3 | A small object or a brief effect appears out of nothing, convincing enough to fool a glance and a second look both. | Action | Close | Scene | Power Level + Mind vs. Resolve |
-| 4 | A detailed illusion, large enough to pass for real at a glance — a person, a doorway, a hazard that isn't there. | Action | Close | Scene | Power Level + Mind vs. Resolve |
-| 5 | A fully convincing illusion, detailed and sustained enough to survive real, sustained scrutiny — people can look right at it and still not see through it. | Action | Medium | Scene (sustained) | Power Level + Mind vs. Resolve |
-
-#### Veil of Unseeing (stealth/invisibility)
-Attention slides off you more easily than it should — not because you're hiding, exactly, but because some part of you is quietly unremarkable on command.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Already keeping a low profile? You go unnoticed a little more easily than you should — eyes drift past you that shouldn't. | Free | Self | Scene | — (no roll, passive) |
-| 2 | Hold still, stay quiet, and you become genuinely easy to overlook — not invisible, just forgettable in exactly the right way. | Free | Self | Scene | Power Level + Body |
-| 3 | Even moving carefully, a passing glance just slides right off you — motion doesn't give you away the way it should. | Free | Self | Scene | Power Level + Body |
-| 4 | You cross a crowded, populated space and come out the other side largely unnoticed, as though the space itself didn't quite register you. | Action | Self | Scene | Power Level + Body |
-| 5 | For a sustained stretch, so long as you keep your focus on it, you're effectively invisible — not a trick of shadow, just genuinely unseen. | Action | Self | Scene (sustained) | Power Level + Body |
-
-#### Shadow Step
-Darkness has never been an obstacle for you — if anything, it's closer to home turf, a medium you can see through and move through better than anyone else.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Near-total darkness resolves clearly in front of you, the way a lit room would for anyone else. | Free | Self | Scene | — (no roll, passive) |
-| 2 | In shadow or darkness, you move faster and quieter than you should — the dark seems to make room for you. | Free | Self | Scene | — (no roll, passive) |
-| 3 | You step into one patch of shadow and out of another nearby, connected one, covering a short distance no eye actually tracked. | Action | Close | Instant | Power Level + Body |
-| 4 | Shadow to shadow, you cover real distance — a genuine means of travel, so long as the dark keeps giving you somewhere to land. | Action | Medium | Instant | Power Level + Body |
-| 5 | Any two sufficiently dark or shadowed points you can identify are, for you, the same place — instant, free movement between them. | Action | Long | Instant | Power Level + Body |
+### Illusion & Concealment
 
 #### Radiant Face
-There's something about you that reads as fundamentally honest, even to people who've never met you — a quiet, natural counterweight to deception and darkness alike.
+Strangers read you as honest before you've said a word. It's a natural counterweight to deception and darkness alike.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Your face gives you away in the best way — people can tell, on some instinctive level, when you actually mean what you're saying. | Free | Self | Passive | — (no roll, passive) |
-| 2 | You let a faint, calming glow rise when you want to be seen as trustworthy — nothing overt, just a warmth people register without quite noticing why. | Action | Self | Scene | — (no roll, passive) |
-| 3 | Lying to your face becomes genuinely difficult — the words catch, the nerve falters, something in your presence resists the deception. | Free | Close | Scene | Power Level + Soul vs. Resolve |
-| 4 | A minor malevolent or deceptive presence recoils from you, on instinct, without you having to do anything but be there. | Free | Close | Instant | Power Level + Soul vs. Resolve |
-| 5 | Your presence alone can expose a lie, settle a crowd's temper, or push back something genuinely dark — a quiet, undeniable force for truth. | Action | Medium | Instant | Power Level + Soul vs. Resolve |
+| 1 | **Gives You Away.** People can tell, on some instinctive level, when you mean what you're saying. | Free | Self | Passive | — (no roll, passive) |
+| 2 | **A Calming Glow.** A faint, calming glow rises when you want to be seen as trustworthy. Nothing overt, just a warmth people register without noticing why. | Action | Self | Scene | — (no roll, passive) |
+| 3 | **Hard to Lie To.** Lying to your face becomes difficult: the words catch, the nerve falters, something in your presence resists the deception. | Free | Close | Scene | Power Level + Soul vs. Resolve |
+| 4 | **Recoils on Instinct.** A minor malevolent or deceptive presence recoils from you, without you having to do anything but be there. | Free | Close | Instant | Power Level + Soul vs. Resolve |
+| 5 | **A Force for Truth.** Your presence alone can expose a lie, settle a crowd's temper, or push back something genuinely dark. | Action | Medium | Instant | Power Level + Soul vs. Resolve |
 
-### Sound & Vibration
+#### Trick of the Light
+What people see isn't always what's actually there. You have a subtle, growing talent for putting something else in front of their eyes instead.
 
-#### Voice of Thunder
-Sound, in your hands, stops being just noise — it's pressure, force, a genuine physical push that happens to come out of your throat.
+*Note: general unremarkability lives in [Unseen](#unseen-concealment--evasion) below as a Special Effect option — the old separate "Veil of Unseeing" entry was merged into it 2026-07-16.*
 
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Your voice carries across a distance and a volume it has no business reaching, and never strains doing it. | Free | Long | Instant | — (no roll, passive) |
-| 2 | A sound leaves you sharp and sudden enough to make someone flinch, stumble, or lose their train of thought for a beat. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 3 | Sound leaves your voice as a real, physical push — enough to shove someone back a step, or knock them briefly off balance. | Action | Close | Instant | Power Level + Soul |
-| 4 | A genuine blast of sound leaves you and lands where you aim it, punching through a target or straight through a structure in its path. | Action | Medium | Instant | Power Level + Soul |
-| 5 | Sound becomes a real weapon or a real tool in your hands at meaningful scale — a wave that levels what's in front of it, or carries your voice across a battlefield. | Action | Medium | Instant | Power Level + Soul |
-
-#### Perfect Pitch
-Sound reaches you with a clarity that borders on unfair — nothing whispered, hidden, or drowned out stays that way for long once you're listening.
+*Note: darkness-based concealment lives in [Unseen](#unseen-concealment--evasion) below as a Special Effect option — the old separate "Shadow Step" entry was merged into it 2026-07-16. Its shadow-to-shadow teleportation lives in [Step Between](#step-between-short-teleport) instead, as a Special Effect option there, since that's a movement power, not concealment.*
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Sounds most people would never register reach you clean — a held breath, a footstep on carpet, a whispered word two rooms over. | Free | Close | Instant | — (no roll, passive) |
-| 2 | A sound tells you exactly what made it and where, with a precision that borders on unnatural. | Free | Close | Instant | Power Level + Mind |
-| 3 | Distance and barriers stop mattering much — you hear real detail through a wall, or from well beyond normal earshot. | Action | Medium | Instant | Power Level + Mind |
-| 4 | Overwhelming noise stops being a problem — you pick the one sound that matters clean out of a roaring crowd or a battlefield. | Free | Close | Instant | Power Level + Mind |
-| 5 | Whatever you focus on, you hear — distance, interference, walls, none of it stands between your attention and the sound you want. | Action | Long | Instant | Power Level + Mind |
+| 1 | **A Wrong Shadow.** A shadow falls a little wrong, a glint catches where it shouldn't: small, deniable, enough to make someone's eye slide past what's really there. | Action | Close | Instant | Power Level + Mind |
+| 2 | **A Minor Illusion.** A false glint, a misplaced shadow: simple but real, sitting where you put it. | Action | Close | Instant | Power Level + Mind |
+| 3 | **Out of Nothing.** A small object or a brief effect appears out of nothing, convincing enough to fool a glance and a second look both. | Action | Close | Scene | Power Level + Mind vs. Resolve |
+| 4 | **Large Enough to Pass.** A detailed illusion, large enough to pass for real at a glance: a person, a doorway, a hazard that isn't there. | Action | Close | Scene | Power Level + Mind vs. Resolve |
+| 5 | **Survives Scrutiny.** A fully convincing illusion, detailed and sustained enough that people can look right at it and still not see through it. | Action | Medium | Scene (sustained) | Power Level + Mind vs. Resolve |
 
-#### Resonant Shatter
-Every solid thing has a note it can't survive hearing — and you have an instinct for finding it.
+#### Unseen (concealment & evasion)
+**Merged with Veil of Unseeing, Empty Body, and Shadow Step, 2026-07-16** (replaces the old "One with the Wild"). Nobody finds you unless you let them. Maybe it's terrain: rough ground and thick brush treat you like one of their own. Maybe it's darkness, home turf instead of a hazard. Maybe it's stillness, discipline pushed until pain and hunger stop registering. Maybe your face is just the kind people's eyes forget to hold onto. However you get there, the result is the same.
 
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | A structure hums back at you when you listen closely, and its weak points are plain in how it resonates. | Free | Touch | Instant | — (no roll, passive) |
-| 2 | Something small and already fragile answers a note you strike with a crack, and then a shatter. | Action | Close | Instant | Power Level + Soul |
-| 3 | Glass, thin metal, anything genuinely breakable meets a focused burst of vibration and comes apart. | Action | Close | Instant | Power Level + Soul |
-| 4 | Sustained resonance cracks or destabilizes something substantial — not fragile at all, just patient enough to find its breaking note. | Action | Close | Scene (sustained) | Power Level + Soul |
-| 5 | A wall, a structure, something genuinely significant — sound and vibration alone bring it down, given the chance to build. | Action | Close | Scene (sustained) | Power Level + Soul |
+**Special Effect note**: choose which of the above your character runs on when you take this Gift, or something else that fits them. The mechanic below is identical regardless.
 
-#### Song Unheard
-Music and voice carry more than melody when they come from you — an emotional current underneath the notes that listeners feel whether or not they notice it.
+*Note: this Gift no longer covers stepping halfway out of the physical world or shadow-to-shadow teleportation. Those are a different kind of power (defense and short-range movement, not concealment) and now live in [Through the Cracks](#through-the-cracks-phasing) and [Step Between](#step-between-short-teleport) respectively as Special Effect options for a character built on discipline or shadow.*
+
+*Natural opposite of [Marked for the Hunt](#marked-for-the-hunt): when a hunter with that Gift pursues you, resolve it as a Resisted Roll — this Gift's tracking-penalty and the hunter's own DoS bonus both apply to their respective sides before comparing margins, rather than either Gift simply overriding the other.*
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | A hummed tune under your breath steadies your own nerves, quietly, every time. | Free | Self | Instant | — (no roll, passive) |
-| 2 | Your voice or music noticeably calms or stirs a small audience — nothing forced, just people willing to be moved, genuinely moved. | Action | Close | Scene | — (no roll, passive) |
-| 3 | You reach a specific listener's mood directly through music or voice, and it shifts even against some real resistance. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 4 | A real crowd's mood bends to your performance, deliberately, reliably — a room you can read and then rewrite. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
-| 5 | Your voice or music carries a force that borders on supernatural — anyone who hears it feels it, whether they meant to or not. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
+| 1 | **Home Ground.** Whatever throws other people off, rough terrain, darkness, distraction, doesn't touch you. You're already a little more forgettable than you have any right to be. | Free | Self | Scene | — (no roll, passive) |
+| 2 | **Trackless Passage.** No trail, no telltale sign, no reason for anyone to remember you were there. Any roll made to notice, track, or follow you specifically suffers **-1 to Degree of Success**. | Free | Self | Scene | — (no roll, passive) |
+| 3 | **Predator's Ghost.** Hold still, move carefully, or simply commit. Even a careful, active search passes right over you. | Action | Self | Scene | Power Level + Body |
+| 4 | **Vanish From Pursuit.** Cross a crowded street or slip a hunting party's cordon: your trail thins fast enough that whoever's looking loses it. The tracking penalty against you rises to **-3 DoS**. | Free | Self | Scene | — (no roll, passive) |
+| 5 | **Ghost.** So long as you choose to stay that way, you're effectively unfindable. The tracking penalty against you rises to **-5 DoS**. | Free | Self | Scene | — (no roll, passive) |
 
 ### Life, Death & Spirit
 
 #### Beyond the Veil (spirit sight/travel)
-The line between the living world and whatever comes after was never as solid to you as it is to everyone else — you can see it, and eventually, cross it.
+The line between the living world and whatever comes after was never as solid to you as it is to everyone else. You can see it, and eventually, cross it.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Places carry more than what's visible — a residual impression, a faint shape at the edge of sight, an echo of grief or rage soaked into the walls, and you catch all of it. | Free | Close | Instant | — (no roll, passive) |
-| 2 | What you sense can sense you back — a spirit hears you when you speak to it, and answers, even though no one else in the room notices either side of the conversation. | Action | Close | Scene | Power Level + Soul |
-| 3 | You lean partway into the space between the living and whatever comes after — a touch that shouldn't be possible, briefly, in both directions. | Action | Close | Instant | Power Level + Soul |
-| 4 | You step across bodily, for a short while, unseen and unfelt by anyone still among the living. | Action | Self | Scene | Power Level + Soul |
-| 5 | The line between the world of the living and whatever lies beyond stops being a wall for you — you cross it freely, and you can take someone else's hand and bring them with you. | Action | Self (or Touch, to guide another) | Scene | Power Level + Soul |
-
-#### Mercy's Hand
-You recognize an ending when it's truly, unavoidably at hand — and you have the rare, quiet gift of making that ending gentle.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | You know, with total certainty, when an ending is truly at hand and truly unavoidable — no false hope, no guessing. | Free | Close | Instant | — (no roll, passive) |
-| 2 | Your presence eases a dying creature's pain in its final moments — not a cure, just a mercy, freely given. | Action | Touch | Instant | Power Level + Soul |
-| 3 | Where an end is already certain, you can make it swift and painless — gentle, deliberate, and final. | Action | Touch | Instant | Power Level + Soul |
-| 4 | The same mercy reaches further now — something that would otherwise linger in suffering for a long stretch instead finds its peace quickly. | Action | Touch | Instant | Power Level + Soul |
-| 5 | Anything whose end has truly, unavoidably come can be granted immediate, total peace at your hand — without exception, without fail. | Action | Touch | Instant | Power Level + Soul |
+| 1 | **More Than Visible.** A residual impression, a faint shape at the edge of sight, an echo of grief or rage soaked into the walls: places carry more than what's visible, and you catch all of it. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **Sense You Back.** A spirit hears you when you speak to it, and answers, even though no one else in the room notices either side of the conversation. | Action | Close | Scene | Power Level + Soul |
+| 3 | **Partway Across.** You lean partway into the space between the living and whatever comes after: a touch that shouldn't be possible, briefly, in both directions. | Action | Close | Instant | Power Level + Soul |
+| 4 | **Step Across.** You step across bodily for a short while, unseen and unfelt by anyone still among the living. | Action | Self | Scene | Power Level + Soul |
+| 5 | **Bring Someone With You.** The line between the living and whatever lies beyond stops being a wall for you. Cross it freely, and take someone else's hand to bring them along. | Action | Self (or Touch, to guide another) | Scene | Power Level + Soul |
 
 #### Borrowed Vitality
-Life force isn't sealed inside a single body, not to you — it's a resource you can read, draw on, and in a pinch, take.
+Life force isn't sealed inside a single body, not to you. It's a resource you can read, draw on, and in a pinch, take.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Life force reads to you like a gauge — how much a nearby creature has to spare, plain at a glance. | Free | Close | Instant | — (no roll, passive) |
-| 2 | A willing source lends you a small measure of their vitality, and it steadies you — a real, if modest, transfer. | Action | Touch | Instant | Power Level + Body |
-| 3 | You draw real strength from someone willing, enough to fuel a significant effort you couldn't otherwise manage. | Action | Touch | Instant | Power Level + Body |
-| 4 | You can take from someone unwilling now — a real draw, and a real cost to them, whether they consent to it or not. | Action | Touch | Instant | Power Level + Body vs. Resolve |
-| 5 | A significant amount of life force comes to you from any source, willing or not, enough to fuel something major. | Action | Touch | Instant | Power Level + Body vs. Resolve |
+| 1 | **Reads Like a Gauge.** Life force reads to you like a gauge: how much a nearby creature has to spare, plain at a glance. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **A Willing Loan.** A willing source spends **1 Health Level** of their own vitality; you recover **1 Health Level**, or gain Advantage on your next roll if you're already at full. | Action | Touch | Instant | Power Level + Body |
+| 3 | **Real Strength.** Draw enough from a willing source to fuel a significant effort: gain **+3 DoS** on your next roll this scene. The source still spends **1 Health Level**. | Action | Touch | Instant | Power Level + Body |
+| 4 | **Taken, Not Given.** Draw from someone unwilling: they lose **1 Health Level** as a real, physical cost, whether they consent or not. You recover **1 Health Level** or gain **+3 DoS**. | Action | Touch | Instant | Power Level + Body vs. Resolve |
+| 5 | **A Major Draw.** An unwilling source loses up to **2 Health Levels**; you recover fully or gain **+5 DoS**. | Action | Touch | Instant | Power Level + Body vs. Resolve |
+
+#### Healer's Touch
+**Added 2026-07-16.** Wounds don't answer only to your own body. Reach out, and harm someone else is carrying eases at your hand. (For healing yourself rather than others, see [Regeneration](#regeneration) instead.)
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **First Touch.** Once per scene, a touch to a willing, injured ally clears any lingering Disadvantage from a minor wound. No Health Level recovered, just the sting taken off. | Free | Touch | Instant | — (no roll, passive) |
+| 2 | **A Real Mending.** Once per scene, recover **1 Health Level** for a willing, touched ally. | Action | Touch | Instant | Power Level + Body |
+| 3 | **Steady Hands.** The once-per-scene limit is gone: recover **1 Health Level** for a touched ally as often as you have Actions to spend. | Action | Touch | Instant | Power Level + Body |
+| 4 | **Deep Mending.** A single touch now recovers **2 Health Levels** at once. | Action | Touch | Instant | Power Level + Body |
+| 5 | **Miracle Worker.** Once per day, recover **every Health Level** a touched ally has lost, in a single act. | Action | Touch | Instant | Power Level + Body |
 
 #### Last Rites
-The dead don't always go quietly, and you're one of the few who can tell the difference — and, if it comes to it, make the choice for them.
+The dead don't always go quietly, and you're one of the few who can tell the difference. If it comes to it, you can make the choice for them.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | The dead nearby tell you plainly whether they're at rest or still lingering — a fact, not a guess. | Free | Close | Instant | — (no roll, passive) |
-| 2 | A restless spirit willing to go finds real peace through a rite you perform — genuine closure, not a trick. | Action | Close | Scene | Power Level + Soul |
-| 3 | A lingering spirit moves on at your compelling, even if some part of it isn't ready to — gentle pressure that wins out anyway. | Action | Close | Scene | Power Level + Soul vs. Resolve |
-| 4 | You can just as easily hold a spirit in place, keeping it from moving on, if that's what you choose to do instead. | Action | Close | Scene (sustained) | Power Level + Soul vs. Resolve |
-| 5 | Whether the dead rest or linger is, for all practical purposes, your call to make — decisive, and at will. | Action | Close | Instant | Power Level + Soul vs. Resolve |
+| 1 | **At Rest or Lingering.** The dead nearby tell you plainly whether they're at rest or still lingering. A fact, not a guess. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **A Willing Rite.** A restless spirit willing to go finds peace through a rite you perform. Closure, not a trick. | Action | Close | Scene | Power Level + Soul |
+| 3 | **Gentle Pressure.** A lingering spirit moves on at your compelling, even if part of it isn't ready. | Action | Close | Scene | Power Level + Soul vs. Resolve |
+| 4 | **Held in Place.** You can just as easily hold a spirit from moving on, if that's what you choose to do instead. | Action | Close | Scene (sustained) | Power Level + Soul vs. Resolve |
+| 5 | **Your Call to Make.** Whether the dead rest or linger is, for all practical purposes, your call. Decisive, and at will. | Action | Close | Instant | Power Level + Soul vs. Resolve |
 
-### Technology, Constructs & Bio-Tech
-
-#### Spark of Invention
-Given a problem and whatever's lying around, you build a solution — a knack for making the impossible fit into the time and materials you actually have.
+#### Mercy's Hand
+You recognize an ending when it's truly, unavoidably at hand, and you have the rare, quiet gift of making that ending gentle.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Whatever's on hand becomes a fix — a jammed lock, a snapped strap, a sparking wire, patched together fast and good enough to hold. | Action | Touch | Instant | Power Level + Mind |
-| 2 | A simple working device comes together in your hands faster and better than the parts on the table should allow. | Action | Touch | Scene | Power Level + Mind |
-| 3 | A genuinely clever gadget takes shape, purpose-built for the exact problem in front of you. | Action | Touch | Scene | Power Level + Mind |
-| 4 | A sophisticated device comes out of your hands, built well beyond what your materials and time should have permitted. | Action | Touch | Scene (extended) | Power Level + Mind |
-| 5 | You invent something that, by any reasonable account, shouldn't be possible with what you had on hand and how little time you had to do it. | Action | Touch | Scene (extended) | Power Level + Mind |
+| 1 | **Total Certainty.** You know, with total certainty, when an ending is at hand and unavoidable. No false hope, no guessing. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **Eases the Pain.** Your presence eases a dying creature's pain in its final moments. Not a cure, just a mercy, freely given. | Action | Touch | Instant | Power Level + Soul |
+| 3 | **Swift and Painless.** Where an end is already certain, you can make it swift and painless. Gentle, deliberate, final. | Action | Touch | Instant | Power Level + Soul |
+| 4 | **Reaches Further.** Something that would otherwise linger in suffering for a long stretch instead finds its peace quickly. | Action | Touch | Instant | Power Level + Soul |
+| 5 | **Without Exception.** Anything whose end has truly, unavoidably come can be granted immediate, total peace at your hand. | Action | Touch | Instant | Power Level + Soul |
 
-#### Waking the Machine
-Machines and constructs listen to you in a way they don't listen to anyone else — a rapport that starts as a suggestion and ends as genuine, fluid command.
+### Mental & Psychic
 
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | A simple mechanism runs a little smoother, a little more willingly, after a touch and a word from you. | Action | Touch | Scene | Power Level + Mind |
-| 2 | A basic construct or simple machine takes an elementary instruction from you and actually follows it. | Action | Touch | Scene | Power Level + Mind |
-| 3 | A straightforward construct or mechanism animates fully at your direction, carrying out a task on its own once you've set it in motion. | Action | Touch | Scene | Power Level + Mind |
-| 4 | A complex construct or machine takes real, nuanced direction from you — not just commands, but judgment calls within them. | Action | Close | Scene | Power Level + Mind |
-| 5 | A sophisticated construct or machine moves like an extension of your own will — command and execution, no gap between them. | Action | Medium | Scene | Power Level + Mind |
-
-#### Field Repair
-Broken technology practically explains itself to you — a diagnostic instinct and a steady hand that turns wreckage back into working order.
+#### Ghost in the Wires (technopathy)
+Electronics were never truly closed systems to you. Circuits and code have a rhythm you can hear, and once you're listening, you can talk back.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Broken technology tells you exactly what's wrong with it the moment you lay eyes on it — no guesswork, no diagnostics needed. | Free | Close | Instant | — (no roll, passive) |
-| 2 | With minimal tools and whatever's around, you patch a piece of technology back to full working order. | Action | Touch | Instant | Power Level + Mind |
-| 3 | A badly damaged device comes back to full function in the field — no workshop, no spare parts, just you and a few minutes. | Action | Touch | Instant | Power Level + Mind |
-| 4 | While you're repairing something, it comes back better than it started — improved past its original specifications, not just restored. | Action | Touch | Instant | Power Level + Mind |
-| 5 | Even severely damaged, genuinely complex technology comes back — restored, or upgraded, with nothing but what's lying around. | Action | Touch | Instant | Power Level + Mind |
+| 1 | **Ambient Hum.** A camera panning, a phone buzzing in a pocket, a server room's quiet churn: active electronics hum at the edge of your awareness. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **A Word to the Machine.** Your thoughts slip into a simple device without a cable or a login: a lock, a lightswitch, a basic terminal, answering you like it was always yours. | Action | Touch | Instant | Power Level + Mind |
+| 3 | **Remote Hand.** A straightforward device or system opens fully to you from a distance: cameras, doors, simple networks, all under your remote hand. | Action | Medium | Instant | Power Level + Mind |
+| 4 | **Walk the Network.** A complex networked system stops being a wall of code and becomes a space you move through, navigating and rewriting it as naturally as walking a hallway. | Action | Long | Scene | Power Level + Mind |
+| 5 | **All Yours at Once.** A building's systems, a fleet of devices, an entire network: scale stops being a limit, all of it yours to command at once. | Action | Long | Scene | Power Level + Mind |
 
-### Nature & Animal
+#### Mind's Whisper (telepathy / hyper-perception / spirit confidant)
+**Merged with Read the Room, 2026-07-16.** Other minds have never been entirely closed books to you.
 
-#### Beast Speech
-Animals were never as inscrutable to you as they are to everyone else — you speak enough of their language, and they of yours, to actually be understood.
+**Special Effect note** (same as [Bulwark](#bulwark-damage-resistance--toughness)): the mechanic below is fixed, but the in-fiction source is genuinely open — literal telepathy, superhuman powers of observation and inference, or an actual spirit that whispers secrets in your ear are all equally valid, chosen when you take this Gift. The GM may let the source matter narratively (a spirit confidant can be silenced or banished; raw perception can't) without touching the numbers.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | An animal's mood and intent are plain to you — the hackles that mean fear, not aggression, the stillness before a strike. | Free | Close | Instant | — (no roll, passive) |
-| 2 | Simple concepts pass between you and a nearby animal, both directions — not conversation, but real, mutual understanding. | Action | Close | Instant | Power Level + Soul |
-| 3 | You hold something that actually qualifies as an exchange with an animal — real back-and-forth, real meaning carried both ways. | Action | Close | Scene | Power Level + Soul |
-| 4 | A group of animals calms or rallies at your communication alone — no treats, no commands, just being understood. | Action | Close | Scene | Power Level + Soul |
-| 5 | Virtually any animal understands you, and you understand it, fluently — the barrier between species just isn't there anymore. | Action | Close | Scene | Power Level + Soul |
+| 1 | **Read the Room.** Tension, deception, a hidden agenda: a mind nearby registers to you the way a lit window registers in a dark street, its general mood plain even through a closed door. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **Catch the Drift.** Unguarded thoughts drift off a nearby mind like heat off pavement. In a conversation, you know who's actually running things and who's lying, usually before they finish their first sentence. | Action | Close | Instant | Power Level + Mind |
+| 3 | **Mind to Mind.** A thought or image leaves your mind and lands whole in someone else's, no words needed. Against someone actively hiding their real goal, you piece it together from what they do instead of what they say. | Action | Close | Instant | Power Level + Mind vs. Resolve |
+| 4 | **No Distance, No Deception.** Distance stops mattering: hold a real, two-way silent conversation with someone you can't see. A gifted liar's seams show to you either way, even when they shouldn't. | Action | Long | Scene | Power Level + Mind |
+| 5 | **Once Touched, Never Lost.** A mind that's touched yours is never entirely out of reach again: find it across any distance and read past the surface to what's actually felt underneath. | Action | Self (target: anyone met before) | Instant | Power Level + Mind vs. Resolve |
+
+*Note: mental resistance lives entirely in [Untouchable](#untouchable) (Combat & Martial Techniques) — the old separate "Iron Mind" entry was merged into it 2026-07-16.*
+
+#### Second Sight (clairvoyance/precognition & decision-reading)
+**Merged with Threadreader, 2026-07-16.** Time and distance are more porous for you than for most. What starts narrow — a lean on one small choice — widens with practice into glimpses of anything distant or significant, whether or not you go looking for it.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **A Lean.** A small decision or near-future moment hangs in front of you. Not certainty, just a lean: a feeling, an afterimage of which way it tips. | Free | Self | Instant | Power Level + Mind |
+| 2 | **A Pointed Answer.** Ask a specific question about a specific choice or moment, and the vague impression sharpens into a real answer. | Action | Self | Instant | Power Level + Mind |
+| 3 | **Several Paths.** Several possible outcomes of a choice lay themselves out clearly enough to weigh, or a likely near-future event plays out in real detail. | Action | Self | Instant | Power Level + Mind |
+| 4 | **Steps Ahead.** A significant decision's consequences trace several steps ahead of you, clear enough to plan around. What's coming, or what already happened, comes through sharp instead of hazy. | Action | Self | Instant | Power Level + Mind |
+| 5 | **Reach Out and Look.** Reach out deliberately for anything distant or significant, a decision, a person, an event, and pull back a detailed, coherent vision on demand rather than by chance. | Action | Self | Instant | Power Level + Mind |
+
+#### Silent Push (telekinesis)
+Your will reaches past your own hands. Objects move because you decided they should, no touch required.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **A Small Push.** A coin skitters off a table. A door eases shut. A light object drifts an inch to the left, undeniably not you touching it. | Action | Close | Instant | Power Level + Mind |
+| 2 | **Precise Lift.** A light object lifts clean off the ground and goes exactly where you point it. Precise, controlled, deliberate. | Action | Close | Instant | Power Level + Mind |
+| 3 | **Real Weight.** A chair, a body, a stack of crates: real weight answers to your will now, moving because you decided it should. | Action | Medium | Instant | Power Level + Mind |
+| 4 | **Invisible Weapon.** Invisible force becomes a weapon: a shove hard enough to strike deals damage as a Martial weapon (**Base +6**), or a grip hard enough to restrain drops a target's Move to 0 until they break free with a Resisted Roll (their Body vs. your Power Level + Mind). | Action | Medium | Instant | Power Level + Mind vs. Defense |
+| 5 | **Total Control.** Hold several things aloft at once, or something massive, all under total, effortless control. The force-strike option now deals **Base +9**. | Action | Medium | Instant | Power Level + Mind vs. Defense |
+
+*Note: reading and moving emotion lives entirely in [Chorus of Concord](#chorus-of-concord-empathic--emotional-influence) (Social & Emotional) — the old separate "Borrowed Feeling" entry was merged into it 2026-07-16.*
+
+### Movement & Spatial
+
+#### Long Road Home (fast travel)
+The road itself seems to want you to arrive. Journeys under your feet go smoother, faster, and shorter than they logically should.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Never Lost.** Turned around, lost, disoriented: it doesn't matter. Some part of you always knows which way leads back toward safety or home. | Free | Self | Instant | — (no roll, passive) |
+| 2 | **Journeys Go Right.** The traffic clears, the trail stays dry, the connection is never missed, more often than luck should allow. | Free | Self | Scene | — (no roll, passive) |
+| 3 | **A Shortcut That Shouldn't Exist.** You find the route nobody else would think to take, and it cuts real time off a long journey. | Action | Self | Scene | Power Level + Mind |
+| 4 | **The Road Bends.** A significant distance collapses into a fraction of the time it should take. | Action | Self | Scene | Power Level + Mind |
+| 5 | **The World Gets Smaller.** Vast distances close in almost no time at all, so long as you're still moving under your own power. | Action | Self | Scene | Power Level + Mind |
+
+#### Step Between (short teleport)
+Distance is more of a suggestion to you than a fixed rule. The space between two points is collapsible whenever you need it to be.
+
+*Note: a shadow-to-shadow flavor of this Gift (moving only between points of darkness, rather than any two points you've seen) absorbed the teleport half of the old "Shadow Step" entry, 2026-07-16. Same mechanic, reskinned as a Special Effect for a shadow-affine character.*
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **The Shortest Line.** Through the crowd, around the guard, past the rubble: the shortest safe line between two points draws itself in your mind's eye. | Free | Medium | Instant | — (no roll, passive) |
+| 2 | **Across the Gap.** A locked door, a chasm, a gap that should stop you cold: none of it matters, so long as you've laid eyes on both sides. | Action | Close | Instant | Power Level + Mind |
+| 3 | **Blink.** You blink out of existence and back in somewhere else: a short hop to any spot you can currently lay eyes on. | Action | Close | Instant | Power Level + Mind |
+| 4 | **No Need to See It.** A place you know well enough is a place you can simply arrive at, sight unseen. | Action | Long | Instant | Power Level + Mind |
+| 5 | **A Thought Away.** Distance stops being the obstacle it once was. Almost anywhere you've ever stood is a single thought away from you again. | Action | Long | Instant | Power Level + Mind |
+
+#### Through the Cracks (phasing)
+Solid matter isn't quite as solid to you as it is to everyone else. A wall, a door, a hull: all of it slightly more theoretical when you decide it should be.
+
+*Note: a meditative-discipline flavor of this Gift (stepping halfway or fully out of the physical world through inner mastery, rather than raw matter-phasing) absorbed the intangibility half of the old "Empty Body" entry, 2026-07-16. Same mechanic, reskinned as a Special Effect for an ascetic character.*
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Fold Through.** A gap far too small for you stops being a problem. You fold through it like the rules briefly forgot to apply. | Action | Self | Instant | — (no roll, passive) |
+| 2 | **A Flicker.** A solid surface brushes against you and, just for an instant, doesn't quite manage to stop you. Gone before anyone's sure they saw it. | Free | Self | Instant | — (no roll, passive) |
+| 3 | **Through and Whole.** Your hand or arm sinks into something solid and comes back out the other side, whole, a heartbeat later. | Action | Touch | Instant | Power Level + Body |
+| 4 | **The Whole Body.** A wall, a door, a hull: none of it stops your entire body for the few moments you need to be somewhere it isn't. | Action | Touch | Instant | Power Level + Body |
+| 5 | **Open Air.** Solid matter stops being an obstacle for as long as you need it to. You move through it as freely as open air. | Action | Self | Scene | Power Level + Body |
+
+#### Wall-Runner
+Footing has always been more flexible for you than for anyone standing on two feet has any right to expect. Vertical, upside-down, it barely matters.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Sure Footing.** Ice, loose gravel, a beam an inch wide: your footing holds on surfaces that should have you flat on your back. | Free | Self | Scene | — (no roll, passive) |
+| 2 | **A Few Real Strides.** You hit a vertical wall at a dead run and get a few real strides out of it before gravity remembers to argue. | Action | Self | Instant | Power Level + Body |
+| 3 | **No Different Than the Street.** A sheer vertical surface is no different to you than a flat street. You climb it at a walk, without strain. | Free | Self | Scene | — (no roll, passive) |
+| 4 | **Ceilings and Overhangs.** Surfaces that shouldn't hold a person at all: you move across them with total, unhurried control. | Free | Self | Scene | — (no roll, passive) |
+| 5 | **Every Direction the Same.** Footing and gravity stop being rules that apply to you while you're in motion. Up, down, and sideways all become the same direction. | Free | Self | Scene | — (no roll, passive) |
+
+#### Weightless (flight)
+Gravity's hold on you has always been a little negotiable. The more you practice, the more room there is to negotiate.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Soft Landing.** A fall that should hurt slows on the way down. You land like it was nothing: shaken, maybe, but never broken. | Free | Self | Instant | — (no roll, passive) |
+| 2 | **A Few Inches.** You lift off the ground and hang there, weightless for a breath or two, before gravity remembers you. | Action | Self | Instant | — (no roll, passive) |
+| 3 | **Off the Ground.** Slow, careful, deliberate, but you leave the ground properly now, flying under your own power. | Action | Self | Scene | — (no roll, passive) |
+| 4 | **Speed and Control.** Both arrive at once. You bank, dive, and climb like flight was always yours to begin with. | Action | Self | Scene | — (no roll, passive) |
+| 5 | **The Sky, Like Ground.** Real altitude, real speed, no more effort than walking across a room. | Free | Self | Scene | — (no roll, passive) |
+
+### Nature & Environment
+
+#### Beast Speech (animal communication & command)
+**Merged with Call of the Wild, 2026-07-16.** Animals were never as inscrutable to you as they are to everyone else. You speak enough of their language, and they of yours, to actually be understood — and, when it matters, to answer a call.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Plain Mood and Intent.** The hackles that mean fear, not aggression, the stillness before a strike: an animal's mood and intent are plain to you. Nearby animals register like blips on a map, roughly where they are and what they're up to. | Free | Medium | Instant | — (no roll, passive) |
+| 2 | **Mutual Understanding.** Simple concepts pass between you and a nearby animal, both directions, and a single animal's attention turns toward you when you want it to. | Action | Close | Instant | Power Level + Soul |
+| 3 | **A Real Exchange.** Real back-and-forth, real meaning carried both ways, with an animal in front of you. A specific type of animal nearby answers a call and comes to you. | Action | Close | Scene | Power Level + Soul |
+| 4 | **A Group Answers.** A group of animals calms or rallies at your communication alone, no treats or commands needed. A small group answers a call together and briefly does roughly what you ask. | Action | Close | Scene | Power Level + Soul |
+| 5 | **No Barrier Left.** Virtually any animal understands you fluently, the barrier between species gone. A significant number of animals from the surrounding area answer your call at once, under your command for as long as it lasts. | Action | Long | Scene | Power Level + Soul |
+
+*Note: weather-sensing and weather-command live entirely in [Storm's Herald](#storms-herald-windlightningweather) (Elemental & Energy Manipulation) — the old separate "Weathersense" entry was merged into it 2026-07-16, since the two reached the same end state (sense weather coming, then command it).*
+
+#### Genius Loci (territorial bond)
+**Merged with City's Own, 2026-07-16.** Batman and Gotham. Spider-Man and New York. A druid and their grove. A bond with a place, not blood or oath, that runs just as deep, whatever kind of place it is.
+
+**Special Effect note**: choose the type of ground this bond takes root in when you take this Gift — untamed wilderness, a city district, farmland, an industrial sprawl, whatever fits the character. The mechanic below never changes; only the flavor of what "vitality" or "pulse" means for the chosen terrain does (ecological health for the wild, crime/prosperity for a city, and so on).
+
+**Attunement:** Perform a 5-minute ritual at a site and spend **1 Resonance** to bond with it. This attunement cost is separate from the general per-use Gift Resonance cost (still in playtesting) — it's the price of *forming* the bond, not of *using* it once formed. The bond's strength tracks the site's own vitality/pulse: a thriving, healthy site powers this Gift fully, while one that's damaged, decaying, or corrupted weakens or cuts off what you can draw from it until it recovers or you attune elsewhere. How many sites you can hold bonded at once scales with your Gift Level.
+
+*Note: this Gift no longer grants site history/rumor-reading — that duplicated [Echo of What Was](#echo-of-what-was-psychometry), which already owns that space. If a character wants both a territorial bond and history-reading, take Echo of What Was as a separate Gift.*
+
+*Note: the old separate "Urban & Territorial" category and its sole entry, City's Own, were merged into this Gift on 2026-07-16 — a territorial bond now works for any terrain type via the Special Effect choice above, rather than needing a separate urban-specific Gift.*
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **The Rite.** 5-minute ritual + 1 Resonance to attune to a site. You hold **one** attunement at a time. From anywhere, you always know that site's condition and exactly how strong your bond to it currently is. | Ritual (5 min) + 1 Resonance | Touch | Permanent (until replaced) | — (no roll, passive) |
+| 2 | **Borrowed Vigor, and a Watchful Ground.** While physically on attuned ground, Advantage on Body and Mind rolls made there. The site also tells you how many other creatures or people are moving through it and their general direction, even ones you can't see. | Free | Self | Scene | — (no roll, passive) |
+| 3 | **The Ground Answers, and a Second Bond.** Once per scene while on attuned ground, command a concrete effect suited to its terrain: a root trips a target, a fire escape gives at the right moment, a burst of steam or underbrush blocks line of sight. You can now hold **two** attunements simultaneously. | Action | Close | Instant | Power Level + Body, Resisted Roll if used to Trip |
+| 4 | **Reaching Further, and a Third Bond.** Draw on an attuned site's power even far outside it — a day's travel in the wild, clear across a city — or let one attunement grow to cover a wider connected area. You can now hold **three** attunements simultaneously. | Free | Long | Scene | — (no roll, passive) |
+| 5 | **Communion Absolute, Instantly.** Even ground you've never attuned to responds faintly to your bond's strength, so long as it's genuinely the same kind of terrain, at reduced power next to a true attuned site. The Rite itself no longer needs the 5-minute ritual: 1 Resonance alone attunes you instantly. | Action | Self | Instant | Power Level + Body |
 
 #### Green Thumb
-Plants respond to you the way they'd respond to a season change — growth, health, and bloom all willing to move faster when you ask them to.
+Plants respond to you the way they'd respond to a season change. Growth, health, and bloom all move faster when you ask them to.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | A plant's health and its needs are obvious to you at a glance — thirsty, root-bound, thriving, all of it plain. | Free | Close | Instant | — (no roll, passive) |
-| 2 | A touch nudges a plant's growth or health favorably — a little encouragement, gently given and gladly taken. | Action | Touch | Instant | Power Level + Soul |
-| 3 | A plant grows or blooms at a pace that has nothing to do with sunlight or season — significantly, visibly faster, because you asked it to. | Action | Touch | Instant | Power Level + Soul |
-| 4 | You shape a plant's growth into a genuinely useful form on command — a lattice, a bridge, a screen of leaves, grown to order. | Action | Touch | Instant | Power Level + Soul |
-| 5 | Plant growth answers to you at real scale — a garden flourishing overnight, a wall of vines rising in moments to block a path or shield a retreat. | Action | Close | Instant | Power Level + Soul |
+| 1 | **Obvious Needs.** Thirsty, root-bound, thriving: a plant's health and its needs are obvious to you at a glance. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **A Little Encouragement.** A touch nudges a plant's growth or health favorably, gently given and gladly taken. | Action | Touch | Instant | Power Level + Soul |
+| 3 | **Visibly Faster.** A plant grows or blooms at a pace that has nothing to do with sunlight or season, because you asked it to. | Action | Touch | Instant | Power Level + Soul |
+| 4 | **Grown to Order.** Shape a plant's growth into a useful form on command: a lattice, a bridge, a screen of leaves. | Action | Touch | Instant | Power Level + Soul |
+| 5 | **Real Scale.** A garden flourishes overnight, or a wall of vines rises in moments to block a path or shield a retreat. A vine wall grants Advantage to anyone using it as cover. | Action | Close | Instant | Power Level + Soul |
 
-#### Call of the Wild
-The animals nearby are never entirely out of your reach — a call only they can hear, and one they're inclined to answer.
+### Physical Enhancement
 
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | Nearby animals register to you, roughly, like blips on a map — where they are, and generally what they're up to. | Free | Medium | Instant | — (no roll, passive) |
-| 2 | A single nearby animal's attention and curiosity turn toward you, drawn without quite knowing why. | Action | Close | Instant | Power Level + Soul |
-| 3 | A specific type of animal genuinely nearby answers your call and comes to you. | Action | Medium | Instant | Power Level + Soul |
-| 4 | A small group of animals answers the call together, and briefly, they'll do roughly what you ask of them. | Action | Medium | Scene | Power Level + Soul |
-| 5 | A significant number of animals from the surrounding area answer at once, summoned and genuinely under your command for as long as it lasts. | Action | Long | Scene | Power Level + Soul |
+#### Bulwark (damage resistance & toughness)
+**Merged with Unbreakable, 2026-07-16** — same territory (not going down, not breaking), one Gift instead of two. Explicitly **not** healing: this is about damage never fully landing or a body that refuses to quit, not wounds closing up. Healing/regeneration lives entirely in [Regeneration](#regeneration) now.
 
-#### Weathersense
-The sky tells you its plans before it tells anyone else, and with enough practice, you can talk it into changing them.
+**Special Effect note**: the mechanic below, a flat **Soak** value that reduces incoming Damage after a hit connects, per [combat.md](combat.md#damage--confirmed), is fixed regardless of fictional source. A player picks the justification when taking this Gift: unnaturally tough skin, a mystic ward woven into a tattoo, subdermal scales, a personal kinetic barrier, hardened chi, whatever fits the character. The numbers never change based on the choice. The GM may let the fictional source matter narratively (a ward-flavored Bulwark might falter against a dispelling effect, a skin-flavored one might not) without touching the mechanic itself.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Weather tells you its plans well before anyone else notices a cloud — real accuracy, real lead time. | Free | Self | Scene | — (no roll, passive) |
-| 2 | The air shifts subtly at your suggestion — a breeze that wasn't there, a patch of sun breaking through, small and local. | Action | Close | Instant | Power Level + Soul |
-| 3 | Local weather shifts meaningfully over a small area — not a whole storm, but a real, noticeable change you chose to make. | Action | Close | Scene | Power Level + Soul |
-| 4 | Real weather answers your call over a real area — rain that falls, wind that rises, a sky that clears, because you asked. | Action | Medium | Scene | Power Level + Soul |
-| 5 | Local weather is yours to command reliably over a significant area — not a nudge anymore, but genuine, dependable control. | Action | Long | Scene | Power Level + Soul |
+| 1 | A blow that should leave a mark barely does. Whatever protects you takes the edge off before it lands, and a fall that should leave you limping instead leaves you standing. **Soak +1.** | Free | Self | Passive | — (no roll, passive) |
+| 2 | The effect deepens. Whatever protects you blocks real force now, not just glancing hits — cold, heat, and crushing pressure that would trouble an ordinary body barely register either. **Soak +2.** | Free | Self | Passive | — (no roll, passive) |
+| 3 | A solid, committed blow that should draw blood instead draws a bruise. **Soak +3.** | Free | Self | Passive | — (no roll, passive) |
+| 4 | Attacks that should stagger anyone else barely register. A blow lands that should have ended things right there — it doesn't, and you're still standing, still in the fight, when everyone watching expected you on the ground. **Soak +4.** | Free | Self | Passive | — (no roll, passive) |
+| 5 | You shrug off blows that should be devastating. Circumstances that would kill almost anyone else leave you scarred, exhausted, and furious — but standing. **Soak +5.** | Free | Self | Passive | — (no roll, passive) |
 
-### Cosmic / Divine / Reality-Warping (rare, high-tier)
-
-#### Voice of Creation
-Words, spoken by you with real intent, carry a weight that ordinary speech doesn't — reality listening, and sometimes agreeing.
+#### Iron Lungs
+The ordinary limits of breath, thirst, hunger, and sleep loosen their grip on you a little more with every level. Your body runs on reserves nobody else has access to.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | A word spoken with real intent lands with faint but unmistakable weight — the air itself seems to take note. | Action | Close | Instant | Power Level + Soul |
-| 2 | A simple statement about the world around you nudges it toward being true — small, but genuinely real once you've said it. | Action | Close | Instant | Power Level + Soul |
-| 3 | A deliberate declaration reshapes one small, specific detail of reality — chosen precisely, and it holds. | Action | Close | Instant | Power Level + Soul |
-| 4 | Something significant about the immediate world bends to a spoken word — a real, meaningful change made true by your saying so. | Action | Close | Instant | Power Level + Soul |
-| 5 | What you declare, within reason, simply becomes true — briefly, locally, but undeniably true, reality catching up to your word. | Action | Close | Instant | Power Level + Soul |
+| 1 | **Deep Reserves.** A held breath stretches on long past the point it should burn. Food, water, and sleep can all wait far longer than your body should allow. | Free | Self | Scene | — (no roll, passive) |
+| 2 | **Filtered Breath.** Smoke that should choke you, thin mountain air, a faintly toxic haze: you breathe through all of it without effect. | Free | Self | Scene | — (no roll, passive) |
+| 3 | **Sealed Lungs.** You stop needing air at all for the scene: underwater, in a sealed room, in smoke too thick to see through. | Free | Self | Scene | — (no roll, passive) |
+| 4 | **Endure the Extreme.** Vacuum-adjacent cold, crushing deep-water pressure, a lungful of something lethal: your body keeps functioning through it for the scene. | Free | Self | Scene | — (no roll, passive) |
+| 5 | **Beyond Need.** Air, food, water, and sleep stop being requirements. Only comforts now. | Free | Self | Passive | — (no roll, passive) |
 
-#### Unerring Hand (mastercraft creation)
-Flaws in a piece of work announce themselves to you, and your own hands rarely make new ones — a craftsmanship that borders on the impossible.
+#### Overwhelming Might
+Ordinary strength has a ceiling. Yours keeps finding more room above it.
+
+*Note: superhuman speed lives entirely in [Stolen Moment](#stolen-moment-speedreaction--time-perception) (Temporal) now — the old separate "Fleet-Footed Fury" entry was merged into it 2026-07-16, since both landed on "faster than everyone, act first, close distance in a blink."*
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | A broken or flawed piece of work shows you exactly what's wrong with it, instantly, like it's confessing. | Free | Touch | Instant | — (no roll, passive) |
-| 2 | Your hands move at a speed that should cost quality and never do — ordinary work, done remarkably fast, still flawless. | Free | Self | Scene | Power Level + Mind |
-| 3 | A single small piece comes off your work entirely finished — flawless by any normal measure, a masterwork in miniature. | Action | Touch | Instant | Power Level + Mind |
-| 4 | You build something the tools and time on hand shouldn't have permitted — genuinely impossible, and genuinely real. | Action | Touch | Scene | Power Level + Mind |
-| 5 | A true masterwork of real scale or complexity comes together in a fraction of the time it should take — finished, flawless, done. | Action | Touch | Scene | Power Level + Mind |
+| 1 | **Barely Feel It.** Your grip closes on stone and it groans before it gives. A locked door is barely an obstacle. You shoulder through debris, wrench open jammed metal, and hoist what two people would need a dolly for. | Action | Touch | Instant | Power Level + Body |
+| 2 | **One Explosive Heartbeat.** A door doesn't creak, it detonates off its hinges. A boulder rolled into your path becomes a boulder rolled *out* of it. A collapsing beam meets a shoulder that doesn't yield. | Action | Touch | Instant | Power Level + Body |
+| 3 | **Settles Into a Rhythm.** Hold a beam off a trapped ally for as long as the scene demands, haul on a line all night, or hold your own in a contest of pure force without tiring. | Free (passive while exerting) | Self | Scene | — (no roll, passive) |
+| 4 | **Redraws What's Possible.** Match a feat of strength that ought to belong to something twice your size. Arm-wrestle a foe built like a wall, and don't lose. | Action | Touch | Instant | Power Level + Body, vs. Resisted Roll if opposing another's active effort (e.g. a strength contest) |
+| 5 | **Collapsing Buildings, Derailed Trains.** Plant your feet and hold a wall from falling. Flip a vehicle off a pinned victim. Put your shoulder into a failing structure and buy everyone inside the seconds they need. | Action | Touch | Instant | Power Level + Body |
+
+#### Second Wind
+Recovery moves at a different pace for you than for anyone else. Exhaustion that should linger for days burns off in a fraction of the time.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Quick Recovery.** A 10-minute rest does what a full night does for anyone else: any Disadvantage you're carrying from fatigue clears the moment you stand back up. | Free | Self | Instant | — (no roll, passive) |
+| 2 | **Borrowed Time.** Fatigue-based Disadvantage doesn't touch you for one extra scene past when it normally would kick in. | Free | Self | Scene | — (no roll, passive) |
+| 3 | **One Breath, Reset.** Clear any fatigue-based Disadvantage on you outright, no rest required. | Action | Self | Instant | — (no roll, passive) |
+| 4 | **Walk It Off.** Once per scene, recover **1 Health Level** from a wound, poison, or bad fall that should have sidelined you for days. | Free | Self | Scene | Power Level + Body |
+| 5 | **Back Up Again.** Recovering a Health Level, from this Gift or any other source, happens instantly rather than over time, and any lingering Disadvantage from an injury clears the moment that level is healed. | Free | Self | Instant | — (no roll, passive) |
+
+#### Titan's Grip
+What should require a forklift or a crane instead just requires you. Mass and weight stop being an obstacle.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Shoulder the Load.** A burden that should have you staggering doesn't slow you down at all. | Free | Self | Scene | — (no roll, passive) |
+| 2 | **Get a Grip.** A stuck vehicle, a fallen beam, a boulder blocking the only way through: you get a grip, plant your feet, and it moves. | Action | Touch | Instant | Power Level + Body |
+| 3 | **Real Force, Real Aim.** Something heavy leaves your hands thrown, not dropped, and lands exactly where you meant it to. | Action | Close | Instant | Power Level + Body |
+| 4 | **Small Vehicle, Bare Hands.** You get your arms around something the size of a small vehicle and it comes with you, off a trapped victim, out of a doorway, wherever it needs to go. | Action | Touch | Instant | Power Level + Body |
+| 5 | **Crane's Work.** Once per scene, move or hurl something at a scale that makes onlookers question what they just saw. | Action | Touch | Instant | Power Level + Body |
+
+### Reality-Warping (rare, high-tier)
 
 #### Mantle of the Divine
-Something about you was never entirely ordinary, and the longer this Gift grows, the harder that becomes to miss — a mark of something greater, worn openly when you choose to.
+You were never entirely ordinary, and the longer this Gift grows, the harder that becomes to miss. A mark of something greater, worn openly when you choose to.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | Something about you doesn't sit quite right in the eyes of anyone who really looks — a faint, hard-to-place sense that you aren't entirely ordinary. | Free | Self | Passive | — (no roll, passive) |
-| 2 | You can let it show now — a glow, a shimmer, a weight to your presence that wasn't visible before, entirely at your choosing. | Free | Self | Scene | — (no roll, passive) |
-| 3 | That mark carries weight — deference, awe, a flicker of genuine reverence from anyone who sees it. | Free | Close | Scene | Power Level + Soul |
-| 4 | Your marked presence alone can settle a crowd, cow it into silence, or lift it toward something braver — sight, nothing more. | Action | Medium | Instant | Power Level + Soul vs. Resolve |
-| 5 | There's no mistaking it anymore — your presence is unmistakably, undeniably touched by something greater, and everyone who sees it knows it in their bones. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
+| 1 | **Doesn't Sit Right.** A faint, hard-to-place sense that you aren't entirely ordinary, to anyone who really looks. | Free | Self | Passive | — (no roll, passive) |
+| 2 | **Let It Show.** A glow, a shimmer, a weight to your presence that wasn't visible before, entirely at your choosing. | Free | Self | Scene | — (no roll, passive) |
+| 3 | **Carries Weight.** Deference, awe, a flicker of reverence from anyone who sees the mark. | Free | Close | Scene | Power Level + Soul |
+| 4 | **Settle or Silence.** Your marked presence alone can settle a crowd, cow it into silence, or lift it toward something braver. Sight, nothing more. | Action | Medium | Instant | Power Level + Soul vs. Resolve |
+| 5 | **Unmistakable.** Your presence is unmistakably touched by something greater, and everyone who sees it knows it in their bones. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
+
+#### Unerring Hand (mastercraft creation)
+Flaws in a piece of work announce themselves to you, and your own hands rarely make new ones. It's a craftsmanship that borders on the impossible.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Confessing Flaws.** A broken or flawed piece of work shows you exactly what's wrong with it, instantly, like it's confessing. | Free | Touch | Instant | — (no roll, passive) |
+| 2 | **Fast and Flawless.** Your hands move at a speed that should cost quality and never does: ordinary work, done fast, still flawless. | Free | Self | Scene | Power Level + Mind |
+| 3 | **A Masterwork in Miniature.** A single small piece comes off your work entirely finished, flawless by any normal measure. | Action | Touch | Instant | Power Level + Mind |
+| 4 | **Shouldn't Have Been Possible.** You build something the tools and time on hand shouldn't have permitted. | Action | Touch | Scene | Power Level + Mind |
+| 5 | **A True Masterwork.** A masterwork of real scale or complexity comes together in a fraction of the time it should take. | Action | Touch | Scene | Power Level + Mind |
+
+#### Voice of Creation
+Words, spoken by you with real intent, carry a weight that ordinary speech doesn't. Reality listens, and sometimes agrees.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Unmistakable Weight.** A word spoken with real intent lands with faint but unmistakable weight. The air itself seems to take note. | Action | Close | Instant | Power Level + Soul |
+| 2 | **Nudges It True.** A simple statement about the world around you nudges it toward being true. Small, but real once you've said it. | Action | Close | Instant | Power Level + Soul |
+| 3 | **One Small Detail.** A deliberate declaration reshapes one small, specific detail of reality, chosen precisely, and it holds. | Action | Close | Instant | Power Level + Soul |
+| 4 | **A Meaningful Change.** Something significant about the immediate world bends to a spoken word, made true by your saying so. | Action | Close | Instant | Power Level + Soul |
+| 5 | **Reality Catches Up.** What you declare, within reason, simply becomes true. Briefly, locally, undeniably true. | Action | Close | Instant | Power Level + Soul |
 
 #### Worldwalker
-Reality has seams, and you're one of the rare few who can actually feel them — places where the world runs thin enough to step through.
+Reality has seams, and you're one of the rare few who can actually feel them: places where the world runs thin enough to step through.
+
+*Checked against [Step Between](#step-between-short-teleport) and [Through the Cracks](#through-the-cracks-phasing), 2026-07-16: all three cover "get from A to B unconventionally," but not the same way. Step Between needs a destination you've seen or know well. Through the Cracks moves you through solid matter, not distance. This Gift needs neither: it rides a seam in reality itself to a place the seam connects to, sight and familiarity both unneeded, which is why it's gated to the rare tier instead of the common Movement & Spatial category. Kept separate.*
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | You feel the seams — places where reality runs thin, unstable, or quietly connected to somewhere else entirely. | Free | Close | Instant | — (no roll, passive) |
-| 2 | You step half-out of normal perception, watching a moment unfold from just outside it, unseen and unfelt. | Action | Self | Scene | Power Level + Mind |
-| 3 | A seam opens, briefly, and you slip through it to a nearby place it connects to. | Action | Close | Instant | Power Level + Mind |
-| 4 | Real distance collapses when you step outside reality's normal rules for a moment — a shortcut nothing else could take. | Action | Long | Instant | Power Level + Mind |
-| 5 | Significantly distant places are, for you, just a step apart — the world's normal rules simply don't apply when you choose to leave them behind. | Action | Long | Instant | Power Level + Mind |
+| 1 | **Feel the Seams.** Places where reality runs thin, unstable, or quietly connected to somewhere else entirely. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **Half Out of Perception.** Step half-out of normal perception, watching a moment unfold from just outside it, unseen and unfelt. | Action | Self | Scene | Power Level + Mind |
+| 3 | **A Seam Opens.** A seam opens, briefly, and you slip through it to a nearby place it connects to. | Action | Close | Instant | Power Level + Mind |
+| 4 | **A Shortcut Nothing Else Could Take.** Real distance collapses when you step outside reality's normal rules for a moment. | Action | Long | Instant | Power Level + Mind |
+| 5 | **Just a Step Apart.** Significantly distant places are, for you, just a step apart. The world's normal rules don't apply once you leave them behind. | Action | Long | Instant | Power Level + Mind |
+
+### Social & Emotional
+
+#### Bound by Oath
+A promise made to you is never as easy to walk away from as an ordinary promise. Something in the exchange takes on real, felt weight.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **It Sticks.** A promise made to you doesn't fade the way promises usually do. It stays vivid in the mind of whoever made it, hard to shake. | Free | Close | Scene | — (no roll, passive) |
+| 2 | **Felt Weight.** Even a small promise made to you settles onto the one who made it with real weight: they suffer Disadvantage on any roll made to act directly against it. | Action | Close | Scene | Power Level + Soul |
+| 3 | **Hard to Break.** A significant oath sworn to you resists being broken. In the moment they try, contest it: win, and they can't bring themselves to act against it this scene. | Action | Close | Scene (extended) | Resisted Roll: Power Level + Soul vs. Resolve |
+| 4 | **The Cost of Breaking It.** Break an oath made to you anyway, and the backlash is automatic: Disadvantage on every roll the oathbreaker makes until they make real amends. | Free | Close | Scene (extended) | Power Level + Soul vs. Resolve |
+| 5 | **Unbreakable.** An oath sworn to you is, for all practical purposes, unbreakable: any attempt to act against it is treated as an automatic failure, no roll needed. | Action | Close | Scene (extended) | — (no roll, automatic) |
+
+#### Chorus of Concord (empathic & emotional influence)
+**Merged with Borrowed Feeling and Song Unheard, 2026-07-16; absorbed part of Commanding Presence the same day** (command-attention, default deference, and rallying belong here; the rest of Commanding Presence went to [Glamour](#glamour-uncanny-enchantment)). Emotion in a room isn't background noise to you. Whether you read and move it through touch and instinct, quiet conversation, or music, you have a real gift for finding the thread that pulls a mood where you want it to go.
+
+**Special Effect note**: choose how this actually works for your character when you take this Gift — an empathic read-and-push through presence and touch, a calm and disarming conversational manner, or a hummed tune/performance that carries more than melody. The mechanic is identical regardless.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Read the Room, Turn It Back.** Tension coiled in a corner, warmth between two people, dread nobody's said out loud yet: you read it instantly. The room's attention works the same way in reverse. Want it, and a look or a word brings the noise down. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **Willing Tension, Willing Deference.** A carefully composed face doesn't fool you, and your presence eases willing tension in individuals or a small audience. Walk into an ambiguous situation and people already default to deferring to you. | Action | Close | Instant | Power Level + Soul |
+| 3 | **The Nudge It Needs.** Reach a mood already leaning somewhere and give it the push, even against real resistance: calming an anger, easing a fear, steadying a grief that isn't ready to let go yet. | Action | Close | Instant | Power Level + Soul vs. Resolve |
+| 4 | **Hold and Rally.** Take hold of a specific, strong emotion directly, or help two willing people mend what's broken between them. A crowd's mood bends to you deliberately, and a group on the edge of breaking finds its nerve because you gave it one. | Action | Close/Medium | Instant/Scene | Power Level + Soul vs. Resolve |
+| 5 | **Breaks Against You.** A mob's temper breaks against you like a wave against a seawall. Calm a crowd outright, forge consensus out of a room ready to tear itself apart, or override one resistant person's emotional state entirely, if only for a moment. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
+
+*Note: reading people/rooms lives entirely in [Mind's Whisper](#minds-whisper-telepathy--hyper-perception--spirit-confidant) (Mental & Psychic) — the old separate "Read the Room" entry was merged into it 2026-07-16.*
+
+#### Glamour (uncanny enchantment)
+**Merged with Silver Tongue and reframed, 2026-07-16; absorbed part of Commanding Presence the same day** (an order followed instantly, and obedience against instinct, belong here; the rest of Commanding Presence went to [Chorus of Concord](#chorus-of-concord-empathic--emotional-influence)). This isn't persuasion and it isn't command: no argument is won, no order given real weight. It's an otherworldly, faintly unsettling pull that people feel around you and can't quite explain, closer to fae enchantment than to charisma.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **An Uncanny Pull.** People extend you trust and attention you haven't earned, and can't say why. Not charm they could point to. | Free | Close | Scene | — (no roll, passive) |
+| 2 | **Doubt Melts Away.** A minor doubt or objection melts away in your presence, like the person forgot why they were worried in the first place. | Action | Close | Instant | Power Level + Soul |
+| 3 | **Not Persuaded. Enchanted.** Someone genuinely reluctant finds themselves agreeing anyway, and can't say why. An order given in the heat of a crisis gets followed, no hesitation, no second-guessing. | Action | Close | Instant | Power Level + Soul vs. Resolve |
+| 4 | **Felt, Not Chosen.** A room defers to you unprompted, or a situation that should be a dead end reopens. Obedience and compliance that isn't chosen so much as felt. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
+| 5 | **Doesn't Take No.** Bend nearly anyone to your will, one person or a whole crowd, pulling against their own instincts if it comes to that. Not argument, not authority. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
+
+### Sound & Vibration
+
+#### Perfect Pitch
+Sound reaches you with a clarity that borders on unfair. Nothing whispered, hidden, or drowned out stays that way once you're listening.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Clean Sound.** A held breath, a footstep on carpet, a whispered word two rooms over: sounds most people would never register reach you clean. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **Exactly What and Where.** A sound tells you exactly what made it and where, with a precision that borders on unnatural. | Free | Close | Instant | Power Level + Mind |
+| 3 | **Through Walls.** Distance and barriers stop mattering much: hear real detail through a wall, or from well beyond normal earshot. | Action | Medium | Instant | Power Level + Mind |
+| 4 | **Cuts Through the Noise.** Pick out the one sound that matters from a roaring crowd or a battlefield. | Free | Close | Instant | Power Level + Mind |
+| 5 | **Nothing Stands Between.** Distance, interference, walls: none of it stands between your attention and the sound you want to hear. | Action | Long | Instant | Power Level + Mind |
+
+#### Resonant Shatter
+Every solid thing has a note it can't survive hearing, and you have an instinct for finding it.
+
+*Note: musical/vocal emotional influence lives entirely in [Chorus of Concord](#chorus-of-concord-empathic--emotional-influence) (Social & Emotional), as one of its Special Effect options — the old separate "Song Unheard" entry was merged into it 2026-07-16.*
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **The Weak Point.** A structure hums back at you when you listen closely, its weak points plain in how it resonates. | Free | Touch | Instant | — (no roll, passive) |
+| 2 | **Crack and Shatter.** Something small and already fragile answers a note you strike with a crack, then a shatter. | Action | Close | Instant | Power Level + Soul |
+| 3 | **Comes Apart.** Glass, thin metal, anything breakable meets a focused burst of vibration and comes apart. | Action | Close | Instant | Power Level + Soul |
+| 4 | **Patient Enough.** Sustained resonance cracks or destabilizes something substantial. Not fragile at all, just patient enough to find its breaking note. | Action | Close | Scene (sustained) | Power Level + Soul |
+| 5 | **Brings It Down.** A wall, a structure, something significant: sound and vibration alone bring it down, given the chance to build. | Action | Close | Scene (sustained) | Power Level + Soul |
+
+#### Voice of Thunder
+Sound, in your hands, stops being just noise. It's pressure, force, a physical push that happens to come out of your throat.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Carries Far.** Your voice carries across a distance and a volume it has no business reaching, and never strains doing it. | Free | Long | Instant | — (no roll, passive) |
+| 2 | **Sharp and Sudden.** A sound leaves you sharp enough to startle: the target suffers Disadvantage on their next roll. | Action | Close | Instant | Power Level + Soul vs. Defense |
+| 3 | **A Physical Push.** Sound leaves your voice as a real push, enough to knock a target back a step or off balance (Trip/Shove), or deals damage as a Light weapon instead (**Base +3**) if you'd rather hurt than shove. | Action | Close | Instant | Power Level + Soul vs. Defense |
+| 4 | **Punches Through.** A blast of sound lands where you aim it, punching through a target or straight through a structure in its path: **Base +6**. | Action | Medium | Instant | Power Level + Soul vs. Defense |
+| 5 | **Levels What's in Front.** A wave that levels what's in front of it, or carries your voice across a battlefield: **Base +9**. | Action | Medium | Instant | Power Level + Soul vs. Defense |
+
+### Technology & Constructs
+
+#### Field Repair
+Broken technology practically explains itself to you. It's a diagnostic instinct and a steady hand that turns wreckage back into working order.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Tells You What's Wrong.** Broken technology tells you exactly what's wrong with it the moment you lay eyes on it. No guesswork, no diagnostics needed. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **Patched Up.** With minimal tools and whatever's around, you patch a piece of technology back to full working order. | Action | Touch | Instant | Power Level + Mind |
+| 3 | **Back to Full Function.** A badly damaged device comes back to full function in the field. No workshop, no spare parts, just you and a few minutes. | Action | Touch | Instant | Power Level + Mind |
+| 4 | **Better Than It Started.** While repairing something, it comes back improved past its original specifications, not just restored. | Action | Touch | Instant | Power Level + Mind |
+| 5 | **Restored or Upgraded.** Even severely damaged, complex technology comes back, restored or upgraded, with nothing but what's lying around. | Action | Touch | Instant | Power Level + Mind |
+
+#### Spark of Invention
+Given a problem and whatever's lying around, you build a solution. You have a knack for making the impossible fit into the time and materials you actually have.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Fast Fix.** Whatever's on hand becomes a fix: a jammed lock, a snapped strap, a sparking wire, patched together fast and good enough to hold. | Action | Touch | Instant | Power Level + Mind |
+| 2 | **A Simple Device.** A working device comes together in your hands faster and better than the parts on the table should allow. | Action | Touch | Scene | Power Level + Mind |
+| 3 | **A Clever Gadget.** A gadget takes shape, purpose-built for the exact problem in front of you. | Action | Touch | Scene | Power Level + Mind |
+| 4 | **Beyond the Materials.** A sophisticated device comes out of your hands, built well beyond what your materials and time should have permitted. | Action | Touch | Scene (extended) | Power Level + Mind |
+| 5 | **Shouldn't Be Possible.** You invent something that, by any reasonable account, shouldn't be possible with what you had on hand and how little time you had. | Action | Touch | Scene (extended) | Power Level + Mind |
+
+#### Waking the Machine
+Machines and constructs listen to you in a way they don't listen to anyone else. It starts as a suggestion and ends as fluid command.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Runs Smoother.** A simple mechanism runs a little smoother, a little more willingly, after a touch and a word from you. | Action | Touch | Scene | Power Level + Mind |
+| 2 | **Follows an Instruction.** A basic construct or simple machine takes an elementary instruction from you and actually follows it. | Action | Touch | Scene | Power Level + Mind |
+| 3 | **Animates Fully.** A straightforward construct or mechanism animates fully at your direction, carrying out a task on its own once set in motion. | Action | Touch | Scene | Power Level + Mind |
+| 4 | **Judgment Calls.** A complex construct or machine takes real, nuanced direction from you: not just commands, but judgment calls within them. | Action | Close | Scene | Power Level + Mind |
+| 5 | **No Gap Between.** A sophisticated construct or machine moves like an extension of your own will, command and execution with no gap between them. | Action | Medium | Scene | Power Level + Mind |
+
+### Temporal
+
+#### Borrowed Time (delay effects)
+Consequences aren't as fixed to their moment as they seem. You have a limited but real ability to make something bad wait its turn.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Felt Coming.** A beat before something bad happens, you feel it coming. Not what, not always why, but enough warning to brace. | Free | Self | Instant | — (no roll, passive) |
+| 2 | **Bought a Beat.** A minor consequence hangs in the air for **1 round** longer than it should, just long enough for you to actually do something about it. | Action | Close | Instant | Power Level + Mind |
+| 3 | **Real Time.** You buy real time against a looming effect or deadline, not forever, but for the rest of the scene, holding until you say otherwise. | Action | Close | Scene | Power Level + Mind |
+| 4 | **Postponed.** Something significant, an injury's onset, a trap already sprung, a deadline already breached, gets meaningfully postponed at your word. | Action | Close | Scene | Power Level + Mind vs. Resolve |
+| 5 | **Held Off Entirely.** A major consequence simply waits, held off entirely for as long as you keep pouring effort into holding it there. | Action | Close | Scene (sustained) | Power Level + Mind vs. Resolve |
+
+#### Echo of What Was (psychometry)
+The past doesn't fully leave a place or an object. It lingers in a residue only you can read, waiting for a touch to bring it back.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **A Faint Residue.** Lay a hand on an object or stand in a place, and its recent past bleeds through, faint and general: something happened here, and you can feel the shape of it. | Free | Touch | Instant | — (no roll, passive) |
+| 2 | **Sharper Impression.** The impression sharpens into something you can describe: hazy, but tied to a specific past event, not just a feeling. | Action | Touch | Instant | Power Level + Mind |
+| 3 | **A Clear Echo.** Something that happened here recently plays out for you, witnessed almost as though you'd been standing there yourself. | Action | Touch | Instant | Power Level + Mind |
+| 4 | **Reaching Further Back.** The echo comes through sharp regardless of how far back you reach. The past doesn't blur just because it's old. | Action | Touch | Instant | Power Level + Mind |
+| 5 | **History Laid Bare.** Any object or place, any distance of years: call up a vivid, fully detailed echo of what happened there, on demand. | Action | Touch | Instant | Power Level + Mind |
+
+#### Frozen Instant (localized time-stop)
+For one narrow slice of the world, time is something you can reach out and grab hold of, pausing it just long enough to change what happens next.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **A Beat Longer.** A falling glass, a swinging door: small, simple things hang in the air a beat longer than they should, giving you just enough time. | Action | Close | Instant | Power Level + Mind |
+| 2 | **The Split-Second Edge.** Something slows, briefly and noticeably, handing you or an ally Advantage on the very next roll made because of it. | Action | Close | Instant | Power Level + Mind |
+| 3 | **Stopped Dead.** A single small object or effect stops dead in place, held there for **1 round** before time remembers it exists. | Action | Close | Instant | Power Level + Mind |
+| 4 | **Frozen Mid-Motion.** A person mid-motion or a mechanism about to trigger freezes in place at your word for **1 round**. | Action | Close | Instant | Power Level + Mind vs. Resolve |
+| 5 | **Complete Stop.** Bring something to a complete stop, and it stays that way for as long as you hold your concentration on it. | Action | Close | Scene (sustained) | Power Level + Mind vs. Resolve |
+
+#### Stolen Moment (speed/reaction & time perception)
+**Merged with Fleet-Footed Fury, 2026-07-16.** Time doesn't pass at quite the same rate for you as it does for everyone else — every physical edge this Gift grants (endurance, outrunning pursuit, closing a gap in a blink) comes from that, not from raw muscle. It's a private head start built into how you experience the world, not a sprinter's legs.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **A Half-Step Ahead.** Details other eyes slide right past register to you. Gain **+1 DoS** on your Initiative roll and on the first reactive roll you make against a sudden threat each scene. | Free | Self | Scene | — (no roll, passive) |
+| 2 | **Outlasting the Chase.** Once you're moving, less time passes for you than for the ground you're covering. A sprint that would exhaust anyone else isn't tiring, full speed with no fade, for as long as the chase demands. | Free | Self | Scene | — (no roll, passive) |
+| 3 | **The Blink.** Several seconds of thought and motion collapse into what looks, to everyone watching, like a single blink: enough to catch a fleeing car, a startled animal, anything not purpose-built to outrun you. | Action | Self | Instant | Power Level + Mind |
+| 4 | **Outside Their Beat.** For a moment, the world stops keeping pace with you: act freely while everyone else is caught between one heartbeat and the next. You gain Advantage on the one roll you make during that stolen moment. | Action | Self | Instant | Power Level + Mind |
+| 5 | **Your Own Clock.** Step onto a slice of time that belongs to you alone. Cross real distance in that stolen moment, a blur, a gust, and you're somewhere else, while the world outside crawls by at its normal pace. | Action | Close | Instant | Power Level + Mind |

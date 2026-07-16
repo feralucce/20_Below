@@ -242,9 +242,17 @@ A hybrid of D&D-style numeric HP and White Wolf-style escalating wound penalties
 - **Incapacitated** has no buffer: no actions, and any further damage is fatal. No dying/stabilizing state currently exists — this is a deliberate lethality choice, not yet reconfirmed as final.
 - **Round up** universally (per [core-mechanic.md](core-mechanic.md#rounding--ties)) applies to the Wounded/Suffering HP calculation.
 
+## Healing — temporary/playtest (2026-07-16)
+
+**Not final** — a baseline rule to unblock play, flagged for real playtesting the same way the [Gift activation cost formula](core-mechanic.md#gift-activation-cost--in-playtesting) is. Supersedes "Healing isn't designed at all yet" below.
+
+- **A full night's rest recovers `⌈Body ÷ 2⌉` Health Levels** (tiers, not raw HP — a Body 5 character recovers 3 tiers in one night's rest, rounding up per the [universal rounding rule](core-mechanic.md#rounding--ties)).
+- **If that doesn't fully heal the character, they may spend Resonance during that same rest to recover further**: **2 Resonance per additional Health Level**, on top of the free recovery above.
+- **A recovered Health Level's container fills to full**, not partially — moving up a tier restores that tier's entire HP capacity. This is the same convention Gift-based healing (Regeneration, Healer's Touch) already uses.
+- **Gifts can heal**, both a character's own body (Regeneration) and another creature's by touch (Healer's Touch) — see [premade-gifts.md](../rules/premade-gifts.md).
+
 **Not yet designed:**
 
-- **Healing** — how a character moves back up a Health Level (recovers HP in a lower container) isn't designed at all yet.
 - Whether Incapacitated's all-or-nothing lethality is final, or wants a last-gasp buffer state.
 
 ## Damage — confirmed

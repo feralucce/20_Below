@@ -6,6 +6,24 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 ## ⬆️ Pick up here next session (2026-07-15)
 
+**Flagged 2026-07-16, not started**: compare Gift-granted natural-weapon damage tiers against
+the real [Weapon Base table](../rules/combat.md#damage--confirmed). Several Gifts now assign
+a natural weapon (claws, bite, hybrid form) a Base tier borrowed from the combat weapon-class
+ladder, but nobody's checked whether the fictional weight matches the real weapon it's
+riding alongside. Known assignments so far, surfaced during the monitored Gift review:
+- **Many Shapes** L2 Partial Shift (a single grafted body part: claws/fangs) — **Improvised,
+  Base +2** (same tier as a broken bottle or brass knuckles).
+- **Many Shapes** L3 Bonded Shape (full single-animal transformation) — **Light, Base +3**
+  (same tier as a dagger or pistol).
+- **Many Shapes** L5 War-Form (hybrid of up to 3 animals) — **Martial, Base +6** (same tier
+  as a spear or carbine).
+- **Mimic's Gift** L3/L5 (a borrowed offensive trait) uses the same +3/+6 pair.
+Worth a dedicated pass once more Gifts have gone through the mechanics review: does a bear
+hybrid's claw really sit at the same lethality as a carbine? Does a wolf's bite belong next
+to a pistol? Not resolved — flagged for later comparison, not blocking the current review.
+
+**Flagged 2026-07-16, not started**: sweep the rest of the ruleset for other-system references. [premade-gifts.md](../rules/premade-gifts.md) and [gifts.md](../rules/gifts.md) had every other-system citation and inspiration reference stripped out during the Gift catalog reorganization (2026-07-16) — the catalog is now organized into 15 alphabetized categories with no "Werewolf/Mage/D&D 5e/Hero System"-style framing left. The rest of the ruleset still has similar citations used as design rationale ("why we chose this formula"): [combat.md](../rules/combat.md), [core-mechanic.md](../rules/core-mechanic.md), [flaws.md](../rules/flaws.md), [perks.md](../rules/perks.md), [premade-skills.md](../rules/premade-skills.md), [design-log.md](design-log.md), and this file. Not swept yet — decide whether that's in scope before touching them, since removing that rationale text is a different kind of edit than cleaning up player-facing catalog entries.
+
 **Resonance widened to 1-20**; XP multiplier revised to **current × 6** (down from ×7) to account for the wider cap — starting value, regain formula, and existing spend costs stay unchanged. See Advancement section below.
 
 **Gift activation cost in Resonance: going to playtest, not a paper decision** — all three candidates get trialed at the table in order: `= Level` (12345) first, then `ceil(Level÷2)` (11223), then flat 1. See Advancement section below and [core-mechanic.md](../rules/core-mechanic.md#gift-activation-cost--in-playtesting).
@@ -207,6 +225,7 @@ Bigger pieces that haven't been touched at all yet:
 
 - [ ] Character creation step-by-step process (the *procedure*, not just the point economy above).
 - [ ] Session structure, downtime, and a proper equipment/gear subsystem (Bulwark covers Soak without one, but weapons/general gear economy still isn't designed) — haven't come up yet.
+- [ ] **Hostile-environment mechanics, flagged 2026-07-16**: the only thing on the books is one bullet in [core-mechanic.md's Disadvantage Trigger Examples](../rules/core-mechanic.md#disadvantage-trigger-examples--non-exhaustive) ("a hostile or poor environment for the task"), a single GM-judgment -1 Disadvantage source with no severity tiers, no canonical hazard list, and no formal duration rules. Surfaced during the monitored Gift review when [Adaptive Flesh](../rules/premade-gifts.md) needed a real mechanic to cancel — its rewrite leans on that one bullet as-is, but a proper hostile-environment subsystem (hazard severity, exposure duration, interaction with Health Levels) doesn't exist yet. Other Gifts that touch this space (Iron Lungs, Undying Vigor) may need revisiting once/if it gets designed.
 
 ## 🔁 Full Revision Pass — planned, after everything above is done
 
