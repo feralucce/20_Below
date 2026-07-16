@@ -89,7 +89,6 @@ Unlike Perks, these don't need to be deferred — combat mechanics already exist
 
 ## Open Questions
 
-- Is there a cap on how many Flaws a character can take?
 - **Exact per-level definitions** for the 3 Leveled (Resource) Flaws (Notoriety, Enemy, Hunted) — same gap as the Leveled (Resource) Perks.
 - **Exact point amount** a Flaw grants at creation, and the exact scaling curve by severity — deferred to the broader point/XP economy (Character Creation & Advancement), same as Perk/Skill/Gift costs.
 
@@ -97,4 +96,5 @@ Unlike Perks, these don't need to be deferred — combat mechanics already exist
 
 - **Flaw list compiled** (2026-07-14): see Flaw List above, sourced from OWoD, Hero System, and D&D 3.5e Flaws (numeric-penalty entries excluded, mirroring how Perks excluded numeric-bonus Feats).
 - **Addendum: introduced Leveled (Resource) Flaws** (2026-07-14): Notoriety, Enemy, and Hunted mirror Perks' Leveled (Resource) treatment — 1-5 scale instead of binary. See Leveled (Resource) Flaws above.
+- **Flaw cap confirmed: 15 points of Wildcard Points from Flaws, max** (2026-07-15) — not a cap on the *number* of Flaws, but on the total Wildcard Points they can grant. Chosen to mirror the 15-point automatic Wildcard Point baseline ([character-creation/overview.md](../character-creation/overview.md#calibration)): Flaws can double a character's Wildcard Points but never exceed what the baseline alone already grants. Looser than classic OWoD's flat 7-point Flaw cap, deliberately, since this system's Wildcard Point economy already runs more generous than WoD's across the board (Attribute pool ~3.3x WoD's, Skill pool ~1.3x). At the existing 1-7 severity range per non-Leveled Flaw, 15 points lands around 2-3 Flaws in practice (e.g. two Severe + one Moderate).
 - **Flaw economy confirmed** (2026-07-14): taking a Flaw grants the player extra build points to spend elsewhere **at character creation only** — confirms Flaws aren't picked up mid-campaign (already stated above) and, since the exchange is a one-time creation-time transaction, **a Flaw is fixed for the character's lifetime once chosen** — there's no mechanism to buy one off later. By the same "cost scales with strength" logic already established for Perks, **the points granted should scale with a Flaw's severity** rather than being uniform — flagged as inferred by symmetry, not separately confirmed by exact numbers, which wait on the broader economy (see Open Questions).

@@ -17,10 +17,10 @@ This is the same paradigm both at creation and during play — the only differen
 2. **Skills** — spent from a dedicated Skill point pool.
 3. **Perks** — spent from a dedicated Perk point pool.
 4. **Gifts** — spent from a dedicated Gift point pool.
-5. **Flaws** — chosen last among the "acquiring" steps. Taking a Flaw doesn't cost anything; it **grants Freebie Points** instead (see [flaws.md](../rules/flaws.md)).
-6. **Spend Freebies** — the Freebie Points earned from step 5 are spent last, as a final flexible top-up pass.
+5. **Flaws** — chosen last among the "acquiring" steps. Taking a Flaw doesn't cost anything; it **grants Wildcard Points** instead (see [flaws.md](../rules/flaws.md)).
+6. **Spend Wildcard Points** — the Wildcard Points earned from step 5 are spent last, as a final flexible top-up pass.
 
-**The four dedicated pools (Attributes/Skills/Perks/Gifts) are siloed**: points from the Attribute pool can only buy Attributes, Skill pool points can only buy Skills, and so on — nothing carries over or converts between them. **Freebie Points are the exception, confirmed 2026-07-14** — the flexible currency, spent last, usable across all four categories at the per-category rates set out in [Step 6](#calibration) below.
+**The four dedicated pools (Attributes/Skills/Perks/Gifts) are siloed**: points from the Attribute pool can only buy Attributes, Skill pool points can only buy Skills, and so on — nothing carries over or converts between them. **Wildcard Points are the exception, confirmed 2026-07-14** — the flexible currency, spent last, usable across all four categories at the per-category rates set out in [Step 6](#calibration) below. (**Renamed from "Freebie Points" to "Wildcard Points" 2026-07-15** — same mechanic, new name; see [design-log.md](../docs/design-log.md).)
 
 ## Resolves
 
@@ -81,18 +81,18 @@ An 8-point Gift pool is **1.6× Mage's 5-dot baseline** — inside the same gene
 
 **Gift pool size and creation-time cost are both resolved.** Individual Perk costs and the XP cost to raise a Gift level after creation are still open.
 
-**Step 6 (2026-07-14): Freebie Points, confirmed.** A **starting pool of 15**, granted automatically regardless of Flaws taken — matching OWoD's own classic (Revised-edition) Freebie allotment, since the per-category costs below are also a direct import of OWoD's ratio. Flaws **add to** this pool on top (see below); Freebies aren't Flaw-gated the way the four dedicated pools are creation-order-gated.
+**Step 6 (2026-07-14): Wildcard Points, confirmed** (renamed from "Freebie Points" 2026-07-15, same mechanic). A **starting pool of 15**, granted automatically regardless of Flaws taken — matching OWoD's own classic (Revised-edition) Freebie allotment, since the per-category costs below are also a direct import of OWoD's ratio. Flaws **add to** this pool on top (see below); Wildcard Points aren't Flaw-gated the way the four dedicated pools are creation-order-gated.
 
-| Category | Cost per level (Freebies) | Cap via Freebies |
+| Category | Cost per level (Wildcard Points) | Cap via Wildcard Points |
 |---|---|---|
-| Attribute | **7** | Max 2 levels (14 Freebies) |
+| Attribute | **7** | Max 2 levels (14 Wildcard Points) |
 | Skill | **1** | None beyond the normal 6-point creation cap |
 | Perk | **3** | None stated |
-| Gift | **5** | Max 3 levels (15 Freebies) |
+| Gift | **5** | Max 3 levels (15 Wildcard Points) |
 
-**Notable interaction**: the 15-point baseline is just barely enough to hit *either* the Attribute cap (14, leaving 1 spare) *or* the Gift cap (exactly 15, leaving nothing) on its own — not both. Reaching both caps, or reaching either cap while still having Freebies left for Skills/Perks, requires additional Freebies from Flaws.
+**Notable interaction**: the 15-point baseline is just barely enough to hit *either* the Attribute cap (14, leaving 1 spare) *or* the Gift cap (exactly 15, leaving nothing) on its own — not both. Reaching both caps, or reaching either cap while still having Wildcard Points left for Skills/Perks, requires additional Wildcard Points from Flaws.
 
-**Flaws grant Freebies on top of the 15 baseline**: non-Leveled Flaws grant **1-7 Freebies** (OWoD's own severity range, GM/player negotiated per Flaw based on how much it actually constrains the character in play), and the 3 Leveled (Resource) Flaws grant **2 × the Flaw's level** (a level-3 Enemy grants 6 Freebies).
+**Flaws grant Wildcard Points on top of the 15 baseline**: non-Leveled Flaws grant **1-7 Wildcard Points** (OWoD's own severity range, GM/player negotiated per Flaw based on how much it actually constrains the character in play), and the 3 Leveled (Resource) Flaws grant **2 × the Flaw's level** (a level-3 Enemy grants 6 Wildcard Points). **Capped at 15 Wildcard Points total from Flaws** (confirmed 2026-07-15, see [flaws.md](../rules/flaws.md#resolved)) — Flaws can double a character's Wildcard Points but never exceed the automatic baseline.
 
 **Character creation is now fully resolved.**
 
