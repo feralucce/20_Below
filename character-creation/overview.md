@@ -5,9 +5,9 @@
 Point-based build, no classes or levels. Players build exactly what they want at creation, and advance exactly how they want afterward — there's no fixed progression track.
 
 - **Creation**: characters are built in a fixed order, across five separate currencies — see [Creation Order](#creation-order--confirmed) below.
-- **Advancement**: after creation, characters improve by spending **XP directly** — XP is not banked into levels or tied to a class chart, it's spent one purchase at a time on whatever the player wants to improve (raise a Skill, buy a specialty, raise an Attribute, pick up a Perk or Gift), subject to GM approval and any in-fiction justification the system ends up requiring.
+- **Advancement**: after creation, characters improve by spending **XP directly** — XP is not banked into levels or tied to a class chart, it's spent one purchase at a time on whatever the player wants to improve (raise a Skill, buy a specialty, raise an Attribute, pick up a Perk or Gift), subject to GM approval, no in-fiction justification required.
 
-This is the same paradigm both at creation and during play — the only difference is the currency (build points up front, XP afterward) and that advancement purchases may need narrative justification (training, practice, a relevant experience in-fiction) at the GM's discretion.
+This is the same paradigm both at creation and during play — the only difference is the currency (build points up front, XP afterward). **No in-fiction justification requirement, confirmed 2026-07-15**: an XP purchase doesn't need a training montage, mentor, or relevant in-play use to unlock — free-form spending between sessions, GM approval only (scope/existence checks for new Skills and Gifts, per their own creation rules — not a narrative-justification gate on top of that).
 
 ## Creation Order — confirmed
 
@@ -118,10 +118,10 @@ XP spend costs (the `current × multiplier` table) are documented per-category i
 
 ## Open Questions
 
-- Does advancement require in-fiction justification (training montage, mentor, relevant use in play), or is it free-form?
-- Resonance's XP-during-advancement multiplier, and the exact Resonance cost to activate a Gift — both still open, tracked in [docs/TODO.md](../docs/TODO.md#advancement-xp-economy--character-progression-post-creation).
+- The exact Resonance cost to activate a Gift — in active playtesting, tracked in [docs/TODO.md](../docs/TODO.md#advancement-xp-economy--character-progression-post-creation).
 
 ## Resolved (creation-specific, not already covered above)
 
 - **Individual Perk costs within the dedicated Perk pool** (2026-07-14): a 3-tier system (Minor 1 / Moderate 2 / Major 3 points), plus flat 1 point per level for the 7 Leveled (Resource) Perks. See [perks.md](../rules/perks.md#resolved).
 - **No Attribute Descriptor reassignment, but extra ones are purchasable** (2026-07-14): Descriptors are free at creation (one per Attribute point) and **fixed once chosen** — no drifting away from one later. Post-creation, a character can buy an **additional** Descriptor on an Attribute they already have, as its own XP purchase priced below a full Attribute raise — more versatility without the exorbitant cost of raising the underlying score. Exact XP cost is an Advancement-economy question. See [core-mechanic.md](../rules/core-mechanic.md#descriptors--confirmed).
+- **No in-fiction justification required for advancement** (2026-07-15): an XP purchase is free-form, spent between sessions on whatever the player wants, subject only to GM approval (and the existing scope/existence checks new Skills and Gifts already require) — no training montage, mentor, or relevant in-play use needed to unlock a purchase. Keeps advancement lightweight and player-directed, consistent with the system's existing "no fixed progression track" philosophy.
