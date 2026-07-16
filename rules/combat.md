@@ -7,7 +7,7 @@ _In active design as of 2026-07-12._
 - **Critical success**: double damage, plus an additional GM-narrated effect.
 - **Critical failure**: always fails (per core mechanic); combat gets a category × severity-tier table, keyed off `|DoF|` — see [Critical Failure](#critical-failure--confirmed) below.
 - **Called shots**: impose a size-dependent difficulty modifier on the attack roll (see Special Maneuvers below).
-- **Resonance**: a per-player 1-10 pool (supersedes Spark, named 2026-07-14) with a full cost-tiered spend menu — Advantage, rerolls, canceling a critical failure, refilling a lost Health Level, auto-stabilizing, a bonus Action, boosting DoS/an NPC's DoF, and forcing a GM reroll — see [core-mechanic.md](core-mechanic.md#resonance--confirmed).
+- **Resonance**: a per-player 1-20 pool (supersedes Spark, named 2026-07-14, widened from 1-10 to 1-20 on 2026-07-15) with a full cost-tiered spend menu — Advantage, rerolls, canceling a critical failure, refilling a lost Health Level, auto-stabilizing, a bonus Action, boosting DoS/an NPC's DoF, and forcing a GM reroll — see [core-mechanic.md](core-mechanic.md#resonance--confirmed).
 - **Damage**: Weapon Base (1-10, by weapon class) + (DoS − Defense); only the Weapon Base doubles on a crit — see [Damage](#damage--confirmed) below.
 
 ## Round Structure (in progress)
