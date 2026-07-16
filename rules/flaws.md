@@ -73,7 +73,15 @@ Overtly supernatural drawbacks (a curse, a bound spirit, a magical weakness) wer
 | Enemy | How capable, resourced, and motivated the specific person or group working against the character is |
 | Hunted | How determined and far-reaching the pursuing authority, organization, or individual is |
 
-**Exact per-level definitions are not yet written** — same flagged gap as the Leveled (Resource) Perks, deferred to the same future pass.
+**Per-level content, confirmed 2026-07-15** — same convention as the Leveled (Resource) Perks' own level tables ([perks.md](perks.md#leveled-resource-perks--confirmed)): each level a cumulative, defined step up in severity, mirroring the matching Perk one-for-one where applicable (Notoriety mirrors Fame).
+
+| Level | Notoriety | Enemy | Hunted |
+|---|---|---|---|
+| 1 | A minor local bad reputation, occasional suspicion | A minor rival — annoying, low capability | Occasionally watched by a minor authority |
+| 2 | A known troublemaker within a community or subculture | A capable individual enemy, or a small hostile group | Actively sought by a local group with modest resources |
+| 3 | Regionally known for something bad; distrust follows you | A well-resourced enemy or organized hostile group | Pursued by a capable, resourced organization |
+| 4 | Widely infamous — recognized and reviled by strangers | A powerful, dangerous enemy with real reach | Hunted by a powerful, far-reaching organization |
+| 5 | A notorious name nationwide or worldwide, actively shunned or targeted on reputation alone | A nemesis-tier enemy — extremely powerful, far-reaching, personally invested in your downfall | Relentlessly hunted by a near-limitless entity — a top-priority target |
 
 ### Combat-Adjacent
 
@@ -89,7 +97,6 @@ Unlike Perks, these don't need to be deferred — combat mechanics already exist
 
 ## Open Questions
 
-- **Exact per-level definitions** for the 3 Leveled (Resource) Flaws (Notoriety, Enemy, Hunted) — same gap as the Leveled (Resource) Perks.
 - **Exact point amount** a Flaw grants at creation, and the exact scaling curve by severity — deferred to the broader point/XP economy (Character Creation & Advancement), same as Perk/Skill/Gift costs.
 
 ## Resolved
@@ -98,3 +105,4 @@ Unlike Perks, these don't need to be deferred — combat mechanics already exist
 - **Addendum: introduced Leveled (Resource) Flaws** (2026-07-14): Notoriety, Enemy, and Hunted mirror Perks' Leveled (Resource) treatment — 1-5 scale instead of binary. See Leveled (Resource) Flaws above.
 - **Flaw cap confirmed: 15 points of Wildcard Points from Flaws, max** (2026-07-15) — not a cap on the *number* of Flaws, but on the total Wildcard Points they can grant. Chosen to mirror the 15-point automatic Wildcard Point baseline ([character-creation/overview.md](../character-creation/overview.md#calibration)): Flaws can double a character's Wildcard Points but never exceed what the baseline alone already grants. Looser than classic OWoD's flat 7-point Flaw cap, deliberately, since this system's Wildcard Point economy already runs more generous than WoD's across the board (Attribute pool ~3.3x WoD's, Skill pool ~1.3x). At the existing 1-7 severity range per non-Leveled Flaw, 15 points lands around 2-3 Flaws in practice (e.g. two Severe + one Moderate).
 - **Flaw economy confirmed** (2026-07-14): taking a Flaw grants the player extra build points to spend elsewhere **at character creation only** — confirms Flaws aren't picked up mid-campaign (already stated above) and, since the exchange is a one-time creation-time transaction, **a Flaw is fixed for the character's lifetime once chosen** — there's no mechanism to buy one off later. By the same "cost scales with strength" logic already established for Perks, **the points granted should scale with a Flaw's severity** rather than being uniform — flagged as inferred by symmetry, not separately confirmed by exact numbers, which wait on the broader economy (see Open Questions).
+- **Per-level content for all 3 Leveled (Resource) Flaws, resolved** (2026-07-15) — see the level table under [Leveled (Resource) Flaws](#leveled-resource-flaws--confirmed) above. Written as direct severity mirrors of the matching Leveled Perks where one exists (Notoriety mirrors Fame one-for-one).

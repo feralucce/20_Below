@@ -14,6 +14,22 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 **Flaw cap resolved: 15 points of Wildcard Points from Flaws, max** — see [flaws.md](../rules/flaws.md#resolved) and the Flaws section below.
 
+**Every non-Leveled Perk tagged with a Minor/Moderate/Major cost tier** — see [perks.md](../rules/perks.md#resolved) and the Perks section below.
+
+**No in-fiction justification required for advancement** — XP spend is free-form, GM approval only. See [character-creation/overview.md](../character-creation/overview.md#resolved-creation-specific-not-already-covered-above).
+
+**Per-level content written for all 10 Leveled (Resource) Perks/Flaws** (7 Perks: Wealth, Fringe Benefit, Contacts, Base, Notable Vehicle, Followers, Fame; 3 Flaws: Notoriety, Enemy, Hunted) — see [perks.md](../rules/perks.md#leveled-resource-perks--confirmed) and [flaws.md](../rules/flaws.md#leveled-resource-flaws--confirmed).
+
+**The original Advancement/Gifts open-item batch from this session is now closed out except Gift activation cost**, which stays parked in playtesting (see above) until tried at the table.
+
+**The full Gift catalog detail pass is done** — every level of every Gift now has Action/Range/Duration/Resolution plus richer flavor text, and the Resisted-Roll-vs-Resolve triage was resolved alongside it. See [premade-gifts.md](../rules/premade-gifts.md) and [gifts.md](../rules/gifts.md#resolved).
+
+**Grafted Steel (the sole cybernetics Gift) removed** — cybernetics now has zero catalog representation, pending a decision on whether it needs its own acquisition rules before adding it back. Catalog total is now **75 Gifts**. See [premade-gifts.md](../rules/premade-gifts.md#cybernetics--note).
+
+**New Gift creation timing and in-fiction source, both resolved 2026-07-15**: new Gifts are created only between sessions (same as new Skills, GM approval required); Gifts need no in-fiction source or origin — a character simply has one, the setting's own "the world is weird" premise doing the explanatory work instead. See [gifts.md](../rules/gifts.md#resolved).
+
+**Only Cybernetics' fuller treatment remains open** in the Gifts section — more catalog entries, and a decision on whether cybernetics needs its own acquisition rules (surgery, cost, installation risk) instead of standard Gift creation.
+
 **"Freebie Points" renamed to "Wildcard Points"** (2026-07-15, same mechanic) — see [design-log.md](design-log.md).
 
 ## Previous session (2026-07-13)
@@ -86,7 +102,7 @@ See the Combat section below for what's still open in this area.
 - [x] **The combat Skills are finalized, no longer deferred** (2026-07-13, revised 2026-07-13): now 4 — Melee Combat, Unarmed Combat, Firearms/Archery (merged), Special Weapons (exception Skill for a single exotic/siege-class weapon, not a broad category). Dodge/Evasion dropped as a Skill — covered by the Defense trait instead. See [premade-skills.md](../rules/premade-skills.md#combat--confirmed).
 - [x] **The 3 combat-adjacent Perks are resolved** (2026-07-14): Combat Reflexes (+5 to the Initiative Degree, per the existing Perk-modifies-Degree convention), Quick Draw (readying a weapon costs no Action), Alertness (immune to Surprise, see below). See [perks.md](../rules/perks.md#combat-adjacent--confirmed).
 - [x] **Surprise resolved** (2026-07-14): Advantage to attacks against the surprised character, plus -5 to their Initiative Degree for the first round of combat only; who is surprised is a GM call based on the fiction. See [combat.md](../rules/combat.md#surprise--confirmed).
-- [ ] **Big downstream TODO**: once combat exists, the entire 76-Gift catalog needs a detail pass to convert soft narrative phrasing into concrete mechanics (ranges, durations, action costs) — [gifts.md](../rules/gifts.md), [premade-gifts.md](../rules/premade-gifts.md)
+- [x] **Big downstream TODO, resolved 2026-07-15**: the entire Gift catalog now has concrete mechanics (Action cost, Range, Duration, Resolution) on every level entry, plus richer flavor text. See [premade-gifts.md](../rules/premade-gifts.md) and [gifts.md](../rules/gifts.md#resolved).
 
 ## Core Mechanic
 
@@ -134,7 +150,7 @@ Split out from Character Creation above (2026-07-14) since it's a genuinely sepa
 
 - [x] **XP cost per rank for Attributes/Skills/Perks/Gifts, resolved** (2026-07-14) — see table above and [core-mechanic.md](../rules/core-mechanic.md), [skills.md](../rules/skills.md#resolved), [gifts.md](../rules/gifts.md#resolved), [perks.md](../rules/perks.md#resolved).
 - [x] **XP award rate resolved: 5 per session** (2026-07-14), via a WoD/Pathfinder-blended category checklist (Attendance, Roleplaying, Heroism, Learning, Standout Moment — 1 XP each) plus separate Pathfinder-style Story Awards for major milestones. Derived from the fact that most of our per-category costs are direct WoD imports except Attribute (×9 vs. WoD's ×4) — reusing WoD's own 5 XP/session rate means everything WoD-derived advances at WoD's pace, and Attributes land 2.25× slower automatically. See [character-creation/overview.md](../character-creation/overview.md#advancement).
-- [ ] Does advancement require in-fiction justification (training montage, mentor, relevant use in play), or is it free-form?
+- [x] **No in-fiction justification required for advancement** (resolved 2026-07-15): XP purchases are free-form, GM approval only — no training montage, mentor, or relevant in-play use needed. See [character-creation/overview.md](../character-creation/overview.md#resolved-creation-specific-not-already-covered-above).
 - [x] **Spark eliminated, folded into Resonance** (named 2026-07-14, superseding an interim "Willpower" placeholder): a full cost-tiered spend menu (1-3 Resonance per effect: Advantage, reroll, cancel a crit-fail, refill a lost Health Level, auto-stabilize, a bonus Action, boost your own DoS or an NPC's DoF, force a GM reroll) replaces Spark's old flat 3-option menu entirely. See [core-mechanic.md](../rules/core-mechanic.md#resonance--confirmed).
 - [x] **Resonance regain triggers resolved: 6 total** (2026-07-14): full night's rest (max ÷ 4, rounded up — supersedes the earlier flat 1/session trickle), full refill between adventures, discretionary GM award for standout play, Compel a Flaw (Fate Core import, 1 Resonance for leaning into a GM-invoked Flaw complication), Critical Success (1 Resonance on a natural 1), and Ritual/deliberate downtime (2 Resonance for spending real scene time on meditation/prayer/attunement/training). See [core-mechanic.md](../rules/core-mechanic.md#regaining-resonance--confirmed).
 - [x] **Power Level and Resonance starting value + Wildcard Point cost, resolved** (2026-07-14): both start at **1** at character creation, raised only with Wildcard Points (**3/level**, at creation) or XP (afterward) — neither gets a dedicated creation pool. See [core-mechanic.md](../rules/core-mechanic.md#power-level) and [core-mechanic.md](../rules/core-mechanic.md#resonance--confirmed).
@@ -154,8 +170,9 @@ Split out from Character Creation above (2026-07-14) since it's a genuinely sepa
 - [x] **No prerequisites — a Perk grants its own standing** (resolved 2026-07-14): e.g. Fringe Benefit is what creates the license/clearance, not a reward for already having it.
 - [x] **Numeric edge-case Perks resolved**: Wealth and similar are a resource/currency pool, not a roll bonus, so they don't break the "no numeric bonus" rule (resolved 2026-07-14).
 - [x] **Addendum: 7 Perks (Wealth, Fringe Benefit, Contacts, Base, Notable Vehicle, Followers, Fame) now use the same 1-5 level scale as Gifts** instead of being binary (resolved 2026-07-14) — exact per-level content not yet written.
-- [ ] **New**: exact per-level definitions for the 7 Leveled (Resource) Perks above — same scale of work as the Gift catalog's level tables.
+- [x] **Per-level content for the 7 Leveled (Resource) Perks, resolved** (2026-07-15) — see [perks.md](../rules/perks.md#leveled-resource-perks--confirmed) for the full level tables (Wealth, Fringe Benefit, Contacts, Base, Notable Vehicle, Followers, Fame).
 - [x] **"Surprised" resolved** (2026-07-14): Advantage to attacks against the surprised character, plus -5 to their Initiative Degree for the first round of combat only. Who is surprised is a GM call based on the fiction, no dedicated roll. See [combat.md](../rules/combat.md#surprise--confirmed).
+- [x] **Every non-Leveled Perk tagged with a cost tier** (resolved 2026-07-15) — all 20 non-Leveled Perks (Physical, Mental/Cognitive, Social, Combat-Adjacent) now carry a Minor/Moderate/Major tag in their table, anchored against the three tiers already fixed by example. Leveled (Resource) Perks excluded — they use their own flat 1 point/level cost. See [perks.md](../rules/perks.md#resolved).
 - ([perks.md](../rules/perks.md))
 
 ## Flaws
@@ -164,19 +181,19 @@ Split out from Character Creation above (2026-07-14) since it's a genuinely sepa
 - [x] **Addendum: Notoriety/Enemy/Hunted mirror Perks' Leveled (Resource) Perks** (resolved 2026-07-14) — 1-5 scale instead of binary, exact per-level content not yet written. See [flaws.md](../rules/flaws.md#leveled-resource-flaws--confirmed).
 - [x] **Flaw economy confirmed** (resolved 2026-07-14): Flaws are taken only at character creation and grant extra build points to spend elsewhere. Since it's a one-time creation-time transaction, a Flaw is fixed for the character's lifetime once chosen — no buy-off mechanism. Points granted should scale with severity, by symmetry with Perk cost scaling — exact numbers still deferred to the point/XP economy.
 - [x] **Flaw cap confirmed: 15 points of Wildcard Points from Flaws, max** (resolved 2026-07-15) — caps the total Wildcard Points Flaws can grant, not the number of Flaws; mirrors the 15-point automatic Wildcard Point baseline so Flaws can double it but never exceed it. See [flaws.md](../rules/flaws.md#resolved).
-- [ ] **New**: exact per-level definitions for the 3 Leveled (Resource) Flaws.
+- [x] **Per-level content for the 3 Leveled (Resource) Flaws, resolved** (2026-07-15) — see [flaws.md](../rules/flaws.md#leveled-resource-flaws--confirmed) for the full level table (Notoriety, Enemy, Hunted).
 - ([flaws.md](../rules/flaws.md))
 
 ## Gifts
 
 - [x] **Gift level cost at character creation confirmed flat 1:1** (2026-07-14) — see Character Creation above.
 - [x] **XP costs resolved** (2026-07-14): new Gift flat 7 XP, raising an existing Gift's level costs current level × 5. See Advancement section above and [gifts.md](../rules/gifts.md#resolved).
-- [ ] Does new Gift creation happen only between sessions (like new Skills), or can it also happen at character creation?
-- [ ] Do Gifts require an in-fiction source/origin (bloodline, pact, training, mutation), or is that left to player flavor?
-- [x] **Resource cost on use, partially resolved** (2026-07-14): every Gift costs Resonance to activate — a universal system, not per-Gift. Exact amount is the same open item tracked under Advancement above (Gift activation cost in Resonance).
+- [x] **New Gift creation happens only between sessions, resolved 2026-07-15** — same timing as new Skill creation, GM approval required. Picking an existing catalog Gift at character creation is unaffected. See [gifts.md](../rules/gifts.md#resolved).
+- [x] **Gifts require no in-fiction source or origin, resolved 2026-07-15** — a character simply has a Gift, no bloodline/pact/training/mutation needed to justify it. See [gifts.md](../rules/gifts.md#resolved).
+- [x] **Resource cost on use, partially resolved** (2026-07-14): every Gift costs Resonance to activate — a universal system, not per-Gift. Exact amount is in active playtesting, tracked under Advancement above (Gift activation cost in Resonance).
 - [ ] **Cybernetics needs fuller treatment** — currently only one catalog entry ("Grafted Steel"). Needs more concepts, and a decision on whether it needs its own acquisition rules (surgery, cost, installation risk) instead of standard Gift creation.
-- [ ] **Detail pass pending combat** (see Combat section above) — the whole 76-Gift catalog is written at a soft narrative level right now.
-- [ ] **Resisted-Roll-vs-Resolve triage**: every unwilling-target Gift needs a case-by-case pass to decide whether it uses the new Resolve default or genuinely needs a full Resisted Roll. Not started.
+- [x] **Detail pass complete, and Resisted-Roll-vs-Resolve triage resolved** (both 2026-07-15) — every Gift's 5 levels now have an Action cost, Range, Duration, and Resolution (Resolve default or flagged Resisted Roll, decided per-Gift as part of this same pass). See [gifts.md](../rules/gifts.md#resolved) and [premade-gifts.md](../rules/premade-gifts.md).
+- [x] **Grafted Steel removed, cybernetics now has no catalog representation** (2026-07-15) — catalog total is **75 Gifts**. Still open: whether cybernetics needs its own acquisition rules before it's added back. See [premade-gifts.md](../rules/premade-gifts.md#cybernetics--note).
 - ([gifts.md](../rules/gifts.md), [premade-gifts.md](../rules/premade-gifts.md))
 
 ## Not Yet Started
