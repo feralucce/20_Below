@@ -54,9 +54,9 @@ This gives every Attribute a matching defensive trait, without overloading any o
 
 ## Resonance — confirmed
 
-**Named 2026-07-14** (superseding the "Willpower" placeholder, which itself superseded Spark). Resonance is a **pool scored 1-10**, same scale as an Attribute or Power Level — not a binary checkbox, and not every spend costs the same amount. **Starting value and acquisition, confirmed 2026-07-14**: every character begins with **Resonance 1**, raised only with Freebie Points (at creation) or XP (afterward) — **3 Freebies per level**, same rate as Power Level and Perks. It gets no dedicated creation pool, same as Power Level.
+**Named 2026-07-14** (superseding the "Willpower" placeholder, which itself superseded Spark). Resonance is a **pool scored 1-20** (widened from 1-10 to 1-20, confirmed 2026-07-15 — Resonance backs *every* Gift activation plus its own spend menu, a wider footprint than a normal Attribute or Power Level, so it gets its own extended scale; starting value, regain formula, and existing spend costs below are all unchanged by the cap increase, see the note at the end of this section) — not a binary checkbox, and not every spend costs the same amount. **Starting value and acquisition, confirmed 2026-07-14**: every character begins with **Resonance 1**, raised only with Freebie Points (at creation) or XP (afterward) — **3 Freebies per level**, same rate as Power Level and Perks. It gets no dedicated creation pool, same as Power Level.
 
-**XP cost to raise Resonance during Advancement, confirmed 2026-07-14**: `current rating × 7` — matching Power Level exactly. Resonance is priced as a "meta" stat, not WoD's own cheap Willpower rate (×1): it gates **all** Gift activation and backs a 10-effect toolkit reaching well beyond Gifts, a scope closer to Power Level's than to a narrow resistance stat. It doesn't reach Attribute's ×9 because raising Resonance only grows *pool capacity* — every individual use still costs its own 1-3 points, and the pool refills slowly, so the always-on-bonus logic that justifies Attribute's premium doesn't fully apply here.
+**XP cost to raise Resonance during Advancement**: `current rating × 6` (**revised 2026-07-15**, down from ×7, to account for the wider 1-20 ceiling — climbing the same number of ranks now costs less per rank than Power Level's still-×7 rate, so a longer climb doesn't compound as steeply). Originally set at ×7 to match Power Level exactly (2026-07-14): priced as a "meta" stat, not WoD's own cheap Willpower rate (×1), since it gates **all** Gift activation and backs a 10-effect toolkit reaching well beyond Gifts. Still doesn't reach Attribute's ×9 because raising Resonance only grows *pool capacity* — every individual use still costs its own 1-3 points, and the pool refills slowly, so the always-on-bonus logic that justifies Attribute's premium doesn't fully apply here.
 
 ### Spending Resonance — confirmed
 
@@ -67,7 +67,7 @@ This gives every Attribute a matching defensive trait, without overloading any o
 | 1 | Grant yourself Advantage on one roll. |
 | 2 | Reroll after seeing the result. Can stack with Advantage, but if the first roll was already made at Advantage, using this on the *second* roll costs another Resonance point of its own. |
 | 1 | Cancel the effects of a critical failure, turning it into a normal failure. |
-| **X** | **Activate a Gift.** Every Gift costs Resonance to use — exact amount **not yet decided**, flagged below. |
+| **X** | **Activate a Gift.** Every Gift costs Resonance to use — cost scales with the Gift's own Level (1-5). **In active playtesting** (started 2026-07-15), not yet locked to a single formula — see below. |
 | 2 | When a hit would drop you a Health Level, spend a point to refill that Health Level instead of losing it. |
 | 1 | Stabilize automatically when dying — moves a character from Incapacitated back to Suffering. |
 | 1 | Gain an extra Action this round, **not** subject to the Multiple Actions penalty. Usable **once per round** only. |
@@ -90,8 +90,18 @@ This is a deliberate mix the old Spark menu never had: several of these are **de
 
 **Overflow** (confirmed, carried over from Spark): if an award would push a character above their maximum, they gain **Advantage on their next roll** instead, per the numeric [Advantage/Disadvantage](#advantage--disadvantage--confirmed) rule above (+1 to that roll's net).
 
+### Gift Activation Cost — in playtesting
+
+**Not yet locked to a single formula.** 2026-07-15 research pass compared several systems: Vampire/Werewolf/Changeling Discipline/Gift/Art costs are largely **flat** per activation regardless of dot level (dot rating gates scope, not cost — the closest structural match to how this game's own Gift Level already works); Hero System (END = Active Points ÷ 10) and Shadowrun (Drain = Force ÷ 2, floored) both scale cost directly with power level, but both are point-buy/energy-invested models rather than WoD-style discrete scope-gates. Rather than pick one on paper, **all three candidates go to the table**, trialed in order until one feels right:
+
+1. **`= Level` (1,2,3,4,5)** — try first. Steepest curve; a Level-5 Gift alone can cost more than any other single Resonance spend in the game.
+2. **`ceil(Level ÷ 2)` (1,1,2,2,3)** — try second. Keeps Gift activation inside the same 1-3 range as every other item on the spend menu above.
+3. **Flat 1, regardless of Level** — try third. Matches the WoD Discipline precedent most directly; Gift Level does all the differentiating work, cost does none.
+
+Whichever formula ships up playing well at the table (pacing, whether Resonance drains too fast/slow, whether high-Level Gifts feel appropriately gated) gets written back in here as confirmed. Until then, GM's call at the table on which of the three is currently being trialed.
+
 **Open questions**:
-- **Gift activation cost (the "X" above)** — not yet decided. A natural direction worth considering: scale it with the Gift's own Level (a Level-1 Gift costs less Resonance to fire than a Level-5 one), but this is flagged, not settled.
+- **Resonance's 1-20 rescale (2026-07-15)**: starting value (1), the regain formula (`max ÷ 4, round up`), and every existing spend cost above are all unchanged from the original 1-10 design — only the cap and the XP formula (now ×6, see above) moved. A pool that grows to 20 still drains proportionally slower per spend than it used to at a max of 10; whether that pacing shift is desirable, or whether the regain formula or spend costs should also be revisited to compensate, was explicitly deferred rather than decided.
 
 ## Character Capabilities
 

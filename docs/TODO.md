@@ -4,7 +4,13 @@ A consolidated view of every open question across the ruleset, pulled from each 
 
 This file is a **summary for thinking, not a source of truth** — the individual rule docs are canonical. If this list and a rule doc's own Open Questions ever disagree, trust the rule doc and update this file to match.
 
-## ⬆️ Pick up here next session (2026-07-13)
+## ⬆️ Pick up here next session (2026-07-15)
+
+**Resonance widened to 1-20**; XP multiplier revised to **current × 6** (down from ×7) to account for the wider cap — starting value, regain formula, and existing spend costs stay unchanged. See Advancement section below.
+
+**Gift activation cost in Resonance: going to playtest, not a paper decision** — all three candidates get trialed at the table in order: `= Level` (12345) first, then `ceil(Level÷2)` (11223), then flat 1. See Advancement section below and [core-mechanic.md](../rules/core-mechanic.md#gift-activation-cost--in-playtesting).
+
+## Previous session (2026-07-13)
 
 **Spark is resolved** *(superseded 2026-07-14 — Spark was eliminated and folded into [Willpower](../rules/core-mechanic.md#willpower--confirmed), see below)*, including overflow (already-full Spark gain converts to Advantage).
 
@@ -118,7 +124,7 @@ Split out from Character Creation above (2026-07-14) since it's a genuinely sepa
 | Attribute Descriptor (extra) | # descriptors × X | **1** |
 | Skill Specialty (extra) | # specialties × X | **1** |
 | New Perk | flat, by tier | **Tier × 3** (Minor 3 / Moderate 6 / Major 9) |
-| Resonance | current × X | **7** — matches Power Level; priced as a "meta" stat (gates all Gift use plus a broad toolkit) but below Attribute's ×9 since it only grows pool capacity, not an always-on bonus |
+| Resonance | current × X | **6** (revised 2026-07-15, down from 7, to account for the wider 1-20 cap) — priced as a "meta" stat (gates all Gift use plus a broad toolkit) but below Attribute's ×9 since it only grows pool capacity, not an always-on bonus |
 
 - [x] **XP cost per rank for Attributes/Skills/Perks/Gifts, resolved** (2026-07-14) — see table above and [core-mechanic.md](../rules/core-mechanic.md), [skills.md](../rules/skills.md#resolved), [gifts.md](../rules/gifts.md#resolved), [perks.md](../rules/perks.md#resolved).
 - [x] **XP award rate resolved: 5 per session** (2026-07-14), via a WoD/Pathfinder-blended category checklist (Attendance, Roleplaying, Heroism, Learning, Standout Moment — 1 XP each) plus separate Pathfinder-style Story Awards for major milestones. Derived from the fact that most of our per-category costs are direct WoD imports except Attribute (×9 vs. WoD's ×4) — reusing WoD's own 5 XP/session rate means everything WoD-derived advances at WoD's pace, and Attributes land 2.25× slower automatically. See [character-creation/overview.md](../character-creation/overview.md#advancement).
@@ -126,8 +132,9 @@ Split out from Character Creation above (2026-07-14) since it's a genuinely sepa
 - [x] **Spark eliminated, folded into Resonance** (named 2026-07-14, superseding an interim "Willpower" placeholder): a full cost-tiered spend menu (1-3 Resonance per effect: Advantage, reroll, cancel a crit-fail, refill a lost Health Level, auto-stabilize, a bonus Action, boost your own DoS or an NPC's DoF, force a GM reroll) replaces Spark's old flat 3-option menu entirely. See [core-mechanic.md](../rules/core-mechanic.md#resonance--confirmed).
 - [x] **Resonance regain triggers resolved: 6 total** (2026-07-14): full night's rest (max ÷ 4, rounded up — supersedes the earlier flat 1/session trickle), full refill between adventures, discretionary GM award for standout play, Compel a Flaw (Fate Core import, 1 Resonance for leaning into a GM-invoked Flaw complication), Critical Success (1 Resonance on a natural 1), and Ritual/deliberate downtime (2 Resonance for spending real scene time on meditation/prayer/attunement/training). See [core-mechanic.md](../rules/core-mechanic.md#regaining-resonance--confirmed).
 - [x] **Power Level and Resonance starting value + Freebie cost, resolved** (2026-07-14): both start at **1** at character creation, raised only with Freebie Points (**3/level**, at creation) or XP (afterward) — neither gets a dedicated creation pool. See [core-mechanic.md](../rules/core-mechanic.md#power-level) and [core-mechanic.md](../rules/core-mechanic.md#resonance--confirmed).
-- [x] **Resonance's XP-during-advancement multiplier resolved: current × 7** (2026-07-14), matching Power Level. See [core-mechanic.md](../rules/core-mechanic.md#resonance--confirmed).
-- [ ] **New (2026-07-14)**: **Gift activation cost in Resonance** — every Gift now costs Resonance to use, exact amount undecided. One direction floated: scale with the Gift's own Level.
+- [x] **Resonance's XP-during-advancement multiplier: current × 6** (revised 2026-07-15, down from the original ×7 set 2026-07-14, to account for the wider 1-20 cap below). See [core-mechanic.md](../rules/core-mechanic.md#resonance--confirmed).
+- [ ] **Gift activation cost in Resonance — now in active playtesting** (2026-07-15), not a paper decision. All three candidate formulas go to the table in order: **1) `= Level` (1,2,3,4,5)**, **2) `ceil(Level÷2)` (1,1,2,2,3)**, **3) flat 1** regardless of Level. Whichever plays best gets confirmed. See [core-mechanic.md](../rules/core-mechanic.md#gift-activation-cost--in-playtesting).
+- [x] **Resonance's scale widened from 1-10 to 1-20** (resolved 2026-07-15) — starting value, regain formula (`max ÷ 4, round up`), and existing spend costs (1-3) are all unchanged; only the cap and the XP multiplier (now ×6, see above) moved. See [core-mechanic.md](../rules/core-mechanic.md#resonance--confirmed).
 - ([character-creation/overview.md](../character-creation/overview.md))
 
 ## Skills
