@@ -172,17 +172,139 @@ costs deferred to the end of this pass per the user's instruction.
   for clarity (using Cunning Step also allows a free attack, once per scene). No Resonance
   cost — same always-on/reflexive pattern as Body as Weapon.
 
+- **Reckless Instinct** (Combat & Martial Techniques) — fully reviewed, continuing past
+  the prior stopping point. L1: surprise-immunity scoped explicitly to *mundane* ambush
+  (Gift/Perk-based ambushes are a separate, later immunity), replaced Advantage with a flat
+  **+3 DoS** on the first round's Initiative roll. L2: "All In" no longer costs an Action,
+  it's a free declared choice, and its Advantage now applies to *all* attacks that round,
+  not just one. L4 reworded to match L2's free-action-cost (was inconsistently still
+  costing an Action). L5 redesigned from scratch since L2's change broke its old text
+  (used to say triggering Reckless "costs a Free action instead of your whole turn," which
+  no longer meant anything once L2 made it free): now escalates the DoS bonus to **+5**
+  (completing the 1→3→5 convention) and removes the enemy's retaliatory Advantage
+  entirely — at max level, going Reckless stops being a real gamble.
+
+- **Undying Fury** (Combat & Martial Techniques) — surfaced the **self-contained Gifts**
+  design decision (now in flavor-writing-style.md): the old L1/L3 text leaned on
+  "fatigue-based Disadvantage" and "a sustain roll," neither of which is defined anywhere
+  in core-mechanic.md or combat.md. Rewritten so the Gift defines its own limits: **L1**
+  now costs 1 Resonance to enter a rage lasting **3 rounds**, and ties its immunity
+  directly to the real Health Level penalty table (ignores the -1/-3/-5 across-the-board
+  penalty unless Incapacitated) instead of a vague "fatigue" reference; **L2** unchanged
+  in substance, now explicitly scoped to the 3-round timer; **L3** removes that timer
+  (holds the whole scene, no roll/action/upkeep) instead of removing an undefined "sustain
+  roll"; **L4** keeps its once-per-scene cap (a first draft accidentally dropped it — don't
+  assume a change removes an existing limiter unless told to) and now costs 1 Resonance,
+  changing "ignore the hit" to "the container bottoms out at 1 HP instead of 0"; **L5**
+  unchanged. See TODO.md for the still-open sweep of other Gifts using the same undefined
+  "fatigue" or bare "Scene (sustained)" language (Second Wind, Undying Vigor, Trick of the
+  Light, Last Rites, Resonant Shatter, Borrowed Time, Frozen Instant).
+
+- **Untouchable** (Combat & Martial Techniques) — **rescoped entirely** from a dual
+  physical-evasion-and-mental-resistance Gift to a pure mental/Soul defense, per the user's
+  direction that a standalone physical-evasion Gift would be "too powerful and too limited
+  simultaneously" (base Dodge/Defense already cover physical evasion at the core-mechanic
+  level, no dedicated Gift needed). Resolution moved from Mind to Soul, matching
+  core-mechanic.md's own definition of Resolve's domain (fear, domination, charm,
+  corruption, possession). New unified mechanic: a flat **-1/-2/-3/-4/-5 DoS** penalty on
+  any Mind-affecting Gift used against you (one point per Gift Level, not the usual 1/3/5
+  step), plus outright immunity to Mind-affecting Gifts up to a level threshold that grows
+  **0 (L1) → 1 (L2) → 1 (L3) → 2 (L4) → 3 (L5)** — an attacker can still try past that
+  threshold by spending 1 Resonance, but the flat DoS penalty still applies even then.
+  Throw It Back (the reflect-an-intrusion ability) survives unchanged at L3. **Combat &
+  Martial Techniques is now fully reviewed.**
+
+- **Ember Touch** (Elemental & Energy Manipulation) — reviewed and later folded into
+  Elemental Manipulation, see below. Fully restructured with a dual
+  escalation track running through all 5 levels: (1) a defensive **-1/-2/-3/-4/-5 DoS**
+  penalty on fire-based attacks against you, paired with a harmless-flame size threshold
+  that grows fist → forearm → waist-high → short-of-a-bonfire → any size at all; and
+  (2) an offense track that now starts at **L3** instead of L4 — L1-2 have no attack at
+  all, L3 unlocks a touch-range charged strike (**Base +3**), L4 upgrades to hurling fire
+  at range (**Base +6**), L5 to conjuring flame directly at a target's location with no
+  throw needed (**Base +9**, spills across Health Levels like Ordnance). L1's sensing is
+  now an actual Mind + Perception roll instead of automatic/no-roll passive detection.
+
+- **Frostbound** (Elemental & Energy Manipulation) — restructured on the same dual-track
+  pattern as Ember Touch, with one difference the user flagged: cold scales by
+  **intensity, not size** (fire's fist/forearm/waist-high thresholds don't make sense for
+  cold). Harmless-cold threshold now uses concrete temperatures in both C and F, dropping
+  each level: **0°C/32°F → -18°C/0°F → -40°C/-40°F → -78°C/-109°F (dry-ice cold) → immune
+  at any intensity**. Same **-1/-2/-3/-4/-5 DoS** defensive penalty escalation, and the
+  same offense-starts-at-L3 structure (touch strike at L3, thrown at L4, conjured at a
+  target's location at L5).
+
+- **Radiant Burst** (Elemental & Energy Manipulation) — checked for a standalone darkness
+  Gift first (per the user's request); none exists, so darkness-creation was folded in as
+  the same light-control power run in reverse (blocking light from an area, not a separate
+  effect), per the user's own logic. Scaling dimension is **area radius** instead of
+  fire's object-size or cold's intensity, since that's the natural fit for light: Close →
+  Medium → a whole building floor by L4-5, same range for illuminating or blacking out a
+  space. Same **-1/-2/-3/-4/-5 DoS** defensive penalty escalation and offense-starts-at-L3
+  structure as Ember Touch and Frostbound. L1 sensing also converted to a real Mind +
+  Perception roll.
+
+- **Elemental Manipulation, added 2026-07-16.** After reviewing Ember Touch, Frostbound,
+  and Radiant Burst individually, the user pointed out that Ember Touch, Frostbound,
+  Stoneheart, Storm's Herald, Tidecaller, and Voltaic Pulse all shared the exact same
+  underlying structure (sense → minor manipulation → touch strike → thrown strike →
+  mastery, with the same DoS/Base-damage numbers), and asked to consolidate them into one
+  Gift with a Special Effect choice of element, matching the pattern already used for
+  Genius Loci and Chorus of Concord. Also folded fire and cold into a single "Temperature"
+  facet, on the logic that both are just the vibration of atoms sped up or slowed down.
+  Radiant Burst (light) stayed separate, per the user's call that light is its own thing.
+  **Elements available**: Earth (Body), Water (Body), Temperature (Soul), Air/Weather
+  (Soul), Electricity (Mind) — a character must repurchase the Gift separately for each
+  additional element. This drops the catalog from 62 Gifts to **57**. All cross-references
+  to the six absorbed Gifts were updated (Green Thumb's Weathersense note now points to
+  Elemental Manipulation's Air/Weather option). Ember Touch and Frostbound's individually
+  reviewed mechanics (the harmless-threshold escalation, the -1→-5 DoS defense track, the
+  offense-starts-at-L3 structure) became the template baked into the unified Gift.
+
+- **Fortune's Favor** (Fate, Luck & Probability) — L1 rewritten from pure flavor to a
+  bounded real effect (once per scene, one minor/no-real-stakes roll that would fail
+  becomes a bare success instead); L2's Advantage grant kept but its "Power Level + Soul"
+  resolution dropped, since granting Advantage isn't itself a contested roll. Same fix
+  applied to **L3 and L4**, which had the same leftover-roll mismatch: nothing in either
+  ability actually involves a roll (they directly modify an existing roll's result or
+  declare a coincidence true), so both are now "no roll, automatic" like L1/L2/L5. All of
+  L2-5 now cost Resonance directly: **1/2/3/5** across L2-5.
+
 ## ⏸️ SESSION SUSPENDED HERE 2026-07-16 — entry point for tomorrow
 
-Catalog order so far: **Biological & Shapeshifting is fully reviewed** (except Adaptive
-Flesh L2-5, blocked on the hostile-environment mechanic). **Combat & Martial Techniques**
-is in progress — Body as Weapon, Marked for the Hunt, and Opportunist's Edge are done.
+- **Fortune's Hand, merged 2026-07-16.** Fortune's Favor and Ill Omen collapsed into one
+  Gift with a choose-your-direction mechanic at every level (bless an ally/self, curse an
+  enemy), same numbers on both sides. **Fate, Luck & Probability is now fully reviewed** —
+  it contains just this one Gift. Catalog is now **56 Gifts**.
 
-**Pick up exactly here next session: [Reckless Instinct](../rules/premade-gifts.md)**
-(Combat & Martial Techniques) — presented to the user, no changes requested yet, review
-not yet started on it. After Reckless Instinct, the remaining order is: Undying Fury,
-Untouchable (finishes Combat & Martial Techniques), then Elemental & Energy Manipulation
-onward through the rest of the 15 categories.
+- **Truthsense, merged 2026-07-16.** User asked whether a lie-detection Gift already
+  existed before touching Radiant Face; Mind's Whisper (Mental & Psychic) already owned
+  it (Catch the Drift, No Distance No Deception). Rather than leave the thematic overlap
+  as a footnote, the user reframed both Gifts around a new unifying concept: the universe
+  already knows what's true, and this Gift resonates with that. Merged Radiant Face's full
+  5 levels and Mind's Whisper's full 5 levels down into one 5-level Gift (dropped the
+  outbound "send a thought" telepathy-broadcast capability from Mind's Whisper's old L3 as
+  redundant with the new receptive framing), moved to the **Mental & Psychic** category
+  (alphabetized after Silent Push), resolving on **Mind** throughout (not Soul, despite
+  Radiant Face's original Soul resolution — the user's call). Radiant Face's old slot in
+  Illusion & Concealment now just holds a redirect note. Iron Mind's old cross-reference to
+  Untouchable moved along with it. Catalog is now **55 Gifts**.
+
+Catalog order so far: **Biological & Shapeshifting is fully reviewed** (except Adaptive
+Flesh L2-5, blocked on the hostile-environment mechanic). **Combat & Martial Techniques,
+Elemental & Energy Manipulation, and Fate, Luck & Probability are all fully reviewed.**
+**Illusion & Concealment** now contains only Trick of the Light and Unseen (both already
+reviewed/mechanized from earlier passes, but neither has been through the monitored
+one-Gift-at-a-time review yet).
+
+**⏸️ PAUSED MID-GIFT 2026-07-16: pick up exactly here next session.**
+[**Trick of the Light**](../rules/premade-gifts.md) was displayed and one issue was
+flagged but not yet resolved: **L5's "Scene (sustained)" duration tag is undefined**, same
+problem Undying Fury hit earlier (see the self-contained-Gifts principle in
+flavor-writing-style.md) — nothing says what sustaining the illusion actually costs each
+round. Settle that first when resuming, then continue through the rest of Trick of the
+Light's levels, then Unseen (the only other Gift left in this category), then onward
+through the remaining categories.
 
 ## Not yet done
 

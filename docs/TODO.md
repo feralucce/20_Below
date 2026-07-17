@@ -6,6 +6,20 @@ This file is a **summary for thinking, not a source of truth** — the individua
 
 ## ⬆️ Pick up here next session (2026-07-15)
 
+**Design decision, 2026-07-16**: Gifts should be **self-contained** rather than leaning on
+an implied shared subsystem that was never actually written down. Surfaced when Undying
+Fury's old text referenced both "fatigue-based Disadvantage" and a "sustain roll," neither
+of which is defined anywhere in core-mechanic.md or combat.md. Rather than build a
+standalone fatigue/exhaustion chart or a universal "sustaining an effect" mechanic, each
+Gift now defines its own limits inline (Undying Fury's rewrite ties directly to the real
+Health Level penalty table instead, and gives its rage an explicit 3-round timer that L3
+removes). **Not fully swept yet**: other Gifts still use a bare "Scene (sustained)" duration
+tag with no inline definition of what sustaining requires — Trick of the Light L5, Last
+Rites L4, Resonant Shatter L4-5, Borrowed Time L5, Frozen Instant L5. Apply the same
+self-contained treatment to each when the monitored review reaches them. Second Wind and
+Undying Vigor's "fatigue-based Disadvantage" language has the same problem and should be
+revisited too, even though those Gifts were already reviewed.
+
 **Flagged 2026-07-16, not started**: compare Gift-granted natural-weapon damage tiers against
 the real [Weapon Base table](../rules/combat.md#damage--confirmed). Several Gifts now assign
 a natural weapon (claws, bite, hybrid form) a Base tier borrowed from the combat weapon-class
