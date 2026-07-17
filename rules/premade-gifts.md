@@ -123,155 +123,78 @@ You lead with instinct instead of thought when danger erupts. It's a gamble, and
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | **Already Tensing.** You can't be caught flat-footed by a surprise attack. Act with Advantage the instant danger erupts. | Free | Self | Instant | — (no roll, passive) |
-| 2 | **All In.** Once per round, go Reckless as an Action: Advantage on your next attack, but attacks against you gain Advantage too until your next turn. | Action | Self | Instant | Power Level + Body |
+| 1 | **Already Tensing.** You can't be caught flat-footed by a **mundane** surprise attack (an ordinary ambush, not a Gift- or Perk-based one). Gain **+3 DoS** on your Initiative roll in the first round of combat. | Free | Self | Instant | — (no roll, passive) |
+| 2 | **All In.** Once per round, choose to go Reckless: Advantage on **all** your attacks this round, but attacks against you gain Advantage too until your next turn. | Free | Self | Instant | Power Level + Body |
 | 3 | **First Every Time.** The surprise immunity now covers Gift- and Perk-based ambushes too, not just mundane ones. | Free | Self | Instant | — (no roll, passive) |
-| 4 | **The Gamble Pays.** Reckless's offense becomes a flat **+3 DoS** instead of Advantage, though the enemy still gets Advantage against you. | Action | Self | Instant | Power Level + Body |
-| 5 | **No Hesitation.** The bonus rises to **+5 DoS**, and triggering Reckless costs a Free action instead of your whole turn. | Free | Self | Instant | Power Level + Body |
+| 4 | **The Gamble Pays.** Reckless's offense becomes a flat **+3 DoS** instead of Advantage, though the enemy still gets Advantage against you. | Free | Self | Instant | Power Level + Body |
+| 5 | **No Hesitation.** The bonus rises to **+5 DoS**, and the enemy's retaliatory Advantage no longer applies — going Reckless is pure upside for you now. | Free | Self | Instant | Power Level + Body |
 
 #### Undying Fury
 Once your temper truly lights, something in you refuses to go down. Pain, fatigue, and injury all take a back seat to the fury carrying you forward.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | **Burn It Off.** Minor pain and fatigue stop imposing Disadvantage on you while your temper's up. | Free | Self | Scene | — (no roll, passive) |
-| 2 | **Rising Heat.** Enter a rage as a Free action: physical attacks against you suffer **-1 DoS**, and your own melee attacks gain **+1 DoS**, for the scene. | Free | Self | Scene | — (no roll, passive) |
-| 3 | **No Fade.** The rage holds at full strength for the whole scene. No sustain roll, no falling off partway through a long fight. | Free | Self | Scene | — (no roll, passive) |
-| 4 | **Fight Through It.** Both bonuses rise to **-3 / +3 DoS**. Once per scene, ignore a hit that would drop you a Health Level. | Free | Self | Scene | — (no roll, passive) |
+| 1 | **Burn It Off.** Spend **1 Resonance** to enter a rage: for **3 rounds**, ignore the roll penalties from Health Level loss entirely (Battered/Wounded/Suffering's -1/-3/-5), unless you're at Incapacitated. | Free | Self | 3 rounds | — (no roll, passive) |
+| 2 | **Rising Heat.** While raging, physical attacks against you suffer **-1 DoS**, and your melee attacks gain **+1 DoS**. | Free | Self | 3 rounds | — (no roll, passive) |
+| 3 | **No Fade.** The rage no longer fades after 3 rounds — it holds at full strength for the whole scene instead, no further roll, action, or upkeep needed. | Free | Self | Scene | — (no roll, passive) |
+| 4 | **Fight Through It.** Both bonuses rise to **-3 / +3 DoS**. Once per scene, spend **1 Resonance** when a hit would drop you a Health Level: instead, that container bottoms out at **1 HP** instead of 0, and you stay at your current tier. | Free | Self | Scene | — (no roll, passive) |
 | 5 | **Refuse to Fall.** Both bonuses rise to **-5 / +5 DoS**. While raging, no single hit can take you below 1 Health Level. | Free | Self | Scene | — (no roll, passive) |
 
 #### Untouchable
-**Merged with Iron Mind, 2026-07-16.** Harm has trouble landing on you. Whatever's coming, body or mind, tends to arrive a beat late or an inch wide.
+**Merged with Iron Mind, 2026-07-16; refocused to pure mental/Soul defense the same day.** Your will doesn't bend, and neither does anything that depends on it. Coercion, suggestion, domination, a mind trying to force its way into yours: all of it meets an iron core that doesn't give.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | **Half a Step Ahead.** Any attack or mental intrusion aimed at you suffers **-1 to its Degree of Success**. | Free | Self | Instant | — (no roll, passive) |
-| 2 | **Doesn't Stick.** Minor coercion, a passing suggestion or a low-grade compulsion, fails against you outright. | Free | Self | Instant | — (no roll, passive) |
-| 3 | **Throw It Back.** Once per scene, force an active mental intrusion already inside your head back out. | Action | Self | Instant | Resisted Roll: Power Level + Mind vs. the intruder |
-| 4 | **Barely There.** The penalty on attacks and intrusions against you rises to **-3 DoS**, and it now applies to area effects too, not just single targets. | Free | Self | Instant | — (no roll, passive) |
-| 5 | **Locked Door.** The penalty rises to **-5 DoS**. Body or mind, almost nothing finds its mark on you anymore. | Free | Self | Passive | — (no roll, passive) |
+| 1 | **Half a Step Ahead.** Any Gift used to affect your mind suffers a flat **-1 DoS**. | Free | Self | Instant | — (no roll, passive) |
+| 2 | **Doesn't Stick.** The penalty rises to **-2 DoS**, and you're now immune outright to any Mind-affecting Gift of **Level 1**, unless its user spends 1 Resonance to try anyway — the -2 DoS penalty still applies even then. | Free | Self | Instant | — (no roll, passive) |
+| 3 | **Throw It Back.** The penalty rises to **-3 DoS**. Once per scene, force an active mental intrusion already inside your head back out. | Action | Self | Instant | Resisted Roll: Power Level + Soul vs. the intruder |
+| 4 | **Barely There.** The penalty rises to **-4 DoS**, and the immunity now covers Mind-affecting Gifts up to **Level 2**. | Free | Self | Instant | — (no roll, passive) |
+| 5 | **Locked Door.** The penalty rises to **-5 DoS**, and the immunity now covers Mind-affecting Gifts up to **Level 3**. | Free | Self | Passive | — (no roll, passive) |
 
 ### Elemental & Energy Manipulation
 
-#### Ember Touch (fire)
-Fire treats you like kin. Flame bends toward your will the way it bends toward fuel and air.
+#### Elemental Manipulation
+**Added 2026-07-16**, consolidating Ember Touch, Frostbound, Stoneheart, Storm's Herald, Tidecaller, and Voltaic Pulse into one Gift, since all six shared the same underlying structure. The world is built of a few basic forces, and one of them listens to you like kin.
+
+**Special Effect note**: choose one element when you take this Gift — **Earth** (Body), **Water** (Body), **Temperature** (Soul — fire and cold are the same phenomenon, the vibration of atoms sped up or slowed down, so one choice covers both), **Air/Weather** (Soul), or **Electricity** (Mind). The mechanic below is identical regardless of element; only the flavor and the paired Attribute change to match. To control a second element, take this Gift again as a separate purchase — one element per purchase.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | **Know Fire.** A guttering candle, a dying ember, the ghost-warmth of a fire long put out: all of it plain to you at a glance. | Free | Close | Instant | — (no roll, passive) |
-| 2 | **Coax the Flame.** A flame flares, dims, bends around a corner, or catches on something already ready to burn, at your suggestion. | Action | Close | Instant | Power Level + Soul |
-| 3 | **Kindle and Hold.** Flame blooms in your open palm from nothing and holds as long as you concentrate: a torch you never have to relight. | Action | Self | Scene | Power Level + Soul |
-| 4 | **Burning Strike.** Fire leaves your hand as a real attack, or shoves an already-raging blaze somewhere else entirely. Deals damage as a Martial weapon (**Base +6**). | Action | Close | Instant | Power Level + Soul vs. Defense |
-| 5 | **Wildfire's Master.** Bend an existing fire's front, starve its heart, or snuff it dead in an instant. Conjure a blast at devastating scale instead: **Base +9**, able to spill across Health Levels like Ordnance. | Action | Medium | Instant | Power Level + Soul vs. Defense |
-
-#### Frostbound (cold/ice)
-Winter never really left you. Cold and ice answer to something in your blood.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | **Read the Ice.** How long it's held its shape, how deep the cold runs, whether it's natural or something else's doing: ice tells you its story on contact. | Free | Close | Instant | — (no roll, passive) |
-| 2 | **Bite the Air.** The air around you picks up a cold it didn't have a moment ago, and a thaw already underway slows to a crawl at your say-so. | Action | Close | Instant | Power Level + Soul |
-| 3 | **Lock It Down.** Standing water stiffens and locks at your command. A bare surface goes slick with ice thick enough that anyone crossing it suffers Disadvantage on the attempt. | Action | Close | Instant | Power Level + Soul |
-| 4 | **Flash Freeze.** Cold pours off you hard enough to freeze a target solid where they stand: their Move drops to 0 until they break free with a Resisted Roll (their Body vs. your Power Level + Soul). If you'd rather hurt than hold, it deals damage as a Martial weapon instead (**Base +6**). | Action | Close | Instant | Power Level + Soul vs. Defense |
-| 5 | **Winter's Reach.** Lock a room in ice thick enough to seal every door, or thaw one instantly with a thought. Turned on a person, the freezing blast deals **Base +9**. | Action | Medium | Instant | Power Level + Soul vs. Defense |
+| 1 | **Elemental Sense.** Roll Mind + Perception to read your element's condition nearby: a hollow in the earth, water's purity and depth, a storm still hours off, a live wire behind a wall, a fire's warmth or winter's bite, all plain to you on a success. A mild, harmless dose of your element doesn't affect you at all, no roll needed. Any attack made of your element against you suffers **-1 DoS**. | Free | Close | Instant | Mind + Perception |
+| 2 | **A Word to It.** Small, exact adjustments to your element within Close range: reshape loose earth, nudge a current, coax warmth or cold, stir a breeze, spark a device. The harmless threshold grows and the defensive penalty rises to **-2 DoS**. | Action | Close | Instant | Power Level + your element's Attribute |
+| 3 | **It Answers, and a Charged Touch.** A real, sustained effect suited to your element: a wall of raised earth (grants Advantage to anyone using it as cover), a redirected stream, a held flame or frost in your palm, a localized gust, a live charge in your grip. A charged touch also deals damage as a Light weapon (**Base +3**). The defensive penalty rises to **-3 DoS**. | Action | Touch | Instant | Power Level + your element's Attribute vs. Defense |
+| 4 | **Force of It, Hurled.** A forceful, ranged application of your element at a target: broken stone, a slammed current, a hurled bolt of fire, cold, or lightning, a knockback gust. Deals damage as a Martial weapon (**Base +6**). The defensive penalty rises to **-4 DoS**. | Action | Close | Instant | Power Level + your element's Attribute vs. Defense |
+| 5 | **Its Mastery.** Command your element at structure-scale magnitude: conjure it directly at a target's location (**Base +9**, able to spill across Health Levels like Ordnance), or reshape, collapse, or unleash it across a wide area. Your element never harms you again, at any scale, and the defensive penalty holds at **-5 DoS**. | Action | Medium | Instant | Power Level + your element's Attribute vs. Defense |
 
 #### Radiant Burst (light/energy)
 Light gathers to you the way it gathers to any source. The source, in this case, is you, and the light knows it.
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | **Steady Light.** A soft glow rises off your skin or gathers in your palm, entirely under your control. A lantern that never runs out. | Free | Self | Scene | — (no roll, passive) |
-| 2 | **Bend the Light.** Light in a room bends to your intent: brighter, dimmer, gone entirely, all with a thought. | Action | Close | Instant | Power Level + Soul |
-| 3 | **Flash.** A flash bursts from you bright enough to blind for a moment (the target suffers Disadvantage on their next roll), or a beam bright enough to signal clean across a valley. | Action | Medium | Instant | Power Level + Soul vs. Defense |
-| 4 | **Cutting Beam.** Light leaves your hands as a real attack, focused enough to burn skin or cut through what it touches. Deals damage as a Martial weapon (**Base +6**). | Action | Close | Instant | Power Level + Soul vs. Defense |
-| 5 | **Blinding Wave.** Unleash a wave bright enough to blind a crowd outright (Disadvantage on their next roll, all at once), or hold a beam steady enough to cut through steel: **Base +9**. | Action | Medium | Instant | Power Level + Soul vs. Defense |
-
-#### Stoneheart (earth)
-The ground under your feet has never really been separate from you. Earth and stone shift, hold, and yield according to something closer to conversation than command.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | **Ground Truth.** A hollow beneath the soil, a crack running through bedrock: the ground under your feet tells you what it's made of and how stable it is. | Free | Self | Instant | — (no roll, passive) |
-| 2 | **A Word to the Earth.** Loose soil firms into packed earth at your touch, or firm ground goes soft and yielding. Small, exact adjustments. | Action | Touch | Instant | Power Level + Body |
-| 3 | **Raise and Seal.** Raise a wall of packed dirt where there was none, or seal a crack in stone shut as though it had never opened. A raised wall grants Advantage to anyone using it as cover. | Action | Close | Instant | Power Level + Body |
-| 4 | **Break the Earth.** A real mass of stone moves at your will, or shatters outright, enough to open a path or bring one down. Hurled at a target, it deals damage as a Martial weapon (**Base +6**). | Action | Close | Instant | Power Level + Body vs. Defense |
-| 5 | **Foundation's Will.** Raise or collapse a structure's worth of earth and stone in a single act of will. Directed at a person instead, it deals **Base +9**. | Action | Medium | Instant | Power Level + Body vs. Defense |
-
-#### Storm's Herald (wind/lightning/weather)
-The sky above you is never entirely neutral. Wind, rain, and lightning lean a little closer to whatever you're feeling, ready to answer if you ask.
-
-*Checked against [Voltaic Pulse](#voltaic-pulse-electricity), 2026-07-16: both touch "lightning," but not the same capability. This Gift's lightning is weather, summoned as part of a wider storm, needs open sky, and answers to Soul. It can't reach a circuit through a wall or ride a wire indoors. Kept separate.*
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | **Weather Sense.** A shift in pressure, a change in the wind, a storm hours off that no one else has noticed yet: the sky tells you its plans before the first cloud rolls in. | Free | Self | Scene | — (no roll, passive) |
-| 2 | **Restless Wind.** A still afternoon picks up a breeze that wasn't there a moment ago, small and local, entirely yours to shape. | Action | Close | Instant | Power Level + Soul |
-| 3 | **Called Down.** You reach up and pull down what wasn't building: a hard gust from nowhere, a sudden downpour, or a single crack of lightning out of a clear sky. Aimed at a target, the bolt deals damage as a Light weapon (**Base +3**). | Action | Medium | Instant | Power Level + Soul vs. Defense |
-| 4 | **The Storm Holds.** A real storm gathers at your call and holds: wind, rain, and lightning that don't dissipate, aimable like a weapon for as long as it lasts. A bolt aimed at a target deals **Base +6**. | Action | Long | Scene | Power Level + Soul vs. Defense |
-| 5 | **Write on the Sky.** The sky over a significant stretch of ground is yours to write on: its path, its intensity, whether it rages or breaks. A bolt aimed at a target now deals **Base +9**. | Action | Long | Scene | Power Level + Soul vs. Defense |
-
-#### Tidecaller (water)
-Water moves for you the way it moves for the moon. It was always going to answer, whether it's a puddle or the open sea.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | **Water's Voice.** Its purity, its current, its depth, its motion: water speaks to you before you touch it, even from well out of sight. | Free | Medium | Instant | — (no roll, passive) |
-| 2 | **A Suggestion to the Current.** A puddle ripples without wind. A stream's flow bends a little at your suggestion. Not commands yet, just nudges, but water listens. | Action | Close | Instant | Power Level + Soul |
-| 3 | **Water Answers.** A real volume of water moves because you told it to: a stream redirected, a wave raised in a still pool. Turned against a person, contest it as a Trip/Shove to knock them down or push them back. | Action | Close | Instant | Resisted Roll: Power Level + Soul vs. the target |
-| 4 | **The Current Bends.** A strong current bends to your will, or a localized flood rises where you need it. Slammed directly into a target, it deals damage as a Martial weapon (**Base +6**). | Action | Medium | Instant | Power Level + Soul vs. Defense |
-| 5 | **The Sea Obeys.** Shape a wave, hold back a flood, or part standing water clean to the bottom. Turned into a weapon, the wave deals **Base +9**. | Action | Long | Instant | Power Level + Soul vs. Defense |
-
-#### Voltaic Pulse (electricity)
-Current runs through the world in more places than most people notice, and it all speaks a language you understand natively.
-
-*Checked against [Storm's Herald](#storms-herald-windlightningweather), 2026-07-16: both touch "lightning," but not the same capability. This Gift is a precise current delivered by touch or along a conductor, wire, water, rebar, indoors or out, no sky required, and answers to Mind. It can't call a bolt down from a clear sky. Kept separate.*
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | **Live Current.** Live wiring behind a wall, the charge building in a storm cloud, a battery's last dregs: current hums to you before you see its source. | Free | Close | Instant | — (no roll, passive) |
-| 2 | **Controlled Spark.** A spark jumps from your fingertip, controlled and precise: a jolt to startle, a static kiss to drain or top off something small. | Action | Touch | Instant | Power Level + Mind |
-| 3 | **Real Jolt.** A real jolt leaves your hand, enough to fry a simple circuit or drop someone to their knees. Deals damage as a Light weapon (**Base +3**). | Action | Touch | Instant | Power Level + Mind vs. Defense |
-| 4 | **Conductive Path.** Send a serious discharge through a target directly, or along whatever conductive path is lying around: wire, water, rebar, all a route to you now. Deals **Base +6**. | Action | Close | Instant | Power Level + Mind vs. Defense |
-| 5 | **Stop a Heart.** A building's power dies at your word, or a discharge leaves your hands at lethal scale: **Base +9**, able to spill across Health Levels like Ordnance. | Action | Medium | Instant | Power Level + Mind vs. Defense |
+| 1 | **Steady Light.** Roll Mind + Perception to read an area's lighting: how bright, how dark, any hidden source, plain to you on a success. A soft glow or dimming under your control, entirely personal, a lantern that never runs out. Any light-based attack against you (a flash, a blinding beam) suffers **-1 DoS**. | Free | Self | Scene | Mind + Perception |
+| 2 | **Bend the Light.** Light in a Close-range area bends to your intent: brighter, dimmer, or blocked from entering at all, plunging the space into real darkness. Defensive penalty rises to **-2 DoS**. | Action | Close | Instant | Power Level + Soul |
+| 3 | **Flash and Focus.** A flash bursts from you bright enough to blind for a moment (Disadvantage on the target's next roll), or you black out a Medium-range area entirely, dark enough that anyone inside needs their own light to see. A charged touch of focused light deals damage as a Light weapon (**Base +3**). Defensive penalty rises to **-3 DoS**. | Action | Touch (or Medium, for the blackout) | Instant | Power Level + Soul vs. Defense |
+| 4 | **Cutting Beam.** Light leaves your hands as a real attack at range, focused enough to burn skin or cut through what it touches. Deals damage as a Martial weapon (**Base +6**). The area you can light or black out grows to a whole building floor. Defensive penalty rises to **-4 DoS**. | Action | Close | Instant | Power Level + Soul vs. Defense |
+| 5 | **Blinding Wave, Absolute Dark.** Unleash a wave bright enough to blind a crowd outright, all at once, or plunge a comparable area into absolute darkness nothing can see through without its own light source. A conjured beam at a target's location deals **Base +9**. Defensive penalty holds at **-5 DoS**. | Action | Medium | Instant | Power Level + Soul vs. Defense |
 
 ### Fate, Luck & Probability
 
-#### Fortune's Favor
-**Merged with Twist of Fate, 2026-07-16.** Luck has always had a soft spot for you. Sometimes it's raw probability tipping your way; sometimes it's the right coincidence landing at the right second. Either way, it's a real, persistent lean in your direction when it matters.
+#### Fortune's Hand
+**Merged Fortune's Favor and Ill Omen, 2026-07-16** — luck bending your way and bad luck landing on someone else were always the same coin, just read from different sides. (Also absorbed Twist of Fate into Fortune's Favor earlier the same day, before that merge.)
 
 | Level | Capability | Action | Range | Duration | Resolution |
 |---|---|---|---|---|---|
-| 1 | **A Beat of Warning.** The light turns green, the coin lands right, the dropped item bounces somewhere convenient. You feel a coincidence coalescing a beat before it lands. | Free | Self | Scene | — (no roll, passive) |
-| 2 | **A Small Lean.** Once per scene, grant yourself Advantage on one roll, or conjure a minor coincidence that grants an ally Advantage instead. | Action | Self | Instant | Power Level + Soul |
-| 3 | **Pull Through.** Once per scene, turn a roll (yours or an ally's) into a real success by adding **+3 DoS** after seeing the result, or force a useful coincidence into being: the right door already unlocked, the right distraction, right on cue. | Action | Close | Instant | Power Level + Soul |
-| 4 | **A Real Stroke.** Once per scene, bend a significant outcome your way with **+5 DoS** to a roll after it's made, or arrange a real stroke of luck, the right person, the right item, with no roll needed at all. | Action | Medium | Instant | Power Level + Soul |
-| 5 | **Fate Rewritten.** Once per session, force a single roll, yours, an ally's, or an enemy's, into an automatic critical success or failure as needed. | Action | Medium | Instant | — (no roll, automatic) |
+| 1 | **Felt Coming.** Once per scene, choose one: turn a minor, incidental roll (yours or an ally's) that would fail into a bare success, or curdle an enemy's minor incidental success into a failure instead. Either way, you feel it coming before it lands. | Free | Self/Close | Instant | — (no roll, automatic) |
+| 2 | **A Small Push.** Once per scene, spend **1 Resonance** to grant Advantage to yourself or an ally on their next roll, or impose Disadvantage on an enemy's next roll instead. | Action | Close | Instant | — (no roll, automatic) |
+| 3 | **Pull Through, Curdled.** Once per scene, spend **2 Resonance** to shift a roll's result by **3 DoS** after seeing it, in your chosen direction: your favor for yourself or an ally, against an enemy. Or force a useful coincidence into being, or curdle a harmful one onto someone else. | Action | Close | Instant | — (no roll, automatic) |
+| 4 | **A Real Stroke, A Genuine Streak.** Once per scene, spend **3 Resonance** for one of: **+5 DoS** to a roll after it's made in your favor, an arranged stroke of luck for yourself or an ally, or a full scene of Disadvantage laid onto one enemy. | Action | Medium | Instant/Scene (extended) | — (no roll, automatic) |
+| 5 | **Fate Rewritten.** Once per session, spend **5 Resonance** to force a single roll, yours, an ally's, or an enemy's, into an automatic critical success or failure, whichever you choose. | Action | Medium | Instant | — (no roll, automatic) |
 
-#### Ill Omen
-Fortune's soft spot for you has a mirror image. You have a knack for making bad luck land on someone else, right when it counts.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | **Felt Coming.** You can feel it on someone before it happens: a run of bad luck circling, waiting for its moment to land. | Free | Close | Instant | — (no roll, passive) |
-| 2 | **A Small Push.** Once per scene, impose Disadvantage on a single roll someone else is about to make. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 3 | **Curdled Success.** Once per scene, turn a target's roll that would have succeeded into a failure with **-3 DoS** after seeing the result. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-| 4 | **A Genuine Streak.** A target carries Disadvantage on every roll for the rest of the scene. | Action | Close | Scene (extended) | Power Level + Soul vs. Resolve |
-| 5 | **Bad Luck, Made Personal.** Once per session, force a single roll of a chosen target's into an automatic critical failure. | Action | Close | Instant | Power Level + Soul vs. Resolve |
-
-*Note: decision-outcome reading lives in [Second Sight](#second-sight-clairvoyanceprecognition--decision-reading) (Mental & Psychic) — the old separate "Threadreader" entry was merged into it 2026-07-16. Coincidence-engineering lives entirely in [Fortune's Favor](#fortunes-favor) above — the old separate "Twist of Fate" entry was merged into it the same day.*
+*Note: decision-outcome reading lives in [Second Sight](#second-sight-clairvoyanceprecognition--decision-reading) (Mental & Psychic) — the old separate "Threadreader" entry was merged into it 2026-07-16. Coincidence-engineering lives entirely in [Fortune's Hand](#fortunes-hand) above — the old separate "Twist of Fate" entry was merged into Fortune's Favor the same day, before Fortune's Favor and Ill Omen merged into this Gift.*
 
 ### Illusion & Concealment
 
-#### Radiant Face
-Strangers read you as honest before you've said a word. It's a natural counterweight to deception and darkness alike.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | **Gives You Away.** People can tell, on some instinctive level, when you mean what you're saying. | Free | Self | Passive | — (no roll, passive) |
-| 2 | **A Calming Glow.** A faint, calming glow rises when you want to be seen as trustworthy. Nothing overt, just a warmth people register without noticing why. | Action | Self | Scene | — (no roll, passive) |
-| 3 | **Hard to Lie To.** Lying to your face becomes difficult: the words catch, the nerve falters, something in your presence resists the deception. | Free | Close | Scene | Power Level + Soul vs. Resolve |
-| 4 | **Recoils on Instinct.** A minor malevolent or deceptive presence recoils from you, without you having to do anything but be there. | Free | Close | Instant | Power Level + Soul vs. Resolve |
-| 5 | **A Force for Truth.** Your presence alone can expose a lie, settle a crowd's temper, or push back something genuinely dark. | Action | Medium | Instant | Power Level + Soul vs. Resolve |
+*Note: Radiant Face was merged into [Truthsense](#truthsense) (Mental & Psychic) 2026-07-16, along with Mind's Whisper — both were about perceiving or compelling truth, just from different angles.*
 
 #### Trick of the Light
 What people see isn't always what's actually there. You have a subtle, growing talent for putting something else in front of their eyes instead.
@@ -375,21 +298,6 @@ Electronics were never truly closed systems to you. Circuits and code have a rhy
 | 4 | **Walk the Network.** A complex networked system stops being a wall of code and becomes a space you move through, navigating and rewriting it as naturally as walking a hallway. | Action | Long | Scene | Power Level + Mind |
 | 5 | **All Yours at Once.** A building's systems, a fleet of devices, an entire network: scale stops being a limit, all of it yours to command at once. | Action | Long | Scene | Power Level + Mind |
 
-#### Mind's Whisper (telepathy / hyper-perception / spirit confidant)
-**Merged with Read the Room, 2026-07-16.** Other minds have never been entirely closed books to you.
-
-**Special Effect note** (same as [Bulwark](#bulwark-damage-resistance--toughness)): the mechanic below is fixed, but the in-fiction source is genuinely open — literal telepathy, superhuman powers of observation and inference, or an actual spirit that whispers secrets in your ear are all equally valid, chosen when you take this Gift. The GM may let the source matter narratively (a spirit confidant can be silenced or banished; raw perception can't) without touching the numbers.
-
-| Level | Capability | Action | Range | Duration | Resolution |
-|---|---|---|---|---|---|
-| 1 | **Read the Room.** Tension, deception, a hidden agenda: a mind nearby registers to you the way a lit window registers in a dark street, its general mood plain even through a closed door. | Free | Close | Instant | — (no roll, passive) |
-| 2 | **Catch the Drift.** Unguarded thoughts drift off a nearby mind like heat off pavement. In a conversation, you know who's actually running things and who's lying, usually before they finish their first sentence. | Action | Close | Instant | Power Level + Mind |
-| 3 | **Mind to Mind.** A thought or image leaves your mind and lands whole in someone else's, no words needed. Against someone actively hiding their real goal, you piece it together from what they do instead of what they say. | Action | Close | Instant | Power Level + Mind vs. Resolve |
-| 4 | **No Distance, No Deception.** Distance stops mattering: hold a real, two-way silent conversation with someone you can't see. A gifted liar's seams show to you either way, even when they shouldn't. | Action | Long | Scene | Power Level + Mind |
-| 5 | **Once Touched, Never Lost.** A mind that's touched yours is never entirely out of reach again: find it across any distance and read past the surface to what's actually felt underneath. | Action | Self (target: anyone met before) | Instant | Power Level + Mind vs. Resolve |
-
-*Note: mental resistance lives entirely in [Untouchable](#untouchable) (Combat & Martial Techniques) — the old separate "Iron Mind" entry was merged into it 2026-07-16.*
-
 #### Second Sight (clairvoyance/precognition & decision-reading)
 **Merged with Threadreader, 2026-07-16.** Time and distance are more porous for you than for most. What starts narrow — a lean on one small choice — widens with practice into glimpses of anything distant or significant, whether or not you go looking for it.
 
@@ -413,6 +321,19 @@ Your will reaches past your own hands. Objects move because you decided they sho
 | 5 | **Total Control.** Hold several things aloft at once, or something massive, all under total, effortless control. The force-strike option now deals **Base +9**. | Action | Medium | Instant | Power Level + Mind vs. Defense |
 
 *Note: reading and moving emotion lives entirely in [Chorus of Concord](#chorus-of-concord-empathic--emotional-influence) (Social & Emotional) — the old separate "Borrowed Feeling" entry was merged into it 2026-07-16.*
+
+#### Truthsense
+**Merged Radiant Face and Mind's Whisper, 2026-07-16.** The universe already knows what's true. Somewhere behind the noise of what people say and want you to believe, the actual shape of things resonates, faint but real, and you're tuned to hear it.
+
+| Level | Capability | Action | Range | Duration | Resolution |
+|---|---|---|---|---|---|
+| 1 | **Reads True.** You instinctively know when someone means what they're saying, and a mind nearby's general state, tension, deception, a hidden agenda, registers to you the moment you're near them, even through a closed door. | Free | Close | Instant | — (no roll, passive) |
+| 2 | **A Trustworthy Resonance, A Caught Lie.** A faint warmth rises when you want to be seen as trustworthy, no argument, just people feeling the truth of you. In conversation, you know who's actually running things and who's lying, usually before they finish their first sentence. | Action | Close | Instant | Power Level + Mind |
+| 3 | **Nothing Hidden.** Lying to your face becomes difficult: the words catch, the nerve falters. At the same time, an intention someone's actively hiding comes into focus, pieced together from what they do rather than what they say. | Free | Close | Scene | Power Level + Mind vs. Resolve |
+| 4 | **No Distance, No Deception.** Distance stops mattering: hold a real, two-way silent exchange with someone you can't see, and a gifted liar's seams show to you either way. A malevolent or deceptive presence recoils from you on instinct, without you doing anything but being there. | Action | Long | Scene | Power Level + Mind vs. Resolve |
+| 5 | **A Force for Truth.** Your presence alone can expose a lie, settle a crowd's temper, or push back something genuinely dark. Reach out to a mind that's touched yours before, across any distance, and read past the surface to what's actually felt underneath. | Action | Medium | Instant | Power Level + Mind vs. Resolve |
+
+*Note: mental resistance lives entirely in [Untouchable](#untouchable) (Combat & Martial Techniques) — the old separate "Iron Mind" entry was merged into it 2026-07-16.*
 
 ### Movement & Spatial
 
@@ -488,7 +409,7 @@ Gravity's hold on you has always been a little negotiable. The more you practice
 | 4 | **A Group Answers.** A group of animals calms or rallies at your communication alone, no treats or commands needed. A small group answers a call together and briefly does roughly what you ask. | Action | Close | Scene | Power Level + Soul |
 | 5 | **No Barrier Left.** Virtually any animal understands you fluently, the barrier between species gone. A significant number of animals from the surrounding area answer your call at once, under your command for as long as it lasts. | Action | Long | Scene | Power Level + Soul |
 
-*Note: weather-sensing and weather-command live entirely in [Storm's Herald](#storms-herald-windlightningweather) (Elemental & Energy Manipulation) — the old separate "Weathersense" entry was merged into it 2026-07-16, since the two reached the same end state (sense weather coming, then command it).*
+*Note: weather-sensing and weather-command live in [Elemental Manipulation](#elemental-manipulation) (Elemental & Energy Manipulation) as its Air/Weather Special Effect option — the old separate "Weathersense" entry was merged into "Storm's Herald" 2026-07-16, which was itself folded into Elemental Manipulation the same day.*
 
 #### Genius Loci (territorial bond)
 **Merged with City's Own, 2026-07-16.** Batman and Gotham. Spider-Man and New York. A druid and their grove. A bond with a place, not blood or oath, that runs just as deep, whatever kind of place it is.
@@ -655,7 +576,7 @@ A promise made to you is never as easy to walk away from as an ordinary promise.
 | 4 | **Hold and Rally.** Take hold of a specific, strong emotion directly, or help two willing people mend what's broken between them. A crowd's mood bends to you deliberately, and a group on the edge of breaking finds its nerve because you gave it one. | Action | Close/Medium | Instant/Scene | Power Level + Soul vs. Resolve |
 | 5 | **Breaks Against You.** A mob's temper breaks against you like a wave against a seawall. Calm a crowd outright, forge consensus out of a room ready to tear itself apart, or override one resistant person's emotional state entirely, if only for a moment. | Action | Medium | Scene | Power Level + Soul vs. Resolve |
 
-*Note: reading people/rooms lives entirely in [Mind's Whisper](#minds-whisper-telepathy--hyper-perception--spirit-confidant) (Mental & Psychic) — the old separate "Read the Room" entry was merged into it 2026-07-16.*
+*Note: reading people/rooms lives entirely in [Truthsense](#truthsense) (Mental & Psychic) — the old separate "Read the Room" entry was merged into "Mind's Whisper" 2026-07-16, which was itself folded into Truthsense the same day.*
 
 #### Glamour (uncanny enchantment)
 **Merged with Silver Tongue and reframed, 2026-07-16; absorbed part of Commanding Presence the same day** (an order followed instantly, and obedience against instinct, belong here; the rest of Commanding Presence went to [Chorus of Concord](#chorus-of-concord-empathic--emotional-influence)). This isn't persuasion and it isn't command: no argument is won, no order given real weight. It's an otherworldly, faintly unsettling pull that people feel around you and can't quite explain, closer to fae enchantment than to charisma.

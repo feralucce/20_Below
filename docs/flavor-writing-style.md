@@ -65,6 +65,15 @@ not an invented one-off subsystem.
   (the [1/3/5 DoS/DoF bonus-penalty steps](../rules/core-mechanic.md#degree-of-success--degree-of-failure),
   Advantage/Disadvantage, Soak, Resisted Rolls, Defense/Resolve) over a bespoke number or
   subsystem unique to one Gift.
+- **Make each Gift self-contained, added 2026-07-16.** Don't reference an implied shared
+  subsystem that hasn't actually been written down anywhere ("fatigue-based Disadvantage,"
+  "a sustain roll," a bare "Scene (sustained)" duration with no inline definition of what
+  sustaining costs). Surfaced when Undying Fury's old text leaned on two mechanics neither
+  of which existed in core-mechanic.md or combat.md. If a Gift needs a timer, a fade
+  condition, or an upkeep cost, define it inline in that Gift's own text (Undying Fury's
+  rewrite gives its rage an explicit 3-round timer and ties its fatigue-immunity directly
+  to the real Health Level penalty table) rather than gesturing at a subsystem that would
+  need its own separate design pass.
 - **Check the finished entry against the 6 style rules above** before moving on, same
   requirement as the prose-only pass.
 - **Update [gift-review-progress.md](gift-review-progress.md) after each Gift** is
