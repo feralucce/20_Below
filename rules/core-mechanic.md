@@ -22,6 +22,14 @@ Separately, that same score also generates a **pool of points equal to the Attri
 
 **Sub-stats never affect whether a roll succeeds** — only the Attribute + Difficulty roll (below) determines pass/fail. Sub-stats instead **add to the effect of a success** (e.g. more points in Damage means a landed hit does more; more points in Healing means a successful recovery restores more). This keeps success/failure entirely on one roll, with sub-stats purely shaping the magnitude of what happens once you've already succeeded.
 
+### Sub-Stat Descriptors
+
+Carried forward from v1's Attribute Descriptors (see [archive/v1/rules/core-mechanic.md](../archive/v1/rules/core-mechanic.md#descriptors--confirmed)), but rehomed one level down: **for every point a character allocates to a sub-stat, they gain one Descriptor** — a short player-chosen word or phrase capturing one specific flavor of that sub-stat for this character. E.g. 3 points in Soak might yield *Iron-skinned, Padded, Unyielding* — three distinct ways the character shrugs off harm, not three copies of the same idea.
+
+Descriptors are **free at character creation** (no separate cost beyond the point that earns them) and **fixed once chosen**, same as v1. How a character later gains additional Descriptors without raising a sub-stat, if that path exists at all, is still open — see [design-log.md](../docs/design-log.md#open-questions).
+
+Descriptors are the concrete hook a player points to when [arguing a Skill pairing](skills.md#skills-are-not-attribute-locked) — grounding "I'm using Fire here because I'm being *Ruthless*" in an established character fact instead of an improvised justification each time.
+
 ## Resolution
 
 **Target number** = Attribute + Difficulty.
