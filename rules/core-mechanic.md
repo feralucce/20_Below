@@ -44,3 +44,11 @@ Target number range: **2** (Attribute 1 + Difficulty 1) to **20** (Attribute 10 
 
 - **Natural 1** — critical success.
 - **Natural 20** — critical failure.
+
+### Advantage / Disadvantage
+
+Confirmed as a standalone v2 mechanic, carried forward from v1: **Advantage** rolls **2d20 and takes the lower** result; **Disadvantage** rolls **2d20 and takes the higher** result (roll-under, so lower is always better). Usable wherever a specific rule grants it — currently only the [Expert/Master Skill Training Tiers](skills.md#training-tiers), but not restricted to that.
+
+### Untrained Rolls
+
+If a character has no applicable Skill for the task, they still roll — but **the Attribute does not apply**. Target number is **Difficulty alone** (1-10), not Attribute + Difficulty. A genuinely hard task attempted untrained (Difficulty 1) only succeeds on a natural 1 — the roll never opens up to the full 1-20 range the way a trained roll does. Having an applicable Skill is what lets the Attribute apply at all; the exact mechanics of Skills are still being designed — see [skills.md](skills.md).
