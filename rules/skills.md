@@ -22,6 +22,8 @@ Inspired by [Numenera's step system](https://numenera.fandom.com/wiki/Skills), b
 
 Each tier is strictly better than the last. Critical *failure* stays fixed at natural 20 across all five tiers — Master widens the success end only, so mastery is pure upside rather than also raising catastrophic-failure odds.
 
-**Advantage**, carried forward from v1: roll 2d20 and take the lower result (roll-under, so lower is better) — not yet re-confirmed as a standalone v2 mechanic outside this ladder, see [design-log.md](../docs/design-log.md#open-questions).
+**Advantage** is a [standalone core mechanic](core-mechanic.md#advantage--disadvantage): roll 2d20, take the lower.
 
-Everything else about Skills (how a character reaches a given tier, XP/advancement costs, whether there's a fixed list, breadth, specialties) is still open — see [design-log.md](../docs/design-log.md#open-questions).
+**Advancement**: a character climbs the ladder one tier at a time via **direct XP expenditure** — same philosophy as v1 (no classes/levels, no fixed track). Exact XP cost per tier is still TBD — see [design-log.md](../docs/design-log.md#open-questions).
+
+Everything else about Skills (exact XP costs per tier, whether there's a fixed list, breadth, specialties) is still open — see [design-log.md](../docs/design-log.md#open-questions).

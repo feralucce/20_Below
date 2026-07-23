@@ -8,9 +8,9 @@ Five attributes, each linked to a classical element. Each pairs a felt **domain*
 |---|---|---|
 | **Earth** | Physical power/endurance | Health / Soak |
 | **Air** | Agility/adaptability | Defense / Initiative |
-| **Fire** | Drive/aggression | Damage/offense |
+| **Fire** | Drive/aggression | Damage / Presence |
 | **Water** | Perception/empathy | Healing/stamina |
-| **Ki** | Spirit/supernatural/willpower | Resource pool / Recovery |
+| **Ki** | Spirit/supernatural/willpower | Luck / Recovery |
 
 Attributes are scored **1-10** (1 = lowest, 10 = highest).
 
