@@ -17,12 +17,12 @@ Inspired by [Numenera's step system](https://numenera.fandom.com/wiki/Skills), b
 | 1 | Untrained | Difficulty only (no Attribute — see [Untrained Rolls](core-mechanic.md#untrained-rolls)) |
 | 2 | Trained | Attribute + Difficulty |
 | 3 | Specialized | Attribute + Difficulty + 1 |
-| 4 | Expert | Attribute + Difficulty + 1, with **Advantage** (roll 2d20, take the lower) |
-| 5 | Master | Attribute + Difficulty + 2, with Advantage, and **critical success on a natural 1 or 2** |
+| 4 | Expert | Attribute + Difficulty + 1, with **Advantage** |
+| 5 | Master | Attribute + Difficulty + 2, with Advantage, and **critical success widens to a roll of 2 or 3** |
 
-Each tier is strictly better than the last. Critical *failure* stays fixed at natural 20 across all five tiers — Master widens the success end only, so mastery is pure upside rather than also raising catastrophic-failure odds.
+Each tier is strictly better than the last. Critical *failure* stays fixed at a roll of 20 across all five tiers — Master widens the success end only, so mastery is pure upside rather than also raising catastrophic-failure odds.
 
-**Advantage** is a [standalone core mechanic](core-mechanic.md#advantage--disadvantage): roll 2d20, take the lower.
+**Advantage** is a [standalone core mechanic](core-mechanic.md#advantage--disadvantage): roll 3d10, keep the lowest two.
 
 **Advancement**: a character climbs the ladder one tier at a time via **direct XP expenditure** — same philosophy as v1 (no classes/levels, no fixed track). Exact XP cost per tier is still TBD — see [design-log.md](../docs/design-log.md#open-questions).
 

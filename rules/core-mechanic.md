@@ -32,23 +32,27 @@ Descriptors are the concrete hook a player points to when [arguing a Skill pairi
 
 ## Resolution
 
+**Changed 2026-07-22**: switched from a flat 1d20 to a **bell curve**, inspired by BESM's Edge/Obstacle dice-pool approach.
+
 **Target number** = Attribute + Difficulty.
 
 **Difficulty** is a number from **1-10**, set by the GM per roll — **1 is most difficult, 10 is trivially easy** (inverted from the usual "higher = harder" convention).
 
-Roll **1d20**. Success if the result is **equal to or lower than** the target number.
+Roll **2d10** and sum them. Success if the result is **equal to or lower than** the target number.
 
-Target number range: **2** (Attribute 1 + Difficulty 1) to **20** (Attribute 10 + Difficulty 10).
+Target number range: **2** (Attribute 1 + Difficulty 1) to **20** (Attribute 10 + Difficulty 10) — matching the natural 2-20 range of 2d10, but weighted toward the middle (11) rather than flat.
 
 **Critical results, regardless of target number:**
 
-- **Natural 1** — critical success.
-- **Natural 20** — critical failure.
+- **A roll of 2** (both dice show 1) — critical success.
+- **A roll of 20** (both dice show 10) — critical failure.
 
 ### Advantage / Disadvantage
 
-Confirmed as a standalone v2 mechanic, carried forward from v1: **Advantage** rolls **2d20 and takes the lower** result; **Disadvantage** rolls **2d20 and takes the higher** result (roll-under, so lower is always better). Usable wherever a specific rule grants it — currently only the [Expert/Master Skill Training Tiers](skills.md#training-tiers), but not restricted to that.
+**Rewritten 2026-07-22**, replacing the "2d20 take lower/higher" version to fit the new 2d10 base roll, adapting BESM's Edge/Obstacle mechanic: **Advantage** rolls **3d10 and keeps the lowest two** (summed); **Disadvantage** rolls **3d10 and keeps the highest two** (summed) — roll-under, so lower is always better. Usable wherever a specific rule grants it — currently the [Expert/Master Skill Training Tiers](skills.md#training-tiers), but not restricted to that.
 
 ### Untrained Rolls
 
-If a character has no applicable Skill for the task, they still roll — but **the Attribute does not apply**. Target number is **Difficulty alone** (1-10), not Attribute + Difficulty. A genuinely hard task attempted untrained (Difficulty 1) only succeeds on a natural 1 — the roll never opens up to the full 1-20 range the way a trained roll does. Having an applicable Skill is what lets the Attribute apply at all; the exact mechanics of Skills are still being designed — see [skills.md](skills.md).
+If a character has no applicable Skill for the task, they still roll — but **the Attribute does not apply**. Target number is **Difficulty alone** (1-10), not Attribute + Difficulty. Having an applicable Skill is what lets the Attribute apply at all; the exact mechanics of Skills are still being designed — see [skills.md](skills.md).
+
+**Note**: this rule was written for a flat 1d20 (where a target of 10 or less was roughly a coin flip). Under the new 2d10 bell curve, results cluster around 11, so a Difficulty-only target (max 10) is now a *worse* than coin-flip proposition even at the easiest untrained Difficulty — the odds haven't been re-checked against the new curve. See [design-log.md](../docs/design-log.md#open-questions).
