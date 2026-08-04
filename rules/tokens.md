@@ -43,8 +43,10 @@ A fifth spend category, adapted from Fabula Ultima's "Alter the Story": spending
 
 ## The GM's Own Pool
 
-**Liked and adopted, from Star Wars FFG/Genesys' Destiny Points**: rather than tokens just draining from players into nothing, **when a player spends a token, the GM gains a token** in a separate GM-side pool. Mirrors Destiny Points' light/dark flip — spending isn't just depletion, it's a transfer of leverage from the players' side of the table to the GM's. What the GM's pool is spent on (complications? empowering NPCs? something else?) isn't decided yet.
+**Liked and adopted, from Star Wars FFG/Genesys' Destiny Points**: rather than tokens just draining from players into nothing, **when a player spends a token, the GM gains a token** in a separate GM-side pool. Mirrors Destiny Points' light/dark flip — spending isn't just depletion, it's a transfer of leverage from the players' side of the table to the GM's.
+
+**Scoped 2026-07-22: narrative-only.** The GM's pool does **not** mirror the player [Token Spend](#token-spend) menu — no Extra Actions, no Automatic Success, no mechanical crunch bonuses for NPCs. The GM already holds narrative authority over the world; stacking mechanical bonuses on top of that would just be power creep on the side that's already advantaged. Instead, the GM spends their pool the same way Narrative Control's ripples work for players — **complications, twists, and consequences woven into the fiction**. The GM is explicitly encouraged to get inventive with these: a spent GM token isn't a flat "the NPC gets +2," it's "the ambush was a distraction," "the ally you saved owed someone else a debt first," or any other fictional escalation that makes the token pool feel like a narrative lever, not a stat bonus.
 
 ## Open Questions
 
-See [design-log.md](../docs/design-log.md#open-questions) for the full list, including: token name, how to reconcile/trim the overlapping spend options above, what the GM's own pool is spent on, Nature's fixed-list-vs-freeform question, sunset vs. sunrise for daily regen, the daily regen amount, and the Milestone award amount/scope.
+See [design-log.md](../docs/design-log.md#open-questions) for the full list, including: token name, how to reconcile/trim the overlapping player spend options above, Nature's fixed-list-vs-freeform question, sunset vs. sunrise for daily regen, the daily regen amount, and the Milestone award amount/scope.
