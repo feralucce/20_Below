@@ -36,11 +36,31 @@ Descriptors are the concrete hook a player points to when [arguing a Skill pairi
 
 **Target number** = Attribute + Difficulty.
 
-**Difficulty** is a number from **1-10**, set by the GM per roll — **1 is most difficult, 10 is trivially easy** (inverted from the usual "higher = harder" convention).
+**Difficulty** is a number from **0-10**, set by the GM per roll — **0 is nearly impossible, 10 is trivial** (inverted from the usual "higher = harder" convention). See [Difficulty Chart](#difficulty-chart) below for the full 11-step ladder.
 
 Roll **2d10** and sum them. Success if the result is **equal to or lower than** the target number.
 
-Target number range: **2** (Attribute 1 + Difficulty 1) to **20** (Attribute 10 + Difficulty 10) — matching the natural 2-20 range of 2d10, but weighted toward the middle (11) rather than flat.
+Target number range: **1** (Attribute 1 + Difficulty 0) to **20** (Attribute 10 + Difficulty 10) — close to the natural 2-20 range of 2d10 (a target of 1 is below the lowest possible roll, i.e. an automatic failure), weighted toward the middle (11) rather than flat.
+
+### Difficulty Chart
+
+An 11-step reference ladder for setting Difficulty, rather than picking a bare number cold:
+
+| Difficulty | Label | Example task |
+|---|---|---|
+| 0 | Nearly Impossible | Catch an arrow out of the air mid-flight |
+| 1 | Extremely Hard | Pick a masterwork lock with no tools, blindfolded |
+| 2 | Very Hard | Scale a sheer, rain-slicked cliff face |
+| 3 | Hard | Convince a hostile guard captain to stand down |
+| 4 | Challenging | Track a careful quarry through a rainstorm |
+| 5 | Moderate | A tense but ordinary skill check under pressure |
+| 6 | Fairly Easy | Pick a simple lock with the right tools |
+| 7 | Easy | Climb a sturdy rope with knots tied in it |
+| 8 | Very Easy | Recall a well-known fact in your field |
+| 9 | Nearly Trivial | Walk a straight line on level ground |
+| 10 | Trivial | Tie your own shoes |
+
+Per-Attribute example tasks (a Fire example vs. an Earth example at the same Difficulty) are intentionally deferred until the rest of the system is further along — see [design-log.md](../docs/design-log.md#open-questions).
 
 **Critical results, regardless of target number:**
 
@@ -53,6 +73,6 @@ Target number range: **2** (Attribute 1 + Difficulty 1) to **20** (Attribute 10 
 
 ### Untrained Rolls
 
-If a character has no applicable Skill for the task, they still roll — but **the Attribute does not apply**. Target number is **Difficulty alone** (1-10), not Attribute + Difficulty. Having an applicable Skill is what lets the Attribute apply at all; the exact mechanics of Skills are still being designed — see [skills.md](skills.md).
+If a character has no applicable Skill for the task, they still roll — but **the Attribute does not apply**. Target number is **Difficulty alone** (0-10), not Attribute + Difficulty. Having an applicable Skill is what lets the Attribute apply at all; the exact mechanics of Skills are still being designed — see [skills.md](skills.md).
 
-**Note**: this rule was written for a flat 1d20 (where a target of 10 or less was roughly a coin flip). Under the new 2d10 bell curve, results cluster around 11, so a Difficulty-only target (max 10) is now a *worse* than coin-flip proposition even at the easiest untrained Difficulty — the odds haven't been re-checked against the new curve. See [design-log.md](../docs/design-log.md#open-questions).
+**This is intentional, not an oversight**: under the 2d10 curve, an untrained character faces genuinely poor odds at anything above Difficulty 5 or so, and Difficulty 0 (Nearly Impossible) is a flat impossibility untrained (target 0 is below 2d10's minimum roll of 2). Most skills require practice — without training, a character shouldn't reliably succeed at anything nontrivial. See [design-log.md](../docs/design-log.md#open-questions) for the confirming discussion.
