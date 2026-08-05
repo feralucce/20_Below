@@ -45,7 +45,12 @@ This is deliberately a **spiral**: since the Risk Pool is its own target number,
 
 **"Risk Pool" is a working/descriptive label, not a final name** — flagged for later, same as the [Tokens](#tokens-name-tbd) resource itself. A separate pool of points — what's actually being risked when a Fatigue Check fails. **Risk Pool = the average of all five combat sub-stats (Soak, Initiative, Damage, Stamina, Resistance), doubled** to land in the 2-20 range. Built from all five equally so no single Attribute dominates the mechanic, unlike the original Water+Stamina version. Refill trigger (rest? something else?) not yet decided.
 
-Stamina's actual job, now that it no longer directly feeds the Fatigue Check target number, is open again — see [design-log.md](../docs/design-log.md#open-questions).
+### Stamina's Job
+
+**Confirmed 2026-07-22**: Action Bands themselves (Fast/Normal/Slow) cost nothing to declare — that's just normal combat flow, not something Stamina governs. Instead, Stamina does two things:
+
+1. **Hard cap on token spends per encounter.** A character can spend tokens **at most [Stamina score] times per single encounter**, regardless of how many tokens they actually have banked. This is a ceiling separate from and in addition to the Fatigue Check's risk — even a character sitting on a full bank of tokens is locked out once they hit their Stamina-based spend limit for the fight.
+2. **General endurance/exhaustion-resistance gauge.** Outside the token-spend cap, Stamina is also the broader measure of how long a character can sustain physically demanding activity and how well they resist exhaustion generally (forced marches, holding your breath, etc.) — the original framing, still standing alongside the new numeric cap. The exact mechanic for this second, non-combat role isn't detailed yet.
 
 ## Narrative Control
 
