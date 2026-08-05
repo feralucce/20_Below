@@ -20,7 +20,7 @@ Every Attribute's Mechanical Role is actually **two sub-stats** (e.g. Earth = So
 
 Separately, that same score also generates a **pool of points equal to the Attribute's rating**, which the player allocates across its two sub-stats — a player choice, not an even split. An Attribute of 10 both rolls as 10 *and* grants 10 points to divide, e.g. 7 Soak / 3 Health, or 5/5, or any other division. What each allocated point actually *buys* in each sub-stat (the formula/scale) is still TBD — see [design-log.md](../docs/design-log.md#open-questions).
 
-**Sub-stats never affect whether a roll succeeds** — only the Attribute + Difficulty roll (below) determines pass/fail. Sub-stats instead **add to the effect of a success** (e.g. more points in Damage means a landed hit does more; more points in Healing means a successful recovery restores more). This keeps success/failure entirely on one roll, with sub-stats purely shaping the magnitude of what happens once you've already succeeded.
+**Repealed 2026-07-22**: the earlier blanket rule ("sub-stats never affect pass/fail, they add to the effect of a success") is dropped. In practice it was never actually implemented for any sub-stat's effect formula, so nothing concrete depended on it — see [design-log.md](../docs/design-log.md#open-questions) for what each sub-stat actually does, decided case by case rather than under one universal rule.
 
 ### Sub-Stat Descriptors
 

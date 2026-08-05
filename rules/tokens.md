@@ -29,6 +29,23 @@ Five spend options:
 
 These five options overlap in places (multiple sources offer some form of reroll or bonus) — deliberately left as-is for now rather than pre-merged, since the exact final menu of spends is still being shaped.
 
+## Fatigue Check
+
+**Revised 2026-07-22**: every time a player spends a token, they immediately make a **Fatigue Check** — roll 2d10 against the **Risk Pool** (see below), same roll-under shape as the [core roll](core-mechanic.md#resolution), with the Risk Pool's current total standing in for a target number instead of a GM-set Difficulty.
+
+- **Success** — no effect, the token spend goes through with no cost beyond the token itself.
+- **Failure** — lose **1 point from the Risk Pool**, until it's refilled (refill trigger TBD).
+
+This is deliberately a **spiral**: since the Risk Pool is its own target number, losing a point makes the *next* Fatigue Check harder too — the more a character leans on tokens, the more the risk compounds. Explicitly chosen over a flat per-spend cost because it keeps token spends cheap most of the time (failure isn't guaranteed) while still building real pressure the more a character pushes, and because more dice rolling is a feature here, not a cost to minimize.
+
+**No longer touches Water or Stamina directly.** The original version targeted Water + Stamina, but that made Water's Attribute score double as both a normal Attribute *and* the universal gatekeeper behind every single token spend regardless of theme — disproportionate influence for one Attribute. See Risk Pool below for the fix.
+
+### Risk Pool
+
+A separate pool of points — what's actually being risked when a Fatigue Check fails. **Risk Pool = the average of all five combat sub-stats (Soak, Initiative, Damage, Stamina, Defense), doubled** to land in the 2-20 range. Built from all five equally so no single Attribute dominates the mechanic, unlike the original Water+Stamina version. Refill trigger (rest? something else?) not yet decided.
+
+Stamina's actual job, now that it no longer directly feeds the Fatigue Check target number, is open again — see [design-log.md](../docs/design-log.md#open-questions).
+
 ## Narrative Control
 
 A fifth spend category, adapted from Fabula Ultima's "Alter the Story": spending tokens to assert a fact into the fiction directly, rather than touching a die roll. **Liked and being scoped** — cost scales with how big the change is, and multiple players may **pool** their tokens together for something no single character could afford alone.
