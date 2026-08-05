@@ -19,14 +19,15 @@ Carried over from White Wolf-style design (e.g. Vampire/Werewolf's Nature & Deme
 
 ## Token Spend
 
-Four spend options, each adapted from a different system:
+Five spend options:
 
 - **Extra Action** *(from D&D 4e Action Points)* — spend a token to take an additional action on your turn.
 - **Reroll / Soak Damage / Push the Fiction** *(from Savage Worlds Bennies)* — spend a token to reroll a roll, reduce incoming damage, or nudge a scene detail in your favor.
 - **Automatic Success / Resist a Mind-Affecting Effect** *(from World of Darkness Willpower)* — spend a token to guarantee a success on a roll outright (not just a bonus), or to resist an effect that targets the mind/will.
 - **Boost a Check / Shrug Off an Effect** *(from Mutants & Masterminds Hero Points)* — spend a token to add a flat bonus to a check, or to negate a condition/effect entirely.
+- **Bump Action Band** — spend **1 token per step** to move up one [Action Band](combat.md#action-bands): Slow → Normal, or Normal → Fast. Spending 2 tokens moves two steps (Slow → Fast) — confirmed one-token-per-step, no separate flat cost for a double bump.
 
-These four options overlap in places (multiple sources offer some form of reroll or bonus) — deliberately left as-is for now rather than pre-merged, since the exact final menu of spends is still being shaped.
+These five options overlap in places (multiple sources offer some form of reroll or bonus) — deliberately left as-is for now rather than pre-merged, since the exact final menu of spends is still being shaped.
 
 ## Narrative Control
 
