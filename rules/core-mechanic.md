@@ -10,7 +10,7 @@ Five attributes, each linked to a classical element. Each pairs a felt **domain*
 | **Air** | Agility/adaptability | Initiative / Luck |
 | **Fire** | Drive/aggression | Damage / Presence |
 | **Water** | Perception/empathy | Stamina / Healing |
-| **Ki** | Spirit/supernatural/willpower | Defense / Recovery |
+| **Ki** | Spirit/supernatural/willpower | Resistance / Recovery |
 
 Attributes are scored **1-10** (1 = lowest, 10 = highest).
 
@@ -21,6 +21,14 @@ Every Attribute's Mechanical Role is actually **two sub-stats** (e.g. Earth = So
 Separately, that same score also generates a **pool of points equal to the Attribute's rating**, which the player allocates across its two sub-stats — a player choice, not an even split. An Attribute of 10 both rolls as 10 *and* grants 10 points to divide, e.g. 7 Soak / 3 Health, or 5/5, or any other division. What each allocated point actually *buys* in each sub-stat (the formula/scale) is still TBD — see [design-log.md](../docs/design-log.md#open-questions).
 
 **Repealed 2026-07-22**: the earlier blanket rule ("sub-stats never affect pass/fail, they add to the effect of a success") is dropped. In practice it was never actually implemented for any sub-stat's effect formula, so nothing concrete depended on it — see [design-log.md](../docs/design-log.md#open-questions) for what each sub-stat actually does, decided case by case rather than under one universal rule.
+
+### Defense (Derived Stat)
+
+**Locked in 2026-07-22**: Ki's combat sub-stat is named **Resistance**, but it doesn't appear on the character sheet directly for combat purposes — instead it feeds a separate, derived entry called **Defense**, the same way D&D's AC is a derived number rather than a raw stat.
+
+**Defense = 10 − Resistance.**
+
+Defense is what an attacker's roll actually targets: **Defense becomes the attacker's Difficulty** when they attack this character (see the [Difficulty Chart](#difficulty-chart)). Since Difficulty runs 0 (hardest) to 10 (trivial), the subtraction inverts Resistance correctly: Resistance 0 → Defense 10 (trivial to hit), Resistance 10 → Defense 0 (nearly impossible to hit) — more Resistance genuinely makes a character harder to hit.
 
 ### Sub-Stat Descriptors
 
