@@ -18,6 +18,8 @@
 
 The tradeoff across all three: **Fast trades action count for going first**, **Normal is the balanced middle (two actions, middling position)**, **Slow trades speed for a single, more powerful, concentrated action**.
 
+A player can spend **1 Token per step** to bump their declared band up (Slow → Normal, or Normal → Fast) — buying back speed at the cost of the resource. Spending 2 tokens moves two steps at once (Slow → Fast). See [tokens.md](tokens.md#token-spend).
+
 ### Interrupted Plans
 
 Carried forward from the earlier version, adapted to bands: if something that happens during an earlier band's turn **eliminates a not-yet-acted character's plan** (e.g. their intended target is removed before their band goes), that character gets a **reactive roll** — the specific Skill/Attribute pairing and Difficulty are still TBD, but it defaults to **average Difficulty**.
