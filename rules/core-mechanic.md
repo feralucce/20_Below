@@ -6,19 +6,19 @@ Five attributes, each linked to a classical element. Each pairs a felt **domain*
 
 | Attribute | Domain | Mechanical Role |
 |---|---|---|
-| **Earth** | Physical power/endurance | Health / Soak |
-| **Air** | Agility/adaptability | Defense / Initiative |
+| **Earth** | Physical power/endurance | Soak / Health |
+| **Air** | Agility/adaptability | Initiative / Luck |
 | **Fire** | Drive/aggression | Damage / Presence |
 | **Water** | Perception/empathy | Healing/stamina |
-| **Ki** | Spirit/supernatural/willpower | Luck / Recovery |
+| **Ki** | Spirit/supernatural/willpower | Defense / Recovery |
 
 Attributes are scored **1-10** (1 = lowest, 10 = highest).
 
 ### Sub-Category Allocation
 
-Every Attribute's Mechanical Role is actually **two sub-stats** (e.g. Earth = Health / Soak). The Attribute's own score is **always the number used to roll** (see [Resolution](#resolution)) — it is never reduced or consumed by the split below.
+Every Attribute's Mechanical Role is actually **two sub-stats** (e.g. Earth = Soak / Health). The Attribute's own score is **always the number used to roll** (see [Resolution](#resolution)) — it is never reduced or consumed by the split below.
 
-Separately, that same score also generates a **pool of points equal to the Attribute's rating**, which the player allocates across its two sub-stats — a player choice, not an even split. An Attribute of 10 both rolls as 10 *and* grants 10 points to divide, e.g. 7 Health / 3 Soak, or 5/5, or any other division. What each allocated point actually *buys* in each sub-stat (the formula/scale) is still TBD — see [design-log.md](../docs/design-log.md#open-questions).
+Separately, that same score also generates a **pool of points equal to the Attribute's rating**, which the player allocates across its two sub-stats — a player choice, not an even split. An Attribute of 10 both rolls as 10 *and* grants 10 points to divide, e.g. 7 Soak / 3 Health, or 5/5, or any other division. What each allocated point actually *buys* in each sub-stat (the formula/scale) is still TBD — see [design-log.md](../docs/design-log.md#open-questions).
 
 **Sub-stats never affect whether a roll succeeds** — only the Attribute + Difficulty roll (below) determines pass/fail. Sub-stats instead **add to the effect of a success** (e.g. more points in Damage means a landed hit does more; more points in Healing means a successful recovery restores more). This keeps success/failure entirely on one roll, with sub-stats purely shaping the magnitude of what happens once you've already succeeded.
 
