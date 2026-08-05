@@ -41,9 +41,9 @@ This is deliberately a **spiral**: since the Risk Pool is its own target number,
 
 **No longer touches Water or Stamina directly.** The original version targeted Water + Stamina, but that made Water's Attribute score double as both a normal Attribute *and* the universal gatekeeper behind every single token spend regardless of theme — disproportionate influence for one Attribute. See Risk Pool below for the fix.
 
-### Risk Pool
+### Risk Pool (name TBD)
 
-A separate pool of points — what's actually being risked when a Fatigue Check fails. **Risk Pool = the average of all five combat sub-stats (Soak, Initiative, Damage, Stamina, Defense), doubled** to land in the 2-20 range. Built from all five equally so no single Attribute dominates the mechanic, unlike the original Water+Stamina version. Refill trigger (rest? something else?) not yet decided.
+**"Risk Pool" is a working/descriptive label, not a final name** — flagged for later, same as the [Tokens](#tokens-name-tbd) resource itself. A separate pool of points — what's actually being risked when a Fatigue Check fails. **Risk Pool = the average of all five combat sub-stats (Soak, Initiative, Damage, Stamina, Resistance), doubled** to land in the 2-20 range. Built from all five equally so no single Attribute dominates the mechanic, unlike the original Water+Stamina version. Refill trigger (rest? something else?) not yet decided.
 
 Stamina's actual job, now that it no longer directly feeds the Fatigue Check target number, is open again — see [design-log.md](../docs/design-log.md#open-questions).
 
