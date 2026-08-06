@@ -19,16 +19,15 @@ Carried over from White Wolf-style design (e.g. Vampire/Werewolf's Nature & Deme
 
 ## Fate Spend
 
-Six spend options:
+**Triaged 2026-07-22.** Current state:
 
-- **Extra Action** *(from D&D 4e Action Points)* — spend a Fate Token to take an additional action on your turn.
-- **Reroll / Soak Damage / Push the Fiction** *(from Savage Worlds Bennies)* — spend a Fate Token to reroll a roll, reduce incoming damage, or nudge a scene detail in your favor.
-- **Automatic Success / Resist a Mind-Affecting Effect** *(from World of Darkness Willpower)* — spend a Fate Token to guarantee a success on a roll outright (not just a bonus), or to resist an effect that targets the mind/will.
-- **Boost a Check / Shrug Off an Effect** *(from Mutants & Masterminds Hero Points)* — spend a Fate Token to add a flat bonus to a check, or to negate a condition/effect entirely.
-- **Bump Action Band** — spend **1 Fate Token per step** to move up one [Action Band](combat.md#action-bands): Slow → Normal, or Normal → Fast. Spending 2 Fate Tokens moves two steps (Slow → Fast) — confirmed one-token-per-step, no separate flat cost for a double bump.
-- **Move Up Initiative Step** — spend a Fate Token, at any point during combat, to move your character up one step in the [Initiative](combat.md#combat-order) order **for that turn only**. Next turn, they settle back to their originally rolled position — a temporary, one-turn positional swap, not a permanent change or a numeric bonus.
-
-These five options overlap in places (multiple sources offer some form of reroll or bonus) — deliberately left as-is for now rather than pre-merged, since the exact final menu of spends is still being shaped.
+- ~~**Extra Action**~~ — **dead.** Superseded by [Bump Action Band](#bump-action-band) below; the Action Band economy already covers "get more done this turn."
+- **Push the Fiction** *(trimmed from "Reroll / Soak Damage / Push the Fiction")* — spend a Fate Token to nudge a scene detail in your favor, altering something about the fiction rather than a die roll. Reroll and Soak Damage were dropped from this option (Reroll overlaps Advantage, Soak Damage overlaps the confirmed Soak mechanic). Framed like *The Matrix* bending a rule of the world rather than a small in-fiction convenience — matches the fated-heroes theme. Worth noting: this may end up overlapping [Narrative Control](#narrative-control)'s 1-token "minor detail" tier — not merged yet, flagged for later review.
+- **Automatic Success / Resist a Mind-Affecting Effect** *(from World of Darkness Willpower)* — **flagged as a maybe.** Powers/supernatural abilities haven't been designed yet, and this spend may end up folded into that system instead of staying a generic Fate spend.
+- **Boost a Check / Shrug Off an Effect** *(from Mutants & Masterminds Hero Points)* — **flagged for review.** May already be covered in spirit by the [Skill Training Tiers](skills.md#training-tiers) (Adept/Expert/Master already grant Advantage and widened crit ranges) — worth checking for redundancy before keeping this as a separate spend.
+- **Bump Action Band** — **confirmed keeper, explicitly liked.** Spend **1 Fate Token per step** to move up one [Action Band](combat.md#action-bands): Slow → Normal, or Normal → Fast. Spending 2 Fate Tokens moves two steps (Slow → Fast) — one-token-per-step, no separate flat cost for a double bump.
+- ~~**Move Up Initiative Step**~~ — **dead.** Superseded by the Action Band economy — bumping bands already covers "act with more urgency," making a separate Initiative-nudge redundant.
+- **[Narrative Control](#narrative-control)** — its own scaled spend category, not a flat-cost option like the others above. See its own section below.
 
 ## Fatigue Check
 
@@ -71,7 +70,7 @@ A fifth spend category, adapted from Fabula Ultima's "Alter the Story": spending
 
 **Liked and adopted, from Star Wars FFG/Genesys' Destiny Points**: rather than Fate Tokens just draining from players into nothing, **when a player spends a Fate Token, the GM gains one** in a separate GM-side pool. Mirrors Destiny Points' light/dark flip — spending isn't just depletion, it's a transfer of leverage from the players' side of the table to the GM's.
 
-**Scoped 2026-07-22: narrative-only.** The GM's pool does **not** mirror the player [Fate Spend](#fate-spend) menu — no Extra Actions, no Automatic Success, no mechanical crunch bonuses for NPCs. The GM already holds narrative authority over the world; stacking mechanical bonuses on top of that would just be power creep on the side that's already advantaged. Instead, the GM spends their pool the same way Narrative Control's ripples work for players — **complications, twists, and consequences woven into the fiction**. The GM is explicitly encouraged to get inventive with these: a spent GM point isn't a flat "the NPC gets +2," it's "the ambush was a distraction," "the ally you saved owed someone else a debt first," or any other fictional escalation that makes the pool feel like a narrative lever, not a stat bonus.
+**Scoped 2026-07-22: narrative-only.** The GM's pool does **not** mirror the player [Fate Spend](#fate-spend) menu — no Bump Action Band, no Automatic Success, no mechanical crunch bonuses for NPCs. The GM already holds narrative authority over the world; stacking mechanical bonuses on top of that would just be power creep on the side that's already advantaged. Instead, the GM spends their pool the same way Narrative Control's ripples work for players — **complications, twists, and consequences woven into the fiction**. The GM is explicitly encouraged to get inventive with these: a spent GM point isn't a flat "the NPC gets +2," it's "the ambush was a distraction," "the ally you saved owed someone else a debt first," or any other fictional escalation that makes the pool feel like a narrative lever, not a stat bonus.
 
 ## Open Questions
 
