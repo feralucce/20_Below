@@ -5,7 +5,7 @@
 **Revised 2026-07-22**, replacing the earlier "declare intent slowest-to-fastest, act fastest-to-slowest" structure with three **Action Bands**:
 
 1. **Initiative** — rolled **once at the start of combat**, not re-rolled each round: **1d10 + Initiative** (sub-stat). **Confirmed: higher total acts first** — a deliberate departure from the roll-under convention used everywhere else, kept simple specifically for this roll. This base order holds for the whole fight.
-   - **At any point during combat**, a player may spend a token to move their character **up one step** in the order **for that turn only** — next turn, they settle back to their original rolled position. No pre-roll Advantage option (scrapped — didn't fit a single d10 roll cleanly).
+   - **At any point during combat**, a player may spend a Fate Token to move their character **up one step** in the order **for that turn only** — next turn, they settle back to their original rolled position. No pre-roll Advantage option (scrapped — didn't fit a single d10 roll cleanly).
 2. **Declare Action Band** — each character declares which of the three bands they're acting in this round: **Fast**, **Normal**, or **Slow** (see below).
 3. **Resolve band by band** — all **Fast**-band characters act first, then all **Normal**-band characters, then all **Slow**-band characters. Within each band, characters act in Initiative order.
 
@@ -19,7 +19,7 @@
 
 The tradeoff across all three: **Fast trades action count for going first**, **Normal is the balanced middle (two actions, middling position)**, **Slow trades speed for a single, more powerful, concentrated action**.
 
-A player can spend **1 Token per step** to bump their declared band up (Slow → Normal, or Normal → Fast) — buying back speed at the cost of the resource. Spending 2 tokens moves two steps at once (Slow → Fast). See [tokens.md](tokens.md#token-spend).
+A player can spend **1 Fate Token per step** to bump their declared band up (Slow → Normal, or Normal → Fast) — buying back speed at the cost of the resource. Spending 2 Fate Tokens moves two steps at once (Slow → Fast). See [fate.md](fate.md#fate-spend).
 
 ### Interrupted Plans
 

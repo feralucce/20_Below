@@ -22,6 +22,18 @@ Separately, that same score also generates a **pool of points equal to the Attri
 
 **Repealed 2026-07-22**: the earlier blanket rule ("sub-stats never affect pass/fail, they add to the effect of a success") is dropped. In practice it was never actually implemented for any sub-stat's effect formula, so nothing concrete depended on it — see [design-log.md](../docs/design-log.md#open-questions) for what each sub-stat actually does, decided case by case rather than under one universal rule.
 
+### Health Levels
+
+**Proposed 2026-07-22**, referencing but simplifying [v1's Health Levels](../archive/v1/rules/combat.md#health-levels--confirmed): **Health (Water's sub-stat) is a count of discrete Health Levels**, not a numeric HP pool. Each Health Level can absorb damage **once** — a binary hit-box, not a container with its own capacity.
+
+- **Soak subtracts from incoming damage first** (`damage taken = max(0, Damage − Soak)`, per the already-confirmed Soak mechanic — full negation is possible).
+- **If any damage gets through** (result > 0), the character loses **one Health Level**, regardless of how much damage exceeded Soak — a grazing hit and a massive one both cost exactly one Level if either gets past Soak at all.
+- **If Soak fully negates the damage**, no Health Level is lost.
+
+**Ki spend to preserve a Health Level**: a player may spend **1 point from Ki** (the pool — distinct from [Fate Tokens](fate.md), the resource players earn/spend) to **cancel the loss of one Health Level**, at a cost of 1 Ki per Level preserved. Multiple Ki can be spent to preserve multiple Levels.
+
+Not yet decided: what happens once Health Levels run out (incapacitated? dying? does it mirror v1's stacking penalties as Levels are lost, or stay flat until 0?), and how lost Health Levels are recovered (tied to Earth's Healing sub-stat, presumably, but not detailed).
+
 ### Defense (Derived Stat)
 
 **Locked in 2026-07-22**, renamed 2026-07-22 to fit the fated-heroes theme: Wyrd's combat sub-stat is named **Warp** (the fixed, load-bearing thread — the part of a character's fate that holds firm and doesn't move), but it doesn't appear on the character sheet directly for combat purposes — instead it feeds a separate, derived entry called **Defense**, the same way D&D's AC is a derived number rather than a raw stat.
