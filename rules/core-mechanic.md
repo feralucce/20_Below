@@ -10,7 +10,7 @@ Five attributes, each linked to a classical element. Each pairs a felt **domain*
 | **Air** | Agility/adaptability | Initiative / Luck |
 | **Fire** | Drive/aggression | Damage / Presence |
 | **Water** | Perception/empathy | Stamina / Healing |
-| **Ki** | Spirit/supernatural/willpower | Resistance / Recovery |
+| **Wyrd** | Fate/destiny/the supernatural | Warp / Weft |
 
 Attributes are scored **1-10** (1 = lowest, 10 = highest).
 
@@ -24,11 +24,11 @@ Separately, that same score also generates a **pool of points equal to the Attri
 
 ### Defense (Derived Stat)
 
-**Locked in 2026-07-22**: Ki's combat sub-stat is named **Resistance**, but it doesn't appear on the character sheet directly for combat purposes — instead it feeds a separate, derived entry called **Defense**, the same way D&D's AC is a derived number rather than a raw stat.
+**Locked in 2026-07-22**, renamed 2026-07-22 to fit the fated-heroes theme: Wyrd's combat sub-stat is named **Warp** (the fixed, load-bearing thread — the part of a character's fate that holds firm and doesn't move), but it doesn't appear on the character sheet directly for combat purposes — instead it feeds a separate, derived entry called **Defense**, the same way D&D's AC is a derived number rather than a raw stat.
 
-**Defense = 10 − Resistance.**
+**Defense = 10 − Warp.**
 
-Defense is what an attacker's roll actually targets: **Defense becomes the attacker's Difficulty** when they attack this character (see the [Difficulty Chart](#difficulty-chart)). Since Difficulty runs 0 (hardest) to 10 (trivial), the subtraction inverts Resistance correctly: Resistance 0 → Defense 10 (trivial to hit), Resistance 10 → Defense 0 (nearly impossible to hit) — more Resistance genuinely makes a character harder to hit.
+Defense is what an attacker's roll actually targets: **Defense becomes the attacker's Difficulty** when they attack this character (see the [Difficulty Chart](#difficulty-chart)). Since Difficulty runs 0 (hardest) to 10 (trivial), the subtraction inverts Warp correctly: Warp 0 → Defense 10 (trivial to hit), Warp 10 → Defense 0 (nearly impossible to hit) — more Warp genuinely makes a character harder to hit, i.e. harder to pull off their own thread.
 
 ### Sub-Stat Descriptors
 
