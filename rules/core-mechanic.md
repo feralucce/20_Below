@@ -24,7 +24,12 @@ Separately, that same score also generates a **pool of points equal to the Attri
 
 ### Health Levels
 
-**Proposed 2026-07-22**, referencing but simplifying [v1's Health Levels](../archive/v1/rules/combat.md#health-levels--confirmed): **Health (Water's sub-stat) is a count of discrete Health Levels**, not a numeric HP pool. Each Health Level can absorb damage **once** — a binary hit-box, not a container with its own capacity.
+**Proposed 2026-07-22**, referencing but simplifying [v1's Health Levels](../archive/v1/rules/combat.md#health-levels--confirmed): **Health Levels are a count of discrete hit-boxes**, not a numeric HP pool. Each Health Level can absorb damage **once** — a binary hit-box, not a container with its own capacity.
+
+**Baseline, confirmed 2026-07-22**: every character starts with **5 Health Levels**, flat, before anything else is added — fixes the earlier problem where a character with 0 points in Health (Water's sub-stat) could end up with 0 Health Levels, effectively dead at character creation.
+
+- **`PC Health Levels = 5 + Health (sub-stat)`** — the flat baseline, plus whatever a PC invests in Water's Health sub-stat.
+- **NPCs will most often just be the flat 5**, with no Health sub-stat added — a deliberate design choice: minor/"weenie" NPCs are meant to go down in a single connecting hit, while PCs are built tougher by default.
 
 ### Damage — Per-Die Resolution
 
