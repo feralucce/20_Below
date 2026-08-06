@@ -6,19 +6,19 @@ Five attributes, each linked to a classical element. Each pairs a felt **domain*
 
 | Attribute | Domain | Mechanical Role |
 |---|---|---|
-| **Earth** | Physical power/endurance | Soak / Health |
+| **Earth** | Physical power/endurance | Soak / Healing |
 | **Air** | Agility/adaptability | Initiative / Luck |
 | **Fire** | Drive/aggression | Damage / Presence |
-| **Water** | Perception/empathy | Stamina / Healing |
+| **Water** | Perception/empathy | Stamina / Health |
 | **Wyrd** | Fate/destiny/the supernatural | Warp / Weft |
 
 Attributes are scored **1-10** (1 = lowest, 10 = highest).
 
 ### Sub-Category Allocation
 
-Every Attribute's Mechanical Role is actually **two sub-stats** (e.g. Earth = Soak / Health). The Attribute's own score is **always the number used to roll** (see [Resolution](#resolution)) — it is never reduced or consumed by the split below.
+Every Attribute's Mechanical Role is actually **two sub-stats** (e.g. Earth = Soak / Healing). The Attribute's own score is **always the number used to roll** (see [Resolution](#resolution)) — it is never reduced or consumed by the split below.
 
-Separately, that same score also generates a **pool of points equal to the Attribute's rating**, which the player allocates across its two sub-stats — a player choice, not an even split. An Attribute of 10 both rolls as 10 *and* grants 10 points to divide, e.g. 7 Soak / 3 Health, or 5/5, or any other division. What each allocated point actually *buys* in each sub-stat (the formula/scale) is still TBD — see [design-log.md](../docs/design-log.md#open-questions).
+Separately, that same score also generates a **pool of points equal to the Attribute's rating**, which the player allocates across its two sub-stats — a player choice, not an even split. An Attribute of 10 both rolls as 10 *and* grants 10 points to divide, e.g. 7 Soak / 3 Healing, or 5/5, or any other division. What each allocated point actually *buys* in each sub-stat (the formula/scale) is still TBD — see [design-log.md](../docs/design-log.md#open-questions).
 
 **Repealed 2026-07-22**: the earlier blanket rule ("sub-stats never affect pass/fail, they add to the effect of a success") is dropped. In practice it was never actually implemented for any sub-stat's effect formula, so nothing concrete depended on it — see [design-log.md](../docs/design-log.md#open-questions) for what each sub-stat actually does, decided case by case rather than under one universal rule.
 
