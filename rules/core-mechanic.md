@@ -26,11 +26,26 @@ Separately, that same score also generates a **pool of points equal to the Attri
 
 **Proposed 2026-07-22**, referencing but simplifying [v1's Health Levels](../archive/v1/rules/combat.md#health-levels--confirmed): **Health (Water's sub-stat) is a count of discrete Health Levels**, not a numeric HP pool. Each Health Level can absorb damage **once** — a binary hit-box, not a container with its own capacity.
 
-- **Soak subtracts from incoming damage first** (`damage taken = max(0, Damage − Soak)`, per the already-confirmed Soak mechanic — full negation is possible).
-- **If any damage gets through** (result > 0), the character loses **one Health Level**, regardless of how much damage exceeded Soak — a grazing hit and a massive one both cost exactly one Level if either gets past Soak at all.
-- **If Soak fully negates the damage**, no Health Level is lost.
+### Damage — Per-Die Resolution
 
-**Ki spend to preserve a Health Level**: a player may spend **1 point from Ki** (the pool — distinct from [Fate Tokens](fate.md), the resource players earn/spend) to **cancel the loss of one Health Level**, at a cost of 1 Ki per Level preserved. Multiple Ki can be spent to preserve multiple Levels.
+**Revised 2026-07-22**, replacing the earlier "sum all dice, compare once" version, which broke down mathematically (a fixed-ceiling Soak couldn't keep pace with an unbounded dice sum — see [design-log.md](../docs/design-log.md) for the math that killed it).
+
+On a successful hit, the attacker's **Damage sub-stat sets how many d10 are rolled** — one die per point of Damage. **Each die is resolved individually against the defender's Soak**, not summed together:
+
+- **Die result > Soak** — that die connects, and costs the defender **one Health Level**.
+- **Die result ≤ Soak** — that die is fully absorbed, no effect.
+
+Because a single die (1-10) and Soak (0-10) sit on the exact same scale, this is a fair, bounded comparison — unlike the old summed version. **Soak 10 guarantees 0% connect chance per die — true, complete negation**, achievable by full investment, matching the confirmed "Soak can fully negate" design goal. A high-Damage attack (more dice) doesn't overwhelm Soak mathematically — it just means **more independent chances to connect**, so a single attack can now plausibly cost a defender **multiple** Health Levels at once if several dice connect, which the old "one hit, one Level, period" version couldn't do.
+
+### Fate Token Infusion
+
+**Confirmed 2026-07-22**, replacing the earlier "+1 die per token" version: **the baseline damage die is a raw, unboosted d10 vs Soak — Soak 10 fully negates it, guaranteed (0% connect).** Before the roll, a player may spend **1 Fate Token per individual die** to add their full Damage rating to that specific die's result — "infusing the attack with their own essence." A boosted die is compared as `d10 + Damage rating` vs Soak, same threshold rule (result > Soak connects).
+
+This makes full negation the honest default, not a permanent wall: an unboosted attack against Soak 10 can never get through, but a player willing to spend Fate Tokens (1 per die, each spend triggering the normal [Fatigue Check](fate.md#fatigue-check) and counting against [Stamina's per-encounter spend cap](fate.md#staminas-job)) can crack even a maxed-Soak target — verified: a boosted die with Damage rating 10 vs Soak 10 is a guaranteed connect, while Damage 2 only gives a 20% chance per boosted die. Soak is a real wall by default; Fate Tokens are the deliberate, resource-costed way through it.
+
+### Ki Spend to Preserve a Health Level
+
+A player may spend **1 point from Ki** (the pool — distinct from [Fate Tokens](fate.md), the resource players earn/spend) to **cancel the loss of one Health Level**, at a cost of 1 Ki per Level preserved. Multiple Ki can be spent to preserve multiple Levels.
 
 Not yet decided: what happens once Health Levels run out (incapacitated? dying? does it mirror v1's stacking penalties as Levels are lost, or stay flat until 0?), and how lost Health Levels are recovered (tied to Earth's Healing sub-stat, presumably, but not detailed).
 
