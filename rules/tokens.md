@@ -32,18 +32,18 @@ These five options overlap in places (multiple sources offer some form of reroll
 
 ## Fatigue Check
 
-**Revised 2026-07-22**: every time a player spends a token, they immediately make a **Fatigue Check** — roll 2d10 against the **Risk Pool** (see below), same roll-under shape as the [core roll](core-mechanic.md#resolution), with the Risk Pool's current total standing in for a target number instead of a GM-set Difficulty.
+**Revised 2026-07-22**: every time a player spends a token, they immediately make a **Fatigue Check** — roll 2d10 against **Ki** (see below), same roll-under shape as the [core roll](core-mechanic.md#resolution), with Ki's current total standing in for a target number instead of a GM-set Difficulty.
 
 - **Success** — no effect, the token spend goes through with no cost beyond the token itself.
-- **Failure** — lose **1 point from the Risk Pool**, until it's refilled (refill trigger TBD).
+- **Failure** — lose **1 point from Ki**, until it's refilled (refill trigger TBD).
 
-This is deliberately a **spiral**: since the Risk Pool is its own target number, losing a point makes the *next* Fatigue Check harder too — the more a character leans on tokens, the more the risk compounds. Explicitly chosen over a flat per-spend cost because it keeps token spends cheap most of the time (failure isn't guaranteed) while still building real pressure the more a character pushes, and because more dice rolling is a feature here, not a cost to minimize.
+This is deliberately a **spiral**: since Ki is its own target number, losing a point makes the *next* Fatigue Check harder too — the more a character leans on tokens, the more the risk compounds. Explicitly chosen over a flat per-spend cost because it keeps token spends cheap most of the time (failure isn't guaranteed) while still building real pressure the more a character pushes, and because more dice rolling is a feature here, not a cost to minimize.
 
-**No longer touches Water or Stamina directly.** The original version targeted Water + Stamina, but that made Water's Attribute score double as both a normal Attribute *and* the universal gatekeeper behind every single token spend regardless of theme — disproportionate influence for one Attribute. See Risk Pool below for the fix.
+**No longer touches Wyrd or Stamina directly.** The original version targeted the Wyrd Attribute + Stamina, but that made Wyrd's raw Attribute score double as both a normal Attribute *and* the universal gatekeeper behind every single token spend regardless of theme — disproportionate influence for one Attribute. See Ki below for the fix.
 
-### Risk Pool (name TBD)
+### Ki (the pool, formerly "Risk Pool")
 
-**"Risk Pool" is a working/descriptive label, not a final name** — flagged for later, same as the [Tokens](#tokens-name-tbd) resource itself. A separate pool of points — what's actually being risked when a Fatigue Check fails. **Risk Pool = the average of all five combat sub-stats (Soak, Initiative, Damage, Stamina, Resistance), doubled** to land in the 2-20 range. Built from all five equally so no single Attribute dominates the mechanic, unlike the original Water+Stamina version. Refill trigger (rest? something else?) not yet decided.
+**Named 2026-07-22**: this pool is now called **Ki** — the wellspring of a character's superhuman capability, appropriated from what used to be the Ki *Attribute's* name once that Attribute was renamed **Wyrd** (fate/destiny/the supernatural) as part of the fated-heroes theme. What's actually being risked when a Fatigue Check fails. **Ki = the average of all five combat sub-stats (Soak, Initiative, Damage, Stamina, Warp), doubled** to land in the 2-20 range. Built from all five equally so no single Attribute dominates the mechanic. Refill trigger (rest? something else?) not yet decided.
 
 ### Stamina's Job
 
