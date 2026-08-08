@@ -4,7 +4,7 @@ A quick-reference summary of the current Attribute/sub-stat state. **This is a s
 
 | Attribute (Element) | Domain | Combat Sub-Stat | Mechanic | Other Sub-Stat | Mechanic |
 |---|---|---|---|---|---|
-| **Earth** | Physical power/endurance | **Soak** | Passive wall — each incoming damage die compared individually; die ≤ Soak is fully absorbed, die > Soak connects. Soak 10 = guaranteed 0% connect (true full negation, unless the attacker spends Fate Tokens to boost individual dice). | **Healing** | **Reverted 2026-07-22** — stays on Earth after all, the Weft-owns-Healing idea was undone. Mechanic still undefined. |
+| **Earth** | Physical power/endurance | **Soak** | Passive wall — each incoming damage die compared individually; die ≤ Soak is fully absorbed, die > Soak connects. Soak 10 = guaranteed 0% connect (true full negation, unless the attacker spends Fate Tokens to boost individual dice). | **Potence** | **Named 2026-07-22** — Healing scrapped for good (dead end), replaced with Potence: raw physical power/strength (carrying capacity, immovability, mass, forcing/breaking things). Mechanic still undefined. |
 | **Air** | Agility/adaptability, mind/intellect | **Initiative** | Rolled once at the start of combat (1d10 + Initiative), fixed for the whole fight. Higher acts first. | **Psyche** | **Committed 2026-07-22**: mirrors Soak exactly, a passive wall against Mental attack dice. |
 | **Fire** | Drive/aggression | **Damage** | Sets how many d10 are rolled on a hit — one die per point. Each die compared individually against the defender's Soak. | **Presence** | **Committed 2026-07-22**: mirrors Soak exactly, a passive wall against Social attack dice. |
 | **Water** | Perception/empathy | **Stamina** | Two jobs: (1) hard cap on Fate Token spends per encounter, (2) general endurance/exhaustion gauge outside combat (mechanic TBD). Also the trigger for the Fatigue Check on every Fate Token spend, resolved against Ki. | **Health** | Flat baseline of 5 Health Levels for every character; PCs add `+ Health sub-stat` on top. Each Level is a binary hit-box — connects once, then it's gone. |
@@ -17,4 +17,4 @@ A quick-reference summary of the current Attribute/sub-stat state. **This is a s
 
 ## Still Undefined
 
-Earth's Healing mechanic, what a connecting Social/Mental die costs the defender, Stamina's non-combat mechanic, what happens at 0 Health Levels, Health Level recovery, Ki's refill trigger, and the rest of the open-questions TODO list in [design-log.md](design-log.md#open-questions).
+Potence's mechanic, what a connecting Social/Mental die costs the defender, Stamina's non-combat mechanic, what happens at 0 Health Levels, Health Level recovery, Ki's refill trigger, and the rest of the open-questions TODO list in [design-log.md](design-log.md#open-questions).

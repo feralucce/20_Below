@@ -6,13 +6,15 @@ Five attributes, each linked to a classical element. Each pairs a felt **domain*
 
 | Attribute | Domain | Mechanical Role |
 |---|---|---|
-| **Earth** | Physical power/endurance | Soak / Healing |
+| **Earth** | Physical power/endurance | Soak / Potence |
 | **Air** | Agility/adaptability, mind/intellect | Initiative / Psyche |
 | **Fire** | Drive/aggression | Damage / Presence |
 | **Water** | Perception/empathy | Stamina / Health |
 | **Wyrd** | Fate/destiny/the supernatural | Warp / Weft |
 
-**Restructured 2026-07-22**: Air's old sub-stat **Luck is retired from Air and folded into Weft** (Wyrd's sub-stat) — fate/fortune fits Wyrd's whole domain better than Air's. In its place, Air gains **Psyche**, a Mind/Intellect-flavored sub-stat, giving Air a mental-resistance role matching the classical/pagan association of Air with the mind. This also builds toward a triad of passive "wall" sub-stats working like Defense: **Soak (Physical, Earth), Presence (Social, Fire), Psyche (Mental, Air)** — exact Psyche mechanic still TBD, see [design-log.md](../docs/design-log.md#open-questions).
+**Restructured 2026-07-22**: Air's old sub-stat **Luck is retired from Air and folded into Weft** (Wyrd's sub-stat) — fate/fortune fits Wyrd's whole domain better than Air's. In its place, Air gains **Psyche**, a Mind/Intellect-flavored sub-stat, giving Air a mental-resistance role matching the classical/pagan association of Air with the mind. This also builds toward a triad of passive "wall" sub-stats working like Defense: **Soak (Physical, Earth), Presence (Social, Fire), Psyche (Mental, Air)** — both now confirmed, see [The Passive Wall Triad](#the-passive-wall-triad--soak-presence-psyche).
+
+**Earth's Healing scrapped for good, replaced by Potence** — Healing never found a mechanic that made sense as its own stat (repeatedly dead-ended, including a brief detour where it moved to Weft and got reverted). Earth's second sub-stat is now **Potence** — raw physical power/strength (carrying capacity, immovability, mass, forcing/breaking things). Exact mechanic still TBD.
 
 Attributes are scored **1-10** (1 = lowest, 10 = highest).
 
