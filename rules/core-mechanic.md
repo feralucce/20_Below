@@ -7,10 +7,12 @@ Five attributes, each linked to a classical element. Each pairs a felt **domain*
 | Attribute | Domain | Mechanical Role |
 |---|---|---|
 | **Earth** | Physical power/endurance | Soak / Healing |
-| **Air** | Agility/adaptability | Initiative / Luck |
+| **Air** | Agility/adaptability, mind/intellect | Initiative / Psyche |
 | **Fire** | Drive/aggression | Damage / Presence |
 | **Water** | Perception/empathy | Stamina / Health |
 | **Wyrd** | Fate/destiny/the supernatural | Warp / Weft |
+
+**Restructured 2026-07-22**: Air's old sub-stat **Luck is retired from Air and folded into Weft** (Wyrd's sub-stat) — fate/fortune fits Wyrd's whole domain better than Air's. In its place, Air gains **Psyche**, a Mind/Intellect-flavored sub-stat, giving Air a mental-resistance role matching the classical/pagan association of Air with the mind. This also builds toward a triad of passive "wall" sub-stats working like Defense: **Soak (Physical, Earth), Presence (Social, Fire), Psyche (Mental, Air)** — exact Psyche mechanic still TBD, see [design-log.md](../docs/design-log.md#open-questions).
 
 Attributes are scored **1-10** (1 = lowest, 10 = highest).
 
