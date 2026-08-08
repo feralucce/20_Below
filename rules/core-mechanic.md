@@ -54,6 +54,13 @@ Because a single die (1-10) and Soak (0-10) sit on the exact same scale, this is
 
 For all three: each attack die is resolved individually against the relevant wall stat. Die ≤ wall stat is fully absorbed; die > wall stat connects. A wall stat of 10 guarantees 0% connect chance per die — true, complete negation — unless the attacker spends Fate Tokens (1 per die) to add their own matching Attack sub-stat to that specific die, per the same [Fate Token Infusion](#fate-token-infusion) rule already defined for Soak/Damage. What a connecting Social or Mental die actually costs the defender (a Health Level, same as Physical? A different track?) is not yet decided — see [design-log.md](../docs/design-log.md#open-questions).
 
+### Weft — Confirmed 2026-07-22
+
+Two passive functions, both "gives" like Health/Soak/Presence/Psyche — no roll, no spend:
+
+1. **Ki Regeneration** — Weft sets how much Ki is restored whenever Ki's refill trigger fires (the trigger itself is still undecided — see [design-log.md](../docs/design-log.md#open-questions)).
+2. **Lucky Number** — a character's lucky number equals their **Weft rating**. Whenever **any die** rolled for that character (the core roll, damage dice, Advantage/Disadvantage dice, the Initiative die, anything) shows a result **equal to their Weft rating**, they immediately gain **1 Fate Token** — automatic, no choice, no cost. Fitting, since it's their own innate luck occasionally handing them the literal currency of bending fate further.
+
 ### Fate Token Infusion
 
 **Confirmed 2026-07-22**, replacing the earlier "+1 die per token" version: **the baseline damage die is a raw, unboosted d10 vs Soak — Soak 10 fully negates it, guaranteed (0% connect).** Before the roll, a player may spend **1 Fate Token per individual die** to add their full Damage rating to that specific die's result — "infusing the attack with their own essence." A boosted die is compared as `d10 + Damage rating` vs Soak, same threshold rule (result > Soak connects).
