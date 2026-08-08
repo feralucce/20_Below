@@ -44,6 +44,16 @@ On a successful hit, the attacker's **Damage sub-stat sets how many d10 are roll
 
 Because a single die (1-10) and Soak (0-10) sit on the exact same scale, this is a fair, bounded comparison — unlike the old summed version. **Soak 10 guarantees 0% connect chance per die — true, complete negation**, achievable by full investment, matching the confirmed "Soak can fully negate" design goal. A high-Damage attack (more dice) doesn't overwhelm Soak mathematically — it just means **more independent chances to connect**, so a single attack can now plausibly cost a defender **multiple** Health Levels at once if several dice connect, which the old "one hit, one Level, period" version couldn't do.
 
+### The Passive Wall Triad — Soak, Presence, Psyche
+
+**Confirmed 2026-07-22**: Presence (Fire) and Psyche (Air) both mirror **Soak exactly** — the identical per-die mechanic, just resisting a different attack type. All three sub-stats are **passive gives**, the same way Health is: a flat number a character simply has, doing its job automatically with no roll or spend required.
+
+- **Soak** — wall against **Physical** damage dice.
+- **Presence** — wall against **Social** attack dice.
+- **Psyche** — wall against **Mental** attack dice.
+
+For all three: each attack die is resolved individually against the relevant wall stat. Die ≤ wall stat is fully absorbed; die > wall stat connects. A wall stat of 10 guarantees 0% connect chance per die — true, complete negation — unless the attacker spends Fate Tokens (1 per die) to add their own matching Attack sub-stat to that specific die, per the same [Fate Token Infusion](#fate-token-infusion) rule already defined for Soak/Damage. What a connecting Social or Mental die actually costs the defender (a Health Level, same as Physical? A different track?) is not yet decided — see [design-log.md](../docs/design-log.md#open-questions).
+
 ### Fate Token Infusion
 
 **Confirmed 2026-07-22**, replacing the earlier "+1 die per token" version: **the baseline damage die is a raw, unboosted d10 vs Soak — Soak 10 fully negates it, guaranteed (0% connect).** Before the roll, a player may spend **1 Fate Token per individual die** to add their full Damage rating to that specific die's result — "infusing the attack with their own essence." A boosted die is compared as `d10 + Damage rating` vs Soak, same threshold rule (result > Soak connects).
