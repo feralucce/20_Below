@@ -35,6 +35,10 @@ Separately, that same score also generates a **pool of points equal to the Attri
 - **`PC Health Levels = 5 + Health (sub-stat)`** — the flat baseline, plus whatever a PC invests in Water's Health sub-stat.
 - **NPCs will most often just be the flat 5**, with no Health sub-stat added — a deliberate design choice: minor/"weenie" NPCs are meant to go down in a single connecting hit, while PCs are built tougher by default.
 
+**What happens at 0, resolved 2026-08-09** (established alongside the [Unstoppable Boon](boons.md)): at **0 Health Levels**, a character falls unconscious and can't act. Health Levels can still be tracked into negative territory from further damage — at **Health Levels ≤ −(Health sub-stat)**, the character dies. Ordinarily this negative range plays out off-screen, since an unconscious character can't act or be aware of it; [Unstoppable](boons.md#major) is the exception that lets a character stay conscious and act throughout that same negative range instead of blacking out at 0.
+
+**Crossing zero, resolved 2026-08-09** — deliberately anime-flavored: a single attack can never skip a character straight past 0 into negative territory. If enough connecting dice from one attack (see [Damage — Per-Die Resolution](#damage--per-die-resolution)) would carry a character's Health Levels below 0, the excess is simply discarded — they land exactly at 0, no further, no matter how many dice connected. **Once a character is already at 0 Health Levels** — unconscious under the rule above, or still conscious via Unstoppable — **any further attack can only remove 1 Health Level, total, regardless of how many dice connect.** The normal "multiple Health Levels from one attack" rule only applies while a character is still above 0; below it, every hit costs exactly one Level, turning the drop toward the −(Health sub-stat) death threshold into a slow, grinding countdown rather than a single unlucky roll ending things outright.
+
 ### Damage — Per-Die Resolution
 
 **Revised 2026-07-22**, replacing the earlier "sum all dice, compare once" version, which broke down mathematically (a fixed-ceiling Soak couldn't keep pace with an unbounded dice sum — see [design-log.md](../docs/design-log.md) for the math that killed it).
@@ -46,6 +50,17 @@ On a successful hit, the attacker's **Damage sub-stat sets how many d10 are roll
 
 Because a single die (1-10) and Soak (0-10) sit on the exact same scale, this is a fair, bounded comparison — unlike the old summed version. **Soak 10 guarantees 0% connect chance per die — true, complete negation**, achievable by full investment, matching the confirmed "Soak can fully negate" design goal. A high-Damage attack (more dice) doesn't overwhelm Soak mathematically — it just means **more independent chances to connect**, so a single attack can now plausibly cost a defender **multiple** Health Levels at once if several dice connect, which the old "one hit, one Level, period" version couldn't do.
 
+![Damage's per-die resolution](../docs/assets/diagrams/damage-per-die-resolution.svg)
+
+### Potence — Confirmed 2026-08-09
+
+Potence (Earth's other sub-stat: raw physical power/strength — carrying capacity, immovability, mass, forcing/breaking things) splits into two jobs, following the same combat-job-plus-general-gauge split already established for [Stamina](fate.md#staminas-job):
+
+1. **Flat passive give (mundane use, no roll)** — Potence directly sets a **Carrying Capacity** (how much weight a character can lift/carry/drag under ordinary conditions) and a **Break Threshold** (the bar an object's resistance must sit under to be forced open/broken with no contest involved, e.g. a flimsy lock nobody's holding shut). Exact scaling formula for both numbers not yet set.
+2. **Contested dice pool, reusing Damage's shape** — when forcing, breaking, or moving something that's actively resisting (a grapple, a door someone's holding shut, a struggling creature), **Potence sets how many d10 are rolled**, identical to [Damage's per-die resolution](#damage--per-die-resolution). Each die is compared individually against the target's relevant resistance: a grappled/restrained creature's own **Soak**, or — for inanimate resisting objects — a not-yet-defined **Hardness** stat (GM-set, same 0-10 scale, functioning as an object's Soak equivalent; see [design-log.md](../docs/design-log.md#open-questions)). Each connecting die represents one increment of success (one step of forced movement, one point toward breaking the object/hold).
+
+Chosen over a single approach because it covers all four flavors in Potence's domain at once — mass/capacity get the flat give, immovability/forcing-under-resistance get the contested roll — while reusing an already-proven mechanical shape (Damage's dice pool) rather than inventing a new one from scratch.
+
 ### The Passive Wall Triad — Soak, Presence, Psyche
 
 **Confirmed 2026-07-22**: Presence (Fire) and Psyche (Air) both mirror **Soak exactly** — the identical per-die mechanic, just resisting a different attack type. All three sub-stats are **passive gives**, the same way Health is: a flat number a character simply has, doing its job automatically with no roll or spend required.
@@ -55,6 +70,8 @@ Because a single die (1-10) and Soak (0-10) sit on the exact same scale, this is
 - **Psyche** — wall against **Mental** attack dice.
 
 For all three: each attack die is resolved individually against the relevant wall stat. Die ≤ wall stat is fully absorbed; die > wall stat connects. A wall stat of 10 guarantees 0% connect chance per die — true, complete negation — unless the attacker spends Fate Tokens (1 per die) to add their own matching Attack sub-stat to that specific die, per the same [Fate Token Infusion](#fate-token-infusion) rule already defined for Soak/Damage. What a connecting Social or Mental die actually costs the defender (a Health Level, same as Physical? A different track?) is not yet decided — see [design-log.md](../docs/design-log.md#open-questions).
+
+**Presence and Psyche are self-paired attacker/wall stats — confirmed 2026-08-09.** Physical splits the attacker/wall pair across two Attributes (Fire's Damage sets the dice, Earth's Soak is the wall). Social and Mental don't get their own separate Attribute the way Physical does, so **Presence and Psyche each do both jobs on their own stat**: a character's Presence sets how many d10 they roll when making a Social attack (intimidation, a cutting rebuke, a bald-faced lie under pressure), resolved die-by-die against the *target's* Presence acting as their wall — identical shape to [Damage vs. Soak](#damage--per-die-resolution), just both ends read off the same-named stat on two different characters. Psyche works identically for Mental attacks. This is the dice-pool mechanism only — it has no Powers/abilities hooked up to trigger it yet, and what a connecting die costs the defender is still the open question noted above; both are separate from putting the roll's shape in place.
 
 ### Weft — Confirmed 2026-07-22
 
