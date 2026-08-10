@@ -1,6 +1,6 @@
 # Skills
 
-Carried forward from [v1](../archive/v1/rules/skills.md): Skills are not locked to a fixed Attribute.
+Skills are not locked to a fixed Attribute.
 
 ## Skills Are Not Attribute-Locked
 
@@ -10,7 +10,7 @@ Any Skill can be paired with any of the five Attributes (Earth, Air, Fire, Water
 
 ## Training Tiers
 
-**Renamed and restructured 2026-07-22**, dropping the old flat "+1/+2" bonuses in favor of Advantage doing that work — instead of a separate flat skill number, a Skill's **training tier** changes *how* the [core roll](core-mechanic.md#resolution) is built:
+A Skill's **training tier** changes *how* the [core roll](core-mechanic.md#resolution) is built:
 
 | Tier | Name | Roll |
 |---|---|---|
@@ -25,10 +25,10 @@ Each tier is strictly better than the last. Master's reroll only ever *removes t
 
 **Advantage/Disadvantage** are the [standalone core mechanic](core-mechanic.md#advantage--disadvantage): roll 3d10, keep the lowest two (Advantage) or highest two (Disadvantage).
 
-**Advancement**: a character climbs the ladder one tier at a time via **direct XP expenditure** — same philosophy as v1 (no classes/levels, no fixed track). Exact XP cost per tier is still TBD — see [design-log.md](../docs/design-log.md#open-questions).
+**Advancement**: a character climbs the ladder one tier at a time via **direct XP expenditure** — no classes/levels, no fixed track. Exact XP cost per tier is still TBD.
 
 ## Everyman Skills
 
-Borrowed from the **Hero System's Everyman Skills** concept: a short list of ordinary, baseline skills that every character starts with at no cost, reflecting the basic competence any functional adult in the setting would have (Hero System's own list includes things like Climbing, Concealment, Conversation, Persuasion, Shopping, and Stealth at a minimal level). 20 Below doesn't fix this list in the core rules — **the GM decides the Everyman Skills list for their own campaign/setting**, since "what any ordinary person can do" depends heavily on genre and setting. Every Everyman Skill is granted at **Tier 2 (Trained)** — full Attribute + Difficulty, no flat bonus or Advantage, reflecting genuine baseline competence rather than a bare exposure.
+A short list of ordinary, baseline skills that every character starts with at no cost, reflecting the basic competence any functional adult in the setting would have. 20 Below doesn't fix this list in the core rules — **the GM decides the Everyman Skills list for their own campaign/setting**, since "what any ordinary person can do" depends heavily on genre and setting. Every Everyman Skill is granted at **Tier 2 (Trained)** — full Attribute + Difficulty, no flat bonus or Advantage, reflecting genuine baseline competence rather than a bare exposure.
 
-Everything else about Skills (exact XP costs per tier, whether there's a fixed list beyond Everyman Skills, breadth, specialties) is still open — see [design-log.md](../docs/design-log.md#open-questions).
+Everything else about Skills (exact XP costs per tier, whether there's a fixed list beyond Everyman Skills, breadth, specialties) is still open.

@@ -1,6 +1,6 @@
 # Resources
 
-**Split out from Boons 2026-08-09.** These were v1's "Leveled (Resource) Perks" — carried into v2's rename as part of [Boons](boons.md) at first, then split into their own category once it became clear they're a structurally different kind of thing: a scalable resource on a 1-5 level scale, not a binary yes/no trait like every other Boon. Content unchanged from v1, just relocated and alphabetized.
+A structurally different kind of thing from [Boons](boons.md): a scalable resource on a 1-5 level scale, not a binary yes/no trait.
 
 ## What a Resource Is
 
@@ -17,8 +17,6 @@ A Resource represents a currency or standing the character can draw on or lean o
 | Wealth | How much disposable financial resource is available to draw on |
 
 ## Per-Level Content
-
-Carried forward unchanged from v1.
 
 | Level | Base | Contacts | Fame |
 |---|---|---|---|
@@ -44,7 +42,3 @@ Carried forward unchanged from v1.
 | 4 | Wealthy; can finance a major undertaking outright |
 | 5 | A fortune large enough to move markets or bankroll entire operations |
 
-## Open Questions
-
-- **Cost not yet re-derived for v2.** v1 priced these at a flat 1 point/level from the same creation-pool Boons drew from — since Resources are no longer part of that pool, whether they get their own pool, their own point costs, or something else entirely is open.
-- **Whether Resources belong in the same character-creation currency as Boons at all**, now that they're a separate category, or need their own budget — not decided.

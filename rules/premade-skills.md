@@ -1,6 +1,6 @@
 # Premade Skills — Base Campaign (Modern World)
 
-A starting Skill list scoped to a **modern-world base campaign**, built the same way [v1's premade list](../archive/v1/rules/premade-skills.md) was but re-cut for the present day instead of a fantasy/historical setting. Per [skills.md](skills.md), **none of these are locked to an Attribute** and **this list is not exhaustive** — players and GMs should freely add, split, merge, or rename entries to fit a specific character or campaign. It exists to save table time at character creation, not to fence in what a character can plausibly do.
+A starting Skill list scoped to a **modern-world base campaign**. Per [skills.md](skills.md), **none of these are locked to an Attribute** and **this list is not exhaustive** — players and GMs should freely add, split, merge, or rename entries to fit a specific character or campaign. It exists to save table time at character creation, not to fence in what a character can plausibly do.
 
 **Broad by design, not narrow**: matching the existing [Specialties](skills.md#specialties) approach used elsewhere (Science, Crafting, Piloting, Performance), entries here stay wide on purpose — a single point spent training *Mechanics* should feel like it was worth the character point and the XP that pushed it up a tier, not like it only covers one narrow task. Where a real distinction exists within a broad Skill (a specific science, a specific trade, a specific vehicle class, a specific instrument), that's a Specialty layered on top of the Skill, not a reason to split the Skill itself.
 
@@ -37,7 +37,7 @@ A starting Skill list scoped to a **modern-world base campaign**, built the same
 | Farming | Cultivating crops and managing livestock. |
 | Finance | Economics, markets, and accounting. |
 | Firearms | Handguns, long guns, and other modern ranged weapons — specialize by category (e.g. *Pistols*, *Rifles*) via Specialty if desired. |
-| First Aid | Immediate, field-level treatment — stabilizing, bandaging, CPR. Mechanical effect (Health Level restoration/preservation) TBD, tracked in [design-log.md](../docs/design-log.md#open-questions). |
+| First Aid | Immediate, field-level treatment — stabilizing, bandaging, CPR. |
 | Fishing | Catching fish by line, net, or spear. |
 | Forgery | Producing convincing fake documents, signatures, IDs, and digital records. |
 | Gaming | Skill at games of strategy, chance, and wagering — tabletop, esports, or otherwise. |
@@ -113,12 +113,3 @@ Per [skills.md's Everyman Skills rule](skills.md#everyman-skills), the GM sets t
 | Streetwise | A working sense of one's own neighborhood/city — what's safe, who's who, where not to go. |
 
 Deliberately **not** included by default: Firearms, Medicine, Hacking, and other Skills that represent real specialized training most people don't get just by living in modern society — those stay Skills characters actually invest in, not baseline gives.
-
-## Source Note
-
-Carried forward and re-cut from [v1's premade list](../archive/v1/rules/premade-skills.md) (itself compiled from OWoD, Pathfinder 1e, Call of Cthulhu 7e, Exalted, Adventure!, Pendragon, Hero System, and Heroes Unlimited/Rifts — see that file for the full cross-reference). Changes made for the modern-world base campaign: dropped period/genre-specific entries with no modern equivalent (Falconry, Heraldry, Riding, Sailing as a general Skill, Alchemy), split Security into physical **Security** and digital **Hacking**, split **Computer Use** out as its own non-adversarial Skill, added **Combat Driving/Piloting** and **Bureaucracy**, and folded **Occult** in as a default rather than a genre-flagged opt-in, since it grounds this system's own fated-heroes premise rather than being setting-specific horror flavor.
-
-## Open Questions
-
-- **XP costs, exact Everyman list, and other Skill-system open items** are tracked in [design-log.md](../docs/design-log.md#open-questions) — this file only proposes the content of a premade list, not the still-open mechanics around it.
-- **This is a first draft proposal**, not confirmed/locked — review and trim before treating it as final.
