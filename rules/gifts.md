@@ -80,3 +80,34 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 
 - **Extended Range**: +1 Ki per use. The Move reaches one Range Band further than its current Level would normally allow.
 - **Area of Effect**: +1 Ki per use. The Move affects everyone within its range/area rather than a single target — exact shape and extent defined when the Move is built, GM-approved.
+
+### Alternate Form
+
+**[FLAGGED — not final. Menu and point costs may need rebalancing once played against the other Gifts. Revisit once the rest of the Gift list is built.]**
+
+The body is not a fixed thing, not for you. At will, you can shed your ordinary shape for another — a specific creature both mundane and impossible, a drift of mist, a living shadow, or some other secondary state entirely, each granting capabilities your normal body could never manage. What the alternate form actually *is* — the creature, the state, the theme — is defined once, at creation, and stays consistent every time you take it.
+
+Transforming costs a Slow action and triggers a [Gift Check](#resolution) — success free, failure costs 1 Ki, the transformation happens either way. The form lasts until voluntarily dropped, no ongoing cost to maintain.
+
+The alternate form is built once, at creation, spending a points pool (below) on the build menu below. The pool scales with Gift Level, so a character can revisit and add to the form's build as they gain Levels.
+
+**Pool by Level**:
+
+| Level | Pool |
+|---|---|
+| 1 | 2 points |
+| 2 | 5 points |
+| 3 | 9 points |
+| 4 | 13 points |
+| 5 | 18 points |
+
+**Build menu**:
+
+| Option | Cost | Effect |
+|---|---|---|
+| Sub-stat boost | 1 pt | +2 to one physical sub-stat (Soak, Ferocity, Stamina, Potence, or Initiative) while transformed. |
+| Natural weapon | 1 pt | Claws, fangs, a stinger, etc. — grants weapon-equivalent dice (per [weapons.md](weapons.md)) usable without a manufactured weapon. |
+| Environmental adaptation | 1 pt | Breathe underwater, see in total darkness, ignore extreme temperatures, or similar. |
+| Enhanced movement | 1 pt | Flight, swimming, wall-climbing, or a ×1.5 Movement Rate — pick one mode/effect. |
+| Elemental resistance | 2 pts | Remove one quarter of an incoming attack's dice of one chosen damage type, same shape as [Elemental Aura](#elemental-aura)'s Level 1. |
+| Sensory upgrade | 1 pt | Echolocation, scent-tracking, infrared vision, or similar. |
