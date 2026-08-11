@@ -111,3 +111,17 @@ The alternate form is built once, at creation, spending a points pool (below) on
 | Enhanced movement | 1 pt | Flight, swimming, wall-climbing, or a ×1.5 Movement Rate — pick one mode/effect. |
 | Elemental resistance | 2 pts | Remove one quarter of an incoming attack's dice of one chosen damage type, same shape as [Elemental Aura](#elemental-aura)'s Level 1. |
 | Sensory upgrade | 1 pt | Echolocation, scent-tracking, infrared vision, or similar. |
+
+### Claws / Fangs
+
+Your body carries its own weapon, grown in rather than picked up — retractable claws, elongated fangs, a natural blade of bone or chitin, whatever fits the concept. Always on hand, never disarmed, capable of dealing real, lasting wounds without a manufactured weapon anywhere in reach.
+
+Chosen once, at creation: **Always There** (visible and permanent — can't be hidden, but free to use) or **Stowable** (concealed until deployed, passes for ordinary at a glance — but each time you deploy and attack with them, it triggers a [Gift Check](#resolution), failure costing 1 Ki).
+
+| Level | Effect |
+|---|---|
+| 1 | Your claws or fangs deal **2d10**, resolved with the same per-die-vs-Soak mechanic as any weapon. Always available in Melee range — no action spent drawing or readying it. Always There costs nothing to use; Stowable triggers the Gift Check on each deployment. |
+| 2 | Damage rises to **3d10**. |
+| 3 | Damage rises to **4d10**. Additionally, you may spend **1 Ki** on a successful hit to add a minor rending effect — the wound bleeds, imposing Disadvantage on the target's next roll before it's tended to or the scene ends. |
+| 4 | Damage rises to **5d10**. The rending effect intensifies — Disadvantage now persists on all of the target's rolls until the wound is treated or the scene ends, not just their next one. |
+| 5 | Damage rises to **6d10** (matching a heavy/anti-materiel weapon). The rending effect still costs 1 Ki per use. If Stowable was chosen, deploying your claws/fangs no longer triggers the Gift Check. |
