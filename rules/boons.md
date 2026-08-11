@@ -14,7 +14,7 @@ Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation 
 | Boon | Points | Effect |
 |---|---|---|
 | Alertness | 3 (Lesser) | Immune to being [Surprised](combat.md#surprise) while conscious, unless under a mind-altering effect that would specifically allow it. |
-| Alternate Identity | TBD | A fully realized second identity — name, history, and papers that hold up under real scrutiny — keeping your real self insulated from what it does. |
+| Alternate Identity | 5 (Greater) | A fully realized second identity — name, history, and papers that hold up under real scrutiny — keeping your real self insulated from what it does. |
 | Ambidextrous | 1 (Trivial) | Ignore the [Disadvantage](core-mechanic.md#advantage--disadvantage) normally imposed for performing a task with your off-hand. |
 | Closed Book | TBD | Your emotions and tells are unreadable — others can't read you the way they can read most people. |
 | Common Sense | TBD | The GM will give you a heads-up before you commit to an obviously terrible decision. |
