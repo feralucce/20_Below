@@ -18,6 +18,7 @@ Flaws are the mirror image of [Boons](boons.md) — disadvantages, quirks, or co
 | Berserk | = Level | Once triggered, must keep fighting at full intensity — see [Berserk](#berserk) below for the 5-level breakdown. |
 | Code of Conduct | = Level | A self-imposed rule the character won't break, even when breaking it would help — see [Code of Conduct](#code-of-conduct) below for the 5-level breakdown. |
 | Dependent | = Level | Someone relies on the character and must be protected or provided for — see [Dependent](#dependent) below for the 5-level breakdown. |
+| Directionless | = Level | A poor, unreliable sense of direction — see [Directionless](#directionless) below for the 5-level breakdown. |
 | Fragile | = Level | The body works against you — see [Fragile](#fragile) below for the 5-level breakdown. |
 | Gun-Shy | = Level | Falters when violence breaks out — see [Gun-Shy](#gun-shy) below for the 5-level breakdown. |
 | Illiterate | = Level | Cannot read or write, to some degree — see [Illiterate](#illiterate) below for the 5-level breakdown. |
@@ -104,6 +105,16 @@ Each level's effect is cumulative — it keeps every lower level's restriction a
 | 3 | A dependent who can't protect themselves and needs real intervention when trouble finds them — a young child, an elderly parent, someone seriously ill. |
 | 4 | A dependent who is a frequent liability — regularly endangered by the character's own life (enemies, work, reputation), requiring real risk to protect. |
 | 5 | A dependent who is entirely helpless without the character and a prime target — enemies know exactly who to threaten to get to the character. |
+
+## Directionless
+
+| Level | Effect |
+|---|---|
+| 1 | A mildly unreliable sense of direction — occasionally turns around even in familiar places, rarely costs more than a moment. |
+| 2 | A genuinely poor sense of direction — regularly gets turned around in unfamiliar areas, needs to double-check directions rather than trust instinct. |
+| 3 | Actively bad — gets lost even in semi-familiar places without a map, guide, or other aid to follow. |
+| 4 | Severe — cannot reliably navigate even short, familiar routes without external aid; easily disoriented under any pressure or unfamiliar layout. |
+| 5 | No functional sense of direction whatsoever — completely dependent on others or tools to get anywhere; could get lost in their own home under stress or darkness. |
 
 ## Fragile
 
