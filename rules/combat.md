@@ -18,6 +18,12 @@ The tradeoff across all three: **Fast trades action count for going first**, **N
 
 A player can spend **1 Ki per step** to bump their declared band up (Slow → Normal, or Normal → Fast) — buying back speed at the cost of the resource. Spending 2 Ki moves two steps at once (Slow → Fast).
 
+### Surprise
+
+A character who hasn't noticed a threat before combat begins is **Surprised** — typically because an opposing Stealth roll succeeded against their Perception, or the GM judges the fiction warrants it.
+
+**A Surprised character rolls at Disadvantage on everything** — attacks, and any other roll where the defender's readiness matters — for the remainder of the round they're caught in. Ends automatically once that round ends. [Alertness](boons.md) grants immunity to being Surprised while conscious.
+
 ### Interrupted Plans
 
 If something that happens during an earlier band's turn **eliminates a not-yet-acted character's plan** (e.g. their intended target is removed before their band goes), that character gets a **reactive roll** — the specific Skill/Attribute pairing and Difficulty are still TBD, but it defaults to **average Difficulty**.
