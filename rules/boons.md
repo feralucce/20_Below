@@ -31,7 +31,7 @@ Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation 
 | Iron Stomach | 1 (Trivial) | Eat or drink almost anything without illness. |
 | Iron Will | 5 (Greater) | Unlocks **Assert Your Will** as a [Fate Spend](fate.md#fate-spend) — spend 1 Fate Token to flatly negate an attempt to frighten, intimidate, or dominate you, no roll. |
 | Light Sleeper | 1, 3, or 5 | Bought as one of three tiers (each includes the lower tier's benefit — no need to buy more than one). **Tier 1 (1, Trivial)**: wake instantly at the slightest disturbance. **Tier 2 (3, Lesser)**: additionally, you're never automatically [Surprised](combat.md#surprise) while asleep — roll Perception even while asleep to notice a threat, same as if you were awake. **Tier 3 (5, Greater)**: additionally, waking from a disturbance doesn't cost you your position in the round — you act on your normal Initiative immediately rather than losing the first exchange getting your bearings. |
-| Lightning Calculator | TBD | Instant complex mental math. |
+| Lightning Calculator | 1 (Trivial) | Instant, effortless mental processing of complex calculations — arithmetic, odds and statistics, trajectories, logistics, or any other math-driven estimate — done in your head, accurately, that would normally take pen, paper, or a calculator. |
 | Living Legend | TBD | Your reputation precedes you at a civilization-spanning scale — whole factions, cities, or movements already have an opinion of you before you arrive. |
 | Mimicry | TBD | Convincingly imitate voices and sounds you've heard. |
 | Natural Linguist | TBD | Pick up new languages unusually fast. |
