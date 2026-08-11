@@ -15,11 +15,16 @@ Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation 
 |---|---|
 | Ambidextrous | Ignore the [Disadvantage](core-mechanic.md#advantage--disadvantage) normally imposed for performing a task with your off-hand. |
 
+## Lesser
+
+| Boon | Effect |
+|---|---|
+| Double-Jointed | For Escapology rolls, treat your [Skill Training Tier](skills.md#training-tiers) as one tier higher than your actual tier, with a minimum of Trained — even an Untrained or Novice character rolls Escapology as if Trained. Trained rolls as if Adept, Adept as if Expert, Expert as if Master. (Master stays Master.) |
+
 ## Minor (pending re-sort into the four-tier scheme)
 
 | Boon | Effect |
 |---|---|
-| Double-Jointed | Escape bonds/tight spaces, contort with ease. |
 | Encyclopedic Knowledge | Broad, ready trivia and general knowledge on nearly any topic — distinct from Eidetic Memory's perfect recall of things you actually saw, read, or heard. |
 | Feign Death | Convincingly fool onlookers — and a casual medical check — into believing you're dead or unconscious, on your own choice. |
 | Higher Purpose | Others innately sense you're meant for something greater. |
