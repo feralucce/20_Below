@@ -173,3 +173,15 @@ Your senses reach further and cut sharper than anyone else's — sounds from acr
 | 3 | Your sense gains true microscopic-level detail at no extra cost — spot a single fingerprint across a room, hear a heartbeat, notice trace chemical residue by scent. Additionally, spend **1 Ki** to pierce an obstacle that would normally block your sense entirely — see through fog or a thin wall, hear through a door, etc. |
 | 4 | The obstacle-piercing from Level 3 no longer costs Ki, and now works through thicker, more substantial barriers — solid walls, multiple rooms away. Additionally, you're immune to being [Surprised](combat.md#surprise) by any threat your enhanced sense would have detected. |
 | 5 | Your chosen sense becomes constant, passive awareness within **Far** range — you don't need to actively look or listen; relevant details and threats simply register automatically. Additionally, it can pierce even magical concealment or supernatural stealth, not just mundane obstacles (GM's call on edge cases specifically countering your exact sense). |
+
+### Telepathy/Empathy
+
+Minds are not as private as people think — not to you. You can brush against another's emotions, catching the shape of what they feel even through a practiced mask, or reach further and hear the words behind their eyes entirely. Feeling and thought, read by the same gift, just at different depths.
+
+| Level | Effect |
+|---|---|
+| 1 | Roll **Air + Difficulty** to read someone's general emotional state — fear, anger, deception, attraction, whatever's closest to the surface — requires them to be within Close range and perceivable to you. Success reveals the surface emotion; no specific thoughts, just the feeling underneath. No Ki, no Gift Check. |
+| 2 | Range extends to **Near**. You can now read surface, unguarded thoughts as well as emotions — still resolved as Air + Difficulty; a target actively resisting simply raises the Difficulty (GM's call), not yet a contested roll. |
+| 3 | Range extends to **Far**. Against a target actively resisting, you may now spend **1 Ki** to force the read as a genuine **Mental attack** — roll your Psyche dice per-die against their Psyche wall, breaching through to their surface thoughts and emotions on a connecting die. |
+| 4 | You can now project your own thoughts into a target's mind as well as read theirs — a genuine two-way telepathic link. For a willing or aware participant, this works at **Line of Sight** (as far as you can see them, not bound by the normal Range Bands). Forcing a read on an unwilling target (the Level 3 Mental attack) is capped at **Near**. Forced reads can now dig into deeper memories and guarded secrets, not just surface thoughts. Ki cost for forced reads stays **1**. |
+| 5 | Forced-read range extends back out to **Far**. Additionally, once you've established a genuine two-way link with someone (even briefly), you retain a limited telepathic connection to them indefinitely afterward — no range limit at all, a permanent bond once formed. Ki cost for forced reads drops to **0** — full mastery, free. |
