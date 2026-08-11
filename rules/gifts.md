@@ -51,3 +51,22 @@ Your body has crossed some threshold ordinary flesh shouldn't be able to cross. 
 | 3 | The extra action from Level 2 can now be a Fast **or Normal** action, still 1 Ki, still once per round. Roll Initiative as 2d10 and keep the higher die. The post-Ki-spend Movement Rate multiplier rises to **×2** for the rest of that turn. |
 | 4 | The extra-action spend can now be used **up to twice per round** (still 1 Ki per use). On any turn where you've spent Ki this way, attacks made against you that turn are at **Disadvantage** — you're moving too fast to track cleanly. The post-Ki-spend Movement Rate multiplier rises to **×3** for the rest of that turn. |
 | 5 | The extra-action spend can now be used **up to three times per round** (still 1 Ki per use, still Fast or Normal only). Attacks made against you are at Disadvantage on any turn you spend Ki this way. The post-Ki-spend Movement Rate multiplier rises to **×5** for the rest of that turn. |
+
+### Signature Move
+
+Every seasoned fighter, mystic, or gifted soul eventually develops something that's uniquely theirs — a technique, a maneuver, a flourish of power that belongs to them and no one else, honed and personal in a way no textbook or master can teach directly. Signature Move is that: a custom ability built from scratch to fit the character who holds it, not pulled from a fixed list. It's usually an attack, but doesn't have to deal damage to qualify — a signature disarm, a signature escape, a signature show of force. Built level by level as the character's mastery of their own technique grows.
+
+Defined once, at creation: whether the Move is primarily an **attack** or a **non-damaging effect**, and — if an attack — which of the three attack types it uses (Physical/Ferocity, Social/Presence, or Mental/Psyche), resolved with the same per-die-vs-wall mechanic as a normal attack of that type.
+
+| Level | Effect |
+|---|---|
+| 1 | If an attack: deals **1d10** vs the target's relevant wall. If non-damaging: produces one small, clearly-bounded effect (GM approval on scope). Using it costs a Fast action. No Ki cost, no Gift Check. |
+| 2 | Damage rises to **2d10** (if an attack); the non-damaging effect's scope widens (still GM-approved, but a real step up from Level 1). Using the Move now costs **1 Ki**, in addition to the Fast action — that Ki spend is what bakes in one minor secondary effect layered onto the base Move (a small knockback, a brief off-balance status, a minor debuff). |
+| 3 | Damage rises to **3d10**. Range extends from Melee to **Close** (Levels 1-2 were Melee-only). The secondary effect from Level 2 upgrades to a moderate tier (a real knockdown, a genuine debuff, a short status lock, rather than just "brief"). Still 1 Ki per use. |
+| 4 | Damage rises to **4d10**. Range extends to **Near**. The secondary effect upgrades to a major tier (a real status condition, a significant forced reposition, a debuff with teeth). Ki cost rises to **2** per use. |
+| 5 | Damage rises to **5d10**. Range extends to **Far**. The secondary effect reaches its full, signature-defining scope (GM-approved — a true finishing blow, a reality-bending flourish, whatever fits the character). Ki cost rises to **3** per use. |
+
+**Adders** — optional, chosen when the Move is built (permanent additions to its design, not a per-use choice):
+
+- **Extended Range**: +1 Ki per use. The Move reaches one Range Band further than its current Level would normally allow.
+- **Area of Effect**: +1 Ki per use. The Move affects everyone within its range/area rather than a single target — exact shape and extent defined when the Move is built, GM-approved.
