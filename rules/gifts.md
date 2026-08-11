@@ -167,6 +167,20 @@ Your senses reach further and cut sharper than anyone else's — sounds from acr
 | 4 | The obstacle-piercing from Level 3 no longer costs Ki, and now works through thicker, more substantial barriers — solid walls, multiple rooms away. Additionally, you're immune to being [Surprised](combat.md#surprise) by any threat your enhanced sense would have detected. |
 | 5 | Your chosen sense becomes constant, passive awareness within **Far** range — you don't need to actively look or listen; relevant details and threats simply register automatically. Additionally, it can pierce even magical concealment or supernatural stealth, not just mundane obstacles (GM's call on edge cases specifically countering your exact sense). |
 
+### Possession
+
+Beyond command, beyond obedience — you can push your own consciousness into someone else's body outright, shoving them into the passenger seat while you take the wheel. Not persuasion. Occupation.
+
+**This Gift always costs Ki, at every Level — there is no mastery discount to free.**
+
+| Level | Effect |
+|---|---|
+| 1 | Requires touch. Spend **1 Ki** and roll your Psyche dice per-die against the target's Psyche wall — a connecting die lets you possess their body for the rest of the scene. Your own body goes limp and undefended while you're away. |
+| 2 | Touch is no longer required — possession can be attempted at **Close range**. |
+| 3 | Range extends to **Near**. Possession duration becomes indefinite — lasting until you choose to return or are forcibly expelled, not capped at a scene. |
+| 4 | Range extends to **Far**. While possessing, you gain full access to the host's Skills, Boons, and other Gifts, using their body's full capability as your own. |
+| 5 | You may possess a new target instantly, snapping from one host directly into another without returning to your own body first, so long as you can make eye contact with the new target. |
+
 ### Precognition
 
 **[FLAGGED — may be overpowered as written, especially Level 5's "rarely truly blindsided" clause. Revisit once played.]**
