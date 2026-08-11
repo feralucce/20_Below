@@ -167,6 +167,18 @@ Your senses reach further and cut sharper than anyone else's — sounds from acr
 | 4 | The obstacle-piercing from Level 3 no longer costs Ki, and now works through thicker, more substantial barriers — solid walls, multiple rooms away. Additionally, you're immune to being [Surprised](combat.md#surprise) by any threat your enhanced sense would have detected. |
 | 5 | Your chosen sense becomes constant, passive awareness within **Far** range — you don't need to actively look or listen; relevant details and threats simply register automatically. Additionally, it can pierce even magical concealment or supernatural stealth, not just mundane obstacles (GM's call on edge cases specifically countering your exact sense). |
 
+### Immovable
+
+Your stance is a fact of the world, not a suggestion. Push, trip, knock back, or throw — none of it moves you unless you decide to move, your feet finding purchase no ordinary force should allow.
+
+| Level | Effect |
+|---|---|
+| 1 | Gain **Advantage** on any roll to resist being pushed, tripped, knocked back, or thrown — including a Potence-based forcing attempt against you. No Ki, no Gift Check. |
+| 2 | Full immunity against ordinary human-strength attempts to move you — anyone trying must clearly exceed normal human capability (GM's call) to have any chance at all. |
+| 3 | Spend **1 Ki**, when targeted by a supernatural or exceptional force effect (a boosted Potence attempt, a Gift, etc.), to gain **Advantage** on resisting it too. |
+| 4 | The Ki-gated Advantage from Level 3 becomes free — always active against supernatural attempts, no Ki cost. |
+| 5 | Full immunity to being forcibly moved by anything at all, mundane or supernatural, short of your own choice to move. |
+
 ### Possession
 
 Beyond command, beyond obedience — you can push your own consciousness into someone else's body outright, shoving them into the passenger seat while you take the wheel. Not persuasion. Occupation.
