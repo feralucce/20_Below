@@ -21,3 +21,17 @@ No new stat governs Gifts. Using a Gift draws on tools that already exist elsewh
 None of these three apply automatically to every Gift or every level — each is a tool, used on a Gift-by-Gift, level-by-level basis as the specific effect calls for it.
 
 ## Gift List
+
+### Elemental Aura
+
+Raise a battle aura of your chosen element around your body. "Element" is a broad catch-all, not limited to the four classical elements — fire, ice, lightning, steam, darkness, radiation, cosmic energy, void, magnetism, or whatever else fits the character's concept. Chosen once, at creation.
+
+Activating the aura costs a Slow action. **Maintaining it requires a [Gift Check](#resolution) every turn it stays active — failure costs 1 Ki, at any Level.** At Level 5, a turn spent lashing out with the aura (below) skips the maintenance check entirely, since spending Ki to attack already covers the cost.
+
+| Level | Effect |
+|---|---|
+| 1 | Before an incoming attack of your chosen element resolves, remove one quarter of its dice (rounded down), then resolve the rest normally against your Soak. Anyone who touches you takes 1d10 vs their Soak. |
+| 2 | Remove half of an incoming elemental attack's dice (rounded down) before it resolves. Contact damage rises to 2d10. |
+| 3 | Remove three quarters of an incoming elemental attack's dice (rounded down). The trigger widens from requiring actual touch to anyone striking you at Melee range — damage rises to 3d10. |
+| 4 | Full immunity — all dice from an incoming attack of your chosen element are removed before it resolves; nothing gets through. Contact/Melee damage rises to 4d10. The aura's presence extends to Close range: anyone nearby (not just attacking you) suffers a minor environmental effect fitting the element, GM-adjudicated to theme. |
+| 5 | Immunity persists. Damage rises to 5d10. The aura can be projected as an attack: spend **1 Ki** to strike a target at Near range without contact, same per-die-vs-Soak resolution — doing so on a turn skips that turn's maintenance Gift Check. |
