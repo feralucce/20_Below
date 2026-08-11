@@ -2,7 +2,7 @@
 
 Boons are a **grab bag** — small advantages that don't fit under Skills (learned, practiced competence, see [skills.md](skills.md)) or the not-yet-built Powers system (truly exceptional/supernatural capability). Boons:
 
-- **Have no levels or ranks.** A character either has a Boon or doesn't — there's no 1-10 scale, no dots, no tiers. (The resource-type entries that *do* scale — Wealth, Contacts, Fringe Benefit, etc. — live in [resources.md](resources.md).)
+- **Have no levels or ranks**, with a single named exception ([Eidetic Memory](#boon-list), bought as one of two tiers). A character either has a Boon or doesn't — there's no 1-10 scale, no dots, no tiers. (The resource-type entries that *do* scale — Wealth, Contacts, Fringe Benefit, etc. — live in [resources.md](resources.md).)
 - **Do not grant numerical bonuses to rolls.** A Boon is usually a rule exception, an unlocked narrative option, or a standing fact about the character's body or reputation — not a flat +N to some roll.
 
 Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation disadvantages built the same way (no levels, mostly non-numeric).
@@ -21,9 +21,9 @@ Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation 
 | Concentration | 5 (Greater) | Immune to being [Distracted](combat.md#distracted), regardless of source (damage, Kotodama, Gifts, environmental hazards) — a Slow action always resolves as declared. |
 | Danger Sense | 5 (Greater) | May ask the GM at any reasonable moment whether there's danger nearby; the GM must give a truthful (if vague, gut-feeling-level) answer. Additionally, roll **2d10 for Initiative and keep the higher die** (instead of the normal single 1d10), then add your Initiative sub-stat as usual. |
 | Double-Jointed | 3 (Lesser) | For Escapology rolls, treat your [Skill Training Tier](skills.md#training-tiers) as one tier higher than your actual tier, with a minimum of Trained — even an Untrained or Novice character rolls Escapology as if Trained. Trained rolls as if Adept, Adept as if Expert, Expert as if Master. (Master stays Master.) |
-| Eidetic Memory | TBD | Perfect recall of anything seen, read, or heard. |
+| Eidetic Memory | 5 or 7 | Bought as one of two tiers (the higher includes the lower's benefit — no need to buy both). **Tier 1 (5, Greater)**: perfect recall of anything you've actually experienced and attended to — things you saw, read, or heard. **Tier 2 (7, Legendary)**: perfect recall of literally anything you've ever perceived, attended to or not — a page glimpsed once, background chatter, something in peripheral vision. |
 | Enchanting Voice | TBD | Your voice alone holds attention and charms. |
-| Encyclopedic Knowledge | TBD | Broad, ready trivia and general knowledge on nearly any topic — distinct from Eidetic Memory's perfect recall of things you actually saw, read, or heard. |
+| Encyclopedic Knowledge | TBD | Broad, ready trivia and general knowledge on nearly any topic. |
 | Eye for the Strange | TBD | You notice when something supernatural is going on around you well before anyone untrained would. |
 | Feign Death | TBD | Convincingly fool onlookers — and a casual medical check — into believing you're dead or unconscious, on your own choice. |
 | Fleet of Foot | TBD | Noticeably faster on foot than the effort should allow. |
