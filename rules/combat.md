@@ -18,6 +18,12 @@ The tradeoff across all three: **Fast trades action count for going first**, **N
 
 A player can spend **1 Ki per step** to bump their declared band up (Slow → Normal, or Normal → Fast) — buying back speed at the cost of the resource. Spending 2 Ki moves two steps at once (Slow → Fast).
 
+### Movement & Range
+
+**Range Bands**: four abstract bands — **Melee, Close, Near, Far** — used for weapon reach, targeting, and spotting. The GM assigns them loosely per scene rather than measuring a map; no grid.
+
+**Movement Rate**: `5 + Air`, in **meters** — the same flat-floor-plus-Attribute shape as [Health Levels](core-mechanic.md#health-levels). A character can move up to their Movement Rate as part of a Fast action's one action or a Normal action's move component. As a rough conversion (not a strict count), **spending a full Movement Rate shifts one Range Band**; the GM can also just narrate a shift directly when the fiction obviously calls for it, without making players do the math.
+
 ### Distracted
 
 A character who loses a Health Level or is the target of a Kotodama effect while resolving a **Slow** Action Band action becomes **Distracted**, and must roll **Warp + Difficulty** to hold focus.
