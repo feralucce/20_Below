@@ -18,6 +18,15 @@ The tradeoff across all three: **Fast trades action count for going first**, **N
 
 A player can spend **1 Ki per step** to bump their declared band up (Slow → Normal, or Normal → Fast) — buying back speed at the cost of the resource. Spending 2 Ki moves two steps at once (Slow → Fast).
 
+### Distracted
+
+A character who loses a Health Level or is the target of a Kotodama effect while resolving a **Slow** Action Band action becomes **Distracted**, and must roll **Warp + Difficulty** to hold focus.
+
+- **Success** — the action resolves as declared.
+- **Failure** — the action downgrades to a **Normal** action (loses the called-shot/Advantage benefit).
+
+**Other sources can impose Distracted too** — a Gift, an environmental hazard (a collapsing building, a deafening explosion), or GM fiat, whether or not a Slow action is involved. The same **Warp + Difficulty** roll applies; outside a Slow action, failure instead imposes **Disadvantage** on the triggering roll. [Concentration](boons.md) grants immunity to being Distracted regardless of source.
+
 ### Surprise
 
 A character who hasn't noticed a threat before combat begins is **Surprised** — typically because an opposing Stealth roll succeeded against their Perception, or the GM judges the fiction warrants it.
