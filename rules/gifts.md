@@ -161,3 +161,15 @@ Given enough scrap, a workbench, and a spare few minutes, you can build almost a
 | 3 | You can now build a gadget on the fly, mid-combat, as a single Fast or Normal action, improvising from whatever's on hand. Gadgets can have up to **three** functions. Combat-relevant gadgets scale up — **2d10** damage, or **+2** to a defensive stat. Ki cost for combat-capable gadgets rises to **2**. |
 | 4 | Building a gadget now only costs a **Fast** action. Gadgets can have up to **four** functions. Combat-relevant gadgets scale to **3d10** damage or **+3** to a defensive stat. Ki cost for combat-capable gadgets rises to **3**. |
 | 5 | Combat-relevant gadgets scale to **4d10** damage or **+4** to a defensive stat. Gadgets can have up to **five** functions. Ki cost drops back to **2** for combat-capable gadgets — mastery makes it easier again. Additionally, once per session, you can build one truly extraordinary one-off device capable of a dramatic, GM-approved effect beyond the normal function cap — a signature invention. |
+
+### Heightened Senses
+
+Your senses reach further and cut sharper than anyone else's — sounds from across a building, shapes in total darkness, details too small or too distant for ordinary eyes to ever resolve. Which sense (or senses) sharpen, and how, is chosen once, at creation — enhanced hearing, night vision, telescopic sight, microscopic focus, or something else entirely that fits the concept.
+
+| Level | Effect |
+|---|---|
+| 1 | Perception rolls that rely on your chosen sense ignore ordinary environmental penalties tied to it — darkness for night vision, distance for telescopic sight, background noise for hearing, and so on. No roll of its own needed; it just strips the penalty layer whenever it would apply. No Ki, no Gift Check. |
+| 2 | Gain **Advantage** on all Perception rolls using your chosen sense. Its effective range extends significantly — perceive things at **Far** range that would normally require being much closer. |
+| 3 | Your sense gains true microscopic-level detail at no extra cost — spot a single fingerprint across a room, hear a heartbeat, notice trace chemical residue by scent. Additionally, spend **1 Ki** to pierce an obstacle that would normally block your sense entirely — see through fog or a thin wall, hear through a door, etc. |
+| 4 | The obstacle-piercing from Level 3 no longer costs Ki, and now works through thicker, more substantial barriers — solid walls, multiple rooms away. Additionally, you're immune to being [Surprised](combat.md#surprise) by any threat your enhanced sense would have detected. |
+| 5 | Your chosen sense becomes constant, passive awareness within **Far** range — you don't need to actively look or listen; relevant details and threats simply register automatically. Additionally, it can pierce even magical concealment or supernatural stealth, not just mundane obstacles (GM's call on edge cases specifically countering your exact sense). |
