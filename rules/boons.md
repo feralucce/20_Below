@@ -2,7 +2,7 @@
 
 Boons are a **grab bag** — small advantages that don't fit under Skills (learned, practiced competence, see [skills.md](skills.md)) or the not-yet-built Powers system (truly exceptional/supernatural capability). Boons:
 
-- **Have no levels or ranks**, with a single named exception ([Eidetic Memory](#boon-list), bought as one of two tiers). A character either has a Boon or doesn't — there's no 1-10 scale, no dots, no tiers. (The resource-type entries that *do* scale — Wealth, Contacts, Fringe Benefit, etc. — live in [resources.md](resources.md).)
+- **Have no levels or ranks**, with two named exceptions ([Eidetic Memory](#boon-list) and [Feign Death](#boon-list), each bought as one of two tiers). A character either has a Boon or doesn't — there's no 1-10 scale, no dots, no tiers. (The resource-type entries that *do* scale — Wealth, Contacts, Fringe Benefit, etc. — live in [resources.md](resources.md).)
 - **Do not grant numerical bonuses to rolls.** A Boon is usually a rule exception, an unlocked narrative option, or a standing fact about the character's body or reputation — not a flat +N to some roll.
 
 Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation disadvantages built the same way (no levels, mostly non-numeric).
@@ -25,7 +25,7 @@ Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation 
 | Enchanting Voice | 5 (Greater) | Anyone who hears you speak has their initial reaction/disposition nudged a step more favorably. Additionally, choose one voice-dependent Skill (Charm, Deception, Performance, Persuasion, Public Speaking, or Seduction) at creation: treat your [Skill Training Tier](skills.md#training-tiers) as one tier higher than your actual tier for that Skill, with a minimum of Trained (same shape as [Double-Jointed](#boon-list)'s Escapology bump). |
 | Encyclopedic Knowledge | 3 (Lesser) | When you want to know something relevant about a topic — history, science, esoteric trivia, nearly anything — roll **Air + Difficulty** directly (GM sets Difficulty by how obscure the fact is; no Skill or Training Tier involved). Success — the GM tells you the relevant fact, though you can't say where or how you learned it. Failure — nothing surfaces. |
 | Eye for the Strange | 5 (Greater) | When something supernatural is happening around you, roll **Wyrd + Difficulty** directly (GM sets Difficulty by how subtle/hidden it is; no Skill or Training Tier involved). Success — the GM tells you something supernatural is present and gives you a relevant detail. Failure — you still feel something resonating in the threads of fate, leaving you uneasy with no concrete information. |
-| Feign Death | TBD | Convincingly fool onlookers — and a casual medical check — into believing you're dead or unconscious, on your own choice. |
+| Feign Death | 3 or 5 | Bought as one of two tiers (the higher includes the lower's benefit — no need to buy both). **Tier 1 (3, Lesser)**: convincingly fool onlookers — and a casual medical check — into believing you're dead or unconscious, on your own choice. **Tier 2 (5, Greater)**: dead to all means of detection, including rigorous or technological examination — full voluntary control over your own vital signs and biofeedback, deep enough to fool sophisticated medical equipment. |
 | Fleet of Foot | TBD | Noticeably faster on foot than the effort should allow. |
 | Higher Purpose | TBD | Others innately sense you're meant for something greater. |
 | Innate Compass | TBD | Always know true north and roughly what time it is, no matter where you are. |
