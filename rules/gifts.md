@@ -211,3 +211,17 @@ Distance means nothing to your sight. Close your eyes and your awareness slips f
 | 3 | Spend **1 Ki** to extend the vision's duration significantly, or to target a place you've never seen or visited at all, so long as you're actively searching for it with a clear intent ("show me where the stolen car went"). |
 | 4 | Your sight can now follow a specific person you've met, tracking their general location even if you don't know exactly where they are — the vision moves with them rather than staying fixed to one place. |
 | 5 | You can project into a completely unknown, undescribed location by intent alone — answering a genuine unknown ("where is the artifact hidden?") rather than needing any prior anchor. Ki cost from Level 3 drops to **0** — full mastery, free. |
+
+### Precognition
+
+**[FLAGGED — may be overpowered as written, especially Level 5's "rarely truly blindsided" clause. Revisit once played.]**
+
+The future leaks through, uninvited and unclear — a flash of what's about to happen, a half-second warning before the blow lands, a dream that turns out to have been true. You don't control when it comes, only how well you've learned to listen when it does.
+
+| Level | Effect |
+|---|---|
+| 1 | Passive and involuntary — at a dramatically appropriate moment (GM's call), you receive a brief precognitive flash: a warning, a fragment of the near future. No roll, no action, purely a narrative tool the GM wields on your behalf. |
+| 2 | Once per scene, you may actively reach for a flash: roll **Wyrd + Difficulty** to get a vague impression of the likely outcome of a specific decision or action you're considering. |
+| 3 | Spend **1 Ki**, when you've foreseen an attack coming, to gain **Advantage** on your defense against it — foreknowledge translated into a real combat edge. |
+| 4 | Active foresight (Level 2) sharpens from a vague impression into a clearer vision, and can now reach further out — not just the immediate next moment, but a meaningful stretch of near future. |
+| 5 | Passive flashes (Level 1) can now surface any time danger is coming, not just when the GM chooses to grant one — you're rarely truly blindsided anymore. Ki cost from Level 3 drops to **0** — full mastery, free. |
