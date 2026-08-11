@@ -199,3 +199,15 @@ Objects remember. A blade recalls the hand that swung it, a ring the years it sa
 | 3 | Ask up to **3** questions. Spend **1 Ki** per question to push that answer into a detailed, near-immersive vision instead of a scene — faces, words, real specifics. |
 | 4 | Ask up to **4** questions. Detailed visions (Level 3) can now identify specific people and approximate dates, and reach centuries back if the object is old enough to hold it. |
 | 5 | Ask up to **5** questions. A touch can now reconstruct a brief sequence of the object's major moments rather than one isolated scene. Ki cost for a detailed vision drops to **0** — full mastery, free. |
+
+### Clairvoyance
+
+Distance means nothing to your sight. Close your eyes and your awareness slips free of your body, drifting to a place you know or can picture — a room down the hall, a city across the world — letting you see and hear what's happening there as if you stood in it yourself.
+
+| Level | Effect |
+|---|---|
+| 1 | Roll **Wyrd + Difficulty** (harder the less familiar the place) to project your sight to somewhere you've personally been before. Costs a Slow action, sight only — no sound — lasting a few minutes or until broken. |
+| 2 | The vision now includes sound as well as sight. You can also target a place you've only seen in detail (a photo, a vivid description) rather than having to have physically been there yourself. |
+| 3 | Spend **1 Ki** to extend the vision's duration significantly, or to target a place you've never seen or visited at all, so long as you're actively searching for it with a clear intent ("show me where the stolen car went"). |
+| 4 | Your sight can now follow a specific person you've met, tracking their general location even if you don't know exactly where they are — the vision moves with them rather than staying fixed to one place. |
+| 5 | You can project into a completely unknown, undescribed location by intent alone — answering a genuine unknown ("where is the artifact hidden?") rather than needing any prior anchor. Ki cost from Level 3 drops to **0** — full mastery, free. |
