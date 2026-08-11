@@ -24,9 +24,3 @@ A character who hasn't noticed a threat before combat begins is **Surprised** �
 
 **A Surprised character rolls at Disadvantage on everything** — attacks, and any other roll where the defender's readiness matters — for the remainder of the round they're caught in. Ends automatically once that round ends. [Alertness](boons.md) grants immunity to being Surprised while conscious.
 
-### Interrupted Plans
-
-If something that happens during an earlier band's turn **eliminates a not-yet-acted character's plan** (e.g. their intended target is removed before their band goes), that character gets a **reactive roll** — the specific Skill/Attribute pairing and Difficulty are still TBD, but it defaults to **average Difficulty**.
-
-- **Success** — the character forms a **new plan** and acts normally when their band comes up.
-- **Failure** — the character forms a **new plan** but acts at **Disadvantage** (see [Advantage/Disadvantage](core-mechanic.md#advantage--disadvantage)).
