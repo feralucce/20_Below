@@ -17,7 +17,7 @@ Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation 
 | Alternate Identity | 5 (Greater) | A fully realized second identity — name, history, and papers that hold up under real scrutiny — keeping your real self insulated from what it does. |
 | Ambidextrous | 1 (Trivial) | Ignore the [Disadvantage](core-mechanic.md#advantage--disadvantage) normally imposed for performing a task with your off-hand. |
 | Closed Book | 5 (Greater) | Immune to being read via [Insight](premade-skills.md) — an attempt to read your emotions, tells, or intentions through Insight automatically fails. Against any other attempt to read you (including future supernatural effects), you have [Advantage](core-mechanic.md#advantage--disadvantage) on the resisting roll. |
-| Common Sense | TBD | The GM will give you a heads-up before you commit to an obviously terrible decision. |
+| Common Sense | 7 (Legendary) | The GM will give you a heads-up before you commit to an obviously terrible decision. |
 | Concentration | TBD | Impervious to being distracted once focused on a task. |
 | Danger Sense | TBD | A "bad feeling" before danger strikes — the GM gives you a warning. |
 | Double-Jointed | 3 (Lesser) | For Escapology rolls, treat your [Skill Training Tier](skills.md#training-tiers) as one tier higher than your actual tier, with a minimum of Trained — even an Untrained or Novice character rolls Escapology as if Trained. Trained rolls as if Adept, Adept as if Expert, Expert as if Master. (Master stays Master.) |
