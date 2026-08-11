@@ -19,7 +19,7 @@ Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation 
 | Closed Book | 5 (Greater) | Immune to being read via [Insight](premade-skills.md) — an attempt to read your emotions, tells, or intentions through Insight automatically fails. Against any other attempt to read you (including future supernatural effects), you have [Advantage](core-mechanic.md#advantage--disadvantage) on the resisting roll. |
 | Common Sense | 7 (Legendary) | The GM will give you a heads-up before you commit to an obviously terrible decision. |
 | Concentration | 5 (Greater) | Immune to being [Distracted](combat.md#distracted), regardless of source (damage, Kotodama, Gifts, environmental hazards) — a Slow action always resolves as declared. |
-| Danger Sense | TBD | A "bad feeling" before danger strikes — the GM gives you a warning. |
+| Danger Sense | 5 (Greater) | May ask the GM at any reasonable moment whether there's danger nearby; the GM must give a truthful (if vague, gut-feeling-level) answer. Additionally, roll **2d10 for Initiative and keep the higher die** (instead of the normal single 1d10), then add your Initiative sub-stat as usual. |
 | Double-Jointed | 3 (Lesser) | For Escapology rolls, treat your [Skill Training Tier](skills.md#training-tiers) as one tier higher than your actual tier, with a minimum of Trained — even an Untrained or Novice character rolls Escapology as if Trained. Trained rolls as if Adept, Adept as if Expert, Expert as if Master. (Master stays Master.) |
 | Eidetic Memory | TBD | Perfect recall of anything seen, read, or heard. |
 | Enchanting Voice | TBD | Your voice alone holds attention and charms. |
