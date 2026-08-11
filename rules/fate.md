@@ -19,7 +19,7 @@ Every character has a **Nature** — a short archetype capturing a core drive or
 
 Fate Tokens are spent on [Kotodama](#kotodama), or to **Overcome a Flaw** — spend 1 Fate Token to have one of your Flaws not apply for the rest of the current scene.
 
-Characters with [Iron Will](boons.md) may also spend 1 Fate Token to **Assert Your Will** — declare "my will is my own" and flatly negate an attempt to frighten, intimidate, or dominate you, no roll. A micro-Kotodama: same shape as the main mechanic, but flat-costed and scoped narrowly to defending your own mind.
+Characters with [Iron Will](boons.md) may also spend 1 Fate Token to **Assert Your Will** — declare "my will is my own" and flatly negate an attempt to intimidate or dominate you, no roll. A micro-Kotodama: same shape as the main mechanic, but flat-costed and scoped narrowly to defending your own mind.
 
 ## Fatigue Check
 
