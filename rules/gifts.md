@@ -42,6 +42,8 @@ Your body has crossed some threshold ordinary flesh shouldn't be able to cross. 
 
 **The extra action this Gift grants can never be a Slow action, at any Level** — moving this fast isn't conducive to the precision a Slow action demands.
 
+**The Disadvantage imposed on attackers (Levels 4-5) doesn't apply if the attacker has Enhanced Speed at the same Level** — matched speed cancels the edge; only someone slower than you gets caught flat-footed by it.
+
 | Level | Effect |
 |---|---|
 | 1 | At the beginning of combat, you may take one Fast or Normal action before anyone else acts — before even the Fast Action Band resolves. If more than one character has this Gift, they act among themselves in Initiative order, but all still act before the normal turn order begins. |
