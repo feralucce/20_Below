@@ -36,6 +36,11 @@ Activating the aura costs a Slow action. **Maintaining it requires a [Gift Check
 | 4 | Full immunity — all dice from an incoming attack of your chosen element are removed before it resolves; nothing gets through. Contact/Melee damage rises to 4d10. The aura's presence extends to Close range: anyone nearby (not just attacking you) suffers a minor environmental effect fitting the element, GM-adjudicated to theme. |
 | 5 | Immunity persists. Damage rises to 5d10. The aura can be projected as an attack: spend **1 Ki** to strike a target at Near range without contact, same per-die-vs-Soak resolution — doing so on a turn skips that turn's maintenance Gift Check. |
 
+**Adders** — optional, spent per use in the moment (not a permanent build-time choice, since this Gift's effect is fixed):
+
+- **Elemental Burst**: +1 Ki, once per activation. Pulse the aura outward — everyone within your current trigger range (whatever Melee/Close/Near your Level currently reaches) takes your contact damage simultaneously, not just someone who happens to touch or strike you.
+- **Environmental Surge**: +1 Ki. For one round, the Level 4 environmental effect pushes out one Range Band further than normal.
+
 ### Enhanced Speed
 
 Your body has crossed some threshold ordinary flesh shouldn't be able to cross. Nerve, muscle, and reflex all fire faster than a human frame has any right to — fast enough that a full second of your action and thought can pass in what looks, to everyone else, like the blink of an eye. Whether it's raw physical conditioning, a mutation, or something stranger entirely, the result is the same: the world seems to slow down whenever you decide to move.
@@ -51,6 +56,11 @@ Your body has crossed some threshold ordinary flesh shouldn't be able to cross. 
 | 3 | The extra action from Level 2 can now be a Fast **or Normal** action, still 1 Ki, still once per round. Roll Initiative as 2d10 and keep the higher die. The post-Ki-spend Movement Rate multiplier rises to **×2** for the rest of that turn. |
 | 4 | The extra-action spend can now be used **up to twice per round** (still 1 Ki per use). On any turn where you've spent Ki this way, attacks made against you that turn are at **Disadvantage** — you're moving too fast to track cleanly. The post-Ki-spend Movement Rate multiplier rises to **×3** for the rest of that turn. |
 | 5 | The extra-action spend can now be used **up to three times per round** (still 1 Ki per use, still Fast or Normal only). Attacks made against you are at Disadvantage on any turn you spend Ki this way. The post-Ki-spend Movement Rate multiplier rises to **×5** for the rest of that turn. |
+
+**Adders** — optional, spent per use in the moment:
+
+- **Redirected Momentum**: +1 Ki, on a turn you take the extra action. Instead of (or alongside) attacking with it, use the momentum to shove or reposition a target you interact with by one Range Band.
+- **Afterimage**: +1 Ki, once per round, on a turn you've already spent Ki for an extra action. When an attack against you would connect, treat it as striking an afterimage instead — the hit is negated entirely.
 
 ### Signature Move
 
