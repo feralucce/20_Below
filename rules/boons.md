@@ -16,7 +16,7 @@ Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation 
 | Alertness | 3 (Lesser) | Immune to being [Surprised](combat.md#surprise) while conscious, unless under a mind-altering effect that would specifically allow it. |
 | Alternate Identity | 5 (Greater) | A fully realized second identity — name, history, and papers that hold up under real scrutiny — keeping your real self insulated from what it does. |
 | Ambidextrous | 1 (Trivial) | Ignore the [Disadvantage](core-mechanic.md#advantage--disadvantage) normally imposed for performing a task with your off-hand. |
-| Closed Book | TBD | Your emotions and tells are unreadable — others can't read you the way they can read most people. |
+| Closed Book | 5 (Greater) | Immune to being read via [Insight](premade-skills.md) — an attempt to read your emotions, tells, or intentions through Insight automatically fails. Against any other attempt to read you (including future supernatural effects), you have [Advantage](core-mechanic.md#advantage--disadvantage) on the resisting roll. |
 | Common Sense | TBD | The GM will give you a heads-up before you commit to an obviously terrible decision. |
 | Concentration | TBD | Impervious to being distracted once focused on a task. |
 | Danger Sense | TBD | A "bad feeling" before danger strikes — the GM gives you a warning. |
