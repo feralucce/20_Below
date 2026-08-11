@@ -91,6 +91,18 @@ Chosen once, at creation: **Always There** (visible and permanent — can't be h
 | 4 | Damage rises to **5d10**. The rending effect intensifies — Disadvantage now persists on all of the target's rolls until the wound is treated or the scene ends, not just their next one. |
 | 5 | Damage rises to **6d10** (matching a heavy/anti-materiel weapon). The rending effect still costs 1 Ki per use. If Stowable was chosen, deploying your claws/fangs no longer triggers the Gift Check. |
 
+### Domination
+
+Your will can simply overwrite someone else's, at least for a moment. Look them in the eye, speak with intent, and watch resistance crumble — a word becomes a command, and a command becomes obedience, so long as what you're asking isn't more than they can bear.
+
+| Level | Effect |
+|---|---|
+| 1 | Requires eye contact. Spend **1 Ki** and roll your Psyche dice per-die against the target's Psyche wall — a connecting die lets you issue a single-word command ("stop," "sleep," "drop it") that they obey for one action or moment. Commands resulting in self-harm or serious injury automatically fail. |
+| 2 | Commands can now be full sentences rather than a single word, and can be genuinely complex — multi-step instructions, conditional logic, or nuanced requests — not just simple directives. |
+| 3 | You may implant a delayed/triggered command — it stays dormant until a specific condition you set occurs, then executes automatically. |
+| 4 | Repeated exposure builds suggestibility: each successful use of this Gift on the same person grants **Advantage** on your next attempt against them, cumulative and lasting until they're free of your influence for an extended stretch (GM's call). |
+| 5 | The self-harm/serious-injury safeguard no longer applies — commands can now be genuinely harmful, even lethal. Full override. |
+
 ### Elemental Aura
 
 Raise a battle aura of your chosen element around your body. "Element" is a broad catch-all, not limited to the four classical elements — fire, ice, lightning, steam, darkness, radiation, cosmic energy, void, magnetism, or whatever else fits the character's concept. Chosen once, at creation.
