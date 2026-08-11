@@ -2,7 +2,7 @@
 
 Boons are a **grab bag** — small advantages that don't fit under Skills (learned, practiced competence, see [skills.md](skills.md)) or the not-yet-built Powers system (truly exceptional/supernatural capability). Boons:
 
-- **Have no levels or ranks**, with three named exceptions ([Eidetic Memory](#boon-list), [Feign Death](#boon-list), and [Innate Compass](#boon-list), each bought as one of two tiers). A character either has a Boon or doesn't — there's no 1-10 scale, no dots, no tiers. (The resource-type entries that *do* scale — Wealth, Contacts, Fringe Benefit, etc. — live in [resources.md](resources.md).)
+- **Have no levels or ranks**, with four named exceptions ([Eidetic Memory](#boon-list), [Feign Death](#boon-list), and [Innate Compass](#boon-list), each bought as one of two tiers; [Light Sleeper](#boon-list), bought as one of three). A character either has a Boon or doesn't — there's no 1-10 scale, no dots, no tiers. (The resource-type entries that *do* scale — Wealth, Contacts, Fringe Benefit, etc. — live in [resources.md](resources.md).)
 - **Do not grant numerical bonuses to rolls.** A Boon is usually a rule exception, an unlocked narrative option, or a standing fact about the character's body or reputation — not a flat +N to some roll.
 
 Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation disadvantages built the same way (no levels, mostly non-numeric).
@@ -30,7 +30,7 @@ Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation 
 | Innate Compass | 1 or 3 | Bought as one of two tiers (the higher includes the lower's benefit — no need to buy both). **Tier 1 (1, Trivial)**: always know true north and roughly what time it is, no matter where you are. **Tier 2 (3, Lesser)**: additionally, for any place you've been before, you always know the direction and rough distance to it. |
 | Iron Stomach | 1 (Trivial) | Eat or drink almost anything without illness. |
 | Iron Will | 5 (Greater) | Unlocks **Assert Your Will** as a [Fate Spend](fate.md#fate-spend) — spend 1 Fate Token to flatly negate an attempt to frighten, intimidate, or dominate you, no roll. |
-| Light Sleeper | TBD | Wake instantly at the slightest disturbance. |
+| Light Sleeper | 1, 3, or 5 | Bought as one of three tiers (each includes the lower tier's benefit — no need to buy more than one). **Tier 1 (1, Trivial)**: wake instantly at the slightest disturbance. **Tier 2 (3, Lesser)**: additionally, you're never automatically [Surprised](combat.md#surprise) while asleep — roll Perception even while asleep to notice a threat, same as if you were awake. **Tier 3 (5, Greater)**: additionally, waking from a disturbance doesn't cost you your position in the round — you act on your normal Initiative immediately rather than losing the first exchange getting your bearings. |
 | Lightning Calculator | TBD | Instant complex mental math. |
 | Living Legend | TBD | Your reputation precedes you at a civilization-spanning scale — whole factions, cities, or movements already have an opinion of you before you arrive. |
 | Mimicry | TBD | Convincingly imitate voices and sounds you've heard. |
