@@ -2,7 +2,7 @@
 
 Boons are a **grab bag** — small advantages that don't fit under Skills (learned, practiced competence, see [skills.md](skills.md)) or the not-yet-built Powers system (truly exceptional/supernatural capability). Boons:
 
-- **Have no levels or ranks**, with two named exceptions ([Eidetic Memory](#boon-list) and [Feign Death](#boon-list), each bought as one of two tiers). A character either has a Boon or doesn't — there's no 1-10 scale, no dots, no tiers. (The resource-type entries that *do* scale — Wealth, Contacts, Fringe Benefit, etc. — live in [resources.md](resources.md).)
+- **Have no levels or ranks**, with three named exceptions ([Eidetic Memory](#boon-list), [Feign Death](#boon-list), and [Innate Compass](#boon-list), each bought as one of two tiers). A character either has a Boon or doesn't — there's no 1-10 scale, no dots, no tiers. (The resource-type entries that *do* scale — Wealth, Contacts, Fringe Benefit, etc. — live in [resources.md](resources.md).)
 - **Do not grant numerical bonuses to rolls.** A Boon is usually a rule exception, an unlocked narrative option, or a standing fact about the character's body or reputation — not a flat +N to some roll.
 
 Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation disadvantages built the same way (no levels, mostly non-numeric).
@@ -27,7 +27,7 @@ Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation 
 | Eye for the Strange | 5 (Greater) | When something supernatural is happening around you, roll **Wyrd + Difficulty** directly (GM sets Difficulty by how subtle/hidden it is; no Skill or Training Tier involved). Success — the GM tells you something supernatural is present and gives you a relevant detail. Failure — you still feel something resonating in the threads of fate, leaving you uneasy with no concrete information. |
 | Feign Death | 3 or 5 | Bought as one of two tiers (the higher includes the lower's benefit — no need to buy both). **Tier 1 (3, Lesser)**: convincingly fool onlookers — and a casual medical check — into believing you're dead or unconscious, on your own choice. **Tier 2 (5, Greater)**: dead to all means of detection, including rigorous or technological examination — full voluntary control over your own vital signs and biofeedback, deep enough to fool sophisticated medical equipment. |
 | Higher Purpose | 7 (Legendary) | Once per major story arc, you cannot be permanently killed or written out of the story by anything short of a dramatically appropriate death — you're meant for something greater, and the universe isn't done with you yet. |
-| Innate Compass | TBD | Always know true north and roughly what time it is, no matter where you are. |
+| Innate Compass | 1 or 3 | Bought as one of two tiers (the higher includes the lower's benefit — no need to buy both). **Tier 1 (1, Trivial)**: always know true north and roughly what time it is, no matter where you are. **Tier 2 (3, Lesser)**: additionally, for any place you've been before, you always know the direction and rough distance to it. |
 | Iron Stomach | TBD | Eat or drink almost anything without illness. |
 | Iron Will | TBD | Notably resistant to fear, intimidation, and manipulation. |
 | Light Sleeper | TBD | Wake instantly at the slightest disturbance. |
