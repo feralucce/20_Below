@@ -29,7 +29,7 @@ Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation 
 | Higher Purpose | 7 (Legendary) | Once per major story arc, you cannot be permanently killed or written out of the story by anything short of a dramatically appropriate death — you're meant for something greater, and the universe isn't done with you yet. |
 | Innate Compass | 1 or 3 | Bought as one of two tiers (the higher includes the lower's benefit — no need to buy both). **Tier 1 (1, Trivial)**: always know true north and roughly what time it is, no matter where you are. **Tier 2 (3, Lesser)**: additionally, for any place you've been before, you always know the direction and rough distance to it. |
 | Iron Stomach | 1 (Trivial) | Eat or drink almost anything without illness. |
-| Iron Will | TBD | Notably resistant to fear, intimidation, and manipulation. |
+| Iron Will | 5 (Greater) | Unlocks **Assert Your Will** as a [Fate Spend](fate.md#fate-spend) — spend 1 Fate Token to flatly negate an attempt to frighten, intimidate, or dominate you, no roll. |
 | Light Sleeper | TBD | Wake instantly at the slightest disturbance. |
 | Lightning Calculator | TBD | Instant complex mental math. |
 | Living Legend | TBD | Your reputation precedes you at a civilization-spanning scale — whole factions, cities, or movements already have an opinion of you before you arrive. |
