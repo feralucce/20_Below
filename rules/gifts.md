@@ -125,3 +125,15 @@ Chosen once, at creation: **Always There** (visible and permanent — can't be h
 | 3 | Damage rises to **4d10**. Additionally, you may spend **1 Ki** on a successful hit to add a minor rending effect — the wound bleeds, imposing Disadvantage on the target's next roll before it's tended to or the scene ends. |
 | 4 | Damage rises to **5d10**. The rending effect intensifies — Disadvantage now persists on all of the target's rolls until the wound is treated or the scene ends, not just their next one. |
 | 5 | Damage rises to **6d10** (matching a heavy/anti-materiel weapon). The rending effect still costs 1 Ki per use. If Stowable was chosen, deploying your claws/fangs no longer triggers the Gift Check. |
+
+### Size Change
+
+Your body ignores the ordinary rules of scale. Shrink small enough to vanish into a crack in the wall, swell up to loom over buildings, or stretch a single limb clear across a room without ever moving your feet — whatever the moment calls for, your proportions are yours to command, not fixed the way everyone else's are.
+
+| Level | Effect |
+|---|---|
+| 1 | Each use, choose one: grow or shrink your whole body by roughly half again your normal height in either direction, or stretch a single limb to extend your reach out to Close range instead of Melee. Costs a Fast action. No Ki, no Gift Check. |
+| 2 | The size swing doubles — grow or shrink up to double your normal height in either direction, or stretch your reach out to Near range. Still just a Fast action, no Ki, no Gift Check. |
+| 3 | The size swing triples, or reach extends to Far. Activating now costs **1 Ki**. While enlarged, gain **+2 Soak**; while shrunk, attacks made against you are at **Disadvantage** — you're a much harder target to land a hit on. |
+| 4 | While enlarged, Soak rises to **+4** and you gain **+2 Ferocity** — sheer mass hits harder. While shrunk, attacks against you remain at Disadvantage, and you gain **Advantage** on Stealth-related rolls — small enough to go unnoticed entirely in the right circumstances. Ki cost rises to **2**. |
+| 5 | While enlarged, Soak rises to **+6** and Ferocity to **+4** — true titanic scale, capable of breaking through walls and toppling structures underfoot (GM-adjudicated environmental interaction). While shrunk, you become effectively undetectable to anything not specifically searching for you at that scale — full immunity to being noticed by chance alone. Ki cost rises to **3**. |
