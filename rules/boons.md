@@ -7,13 +7,18 @@ Boons are a **grab bag** — small advantages that don't fit under Skills (learn
 
 Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation disadvantages built the same way (no levels, mostly non-numeric).
 
-**Organized by cost tier** — Minor, Moderate, Major — alphabetized within each.
+**Organized by cost tier** — Trivial (1 point), Lesser (3 points), Greater (5 points), Legendary (7 points) — alphabetized within each. A Boon's point cost is spent from the character-creation pool the same way a Flaw refunds points to it.
 
-## Minor
+## Trivial
 
 | Boon | Effect |
 |---|---|
-| Ambidextrous | No penalty for using your off-hand. |
+| Ambidextrous | Ignore the [Disadvantage](core-mechanic.md#advantage--disadvantage) normally imposed for performing a task with your off-hand. |
+
+## Minor (pending re-sort into the four-tier scheme)
+
+| Boon | Effect |
+|---|---|
 | Double-Jointed | Escape bonds/tight spaces, contort with ease. |
 | Encyclopedic Knowledge | Broad, ready trivia and general knowledge on nearly any topic — distinct from Eidetic Memory's perfect recall of things you actually saw, read, or heard. |
 | Feign Death | Convincingly fool onlookers — and a casual medical check — into believing you're dead or unconscious, on your own choice. |

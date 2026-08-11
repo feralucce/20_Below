@@ -137,7 +137,9 @@ Per-Attribute example tasks (a Fire example vs. an Earth example at the same Dif
 
 ### Advantage / Disadvantage
 
-**Advantage** rolls **3d10 and keeps the lowest two** (summed); **Disadvantage** rolls **3d10 and keeps the highest two** (summed) — roll-under, so lower is always better. Usable wherever a specific rule grants it — currently the [Expert/Master Skill Training Tiers](skills.md#training-tiers), but not restricted to that.
+**Advantage** rolls **3d10 and keeps the lowest two** (summed); **Disadvantage** rolls **3d10 and keeps the highest two** (summed) — roll-under, so lower is always better. Usable wherever a specific rule grants it — currently the [Expert/Master Skill Training Tiers](skills.md#training-tiers), a character's off-hand (below), but not restricted to those.
+
+**Off-hand**: performing a task that requires manual dexterity or precision (attacking, fine manipulation, etc.) with your off-hand imposes Disadvantage on the roll. [Ambidextrous](boons.md#trivial) removes this penalty.
 
 ### Untrained Rolls
 
