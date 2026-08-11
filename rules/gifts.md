@@ -35,3 +35,17 @@ Activating the aura costs a Slow action. **Maintaining it requires a [Gift Check
 | 3 | Remove three quarters of an incoming elemental attack's dice (rounded down). The trigger widens from requiring actual touch to anyone striking you at Melee range — damage rises to 3d10. |
 | 4 | Full immunity — all dice from an incoming attack of your chosen element are removed before it resolves; nothing gets through. Contact/Melee damage rises to 4d10. The aura's presence extends to Close range: anyone nearby (not just attacking you) suffers a minor environmental effect fitting the element, GM-adjudicated to theme. |
 | 5 | Immunity persists. Damage rises to 5d10. The aura can be projected as an attack: spend **1 Ki** to strike a target at Near range without contact, same per-die-vs-Soak resolution — doing so on a turn skips that turn's maintenance Gift Check. |
+
+### Enhanced Speed
+
+Your body has crossed some threshold ordinary flesh shouldn't be able to cross. Nerve, muscle, and reflex all fire faster than a human frame has any right to — fast enough that a full second of your action and thought can pass in what looks, to everyone else, like the blink of an eye. Whether it's raw physical conditioning, a mutation, or something stranger entirely, the result is the same: the world seems to slow down whenever you decide to move.
+
+**The extra action this Gift grants can never be a Slow action, at any Level** — moving this fast isn't conducive to the precision a Slow action demands.
+
+| Level | Effect |
+|---|---|
+| 1 | At the beginning of combat, you may take one Fast or Normal action before anyone else acts — before even the Fast Action Band resolves. If more than one character has this Gift, they act among themselves in Initiative order, but all still act before the normal turn order begins. |
+| 2 | Once per round, you may spend **1 Ki** to take an additional Fast action, resolved immediately after your normal action for that round — it doesn't change your Action Band or Initiative position, just adds a second action on top. For the rest of that turn after spending the Ki, your [Movement Rate](combat.md#movement--range) is **×1.5**. |
+| 3 | The extra action from Level 2 can now be a Fast **or Normal** action, still 1 Ki, still once per round. Roll Initiative as 2d10 and keep the higher die. The post-Ki-spend Movement Rate multiplier rises to **×2** for the rest of that turn. |
+| 4 | The extra-action spend can now be used **up to twice per round** (still 1 Ki per use). On any turn where you've spent Ki this way, attacks made against you that turn are at **Disadvantage** — you're moving too fast to track cleanly. The post-Ki-spend Movement Rate multiplier rises to **×3** for the rest of that turn. |
+| 5 | The extra-action spend can now be used **up to three times per round** (still 1 Ki per use, still Fast or Normal only). Attacks made against you are at Disadvantage on any turn you spend Ki this way. The post-Ki-spend Movement Rate multiplier rises to **×5** for the rest of that turn. |
