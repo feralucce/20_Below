@@ -185,3 +185,17 @@ Minds are not as private as people think — not to you. You can brush against a
 | 3 | Range extends to **Far**. Against a target actively resisting, you may now spend **1 Ki** to force the read as a genuine **Mental attack** — roll your Psyche dice per-die against their Psyche wall, breaching through to their surface thoughts and emotions on a connecting die. |
 | 4 | You can now project your own thoughts into a target's mind as well as read theirs — a genuine two-way telepathic link. For a willing or aware participant, this works at **Line of Sight** (as far as you can see them, not bound by the normal Range Bands). Forcing a read on an unwilling target (the Level 3 Mental attack) is capped at **Near**. Forced reads can now dig into deeper memories and guarded secrets, not just surface thoughts. Ki cost for forced reads stays **1**. |
 | 5 | Forced-read range extends back out to **Far**. Additionally, once you've established a genuine two-way link with someone (even briefly), you retain a limited telepathic connection to them indefinitely afterward — no range limit at all, a permanent bond once formed. Ki cost for forced reads drops to **0** — full mastery, free. |
+
+### Psychometry
+
+Objects remember. A blade recalls the hand that swung it, a ring the years it sat on someone's finger, a knife the moment it drew blood. Touch something with intent and its history opens up to you — fragments of who held it, what happened around it, what it's been through.
+
+**Direct touch is required at every Level — there is no remote version of this Gift.**
+
+| Level | Effect |
+|---|---|
+| 1 | Touch an object and roll **Wyrd + Difficulty**. Ask **1** question about its most significant recent history — the answer comes as a vague impression, a flash of emotion or sense-memory. No Ki, no Gift Check. |
+| 2 | Ask up to **2** questions. Answers now come as a clearer scene rather than a flash, and can reach further back into the object's history, not just its most recent moments. |
+| 3 | Ask up to **3** questions. Spend **1 Ki** per question to push that answer into a detailed, near-immersive vision instead of a scene — faces, words, real specifics. |
+| 4 | Ask up to **4** questions. Detailed visions (Level 3) can now identify specific people and approximate dates, and reach centuries back if the object is old enough to hold it. |
+| 5 | Ask up to **5** questions. A touch can now reconstruct a brief sequence of the object's major moments rather than one isolated scene. Ki cost for a detailed vision drops to **0** — full mastery, free. |
