@@ -15,6 +15,8 @@ A Resource represents a currency or standing the character can draw on or lean o
 | Fame | How widely recognized the character is, and how strongly people react to it |
 | Followers | How many, how skilled, or how loyal the group is |
 | Fringe Benefit | The reach/exclusivity of the license, membership, clearance, or legal right |
+| Occult Library | How comprehensive, rare, or dangerous the collection of esoteric material is |
+| System Access | How deep and wide the character's reach into digital systems and networks already is |
 | Vehicle | How distinctive, capable, or valuable the vehicle is |
 | Wealth | How much disposable financial resource is available to draw on |
 
@@ -35,6 +37,14 @@ A Resource represents a currency or standing the character can draw on or lean o
 | 3 | A coordinated, reasonably capable crew | Restricted-access clearance — into secured facilities, government-adjacent circles | Significantly customized, high-performance |
 | 4 | A sizable, well-organized group with real capability | High-level clearance — classified access, executive-level standing | Rare and exceptional — armored, military-grade, or famous |
 | 5 | A substantial, highly capable and loyal organization | Near-total access — opens virtually any door in its domain | One-of-a-kind, legendary in capability or reputation |
+
+| Level | Occult Library | System Access |
+|---|---|---|
+| 1 | A modest personal collection — well-thumbed books on folklore and the occult, covering common knowledge | Access to public records and consumer-level databases and systems |
+| 2 | A solid working library, with enough breadth to research most common supernatural phenomena and a few genuine rarities | Real internal access into a specific organization's systems — a company, a local agency |
+| 3 | An extensive collection, including forbidden or suppressed texts — enough to dig into obscure or actively dangerous topics | Broad access spanning multiple systems and networks, reaching into mid-level corporate or government databases |
+| 4 | A renowned archive sought after by scholars and occultists alike, holding material found nowhere else publicly | Deep access into high-security systems — classified government or corporate networks, real backdoors |
+| 5 | A legendary collection — texts thought lost or mythical; knowledge dangerous enough that possessing it alone draws attention | Near-total digital reach — access into almost any system that exists, the kind of reach that alarms anyone who learns of it |
 
 | Level | Wealth |
 |---|---|
