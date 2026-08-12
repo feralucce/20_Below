@@ -776,6 +776,30 @@ Your body ignores the ordinary rules of scale. Shrink small enough to vanish int
 - **Fixed Direction**: chosen once at creation, you can only ever grow or only ever shrink, never both.
 - **Unscaled Gear**: your clothing and equipment never resize with you. Growing bursts your clothes; shrinking leaves you swimming in them, at Disadvantage on any roll requiring properly fitted gear until you adjust.
 
+### Super-Strength
+
+Your body was never bound by the ordinary limits of muscle and leverage. What you can lift, throw, or break keeps redefining what should be possible.
+
+| Level | Effect |
+|---|---|
+| 1 | Treat your Potence as **2 higher** for Carrying Capacity and Break Threshold only. No Ki, no Gift Check. |
+| 2 | The bonus also applies to the contested dice pool - roll as if your Potence were 2 higher when forcing, breaking, or moving something actively resisting. |
+| 3 | Spend **1 Ki** on a successful Physical attack to add your Potence to that attack die, on top of Ferocity - the boosted die becomes `d10 + Ferocity + Potence` vs. Soak, for the same 1 Ki spend Ki Infusion already costs. |
+| 4 | The Potence bonus from Levels 1-2 rises to **4**. The boosted attack (Level 3) can also send the target flying, a forced reposition one Range Band, on top of the damage. |
+| 5 | The Potence bonus rises to **6**. Once per Scene, unleash a GM-approved capstone feat sized to the moment: overturning a vehicle, collapsing a wall, holding a structure up long enough for others to escape. Ki cost for the boosted attack drops to **0**. |
+
+**Adders**:
+
+- **Rending Grip** (Lesser, 3 pts): the boosted attack (Level 3+) also disarms or crushes whatever the target is holding, on a hit.
+- **Seismic Slam** (Lesser, 3 pts): spend 1 Ki to slam the ground, a shockwave dealing Potence dice vs. Soak to everyone at Close range along it.
+- **Unstoppable Force** (Greater, 6 pts): spend 1 Ki when you land a hit. If enough dice connect to drop the target past 0 Health Levels in one blow, let it carry all the way through instead of stopping them at exactly 0.
+
+**Limiters**:
+
+- **Uncontrolled Force**: the boosted attack (Level 3+) always destroys any inanimate object it strikes alongside the target. You can't pull the blow.
+- **Ravenous Hunger**: using the boosted attack costs you 1 unsoakable Health Level each time, the strain of unleashing that much force.
+- **Loud and Obvious**: your strength is never subtle. Even the passive Level 1+ bonus is visibly inhuman, no way to hide it.
+
 ### Swarm
 
 Nothing says you have to stay in one piece. A cloud of bugs, a flock of bats, a swirl of micro-drones, take your pick, and let a thousand small pieces do what one body never could: slip through a crack, cover a room from every angle, or vanish into noise.
