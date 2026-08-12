@@ -421,6 +421,18 @@ Nothing says you have to stay in one piece. A cloud of bugs, a flock of bats, a 
 | 4 | Spread range extends to **Near**. |
 | 5 | Spread range extends to **Far**. Ki cost for spreading out and attacking (Level 3) drops to **0**. |
 
+### Technokinesis
+
+Circuits and code were never a closed system to you. Machines have a pulse if you know how to listen, and once you're listening, you can talk back.
+
+| Level | Effect |
+|---|---|
+| 1 | Active electronics within Close range register at the edge of your awareness: a phone buzzing in a pocket, a camera panning, a server humming behind a wall. No roll, no Ki. |
+| 2 | Touch a simple device (a lock, a lightswitch, a basic terminal) and roll **Air + Difficulty** to make it answer to you directly, no cable, no login. Costs a Normal action. |
+| 3 | Range extends to **Close**, no touch required. Spend **1 Ki** to reach a straightforward device or system (a camera, a door, a simple network) from a distance. |
+| 4 | Range extends to **Near**. A complex networked system stops being a wall of code and becomes a space you can navigate and rewrite in real time. Ki cost rises to **2**. |
+| 5 | Range extends to **Far**. An entire building's systems, a fleet of devices, a whole network: scale stops being a limit, all of it yours to command at once. Ki cost from Level 3 drops to **0**. |
+
 ### Telepathy/Empathy
 
 Minds are not as private as people think — not to you. You can brush against another's emotions, catching the shape of what they feel even through a practiced mask, or reach further and hear the words behind their eyes. Feeling and thought, read by the same gift, just at different depths.
