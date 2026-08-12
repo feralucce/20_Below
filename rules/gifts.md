@@ -179,6 +179,18 @@ Your stance is a fact of the world, not a suggestion. Push, trip, knock back, or
 | 4 | The Ki-gated Advantage from Level 3 becomes free — always active against supernatural attempts, no Ki cost. |
 | 5 | Full immunity to being forcibly moved by anything at all, mundane or supernatural, short of your own choice to move. |
 
+### Insubstantiality
+
+Your body loses its grip on solidity — flesh and bone thinning to something the world can no longer touch, letting you slip straight through a wall, a locked door, or an incoming blow as if none of it were really there.
+
+| Level | Effect |
+|---|---|
+| 1 | Spend **1 Ki** and a Fast action to phase for **1 Round** — pass through a thin barrier (a door, a thin wall). You can't attack or be attacked while phased, and it ends automatically once you're through. |
+| 2 | Phasing now lasts up to **1 Minute** (≈10 Rounds), letting you move through multiple thin obstacles in sequence. Still can't attack while phased. |
+| 3 | You can now phase through thicker, more substantial barriers — solid stone, concrete. While phased, you're immune to Physical damage — attacks pass through you the same way you pass through walls. |
+| 4 | Phasing can be maintained for a full **Scene** (toggled on/off at will) instead of just a Minute. You may now attack while phased, though only as a Mental or Social attack — your body still can't physically connect with anything solid. |
+| 5 | You move at full [Movement Rate](combat.md#movement--range) while phased, with no penalty, and can phase instantly as a reaction to dodge an incoming attack. Ki cost drops to **0** — full mastery, free. |
+
 ### Possession
 
 Beyond command, beyond obedience — you can push your own consciousness into someone else's body outright, shoving them into the passenger seat while you take the wheel. Not persuasion. Occupation.
