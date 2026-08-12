@@ -764,6 +764,18 @@ Your body ignores the ordinary rules of scale. Shrink small enough to vanish int
 | 4 | While enlarged, Soak rises to **+4** and you gain **+2 Ferocity** — sheer mass hits harder. While shrunk, attacks against you remain at Disadvantage, and you gain **Advantage** on Stealth-related rolls — small enough to go unnoticed in the right circumstances. Ki cost rises to **2**. |
 | 5 | While enlarged, Soak rises to **+6** and Ferocity to **+4** — titanic scale, capable of breaking through walls and toppling structures underfoot (GM-adjudicated environmental interaction). While shrunk, you become undetectable to anything not specifically searching for you at that scale — full immunity to being noticed by chance alone. Ki cost rises to **3**. |
 
+**Adders**:
+
+- **Partial Shift** (Lesser, 3 pts): grow or shrink just one part of your body, a hand, a foot, instead of the whole thing, for precision work without the full-body swing.
+- **Momentum Slam** (Lesser, 3 pts): while enlarged, spend 1 Ki on a successful hit to add your current Soak bonus, halved (round down), as extra damage dice on that attack.
+- **Proportional Gear** (Greater, 6 pts): carried objects and worn equipment resize along with you automatically, staying usable at any size instead of being left behind or crushed.
+
+**Limiters**:
+
+- **Slow Growth**: activating this Gift is always a Slow action, at every Level.
+- **Fixed Direction**: chosen once at creation, you can only ever grow or only ever shrink, never both.
+- **Unscaled Gear**: your clothing and equipment never resize with you. Growing bursts your clothes; shrinking leaves you swimming in them, at Disadvantage on any roll requiring properly fitted gear until you adjust.
+
 ### Swarm
 
 Nothing says you have to stay in one piece. A cloud of bugs, a flock of bats, a swirl of micro-drones, take your pick, and let a thousand small pieces do what one body never could: slip through a crack, cover a room from every angle, or vanish into noise.
