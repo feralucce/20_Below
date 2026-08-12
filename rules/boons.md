@@ -7,7 +7,7 @@ Boons are a **grab bag** — small advantages that don't fit under Skills (learn
 
 Boons have a mirror-image counterpart, [Flaws](flaws.md) — character-creation disadvantages built the same way (no levels, mostly non-numeric).
 
-**Points**: every Boon costs a flat number of points from the character-creation pool, in one of four tiers — **Trivial (1)**, **Lesser (3)**, **Greater (5)**, **Legendary (7)**.
+**Points**: every Boon costs a flat number of points from the [Boons pool](character-creation.md#boons-pool), in one of four tiers — **Trivial (1)**, **Lesser (3)**, **Greater (5)**, **Legendary (7)**.
 
 ## Boon List
 
