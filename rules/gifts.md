@@ -814,6 +814,18 @@ Circuits and code were never a closed system to you. Machines have a pulse if yo
 | 4 | Range extends to **Near**. A complex networked system stops being a wall of code and becomes a space you can navigate and rewrite in real time. Ki cost rises to **2**. |
 | 5 | Range extends to **Far**. An entire building's systems, a fleet of devices, a whole network: scale stops being a limit, all of it yours to command at once. Ki cost from Level 3 drops to **0**. |
 
+**Adders**:
+
+- **Lingering Foothold** (Lesser, 3 pts): once you've connected to a device or system, retain a passive backdoor indefinitely, reconnecting instantly with no roll or Ki, until the device is reset, reformatted, or physically disconnected.
+- **Ghost in Every Machine** (Lesser, 3 pts): Level 1's passive awareness extends to Near range, and you also immediately sense which devices nearby are actively working against you, recording, transmitting, or armed, without needing to connect to any of them.
+- **Overload Surge** (Greater, 6 pts): spend 1 Ki to fry a connected device instead of controlling it, disabling it outright and dealing a jolt of feedback (1d10 vs Soak) to anyone in direct contact with it.
+
+**Limiters**:
+
+- **Networked Only**: this Gift only works on devices already networked or powered on. Standalone, offline, or unpowered electronics are invisible to it.
+- **Visible Interference**: connecting to a device causes visible interference nearby, flickering screens, dimming lights, tipping off anyone paying attention.
+- **Slow Handshake**: every connection, at every Level, takes a full Round to establish instead of its normal action cost.
+
 ### Telepathy/Empathy
 
 Minds are not as private as people think — not to you. You can brush against another's emotions, catching the shape of what they feel even through a practiced mask, or reach further and hear the words behind their eyes. Feeling and thought, read by the same gift, just at different depths.
