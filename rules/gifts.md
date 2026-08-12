@@ -91,6 +91,20 @@ Chosen once, at creation: **Always There** (visible and permanent — can't be h
 | 4 | Damage rises to **5d10**. The rending effect intensifies — Disadvantage now persists on all of the target's rolls until the wound is treated or the scene ends, not just their next one. |
 | 5 | Damage rises to **6d10** (matching a heavy/anti-materiel weapon). The rending effect still costs 1 Ki per use. If Stowable was chosen, deploying your claws/fangs no longer triggers the Gift Check. |
 
+### Copycat
+
+Watch someone closely enough, and what makes them exceptional becomes yours to borrow, just for a while. Not their body, whatever it is that actually makes the trick work.
+
+**This Gift always costs Ki, at every Level. There is no mastery discount to free.**
+
+| Level | Effect |
+|---|---|
+| 1 | Watch a target use a Skill, then spend **1 Ki** and roll **Wyrd + Difficulty** to borrow it: for the rest of the scene, use that Skill yourself, treated as Trained even with no training of your own (or your own tier, if already higher). |
+| 2 | You can also mimic a Boon after watching its effect happen once, gaining that Boon's benefit for the rest of the scene. Same cost. |
+| 3 | You can mimic a Gift after watching it used, copying its Level 1 capability for the rest of the scene. Ki cost rises to **2**. |
+| 4 | A mimicked Gift capability can go as high as its Level 3, and any mimicry (Skill, Boon, or Gift) now lasts a full **Day** instead of just a Scene. |
+| 5 | Mimic a Gift capability up to its full Level 5, or hold a Skill, a Boon, and a Gift capability all mimicked at once, for a full Day. |
+
 ### Deadzone
 
 Some people burn bright with what they can do. Around you, that light gutters. Step close enough and the impossible starts running dry: Gifts stutter, spells fail, whatever's fueling someone else's edge simply stops answering.
