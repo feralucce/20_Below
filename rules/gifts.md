@@ -186,6 +186,20 @@ Given enough scrap, a workbench, and a spare few minutes, you can build almost a
 | 4 | Building a gadget now only costs a **Fast** action. Gadgets can have up to **four** functions. Combat-relevant gadgets scale to **3d10** damage or **+3** to a defensive stat. Ki cost for combat-capable gadgets rises to **3**. |
 | 5 | Combat-relevant gadgets scale to **4d10** damage or **+4** to a defensive stat. Gadgets can have up to **five** functions. Ki cost drops back to **2** for combat-capable gadgets. Additionally, once per session, you can build one extraordinary one-off device capable of a dramatic, GM-approved effect beyond the normal function cap — a signature invention. |
 
+### Healing
+
+Where you press your hands, the wound remembers what it looked like before. Poison thins, fevers break, the body simply gets on with fixing itself under your touch, faster and further than it ever could alone.
+
+**This Gift always costs Ki, at every Level. There is no mastery discount to free.**
+
+| Level | Effect |
+|---|---|
+| 1 | Touch a willing or unconscious target and spend **1 Ki** to instantly restore 1 Health Level. Usable once per Round. No Gift Check. |
+| 2 | The same touch and Ki spend can instead cure a mundane poison, disease, or negative physical condition, so long as it isn't already permanent. |
+| 3 | Restores **2 Health Levels** per use instead of 1. Touch is no longer required, range extends to **Close**. |
+| 4 | Reaches supernatural-origin poisons, curses, and conditions too, not just mundane ones. Ki cost for a supernatural cure rises to **2**. |
+| 5 | Given a full **Day** of dedicated care and **3 Ki**, you can heal even normally-permanent harm on someone else: a lost limb, lasting disfigurement. |
+
 ### Heightened Senses
 
 Your senses reach further and cut sharper than anyone else's — sounds from across a building, shapes in total darkness, details too small or too distant for ordinary eyes to ever resolve. Which sense (or senses) sharpen, and how, is chosen once, at creation — enhanced hearing, night vision, telescopic sight, microscopic focus, or something else that fits the concept.
