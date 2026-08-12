@@ -938,6 +938,18 @@ The body has needs. You've stopped listening to most of them. Breath, hunger, th
 | 4 | The Level 3 immunity extends to genuinely extreme conditions too (vacuum-adjacent cold, crushing pressure, lethal air), and now lasts a full **Month** instead of a Day. |
 | 5 | Air, food, water, sleep, and extreme temperature all stop being requirements, permanently, no Ki needed, no Level 3 spend required anymore. |
 
+**Adders**:
+
+- **Painless** (Lesser, 3 pts): Advantage on any roll to resist the penalty effects of pain or injury, not immunity to the damage itself, just the body's distraction from it.
+- **Deep Reserve** (Lesser, 3 pts): when you do eat, drink, or sleep, a single session banks enough reserve to cover a stretch twice as long as your current Level would otherwise grant.
+- **Instant Reset** (Greater, 6 pts): once per Day, instantly clear any accumulated deprivation effects with a moment's focus, no need to actually eat, drink, or sleep to recover from them.
+
+**Limiters**:
+
+- **Sudden Reckoning**: when this Gift's duration finally runs out, all the deprivation you'd normally have felt gradually hits at once: Disadvantage on everything until you properly rest, eat, and drink.
+- **Conscious Effort**: the passive benefits (Levels 1-2) require active concentration. They stop working while unconscious or genuinely surprised.
+- **No Comfort**: not needing food, sleep, or rest doesn't mean you don't crave them. Disadvantage on any Social roll requiring you to convincingly pass as an ordinary person eating, sleeping, or resting normally.
+
 ### Undying Vigor
 
 Age was always going to catch you eventually, or so everyone assumes. Poison, plague, the slow wear of decades: none of it actually gets there. You can still be killed. You just can't be worn down.
