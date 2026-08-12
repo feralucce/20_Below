@@ -109,6 +109,18 @@ Distance means nothing to your sight. Close your eyes and your awareness slips f
 | 4 | Your sight can now follow a specific person you've met, tracking their general location even if you don't know exactly where they are — the vision moves with them rather than staying fixed to one place. |
 | 5 | You can project into a completely unknown, undescribed location by intent alone — answering an unknown ("where is the artifact hidden?") rather than needing any prior anchor. Ki cost from Level 3 drops to **0**. |
 
+**Adders**:
+
+- **Split Focus** (Lesser, 3 pts): divide the vision between two locations at once, each getting a proportionally weaker (GM-adjudicated) picture, instead of one full-strength vision.
+- **Anchor Point** (Lesser, 3 pts): designate a person or object beforehand. You may reflexively snap your vision to it once per Scene, even mid-action, without spending the normal Slow action to project.
+- **Tandem Sight** (Greater, 6 pts): bring one other willing person along for the ride — they share what you see and hear for the vision's duration, no separate roll needed.
+
+**Limiters**:
+
+- **Vulnerable While Projecting**: your body is left slumped and unaware of its surroundings while your sight is elsewhere — no passive Perception, Disadvantage on any roll to notice danger to your physical body.
+- **Tethered Sight**: the Gift only works on a fixed set of pre-tuned static locations — one slot per Level held in this Gift. Retargeting an existing slot to a new location requires spending a full evening or rest period retuning your sight to it. Level 4-5's follow-a-person and unknown-location capabilities never apply, since every use has to land on one of your tuned slots.
+- **One-Way Mirror**: anyone at the destination with a supernatural sense for it can always tell they're being watched, no roll required.
+
 ### Claws / Fangs
 
 Your body carries its own weapon, grown in rather than picked up — retractable claws, elongated fangs, a natural blade of bone or chitin, whatever fits the concept. Always on hand, never disarmed, capable of dealing real, lasting wounds without a manufactured weapon anywhere in reach.
