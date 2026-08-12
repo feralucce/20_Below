@@ -963,3 +963,15 @@ Age was always going to catch you eventually, or so everyone assumes. Poison, pl
 | 3 | Spend **1 Ki** to purge an active poison or disease from your system outright, on command, no roll needed. |
 | 4 | You stop aging entirely, natural or accelerated. Immunity to poison and disease upgrades from Advantage to outright, even against exotic toxins and genuine plagues. |
 | 5 | Full immunity to poison, disease, and aging of any origin, natural or supernatural. You can still be killed, violence, injury, and the like still work, you simply can't be worn down or aged to death. |
+
+**Adders**:
+
+- **Cleansing Touch** (Lesser, 3 pts): spend 1 Ki to purge a poison or disease from a touched ally instead of only yourself.
+- **Preemptive Ward** (Lesser, 3 pts): once per Day, grant yourself Advantage against a specific known poison, disease, or aging effect before you're ever exposed to it.
+- **Halted Decay** (Greater, 6 pts): once per year of in-game time, subtly reverse a few years of accumulated aging, on top of the Level 4+ stopped-aging benefit.
+
+**Limiters**:
+
+- **Slow Purge**: your immunity isn't instantaneous, at any Level. A poison or disease still runs its full course, symptoms included, for up to a Day before your body fights it off. The Level 3+ Ki purge still works, but only shortens that Day down to a Minute rather than clearing it outright.
+- **Vulnerable Youth**: your immunity to aging (Level 4+) doesn't protect against magical or supernatural rapid-aging effects specifically, only the natural passage of time.
+- **Silent Carrier**: you're personally immune, but you can still carry and unknowingly transmit disease to others without ever showing symptoms yourself.
