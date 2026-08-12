@@ -380,3 +380,19 @@ You don't walk between places, you erase the distance between them. However it l
 | 3 | Blinking now works for a place you've only seen in vivid detail (a photo, a thorough description) rather than requiring you to have been there yourself. Doing so requires a [Gift Check](#resolution): failure still moves you, but you land somewhere within sight of the intended spot instead of precisely on it. |
 | 4 | You can bring one other person along, if you're touching them, at no extra cost. Instead of blinking, you may tear a portal: a stable rift lasting up to a Minute, letting others step through it in both directions. Opening a portal costs a Slow action and a Gift Check. |
 | 5 | The portal can connect to a different plane of existence entirely, not just another point in your own world, so long as you have some way of pointing it there: an object, a description, a name, GM's call on fit. Ki cost for the Level 3 detail-only blink drops to **0**. |
+
+### Threadspace
+
+Reach into a fold in space only you can find, and pull out exactly what you left there. What starts as a place to stash a few things becomes, with practice, a room, then a home, then somewhere other people can visit too. Somewhere real, just not anywhere.
+
+| Level | Effect |
+|---|---|
+| 1 | Stash or retrieve a handful of small objects (anything that fits in two hands) in a hidden fold in space only you can reach. Doing so costs a Fast action. No Ki, no Gift Check. |
+| 2 | The fold grows to a closet's worth of space. You can store considerably more, and duck inside yourself briefly as a hiding spot. |
+| 3 | The fold becomes a genuine room behind its own door, big enough to live in and furnish however you like. Opening the door for the first time triggers a [Gift Check](#resolution): success costs nothing, failure costs 1 Ki, either way the door opens. |
+| 4 | The room expands into a full dwelling of your own design, as many rooms as you want, furnished and stocked however you like. You can bring others through the door with you as guests. |
+| 5 | You can maintain up to two doors into the same Threadspace at once, opened wherever you choose. Stepping through one and out the other links those two real points together for as long as both doors stay open. Ki cost for opening a new door (Level 3) drops to **0**. |
+
+**Adders** - optional, chosen once, permanently:
+
+- **Physical Link**: 1 Ki, once. Bind the opening itself to a physical object big enough to actually climb through (a trunk, a door, a large bag). Anyone who opens it can step through into your Threadspace, or pull items from it, the same way you can.
