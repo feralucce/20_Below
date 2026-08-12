@@ -235,6 +235,19 @@ One of you was never going to be enough. Split off a copy, then another, each on
 | 4 | You can maintain **3** clones at once, and they're no longer bound by line of sight, so long as you know roughly where they are. Clones can spend your Ki to use your Gifts too, drawing from the same pool you have. |
 | 5 | You can maintain **5** clones at once, with no range limit at all. |
 
+**Adders**:
+
+- **Tougher Copies** (Lesser, 3 pts): your clones' Health Levels rise from 1 to 2.
+- **Delayed Pop** (Lesser, 3 pts): when a clone would pop, spend 1 Ki to instead let it survive at 0 Health Levels for one more action before vanishing.
+- **Combined Strike** (Greater, 6 pts): two or more clones (or you and a clone) attacking the same target in the same round add their dice pools together into a single attack roll, instead of resolving separately.
+
+**Limiters**:
+
+- **Shared Pain**: whenever a clone pops, you take 1 unsoakable Health Level and are at Disadvantage on your next roll.
+- **Slow Split**: creating a clone is a Slow action instead of instantaneous, at every Level.
+- **One Mind**: clones can't act independently — every clone takes the exact same action you do, on your turn, mirrored rather than directed separately.
+- **Severed Reach**: you must physically touch a clone to reabsorb it early and gain its memories — the Gift's normal instant, no-action remote dismissal doesn't apply.
+
 ### Elemental Aura
 
 Raise a battle aura of your chosen element around your body. "Element" is a broad catch-all, not limited to the four classical elements — fire, ice, lightning, steam, darkness, radiation, cosmic energy, void, magnetism, or whatever else fits the character's concept. Chosen once, at creation.
