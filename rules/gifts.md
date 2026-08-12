@@ -209,6 +209,18 @@ Your will can simply overwrite someone else's, at least for a moment. Look them 
 | 4 | Repeated exposure builds suggestibility: each successful use of this Gift on the same person grants **Advantage** on your next attempt against them, cumulative and lasting until they're free of your influence for an extended stretch (GM's call). |
 | 5 | The self-harm/serious-injury safeguard no longer applies — commands can now be harmful, even lethal. |
 
+**Adders**:
+
+- **Blind Command** (Lesser, 3 pts): issue a command over a phone call, recording, or any medium carrying your voice and intent, not just direct eye contact.
+- **False Memory of Consent** (Lesser, 3 pts): the target has no memory of being commanded — the compliance feels, to them, like it was their own idea.
+- **Standing Order** (Greater, 6 pts): a delayed/triggered command (Level 3+) can be reset and reused against the same target without needing to re-establish eye contact and pay the Ki cost again, so long as the original condition hasn't yet fired.
+
+**Limiters**:
+
+- **One Word, Always**: commands never advance past Level 1's single-word simplicity, regardless of Gift Level bought — Level 2's sentence/complexity upgrade never applies.
+- **Fragile Hold**: any command that would cause the target visible distress or conflict with their core values ends immediately and can't be reattempted against them for a full Day.
+- **Marked Predator**: anyone who succeeds a Psyche roll against you afterward instinctively recognizes you as a Domination user on sight, permanently, whether or not they were ever a target.
+
 ### Duplication
 
 One of you was never going to be enough. Split off a copy, then another, each one fully you, at least for a little while.
