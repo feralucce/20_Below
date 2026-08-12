@@ -94,6 +94,33 @@ Dropping to 0 Health Levels leaves a permanent mark - a scar, a limp, a changed 
 
 Dropping below 0 Health Levels can instead impose a genuine [Flaw](flaws.md), lasting until the character is fully healed back to 0. GM's call, in consultation with the player, on which Flaw fits the harm taken.
 
+### Poise
+
+Poise mirrors [Health Levels](#health-levels), tracking composure under Social attack instead of Physical.
+
+- **`PC Poise = 5 + Presence`.** NPCs default to a flat 5. Each Level is a binary hit-box, same shape as Health.
+- **Crossing zero** works identically to Health Levels: a single Social attack can't carry a target past 0 in one hit, the excess is discarded; once at 0, further hits only remove 1 Poise total, regardless of how many dice connect.
+- **At 0 Poise**, a character becomes [Flustered](combat.md#flustered).
+- **Below 0**, tracked down to `-Presence`, the character is **Broken**: their standing is permanently, publicly ruined - the social equivalent of death. GM narrates the lasting fallout.
+
+**Recovery**: Short Rest heals `Presence ÷ 2` (round up); Full Night's Rest heals fully; below 0 recovers 1 Poise per day, same as Health.
+
+**Ki cannot prevent a Poise loss.** Once Poise reaches 0, spending **1 Ki refills it back to full**, reflecting how quickly social standing can turn around in the moment.
+
+**Poise scars**: dropping to 0 leaves a purely cosmetic social tell (a nervous habit, a reputation quirk), no mechanical effect. No Gift currently grants immunity to this - intentional. Dropping below 0 can instead impose a genuine Flaw, same as Health.
+
+### Sanity
+
+Sanity mirrors Health Levels too, tracking a character's grip on their own mind against Mental attack.
+
+- **`PC Sanity = 5 + Psyche`.** NPCs default to a flat 5. Each Level is a binary hit-box.
+- **Crossing zero** works identically to Health Levels.
+- **General recovery** matches Health/Poise: Short Rest heals `Psyche ÷ 2` (round up); Full Night's Rest heals fully.
+
+**At 0 Sanity, a character is Overwhelmed**: they gain a temporary negative mental trait (a Flaw - exact mechanic to be defined later) and are at Disadvantage on rolls. They can still act on their own. Overwhelmed clears when the character is removed from the stimulus that caused it and given a chance to rest, or by spending 1 Ki, which also refills Sanity to full.
+
+**Below 0, a character is Shattered**: panicky, babbling, unable to act on their own - they have to be led or dragged. Shattered clears when 1 Ki is spent or a Full Night's Rest passes, either of which restores Sanity only to 1, not fully - normal recovery resumes from there on the next rest. **Dropping below 0 always leaves a permanent mental scar**, regardless of how the character recovers afterward, even a Ki-funded refill doesn't erase it. The scar mechanic itself is not yet defined - flagged for a later, deeper pass.
+
 ### Defense (Derived Stat)
 
 Wyrd's combat sub-stat is named **Warp** (the fixed, load-bearing thread - the part of a character's fate that holds firm and doesn't move), but it doesn't appear on the character sheet directly for combat purposes - instead it feeds a separate, derived entry called **Defense**, the same way D&D's AC is a derived number rather than a raw stat.
