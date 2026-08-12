@@ -665,6 +665,18 @@ Objects remember. A blade recalls the hand that swung it, a ring the years it sa
 | 4 | Ask up to **4** questions. Detailed visions (Level 3) can now identify specific people and approximate dates, and reach centuries back if the object is old enough to hold it. |
 | 5 | Ask up to **5** questions. A touch can now reconstruct a brief sequence of the object's major moments rather than one isolated scene. Ki cost for a detailed vision drops to **0**. |
 
+**Adders**:
+
+- **Lingering Impression** (Lesser, 3 pts): after reading an object, you retain a faint sense of it for a Day, letting you recognize it or its owner again on a later touch without a fresh roll.
+- **Emotional Resonance** (Lesser, 3 pts): once per Scene, ask specifically about the emotional state of whoever last handled the object, getting a clear answer even at Level 1's flash tier.
+- **Chain Reading** (Greater, 6 pts): read a second object that was in contact with the first at the time of the event in question, extending the vision to include it, for the same Ki cost.
+
+**Limiters**:
+
+- **Painful Echo**: a detailed vision always costs 1 unsoakable Health Level, even after the Ki cost drops to 0 at Level 5.
+- **One Touch Only**: you can only ever read an object once. A second reading of the same object yields nothing new.
+- **Overwhelmed by Violence**: if the object's history includes a violent death or severe trauma, roll Wyrd + Difficulty or be Disadvantaged for the rest of the Scene.
+
 ### Regeneration
 
 Your body refuses to stay broken. Wounds that would sideline anyone else for weeks close in minutes, and even grievous injury is, at worst, a temporary setback rather than a lasting cost.
