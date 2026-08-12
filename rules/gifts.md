@@ -12,7 +12,11 @@ Every Gift has exactly **5 levels**, rated 1-5.
 
 ## Points
 
-At character creation, each Gift Level costs a flat **3 points** from the [Gifts pool](character-creation.md#gifts-pool) — a Gift bought to Level 3 costs 9 points, to Level 5, 15 points. An Adder, where a Gift has one, costs a flat **6 points**, paid once to unlock the option permanently; the Ki cost of actually using it each time is separate and paid per the Gift's own text.
+At character creation, each Gift Level costs a flat **3 points** from the [Gifts pool](character-creation.md#gifts-pool) — a Gift bought to Level 3 costs 9 points, to Level 5, 15 points.
+
+**Adders** come in two tiers, **Lesser (3 points)** and **Greater (6 points)**, paid once to unlock the option permanently; the Ki cost of actually using it each time is separate and paid per the Gift's own text. Every Gift should offer at least 3 Adders.
+
+**Limiters** are a permanent, creation-time restriction chosen for one specific Gift. Each Limiter taken drops the cost of every Level of that Gift by 1 point. A character may stack as many different Limiters on a Gift as they want, but no combination can ever drop a Level's cost below 1 point.
 
 ## Resolution
 
@@ -51,11 +55,22 @@ The alternate form is built once, at creation, spending a points pool (below) on
 | Option | Cost | Effect |
 |---|---|---|
 | Sub-stat boost | 1 pt | +2 to one physical sub-stat (Soak, Ferocity, Stamina, Potence, or Initiative) while transformed. |
-| Natural weapon | 1 pt | Claws, fangs, a stinger, etc. — grants weapon-equivalent dice (per [weapons.md](weapons.md)) usable without a manufactured weapon. |
+| Attribute boost | 2 pts/point | +1 to one Attribute (Earth, Air, Fire, Water, or Wyrd) while transformed, up to the character's normal maximum. |
 | Environmental adaptation | 1 pt | Breathe underwater, see in total darkness, ignore extreme temperatures, or similar. |
-| Enhanced movement | 1 pt | Flight, swimming, wall-climbing, or a ×1.5 Movement Rate — pick one mode/effect. |
-| Elemental resistance | 2 pts | Remove one quarter of an incoming attack's dice of one chosen damage type, same shape as [Elemental Aura](#elemental-aura)'s Level 1. |
-| Sensory upgrade | 1 pt | Echolocation, scent-tracking, infrared vision, or similar. |
+| Borrow a Gift Level | 3 pts/Level | Gain one Level of an existing Gift you don't otherwise hold while transformed, GM-approved for fit — same per-Level price as the [Gifts pool](character-creation.md#gifts-pool). |
+| Borrow a Boon | 1/3/5/7 pts | Gain a Boon you don't otherwise hold while transformed, at that Boon's own Trivial/Lesser/Greater/Legendary price. |
+
+**Adders**:
+
+- **Partial Shift** (Lesser, 3 pts): shift a single body part (hands to claws, eyes, wings) without a full transformation — no action cost, no Gift Check — but only one build-menu option's benefit applies at a time, not the whole form.
+- **Extended Reserve** (Greater, 6 pts): the build-menu pool at every Level is permanently +3 points bigger.
+- **Second Form** (Greater, 6 pts): build a second alternate form on the same pool, chosen independently at creation. Switching still triggers the Gift Check each time.
+
+**Limiters**:
+
+- **Slow to Invoke**: transforming takes a full Minute instead of a Slow action.
+- **Involuntary Trigger**: the form activates automatically under a specific stress condition (mortal danger, strong emotion, GM's call at creation) and can't be suppressed once triggered.
+- **Fixed Duration**: the form can't be voluntarily dropped early. It lasts a flat Scene, then reverts on its own.
 
 ### Animal Friendship
 
