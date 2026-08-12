@@ -488,6 +488,20 @@ Your body loses its grip on solidity — flesh and bone thinning to something th
 | 4 | Phasing can be maintained for a full **Scene** (toggled on/off at will) instead of just a Minute. You may now attack while phased, though only as a Mental or Social attack — your body still can't physically connect with anything solid. |
 | 5 | You may extend the effect to one other person you're touching, phasing them along with you. You can also phase instantly as a reaction to dodge an incoming attack. Ki cost drops to **0**. |
 
+While phased, you're also undetectable by ordinary senses, sight, sound, and touch alike, not just untouchable.
+
+**Adders**:
+
+- **Extended Phase** (Lesser, 3 pts): the duration at Levels 1-2 doubles (2 Rounds / 2 Minutes).
+- **Solid Strike** (Lesser, 3 pts): while phased at Level 4+, spend 1 Ki to briefly re-solidify one limb for a single Physical attack, then re-phase immediately after.
+- **Phase Walk** (Greater, 6 pts): pass through moving obstacles (a crowd, a struggling grapple, a closing door) as freely as static ones, not just stationary barriers.
+
+**Limiters**:
+
+- **Slow Fade**: phasing takes a full Round to take effect instead of a Fast action, at every Level except Level 5's reactive dodge.
+- **Residual Static**: while phased, you're still visible as a faint shimmer or outline. You're never truly undetectable.
+- **No Passengers**: Level 5's extend-to-another-person clause never applies.
+
 ### Invisibility
 
 You fade from ordinary perception entirely — not hidden, not blended in, simply not there to be seen, heard, or sensed by anything short of genuine effort or supernatural means.
