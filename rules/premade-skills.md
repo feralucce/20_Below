@@ -62,7 +62,7 @@ A starting Skill list scoped to a **modern-world base campaign**. Per [skills.md
 | Natural World | Knowledge of flora, fauna, ecosystems, and the environment. |
 | Navigation | Plotting a course and avoiding getting lost, on foot, by vehicle, or otherwise. |
 | Networking | Building and leveraging connections in professional, corporate, or elite circles. |
-| Occult | Esoteric lore, ritual, and the world's hidden supernatural undercurrent - grounds a character's understanding of things like Wyrd, fate, and what a connecting Social/Mental die is actually reaching into. Included by default rather than genre-flagged, since the setting's fated-heroes premise makes it broadly relevant rather than an opt-in module. |
+| Occult | Esoteric lore, ritual, and the world's hidden supernatural undercurrent - grounds a character's understanding of things like Moira, fate, and what a connecting Social/Mental die is actually reaching into. Included by default rather than genre-flagged, since the setting's fated-heroes premise makes it broadly relevant rather than an opt-in module. |
 | Perception | Noticing details and spotting hidden things. |
 | Performance | Acting, music, dance, or oratory before an audience - broad by default; specialize by discipline via Specialty. |
 | Persuasion | Honest argument and diplomacy. |

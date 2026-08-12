@@ -26,12 +26,12 @@ A player can spend **1 Ki per step** to bump their declared band up (Slow → No
 
 ### Distracted
 
-A character who loses a Health Level or is the target of a Kotodama effect while resolving a **Slow** Action Band action becomes **Distracted**, and must roll **Warp + Difficulty** to hold focus.
+A character who loses a Health Level or is the target of a Kotodama effect while resolving a **Slow** Action Band action becomes **Distracted**, and must roll **Atropos + Difficulty** to hold focus.
 
 - **Success** - the action resolves as declared.
 - **Failure** - the action downgrades to a **Normal** action (loses the called-shot/Advantage benefit).
 
-**Other sources can impose Distracted too** - a Gift, an environmental hazard (a collapsing building, a deafening explosion), or GM fiat, whether or not a Slow action is involved. The same **Warp + Difficulty** roll applies; outside a Slow action, failure instead imposes **Disadvantage** on the triggering roll. [Concentration](boons.md) grants immunity to being Distracted regardless of source.
+**Other sources can impose Distracted too** - a Gift, an environmental hazard (a collapsing building, a deafening explosion), or GM fiat, whether or not a Slow action is involved. The same **Atropos + Difficulty** roll applies; outside a Slow action, failure instead imposes **Disadvantage** on the triggering roll. [Concentration](boons.md) grants immunity to being Distracted regardless of source.
 
 ### Surprise
 

@@ -55,7 +55,7 @@ The alternate form is built once, at creation, spending a points pool (below) on
 | Option | Cost | Effect |
 |---|---|---|
 | Sub-stat boost | 1 pt | +2 to one physical sub-stat (Soak, Ferocity, Stamina, Potence, or Initiative) while transformed. |
-| Attribute boost | 2 pts/point | +1 to one Attribute (Earth, Air, Fire, Water, or Wyrd) while transformed, up to the character's normal maximum. |
+| Attribute boost | 2 pts/point | +1 to one Attribute (Earth, Air, Fire, Water, or Moira) while transformed, up to the character's normal maximum. |
 | Environmental adaptation | 1 pt | Breathe underwater, see in total darkness, ignore extreme temperatures, or similar. |
 | Borrow a Gift Level | 3 pts/Level | Gain one Level of an existing Gift you don't otherwise hold while transformed, GM-approved for fit - same per-Level price as the [Gifts pool](character-creation.md#gifts-pool). |
 | Borrow a Boon | 1/3/5/7 pts | Gain a Boon you don't otherwise hold while transformed, at that Boon's own Trivial/Lesser/Greater/Legendary price. |
@@ -78,7 +78,7 @@ Animals sense something in you that overrides their instincts - an inborn trust 
 
 | Level | Effect |
 |---|---|
-| 1 | Roll **Wyrd + Difficulty** to calm an agitated animal or exchange simple, instinct-level understanding with it (hunger, fear, the direction of danger) - one ordinary animal at a time, within Close range. Is a Normal action. No Ki, no Gift Check. |
+| 1 | Roll **Moira + Difficulty** to calm an agitated animal or exchange simple, instinct-level understanding with it (hunger, fear, the direction of danger) - one ordinary animal at a time, within Close range. Is a Normal action. No Ki, no Gift Check. |
 | 2 | Range extends to **Near**. You may now direct the animal to perform one simple task within its natural capabilities (lead you somewhere, retrieve a small object, stand guard, fetch help) in addition to calming or understanding it. Still a Normal action, no Ki. Additionally, you gain a lasting **Animal Companion**, free with this Level - no Ki or point cost - an ordinary creature of your choice, chosen at creation, that stays by your side simply because it likes you. Not summoned or magically bound; it can leave if truly mistreated or endangered, but under normal circumstances it travels and fights alongside you. |
 | 3 | Range extends to **Far**. You may now affect a small group of animals simultaneously (a pack, a flock, a swarm) rather than just one - calming, understanding, or directing all of them at once costs **1 Ki**. Your Animal Companion's bond deepens automatically, free with this Level: it gains **+2** to one relevant sub-stat of your choice (Soak, Ferocity, Stamina, Potence, or Initiative). |
 | 4 | The affected group scales up to a full herd, swarm, or pack of any size. Your influence now extends to dangerous or exotic wildlife, not just ordinary animals - even apex predators respond to you. Group-effect Ki cost rises to **2**. Your Animal Companion gains a second **+2** to a different sub-stat, automatically, free with this Level (stacking with Level 3's bonus). |
@@ -103,7 +103,7 @@ Distance means nothing to your sight. Close your eyes and your awareness slips f
 
 | Level | Effect |
 |---|---|
-| 1 | Roll **Wyrd + Difficulty** (harder the less familiar the place) to project your sight to somewhere you've personally been before. Is a Slow action, sight only - no sound - lasting a few minutes or until broken. |
+| 1 | Roll **Moira + Difficulty** (harder the less familiar the place) to project your sight to somewhere you've personally been before. Is a Slow action, sight only - no sound - lasting a few minutes or until broken. |
 | 2 | The vision now includes sound as well as sight. You can also target a place you've only seen in detail (a photo, a vivid description) rather than having to have physically been there yourself. |
 | 3 | Spend **1 Ki** to extend the vision's duration significantly, or to target a place you've never seen or visited at all, so long as you're actively searching for it with a clear intent ("show me where the stolen car went"). |
 | 4 | Your sight can now follow a specific person you've met, tracking their general location even if you don't know exactly where they are - the vision moves with them rather than staying fixed to one place. |
@@ -155,7 +155,7 @@ Watch someone closely enough, and what makes them exceptional becomes yours to b
 
 | Level | Effect |
 |---|---|
-| 1 | Watch a target use a Skill, then spend **1 Ki** and roll **Wyrd + Difficulty** to borrow it: for the rest of the scene, use that Skill yourself, treated as Trained even with no training of your own (or your own tier, if already higher). |
+| 1 | Watch a target use a Skill, then spend **1 Ki** and roll **Moira + Difficulty** to borrow it: for the rest of the scene, use that Skill yourself, treated as Trained even with no training of your own (or your own tier, if already higher). |
 | 2 | You can also mimic a Boon after watching its effect happen once, gaining that Boon's benefit for the rest of the scene. Same cost. |
 | 3 | You can mimic a Gift after watching it used, copying its Level 1 capability for the rest of the scene. Ki cost rises to **2**. |
 | 4 | A mimicked Gift capability can go as high as its Level 3, and any mimicry (Skill, Boon, or Gift) now lasts a full **Day** instead of just a Scene. |
@@ -171,7 +171,7 @@ Watch someone closely enough, and what makes them exceptional becomes yours to b
 
 - **One at a Time**: you can only hold a single mimicked capability at once, at any Level - Level 5's "all three at once" clause never applies.
 - **Live Feed Only**: the target must still be within your sight when you activate a mimicked capability, not just at the moment you first watched it.
-- **Echo, Not Original**: a mimicked Gift capability never benefits from your own Wyrd, Ki totals, or other bonuses beyond what the roll itself requires - it runs at the exact numbers you watched, even if worse than your own stats would produce.
+- **Echo, Not Original**: a mimicked Gift capability never benefits from your own Moira, Ki totals, or other bonuses beyond what the roll itself requires - it runs at the exact numbers you watched, even if worse than your own stats would produce.
 
 ### Deadzone
 
@@ -182,7 +182,7 @@ Some people burn bright with what they can do. Around you, that light gutters. S
 | 1 | Touch or **Close** range, single target. Spend **1 Ki**, no roll: for the rest of the scene, that target's Gift uses cost double Ki, rounded up (a normally-free use instead costs 1 Ki). |
 | 2 | Range extends to **Near**. You may instead spend 1 Ki to directly prevent a Gift from activating in the first place, or shut down one specific active supernatural effect already in place, no roll, either way ending it outright. |
 | 3 | Range extends to **Far**. You can affect a second target at the same time, for a second 1 Ki spend. |
-| 4 | Spend **2 Ki** and roll **Wyrd + Difficulty** to instead raise a true field around yourself out to **Close** range, affecting everyone inside rather than picking individual targets, lasting the rest of the scene. Failure still spends the Ki; the field doesn't form. |
+| 4 | Spend **2 Ki** and roll **Moira + Difficulty** to instead raise a true field around yourself out to **Close** range, affecting everyone inside rather than picking individual targets, lasting the rest of the scene. Failure still spends the Ki; the field doesn't form. |
 | 5 | The field radius extends to **Near**, and upgrades from a tax to an outright block: Gifts simply can't be used inside it. Ki cost for the single-target effects (Levels 1-3) drops to **0**. |
 
 **Adders**:
@@ -280,7 +280,7 @@ Some Gifts are one move, sharpened over time. This isn't that. Pick a single dom
 
 | Level | Effect |
 |---|---|
-| 1 | Roll **Wyrd + Difficulty** to shape an effect within your domain that touches a full sensory picture (not just one sense) or physically moves/reshapes something person-sized (a body's worth of matter, a room's worth of shadow, a sound that isn't really there, the temperature of a room). No Range Band limit, works anywhere you can perceive or clearly reach with it. Is a Normal action. No Ki, no Gift Check. |
+| 1 | Roll **Moira + Difficulty** to shape an effect within your domain that touches a full sensory picture (not just one sense) or physically moves/reshapes something person-sized (a body's worth of matter, a room's worth of shadow, a sound that isn't really there, the temperature of a room). No Range Band limit, works anywhere you can perceive or clearly reach with it. Is a Normal action. No Ki, no Gift Check. |
 | 2 | You can now blanket an area instead of a single target or point. Spend **1 Ki** to create a zone (spreading true darkness, a field of magnetic interference, a sudden downpour, a shared false vision everyone inside perceives the same way) that imposes Disadvantage on anyone inside acting against you, lasting up to a Scene. |
 | 3 | The area effect scales to something building-sized or block-sized (a full weather shift over a neighborhood, a false skyline that fools anyone looking). Ki cost rises to **2**. You can also physically move or reshape something correspondingly large within your domain with no roll, so long as it's plausible for the element. |
 | 4 | Any effect you create (the area zone, a moved or reshaped object, a false sensory scene) can be made **permanent** instead of temporary, for an extra **1 Ki** spent when you create it. |
@@ -448,7 +448,7 @@ Your senses reach further and cut sharper than anyone else's - sounds from acros
 
 **Limiters**:
 
-- **Overload**: using your sense in an overwhelming environment (a loud crowd, bright lights, thick smells) forces a Wyrd + Difficulty roll or you're Disadvantaged for a Round.
+- **Overload**: using your sense in an overwhelming environment (a loud crowd, bright lights, thick smells) forces a Moira + Difficulty roll or you're Disadvantaged for a Round.
 - **Single Direction**: your enhanced sense only covers a narrow cone, not all-around awareness. GM adjudicates facing.
 - **Draining Focus**: obstacle-piercing always costs 1 Ki. Level 4's free upgrade never applies.
 
@@ -525,7 +525,7 @@ You fade from ordinary perception entirely - not hidden, not blended in, simply 
 
 - **Fragile Veil**: any physical contact, being touched or bumping into someone, breaks the invisibility instantly, at every Level.
 - **Silence Required**: the Gift doesn't work if you're already speaking or making noise the moment you activate it.
-- **Startled Reveal**: if something sudden and dangerous happens while you're invisible, roll Wyrd + Difficulty or the effect breaks involuntarily.
+- **Startled Reveal**: if something sudden and dangerous happens while you're invisible, roll Moira + Difficulty or the effect breaks involuntarily.
 
 ### Jumping
 
@@ -610,7 +610,7 @@ The future leaks through, uninvited and unclear - a flash of what's about to hap
 | Level | Effect |
 |---|---|
 | 1 | Passive and involuntary - at a dramatically appropriate moment (GM's call), you receive a brief precognitive flash: a warning, a fragment of the near future. No roll, no action, purely a narrative tool the GM wields on your behalf. |
-| 2 | Once per scene, you may actively reach for a flash: roll **Wyrd + Difficulty** to get a vague impression of the likely outcome of a specific decision or action you're considering. |
+| 2 | Once per scene, you may actively reach for a flash: roll **Moira + Difficulty** to get a vague impression of the likely outcome of a specific decision or action you're considering. |
 | 3 | Spend **1 Ki**, when you've foreseen an attack coming, to gain **Advantage** on your defense against it - foreknowledge translated into a real combat edge. |
 | 4 | Active foresight (Level 2) sharpens from a vague impression into a clearer vision, and can now reach further out - not just the immediate next moment, but a meaningful stretch of near future. |
 | 5 | Passive flashes (Level 1) can now surface any time danger is coming, not just when the GM chooses to grant one - you're rarely blindsided anymore. Ki cost from Level 3 drops to **0**. |
@@ -659,7 +659,7 @@ Objects remember. A blade recalls the hand that swung it, a ring the years it sa
 
 | Level | Effect |
 |---|---|
-| 1 | Touch an object and roll **Wyrd + Difficulty**. Ask **1** question about its most significant recent history - the answer comes as a vague impression, a flash of emotion or sense-memory. No Ki, no Gift Check. |
+| 1 | Touch an object and roll **Moira + Difficulty**. Ask **1** question about its most significant recent history - the answer comes as a vague impression, a flash of emotion or sense-memory. No Ki, no Gift Check. |
 | 2 | Ask up to **2** questions. Answers now come as a clearer scene rather than a flash, and can reach further back into the object's history, not just its most recent moments. |
 | 3 | Ask up to **3** questions. Spend **1 Ki** per question to push that answer into a detailed, near-immersive vision instead of a scene - faces, words, real specifics. |
 | 4 | Ask up to **4** questions. Detailed visions (Level 3) can now identify specific people and approximate dates, and reach centuries back if the object is old enough to hold it. |
@@ -675,7 +675,7 @@ Objects remember. A blade recalls the hand that swung it, a ring the years it sa
 
 - **Painful Echo**: a detailed vision always costs 1 unsoakable Health Level, even after the Ki cost drops to 0 at Level 5.
 - **One Touch Only**: you can only ever read an object once. A second reading of the same object yields nothing new.
-- **Overwhelmed by Violence**: if the object's history includes a violent death or severe trauma, roll Wyrd + Difficulty or be Disadvantaged for the rest of the Scene.
+- **Overwhelmed by Violence**: if the object's history includes a violent death or severe trauma, roll Moira + Difficulty or be Disadvantaged for the rest of the Scene.
 
 ### Regeneration
 
@@ -932,7 +932,7 @@ Chosen once, at creation: how you perform the ritual that triggers this Gift, tr
 
 | Level | Effect |
 |---|---|
-| 1 | Touch a quantity of raw or simple material (up to roughly what you could carry) and spend **1 Ki**, then roll **Wyrd + Difficulty** to break it down and reconstruct it into a different simple object of equivalent mass and similar composition (loose stone into a crude wall, wood into a simple tool). Performing the ritual is a Slow action; the transmutation itself is instant once triggered. |
+| 1 | Touch a quantity of raw or simple material (up to roughly what you could carry) and spend **1 Ki**, then roll **Moira + Difficulty** to break it down and reconstruct it into a different simple object of equivalent mass and similar composition (loose stone into a crude wall, wood into a simple tool). Performing the ritual is a Slow action; the transmutation itself is instant once triggered. |
 | 2 | The output can now be meaningfully more complex than the input (raw ore into a working blade, rubble into a fitted brick wall), still equivalent mass. The ritual is now only a Normal action. Ki cost rises to **2**. |
 | 3 | You can change a material's basic composition, not just its shape (wood into iron, sand into glass). Affected mass roughly doubles. Ki cost rises to **3**. A [Gift Check](#resolution) applies on especially large or precise jobs, GM's call. |
 | 4 | The ritual is now only a Fast action. Affected mass roughly doubles again. Ki cost rises to **4**. |
