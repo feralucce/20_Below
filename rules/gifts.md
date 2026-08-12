@@ -369,6 +369,20 @@ Your body ignores the ordinary rules of scale. Shrink small enough to vanish int
 | 4 | While enlarged, Soak rises to **+4** and you gain **+2 Ferocity** — sheer mass hits harder. While shrunk, attacks against you remain at Disadvantage, and you gain **Advantage** on Stealth-related rolls — small enough to go unnoticed in the right circumstances. Ki cost rises to **2**. |
 | 5 | While enlarged, Soak rises to **+6** and Ferocity to **+4** — titanic scale, capable of breaking through walls and toppling structures underfoot (GM-adjudicated environmental interaction). While shrunk, you become undetectable to anything not specifically searching for you at that scale — full immunity to being noticed by chance alone. Ki cost rises to **3**. |
 
+### Swarm
+
+Nothing says you have to stay in one piece. A cloud of bugs, a flock of bats, a swirl of micro-drones, take your pick, and let a thousand small pieces do what one body never could: slip through a crack, cover a room from every angle, or vanish into noise.
+
+**The double-damage vulnerability to area attacks while swarmed never goes away, at any Level.**
+
+| Level | Effect |
+|---|---|
+| 1 | Spend **1 Ki**; is a Slow action to break apart into your swarm form (a cloud of bugs, bats, drones, whatever fits). While swarmed, immune to single-target Physical attacks (they connect with mostly empty space), but any attack that hits an area instead deals double dice. You can flow through any gap large enough for a single one of your components (a crack under a door, a vent). Lasts up to a Minute. Reforming is a Normal action. |
+| 2 | Duration extends to a **Scene**. Breaking apart is now a Normal action. |
+| 3 | Breaking apart is now a Fast action. While swarmed, spend **1 Ki** to spread out across **Close** range instead of staying roughly person-shaped, letting you watch or listen from many points at once, or make a single Physical attack (per-die vs. Soak) against everyone in that range simultaneously. |
+| 4 | Spread range extends to **Near**. |
+| 5 | Spread range extends to **Far**. Ki cost for spreading out and attacking (Level 3) drops to **0**. |
+
 ### Telepathy/Empathy
 
 Minds are not as private as people think — not to you. You can brush against another's emotions, catching the shape of what they feel even through a practiced mask, or reach further and hear the words behind their eyes. Feeling and thought, read by the same gift, just at different depths.
