@@ -340,10 +340,17 @@ Gravity is a suggestion you've learned to decline. Whether it's feathered wings,
 | 4 | Movement Rate while flying rises to **x5**, fast enough to close or open a full Range Band as part of a single move. You can carry one other person while flying with no penalty. Ki cost from Level 3 stays at 1. |
 | 5 | You break the sound barrier. Within a scene, you can cross from Far to Melee range (or the reverse) in a single move, no Range Band restriction. Ki cost for the evasive dodge from Level 3 drops to **0**. |
 
-**Adders** - optional, spent per use in the moment:
+**Adders**:
 
-- **Sonic Boom**: 1 Ki. A shockwave hits everyone at Close range along your flight path. Usable any time you move at flying speed, no cap on uses beyond the Ki cost itself.
-- **Passenger Overload**: 1 Ki. Carry more than one person while flying (Level 4+ only).
+- **Passenger Overload** (Lesser, 3 pts): 1 Ki. Carry more than one person while flying (Level 4+ only).
+- **Dive Bomb** (Lesser, 3 pts): spend 1 Ki to slam into a target from the air — Potence dice vs. their Soak, Close range only.
+- **Sonic Boom** (Greater, 6 pts): 1 Ki. Everyone at Close range along your flight path takes 2d10 vs Soak and is knocked Prone if any die connects. Usable any time you move at flying speed, no cap on uses beyond the Ki cost itself.
+
+**Limiters**:
+
+- **Vulnerable Silhouette**: you're always visible against the sky while flying, no concealment possible — Disadvantage on any Stealth roll made while airborne.
+- **Fair Weather Flier**: you can't fly in severe weather (storms, high wind, heavy turbulence) — GM's call on what qualifies.
+- **Grounded Recovery**: if reduced to 0 Health Levels or knocked unconscious while flying, you fall and take normal fall damage — no automatic soft landing.
 
 ### Gadgeteer
 
