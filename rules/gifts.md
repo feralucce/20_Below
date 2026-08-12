@@ -300,6 +300,18 @@ The future leaks through, uninvited and unclear — a flash of what's about to h
 | 4 | Active foresight (Level 2) sharpens from a vague impression into a clearer vision, and can now reach further out — not just the immediate next moment, but a meaningful stretch of near future. |
 | 5 | Passive flashes (Level 1) can now surface any time danger is coming, not just when the GM chooses to grant one — you're rarely blindsided anymore. Ki cost from Level 3 drops to **0**. |
 
+### Psychokinesis / Telekinesis
+
+You don't need hands. A thought is enough to lift, throw, pin, or crush anything within reach of your will.
+
+| Level | Effect |
+|---|---|
+| 1 | Spend **1 Ki** to apply your Potence rating (both the flat carry/break give and the contested forcing dice pool) to an object within **Close** range, no touch required. Initiating is a Normal action; holding or moving something across subsequent rounds takes a Fast action each round to maintain concentration. |
+| 2 | Range extends to **Near**. You can also perform simple fine manipulation at range (turn a key, flip a switch, thread a needle) with no roll. |
+| 3 | Range extends to **Far**. You can hurl an object you're gripping at a target as an attack: roll your Potence dice per-die vs. the target's Soak, same shape as a thrown weapon. Ki cost stays **1**. |
+| 4 | You can grip and move several objects at once (up to a handful), or grip a person directly to restrain or reposition them (contested against their Potence or Soak, GM's call). Ki cost rises to **2**. |
+| 5 | Maintaining a telekinetic grip no longer requires concentration once per Scene, and the mass you can grip doubles beyond your normal Potence carrying capacity. Ki cost from Level 1 drops to **0**. |
+
 ### Psychometry
 
 Objects remember. A blade recalls the hand that swung it, a ring the years it sat on someone's finger, a knife the moment it drew blood. Touch something with intent and its history opens up to you — fragments of who held it, what happened around it, what it's been through.
