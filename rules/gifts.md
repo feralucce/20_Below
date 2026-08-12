@@ -245,6 +245,18 @@ Objects remember. A blade recalls the hand that swung it, a ring the years it sa
 | 4 | Ask up to **4** questions. Detailed visions (Level 3) can now identify specific people and approximate dates, and reach centuries back if the object is old enough to hold it. |
 | 5 | Ask up to **5** questions. A touch can now reconstruct a brief sequence of the object's major moments rather than one isolated scene. Ki cost for a detailed vision drops to **0** — full mastery, free. |
 
+### Shapeshift
+
+Your body ripples and reforms like water finding a new shape — skin, bone, and voice shifting to convincingly become a specific person you've seen, or reconfiguring into a specific inanimate object entirely. Not a fixed alternate form (that's its own Gift) — a flexible mimicry of whatever target you choose, fresh each time you use it.
+
+| Level | Effect |
+|---|---|
+| 1 | Costs a Slow action and a [Gift Check](#resolution) — success free, failure costs 1 Ki, the transformation happens either way. Transform into a generic member of a broad category you've seen examples of (a dog, a police officer, a teenage boy) — not a specific individual. Appearance only, no voice. Undetectable unless an observer has specific reason to doubt it, in which case they may roll Insight + Difficulty to see through it. |
+| 2 | Mimicry now includes voice as well as appearance. |
+| 3 | You may now mimic a specific individual — a particular person or animal you've seen in real detail — instead of just a generic category. |
+| 4 | You no longer need to have seen the specific target in person — a detailed photo or description is enough. You also pick up minor functional traits where it makes sense — their exact fingerprint or biometric signature (fooling biometric scanners). |
+| 5 | The mimicry becomes undetectable even under close technical scrutiny, and lasts indefinitely until you choose to change back — no more Gift Check required to maintain it. |
+
 ### Signature Move
 
 Every seasoned fighter, mystic, or gifted soul eventually develops something that's uniquely theirs — a technique, a maneuver, a flourish of power that belongs to them and no one else, honed and personal in a way no textbook or master can teach directly. Signature Move is that: a custom ability built from scratch to fit the character who holds it, not pulled from a fixed list. It's usually an attack, but doesn't have to deal damage to qualify — a signature disarm, a signature escape, a signature show of force. Built level by level as the character's mastery of their own technique grows.
