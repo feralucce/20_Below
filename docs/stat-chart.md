@@ -17,4 +17,4 @@ A quick-reference summary of the current Attribute/sub-stat state. **This is a s
 
 ## Still Undefined
 
-Potence's Carrying Capacity/Break Threshold scaling, the new Hardness stat for inanimate resisting objects, what a connecting Social/Mental die costs the defender, Stamina's non-combat mechanic, Health Level recovery, Ki's refill trigger, [weapons.md](../rules/weapons.md)'s dice ratings (unbalanced first draft), Kotodama's Plausibility token costs and pooled Magnitude tiers, and the rest of the open-questions TODO list in [design-log.md](design-log.md#open-questions).
+Potence's Carrying Capacity/Break Threshold scaling, the new Hardness stat for inanimate resisting objects, what a connecting Social/Mental die costs the defender, Stamina's non-combat mechanic, Ki's refill trigger, [weapons.md](../rules/weapons.md)'s dice ratings (unbalanced first draft), Kotodama's Plausibility token costs and pooled Magnitude tiers, and the rest of the open-questions TODO list in [design-log.md](design-log.md#open-questions). **Health Level recovery and Battle Scars are resolved** - see [core-mechanic.md](../rules/core-mechanic.md#health-level-recovery).

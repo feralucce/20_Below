@@ -82,7 +82,17 @@ Full negation is still the honest baseline: an unboosted attack against a maxed 
 
 A player may spend **1 point from Ki** (the pool - distinct from [Fate Tokens](fate.md), the resource players earn/spend) to **cancel the loss of one Health Level**, at a cost of 1 Ki per Level preserved. Multiple Ki can be spent to preserve multiple Levels.
 
-What happens once Health Levels run out beyond Unstoppable's rule, and how lost Health Levels are recovered, are not yet decided.
+### Health Level Recovery
+
+- **Short Rest**: heal Health Levels equal to your Health sub-stat divided by 2, round up.
+- **Full Night's Rest**: heal all lost Health Levels, back to full.
+- **Reduced below 0 Health Levels**: instead of the rates above, recover 1 Health Level per day of rest until back to 0.
+
+### Battle Scars
+
+Dropping to 0 Health Levels leaves a permanent mark - a scar, a limp, a changed voice, whatever fits the wound. **Purely cosmetic, no mechanical effect.** The [Healing](gifts.md#healing) and [Regeneration](gifts.md#regeneration) Gifts both grant immunity to it, for the target they're used on.
+
+Dropping below 0 Health Levels can instead impose a genuine [Flaw](flaws.md), lasting until the character is fully healed back to 0. GM's call, in consultation with the player, on which Flaw fits the harm taken.
 
 ### Defense (Derived Stat)
 
