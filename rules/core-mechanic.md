@@ -105,7 +105,7 @@ For all three: each attack die is resolved individually against the relevant wal
 
 Two passive functions, both "gives" like Health/Soak/Presence/Psyche - no roll, no spend:
 
-1. **Ki Regeneration** - Weft sets how much Ki is restored whenever Ki's refill trigger fires (the trigger itself is still undecided).
+1. **Ki Regeneration** - a Short Rest restores `Weft ÷ 2` Ki (round up); a Full Night's Rest restores Ki fully. See [Ki's refill](fate.md#fatigue-check).
 2. **Lucky Number** - a character's lucky number equals their **Weft rating**. Whenever **any die** rolled for that character shows a result **equal to their Weft rating**, they immediately gain **1 Fate Token** - automatic, no choice, no cost.
 
 ### Ki Infusion

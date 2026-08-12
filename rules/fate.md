@@ -26,7 +26,9 @@ Characters with [Iron Will](boons.md) may also spend 1 Fate Token to **Assert Yo
 Every time a player spends a Fate Token, they immediately make a **Fatigue Check** - roll 2d10 against **Ki** (see below), same roll-under shape as the [core roll](core-mechanic.md#resolution), with Ki's current total standing in for a target number instead of a GM-set Difficulty.
 
 - **Success** - no effect, the spend goes through with no cost beyond the token itself.
-- **Failure** - lose **1 point from Ki**, until it's refilled (refill trigger TBD).
+- **Failure** - lose **1 point from Ki**, until it's refilled.
+
+**Refill**: a Short Rest restores `Weft ÷ 2` Ki (round up); a Full Night's Rest restores Ki fully. These are the big damn heroes, after all - Ki isn't meant to be a slow trickle back.
 
 ### Ki (the pool)
 
