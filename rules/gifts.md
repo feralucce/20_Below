@@ -539,6 +539,18 @@ You don't run to the edge and jump. You just jump. A single push clears rooftops
 | 4 | Forward jumps extend to **6x** Movement Rate, vertical to **3x**. Landing from a jump can be turned into an attack: spend **1 Ki**, everyone within Close range of your landing point takes your Potence dice vs. their Soak. Chaining a jump (Level 3) no longer costs Ki. |
 | 5 | Forward jumps extend to **10x** Movement Rate, vertical to **5x**. Ki cost for the landing-impact attack from Level 4 drops to **0**. |
 
+**Adders**:
+
+- **Wall Launch** (Lesser, 3 pts): use a vertical surface mid-jump to kick off and redirect, adding a second full jump distance to the same move, no Ki cost.
+- **Silent Landing** (Lesser, 3 pts): land without sound or visible impact, no dust, no thud, no telltale sign you came down here.
+- **Shockwave Leap** (Greater, 6 pts): the landing-impact attack (Level 4+) becomes a Near-range area effect instead of Close, for an extra 1 Ki on top of its normal cost.
+
+**Limiters**:
+
+- **Committed Arc**: once a jump begins, you can't abort or land early. You cover the full distance you committed to.
+- **Self-Inflicted Impact**: the landing-impact attack (Level 4+) also hits you for half the dice rolled.
+- **No Redirect**: Level 2's mid-air trajectory adjustment never applies.
+
 ### Marked for the Hunt
 
 Once you've marked someone, the hunt runs itself. Part of your attention stays fixed on them no matter what else you're doing.
