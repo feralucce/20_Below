@@ -122,6 +122,20 @@ Activating the aura costs a Slow action. **Maintaining it requires a [Gift Check
 - **Elemental Burst**: +1 Ki, once per activation. Pulse the aura outward — everyone within your current trigger range (whatever Melee/Close/Near your Level currently reaches) takes your contact damage simultaneously, not just someone who happens to touch or strike you.
 - **Environmental Surge**: +1 Ki. For one round, the Level 4 environmental effect pushes out one Range Band further than normal.
 
+### Elemental Manipulation
+
+Some Gifts are one move, sharpened over time. This isn't that. Pick a single domain (fire, darkness, gravity, time, whatever fits the concept) once, and every time you reach for it, you improvise something new: a barrier this time, a hidden shift the next, a small impossible convenience nobody else could manage. It won't put anyone down directly. It changes the world around them instead.
+
+| Level | Effect |
+|---|---|
+| 1 | Roll **Wyrd + Difficulty** to shape an effect within your domain that touches a full sensory picture (not just one sense) or physically moves/reshapes something person-sized (a body's worth of matter, a room's worth of shadow). No Range Band limit, works anywhere you can perceive or clearly reach with it. Costs a Normal action. No Ki, no Gift Check. |
+| 2 | You can now blanket an area instead of a single target or point. Spend **1 Ki** to create a zone (spreading true darkness, a field of magnetic interference, a localized cold snap) that imposes Disadvantage on anyone inside acting against you, lasting up to a Scene. |
+| 3 | The area effect scales to something building-sized or block-sized. Ki cost rises to **2**. You can also physically move or reshape something correspondingly large within your domain with no roll, so long as it's plausible for the element. |
+| 4 | Any effect you create (the area zone, a moved or reshaped object) can be made **permanent** instead of temporary, for an extra **1 Ki** spent when you create it. |
+| 5 | Once per Scene, you can briefly merge with your own domain (a body of living shadow, a drifting cloud of embers, a knot of pure magnetism) for a Round, immune to Physical damage while merged, though you still can't deal damage yourself. Ki cost for the Level 2 area effect drops to **0**. |
+
+This Gift never deals direct damage, at any Level.
+
 ### Enhanced Speed
 
 Your body has crossed some threshold ordinary flesh shouldn't be able to cross. Nerve, muscle, and reflex all fire faster than a human frame has any right to — fast enough that a full second of your action and thought can pass in what looks, to everyone else, like the blink of an eye. Whether it's raw physical conditioning, a mutation, or something stranger, the result is the same: the world seems to slow down whenever you decide to move.
