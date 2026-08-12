@@ -838,6 +838,18 @@ Minds are not as private as people think — not to you. You can brush against a
 | 4 | You can now project your own thoughts into a target's mind as well as read theirs — a genuine two-way telepathic link. For a willing or aware participant, this works at **Line of Sight** (as far as you can see them, not bound by the normal Range Bands). Forcing a read on an unwilling target (the Level 3 Mental attack) is capped at **Near**. Forced reads can now dig into deeper memories and guarded secrets, not just surface thoughts. Ki cost for forced reads stays **1**. |
 | 5 | Forced-read range extends back out to **Far**. Additionally, once you've established a genuine two-way link with someone (even briefly), you retain a limited telepathic connection to them indefinitely afterward — no range limit at all, a permanent bond once formed. Ki cost for forced reads drops to **0**. |
 
+**Adders**:
+
+- **Emotional Broadcast** (Lesser, 3 pts): once per Scene, project a simple emotion (fear, calm, doubt) into a target's mind as a Mental attack, even before Level 4's two-way link exists.
+- **Group Mind** (Lesser, 3 pts): once a two-way link is established with someone (Level 4+), bridge one additional willing party into the same shared link.
+- **Memory Lockpick** (Greater, 6 pts): spend an extra 1 Ki on a forced read (Level 3+) to target one specific memory or fact instead of a general surface impression, yielding a precise answer instead of a vague sensation.
+
+**Limiters**:
+
+- **One Mind at a Time**: you can only maintain one link or active read at a time, even at Level 5. A new link severs the previous one automatically.
+- **Echoes Linger**: a faint psychic echo lingers after any read or link. Other telepaths or psychics can detect that you were there.
+- **Vulnerable Link**: while actively linked (Level 4+), you're at Disadvantage against any Mental attack targeting you. The open channel cuts both ways.
+
 ### Teleport / Dimensional Portal
 
 You don't walk between places, you erase the distance between them. However it looks (a plain vanish and reappear, a burst of smoke, a rift torn open in the air), it's the same trick underneath: the gap between here and there simply stops existing.
