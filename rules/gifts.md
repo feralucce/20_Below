@@ -212,6 +212,20 @@ Given enough scrap, a workbench, and a spare few minutes, you can build almost a
 | 4 | Building a gadget is now only a **Fast** action. Gadgets can have up to **four** functions. Combat-relevant gadgets scale to **3d10** damage or **+3** to a defensive stat. Ki cost for combat-capable gadgets rises to **3**. |
 | 5 | Combat-relevant gadgets scale to **4d10** damage or **+4** to a defensive stat. Gadgets can have up to **five** functions. Ki cost drops back to **2** for combat-capable gadgets. Additionally, once per session, you can build one extraordinary one-off device capable of a dramatic, GM-approved effect beyond the normal function cap — a signature invention. |
 
+### Grace Period
+
+Consequences aren't as fixed to their moment as they seem. You have a limited but real ability to make something bad wait its turn.
+
+**This Gift always costs Ki, at every Level. There is no mastery discount to free.**
+
+| Level | Effect |
+|---|---|
+| 1 | Spend **1 Ki** to delay a minor consequence already in motion by **1 Round**, just long enough to react. No roll. |
+| 2 | Delay a real, meaningful consequence (an injury's onset, a trap already sprung) for up to a **Minute**. Ki cost rises to **2**. |
+| 3 | Delay something looming over the whole scene (a curse taking hold, a countdown to disaster) for the rest of the **Scene**. Ki cost rises to **3**. |
+| 4 | Delay something major and lasting (an injury that should be crippling, a deadline with real stakes) for a full **Day**. Ki cost rises to **4**. |
+| 5 | Hold off almost anything for up to a **Month**, so long as you renew the effect with another 1 Ki before it lapses. Ki cost for the initial delay rises to **5**. |
+
 ### Healing
 
 Where you press your hands, the wound remembers what it looked like before. Poison thins, fevers break, the body simply gets on with fixing itself under your touch, faster and further than it ever could alone.
