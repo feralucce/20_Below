@@ -440,6 +440,18 @@ Your senses reach further and cut sharper than anyone else's — sounds from acr
 | 4 | The obstacle-piercing from Level 3 no longer costs Ki, and now works through thicker, more substantial barriers — solid walls, multiple rooms away. Additionally, you're immune to being [Surprised](combat.md#surprise) by any threat your enhanced sense would have detected. |
 | 5 | Your chosen sense becomes constant, passive awareness within **Far** range — you don't need to actively look or listen; relevant details and threats simply register automatically. Additionally, it can pierce even magical concealment or supernatural stealth, not just mundane obstacles (GM's call on edge cases specifically countering your exact sense). |
 
+**Adders**:
+
+- **Cross-Sense Bleed** (Lesser, 3 pts): a second sense of your choice, different from your primary one, also gains Level 1's penalty-stripping benefit.
+- **Danger Instinct** (Lesser, 3 pts): once per Scene, if your enhanced sense would detect something dangerous while you're not actively paying attention, you get a reflexive warning and Advantage on Initiative for that encounter.
+- **Piercing Focus** (Greater, 6 pts): spend 1 Ki to pierce a barrier or concealment one tier beyond what your current Level would normally reach, for a single use.
+
+**Limiters**:
+
+- **Overload**: using your sense in an overwhelming environment (a loud crowd, bright lights, thick smells) forces a Wyrd + Difficulty roll or you're Disadvantaged for a Round.
+- **Single Direction**: your enhanced sense only covers a narrow cone, not all-around awareness. GM adjudicates facing.
+- **Draining Focus**: obstacle-piercing always costs 1 Ki. Level 4's free upgrade never applies.
+
 ### Immovable
 
 Your stance is a fact of the world, not a suggestion. Push, trip, knock back, or throw — none of it moves you unless you decide to move, your feet finding purchase no ordinary force should allow.
