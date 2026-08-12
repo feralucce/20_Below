@@ -862,6 +862,18 @@ You don't walk between places, you erase the distance between them. However it l
 | 4 | You can bring one other person along, if you're touching them, at no extra cost. Instead of blinking, you may tear a portal: a stable rift lasting up to a Minute, letting others step through it in both directions. Opening a portal is a Slow action and triggers a Gift Check. |
 | 5 | The portal can connect to a different plane of existence entirely, not just another point in your own world, so long as you have some way of pointing it there: an object, a description, a name, GM's call on fit. Ki cost for the Level 3 detail-only blink drops to **0**. |
 
+**Adders**:
+
+- **Extended Portal** (Lesser, 3 pts): the portal (Level 4+) lasts a full Scene instead of a Minute.
+- **Blind Jump Recovery** (Lesser, 3 pts): once per Scene, if a blink would land you somewhere dangerous, you may instantly abort and land back at your starting point instead, no Ki cost.
+- **Extra Passenger** (Greater, 6 pts): bring up to three touched people along instead of just one, at Level 4+.
+
+**Limiters**:
+
+- **Echo Behind**: a visible or audible trace always marks both where you left and where you arrived. There's no silent option.
+- **Recoil**: after teleporting, you're at Disadvantage on all rolls for the next Minute.
+- **One-Way Portal Only**: Level 4's portal never allows two-way travel. It opens once for you to step through, then closes immediately.
+
 ### Threadspace
 
 Reach into a fold in space only you can find, and pull out exactly what you left there. What starts as a place to stash a few things becomes, with practice, a room, then a home, then somewhere other people can visit too. Somewhere real, just not anywhere.
