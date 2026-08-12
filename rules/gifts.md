@@ -286,6 +286,18 @@ You don't run to the edge and jump. You just jump. A single push clears rooftops
 | 4 | Forward jumps extend to **6x** Movement Rate, vertical to **3x**. Landing from a jump can be turned into an attack: spend **1 Ki**, everyone within Close range of your landing point takes your Potence dice vs. their Soak. Chaining a jump (Level 3) no longer costs Ki. |
 | 5 | Forward jumps extend to **10x** Movement Rate, vertical to **5x**. Ki cost for the landing-impact attack from Level 4 drops to **0**. |
 
+### Marked for the Hunt
+
+Once you've marked someone, the hunt runs itself. Part of your attention stays fixed on them no matter what else you're doing.
+
+| Level | Effect |
+|---|---|
+| 1 | Spend **1 Ki** to mark a target you can currently see. For as long as the mark lasts (a Scene, renewable), you always know their rough direction and gain **Advantage** on any roll made to track or locate them specifically. |
+| 2 | Gain **Advantage** on any roll made directly against your marked target: an attack, a contested Skill use, anything aimed at them specifically. |
+| 3 | Your marked target's attempts to hide, disguise themselves, or evade you specifically are at **Disadvantage**. You also gain Advantage to avoid being Surprised by them. |
+| 4 | The mark no longer needs renewing: it holds until the target is dealt with or you choose to release it, not just for a Scene. |
+| 5 | Spend **1 Ki** to pinpoint your marked target's exact location right now, regardless of concealment, Stealth, Invisibility, or other means of hiding (short of a Gift specifically built to counter this, GM's call). |
+
 ### Possession
 
 Beyond command, beyond obedience — you can push your own consciousness into someone else's body outright, shoving them into the passenger seat while you take the wheel. Not persuasion. Occupation.
