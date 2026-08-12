@@ -886,9 +886,17 @@ Reach into a fold in space only you can find, and pull out exactly what you left
 | 4 | The room expands into a full dwelling of your own design, as many rooms as you want, furnished and stocked however you like. You can bring others through the door with you as guests. |
 | 5 | You can maintain up to two doors into the same Threadspace at once, opened wherever you choose. Stepping through one and out the other links those two real points together for as long as both doors stay open. Ki cost for opening a new door (Level 3) drops to **0**. |
 
-**Adders** - optional, chosen once, permanently:
+**Adders**:
 
-- **Physical Link**: 1 Ki, once. Bind the opening itself to a physical object big enough to actually climb through (a trunk, a door, a large bag). Anyone who opens it can step through into your Threadspace, or pull items from it, the same way you can.
+- **Reflexive Retrieval** (Lesser, 3 pts): retrieving a stashed handheld item (Level 1 scope) is a reflexive action once per Round, not costing your Fast action.
+- **Expanded Fold** (Lesser, 3 pts): storage capacity at every Level increases well beyond its normal scale, room for bulky or oversized items (a vehicle, furniture in bulk) that wouldn't otherwise fit.
+- **Physical Link** (Greater, 6 pts): bind the opening itself to a physical object big enough to actually climb through (a trunk, a door, a large bag), permanently, no Ki cost. Anyone who opens it can step through into your Threadspace, or pull items from it, the same way you can.
+
+**Limiters**:
+
+- **Slow Threading**: opening the fold or door always takes a full Round instead of a Fast action, at every Level.
+- **Guided Guests**: guests (Level 4+) can never navigate the Threadspace unassisted. They must be led by you at all times or risk getting lost.
+- **Fragile Weave**: if the Threadspace is ever breached by an outside supernatural force (GM's call, rare), everything currently stored inside is at risk of being lost or expelled.
 
 ### Transmutation
 
