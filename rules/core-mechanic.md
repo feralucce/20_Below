@@ -48,7 +48,22 @@ On a successful hit, the **weapon in use sets how many d10 are rolled** - see [w
 
 Potence (Earth's other sub-stat: raw physical power/strength - carrying capacity, immovability, mass, forcing/breaking things) splits into two jobs:
 
-1. **Flat passive give (mundane use, no roll)** - Potence directly sets a **Carrying Capacity** (how much weight a character can lift/carry/drag under ordinary conditions) and a **Break Threshold** (the bar an object's resistance must sit under to be forced open/broken with no contest involved). Exact scaling formula for both numbers not yet set.
+1. **Flat passive give (mundane use, no roll)** - Potence directly sets a **Carrying Capacity** and a **Break Threshold**.
+   - **Carrying Capacity** (how much weight a character can lift/carry/drag under ordinary conditions): `Potence² × 10`, in kg.
+
+     | Potence | Carrying Capacity |
+     |---|---|
+     | 1 | 10 kg (~22 lbs) |
+     | 2 | 40 kg (~88 lbs) |
+     | 3 | 90 kg (~198 lbs) |
+     | 4 | 160 kg (~353 lbs) |
+     | 5 | 250 kg (~551 lbs) |
+     | 6 | 360 kg (~794 lbs) |
+     | 7 | 490 kg (~1,080 lbs) |
+     | 8 | 640 kg (~1,411 lbs) |
+     | 9 | 810 kg (~1,786 lbs) |
+     | 10 | 1,000 kg (~2,205 lbs) |
+   - **Break Threshold** (the bar an object's resistance must sit under to be forced open/broken with no contest involved): no separate number, just a direct comparison. If a character's **Potence is equal to or greater than the target object's Soak**, it breaks or forces open automatically, no roll. If Potence is lower, it isn't a no-contest job anymore; that's what the contested dice pool below is for.
 2. **Contested dice pool** - when forcing, breaking, or moving something that's actively resisting (a grapple, a door someone's holding shut, a struggling creature), **Potence itself sets how many d10 are rolled**. Each die is compared individually against the target's relevant resistance: a grappled/restrained creature's own **Soak**, or - for inanimate resisting objects - the object's own **Soak** (GM-set, same 0-10 scale and mechanic as a character's Soak, just held by the object instead). Each connecting die represents one increment of success, costing the object one of its **Health Levels** - same binary hit-box shape as a character's, just scaled to the object's durability instead of a body.
 
 **Object Soak and Health Level reference chart**, low to high, for GM calibration:
