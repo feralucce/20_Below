@@ -13,7 +13,9 @@ Every character is built from four separate point pools at creation. Each pool f
 
 Each Gift Level costs a flat **3 points**. A Gift bought to Level 3 costs 9 points total; to Level 5, 15 points.
 
-An Adder (see [gifts.md](gifts.md#resolution)) costs a flat **6 points**, paid once to unlock the option permanently. This is separate from the Ki cost of actually using the Adder, which is paid per the Gift's own text each time it's used.
+An Adder (see [gifts.md](gifts.md#points)) costs either **3 points (Lesser)** or **6 points (Greater)**, paid once to unlock the option permanently. This is separate from the Ki cost of actually using the Adder, which is paid per the Gift's own text each time it's used. Every Gift should offer at least 3 Adders.
+
+A Limiter (see [gifts.md](gifts.md#points)) is a permanent, creation-time restriction chosen for one specific Gift. Each Limiter taken drops the cost of every Level of that Gift by 1 point. A character may stack as many different Limiters on a Gift as they want, but no combination can ever drop a Level's cost below 1 point.
 
 ## Boons Pool
 
