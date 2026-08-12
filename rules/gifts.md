@@ -639,6 +639,18 @@ You don't need hands. A thought is enough to lift, throw, pin, or crush anything
 | 4 | You can grip and move several objects at once (up to a handful), or grip a person directly to restrain or reposition them (contested against their Potence or Soak, GM's call). Ki cost rises to **2**. |
 | 5 | Maintaining a telekinetic grip no longer requires concentration once per Scene, and the mass you can grip doubles beyond your normal Potence carrying capacity. Ki cost from Level 1 drops to **0**. |
 
+**Adders**:
+
+- **Gentle Touch** (Lesser, 3 pts): grip and manipulate liquids, gases, or loose particulate matter (sand, water, smoke) as a cohesive mass, something solid-object telekinesis normally can't do.
+- **Multi-Throw** (Lesser, 3 pts): the thrown-object attack (Level 3+) can hit a second target in the same Round at no additional Ki cost.
+- **Crushing Grip** (Greater, 6 pts): spend 1 Ki to crush a gripped object or limb directly, Potence dice vs. Soak, no throw required, usable each round while the grip is maintained.
+
+**Limiters**:
+
+- **Line of Sight Only**: you must maintain unbroken line of sight to whatever you're gripping. The effect ends instantly if that's blocked.
+- **One at a Time**: Level 4's multi-object grip never applies. You're limited to one object or person at a time, regardless of Level.
+- **Backlash**: if a contested Potence attempt against a person fails, you're at Disadvantage on all rolls for your next turn.
+
 ### Psychometry
 
 Objects remember. A blade recalls the hand that swung it, a ring the years it sat on someone's finger, a knife the moment it drew blood. Touch something with intent and its history opens up to you — fragments of who held it, what happened around it, what it's been through.
