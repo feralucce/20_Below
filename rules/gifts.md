@@ -187,9 +187,9 @@ Your body loses its grip on solidity — flesh and bone thinning to something th
 |---|---|
 | 1 | Spend **1 Ki** and a Fast action to phase for **1 Round** — pass through a thin barrier (a door, a thin wall). You can't attack or be attacked while phased, and it ends automatically once you're through. |
 | 2 | Phasing now lasts up to **1 Minute** (≈10 Rounds), letting you move through multiple thin obstacles in sequence. Still can't attack while phased. |
-| 3 | You can now phase through thicker, more substantial barriers — solid stone, concrete. While phased, you're immune to Physical damage — attacks pass through you the same way you pass through walls. |
+| 3 | You can now phase through thicker, more substantial barriers — solid stone, concrete — and phase only part of your body instead of the whole thing. While phased, the phased part is immune to Physical damage — attacks pass through it the same way you pass through walls. |
 | 4 | Phasing can be maintained for a full **Scene** (toggled on/off at will) instead of just a Minute. You may now attack while phased, though only as a Mental or Social attack — your body still can't physically connect with anything solid. |
-| 5 | You move at full [Movement Rate](combat.md#movement--range) while phased, with no penalty, and can phase instantly as a reaction to dodge an incoming attack. Ki cost drops to **0** — full mastery, free. |
+| 5 | You may extend the effect to one other person you're touching, phasing them along with you. You can also phase instantly as a reaction to dodge an incoming attack. Ki cost drops to **0** — full mastery, free. |
 
 ### Possession
 
