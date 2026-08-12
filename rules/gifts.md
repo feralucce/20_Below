@@ -914,6 +914,18 @@ Chosen once, at creation: how you perform the ritual that triggers this Gift, tr
 | 4 | The ritual is now only a Fast action. Affected mass roughly doubles again. Ki cost rises to **4**. |
 | 5 | Affected mass reaches building scale, and you can transmute functioning mechanisms, not just static shapes (a working weapon, a piece of armor, a simple machine), so long as the raw material and mass are sufficient. Ki cost rises to **5**. |
 
+**Adders**:
+
+- **Ritual Shortcut** (Lesser, 3 pts): once per Scene, perform the ritual one action-band faster than your Level normally allows, at no extra Ki cost.
+- **Precise Recall** (Lesser, 3 pts): revert an object you've personally transmuted back to its original form, at the same Ki cost as the original transformation, so long as nothing has altered it further since.
+- **Mass Bank** (Greater, 6 pts): break something down without immediately rebuilding it, banking the freed mass for a later transmutation, up to your current Level's mass cap.
+
+**Limiters**:
+
+- **Irreversible Exchange**: once transmuted, an object can never be reverted to its original form, by this Gift or any other means. Equivalent exchange only runs one way.
+- **Loud Working**: the ritual is never silent or discreet, always visibly or audibly obvious, at every Level.
+- **Fixed Ritual Component**: your chosen ritual flavor requires a specific physical condition (a clear space to draw a circle, the ability to speak a chant, genuine silence to focus). The Gift simply fails if that condition is denied.
+
 ### Unburdened
 
 The body has needs. You've stopped listening to most of them. Breath, hunger, thirst, sleep, pain, cold, heat: all of it just background noise you've learned to tune out.
