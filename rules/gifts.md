@@ -790,6 +790,18 @@ Nothing says you have to stay in one piece. A cloud of bugs, a flock of bats, a 
 | 4 | Spread range extends to **Near**. |
 | 5 | Spread range extends to **Far**. Ki cost for spreading out and attacking (Level 3) drops to **0**. |
 
+**Adders**:
+
+- **Distraction Cloud** (Lesser, 3 pts): while swarmed, spend 1 Ki to impose Disadvantage on all attacks a single target within your spread range makes for the rest of the Round, your components harassing them from every angle.
+- **Instant Regroup** (Lesser, 3 pts): reforming is always a free action instead of whatever action cost your Level normally requires.
+- **Split Focus** (Greater, 6 pts): while spread (Level 3+), attack two separate points independently instead of one uniform area, each resolved separately, same Ki cost.
+
+**Limiters**:
+
+- **Fragile Focus**: if a physical barrier interrupts your swarm mid-flow (a door slams shut, a window closes), you reform prematurely on the spot, ending the effect early.
+- **Weather Locked**: strong wind, rain, or similar conditions impose Disadvantage on all actions while swarmed.
+- **Always Costly**: the spread/attack Ki cost never drops to 0. Level 5's mastery discount doesn't apply.
+
 ### Technokinesis
 
 Circuits and code were never a closed system to you. Machines have a pulse if you know how to listen, and once you're listening, you can talk back.
