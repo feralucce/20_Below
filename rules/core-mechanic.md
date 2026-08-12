@@ -173,7 +173,7 @@ Defense is what an attacker's roll actually targets: **Defense becomes the attac
 
 For every point a character allocates to a sub-stat, they gain one Descriptor - a short player-chosen word or phrase capturing one specific flavor of that sub-stat for this character. E.g. 3 points in Soak might yield *Iron-skinned, Padded, Unyielding* - three distinct ways the character shrugs off harm, not three copies of the same idea.
 
-Descriptors are **free at character creation** (no separate cost beyond the point that earns them) and **fixed once chosen**. How a character later gains additional Descriptors without raising a sub-stat, if that path exists at all, is still open.
+Descriptors are **free at character creation** (no separate cost beyond the point that earns them) and **fixed once chosen**. A character can also buy an extra Descriptor on a sub-stat without raising it: at creation, this costs a flat **1 Discretionary point** per extra Descriptor, no scaling. Buying one after creation instead costs XP, priced alongside the other Skill Training Tier XP costs (still undecided).
 
 Descriptors are the concrete hook a player points to when [arguing a Skill pairing](skills.md#skills-are-not-attribute-locked) - grounding "I'm using Fire here because I'm being *Ruthless*" in an established character fact instead of an improvised justification each time.
 
