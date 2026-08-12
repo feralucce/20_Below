@@ -143,6 +143,23 @@ Your body has crossed some threshold ordinary flesh shouldn't be able to cross. 
 - **Redirected Momentum**: +1 Ki, on a turn you take the extra action. Instead of (or alongside) attacking with it, use the momentum to shove or reposition a target you interact with by one Range Band.
 - **Afterimage**: +1 Ki, once per round, on a turn you've already spent Ki for an extra action. When an attack against you would connect, treat it as striking an afterimage instead — the hit is negated entirely.
 
+### Flight
+
+Gravity is a suggestion you've learned to decline. Whether it's feathered wings, a contrail of raw thrust, or something stranger entirely, you can lift free of the ground and hold yourself aloft - starting as a controlled hover and building toward outrunning a jet fighter.
+
+| Level | Effect |
+|---|---|
+| 1 | You can hover in place or fly at your normal ground Movement Rate. Taking off or landing costs a Fast action; staying aloft is free once airborne. No Ki, no Gift Check. |
+| 2 | Movement Rate while flying doubles. You can hover just out of Melee range of anything that can't also fly or reach that high, forcing grounded attackers to close the distance some other way. |
+| 3 | Movement Rate while flying triples. Spend **1 Ki**, when an attack targets you in the air, to juke through open air for **Advantage** on your defense. |
+| 4 | Movement Rate while flying rises to **x5**, fast enough to close or open a full Range Band as part of a single move. You can carry one other person while flying with no penalty. Ki cost from Level 3 stays at 1. |
+| 5 | You break the sound barrier. Within a scene, you can cross from Far to Melee range (or the reverse) in a single move, no Range Band restriction. Ki cost for the evasive dodge from Level 3 drops to **0**. |
+
+**Adders** - optional, spent per use in the moment:
+
+- **Sonic Boom**: 1 Ki. A shockwave hits everyone at Close range along your flight path. Usable any time you move at flying speed, no cap on uses beyond the Ki cost itself.
+- **Passenger Overload**: 1 Ki. Carry more than one person while flying (Level 4+ only).
+
 ### Gadgeteer
 
 Given enough scrap, a workbench, and a spare few minutes, you can build almost anything — a device that shouldn't be possible with the parts on hand, working exactly as intended the moment it's finished. Not slow, careful engineering; a burst of inspired, borderline-supernatural craftsmanship that turns junk into function.
