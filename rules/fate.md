@@ -46,7 +46,19 @@ Jobs 2-4 are direct spends - no roll, no Fatigue Check, no Stamina spend-cap int
 Action Bands themselves (Fast/Normal/Slow) cost nothing to declare - that's just normal combat flow, not something Stamina governs. Instead, Stamina does two things:
 
 1. **Hard cap on Fate Token spends per encounter.** A character can spend Fate Tokens **at most [Stamina score] times per single encounter**, regardless of how many Fate Tokens they actually have banked.
-2. **General endurance/exhaustion-resistance gauge.** Outside the Fate Token spend cap, Stamina is also the broader measure of how long a character can sustain physically demanding activity and how well they resist exhaustion generally. The exact mechanic for this second, non-combat role isn't detailed yet.
+2. **General endurance/exhaustion-resistance gauge.** Stamina sets a free baseline duration for any single sustained exertion (holding breath, forced marching, sustained labor, running flat-out) - Stamina Rounds, Minutes, Hours, or whatever [Time Band](core-mechanic.md#time-bands) unit fits the activity, GM's call. Past that baseline, roll **Water + Difficulty** once per additional unit of time, with Difficulty dropping by 1 each successive check. Failure imposes one level of **Exhausted**.
+
+**Exhausted** is cumulative, each level stacking on top of the last:
+
+| Level | Effect |
+|---|---|
+| 1 | Disadvantage on Physical rolls. |
+| 2 | Disadvantage on all rolls. |
+| 3 | Movement Rate halved. |
+| 4 | Can't take Slow actions - too worn down for that kind of precision. |
+| 5 | Collapse: falls unconscious, can't act until rested. |
+
+A Short Rest drops one level of Exhausted; a Full Night's Rest clears it entirely, mirroring [Health Level Recovery](core-mechanic.md#health-level-recovery)'s own split.
 
 ## Kotodama
 
