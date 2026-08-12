@@ -135,6 +135,18 @@ Chosen once, at creation: **Always There** (visible and permanent — can't be h
 | 4 | Damage rises to **5d10**. The rending effect intensifies — Disadvantage now persists on all of the target's rolls until the wound is treated or the scene ends, not just their next one. |
 | 5 | Damage rises to **6d10** (matching a heavy/anti-materiel weapon). The rending effect still costs 1 Ki per use. If Stowable was chosen, deploying your claws/fangs no longer triggers the Gift Check. |
 
+**Adders**:
+
+- **Honed Technique** (Lesser, 3 pts): practiced timing and footwork let you close the last few feet as part of the strike itself — your claws/fangs threaten Close range as well as Melee, no literal reach involved.
+- **Venomous** (Lesser, 3 pts): add a poison to a successful hit: 1 Ki, target takes Disadvantage on physical rolls until treated, separate from and stacking with the rending effect.
+- **Sunder** (Greater, 6 pts): on a successful hit, spend 1 Ki to also deal damage to a weapon or piece of equipment the target is holding/wearing, treating it as a second, simultaneous attack.
+
+**Limiters**:
+
+- **Feral Grip**: can't hold, use, or manipulate manufactured weapons or fine tools while your claws/fangs are deployed.
+- **One-Way Weapon**: the Stowable option is unavailable — your claws/fangs are always Always There, visible and permanent, no choice at creation.
+- **Fragile Edge**: your natural weapon's damage die drops by one step (6d10 caps at 5d10, etc.) against anything with Hardness equal to or greater than your Potence.
+
 ### Copycat
 
 Watch someone closely enough, and what makes them exceptional becomes yours to borrow, just for a while. Not their body, whatever it is that actually makes the trick work.
