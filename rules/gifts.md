@@ -464,3 +464,17 @@ Chosen once, at creation: how you perform the ritual that triggers this Gift, tr
 | 3 | You can change a material's basic composition, not just its shape (wood into iron, sand into glass). Affected mass roughly doubles. Ki cost rises to **3**. A [Gift Check](#resolution) applies on especially large or precise jobs, GM's call. |
 | 4 | The ritual is now only a Fast action. Affected mass roughly doubles again. Ki cost rises to **4**. |
 | 5 | Affected mass reaches building scale, and you can transmute functioning mechanisms, not just static shapes (a working weapon, a piece of armor, a simple machine), so long as the raw material and mass are sufficient. Ki cost rises to **5**. |
+
+### Undying Vigor
+
+Age was always going to catch you eventually, or so everyone assumes. Poison, plague, the slow wear of decades: none of it actually gets there. You can still be killed. You just can't be worn down.
+
+**Purging a poison or disease (Level 3+) always costs Ki. There is no mastery discount to free.**
+
+| Level | Effect |
+|---|---|
+| 1 | **Advantage** on any roll to resist poison. Immune outright to ordinary disease. No Ki, no Gift Check. |
+| 2 | Advantage extends to serious, genuinely dangerous poisons and illnesses too, not just minor ones. |
+| 3 | Spend **1 Ki** to purge an active poison or disease from your system outright, on command, no roll needed. |
+| 4 | You stop aging entirely, natural or accelerated. Immunity to poison and disease upgrades from Advantage to outright, even against exotic toxins and genuine plagues. |
+| 5 | Full immunity to poison, disease, and aging of any origin, natural or supernatural. You can still be killed, violence, injury, and the like still work, you simply can't be worn down or aged to death. |
