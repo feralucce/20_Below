@@ -288,6 +288,18 @@ Some Gifts are one move, sharpened over time. This isn't that. Pick a single dom
 
 This Gift never deals direct damage, at any Level.
 
+**Adders**:
+
+- **Layered Effect** (Lesser, 3 pts): create two Level 1-scope effects with a single roll and action instead of one.
+- **Domain Echo** (Lesser, 3 pts): an effect you create leaves a passive lingering trace after it ends (residual heat, faint darkness, static in the air) lasting a Scene — detectable by anyone investigating, no mechanical effect of its own.
+- **Anchor the Domain** (Greater, 6 pts): the Level 5 merge lasts a full Scene instead of one Round, still once per Scene.
+
+**Limiters**:
+
+- **Single Sense Domain**: your effects only ever manifest through one sense at a time (sight-only, sound-only, etc.) — Level 1's "full sensory picture" never applies.
+- **Elemental Purity**: you can only manipulate a literal instance of your element already present in the scene (no darkness in broad daylight, no fire without an existing spark) — GM's call on availability.
+- **Costly Merge**: the Level 5 merge always costs 1 Ki to trigger, never free.
+
 ### Enhanced Speed
 
 Your body has crossed some threshold ordinary flesh shouldn't be able to cross. Nerve, muscle, and reflex all fire faster than a human frame has any right to — fast enough that a full second of your action and thought can pass in what looks, to everyone else, like the blink of an eye. Whether it's raw physical conditioning, a mutation, or something stranger, the result is the same: the world seems to slow down whenever you decide to move.
