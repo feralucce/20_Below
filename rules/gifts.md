@@ -220,6 +220,18 @@ You fade from ordinary perception entirely — not hidden, not blended in, simpl
 | 4 | You may now take a hostile action without breaking the invisibility. Additionally, spend **1 Ki** to also fool technological detection for that action. |
 | 5 | You can activate this Gift even under direct, active observation — someone already looking right at you doesn't stop it from taking hold, though doing so costs an additional **1 Ki** on top of the base cost (2 Ki total when used this way). |
 
+### Jumping
+
+You don't run to the edge and jump. You just jump. A single push clears rooftops, ravines, whatever's in the way.
+
+| Level | Effect |
+|---|---|
+| 1 | From a standing start, jump forward up to **2x** your Movement Rate, or straight up up to **1x** your Movement Rate. Costs a Fast action. No fall damage from a landing height within what you could jump. No Ki, no Gift Check. |
+| 2 | Forward jumps extend to **3x** Movement Rate, vertical to **1.5x**. You can adjust your trajectory once, mid-air, changing direction after the jump's already started. |
+| 3 | Forward jumps extend to **4x** Movement Rate, vertical to **2x**. Spend **1 Ki** to chain a second jump immediately on landing, covering that much distance again in the same move. |
+| 4 | Forward jumps extend to **6x** Movement Rate, vertical to **3x**. Landing from a jump can be turned into an attack: spend **1 Ki**, everyone within Close range of your landing point takes your Potence dice vs. their Soak. Chaining a jump (Level 3) no longer costs Ki. |
+| 5 | Forward jumps extend to **10x** Movement Rate, vertical to **5x**. Ki cost for the landing-impact attack from Level 4 drops to **0**. |
+
 ### Possession
 
 Beyond command, beyond obedience — you can push your own consciousness into someone else's body outright, shoving them into the passenger seat while you take the wheel. Not persuasion. Occupation.
@@ -328,3 +340,15 @@ Minds are not as private as people think — not to you. You can brush against a
 | 3 | Range extends to **Far**. Against a target actively resisting, you may now spend **1 Ki** to force the read as a genuine **Mental attack** — roll your Psyche dice per-die against their Psyche wall, breaching through to their surface thoughts and emotions on a connecting die. |
 | 4 | You can now project your own thoughts into a target's mind as well as read theirs — a genuine two-way telepathic link. For a willing or aware participant, this works at **Line of Sight** (as far as you can see them, not bound by the normal Range Bands). Forcing a read on an unwilling target (the Level 3 Mental attack) is capped at **Near**. Forced reads can now dig into deeper memories and guarded secrets, not just surface thoughts. Ki cost for forced reads stays **1**. |
 | 5 | Forced-read range extends back out to **Far**. Additionally, once you've established a genuine two-way link with someone (even briefly), you retain a limited telepathic connection to them indefinitely afterward — no range limit at all, a permanent bond once formed. Ki cost for forced reads drops to **0**. |
+
+### Teleport / Dimensional Portal
+
+You don't walk between places, you erase the distance between them. However it looks (a plain vanish and reappear, a burst of smoke, a rift torn open in the air), it's the same trick underneath: the gap between here and there simply stops existing.
+
+| Level | Effect |
+|---|---|
+| 1 | Blink instantly to anywhere within line of sight, no matter the distance. Costs a Fast action and **1 Ki**. No Gift Check. |
+| 2 | You can also blink to a place you've personally visited before, even without current line of sight, so long as you can clearly picture it. |
+| 3 | Blinking now works for a place you've only seen in vivid detail (a photo, a thorough description) rather than requiring you to have been there yourself. Doing so requires a [Gift Check](#resolution): failure still moves you, but you land somewhere within sight of the intended spot instead of precisely on it. |
+| 4 | You can bring one other person along, if you're touching them, at no extra cost. Instead of blinking, you may tear a portal: a stable rift lasting up to a Minute, letting others step through it in both directions. Opening a portal costs a Slow action and a Gift Check. |
+| 5 | The portal can connect to a different plane of existence entirely, not just another point in your own world, so long as you have some way of pointing it there: an object, a description, a name, GM's call on fit. Ki cost for the Level 3 detail-only blink drops to **0**. |
