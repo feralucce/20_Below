@@ -49,7 +49,30 @@ On a successful hit, the **weapon in use sets how many d10 are rolled** - see [w
 Potence (Earth's other sub-stat: raw physical power/strength - carrying capacity, immovability, mass, forcing/breaking things) splits into two jobs:
 
 1. **Flat passive give (mundane use, no roll)** - Potence directly sets a **Carrying Capacity** (how much weight a character can lift/carry/drag under ordinary conditions) and a **Break Threshold** (the bar an object's resistance must sit under to be forced open/broken with no contest involved). Exact scaling formula for both numbers not yet set.
-2. **Contested dice pool** - when forcing, breaking, or moving something that's actively resisting (a grapple, a door someone's holding shut, a struggling creature), **Potence itself sets how many d10 are rolled**. Each die is compared individually against the target's relevant resistance: a grappled/restrained creature's own **Soak**, or - for inanimate resisting objects - a not-yet-defined **Hardness** stat (GM-set, same 0-10 scale, functioning as an object's Soak equivalent). Each connecting die represents one increment of success.
+2. **Contested dice pool** - when forcing, breaking, or moving something that's actively resisting (a grapple, a door someone's holding shut, a struggling creature), **Potence itself sets how many d10 are rolled**. Each die is compared individually against the target's relevant resistance: a grappled/restrained creature's own **Soak**, or - for inanimate resisting objects - the object's own **Soak** (GM-set, same 0-10 scale and mechanic as a character's Soak, just held by the object instead). Each connecting die represents one increment of success, costing the object one of its **Health Levels** - same binary hit-box shape as a character's, just scaled to the object's durability instead of a body.
+
+**Object Soak and Health Level reference chart**, low to high, for GM calibration:
+
+| Object | Soak | Health Levels |
+|---|---|---|
+| Sheet of paper / cardboard | 0 | 1 |
+| Glass pane / window | 1 | 1 |
+| Rope / zip ties | 2 | 1 |
+| Drywall interior wall | 2 | 2 |
+| Wooden chair | 2 | 2 |
+| Padlock (cheap) | 3 | 1 |
+| Chain-link fence | 3 | 2 |
+| Interior wooden door | 3 | 2 |
+| Handcuffs (standard) | 4 | 1 |
+| Car door | 5 | 3 |
+| Exterior wooden door (reinforced) | 5 | 3 |
+| Brick wall (residential) | 6 | 4 |
+| Boulder / natural stone | 7 | 5 |
+| Steel security door | 7 | 4 |
+| Reinforced concrete wall | 8 | 5 |
+| Bank vault door | 9 | 6 |
+| Castle gate / fortress wall | 9 | 8 |
+| High-security modern vault | 10 | 8 |
 
 ### The Passive Wall Triad - Soak, Presence, Psyche
 
