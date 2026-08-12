@@ -615,6 +615,18 @@ The future leaks through, uninvited and unclear — a flash of what's about to h
 | 4 | Active foresight (Level 2) sharpens from a vague impression into a clearer vision, and can now reach further out — not just the immediate next moment, but a meaningful stretch of near future. |
 | 5 | Passive flashes (Level 1) can now surface any time danger is coming, not just when the GM chooses to grant one — you're rarely blindsided anymore. Ki cost from Level 3 drops to **0**. |
 
+**Adders**:
+
+- **Shared Vision** (Lesser, 3 pts): once per Scene, share a passive flash with an ally in Melee range. They receive the warning too.
+- **Second Impression** (Lesser, 3 pts): once per Scene, reroll a failed active-foresight roll (Level 2+).
+- **Guided Hand** (Greater, 6 pts): spend 1 Ki so the Advantage from a foreseen attack (Level 3+) also applies to your next attack against that same attacker, not just your defense.
+
+**Limiters**:
+
+- **Uncertain Visions**: every flash, passive or active, is vague and symbolic, never literal. The GM always delivers it as an interpretable image, not plain information.
+- **Draining Sight**: after any active use (Level 2+), you're at Disadvantage on your next roll.
+- **Fewer Flashes**: Level 5's always-on passive upgrade never applies. Passive flashes stay GM's-call only regardless of Level bought.
+
 ### Psychokinesis / Telekinesis
 
 You don't need hands. A thought is enough to lift, throw, pin, or crush anything within reach of your will.
