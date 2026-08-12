@@ -84,6 +84,19 @@ Animals sense something in you that overrides their instincts — an inborn trus
 | 4 | The affected group scales up to a full herd, swarm, or pack of any size. Your influence now extends to dangerous or exotic wildlife, not just ordinary animals — even apex predators respond to you. Group-effect Ki cost rises to **2**. Your Animal Companion gains a second **+2** to a different sub-stat, automatically, free with this Level (stacking with Level 3's bonus). |
 | 5 | Your connection extends even to legendary or mythic beasts — dragons, cryptids, spirits wearing animal shape, whatever the setting allows (GM's call on fit). Group-effect Ki cost drops back to **1**. Your Animal Companion gains a third **+2** to a sub-stat of your choice, plus one minor Boon-equivalent trait fitting the bond (GM-approved) — both automatic, free with this Level. |
 
+**Adders**:
+
+- **Beast Steed** (Lesser, 3 pts): your Animal Companion can carry you as a mount. While mounted, your Movement Rate matches the Companion's own.
+- **Speak for the Wild** (Lesser, 3 pts): once per Scene, ask an animal what it's seen or sensed recently — a real memory read, not just its current instinct-level state.
+- **Swarm Companion** (Lesser, 3 pts): your Animal Companion is a swarm of small creatures (rats, birds, insects) acting as one, not a single creature. Same stats and progression as an ordinary Companion, but immune to attacks that require a single physical target, and takes double dice from any attack that hits an area. Stacks with Second Companion.
+- **Second Companion** (Greater, 6 pts): gain a second Animal Companion, built and advanced identically to the first.
+
+**Limiters**:
+
+- **Single Species**: the Gift only works on one chosen species, not animals in general.
+- **No Companion**: you never gain the free Animal Companion at Level 2. Can be bought off later with XP, at 2 points per Level currently held in this Gift.
+- **Vocal Component**: using the Gift requires speaking or making an audible animal call. Doesn't work if you're silenced, gagged, or otherwise unable to vocalize.
+
 ### Clairvoyance
 
 Distance means nothing to your sight. Close your eyes and your awareness slips free of your body, drifting to a place you know or can picture — a room down the hall, a city across the world — letting you see and hear what's happening there as if you stood in it yourself.
