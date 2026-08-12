@@ -245,6 +245,18 @@ Objects remember. A blade recalls the hand that swung it, a ring the years it sa
 | 4 | Ask up to **4** questions. Detailed visions (Level 3) can now identify specific people and approximate dates, and reach centuries back if the object is old enough to hold it. |
 | 5 | Ask up to **5** questions. A touch can now reconstruct a brief sequence of the object's major moments rather than one isolated scene. Ki cost for a detailed vision drops to **0** — full mastery, free. |
 
+### Regeneration
+
+Your body refuses to stay broken. Wounds that would sideline anyone else for weeks close in minutes, and even grievous injury is, at worst, a temporary setback rather than a lasting cost.
+
+| Level | Effect |
+|---|---|
+| 1 | While resting (not fighting or exerting), recover 1 Health Level per **Scene** of rest. |
+| 2 | Passive recovery rate improves to 1 Health Level per **Minute** of rest. |
+| 3 | Spend **1 Ki** to instantly recover 1 Health Level at any time, even mid-combat — usable once per **Round**. |
+| 4 | Passive recovery improves further to 1 Health Level per **Round** of dedicated rest (near-instant between exchanges). The Ki-spend combat heal from Level 3 can now be used twice per Round. |
+| 5 | Given a full **Day** of rest, you can recover from even normally-permanent harm — a lost limb, lasting disfigurement. Ki cost for the combat heal drops to **0** — full mastery, free. |
+
 ### Shapeshift
 
 Your body ripples and reforms like water finding a new shape — skin, bone, and voice shifting to convincingly become a specific person you've seen, or reconfiguring into a specific inanimate object entirely. Not a fixed alternate form (that's its own Gift) — a flexible mimicry of whatever target you choose, fresh each time you use it.
