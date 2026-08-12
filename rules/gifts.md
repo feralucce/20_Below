@@ -129,6 +129,20 @@ Your will can simply overwrite someone else's, at least for a moment. Look them 
 | 4 | Repeated exposure builds suggestibility: each successful use of this Gift on the same person grants **Advantage** on your next attempt against them, cumulative and lasting until they're free of your influence for an extended stretch (GM's call). |
 | 5 | The self-harm/serious-injury safeguard no longer applies — commands can now be harmful, even lethal. |
 
+### Duplication
+
+One of you was never going to be enough. Split off a copy, then another, each one fully you, at least for a little while.
+
+**This Gift always costs Ki, at every Level. There is no mastery discount to free. You can dismiss any or all of your clones instantly, at will, no action required.**
+
+| Level | Effect |
+|---|---|
+| 1 | Spend **1 Ki** to create one duplicate of yourself: identical in appearance and Skills, but with only **1 Health Level**, popping instantly on any connecting hit. It acts immediately after you in the turn order, taking a Fast or Normal action each round (never Slow), and must stay within your line of sight. Lasts up to a Minute or until it pops. When it pops, or the duration ends, you instantly know everything it experienced. |
+| 2 | Duration extends to a **Scene**. |
+| 3 | You can maintain **2** clones at once, for a second **1 Ki**. Clones can use your Boons and Skills fully, as if they were you. |
+| 4 | You can maintain **3** clones at once, and they're no longer bound by line of sight, so long as you know roughly where they are. Clones can spend your Ki to use your Gifts too, drawing from the same pool you have. |
+| 5 | You can maintain **5** clones at once, with no range limit at all. |
+
 ### Elemental Aura
 
 Raise a battle aura of your chosen element around your body. "Element" is a broad catch-all, not limited to the four classical elements — fire, ice, lightning, steam, darkness, radiation, cosmic energy, void, magnetism, or whatever else fits the character's concept. Chosen once, at creation.
