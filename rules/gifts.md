@@ -185,6 +185,18 @@ Some people burn bright with what they can do. Around you, that light gutters. S
 | 4 | Spend **2 Ki** and roll **Wyrd + Difficulty** to instead raise a true field around yourself out to **Close** range, affecting everyone inside rather than picking individual targets, lasting the rest of the scene. Failure still spends the Ki; the field doesn't form. |
 | 5 | The field radius extends to **Near**, and upgrades from a tax to an outright block: Gifts simply can't be used inside it. Ki cost for the single-target effects (Levels 1-3) drops to **0**. |
 
+**Adders**:
+
+- **Lingering Dampener** (Lesser, 3 pts): the single-target tax/shutdown (Levels 1-3) persists for a full Day instead of just the rest of the scene.
+- **Ki Bleed** (Lesser, 3 pts): when your field (Level 4+) is active, spend 1 Ki to siphon 1 Ki directly from a target inside it into your own pool.
+- **Anchor the Field** (Greater, 6 pts): your field (Level 4+) stays up after you leave it or fall unconscious, persisting until the scene ends or you choose to drop it.
+
+**Limiters**:
+
+- **Indiscriminate**: your field (Level 4+) can't be tuned to exclude allies — it suppresses everyone inside, including yourself and your own Gift uses.
+- **Warning Shimmer**: the air visibly distorts around you whenever this Gift is active at any Level — it can never be used covertly.
+- **Costs You Too**: every Ki spend for this Gift is doubled, rounded up (so Level 1's single-target tax costs 2 Ki instead of 1), at every Level, with no exceptions.
+
 ### Domination
 
 Your will can simply overwrite someone else's, at least for a moment. Look them in the eye, speak with intent, and watch resistance crumble — a word becomes a command, and a command becomes obedience, so long as what you're asking isn't more than they can bear.
