@@ -563,6 +563,18 @@ Once you've marked someone, the hunt runs itself. Part of your attention stays f
 | 4 | The mark no longer needs renewing: it holds until the target is dealt with or you choose to release it, not just for a Scene. |
 | 5 | Spend **1 Ki** to pinpoint your marked target's exact location right now, regardless of concealment, Stealth, Invisibility, or other means of hiding (short of a Gift specifically built to counter this, GM's call). |
 
+**Adders**:
+
+- **Shared Mark** (Lesser, 3 pts): spend 1 Ki to extend the mark's tracking and Advantage benefits to one touched ally.
+- **Lingering Scent** (Lesser, 3 pts): if the mark lapses at Levels 1-3, rough-direction awareness persists for one additional Scene before it fully fades.
+- **First Blood** (Greater, 6 pts): the first successful hit against a marked target each encounter deals one extra damage die.
+
+**Limiters**:
+
+- **One Target Only**: you can only ever have one active mark at a time. Marking a new target instantly releases the old one.
+- **Visible Focus**: your intense focus on the marked target is obvious to onlookers. Disadvantage on Stealth or Deception rolls made against anyone aware you have a mark active.
+- **Personal Vendetta**: you can only mark someone who's genuinely wronged you or someone you care about, GM's call, not an arbitrary target.
+
 ### Possession
 
 Beyond command, beyond obedience — you can push your own consciousness into someone else's body outright, shoving them into the passenger seat while you take the wheel. Not persuasion. Occupation.
