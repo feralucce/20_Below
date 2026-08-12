@@ -28,7 +28,7 @@ None of these three apply automatically to every Gift or every level — each is
 
 The body is not a fixed thing, not for you. At will, you can shed your ordinary shape for another — a specific creature both mundane and impossible, a drift of mist, a living shadow, or some other secondary state, each granting capabilities your normal body could never manage. What the alternate form actually *is* — the creature, the state, the theme — is defined once, at creation, and stays consistent every time you take it.
 
-Transforming costs a Slow action and triggers a [Gift Check](#resolution) — success free, failure costs 1 Ki, the transformation happens either way. The form lasts until voluntarily dropped, no ongoing cost to maintain.
+Transforming is a Slow action and triggers a [Gift Check](#resolution) — success free, failure costs 1 Ki, the transformation happens either way. The form lasts until voluntarily dropped, no ongoing cost to maintain.
 
 The alternate form is built once, at creation, spending a points pool (below) on the build menu below. The pool scales with Gift Level, so a character can revisit and add to the form's build as they gain Levels.
 
@@ -59,7 +59,7 @@ Animals sense something in you that overrides their instincts — an inborn trus
 
 | Level | Effect |
 |---|---|
-| 1 | Roll **Wyrd + Difficulty** to calm an agitated animal or exchange simple, instinct-level understanding with it (hunger, fear, the direction of danger) — one ordinary animal at a time, within Close range. Costs a Normal action. No Ki, no Gift Check. |
+| 1 | Roll **Wyrd + Difficulty** to calm an agitated animal or exchange simple, instinct-level understanding with it (hunger, fear, the direction of danger) — one ordinary animal at a time, within Close range. Is a Normal action. No Ki, no Gift Check. |
 | 2 | Range extends to **Near**. You may now direct the animal to perform one simple task within its natural capabilities (lead you somewhere, retrieve a small object, stand guard, fetch help) in addition to calming or understanding it. Still a Normal action, no Ki. Additionally, you gain a lasting **Animal Companion**, free with this Level — no Ki or point cost — an ordinary creature of your choice, chosen at creation, that stays by your side simply because it likes you. Not summoned or magically bound; it can leave if truly mistreated or endangered, but under normal circumstances it travels and fights alongside you. |
 | 3 | Range extends to **Far**. You may now affect a small group of animals simultaneously (a pack, a flock, a swarm) rather than just one — calming, understanding, or directing all of them at once costs **1 Ki**. Your Animal Companion's bond deepens automatically, free with this Level: it gains **+2** to one relevant sub-stat of your choice (Soak, Ferocity, Stamina, Potence, or Initiative). |
 | 4 | The affected group scales up to a full herd, swarm, or pack of any size. Your influence now extends to dangerous or exotic wildlife, not just ordinary animals — even apex predators respond to you. Group-effect Ki cost rises to **2**. Your Animal Companion gains a second **+2** to a different sub-stat, automatically, free with this Level (stacking with Level 3's bonus). |
@@ -71,7 +71,7 @@ Distance means nothing to your sight. Close your eyes and your awareness slips f
 
 | Level | Effect |
 |---|---|
-| 1 | Roll **Wyrd + Difficulty** (harder the less familiar the place) to project your sight to somewhere you've personally been before. Costs a Slow action, sight only — no sound — lasting a few minutes or until broken. |
+| 1 | Roll **Wyrd + Difficulty** (harder the less familiar the place) to project your sight to somewhere you've personally been before. Is a Slow action, sight only — no sound — lasting a few minutes or until broken. |
 | 2 | The vision now includes sound as well as sight. You can also target a place you've only seen in detail (a photo, a vivid description) rather than having to have physically been there yourself. |
 | 3 | Spend **1 Ki** to extend the vision's duration significantly, or to target a place you've never seen or visited at all, so long as you're actively searching for it with a clear intent ("show me where the stolen car went"). |
 | 4 | Your sight can now follow a specific person you've met, tracking their general location even if you don't know exactly where they are — the vision moves with them rather than staying fixed to one place. |
@@ -107,7 +107,7 @@ Your will can simply overwrite someone else's, at least for a moment. Look them 
 
 Raise a battle aura of your chosen element around your body. "Element" is a broad catch-all, not limited to the four classical elements — fire, ice, lightning, steam, darkness, radiation, cosmic energy, void, magnetism, or whatever else fits the character's concept. Chosen once, at creation.
 
-Activating the aura costs a Slow action. **Maintaining it requires a [Gift Check](#resolution) every turn it stays active — failure costs 1 Ki, at any Level.** At Level 5, a turn spent lashing out with the aura (below) skips the maintenance check entirely, since spending Ki to attack already covers the cost.
+Activating the aura is a Slow action. **Maintaining it requires a [Gift Check](#resolution) every turn it stays active — failure costs 1 Ki, at any Level.** At Level 5, a turn spent lashing out with the aura (below) skips the maintenance check entirely, since spending Ki to attack already covers the cost.
 
 | Level | Effect |
 |---|---|
@@ -128,7 +128,7 @@ Some Gifts are one move, sharpened over time. This isn't that. Pick a single dom
 
 | Level | Effect |
 |---|---|
-| 1 | Roll **Wyrd + Difficulty** to shape an effect within your domain that touches a full sensory picture (not just one sense) or physically moves/reshapes something person-sized (a body's worth of matter, a room's worth of shadow, a sound that isn't really there, the temperature of a room). No Range Band limit, works anywhere you can perceive or clearly reach with it. Costs a Normal action. No Ki, no Gift Check. |
+| 1 | Roll **Wyrd + Difficulty** to shape an effect within your domain that touches a full sensory picture (not just one sense) or physically moves/reshapes something person-sized (a body's worth of matter, a room's worth of shadow, a sound that isn't really there, the temperature of a room). No Range Band limit, works anywhere you can perceive or clearly reach with it. Is a Normal action. No Ki, no Gift Check. |
 | 2 | You can now blanket an area instead of a single target or point. Spend **1 Ki** to create a zone (spreading true darkness, a field of magnetic interference, a sudden downpour, a shared false vision everyone inside perceives the same way) that imposes Disadvantage on anyone inside acting against you, lasting up to a Scene. |
 | 3 | The area effect scales to something building-sized or block-sized (a full weather shift over a neighborhood, a false skyline that fools anyone looking). Ki cost rises to **2**. You can also physically move or reshape something correspondingly large within your domain with no roll, so long as it's plausible for the element. |
 | 4 | Any effect you create (the area zone, a moved or reshaped object, a false sensory scene) can be made **permanent** instead of temporary, for an extra **1 Ki** spent when you create it. |
@@ -163,7 +163,7 @@ Gravity is a suggestion you've learned to decline. Whether it's feathered wings,
 
 | Level | Effect |
 |---|---|
-| 1 | You can hover in place or fly at your normal ground Movement Rate. Taking off or landing costs a Fast action; staying aloft is free once airborne. No Ki, no Gift Check. |
+| 1 | You can hover in place or fly at your normal ground Movement Rate. Taking off or landing is a Fast action; staying aloft is free once airborne. No Ki, no Gift Check. |
 | 2 | Movement Rate while flying doubles. You can hover just out of Melee range of anything that can't also fly or reach that high, forcing grounded attackers to close the distance some other way. |
 | 3 | Movement Rate while flying triples. Spend **1 Ki**, when an attack targets you in the air, to juke through open air for **Advantage** on your defense. |
 | 4 | Movement Rate while flying rises to **x5**, fast enough to close or open a full Range Band as part of a single move. You can carry one other person while flying with no penalty. Ki cost from Level 3 stays at 1. |
@@ -183,7 +183,7 @@ Given enough scrap, a workbench, and a spare few minutes, you can build almost a
 | 1 | Given scrap and a few minutes of work, roll **Air + Difficulty** (GM sets Difficulty by how complex the gadget is) to build one simple, single-function gadget — a lockpick set, a basic signal jammer, a simple sensor, a makeshift flashlight upgrade. It works reliably until broken or its narrow purpose is exhausted. No Ki cost. |
 | 2 | Build time drops to just a few minutes regardless of complexity. Gadgets can now have **two** functions instead of one, and may include a minor combat-relevant effect (a taser dealing 1d10, a personal shield granting +1 Soak, etc.) — combat-capable gadgets cost **1 Ki** to build; pure-utility gadgets stay free. |
 | 3 | You can now build a gadget on the fly, mid-combat, as a single Fast or Normal action, improvising from whatever's on hand. Gadgets can have up to **three** functions. Combat-relevant gadgets scale up — **2d10** damage, or **+2** to a defensive stat. Ki cost for combat-capable gadgets rises to **2**. |
-| 4 | Building a gadget now only costs a **Fast** action. Gadgets can have up to **four** functions. Combat-relevant gadgets scale to **3d10** damage or **+3** to a defensive stat. Ki cost for combat-capable gadgets rises to **3**. |
+| 4 | Building a gadget is now only a **Fast** action. Gadgets can have up to **four** functions. Combat-relevant gadgets scale to **3d10** damage or **+3** to a defensive stat. Ki cost for combat-capable gadgets rises to **3**. |
 | 5 | Combat-relevant gadgets scale to **4d10** damage or **+4** to a defensive stat. Gadgets can have up to **five** functions. Ki cost drops back to **2** for combat-capable gadgets. Additionally, once per session, you can build one extraordinary one-off device capable of a dramatic, GM-approved effect beyond the normal function cap — a signature invention. |
 
 ### Healing
@@ -254,7 +254,7 @@ You don't run to the edge and jump. You just jump. A single push clears rooftops
 
 | Level | Effect |
 |---|---|
-| 1 | From a standing start, jump forward up to **2x** your Movement Rate, or straight up up to **1x** your Movement Rate. Costs a Fast action. No fall damage from a landing height within what you could jump. No Ki, no Gift Check. |
+| 1 | From a standing start, jump forward up to **2x** your Movement Rate, or straight up up to **1x** your Movement Rate. Is a Fast action. No fall damage from a landing height within what you could jump. No Ki, no Gift Check. |
 | 2 | Forward jumps extend to **3x** Movement Rate, vertical to **1.5x**. You can adjust your trajectory once, mid-air, changing direction after the jump's already started. |
 | 3 | Forward jumps extend to **4x** Movement Rate, vertical to **2x**. Spend **1 Ki** to chain a second jump immediately on landing, covering that much distance again in the same move. |
 | 4 | Forward jumps extend to **6x** Movement Rate, vertical to **3x**. Landing from a jump can be turned into an attack: spend **1 Ki**, everyone within Close range of your landing point takes your Potence dice vs. their Soak. Chaining a jump (Level 3) no longer costs Ki. |
@@ -320,7 +320,7 @@ Your body ripples and reforms like water finding a new shape — skin, bone, and
 
 | Level | Effect |
 |---|---|
-| 1 | Costs a Slow action and a [Gift Check](#resolution) — success free, failure costs 1 Ki, the transformation happens either way. Transform into a generic member of a broad category you've seen examples of (a dog, a police officer, a teenage boy) — not a specific individual. Appearance only, no voice. Undetectable unless an observer has specific reason to doubt it, in which case they may roll Insight + Difficulty to see through it. |
+| 1 | Is a Slow action and triggers a [Gift Check](#resolution) — success free, failure costs 1 Ki, the transformation happens either way. Transform into a generic member of a broad category you've seen examples of (a dog, a police officer, a teenage boy) — not a specific individual. Appearance only, no voice. Undetectable unless an observer has specific reason to doubt it, in which case they may roll Insight + Difficulty to see through it. |
 | 2 | Mimicry now includes voice as well as appearance. |
 | 3 | You may now mimic a specific individual — a particular person or animal you've seen in real detail — instead of just a generic category. |
 | 4 | You no longer need to have seen the specific target in person — a detailed photo or description is enough. You also pick up minor functional traits where it makes sense — their exact fingerprint or biometric signature (fooling biometric scanners). |
@@ -334,7 +334,7 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 
 | Level | Effect |
 |---|---|
-| 1 | If an attack: deals **1d10** vs the target's relevant wall. If non-damaging: produces one small, clearly-bounded effect (GM approval on scope). Using it costs a Fast action. No Ki cost, no Gift Check. |
+| 1 | If an attack: deals **1d10** vs the target's relevant wall. If non-damaging: produces one small, clearly-bounded effect (GM approval on scope). Using it is a Fast action. No Ki cost, no Gift Check. |
 | 2 | Damage rises to **2d10** (if an attack); the non-damaging effect's scope widens (still GM-approved, but a real step up from Level 1). Using the Move now costs **1 Ki**, in addition to the Fast action — that Ki spend is what bakes in one minor secondary effect layered onto the base Move (a small knockback, a brief off-balance status, a minor debuff). |
 | 3 | Damage rises to **3d10**. Range extends from Melee to **Close** (Levels 1-2 were Melee-only). The secondary effect from Level 2 upgrades to a moderate tier (a real knockdown, a genuine debuff, a short status lock, rather than just "brief"). Still 1 Ki per use. |
 | 4 | Damage rises to **4d10**. Range extends to **Near**. The secondary effect upgrades to a major tier (a real status condition, a significant forced reposition, a debuff with teeth). Ki cost rises to **2** per use. |
@@ -351,7 +351,7 @@ Your body ignores the ordinary rules of scale. Shrink small enough to vanish int
 
 | Level | Effect |
 |---|---|
-| 1 | Each use, choose one: grow or shrink your whole body by roughly half again your normal height in either direction, or stretch a single limb to extend your reach out to Close range instead of Melee. Costs a Fast action. No Ki, no Gift Check. |
+| 1 | Each use, choose one: grow or shrink your whole body by roughly half again your normal height in either direction, or stretch a single limb to extend your reach out to Close range instead of Melee. Is a Fast action. No Ki, no Gift Check. |
 | 2 | The size swing doubles — grow or shrink up to double your normal height in either direction, or stretch your reach out to Near range. Still just a Fast action, no Ki, no Gift Check. |
 | 3 | The size swing triples, or reach extends to Far. Activating now costs **1 Ki**. While enlarged, gain **+2 Soak**; while shrunk, attacks made against you are at **Disadvantage** — you're a much harder target to land a hit on. |
 | 4 | While enlarged, Soak rises to **+4** and you gain **+2 Ferocity** — sheer mass hits harder. While shrunk, attacks against you remain at Disadvantage, and you gain **Advantage** on Stealth-related rolls — small enough to go unnoticed in the right circumstances. Ki cost rises to **2**. |
@@ -375,10 +375,10 @@ You don't walk between places, you erase the distance between them. However it l
 
 | Level | Effect |
 |---|---|
-| 1 | Blink instantly to anywhere within line of sight, no matter the distance. Costs a Fast action and **1 Ki**. No Gift Check. |
+| 1 | Blink instantly to anywhere within line of sight, no matter the distance. Is a Fast action, and costs **1 Ki**. No Gift Check. |
 | 2 | You can also blink to a place you've personally visited before, even without current line of sight, so long as you can clearly picture it. |
 | 3 | Blinking now works for a place you've only seen in vivid detail (a photo, a thorough description) rather than requiring you to have been there yourself. Doing so requires a [Gift Check](#resolution): failure still moves you, but you land somewhere within sight of the intended spot instead of precisely on it. |
-| 4 | You can bring one other person along, if you're touching them, at no extra cost. Instead of blinking, you may tear a portal: a stable rift lasting up to a Minute, letting others step through it in both directions. Opening a portal costs a Slow action and a Gift Check. |
+| 4 | You can bring one other person along, if you're touching them, at no extra cost. Instead of blinking, you may tear a portal: a stable rift lasting up to a Minute, letting others step through it in both directions. Opening a portal is a Slow action and triggers a Gift Check. |
 | 5 | The portal can connect to a different plane of existence entirely, not just another point in your own world, so long as you have some way of pointing it there: an object, a description, a name, GM's call on fit. Ki cost for the Level 3 detail-only blink drops to **0**. |
 
 ### Threadspace
@@ -387,7 +387,7 @@ Reach into a fold in space only you can find, and pull out exactly what you left
 
 | Level | Effect |
 |---|---|
-| 1 | Stash or retrieve a handful of small objects (anything that fits in two hands) in a hidden fold in space only you can reach. Doing so costs a Fast action. No Ki, no Gift Check. |
+| 1 | Stash or retrieve a handful of small objects (anything that fits in two hands) in a hidden fold in space only you can reach. Doing so is a Fast action. No Ki, no Gift Check. |
 | 2 | The fold grows to a closet's worth of space. You can store considerably more, and duck inside yourself briefly as a hiding spot. |
 | 3 | The fold becomes a genuine room behind its own door, big enough to live in and furnish however you like. Opening the door for the first time triggers a [Gift Check](#resolution): success costs nothing, failure costs 1 Ki, either way the door opens. |
 | 4 | The room expands into a full dwelling of your own design, as many rooms as you want, furnished and stocked however you like. You can bring others through the door with you as guests. |
@@ -396,3 +396,19 @@ Reach into a fold in space only you can find, and pull out exactly what you left
 **Adders** - optional, chosen once, permanently:
 
 - **Physical Link**: 1 Ki, once. Bind the opening itself to a physical object big enough to actually climb through (a trunk, a door, a large bag). Anyone who opens it can step through into your Threadspace, or pull items from it, the same way you can.
+
+### Transmutation
+
+Information cannot be created or destroyed. It can, however, be rearranged. Break something down to its raw materials and build something new from the same mass: a wall from dirt, a blade from scrap iron, a bridge from loose stone. Equivalent exchange. You never get more out than you put in.
+
+Chosen once, at creation: how you perform the ritual that triggers this Gift, tracing a circle, speaking a precise chant, or simply focusing in silence. The mechanics stay the same regardless of flavor.
+
+**This Gift always costs Ki, at every Level. There is no mastery discount to free. This Gift cannot create or restore living matter, and cannot resurrect the dead: equivalent exchange has never once made that trade work.**
+
+| Level | Effect |
+|---|---|
+| 1 | Touch a quantity of raw or simple material (up to roughly what you could carry) and spend **1 Ki**, then roll **Wyrd + Difficulty** to break it down and reconstruct it into a different simple object of equivalent mass and similar composition (loose stone into a crude wall, wood into a simple tool). Performing the ritual is a Slow action; the transmutation itself is instant once triggered. |
+| 2 | The output can now be meaningfully more complex than the input (raw ore into a working blade, rubble into a fitted brick wall), still equivalent mass. The ritual is now only a Normal action. Ki cost rises to **2**. |
+| 3 | You can change a material's basic composition, not just its shape (wood into iron, sand into glass). Affected mass roughly doubles. Ki cost rises to **3**. A [Gift Check](#resolution) applies on especially large or precise jobs, GM's call. |
+| 4 | The ritual is now only a Fast action. Affected mass roughly doubles again. Ki cost rises to **4**. |
+| 5 | Affected mass reaches building scale, and you can transmute functioning mechanisms, not just static shapes (a working weapon, a piece of armor, a simple machine), so long as the raw material and mass are sufficient. Ki cost rises to **5**. |
