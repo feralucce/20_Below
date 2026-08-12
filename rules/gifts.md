@@ -740,10 +740,17 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 | 4 | Damage rises to **4d10**. Range extends to **Near**. The secondary effect upgrades to a major tier (a real status condition, a significant forced reposition, a debuff with teeth). Ki cost rises to **2** per use. |
 | 5 | Damage rises to **5d10**. Range extends to **Far**. The secondary effect reaches its full, signature-defining scope (GM-approved — a finishing blow, a reality-bending flourish, whatever fits the character). Ki cost rises to **3** per use. |
 
-**Adders** — optional, chosen when the Move is built (permanent additions to its design, not a per-use choice):
+**Adders**:
 
-- **Extended Range**: +1 Ki per use. The Move reaches one Range Band further than its current Level would normally allow.
-- **Area of Effect**: +1 Ki per use. The Move affects everyone within its range/area rather than a single target — exact shape and extent defined when the Move is built, GM-approved.
+- **Extended Range** (Lesser, 3 pts): +1 Ki per use. The Move reaches one Range Band further than its current Level would normally allow.
+- **Piercing Edge** (Lesser, 3 pts): the Move ignores a flat 2 points of the target's relevant wall (Soak, Presence, or Psyche) before resolving.
+- **Area of Effect** (Greater, 6 pts): +1 Ki per use. The Move affects everyone within its range/area rather than a single target — exact shape and extent defined when the Move is built, GM-approved.
+
+**Limiters**:
+
+- **Telegraphed**: the Move requires an obvious, visible windup, a stance, a gesture, something a watching enemy learns to recognize. Anyone who's seen it before gains Advantage on defending against it again.
+- **One and Done**: the Move can only be used once per Scene, regardless of Level.
+- **Costly Signature**: the Move's Ki cost is always 1 higher than its Level would normally require, at every Level, including Level 1 (which costs 1 Ki instead of 0).
 
 ### Size Change
 
