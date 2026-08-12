@@ -689,6 +689,19 @@ Your body refuses to stay broken. Wounds that would sideline anyone else for wee
 | 4 | Passive recovery improves further to 1 Health Level per **Round** of dedicated rest (near-instant between exchanges). The Ki-spend combat heal from Level 3 can now be used twice per Round. |
 | 5 | Given a full **Day** of rest, you can recover from even normally-permanent harm — a lost limb, lasting disfigurement. Ki cost for the combat heal drops to **0**. |
 
+**Adders**:
+
+- **Battlefield Mend** (Lesser, 3 pts): the combat heal (Level 3+) can trigger reflexively the first time you'd drop to 0 Health Levels in a Scene, stabilizing you instantly.
+- **Deep Reserves** (Lesser, 3 pts): the combat heal's per-Round use cap increases by one at every Level (2/Round at Level 3, 3/Round at Level 4, etc.).
+- **Overheal Buffer** (Lesser, 3 pts): once per Scene, using the combat heal while already at full Health Levels instead grants a temporary bonus Health Level that lasts until the Scene ends.
+- **Rapid Mend** (Greater, 6 pts): the Level 5 permanent-harm recovery only needs a full Scene of dedicated rest instead of a full Day.
+
+**Limiters**:
+
+- **Feed the Fire**: passive recovery requires actually eating a substantial meal during the rest period. It doesn't work on an empty stomach.
+- **No Instant Fix**: the Ki-gated combat heal (Level 3+) never applies. Passive recovery rates are the only way this Gift heals, at any Level.
+- **Fragile Restoration**: a Health Level recovered by the combat heal (Level 3+) can be lost again by any single hit, even one that would normally deal no damage past Soak.
+
 ### Shapeshift
 
 Your body ripples and reforms like water finding a new shape — skin, bone, and voice shifting to convincingly become a specific person you've seen, or reconfiguring into a specific inanimate object. Not a fixed alternate form (that's its own Gift) — a flexible mimicry of whatever target you choose, fresh each time you use it.
