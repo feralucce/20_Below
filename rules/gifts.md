@@ -91,6 +91,18 @@ Chosen once, at creation: **Always There** (visible and permanent — can't be h
 | 4 | Damage rises to **5d10**. The rending effect intensifies — Disadvantage now persists on all of the target's rolls until the wound is treated or the scene ends, not just their next one. |
 | 5 | Damage rises to **6d10** (matching a heavy/anti-materiel weapon). The rending effect still costs 1 Ki per use. If Stowable was chosen, deploying your claws/fangs no longer triggers the Gift Check. |
 
+### Deadzone
+
+Some people burn bright with what they can do. Around you, that light gutters. Step close enough and the impossible starts running dry: Gifts stutter, spells fail, whatever's fueling someone else's edge simply stops answering.
+
+| Level | Effect |
+|---|---|
+| 1 | Touch or **Close** range, single target. Spend **1 Ki**, no roll: for the rest of the scene, that target's Gift uses cost double Ki, rounded up (a normally-free use instead costs 1 Ki). |
+| 2 | Range extends to **Near**. You may instead spend 1 Ki to directly prevent a Gift from activating in the first place, or shut down one specific active supernatural effect already in place, no roll, either way ending it outright. |
+| 3 | Range extends to **Far**. You can affect a second target at the same time, for a second 1 Ki spend. |
+| 4 | Spend **2 Ki** and roll **Wyrd + Difficulty** to instead raise a true field around yourself out to **Close** range, affecting everyone inside rather than picking individual targets, lasting the rest of the scene. Failure still spends the Ki; the field doesn't form. |
+| 5 | The field radius extends to **Near**, and upgrades from a tax to an outright block: Gifts simply can't be used inside it. Ki cost for the single-target effects (Levels 1-3) drops to **0**. |
+
 ### Domination
 
 Your will can simply overwrite someone else's, at least for a moment. Look them in the eye, speak with intent, and watch resistance crumble — a word becomes a command, and a command becomes obedience, so long as what you're asking isn't more than they can bear.
