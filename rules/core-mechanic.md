@@ -10,7 +10,7 @@ Five attributes, each linked to a classical element. Each pairs a **domain** (na
 | **Air** | Agility/adaptability, mind/intellect | Initiative / Psyche |
 | **Fire** | Drive/aggression | Ferocity / Presence |
 | **Water** | Perception/empathy | Stamina / Health |
-| **Wyrd** | Fate/destiny/the supernatural | Warp / Weft |
+| **Moira** | Fate/destiny/the supernatural | Atropos / Klotho |
 
 Attributes are scored **1-10** (1 = lowest, 10 = highest).
 
@@ -103,12 +103,12 @@ For all three: each attack die is resolved individually against the relevant wal
 
 **Presence and Psyche are self-paired attacker/wall stats.** Physical splits the attacker/wall pair across two Attributes (a weapon sets the dice, Earth's Soak is the wall). Social and Mental don't get their own separate Attribute the way Physical does, and there's no "weapon" equivalent for words or force of personality, so **Presence and Psyche each do both jobs on their own stat**: a character's Presence sets how many d10 they roll when making a Social attack, resolved die-by-die against the *target's* Presence acting as their wall. Psyche works identically for Mental attacks. All three attack types boost a die via [Ki Infusion](#ki-infusion), 1 Ki per die.
 
-### Weft
+### Klotho
 
 Two passive functions, both "gives" like Health/Soak/Presence/Psyche - no roll, no spend:
 
-1. **Ki Regeneration** - a Short Rest restores `Weft ÷ 2` Ki (round up); a Full Night's Rest restores Ki fully. See [Ki's refill](fate.md#fatigue-check).
-2. **Lucky Number** - a character's lucky number equals their **Weft rating**. Whenever **any die** rolled for that character shows a result **equal to their Weft rating**, they immediately gain **1 Fate Token** - automatic, no choice, no cost.
+1. **Ki Regeneration** - a Short Rest restores `Klotho ÷ 2` Ki (round up); a Full Night's Rest restores Ki fully. See [Ki's refill](fate.md#fatigue-check).
+2. **Lucky Number** - a character's lucky number equals their **Klotho rating**. Whenever **any die** rolled for that character shows a result **equal to their Klotho rating**, they immediately gain **1 Fate Token** - automatic, no choice, no cost.
 
 ### Ki Infusion
 
@@ -163,11 +163,11 @@ Sanity mirrors Health Levels too, tracking a character's grip on their own mind 
 
 ### Defense (Derived Stat)
 
-Wyrd's combat sub-stat is named **Warp** (the fixed, load-bearing thread - the part of a character's fate that holds firm and doesn't move), but it doesn't appear on the character sheet directly for combat purposes - instead it feeds a separate, derived entry called **Defense**, the same way D&D's AC is a derived number rather than a raw stat.
+Moira's combat sub-stat is named **Atropos**, after the Fate who cuts the thread of life and cannot be turned aside - the fixed, unmovable point in a character's own destiny. It doesn't appear on the character sheet directly for combat purposes - instead it feeds a separate, derived entry called **Defense**, the same way D&D's AC is a derived number rather than a raw stat.
 
-**Defense = 10 − Warp.**
+**Defense = 10 − Atropos.**
 
-Defense is what an attacker's roll actually targets: **Defense becomes the attacker's Difficulty** when they attack this character (see the [Difficulty Chart](#difficulty-chart)). Since Difficulty runs 0 (hardest) to 10 (trivial), the subtraction inverts Warp correctly: Warp 0 → Defense 10 (trivial to hit), Warp 10 → Defense 0 (nearly impossible to hit).
+Defense is what an attacker's roll actually targets: **Defense becomes the attacker's Difficulty** when they attack this character (see the [Difficulty Chart](#difficulty-chart)). Since Difficulty runs 0 (hardest) to 10 (trivial), the subtraction inverts Atropos correctly: Atropos 0 → Defense 10 (trivial to hit), Atropos 10 → Defense 0 (nearly impossible to hit).
 
 ### Sub-Stat Descriptors
 

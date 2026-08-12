@@ -33,11 +33,11 @@ Every time a player spends a Fate Token, they immediately make a **Fatigue Check
 - **Success** - no effect, the spend goes through with no cost beyond the token itself.
 - **Failure** - lose **1 point from Ki**, until it's refilled.
 
-**Refill**: a Short Rest restores `Weft ÷ 2` Ki (round up); a Full Night's Rest restores Ki fully. These are the big damn heroes, after all - Ki isn't meant to be a slow trickle back.
+**Refill**: a Short Rest restores `Klotho ÷ 2` Ki (round up); a Full Night's Rest restores Ki fully. These are the big damn heroes, after all - Ki isn't meant to be a slow trickle back.
 
 ### Ki (the pool)
 
-**Fate Tokens are the resource players earn and spend; Ki is the pool that gets risked when they do.** Ki is the wellspring of a character's superhuman capability. **Ki = the average of all five combat sub-stats (Soak, Initiative, Ferocity, Stamina, Warp), doubled** to land in the 2-20 range.
+**Fate Tokens are the resource players earn and spend; Ki is the pool that gets risked when they do.** Ki is the wellspring of a character's superhuman capability. **Ki = the average of all five combat sub-stats (Soak, Initiative, Ferocity, Stamina, Atropos), doubled** to land in the 2-20 range.
 
 Ki has four jobs:
 
