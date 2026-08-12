@@ -514,6 +514,19 @@ You fade from ordinary perception entirely — not hidden, not blended in, simpl
 | 4 | You may now take a hostile action without breaking the invisibility. Additionally, spend **1 Ki** to also fool technological detection for that action. |
 | 5 | You can activate this Gift even under direct, active observation — someone already looking right at you doesn't stop it from taking hold, though doing so costs an additional **1 Ki** on top of the base cost (2 Ki total when used this way). |
 
+**Adders**:
+
+- **Shared Veil** (Lesser, 3 pts): spend 1 Ki to extend Level 3+'s sound/scent masking to one other touched person alongside you.
+- **Peripheral Blur** (Lesser, 3 pts): even when detected by touch, tech, or a broken effect, anyone who detects you is at Disadvantage on any roll to precisely locate or target you.
+- **Deep Cover** (Lesser, 3 pts): so long as you stay in one place and take no action, the effect's duration extends to a full Scene instead of capping at 1 Minute.
+- **Ghost Step** (Greater, 6 pts): while invisible, you leave no physical trace at all, no footprints, no disturbed dust, no broken cobwebs, foiling even mundane tracking methods.
+
+**Limiters**:
+
+- **Fragile Veil**: any physical contact, being touched or bumping into someone, breaks the invisibility instantly, at every Level.
+- **Silence Required**: the Gift doesn't work if you're already speaking or making noise the moment you activate it.
+- **Startled Reveal**: if something sudden and dangerous happens while you're invisible, roll Wyrd + Difficulty or the effect breaks involuntarily.
+
 ### Jumping
 
 You don't run to the edge and jump. You just jump. A single push clears rooftops, ravines, whatever's in the way.
