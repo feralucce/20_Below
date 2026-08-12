@@ -464,6 +464,18 @@ Your stance is a fact of the world, not a suggestion. Push, trip, knock back, or
 | 4 | The Ki-gated Advantage from Level 3 becomes free — always active against supernatural attempts, no Ki cost. |
 | 5 | Full immunity to being forcibly moved by anything at all, mundane or supernatural, short of your own choice to move. |
 
+**Adders**:
+
+- **Rooted Strike** (Lesser, 3 pts): when a forcing attempt against you fails, spend 1 Ki to counter-shove the attacker by half your Movement Rate.
+- **Grounding Field** (Lesser, 3 pts): as a Fast action, spend 1 Ki to extend your current Level's resistance to one touched ally for the rest of the Round.
+- **Unbreakable Line** (Greater, 6 pts): once per Scene, when an ally within Melee range would be forcibly moved, spend 1 Ki to intercept the effect. It targets you instead, resolved against your own resistance.
+
+**Limiters**:
+
+- **Flat Feet**: after you resist a forcing attempt with this Gift, your Movement Rate is halved for the next 2 Rounds.
+- **One Failure, Done**: if you're ever successfully moved despite this Gift, all its benefits stop for the rest of the Scene.
+- **No Bracing**: this Gift's benefits don't apply if you're Surprised or otherwise unaware of the attempt against you.
+
 ### Insubstantiality
 
 Your body loses its grip on solidity — flesh and bone thinning to something the world can no longer touch, letting you slip straight through a wall, a locked door, or an incoming blow as if none of it were really there.
