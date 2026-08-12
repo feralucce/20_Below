@@ -1,6 +1,6 @@
 # Gifts
 
-Gifts represent truly exceptional capability — magic, psionics, superpowers, divine blessings, mutation, whatever fits the campaign's genre. Each Gift is unique and narrow in scope — a specific named capability, not a broad umbrella.
+Gifts represent exceptional capability — magic, psionics, superpowers, divine blessings, mutation, whatever fits the campaign's genre. Each Gift is unique and narrow in scope — a specific named capability, not a broad umbrella.
 
 ## Five Levels
 
@@ -26,7 +26,7 @@ None of these three apply automatically to every Gift or every level — each is
 
 **[FLAGGED — not final. Menu and point costs may need rebalancing once played against the other Gifts. Revisit once the rest of the Gift list is built.]**
 
-The body is not a fixed thing, not for you. At will, you can shed your ordinary shape for another — a specific creature both mundane and impossible, a drift of mist, a living shadow, or some other secondary state entirely, each granting capabilities your normal body could never manage. What the alternate form actually *is* — the creature, the state, the theme — is defined once, at creation, and stays consistent every time you take it.
+The body is not a fixed thing, not for you. At will, you can shed your ordinary shape for another — a specific creature both mundane and impossible, a drift of mist, a living shadow, or some other secondary state, each granting capabilities your normal body could never manage. What the alternate form actually *is* — the creature, the state, the theme — is defined once, at creation, and stays consistent every time you take it.
 
 Transforming costs a Slow action and triggers a [Gift Check](#resolution) — success free, failure costs 1 Ki, the transformation happens either way. The form lasts until voluntarily dropped, no ongoing cost to maintain.
 
@@ -63,7 +63,7 @@ Animals sense something in you that overrides their instincts — an inborn trus
 | 2 | Range extends to **Near**. You may now direct the animal to perform one simple task within its natural capabilities (lead you somewhere, retrieve a small object, stand guard, fetch help) in addition to calming or understanding it. Still a Normal action, no Ki. Additionally, you gain a lasting **Animal Companion**, free with this Level — no Ki or point cost — an ordinary creature of your choice, chosen at creation, that stays by your side simply because it likes you. Not summoned or magically bound; it can leave if truly mistreated or endangered, but under normal circumstances it travels and fights alongside you. |
 | 3 | Range extends to **Far**. You may now affect a small group of animals simultaneously (a pack, a flock, a swarm) rather than just one — calming, understanding, or directing all of them at once costs **1 Ki**. Your Animal Companion's bond deepens automatically, free with this Level: it gains **+2** to one relevant sub-stat of your choice (Soak, Ferocity, Stamina, Potence, or Initiative). |
 | 4 | The affected group scales up to a full herd, swarm, or pack of any size. Your influence now extends to dangerous or exotic wildlife, not just ordinary animals — even apex predators respond to you. Group-effect Ki cost rises to **2**. Your Animal Companion gains a second **+2** to a different sub-stat, automatically, free with this Level (stacking with Level 3's bonus). |
-| 5 | Your connection extends even to legendary or mythic beasts — dragons, cryptids, spirits wearing animal shape, whatever the setting allows (GM's call on fit). Group-effect Ki cost drops back to **1**, mastery making it easier again. Your Animal Companion gains a third **+2** to a sub-stat of your choice, plus one minor Boon-equivalent trait fitting the bond (GM-approved) — both automatic, free with this Level. |
+| 5 | Your connection extends even to legendary or mythic beasts — dragons, cryptids, spirits wearing animal shape, whatever the setting allows (GM's call on fit). Group-effect Ki cost drops back to **1**. Your Animal Companion gains a third **+2** to a sub-stat of your choice, plus one minor Boon-equivalent trait fitting the bond (GM-approved) — both automatic, free with this Level. |
 
 ### Clairvoyance
 
@@ -75,7 +75,7 @@ Distance means nothing to your sight. Close your eyes and your awareness slips f
 | 2 | The vision now includes sound as well as sight. You can also target a place you've only seen in detail (a photo, a vivid description) rather than having to have physically been there yourself. |
 | 3 | Spend **1 Ki** to extend the vision's duration significantly, or to target a place you've never seen or visited at all, so long as you're actively searching for it with a clear intent ("show me where the stolen car went"). |
 | 4 | Your sight can now follow a specific person you've met, tracking their general location even if you don't know exactly where they are — the vision moves with them rather than staying fixed to one place. |
-| 5 | You can project into a completely unknown, undescribed location by intent alone — answering a genuine unknown ("where is the artifact hidden?") rather than needing any prior anchor. Ki cost from Level 3 drops to **0** — full mastery, free. |
+| 5 | You can project into a completely unknown, undescribed location by intent alone — answering an unknown ("where is the artifact hidden?") rather than needing any prior anchor. Ki cost from Level 3 drops to **0**. |
 
 ### Claws / Fangs
 
@@ -98,10 +98,10 @@ Your will can simply overwrite someone else's, at least for a moment. Look them 
 | Level | Effect |
 |---|---|
 | 1 | Requires eye contact. Spend **1 Ki** and roll your Psyche dice per-die against the target's Psyche wall — a connecting die lets you issue a single-word command ("stop," "sleep," "drop it") that they obey for one action or moment. Commands resulting in self-harm or serious injury automatically fail. |
-| 2 | Commands can now be full sentences rather than a single word, and can be genuinely complex — multi-step instructions, conditional logic, or nuanced requests — not just simple directives. |
+| 2 | Commands can now be full sentences rather than a single word, and can be complex — multi-step instructions, conditional logic, or nuanced requests — not just simple directives. |
 | 3 | You may implant a delayed/triggered command — it stays dormant until a specific condition you set occurs, then executes automatically. |
 | 4 | Repeated exposure builds suggestibility: each successful use of this Gift on the same person grants **Advantage** on your next attempt against them, cumulative and lasting until they're free of your influence for an extended stretch (GM's call). |
-| 5 | The self-harm/serious-injury safeguard no longer applies — commands can now be genuinely harmful, even lethal. Full override. |
+| 5 | The self-harm/serious-injury safeguard no longer applies — commands can now be harmful, even lethal. |
 
 ### Elemental Aura
 
@@ -124,7 +124,7 @@ Activating the aura costs a Slow action. **Maintaining it requires a [Gift Check
 
 ### Enhanced Speed
 
-Your body has crossed some threshold ordinary flesh shouldn't be able to cross. Nerve, muscle, and reflex all fire faster than a human frame has any right to — fast enough that a full second of your action and thought can pass in what looks, to everyone else, like the blink of an eye. Whether it's raw physical conditioning, a mutation, or something stranger entirely, the result is the same: the world seems to slow down whenever you decide to move.
+Your body has crossed some threshold ordinary flesh shouldn't be able to cross. Nerve, muscle, and reflex all fire faster than a human frame has any right to — fast enough that a full second of your action and thought can pass in what looks, to everyone else, like the blink of an eye. Whether it's raw physical conditioning, a mutation, or something stranger, the result is the same: the world seems to slow down whenever you decide to move.
 
 **The extra action this Gift grants can never be a Slow action, at any Level** — moving this fast isn't conducive to the precision a Slow action demands.
 
@@ -153,17 +153,17 @@ Given enough scrap, a workbench, and a spare few minutes, you can build almost a
 | 2 | Build time drops to just a few minutes regardless of complexity. Gadgets can now have **two** functions instead of one, and may include a minor combat-relevant effect (a taser dealing 1d10, a personal shield granting +1 Soak, etc.) — combat-capable gadgets cost **1 Ki** to build; pure-utility gadgets stay free. |
 | 3 | You can now build a gadget on the fly, mid-combat, as a single Fast or Normal action, improvising from whatever's on hand. Gadgets can have up to **three** functions. Combat-relevant gadgets scale up — **2d10** damage, or **+2** to a defensive stat. Ki cost for combat-capable gadgets rises to **2**. |
 | 4 | Building a gadget now only costs a **Fast** action. Gadgets can have up to **four** functions. Combat-relevant gadgets scale to **3d10** damage or **+3** to a defensive stat. Ki cost for combat-capable gadgets rises to **3**. |
-| 5 | Combat-relevant gadgets scale to **4d10** damage or **+4** to a defensive stat. Gadgets can have up to **five** functions. Ki cost drops back to **2** for combat-capable gadgets — mastery makes it easier again. Additionally, once per session, you can build one truly extraordinary one-off device capable of a dramatic, GM-approved effect beyond the normal function cap — a signature invention. |
+| 5 | Combat-relevant gadgets scale to **4d10** damage or **+4** to a defensive stat. Gadgets can have up to **five** functions. Ki cost drops back to **2** for combat-capable gadgets. Additionally, once per session, you can build one extraordinary one-off device capable of a dramatic, GM-approved effect beyond the normal function cap — a signature invention. |
 
 ### Heightened Senses
 
-Your senses reach further and cut sharper than anyone else's — sounds from across a building, shapes in total darkness, details too small or too distant for ordinary eyes to ever resolve. Which sense (or senses) sharpen, and how, is chosen once, at creation — enhanced hearing, night vision, telescopic sight, microscopic focus, or something else entirely that fits the concept.
+Your senses reach further and cut sharper than anyone else's — sounds from across a building, shapes in total darkness, details too small or too distant for ordinary eyes to ever resolve. Which sense (or senses) sharpen, and how, is chosen once, at creation — enhanced hearing, night vision, telescopic sight, microscopic focus, or something else that fits the concept.
 
 | Level | Effect |
 |---|---|
 | 1 | Perception rolls that rely on your chosen sense ignore ordinary environmental penalties tied to it — darkness for night vision, distance for telescopic sight, background noise for hearing, and so on. No roll of its own needed; it just strips the penalty layer whenever it would apply. No Ki, no Gift Check. |
 | 2 | Gain **Advantage** on all Perception rolls using your chosen sense. Its effective range extends significantly — perceive things at **Far** range that would normally require being much closer. |
-| 3 | Your sense gains true microscopic-level detail at no extra cost — spot a single fingerprint across a room, hear a heartbeat, notice trace chemical residue by scent. Additionally, spend **1 Ki** to pierce an obstacle that would normally block your sense entirely — see through fog or a thin wall, hear through a door, etc. |
+| 3 | Your sense gains microscopic-level detail at no extra cost — spot a single fingerprint across a room, hear a heartbeat, notice trace chemical residue by scent. Additionally, spend **1 Ki** to pierce an obstacle that would normally block your sense entirely — see through fog or a thin wall, hear through a door, etc. |
 | 4 | The obstacle-piercing from Level 3 no longer costs Ki, and now works through thicker, more substantial barriers — solid walls, multiple rooms away. Additionally, you're immune to being [Surprised](combat.md#surprise) by any threat your enhanced sense would have detected. |
 | 5 | Your chosen sense becomes constant, passive awareness within **Far** range — you don't need to actively look or listen; relevant details and threats simply register automatically. Additionally, it can pierce even magical concealment or supernatural stealth, not just mundane obstacles (GM's call on edge cases specifically countering your exact sense). |
 
@@ -189,7 +189,7 @@ Your body loses its grip on solidity — flesh and bone thinning to something th
 | 2 | Phasing now lasts up to **1 Minute** (≈10 Rounds), letting you move through multiple thin obstacles in sequence. Still can't attack while phased. |
 | 3 | You can now phase through thicker, more substantial barriers — solid stone, concrete — and phase only part of your body instead of the whole thing. While phased, the phased part is immune to Physical damage — attacks pass through it the same way you pass through walls. |
 | 4 | Phasing can be maintained for a full **Scene** (toggled on/off at will) instead of just a Minute. You may now attack while phased, though only as a Mental or Social attack — your body still can't physically connect with anything solid. |
-| 5 | You may extend the effect to one other person you're touching, phasing them along with you. You can also phase instantly as a reaction to dodge an incoming attack. Ki cost drops to **0** — full mastery, free. |
+| 5 | You may extend the effect to one other person you're touching, phasing them along with you. You can also phase instantly as a reaction to dodge an incoming attack. Ki cost drops to **0**. |
 
 ### Invisibility
 
@@ -199,7 +199,7 @@ You fade from ordinary perception entirely — not hidden, not blended in, simpl
 |---|---|
 | 1 | Spend **1 Ki** and a Fast action to turn invisible to sight only, so long as you remain stationary — moving or taking any action breaks the effect immediately. Touch, sound, scent, and technology can still detect you. Lasts up to 1 Minute or until broken. |
 | 2 | You may move while invisible without breaking the effect. Still breaks the instant you take a hostile action (attacking, etc.). |
-| 3 | Invisibility now extends beyond sight to sound and scent as well — essentially undetectable to ordinary senses while active. Technological sensors (cameras, motion detectors) still pick you up. |
+| 3 | Invisibility now extends beyond sight to sound and scent as well — undetectable to ordinary senses while active. Technological sensors (cameras, motion detectors) still pick you up. |
 | 4 | You may now take a hostile action without breaking the invisibility. Additionally, spend **1 Ki** to also fool technological detection for that action. |
 | 5 | You can activate this Gift even under direct, active observation — someone already looking right at you doesn't stop it from taking hold, though doing so costs an additional **1 Ki** on top of the base cost (2 Ki total when used this way). |
 
@@ -219,7 +219,7 @@ Beyond command, beyond obedience — you can push your own consciousness into so
 
 ### Precognition
 
-**[FLAGGED — may be overpowered as written, especially Level 5's "rarely truly blindsided" clause. Revisit once played.]**
+**[FLAGGED — may be overpowered as written, especially Level 5's "rarely blindsided" clause. Revisit once played.]**
 
 The future leaks through, uninvited and unclear — a flash of what's about to happen, a half-second warning before the blow lands, a dream that turns out to have been true. You don't control when it comes, only how well you've learned to listen when it does.
 
@@ -229,7 +229,7 @@ The future leaks through, uninvited and unclear — a flash of what's about to h
 | 2 | Once per scene, you may actively reach for a flash: roll **Wyrd + Difficulty** to get a vague impression of the likely outcome of a specific decision or action you're considering. |
 | 3 | Spend **1 Ki**, when you've foreseen an attack coming, to gain **Advantage** on your defense against it — foreknowledge translated into a real combat edge. |
 | 4 | Active foresight (Level 2) sharpens from a vague impression into a clearer vision, and can now reach further out — not just the immediate next moment, but a meaningful stretch of near future. |
-| 5 | Passive flashes (Level 1) can now surface any time danger is coming, not just when the GM chooses to grant one — you're rarely truly blindsided anymore. Ki cost from Level 3 drops to **0** — full mastery, free. |
+| 5 | Passive flashes (Level 1) can now surface any time danger is coming, not just when the GM chooses to grant one — you're rarely blindsided anymore. Ki cost from Level 3 drops to **0**. |
 
 ### Psychometry
 
@@ -243,7 +243,7 @@ Objects remember. A blade recalls the hand that swung it, a ring the years it sa
 | 2 | Ask up to **2** questions. Answers now come as a clearer scene rather than a flash, and can reach further back into the object's history, not just its most recent moments. |
 | 3 | Ask up to **3** questions. Spend **1 Ki** per question to push that answer into a detailed, near-immersive vision instead of a scene — faces, words, real specifics. |
 | 4 | Ask up to **4** questions. Detailed visions (Level 3) can now identify specific people and approximate dates, and reach centuries back if the object is old enough to hold it. |
-| 5 | Ask up to **5** questions. A touch can now reconstruct a brief sequence of the object's major moments rather than one isolated scene. Ki cost for a detailed vision drops to **0** — full mastery, free. |
+| 5 | Ask up to **5** questions. A touch can now reconstruct a brief sequence of the object's major moments rather than one isolated scene. Ki cost for a detailed vision drops to **0**. |
 
 ### Regeneration
 
@@ -255,11 +255,11 @@ Your body refuses to stay broken. Wounds that would sideline anyone else for wee
 | 2 | Passive recovery rate improves to 1 Health Level per **Minute** of rest. |
 | 3 | Spend **1 Ki** to instantly recover 1 Health Level at any time, even mid-combat — usable once per **Round**. |
 | 4 | Passive recovery improves further to 1 Health Level per **Round** of dedicated rest (near-instant between exchanges). The Ki-spend combat heal from Level 3 can now be used twice per Round. |
-| 5 | Given a full **Day** of rest, you can recover from even normally-permanent harm — a lost limb, lasting disfigurement. Ki cost for the combat heal drops to **0** — full mastery, free. |
+| 5 | Given a full **Day** of rest, you can recover from even normally-permanent harm — a lost limb, lasting disfigurement. Ki cost for the combat heal drops to **0**. |
 
 ### Shapeshift
 
-Your body ripples and reforms like water finding a new shape — skin, bone, and voice shifting to convincingly become a specific person you've seen, or reconfiguring into a specific inanimate object entirely. Not a fixed alternate form (that's its own Gift) — a flexible mimicry of whatever target you choose, fresh each time you use it.
+Your body ripples and reforms like water finding a new shape — skin, bone, and voice shifting to convincingly become a specific person you've seen, or reconfiguring into a specific inanimate object. Not a fixed alternate form (that's its own Gift) — a flexible mimicry of whatever target you choose, fresh each time you use it.
 
 | Level | Effect |
 |---|---|
@@ -281,7 +281,7 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 | 2 | Damage rises to **2d10** (if an attack); the non-damaging effect's scope widens (still GM-approved, but a real step up from Level 1). Using the Move now costs **1 Ki**, in addition to the Fast action — that Ki spend is what bakes in one minor secondary effect layered onto the base Move (a small knockback, a brief off-balance status, a minor debuff). |
 | 3 | Damage rises to **3d10**. Range extends from Melee to **Close** (Levels 1-2 were Melee-only). The secondary effect from Level 2 upgrades to a moderate tier (a real knockdown, a genuine debuff, a short status lock, rather than just "brief"). Still 1 Ki per use. |
 | 4 | Damage rises to **4d10**. Range extends to **Near**. The secondary effect upgrades to a major tier (a real status condition, a significant forced reposition, a debuff with teeth). Ki cost rises to **2** per use. |
-| 5 | Damage rises to **5d10**. Range extends to **Far**. The secondary effect reaches its full, signature-defining scope (GM-approved — a true finishing blow, a reality-bending flourish, whatever fits the character). Ki cost rises to **3** per use. |
+| 5 | Damage rises to **5d10**. Range extends to **Far**. The secondary effect reaches its full, signature-defining scope (GM-approved — a finishing blow, a reality-bending flourish, whatever fits the character). Ki cost rises to **3** per use. |
 
 **Adders** — optional, chosen when the Move is built (permanent additions to its design, not a per-use choice):
 
@@ -297,12 +297,12 @@ Your body ignores the ordinary rules of scale. Shrink small enough to vanish int
 | 1 | Each use, choose one: grow or shrink your whole body by roughly half again your normal height in either direction, or stretch a single limb to extend your reach out to Close range instead of Melee. Costs a Fast action. No Ki, no Gift Check. |
 | 2 | The size swing doubles — grow or shrink up to double your normal height in either direction, or stretch your reach out to Near range. Still just a Fast action, no Ki, no Gift Check. |
 | 3 | The size swing triples, or reach extends to Far. Activating now costs **1 Ki**. While enlarged, gain **+2 Soak**; while shrunk, attacks made against you are at **Disadvantage** — you're a much harder target to land a hit on. |
-| 4 | While enlarged, Soak rises to **+4** and you gain **+2 Ferocity** — sheer mass hits harder. While shrunk, attacks against you remain at Disadvantage, and you gain **Advantage** on Stealth-related rolls — small enough to go unnoticed entirely in the right circumstances. Ki cost rises to **2**. |
-| 5 | While enlarged, Soak rises to **+6** and Ferocity to **+4** — true titanic scale, capable of breaking through walls and toppling structures underfoot (GM-adjudicated environmental interaction). While shrunk, you become effectively undetectable to anything not specifically searching for you at that scale — full immunity to being noticed by chance alone. Ki cost rises to **3**. |
+| 4 | While enlarged, Soak rises to **+4** and you gain **+2 Ferocity** — sheer mass hits harder. While shrunk, attacks against you remain at Disadvantage, and you gain **Advantage** on Stealth-related rolls — small enough to go unnoticed in the right circumstances. Ki cost rises to **2**. |
+| 5 | While enlarged, Soak rises to **+6** and Ferocity to **+4** — titanic scale, capable of breaking through walls and toppling structures underfoot (GM-adjudicated environmental interaction). While shrunk, you become undetectable to anything not specifically searching for you at that scale — full immunity to being noticed by chance alone. Ki cost rises to **3**. |
 
 ### Telepathy/Empathy
 
-Minds are not as private as people think — not to you. You can brush against another's emotions, catching the shape of what they feel even through a practiced mask, or reach further and hear the words behind their eyes entirely. Feeling and thought, read by the same gift, just at different depths.
+Minds are not as private as people think — not to you. You can brush against another's emotions, catching the shape of what they feel even through a practiced mask, or reach further and hear the words behind their eyes. Feeling and thought, read by the same gift, just at different depths.
 
 | Level | Effect |
 |---|---|
@@ -310,4 +310,4 @@ Minds are not as private as people think — not to you. You can brush against a
 | 2 | Range extends to **Near**. You can now read surface, unguarded thoughts as well as emotions — still resolved as Air + Difficulty; a target actively resisting simply raises the Difficulty (GM's call), not yet a contested roll. |
 | 3 | Range extends to **Far**. Against a target actively resisting, you may now spend **1 Ki** to force the read as a genuine **Mental attack** — roll your Psyche dice per-die against their Psyche wall, breaching through to their surface thoughts and emotions on a connecting die. |
 | 4 | You can now project your own thoughts into a target's mind as well as read theirs — a genuine two-way telepathic link. For a willing or aware participant, this works at **Line of Sight** (as far as you can see them, not bound by the normal Range Bands). Forcing a read on an unwilling target (the Level 3 Mental attack) is capped at **Near**. Forced reads can now dig into deeper memories and guarded secrets, not just surface thoughts. Ki cost for forced reads stays **1**. |
-| 5 | Forced-read range extends back out to **Far**. Additionally, once you've established a genuine two-way link with someone (even briefly), you retain a limited telepathic connection to them indefinitely afterward — no range limit at all, a permanent bond once formed. Ki cost for forced reads drops to **0** — full mastery, free. |
+| 5 | Forced-read range extends back out to **Far**. Additionally, once you've established a genuine two-way link with someone (even briefly), you retain a limited telepathic connection to them indefinitely afterward — no range limit at all, a permanent bond once formed. Ki cost for forced reads drops to **0**. |
