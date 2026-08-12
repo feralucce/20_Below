@@ -30,3 +30,5 @@ Spent per [resources.md](resources.md)'s own flat 2-points-per-level cost.
 Every character starts with **10 Discretionary points**, flat, no strings attached. These can be spent in any of the three pools above, wherever the extra room is needed.
 
 Taking a [Flaw](flaws.md) grants additional Discretionary points equal to the Flaw's assigned points (1-5, or the Level taken for a Leveled Flaw). The GM sets a per-campaign cap on how many Discretionary points a character can bank this way, since there's no universal number that fits every table's tolerance for min-maxing through weaknesses.
+
+An extra [Sub-Stat Descriptor](core-mechanic.md#sub-stat-descriptors) can be bought this way too, 1 Discretionary point per Descriptor.
