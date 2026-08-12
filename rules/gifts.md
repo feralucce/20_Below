@@ -191,6 +191,18 @@ Your body loses its grip on solidity — flesh and bone thinning to something th
 | 4 | Phasing can be maintained for a full **Scene** (toggled on/off at will) instead of just a Minute. You may now attack while phased, though only as a Mental or Social attack — your body still can't physically connect with anything solid. |
 | 5 | You may extend the effect to one other person you're touching, phasing them along with you. You can also phase instantly as a reaction to dodge an incoming attack. Ki cost drops to **0** — full mastery, free. |
 
+### Invisibility
+
+You fade from ordinary perception entirely — not hidden, not blended in, simply not there to be seen, heard, or sensed by anything short of genuine effort or supernatural means.
+
+| Level | Effect |
+|---|---|
+| 1 | Spend **1 Ki** and a Fast action to turn invisible to sight only, so long as you remain stationary — moving or taking any action breaks the effect immediately. Touch, sound, scent, and technology can still detect you. Lasts up to 1 Minute or until broken. |
+| 2 | You may move while invisible without breaking the effect. Still breaks the instant you take a hostile action (attacking, etc.). |
+| 3 | Invisibility now extends beyond sight to sound and scent as well — essentially undetectable to ordinary senses while active. Technological sensors (cameras, motion detectors) still pick you up. |
+| 4 | You may now take a hostile action without breaking the invisibility. Additionally, spend **1 Ki** to also fool technological detection for that action. |
+| 5 | You can activate this Gift even under direct, active observation — someone already looking right at you doesn't stop it from taking hold, though doing so costs an additional **1 Ki** on top of the base cost (2 Ki total when used this way). |
+
 ### Possession
 
 Beyond command, beyond obedience — you can push your own consciousness into someone else's body outright, shoving them into the passenger seat while you take the wheel. Not persuasion. Occupation.
