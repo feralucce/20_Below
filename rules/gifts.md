@@ -262,10 +262,17 @@ Activating the aura is a Slow action. **Maintaining it requires a [Gift Check](#
 | 4 | Full immunity — all dice from an incoming attack of your chosen element are removed before it resolves; nothing gets through. Contact/Melee damage rises to 4d10. The aura's presence extends to Close range: anyone nearby (not just attacking you) suffers a minor environmental effect fitting the element, GM-adjudicated to theme. |
 | 5 | Immunity persists. Damage rises to 5d10. The aura can be projected as an attack: spend **1 Ki** to strike a target at Near range without contact, same per-die-vs-Soak resolution — doing so on a turn skips that turn's maintenance Gift Check. |
 
-**Adders** — optional, spent per use in the moment (not a permanent build-time choice, since this Gift's effect is fixed):
+**Adders**:
 
-- **Elemental Burst**: +1 Ki, once per activation. Pulse the aura outward — everyone within your current trigger range (whatever Melee/Close/Near your Level currently reaches) takes your contact damage simultaneously, not just someone who happens to touch or strike you.
-- **Environmental Surge**: +1 Ki. For one round, the Level 4 environmental effect pushes out one Range Band further than normal.
+- **Environmental Surge** (Lesser, 3 pts): +1 Ki. For one round, the Level 4 environmental effect pushes out one Range Band further than normal.
+- **Elemental Weapon** (Lesser, 3 pts): imbue a held weapon with your aura's element — it deals your current contact damage type alongside its own, no extra Ki cost.
+- **Elemental Burst** (Greater, 6 pts): +1 Ki, once per activation. Pulse the aura outward — everyone within your current trigger range (whatever Melee/Close/Near your Level currently reaches) takes your contact damage simultaneously, not just someone who happens to touch or strike you.
+
+**Limiters**:
+
+- **Vulnerable Opposite**: you take double dice from attacks of one specific opposing element (GM-set to fit your chosen element, e.g. a fire aura leaves you vulnerable to ice).
+- **Visible Aura**: the aura is always visibly active whenever raised — it can never be raised discreetly or concealed.
+- **Exhausting Maintenance**: the Gift Check's failure cost rises to 2 Ki instead of 1, at every Level.
 
 ### Elemental Manipulation
 
