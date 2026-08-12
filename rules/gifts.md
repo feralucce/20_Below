@@ -358,11 +358,23 @@ Given enough scrap, a workbench, and a spare few minutes, you can build almost a
 
 | Level | Effect |
 |---|---|
-| 1 | Given scrap and a few minutes of work, roll **Air + Difficulty** (GM sets Difficulty by how complex the gadget is) to build one simple, single-function gadget — a lockpick set, a basic signal jammer, a simple sensor, a makeshift flashlight upgrade. It works reliably until broken or its narrow purpose is exhausted. No Ki cost. |
+| 1 | Given scrap and roughly an hour of focused work, roll **Air + Difficulty** (GM sets Difficulty by how complex the gadget is) to build one simple, single-function gadget — a lockpick set, a basic signal jammer, a simple sensor, a makeshift flashlight upgrade. It works reliably until broken or its narrow purpose is exhausted. No Ki cost. |
 | 2 | Build time drops to just a few minutes regardless of complexity. Gadgets can now have **two** functions instead of one, and may include a minor combat-relevant effect (a taser dealing 1d10, a personal shield granting +1 Soak, etc.) — combat-capable gadgets cost **1 Ki** to build; pure-utility gadgets stay free. |
 | 3 | You can now build a gadget on the fly, mid-combat, as a single Fast or Normal action, improvising from whatever's on hand. Gadgets can have up to **three** functions. Combat-relevant gadgets scale up — **2d10** damage, or **+2** to a defensive stat. Ki cost for combat-capable gadgets rises to **2**. |
 | 4 | Building a gadget is now only a **Fast** action. Gadgets can have up to **four** functions. Combat-relevant gadgets scale to **3d10** damage or **+3** to a defensive stat. Ki cost for combat-capable gadgets rises to **3**. |
 | 5 | Combat-relevant gadgets scale to **4d10** damage or **+4** to a defensive stat. Gadgets can have up to **five** functions. Ki cost drops back to **2** for combat-capable gadgets. Additionally, once per session, you can build one extraordinary one-off device capable of a dramatic, GM-approved effect beyond the normal function cap — a signature invention. |
+
+**Adders**:
+
+- **Stockpile** (Lesser, 3 pts): during downtime, pre-build up to 2 gadgets ahead of time to carry with you, ready to use later without spending build time in the moment.
+- **Salvage Loop** (Lesser, 3 pts): when a gadget you built breaks or is destroyed, gain Advantage on your next Gadgeteer roll.
+- **Overclock** (Greater, 6 pts): spend an extra 1 Ki when building a gadget to push it one function or damage/defense tier beyond what your Level normally allows. That gadget breaks after a single use, win or lose.
+
+**Limiters**:
+
+- **Finite Supply**: you need actual physical scrap or parts on hand to build anything — this Gift doesn't work with empty hands in a bare room.
+- **One and Done**: only one Gadgeteer-built device can be functional at a time — building a new one instantly disables the previous one.
+- **Loud Construction**: building a gadget, at any Level, is never quiet — always audible or visibly obvious, no stealthy use.
 
 ### Grace Period
 
