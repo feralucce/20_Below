@@ -161,6 +161,18 @@ Watch someone closely enough, and what makes them exceptional becomes yours to b
 | 4 | A mimicked Gift capability can go as high as its Level 3, and any mimicry (Skill, Boon, or Gift) now lasts a full **Day** instead of just a Scene. |
 | 5 | Mimic a Gift capability up to its full Level 5, or hold a Skill, a Boon, and a Gift capability all mimicked at once, for a full Day. |
 
+**Adders**:
+
+- **Retained Impression** (Lesser, 3 pts): once you've mimicked a specific person's capability, watching them again re-triggers it at half Ki cost (rounded up) for the rest of that session.
+- **Group Study** (Lesser, 3 pts): you may watch multiple targets in the same scene and hold a separate mimicked capability from each, rather than one overwriting the last.
+- **Perfect Copy** (Greater, 6 pts): a mimicked Gift capability comes with any Adders the original had unlocked, not just its bare Level effect.
+
+**Limiters**:
+
+- **One at a Time**: you can only hold a single mimicked capability at once, at any Level — Level 5's "all three at once" clause never applies.
+- **Live Feed Only**: the target must still be within your sight when you activate a mimicked capability, not just at the moment you first watched it.
+- **Echo, Not Original**: a mimicked Gift capability never benefits from your own Wyrd, Ki totals, or other bonuses beyond what the roll itself requires — it runs at the exact numbers you watched, even if worse than your own stats would produce.
+
 ### Deadzone
 
 Some people burn bright with what they can do. Around you, that light gutters. Step close enough and the impossible starts running dry: Gifts stutter, spells fail, whatever's fueling someone else's edge simply stops answering.
