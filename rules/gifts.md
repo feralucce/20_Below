@@ -589,6 +589,18 @@ Beyond command, beyond obedience — you can push your own consciousness into so
 | 4 | Range extends to **Far**. While possessing, you gain full access to the host's Skills, Boons, and other Gifts, using their body's full capability as your own. |
 | 5 | You may possess a new target instantly, snapping from one host directly into another without returning to your own body first, so long as you can make eye contact with the new target. |
 
+**Adders**:
+
+- **Anchor Line** (Lesser, 3 pts): when you possess a target, spend 1 additional Ki to sense if your original body enters danger for the duration of that possession, letting you snap back to it instantly as a reaction.
+- **Distant Hop** (Lesser, 3 pts): Level 5's instant target-switching only requires line of sight, not direct eye contact.
+- **Mechanical Take** (Greater, 6 pts): this Gift also works on constructs and machines, not just living bodies.
+
+**Limiters**:
+
+- **Fragile Grip**: if the host resists at any point during possession (GM's call, under duress or extreme willpower), you're expelled back to your own body immediately, unless you spend 1 Ki to hold on.
+- **Echo Sickness**: after returning from a possession lasting longer than a Scene, you're at Disadvantage on all rolls for the rest of that day.
+- **One-Way Door**: returning to your own body isn't automatic. You must win another Psyche roll against the host to leave, same as entering.
+
 ### Precognition
 
 **[FLAGGED — may be overpowered as written, especially Level 5's "rarely blindsided" clause. Revisit once played.]**
