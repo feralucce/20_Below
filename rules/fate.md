@@ -11,7 +11,7 @@ Every character has a **Nature** - a short archetype capturing a core drive or w
 - **Nature** - playing to your Nature at a fitting moment (see above).
 - **Voluntary Disadvantage** - a player may choose to take [Disadvantage](core-mechanic.md#advantage--disadvantage) on a roll in exchange for a Fate Token.
 - **Flaws** - every character has Flaws. When the GM *or* the player invokes a Flaw in a scene, the invoking side's choice grants the player a Fate Token.
-- **Daily Regeneration** - characters regain a set number of Fate Tokens once per day, at either sunset or sunrise (not yet decided). The exact number regained is also not yet decided.
+- **Daily Regeneration** - characters regain **1 Fate Token** at sunrise, every day.
 - **Milestone Award** - when the party overcomes a significant challenge, the GM awards Fate Tokens (presumably party-wide, exact amount/scope not yet decided).
 - **GM Discretion** - the GM can directly award a Fate Token for good roleplay or a clever idea, independent of the other triggers above.
 
