@@ -390,6 +390,18 @@ Consequences aren't as fixed to their moment as they seem. You have a limited bu
 | 4 | Delay something major and lasting (an injury that should be crippling, a deadline with real stakes) for a full **Day**. Ki cost rises to **4**. |
 | 5 | Hold off almost anything for up to a **Month**, so long as you renew the effect with another 1 Ki before it lapses. Ki cost for the initial delay rises to **5**. |
 
+**Adders**:
+
+- **Shared Reprieve** (Lesser, 3 pts): the same Ki spend delays a second, separate consequence at the same time, not just one.
+- **Preemptive Ward** (Lesser, 3 pts): use this Gift before a consequence has even happened. If the thing you're warding against occurs within the next Round, it's automatically caught and delayed, no reaction timing needed.
+- **Partial Release** (Greater, 6 pts): when a delayed consequence finally lands, spend 1 extra Ki (paid at the original delay) to reduce its severity by one step (GM's call) instead of it landing at full force.
+
+**Limiters**:
+
+- **Debt Comes Due**: when a delayed consequence finally lands, it lands harder, worsened by one step (GM's call) rather than landing as originally sized.
+- **Self Only**: you can only ever delay consequences affecting yourself, never someone else.
+- **No Renewal**: Level 5's renewal clause never applies. The Month-long delay always lapses for good at the end of its duration.
+
 ### Healing
 
 Where you press your hands, the wound remembers what it looked like before. Poison thins, fevers break, the body simply gets on with fixing itself under your touch, faster and further than it ever could alone.
