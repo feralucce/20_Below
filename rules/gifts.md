@@ -145,7 +145,7 @@ Chosen once, at creation: **Always There** (visible and permanent - can't be hid
 
 - **Feral Grip**: can't hold, use, or manipulate manufactured weapons or fine tools while your claws/fangs are deployed.
 - **One-Way Weapon**: the Stowable option is unavailable - your claws/fangs are always Always There, visible and permanent, no choice at creation.
-- **Fragile Edge**: your natural weapon's damage die drops by one step (6d10 caps at 5d10, etc.) against anything with Hardness equal to or greater than your Potence.
+- **Fragile Edge**: your natural weapon's damage die drops by one step (6d10 caps at 5d10, etc.) against anything with Soak equal to or greater than your Potence.
 
 ### Copycat
 
