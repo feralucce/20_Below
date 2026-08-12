@@ -503,6 +503,18 @@ Chosen once, at creation: how you perform the ritual that triggers this Gift, tr
 | 4 | The ritual is now only a Fast action. Affected mass roughly doubles again. Ki cost rises to **4**. |
 | 5 | Affected mass reaches building scale, and you can transmute functioning mechanisms, not just static shapes (a working weapon, a piece of armor, a simple machine), so long as the raw material and mass are sufficient. Ki cost rises to **5**. |
 
+### Unburdened
+
+The body has needs. You've stopped listening to most of them. Breath, hunger, thirst, sleep, pain, cold, heat: all of it just background noise you've learned to tune out.
+
+| Level | Effect |
+|---|---|
+| 1 | Hold your breath for a **Minute**. Hunger, thirst, and sleep needs stretch to roughly a **Day** between requirements instead of daily. No roll, no Ki, passive. |
+| 2 | Hold your breath for a full **Scene**. Hunger, thirst, and sleep needs stretch to roughly a **Month**. |
+| 3 | Spend **1 Ki** to stop needing air, food, water, or sleep entirely for a full **Day**: underwater, in a sealed room, in smoke too thick to breathe, wide awake through what should be an exhausting stretch. |
+| 4 | The Level 3 immunity extends to genuinely extreme conditions too (vacuum-adjacent cold, crushing pressure, lethal air), and now lasts a full **Month** instead of a Day. |
+| 5 | Air, food, water, sleep, and extreme temperature all stop being requirements, permanently, no Ki needed, no Level 3 spend required anymore. |
+
 ### Undying Vigor
 
 Age was always going to catch you eventually, or so everyone assumes. Poison, plague, the slow wear of decades: none of it actually gets there. You can still be killed. You just can't be worn down.
