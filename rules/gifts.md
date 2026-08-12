@@ -416,6 +416,18 @@ Where you press your hands, the wound remembers what it looked like before. Pois
 | 4 | Reaches supernatural-origin poisons, curses, and conditions too, not just mundane ones. Ki cost for a supernatural cure rises to **2**. |
 | 5 | Given a full **Day** of dedicated care and **3 Ki**, you can heal even normally-permanent harm on someone else: a lost limb, lasting disfigurement. |
 
+**Adders**:
+
+- **Second Hands** (Lesser, 3 pts): spend a second 1 Ki to heal a second target in the same Round, bypassing the normal once-per-Round cap.
+- **Lingering Mend** (Lesser, 3 pts): a Health Level you restore gains a one-time buffer: the next hit that would take it away is negated instead.
+- **Preventive Dose** (Greater, 6 pts): spend 1 Ki to grant a target Advantage against contracting poison or disease for the rest of the scene, used before exposure rather than after.
+
+**Limiters**:
+
+- **Cost to Self**: healing another person costs you 1 unsoakable Health Level of your own per use, in addition to the Ki cost.
+- **Willing Only**: you can never heal an unconscious or unwilling target. Level 1's "willing or unconscious" narrows to willing only.
+- **Slow Hands**: every use of this Gift is a Slow action, at every Level.
+
 ### Heightened Senses
 
 Your senses reach further and cut sharper than anyone else's — sounds from across a building, shapes in total darkness, details too small or too distant for ordinary eyes to ever resolve. Which sense (or senses) sharpen, and how, is chosen once, at creation — enhanced hearing, night vision, telescopic sight, microscopic focus, or something else that fits the concept.
