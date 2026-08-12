@@ -39,3 +39,11 @@ A character who hasn't noticed a threat before combat begins is **Surprised** - 
 
 **A Surprised character rolls at Disadvantage on everything** - attacks, and any other roll where the defender's readiness matters - for the remainder of the round they're caught in. Ends automatically once that round ends. [Alertness](boons.md) grants immunity to being Surprised while conscious.
 
+### Flustered
+
+A character whose [Poise](core-mechanic.md#poise) reaches 0 becomes **Flustered**.
+
+**A Flustered character rolls at Disadvantage on all Social rolls**, and on any other roll where composure matters (GM's call, same standard as Surprise), for the rest of the Scene.
+
+A Flustered character may spend an action to roll **Presence + Difficulty** to shake it off early, ending the condition immediately on success.
+
