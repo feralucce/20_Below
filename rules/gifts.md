@@ -10,6 +10,10 @@ Every Gift has exactly **5 levels**, rated 1-5.
 - **A Gift's Level is its magnitude** — how big, strong, or wide the effect is at that level. Each level explicitly defines what the character can do at that magnitude, building on the level before it.
 - All 5 levels are defined up front when a Gift is created.
 
+## Points
+
+At character creation, each Gift Level costs a flat **3 points** from the [Gifts pool](character-creation.md#gifts-pool) — a Gift bought to Level 3 costs 9 points, to Level 5, 15 points. An Adder, where a Gift has one, costs a flat **6 points**, paid once to unlock the option permanently; the Ki cost of actually using it each time is separate and paid per the Gift's own text.
+
 ## Resolution
 
 No new stat governs Gifts. Using a Gift draws on tools that already exist elsewhere in the system:
