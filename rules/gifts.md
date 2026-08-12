@@ -316,10 +316,17 @@ Your body has crossed some threshold ordinary flesh shouldn't be able to cross. 
 | 4 | The extra-action spend can now be used **up to twice per round** (still 1 Ki per use). On any turn where you've spent Ki this way, attacks made against you that turn are at **Disadvantage** — you're moving too fast to track cleanly. The post-Ki-spend Movement Rate multiplier rises to **×3** for the rest of that turn. |
 | 5 | The extra-action spend can now be used **up to three times per round** (still 1 Ki per use, still Fast or Normal only). Attacks made against you are at Disadvantage on any turn you spend Ki this way. The post-Ki-spend Movement Rate multiplier rises to **×5** for the rest of that turn. |
 
-**Adders** — optional, spent per use in the moment:
+**Adders**:
 
-- **Redirected Momentum**: +1 Ki, on a turn you take the extra action. Instead of (or alongside) attacking with it, use the momentum to shove or reposition a target you interact with by one Range Band.
-- **Afterimage**: +1 Ki, once per round, on a turn you've already spent Ki for an extra action. When an attack against you would connect, treat it as striking an afterimage instead — the hit is negated entirely.
+- **Redirected Momentum** (Lesser, 3 pts): +1 Ki, on an extra-action turn. Instead of (or alongside) attacking, shove or reposition a target you interact with by half your Movement Rate.
+- **Blink Step** (Lesser, 3 pts): on a turn you spend Ki for the extra action, you may also move your full Movement Rate as a free action, not counted against your normal movement.
+- **Afterimage** (Greater, 6 pts): +1 Ki, once per round, on an extra-action turn. When an attack against you would connect, treat it as striking an afterimage instead — the hit is negated entirely.
+
+**Limiters**:
+
+- **Winded**: after the third extra-action Ki spend in a single Scene, you're at Disadvantage on all rolls until you get a short rest.
+- **Loud and Fast**: using the extra-action spend, at any Level, is always audible and visible to anyone nearby — no stealth use of this Gift.
+- **Straight Line Only**: the extra action's movement can only be used to move in a straight line — no sharp turns or complex maneuvering on a Ki-spend turn.
 
 ### Flight
 
