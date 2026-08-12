@@ -710,9 +710,21 @@ Your body ripples and reforms like water finding a new shape — skin, bone, and
 |---|---|
 | 1 | Is a Slow action and triggers a [Gift Check](#resolution) — success free, failure costs 1 Ki, the transformation happens either way. Transform into a generic member of a broad category you've seen examples of (a dog, a police officer, a teenage boy) — not a specific individual. Appearance only, no voice. Undetectable unless an observer has specific reason to doubt it, in which case they may roll Insight + Difficulty to see through it. |
 | 2 | Mimicry now includes voice as well as appearance. |
-| 3 | You may now mimic a specific individual — a particular person or animal you've seen in real detail — instead of just a generic category. |
+| 3 | You may now mimic a specific individual — a particular person or animal you've seen in real detail — or a specific inanimate object, instead of just a generic category. |
 | 4 | You no longer need to have seen the specific target in person — a detailed photo or description is enough. You also pick up minor functional traits where it makes sense — their exact fingerprint or biometric signature (fooling biometric scanners). |
 | 5 | The mimicry becomes undetectable even under close technical scrutiny, and lasts indefinitely until you choose to change back — no more Gift Check required to maintain it. |
+
+**Adders**:
+
+- **Instant Revert** (Lesser, 3 pts): once per Scene, revert to your true form as a Fast action instead of a Slow one, with no Gift Check.
+- **Full Spectrum Mimicry** (Lesser, 3 pts): mimicry (Level 2+) extends to scent and body heat too, fooling animal senses and thermal imaging, not just sight and sound.
+- **Living Disguise** (Greater, 6 pts): while mimicking a specific person, you also gain a working instinctive sense of how they'd act or react, enough to improvise their mannerisms convincingly under pressure.
+
+**Limiters**:
+
+- **Size Locked**: the mimicked form must stay within roughly your own mass (±25%). No shifting into something much larger or smaller.
+- **Slow Return**: reverting to your true form always takes the same Slow action and Gift Check as transforming, at every Level.
+- **Betraying Detail**: one small, GM-chosen detail of your true self always persists through the disguise (a birthmark, a habit, a scent), a fixed tell you don't get to choose.
 
 ### Signature Move
 
