@@ -48,16 +48,25 @@ export function createInitialState(data) {
     resources,
     gifts: [], // [{ name, level, adders: string[], limiters: string[] }]
     flaws: [], // [{ name, level }]
+    // Pool-points'-worth of extra capacity bought via Discretionary, added
+    // on top of each target's base pool total. Gifts is tracked separately
+    // (see giftsDiscretionaryContribution) since its per-unit cost varies
+    // with Limiters chosen after purchase.
     discretionaryExtra: {
       Resources: 0,
       Skills: 0,
       Descriptors: 0,
       'Fate Tokens': 0,
       Boons: 0,
-      Gifts: 0,
       Attributes: 0,
     },
     discretionaryCap: null, // GM-set cap on Flaw-earned Discretionary points, null = uncapped
+    // Tracks how many pool-points'-worth of each scalar target (Attributes/
+    // Skills/Resources/Gifts) were funded specifically through step 12's
+    // Discretionary pickers, keyed by item name. Lets step 12 offer real
+    // +/- controls on the actual items (not just an abstract pool bump)
+    // while still letting the item's own step show/adjust the same value.
+    discretionaryPurchases: { Attributes: {}, Skills: {}, Resources: {}, Gifts: {} },
     finishingNotes: '',
   };
 }
@@ -148,8 +157,103 @@ export function giftsPointsSpent(state, data) {
 }
 
 export function giftsPoolRemaining(state, data) {
-  const total = data.giftsPoolTotal + state.discretionaryExtra.Gifts;
+  const total = data.giftsPoolTotal + giftsDiscretionaryContribution(state, data);
   return total - giftsPointsSpent(state, data);
+}
+
+// ---- Discretionary purchases of real items (step 12) ----
+// Attributes/Skills/Resources use a flat per-unit cost, so their
+// discretionaryExtra counters can just be incremented/decremented directly
+// alongside the real state change. Gifts are the exception - a Gift's
+// per-Level cost depends on how many Limiters it has, which can change
+// after the purchase - so Gifts track levels-bought-here per Gift and
+// recompute their pool contribution live instead of a static increment.
+
+export function buyAttributePoint(state, attrName) {
+  state.attributes[attrName] += 1;
+  state.discretionaryPurchases.Attributes[attrName] =
+    (state.discretionaryPurchases.Attributes[attrName] ?? 0) + 1;
+  state.discretionaryExtra.Attributes += 1;
+}
+
+export function refundAttributePoint(state, attrName) {
+  const bought = state.discretionaryPurchases.Attributes[attrName] ?? 0;
+  if (bought <= 0) return;
+  state.attributes[attrName] -= 1;
+  state.discretionaryPurchases.Attributes[attrName] = bought - 1;
+  state.discretionaryExtra.Attributes -= 1;
+}
+
+export function buySkillTier(state, skillName) {
+  state.skills[skillName] += 1;
+  state.discretionaryPurchases.Skills[skillName] =
+    (state.discretionaryPurchases.Skills[skillName] ?? 0) + 1;
+  state.discretionaryExtra.Skills += 1;
+}
+
+export function refundSkillTier(state, skillName) {
+  const bought = state.discretionaryPurchases.Skills[skillName] ?? 0;
+  if (bought <= 0) return;
+  state.skills[skillName] -= 1;
+  state.discretionaryPurchases.Skills[skillName] = bought - 1;
+  state.discretionaryExtra.Skills -= 1;
+}
+
+export function buyResourceLevel(state, data, resourceName) {
+  state.resources[resourceName] += 1;
+  state.discretionaryPurchases.Resources[resourceName] =
+    (state.discretionaryPurchases.Resources[resourceName] ?? 0) + 1;
+  state.discretionaryExtra.Resources += data.resourceLevelCost;
+}
+
+export function refundResourceLevel(state, data, resourceName) {
+  const bought = state.discretionaryPurchases.Resources[resourceName] ?? 0;
+  if (bought <= 0) return;
+  state.resources[resourceName] -= 1;
+  state.discretionaryPurchases.Resources[resourceName] = bought - 1;
+  state.discretionaryExtra.Resources -= data.resourceLevelCost;
+}
+
+export function buyGiftLevel(state, giftName) {
+  let g = state.gifts.find((x) => x.name === giftName);
+  if (!g) {
+    g = { name: giftName, level: 0, adders: [], limiters: [] };
+    state.gifts.push(g);
+  }
+  g.level += 1;
+  state.discretionaryPurchases.Gifts[giftName] = (state.discretionaryPurchases.Gifts[giftName] ?? 0) + 1;
+}
+
+export function refundGiftLevel(state, giftName) {
+  const bought = state.discretionaryPurchases.Gifts[giftName] ?? 0;
+  if (bought <= 0) return;
+  const g = state.gifts.find((x) => x.name === giftName);
+  g.level -= 1;
+  state.discretionaryPurchases.Gifts[giftName] = bought - 1;
+}
+
+export function giftsDiscretionaryContribution(state, data) {
+  let total = 0;
+  Object.entries(state.discretionaryPurchases.Gifts).forEach(([name, levels]) => {
+    if (!levels) return;
+    const g = state.gifts.find((x) => x.name === name);
+    total += levels * giftLevelCost(data, g ? g.limiters.length : 0);
+  });
+  return total;
+}
+
+export function addBoon(state, name, cost, source) {
+  state.boons.push({ name, points: cost.points, tier: cost.tier, source });
+  if (source === 'discretionary') {
+    state.discretionaryExtra.Boons += cost.points;
+  }
+}
+
+export function removeBoon(state, index) {
+  const [removed] = state.boons.splice(index, 1);
+  if (removed?.source === 'discretionary') {
+    state.discretionaryExtra.Boons -= removed.points;
+  }
 }
 
 // Every Flaw in flaws.md is Leveled; points granted equal the level taken.
@@ -167,8 +271,10 @@ export function discretionaryTotal(state, data) {
 export function discretionaryPointsSpent(state, data) {
   let spent = 0;
   Object.entries(state.discretionaryExtra).forEach(([target, extra]) => {
+    if (target === 'Gifts') return; // computed separately, see giftsDiscretionaryContribution
     spent += extra * (data.discretionaryRates[target] ?? 0);
   });
+  spent += giftsDiscretionaryContribution(state, data) * (data.discretionaryRates.Gifts ?? 0);
   const extraDescriptorCount = Object.values(state.extraDescriptors).reduce((a, b) => a + b, 0);
   spent += extraDescriptorCount * (data.discretionaryRates.Descriptors ?? 0);
   return spent;
