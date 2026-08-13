@@ -41,7 +41,7 @@ Each level's effect is cumulative - it keeps every lower level's restriction and
 | Level | Effect |
 |---|---|
 | 1 | Once triggered by real danger, cannot voluntarily disengage from the current fight - must keep engaging until an enemy is defeated or flees. |
-| 2 | Level 1, plus: while triggered, cannot declare a Slow [Action Band](combat.md#action-bands) - full aggression only, no called shots or concentration. |
+| 2 | Level 1, plus: while triggered, cannot declare a Slow [Action Bracket](combat.md#action-brackets) - full aggression only, no called shots or concentration. |
 | 3 | Levels 1-2, plus: must always act against the nearest hostile target - no picking tactically who to engage. |
 | 4 | Levels 1-3, plus: the trigger doesn't end just because the original threat is gone - any new hostile that appears keeps the fight going. |
 | 5 | Levels 1-4, plus: keeps fighting even when badly hurt - won't retreat or stop to protect themselves, only stopping when physically unable to continue (unconscious, restrained, or no hostiles remain). |
@@ -132,7 +132,7 @@ Each level's effect is cumulative - it keeps every lower level's penalty and add
 
 | Level | Effect |
 |---|---|
-| 1 | First round of combat, act last within your declared [Action Band](combat.md#action-bands), regardless of Initiative. |
+| 1 | First round of combat, act last within your declared [Action Bracket](combat.md#action-brackets), regardless of Initiative. |
 | 2 | Level 1, plus: for the first round, Fast actions are treated as Normal and Normal actions are treated as Slow - Slow actions can't be taken that round at all. |
 | 3 | Levels 1-2, plus: unless 1 Ki is spent, they don't act at all in the first round of combat. |
 | 4 | Levels 1-3, plus: while in combat, they act at [Disadvantage](core-mechanic.md#advantage--disadvantage). |
