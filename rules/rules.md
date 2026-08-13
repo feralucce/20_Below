@@ -2,6 +2,57 @@
 
 ## Core Mechanic
 
+**Target number** = Attribute + Difficulty.
+
+**Difficulty** is a number from **0-10**, set by the GM per roll - **0 is nearly impossible, 10 is trivially easy** (inverted from the usual "higher = harder" convention). See [Difficulty Chart](#difficulty-chart) below for the full 11-step ladder.
+
+Roll **2d10** and sum them. Success if the result is **equal to or lower than** the target number.
+
+Target number range: **1** (Attribute 1 + Difficulty 0) to **20** (Attribute 10 + Difficulty 10) - a target of 1 is below the lowest possible roll, i.e. an automatic failure, weighted toward the middle (11) rather than flat.
+
+### Difficulty Chart
+
+An 11-step reference ladder for setting Difficulty, rather than picking a bare number cold:
+
+| Difficulty | Label | Example task |
+|---|---|---|
+| 0 | Nearly Impossible | Catch an arrow out of the air mid-flight |
+| 1 | Extremely Hard | Pick a masterwork lock with no tools, blindfolded |
+| 2 | Very Hard | Scale a sheer, rain-slicked cliff face |
+| 3 | Hard | Convince a hostile guard captain to stand down |
+| 4 | Challenging | Track a careful quarry through a rainstorm |
+| 5 | Moderate | A tense but ordinary skill check under pressure |
+| 6 | Fairly Easy | Pick a simple lock with the right tools |
+| 7 | Easy | Climb a sturdy rope with knots tied in it |
+| 8 | Very Easy | Recall a well-known fact in your field |
+| 9 | Nearly Trivial | Walk a straight line on level ground |
+| 10 | Trivial | Tie your own shoes |
+
+Per-Attribute example tasks (a Fire example vs. an Earth example at the same Difficulty) are deferred until the rest of the system is further along.
+
+**Critical results, regardless of target number:**
+
+- **A roll of 2** (both dice show 1) - critical success.
+- **A roll of 20** (both dice show 10) - critical failure.
+
+### Advantage / Disadvantage
+
+**Advantage** rolls **3d10 and keeps the lowest two** (summed); **Disadvantage** rolls **3d10 and keeps the highest two** (summed) - roll-under, so lower is always better. Usable wherever a specific rule grants it - currently the [Expert/Master Skill Training Tiers](skills.md#training-tiers), a character's off-hand (below), but not restricted to those.
+
+**Off-hand**: performing a task that requires manual dexterity or precision (attacking, fine manipulation, etc.) with your off-hand imposes Disadvantage on the roll. [Ambidextrous](boons.md#trivial) removes this penalty.
+
+### Untrained Rolls
+
+If a character has no applicable Skill for the task, they still roll - but **the Attribute does not apply**. Target number is **Difficulty alone** (0-10), not Attribute + Difficulty. Having an applicable Skill is what lets the Attribute apply at all.
+
+### Time Bands
+
+A standard ladder of duration used wherever a rule needs to name "how long": **Round → Minute (≈10 rounds) → Scene → Day → Month → Year**. The **Round** is the base unit - any duration described elsewhere in the rules is stated in Rounds unless a longer band is explicitly named.
+
+This is intentional: under the 2d10 curve, an untrained character faces poor odds at anything above Difficulty 5 or so, and Difficulty 0 (Nearly Impossible) is a flat impossibility untrained (target 0 is below 2d10's minimum roll of 2).
+
+## Attributes & Traits
+
 ### Attributes
 
 Five attributes, each linked to a classical element. Each pairs a **domain** (narrative flavor) with a **mechanical role** (two sub-stats).
@@ -18,7 +69,7 @@ Attributes are scored **1-10** (1 = lowest, 10 = highest).
 
 #### Sub-Category Allocation
 
-Every Attribute's Mechanical Role is **two sub-stats**. The Attribute's own score is **always the number used to roll** (see [Resolution](#resolution)) - it is never reduced or consumed by the split below.
+Every Attribute's Mechanical Role is **two sub-stats**. The Attribute's own score is **always the number used to roll** (see [Core Mechanic](#core-mechanic)) - it is never reduced or consumed by the split below.
 
 Separately, that same score generates a **pool of points equal to the Attribute's rating**, which the player allocates across its two sub-stats - a player choice, not an even split. An Attribute of 10 both rolls as 10 *and* grants 10 points to divide, e.g. 7 Soak / 3 Potence, or 5/5, or any other division. What each allocated point actually *buys* in each sub-stat is defined case by case, sub-stat by sub-stat.
 
@@ -177,57 +228,6 @@ For every point a character allocates to a sub-stat, they gain one Descriptor - 
 Descriptors are **free at character creation** (no separate cost beyond the point that earns them) and **fixed once chosen**. A character can also buy an extra Descriptor on a sub-stat without raising it: at creation, this costs a flat **1 Discretionary point** per extra Descriptor, no scaling. Buying one after creation instead costs XP, priced alongside the other Skill Training Tier XP costs (still undecided).
 
 Descriptors are the concrete hook a player points to when [arguing a Skill pairing](skills.md#skills-are-not-attribute-locked) - grounding "I'm using Fire here because I'm being *Ruthless*" in an established character fact instead of an improvised justification each time.
-
-### Resolution
-
-**Target number** = Attribute + Difficulty.
-
-**Difficulty** is a number from **0-10**, set by the GM per roll - **0 is nearly impossible, 10 is trivially easy** (inverted from the usual "higher = harder" convention). See [Difficulty Chart](#difficulty-chart) below for the full 11-step ladder.
-
-Roll **2d10** and sum them. Success if the result is **equal to or lower than** the target number.
-
-Target number range: **1** (Attribute 1 + Difficulty 0) to **20** (Attribute 10 + Difficulty 10) - a target of 1 is below the lowest possible roll, i.e. an automatic failure, weighted toward the middle (11) rather than flat.
-
-#### Difficulty Chart
-
-An 11-step reference ladder for setting Difficulty, rather than picking a bare number cold:
-
-| Difficulty | Label | Example task |
-|---|---|---|
-| 0 | Nearly Impossible | Catch an arrow out of the air mid-flight |
-| 1 | Extremely Hard | Pick a masterwork lock with no tools, blindfolded |
-| 2 | Very Hard | Scale a sheer, rain-slicked cliff face |
-| 3 | Hard | Convince a hostile guard captain to stand down |
-| 4 | Challenging | Track a careful quarry through a rainstorm |
-| 5 | Moderate | A tense but ordinary skill check under pressure |
-| 6 | Fairly Easy | Pick a simple lock with the right tools |
-| 7 | Easy | Climb a sturdy rope with knots tied in it |
-| 8 | Very Easy | Recall a well-known fact in your field |
-| 9 | Nearly Trivial | Walk a straight line on level ground |
-| 10 | Trivial | Tie your own shoes |
-
-Per-Attribute example tasks (a Fire example vs. an Earth example at the same Difficulty) are deferred until the rest of the system is further along.
-
-**Critical results, regardless of target number:**
-
-- **A roll of 2** (both dice show 1) - critical success.
-- **A roll of 20** (both dice show 10) - critical failure.
-
-#### Advantage / Disadvantage
-
-**Advantage** rolls **3d10 and keeps the lowest two** (summed); **Disadvantage** rolls **3d10 and keeps the highest two** (summed) - roll-under, so lower is always better. Usable wherever a specific rule grants it - currently the [Expert/Master Skill Training Tiers](skills.md#training-tiers), a character's off-hand (below), but not restricted to those.
-
-**Off-hand**: performing a task that requires manual dexterity or precision (attacking, fine manipulation, etc.) with your off-hand imposes Disadvantage on the roll. [Ambidextrous](boons.md#trivial) removes this penalty.
-
-#### Untrained Rolls
-
-If a character has no applicable Skill for the task, they still roll - but **the Attribute does not apply**. Target number is **Difficulty alone** (0-10), not Attribute + Difficulty. Having an applicable Skill is what lets the Attribute apply at all.
-
-### Time Bands
-
-A standard ladder of duration used wherever a rule needs to name "how long": **Round → Minute (≈10 rounds) → Scene → Day → Month → Year**. The **Round** is the base unit - any duration described elsewhere in the rules is stated in Rounds unless a longer band is explicitly named.
-
-This is intentional: under the 2d10 curve, an untrained character faces poor odds at anything above Difficulty 5 or so, and Difficulty 0 (Nearly Impossible) is a flat impossibility untrained (target 0 is below 2d10's minimum roll of 2).
 
 ## Combat
 
