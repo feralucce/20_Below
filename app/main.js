@@ -44,6 +44,7 @@ const nav = document.getElementById('step-nav');
 const poolSummary = document.getElementById('pool-summary');
 const btnBack = document.getElementById('btn-back');
 const btnNext = document.getElementById('btn-next');
+const btnReset = document.getElementById('btn-reset');
 
 async function loadRulesData() {
   const [creationMd, fateMd, skillsMd, premadeMd, boonsMd, resourcesMd, giftsMd, flawsMd] =
@@ -144,6 +145,23 @@ async function main() {
       currentStep += 1;
       rerenderStep();
     }
+  });
+  let resetArmed = false;
+  let resetTimer = null;
+  btnReset.addEventListener('click', () => {
+    if (!resetArmed) {
+      resetArmed = true;
+      btnReset.textContent = 'Click again to confirm';
+      clearTimeout(resetTimer);
+      resetTimer = setTimeout(() => {
+        resetArmed = false;
+        btnReset.textContent = 'Reset';
+      }, 4000);
+      return;
+    }
+    clearTimeout(resetTimer);
+    localStorage.removeItem(STORAGE_KEY);
+    window.location.reload();
   });
 
   rerenderStep();

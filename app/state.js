@@ -284,6 +284,10 @@ export function discretionaryRemaining(state, data) {
   return discretionaryTotal(state, data) - discretionaryPointsSpent(state, data);
 }
 
+export function skillTierName(data, tier) {
+  return data.skillTiers.find((t) => t.tier === tier)?.name ?? String(tier);
+}
+
 // ---- Descriptors ----
 
 export function descriptorSlots(state, subStatName) {
@@ -303,7 +307,7 @@ export function computeFiguredCharacteristics(state) {
     Defense: 10 - s.Atropos,
     'Movement Rate': 5 + state.attributes.Air,
     'Carrying Capacity': Math.pow(s.Potence, 2) * 10,
-    Ki: ki,
+    Ki: Math.ceil(ki),
   };
 }
 
