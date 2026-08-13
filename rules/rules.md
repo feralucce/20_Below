@@ -55,9 +55,21 @@ A standard ladder of duration used wherever a rule needs to name "how long": **R
 
 This is intentional: under the 2d10 curve, an untrained character faces poor odds at anything above Difficulty 5 or so, and Difficulty 0 (Nearly Impossible) is a flat impossibility untrained (target 0 is below 2d10's minimum roll of 2).
 
-## Attributes & Traits
+### Ki Infusion
 
-### Attributes
+Covers **all three attack types** - Physical, Social, and Mental - with the same shape and the same currency. The baseline attack die is raw and unboosted - `d10` vs. the defender's wall (Soak/Presence/Psyche as appropriate), so a wall of 10 fully negates it, guaranteed (0% connect). Before the roll, a player may spend **1 Ki per individual die** to add their own matching sub-stat (**Ferocity** for Physical, **Presence** for Social, **Psyche** for Mental) to that specific die's result - "pushing" the attack. A boosted die is compared as `d10 + [matching sub-stat]` vs. the wall, same threshold rule (result > wall connects).
+
+This is a **direct Ki spend**, the same category as [spending Ki to preserve a Health Level](#ki-spend-to-preserve-a-health-level) and [Bump Action Bracket](fate.md#ki-the-pool-formerly-risk-pool) - **not** a Fate Token spend, so it does **not** trigger the [Fatigue Check](fate.md#fatigue-check) and does **not** count against [Stamina's per-encounter spend cap](fate.md#staminas-job).
+
+Full negation is still the honest baseline: an unboosted attack against a maxed wall can never get through, but a player willing to spend Ki can crack even a Soak/Presence/Psyche of 10 - a boosted die with a matching sub-stat of 10 is a guaranteed connect, while a rating of 2 only gives a 20% chance per boosted die.
+
+### Ki Spend to Preserve a Health Level
+
+A player may spend **1 point from Ki** (the pool - distinct from [Fate Tokens](fate.md), the resource players earn/spend) to **cancel the loss of one Health Level**, at a cost of 1 Ki per Level preserved. Multiple Ki can be spent to preserve multiple Levels.
+
+## Attributes
+
+### The Elements
 
 Five attributes, each linked to a classical element. Each pairs a **domain** (narrative flavor) with a **mechanical role** (two sub-stats).
 
@@ -71,7 +83,7 @@ Five attributes, each linked to a classical element. Each pairs a **domain** (na
 
 Attributes are scored **1-10** (1 = lowest, 10 = highest).
 
-#### Sub-Category Allocation
+### Sub-Category Allocation
 
 Every Attribute's Mechanical Role is **two sub-stats**. The Attribute's own score is **always the number used to roll** (see [Core Mechanic](#core-mechanic)) - it is never reduced or consumed by the split below.
 
@@ -79,18 +91,27 @@ Separately, that same score generates a **pool of points equal to the Attribute'
 
 **This allocation is permanent.** Once a point is spent into a sub-stat, it's spent - there's no reallocating a pair's split later, same as Descriptors being fixed once chosen.
 
-#### Health Levels
+### Sub-Stat Descriptors
 
-**Health Levels are a count of discrete hit-boxes**, not a numeric HP pool. Each Health Level can absorb damage **once** - a binary hit-box, not a container with its own capacity.
+For every point a character allocates to a sub-stat, they gain one Descriptor - a short player-chosen word or phrase capturing one specific flavor of that sub-stat for this character. E.g. 3 points in Soak might yield *Iron-skinned, Padded, Unyielding* - three distinct ways the character shrugs off harm, not three copies of the same idea.
 
-Every character starts with **5 Health Levels**, flat, before anything else is added.
+Descriptors are **free at character creation** (no separate cost beyond the point that earns them) and **fixed once chosen**. A character can also buy an extra Descriptor on a sub-stat without raising it: at creation, this costs a flat **1 Discretionary point** per extra Descriptor, no scaling. Buying one after creation instead costs XP, priced alongside the other Skill Training Tier XP costs (still undecided).
 
-- **`PC Health Levels = 5 + Health (sub-stat)`** - the flat baseline, plus whatever a PC invests in Water's Health sub-stat.
-- **NPCs will most often just be the flat 5**, with no Health sub-stat added - minor/"weenie" NPCs go down in a single connecting hit, while PCs are built tougher by default.
+Descriptors are the concrete hook a player points to when [arguing a Skill pairing](skills.md#skills-are-not-attribute-locked) - grounding "I'm using Fire here because I'm being *Ruthless*" in an established character fact instead of an improvised justification each time.
 
-At **0 Health Levels**, a character falls unconscious and can't act. Health Levels can still be tracked into negative territory from further damage - at **Health Levels ≤ −(Health sub-stat)**, the character dies. Ordinarily this negative range plays out off-screen, since an unconscious character can't act or be aware of it; [Unstoppable](boons.md#major) is the exception that lets a character stay conscious and act throughout that same negative range instead of blacking out at 0.
+### The Passive Wall Triad - Soak, Presence, Psyche
 
-**Crossing zero**: a single attack can never carry a character straight past 0 into negative territory. If enough connecting dice from one attack would carry a character's Health Levels below 0, the excess is simply discarded - they land exactly at 0, no further, no matter how many dice connected. **Once a character is already at 0 Health Levels** - unconscious under the rule above, or still conscious via Unstoppable - **any further attack can only remove 1 Health Level, total, regardless of how many dice connect.**
+Presence (Fire) and Psyche (Air) both mirror **Soak exactly** - the identical per-die mechanic, just resisting a different attack type. All three sub-stats are **passive gives**, the same way Health is: a flat number a character simply has, doing its job automatically with no roll or spend required.
+
+- **Soak** - wall against **Physical** damage dice.
+- **Presence** - wall against **Social** attack dice.
+- **Psyche** - wall against **Mental** attack dice.
+
+For all three: each attack die is resolved individually against the relevant wall stat. Die ≤ wall stat is fully absorbed; die > wall stat connects. A wall stat of 10 guarantees 0% connect chance per die - true, complete negation - unless the attacker spends **Ki** (1 per die) to add their own matching Attack sub-stat to that specific die, per [Ki Infusion](#ki-infusion). What a connecting Social or Mental die actually costs the defender is not yet decided.
+
+**Presence and Psyche are self-paired attacker/wall stats.** Physical splits the attacker/wall pair across two Attributes (a weapon sets the dice, Earth's Soak is the wall). Social and Mental don't get their own separate Attribute the way Physical does, and there's no "weapon" equivalent for words or force of personality, so **Presence and Psyche each do both jobs on their own stat**: a character's Presence sets how many d10 they roll when making a Social attack, resolved die-by-die against the *target's* Presence acting as their wall. Psyche works identically for Mental attacks. All three attack types boost a die via [Ki Infusion](#ki-infusion), 1 Ki per die.
+
+### Earth
 
 #### Physical Attacks - Weapon Damage & Per-Die Resolution
 
@@ -148,48 +169,21 @@ Potence (Earth's other sub-stat: raw physical power/strength - carrying capacity
 | Castle gate / fortress wall | 9 | 8 |
 | High-security modern vault | 10 | 8 |
 
-#### The Passive Wall Triad - Soak, Presence, Psyche
+### Air
 
-Presence (Fire) and Psyche (Air) both mirror **Soak exactly** - the identical per-die mechanic, just resisting a different attack type. All three sub-stats are **passive gives**, the same way Health is: a flat number a character simply has, doing its job automatically with no roll or spend required.
+#### Sanity
 
-- **Soak** - wall against **Physical** damage dice.
-- **Presence** - wall against **Social** attack dice.
-- **Psyche** - wall against **Mental** attack dice.
+Sanity mirrors Health Levels too, tracking a character's grip on their own mind against Mental attack.
 
-For all three: each attack die is resolved individually against the relevant wall stat. Die ≤ wall stat is fully absorbed; die > wall stat connects. A wall stat of 10 guarantees 0% connect chance per die - true, complete negation - unless the attacker spends **Ki** (1 per die) to add their own matching Attack sub-stat to that specific die, per [Ki Infusion](#ki-infusion). What a connecting Social or Mental die actually costs the defender is not yet decided.
+- **`PC Sanity = 5 + Psyche`.** NPCs default to a flat 5. Each Level is a binary hit-box.
+- **Crossing zero** works identically to Health Levels.
+- **General recovery** matches Health/Poise: Short Rest heals `Psyche ÷ 2` (round up); Full Night's Rest heals fully.
 
-**Presence and Psyche are self-paired attacker/wall stats.** Physical splits the attacker/wall pair across two Attributes (a weapon sets the dice, Earth's Soak is the wall). Social and Mental don't get their own separate Attribute the way Physical does, and there's no "weapon" equivalent for words or force of personality, so **Presence and Psyche each do both jobs on their own stat**: a character's Presence sets how many d10 they roll when making a Social attack, resolved die-by-die against the *target's* Presence acting as their wall. Psyche works identically for Mental attacks. All three attack types boost a die via [Ki Infusion](#ki-infusion), 1 Ki per die.
+**At 0 Sanity, a character is Overwhelmed**: they gain a temporary negative mental trait (a Flaw - exact mechanic to be defined later) and are at Disadvantage on rolls. They can still act on their own. Overwhelmed clears when the character is removed from the stimulus that caused it and given a chance to rest, or by spending 1 Ki, which also refills Sanity to full.
 
-#### Klotho
+**Below 0, a character is Shattered**: panicky, babbling, unable to act on their own - they have to be led or dragged. Shattered clears when 1 Ki is spent or a Full Night's Rest passes, either of which restores Sanity only to 1, not fully - normal recovery resumes from there on the next rest. **Dropping below 0 always leaves a permanent mental scar**, regardless of how the character recovers afterward, even a Ki-funded refill doesn't erase it. The scar mechanic itself is not yet defined - flagged for a later, deeper pass.
 
-Two passive functions, both "gives" like Health/Soak/Presence/Psyche - no roll, no spend:
-
-1. **Ki Regeneration** - a Short Rest restores `Klotho ÷ 2` Ki (round up); a Full Night's Rest restores Ki fully. See [Ki's refill](fate.md#fatigue-check).
-2. **Lucky Number** - a character's lucky number equals their **Klotho rating**. Whenever **any die** rolled for that character shows a result **equal to their Klotho rating**, they immediately gain **1 Fate Token** - automatic, no choice, no cost.
-
-#### Ki Infusion
-
-Covers **all three attack types** - Physical, Social, and Mental - with the same shape and the same currency. The baseline attack die is raw and unboosted - `d10` vs. the defender's wall (Soak/Presence/Psyche as appropriate), so a wall of 10 fully negates it, guaranteed (0% connect). Before the roll, a player may spend **1 Ki per individual die** to add their own matching sub-stat (**Ferocity** for Physical, **Presence** for Social, **Psyche** for Mental) to that specific die's result - "pushing" the attack. A boosted die is compared as `d10 + [matching sub-stat]` vs. the wall, same threshold rule (result > wall connects).
-
-This is a **direct Ki spend**, the same category as [spending Ki to preserve a Health Level](#ki-spend-to-preserve-a-health-level) and [Bump Action Bracket](fate.md#ki-the-pool-formerly-risk-pool) - **not** a Fate Token spend, so it does **not** trigger the [Fatigue Check](fate.md#fatigue-check) and does **not** count against [Stamina's per-encounter spend cap](fate.md#staminas-job).
-
-Full negation is still the honest baseline: an unboosted attack against a maxed wall can never get through, but a player willing to spend Ki can crack even a Soak/Presence/Psyche of 10 - a boosted die with a matching sub-stat of 10 is a guaranteed connect, while a rating of 2 only gives a 20% chance per boosted die.
-
-#### Ki Spend to Preserve a Health Level
-
-A player may spend **1 point from Ki** (the pool - distinct from [Fate Tokens](fate.md), the resource players earn/spend) to **cancel the loss of one Health Level**, at a cost of 1 Ki per Level preserved. Multiple Ki can be spent to preserve multiple Levels.
-
-#### Health Level Recovery
-
-- **Short Rest**: heal Health Levels equal to your Health sub-stat divided by 2, round up.
-- **Full Night's Rest**: heal all lost Health Levels, back to full.
-- **Reduced below 0 Health Levels**: instead of the rates above, recover 1 Health Level per day of rest until back to 0.
-
-#### Battle Scars
-
-Dropping to 0 Health Levels leaves a permanent mark - a scar, a limp, a changed voice, whatever fits the wound. **Purely cosmetic, no mechanical effect.** The [Healing](gifts.md#healing) and [Regeneration](gifts.md#regeneration) Gifts both grant immunity to it, for the target they're used on.
-
-Dropping below 0 Health Levels can instead impose a genuine [Flaw](flaws.md), lasting until the character is fully healed back to 0. GM's call, in consultation with the player, on which Flaw fits the harm taken.
+### Fire
 
 #### Poise
 
@@ -205,17 +199,41 @@ Poise mirrors [Health Levels](#health-levels), tracking composure under Social a
 
 **Poise scars**: dropping to 0 leaves a purely cosmetic social tell (a nervous habit, a reputation quirk), no mechanical effect. No Gift currently grants immunity to this - intentional.
 
-#### Sanity
+### Water
 
-Sanity mirrors Health Levels too, tracking a character's grip on their own mind against Mental attack.
+#### Health Levels
 
-- **`PC Sanity = 5 + Psyche`.** NPCs default to a flat 5. Each Level is a binary hit-box.
-- **Crossing zero** works identically to Health Levels.
-- **General recovery** matches Health/Poise: Short Rest heals `Psyche ÷ 2` (round up); Full Night's Rest heals fully.
+**Health Levels are a count of discrete hit-boxes**, not a numeric HP pool. Each Health Level can absorb damage **once** - a binary hit-box, not a container with its own capacity.
 
-**At 0 Sanity, a character is Overwhelmed**: they gain a temporary negative mental trait (a Flaw - exact mechanic to be defined later) and are at Disadvantage on rolls. They can still act on their own. Overwhelmed clears when the character is removed from the stimulus that caused it and given a chance to rest, or by spending 1 Ki, which also refills Sanity to full.
+Every character starts with **5 Health Levels**, flat, before anything else is added.
 
-**Below 0, a character is Shattered**: panicky, babbling, unable to act on their own - they have to be led or dragged. Shattered clears when 1 Ki is spent or a Full Night's Rest passes, either of which restores Sanity only to 1, not fully - normal recovery resumes from there on the next rest. **Dropping below 0 always leaves a permanent mental scar**, regardless of how the character recovers afterward, even a Ki-funded refill doesn't erase it. The scar mechanic itself is not yet defined - flagged for a later, deeper pass.
+- **`PC Health Levels = 5 + Health (sub-stat)`** - the flat baseline, plus whatever a PC invests in Water's Health sub-stat.
+- **NPCs will most often just be the flat 5**, with no Health sub-stat added - minor/"weenie" NPCs go down in a single connecting hit, while PCs are built tougher by default.
+
+At **0 Health Levels**, a character falls unconscious and can't act. Health Levels can still be tracked into negative territory from further damage - at **Health Levels ≤ −(Health sub-stat)**, the character dies. Ordinarily this negative range plays out off-screen, since an unconscious character can't act or be aware of it; [Unstoppable](boons.md#major) is the exception that lets a character stay conscious and act throughout that same negative range instead of blacking out at 0.
+
+**Crossing zero**: a single attack can never carry a character straight past 0 into negative territory. If enough connecting dice from one attack would carry a character's Health Levels below 0, the excess is simply discarded - they land exactly at 0, no further, no matter how many dice connected. **Once a character is already at 0 Health Levels** - unconscious under the rule above, or still conscious via Unstoppable - **any further attack can only remove 1 Health Level, total, regardless of how many dice connect.**
+
+#### Health Level Recovery
+
+- **Short Rest**: heal Health Levels equal to your Health sub-stat divided by 2, round up.
+- **Full Night's Rest**: heal all lost Health Levels, back to full.
+- **Reduced below 0 Health Levels**: instead of the rates above, recover 1 Health Level per day of rest until back to 0.
+
+#### Battle Scars
+
+Dropping to 0 Health Levels leaves a permanent mark - a scar, a limp, a changed voice, whatever fits the wound. **Purely cosmetic, no mechanical effect.** The [Healing](gifts.md#healing) and [Regeneration](gifts.md#regeneration) Gifts both grant immunity to it, for the target they're used on.
+
+Dropping below 0 Health Levels can instead impose a genuine [Flaw](flaws.md), lasting until the character is fully healed back to 0. GM's call, in consultation with the player, on which Flaw fits the harm taken.
+
+### Moira
+
+#### Klotho
+
+Two passive functions, both "gives" like Health/Soak/Presence/Psyche - no roll, no spend:
+
+1. **Ki Regeneration** - a Short Rest restores `Klotho ÷ 2` Ki (round up); a Full Night's Rest restores Ki fully. See [Ki's refill](fate.md#fatigue-check).
+2. **Lucky Number** - a character's lucky number equals their **Klotho rating**. Whenever **any die** rolled for that character shows a result **equal to their Klotho rating**, they immediately gain **1 Fate Token** - automatic, no choice, no cost.
 
 #### Defense (Derived Stat)
 
@@ -224,14 +242,6 @@ Moira's combat sub-stat is named **Atropos**, after the Fate who cuts the thread
 **Defense = 10 − Atropos.**
 
 Defense is what an attacker's roll actually targets: **Defense becomes the attacker's Difficulty** when they attack this character (see the [Difficulty Chart](#difficulty-chart)). Since Difficulty runs 0 (hardest) to 10 (trivial), the subtraction inverts Atropos correctly: Atropos 0 → Defense 10 (trivial to hit), Atropos 10 → Defense 0 (nearly impossible to hit).
-
-#### Sub-Stat Descriptors
-
-For every point a character allocates to a sub-stat, they gain one Descriptor - a short player-chosen word or phrase capturing one specific flavor of that sub-stat for this character. E.g. 3 points in Soak might yield *Iron-skinned, Padded, Unyielding* - three distinct ways the character shrugs off harm, not three copies of the same idea.
-
-Descriptors are **free at character creation** (no separate cost beyond the point that earns them) and **fixed once chosen**. A character can also buy an extra Descriptor on a sub-stat without raising it: at creation, this costs a flat **1 Discretionary point** per extra Descriptor, no scaling. Buying one after creation instead costs XP, priced alongside the other Skill Training Tier XP costs (still undecided).
-
-Descriptors are the concrete hook a player points to when [arguing a Skill pairing](skills.md#skills-are-not-attribute-locked) - grounding "I'm using Fire here because I'm being *Ruthless*" in an established character fact instead of an improvised justification each time.
 
 ## Combat
 
