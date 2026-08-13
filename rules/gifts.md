@@ -601,6 +601,30 @@ Once you've marked someone, the hunt runs itself. Part of your attention stays f
 - **Visible Focus**: your intense focus on the marked target is obvious to onlookers. Disadvantage on Stealth or Deception rolls made against anyone aware you have a mark active.
 - **Personal Vendetta**: you can only mark someone who's wronged you or someone you care about, GM's call, not an arbitrary target.
 
+### Peripheral
+
+You fade from notice and memory. Not literal invisibility - people can still see you if they look - but nothing about you holds their attention or sticks in their mind afterward.
+
+| Level | Effect |
+|---|---|
+| 1 | Activating is a Fast action and triggers a **Gift Check** - success free, failure costs 1 Ki, the effect happens either way. For the rest of the Scene, anyone not already actively focused on you must beat a **Perception + Difficulty** roll to notice what you're doing, and even on a success, they're at **Disadvantage** recalling details about you afterward. |
+| 2 | Anyone who briefly loses sight of you (you leave a room, turn a corner, get lost in a crowd) forgets they saw you at all within a few minutes, unless something jogs their memory. |
+| 3 | The effect now holds even mid-conversation - if you go quiet or step back, people naturally lose their conversational thread about you and move on, without it feeling unnatural to them. |
+| 4 | You may extend the effect to one other person you're touching, bringing them into your own obscurity for as long as contact holds. |
+| 5 | Once per Scene, spend **1 Ki** to retroactively erase yourself from the last few minutes of everyone present's memory - as far as they can recall, you were never part of what just happened. |
+
+**Adders**:
+
+- **Selective Presence** (Lesser, 3 pts): choose specific individuals to be exempt from the effect at will - they perceive and remember you normally, everyone else doesn't.
+- **Fading Trail** (Lesser, 3 pts): physical evidence you leave behind (footprints, fingerprints, a dropped item) is similarly overlooked or dismissed, not just your presence itself.
+- **Group Obscurity** (Greater, 6 pts): Level 4's touch-extension covers everyone in a chain of physical contact at once, not just one other person.
+
+**Limiters**:
+
+- **Breaks on Contact**: any direct physical interaction (a touch, a handshake, being bumped into) instantly ends the effect for that Scene.
+- **No Recordings**: the effect doesn't fool cameras, recordings, or other non-living observation - only living memory and attention.
+- **Loud Undoes It**: raising your voice, running, or otherwise drawing deliberate attention immediately breaks the effect.
+
 ### Possession
 
 Beyond command, beyond obedience - you can push your own consciousness into someone else's body outright, shoving them into the passenger seat while you take the wheel. Not persuasion. Occupation.
