@@ -1,4 +1,4 @@
-import { findSection, splitByHeading } from './markdown.js';
+import { findSection, splitByHeading, extractTableAfter } from './markdown.js';
 
 const ADDER_ITEM = /^- \*\*(.+?)\*\* \((Lesser|Greater), (\d+) ?pts?\):?\s*(.*)$/;
 const LIMITER_ITEM = /^- \*\*(.+?)\*\*:?\s*(.*)$/;
@@ -65,7 +65,19 @@ export function parseGifts(giftsMd) {
       })
       .filter(Boolean);
 
-    return { name: title, flagged, adders, limiters, markdown: body };
+    // 40 of 41 Gifts have a standard "| Level | Effect |" table right after
+    // the intro prose. The one exception (Alternate Form) uses a custom
+    // Pool/Build-menu structure instead - `levels` is null for it, and
+    // callers fall back to the raw markdown for that case.
+    let levels = null;
+    try {
+      const table = extractTableAfter(body, '| Level | Effect |');
+      levels = table.rows.map((row) => ({ level: Number(row.Level), effect: row.Effect }));
+    } catch {
+      // no standard Level table for this Gift - leave levels null
+    }
+
+    return { name: title, flagged, adders, limiters, levels, markdown: body };
   });
 }
 

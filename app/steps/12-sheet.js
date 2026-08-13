@@ -14,9 +14,14 @@ export default {
     const figured = computeFiguredCharacteristics(state);
     const fate = startingFateTokens(state, data);
 
-    const boonEntries = state.boons.map((b) =>
-      el('li', {}, b.tier ? `${b.name} (${b.tier})` : `${b.name} (${b.points} pts)`),
-    );
+    const boonEntries = state.boons.map((b) => {
+      const boonData = data.boons.find((d) => d.name === b.name);
+      const label = b.tier ? `${b.name} (${b.tier})` : `${b.name} (${b.points} pts)`;
+      return el('li', {}, [
+        el('strong', {}, label + ': '),
+        boonData ? el('span', { html: inline(boonData.effect) }) : null,
+      ]);
+    });
 
     const resourceEntries = data.resources
       .filter((r) => state.resources[r.name] > 0)
@@ -31,13 +36,38 @@ export default {
 
     const giftEntries = state.gifts
       .filter((g) => g.level > 0)
-      .map((g) =>
-        el(
-          'li',
-          {},
-          `${g.name} (Level ${g.level})${g.adders.length ? ' - Adders: ' + g.adders.join(', ') : ''}${g.limiters.length ? ' - Limiters: ' + g.limiters.join(', ') : ''}`,
-        ),
-      );
+      .map((g) => {
+        const giftData = data.gifts.find((d) => d.name === g.name);
+        const levelRows = giftData?.levels
+          ? el(
+              'ol',
+              {},
+              giftData.levels
+                .filter((l) => l.level <= g.level)
+                .map((l) => el('li', { html: inline(l.effect) })),
+            )
+          : giftData
+            ? el('p', { class: 'detail' }, "No standard Level table for this Gift - see gifts.md for its full effect.")
+            : null;
+        const adderTexts = (giftData?.adders ?? []).filter((a) => g.adders.includes(a.name));
+        const limiterTexts = (giftData?.limiters ?? []).filter((l) => g.limiters.includes(l.name));
+        return el('li', {}, [
+          el('strong', {}, `${g.name} (Level ${g.level})`),
+          levelRows,
+          adderTexts.length
+            ? el('p', {}, [
+                el('strong', {}, 'Adders: '),
+                el('span', { html: adderTexts.map((a) => `${a.name} (${a.tier}) - ${inline(a.text)}`).join('; ') }),
+              ])
+            : null,
+          limiterTexts.length
+            ? el('p', {}, [
+                el('strong', {}, 'Limiters: '),
+                el('span', { html: limiterTexts.map((l) => `${l.name} - ${inline(l.text)}`).join('; ') }),
+              ])
+            : null,
+        ]);
+      });
 
     const sheet = el('div', { class: 'sheet', id: 'character-sheet' }, [
       el('h2', {}, state.name || 'Unnamed Character'),

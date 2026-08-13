@@ -261,11 +261,27 @@ export function flawsPointsGranted(state) {
   return state.flaws.reduce((sum, f) => sum + f.level, 0);
 }
 
+// Unspent points from the base 10-point Boons Pool convert 1:1 into
+// Discretionary rather than being lost. Only counts Boons bought with
+// source 'pool' - a Boon bought *with* Discretionary points doesn't feed
+// back into this, which would just be moving the same points in a circle.
+export function unspentBoonsPoolPoints(state, data) {
+  const poolFundedSpent = state.boons
+    .filter((b) => b.source !== 'discretionary')
+    .reduce((sum, b) => sum + b.points, 0);
+  return Math.max(0, data.boonsPoolTotal - poolFundedSpent);
+}
+
+// The GM's cap (see step 12) applies only to Flaw-earned Discretionary,
+// same as it always has - Boons Pool leftover isn't a stacking-for-profit
+// lever the way Flaws can be, it's just "don't lose points you didn't
+// spend," so it always converts in full regardless of the cap.
 export function discretionaryTotal(state, data) {
-  const earned = data.discretionaryBase + flawsPointsGranted(state);
-  return state.discretionaryCap != null
-    ? Math.min(earned, data.discretionaryBase + state.discretionaryCap)
-    : earned;
+  const flawBonus =
+    state.discretionaryCap != null
+      ? Math.min(flawsPointsGranted(state), state.discretionaryCap)
+      : flawsPointsGranted(state);
+  return data.discretionaryBase + flawBonus + unspentBoonsPoolPoints(state, data);
 }
 
 export function discretionaryPointsSpent(state, data) {

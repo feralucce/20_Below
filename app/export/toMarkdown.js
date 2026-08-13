@@ -53,7 +53,11 @@ export function buildMarkdown(state, data) {
   push('## Boons');
   push();
   if (state.boons.length === 0) push('None.');
-  state.boons.forEach((b) => push(`- **${b.name}** (${b.tier ?? `${b.points} pts`})`));
+  state.boons.forEach((b) => {
+    const boonData = data.boons.find((d) => d.name === b.name);
+    const effect = boonData ? boonData.effect : '';
+    push(`- **${b.name}** (${b.tier ?? `${b.points} pts`}): ${effect}`);
+  });
   push();
 
   push('## Resources');
@@ -74,11 +78,30 @@ export function buildMarkdown(state, data) {
   state.gifts
     .filter((g) => g.level > 0)
     .forEach((g) => {
-      push(`- **${g.name}** (Level ${g.level})`);
-      if (g.adders.length) push(`  - Adders: ${g.adders.join(', ')}`);
-      if (g.limiters.length) push(`  - Limiters: ${g.limiters.join(', ')}`);
+      push(`- **${g.name}** (Level ${g.level}):`);
+      push();
+      const giftData = data.gifts.find((d) => d.name === g.name);
+      if (giftData?.levels) {
+        giftData.levels
+          .filter((l) => l.level <= g.level)
+          .forEach((l) => push(`  ${l.level}. ${l.effect}`));
+      } else if (giftData) {
+        push(`  (see [gifts.md](gifts.md#${g.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}) for this Gift's full effect - no standard Level table to summarize here)`);
+      }
+      const adderTexts = (giftData?.adders ?? []).filter((a) => g.adders.includes(a.name));
+      const limiterTexts = (giftData?.limiters ?? []).filter((l) => g.limiters.includes(l.name));
+      if (adderTexts.length) {
+        push();
+        push('  Adders:');
+        adderTexts.forEach((a) => push(`  - **${a.name}** (${a.tier}): ${a.text}`));
+      }
+      if (limiterTexts.length) {
+        push();
+        push('  Limiters:');
+        limiterTexts.forEach((l) => push(`  - **${l.name}**: ${l.text}`));
+      }
+      push();
     });
-  push();
   push(data.giftCheckText);
   push();
 
