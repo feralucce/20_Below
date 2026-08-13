@@ -1,10 +1,10 @@
 # Weapons
 
-Each weapon's rating is how many d10 it rolls on a hit, resolved per-die against the defender's Soak, as described in [core-mechanic.md](core-mechanic.md#physical-attacks--weapon-damage--per-die-resolution).
+Each weapon's rating is how many d10 it rolls on a hit, resolved per-die against the defender's Soak, as described in [rules.md](rules.md#physical-attacks--weapon-damage--per-die-resolution).
 
 ## Basic Weapons
 
-Range is given as **Normal / Long**, in meters - the same unit as [Movement Rate](combat.md#movement--range). Long range's exact mechanical penalty (most likely Disadvantage) isn't defined yet.
+Range is given as **Normal / Long**, in meters - the same unit as [Movement Rate](rules.md#movement--range). Long range's exact mechanical penalty (most likely Disadvantage) isn't defined yet.
 
 | Weapon | Dice | Range (Normal / Long) | Ammo |
 |---|---|---|---|
