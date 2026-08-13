@@ -81,7 +81,7 @@ This is a creation-time budget only - advancing further after play starts costs 
 
 ## 8. Boons
 
-Spend your **10-point Boons Pool** on [Boons](boons.md), priced at Trivial (1), Lesser (3), Greater (5), or Legendary (7). Boons are small, permanent perks - not combat-defining powers like Gifts, more the "useful edges" a character has (a contact, a knack, a minor talent). You can spend across multiple tiers as long as the total fits your 10 points.
+Spend your **10-point Boons Pool** on [Boons](boons.md), priced at Trivial (1), Lesser (3), Greater (5), or Legendary (7). Boons are small, permanent perks - not combat-defining powers like Gifts, more the "useful edges" a character has (a contact, a knack, a minor talent). You can spend across multiple tiers as long as the total fits your 10 points. Any Boons Pool points left unspent convert 1:1 into Discretionary points (step 12) rather than being lost.
 
 ## 9. Resources
 
@@ -99,7 +99,7 @@ A Flaw with no real effect on play grants no points - if it doesn't actually mak
 
 ## 12. Discretionary Points
 
-Every character starts with **10 Discretionary points**, flat, plus whatever you picked up from Flaws in step 11. These don't convert 1:1 into every pool - spending them costs more the closer you get to raw supernatural power:
+Every character starts with **10 Discretionary points**, flat, plus whatever you picked up from Flaws in step 11 and any unspent Boons Pool points from step 8, converted 1:1. These don't convert 1:1 into every pool - spending them costs more the closer you get to raw supernatural power:
 
 | Target | Discretionary points per point |
 |---|---|
