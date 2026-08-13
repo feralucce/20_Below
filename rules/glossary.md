@@ -46,7 +46,7 @@ Terms worth knowing before you go through [Character Creation](character-creatio
 
 **Gift** — A supernatural power a character can have - magic, psionics, mutation, divine blessing, or whatever fits the campaign's genre. Each Gift is unique and narrow in scope, a specific named capability rather than a broad umbrella, and has 5 cumulative levels representing how big, strong, or wide its effect grows.
 
-**Gift Check** — A resource-risk roll for using certain Gifts: 2d10 against current Ki, roll-under. Success is free; failure costs 1 Ki.
+**Gift Check** — A resource-risk roll for using certain Gifts: 2d10 against current Ki + Stamina, roll-under. Success is free; failure costs 1 Ki.
 
 **Health** — One of Water's two sub-stats, the depth of the well you draw endurance from. Determines your Health Levels (`5 + Health`) - how many hits you can take before going down.
 
