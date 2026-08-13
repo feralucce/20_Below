@@ -10,6 +10,8 @@ Roll **2d10** and sum them. Success if the result is **equal to or lower than** 
 
 Target number range: **1** (Attribute 1 + Difficulty 0) to **20** (Attribute 10 + Difficulty 10) - a target of 1 is below the lowest possible roll, i.e. an automatic failure, weighted toward the middle (11) rather than flat.
 
+**A Skill isn't locked to one Attribute.** Any Skill can pair with any of the five, provided the player can argue the pairing to the GM's satisfaction - grounded in one of the character's own [Descriptors](#sub-stat-descriptors), a specific chosen flavor of a sub-stat ("I'm using Fire here because I'm being *Ruthless*"), rather than an improvised justification from scratch. See [Skills](skills.md#skills-are-not-attribute-locked) for the full rule.
+
 ### Difficulty Chart
 
 An 11-step reference ladder for setting Difficulty, rather than picking a bare number cold:
