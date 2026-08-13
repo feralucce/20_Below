@@ -1,5 +1,5 @@
-import { el } from '../ui.js';
-import { computeFiguredCharacteristics, startingFateTokens } from '../state.js';
+import { el, renderMarkdown } from '../ui.js';
+import { computeFiguredCharacteristics, startingFateTokens, skillTierName } from '../state.js';
 import { downloadMarkdown } from '../export/toMarkdown.js';
 import { downloadPdf } from '../export/toPdf.js';
 
@@ -9,6 +9,39 @@ export default {
   render(container, { state, data }) {
     const figured = computeFiguredCharacteristics(state);
     const fate = startingFateTokens(state, data);
+
+    const boonEntries = state.boons.map((b) => {
+      const boonData = data.boons.find((d) => d.name === b.name);
+      return el('li', {}, [
+        el('strong', {}, `${b.name} (${b.tier ?? ''} ${b.points} pts)`),
+        boonData ? el('div', { class: 'detail', html: renderMarkdown(boonData.effect) }) : null,
+      ]);
+    });
+
+    const resourceEntries = data.resources
+      .filter((r) => state.resources[r.name] > 0)
+      .map((r) => {
+        const level = state.resources[r.name];
+        const desc = r.levels[level] ?? '';
+        return el('li', {}, [
+          el('strong', {}, `${r.name}: Level ${level}`),
+          el('div', { class: 'detail', html: renderMarkdown(desc) }),
+        ]);
+      });
+
+    const giftEntries = state.gifts
+      .filter((g) => g.level > 0)
+      .map((g) => {
+        const giftData = data.gifts.find((d) => d.name === g.name);
+        return el('li', {}, [
+          el(
+            'strong',
+            {},
+            `${g.name} (Level ${g.level})${g.adders.length ? ' - Adders: ' + g.adders.join(', ') : ''}${g.limiters.length ? ' - Limiters: ' + g.limiters.join(', ') : ''}`,
+          ),
+          giftData ? el('div', { class: 'detail', html: renderMarkdown(giftData.markdown) }) : null,
+        ]);
+      });
 
     const sheet = el('div', { class: 'sheet', id: 'character-sheet' }, [
       el('h2', {}, state.name || 'Unnamed Character'),
@@ -43,39 +76,17 @@ export default {
         {},
         data.skillCatalog
           .filter((s) => state.skills[s.name] > 0)
-          .map((s) => el('li', {}, `${s.name}: Tier ${state.skills[s.name]}`)),
+          .map((s) => el('li', {}, `${s.name}: ${skillTierName(data, state.skills[s.name])}`)),
       ),
 
       el('h3', {}, 'Boons'),
-      el(
-        'ul',
-        {},
-        state.boons.map((b) => el('li', {}, `${b.name} (${b.tier ?? ''} ${b.points} pts)`)),
-      ),
+      el('ul', {}, boonEntries),
 
       el('h3', {}, 'Resources'),
-      el(
-        'ul',
-        {},
-        data.resources
-          .filter((r) => state.resources[r.name] > 0)
-          .map((r) => el('li', {}, `${r.name}: Level ${state.resources[r.name]}`)),
-      ),
+      el('ul', {}, resourceEntries),
 
       el('h3', {}, 'Gifts'),
-      el(
-        'ul',
-        {},
-        state.gifts
-          .filter((g) => g.level > 0)
-          .map((g) =>
-            el(
-              'li',
-              {},
-              `${g.name} (Level ${g.level})${g.adders.length ? ' - Adders: ' + g.adders.join(', ') : ''}${g.limiters.length ? ' - Limiters: ' + g.limiters.join(', ') : ''}`,
-            ),
-          ),
-      ),
+      el('ul', {}, giftEntries),
 
       el('h3', {}, 'Flaws'),
       el(

@@ -13,6 +13,7 @@ import {
   buyGiftLevel,
   refundGiftLevel,
   giftLevelCost,
+  skillTierName,
 } from '../state.js';
 import { renderBoonPicker } from './07-boons.js';
 
@@ -195,6 +196,7 @@ export default {
                   5,
                   state.skills[s.name] + Math.floor(discretionaryRemaining(state, data) / rateSkills),
                 ),
+              format: (v) => skillTierName(data, v),
               onChange: () => {
                 rerenderPools();
                 summaryEl.textContent = summaryText();

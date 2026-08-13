@@ -1,7 +1,9 @@
 import { el, counterRow } from '../ui.js';
-import { skillsPoolRemaining } from '../state.js';
+import { skillsPoolRemaining, skillTierName } from '../state.js';
 
-const TIER_NAMES = ['Untrained', 'Novice', 'Trained', 'Adept', 'Expert', 'Master'];
+function inline(md) {
+  return window.marked ? window.marked.parseInline(md) : md;
+}
 
 export default {
   id: 'skills',
@@ -15,6 +17,15 @@ export default {
         {},
         `Everyman Skills (${data.everymanSkills.join(', ')}) start Trained for free. Beyond that, a ${data.skillsPoolTotal}-point pool, 1 point per tier climbed. Remaining: ${remaining}.`,
       ),
+    );
+
+    const tierTable = el('table', {}, [
+      el('tr', {}, [el('th', {}, 'Tier'), el('th', {}, 'Roll')]),
+      ...data.skillTiers.map((t) => el('tr', {}, [el('td', {}, t.name), el('td', { html: inline(t.roll) })])),
+    ]);
+    container.append(el('div', { class: 'detail', style: 'margin-bottom:1rem;' }, tierTable));
+
+    container.append(
       el('div', { class: 'field' }, [
         el('input', {
           type: 'text',
@@ -42,13 +53,13 @@ export default {
           row.append(
             counterRow({
               name: `${s.name}${baseline ? ' (Everyman)' : ''}`,
-              hint: TIER_NAMES[state.skills[s.name]],
               get: () => state.skills[s.name],
               set: (v) => {
                 state.skills[s.name] = v;
               },
               min: baseline,
               max: () => Math.min(5, state.skills[s.name] + rem),
+              format: (v) => skillTierName(data, v),
               onChange: () => {
                 rerenderPools();
                 renderList();

@@ -1,4 +1,11 @@
-import { computeFiguredCharacteristics, startingFateTokens } from '../state.js';
+import { computeFiguredCharacteristics, startingFateTokens, skillTierName } from '../state.js';
+
+function indentBlock(text, prefix = '  > ') {
+  return text
+    .split('\n')
+    .map((line) => (line.trim() ? `${prefix}${line}` : ''))
+    .join('\n');
+}
 
 export function buildMarkdown(state, data) {
   const lines = [];
@@ -36,20 +43,34 @@ export function buildMarkdown(state, data) {
   const trained = data.skillCatalog.filter((s) => state.skills[s.name] > 0);
   push('| Skill | Tier |');
   push('|---|---|');
-  trained.forEach((s) => push(`| ${s.name} | ${state.skills[s.name]} |`));
+  trained.forEach((s) => push(`| ${s.name} | ${skillTierName(data, state.skills[s.name])} |`));
   push();
 
   push('## Boons');
   push();
   if (state.boons.length === 0) push('None.');
-  state.boons.forEach((b) => push(`- ${b.name} (${b.tier ?? ''} ${b.points} pts)`));
+  state.boons.forEach((b) => {
+    push(`- **${b.name}** (${b.tier ?? ''} ${b.points} pts)`);
+    const boonData = data.boons.find((d) => d.name === b.name);
+    if (boonData) {
+      push();
+      push(indentBlock(boonData.effect));
+      push();
+    }
+  });
   push();
 
   push('## Resources');
   push();
   data.resources
     .filter((r) => state.resources[r.name] > 0)
-    .forEach((r) => push(`- ${r.name}: Level ${state.resources[r.name]}`));
+    .forEach((r) => {
+      const level = state.resources[r.name];
+      push(`- **${r.name}**: Level ${level}`);
+      push();
+      push(indentBlock(r.levels[level] ?? ''));
+      push();
+    });
   push();
 
   push('## Gifts');
@@ -60,6 +81,12 @@ export function buildMarkdown(state, data) {
       push(`- **${g.name}** (Level ${g.level})`);
       if (g.adders.length) push(`  - Adders: ${g.adders.join(', ')}`);
       if (g.limiters.length) push(`  - Limiters: ${g.limiters.join(', ')}`);
+      const giftData = data.gifts.find((d) => d.name === g.name);
+      if (giftData) {
+        push();
+        push(indentBlock(giftData.markdown));
+        push();
+      }
     });
   push();
 

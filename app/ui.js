@@ -19,13 +19,15 @@ export function el(tag, attrs = {}, children = []) {
   return node;
 }
 
-// A labeled +/- counter row. `get`/`set` read and write the current value;
-// `min`/`max` may be numbers or functions of no args (re-evaluated on every
-// render so they can depend on pool remaining elsewhere in the app).
-export function counterRow({ name, hint, get, set, min = 0, max = 99, onChange }) {
+// A labeled +/- counter row. `get`/`set` read and write the current numeric
+// value; `min`/`max` may be numbers or functions of no args (re-evaluated on
+// every render so they can depend on pool remaining elsewhere in the app).
+// `format`, if given, renders the displayed value (e.g. a tier number as its
+// tier name) without changing the underlying numeric get/set/min/max logic.
+export function counterRow({ name, hint, get, set, min = 0, max = 99, format, onChange }) {
   const row = el('div', { class: 'counter-row' });
   const nameEl = el('span', { class: 'name' }, hint ? `${name} (${hint})` : name);
-  const valueEl = el('span', { class: 'value' }, String(get()));
+  const valueEl = el('span', { class: 'value' }, format ? format(get()) : String(get()));
   const resolvedMin = typeof min === 'function' ? min() : min;
   const resolvedMax = typeof max === 'function' ? max() : max;
   const minusBtn = el('button', {
