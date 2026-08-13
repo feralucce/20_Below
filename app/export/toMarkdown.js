@@ -110,17 +110,14 @@ export function buildMarkdown(state, data) {
   state.flaws
     .filter((f) => f.level > 0)
     .forEach((f) => {
-      push(`- **${f.name}** (Level ${f.level}):`);
-      push();
       const flawData = data.flaws.find((d) => d.name === f.name);
-      if (flawData?.levels) {
-        flawData.levels
-          .filter((l) => l.level <= f.level)
-          .forEach((l) => push(`  ${l.level}. ${l.effect}`));
-      } else if (flawData) {
-        push(`  (see [flaws.md](flaws.md#${f.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}) for this Flaw's full effect - no standard Level table to summarize here)`);
-      }
-      push();
+      const thisLevel = flawData?.levels?.find((l) => l.level === f.level);
+      const effect = thisLevel
+        ? thisLevel.effect
+        : flawData
+          ? `(see [flaws.md](flaws.md#${f.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}) for this Flaw's full effect - no standard Level table to summarize here)`
+          : '';
+      push(`- **${f.name}** (Level ${f.level}): ${effect}`);
     });
   push();
 

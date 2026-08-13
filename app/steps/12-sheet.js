@@ -73,18 +73,13 @@ export default {
       .filter((f) => f.level > 0)
       .map((f) => {
         const flawData = data.flaws.find((d) => d.name === f.name);
-        const levelRows = flawData?.levels
-          ? el(
-              'ol',
-              {},
-              flawData.levels
-                .filter((l) => l.level <= f.level)
-                .map((l) => el('li', { html: inline(l.effect) })),
-            )
+        const thisLevel = flawData?.levels?.find((l) => l.level === f.level);
+        const effect = thisLevel
+          ? el('span', { html: inline(thisLevel.effect) })
           : flawData
-            ? el('p', { class: 'detail' }, "No standard Level table for this Flaw - see flaws.md for its full effect.")
+            ? el('span', { class: 'detail' }, "(no standard Level table for this Flaw - see flaws.md for its full effect)")
             : null;
-        return el('li', {}, [el('strong', {}, `${f.name} (Level ${f.level})`), levelRows]);
+        return el('li', {}, [el('strong', {}, `${f.name} (Level ${f.level}): `), effect]);
       });
 
     const sheet = el('div', { class: 'sheet', id: 'character-sheet' }, [
