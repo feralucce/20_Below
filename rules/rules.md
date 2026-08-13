@@ -55,6 +55,8 @@ A standard ladder of duration used wherever a rule needs to name "how long": **R
 
 This is intentional: under the 2d10 curve, an untrained character faces poor odds at anything above Difficulty 5 or so, and Difficulty 0 (Nearly Impossible) is a flat impossibility untrained (target 0 is below 2d10's minimum roll of 2).
 
+## Ki
+
 ### Ki Infusion
 
 Covers **all three attack types** - Physical, Social, and Mental - with the same shape and the same currency. The baseline attack die is raw and unboosted - `d10` vs. the defender's wall (Soak/Presence/Psyche as appropriate), so a wall of 10 fully negates it, guaranteed (0% connect). Before the roll, a player may spend **1 Ki per individual die** to add their own matching sub-stat (**Ferocity** for Physical, **Presence** for Social, **Psyche** for Mental) to that specific die's result - "pushing" the attack. A boosted die is compared as `d10 + [matching sub-stat]` vs. the wall, same threshold rule (result > wall connects).
@@ -268,6 +270,8 @@ A player can spend **1 Ki per step** to bump their declared band up (Slow → No
 **Range Bands**: four abstract bands - **Melee, Close, Near, Far** - used for weapon reach, targeting, and spotting. The GM assigns them loosely per scene rather than measuring a map; no grid.
 
 **Movement Rate**: `5 + Air`, in **meters** - the same flat-floor-plus-Attribute shape as [Health Levels](#health-levels). A character can move up to their Movement Rate as part of a Fast action's one action or a Normal action's move component. As a rough conversion (not a strict count), **spending a full Movement Rate shifts one Range Band**; the GM can also just narrate a shift directly when the fiction obviously calls for it, without making players do the math.
+
+*The following are the status effects defined so far - Distracted, Surprise, Flustered. More are expected as combat rules develop further; this isn't the full list.*
 
 #### Distracted
 
