@@ -1,0 +1,245 @@
+:root {
+  color-scheme: light dark;
+  --bg: #14161c;
+  --panel: #1d2028;
+  --panel-border: #2f3341;
+  --text: #e8e9ee;
+  --text-dim: #9ba0b0;
+  --accent: #7aa2f7;
+  --accent-dim: #3b4a6b;
+  --danger: #e0685c;
+  --ok: #6fbf73;
+  --radius: 8px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 1.25rem 1.5rem 0.5rem;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  color: var(--text-dim);
+}
+
+.step-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+}
+
+.step-nav button {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  color: var(--text-dim);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.step-nav button.active {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.step-nav button.visited {
+  color: var(--text);
+}
+
+.step-panel {
+  flex: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 2rem;
+  width: 100%;
+}
+
+.step-panel h2 {
+  margin-top: 0;
+}
+
+.loading,
+.error {
+  color: var(--text-dim);
+}
+
+.error {
+  color: var(--danger);
+  white-space: pre-wrap;
+}
+
+.wizard-controls {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--panel);
+  border-top: 1px solid var(--panel-border);
+}
+
+.wizard-controls button {
+  background: var(--accent-dim);
+  color: var(--text);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.wizard-controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pool-summary {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  justify-content: center;
+}
+
+.pool-summary .pool.negative {
+  color: var(--danger);
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.field input[type="text"],
+.field textarea {
+  width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.counter-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.counter-row .name {
+  flex: 1;
+}
+
+.counter-row .value {
+  min-width: 2ch;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.counter-row button {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  color: var(--text);
+  border-radius: 999px;
+  width: 1.75rem;
+  height: 1.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.counter-row button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.pick-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pick-card {
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  background: var(--panel);
+}
+
+.pick-card summary {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.pick-card .cost {
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.pick-card .detail {
+  margin-top: 0.5rem;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.pick-card .detail table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.pick-card .detail th,
+.pick-card .detail td {
+  border: 1px solid var(--panel-border);
+  padding: 0.35rem 0.5rem;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.sheet {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.sheet h3 {
+  border-bottom: 1px solid var(--panel-border);
+  padding-bottom: 0.25rem;
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>20 Below - Character Creator</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+<header class="app-header">
+  <h1>20 Below</h1>
+  <p class="subtitle">Character Creator</p>
+</header>
+
+<nav id="step-nav" class="step-nav" aria-label="Character creation steps"></nav>
+
+<main id="step-panel" class="step-panel">
+  <p class="loading">Loading rules data&hellip;</p>
+</main>
+
+<footer class="wizard-controls">
+  <button id="btn-back" type="button">Back</button>
+  <div id="pool-summary" class="pool-summary"></div>
+  <button id="btn-next" type="button">Next</button>
+</footer>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
