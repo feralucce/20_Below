@@ -328,6 +328,32 @@ Your body has crossed some threshold ordinary flesh shouldn't be able to cross. 
 - **Loud and Fast**: using the extra-action spend, at any Level, is always audible and visible to anyone nearby - no stealth use of this Gift.
 - **Straight Line Only**: the extra action's movement can only be used to move in a straight line - no sharp turns or complex maneuvering on a Ki-spend turn.
 
+### Enthrall
+
+You don't need to say a word to command a room's attention - it simply happens, the way a candle flame draws every eye in a dark space. Awe, dread, magnetism, whatever the moment calls for, without ever asking anyone to do anything. They just can't look away.
+
+| Level | Effect |
+|---|---|
+| 1 | Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** + Skill vs. their Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die locks their attention onto you for the scene: awe, dread, or fascination, your choice. No specific action compelled, just overwhelming presence. |
+| 2 | Dice rise to **3d10**. Effect now reaches everyone perceiving you within Close range - each target gets their own to-hit roll and, on success, their own dice vs. their Presence wall. |
+| 3 | Dice rise to **4d10**. You may split the effect's flavor by target in the same use - dread for hostiles, awe or magnetism for allies/bystanders. |
+| 4 | **No to-hit roll required anymore** - your presence is overwhelming enough that it simply rolls **5d10** per-die against the target's Presence wall directly. Repeated exposure builds a hold: each successful use on the same person grants **Advantage** on your next attempt against them, cumulative, lasting until they're away from you for an extended stretch (GM's call). |
+| 5 | Dice rise to **6d10**, still no to-hit roll needed. Range extends to everyone perceiving you within Near, and a natural 10 on any die (not just a connect) causes the target to freeze or flee outright for a Round, unable to act against you at all. |
+
+As with any Social attack, additional [Ki Infusion](rules.md#ki-infusion) (1 Ki per die) can push individual dice further by adding your own Presence, per the usual rule.
+
+**Adders**:
+
+- **Voice and Image** (Lesser, 3 pts): works through a live phone call or video feed - the target doesn't need to be in the same physical space, but it has to be real-time.
+- **Recorded Echo** (Greater, 6 pts): the effect also works through a pre-recorded message - a video, a voicemail, a broadcast - landing on the target without you present or even active at the time it lands.
+- **Undeniable** (Greater, 6 pts): at Level 4+, a connecting die also grants you Advantage on your very next direct Social roll against that same target this Scene, stacking with the passive lock.
+
+**Limiters**:
+
+- **Must Be Seen**: the target has to actually see you, not just hear you - kills any voice-only or audio-only use.
+- **Single Target Only**: the Level 2+ multi-target/crowd expansion never applies, regardless of Level bought - always resolves against one target.
+- **Fades Fast**: the lock still lasts the full Scene, but only while you actively concentrate on maintaining it - losing focus (Distracted, taking an unrelated Slow action, or similar) ends it immediately instead of it lingering passively.
+
 ### Flight
 
 Gravity is a suggestion you've learned to decline. Whether it's feathered wings, a contrail of raw thrust, or something stranger entirely, you can lift free of the ground and hold yourself aloft - starting as a controlled hover and building toward outrunning a jet fighter.
