@@ -14,7 +14,9 @@ Target number range: **1** (Attribute 1 + Difficulty 0) to **20** (Attribute 10 
 
 ### Difficulty Chart
 
-An 11-step reference ladder for setting Difficulty, rather than picking a bare number cold:
+An 11-step reference ladder for setting Difficulty, rather than picking a bare number cold, color-banded red (hardest) to blue (easiest):
+
+![Difficulty Chart, red to blue, 0 Nearly Impossible through 10 Trivial](../docs/assets/diagrams/difficulty-chart.svg)
 
 | Difficulty | Label | Example task |
 |---|---|---|
