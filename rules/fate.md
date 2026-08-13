@@ -1,6 +1,6 @@
 # Fate Tokens
 
-A parallel resource layered on top of the [core roll](rules.md#resolution) - playing into vulnerability, flaws, and bad luck funds a currency spent later.
+A parallel resource layered on top of the [core roll](rules.md#core-mechanic) - playing into vulnerability, flaws, and bad luck funds a currency spent later.
 
 ## Nature
 
@@ -70,7 +70,7 @@ Characters with [Iron Will](boons.md) may also spend 1 Fate Token to **Assert Yo
 
 ## Fatigue Check
 
-Every time a player spends a Fate Token, they immediately make a **Fatigue Check** - roll 2d10 against **Ki** (see below), same roll-under shape as the [core roll](rules.md#resolution), with Ki's current total standing in for a target number instead of a GM-set Difficulty.
+Every time a player spends a Fate Token, they immediately make a **Fatigue Check** - roll 2d10 against **Ki** (see below), same roll-under shape as the [core roll](rules.md#core-mechanic), with Ki's current total standing in for a target number instead of a GM-set Difficulty.
 
 - **Success** - no effect, the spend goes through with no cost beyond the token itself.
 - **Failure** - lose **1 point from Ki**, until it's refilled.

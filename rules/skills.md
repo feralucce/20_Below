@@ -10,7 +10,7 @@ Any Skill can be paired with any of the five Attributes (Earth, Air, Fire, Water
 
 ## Training Tiers
 
-A Skill's **training tier** changes *how* the [core roll](rules.md#resolution) is built:
+A Skill's **training tier** changes *how* the [core roll](rules.md#core-mechanic) is built:
 
 | Tier | Name | Roll |
 |---|---|---|
