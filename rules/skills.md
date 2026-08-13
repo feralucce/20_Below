@@ -25,10 +25,10 @@ Each tier is strictly better than the last. Master's reroll only ever *removes t
 
 **Advantage/Disadvantage** are the [standalone core mechanic](rules.md#advantage--disadvantage): roll 3d10, keep the lowest two (Advantage) or highest two (Disadvantage).
 
-**Advancement**: a character climbs the ladder one tier at a time via **direct XP expenditure** - no classes/levels, no fixed track. Exact XP cost per tier is still TBD.
+**Advancement**: a character climbs the ladder one tier at a time via **direct XP expenditure** - no classes/levels, no fixed track. Exact XP cost per tier is still TBD; see [Advancement](advancement.md).
 
 ## Everyman Skills
 
 A short list of ordinary, baseline skills that every character starts with at no cost, reflecting the basic competence any functional adult in the setting would have. 20 Below doesn't fix this list in the core rules - **the GM decides the Everyman Skills list for their own campaign/setting**, since "what any ordinary person can do" depends heavily on genre and setting. Every Everyman Skill is granted at **Tier 2 (Trained)** - full Attribute + Difficulty, no flat bonus or Advantage, reflecting genuine baseline competence rather than a bare exposure.
 
-Everything else about Skills (exact XP costs per tier, whether there's a fixed list beyond Everyman Skills, breadth, specialties) is still open.
+Everything else about Skills (whether there's a fixed list beyond Everyman Skills, breadth, specialties) is still open. XP costs per tier are tracked in [Advancement](advancement.md), not here.
