@@ -95,7 +95,7 @@ Separately, that same score generates a **pool of points equal to the Attribute'
 
 For every point a character allocates to a sub-stat, they gain one Descriptor - a short player-chosen word or phrase capturing one specific flavor of that sub-stat for this character. E.g. 3 points in Soak might yield *Iron-skinned, Padded, Unyielding* - three distinct ways the character shrugs off harm, not three copies of the same idea.
 
-Descriptors are **free at character creation** (no separate cost beyond the point that earns them) and **fixed once chosen**. A character can also buy an extra Descriptor on a sub-stat without raising it: at creation, this costs a flat **1 Discretionary point** per extra Descriptor, no scaling. Buying one after creation instead costs XP, priced alongside the other Skill Training Tier XP costs (still undecided).
+Descriptors are **free at character creation** (no separate cost beyond the point that earns them) and **fixed once chosen**. A character can also buy an extra Descriptor on a sub-stat without raising it: at creation, this costs a flat **1 Discretionary point** per extra Descriptor, no scaling. Buying one after creation instead costs XP, still undecided - see [Advancement](advancement.md).
 
 Descriptors are the concrete hook a player points to when [arguing a Skill pairing](skills.md#skills-are-not-attribute-locked) - grounding "I'm using Fire here because I'm being *Ruthless*" in an established character fact instead of an improvised justification each time.
 
