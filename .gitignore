@@ -1,3 +1,8 @@
 .DS_Store
 Thumbs.db
 *.tmp
+
+# Private design notes - kept locally only, not in the public repo
+*.notes.md
+docs/design-log.md
+docs/restore-points.md
