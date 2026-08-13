@@ -1,6 +1,6 @@
 # Character Creation
 
-Every character is built in the same 14-step sequence, broad concept down to concrete numbers. Follow the steps in order - later steps depend on choices made earlier.
+Every character is built in the same 14-step sequence, broad concept down to concrete numbers. Follow the steps in order - later steps depend on choices made earlier. New to the terminology? Check the [Glossary](glossary.md) first.
 
 ## 1. Name
 
