@@ -69,6 +69,24 @@ export default {
         ]);
       });
 
+    const flawEntries = state.flaws
+      .filter((f) => f.level > 0)
+      .map((f) => {
+        const flawData = data.flaws.find((d) => d.name === f.name);
+        const levelRows = flawData?.levels
+          ? el(
+              'ol',
+              {},
+              flawData.levels
+                .filter((l) => l.level <= f.level)
+                .map((l) => el('li', { html: inline(l.effect) })),
+            )
+          : flawData
+            ? el('p', { class: 'detail' }, "No standard Level table for this Flaw - see flaws.md for its full effect.")
+            : null;
+        return el('li', {}, [el('strong', {}, `${f.name} (Level ${f.level})`), levelRows]);
+      });
+
     const sheet = el('div', { class: 'sheet', id: 'character-sheet' }, [
       el('h2', {}, state.name || 'Unnamed Character'),
       state.concept ? el('p', {}, state.concept) : null,
@@ -121,13 +139,7 @@ export default {
       el('ul', {}, giftEntries),
 
       el('h3', {}, 'Flaws'),
-      el(
-        'ul',
-        {},
-        state.flaws
-          .filter((f) => f.level > 0)
-          .map((f) => el('li', {}, `${f.name} (Level ${f.level})`)),
-      ),
+      el('ul', {}, flawEntries),
 
       el('h3', {}, 'Figured Characteristics'),
       el(
