@@ -129,8 +129,6 @@ export function buildMarkdown(state, data) {
   Object.entries(figured).forEach(([name, value]) => push(`| ${name} | ${value} |`));
   push();
 
-  push('## Finishing Touches');
-  push();
   push(`- Starting Fate Tokens: ${startingFateTokens(state, data)}`);
   if (state.finishingNotes) {
     push();
