@@ -1,5 +1,11 @@
 import { el, counterRow, renderMarkdown } from '../ui.js';
-import { giftsPoolRemaining, giftLevelCost, giftPointsSpent } from '../state.js';
+import {
+  giftsPoolRemaining,
+  giftLevelCost,
+  giftPointsSpent,
+  giftCheckTarget,
+  computeFiguredCharacteristics,
+} from '../state.js';
 
 function getOrCreateGiftState(state, name) {
   let g = state.gifts.find((x) => x.name === name);
@@ -17,6 +23,12 @@ export default {
     const remaining = giftsPoolRemaining(state, data);
     container.append(
       el('h2', {}, '10. Gifts'),
+      el('div', { class: 'detail', style: 'margin-bottom:1rem;', html: renderMarkdown(data.giftCheckText) }),
+      el(
+        'p',
+        {},
+        `Your current Gift Check target: Ki (${computeFiguredCharacteristics(state).Ki}) + Stamina (${state.subStats.Stamina}) = ${giftCheckTarget(state)}.`,
+      ),
       el(
         'p',
         {},

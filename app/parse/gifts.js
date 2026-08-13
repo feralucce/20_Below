@@ -68,3 +68,16 @@ export function parseGifts(giftsMd) {
     return { name: title, flagged, adders, limiters, markdown: body };
   });
 }
+
+// Pulls the "The Gift Check" bullet out of gifts.md's Resolution section, so
+// the app can display the live rule text (e.g. its target number) rather
+// than a hardcoded copy that could drift from the actual rules file.
+export function parseGiftCheckText(giftsMd) {
+  const section = findSection(giftsMd, 'Resolution', '##');
+  const line = section.split('\n').find((l) => l.trim().startsWith('- **The Gift Check**'));
+  if (!line) {
+    console.warn('Gift Check bullet not found in gifts.md Resolution section');
+    return '';
+  }
+  return line.trim().replace(/^- /, '');
+}
