@@ -1,9 +1,9 @@
 import { extractTableAfter, extractNumberNear, findSection } from './markdown.js';
 
-// Parses steps 4, 5, 12, 13, 14 of character-creation.md: the five
-// Attributes, their sub-stats, the point-buy pool/cap, the Discretionary
-// conversion table, the Figured Characteristics formulas, and starting
-// Fate Tokens.
+// Parses steps 4, 5, 9, 12, 13, 14 of character-creation.md: the five
+// Attributes, their sub-stats, the point-buy pool/cap, the Resources
+// per-level cost, the Discretionary conversion table, the Figured
+// Characteristics formulas, and starting Fate Tokens.
 export function parseAttributes(creationMd) {
   const attrTable = extractTableAfter(creationMd, '## 4. Attributes');
   const attributes = attrTable.rows.map((row) => ({
@@ -50,6 +50,11 @@ export function parseAttributes(creationMd) {
     '## 9. Resources',
     /\*\*(\d+)-point Resources Pool\*\*/,
   );
+  const resourceLevelCost = extractNumberNear(
+    creationMd,
+    '## 9. Resources',
+    /a flat (\d+) points? per level/,
+  );
   const giftsPoolTotal = extractNumberNear(
     creationMd,
     '## 10. Gifts',
@@ -93,6 +98,7 @@ export function parseAttributes(creationMd) {
     skillsPoolTotal,
     boonsPoolTotal,
     resourcesPoolTotal,
+    resourceLevelCost,
     giftsPoolTotal,
     giftLevelCost,
     discretionaryBase,
