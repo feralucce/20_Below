@@ -6,6 +6,46 @@ A parallel resource layered on top of the [core roll](core-mechanic.md#resolutio
 
 Every character has a **Nature** - a short archetype capturing a core drive or way of engaging with the world, written on the character sheet. Playing to your Nature at a dramatically appropriate moment grants a Fate Token.
 
+### Starter Natures
+
+Pick one of these, or [write your own](#writing-a-custom-nature).
+
+| Nature | Drive | Playing to it looks like |
+|---|---|---|
+| Analyst | Nothing gets acted on until you understand how it actually works | Pausing the plan to dig into the mechanism, the pattern, or the real cause before moving |
+| Avenger | A wrong doesn't stay unanswered | Pursuing payback or justice even when it isn't the smart move |
+| Caregiver | Other people's wounds are yours to tend | Stopping to help, heal, or comfort someone at your own expense |
+| Charmer | People are won over, not overpowered | Turning a hostile or closed-off person into an ally through charm alone |
+| Competitor | Everything is a contest you intend to win | Turning a task into a competition and pushing yourself past what was needed |
+| Daredevil | The safe option is the boring option | Taking the reckless, high-stakes move when a safer one was sitting right there |
+| Diplomat | Every conflict has a deal hiding inside it | Talking two sides down from a fight instead of picking one |
+| Enforcer | A deal is a deal, and someone has to make sure it holds | Making someone answer for a broken promise or unpaid debt |
+| Fixer | Every problem has a working solution if you're clever enough | Solving a mess through leverage, favors, or a clever angle instead of force |
+| Ghost | The less anyone knows about you, the safer everyone is | Choosing to disappear, stay unseen, or erase your trail instead of being known |
+| Guardian | Some things are yours to watch over | Standing your ground to protect a place, group, or thing you've claimed |
+| Idealist | The world can be better, and you're proof it's worth trying | Pushing for the principled option when the cynical one is easier |
+| Judge | Right and wrong get named out loud | Calling out someone's conduct plainly, even when it's socially costly |
+| Leader | Someone has to call the shot, so it's you | Making the hard call for the group and owning the outcome |
+| Loner | You handle it yourself | Refusing help, or cutting yourself off from the group, to solve something alone |
+| Mentor | Someone else's growth matters more than your own credit | Stepping back so someone else can learn, lead, or take the win |
+| Opportunist | Chaos is just an opening nobody's grabbed yet | Turning someone else's disaster into your own advantage |
+| Perfectionist | Good enough isn't | Redoing, refusing to ship, or pushing back on a "good enough" result |
+| Protector | Someone else's safety comes before yours | Taking a hit, a risk, or a loss meant for someone who can't fend for themselves |
+| Rebel | Authority is something to test, not obey | Breaking a rule or defying an order specifically because it was given |
+| Showman | The room should be watching you | Turning a moment into a performance, at some cost to subtlety or safety |
+| Skeptic | The comfortable answer is usually the wrong one | Refusing to accept an easy explanation until you've checked it yourself |
+| Survivor | Getting through today matters more than looking good doing it | Choosing the ugly, practical option over the proud one to come out ahead |
+| Trickster | The straight path is boring | Solving a problem through misdirection, a lie, or a bit instead of the obvious approach |
+| True Believer | A cause or code outranks your own comfort | Sticking to your code when the easy move would break it |
+| Wanderer | Roots are just something to outrun | Walking away from a place, group, or claim rather than settling into it |
+
+### Writing a Custom Nature
+
+1. **One or two words** - a label, not a paragraph. If it doesn't fit on the character sheet in a glance, it's too long.
+2. **Write the Drive as one sentence** - what you want or how you engage the world, not a backstory fact. "I lost my brother" is backstory; "I don't let anyone else lose someone they can save" is a Nature.
+3. **Make the trigger concrete and repeatable.** If you'd have to ask the GM whether it applies, it's too vague - a Nature should come up scene after scene, not once at the table.
+4. It doesn't need to cost you anything the way a Flaw does, but the best ones occasionally do - a Showman blowing their cover for a dramatic entrance is playing to Nature *and* creating a problem, and that's when it's most fun.
+
 ## Fate Gain
 
 - **Nature** - playing to your Nature at a fitting moment (see above).
@@ -14,6 +54,8 @@ Every character has a **Nature** - a short archetype capturing a core drive or w
 - **Daily Regeneration** - characters regain **1 Fate Token** at sunrise, every day.
 - **Milestone Award** - when the party overcomes a significant challenge, the GM awards Fate Tokens (presumably party-wide, exact amount/scope not yet decided).
 - **GM Discretion** - the GM can directly award a Fate Token for good roleplay or a clever idea, independent of the other triggers above.
+
+**No double-dipping**: a single scene beat pays out **at most one Fate Token**, even if it could honestly be described as both playing to your Nature and invoking a Flaw (or any other two triggers above) at once - e.g. a Soft-Hearted character with a Caregiver Nature stopping to help someone vulnerable. Pick whichever source fits best and pay out once.
 
 ## Fate Spend
 
