@@ -653,6 +653,33 @@ The future leaks through, uninvited and unclear - a flash of what's about to hap
 - **Draining Sight**: after any active use (Level 2+), you're at Disadvantage on your next roll.
 - **Fewer Flashes**: Level 5's always-on passive upgrade never applies. Passive flashes stay GM's-call only regardless of Level bought.
 
+### Protocol
+
+You don't issue one-off commands - that's Domination's territory. You set the rules everyone around you has to live by, for as long as your authority holds. A bound target doesn't just personally obey - they genuinely want the rule followed, and bristle when they see anyone else break it too.
+
+| Level | Effect |
+|---|---|
+| 1 | Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** + Skill vs. their Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die binds them to one simple rule of conduct you declare ("don't raise your voice," "don't lie to me," "don't draw a weapon") for the rest of the Scene. Breaking the rule costs them **Disadvantage** on the roll that breaks it. |
+| 2 | Dice rise to **3d10**. You may declare up to two rules at once on the same target. |
+| 3 | Dice rise to **4d10**. You may bind up to **two targets** at once, each resolved individually against their own Presence wall and their own rule set. |
+| 4 | **No to-hit roll required anymore** - it simply rolls **5d10** per-die against each target's Presence wall directly. Up to **three targets** at once, each able to hold up to **three rules**. |
+| 5 | Dice rise to **6d10**, still no to-hit roll needed. Up to **five targets** at once. Duration extends to a full Day instead of just the Scene. |
+
+Ki Infusion still applies on top, same as any Social attack.
+
+**Adders**:
+
+- **Silent Imposition** (Lesser, 3 pts): the target has no memory of being bound - the rule feels like their own personal code, not something imposed on them.
+- **Lasting Decree** (Greater, 6 pts): a rule set persists indefinitely once imposed, not capped at Scene/Day - it holds until you release it or the target manages to break free (GM's call on the threshold).
+- **Zealous Enforcement** (Greater, 6 pts): bound targets don't just want the rule followed - they actively intervene, verbally or physically, to stop anyone else from breaking it.
+
+**Limiters**:
+
+- **Spoken Aloud Only**: the rule has to be declared out loud in the target's presence - no silent or written imposition.
+- **Fragile Authority**: the first time a bound target successfully breaks a rule, even at the Disadvantage cost, the whole binding shatters immediately for them - no wearing it down over repeated attempts.
+- **Reciprocal Bond**: while any binding is active, you're also bound by the same rule yourself - you set the standard, you have to live by it too.
+- **Undermined by Contradiction**: if you personally break a rule you've currently imposed on someone else, every active binding you're holding shatters at once.
+
 ### Psychokinesis / Telekinesis
 
 You don't need hands. A thought is enough to lift, throw, pin, or crush anything within reach of your will.
