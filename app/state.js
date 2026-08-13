@@ -311,6 +311,11 @@ export function computeFiguredCharacteristics(state) {
   };
 }
 
+// Gift Check target number: current Ki + Stamina (see rules/gifts.md#resolution).
+export function giftCheckTarget(state) {
+  return computeFiguredCharacteristics(state).Ki + state.subStats.Stamina;
+}
+
 export function startingFateTokens(state, data) {
   return data.startingFateTokens + state.discretionaryExtra['Fate Tokens'];
 }

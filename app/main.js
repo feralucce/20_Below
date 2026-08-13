@@ -4,7 +4,7 @@ import { parseNatures } from './parse/nature.js';
 import { parseSkillTiers, parseSkillCatalog } from './parse/skills.js';
 import { parseBoons } from './parse/boons.js';
 import { parseResources } from './parse/resources.js';
-import { parseGifts } from './parse/gifts.js';
+import { parseGifts, parseGiftCheckText } from './parse/gifts.js';
 import { parseFlaws } from './parse/flaws.js';
 import { createInitialState, allPoolsSummary } from './state.js';
 import { el, poolBadge } from './ui.js';
@@ -70,6 +70,7 @@ async function loadRulesData() {
     boons: parseBoons(boonsMd),
     resources: parseResources(resourcesMd),
     gifts: parseGifts(giftsMd),
+    giftCheckText: parseGiftCheckText(giftsMd),
     flaws: parseFlaws(flawsMd),
   };
 }

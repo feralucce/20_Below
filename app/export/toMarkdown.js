@@ -45,19 +45,15 @@ export function buildMarkdown(state, data) {
   push('|---|---|');
   trained.forEach((s) => push(`| ${s.name} | ${skillTierName(data, state.skills[s.name])} |`));
   push();
+  push('| Tier | Roll |');
+  push('|---|---|');
+  data.skillTiers.forEach((t) => push(`| ${t.name} | ${t.roll} |`));
+  push();
 
   push('## Boons');
   push();
   if (state.boons.length === 0) push('None.');
-  state.boons.forEach((b) => {
-    push(`- **${b.name}** (${b.tier ?? ''} ${b.points} pts)`);
-    const boonData = data.boons.find((d) => d.name === b.name);
-    if (boonData) {
-      push();
-      push(indentBlock(boonData.effect));
-      push();
-    }
-  });
+  state.boons.forEach((b) => push(`- **${b.name}** (${b.tier ?? `${b.points} pts`})`));
   push();
 
   push('## Resources');
@@ -81,13 +77,9 @@ export function buildMarkdown(state, data) {
       push(`- **${g.name}** (Level ${g.level})`);
       if (g.adders.length) push(`  - Adders: ${g.adders.join(', ')}`);
       if (g.limiters.length) push(`  - Limiters: ${g.limiters.join(', ')}`);
-      const giftData = data.gifts.find((d) => d.name === g.name);
-      if (giftData) {
-        push();
-        push(indentBlock(giftData.markdown));
-        push();
-      }
     });
+  push();
+  push(data.giftCheckText);
   push();
 
   push('## Flaws');
