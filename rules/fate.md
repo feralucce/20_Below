@@ -57,7 +57,7 @@ Pick one of these, or [write your own](#writing-a-custom-nature).
 
 **No double-dipping**: a single scene beat pays out **at most one Fate Token**, even if it could honestly be described as both playing to your Nature and invoking a Flaw (or any other two triggers above) at once - e.g. a Soft-Hearted character with a Caregiver Nature stopping to help someone vulnerable. Pick whichever source fits best and pay out once.
 
-## Fate Spend
+## Fate Triggers
 
 Fate Tokens are spent on [Kotodama](#kotodama), or on any of the following, each a flat **1 Fate Token**:
 
@@ -85,14 +85,14 @@ Ki has four jobs:
 
 1. **Target number for the Fatigue Check** (above).
 2. **Direct spend**: 1 point from Ki preserves one [Health Level](core-mechanic.md#health-levels) that would otherwise be lost to an unsoaked hit.
-3. **Direct spend**: 1 Ki per step to move up one [Action Band](combat.md#action-bands) (Slow → Normal, or Normal → Fast; 2 Ki moves two steps at once).
+3. **Direct spend**: 1 Ki per step to move up one [Action Bracket](combat.md#action-brackets) (Slow → Normal, or Normal → Fast; 2 Ki moves two steps at once).
 4. **Direct spend**: 1 Ki per die to boost an attack die - see [Ki Infusion](core-mechanic.md#ki-infusion), covering all three attack types (Physical/Ferocity, Social/Presence, Mental/Psyche).
 
 Jobs 2-4 are direct spends - no roll, no Fatigue Check, no Stamina spend-cap interaction, since none of those are tied to Fate Token spending specifically.
 
 ### Stamina's Job
 
-Action Bands themselves (Fast/Normal/Slow) cost nothing to declare - that's just normal combat flow, not something Stamina governs. Instead, Stamina does two things:
+Action Brackets themselves (Fast/Normal/Slow) cost nothing to declare - that's just normal combat flow, not something Stamina governs. Instead, Stamina does two things:
 
 1. **Hard cap on Fate Token spends per encounter.** A character can spend Fate Tokens **at most [Stamina score] times per single encounter**, regardless of how many Fate Tokens they actually have banked.
 2. **General endurance/exhaustion-resistance gauge.** Stamina sets a free baseline duration for any single sustained exertion (holding breath, forced marching, sustained labor, running flat-out) - Stamina Rounds, Minutes, Hours, or whatever [Time Band](core-mechanic.md#time-bands) unit fits the activity, GM's call. Past that baseline, roll **Water + Difficulty** once per additional unit of time, with Difficulty dropping by 1 each successive check. Failure imposes one level of **Exhausted**.
@@ -165,6 +165,6 @@ Permanent is the free default - a spoken truth just sticks, no extra cost. Payin
 
 Rather than Fate Tokens just draining from players into nothing, **when a player spends a Fate Token, the GM gains one** in a separate GM-side pool - spending isn't just depletion, it's a transfer of leverage from the players' side of the table to the GM's.
 
-The GM's pool is **narrative-only** - it does **not** mirror the player [Fate Spend](#fate-spend) menu, no mechanical crunch bonuses for NPCs. Instead the GM spends their pool on **complications, twists, and consequences woven into the fiction** - not a flat "the NPC gets +2," but "the ambush was a distraction," "the ally you saved owed someone else a debt first," or any other fictional escalation.
+The GM's pool is **narrative-only** - it does **not** mirror the player [Fate Triggers](#fate-triggers) menu, no mechanical crunch bonuses for NPCs. Instead the GM spends their pool on **complications, twists, and consequences woven into the fiction** - not a flat "the NPC gets +2," but "the ambush was a distraction," "the ally you saved owed someone else a debt first," or any other fictional escalation.
 
 **Since the GM gains a Fate Token for every one a player spends, a bigger Kotodama spend automatically hands the GM proportionally more leverage** - no separate consequence math needed. Small edits barely move the GM's pool; massive pooled edits load it up considerably.

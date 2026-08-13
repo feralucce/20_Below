@@ -3,10 +3,10 @@
 ## Combat Order
 
 1. **Initiative** - rolled **once at the start of combat**, not re-rolled each round: **1d10 + Initiative** (sub-stat). Higher total acts first. This base order holds for the whole fight.
-2. **Declare Action Band** - each character declares which of the three bands they're acting in this round: **Fast**, **Normal**, or **Slow** (see below).
+2. **Declare Action Bracket** - each character declares which of the three bands they're acting in this round: **Fast**, **Normal**, or **Slow** (see below).
 3. **Resolve band by band** - all **Fast**-band characters act first, then all **Normal**-band characters, then all **Slow**-band characters. Within each band, characters act in Initiative order.
 
-### Action Bands
+### Action Brackets
 
 | Band | Also called | Actions | Notes |
 |---|---|---|---|
@@ -26,7 +26,7 @@ A player can spend **1 Ki per step** to bump their declared band up (Slow → No
 
 ### Distracted
 
-A character who loses a Health Level or is the target of a Kotodama effect while resolving a **Slow** Action Band action becomes **Distracted**, and must roll **Atropos + Difficulty** to hold focus.
+A character who loses a Health Level or is the target of a Kotodama effect while resolving a **Slow** Action Bracket action becomes **Distracted**, and must roll **Atropos + Difficulty** to hold focus.
 
 - **Success** - the action resolves as declared.
 - **Failure** - the action downgrades to a **Normal** action (loses the called-shot/Advantage benefit).

@@ -114,7 +114,7 @@ Two passive functions, both "gives" like Health/Soak/Presence/Psyche - no roll, 
 
 Covers **all three attack types** - Physical, Social, and Mental - with the same shape and the same currency. The baseline attack die is raw and unboosted - `d10` vs. the defender's wall (Soak/Presence/Psyche as appropriate), so a wall of 10 fully negates it, guaranteed (0% connect). Before the roll, a player may spend **1 Ki per individual die** to add their own matching sub-stat (**Ferocity** for Physical, **Presence** for Social, **Psyche** for Mental) to that specific die's result - "pushing" the attack. A boosted die is compared as `d10 + [matching sub-stat]` vs. the wall, same threshold rule (result > wall connects).
 
-This is a **direct Ki spend**, the same category as [spending Ki to preserve a Health Level](#ki-spend-to-preserve-a-health-level) and [Bump Action Band](fate.md#ki-the-pool-formerly-risk-pool) - **not** a Fate Token spend, so it does **not** trigger the [Fatigue Check](fate.md#fatigue-check) and does **not** count against [Stamina's per-encounter spend cap](fate.md#staminas-job).
+This is a **direct Ki spend**, the same category as [spending Ki to preserve a Health Level](#ki-spend-to-preserve-a-health-level) and [Bump Action Bracket](fate.md#ki-the-pool-formerly-risk-pool) - **not** a Fate Token spend, so it does **not** trigger the [Fatigue Check](fate.md#fatigue-check) and does **not** count against [Stamina's per-encounter spend cap](fate.md#staminas-job).
 
 Full negation is still the honest baseline: an unboosted attack against a maxed wall can never get through, but a player willing to spend Ki can crack even a Soak/Presence/Psyche of 10 - a boosted die with a matching sub-stat of 10 is a guaranteed connect, while a rating of 2 only gives a 20% chance per boosted die.
 
@@ -139,15 +139,14 @@ Dropping below 0 Health Levels can instead impose a genuine [Flaw](flaws.md), la
 Poise mirrors [Health Levels](#health-levels), tracking composure under Social attack instead of Physical.
 
 - **`PC Poise = 5 + Presence`.** NPCs default to a flat 5. Each Level is a binary hit-box, same shape as Health.
-- **Crossing zero** works identically to Health Levels: a single Social attack can't carry a target past 0 in one hit, the excess is discarded; once at 0, further hits only remove 1 Poise total, regardless of how many dice connect.
+- **Poise cannot drop below 0.** Once at 0, further connecting Social dice have no additional effect - you're already as Flustered as you get.
 - **At 0 Poise**, a character becomes [Flustered](combat.md#flustered).
-- **Below 0**, tracked down to `-Presence`, the character is **Broken**: their standing is permanently, publicly ruined - the social equivalent of death. GM narrates the lasting fallout.
 
-**Recovery**: Short Rest heals `Presence ÷ 2` (round up); Full Night's Rest heals fully; below 0 recovers 1 Poise per day, same as Health.
+**Recovery**: Short Rest heals `Presence ÷ 2` (round up); Full Night's Rest heals fully.
 
 **Ki cannot prevent a Poise loss.** Once Poise reaches 0, spending **1 Ki refills it back to full**, reflecting how quickly social standing can turn around in the moment.
 
-**Poise scars**: dropping to 0 leaves a purely cosmetic social tell (a nervous habit, a reputation quirk), no mechanical effect. No Gift currently grants immunity to this - intentional. Dropping below 0 can instead impose a genuine Flaw, same as Health.
+**Poise scars**: dropping to 0 leaves a purely cosmetic social tell (a nervous habit, a reputation quirk), no mechanical effect. No Gift currently grants immunity to this - intentional.
 
 ### Sanity
 

@@ -23,7 +23,7 @@ At character creation, each Gift Level costs a flat **3 points** from the [Gifts
 No new stat governs Gifts. Using a Gift draws on tools that already exist elsewhere in the system:
 
 - **The roll**, where one applies, reuses the standard mechanics already in place - weapon/Physical resolution, Presence/Psyche's self-paired attack shape, or a plain `Attribute + Difficulty` check - rather than each Gift inventing its own roll type.
-- **Ki cost**, where one applies, is a direct spend (no roll, no Fatigue Check) called out explicitly per Gift level, the same category as Ki Infusion or Bump Action Band.
+- **Ki cost**, where one applies, is a direct spend (no roll, no Fatigue Check) called out explicitly per Gift level, the same category as Ki Infusion or Bump Action Bracket.
 - **The Gift Check**, where one applies, is a resource-risk roll: 2d10 against current Ki (roll-under, same shape as the Fatigue Check). Success - free. Failure - lose 1 Ki, until refilled.
 
 None of these three apply automatically to every Gift or every level - each is a tool, used on a Gift-by-Gift, level-by-level basis as the specific effect calls for it.
@@ -310,8 +310,8 @@ Your body has crossed some threshold ordinary flesh shouldn't be able to cross. 
 
 | Level | Effect |
 |---|---|
-| 1 | At the beginning of combat, you may take one Fast or Normal action before anyone else acts - before even the Fast Action Band resolves. If more than one character has this Gift, they act among themselves in Initiative order, but all still act before the normal turn order begins. |
-| 2 | Once per round, you may spend **1 Ki** to take an additional Fast action, resolved immediately after your normal action for that round - it doesn't change your Action Band or Initiative position, just adds a second action on top. For the rest of that turn after spending the Ki, your [Movement Rate](combat.md#movement--range) is **×1.5**. |
+| 1 | At the beginning of combat, you may take one Fast or Normal action before anyone else acts - before even the Fast Action Bracket resolves. If more than one character has this Gift, they act among themselves in Initiative order, but all still act before the normal turn order begins. |
+| 2 | Once per round, you may spend **1 Ki** to take an additional Fast action, resolved immediately after your normal action for that round - it doesn't change your Action Bracket or Initiative position, just adds a second action on top. For the rest of that turn after spending the Ki, your [Movement Rate](combat.md#movement--range) is **×1.5**. |
 | 3 | The extra action from Level 2 can now be a Fast **or Normal** action, still 1 Ki, still once per round. Roll Initiative as 2d10 and keep the higher die. The post-Ki-spend Movement Rate multiplier rises to **×2** for the rest of that turn. |
 | 4 | The extra-action spend can now be used **up to twice per round** (still 1 Ki per use). On any turn where you've spent Ki this way, attacks made against you that turn are at **Disadvantage** - you're moving too fast to track cleanly. The post-Ki-spend Movement Rate multiplier rises to **×3** for the rest of that turn. |
 | 5 | The extra-action spend can now be used **up to three times per round** (still 1 Ki per use, still Fast or Normal only). Attacks made against you are at Disadvantage on any turn you spend Ki this way. The post-Ki-spend Movement Rate multiplier rises to **×5** for the rest of that turn. |
