@@ -143,7 +143,6 @@ export default {
         Object.entries(figured).map(([name, value]) => el('li', {}, `${name}: ${value}`)),
       ),
 
-      el('h3', {}, 'Finishing Touches'),
       el('p', {}, `Starting Fate Tokens: ${fate}`),
     ]);
 
@@ -167,7 +166,21 @@ export default {
       el('button', {
         type: 'button',
         text: 'Download PDF',
-        onClick: () => downloadPdf(sheet, state.name),
+        onClick: async (e) => {
+          const btn = e.currentTarget;
+          const original = btn.textContent;
+          btn.disabled = true;
+          btn.textContent = 'Generating…';
+          try {
+            await downloadPdf(sheet, state.name);
+          } catch (err) {
+            console.error(err);
+            alert('PDF generation failed - try the Markdown export instead.');
+          } finally {
+            btn.disabled = false;
+            btn.textContent = original;
+          }
+        },
       }),
     ]);
 
