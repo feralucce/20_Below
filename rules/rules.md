@@ -101,21 +101,21 @@ Descriptors are the concrete hook a player points to when [arguing a Skill pairi
 
 ### The Passive Wall Triad - Soak, Presence, Psyche
 
-Presence (Fire) and Psyche (Air) both mirror **Soak exactly** - the identical per-die mechanic, just resisting a different attack type. All three sub-stats are **passive gives**, the same way Health is: a flat number a character simply has, doing its job automatically with no roll or spend required.
+Every attack, regardless of type, resolves in the same two steps. **First, a to-hit roll**: the attacker's Attribute + Skill against the target's [Defense](#defense-derived-stat) as Difficulty - a normal core roll, and the same formula whether the attack is a fist, a threat, or a mind reaching where it isn't welcome. **Only a success reaches step two.** Then the attack's dice are resolved against the relevant wall stat, per die:
 
 - **Soak** - wall against **Physical** damage dice.
 - **Presence** - wall against **Social** attack dice.
 - **Psyche** - wall against **Mental** attack dice.
 
-For all three: each attack die is resolved individually against the relevant wall stat. Die ≤ wall stat is fully absorbed; die > wall stat connects. A wall stat of 10 guarantees 0% connect chance per die - true, complete negation - unless the attacker spends **Ki** (1 per die) to add their own matching Attack sub-stat to that specific die, per [Ki Infusion](#ki-infusion). What a connecting Social or Mental die actually costs the defender is not yet decided.
+Presence (Fire) and Psyche (Air) both mirror **Soak exactly** - the identical per-die mechanic, just resisting a different attack type. All three sub-stats are **passive gives**, the same way Health is: a flat number a character simply has, doing its job automatically with no roll or spend required.
 
-**Presence and Psyche are self-paired attacker/wall stats.** Physical splits the attacker/wall pair across two Attributes (a weapon sets the dice, Earth's Soak is the wall). Social and Mental don't get their own separate Attribute the way Physical does, and there's no "weapon" equivalent for words or force of personality, so **Presence and Psyche each do both jobs on their own stat**: a character's Presence sets how many d10 they roll when making a Social attack, resolved die-by-die against the *target's* Presence acting as their wall. Psyche works identically for Mental attacks. All three attack types boost a die via [Ki Infusion](#ki-infusion), 1 Ki per die.
+For all three: each attack die is resolved individually against the relevant wall stat. Die ≤ wall stat is fully absorbed; die > wall stat connects. A wall stat of 10 guarantees 0% connect chance per die - true, complete negation - unless the attacker spends **Ki** (1 per die) to add their own matching Attack sub-stat to that specific die, per [Ki Infusion](#ki-infusion). A connecting Physical die costs a Health Level, a connecting Social die costs a Poise, a connecting Mental die costs a Sanity.
 
 ### Earth
 
 #### Physical Attacks - Weapon Damage & Per-Die Resolution
 
-On a successful hit, the **weapon in use sets how many d10 are rolled** - see [weapons.md](weapons.md) for the base list. **Each die is resolved individually against the defender's Soak**, not summed together:
+After the attacker's [to-hit roll](#the-passive-wall-triad---soak-presence-psyche) succeeds, the **weapon in use sets how many d10 are rolled** - see [weapons.md](weapons.md) for the base list. **Each die is resolved individually against the defender's Soak**, not summed together:
 
 - **Die result > Soak** - that die connects, and costs the defender **one Health Level**.
 - **Die result ≤ Soak** - that die is fully absorbed, no effect.
@@ -237,11 +237,11 @@ Two passive functions, both "gives" like Health/Soak/Presence/Psyche - no roll, 
 
 #### Defense (Derived Stat)
 
-Moira's combat sub-stat is named **Atropos**, after the Fate who cuts the thread of life and cannot be turned aside - the fixed, unmovable point in a character's own destiny. It doesn't appear on the character sheet directly for combat purposes - instead it feeds a separate, derived entry called **Defense**, the same way D&D's AC is a derived number rather than a raw stat.
+Moira's combat sub-stat, **Atropos**, named for the Fate who cuts the thread of life and cannot be turned aside, feeds a single derived number, **Defense** (`10 − Atropos`), that governs how hard a character is to touch by *any* means - a blade, a word meant to wound, or a mind reaching where it isn't welcome. Fate doesn't distinguish the shape of the blow; it just decides whether the thread gets cut.
 
 **Defense = 10 − Atropos.**
 
-Defense is what an attacker's roll actually targets: **Defense becomes the attacker's Difficulty** when they attack this character (see the [Difficulty Chart](#difficulty-chart)). Since Difficulty runs 0 (hardest) to 10 (trivial), the subtraction inverts Atropos correctly: Atropos 0 → Defense 10 (trivial to hit), Atropos 10 → Defense 0 (nearly impossible to hit).
+Defense is **universal across all three attack types** - Physical, Social, and Mental all resolve their [to-hit roll](#the-passive-wall-triad---soak-presence-psyche) against the same Defense number. Defense becomes the attacker's Difficulty (see the [Difficulty Chart](#difficulty-chart)); since Difficulty runs 0 (hardest) to 10 (trivial), the subtraction inverts Atropos correctly: Atropos 0 → Defense 10 (trivial to hit), Atropos 10 → Defense 0 (nearly impossible to hit).
 
 ## Combat
 
