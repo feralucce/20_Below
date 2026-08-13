@@ -1,6 +1,8 @@
-# Core Mechanic
+# Rules
 
-## Attributes
+## Core Mechanic
+
+### Attributes
 
 Five attributes, each linked to a classical element. Each pairs a **domain** (narrative flavor) with a **mechanical role** (two sub-stats).
 
@@ -14,7 +16,7 @@ Five attributes, each linked to a classical element. Each pairs a **domain** (na
 
 Attributes are scored **1-10** (1 = lowest, 10 = highest).
 
-### Sub-Category Allocation
+#### Sub-Category Allocation
 
 Every Attribute's Mechanical Role is **two sub-stats**. The Attribute's own score is **always the number used to roll** (see [Resolution](#resolution)) - it is never reduced or consumed by the split below.
 
@@ -22,7 +24,7 @@ Separately, that same score generates a **pool of points equal to the Attribute'
 
 **This allocation is permanent.** Once a point is spent into a sub-stat, it's spent - there's no reallocating a pair's split later, same as Descriptors being fixed once chosen.
 
-### Health Levels
+#### Health Levels
 
 **Health Levels are a count of discrete hit-boxes**, not a numeric HP pool. Each Health Level can absorb damage **once** - a binary hit-box, not a container with its own capacity.
 
@@ -35,7 +37,7 @@ At **0 Health Levels**, a character falls unconscious and can't act. Health Leve
 
 **Crossing zero**: a single attack can never carry a character straight past 0 into negative territory. If enough connecting dice from one attack would carry a character's Health Levels below 0, the excess is simply discarded - they land exactly at 0, no further, no matter how many dice connected. **Once a character is already at 0 Health Levels** - unconscious under the rule above, or still conscious via Unstoppable - **any further attack can only remove 1 Health Level, total, regardless of how many dice connect.**
 
-### Physical Attacks - Weapon Damage & Per-Die Resolution
+#### Physical Attacks - Weapon Damage & Per-Die Resolution
 
 On a successful hit, the **weapon in use sets how many d10 are rolled** - see [weapons.md](weapons.md) for the base list. **Each die is resolved individually against the defender's Soak**, not summed together:
 
@@ -46,7 +48,7 @@ On a successful hit, the **weapon in use sets how many d10 are rolled** - see [w
 
 ![Damage's per-die resolution](../docs/assets/diagrams/damage-per-die-resolution.svg)
 
-### Potence
+#### Potence
 
 Potence (Earth's other sub-stat: raw physical power/strength - carrying capacity, immovability, mass, forcing/breaking things) splits into two jobs:
 
@@ -91,7 +93,7 @@ Potence (Earth's other sub-stat: raw physical power/strength - carrying capacity
 | Castle gate / fortress wall | 9 | 8 |
 | High-security modern vault | 10 | 8 |
 
-### The Passive Wall Triad - Soak, Presence, Psyche
+#### The Passive Wall Triad - Soak, Presence, Psyche
 
 Presence (Fire) and Psyche (Air) both mirror **Soak exactly** - the identical per-die mechanic, just resisting a different attack type. All three sub-stats are **passive gives**, the same way Health is: a flat number a character simply has, doing its job automatically with no roll or spend required.
 
@@ -103,14 +105,14 @@ For all three: each attack die is resolved individually against the relevant wal
 
 **Presence and Psyche are self-paired attacker/wall stats.** Physical splits the attacker/wall pair across two Attributes (a weapon sets the dice, Earth's Soak is the wall). Social and Mental don't get their own separate Attribute the way Physical does, and there's no "weapon" equivalent for words or force of personality, so **Presence and Psyche each do both jobs on their own stat**: a character's Presence sets how many d10 they roll when making a Social attack, resolved die-by-die against the *target's* Presence acting as their wall. Psyche works identically for Mental attacks. All three attack types boost a die via [Ki Infusion](#ki-infusion), 1 Ki per die.
 
-### Klotho
+#### Klotho
 
 Two passive functions, both "gives" like Health/Soak/Presence/Psyche - no roll, no spend:
 
 1. **Ki Regeneration** - a Short Rest restores `Klotho ÷ 2` Ki (round up); a Full Night's Rest restores Ki fully. See [Ki's refill](fate.md#fatigue-check).
 2. **Lucky Number** - a character's lucky number equals their **Klotho rating**. Whenever **any die** rolled for that character shows a result **equal to their Klotho rating**, they immediately gain **1 Fate Token** - automatic, no choice, no cost.
 
-### Ki Infusion
+#### Ki Infusion
 
 Covers **all three attack types** - Physical, Social, and Mental - with the same shape and the same currency. The baseline attack die is raw and unboosted - `d10` vs. the defender's wall (Soak/Presence/Psyche as appropriate), so a wall of 10 fully negates it, guaranteed (0% connect). Before the roll, a player may spend **1 Ki per individual die** to add their own matching sub-stat (**Ferocity** for Physical, **Presence** for Social, **Psyche** for Mental) to that specific die's result - "pushing" the attack. A boosted die is compared as `d10 + [matching sub-stat]` vs. the wall, same threshold rule (result > wall connects).
 
@@ -118,29 +120,29 @@ This is a **direct Ki spend**, the same category as [spending Ki to preserve a H
 
 Full negation is still the honest baseline: an unboosted attack against a maxed wall can never get through, but a player willing to spend Ki can crack even a Soak/Presence/Psyche of 10 - a boosted die with a matching sub-stat of 10 is a guaranteed connect, while a rating of 2 only gives a 20% chance per boosted die.
 
-### Ki Spend to Preserve a Health Level
+#### Ki Spend to Preserve a Health Level
 
 A player may spend **1 point from Ki** (the pool - distinct from [Fate Tokens](fate.md), the resource players earn/spend) to **cancel the loss of one Health Level**, at a cost of 1 Ki per Level preserved. Multiple Ki can be spent to preserve multiple Levels.
 
-### Health Level Recovery
+#### Health Level Recovery
 
 - **Short Rest**: heal Health Levels equal to your Health sub-stat divided by 2, round up.
 - **Full Night's Rest**: heal all lost Health Levels, back to full.
 - **Reduced below 0 Health Levels**: instead of the rates above, recover 1 Health Level per day of rest until back to 0.
 
-### Battle Scars
+#### Battle Scars
 
 Dropping to 0 Health Levels leaves a permanent mark - a scar, a limp, a changed voice, whatever fits the wound. **Purely cosmetic, no mechanical effect.** The [Healing](gifts.md#healing) and [Regeneration](gifts.md#regeneration) Gifts both grant immunity to it, for the target they're used on.
 
 Dropping below 0 Health Levels can instead impose a genuine [Flaw](flaws.md), lasting until the character is fully healed back to 0. GM's call, in consultation with the player, on which Flaw fits the harm taken.
 
-### Poise
+#### Poise
 
 Poise mirrors [Health Levels](#health-levels), tracking composure under Social attack instead of Physical.
 
 - **`PC Poise = 5 + Presence`.** NPCs default to a flat 5. Each Level is a binary hit-box, same shape as Health.
 - **Poise cannot drop below 0.** Once at 0, further connecting Social dice have no additional effect - you're already as Flustered as you get.
-- **At 0 Poise**, a character becomes [Flustered](combat.md#flustered).
+- **At 0 Poise**, a character becomes [Flustered](#flustered).
 
 **Recovery**: Short Rest heals `Presence ÷ 2` (round up); Full Night's Rest heals fully.
 
@@ -148,7 +150,7 @@ Poise mirrors [Health Levels](#health-levels), tracking composure under Social a
 
 **Poise scars**: dropping to 0 leaves a purely cosmetic social tell (a nervous habit, a reputation quirk), no mechanical effect. No Gift currently grants immunity to this - intentional.
 
-### Sanity
+#### Sanity
 
 Sanity mirrors Health Levels too, tracking a character's grip on their own mind against Mental attack.
 
@@ -160,7 +162,7 @@ Sanity mirrors Health Levels too, tracking a character's grip on their own mind 
 
 **Below 0, a character is Shattered**: panicky, babbling, unable to act on their own - they have to be led or dragged. Shattered clears when 1 Ki is spent or a Full Night's Rest passes, either of which restores Sanity only to 1, not fully - normal recovery resumes from there on the next rest. **Dropping below 0 always leaves a permanent mental scar**, regardless of how the character recovers afterward, even a Ki-funded refill doesn't erase it. The scar mechanic itself is not yet defined - flagged for a later, deeper pass.
 
-### Defense (Derived Stat)
+#### Defense (Derived Stat)
 
 Moira's combat sub-stat is named **Atropos**, after the Fate who cuts the thread of life and cannot be turned aside - the fixed, unmovable point in a character's own destiny. It doesn't appear on the character sheet directly for combat purposes - instead it feeds a separate, derived entry called **Defense**, the same way D&D's AC is a derived number rather than a raw stat.
 
@@ -168,7 +170,7 @@ Moira's combat sub-stat is named **Atropos**, after the Fate who cuts the thread
 
 Defense is what an attacker's roll actually targets: **Defense becomes the attacker's Difficulty** when they attack this character (see the [Difficulty Chart](#difficulty-chart)). Since Difficulty runs 0 (hardest) to 10 (trivial), the subtraction inverts Atropos correctly: Atropos 0 → Defense 10 (trivial to hit), Atropos 10 → Defense 0 (nearly impossible to hit).
 
-### Sub-Stat Descriptors
+#### Sub-Stat Descriptors
 
 For every point a character allocates to a sub-stat, they gain one Descriptor - a short player-chosen word or phrase capturing one specific flavor of that sub-stat for this character. E.g. 3 points in Soak might yield *Iron-skinned, Padded, Unyielding* - three distinct ways the character shrugs off harm, not three copies of the same idea.
 
@@ -176,7 +178,7 @@ Descriptors are **free at character creation** (no separate cost beyond the poin
 
 Descriptors are the concrete hook a player points to when [arguing a Skill pairing](skills.md#skills-are-not-attribute-locked) - grounding "I'm using Fire here because I'm being *Ruthless*" in an established character fact instead of an improvised justification each time.
 
-## Resolution
+### Resolution
 
 **Target number** = Attribute + Difficulty.
 
@@ -186,7 +188,7 @@ Roll **2d10** and sum them. Success if the result is **equal to or lower than** 
 
 Target number range: **1** (Attribute 1 + Difficulty 0) to **20** (Attribute 10 + Difficulty 10) - a target of 1 is below the lowest possible roll, i.e. an automatic failure, weighted toward the middle (11) rather than flat.
 
-### Difficulty Chart
+#### Difficulty Chart
 
 An 11-step reference ladder for setting Difficulty, rather than picking a bare number cold:
 
@@ -211,18 +213,67 @@ Per-Attribute example tasks (a Fire example vs. an Earth example at the same Dif
 - **A roll of 2** (both dice show 1) - critical success.
 - **A roll of 20** (both dice show 10) - critical failure.
 
-### Advantage / Disadvantage
+#### Advantage / Disadvantage
 
 **Advantage** rolls **3d10 and keeps the lowest two** (summed); **Disadvantage** rolls **3d10 and keeps the highest two** (summed) - roll-under, so lower is always better. Usable wherever a specific rule grants it - currently the [Expert/Master Skill Training Tiers](skills.md#training-tiers), a character's off-hand (below), but not restricted to those.
 
 **Off-hand**: performing a task that requires manual dexterity or precision (attacking, fine manipulation, etc.) with your off-hand imposes Disadvantage on the roll. [Ambidextrous](boons.md#trivial) removes this penalty.
 
-### Untrained Rolls
+#### Untrained Rolls
 
 If a character has no applicable Skill for the task, they still roll - but **the Attribute does not apply**. Target number is **Difficulty alone** (0-10), not Attribute + Difficulty. Having an applicable Skill is what lets the Attribute apply at all.
 
-## Time Bands
+### Time Bands
 
 A standard ladder of duration used wherever a rule needs to name "how long": **Round → Minute (≈10 rounds) → Scene → Day → Month → Year**. The **Round** is the base unit - any duration described elsewhere in the rules is stated in Rounds unless a longer band is explicitly named.
 
 This is intentional: under the 2d10 curve, an untrained character faces poor odds at anything above Difficulty 5 or so, and Difficulty 0 (Nearly Impossible) is a flat impossibility untrained (target 0 is below 2d10's minimum roll of 2).
+
+## Combat
+
+### Combat Order
+
+1. **Initiative** - rolled **once at the start of combat**, not re-rolled each round: **1d10 + Initiative** (sub-stat). Higher total acts first. This base order holds for the whole fight.
+2. **Declare Action Bracket** - each character declares which of the three bands they're acting in this round: **Fast**, **Normal**, or **Slow** (see below).
+3. **Resolve band by band** - all **Fast**-band characters act first, then all **Normal**-band characters, then all **Slow**-band characters. Within each band, characters act in Initiative order.
+
+#### Action Brackets
+
+| Band | Also called | Actions | Notes |
+|---|---|---|---|
+| **Fast** | Reactive | One action | A snap shot, a move, a single Skill use. Acts first, but only gets the one action. |
+| **Normal** | Active | Two actions | E.g. a move and an attack. Acts second. |
+| **Slow** | Measured | One action, with concentration | Acts last, but the single action is empowered: allows called shots, grants **Advantage** on the attack, and (once magic exists) all spellcasting is always a Slow action. |
+
+The tradeoff across all three: **Fast trades action count for going first**, **Normal is the balanced middle (two actions, middling position)**, **Slow trades speed for a single, more powerful, concentrated action**.
+
+A player can spend **1 Ki per step** to bump their declared band up (Slow → Normal, or Normal → Fast) - buying back speed at the cost of the resource. Spending 2 Ki moves two steps at once (Slow → Fast).
+
+#### Movement & Range
+
+**Range Bands**: four abstract bands - **Melee, Close, Near, Far** - used for weapon reach, targeting, and spotting. The GM assigns them loosely per scene rather than measuring a map; no grid.
+
+**Movement Rate**: `5 + Air`, in **meters** - the same flat-floor-plus-Attribute shape as [Health Levels](#health-levels). A character can move up to their Movement Rate as part of a Fast action's one action or a Normal action's move component. As a rough conversion (not a strict count), **spending a full Movement Rate shifts one Range Band**; the GM can also just narrate a shift directly when the fiction obviously calls for it, without making players do the math.
+
+#### Distracted
+
+A character who loses a Health Level or is the target of a Kotodama effect while resolving a **Slow** Action Bracket action becomes **Distracted**, and must roll **Atropos + Difficulty** to hold focus.
+
+- **Success** - the action resolves as declared.
+- **Failure** - the action downgrades to a **Normal** action (loses the called-shot/Advantage benefit).
+
+**Other sources can impose Distracted too** - a Gift, an environmental hazard (a collapsing building, a deafening explosion), or GM fiat, whether or not a Slow action is involved. The same **Atropos + Difficulty** roll applies; outside a Slow action, failure instead imposes **Disadvantage** on the triggering roll. [Concentration](boons.md) grants immunity to being Distracted regardless of source.
+
+#### Surprise
+
+A character who hasn't noticed a threat before combat begins is **Surprised** - typically because an opposing Stealth roll succeeded against their Perception, or the GM judges the fiction warrants it.
+
+**A Surprised character rolls at Disadvantage on everything** - attacks, and any other roll where the defender's readiness matters - for the remainder of the round they're caught in. Ends automatically once that round ends. [Alertness](boons.md) grants immunity to being Surprised while conscious.
+
+#### Flustered
+
+A character whose [Poise](#poise) reaches 0 becomes **Flustered**.
+
+**A Flustered character rolls at Disadvantage on all Social rolls**, and on any other roll where composure matters (GM's call, same standard as Surprise), for the rest of the Scene.
+
+A Flustered character may spend an action to roll **Presence + Difficulty** to shake it off early, ending the condition immediately on success.

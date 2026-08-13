@@ -92,7 +92,7 @@ A starting Skill list scoped to a **modern-world base campaign**. Per [skills.md
 | Thrown Weapons | Knives, javelins, axes, and other bladed or weighted weapons thrown by hand - a different body mechanic and skillset from Archery's draw-and-release. |
 | Tracking | Following physical trails. |
 | Tradecraft | Spy fieldcraft - dead drops, signals, cover identities, evasion, counter-surveillance. |
-| Unarmed Combat | Brawling, martial arts, and grappling. Also the attacker's Skill for the Grapple maneuver once [combat.md](combat.md) defines one. |
+| Unarmed Combat | Brawling, martial arts, and grappling. Also the attacker's Skill for the Grapple maneuver once [rules.md](rules.md) defines one. |
 | Veterinary Medicine | Diagnosing and treating animals. |
 
 ## Everyman Skills

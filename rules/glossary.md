@@ -1,6 +1,6 @@
 # Glossary
 
-Terms worth knowing before you go through [Character Creation](character-creation.md). Scoped to what the walkthrough itself uses - combat-only vocabulary gets defined where it's first needed, in [combat.md](combat.md).
+Terms worth knowing before you go through [Character Creation](character-creation.md). Scoped to what the walkthrough itself uses - combat-only vocabulary gets defined where it's first needed, in [rules.md](rules.md).
 
 **Action Bracket** — One of three timing categories (Fast, Normal, Slow) a character declares each combat round. Fast acts first but gets only one action; Normal acts second with two actions; Slow acts last but its single action is empowered (Advantage, called shots). Within each bracket, characters act in Initiative order before resolution moves to the next bracket.
 

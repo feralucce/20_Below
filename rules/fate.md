@@ -1,6 +1,6 @@
 # Fate Tokens
 
-A parallel resource layered on top of the [core roll](core-mechanic.md#resolution) - playing into vulnerability, flaws, and bad luck funds a currency spent later.
+A parallel resource layered on top of the [core roll](rules.md#resolution) - playing into vulnerability, flaws, and bad luck funds a currency spent later.
 
 ## Nature
 
@@ -49,7 +49,7 @@ Pick one of these, or [write your own](#writing-a-custom-nature).
 ## Fate Gain
 
 - **Nature** - playing to your Nature at a fitting moment (see above).
-- **Voluntary Disadvantage** - a player may choose to take [Disadvantage](core-mechanic.md#advantage--disadvantage) on a roll in exchange for a Fate Token.
+- **Voluntary Disadvantage** - a player may choose to take [Disadvantage](rules.md#advantage--disadvantage) on a roll in exchange for a Fate Token.
 - **Flaws** - every character has Flaws. When the GM *or* the player invokes a Flaw in a scene, the invoking side's choice grants the player a Fate Token.
 - **Daily Regeneration** - characters regain **1 Fate Token** at sunrise, every day.
 - **Milestone Award** - when the party overcomes a significant challenge, the GM awards Fate Tokens (presumably party-wide, exact amount/scope not yet decided).
@@ -70,7 +70,7 @@ Characters with [Iron Will](boons.md) may also spend 1 Fate Token to **Assert Yo
 
 ## Fatigue Check
 
-Every time a player spends a Fate Token, they immediately make a **Fatigue Check** - roll 2d10 against **Ki** (see below), same roll-under shape as the [core roll](core-mechanic.md#resolution), with Ki's current total standing in for a target number instead of a GM-set Difficulty.
+Every time a player spends a Fate Token, they immediately make a **Fatigue Check** - roll 2d10 against **Ki** (see below), same roll-under shape as the [core roll](rules.md#resolution), with Ki's current total standing in for a target number instead of a GM-set Difficulty.
 
 - **Success** - no effect, the spend goes through with no cost beyond the token itself.
 - **Failure** - lose **1 point from Ki**, until it's refilled.
@@ -84,9 +84,9 @@ Every time a player spends a Fate Token, they immediately make a **Fatigue Check
 Ki has four jobs:
 
 1. **Target number for the Fatigue Check** (above).
-2. **Direct spend**: 1 point from Ki preserves one [Health Level](core-mechanic.md#health-levels) that would otherwise be lost to an unsoaked hit.
-3. **Direct spend**: 1 Ki per step to move up one [Action Bracket](combat.md#action-brackets) (Slow → Normal, or Normal → Fast; 2 Ki moves two steps at once).
-4. **Direct spend**: 1 Ki per die to boost an attack die - see [Ki Infusion](core-mechanic.md#ki-infusion), covering all three attack types (Physical/Ferocity, Social/Presence, Mental/Psyche).
+2. **Direct spend**: 1 point from Ki preserves one [Health Level](rules.md#health-levels) that would otherwise be lost to an unsoaked hit.
+3. **Direct spend**: 1 Ki per step to move up one [Action Bracket](rules.md#action-brackets) (Slow → Normal, or Normal → Fast; 2 Ki moves two steps at once).
+4. **Direct spend**: 1 Ki per die to boost an attack die - see [Ki Infusion](rules.md#ki-infusion), covering all three attack types (Physical/Ferocity, Social/Presence, Mental/Psyche).
 
 Jobs 2-4 are direct spends - no roll, no Fatigue Check, no Stamina spend-cap interaction, since none of those are tied to Fate Token spending specifically.
 
@@ -95,7 +95,7 @@ Jobs 2-4 are direct spends - no roll, no Fatigue Check, no Stamina spend-cap int
 Action Brackets themselves (Fast/Normal/Slow) cost nothing to declare - that's just normal combat flow, not something Stamina governs. Instead, Stamina does two things:
 
 1. **Hard cap on Fate Token spends per encounter.** A character can spend Fate Tokens **at most [Stamina score] times per single encounter**, regardless of how many Fate Tokens they actually have banked.
-2. **General endurance/exhaustion-resistance gauge.** Stamina sets a free baseline duration for any single sustained exertion (holding breath, forced marching, sustained labor, running flat-out) - Stamina Rounds, Minutes, Hours, or whatever [Time Band](core-mechanic.md#time-bands) unit fits the activity, GM's call. Past that baseline, roll **Water + Difficulty** once per additional unit of time, with Difficulty dropping by 1 each successive check. Failure imposes one level of **Exhausted**.
+2. **General endurance/exhaustion-resistance gauge.** Stamina sets a free baseline duration for any single sustained exertion (holding breath, forced marching, sustained labor, running flat-out) - Stamina Rounds, Minutes, Hours, or whatever [Time Band](rules.md#time-bands) unit fits the activity, GM's call. Past that baseline, roll **Water + Difficulty** once per additional unit of time, with Difficulty dropping by 1 each successive check. Failure imposes one level of **Exhausted**.
 
 **Exhausted** is cumulative, each level stacking on top of the last:
 
@@ -107,7 +107,7 @@ Action Brackets themselves (Fast/Normal/Slow) cost nothing to declare - that's j
 | 4 | Can't take Slow actions - too worn down for that kind of precision. |
 | 5 | Collapse: falls unconscious, can't act until rested. |
 
-A Short Rest drops one level of Exhausted; a Full Night's Rest clears it entirely, mirroring [Health Level Recovery](core-mechanic.md#health-level-recovery)'s own split.
+A Short Rest drops one level of Exhausted; a Full Night's Rest clears it entirely, mirroring [Health Level Recovery](rules.md#health-level-recovery)'s own split.
 
 ## Kotodama
 
