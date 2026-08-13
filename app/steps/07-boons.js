@@ -78,7 +78,7 @@ export default {
     const { state, data } = ctx;
     container.append(
       el('h2', {}, '8. Boons'),
-      el('p', {}, `Spend a ${data.boonsPoolTotal}-point pool. Remaining: ${boonsPoolRemaining(state, data)}.`),
+      el('p', {}, `Spend a ${data.boonsPoolTotal}-point pool. Remaining: ${boonsPoolRemaining(state, data)}. Anything left unspent converts 1:1 into Discretionary points (step 12).`),
     );
     renderBoonPicker(container, ctx, data.boons, {
       source: 'pool',
