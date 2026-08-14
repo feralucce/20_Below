@@ -726,6 +726,7 @@ body {
   border-top: 1px solid var(--panel-border);
 }
 
+.roller-panel > h4,
 .roller-gift-check h4 {
   margin: 0 0 0.4rem;
   font-size: 0.8rem;
