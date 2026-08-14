@@ -1,7 +1,7 @@
 import { el, renderMarkdown } from '../ui.js';
 import { computeFiguredCharacteristics, startingFateTokens, skillTierName } from '../state.js';
 import { downloadMarkdown } from '../export/toMarkdown.js';
-import { downloadPdf } from '../export/toPdf.js';
+import { downloadHtml, printToPdf } from '../export/toHtml.js';
 
 function inline(md) {
   return window.marked ? window.marked.parseInline(md) : md;
@@ -355,17 +355,36 @@ export default {
       }),
       el('button', {
         type: 'button',
-        text: 'Download PDF',
+        text: 'Download HTML',
         onClick: async (e) => {
           const btn = e.currentTarget;
           const original = btn.textContent;
           btn.disabled = true;
           btn.textContent = 'Generating…';
           try {
-            await downloadPdf(printSheet, state.name);
+            await downloadHtml(printSheet, state.name);
           } catch (err) {
             console.error(err);
-            alert('PDF generation failed - try the Markdown export instead.');
+            alert('HTML generation failed - try the Markdown export instead.');
+          } finally {
+            btn.disabled = false;
+            btn.textContent = original;
+          }
+        },
+      }),
+      el('button', {
+        type: 'button',
+        text: 'Print / Save as PDF',
+        onClick: async (e) => {
+          const btn = e.currentTarget;
+          const original = btn.textContent;
+          btn.disabled = true;
+          btn.textContent = 'Opening…';
+          try {
+            await printToPdf(printSheet, state.name);
+          } catch (err) {
+            console.error(err);
+            alert('Could not open the print view - try the Download HTML export instead.');
           } finally {
             btn.disabled = false;
             btn.textContent = original;
