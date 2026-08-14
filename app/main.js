@@ -9,6 +9,7 @@ import { parseFlaws } from './parse/flaws.js';
 import { parseSampleDescriptors } from './parse/descriptors.js';
 import { createInitialState, allPoolsSummary } from './state.js';
 import { el, poolBadge } from './ui.js';
+import { isDesktopApp, saveCharacterToFile, listSavedCharacters, loadCharacterFromFile } from './desktop-storage.js';
 
 import stepIdentity from './steps/01-identity.js';
 import stepNature from './steps/02-nature.js';
@@ -46,6 +47,7 @@ const poolSummary = document.getElementById('pool-summary');
 const btnBack = document.getElementById('btn-back');
 const btnNext = document.getElementById('btn-next');
 const btnReset = document.getElementById('btn-reset');
+const fileControls = document.getElementById('character-file-controls');
 
 async function loadRulesData() {
   const [creationMd, fateMd, skillsMd, premadeMd, boonsMd, resourcesMd, giftsMd, flawsMd, rulesMd] =
@@ -92,6 +94,14 @@ function saveState(state) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 }
 
+// Replaces every own key on `target` with `source`'s, in place - `state` is
+// a `const` binding closed over everywhere, so loading a saved character
+// mutates its contents rather than rebinding the variable.
+function replaceStateContents(target, source) {
+  Object.keys(target).forEach((key) => delete target[key]);
+  Object.assign(target, source);
+}
+
 async function main() {
   let data;
   try {
@@ -119,6 +129,54 @@ async function main() {
     btnBack.disabled = currentStep === 0;
     btnNext.disabled = currentStep === STEPS.length - 1;
     rerenderPools();
+  }
+
+  async function renderFileControls() {
+    if (!isDesktopApp || !fileControls) return;
+    fileControls.innerHTML = '';
+
+    const select = el('select', { class: 'character-select' }, [
+      el('option', { value: '' }, 'Load a saved character…'),
+    ]);
+    try {
+      (await listSavedCharacters()).forEach((name) => {
+        select.appendChild(el('option', { value: name }, name));
+      });
+    } catch (err) {
+      console.error('Failed to list saved characters', err);
+    }
+    select.addEventListener('change', async () => {
+      const name = select.value;
+      if (!name) return;
+      try {
+        const loaded = await loadCharacterFromFile(name);
+        replaceStateContents(state, { ...createInitialState(data), ...loaded });
+        currentStep = 0;
+        rerenderStep();
+      } catch (err) {
+        console.error(err);
+        alert(`Failed to load "${name}".`);
+      } finally {
+        select.value = '';
+      }
+    });
+
+    const saveBtn = el('button', {
+      type: 'button',
+      class: 'save-btn',
+      text: 'Save',
+      onClick: async () => {
+        try {
+          await saveCharacterToFile(state);
+          await renderFileControls();
+        } catch (err) {
+          console.error(err);
+          alert('Save failed.');
+        }
+      },
+    });
+
+    fileControls.append(select, saveBtn);
   }
 
   function renderNav() {
@@ -169,6 +227,7 @@ async function main() {
   });
 
   rerenderStep();
+  renderFileControls();
 }
 
 main();
