@@ -11,6 +11,8 @@ import {
 import { downloadMarkdown } from '../export/toMarkdown.js';
 import { downloadHtml, printToPdf } from '../export/toHtml.js';
 import { downloadRtf } from '../export/toRtf.js';
+import buildAdvancementTab from './tab-advancement.js';
+import buildScarsTab from './tab-scars.js';
 
 function inline(md) {
   return window.marked ? window.marked.parseInline(md) : md;
@@ -246,6 +248,8 @@ const TABS = [
   { id: 'gifts', label: 'Gifts', build: buildGiftsTab },
   { id: 'traits', label: 'Traits', build: buildTraitsTab },
   { id: 'gear', label: 'Gear', build: buildGearTab },
+  { id: 'advancement', label: 'Advancement', build: buildAdvancementTab, interactive: true },
+  { id: 'scars', label: 'Scars', build: buildScarsTab, interactive: true },
   { id: 'biography', label: 'Biography', build: buildBiographyTab },
 ];
 
@@ -371,7 +375,8 @@ export default {
     function renderTabContent() {
       tabContent.innerHTML = '';
       const tab = TABS.find((t) => t.id === activeTab);
-      tabContent.append(...tab.build(state, data).filter((n) => n != null));
+      const nodes = tab.interactive ? tab.build(state, data, renderTabContent) : tab.build(state, data);
+      tabContent.append(...nodes.filter((n) => n != null));
     }
 
     function renderTabNav() {
@@ -402,17 +407,23 @@ export default {
     // everything in one document regardless of which tab happens to be open
     // on screen, so it renders from this hidden element instead. Read-only:
     // interactive controls would be pointless on a page nobody sees or clicks.
-    const printSheet = el(
-      'div',
-      { class: 'sheet sheet-print-only', id: 'character-sheet-print' },
-      [
-        ...buildHeader(state, data, figured, { interactive: false }),
-        ...TABS.flatMap((tab) => [
-          el('h3', {}, tab.label),
-          el('div', {}, tab.build(state, data)),
-        ]),
-      ],
-    );
+    // Built fresh right before each export (see buildPrintSheet below)
+    // rather than once here - the Advancement/Scars tabs and the header's
+    // trackers can all change after this step first renders, and a
+    // snapshot taken only once would silently export stale content.
+    function buildPrintSheet() {
+      return el(
+        'div',
+        { class: 'sheet sheet-print-only', id: 'character-sheet-print' },
+        [
+          ...buildHeader(state, data, computeFiguredCharacteristics(state), { interactive: false }),
+          ...TABS.flatMap((tab) => [
+            el('h3', {}, tab.label),
+            el('div', {}, tab.build(state, data)),
+          ]),
+        ],
+      );
+    }
     // Only one of these should ever exist in the DOM - drop any leftover
     // from a previous visit to this step before adding the fresh one. The
     // wrapper (not the sheet itself) carries the hiding style - clipping
@@ -421,10 +432,18 @@ export default {
     // `position: absolute; left: -99999px`, which html2canvas measures as
     // zero-size.
     document.getElementById('character-sheet-print-wrapper')?.remove();
+    let printSheet = buildPrintSheet();
     const printWrapper = el('div', { class: 'print-sheet-wrapper', id: 'character-sheet-print-wrapper' }, [
       printSheet,
     ]);
     document.body.appendChild(printWrapper);
+
+    function refreshPrintSheet() {
+      printSheet = buildPrintSheet();
+      printWrapper.innerHTML = '';
+      printWrapper.appendChild(printSheet);
+      return printSheet;
+    }
 
     const notesField = el('div', { class: 'field' }, [
       el('label', {}, 'Finishing Touches notes (equipment, appearance, anything else)'),
@@ -464,7 +483,7 @@ export default {
           btn.disabled = true;
           btn.textContent = 'Generating…';
           try {
-            await downloadHtml(printSheet, state.name);
+            await downloadHtml(refreshPrintSheet(), state.name);
           } catch (err) {
             console.error(err);
             alert('HTML generation failed - try the Markdown export instead.');
@@ -483,7 +502,7 @@ export default {
           btn.disabled = true;
           btn.textContent = 'Opening…';
           try {
-            await printToPdf(printSheet, state.name);
+            await printToPdf(refreshPrintSheet(), state.name);
           } catch (err) {
             console.error(err);
             alert('Could not open the print view - try the Download HTML export instead.');

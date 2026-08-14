@@ -1,4 +1,4 @@
-import { computeFiguredCharacteristics, startingFateTokens, skillTierName } from '../state.js';
+import { computeFiguredCharacteristics, startingFateTokens, skillTierName, xpSpent, xpRemaining } from '../state.js';
 
 function indentBlock(text, prefix = '  > ') {
   return text
@@ -119,6 +119,26 @@ export function buildMarkdown(state, data) {
           : '';
       push(`- **${f.name}** (Level ${f.level}): ${effect}`);
     });
+  push();
+
+  push('## Scars');
+  push();
+  const physicalScars = state.scars.filter((s) => s.physical);
+  const mentalScars = state.scars.filter((s) => !s.physical);
+  push('**Physical**');
+  push();
+  if (physicalScars.length === 0) push('None.');
+  physicalScars.forEach((s) => push(`- **${s.title || '(untitled)'}**${s.description ? `: ${s.description}` : ''}`));
+  push();
+  push('**Mental**');
+  push();
+  if (mentalScars.length === 0) push('None.');
+  mentalScars.forEach((s) => push(`- **${s.title || '(untitled)'}**${s.description ? `: ${s.description}` : ''}`));
+  push();
+
+  push('## Advancement');
+  push();
+  push(`- XP Earned: ${state.xpEarned}. Spent: ${xpSpent(state, data)}. Remaining: ${xpRemaining(state, data)}.`);
   push();
 
   push('## Figured Characteristics');

@@ -1,4 +1,4 @@
-import { el, counterRow } from '../ui.js';
+import { el, counterRow, renderMarkdown } from '../ui.js';
 import {
   discretionaryTotal,
   discretionaryPointsSpent,
@@ -12,6 +12,8 @@ import {
   refundResourceLevel,
   buyGiftLevel,
   refundGiftLevel,
+  buyDiscretionaryGiftAdder,
+  refundDiscretionaryGiftAdder,
   giftLevelCost,
   skillTierName,
   unspentBoonsPoolPoints,
@@ -128,17 +130,21 @@ export default {
       );
     });
 
-    // ---- Gifts (Level only; manage Adders/Limiters back on step 10) ----
+    // ---- Gifts (Level, Adders, and Limiters, all from this one page) ----
     const rateGifts = data.discretionaryRates.Gifts;
-    container.append(
-      el('h3', {}, `Gift Levels (${rateGifts} Discretionary/point - manage Adders/Limiters on step 10)`),
-    );
+    container.append(el('h3', {}, `Gifts (${rateGifts} Discretionary/pool-point)`));
     data.gifts.forEach((gift) => {
       const gState = state.gifts.find((g) => g.name === gift.name);
       const level = gState?.level ?? 0;
       const bought = state.discretionaryPurchases.Gifts[gift.name] ?? 0;
       const perLevelPool = giftLevelCost(data, gState?.limiters.length ?? 0);
       const unitCost = perLevelPool * rateGifts;
+      const card = el('details', { class: 'pick-card' });
+      card.append(
+        el('summary', {}, `${gift.name}${gift.flagged ? ' [flagged, not final]' : ''}`),
+        el('div', { class: 'detail', html: renderMarkdown(gift.markdown) }),
+      );
+      container.appendChild(card);
       container.append(
         counterRow({
           name: gift.name,
@@ -156,6 +162,68 @@ export default {
           },
         }),
       );
+
+      if (level > 0 || gState?.adders.length || gState?.limiters.length) {
+        if (gift.adders.length) {
+          const addersRow = el('div', { style: 'margin:0.25rem 0 0.5rem 0.5rem;' });
+          gift.adders.forEach((adder) => {
+            const owned = gState?.adders.includes(adder.name);
+            const boughtHere = (state.discretionaryPurchases.GiftAdders[gift.name] ?? []).includes(adder.name);
+            const adderCost = adder.points * rateGifts;
+            addersRow.appendChild(
+              el('div', { style: 'display:flex;gap:0.5rem;align-items:center;margin:0.15rem 0;font-size:0.85rem;' }, [
+                el('span', {}, `${adder.name} (${adder.tier}, ${adderCost} Discretionary)${owned ? ' - owned' : ''}`),
+                !owned
+                  ? el('button', {
+                      type: 'button',
+                      text: 'Buy',
+                      disabled: adderCost > discretionaryRemaining(state, data) ? '' : undefined,
+                      onClick: () => {
+                        buyDiscretionaryGiftAdder(state, gift.name, adder.name);
+                        rerenderStep();
+                        rerenderPools();
+                      },
+                    })
+                  : null,
+                owned && boughtHere
+                  ? el('button', {
+                      type: 'button',
+                      text: 'Undo',
+                      onClick: () => {
+                        refundDiscretionaryGiftAdder(state, gift.name, adder.name);
+                        rerenderStep();
+                        rerenderPools();
+                      },
+                    })
+                  : null,
+              ]),
+            );
+          });
+          container.appendChild(addersRow);
+        }
+        if (gift.limiters.length) {
+          const limitersRow = el('div', { style: 'margin:0 0 1rem 0.5rem;' });
+          gift.limiters.forEach((limiter) => {
+            const checked = gState?.limiters.includes(limiter.name);
+            limitersRow.appendChild(
+              el('label', { style: 'display:block;font-size:0.85rem;' }, [
+                el('input', {
+                  type: 'checkbox',
+                  checked: checked ? '' : undefined,
+                  onChange: (e) => {
+                    if (e.target.checked) gState.limiters.push(limiter.name);
+                    else gState.limiters = gState.limiters.filter((l) => l !== limiter.name);
+                    rerenderStep();
+                    rerenderPools();
+                  },
+                }),
+                ` ${limiter.name} (free, -1 pt/Level)`,
+              ]),
+            );
+          });
+          container.appendChild(limitersRow);
+        }
+      }
     });
 
     // ---- Skills ----

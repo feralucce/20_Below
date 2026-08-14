@@ -3,7 +3,7 @@
 // actually computed. Opens natively in Word, LibreOffice, Google Docs
 // (via import), etc.
 
-import { computeFiguredCharacteristics, startingFateTokens, skillTierName } from '../state.js';
+import { computeFiguredCharacteristics, startingFateTokens, skillTierName, xpSpent, xpRemaining } from '../state.js';
 
 const PAGE_WIDTH_TWIPS = 12240; // US Letter, 8.5in
 const MARGIN_TWIPS = 1440; // 1in
@@ -166,6 +166,21 @@ export function buildRtf(state, data) {
           : '';
       bullet(`**${f.name}** (Level ${f.level}): ${effect}`);
     });
+  spacer();
+
+  h2('Scars');
+  const physicalScars = state.scars.filter((s) => s.physical);
+  const mentalScars = state.scars.filter((s) => !s.physical);
+  para('**Physical**');
+  if (physicalScars.length === 0) para('None.');
+  physicalScars.forEach((s) => bullet(`**${s.title || '(untitled)'}**${s.description ? `: ${s.description}` : ''}`));
+  para('**Mental**');
+  if (mentalScars.length === 0) para('None.');
+  mentalScars.forEach((s) => bullet(`**${s.title || '(untitled)'}**${s.description ? `: ${s.description}` : ''}`));
+  spacer();
+
+  h2('Advancement');
+  bullet(`XP Earned: ${state.xpEarned}. Spent: ${xpSpent(state, data)}. Remaining: ${xpRemaining(state, data)}.`);
   spacer();
 
   h2('Figured Characteristics');
