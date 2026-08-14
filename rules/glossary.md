@@ -86,7 +86,7 @@ Terms worth knowing before you go through [Character Creation](character-creatio
 
 **Soak** — One of Earth's two sub-stats, the hide the world's blows can't quite get through. Resists Physical damage - the wall an attacker's dice have to beat to hurt you.
 
-**Stamina** — One of Water's two sub-stats, the reserve that keeps a body moving past its limit. Caps how many Fate Tokens you can spend per encounter; also your endurance against non-combat exhaustion.
+**Stamina** — One of Water's two sub-stats, the reserve that keeps a body moving past its limit. Caps how many Fate Tokens you can spend per Scene; also your endurance against non-combat exhaustion.
 
 **Surprised** — A condition triggered when a character hasn't noticed a threat before combat begins. While Surprised, you roll at Disadvantage on everything until the round ends.
 
