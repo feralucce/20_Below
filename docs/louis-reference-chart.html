@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Louis' Reference Chart - 20 Below</title>
+<style>
+  :root {
+    --bg: #14161c;
+    --panel: #1d2028;
+    --panel-border: #2f3341;
+    --text: #e8e9ee;
+    --text-dim: #9ba0b0;
+    --accent: #7aa2f7;
+    --radius: 8px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  main {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  .back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  h1 {
+    margin: 1rem 0 0.5rem;
+    letter-spacing: 0.02em;
+  }
+  .note {
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+    border: 1px solid var(--panel-border);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <a class="back-link" href="../index.html">&larr; Back to 20 Below</a>
+  <h1>Louis' Reference Chart</h1>
+  <p class="note">
+    A quick-reference copy of the Difficulty Chart, pulled out on its own for fast lookup during play.
+    This is a copy, not the source of truth - if it ever conflicts with
+    <a href="../rules/rules.html#difficulty-chart">rules.md</a>, that wins.
+  </p>
+  <img src="assets/diagrams/difficulty-chart.svg" alt="Difficulty Chart, red to blue, 0 Nearly Impossible through 10 Trivial" />
+</main>
+</body>
+</html>
