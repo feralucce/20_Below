@@ -1,5 +1,5 @@
 import { el } from '../ui.js';
-import { performCoreRoll } from '../roller/core.js';
+import { performCoreRoll, SKILL_TIERS } from '../roller/core.js';
 import { performGiftCheck } from '../roller/giftCheck.js';
 import { rollDamagePool, applyThrottledDamage, applyPoiseDamage } from '../roller/damage.js';
 import { skillTierName } from '../state.js';
@@ -60,6 +60,7 @@ export default function buildRollerPanel(state, data, { refreshHeader }) {
       onChange: (e) => {
         selectedSkill = e.target.value;
         renderAttributeVisibility();
+        renderTierGrantNote();
       },
     },
     [
@@ -103,6 +104,22 @@ export default function buildRollerPanel(state, data, { refreshHeader }) {
     attributeGroup.style.display = currentTier() === 0 ? 'none' : 'flex';
   }
   renderAttributeVisibility();
+
+  // The selected Skill's own Tier can already grant Advantage or
+  // Disadvantage (Adept/Expert/Master, Novice respectively) before either
+  // toggle box is touched - the toggles are an *additional* source that
+  // stacks with the Tier's own grant via the binary cancellation rule
+  // (rules.md#advantage--disadvantage), not a direct override. This note
+  // makes that visible so a toggle that seems to "do nothing" (because it
+  // canceled the Tier's own grant back to Normal) isn't mistaken for a bug.
+  const tierGrantNote = el('p', { class: 'roller-tier-note' });
+  function renderTierGrantNote() {
+    const grant = SKILL_TIERS[currentTier()].grantsAdvantage;
+    tierGrantNote.textContent = grant
+      ? `${SKILL_TIERS[currentTier()].name} already grants ${grant === 'advantage' ? 'Advantage' : 'Disadvantage'} from its Tier - checking the opposite box below cancels it back to Normal, it doesn't reverse it.`
+      : '';
+  }
+  renderTierGrantNote();
 
   const difficultySelect = el(
     'select',
@@ -189,6 +206,7 @@ export default function buildRollerPanel(state, data, { refreshHeader }) {
     el('div', { class: 'roller-row' }, [el('label', {}, 'Skill'), skillSelect]),
     attributeGroup,
     el('div', { class: 'roller-row' }, [el('label', {}, 'Difficulty'), difficultySelect]),
+    tierGrantNote,
     togglesRow,
     rollBtn,
     resultEl,

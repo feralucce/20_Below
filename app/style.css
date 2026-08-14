@@ -685,6 +685,16 @@ body {
   margin: 0.25rem 0 0.9rem;
 }
 
+.roller-tier-note {
+  margin: 0 0 0.5rem;
+  color: var(--gold);
+  font-size: 0.8rem;
+}
+
+.roller-tier-note:empty {
+  display: none;
+}
+
 .toggle-box {
   display: flex;
   align-items: center;
