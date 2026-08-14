@@ -250,11 +250,122 @@ body {
 .sheet {
   background: var(--panel);
   border: 1px solid var(--panel-border);
-  border-radius: var(--radius);
-  padding: 1rem;
+  border-radius: calc(var(--radius) * 1.5);
+  overflow: hidden;
+}
+
+.sheet-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--accent-dim), var(--panel) 70%);
+  border-bottom: 2px solid var(--accent);
+}
+
+.sheet-header h2 {
+  margin: 0;
+  font-size: 1.7rem;
+  letter-spacing: 0.02em;
+}
+
+.sheet-concept {
+  margin: 0.35rem 0 0;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.sheet-badge {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.2rem 0.75rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.sheet-body {
+  padding: 0.25rem 1.5rem 1.5rem;
 }
 
 .sheet h3 {
-  border-bottom: 1px solid var(--panel-border);
-  padding-bottom: 0.25rem;
+  margin: 1.75rem 0 0.6rem;
+  padding-left: 0.6rem;
+  border-left: 3px solid var(--accent);
+  border-bottom: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.sheet ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sheet li {
+  padding: 0.4rem 0.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  line-height: 1.4;
+}
+
+.sheet li:last-child {
+  border-bottom: none;
+}
+
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stat-chip {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  background: var(--bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  padding: 0.35rem 0.75rem;
+}
+
+.stat-chip .stat-label {
+  color: var(--text-dim);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-chip .stat-value {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+.figured-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.figured-box {
+  flex: 1 1 120px;
+  background: var(--bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+}
+
+.figured-box .label {
+  color: var(--text-dim);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.figured-box .value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
 }
