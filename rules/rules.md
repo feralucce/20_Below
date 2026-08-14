@@ -237,7 +237,7 @@ Dropping below 0 Health Levels can instead impose a genuine [Flaw](flaws.md), la
 Two passive functions, both "gives" like Health/Soak/Presence/Psyche - no roll, no spend:
 
 1. **Ki Regeneration** - a Short Rest restores `Klotho ÷ 2` Ki (round up); a Full Night's Rest restores Ki fully. See [Ki's refill](fate.md#fatigue-check).
-2. **Lucky Number** - a character's lucky number equals their **Klotho rating**. Whenever **any die** rolled for that character shows a result **equal to their Klotho rating**, they immediately gain **1 Fate Token** - automatic, no choice, no cost.
+2. **Lucky Number** - a character's lucky number equals their **Klotho rating**. Whenever the result of one of the character's own core rolls - the [core roll](#core-mechanic)'s 2d10 or an Advantage/Disadvantage 3d10 - equals their Klotho rating, they immediately gain **1 Fate Token**, automatic, no choice, no cost, and never more than one per roll. It's the roll's result that has to match, not any individual die within it - does not apply to damage dice pools (weapon dice, Gift dice, the Potence contested dice pool, or any other bulk multi-die pool resolved per-die against a wall).
 
 #### Defense (Derived Stat)
 
