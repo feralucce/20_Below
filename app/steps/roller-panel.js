@@ -185,6 +185,7 @@ export default function buildRollerPanel(state, data, { refreshHeader }) {
   }
 
   wrap.append(
+    el('h4', {}, 'Core Roll'),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Skill'), skillSelect]),
     attributeGroup,
     el('div', { class: 'roller-row' }, [el('label', {}, 'Difficulty'), difficultySelect]),
@@ -231,7 +232,8 @@ function buildDamageRollSection(state, data, refreshHeader) {
     max: '15',
     value: diceCount,
     onInput: (e) => {
-      diceCount = Math.max(1, Number(e.target.value) || 1);
+      diceCount = Math.max(1, Math.min(15, Number(e.target.value) || 1));
+      e.target.value = diceCount;
       boostedDice = new Set([...boostedDice].filter((i) => i < diceCount));
       renderBoostRow();
     },
@@ -244,6 +246,7 @@ function buildDamageRollSection(state, data, refreshHeader) {
     value: wall,
     onInput: (e) => {
       wall = Math.max(0, Math.min(10, Number(e.target.value) || 0));
+      e.target.value = wall;
     },
   });
 
