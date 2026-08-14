@@ -1,7 +1,18 @@
 import { el } from '../ui.js';
 import { performCoreRoll } from '../roller/core.js';
 import { performGiftCheck } from '../roller/giftCheck.js';
+import { rollDamagePool, applyThrottledDamage, applyPoiseDamage } from '../roller/damage.js';
 import { skillTierName } from '../state.js';
+
+// Physical/Social/Mental each pair a wall stat (what the target's dice are
+// checked against), the attacker's own matching Ki Infusion boost sub-stat,
+// and which of the character's own trackers absorbs a connecting die - see
+// rules.md#the-passive-wall-triad---soak-presence-psyche and #ki-infusion.
+const ATTACK_TYPES = {
+  Physical: { wallStat: 'Soak', boostStat: 'Ferocity', track: 'health' },
+  Social: { wallStat: 'Presence', boostStat: 'Presence', track: 'poise' },
+  Mental: { wallStat: 'Psyche', boostStat: 'Psyche', track: 'sanity' },
+};
 
 const UNTRAINED_VALUE = '__untrained__';
 
@@ -181,9 +192,153 @@ export default function buildRollerPanel(state, data, { refreshHeader }) {
     rollBtn,
     resultEl,
     buildGiftCheckSection(state, data, refreshHeader),
+    buildDamageRollSection(state, data, refreshHeader),
   );
 
   return wrap;
+}
+
+// Damage dice pool - weapon/Gift attacks, per-die resolution against a
+// wall stat with an optional pre-committed Ki Infusion boost (see
+// rules.md#the-passive-wall-triad---soak-presence-psyche and #ki-infusion).
+// Dice count and the target's wall value are typed in directly rather than
+// looked up from a weapon/Gift catalog - see the discussion in
+// character-creator.notes.md for why that's out of scope for this pass.
+function buildDamageRollSection(state, data, refreshHeader) {
+  const section = el('div', { class: 'roller-gift-check' });
+
+  let attackType = 'Physical';
+  let diceCount = 3;
+  let wall = 5;
+  let boostedDice = new Set();
+
+  const typeSelect = el(
+    'select',
+    {
+      onChange: (e) => {
+        attackType = e.target.value;
+        boostedDice = new Set();
+        renderBoostRow();
+        renderSummary();
+      },
+    },
+    Object.keys(ATTACK_TYPES).map((t) => el('option', { value: t }, t)),
+  );
+
+  const diceInput = el('input', {
+    type: 'number',
+    min: '1',
+    max: '15',
+    value: diceCount,
+    onInput: (e) => {
+      diceCount = Math.max(1, Number(e.target.value) || 1);
+      boostedDice = new Set([...boostedDice].filter((i) => i < diceCount));
+      renderBoostRow();
+    },
+  });
+
+  const wallInput = el('input', {
+    type: 'number',
+    min: '0',
+    max: '10',
+    value: wall,
+    onInput: (e) => {
+      wall = Math.max(0, Math.min(10, Number(e.target.value) || 0));
+    },
+  });
+
+  const boostRow = el('div', { class: 'roller-boost-row' });
+  function renderBoostRow() {
+    const info = ATTACK_TYPES[attackType];
+    boostRow.innerHTML = '';
+    boostRow.append(el('span', { class: 'boost-label' }, `Ki Infusion (+${state.subStats[info.boostStat]} ${info.boostStat} per boosted die, 1 Ki each):`));
+    for (let i = 0; i < diceCount; i++) {
+      const checked = boostedDice.has(i);
+      boostRow.append(
+        el('label', { class: 'boost-die' }, [
+          el('input', {
+            type: 'checkbox',
+            checked: checked ? '' : undefined,
+            onChange: (e) => {
+              if (e.target.checked) boostedDice.add(i);
+              else boostedDice.delete(i);
+            },
+          }),
+          ` ${i + 1}`,
+        ]),
+      );
+    }
+  }
+  renderBoostRow();
+
+  const summaryEl = el('p', {});
+  function renderSummary() {
+    const info = ATTACK_TYPES[attackType];
+    summaryEl.textContent = `${attackType}: dice vs target's ${info.wallStat}, connecting dice cost the target a ${info.track === 'health' ? 'Health Level' : info.track === 'poise' ? 'Poise' : 'Sanity Level'}.`;
+  }
+  renderSummary();
+
+  const resultEl = el('div', { class: 'roller-result' });
+
+  const rollBtn = el('button', {
+    type: 'button',
+    class: 'roll-btn',
+    text: 'Roll Damage',
+    onClick: () => {
+      const info = ATTACK_TYPES[attackType];
+      const boostAmount = state.subStats[info.boostStat];
+      const kiSpent = boostedDice.size;
+      state.currentKi = Math.max(0, state.currentKi - kiSpent);
+
+      const result = rollDamagePool({ diceCount, wall, boostedDice: [...boostedDice], boostAmount });
+
+      const before = state.currentHealth != null ? { health: state.currentHealth, poise: state.currentPoise, sanity: state.currentSanity } : null;
+      if (info.track === 'health') {
+        state.currentHealth = applyThrottledDamage(state.currentHealth, result.connectCount);
+      } else if (info.track === 'sanity') {
+        state.currentSanity = applyThrottledDamage(state.currentSanity, result.connectCount);
+      } else {
+        state.currentPoise = applyPoiseDamage(state.currentPoise, result.connectCount);
+      }
+      refreshHeader();
+
+      resultEl.innerHTML = '';
+      resultEl.append(
+        ...[
+          el(
+            'p',
+            {},
+            `Rolled: ${result.dice.map((d) => (d.boosted ? `${d.raw}+${boostAmount}=${d.result}` : `${d.result}`)).join(', ')} vs wall ${wall}`,
+          ),
+          el('p', {}, [el('strong', {}, `${result.connectCount} of ${diceCount} connect`)]),
+          kiSpent > 0 ? el('p', {}, `${kiSpent} Ki spent on boosted dice.`) : null,
+          before
+            ? el(
+                'p',
+                { class: 'status-bad' },
+                info.track === 'health'
+                  ? `Health Levels: ${before.health} → ${state.currentHealth}`
+                  : info.track === 'poise'
+                    ? `Poise: ${before.poise} → ${state.currentPoise}`
+                    : `Sanity: ${before.sanity} → ${state.currentSanity}`,
+              )
+            : null,
+        ].filter((n) => n != null),
+      );
+    },
+  });
+
+  section.append(
+    el('h4', {}, 'Damage Roll'),
+    el('div', { class: 'roller-row' }, [el('label', {}, 'Attack Type'), typeSelect]),
+    el('div', { class: 'roller-row' }, [el('label', {}, 'Dice'), diceInput]),
+    el('div', { class: 'roller-row' }, [el('label', {}, "Target's Wall"), wallInput]),
+    boostRow,
+    summaryEl,
+    rollBtn,
+    resultEl,
+  );
+  return section;
 }
 
 // Gift Check (rules.md#resolution, gifts.md#resolution): 2d10 roll-under

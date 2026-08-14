@@ -737,3 +737,25 @@ body {
 .roller-gift-check p {
   margin: 0.3rem 0;
 }
+
+.roller-boost-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.boost-label {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  margin-right: 0.25rem;
+}
+
+.boost-die {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
