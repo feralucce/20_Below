@@ -201,6 +201,14 @@ export default function buildRollerPanel(state, data, { refreshHeader }) {
     );
   }
 
+  const damageSection = buildDamageRollSection(state, data, refreshHeader);
+  // The damage roller's Ki Infusion checkboxes need to reflect the
+  // character's *current* Ki, which can change from outside this section
+  // entirely (the header's own Ki −/+ buttons, a Gift Check failure) -
+  // exposed here so 12-sheet.js can fold it into the header's own refresh,
+  // since that's the one place already called on every Ki-affecting action.
+  wrap.refreshKiDependents = damageSection.refreshBoostRow;
+
   wrap.append(
     el('h4', {}, 'Core Roll'),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Skill'), skillSelect]),
@@ -211,7 +219,7 @@ export default function buildRollerPanel(state, data, { refreshHeader }) {
     rollBtn,
     resultEl,
     buildGiftCheckSection(state, data, refreshHeader),
-    buildDamageRollSection(state, data, refreshHeader),
+    damageSection,
   );
 
   return wrap;
@@ -268,21 +276,32 @@ function buildDamageRollSection(state, data, refreshHeader) {
     },
   });
 
+  // Each boosted die costs 1 Ki - can't check more boxes than the
+  // character currently has, and at 0 Ki none are checkable at all.
   const boostRow = el('div', { class: 'roller-boost-row' });
   function renderBoostRow() {
     const info = ATTACK_TYPES[attackType];
     boostRow.innerHTML = '';
-    boostRow.append(el('span', { class: 'boost-label' }, `Ki Infusion (+${state.subStats[info.boostStat]} ${info.boostStat} per boosted die, 1 Ki each):`));
+    boostRow.append(
+      el(
+        'span',
+        { class: 'boost-label' },
+        `Ki Infusion (+${state.subStats[info.boostStat]} ${info.boostStat} per boosted die, 1 Ki each - ${state.currentKi} Ki available):`,
+      ),
+    );
     for (let i = 0; i < diceCount; i++) {
       const checked = boostedDice.has(i);
+      const atCap = !checked && boostedDice.size >= state.currentKi;
       boostRow.append(
-        el('label', { class: 'boost-die' }, [
+        el('label', { class: atCap ? 'boost-die boost-die-disabled' : 'boost-die' }, [
           el('input', {
             type: 'checkbox',
             checked: checked ? '' : undefined,
+            disabled: atCap ? '' : undefined,
             onChange: (e) => {
               if (e.target.checked) boostedDice.add(i);
               else boostedDice.delete(i);
+              renderBoostRow();
             },
           }),
           ` ${i + 1}`,
@@ -317,11 +336,13 @@ function buildDamageRollSection(state, data, refreshHeader) {
       const info = ATTACK_TYPES[attackType];
       const boostAmount = state.subStats[info.boostStat];
       const kiSpent = boostedDice.size;
-      state.currentKi = Math.max(0, state.currentKi - kiSpent);
-      refreshHeader();
-
       const result = rollDamagePool({ diceCount, wall, boostedDice: [...boostedDice], boostAmount });
       const trackUnit = info.track === 'poise' ? 'Poise' : 'Levels';
+
+      state.currentKi = Math.max(0, state.currentKi - kiSpent);
+      refreshHeader();
+      boostedDice = new Set();
+      renderBoostRow();
 
       resultEl.innerHTML = '';
       resultEl.append(
@@ -349,6 +370,7 @@ function buildDamageRollSection(state, data, refreshHeader) {
     rollBtn,
     resultEl,
   );
+  section.refreshBoostRow = renderBoostRow;
   return section;
 }
 
