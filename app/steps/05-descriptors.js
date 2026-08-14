@@ -19,6 +19,15 @@ export default {
       if (slots === 0 && state.subStats[s.name] === 0) return;
 
       container.append(el('h3', {}, s.name));
+      const samples = data.sampleDescriptors[s.name];
+      if (samples?.length) {
+        container.append(
+          el('p', { class: 'detail', style: 'margin:0 0 0.5rem;' }, [
+            el('strong', {}, 'Sample Descriptors: '),
+            samples.join(', '),
+          ]),
+        );
+      }
       const arr = state.descriptors[s.name];
       while (arr.length < slots) arr.push('');
       while (arr.length > slots) arr.pop();

@@ -49,6 +49,21 @@ For every point you spent in step 5, you get one Descriptor - a short word or ph
 
 Descriptors matter beyond flavor: they're what you point to when arguing a Skill+Attribute pairing in play ("I'm using Fire here because I'm being *Ruthless*"), grounding the argument in an established character fact instead of improvising one on the spot.
 
+**Sample Descriptors**, one starter list per sub-stat - write your own instead if none of these fit:
+
+| Sub-Stat | Sample Descriptors |
+|---|---|
+| Soak | Iron-Skinned, Padded, Unyielding, Thick-Hided, Stone-Boned, Numb to Pain, Armored Instinct, Bull-Necked, Weathered, Scarred and Solid |
+| Potence | Bull-Strong, Vice Grip, Bone-Crushing, Load-Bearing, Wiry but Deceptive, Mountain-Moving, Sinew and Steel, Unstoppable Momentum, Farmhand Strength, Brute Force |
+| Initiative | Hair-Trigger, Always Ready, Predatory Reflexes, First to React, Coiled Spring, Battle-Honed Instinct, Never Caught Flat-Footed, Twitch Reactions, Combat Sense, Anticipatory |
+| Psyche | Iron-Willed, Unshakeable Focus, Clear-Headed, Mental Fortress, Disciplined Mind, Meditative Calm, Sharp and Undistracted, Trained Concentration, Inner Stillness, Battle-Tested Nerves |
+| Ferocity | Killer Instinct, Relentless, Berserker's Edge, Simmering Rage, Predator's Focus, All-Out Aggression, Never Holds Back, Feral Intensity, Controlled Violence, Burning Determination |
+| Presence | Magnetic, Commanding, Larger Than Life, Effortlessly Charming, Quiet Authority, Impossible to Ignore, Natural Leader, Radiant Confidence, Star Power, Unforgettable |
+| Stamina | Tireless, Iron Lungs, Second Wind, Endurance Athlete, Never Slows Down, Marathon Body, Deep Reserves, Won't Quit, Built for the Long Haul, Steady Engine |
+| Health | Hard to Kill, Thick-Skinned Constitution, Stubbornly Alive, Built Like a Tank, Resilient Body, Keeps Getting Up, Tougher Than It Looks, Iron Constitution, Won't Stay Down, Deep Reserves of Vitality |
+| Atropos | Uncanny Reflexes, Never Where the Blow Lands, Ghost-Like Evasion, Danger Sense, Always a Step Ahead, Untouchable, Threads Part Around Them, Combat Precognition, Impossible to Pin Down, Fate's Own Guard |
+| Klotho | Charmed, Fortune's Favorite, Quick to Recover, Deep Well of Ki, Touched by Luck, Never Runs Dry, Fate's Darling, Second Chances, Uncannily Fortunate, Recharges Fast |
+
 ## 7. Skills
 
 Every character gets the GM's **Everyman Skills** for free, at **Trained** - the baseline competence any functional adult in the setting would have just from living in it. This is a suggested list for a modern-world base campaign; the GM sets it per campaign and can trim or extend it.

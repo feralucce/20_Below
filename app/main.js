@@ -6,6 +6,7 @@ import { parseBoons } from './parse/boons.js';
 import { parseResources } from './parse/resources.js';
 import { parseGifts, parseGiftCheckText } from './parse/gifts.js';
 import { parseFlaws } from './parse/flaws.js';
+import { parseSampleDescriptors } from './parse/descriptors.js';
 import { createInitialState, allPoolsSummary } from './state.js';
 import { el, poolBadge } from './ui.js';
 
@@ -47,7 +48,7 @@ const btnNext = document.getElementById('btn-next');
 const btnReset = document.getElementById('btn-reset');
 
 async function loadRulesData() {
-  const [creationMd, fateMd, skillsMd, premadeMd, boonsMd, resourcesMd, giftsMd, flawsMd] =
+  const [creationMd, fateMd, skillsMd, premadeMd, boonsMd, resourcesMd, giftsMd, flawsMd, rulesMd] =
     await Promise.all(
       [
         '../rules/character-creation.md',
@@ -58,6 +59,7 @@ async function loadRulesData() {
         '../rules/resources.md',
         '../rules/gifts.md',
         '../rules/flaws.md',
+        '../rules/rules.md',
       ].map(fetchText),
     );
 
@@ -72,6 +74,7 @@ async function loadRulesData() {
     gifts: parseGifts(giftsMd),
     giftCheckText: parseGiftCheckText(giftsMd),
     flaws: parseFlaws(flawsMd),
+    sampleDescriptors: parseSampleDescriptors(rulesMd),
   };
 }
 
