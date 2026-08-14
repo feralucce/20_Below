@@ -2,23 +2,33 @@
 
 How a character grows after character creation, via XP. Distinct from the creation-time pools in [character-creation.md](character-creation.md), which fund a starting character only.
 
+## XP Award Rate
+
+Up to **5 XP per session**, across five categories:
+
+| Category | XP | Notes |
+|---|---|---|
+| Attendance / Participation | 1 | Showed up and played. |
+| Good Roleplaying | 1 | Played the character well. |
+| Heroism / Risk Faced | 1 | Took a real risk in character. |
+| Learning / Discovery | 1 | Learned something significant about the character, plot, or world. |
+| Standout Moment | 1 | GM's discretion, an especially memorable beat. |
+
+**Story Awards**: separate from the per-session cap, occasional larger lump-sum XP grants for completing a major arc, defeating a significant villain, or hitting a defined campaign milestone.
+
 ## Resolved Costs
 
 | Track | Post-creation cost |
 |---|---|
 | Resources | Flat **3 XP** per level raised. |
+| Skill Training Tiers | `current tier × 2` XP per tier raised. |
+| Attributes | `current rating × 9` XP per point raised. Also grants 1 free Sub-Stat point to split between that Attribute's two sub-stats, same as at creation. |
+| Boons | **2x** the Boon's creation-pool cost: Trivial 2 XP, Lesser 6 XP, Greater 10 XP, Legendary 14 XP. |
+| Extra Sub-Stat Descriptors | The first 3 extra Descriptors on a sub-stat cost a flat **1 XP** each. Past 3, cost is `current Descriptor count on that sub-stat × 1` XP. |
+| New Gift (Level 0→1) | `(7 − Limiters) XP`, floored at 1, plus any Adders bought at the same time at their own cost (Lesser 3 XP, Greater 6 XP). |
+| Existing Gift Level raise | `(current level × 5) − Limiters` XP, floored at 1. |
+| Gift Adders (bought any time) | Lesser 3 XP, Greater 6 XP, same price whether bought at acquisition or added later. |
 
 ## Open Costs
 
-Nothing else has a set XP cost yet. Each of these needs its own pass:
-
-- **Skill Training Tiers** - climbing the ladder (Untrained → Novice → Trained → Adept → Expert → Master) costs XP, but the amount per tier isn't set. See [Skills](skills.md#training-tiers).
-- **Gift Levels** - raising an existing Gift's Level, and acquiring a brand-new Gift at Level 1, both need a cost. See [Gifts](gifts.md#points).
-- **Boons** - acquiring a Boon after creation needs a cost, separate from (and likely pricier than) its creation-pool cost. See [Boons](boons.md).
-- **Extra Sub-Stat Descriptors** - buying one after creation costs XP; at creation it's a flat 1 Discretionary point. See [Sub-Stat Descriptors](rules.md#sub-stat-descriptors).
-- **Attributes** - raising an Attribute after creation has no cost set at all, and isn't yet flagged as open anywhere else in the ruleset. Flagged here.
 - **Limiter buy-offs** - Animal Friendship's No Companion Limiter set a one-off precedent (2 XP per Level currently held in that Gift), but the GM declined to generalize that into a standing rule - future Limiter buy-offs get decided case by case, not from a formula here.
-
-## Open Questions
-
-- **How much XP a character actually earns**, and how often (per session, per milestone, GM discretion) - the spend side has these open costs, but the earn side isn't defined at all yet.
