@@ -200,7 +200,7 @@ Sanity mirrors Health Levels too, tracking a character's grip on their own mind 
 
 **At 0 Sanity, a character is Overwhelmed**: they gain a temporary negative mental trait (a Flaw - exact mechanic to be defined later) and are at Disadvantage on rolls. They can still act on their own. Overwhelmed clears when the character is removed from the stimulus that caused it and given a chance to rest, or by spending 1 Ki, which also refills Sanity to full.
 
-**Below 0, a character is Shattered**: panicky, babbling, unable to act on their own - they have to be led or dragged. Shattered clears when 1 Ki is spent or a Full Night's Rest passes, either of which restores Sanity only to 1, not fully - normal recovery resumes from there on the next rest. **Dropping below 0 always leaves a permanent mental scar**, regardless of how the character recovers afterward, even a Ki-funded refill doesn't erase it. The scar mechanic itself is not yet defined - flagged for a later, deeper pass.
+**Below 0, a character is Shattered**: panicky, babbling, unable to act on their own - they have to be led or dragged. Shattered clears when 1 Ki is spent or a Short Rest or Full Night's Rest passes, either of which restores Sanity only to 1, not fully - normal recovery resumes from there on the next rest. **Dropping below 0 always leaves a permanent mental scar**, regardless of how the character recovers afterward, even a Ki-funded refill doesn't erase it. The scar mechanic itself is not yet defined - flagged for a later, deeper pass.
 
 ### Fire
 
@@ -237,7 +237,7 @@ At **0 Health Levels**, a character falls unconscious and can't act. Health Leve
 
 - **Short Rest**: heal Health Levels equal to your Health sub-stat divided by 2, round up.
 - **Full Night's Rest**: heal all lost Health Levels, back to full.
-- **Reduced below 0 Health Levels**: instead of the rates above, recover 1 Health Level per day of rest until back to 0.
+- **Reduced below 0 Health Levels**: instead of the rates above, recover 1 Health Level per Short Rest or Full Night's Rest, until back to 0.
 
 #### Battle Scars
 

@@ -344,6 +344,12 @@ body {
   height: 1rem;
   border-radius: 3px;
   background: var(--pip-color, var(--accent));
+  cursor: pointer;
+}
+
+.pip-empty {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
 }
 
 .pip-fraction {
@@ -357,21 +363,48 @@ body {
   color: var(--gold);
 }
 
-.fate-value {
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: var(--gold);
+.tracker-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.inert-btn {
-  display: inline-block;
-  margin-top: 0.4rem;
+.step-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.status-badge {
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--danger);
+  color: var(--bg);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.rest-btn {
   padding: 0.35rem 0.9rem;
   background: var(--panel);
   border: 1px solid var(--panel-border);
   border-radius: var(--radius);
   font-size: 0.8rem;
-  color: var(--text-dim);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.rest-btn:hover {
+  border-color: var(--accent);
 }
 
 .sheet-mini-row {
