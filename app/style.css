@@ -719,3 +719,21 @@ body {
 .status-bad {
   color: var(--danger);
 }
+
+.roller-gift-check {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--panel-border);
+}
+
+.roller-gift-check h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+}
+
+.roller-gift-check p {
+  margin: 0.3rem 0;
+}
