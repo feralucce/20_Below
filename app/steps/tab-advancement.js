@@ -120,39 +120,27 @@ function skillsSection(state, data, refresh) {
   function renderList() {
     listEl.innerHTML = '';
     const filter = filterInput.value.toLowerCase();
-    const remaining = xpRemaining(state, data);
     data.skillCatalog
       .filter((s) => s.name.toLowerCase().includes(filter))
       .forEach((s) => {
         const tier = state.skills[s.name];
         const cost = tier * data.advancement.skillTierXpMultiplier;
         const bought = state.advancementPurchases.Skills[s.name] ?? 0;
-        listEl.appendChild(
-          el('div', { class: 'counter-row' }, [
-            el('span', { class: 'name' }, `${s.name} - ${skillTierName(data, tier)}`),
-            bought > 0
-              ? el('button', {
-                  type: 'button',
-                  text: 'Undo',
-                  onClick: () => {
-                    refundAdvancementSkillTier(state, s.name);
-                    refresh();
-                  },
-                })
-              : null,
-            tier < 5
-              ? el('button', {
-                  type: 'button',
-                  text: `Raise (${cost} XP)`,
-                  disabled: cost > remaining ? '' : undefined,
-                  onClick: () => {
-                    buyAdvancementSkillTier(state, s.name);
-                    refresh();
-                  },
-                })
-              : null,
-          ]),
-        );
+        const row = counterRow({
+          name: s.name,
+          hint: tier < 5 ? `${cost} XP` : 'maxed',
+          get: () => tier,
+          set: (v) => {
+            if (v > tier) buyAdvancementSkillTier(state, s.name);
+            else refundAdvancementSkillTier(state, s.name);
+          },
+          min: tier - bought,
+          max: () => (tier < 5 && cost <= xpRemaining(state, data) ? tier + 1 : tier),
+          format: (v) => skillTierName(data, v),
+          onChange: refresh,
+        });
+        row.classList.add('counter-row-compact');
+        listEl.appendChild(row);
       });
   }
   filterInput.addEventListener('input', renderList);
