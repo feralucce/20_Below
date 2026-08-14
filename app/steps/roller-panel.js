@@ -1,5 +1,6 @@
 import { el } from '../ui.js';
 import { performCoreRoll } from '../roller/core.js';
+import { performGiftCheck } from '../roller/giftCheck.js';
 import { skillTierName } from '../state.js';
 
 const UNTRAINED_VALUE = '__untrained__';
@@ -179,7 +180,48 @@ export default function buildRollerPanel(state, data, { refreshHeader }) {
     togglesRow,
     rollBtn,
     resultEl,
+    buildGiftCheckSection(state, data, refreshHeader),
   );
 
   return wrap;
+}
+
+// Gift Check (rules.md#resolution, gifts.md#resolution): 2d10 roll-under
+// against current Ki + Stamina. Success is free; failure costs 1 Ki,
+// deducted here immediately since there's no separate confirmation step
+// for a cost this small and automatic.
+function buildGiftCheckSection(state, data, refreshHeader) {
+  const section = el('div', { class: 'roller-gift-check' });
+  const summary = el('p', {});
+  const resultEl = el('div', { class: 'roller-result' });
+
+  function updateSummary() {
+    const target = state.currentKi + state.subStats.Stamina;
+    summary.textContent = `Current Ki (${state.currentKi}) + Stamina (${state.subStats.Stamina}) = ${target}`;
+  }
+  updateSummary();
+
+  const rollBtn = el('button', {
+    type: 'button',
+    class: 'roll-btn',
+    text: 'Roll Gift Check',
+    onClick: () => {
+      const result = performGiftCheck({ ki: state.currentKi, stamina: state.subStats.Stamina });
+      if (result.outcome === 'failure') {
+        state.currentKi = Math.max(0, state.currentKi - 1);
+        refreshHeader();
+      }
+      updateSummary();
+      resultEl.innerHTML = '';
+      resultEl.append(
+        el('p', {}, `Rolled ${result.roll.dice.join(', ')} → ${result.roll.sum} vs target ${result.target}`),
+        el('p', { class: result.outcome === 'success' ? 'status-ok' : 'status-bad' }, [
+          el('strong', {}, result.outcome === 'success' ? 'Success' : 'Failure (1 Ki spent)'),
+        ]),
+      );
+    },
+  });
+
+  section.append(el('h4', {}, 'Gift Check'), summary, rollBtn, resultEl);
+  return section;
 }
