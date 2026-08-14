@@ -10,6 +10,7 @@ const MARGIN_MM = 10;
 const SCALE = 1.5;
 const JPEG_QUALITY = 0.85;
 const BACKGROUND_COLOR = '#14161c'; // matches --bg in style.css
+const BACKGROUND_RGB = [0x14, 0x16, 0x1c];
 
 export async function downloadPdf(sheetElement, filenameBase) {
   if (!window.html2pdf) {
@@ -53,6 +54,10 @@ export async function downloadPdf(sheetElement, filenameBase) {
     ctx.drawImage(canvas, 0, i * pageHeightPx, canvas.width, sliceHeightPx, 0, 0, canvas.width, sliceHeightPx);
     const imgData = sliceCanvas.toDataURL('image/jpeg', JPEG_QUALITY);
     if (i > 0) pdf.addPage();
+    // Fill the full page first - a short last slice would otherwise leave
+    // the page's own default white background showing past the image.
+    pdf.setFillColor(...BACKGROUND_RGB);
+    pdf.rect(0, 0, pageWidthMM, pageHeightMM, 'F');
     const sliceHeightMM = sliceHeightPx / pxPerMM;
     pdf.addImage(imgData, 'JPEG', MARGIN_MM, MARGIN_MM, usableWidthMM, sliceHeightMM);
   }
