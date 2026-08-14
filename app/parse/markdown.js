@@ -4,7 +4,43 @@
 // Keeping parsing this literal (vs. hand-copying data) is the whole point of the
 // app: edit a rules file, reload, the app reflects it.
 
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/feralucce/20_Below/main/';
+const REPO_FETCH_TIMEOUT_MS = 5000;
+
+// The desktop shell (Tauri) ships a bundled snapshot of rules/*.md that goes
+// stale the moment the live repo changes, unlike the browser build, which is
+// already served straight from the repo (GitHub Pages) and stays current for
+// free. Only the desktop build needs this - detected via withGlobalTauri in
+// tauri.conf.json, which is what actually exposes window.__TAURI__.
+const isDesktopApp = typeof window !== 'undefined' && Boolean(window.__TAURI__);
+
+async function fetchFromGitHub(repoRelativePath) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), REPO_FETCH_TIMEOUT_MS);
+  try {
+    const res = await fetch(GITHUB_RAW_BASE + repoRelativePath, {
+      cache: 'no-store',
+      signal: controller.signal,
+    });
+    if (!res.ok) return null;
+    return await res.text();
+  } catch {
+    return null; // offline, DNS failure, timeout, etc. - fall back to the bundled copy
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 export async function fetchText(path) {
+  if (isDesktopApp) {
+    // Every call site passes a path like "../rules/rules.md", relative to
+    // app/index.html - strip the leading "../" to get the path relative to
+    // the repo root, which is exactly what the GitHub raw URL needs.
+    const repoRelativePath = path.replace(/^(\.\.\/)+/, '');
+    const live = await fetchFromGitHub(repoRelativePath);
+    if (live !== null) return live;
+  }
+
   const res = await fetch(path);
   if (!res.ok) {
     throw new Error(`Failed to load ${path}: ${res.status} ${res.statusText}`);
