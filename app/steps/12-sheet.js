@@ -514,6 +514,14 @@ export default {
       }),
     ]);
 
-    container.append(el('h2', {}, '13-14. Character Sheet & Export'), notesField, sheet, exportRow);
+    // Reserved spot for the dice roller (not built yet - logic comes first,
+    // this placeholder just holds its place at the top of the step per
+    // direct request, with Finishing Touches moved down to make room).
+    const rollerPlaceholder = el('div', { class: 'roller-placeholder' }, [
+      el('h3', {}, 'Roller'),
+      el('p', { class: 'detail' }, 'Coming soon.'),
+    ]);
+
+    container.append(el('h2', {}, '13-14. Character Sheet & Export'), rollerPlaceholder, sheet, notesField, exportRow);
   },
 };
