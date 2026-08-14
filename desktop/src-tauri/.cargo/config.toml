@@ -1,0 +1,6 @@
+# Build output is redirected outside the repo entirely - frontendDist points
+# at the repo root (so the app can serve the live rules/*.md files the same
+# way the browser build does), and a target/ folder living inside that tree
+# would get bundled into itself, growing without bound.
+[build]
+target-dir = "C:/Users/feral/.tauri-targets/20below"
