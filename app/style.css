@@ -770,3 +770,8 @@ body {
   font-size: 0.85rem;
   cursor: pointer;
 }
+
+.boost-die-disabled {
+  color: var(--text-dim);
+  cursor: not-allowed;
+}

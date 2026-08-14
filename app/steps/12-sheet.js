@@ -367,10 +367,15 @@ export default {
     const tabContent = el('div', { class: 'tab-content' });
     const tabNav = el('div', { class: 'tab-nav' });
     const headerEl = el('div', {});
+    // Assigned once the Roller panel is built below - declared here so
+    // renderHeader's closure sees it once set, even though it runs before
+    // that point on the very first render (harmless no-op via `?.`).
+    let rollerPanelNode = null;
 
     function renderHeader() {
       headerEl.innerHTML = '';
       headerEl.append(...buildHeader(state, data, figured, { interactive: true, refresh: renderHeader }));
+      rollerPanelNode?.refreshKiDependents?.();
     }
 
     function renderTabContent() {
@@ -519,9 +524,10 @@ export default {
     // moved down to make room). renderHeader is passed through so a
     // Lucky Number's automatic Fate Token gain shows up immediately in the
     // header tracker without a full step re-render.
+    rollerPanelNode = buildRollerPanel(state, data, { refreshHeader: renderHeader });
     const rollerPlaceholder = el('div', { class: 'roller-placeholder' }, [
       el('h3', {}, 'Roller'),
-      buildRollerPanel(state, data, { refreshHeader: renderHeader }),
+      rollerPanelNode,
     ]);
 
     container.append(el('h2', {}, '13-14. Character Sheet & Export'), rollerPlaceholder, sheet, notesField, exportRow);
