@@ -103,6 +103,21 @@ Descriptors are **free at character creation** (no separate cost beyond the poin
 
 Descriptors are the concrete hook a player points to when [arguing a Skill pairing](skills.md#skills-are-not-attribute-locked) - grounding "I'm using Fire here because I'm being *Ruthless*" in an established character fact instead of an improvised justification each time.
 
+**Sample Descriptors**, one starter list per sub-stat - a player is free to write their own instead:
+
+| Sub-Stat | Sample Descriptors |
+|---|---|
+| Soak | Iron-Skinned, Padded, Unyielding, Thick-Hided, Stone-Boned, Numb to Pain, Armored Instinct, Bull-Necked, Weathered, Scarred and Solid |
+| Potence | Bull-Strong, Vice Grip, Bone-Crushing, Load-Bearing, Wiry but Deceptive, Mountain-Moving, Sinew and Steel, Unstoppable Momentum, Farmhand Strength, Brute Force |
+| Initiative | Hair-Trigger, Always Ready, Predatory Reflexes, First to React, Coiled Spring, Battle-Honed Instinct, Never Caught Flat-Footed, Twitch Reactions, Combat Sense, Anticipatory |
+| Psyche | Iron-Willed, Unshakeable Focus, Clear-Headed, Mental Fortress, Disciplined Mind, Meditative Calm, Sharp and Undistracted, Trained Concentration, Inner Stillness, Battle-Tested Nerves |
+| Ferocity | Killer Instinct, Relentless, Berserker's Edge, Simmering Rage, Predator's Focus, All-Out Aggression, Never Holds Back, Feral Intensity, Controlled Violence, Burning Determination |
+| Presence | Magnetic, Commanding, Larger Than Life, Effortlessly Charming, Quiet Authority, Impossible to Ignore, Natural Leader, Radiant Confidence, Star Power, Unforgettable |
+| Stamina | Tireless, Iron Lungs, Second Wind, Endurance Athlete, Never Slows Down, Marathon Body, Deep Reserves, Won't Quit, Built for the Long Haul, Steady Engine |
+| Health | Hard to Kill, Thick-Skinned Constitution, Stubbornly Alive, Built Like a Tank, Resilient Body, Keeps Getting Up, Tougher Than It Looks, Iron Constitution, Won't Stay Down, Deep Reserves of Vitality |
+| Atropos | Uncanny Reflexes, Never Where the Blow Lands, Ghost-Like Evasion, Danger Sense, Always a Step Ahead, Untouchable, Threads Part Around Them, Combat Precognition, Impossible to Pin Down, Fate's Own Guard |
+| Klotho | Charmed, Fortune's Favorite, Quick to Recover, Deep Well of Ki, Touched by Luck, Never Runs Dry, Fate's Darling, Second Chances, Uncannily Fortunate, Recharges Fast |
+
 ### The Passive Wall Triad - Soak, Presence, Psyche
 
 Every attack, regardless of type, resolves in the same two steps. **First, a to-hit roll**: the attacker's Attribute + Skill against the target's [Defense](#defense-derived-stat) as Difficulty - a normal core roll, and the same formula whether the attack is a fist, a threat, or a mind reaching where it isn't welcome. **Only a success reaches step two.** Then the attack's dice are resolved against the relevant wall stat, per die:
