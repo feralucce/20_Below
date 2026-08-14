@@ -1,7 +1,7 @@
 import { el } from '../ui.js';
 import { performCoreRoll, SKILL_TIERS } from '../roller/core.js';
 import { performGiftCheck } from '../roller/giftCheck.js';
-import { rollDamagePool, applyThrottledDamage, applyPoiseDamage } from '../roller/damage.js';
+import { rollDamagePool } from '../roller/damage.js';
 import { skillTierName } from '../state.js';
 
 // Physical/Social/Mental each pair a wall stat (what the target's dice are
@@ -306,22 +306,22 @@ function buildDamageRollSection(state, data, refreshHeader) {
     class: 'roll-btn',
     text: 'Roll Damage',
     onClick: () => {
+      // This is damage the character is dealing to a target (an NPC or
+      // another PC this app doesn't track), not damage to the character's
+      // own sheet - only the Ki Infusion spend, which is the attacking
+      // character's own resource, touches this character's state. The
+      // crossing-zero throttle isn't applied here either: it depends on
+      // the target's own current Health/Poise/Sanity, which this app has
+      // no visibility into for an NPC - the connect count itself is the
+      // damage dealt, for whoever's tracking the target's sheet to apply.
       const info = ATTACK_TYPES[attackType];
       const boostAmount = state.subStats[info.boostStat];
       const kiSpent = boostedDice.size;
       state.currentKi = Math.max(0, state.currentKi - kiSpent);
+      refreshHeader();
 
       const result = rollDamagePool({ diceCount, wall, boostedDice: [...boostedDice], boostAmount });
-
-      const before = state.currentHealth != null ? { health: state.currentHealth, poise: state.currentPoise, sanity: state.currentSanity } : null;
-      if (info.track === 'health') {
-        state.currentHealth = applyThrottledDamage(state.currentHealth, result.connectCount);
-      } else if (info.track === 'sanity') {
-        state.currentSanity = applyThrottledDamage(state.currentSanity, result.connectCount);
-      } else {
-        state.currentPoise = applyPoiseDamage(state.currentPoise, result.connectCount);
-      }
-      refreshHeader();
+      const trackUnit = info.track === 'poise' ? 'Poise' : 'Levels';
 
       resultEl.innerHTML = '';
       resultEl.append(
@@ -332,18 +332,8 @@ function buildDamageRollSection(state, data, refreshHeader) {
             `Rolled: ${result.dice.map((d) => (d.boosted ? `${d.raw}+${boostAmount}=${d.result}` : `${d.result}`)).join(', ')} vs wall ${wall}`,
           ),
           el('p', {}, [el('strong', {}, `${result.connectCount} of ${diceCount} connect`)]),
+          el('p', { class: 'status-bad' }, [el('strong', {}, `Damage dealt: ${result.connectCount} ${trackUnit}`)]),
           kiSpent > 0 ? el('p', {}, `${kiSpent} Ki spent on boosted dice.`) : null,
-          before
-            ? el(
-                'p',
-                { class: 'status-bad' },
-                info.track === 'health'
-                  ? `Health Levels: ${before.health} → ${state.currentHealth}`
-                  : info.track === 'poise'
-                    ? `Poise: ${before.poise} → ${state.currentPoise}`
-                    : `Sanity: ${before.sanity} → ${state.currentSanity}`,
-              )
-            : null,
         ].filter((n) => n != null),
       );
     },
