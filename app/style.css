@@ -623,3 +623,99 @@ body {
   max-height: 0;
   overflow-y: hidden;
 }
+
+.roller-placeholder {
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.roller-placeholder h3 {
+  margin: 0 0 0.75rem;
+  padding-left: 0.6rem;
+  border-left: 3px solid var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.roller-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.roller-row label {
+  min-width: 5rem;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.roller-row select {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 0.4rem 0.5rem;
+}
+
+.attribute-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 0 0.6rem 5.75rem;
+}
+
+.attribute-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.roller-toggles {
+  display: flex;
+  gap: 1.25rem;
+  margin: 0.25rem 0 0.9rem;
+}
+
+.toggle-box {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  user-select: none;
+}
+
+.roll-btn {
+  background: var(--accent-dim);
+  color: var(--text);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5rem 1.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.roller-result {
+  margin-top: 0.9rem;
+}
+
+.roller-result p {
+  margin: 0.25rem 0;
+}
+
+.status-ok {
+  color: var(--ok);
+}
+
+.status-bad {
+  color: var(--danger);
+}

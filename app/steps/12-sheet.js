@@ -13,6 +13,7 @@ import { downloadHtml, printToPdf } from '../export/toHtml.js';
 import { downloadRtf } from '../export/toRtf.js';
 import buildAdvancementTab from './tab-advancement.js';
 import buildScarsTab from './tab-scars.js';
+import buildRollerPanel from './roller-panel.js';
 
 function inline(md) {
   return window.marked ? window.marked.parseInline(md) : md;
@@ -514,12 +515,13 @@ export default {
       }),
     ]);
 
-    // Reserved spot for the dice roller (not built yet - logic comes first,
-    // this placeholder just holds its place at the top of the step per
-    // direct request, with Finishing Touches moved down to make room).
+    // Roller, at the top of the step per direct request (Finishing Touches
+    // moved down to make room). renderHeader is passed through so a
+    // Lucky Number's automatic Fate Token gain shows up immediately in the
+    // header tracker without a full step re-render.
     const rollerPlaceholder = el('div', { class: 'roller-placeholder' }, [
       el('h3', {}, 'Roller'),
-      el('p', { class: 'detail' }, 'Coming soon.'),
+      buildRollerPanel(state, data, { refreshHeader: renderHeader }),
     ]);
 
     container.append(el('h2', {}, '13-14. Character Sheet & Export'), rollerPlaceholder, sheet, notesField, exportRow);
