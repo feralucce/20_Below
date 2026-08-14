@@ -8,6 +8,7 @@ import { parseGifts, parseGiftCheckText } from './parse/gifts.js';
 import { parseFlaws } from './parse/flaws.js';
 import { parseSampleDescriptors } from './parse/descriptors.js';
 import { parseCosts } from './parse/costs.js';
+import { parseDifficultyChart } from './parse/difficulty.js';
 import { createInitialState, allPoolsSummary } from './state.js';
 import { el, poolBadge } from './ui.js';
 import { isDesktopApp, saveCharacterToFile, listSavedCharacters, loadCharacterFromFile } from './desktop-storage.js';
@@ -87,6 +88,7 @@ async function loadRulesData() {
     giftCheckText: parseGiftCheckText(giftsMd),
     flaws: parseFlaws(flawsMd),
     sampleDescriptors: parseSampleDescriptors(rulesMd),
+    difficultyChart: parseDifficultyChart(rulesMd),
   };
 }
 
