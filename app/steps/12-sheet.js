@@ -2,6 +2,7 @@ import { el, renderMarkdown } from '../ui.js';
 import { computeFiguredCharacteristics, startingFateTokens, skillTierName } from '../state.js';
 import { downloadMarkdown } from '../export/toMarkdown.js';
 import { downloadHtml, printToPdf } from '../export/toHtml.js';
+import { downloadRtf } from '../export/toRtf.js';
 
 function inline(md) {
   return window.marked ? window.marked.parseInline(md) : md;
@@ -352,6 +353,18 @@ export default {
         type: 'button',
         text: 'Download Markdown',
         onClick: () => downloadMarkdown(state, data),
+      }),
+      el('button', {
+        type: 'button',
+        text: 'Download RTF',
+        onClick: () => {
+          try {
+            downloadRtf(state, data);
+          } catch (err) {
+            console.error(err);
+            alert('RTF generation failed - try the Markdown export instead.');
+          }
+        },
       }),
       el('button', {
         type: 'button',
