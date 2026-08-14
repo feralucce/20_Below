@@ -7,6 +7,7 @@ import { parseResources } from './parse/resources.js';
 import { parseGifts, parseGiftCheckText } from './parse/gifts.js';
 import { parseFlaws } from './parse/flaws.js';
 import { parseSampleDescriptors } from './parse/descriptors.js';
+import { parseCosts } from './parse/costs.js';
 import { createInitialState, allPoolsSummary } from './state.js';
 import { el, poolBadge } from './ui.js';
 import { isDesktopApp, saveCharacterToFile, listSavedCharacters, loadCharacterFromFile } from './desktop-storage.js';
@@ -50,7 +51,7 @@ const btnReset = document.getElementById('btn-reset');
 const fileControls = document.getElementById('character-file-controls');
 
 async function loadRulesData() {
-  const [creationMd, fateMd, skillsMd, premadeMd, boonsMd, resourcesMd, giftsMd, flawsMd, rulesMd] =
+  const [creationMd, fateMd, skillsMd, premadeMd, boonsMd, resourcesMd, giftsMd, flawsMd, rulesMd, costsMd] =
     await Promise.all(
       [
         '../rules/character-creation.md',
@@ -62,18 +63,27 @@ async function loadRulesData() {
         '../rules/gifts.md',
         '../rules/flaws.md',
         '../rules/rules.md',
+        '../rules/costs.md',
       ].map(fetchText),
     );
 
+  const costs = parseCosts(costsMd);
+
   return {
+    // parseAttributes(creationMd) still supplies structural data (the
+    // Attribute/sub-stat lists, Figured Characteristics formulas) - every
+    // numeric cost it also used to scrape out of character-creation.md's
+    // prose is overridden below by costs.md, the app's actual source for
+    // tunable numbers now (see rules/costs.md).
     ...parseAttributes(creationMd),
+    ...costs,
     everymanSkills: parseEverymanSkills(creationMd),
     natures: parseNatures(fateMd),
     skillTiers: parseSkillTiers(skillsMd),
     skillCatalog: parseSkillCatalog(premadeMd),
     boons: parseBoons(boonsMd),
     resources: parseResources(resourcesMd),
-    gifts: parseGifts(giftsMd),
+    gifts: parseGifts(giftsMd, costs.giftAdderCost),
     giftCheckText: parseGiftCheckText(giftsMd),
     flaws: parseFlaws(flawsMd),
     sampleDescriptors: parseSampleDescriptors(rulesMd),

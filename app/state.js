@@ -3,8 +3,6 @@
 // Every pool size/rate/cost used here comes from the parsed rules data
 // (see main.js), nothing is hardcoded twice.
 
-const TIER_COST = { 0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5 };
-
 export function createInitialState(data) {
   const attributes = {};
   data.attributes.forEach((a) => {
@@ -66,8 +64,21 @@ export function createInitialState(data) {
     // Discretionary pickers, keyed by item name. Lets step 12 offer real
     // +/- controls on the actual items (not just an abstract pool bump)
     // while still letting the item's own step show/adjust the same value.
-    discretionaryPurchases: { Attributes: {}, Skills: {}, Resources: {}, Gifts: {} },
+    discretionaryPurchases: { Attributes: {}, Skills: {}, Resources: {}, Gifts: {}, GiftAdders: {} },
     finishingNotes: '',
+
+    // ---- Advancement (post-creation XP spend, see rules/advancement.md) ----
+    xpEarned: 0,
+    // Same shape/role as discretionaryPurchases - tracks how much of each
+    // scalar target's current value was funded via Advancement XP rather
+    // than creation pools or Discretionary, so it can be refunded and its
+    // XP cost recomputed live. Boons funded via Advancement are tagged with
+    // source 'advancement' on the existing state.boons list instead, same
+    // as Discretionary-funded Boons already are.
+    advancementPurchases: { Attributes: {}, Skills: {}, Resources: {}, Gifts: {}, Descriptors: {} },
+    // [{ id, physical: bool, title, description }] - freeform Battle Scar
+    // log, see rules.md#battle-scars. Purely narrative, no mechanical field.
+    scars: [],
   };
 }
 
@@ -95,15 +106,15 @@ export function subStatPoolRemaining(state, data, attributeName) {
   return state.attributes[attributeName] - spent;
 }
 
-export function skillPointCost(tier, baselineTier) {
-  return Math.max(0, TIER_COST[tier] - TIER_COST[baselineTier]);
+export function skillPointCost(data, tier, baselineTier) {
+  return Math.max(0, (tier - baselineTier) * data.skillTierPointCost);
 }
 
 export function skillsPointsSpent(state, data) {
   let spent = 0;
   data.skillCatalog.forEach((s) => {
     const baseline = data.everymanSkills.includes(s.name) ? 2 : 0;
-    spent += skillPointCost(state.skills[s.name], baseline);
+    spent += skillPointCost(data, state.skills[s.name], baseline);
   });
   return spent;
 }
@@ -135,10 +146,11 @@ export function resourcesPoolRemaining(state, data) {
   return total - resourcesPointsSpent(state, data);
 }
 
-// A Limiter drops the cost of every Level of its Gift by 1 point, floored
-// at 1 point/Level, stacking with no ceiling on how many can be taken.
+// A Limiter drops the cost of every Level of its Gift, floored at a
+// minimum, stacking with no ceiling on how many can be taken. Discount
+// and floor both come from rules/costs.md (see rules/gifts.md#points).
 export function giftLevelCost(data, limiterCount) {
-  return Math.max(1, data.giftLevelCost - limiterCount);
+  return Math.max(data.giftLimiterFloor, data.giftLevelCost - limiterCount * data.giftLimiterDiscount);
 }
 
 export function giftPointsSpent(gift, data) {
@@ -232,12 +244,38 @@ export function refundGiftLevel(state, giftName) {
   state.discretionaryPurchases.Gifts[giftName] = bought - 1;
 }
 
+// Adders bought via Discretionary are tracked separately from a Gift's own
+// `adders` array entry (which just needs the name for display/effect
+// text), same pattern as Advancement's buyAdvancementGiftAdder.
+export function buyDiscretionaryGiftAdder(state, giftName, adderName) {
+  const g = state.gifts.find((x) => x.name === giftName);
+  if (g && !g.adders.includes(adderName)) g.adders.push(adderName);
+  const list = (state.discretionaryPurchases.GiftAdders[giftName] ??= []);
+  list.push(adderName);
+}
+
+export function refundDiscretionaryGiftAdder(state, giftName, adderName) {
+  const list = state.discretionaryPurchases.GiftAdders[giftName] ?? [];
+  const idx = list.lastIndexOf(adderName);
+  if (idx === -1) return;
+  list.splice(idx, 1);
+  const g = state.gifts.find((x) => x.name === giftName);
+  if (g) g.adders = g.adders.filter((a) => a !== adderName);
+}
+
 export function giftsDiscretionaryContribution(state, data) {
   let total = 0;
   Object.entries(state.discretionaryPurchases.Gifts).forEach(([name, levels]) => {
     if (!levels) return;
     const g = state.gifts.find((x) => x.name === name);
     total += levels * giftLevelCost(data, g ? g.limiters.length : 0);
+  });
+  Object.entries(state.discretionaryPurchases.GiftAdders).forEach(([giftName, adderNames]) => {
+    const giftData = data.gifts.find((x) => x.name === giftName);
+    adderNames.forEach((adderName) => {
+      const adder = giftData?.adders.find((a) => a.name === adderName);
+      if (adder) total += adder.points;
+    });
   });
   return total;
 }
@@ -394,6 +432,216 @@ export function applyRest(state, isFullRest) {
     ? figured.Poise
     : Math.min(figured.Poise, state.currentPoise + Math.ceil(s.Presence / 2));
   state.currentKi = isFullRest ? figured.Ki : Math.min(figured.Ki, state.currentKi + Math.ceil(s.Klotho / 2));
+}
+
+// ---- Advancement (post-creation XP spend, see rules/advancement.md) ----
+// Unlike Discretionary's flat per-unit rates, most Advancement costs scale
+// with the current value being raised (current tier/rating/level × a
+// multiplier) - so, same convention already used by giftsDiscretionaryContribution,
+// XP-funded units are treated as the topmost N of whatever the stat's
+// current total is, and their cost is recomputed live from that
+// assumption rather than stored per-purchase. This is exact as long as a
+// given stat's Advancement-funded units aren't interleaved with a later
+// Discretionary purchase on the very same stat after creation has ended,
+// which isn't expected to happen in practice (creation finishes, then
+// Advancement play begins).
+
+function sumTopN(currentValue, count, costFn) {
+  let total = 0;
+  for (let i = 0; i < count; i++) {
+    total += costFn(currentValue - count + i);
+  }
+  return total;
+}
+
+export function buyAdvancementAttributePoint(state, attrName) {
+  state.attributes[attrName] += 1;
+  state.advancementPurchases.Attributes[attrName] = (state.advancementPurchases.Attributes[attrName] ?? 0) + 1;
+}
+
+export function refundAdvancementAttributePoint(state, attrName) {
+  const bought = state.advancementPurchases.Attributes[attrName] ?? 0;
+  if (bought <= 0) return;
+  state.attributes[attrName] -= 1;
+  state.advancementPurchases.Attributes[attrName] = bought - 1;
+}
+
+function attributesAdvancementXpSpent(state, data) {
+  let total = 0;
+  Object.entries(state.advancementPurchases.Attributes).forEach(([name, count]) => {
+    if (!count) return;
+    total += sumTopN(state.attributes[name], count, (rating) => rating * data.advancement.attributeXpMultiplier);
+  });
+  return total;
+}
+
+export function buyAdvancementSkillTier(state, skillName) {
+  state.skills[skillName] += 1;
+  state.advancementPurchases.Skills[skillName] = (state.advancementPurchases.Skills[skillName] ?? 0) + 1;
+}
+
+export function refundAdvancementSkillTier(state, skillName) {
+  const bought = state.advancementPurchases.Skills[skillName] ?? 0;
+  if (bought <= 0) return;
+  state.skills[skillName] -= 1;
+  state.advancementPurchases.Skills[skillName] = bought - 1;
+}
+
+function skillsAdvancementXpSpent(state, data) {
+  let total = 0;
+  Object.entries(state.advancementPurchases.Skills).forEach(([name, count]) => {
+    if (!count) return;
+    total += sumTopN(state.skills[name], count, (tier) => tier * data.advancement.skillTierXpMultiplier);
+  });
+  return total;
+}
+
+export function buyAdvancementResourceLevel(state, resourceName) {
+  state.resources[resourceName] += 1;
+  state.advancementPurchases.Resources[resourceName] = (state.advancementPurchases.Resources[resourceName] ?? 0) + 1;
+}
+
+export function refundAdvancementResourceLevel(state, resourceName) {
+  const bought = state.advancementPurchases.Resources[resourceName] ?? 0;
+  if (bought <= 0) return;
+  state.resources[resourceName] -= 1;
+  state.advancementPurchases.Resources[resourceName] = bought - 1;
+}
+
+function resourcesAdvancementXpSpent(state, data) {
+  const totalLevels = Object.values(state.advancementPurchases.Resources).reduce((a, b) => a + b, 0);
+  return totalLevels * data.advancement.resourceXpPerLevel;
+}
+
+// First 3 extra Descriptors on a sub-stat cost a flat rate each; the 4th
+// and beyond scale with the current count. `count` here is every extra
+// Descriptor on that sub-stat regardless of funding source (Discretionary
+// at creation or Advancement after), since the threshold is about how many
+// the sub-stat already has, not who paid for which one.
+function descriptorAdvancementCostAt(index, data) {
+  return index < 3 ? data.advancement.descriptorFlatXp : index * data.advancement.descriptorXpMultiplierAfter3;
+}
+
+export function buyAdvancementDescriptor(state, subStatName) {
+  state.extraDescriptors[subStatName] += 1;
+  state.advancementPurchases.Descriptors[subStatName] = (state.advancementPurchases.Descriptors[subStatName] ?? 0) + 1;
+}
+
+export function refundAdvancementDescriptor(state, subStatName) {
+  const bought = state.advancementPurchases.Descriptors[subStatName] ?? 0;
+  if (bought <= 0) return;
+  state.extraDescriptors[subStatName] -= 1;
+  state.advancementPurchases.Descriptors[subStatName] = bought - 1;
+}
+
+function descriptorsAdvancementXpSpent(state, data) {
+  let total = 0;
+  Object.entries(state.advancementPurchases.Descriptors).forEach(([name, count]) => {
+    if (!count) return;
+    total += sumTopN(state.extraDescriptors[name], count, (index) => descriptorAdvancementCostAt(index, data));
+  });
+  return total;
+}
+
+// New Gift (Level 0→1) uses a flat base instead of the level×multiplier
+// formula, same override v1 needed for the same reason (the formula
+// collapses to 0 at a starting level of 0).
+export function advancementGiftLevelCostAt(data, fromLevel, limiterCount) {
+  const base = fromLevel === 0 ? data.advancement.newGiftBaseXp : fromLevel * data.advancement.giftLevelXpMultiplier;
+  return Math.max(data.advancement.giftLimiterFloor, base - limiterCount * data.advancement.giftLimiterDiscount);
+}
+
+function getOrCreateGift(state, giftName) {
+  let g = state.gifts.find((x) => x.name === giftName);
+  if (!g) {
+    g = { name: giftName, level: 0, adders: [], limiters: [] };
+    state.gifts.push(g);
+  }
+  return g;
+}
+
+export function buyAdvancementGiftLevel(state, giftName) {
+  const g = getOrCreateGift(state, giftName);
+  g.level += 1;
+  state.advancementPurchases.Gifts[giftName] = (state.advancementPurchases.Gifts[giftName] ?? 0) + 1;
+}
+
+export function refundAdvancementGiftLevel(state, giftName) {
+  const bought = state.advancementPurchases.Gifts[giftName] ?? 0;
+  if (bought <= 0) return;
+  const g = state.gifts.find((x) => x.name === giftName);
+  g.level -= 1;
+  state.advancementPurchases.Gifts[giftName] = bought - 1;
+}
+
+function giftsLevelAdvancementXpSpent(state, data) {
+  let total = 0;
+  Object.entries(state.advancementPurchases.Gifts).forEach(([name, count]) => {
+    if (!count) return;
+    const g = state.gifts.find((x) => x.name === name);
+    const limiterCount = g ? g.limiters.length : 0;
+    total += sumTopN(g.level, count, (fromLevel) => advancementGiftLevelCostAt(data, fromLevel, limiterCount));
+  });
+  return total;
+}
+
+// Adders bought via Advancement are tracked separately from a Gift's own
+// `adders` array entry (which just needs the name for display/effect
+// text) so they can be refunded specifically, distinct from any Adder the
+// same Gift already had from creation.
+export function buyAdvancementGiftAdder(state, giftName, adderName) {
+  const g = getOrCreateGift(state, giftName);
+  if (!g.adders.includes(adderName)) g.adders.push(adderName);
+  if (!state.advancementPurchases.GiftAdders) state.advancementPurchases.GiftAdders = {};
+  const list = (state.advancementPurchases.GiftAdders[giftName] ??= []);
+  list.push(adderName);
+}
+
+export function refundAdvancementGiftAdder(state, giftName, adderName) {
+  const list = state.advancementPurchases.GiftAdders?.[giftName] ?? [];
+  const idx = list.lastIndexOf(adderName);
+  if (idx === -1) return;
+  list.splice(idx, 1);
+  const g = state.gifts.find((x) => x.name === giftName);
+  if (g) g.adders = g.adders.filter((a) => a !== adderName);
+}
+
+function giftAddersAdvancementXpSpent(state, data) {
+  let total = 0;
+  Object.entries(state.advancementPurchases.GiftAdders ?? {}).forEach(([giftName, adderNames]) => {
+    const giftData = data.gifts.find((x) => x.name === giftName);
+    adderNames.forEach((adderName) => {
+      const adder = giftData?.adders.find((a) => a.name === adderName);
+      if (adder) total += data.advancement.giftAdderXp[adder.tier];
+    });
+  });
+  return total;
+}
+
+// Boons bought via Advancement reuse the existing `state.boons` list with
+// source 'advancement' (see addBoon/removeBoon) - their XP cost is the
+// Boon's own creation-pool points times the Advancement markup, computed
+// live rather than stored, same as Discretionary-funded Boons already do.
+function boonsAdvancementXpSpent(state, data) {
+  return state.boons
+    .filter((b) => b.source === 'advancement')
+    .reduce((sum, b) => sum + b.points * data.advancement.boonXpMultiplier, 0);
+}
+
+export function xpSpent(state, data) {
+  return (
+    attributesAdvancementXpSpent(state, data) +
+    skillsAdvancementXpSpent(state, data) +
+    resourcesAdvancementXpSpent(state, data) +
+    descriptorsAdvancementXpSpent(state, data) +
+    giftsLevelAdvancementXpSpent(state, data) +
+    giftAddersAdvancementXpSpent(state, data) +
+    boonsAdvancementXpSpent(state, data)
+  );
+}
+
+export function xpRemaining(state, data) {
+  return state.xpEarned - xpSpent(state, data);
 }
 
 export function allPoolsSummary(state, data) {

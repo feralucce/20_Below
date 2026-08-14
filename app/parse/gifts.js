@@ -1,6 +1,6 @@
 import { findSection, splitByHeading, extractTableAfter } from './markdown.js';
 
-const ADDER_ITEM = /^- \*\*(.+?)\*\* \((Lesser|Greater), (\d+) ?pts?\):?\s*(.*)$/;
+const ADDER_ITEM = /^- \*\*(.+?)\*\* \((Lesser|Greater), \d+ ?pts?\):?\s*(.*)$/;
 const LIMITER_ITEM = /^- \*\*(.+?)\*\*:?\s*(.*)$/;
 
 function extractBulletsBetween(body, startLabel, endLabel) {
@@ -20,7 +20,13 @@ function extractBulletsBetween(body, startLabel, endLabel) {
 // power), so this only structures what's needed for point-tracking
 // (Adders/Limiters and their costs) and leaves the rest of each Gift's
 // block as raw markdown for the picker's detail view to render as-is.
-export function parseGifts(giftsMd) {
+//
+// `giftAdderCost` (from costs.md, e.g. { Lesser: 3, Greater: 6 }) is the
+// authoritative price by tier - each Adder line's own printed number
+// (e.g. "Lesser, 3 pts") is parsed for its tier name only and otherwise
+// ignored, so changing costs.md's rate reprices every Adder in the game
+// without needing to hand-edit every line in gifts.md to match.
+export function parseGifts(giftsMd, giftAdderCost) {
   const listSection = findSection(giftsMd, 'Gift List', '##');
   const blocks = splitByHeading(listSection, '###');
 
@@ -42,7 +48,7 @@ export function parseGifts(giftsMd) {
           console.warn(`Gift "${title}": Adder line didn't match expected pattern: "${line}"`);
           return null;
         }
-        return { name: m[1], tier: m[2], points: Number(m[3]), text: m[4] };
+        return { name: m[1], tier: m[2], points: giftAdderCost[m[2]], text: m[3] };
       })
       .filter(Boolean);
 
