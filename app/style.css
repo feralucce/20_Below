@@ -247,6 +247,15 @@ body {
   gap: 0.5rem;
 }
 
+/* Pulls a counter-row's -/value/+ controls right up against the name
+   instead of the default flex:1 name pushing them to the far edge of the
+   row - used where the row's own container is already fairly narrow
+   (e.g. the Advancement tab's Skills list) so the controls read as
+   belonging to that name, not floating off on their own. */
+.counter-row-compact .name {
+  flex: none;
+}
+
 .pick-card {
   border: 1px solid var(--panel-border);
   border-radius: var(--radius);
