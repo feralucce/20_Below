@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Combat Flow Reference - 20 Below</title>
+<style>
+  :root {
+    --bg: #14161c;
+    --panel: #1d2028;
+    --panel-border: #2f3341;
+    --text: #e8e9ee;
+    --text-dim: #9ba0b0;
+    --accent: #7aa2f7;
+    --accent-dim: #3b4a6b;
+    --radius: 8px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  main {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  .back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  h1 {
+    margin: 1rem 0 0.5rem;
+    letter-spacing: 0.02em;
+  }
+  .note {
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  .step {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .step-number {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .step-body {
+    flex: 1;
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+  }
+  .step-body h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+  }
+  .step-body p {
+    margin: 0 0 0.75rem;
+    line-height: 1.5;
+    color: var(--text);
+  }
+  .step-body p:last-child {
+    margin-bottom: 0;
+  }
+  .roll-box {
+    background: var(--bg);
+    border: 1px solid var(--accent-dim);
+    border-radius: var(--radius);
+    padding: 0.6rem 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: inline-block;
+  }
+  .bracket-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .bracket-card {
+    flex: 1 1 160px;
+    background: var(--bg);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 0.75rem;
+  }
+  .bracket-name {
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+  }
+  .bracket-actions {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.4rem;
+  }
+  .bracket-desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .aside {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+  .resolve-list {
+    margin: 0 0 0.75rem;
+    padding-left: 1.25rem;
+    line-height: 1.6;
+  }
+  .resolve-list li {
+    margin-bottom: 0.3rem;
+  }
+  a { color: var(--accent); }
+  h2.section-heading {
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--panel-border);
+    font-size: 1.3rem;
+  }
+  .step-letter {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <a class="back-link" href="../index.html">&larr; Back to 20 Below</a>
+  <h1>Combat Flow Reference</h1>
+  <p class="note">
+    A plain-language walkthrough of how a fight actually plays out, step by step, with the exact roll for each part.
+    See <a href="../rules/rules.html#combat">rules.md</a> for the full rules text.
+  </p>
+
+  <div class="step">
+    <div class="step-number">1</div>
+    <div class="step-body">
+      <h2>Initiative</h2>
+      <p>At the start of the fight, everyone rolls once to see who acts first. This order holds for the entire fight - you don't re-roll each round.</p>
+      <div class="roll-box">1d10 + Initiative sub-stat</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">2</div>
+    <div class="step-body">
+      <h2>Declare Action Bracket</h2>
+      <p>Each round, before anyone acts, every character quietly picks how they're playing it this round: <strong>Fast</strong>, <strong>Normal</strong>, or <strong>Slow</strong>. This decides how many actions you get and when you act relative to everyone else.</p>
+      <div class="bracket-grid">
+        <div class="bracket-card">
+          <div class="bracket-name">Fast</div>
+          <div class="bracket-actions">1 action</div>
+          <div class="bracket-desc">A snap shot, a move, one Skill use. Acts first, but that's all you get.</div>
+        </div>
+        <div class="bracket-card">
+          <div class="bracket-name">Normal</div>
+          <div class="bracket-actions">2 actions</div>
+          <div class="bracket-desc">Move and attack, for example. Acts second - the balanced middle.</div>
+        </div>
+        <div class="bracket-card">
+          <div class="bracket-name">Slow</div>
+          <div class="bracket-actions">1 action, empowered</div>
+          <div class="bracket-desc">Acts last, but that one action allows called shots and gets Advantage.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">3</div>
+    <div class="step-body">
+      <h2>Resolve Actions</h2>
+      <p>Once everyone's declared, the round actually plays out in three passes:</p>
+      <ol class="resolve-list">
+        <li><strong>All Fast actions</strong> happen first, in Initiative order.</li>
+        <li>Then <strong>all Normal actions</strong>, in Initiative order.</li>
+        <li>Then <strong>all Slow actions</strong>, in Initiative order.</li>
+      </ol>
+      <p class="aside">Spending 1 Ki bumps your bracket up one step (Slow &rarr; Normal, or Normal &rarr; Fast); 2 Ki bumps it up two steps at once.</p>
+    </div>
+  </div>
+
+  <h2 class="section-heading">How Attacks Work</h2>
+
+  <div class="step">
+    <div class="step-letter">A</div>
+    <div class="step-body">
+      <h2>Do You Even Hit?</h2>
+      <p>Before anything else, you have to actually land the hit. This works the same whether you're swinging a fist, saying something cutting, or pushing into someone's mind - roll your Attribute + Skill against how hard the target is to hit.</p>
+      <div class="roll-box">Attribute + Skill vs. target's Defense</div>
+      <p>Roll 2d10 and add them up. If your total is <strong>equal to or less than</strong> your target number, you hit. Higher than that, and it's a miss - nothing happens this time.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-letter">B</div>
+    <div class="step-body">
+      <h2>How Much Gets Through?</h2>
+      <p>Now roll a handful of dice - how many depends on what you're using (a weapon, a Gift, whatever fits the attack). Check each die one at a time against the target's toughness for that kind of attack: <strong>Soak</strong> for a physical hit, <strong>Presence</strong> for words, <strong>Psyche</strong> for a mental push.</p>
+      <div class="roll-box">Each die vs. Soak / Presence / Psyche</div>
+      <p>A die <strong>higher than</strong> that number gets through. A die <strong>equal to or lower</strong> just bounces off, no effect. Each connecting die costs the target one Health Level, Poise, or Sanity - whichever fits the attack.</p>
+      <p class="aside">Spending 1 Ki per die lets you boost that die, adding your own Ferocity (Physical), Presence (Social), or Psyche (Mental) to its result - decided before any dice are rolled, not after seeing a bad one. Enough boosted dice can crack through even a maxed-out wall.</p>
+    </div>
+  </div>
+
+  <h2 class="section-heading">How Damage Works</h2>
+
+  <div class="step">
+    <div class="step-letter">C</div>
+    <div class="step-body">
+      <h2>Health Levels (Physical)</h2>
+      <p>Think of Health Levels as a row of boxes, not one big number - each box takes exactly one hit before it's gone. Everyone starts with 5, plus whatever they've put into their Health sub-stat.</p>
+      <div class="roll-box">5 + Health sub-stat</div>
+      <p>At 0, you're unconscious and can't act. Go far enough past that and you die. One attack can never wipe out more boxes than it takes to reach 0 - even a huge hit just lands you exactly at 0, no further. Once you're already at 0, any later attack can only take one more box, no matter how many dice connect.</p>
+      <p class="aside">Spending 1 Ki cancels the loss of one Health Level - 1 Ki per Level saved, and you can spend more than one at once. Dropping to 0 anyway leaves a permanent scar. See <a href="scars.html">Scars</a>.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-letter">D</div>
+    <div class="step-body">
+      <h2>Poise (Social)</h2>
+      <p>Poise is also a row of boxes, one hit each, starting at 5 plus your Presence sub-stat - but it tracks your composure under Social attack instead of physical harm: cutting words, humiliation, pressure.</p>
+      <div class="roll-box">5 + Presence</div>
+      <p>The one difference: Poise can't go below 0. Once you're there, you're as Flustered as it gets - stuck at Disadvantage - but nothing worse happens after that.</p>
+      <p class="aside">Spending 1 Ki cancels the loss of one Poise Level, same rate as Health - 1 Ki per Level saved.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-letter">E</div>
+    <div class="step-body">
+      <h2>Sanity (Mental)</h2>
+      <p>Sanity is also a row of boxes, one hit each, starting at 5 plus your Psyche sub-stat - tracking your grip on your own mind under Mental attack.</p>
+      <div class="roll-box">5 + Psyche</div>
+      <p>Unlike Poise, Sanity can drop below 0. At 0 you're <strong>Overwhelmed</strong> - a temporary bad mental trait, Disadvantage, but you can still act on your own. Push it below 0 and you're <strong>Shattered</strong> - you can't act alone anymore, someone has to lead you. Dropping below 0 always leaves a lasting mental scar, even after you recover.</p>
+      <p class="aside">Spending 1 Ki cancels the loss of one Sanity Level, same rate as Health. See <a href="scars.html">Scars</a>.</p>
+    </div>
+  </div>
+
+  <h2 class="section-heading">Healing Damage</h2>
+
+  <div class="step">
+    <div class="step-letter">F</div>
+    <div class="step-body">
+      <h2>Health Levels</h2>
+      <p>Rest is the normal way back. A short breather patches up some of your boxes based on your Health sub-stat; a full night's sleep patches up every box you've lost.</p>
+      <div class="roll-box">Short Rest: Health sub-stat &divide; 2 (round up) &middot; Full Night's Rest: full</div>
+      <p class="aside">If you're already below 0, healing is slower - 1 Health Level per day of rest, until you're back up to 0. Normal recovery picks up again from there.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-letter">G</div>
+    <div class="step-body">
+      <h2>Poise</h2>
+      <p>A short breather patches up some of your lost Poise based on your Presence; a full night's sleep patches up all of it.</p>
+      <div class="roll-box">Short Rest: Presence &divide; 2 (round up) &middot; Full Night's Rest: full</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-letter">H</div>
+    <div class="step-body">
+      <h2>Sanity</h2>
+      <p>A short breather patches up some of your lost Sanity based on your Psyche; a full night's sleep patches up all of it.</p>
+      <div class="roll-box">Short Rest: Psyche &divide; 2 (round up) &middot; Full Night's Rest: full</div>
+      <p class="aside"><strong>Overwhelmed</strong> (at 0) clears once you're away from whatever caused it and get a chance to rest - or by spending 1 Ki, which also fills Sanity back to full. <strong>Shattered</strong> (below 0) clears via the same two triggers - removal from the stimulus plus rest, or spending 1 Ki - but either one only refills you to 1, not full; normal recovery continues from there.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-letter">I</div>
+    <div class="step-body">
+      <h2>Ki</h2>
+      <p>A short breather refills some of your spent Ki based on your Klotho; a full night's sleep refills it completely.</p>
+      <div class="roll-box">Short Rest: Klotho &divide; 2 (round up) &middot; Full Night's Rest: full</div>
+    </div>
+  </div>
+
+  <p class="note">Two Gifts can speed any of this up: <a href="../rules/gifts.html#healing">Healing</a> lets someone else mend you faster, and <a href="../rules/gifts.html#regeneration">Regeneration</a> does the same thing to yourself.</p>
+
+</main>
+</body>
+</html>
