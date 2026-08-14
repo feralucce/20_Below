@@ -38,7 +38,7 @@ Each Attribute you raised in step 4 generates a pool of points equal to its own 
 | Air | Psyche | Resists Mental attacks, and sets how many dice you roll when making one. |
 | Fire | Ferocity | Boosts a Physical attack die when you spend Ki to push a strike. |
 | Fire | Presence | Resists Social attacks, and sets how many dice you roll when making one. |
-| Water | Stamina | Caps how many Fate Tokens you can spend per encounter; also your endurance against non-combat exhaustion. |
+| Water | Stamina | Caps how many Fate Tokens you can spend per Scene; also your endurance against non-combat exhaustion. |
 | Water | Health | Feeds your Health Levels (how many hits you can take). |
 | Moira | Atropos | Feeds Defense (how hard you are to hit). |
 | Moira | Klotho | Ki Regeneration rate and your Lucky Number. |
