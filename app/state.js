@@ -336,6 +336,66 @@ export function startingFateTokens(state, data) {
   return data.startingFateTokens + state.discretionaryExtra['Fate Tokens'];
 }
 
+// ---- Play State (post-creation tracking: damage, Fate Tokens, Ki, rest) ----
+
+// state.current* fields don't exist until the character sheet is first
+// shown - initialized here to each track's max/starting value rather than
+// baked into createInitialState, so they always reflect whatever the build
+// actually looked like the moment the player finished it. Safe to call every
+// render: only sets a field the first time (`== null`), never resets an
+// in-progress character's tracked values on a later visit to the sheet.
+export function initPlayState(state, data) {
+  const figured = computeFiguredCharacteristics(state);
+  if (state.currentHealth == null) state.currentHealth = figured['Health Levels'];
+  if (state.currentPoise == null) state.currentPoise = figured.Poise;
+  if (state.currentSanity == null) state.currentSanity = figured.Sanity;
+  if (state.currentKi == null) state.currentKi = figured.Ki;
+  if (state.currentFateTokens == null) state.currentFateTokens = startingFateTokens(state, data);
+}
+
+export function healthStatus(current, healthSubStat) {
+  if (current > 0) return null;
+  // "At 0 Health Levels, a character falls unconscious" is unconditional -
+  // death requires actually going negative, not just reaching the death
+  // formula's threshold. Without the `current < 0` check, a character with
+  // Health sub-stat 0 (death threshold ≤ -0, i.e. ≤ 0) would show Dead the
+  // instant they hit 0, skipping Unconscious entirely.
+  return current < 0 && current <= -healthSubStat ? 'Dead' : 'Unconscious';
+}
+
+export function poiseStatus(current) {
+  return current <= 0 ? 'Flustered' : null;
+}
+
+export function sanityStatus(current) {
+  if (current < 0) return 'Shattered';
+  return current === 0 ? 'Overwhelmed' : null;
+}
+
+// Short Rest and Full Night's Rest recovery (see rules.md#health-level-recovery,
+// #sanity, #ki). Health and Sanity share the same below-0 exception, confirmed
+// 2026-08-14: any rest, Short or Full, only recovers 1 Level and caps at 0 -
+// never the normal partial rate, never a full heal, while already below 0.
+// Poise never goes below 0, so it has no such exception.
+function restLevel(current, max, subStatValue, isFullRest) {
+  if (current < 0) {
+    return Math.min(0, current + 1);
+  }
+  if (isFullRest) return max;
+  return Math.min(max, current + Math.ceil(subStatValue / 2));
+}
+
+export function applyRest(state, isFullRest) {
+  const figured = computeFiguredCharacteristics(state);
+  const s = state.subStats;
+  state.currentHealth = restLevel(state.currentHealth, figured['Health Levels'], s.Health, isFullRest);
+  state.currentSanity = restLevel(state.currentSanity, figured.Sanity, s.Psyche, isFullRest);
+  state.currentPoise = isFullRest
+    ? figured.Poise
+    : Math.min(figured.Poise, state.currentPoise + Math.ceil(s.Presence / 2));
+  state.currentKi = isFullRest ? figured.Ki : Math.min(figured.Ki, state.currentKi + Math.ceil(s.Klotho / 2));
+}
+
 export function allPoolsSummary(state, data) {
   return [
     { label: 'Attributes', remaining: attributePoolRemaining(state, data) },

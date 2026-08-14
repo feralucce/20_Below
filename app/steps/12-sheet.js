@@ -1,5 +1,13 @@
 import { el, renderMarkdown } from '../ui.js';
-import { computeFiguredCharacteristics, startingFateTokens, skillTierName } from '../state.js';
+import {
+  computeFiguredCharacteristics,
+  skillTierName,
+  initPlayState,
+  healthStatus,
+  poiseStatus,
+  sanityStatus,
+  applyRest,
+} from '../state.js';
 import { downloadMarkdown } from '../export/toMarkdown.js';
 import { downloadHtml, printToPdf } from '../export/toHtml.js';
 import { downloadRtf } from '../export/toRtf.js';
@@ -8,15 +16,47 @@ function inline(md) {
   return window.marked ? window.marked.parseInline(md) : md;
 }
 
-function pipTracker(label, count, color) {
+// Click a pip to set the fill level there (clicking a filled pip drops the
+// count to that pip; clicking an empty one heals up to and including it).
+// Pips only ever show the 0..max range - the "-1"/"+1" buttons cover the
+// below-0 range (Health/Sanity only) that a fixed row of boxes can't.
+function damageTracker(label, current, max, color, statusFn, onChange, interactive) {
+  const clamped = Math.max(0, Math.min(max, current));
   const pips = [];
-  for (let i = 0; i < count; i++) {
-    pips.push(el('div', { class: 'pip', style: `--pip-color:${color}` }));
+  for (let i = 0; i < max; i++) {
+    const filled = i < clamped;
+    pips.push(
+      el('div', {
+        class: filled ? 'pip' : 'pip pip-empty',
+        style: `--pip-color:${color}`,
+        onClick: interactive ? () => onChange(i < current ? i : i + 1) : null,
+      }),
+    );
   }
+  const status = statusFn(current);
   return el('div', { class: 'field-box' }, [
     el('span', { class: 'field-label' }, label),
     el('div', { class: 'pip-row' }, pips),
-    el('span', { class: 'pip-fraction' }, `${count}/${count}`),
+    el('div', { class: 'tracker-row' }, [
+      interactive ? el('button', { type: 'button', class: 'step-btn', text: '−', onClick: () => onChange(current - 1) }) : null,
+      el('span', { class: 'pip-fraction' }, `${current}/${max}`),
+      interactive ? el('button', { type: 'button', class: 'step-btn', text: '+', onClick: () => onChange(current + 1) }) : null,
+      status ? el('span', { class: 'status-badge' }, status) : null,
+    ]),
+  ]);
+}
+
+// Ki and Fate Tokens don't fit the pip-boxes model - Ki's max can run well
+// past what's reasonable to draw as boxes, and Fate Tokens has no max at
+// all - so both get a plain stepping counter instead.
+function counterTracker(label, current, max, onChange, interactive) {
+  return el('div', { class: 'field-box' }, [
+    el('span', { class: 'field-label' }, label),
+    el('div', { class: 'tracker-row' }, [
+      interactive ? el('button', { type: 'button', class: 'step-btn', text: '−', onClick: () => onChange(current - 1) }) : null,
+      el('div', { class: 'tracker-value' }, max == null ? String(current) : `${current}/${max}`),
+      interactive ? el('button', { type: 'button', class: 'step-btn', text: '+', onClick: () => onChange(current + 1) }) : null,
+    ]),
   ]);
 }
 
@@ -209,8 +249,32 @@ const TABS = [
   { id: 'biography', label: 'Biography', build: buildBiographyTab },
 ];
 
-function buildHeader(state, data, figured, fate) {
+// interactive=false renders a plain read-only snapshot (used by the hidden
+// print copy, which only ever needs to be captured, never clicked).
+function buildHeader(state, data, figured, { interactive = false, refresh = () => {} } = {}) {
   const natureLabel = state.nature.picked ?? state.nature.custom?.label ?? '';
+  const healthSubStat = state.subStats.Health;
+
+  const setHealth = (v) => {
+    state.currentHealth = Math.min(figured['Health Levels'], v);
+    refresh();
+  };
+  const setPoise = (v) => {
+    state.currentPoise = Math.max(0, Math.min(figured.Poise, v));
+    refresh();
+  };
+  const setSanity = (v) => {
+    state.currentSanity = Math.min(figured.Sanity, v);
+    refresh();
+  };
+  const setKi = (v) => {
+    state.currentKi = Math.max(0, Math.min(figured.Ki, v));
+    refresh();
+  };
+  const setFate = (v) => {
+    state.currentFateTokens = Math.max(0, v);
+    refresh();
+  };
 
   return [
     el('div', { class: 'sheet-topbar' }, [
@@ -233,18 +297,19 @@ function buildHeader(state, data, figured, fate) {
     ]),
 
     el('div', { class: 'sheet-trackers-row' }, [
-      pipTracker('Health Levels', figured['Health Levels'], 'var(--ok)'),
-      pipTracker('Poise', figured.Poise, 'var(--gold)'),
-      pipTracker('Sanity', figured.Sanity, 'var(--air)'),
-      el('div', { class: 'field-box' }, [
-        el('span', { class: 'field-label' }, 'Ki'),
-        el('div', { class: 'tracker-value' }, `${figured.Ki}/${figured.Ki}`),
-      ]),
-      el('div', { class: 'field-box' }, [
-        el('span', { class: 'field-label' }, 'Fate Tokens'),
-        el('div', { class: 'fate-value' }, String(fate)),
-        el('div', { class: 'inert-btn' }, 'Spend token'),
-      ]),
+      damageTracker(
+        'Health Levels',
+        state.currentHealth,
+        figured['Health Levels'],
+        'var(--ok)',
+        (c) => healthStatus(c, healthSubStat),
+        setHealth,
+        interactive,
+      ),
+      damageTracker('Poise', state.currentPoise, figured.Poise, 'var(--gold)', poiseStatus, setPoise, interactive),
+      damageTracker('Sanity', state.currentSanity, figured.Sanity, 'var(--air)', sanityStatus, setSanity, interactive),
+      counterTracker('Ki', state.currentKi, figured.Ki, setKi, interactive),
+      counterTracker('Fate Tokens', state.currentFateTokens, null, setFate, interactive),
     ]),
 
     el('div', { class: 'sheet-mini-row' }, [
@@ -260,8 +325,28 @@ function buildHeader(state, data, figured, fate) {
         el('span', { class: 'field-label' }, 'Carry'),
         el('div', { class: 'mini-value' }, `${figured['Carrying Capacity']}kg`),
       ]),
-      el('div', { class: 'inert-btn' }, 'Short rest'),
-      el('div', { class: 'inert-btn' }, "Full night's rest"),
+      interactive
+        ? el('button', {
+            type: 'button',
+            class: 'rest-btn',
+            text: 'Short rest',
+            onClick: () => {
+              applyRest(state, false);
+              refresh();
+            },
+          })
+        : null,
+      interactive
+        ? el('button', {
+            type: 'button',
+            class: 'rest-btn',
+            text: "Full night's rest",
+            onClick: () => {
+              applyRest(state, true);
+              refresh();
+            },
+          })
+        : null,
     ]),
   ];
 }
@@ -270,12 +355,18 @@ export default {
   id: 'sheet',
   title: '13-14. Sheet & Export',
   render(container, { state, data }) {
+    initPlayState(state, data);
     const figured = computeFiguredCharacteristics(state);
-    const fate = startingFateTokens(state, data);
 
     let activeTab = TABS[0].id;
     const tabContent = el('div', { class: 'tab-content' });
     const tabNav = el('div', { class: 'tab-nav' });
+    const headerEl = el('div', {});
+
+    function renderHeader() {
+      headerEl.innerHTML = '';
+      headerEl.append(...buildHeader(state, data, figured, { interactive: true, refresh: renderHeader }));
+    }
 
     function renderTabContent() {
       tabContent.innerHTML = '';
@@ -303,21 +394,19 @@ export default {
 
     renderTabNav();
     renderTabContent();
+    renderHeader();
 
-    const sheet = el('div', { class: 'sheet', id: 'character-sheet' }, [
-      ...buildHeader(state, data, figured, fate),
-      tabNav,
-      tabContent,
-    ]);
+    const sheet = el('div', { class: 'sheet', id: 'character-sheet' }, [headerEl, tabNav, tabContent]);
 
     // A separate, non-tabbed copy with every section stacked - the PDF needs
     // everything in one document regardless of which tab happens to be open
-    // on screen, so it renders from this hidden element instead.
+    // on screen, so it renders from this hidden element instead. Read-only:
+    // interactive controls would be pointless on a page nobody sees or clicks.
     const printSheet = el(
       'div',
       { class: 'sheet sheet-print-only', id: 'character-sheet-print' },
       [
-        ...buildHeader(state, data, figured, fate),
+        ...buildHeader(state, data, figured, { interactive: false }),
         ...TABS.flatMap((tab) => [
           el('h3', {}, tab.label),
           el('div', {}, tab.build(state, data)),
