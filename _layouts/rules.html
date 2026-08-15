@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ page.name | remove: ".md" | replace: "-", " " | capitalize }} | 20 Below</title>
+<style>
+  :root {
+    --bg: #14161c;
+    --panel: #1d2028;
+    --panel-border: #2f3341;
+    --text: #e8e9ee;
+    --text-dim: #9ba0b0;
+    --accent: #7aa2f7;
+    --accent-dim: #3b4a6b;
+    --radius: 8px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    line-height: 1.6;
+  }
+  .back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  h1, h2, h3, h4 {
+    letter-spacing: 0.02em;
+  }
+  h1 {
+    margin: 1rem 0 0.5rem;
+  }
+  h2 {
+    border-bottom: 1px solid var(--panel-border);
+    padding-bottom: 0.4rem;
+    margin-top: 2.5rem;
+  }
+  h3 {
+    margin-top: 2rem;
+    color: var(--accent);
+  }
+  h4 {
+    margin-top: 1.5rem;
+  }
+  p, li {
+    color: var(--text);
+  }
+  a { color: var(--accent); }
+  strong { color: var(--text); }
+  hr {
+    border: none;
+    border-top: 1px solid var(--panel-border);
+    margin: 2.5rem 0;
+  }
+  code {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 4px;
+    padding: 0.1rem 0.35rem;
+    font-size: 0.9em;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.95rem;
+  }
+  th, td {
+    border: 1px solid var(--panel-border);
+    padding: 0.5rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--panel);
+    color: var(--text);
+  }
+  tr:nth-child(even) td {
+    background: rgba(255, 255, 255, 0.02);
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+    border: 1px solid var(--panel-border);
+  }
+</style>
+</head>
+<body>
+<main>
+  <a class="back-link" href="../index.html">&larr; Back to 20 Below</a>
+  {{ content }}
+</main>
+</body>
+</html>
