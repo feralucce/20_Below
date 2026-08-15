@@ -222,6 +222,7 @@ The build is set once at creation, spending a points pool (below) on the build m
 - **Overclock Surge** (Lesser, 3 pts): spend 1 Ki to push one installed augmentation to double effect for a single action.
 - **Backup Power Cell** (Lesser, 3 pts): once per Scene, ignore an effect that would otherwise disable your augmentations.
 - **Full Conversion** (Greater, 6 pts): the build-menu pool at every Level is permanently +3 points bigger.
+- **Reconfigurable** (Greater, 6 pts): with an hour of focused work, swap your build-menu loadout for a different selection of equal or lesser total cost.
 
 **Limiters**:
 

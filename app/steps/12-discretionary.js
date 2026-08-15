@@ -22,7 +22,7 @@ import { renderBoonPicker } from './07-boons.js';
 
 export default {
   id: 'discretionary',
-  title: '12. Discretionary Points',
+  title: '13. Discretionary Points',
   render(container, ctx) {
     const { state, data, rerenderStep, rerenderPools } = ctx;
     function summaryText() {
@@ -34,7 +34,7 @@ export default {
     const summaryEl = el('p', {}, summaryText());
 
     container.append(
-      el('h2', {}, '12. Discretionary Points'),
+      el('h2', {}, '13. Discretionary Points'),
       summaryEl,
       el('div', { class: 'field' }, [
         el('label', {}, "GM's per-campaign cap on Flaw-earned Discretionary (optional, blank = uncapped)"),

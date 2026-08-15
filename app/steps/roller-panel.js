@@ -205,7 +205,7 @@ export default function buildRollerPanel(state, data, { refreshHeader }) {
   // The damage roller's Ki Infusion checkboxes need to reflect the
   // character's *current* Ki, which can change from outside this section
   // entirely (the header's own Ki −/+ buttons, a Gift Check failure) -
-  // exposed here so 12-sheet.js can fold it into the header's own refresh,
+  // exposed here so 13-sheet.js can fold it into the header's own refresh,
   // since that's the one place already called on every Ki-affecting action.
   wrap.refreshKiDependents = damageSection.refreshBoostRow;
 

@@ -22,9 +22,10 @@ import stepSkills from './steps/06-skills.js';
 import stepBoons from './steps/07-boons.js';
 import stepResources from './steps/08-resources.js';
 import stepGifts from './steps/09-gifts.js';
-import stepFlaws from './steps/10-flaws.js';
-import stepDiscretionary from './steps/11-discretionary.js';
-import stepSheet from './steps/12-sheet.js';
+import stepGiftMenus from './steps/10-gift-menus.js';
+import stepFlaws from './steps/11-flaws.js';
+import stepDiscretionary from './steps/12-discretionary.js';
+import stepSheet from './steps/13-sheet.js';
 
 const STEPS = [
   stepIdentity,
@@ -36,6 +37,7 @@ const STEPS = [
   stepBoons,
   stepResources,
   stepGifts,
+  stepGiftMenus,
   stepFlaws,
   stepDiscretionary,
   stepSheet,

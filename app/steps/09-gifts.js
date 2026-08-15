@@ -44,6 +44,9 @@ export default {
         el('summary', {}, `${gift.name}${gift.flagged ? ' [flagged, not final]' : ''} - ${giftPointsSpent(gState, data)} pts spent`),
         el('div', { class: 'detail', html: renderMarkdown(gift.markdown) }),
       );
+      if (gift.menu) {
+        card.append(el('p', { class: 'hint' }, 'No standard Level table for this Gift - see Gift Menus.'));
+      }
       container.appendChild(card);
 
       container.appendChild(

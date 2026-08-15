@@ -173,6 +173,50 @@ export function giftsPoolRemaining(state, data) {
   return total - giftsPointsSpent(state, data);
 }
 
+// ---- Gift build-menu purchases ----
+// A Gift using the custom Pool/Build-menu structure (Alternate Form,
+// Cybernetics, or any future Gift built the same way - see parseGiftMenu in
+// parse/gifts.js) has its own separate points pool, sized by the Gift's
+// current Level, spent on menu options rather than the flat per-Level cost.
+// Each purchase is its own entry (not a count per option) since the same
+// option can be bought more than once for different sub-choices (e.g. two
+// separate Sub-stat boosts) - each entry's `note` records which.
+
+export function giftMenuPool(gift, giftData) {
+  const row = giftData.menu.poolByLevel.find((r) => r.level === gift.level);
+  return row ? row.pool : 0;
+}
+
+export function giftMenuSpent(gift) {
+  return (gift.buildPurchases ?? []).reduce((sum, p) => sum + p.cost, 0);
+}
+
+export function giftMenuRemaining(gift, giftData) {
+  return giftMenuPool(gift, giftData) - giftMenuSpent(gift);
+}
+
+function nextBuildPurchaseId(gift) {
+  return (gift.buildPurchases ?? []).reduce((max, p) => Math.max(max, p.id), 0) + 1;
+}
+
+export function addGiftMenuPurchase(state, giftName, { option, cost, note = '' }) {
+  const g = state.gifts.find((x) => x.name === giftName);
+  const id = nextBuildPurchaseId(g);
+  (g.buildPurchases ??= []).push({ id, option, cost, note });
+}
+
+export function updateGiftMenuPurchaseNote(state, giftName, purchaseId, note) {
+  const g = state.gifts.find((x) => x.name === giftName);
+  const purchase = g?.buildPurchases?.find((p) => p.id === purchaseId);
+  if (purchase) purchase.note = note;
+}
+
+export function removeGiftMenuPurchase(state, giftName, purchaseId) {
+  const g = state.gifts.find((x) => x.name === giftName);
+  if (!g?.buildPurchases) return;
+  g.buildPurchases = g.buildPurchases.filter((p) => p.id !== purchaseId);
+}
+
 // ---- Discretionary purchases of real items (step 12) ----
 // Attributes/Skills/Resources use a flat per-unit cost, so their
 // discretionaryExtra counters can just be incremented/decremented directly

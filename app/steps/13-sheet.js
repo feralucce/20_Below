@@ -356,7 +356,7 @@ function buildHeader(state, data, figured, { interactive = false, refresh = () =
 
 export default {
   id: 'sheet',
-  title: '13-14. Sheet & Export',
+  title: '14-15. Sheet & Export',
   render(container, { state, data }) {
     initPlayState(state, data);
     const figured = computeFiguredCharacteristics(state);
@@ -436,6 +436,6 @@ export default {
       rollerPanelNode,
     ]);
 
-    container.append(el('h2', {}, '13-14. Character Sheet & Export'), rollerPlaceholder, sheet, notesField, exportRow);
+    container.append(el('h2', {}, '14-15. Character Sheet & Export'), rollerPlaceholder, sheet, notesField, exportRow);
   },
 };
