@@ -12,10 +12,10 @@ function getOrCreateFlawState(state, name) {
 
 export default {
   id: 'flaws',
-  title: '11. Flaws',
+  title: '12. Flaws',
   render(container, { state, data, rerenderStep, rerenderPools }) {
     container.append(
-      el('h2', {}, '11. Flaws'),
+      el('h2', {}, '12. Flaws'),
       el(
         'p',
         {},

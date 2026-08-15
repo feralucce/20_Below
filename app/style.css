@@ -263,6 +263,22 @@ body {
   background: var(--panel);
 }
 
+.hint {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.menu-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.menu-table td {
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid var(--panel-border);
+  vertical-align: top;
+}
+
 .pick-card summary {
   cursor: pointer;
   display: flex;
