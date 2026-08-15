@@ -12,14 +12,14 @@ function getOrCreateFlawState(state, name) {
 
 export default {
   id: 'flaws',
-  title: '12. Flaws',
+  title: 'Flaws',
   render(container, { state, data, rerenderStep, rerenderPools }) {
     container.append(
-      el('h2', {}, '12. Flaws'),
+      el('h2', {}, 'Flaws'),
       el(
         'p',
         {},
-        `Optional. Each Flaw's points equal the Level taken, feeding Discretionary Points (step 12). Total granted so far: ${flawsPointsGranted(state)}.`,
+        `Optional. Each Flaw's points equal the Level taken, feeding Discretionary Points (the Discretionary Points step). Total granted so far: ${flawsPointsGranted(state)}.`,
       ),
     );
 

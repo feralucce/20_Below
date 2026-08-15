@@ -1,8 +1,9 @@
 import { el } from '../ui.js';
 import { performCoreRoll, SKILL_TIERS } from '../roller/core.js';
 import { performGiftCheck } from '../roller/giftCheck.js';
+import { performResourceCheck } from '../roller/resourceCheck.js';
 import { rollDamagePool } from '../roller/damage.js';
-import { skillTierName } from '../state.js';
+import { skillTierName, effectiveResourceLevel, applyResourceCheckFailure, clearResourcePenalty } from '../state.js';
 
 // Physical/Social/Mental each pair a wall stat (what the target's dice are
 // checked against), the attacker's own matching Ki Infusion boost sub-stat,
@@ -44,7 +45,7 @@ function diceSummary(rollResult) {
   return `Rolled ${dice.join(', ')} → kept ${kept.join(', ')} = ${kept[0] + kept[1]}`;
 }
 
-export default function buildRollerPanel(state, data, { refreshHeader }) {
+export default function buildRollerPanel(state, data, { refreshHeader = () => {} } = {}) {
   const wrap = el('div', { class: 'roller-panel' });
   const resultEl = el('div', { class: 'roller-result' });
 
@@ -204,10 +205,13 @@ export default function buildRollerPanel(state, data, { refreshHeader }) {
   const damageSection = buildDamageRollSection(state, data, refreshHeader);
   // The damage roller's Ki Infusion checkboxes need to reflect the
   // character's *current* Ki, which can change from outside this section
-  // entirely (the header's own Ki −/+ buttons, a Gift Check failure) -
-  // exposed here so 13-sheet.js can fold it into the header's own refresh,
-  // since that's the one place already called on every Ki-affecting action.
-  wrap.refreshKiDependents = damageSection.refreshBoostRow;
+  // entirely (a Gift Check failure, most directly) - Roll Damage already
+  // refreshes its own boost row after spending Ki, so the only other spot
+  // that needs to reach in here is Gift Check, wired below.
+  function refreshKiDependents() {
+    refreshHeader();
+    damageSection.refreshBoostRow();
+  }
 
   wrap.append(
     el('h4', {}, 'Core Roll'),
@@ -218,11 +222,115 @@ export default function buildRollerPanel(state, data, { refreshHeader }) {
     togglesRow,
     rollBtn,
     resultEl,
-    buildGiftCheckSection(state, data, refreshHeader),
+    buildGiftCheckSection(state, data, refreshKiDependents),
     damageSection,
+    buildResourceCheckSection(state, data),
   );
 
   return wrap;
+}
+
+// Pushing a Resource (resources.md#pushing-a-resource): 2d10 against
+// Resource Level + Difficulty, ordinary critical success/failure rule, no
+// Skill involved. A failed check never denies the ask - it only drops the
+// Resource's effective Level (state.resourcePenalties) until manually
+// cleared, since the app has no in-game calendar to auto-expire "a Month"
+// against.
+function buildResourceCheckSection(state, data) {
+  const section = el('div', { class: 'roller-gift-check' });
+
+  const ownedResources = data.resources.filter((r) => state.resources[r.name] > 0);
+  let selectedResource = ownedResources[0]?.name ?? null;
+  let selectedDifficulty = 5;
+
+  const resourceSelect = el(
+    'select',
+    {
+      onChange: (e) => {
+        selectedResource = e.target.value;
+        renderSummary();
+      },
+    },
+    ownedResources.map((r) =>
+      el('option', { value: r.name }, `${r.name} (Level ${state.resources[r.name]})`),
+    ),
+  );
+
+  const difficultySelect = el(
+    'select',
+    {
+      onChange: (e) => {
+        selectedDifficulty = Number(e.target.value);
+      },
+    },
+    data.difficultyChart.map((d) =>
+      el(
+        'option',
+        { value: d.difficulty, selected: d.difficulty === selectedDifficulty ? '' : undefined },
+        `${d.difficulty} - ${d.label}`,
+      ),
+    ),
+  );
+
+  const summaryEl = el('p', {});
+  const clearBtn = el('button', {
+    type: 'button',
+    text: 'Clear penalty (a Month has passed)',
+    onClick: () => {
+      clearResourcePenalty(state, selectedResource);
+      renderSummary();
+    },
+  });
+
+  function renderSummary() {
+    if (!selectedResource) {
+      summaryEl.textContent = 'No Resources owned yet.';
+      clearBtn.disabled = true;
+      return;
+    }
+    const effective = effectiveResourceLevel(state, selectedResource);
+    const penalty = state.resourcePenalties[selectedResource] ?? 0;
+    summaryEl.textContent = penalty
+      ? `Effective Level ${effective} (reduced from ${state.resources[selectedResource]} by a prior failure).`
+      : `Current Level ${effective}.`;
+    clearBtn.disabled = !penalty;
+  }
+  renderSummary();
+
+  const resultEl = el('div', { class: 'roller-result' });
+
+  const rollBtn = el('button', {
+    type: 'button',
+    class: 'roll-btn',
+    text: 'Roll Resource Check',
+    disabled: selectedResource ? undefined : '',
+    onClick: () => {
+      const resourceLevel = effectiveResourceLevel(state, selectedResource);
+      const result = performResourceCheck({ resourceLevel, difficulty: selectedDifficulty });
+      if (result.resourceReduced) {
+        applyResourceCheckFailure(state, selectedResource);
+      }
+      renderSummary();
+      resultEl.innerHTML = '';
+      resultEl.append(
+        el('p', {}, `Rolled ${result.roll.dice.join(', ')} → ${result.roll.sum} vs target ${result.target}`),
+        el('p', { class: outcomeClass(result.outcome) }, [el('strong', {}, outcomeLabel(result.outcome))]),
+        el('p', {}, result.resourceReduced
+          ? `${selectedResource} drops to Level ${effectiveResourceLevel(state, selectedResource)} until a Month passes.`
+          : `${selectedResource} is unaffected - you got what you were after.`),
+      );
+    },
+  });
+
+  section.append(
+    el('h4', {}, 'Resource Check'),
+    el('div', { class: 'roller-row' }, [el('label', {}, 'Resource'), resourceSelect]),
+    el('div', { class: 'roller-row' }, [el('label', {}, 'Difficulty'), difficultySelect]),
+    summaryEl,
+    el('div', { style: 'display:flex;gap:0.5rem;' }, [rollBtn, clearBtn]),
+    resultEl,
+  );
+  return section;
 }
 
 // Damage dice pool - weapon/Gift attacks, per-die resolution against a
@@ -378,7 +486,7 @@ function buildDamageRollSection(state, data, refreshHeader) {
 // against current Ki + Stamina. Success is free; failure costs 1 Ki,
 // deducted here immediately since there's no separate confirmation step
 // for a cost this small and automatic.
-function buildGiftCheckSection(state, data, refreshHeader) {
+function buildGiftCheckSection(state, data, refreshKiDependents) {
   const section = el('div', { class: 'roller-gift-check' });
   const summary = el('p', {});
   const resultEl = el('div', { class: 'roller-result' });
@@ -397,7 +505,7 @@ function buildGiftCheckSection(state, data, refreshHeader) {
       const result = performGiftCheck({ ki: state.currentKi, stamina: state.subStats.Stamina });
       if (result.outcome === 'failure') {
         state.currentKi = Math.max(0, state.currentKi - 1);
-        refreshHeader();
+        refreshKiDependents();
       }
       updateSummary();
       resultEl.innerHTML = '';

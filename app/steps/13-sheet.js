@@ -7,11 +7,11 @@ import {
   poiseStatus,
   sanityStatus,
   applyRest,
+  effectiveResourceLevel,
 } from '../state.js';
 import { downloadJson } from '../export/toJson.js';
 import buildAdvancementTab from './tab-advancement.js';
 import buildScarsTab from './tab-scars.js';
-import buildRollerPanel from './roller-panel.js';
 
 function inline(md) {
   return window.marked ? window.marked.parseInline(md) : md;
@@ -77,9 +77,11 @@ function buildResourceEntries(state, data) {
     .filter((r) => state.resources[r.name] > 0)
     .map((r) => {
       const level = state.resources[r.name];
-      const desc = r.levels[level] ?? '';
+      const effective = effectiveResourceLevel(state, r.name);
+      const desc = r.levels[effective] ?? '';
+      const label = effective < level ? `${r.name}: Level ${effective} (reduced from ${level})` : `${r.name}: Level ${level}`;
       return el('li', {}, [
-        el('strong', {}, `${r.name}: Level ${level}`),
+        el('strong', {}, label),
         el('div', { class: 'detail', html: renderMarkdown(desc) }),
       ]);
     });
@@ -368,7 +370,7 @@ function buildHeader(state, data, figured, { interactive = false, refresh = () =
 
 export default {
   id: 'sheet',
-  title: '14-15. Sheet & Export',
+  title: 'Character Sheet & Export',
   render(container, { state, data }) {
     initPlayState(state, data);
     const figured = computeFiguredCharacteristics(state);
@@ -377,15 +379,10 @@ export default {
     const tabContent = el('div', { class: 'tab-content' });
     const tabNav = el('div', { class: 'tab-nav' });
     const headerEl = el('div', {});
-    // Assigned once the Roller panel is built below - declared here so
-    // renderHeader's closure sees it once set, even though it runs before
-    // that point on the very first render (harmless no-op via `?.`).
-    let rollerPanelNode = null;
 
     function renderHeader() {
       headerEl.innerHTML = '';
       headerEl.append(...buildHeader(state, data, figured, { interactive: true, refresh: renderHeader }));
-      rollerPanelNode?.refreshKiDependents?.();
     }
 
     function renderTabContent() {
@@ -438,16 +435,6 @@ export default {
       }),
     ]);
 
-    // Roller, at the top of the step per direct request (Finishing Touches
-    // moved down to make room). renderHeader is passed through so a
-    // Lucky Number's automatic Fate Token gain shows up immediately in the
-    // header tracker without a full step re-render.
-    rollerPanelNode = buildRollerPanel(state, data, { refreshHeader: renderHeader });
-    const rollerPlaceholder = el('div', { class: 'roller-placeholder' }, [
-      el('h3', {}, 'Roller'),
-      rollerPanelNode,
-    ]);
-
-    container.append(el('h2', {}, '14-15. Character Sheet & Export'), rollerPlaceholder, sheet, notesField, exportRow);
+    container.append(el('h2', {}, 'Character Sheet & Export'), sheet, notesField, exportRow);
   },
 };

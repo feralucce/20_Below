@@ -7,11 +7,11 @@ function inline(md) {
 
 export default {
   id: 'skills',
-  title: '7. Skills',
+  title: 'Skills',
   render(container, { state, data, rerenderStep, rerenderPools }) {
     const remaining = skillsPoolRemaining(state, data);
     container.append(
-      el('h2', {}, '7. Skills'),
+      el('h2', {}, 'Skills'),
       el(
         'p',
         {},

@@ -22,7 +22,7 @@ import { renderBoonPicker } from './07-boons.js';
 
 export default {
   id: 'discretionary',
-  title: '13. Discretionary Points',
+  title: 'Discretionary Points',
   render(container, ctx) {
     const { state, data, rerenderStep, rerenderPools } = ctx;
     function summaryText() {
@@ -34,7 +34,7 @@ export default {
     const summaryEl = el('p', {}, summaryText());
 
     container.append(
-      el('h2', {}, '13. Discretionary Points'),
+      el('h2', {}, 'Discretionary Points'),
       summaryEl,
       el('div', { class: 'field' }, [
         el('label', {}, "GM's per-campaign cap on Flaw-earned Discretionary (optional, blank = uncapped)"),
@@ -52,7 +52,7 @@ export default {
       el(
         'p',
         {},
-        'Buy real Boons, Resources, Gifts, Skills, Attribute points, or Fate Tokens directly below, priced at the conversion rate. Extra Descriptors are bought per sub-stat back on step 6.',
+        'Buy real Boons, Resources, Gifts, Skills, Attribute points, or Fate Tokens directly below, priced at the conversion rate. Extra Descriptors are bought per sub-stat back on the Descriptors step.',
       ),
     );
 

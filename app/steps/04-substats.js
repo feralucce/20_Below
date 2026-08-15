@@ -3,10 +3,10 @@ import { subStatPoolRemaining } from '../state.js';
 
 export default {
   id: 'substats',
-  title: '5. Sub-Stat Division',
+  title: 'Sub-Stat Division',
   render(container, { state, data, rerenderStep, rerenderPools }) {
     container.append(
-      el('h2', {}, '5. Sub-Stat Division'),
+      el('h2', {}, 'Sub-Stat Division'),
       el(
         'p',
         {},

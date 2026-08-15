@@ -33,6 +33,11 @@ export function createInitialState(data) {
     resources[r.name] = 0;
   });
 
+  const resourcePenalties = {}; // resourceName -> Levels temporarily lost to a failed Resource Check
+  data.resources.forEach((r) => {
+    resourcePenalties[r.name] = 0;
+  });
+
   return {
     name: '',
     concept: '',
@@ -44,6 +49,7 @@ export function createInitialState(data) {
     skills,
     boons: [], // [{ name, points, tier }] - Special Movement (repeatable) can appear more than once
     resources,
+    resourcePenalties,
     gifts: [], // [{ name, level, adders: string[], limiters: string[] }]
     flaws: [], // [{ name, level }]
     // Pool-points'-worth of extra capacity bought via Discretionary, added
@@ -60,8 +66,8 @@ export function createInitialState(data) {
     },
     discretionaryCap: null, // GM-set cap on Flaw-earned Discretionary points, null = uncapped
     // Tracks how many pool-points'-worth of each scalar target (Attributes/
-    // Skills/Resources/Gifts) were funded specifically through step 12's
-    // Discretionary pickers, keyed by item name. Lets step 12 offer real
+    // Skills/Resources/Gifts) were funded specifically through the Discretionary Points step's
+    // Discretionary pickers, keyed by item name. Lets the Discretionary Points step offer real
     // +/- controls on the actual items (not just an abstract pool bump)
     // while still letting the item's own step show/adjust the same value.
     discretionaryPurchases: { Attributes: {}, Skills: {}, Resources: {}, Gifts: {}, GiftAdders: {} },
@@ -146,6 +152,29 @@ export function resourcesPoolRemaining(state, data) {
   return total - resourcesPointsSpent(state, data);
 }
 
+// ---- Resource Checks (see resources.md#pushing-a-resource) ----
+// A failed check drops a Resource's *effective* Level by 1 (floored at 1)
+// until the app's user manually clears it once a Month has passed in
+// fiction - there's no in-game calendar here to auto-expire it against.
+// The penalty is tracked separately from the purchased Level itself so
+// point-cost accounting (resourcesPointsSpent above) is never affected.
+
+export function effectiveResourceLevel(state, resourceName) {
+  const level = state.resources[resourceName] ?? 0;
+  const penalty = state.resourcePenalties[resourceName] ?? 0;
+  return Math.max(Math.min(level, 1), level - penalty);
+}
+
+export function applyResourceCheckFailure(state, resourceName) {
+  const level = state.resources[resourceName] ?? 0;
+  const current = state.resourcePenalties[resourceName] ?? 0;
+  state.resourcePenalties[resourceName] = Math.min(Math.max(level - 1, 0), current + 1);
+}
+
+export function clearResourcePenalty(state, resourceName) {
+  state.resourcePenalties[resourceName] = 0;
+}
+
 // A Limiter drops the cost of every Level of its Gift, floored at a
 // minimum, stacking with no ceiling on how many can be taken. Discount
 // and floor both come from rules/costs.md (see rules/gifts.md#points).
@@ -217,7 +246,7 @@ export function removeGiftMenuPurchase(state, giftName, purchaseId) {
   g.buildPurchases = g.buildPurchases.filter((p) => p.id !== purchaseId);
 }
 
-// ---- Discretionary purchases of real items (step 12) ----
+// ---- Discretionary purchases of real items (the Discretionary Points step) ----
 // Attributes/Skills/Resources use a flat per-unit cost, so their
 // discretionaryExtra counters can just be incremented/decremented directly
 // alongside the real state change. Gifts are the exception - a Gift's
@@ -354,7 +383,7 @@ export function unspentBoonsPoolPoints(state, data) {
   return Math.max(0, data.boonsPoolTotal - poolFundedSpent);
 }
 
-// The GM's cap (see step 12) applies only to Flaw-earned Discretionary,
+// The GM's cap (see the Discretionary Points step) applies only to Flaw-earned Discretionary,
 // same as it always has - Boons Pool leftover isn't a stacking-for-profit
 // lever the way Flaws can be, it's just "don't lose points you didn't
 // spend," so it always converts in full regardless of the cap.

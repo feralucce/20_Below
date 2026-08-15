@@ -1,7 +1,7 @@
 import { el, renderMarkdown } from '../ui.js';
 import { boonsPoolRemaining, addBoon, removeBoon } from '../state.js';
 
-// Shared by step 8 (spend the Boons pool) and step 12 (spend Discretionary
+// Shared by the Boons step (spend the Boons pool) and the Discretionary Points step (spend Discretionary
 // points on a Boon at the converted rate) - `source` tags each purchase so
 // removing it later refunds the right currency, `getRemaining`/`toCurrency`
 // let the caller price it in whichever pool applies.
@@ -73,12 +73,12 @@ export function renderBoonPicker(container, ctx, allBoons, { source, getRemainin
 
 export default {
   id: 'boons',
-  title: '8. Boons',
+  title: 'Boons',
   render(container, ctx) {
     const { state, data } = ctx;
     container.append(
-      el('h2', {}, '8. Boons'),
-      el('p', {}, `Spend a ${data.boonsPoolTotal}-point pool. Remaining: ${boonsPoolRemaining(state, data)}. Anything left unspent converts 1:1 into Discretionary points (step 12).`),
+      el('h2', {}, 'Boons'),
+      el('p', {}, `Spend a ${data.boonsPoolTotal}-point pool. Remaining: ${boonsPoolRemaining(state, data)}. Anything left unspent converts 1:1 into Discretionary points (the Discretionary Points step).`),
     );
     renderBoonPicker(container, ctx, data.boons, {
       source: 'pool',

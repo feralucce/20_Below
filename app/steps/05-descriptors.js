@@ -3,14 +3,14 @@ import { descriptorSlots, discretionaryRemaining } from '../state.js';
 
 export default {
   id: 'descriptors',
-  title: '6. Descriptors',
+  title: 'Descriptors',
   render(container, { state, data, rerenderStep, rerenderPools }) {
     container.append(
-      el('h2', {}, '6. Descriptors'),
+      el('h2', {}, 'Descriptors'),
       el(
         'p',
         {},
-        'For every point spent in a sub-stat, you get one free Descriptor - a short word or phrase capturing a specific flavor of it. Extra Descriptors beyond that cost Discretionary points (see step 12).',
+        'For every point spent in a sub-stat, you get one free Descriptor - a short word or phrase capturing a specific flavor of it. Extra Descriptors beyond that cost Discretionary points (see the Discretionary Points step).',
       ),
     );
 
