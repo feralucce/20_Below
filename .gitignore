@@ -6,3 +6,8 @@ Thumbs.db
 *.notes.md
 docs/design-log.md
 docs/restore-points.md
+
+# Generated staging copy of app/+rules/+docs for the desktop build's
+# frontendDist - rebuilt fresh by desktop/scripts/stage-frontend.ps1 before
+# every build/dev run, never hand-edited or committed.
+desktop/src-tauri/frontend-dist/
