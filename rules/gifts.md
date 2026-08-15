@@ -173,6 +173,62 @@ Watch someone closely enough, and what makes them exceptional becomes yours to b
 - **Live Feed Only**: the target must still be within your sight when you activate a mimicked capability, not just at the moment you first watched it.
 - **Echo, Not Original**: a mimicked Gift capability never benefits from your own Moira, Ki totals, or other bonuses beyond what the roll itself requires - it runs at the exact numbers you watched, even if worse than your own stats would produce.
 
+### Cybernetics
+
+Flesh gave way to hardware, by choice or by necessity - a limb swapped for something stronger, a spine threaded with fiber-optic reflexes, an eye that sees past normal color. This isn't magic and isn't muscle; it's engineering, built into your body and permanently online.
+
+Unlike a shapeshifting Gift, there's no transformation to trigger - your augmentations are always active. No action, no Gift Check, no Ki cost just to have them running.
+
+The build is set once at creation, spending a points pool (below) on the build menu. The pool scales with Gift Level, so a character can revisit and expand their augmentations as they gain Levels.
+
+**Pool by Level**:
+
+| Level | Pool |
+|---|---|
+| 1 | 2 points |
+| 2 | 5 points |
+| 3 | 9 points |
+| 4 | 13 points |
+| 5 | 18 points |
+
+**Build menu**:
+
+| Option | Cost | Effect |
+|---|---|---|
+| Subdermal Plating | 1 pt | +2 Soak, always on. |
+| Myomer Fiber | 1 pt | +2 to one physical sub-stat (Ferocity, Potence, Initiative, or Stamina). |
+| Sensory Suite | 1 pt | One sense-based upgrade: see in total darkness, zoom/magnify at will, or filter out deafening/blinding effects. |
+| Integrated Toolkit | 1 pt | A multitool, lockpick set, or scanner built into a limb - can't be disarmed or confiscated in a pat-down. |
+| Integrated Storage Compartment | 1 pt | A concealed cavity in a limb or torso, holding a handful of small items - invisible to a pat-down or metal detector. |
+| Video/Audio Recorder | 1 pt | Continuously record everything you see and hear, and replay it later - clean, reliable evidence. |
+| Comms Array | 1 pt | Short-range encrypted radio link to other augmented allies or compatible tech, immune to ordinary jamming. |
+| Navigation Suite | 1 pt | Perfect sense of direction and position, plus a stored map of anywhere you've personally been. |
+| Biometric Lock | 1 pt | Your augmentations (and anything in an Integrated Storage Compartment) only function for you - stolen or severed parts are inert junk to anyone else. |
+| Universal Interface Port | 1 pt | A hardline jack that connects to any standard port or socket, no compatible cable or adapter needed. |
+| Climbing Servos | 1 pt | Retractable claws or grip pads in hands and feet - climb sheer surfaces at your normal Movement Rate, no roll for an ordinary climb. |
+| Silent Movement Dampeners | 1 pt | Your augmented limbs make no mechanical noise - no Stealth penalty from servo whine or joint clicks. |
+| Thermal Regulation | 1 pt | Ignore extreme heat or cold - no Disadvantage from environmental temperature. |
+| Reinforced Chassis | 2 pts | +1 to Carrying Capacity and Break Threshold, stacking with Potence's own. |
+| Subroutine Uplink | 2 pts | Passive short-range wireless link to nearby active electronics - grants Technokinesis Level 1's passive awareness, without needing that Gift. |
+| Data Vault | 2 pts | Onboard encrypted memory - perfect recall of anything you've scanned or recorded, immune to remote hacking without direct physical access. |
+| Onboard Computer | 2 pts | Instant calculation, translation, and lookup - treat any Knowledge-Skill roll needing reference material as if you had a research library on hand. |
+| Holographic Projector | 2 pts | Project a small hologram at Close range - a decoy, a visual aid, a disguise overlay. |
+| Grapple Line | 2 pts | A retractable cable launcher built into an arm - anchor and pull yourself to a point within Near range, or yank a target or object toward you. |
+| Nanite Medkit | 2 pts | A self-contained injector loaded with one dose of field-medicine nanites - once per Scene, stabilize yourself or an adjacent ally from dying, no roll. |
+| Integrated Weapon | 3 pts | A retractable blade, dart launcher, or similar built into a limb - counts as a Light weapon that can never be disarmed or left behind. |
+
+**Adders**:
+
+- **Overclock Surge** (Lesser, 3 pts): spend 1 Ki to push one installed augmentation to double effect for a single action.
+- **Backup Power Cell** (Lesser, 3 pts): once per Scene, ignore an effect that would otherwise disable your augmentations.
+- **Full Conversion** (Greater, 6 pts): the build-menu pool at every Level is permanently +3 points bigger.
+
+**Limiters**:
+
+- **Vulnerable to EMP**: electromagnetic effects, a Technokinesis-style intrusion, or a dedicated anti-tech weapon disable your augmentations for the rest of the Scene on a hit.
+- **Visible Hardware**: your augmentations are visible, not concealable under normal clothing - no passing as unaugmented.
+- **Maintenance Dependent**: without downtime and access to tools between sessions, GM's call whether an augmentation glitches out for the session.
+
 ### Deadzone
 
 Some people burn bright with what they can do. Around you, that light gutters. Step close enough and the impossible starts running dry: Gifts stutter, spells fail, whatever's fueling someone else's edge simply stops answering.
