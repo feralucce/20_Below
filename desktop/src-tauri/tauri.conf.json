@@ -4,7 +4,9 @@
   "version": "0.1.0",
   "identifier": "com.feralucce.twentybelow",
   "build": {
-    "frontendDist": "../../"
+    "frontendDist": "frontend-dist",
+    "beforeDevCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/stage-frontend.ps1",
+    "beforeBuildCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/stage-frontend.ps1"
   },
   "app": {
     "withGlobalTauri": true,
