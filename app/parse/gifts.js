@@ -71,9 +71,9 @@ export function parseGifts(giftsMd, giftAdderCost) {
       })
       .filter(Boolean);
 
-    // 40 of 41 Gifts have a standard "| Level | Effect |" table right after
-    // the intro prose. The one exception (Alternate Form) uses a custom
-    // Pool/Build-menu structure instead - `levels` is null for it, and
+    // Most Gifts have a standard "| Level | Effect |" table right after the
+    // intro prose. A few (Alternate Form, Cybernetics) use a custom
+    // Pool/Build-menu structure instead - `levels` is null for those, and
     // callers fall back to the raw markdown for that case.
     let levels = null;
     try {
