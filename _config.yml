@@ -1,0 +1,6 @@
+markdown: kramdown
+defaults:
+  - scope:
+      path: "rules"
+    values:
+      layout: "rules"
