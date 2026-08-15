@@ -98,8 +98,20 @@ function buildGiftEntries(state, data) {
               .filter((l) => l.level <= g.level)
               .map((l) => el('li', { html: inline(l.effect) })),
           )
-        : giftData
-          ? el('p', { class: 'detail' }, "No standard Level table for this Gift - see gifts.md for its full effect.")
+        : giftData?.menu
+          ? g.buildPurchases?.length
+            ? el(
+                'ul',
+                {},
+                g.buildPurchases.map((p) =>
+                  el(
+                    'li',
+                    {},
+                    `${p.option} (${p.cost} pt${p.cost === 1 ? '' : 's'})${p.note ? ` - ${p.note}` : ''}`,
+                  ),
+                ),
+              )
+            : el('p', { class: 'detail' }, 'No build-menu purchases yet - see Gift Menus.')
           : null;
       const adderTexts = (giftData?.adders ?? []).filter((a) => g.adders.includes(a.name));
       const limiterTexts = (giftData?.limiters ?? []).filter((l) => g.limiters.includes(l.name));
