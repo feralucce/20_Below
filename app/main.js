@@ -200,9 +200,8 @@ async function main() {
     STEPS.forEach((step, i) => {
       const btn = el('button', {
         type: 'button',
-        text: `${i + 1}`,
+        text: step.title,
         class: i === currentStep ? 'active' : i < currentStep ? 'visited' : '',
-        title: step.title,
         onClick: () => {
           currentStep = i;
           rerenderStep();
