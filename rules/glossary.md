@@ -78,6 +78,8 @@ Terms worth knowing before you go through [Character Creation](character-creatio
 
 **Resource** — Material or logistical backing a character can buy - money, gear, a base of operations - distinct from Boons' personal knacks and Gifts' supernatural power.
 
+**Resource Check** — A roll to push a Resource beyond what its Level normally covers for free: 2d10 against Resource Level + Difficulty, roll-under, standard critical results apply. Success is free; failure still gets the character what they were after, but the Resource's Level drops by 1 (floored at 1) until a Month passes.
+
 **Sanity** — Grip on your own mind under Mental attack, mirroring Health Levels. `5 + Psyche`. At 0 you're Overwhelmed; below 0, Shattered.
 
 **Skill** — A learned, practiced competence. Not locked to any one Attribute - any Skill can be paired with any Attribute, provided you can argue the pairing to the GM's satisfaction, typically grounded in one of your Descriptors.
