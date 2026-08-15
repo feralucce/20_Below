@@ -8,9 +8,7 @@ import {
   sanityStatus,
   applyRest,
 } from '../state.js';
-import { downloadMarkdown } from '../export/toMarkdown.js';
-import { downloadHtml, printToPdf } from '../export/toHtml.js';
-import { downloadRtf } from '../export/toRtf.js';
+import { downloadJson } from '../export/toJson.js';
 import buildAdvancementTab from './tab-advancement.js';
 import buildScarsTab from './tab-scars.js';
 import buildRollerPanel from './roller-panel.js';
@@ -409,48 +407,6 @@ export default {
 
     const sheet = el('div', { class: 'sheet', id: 'character-sheet' }, [headerEl, tabNav, tabContent]);
 
-    // A separate, non-tabbed copy with every section stacked - the PDF needs
-    // everything in one document regardless of which tab happens to be open
-    // on screen, so it renders from this hidden element instead. Read-only:
-    // interactive controls would be pointless on a page nobody sees or clicks.
-    // Built fresh right before each export (see buildPrintSheet below)
-    // rather than once here - the Advancement/Scars tabs and the header's
-    // trackers can all change after this step first renders, and a
-    // snapshot taken only once would silently export stale content.
-    function buildPrintSheet() {
-      return el(
-        'div',
-        { class: 'sheet sheet-print-only', id: 'character-sheet-print' },
-        [
-          ...buildHeader(state, data, computeFiguredCharacteristics(state), { interactive: false }),
-          ...TABS.flatMap((tab) => [
-            el('h3', {}, tab.label),
-            el('div', {}, tab.build(state, data)),
-          ]),
-        ],
-      );
-    }
-    // Only one of these should ever exist in the DOM - drop any leftover
-    // from a previous visit to this step before adding the fresh one. The
-    // wrapper (not the sheet itself) carries the hiding style - clipping
-    // an ancestor's height keeps the sheet normally rendered (so html2canvas
-    // measures it correctly) while staying invisible to the user, unlike
-    // `position: absolute; left: -99999px`, which html2canvas measures as
-    // zero-size.
-    document.getElementById('character-sheet-print-wrapper')?.remove();
-    let printSheet = buildPrintSheet();
-    const printWrapper = el('div', { class: 'print-sheet-wrapper', id: 'character-sheet-print-wrapper' }, [
-      printSheet,
-    ]);
-    document.body.appendChild(printWrapper);
-
-    function refreshPrintSheet() {
-      printSheet = buildPrintSheet();
-      printWrapper.innerHTML = '';
-      printWrapper.appendChild(printSheet);
-      return printSheet;
-    }
-
     const notesField = el('div', { class: 'field' }, [
       el('label', {}, 'Finishing Touches notes (equipment, appearance, anything else)'),
       el('textarea', {
@@ -465,58 +421,8 @@ export default {
     const exportRow = el('div', { style: 'display:flex;gap:0.75rem;margin-top:1rem;' }, [
       el('button', {
         type: 'button',
-        text: 'Download Markdown',
-        onClick: () => downloadMarkdown(state, data),
-      }),
-      el('button', {
-        type: 'button',
-        text: 'Download RTF',
-        onClick: () => {
-          try {
-            downloadRtf(state, data);
-          } catch (err) {
-            console.error(err);
-            alert('RTF generation failed - try the Markdown export instead.');
-          }
-        },
-      }),
-      el('button', {
-        type: 'button',
-        text: 'Download HTML',
-        onClick: async (e) => {
-          const btn = e.currentTarget;
-          const original = btn.textContent;
-          btn.disabled = true;
-          btn.textContent = 'Generating…';
-          try {
-            await downloadHtml(refreshPrintSheet(), state.name);
-          } catch (err) {
-            console.error(err);
-            alert('HTML generation failed - try the Markdown export instead.');
-          } finally {
-            btn.disabled = false;
-            btn.textContent = original;
-          }
-        },
-      }),
-      el('button', {
-        type: 'button',
-        text: 'Print / Save as PDF',
-        onClick: async (e) => {
-          const btn = e.currentTarget;
-          const original = btn.textContent;
-          btn.disabled = true;
-          btn.textContent = 'Opening…';
-          try {
-            await printToPdf(refreshPrintSheet(), state.name);
-          } catch (err) {
-            console.error(err);
-            alert('Could not open the print view - try the Download HTML export instead.');
-          } finally {
-            btn.disabled = false;
-            btn.textContent = original;
-          }
-        },
+        text: 'Download JSON',
+        onClick: () => downloadJson(state),
       }),
     ]);
 
