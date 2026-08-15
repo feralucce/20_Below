@@ -3,11 +3,11 @@ import { resourcesPoolRemaining } from '../state.js';
 
 export default {
   id: 'resources',
-  title: '9. Resources',
+  title: 'Resources',
   render(container, { state, data, rerenderStep, rerenderPools }) {
     const remaining = resourcesPoolRemaining(state, data);
     container.append(
-      el('h2', {}, '9. Resources'),
+      el('h2', {}, 'Resources'),
       el(
         'p',
         {},

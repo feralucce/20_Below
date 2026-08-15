@@ -59,7 +59,7 @@ function rollByMode(mode) {
 // critical failure. Expert/Master widen critical success to a roll of 2 or
 // 3; critical failure is always exactly a roll of 20 (uniquely (10,10) on
 // two dice), never widened. See rules.md#difficulty-chart.
-function classifyRoll(sum, target, widenCrit) {
+export function classifyRoll(sum, target, widenCrit) {
   const critSuccessMax = widenCrit ? 3 : 2;
   if (sum <= critSuccessMax) return 'critical-success';
   if (sum === 20) return 'critical-failure';

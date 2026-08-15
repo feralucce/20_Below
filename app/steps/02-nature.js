@@ -2,10 +2,10 @@ import { el } from '../ui.js';
 
 export default {
   id: 'nature',
-  title: '3. Nature',
+  title: 'Nature',
   render(container, { state, data, rerenderStep }) {
     container.append(
-      el('h2', {}, '3. Nature'),
+      el('h2', {}, 'Nature'),
       el(
         'p',
         {},

@@ -635,24 +635,6 @@ body {
   color: var(--accent);
 }
 
-.roller-placeholder {
-  border: 1px solid var(--panel-border);
-  border-radius: var(--radius);
-  background: var(--panel);
-  padding: 1rem 1.25rem;
-  margin-bottom: 1.5rem;
-}
-
-.roller-placeholder h3 {
-  margin: 0 0 0.75rem;
-  padding-left: 0.6rem;
-  border-left: 3px solid var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.8rem;
-  color: var(--text-dim);
-}
-
 .roller-row {
   display: flex;
   align-items: center;

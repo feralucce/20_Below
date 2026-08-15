@@ -2,10 +2,10 @@ import { el } from '../ui.js';
 
 export default {
   id: 'identity',
-  title: '1-2. Name & Concept',
+  title: 'Name & Concept',
   render(container, { state }) {
     container.append(
-      el('h2', {}, '1. Name'),
+      el('h2', {}, 'Name'),
       el('p', {}, 'Give your character a name. Purely cosmetic, no mechanical weight.'),
       el('div', { class: 'field' }, [
         el('input', {
@@ -17,7 +17,7 @@ export default {
           },
         }),
       ]),
-      el('h2', {}, '2. Concept'),
+      el('h2', {}, 'Concept'),
       el(
         'p',
         {},

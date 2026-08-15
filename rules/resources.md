@@ -8,6 +8,13 @@ A Resource represents a currency or standing the character can draw on or lean o
 
 **Cost**: at character creation, each level costs a flat **2 points** from the [Resources pool](character-creation.md#resources-pool) - a Resource at Level 3 costs 6 points total. After creation, raising a Resource by one level costs a flat **3 XP** per step.
 
+## Pushing a Resource
+
+Each Resource's Level table below defines what's available for free, no roll required. When a character wants to draw on a Resource for something beyond that free scope, roll a **Resource Check**: **2d10** against **Resource Level + Difficulty**, roll-under, using the same [Difficulty Chart](rules.md#difficulty-chart) as any other roll - Difficulty set by how far beyond the Resource's current Level the request reaches. Critical results apply as normal (a roll of 2 is always a success, a roll of 20 is always a failure, regardless of the target number). No Skill is involved - a flat roll against the Resource itself, the same shape as the [Gift Check](gifts.md#resolution).
+
+- **Success**: the character gets what they were after, no further cost.
+- **Failure**: the character still gets what they were after - the ask goes through either way - but the Resource's Level drops by **1** (to a minimum of 1) until the start of the next **Month**, representing it stretched thin: savings drained, favors called in, goodwill spent. A Resource at a reduced Level uses that lower Level for everything, including further Resource Checks made while it's still reduced.
+
 | Resource | What Scales by Level |
 |---|---|
 | Base | How developed, defended, or well-equipped the headquarters/safehouse is |

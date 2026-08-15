@@ -84,11 +84,11 @@ function buyControl(giftName, item, remaining, ctx) {
 
 export default {
   id: 'gift-menus',
-  title: '11. Gift Menus',
+  title: 'Gift Menus',
   render(container, ctx) {
     const { state, data } = ctx;
     container.append(
-      el('h2', {}, '11. Gift Menus'),
+      el('h2', {}, 'Gift Menus'),
       el(
         'p',
         {},

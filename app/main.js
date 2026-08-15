@@ -26,6 +26,7 @@ import stepGiftMenus from './steps/10-gift-menus.js';
 import stepFlaws from './steps/11-flaws.js';
 import stepDiscretionary from './steps/12-discretionary.js';
 import stepSheet from './steps/13-sheet.js';
+import stepRoller from './steps/14-roller.js';
 
 const STEPS = [
   stepIdentity,
@@ -41,6 +42,7 @@ const STEPS = [
   stepFlaws,
   stepDiscretionary,
   stepSheet,
+  stepRoller,
 ];
 
 const STORAGE_KEY = '20below-character-draft';

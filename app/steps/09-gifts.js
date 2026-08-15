@@ -18,11 +18,11 @@ function getOrCreateGiftState(state, name) {
 
 export default {
   id: 'gifts',
-  title: '10. Gifts',
+  title: 'Gifts',
   render(container, { state, data, rerenderStep, rerenderPools }) {
     const remaining = giftsPoolRemaining(state, data);
     container.append(
-      el('h2', {}, '10. Gifts'),
+      el('h2', {}, 'Gifts'),
       el('div', { class: 'detail', style: 'margin-bottom:1rem;', html: renderMarkdown(data.giftCheckText) }),
       el(
         'p',

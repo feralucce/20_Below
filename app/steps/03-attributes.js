@@ -3,12 +3,12 @@ import { attributePointsSpent } from '../state.js';
 
 export default {
   id: 'attributes',
-  title: '4. Attributes',
+  title: 'Attributes',
   render(container, { state, data, rerenderStep, rerenderPools }) {
     const total = data.attributePoolTotal + state.discretionaryExtra.Attributes;
     const spent = attributePointsSpent(state, data);
     container.append(
-      el('h2', {}, '4. Attributes'),
+      el('h2', {}, 'Attributes'),
       el(
         'p',
         {},
