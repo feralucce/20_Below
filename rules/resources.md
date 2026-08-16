@@ -17,7 +17,7 @@ Each Resource's Level table below defines what's available for free, no roll req
 
 ## Wealth at Character Creation
 
-Buying gear (see [Weapons](weapons.md)) at character creation uses a dedicated procedure, not the general [Pushing a Resource](#pushing-a-resource) rule above.
+Buying gear (see [Weapons & Equipment](weapons.md)) at character creation uses a dedicated procedure, not the general [Pushing a Resource](#pushing-a-resource) rule above.
 
 A character's **creation-Wealth** starts at **2**, unless they spent Resources Pool points on Wealth, in which case their purchased Level is used instead. Every gear item carries its own **Wealth rating** - the Level needed to get it for free, no roll, no limit on how many such items a character takes.
 

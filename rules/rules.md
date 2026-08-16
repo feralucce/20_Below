@@ -143,6 +143,14 @@ After the attacker's [to-hit roll](#the-passive-wall-triad---soak-presence-psych
 
 ![Damage's per-die resolution](../docs/assets/diagrams/damage-per-die-resolution.svg)
 
+#### Armor & Called Shots
+
+Worn or carried armor (see [Weapons & Equipment](weapons.md#armor)) adds a flat **Soak Bonus** to the wearer's Soak for the purpose of the per-die resolution above. Every armor item covers one of two **Zones**: **Body** or **Head**.
+
+- **Armor doesn't stack within a Zone.** If a character has more than one item covering the same Zone, only the single highest Soak Bonus in that Zone applies - the rest go unused.
+- **A normal attack always resolves against Body-Zone armor.** Head-Zone armor does nothing against it.
+- **A called shot** - legal only as a [Slow Action Bracket](#action-brackets) - lets the attacker specifically target the Head Zone instead. That attack resolves against the defender's Head-Zone armor (or no bonus, if they have none), and Body-Zone armor doesn't apply to it.
+
 #### Potence
 
 Potence (Earth's other sub-stat: raw physical power/strength - carrying capacity, immovability, mass, forcing/breaking things) splits into two jobs:
