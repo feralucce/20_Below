@@ -234,8 +234,28 @@ function buildTraitsTab(state, data) {
   ];
 }
 
+function buildGearPurchaseEntries(state) {
+  if (!state.gearPurchases.length) {
+    return [el('p', { class: 'detail' }, 'No gear purchased at creation.')];
+  }
+  return [
+    el(
+      'ul',
+      {},
+      state.gearPurchases.map((p) =>
+        el('li', {}, `${p.name} (${p.category}, Wealth ${p.wealth})${p.loss ? ` - cost ${p.loss} creation-Wealth` : ''}`),
+      ),
+    ),
+  ];
+}
+
 function buildGearTab(state, data) {
-  return [el('ul', {}, buildResourceEntries(state, data))];
+  return [
+    el('h3', {}, 'Resources'),
+    el('ul', {}, buildResourceEntries(state, data)),
+    el('h3', {}, 'Gear'),
+    ...buildGearPurchaseEntries(state),
+  ];
 }
 
 function buildBiographyTab(state) {

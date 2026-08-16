@@ -9,6 +9,7 @@ import { parseFlaws } from './parse/flaws.js';
 import { parseSampleDescriptors } from './parse/descriptors.js';
 import { parseCosts } from './parse/costs.js';
 import { parseDifficultyChart } from './parse/difficulty.js';
+import { parseEquipment } from './parse/weapons.js';
 import { createInitialState, allPoolsSummary } from './state.js';
 import { el, poolBadge } from './ui.js';
 import { isDesktopApp, saveCharacterToFile, listSavedCharacters, loadCharacterFromFile } from './desktop-storage.js';
@@ -56,7 +57,7 @@ const btnReset = document.getElementById('btn-reset');
 const fileControls = document.getElementById('character-file-controls');
 
 async function loadRulesData() {
-  const [creationMd, fateMd, skillsMd, premadeMd, boonsMd, resourcesMd, giftsMd, flawsMd, rulesMd, costsMd] =
+  const [creationMd, fateMd, skillsMd, premadeMd, boonsMd, resourcesMd, giftsMd, flawsMd, rulesMd, costsMd, weaponsMd] =
     await Promise.all(
       [
         '../rules/character-creation.md',
@@ -69,6 +70,7 @@ async function loadRulesData() {
         '../rules/flaws.md',
         '../rules/rules.md',
         '../rules/costs.md',
+        '../rules/weapons.md',
       ].map(fetchText),
     );
 
@@ -93,6 +95,7 @@ async function loadRulesData() {
     flaws: parseFlaws(flawsMd),
     sampleDescriptors: parseSampleDescriptors(rulesMd),
     difficultyChart: parseDifficultyChart(rulesMd),
+    equipment: parseEquipment(weaponsMd),
   };
 }
 

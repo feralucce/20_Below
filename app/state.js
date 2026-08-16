@@ -52,6 +52,12 @@ export function createInitialState(data) {
     resourcePenalties,
     gifts: [], // [{ name, level, adders: string[], limiters: string[] }]
     flaws: [], // [{ name, level }]
+    // Wealth-at-Creation gear shopping (see resources.md#wealth-at-character-creation)
+    // - temporary bookkeeping only, never touches the purchased Wealth Resource
+    // Level above. [{ id, category, name, wealth, loss }], loss = 0 for a free
+    // or successfully-checked item.
+    gearPurchases: [],
+    creationWealthLoss: 0,
     // Pool-points'-worth of extra capacity bought via Discretionary, added
     // on top of each target's base pool total. Gifts is tracked separately
     // (see giftsDiscretionaryContribution) since its per-unit cost varies
@@ -173,6 +179,34 @@ export function applyResourceCheckFailure(state, resourceName) {
 
 export function clearResourcePenalty(state, resourceName) {
   state.resourcePenalties[resourceName] = 0;
+}
+
+// creation-Wealth starts at 2, unless Wealth was actually purchased from the
+// Resources Pool, in which case that purchased Level is used instead (not
+// the higher of the two - see resources.md#wealth-at-character-creation).
+export function creationWealthBase(state) {
+  return state.resources.Wealth > 0 ? state.resources.Wealth : 2;
+}
+
+export function currentCreationWealth(state) {
+  return Math.max(1, creationWealthBase(state) - state.creationWealthLoss);
+}
+
+function nextGearPurchaseId(state) {
+  return state.gearPurchases.reduce((max, p) => Math.max(max, p.id), 0) + 1;
+}
+
+export function addGearPurchase(state, { category, name, wealth, loss = 0 }) {
+  const id = nextGearPurchaseId(state);
+  state.gearPurchases.push({ id, category, name, wealth, loss });
+  state.creationWealthLoss += loss;
+}
+
+export function removeGearPurchase(state, id) {
+  const purchase = state.gearPurchases.find((p) => p.id === id);
+  if (!purchase) return;
+  state.creationWealthLoss = Math.max(0, state.creationWealthLoss - purchase.loss);
+  state.gearPurchases = state.gearPurchases.filter((p) => p.id !== id);
 }
 
 // A Limiter drops the cost of every Level of its Gift, floored at a
