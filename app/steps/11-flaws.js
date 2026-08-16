@@ -25,18 +25,13 @@ export default {
 
     data.flaws.forEach((flaw) => {
       const fState = getOrCreateFlawState(state, flaw.name);
-      const card = el('details', { class: 'pick-card' });
+      const card = el('div', { class: 'pick-card' });
       const levelRows = flaw.levels
         ? `<table><tr><th>Level</th><th>Effect</th></tr>${flaw.levels
             .map((l) => `<tr><td>${l.level}</td><td>${window.marked ? window.marked.parseInline(l.effect) : l.effect}</td></tr>`)
             .join('')}</table>`
         : renderMarkdown(flaw.blurb);
       card.append(
-        el('summary', {}, `${flaw.name}${fState.level ? ` - Level ${fState.level}` : ''}`),
-        el('div', { class: 'detail', html: levelRows }),
-      );
-      container.appendChild(card);
-      container.appendChild(
         counterRow({
           name: flaw.name,
           get: () => fState.level,
@@ -50,7 +45,9 @@ export default {
             rerenderPools();
           },
         }),
+        el('div', { class: 'detail', html: levelRows }),
       );
+      container.appendChild(card);
     });
   },
 };
