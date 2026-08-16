@@ -145,11 +145,20 @@ After the attacker's [to-hit roll](#the-passive-wall-triad---soak-presence-psych
 
 #### Armor & Called Shots
 
-Worn or carried armor (see [Weapons & Equipment](weapons.md#armor)) adds a flat **Soak Bonus** to the wearer's Soak for the purpose of the per-die resolution above. Every armor item covers one of two **Zones**: **Body** or **Head**.
+Worn or carried armor (see [Weapons & Equipment](weapons.md#armor)) has its own **Hardness** (a threshold on the same 0-10 scale as Soak) and its own **Health Levels**, both tracked separately from the wearer's. Every armor item covers one of two **Zones**: **Body** or **Head**.
 
-- **Armor doesn't stack within a Zone.** If a character has more than one item covering the same Zone, only the single highest Soak Bonus in that Zone applies - the rest go unused.
+While it still has Health Levels remaining, armor intercepts every die aimed at the Zone it covers, before the wearer's own Soak ever comes into play:
+
+- **Die result ≤ Hardness** - deflected for free. No effect on the wearer, no cost to the armor.
+- **Die result > Hardness** - still fully stopped, the wearer takes nothing - but the armor takes the hit instead. **An armor item never loses more than 1 Health Level per attack**, no matter how many of that attack's dice exceeded its Hardness.
+
+**Once an armor item's Health Levels reach 0, it's broken.** It stops covering its Zone entirely - dice resolve straight against the wearer's own Soak, per the normal per-die rule above - until repaired (a downtime/GM-adjudicated task, not modeled further here).
+
+**Ki Spend to Preserve** (see [above](#ki-spend-to-preserve-a-health-level-poise-or-sanity-level)) only ever applies to the wearer's own Health, Poise, or Sanity - it can't prevent or undo an armor Health Level loss.
+
+- **Armor doesn't stack within a Zone.** If a character owns more than one item covering the same Zone, only one can be worn there at a time - their choice which.
 - **A normal attack always resolves against Body-Zone armor.** Head-Zone armor does nothing against it.
-- **A called shot** - legal only as a [Slow Action Bracket](#action-brackets) - lets the attacker specifically target the Head Zone instead. That attack resolves against the defender's Head-Zone armor (or no bonus, if they have none), and Body-Zone armor doesn't apply to it.
+- **A called shot** - legal only as a [Slow Action Bracket](#action-brackets) - lets the attacker specifically target the Head Zone instead. That attack resolves against the defender's Head-Zone armor (or no armor at all, if they have none), and Body-Zone armor doesn't apply to it.
 
 #### Potence
 
