@@ -40,12 +40,11 @@ export function renderBoonPicker(container, ctx, allBoons, { source, getRemainin
     allBoons.forEach((boon) => {
       const alreadyTaken = state.boons.some((b) => b.name === boon.name);
       const disable = alreadyTaken && !boon.repeatable;
-      const card = el('details', { class: 'pick-card' });
-      card.append(
-        el('summary', {}, [el('span', {}, boon.name + (disable ? ' (taken)' : ''))]),
-        el('div', { class: 'detail', html: renderMarkdown(boon.effect) }),
-      );
-      const btnRow = el('div', { style: 'display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem;' });
+      const card = el('div', { class: 'pick-card' });
+      const headerRow = el('div', { style: 'display:flex;justify-content:space-between;align-items:center;gap:0.5rem;flex-wrap:wrap;' }, [
+        el('span', {}, boon.name + (disable ? ' (taken)' : '')),
+      ]);
+      const btnRow = el('div', { style: 'display:flex;gap:0.5rem;flex-wrap:wrap;' });
       boon.costs.forEach((cost) => {
         const currencyCost = toCurrency(cost.points);
         btnRow.appendChild(
@@ -61,7 +60,8 @@ export function renderBoonPicker(container, ctx, allBoons, { source, getRemainin
           }),
         );
       });
-      card.appendChild(btnRow);
+      headerRow.appendChild(btnRow);
+      card.append(headerRow, el('div', { class: 'detail', html: renderMarkdown(boon.effect) }));
       listEl.appendChild(card);
     });
   }

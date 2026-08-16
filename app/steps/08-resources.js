@@ -16,16 +16,17 @@ export default {
     );
 
     data.resources.forEach((r) => {
-      const card = el('details', { class: 'pick-card' });
-      const levelText = state.resources[r.name] > 0
-        ? renderMarkdown(r.levels[state.resources[r.name]] ?? '')
-        : '';
+      const card = el('div', { class: 'pick-card' });
+      const levelTable = el('table', { class: 'menu-table' }, [
+        el('tr', {}, [el('th', {}, 'Level'), el('th', {}, r.scales)]),
+        ...[1, 2, 3, 4, 5].map((lvl) =>
+          el('tr', {}, [
+            el('td', {}, String(lvl)),
+            el('td', { html: renderMarkdown(r.levels[lvl] ?? '') }),
+          ]),
+        ),
+      ]);
       card.append(
-        el('summary', {}, `${r.name} - ${r.scales}`),
-        el('div', { class: 'detail', html: levelText }),
-      );
-      container.appendChild(card);
-      container.appendChild(
         counterRow({
           name: r.name,
           get: () => state.resources[r.name],
@@ -40,7 +41,9 @@ export default {
             rerenderPools();
           },
         }),
+        el('div', { class: 'detail' }, levelTable),
       );
+      container.appendChild(card);
     });
   },
 };
