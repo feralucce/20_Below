@@ -158,6 +158,20 @@ async function main() {
   // the imported content against the current rules data - an export from
   // an older rules version could carry a since-renamed Gift/Skill/Resource
   // name forward silently. Accepted risk, not handled.
+  function applyImportedCharacter(jsonText) {
+    const loaded = JSON.parse(jsonText);
+    replaceStateContents(state, { ...createInitialState(data), ...loaded });
+    currentStep = 0;
+    rerenderStep();
+  }
+
+  // Plain HTML file input works fine for the browser build, but a WebView2
+  // <input type=file> inside the packaged Tauri app never opens a native
+  // dialog at all (confirmed live - a genuine OS-level click on the button
+  // produced no dialog anywhere on screen, not a permissions/CSP block,
+  // just not wired up the same way a browser tab is) - so the desktop build
+  // uses Tauri's own dialog plugin instead, reading the chosen path through
+  // the fs plugin the same way the existing Load select already does.
   const importInput = el('input', {
     type: 'file',
     accept: 'application/json,.json',
@@ -167,10 +181,7 @@ async function main() {
       e.target.value = '';
       if (!file) return;
       try {
-        const loaded = JSON.parse(await file.text());
-        replaceStateContents(state, { ...createInitialState(data), ...loaded });
-        currentStep = 0;
-        rerenderStep();
+        applyImportedCharacter(await file.text());
       } catch (err) {
         console.error(err);
         alert(`Failed to import "${file.name}" - not a valid character file.`);
@@ -181,7 +192,23 @@ async function main() {
     type: 'button',
     class: 'import-btn',
     text: 'Import character…',
-    onClick: () => importInput.click(),
+    onClick: async () => {
+      if (!isDesktopApp) {
+        importInput.click();
+        return;
+      }
+      try {
+        const path = await window.__TAURI__.dialog.open({
+          multiple: false,
+          filters: [{ name: 'Character', extensions: ['json'] }],
+        });
+        if (!path) return;
+        applyImportedCharacter(await window.__TAURI__.fs.readTextFile(path));
+      } catch (err) {
+        console.error(err);
+        alert('Failed to import - not a valid character file.');
+      }
+    },
   });
 
   async function renderFileControls() {
