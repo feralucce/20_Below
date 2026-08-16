@@ -1,5 +1,6 @@
 import { el, counterRow, renderMarkdown } from '../ui.js';
 import { resourcesPoolRemaining } from '../state.js';
+import buildGearShop from './gear-shop.js';
 
 export default {
   id: 'resources',
@@ -42,5 +43,7 @@ export default {
         }),
       );
     });
+
+    container.appendChild(buildGearShop(state, data));
   },
 };
