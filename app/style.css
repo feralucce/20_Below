@@ -326,6 +326,10 @@ body {
   font-size: 0.85rem;
 }
 
+.detail table tr:nth-child(even) {
+  background: var(--bg);
+}
+
 .sheet {
   background: var(--panel);
   border: 1px solid var(--panel-border);
