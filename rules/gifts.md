@@ -658,6 +658,30 @@ Once you've marked someone, the hunt runs itself. Part of your attention stays f
 - **Visible Focus**: your intense focus on the marked target is obvious to onlookers. Disadvantage on Stealth or Deception rolls made against anyone aware you have a mark active.
 - **Personal Vendetta**: you can only mark someone who's wronged you or someone you care about, GM's call, not an arbitrary target.
 
+### Martial Artist
+
+Years of discipline turned your body itself into the weapon. Where anyone else needs a blade in hand to be dangerous, your open-hand strikes carry the same weight - and the same training lets you read an incoming blow and turn your whole stance into a wall instead.
+
+| Level | Effect |
+|---|---|
+| 1 | Your unarmed strikes deal **3** Damage (up from the baseline 1), resolved with the same per-die-vs-Soak mechanic as a weapon. No Ki, no Gift Check. You also gain **Guard**: as your action, forgo attacking to brace instead, gaining Soak equal to half your Unarmed Damage (round up - **+2** at this Level) until the start of your next turn. |
+| 2 | Unarmed Damage rises to **5**, matching a Knife or Handgun. Guard's bonus rises to **+3**. |
+| 3 | Unarmed Damage rises to **7**, matching a Sword or Rifle. Guard's bonus rises to **+4**. Spend **1 Ki** on a successful unarmed hit to stagger the target, imposing Disadvantage on their next roll before the end of their next turn. |
+| 4 | Guard can now be held as a **Fast action**, usable reactively - even outside your own turn, once per round - instead of only on your own turn. |
+| 5 | Unarmed Damage rises to **10**, matching a Two-handed sword or Heavy weapon - your bare hands hit as hard as anything on the weapon table. Guard's bonus rises to **+5**. The stagger effect (Level 3) no longer costs Ki. |
+
+**Adders**:
+
+- **Iron Body** (Lesser, 3 pts): while Guard is active, its Soak bonus also applies against harm that would normally bypass Soak entirely (fire, falls, GM's call).
+- **Flowing Counter** (Greater, 6 pts): if an attack misses you while Guard is active, spend 1 Ki for an immediate free unarmed attack against that attacker, no action cost.
+- **Weaponized Body** (Lesser, 3 pts): your unarmed strikes count as wielding a weapon for any Skill, Boon, or Gift that specifically requires one.
+
+**Limiters**:
+
+- **Marked Hands**: your unarmed Damage bonus doesn't apply against a target wearing modern ballistic/plate armor - GM's call on what qualifies.
+- **All In**: while Guard is active, you can't take any action besides moving up to half your Movement Rate - no partial commitment.
+- **Telegraphed**: an opponent who's seen you fight before gets Advantage on their first attack roll against you each combat, recognizing your stance on sight.
+
 ### Peripheral
 
 You fade from notice and memory. Not literal invisibility - people can still see you if they look - but nothing about you holds their attention or sticks in their mind afterward.
@@ -1133,27 +1157,3 @@ Age was always going to catch you eventually, or so everyone assumes. Poison, pl
 - **Slow Purge**: your immunity isn't instantaneous, at any Level. A poison or disease still runs its full course, symptoms included, for up to a Day before your body fights it off. The Level 3+ Ki purge still works, but only shortens that Day down to a Minute rather than clearing it outright.
 - **Vulnerable Youth**: your immunity to aging (Level 4+) doesn't protect against magical or supernatural rapid-aging effects specifically, only the natural passage of time.
 - **Silent Carrier**: you're personally immune, but you can still carry and unknowingly transmit disease to others without ever showing symptoms yourself.
-
-### Weaponized Body
-
-Years of discipline turned your body itself into the weapon. Where anyone else needs a blade in hand to be dangerous, your open-hand strikes carry the same weight - and the same training lets you read an incoming blow and turn your whole stance into a wall instead.
-
-| Level | Effect |
-|---|---|
-| 1 | Your unarmed strikes deal **3** Damage (up from the baseline 1), resolved with the same per-die-vs-Soak mechanic as a weapon. No Ki, no Gift Check. You also gain **Guard**: as your action, forgo attacking to brace instead, gaining Soak equal to half your Unarmed Damage (round up - **+2** at this Level) until the start of your next turn. |
-| 2 | Unarmed Damage rises to **5**, matching a Knife or Handgun. Guard's bonus rises to **+3**. |
-| 3 | Unarmed Damage rises to **7**, matching a Sword or Rifle. Guard's bonus rises to **+4**. Spend **1 Ki** on a successful unarmed hit to stagger the target, imposing Disadvantage on their next roll before the end of their next turn. |
-| 4 | Guard can now be held as a **Fast action**, usable reactively - even outside your own turn, once per round - instead of only on your own turn. |
-| 5 | Unarmed Damage rises to **10**, matching a Two-handed sword or Heavy weapon - your bare hands hit as hard as anything on the weapon table. Guard's bonus rises to **+5**. The stagger effect (Level 3) no longer costs Ki. |
-
-**Adders**:
-
-- **Iron Body** (Lesser, 3 pts): while Guard is active, its Soak bonus also applies against harm that would normally bypass Soak entirely (fire, falls, GM's call).
-- **Flowing Counter** (Greater, 6 pts): if an attack misses you while Guard is active, spend 1 Ki for an immediate free unarmed attack against that attacker, no action cost.
-- **Weapon of the Body** (Lesser, 3 pts): your unarmed strikes count as wielding a weapon for any Skill, Boon, or Gift that specifically requires one.
-
-**Limiters**:
-
-- **Marked Hands**: your unarmed Damage bonus doesn't apply against a target wearing modern ballistic/plate armor - GM's call on what qualifies.
-- **All In**: while Guard is active, you can't take any action besides moving up to half your Movement Rate - no partial commitment.
-- **Telegraphed**: an opponent who's seen you fight before gets Advantage on their first attack roll against you each combat, recognizing your stance on sight.
