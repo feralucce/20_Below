@@ -13,19 +13,19 @@ Attacking a target within a weapon's **Normal** range carries no penalty. Attack
 | Weapon | Category | Damage | Range (Normal / Long) | Ammo | Wealth |
 |---|---|---|---|---|---|
 | Fists, feet | Unarmed | 1 | Melee | - | - |
-| Combat knife | Knife | 2 | Melee | - | 1 |
-| Switchblade | Knife | 2 | Melee | - | 1 |
-| Baseball bat | Improvised | 2 | Melee | - | 1 |
-| Metal pipe | Improvised | 2 | Melee | - | 1 |
+| Combat knife | Knife | 5 | Melee | - | 1 |
+| Switchblade | Knife | 5 | Melee | - | 1 |
+| Baseball bat | Improvised | 5 | Melee | - | 1 |
+| Metal pipe | Improvised | 5 | Melee | - | 1 |
 | Throwing knife | Thrown | 2 | 5m / 15m | 1 per throw | 1 |
 | Hand axe | Thrown | 2 | 5m / 15m | 1 per throw | 1 |
-| Short sword | One-handed blade | 3 | Melee | - | 2 |
-| Hatchet | One-handed blade | 3 | Melee | - | 1 |
-| Machete | Large blade | 3 | Melee | - | 1 |
+| Short sword | One-handed blade | 7 | Melee | - | 2 |
+| Hatchet | One-handed blade | 7 | Melee | - | 1 |
+| Machete | Large blade | 7 | Melee | - | 1 |
 | Recurve bow | Bow | 3 | 20m / 50m | 12 (quiver) | 2 |
 | Crossbow | Bow | 3 | 20m / 50m | 12 (quiver) | 2 |
-| Two-handed sword | Polearm / two-handed | 4 | Melee | - | 2 |
-| Battle spear | Polearm / two-handed | 4 | Melee | - | 2 |
+| Two-handed sword | Polearm / two-handed | 10 | Melee | - | 2 |
+| Battle spear | Polearm / two-handed | 10 | Melee | - | 2 |
 | Compact pistol | Handgun | 5 | 15m / 40m | 15 rounds | 2 |
 | Heavy revolver | Handgun | 5 | 15m / 40m | 6 rounds | 2 |
 | Compact SMG | Submachine gun | 6 | 25m / 60m | 30 rounds | 3 |
