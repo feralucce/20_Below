@@ -84,6 +84,21 @@ body {
   color: var(--bg);
 }
 
+.import-btn {
+  background: var(--panel);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: var(--radius);
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.import-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
 .app-header h1 {
   margin: 0;
   letter-spacing: 0.05em;
