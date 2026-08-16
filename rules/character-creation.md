@@ -1,6 +1,6 @@
 # Character Creation
 
-Every character is built in the same 14-step sequence, broad concept down to concrete numbers. Follow the steps in order - later steps depend on choices made earlier. New to the terminology? Check the [Glossary](glossary.md) first.
+Every character is built in the same 15-step sequence, broad concept down to concrete numbers. Follow the steps in order - later steps depend on choices made earlier. New to the terminology? Check the [Glossary](glossary.md) first.
 
 ## 1. Name
 
@@ -102,7 +102,7 @@ Spend your **10-point Boons Pool** on [Boons](boons.md), priced at Trivial (1), 
 
 Spend your **6-point Resources Pool** on [Resources](resources.md), a flat 2 points per level. Resources cover the material/logistical side of a character - money, gear, a base of operations, that kind of backing - distinct from Boons' personal knacks and Gifts' supernatural power.
 
-Buying starting gear (see [Weapons & Equipment](weapons.md)) uses its own procedure - see [Wealth at Character Creation](resources.md#wealth-at-character-creation).
+Buying starting gear (see [Weapons & Equipment](weapons.md)) uses its own procedure - see [Wealth at Character Creation](resources.md#wealth-at-character-creation) and step 13, below. It comes after Discretionary Points (step 12) rather than here, since Discretionary points can raise Wealth itself, and creation-Wealth needs to be fully settled before gear shopping runs its math against it.
 
 ## 10. Gifts
 
@@ -128,7 +128,11 @@ Every character starts with **10 Discretionary points**, flat, plus whatever you
 | Gifts | 4 |
 | Attributes | 8 |
 
-## 13. Figured Characteristics
+## 13. Equipment
+
+Buy starting gear from the full [Weapons & Equipment](weapons.md) catalog, spending against your **creation-Wealth** - see [Wealth at Character Creation](resources.md#wealth-at-character-creation) for the full procedure (starting value, the Wealth Check, what happens on a failure). This step comes after Discretionary Points (step 12) rather than alongside Resources (step 9), since Discretionary points can raise the Wealth Resource itself, and creation-Wealth needs to be fully settled first.
+
+## 14. Figured Characteristics
 
 These aren't purchased - they're computed directly from the choices you already made in steps 4-10:
 
@@ -142,9 +146,9 @@ These aren't purchased - they're computed directly from the choices you already 
 | Carrying Capacity | Potence² x 10 kg |
 | Ki | Average of Soak, Initiative, Ferocity, Stamina, and Atropos, doubled |
 
-## 14. Finishing Touches
+## 15. Finishing Touches
 
 - **Starting Fate Tokens**: every character begins play with **1**, matching the flat daily regeneration rate - more can be bought with Discretionary points at step 12, 1:1.
-- Anything else that falls outside the numbered steps above - equipment specifics bought through Resources, final appearance/personality details building on your step 2 concept, and any last GM sign-off on the finished sheet.
+- Anything else that falls outside the numbered steps above - final appearance/personality details building on your step 2 concept, and any last GM sign-off on the finished sheet.
 
 The character is ready to play.

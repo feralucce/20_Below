@@ -1,14 +1,13 @@
 import { el, counterRow, renderMarkdown } from '../ui.js';
 import { resourcesPoolRemaining } from '../state.js';
-import buildGearShop from './gear-shop.js';
 
 export default {
   id: 'resources',
-  title: 'Resources and Equipment',
+  title: 'Resources',
   render(container, { state, data, rerenderStep, rerenderPools }) {
     const remaining = resourcesPoolRemaining(state, data);
     container.append(
-      el('h2', {}, 'Resources and Equipment'),
+      el('h2', {}, 'Resources'),
       el(
         'p',
         {},
@@ -43,7 +42,5 @@ export default {
         }),
       );
     });
-
-    container.appendChild(buildGearShop(state, data));
   },
 };
