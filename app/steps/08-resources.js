@@ -4,11 +4,11 @@ import buildGearShop from './gear-shop.js';
 
 export default {
   id: 'resources',
-  title: 'Resources',
+  title: 'Resources and Equipment',
   render(container, { state, data, rerenderStep, rerenderPools }) {
     const remaining = resourcesPoolRemaining(state, data);
     container.append(
-      el('h2', {}, 'Resources'),
+      el('h2', {}, 'Resources and Equipment'),
       el(
         'p',
         {},
