@@ -11,7 +11,7 @@ This page is the table of contents. Start at the top and work down; later docume
 | [Glossary](rules/glossary.md) | Every term worth knowing before character creation - Attributes, sub-stats, Gifts, Fate Tokens, and more, alphabetized. |
 | [Rules](rules/rules.md) | The core mechanic (the 2d10 roll, Difficulty, Advantage/Disadvantage), Ki, the five Attributes and what they govern, and Combat. |
 | [Character Creation](rules/character-creation.md) | The full 15-step walkthrough for building a character, start to finish. |
-| [Character Creator (app)](app/index.html) | An interactive, step-by-step version of the walkthrough above - tracks pool spending live and exports a finished build as Markdown or PDF. Requires GitHub Pages to be enabled to run from a link; open `app/index.html` via a local web server otherwise. |
+| [Character Creator (app)](app/index.html) | An interactive, step-by-step version of the walkthrough above - tracks pool spending live and exports a finished build as JSON. Requires GitHub Pages to be enabled to run from a link; open `app/index.html` via a local web server otherwise. |
 
 ## Character Options
 
