@@ -26,6 +26,7 @@ import stepGifts from './steps/09-gifts.js';
 import stepGiftMenus from './steps/10-gift-menus.js';
 import stepFlaws from './steps/11-flaws.js';
 import stepDiscretionary from './steps/12-discretionary.js';
+import stepEquipment from './steps/12a-equipment.js';
 import stepSheet from './steps/13-sheet.js';
 import stepRoller from './steps/14-roller.js';
 
@@ -42,6 +43,7 @@ const STEPS = [
   stepGiftMenus,
   stepFlaws,
   stepDiscretionary,
+  stepEquipment,
   stepSheet,
   stepRoller,
 ];

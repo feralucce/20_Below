@@ -77,7 +77,7 @@ export function parseAttributes(creationMd) {
     discretionaryRates[row.Target] = Number(row['Discretionary points per point']);
   });
 
-  const figuredTable = extractTableAfter(creationMd, '## 13. Figured Characteristics');
+  const figuredTable = extractTableAfter(creationMd, '## 14. Figured Characteristics');
   const figuredCharacteristics = figuredTable.rows.map((row) => ({
     name: row.Characteristic,
     formula: row.Formula,
@@ -85,7 +85,7 @@ export function parseAttributes(creationMd) {
 
   const startingFateTokens = extractNumberNear(
     creationMd,
-    '## 14. Finishing Touches',
+    '## 15. Finishing Touches',
     /begins play with \*\*(\d+)\*\*/,
   );
 
