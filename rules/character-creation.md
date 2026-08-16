@@ -102,6 +102,8 @@ Spend your **10-point Boons Pool** on [Boons](boons.md), priced at Trivial (1), 
 
 Spend your **6-point Resources Pool** on [Resources](resources.md), a flat 2 points per level. Resources cover the material/logistical side of a character - money, gear, a base of operations, that kind of backing - distinct from Boons' personal knacks and Gifts' supernatural power.
 
+Buying starting gear (see [Weapons](weapons.md)) uses its own procedure - see [Wealth at Character Creation](resources.md#wealth-at-character-creation).
+
 ## 10. Gifts
 
 Spend your **21-point Gifts Pool** on [Gifts](gifts.md) - the supernatural powers a character can have. Each Gift Level costs a flat **3 points** (a Gift bought to Level 3 costs 9 points total, to Level 5 costs 15). You can also unlock Adders (permanent, optional upgrades to a Gift you already have) for **3 points (Lesser)** or **6 points (Greater)**, and take Limiters (permanent restrictions on one Gift) to knock **1 point off every Level of that Gift**, stacking with no ceiling but never dropping a Level below 1 point.

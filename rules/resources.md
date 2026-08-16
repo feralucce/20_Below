@@ -15,6 +15,22 @@ Each Resource's Level table below defines what's available for free, no roll req
 - **Success**: the character gets what they were after, no further cost.
 - **Failure**: the character still gets what they were after - the ask goes through either way - but the Resource's Level drops by **1** (to a minimum of 1) until the start of the next **Month**, representing it stretched thin: savings drained, favors called in, goodwill spent. A Resource at a reduced Level uses that lower Level for everything, including further Resource Checks made while it's still reduced.
 
+## Wealth at Character Creation
+
+Buying gear (see [Weapons](weapons.md)) at character creation uses a dedicated procedure, not the general [Pushing a Resource](#pushing-a-resource) rule above.
+
+A character's **creation-Wealth** starts at **2**, unless they spent Resources Pool points on Wealth, in which case their purchased Level is used instead. Every gear item carries its own **Wealth rating** - the Level needed to get it for free, no roll, no limit on how many such items a character takes.
+
+For an item whose Wealth rating exceeds the character's current creation-Wealth:
+
+1. Find the **gap**: the item's Wealth rating minus current creation-Wealth.
+2. If the gap is **more than current creation-Wealth**, the item can't be afforded at all - no roll.
+3. Otherwise, roll a **Wealth Check**: 2d10 against creation-Wealth + Difficulty **6**, roll-under, standard critical results apply.
+   - **Success**: the item is free.
+   - **Failure**: the character still gets the item. Creation-Wealth drops by the gap (or by **1** if the gap is exactly 1). A **critical failure** doubles this loss.
+
+Creation-Wealth carries across every purchase made during this shopping pass - once no remaining item is affordable (free or via a viable roll), gear shopping is over for this character creation. **This pool is temporary bookkeeping only**: it has no effect on the character's actual Wealth Resource once play begins, which stays at whatever Level was actually purchased.
+
 | Resource | What Scales by Level |
 |---|---|
 | Base | How developed, defended, or well-equipped the headquarters/safehouse is |
