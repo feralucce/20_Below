@@ -1,14 +1,14 @@
-# Weapons
+# Weapons & Equipment
 
 Each weapon's **Damage** rating is how many d10 it rolls on a hit, resolved per-die against the defender's Soak, as described in [rules.md](rules.md#physical-attacks--weapon-damage--per-die-resolution).
+
+**Wealth** is the [Wealth](resources.md#per-level-content) Level needed to get an item for free at [character creation](resources.md#wealth-at-character-creation) - see that section for the full purchasing procedure. It applies the same way to every table on this page, not just weapons.
 
 ## Basic Weapons
 
 Range is given as **Normal / Long**, in meters - the same unit as [Movement Rate](rules.md#movement--range). This is a separate, more precise system from [Range Bands](rules.md#movement--range) (Melee/Close/Near/Far), which stay in use for movement, positioning, and spotting - the two aren't meant to line up.
 
 Attacking a target within a weapon's **Normal** range carries no penalty. Attacking at **Long** range imposes **Disadvantage** on the attack roll, stacking with any other Advantage/Disadvantage source per the usual [binary rule](rules.md#advantage--disadvantage). Beyond Long range, the target can't be attacked with that weapon at all.
-
-**Wealth** is the [Wealth](resources.md#per-level-content) Level needed to get a weapon for free at [character creation](resources.md#wealth-at-character-creation) - see that section for the full purchasing procedure.
 
 | Weapon | Category | Damage | Range (Normal / Long) | Ammo | Wealth |
 |---|---|---|---|---|---|
@@ -35,3 +35,92 @@ Attacking a target within a weapon's **Normal** range carries no penalty. Attack
 | Sawed-off shotgun | Shotgun | 8 | 5m / 15m | 2 shells | 2 |
 | Anti-materiel rifle | Heavy | 10 | 300m / 800m | 5 rounds | 5 |
 | Squad automatic weapon | Heavy | 10 | 300m / 800m | 100 rounds | 4 |
+
+## Armor
+
+Worn or carried protection. Every item covers one of two **Zones**, **Body** or **Head** - see [Armor & Called Shots](rules.md#armor--called-shots) for how the Soak Bonus applies, why armor doesn't stack within a Zone, and how a called shot targets Head-Zone armor specifically.
+
+| Item | Zone | Soak Bonus | Notes | Wealth |
+|---|---|---|---|---|
+| Padded jacket / riding leathers | Body | +1 | No penalty, civilian-plausible | 1 |
+| Concealable vest | Body | +1 | Worn under clothing, no penalty | 3 |
+| Tactical vest | Body | +2 | Disadvantage on Stealth rolls while worn | 4 |
+| Ballistic helmet | Head | +1 | | 3 |
+| Ballistic shield | Body | +3 | Front arc only, requires both hands | 4 |
+| Full tactical rig | Body + Head | +3 | Single item, sets both Zones; Disadvantage on Stealth rolls; Movement Rate -2 while worn | 5 |
+| Bomb disposal suit | Body + Head | +4 | Movement Rate -4; Disadvantage on all Physical rolls except resisting damage | 5 |
+
+## Tech & Electronics
+
+| Item | Effect | Wealth |
+|---|---|---|
+| Smartphone | Comms, maps, research at a glance - no roll for obvious lookups | 1 |
+| Laptop / hacking rig | Required tool for Hacking Skill checks; without one, Hacking rolls are at Disadvantage | 2 |
+| Encrypted comms set | Silent team communication at Near-Far range, no roll | 2 |
+| Satellite phone | Comms with no signal dependency, works anywhere | 2 |
+| Night vision goggles | Negate Disadvantage from darkness on Perception rolls | 3 |
+| Thermal imaging scope | Advantage on Perception through darkness, smoke, or light cover | 3 |
+| Recon drone | Remote Far-range visual/audio scouting, directed as a Fast action | 3 |
+| Covert GPS tracker | Real-time location on a person/vehicle until found and removed | 1 |
+| Data cloner | Required tool for certain rapid digital-copy Hacking tasks | 2 |
+| Signal jammer | Disables nearby wireless comms/cameras within Close range | 3 |
+| EMP device | One-time consumable; disables nearby unshielded electronics within Close range | 4 |
+
+## Survival & Tools
+
+| Item | Effect | Wealth |
+|---|---|---|
+| Rope & climbing kit | Advantage on Climbing-related rolls | 1 |
+| Tactical flashlight | Negates darkness Disadvantage within Close range | 1 |
+| Lockpick set | Required tool for lockpicking; without one, bypass rolls are at Disadvantage | 1 |
+| First aid kit | Consumed on use: Advantage on a roll to treat Health Levels | 2 |
+| Breaching kit | Advantage on forced-entry rolls; treat your Potence as +2 for that Break Threshold check | 2 |
+| Multitool | No roll for trivial improvised repairs | 1 |
+| Gas mask / respirator | Negates Disadvantage from smoke, gas, or airborne toxins | 2 |
+| Field rations & water purifier | Sustains a character in the field without a roll for an extended stretch | 1 |
+| Tent & sleeping gear | Field shelter; avoids Exhausted accrual from a rough night outdoors | 1 |
+
+## Medical & Chemical
+
+| Item | Effect | Wealth |
+|---|---|---|
+| Advanced trauma kit | Consumed on use: Advantage on treating Health Levels, usable even to stabilize someone at or below 0 | 3 |
+| Field stimulant | Consumed on use: clear your current Exhausted levels, or grant Advantage on one Physical roll - GM's call on any crash afterward | 2 |
+| Chemical analysis kit | Required tool for identifying unknown substances; Advantage on related Research/Science rolls | 2 |
+| Antitoxin | Consumed on use: Advantage resisting a specific known poison | 2 |
+
+## Disguise & Infiltration
+
+| Item | Effect | Wealth |
+|---|---|---|
+| Disguise kit | Advantage on Deception rolls involving a physical disguise | 1 |
+| Forged documents | Passes routine identity checks with no roll; GM's call under real scrutiny | 2 |
+| Environment-matched camo | Advantage on Stealth rolls in matching terrain | 1 |
+| RFID cloner | Advantage on bypassing keycard/RFID-secured locks specifically | 2 |
+
+## Surveillance
+
+| Item | Effect | Wealth |
+|---|---|---|
+| Binoculars | Advantage on Perception rolls at Far range | 1 |
+| Concealable microphone | Covert audio pickup, Close-Near broadcast range | 2 |
+| Hidden camera | Covert visual feed, live or for later retrieval | 2 |
+| Directional microphone | Advantage on eavesdropping at Near-Far range | 2 |
+
+## Transport
+
+Driving/Piloting Skill required to operate; combat or pursuit use falls under Combat Driving/Piloting instead.
+
+| Item | Notes | Wealth |
+|---|---|---|
+| Bicycle | Quiet, no fuel, no roll to operate | 1 |
+| Motorcycle | Advantage on Chase rolls in dense urban/congested terrain | 2 |
+| Economy sedan | Ordinary car, 4-5 seats | 2 |
+| Pickup truck | Real cargo/towing capacity | 2 |
+| Cargo van | Hauling capacity, inconspicuous | 2 |
+| Off-road SUV | Advantage on Chase rolls off-road or rough terrain | 3 |
+| Armored sedan | Soak 4, 3 Health Levels (executive-protection grade) | 3 |
+| Speedboat | Water only | 3 |
+| Armored transport van | Soak 6, 4 Health Levels (per the object reference chart), several passengers ride behind that Soak | 4 |
+| Light helicopter | Full 3D movement, requires Piloting | 5 |
+| Small fixed-wing aircraft | Requires Piloting (Fixed-Wing) | 5 |
