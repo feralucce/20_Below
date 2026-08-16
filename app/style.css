@@ -326,7 +326,7 @@ body {
   font-size: 0.85rem;
 }
 
-.detail table tr:nth-child(even) {
+.pick-list .pick-card:nth-child(even) {
   background: var(--bg);
 }
 

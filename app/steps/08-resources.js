@@ -15,6 +15,9 @@ export default {
       ),
     );
 
+    const listEl = el('div', { class: 'pick-list' });
+    container.appendChild(listEl);
+
     data.resources.forEach((r) => {
       const card = el('div', { class: 'pick-card' });
       const levelTable = el('table', { class: 'menu-table' }, [
@@ -43,7 +46,7 @@ export default {
         }),
         el('div', { class: 'detail' }, levelTable),
       );
-      container.appendChild(card);
+      listEl.appendChild(card);
     });
   },
 };

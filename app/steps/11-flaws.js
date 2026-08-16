@@ -23,6 +23,9 @@ export default {
       ),
     );
 
+    const listEl = el('div', { class: 'pick-list' });
+    container.appendChild(listEl);
+
     data.flaws.forEach((flaw) => {
       const fState = getOrCreateFlawState(state, flaw.name);
       const card = el('div', { class: 'pick-card' });
@@ -47,7 +50,7 @@ export default {
         }),
         el('div', { class: 'detail', html: levelRows }),
       );
-      container.appendChild(card);
+      listEl.appendChild(card);
     });
   },
 };
