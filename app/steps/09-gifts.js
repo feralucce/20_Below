@@ -36,6 +36,9 @@ export default {
       ),
     );
 
+    const listEl = el('div', { class: 'pick-list' });
+    container.appendChild(listEl);
+
     data.gifts.forEach((gift) => {
       const gState = getOrCreateGiftState(state, gift.name);
       const card = el('div', { class: 'pick-card' });
@@ -107,7 +110,7 @@ export default {
         card.appendChild(el('p', { class: 'hint' }, 'No standard Level table for this Gift - see Gift Menus.'));
       }
       card.appendChild(el('div', { class: 'detail', html: renderMarkdown(gift.markdown) }));
-      container.appendChild(card);
+      listEl.appendChild(card);
     });
   },
 };
