@@ -38,17 +38,16 @@ Attacking a target within a weapon's **Normal** range carries no penalty. Attack
 
 ## Armor
 
-Worn or carried protection. Every item covers one of two **Zones**, **Body** or **Head** - see [Armor & Called Shots](rules.md#armor--called-shots) for how the Soak Bonus applies, why armor doesn't stack within a Zone, and how a called shot targets Head-Zone armor specifically.
+Purpose-built protective gear only - ordinary clothing, even sturdy clothing, doesn't qualify. Every item covers one of two **Zones**, **Body** or **Head**, and carries its own **Hardness** and **Health Levels** - see [Armor & Called Shots](rules.md#armor--called-shots) for the full two-stage per-die mechanic, why armor doesn't stack within a Zone, and how a called shot targets Head-Zone armor specifically.
 
-| Item | Zone | Soak Bonus | Notes | Wealth |
-|---|---|---|---|---|
-| Padded jacket / riding leathers | Body | +1 | No penalty, civilian-plausible | 1 |
-| Concealable vest | Body | +1 | Worn under clothing, no penalty | 3 |
-| Tactical vest | Body | +2 | Disadvantage on Stealth rolls while worn | 4 |
-| Ballistic helmet | Head | +1 | | 3 |
-| Ballistic shield | Body | +3 | Front arc only, requires both hands | 4 |
-| Full tactical rig | Body + Head | +3 | Single item, sets both Zones; Disadvantage on Stealth rolls; Movement Rate -2 while worn | 5 |
-| Bomb disposal suit | Body + Head | +4 | Movement Rate -4; Disadvantage on all Physical rolls except resisting damage | 5 |
+| Item | Zone | Hardness | Health Levels | Notes | Wealth |
+|---|---|---|---|---|---|
+| Concealable vest | Body | 3 | 2 | Worn under clothing, no penalty | 3 |
+| Ballistic helmet | Head | 4 | 2 | | 3 |
+| Tactical vest | Body | 5 | 3 | Disadvantage on Stealth rolls while worn | 4 |
+| Ballistic shield | Body | 6 | 4 | Front arc only, requires both hands | 4 |
+| Full tactical rig | Body + Head | 6 | 5 | Single item, sets both Zones; Disadvantage on Stealth rolls; Movement Rate -2 while worn | 5 |
+| Bomb disposal suit | Body + Head | 8 | 6 | Movement Rate -4; Disadvantage on all Physical rolls except resisting damage | 5 |
 
 ## Tech & Electronics
 
