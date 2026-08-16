@@ -152,9 +152,44 @@ async function main() {
     rerenderPools();
   }
 
+  // Reads a character JSON export (from either build - a plain download,
+  // an emailed file, whatever) and merges it over a fresh initial state,
+  // same shape as loadSavedState/the desktop Load select. No validation of
+  // the imported content against the current rules data - an export from
+  // an older rules version could carry a since-renamed Gift/Skill/Resource
+  // name forward silently. Accepted risk, not handled.
+  const importInput = el('input', {
+    type: 'file',
+    accept: 'application/json,.json',
+    style: 'display:none',
+    onChange: async (e) => {
+      const file = e.target.files[0];
+      e.target.value = '';
+      if (!file) return;
+      try {
+        const loaded = JSON.parse(await file.text());
+        replaceStateContents(state, { ...createInitialState(data), ...loaded });
+        currentStep = 0;
+        rerenderStep();
+      } catch (err) {
+        console.error(err);
+        alert(`Failed to import "${file.name}" - not a valid character file.`);
+      }
+    },
+  });
+  const importBtn = el('button', {
+    type: 'button',
+    class: 'import-btn',
+    text: 'Import character…',
+    onClick: () => importInput.click(),
+  });
+
   async function renderFileControls() {
-    if (!isDesktopApp || !fileControls) return;
+    if (!fileControls) return;
     fileControls.innerHTML = '';
+    fileControls.append(importInput, importBtn);
+
+    if (!isDesktopApp) return;
 
     const select = el('select', { class: 'character-select' }, [
       el('option', { value: '' }, 'Load a saved character…'),
