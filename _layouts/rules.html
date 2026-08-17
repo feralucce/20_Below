@@ -95,6 +95,27 @@
     border-radius: var(--radius);
     border: 1px solid var(--panel-border);
   }
+  table.adversary-card {
+    width: 100%;
+    border-collapse: separate;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+  }
+  table.adversary-card td {
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    vertical-align: top;
+  }
+  table.adversary-card:nth-of-type(odd) td {
+    background: var(--panel);
+  }
+  table.adversary-card:nth-of-type(even) td {
+    background: var(--bg);
+  }
+  table.adversary-card h3 {
+    margin-top: 0;
+  }
 </style>
 </head>
 <body>
