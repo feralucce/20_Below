@@ -47,7 +47,7 @@ Ordinary animals, native to a modern-day setting. None of these are supernatural
 
 A stray or pack-abandoned dog, unpredictable more than dangerous - but a hungry or cornered one will bite.
 
-**Soak** 1 | **Defense** 6 | **Health Levels** 3 | **Movement Rate** 9m
+**Soak** 1 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 9m
 
 **Bite**: 2, Melee
 
@@ -63,7 +63,7 @@ A stray or pack-abandoned dog, unpredictable more than dangerous - but a hungry 
 
 Bred or trained to hold a line, not just to threaten one.
 
-**Soak** 1 | **Defense** 6 | **Health Levels** 4 | **Movement Rate** 9m
+**Soak** 1 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 9m
 
 **Bite**: 3, Melee
 
@@ -79,7 +79,7 @@ Bred or trained to hold a line, not just to threaten one.
 
 Small, fast, and almost never worth the fight it can put up if actually cornered.
 
-**Soak** 0 | **Defense** 8 | **Health Levels** 2 | **Movement Rate** 8m
+**Soak** 0 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 8m
 
 **Claws**: 1, Melee
 
@@ -95,7 +95,7 @@ Small, fast, and almost never worth the fight it can put up if actually cornered
 
 Bold around people, genuinely dangerous only if rabid.
 
-**Soak** 1 | **Defense** 7 | **Health Levels** 2 | **Movement Rate** 6m
+**Soak** 1 · **Defense** 7 · **Health Levels** 2 · **Movement Rate** 6m
 
 **Bite / Claws**: 1, Melee
 
@@ -111,7 +111,7 @@ Bold around people, genuinely dangerous only if rabid.
 
 No interest in a fight - just in being left alone.
 
-**Soak** 0 | **Defense** 6 | **Health Levels** 1 | **Movement Rate** 4m
+**Soak** 0 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 4m
 
 **Spray** (once per encounter, no Health Level cost): every target within Close range must wash off or take Disadvantage on all rolls for the rest of the Scene.
 
@@ -127,7 +127,7 @@ No interest in a fight - just in being left alone.
 
 A mass of small bodies, not a single creature - what it lacks in individual danger it makes up in sheer numbers.
 
-**Soak** 0 | **Defense** 8 | **Health Levels** 2 | **Movement Rate** 6m
+**Soak** 0 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 6m
 
 **Bite**: 1, Melee
 
@@ -143,7 +143,7 @@ A mass of small bodies, not a single creature - what it lacks in individual dang
 
 Placid until it isn't - and a full charge is genuinely lethal.
 
-**Soak** 3 | **Defense** 5 | **Health Levels** 6 | **Movement Rate** 10m
+**Soak** 3 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 10m
 
 **Gore**: 5, Melee
 
@@ -159,7 +159,7 @@ Placid until it isn't - and a full charge is genuinely lethal.
 
 Low, fast, and willing to press an attack that a smarter animal would break off.
 
-**Soak** 2 | **Defense** 5 | **Health Levels** 4 | **Movement Rate** 8m
+**Soak** 2 · **Defense** 5 · **Health Levels** 4 · **Movement Rate** 8m
 
 **Tusks**: 3, Melee
 
@@ -175,7 +175,7 @@ Low, fast, and willing to press an attack that a smarter animal would break off.
 
 Absurd on paper, genuinely relentless in practice.
 
-**Soak** 0 | **Defense** 7 | **Health Levels** 1 | **Movement Rate** 6m
+**Soak** 0 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 6m
 
 **Bite / Wing Buffet**: 1, Melee
 
@@ -191,7 +191,7 @@ Absurd on paper, genuinely relentless in practice.
 
 Not a predator - a large, panicked animal is dangerous mostly by accident.
 
-**Soak** 1 | **Defense** 5 | **Health Levels** 5 | **Movement Rate** 14m
+**Soak** 1 · **Defense** 5 · **Health Levels** 5 · **Movement Rate** 14m
 
 **Kick / Trample**: 4, Melee
 
@@ -207,7 +207,7 @@ Not a predator - a large, panicked animal is dangerous mostly by accident.
 
 Territorial and stubborn, more nuisance than threat on its own.
 
-**Soak** 1 | **Defense** 6 | **Health Levels** 3 | **Movement Rate** 8m
+**Soak** 1 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 8m
 
 **Headbutt**: 2, Melee
 
@@ -223,7 +223,7 @@ Territorial and stubborn, more nuisance than threat on its own.
 
 Cautious and opportunistic - rarely presses a fight it isn't sure it can win.
 
-**Soak** 1 | **Defense** 7 | **Health Levels** 3 | **Movement Rate** 10m
+**Soak** 1 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m
 
 **Bite**: 2, Melee
 
@@ -239,7 +239,7 @@ Cautious and opportunistic - rarely presses a fight it isn't sure it can win.
 
 A genuine apex predator in its own territory, especially in numbers.
 
-**Soak** 2 | **Defense** 6 | **Health Levels** 4 | **Movement Rate** 11m
+**Soak** 2 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 11m
 
 **Bite**: 4, Melee
 
@@ -255,7 +255,7 @@ A genuine apex predator in its own territory, especially in numbers.
 
 Small for what it's willing to fight, and it doesn't quit.
 
-**Soak** 3 | **Defense** 5 | **Health Levels** 5 | **Movement Rate** 8m
+**Soak** 3 · **Defense** 5 · **Health Levels** 5 · **Movement Rate** 8m
 
 **Bite / Claws**: 4, Melee
 
@@ -271,7 +271,7 @@ Small for what it's willing to fight, and it doesn't quit.
 
 Rarely seen before it attacks - that's the point.
 
-**Soak** 2 | **Defense** 6 | **Health Levels** 5 | **Movement Rate** 12m
+**Soak** 2 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 12m
 
 **Claws / Bite**: 5, Melee
 
@@ -287,7 +287,7 @@ Rarely seen before it attacks - that's the point.
 
 Smaller and warier than a mountain lion, same basic approach.
 
-**Soak** 1 | **Defense** 7 | **Health Levels** 3 | **Movement Rate** 10m
+**Soak** 1 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m
 
 **Claws**: 3, Melee
 
@@ -303,7 +303,7 @@ Smaller and warier than a mountain lion, same basic approach.
 
 Built for cold terrain, hunts the same way a bobcat does.
 
-**Soak** 1 | **Defense** 7 | **Health Levels** 3 | **Movement Rate** 10m
+**Soak** 1 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m
 
 **Claws**: 3, Melee
 
@@ -319,7 +319,7 @@ Built for cold terrain, hunts the same way a bobcat does.
 
 Strong enough to be dangerous, but genuinely avoidant by nature.
 
-**Soak** 3 | **Defense** 5 | **Health Levels** 7 | **Movement Rate** 9m
+**Soak** 3 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 9m
 
 **Claws**: 5, Melee
 
@@ -335,7 +335,7 @@ Strong enough to be dangerous, but genuinely avoidant by nature.
 
 Nothing about it is avoidant once it's decided to engage.
 
-**Soak** 4 | **Defense** 5 | **Health Levels** 9 | **Movement Rate** 10m
+**Soak** 4 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 10m
 
 **Claws**: 7, Melee
 
@@ -351,7 +351,7 @@ Nothing about it is avoidant once it's decided to engage.
 
 The largest land predator that actually hunts people as prey.
 
-**Soak** 4 | **Defense** 5 | **Health Levels** 9 | **Movement Rate** 9m (no penalty in water)
+**Soak** 4 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 9m (no penalty in water)
 
 **Claws / Bite**: 7, Melee
 
@@ -367,7 +367,7 @@ The largest land predator that actually hunts people as prey.
 
 Would rather warn than strike - the warning is the only mercy it offers.
 
-**Soak** 0 | **Defense** 7 | **Health Levels** 1 | **Movement Rate** 3m
+**Soak** 0 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 3m
 
 **Bite**: 1, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
 
@@ -383,7 +383,7 @@ Would rather warn than strike - the warning is the only mercy it offers.
 
 Camouflages well enough that the warning display is easy to miss.
 
-**Soak** 0 | **Defense** 7 | **Health Levels** 1 | **Movement Rate** 3m
+**Soak** 0 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 3m
 
 **Bite**: 1, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
@@ -397,7 +397,7 @@ Camouflages well enough that the warning display is easy to miss.
 
 Aquatic, territorial, and willing to stand its ground rather than flee into deeper water.
 
-**Soak** 0 | **Defense** 7 | **Health Levels** 1 | **Movement Rate** 3m (6m in water)
+**Soak** 0 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 3m (6m in water)
 
 **Bite**: 1, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
@@ -411,7 +411,7 @@ Aquatic, territorial, and willing to stand its ground rather than flee into deep
 
 Nearly invisible at the waterline until it isn't.
 
-**Soak** 3 | **Defense** 4 | **Health Levels** 6 | **Movement Rate** 6m (12m in water)
+**Soak** 3 · **Defense** 4 · **Health Levels** 6 · **Movement Rate** 6m (12m in water)
 
 **Bite**: 6, Melee
 
@@ -427,7 +427,7 @@ Nearly invisible at the waterline until it isn't.
 
 Slow, low, and armored - the shell does most of the work.
 
-**Soak** 4 | **Defense** 3 | **Health Levels** 4 | **Movement Rate** 3m
+**Soak** 4 · **Defense** 3 · **Health Levels** 4 · **Movement Rate** 3m
 
 **Bite**: 3, Melee
 
@@ -441,7 +441,7 @@ Slow, low, and armored - the shell does most of the work.
 
 Slow-moving, but its bite doesn't easily let go.
 
-**Soak** 1 | **Defense** 5 | **Health Levels** 2 | **Movement Rate** 3m
+**Soak** 1 · **Defense** 5 · **Health Levels** 2 · **Movement Rate** 3m
 
 **Bite**: 2, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
 
@@ -455,7 +455,7 @@ Slow-moving, but its bite doesn't easily let go.
 
 Small enough to go unnoticed until the bite already happened.
 
-**Soak** 0 | **Defense** 6 | **Health Levels** 1 | **Movement Rate** 2m
+**Soak** 0 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 2m
 
 **Bite**: 1, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
 
@@ -469,7 +469,7 @@ Small enough to go unnoticed until the bite already happened.
 
 Its bite rarely hurts in the moment - the real damage comes later.
 
-**Soak** 0 | **Defense** 6 | **Health Levels** 1 | **Movement Rate** 2m
+**Soak** 0 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 2m
 
 **Bite**: 1, Melee, **Venom**: no immediate Health Level loss, but the wound worsens without treatment over the following days - severity is the GM's call.
 
@@ -483,7 +483,7 @@ Its bite rarely hurts in the moment - the real damage comes later.
 
 Individually harmless, collectively a real threat if provoked.
 
-**Soak** 0 | **Defense** 7 | **Health Levels** 2 | **Movement Rate** 6m (flight)
+**Soak** 0 · **Defense** 7 · **Health Levels** 2 · **Movement Rate** 6m (flight)
 
 **Stings**: 2, Melee
 
@@ -497,7 +497,7 @@ Individually harmless, collectively a real threat if provoked.
 
 More aggressive and far more persistent than an ordinary hive.
 
-**Soak** 0 | **Defense** 7 | **Health Levels** 3 | **Movement Rate** 6m (flight)
+**Soak** 0 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 6m (flight)
 
 **Stings**: 3, Melee
 
@@ -511,7 +511,7 @@ More aggressive and far more persistent than an ordinary hive.
 
 Small, easy to miss, and painful rather than lethal in most cases.
 
-**Soak** 1 | **Defense** 6 | **Health Levels** 1 | **Movement Rate** 4m
+**Soak** 1 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 4m
 
 **Sting**: 1, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
@@ -525,7 +525,7 @@ Small, easy to miss, and painful rather than lethal in most cases.
 
 Exceptional eyesight, and a dive that closes distance faster than it looks.
 
-**Soak** 0 | **Defense** 8 | **Health Levels** 2 | **Movement Rate** 15m (flight)
+**Soak** 0 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 15m (flight)
 
 **Talons**: 2, Melee
 
@@ -541,7 +541,7 @@ Exceptional eyesight, and a dive that closes distance faster than it looks.
 
 Silent wings make it one of the few genuinely hard-to-detect predators in the sky.
 
-**Soak** 0 | **Defense** 8 | **Health Levels** 2 | **Movement Rate** 14m (flight)
+**Soak** 0 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 14m (flight)
 
 **Talons**: 2, Melee
 
@@ -557,7 +557,7 @@ Silent wings make it one of the few genuinely hard-to-detect predators in the sk
 
 Not a combat threat under any normal circumstance.
 
-**Soak** 0 | **Defense** 7 | **Health Levels** 2 | **Movement Rate** 12m (flight)
+**Soak** 0 · **Defense** 7 · **Health Levels** 2 · **Movement Rate** 12m (flight)
 
 **Beak**: 1, Melee
 
@@ -573,7 +573,7 @@ Not a combat threat under any normal circumstance.
 
 The apex predator of open water, full stop.
 
-**Soak** 3 | **Defense** 5 | **Health Levels** 8 | **Movement Rate** 14m (water only)
+**Soak** 3 · **Defense** 5 · **Health Levels** 8 · **Movement Rate** 14m (water only)
 
 **Bite**: 8, Melee
 
@@ -589,7 +589,7 @@ The apex predator of open water, full stop.
 
 Tolerates brackish and shallow water better than most sharks - which means it turns up closer to shore.
 
-**Soak** 2 | **Defense** 5 | **Health Levels** 6 | **Movement Rate** 12m (water only, including shallows)
+**Soak** 2 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 12m (water only, including shallows)
 
 **Bite**: 6, Melee
 
@@ -605,7 +605,7 @@ Tolerates brackish and shallow water better than most sharks - which means it tu
 
 Not a single fish worth worrying about - the school is the threat.
 
-**Soak** 0 | **Defense** 7 | **Health Levels** 3 | **Movement Rate** 10m (water only)
+**Soak** 0 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m (water only)
 
 **Bite**: 3, Melee
 
@@ -619,7 +619,7 @@ Not a single fish worth worrying about - the school is the threat.
 
 Intelligent, coordinated, and the only predator on this list that hunts great white sharks.
 
-**Soak** 4 | **Defense** 5 | **Health Levels** 10 | **Movement Rate** 16m (water only)
+**Soak** 4 · **Defense** 5 · **Health Levels** 10 · **Movement Rate** 16m (water only)
 
 **Bite / Ram**: 9, Melee
 
@@ -635,7 +635,7 @@ Intelligent, coordinated, and the only predator on this list that hunts great wh
 
 Doesn't need to bite when it can simply stop a target from acting.
 
-**Soak** 0 | **Defense** 6 | **Health Levels** 2 | **Movement Rate** 6m (water only)
+**Soak** 0 · **Defense** 6 · **Health Levels** 2 · **Movement Rate** 6m (water only)
 
 **Shock**: Close range, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls until the end of their next turn.
 
@@ -649,7 +649,7 @@ Doesn't need to bite when it can simply stop a target from acting.
 
 Placid in a herd, catastrophic when charging.
 
-**Soak** 3 | **Defense** 5 | **Health Levels** 7 | **Movement Rate** 11m
+**Soak** 3 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 11m
 
 **Gore / Trample**: 5, Melee
 
@@ -665,7 +665,7 @@ Placid in a herd, catastrophic when charging.
 
 The largest deer species, and surprisingly willing to fight when provoked.
 
-**Soak** 3 | **Defense** 5 | **Health Levels** 7 | **Movement Rate** 11m
+**Soak** 3 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 11m
 
 **Antlers / Hooves**: 5, Melee
 
@@ -681,7 +681,7 @@ The largest deer species, and surprisingly willing to fight when provoked.
 
 Smaller and less consistently aggressive than a moose, same basic shape.
 
-**Soak** 2 | **Defense** 6 | **Health Levels** 5 | **Movement Rate** 12m
+**Soak** 2 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 12m
 
 **Antlers / Hooves**: 4, Melee
 
@@ -697,7 +697,7 @@ Smaller and less consistently aggressive than a moose, same basic shape.
 
 Small, camouflaged, and no real combat threat.
 
-**Soak** 0 | **Defense** 8 | **Health Levels** 2 | **Movement Rate** 10m
+**Soak** 0 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 10m
 
 **Bite**: 1, Melee
 
@@ -713,7 +713,7 @@ Small, camouflaged, and no real combat threat.
 
 Unlike most owls, hunts by day as often as by night.
 
-**Soak** 0 | **Defense** 8 | **Health Levels** 2 | **Movement Rate** 14m (flight)
+**Soak** 0 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 14m (flight)
 
 **Talons**: 2, Melee
 
