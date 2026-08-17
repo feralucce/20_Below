@@ -2,6 +2,213 @@
 
 A catalog of threats a party might face outside of other player characters - not a pure bestiary, since it will eventually include dangerous people alongside dangerous animals. Each entry gives a GM everything needed to run the creature at the table without a separate build process.
 
+## Contents
+
+**Mundane Beasts**
+
+- **Domestic & Urban**
+  - [Feral Dog](#feral-dog)
+  - [Guard Dog](#guard-dog)
+  - [Feral Cat](#feral-cat)
+  - [Raccoon](#raccoon)
+  - [Skunk](#skunk)
+  - [Rat Swarm](#rat-swarm)
+- **Farm & Rural**
+  - [Bull](#bull)
+  - [Wild Boar](#wild-boar)
+  - [Aggressive Goose](#aggressive-goose)
+  - [Spooked Horse](#spooked-horse)
+  - [Feral Goat](#feral-goat)
+- **Canines**
+  - [Coyote](#coyote)
+  - [Wolf](#wolf)
+  - [Wolverine](#wolverine)
+- **Wild Cats**
+  - [Mountain Lion](#mountain-lion)
+  - [Bobcat](#bobcat)
+  - [Lynx](#lynx)
+- **Bears**
+  - [Black Bear](#black-bear)
+  - [Grizzly Bear](#grizzly-bear)
+  - [Polar Bear](#polar-bear)
+- **Reptiles**
+  - [Rattlesnake](#rattlesnake)
+  - [Copperhead](#copperhead)
+  - [Cottonmouth](#cottonmouth)
+  - [Alligator](#alligator)
+  - [Snapping Turtle](#snapping-turtle)
+  - [Gila Monster](#gila-monster)
+- **Arachnids & Insects**
+  - [Black Widow](#black-widow)
+  - [Brown Recluse](#brown-recluse)
+  - [Wasp Swarm](#wasp-swarm)
+  - [Africanized Bee Swarm](#africanized-bee-swarm)
+  - [Scorpion](#scorpion)
+- **Birds of Prey & Scavengers**
+  - [Red-Tailed Hawk](#red-tailed-hawk)
+  - [Great Horned Owl](#great-horned-owl)
+  - [Turkey Vulture](#turkey-vulture)
+- **Aquatic**
+  - [Great White Shark](#great-white-shark)
+  - [Bull Shark](#bull-shark)
+  - [Piranha School](#piranha-school)
+  - [Orca](#orca)
+  - [Electric Eel](#electric-eel)
+- **Large Herbivores**
+  - [Bison](#bison)
+  - [Moose](#moose)
+  - [Elk](#elk)
+- **Arctic Specialists**
+  - [Arctic Fox](#arctic-fox)
+  - [Snowy Owl](#snowy-owl)
+**Beast Variants**
+
+- **Domestic & Urban**
+  - [Dire Feral Dog](#dire-feral-dog)
+  - [Giant Feral Dog](#giant-feral-dog)
+  - [Mutated Feral Dog](#mutated-feral-dog)
+  - [Dire Guard Dog](#dire-guard-dog)
+  - [Giant Guard Dog](#giant-guard-dog)
+  - [Mutated Guard Dog](#mutated-guard-dog)
+  - [Dire Feral Cat](#dire-feral-cat)
+  - [Giant Feral Cat](#giant-feral-cat)
+  - [Mutated Feral Cat](#mutated-feral-cat)
+  - [Dire Raccoon](#dire-raccoon)
+  - [Giant Raccoon](#giant-raccoon)
+  - [Mutated Raccoon](#mutated-raccoon)
+  - [Dire Skunk](#dire-skunk)
+  - [Giant Skunk](#giant-skunk)
+  - [Mutated Skunk](#mutated-skunk)
+  - [Dire Rat Swarm](#dire-rat-swarm)
+  - [Giant Rat Swarm](#giant-rat-swarm)
+  - [Mutated Rat Swarm](#mutated-rat-swarm)
+- **Farm & Rural**
+  - [Dire Bull](#dire-bull)
+  - [Giant Bull](#giant-bull)
+  - [Mutated Bull](#mutated-bull)
+  - [Dire Wild Boar](#dire-wild-boar)
+  - [Giant Wild Boar](#giant-wild-boar)
+  - [Mutated Wild Boar](#mutated-wild-boar)
+  - [Dire Aggressive Goose](#dire-aggressive-goose)
+  - [Giant Aggressive Goose](#giant-aggressive-goose)
+  - [Mutated Aggressive Goose](#mutated-aggressive-goose)
+  - [Dire Spooked Horse](#dire-spooked-horse)
+  - [Giant Spooked Horse](#giant-spooked-horse)
+  - [Mutated Spooked Horse](#mutated-spooked-horse)
+  - [Dire Feral Goat](#dire-feral-goat)
+  - [Giant Feral Goat](#giant-feral-goat)
+  - [Mutated Feral Goat](#mutated-feral-goat)
+- **Canines**
+  - [Dire Coyote](#dire-coyote)
+  - [Giant Coyote](#giant-coyote)
+  - [Mutated Coyote](#mutated-coyote)
+  - [Dire Wolf](#dire-wolf)
+  - [Giant Wolf](#giant-wolf)
+  - [Mutated Wolf](#mutated-wolf)
+  - [Dire Wolverine](#dire-wolverine)
+  - [Giant Wolverine](#giant-wolverine)
+  - [Mutated Wolverine](#mutated-wolverine)
+- **Wild Cats**
+  - [Dire Mountain Lion](#dire-mountain-lion)
+  - [Giant Mountain Lion](#giant-mountain-lion)
+  - [Mutated Mountain Lion](#mutated-mountain-lion)
+  - [Dire Bobcat](#dire-bobcat)
+  - [Giant Bobcat](#giant-bobcat)
+  - [Mutated Bobcat](#mutated-bobcat)
+  - [Dire Lynx](#dire-lynx)
+  - [Giant Lynx](#giant-lynx)
+  - [Mutated Lynx](#mutated-lynx)
+- **Bears**
+  - [Dire Black Bear](#dire-black-bear)
+  - [Giant Black Bear](#giant-black-bear)
+  - [Mutated Black Bear](#mutated-black-bear)
+  - [Dire Grizzly Bear](#dire-grizzly-bear)
+  - [Giant Grizzly Bear](#giant-grizzly-bear)
+  - [Mutated Grizzly Bear](#mutated-grizzly-bear)
+  - [Dire Polar Bear](#dire-polar-bear)
+  - [Giant Polar Bear](#giant-polar-bear)
+  - [Mutated Polar Bear](#mutated-polar-bear)
+- **Reptiles**
+  - [Dire Rattlesnake](#dire-rattlesnake)
+  - [Giant Rattlesnake](#giant-rattlesnake)
+  - [Mutated Rattlesnake](#mutated-rattlesnake)
+  - [Dire Copperhead](#dire-copperhead)
+  - [Giant Copperhead](#giant-copperhead)
+  - [Mutated Copperhead](#mutated-copperhead)
+  - [Dire Cottonmouth](#dire-cottonmouth)
+  - [Giant Cottonmouth](#giant-cottonmouth)
+  - [Mutated Cottonmouth](#mutated-cottonmouth)
+  - [Dire Alligator](#dire-alligator)
+  - [Giant Alligator](#giant-alligator)
+  - [Mutated Alligator](#mutated-alligator)
+  - [Dire Snapping Turtle](#dire-snapping-turtle)
+  - [Giant Snapping Turtle](#giant-snapping-turtle)
+  - [Mutated Snapping Turtle](#mutated-snapping-turtle)
+  - [Dire Gila Monster](#dire-gila-monster)
+  - [Giant Gila Monster](#giant-gila-monster)
+  - [Mutated Gila Monster](#mutated-gila-monster)
+- **Arachnids & Insects**
+  - [Dire Black Widow](#dire-black-widow)
+  - [Giant Black Widow](#giant-black-widow)
+  - [Mutated Black Widow](#mutated-black-widow)
+  - [Dire Brown Recluse](#dire-brown-recluse)
+  - [Giant Brown Recluse](#giant-brown-recluse)
+  - [Mutated Brown Recluse](#mutated-brown-recluse)
+  - [Dire Wasp Swarm](#dire-wasp-swarm)
+  - [Giant Wasp Swarm](#giant-wasp-swarm)
+  - [Mutated Wasp Swarm](#mutated-wasp-swarm)
+  - [Dire Africanized Bee Swarm](#dire-africanized-bee-swarm)
+  - [Giant Africanized Bee Swarm](#giant-africanized-bee-swarm)
+  - [Mutated Africanized Bee Swarm](#mutated-africanized-bee-swarm)
+  - [Dire Scorpion](#dire-scorpion)
+  - [Giant Scorpion](#giant-scorpion)
+  - [Mutated Scorpion](#mutated-scorpion)
+- **Birds of Prey & Scavengers**
+  - [Dire Red-Tailed Hawk](#dire-red-tailed-hawk)
+  - [Giant Red-Tailed Hawk](#giant-red-tailed-hawk)
+  - [Mutated Red-Tailed Hawk](#mutated-red-tailed-hawk)
+  - [Dire Great Horned Owl](#dire-great-horned-owl)
+  - [Giant Great Horned Owl](#giant-great-horned-owl)
+  - [Mutated Great Horned Owl](#mutated-great-horned-owl)
+  - [Dire Turkey Vulture](#dire-turkey-vulture)
+  - [Giant Turkey Vulture](#giant-turkey-vulture)
+  - [Mutated Turkey Vulture](#mutated-turkey-vulture)
+- **Aquatic**
+  - [Dire Great White Shark](#dire-great-white-shark)
+  - [Giant Great White Shark](#giant-great-white-shark)
+  - [Mutated Great White Shark](#mutated-great-white-shark)
+  - [Dire Bull Shark](#dire-bull-shark)
+  - [Giant Bull Shark](#giant-bull-shark)
+  - [Mutated Bull Shark](#mutated-bull-shark)
+  - [Dire Piranha School](#dire-piranha-school)
+  - [Giant Piranha School](#giant-piranha-school)
+  - [Mutated Piranha School](#mutated-piranha-school)
+  - [Dire Orca](#dire-orca)
+  - [Giant Orca](#giant-orca)
+  - [Mutated Orca](#mutated-orca)
+  - [Dire Electric Eel](#dire-electric-eel)
+  - [Giant Electric Eel](#giant-electric-eel)
+  - [Mutated Electric Eel](#mutated-electric-eel)
+- **Large Herbivores**
+  - [Dire Bison](#dire-bison)
+  - [Giant Bison](#giant-bison)
+  - [Mutated Bison](#mutated-bison)
+  - [Dire Moose](#dire-moose)
+  - [Giant Moose](#giant-moose)
+  - [Mutated Moose](#mutated-moose)
+  - [Dire Elk](#dire-elk)
+  - [Giant Elk](#giant-elk)
+  - [Mutated Elk](#mutated-elk)
+- **Arctic Specialists**
+  - [Dire Arctic Fox](#dire-arctic-fox)
+  - [Giant Arctic Fox](#giant-arctic-fox)
+  - [Mutated Arctic Fox](#mutated-arctic-fox)
+  - [Dire Snowy Owl](#dire-snowy-owl)
+  - [Giant Snowy Owl](#giant-snowy-owl)
+  - [Mutated Snowy Owl](#mutated-snowy-owl)
+
+---
+
 **How to read a stat block:**
 
 - **Soak** and **Defense** work exactly as they do for a PC - Soak resolves per-die against an attack (rules.md#physical-attacks--weapon-damage--per-die-resolution), Defense is the target number for an attacker's to-hit roll.
@@ -2859,537 +3066,5 @@ It hunts equally well against the glare of open snow at noon or in the dead dark
 **Notable Skills**: Perception 9
 
 **Traits**: **Ambush Hunter** - Advantage on an attack made against a target that hasn't detected it, day or night (unlike Great Horned Owl, not limited to darkness). **Photophobic Frenzy** - Advantage on attacks made in darkness; Disadvantage on attacks made in direct bright light.
-
-</td></tr></table>
-
----
-
-## Cryptids
-
-American folklore cryptids, treated as real but rare in a modern setting. Sightings are genuine, evidence is thin, and most of these would rather not be found.
-
-**Cryptids**: Sasquatch · Chupacabra · Mothman · Jersey Devil · Lake Monster · Thunderbird · Dogman · Hodag · Fresno Nightcrawler · Flatwoods Monster · Beast of Bray Road · Loveland Frogman · Black-Eyed Children · Hopkinsville Goblins · Jackalope · Pope Lick Monster · Beast of Bladenboro · Ozark Howler
-
----
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Sasquatch
-
-Big enough that most encounters end with it walking away rather than fighting - the stories about the ones that didn't are the ones that get told.
-
-**Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 10m
-
-**Fists / Thrown Debris**: 5, Melee or Close
-
-**Notable Skills**: Stealth 9, Athletics 9
-
-**Traits**: **Avoidant** - won't attack unless cornered, wounded, or defending young. **Immense Strength** - Advantage on any roll to break a grapple, force open an obstruction, or throw something heavy.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Chupacabra
-
-Ranchers lose livestock to it long before anyone gets a clear look.
-
-**Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 9m
-
-**Bite / Talons**: 3, Melee
-
-**Notable Skills**: Stealth 9, Perception 7
-
-**Traits**: **Livestock Predator** - Advantage on attacks against domestic and farm animals, and on Stealth rolls made while moving through a pen or pasture at night.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Mothman
-
-Shows up before something goes wrong, or that's how the stories always get told after the fact.
-
-**Soak** 1 · **Attack** 4 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 16m (flight)
-
-**Claws**: 2, Melee (rarely used)
-
-**Notable Skills**: Stealth 8, Perception 10
-
-**Traits**: **Ill Omen** - anyone who gets a clear, sustained look at it takes Disadvantage on their next roll, unnerved rather than harmed. **Avoidant** - flees at the first sign of real conflict and almost never initiates one.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Jersey Devil
-
-Hooved, winged, and loud about it - the scream carries farther than the sighting ever does.
-
-**Soak** 2 · **Attack** 5 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 14m (flight)
-
-**Claws / Bite**: 4, Melee
-
-**Notable Skills**: Stealth 8, Intimidation 8
-
-**Traits**: **Shriek** (once per encounter) - everyone within Close range takes Disadvantage on their next Perception roll, startled badly enough to lose track of where it went.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Lake Monster
-
-Every deep, cold lake seems to have one story like it. This is the generic write-up; rename it to whatever local legend fits the table.
-
-**Soak** 4 · **Attack** 6 · **Defense** 4 · **Health Levels** 8 · **Movement Rate** 10m (water only)
-
-**Bite / Crush**: 6, Melee
-
-**Traits**: **Ambush from Depth** - Advantage on its first attack if it was submerged and undetected beforehand. Cannot leave the water.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Thunderbird
-
-Wingspan alone is enough to convince most witnesses they saw something that shouldn't exist.
-
-**Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 18m (flight)
-
-**Talons**: 6, Melee
-
-**Notable Skills**: Perception 9
-
-**Traits**: **Storm Cover** - Advantage on Stealth while flying through cloud or storm cover, and Perception rolls made to track it at range take Disadvantage in poor weather.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Dogman
-
-Upright when it wants distance covered fast, on all fours when it wants to close in quiet.
-
-**Soak** 2 · **Attack** 6 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 12m
-
-**Claws / Bite**: 5, Melee
-
-**Notable Skills**: Athletics 9, Stealth 8
-
-**Traits**: **Two Gaits** - may drop to all fours as part of its movement for an extra 4m that round, at a cost of -1 Defense until its next action.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Hodag
-
-Squat, spined, and stubborn about its territory - the Wisconsin logging camps that first told stories about it weren't exaggerating the attitude.
-
-**Soak** 3 · **Attack** 4 · **Defense** 4 · **Health Levels** 5 · **Movement Rate** 5m
-
-**Spines / Bite**: 4, Melee
-
-**Traits**: **Den Ambush** - Advantage on the first attack against anything that enters Close range of its den.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Fresno Nightcrawler
-
-Two legs, no visible arms or head, and no recorded case of it ever doing anything but walk away.
-
-**Soak** 0 · **Attack** 1 · **Defense** 9 · **Health Levels** 2 · **Movement Rate** 4m
-
-**Notable Skills**: Stealth 10
-
-**Traits**: **Utterly Nonaggressive** - never attacks under any circumstance. This entry exists for encounters built on observation and unease, not combat.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Flatwoods Monster
-
-Hisses, hovers, and leaves behind a smell that lingers for hours after it's gone.
-
-**Soak** 1 · **Attack** 3 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 6m (glides)
-
-**Noxious Mist** (once per encounter, no Health Level cost): everyone within Close range must resist or take Disadvantage on Physical rolls for the rest of the Scene.
-
-**Notable Skills**: Stealth 8
-
-**Traits**: **Avoidant** - retreats into its own mist the moment it's directly engaged.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Beast of Bray Road
-
-Roadside sightings, always at night, always gone by the time headlights swing back around.
-
-**Soak** 2 · **Attack** 6 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 12m
-
-**Claws / Bite**: 4, Melee
-
-**Notable Skills**: Perception 8, Athletics 8
-
-**Traits**: **Roadside Ambush** - Advantage on an attack made against a target it approached along a road, fence line, or open field after dark.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Loveland Frogman
-
-Reeds and riverbanks hide it well enough that most reports are just a shape and a splash.
-
-**Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 8m (12m in water)
-
-**Claws**: 3, Melee
-
-**Notable Skills**: Stealth 8, Athletics 8
-
-**Traits**: **Leaping Ambush** - Advantage on its first attack if it leaps from water or heavy reeds at a target within Close range.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Black-Eyed Children
-
-They knock, they ask to come in, and the wrongness is entirely in how ordinary the request sounds coming from something that looks at you like that.
-
-**Soak** 0 · **Attack** 2 · **Defense** 6 · **Health Levels** 2 · **Movement Rate** 8m
-
-**Notable Skills**: Persuasion 9
-
-**Traits**: **Wrong in a Way You Can't Name** - anyone who holds eye contact with one, or lets one inside, takes Disadvantage on their next roll. That's the full extent of what they do; if actually attacked, they flee rather than fight.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Hopkinsville Goblins
-
-Small, pale, all-limbs humanoids that come out at night in numbers and don't scare easy.
-
-**Soak** 0 · **Attack** 3 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 6m
-
-**Claws / Small Blades**: 2, Melee
-
-**Notable Skills**: Stealth 9
-
-**Traits**: **Pack Tactics** (as Feral Dog). **Floats Oddly** - Advantage on Stealth while moving along rooflines, fences, or low structures.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Jackalope
-
-The joke wears off the first time one actually charges.
-
-**Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 3 · **Movement Rate** 14m
-
-**Antlers**: 4, Melee
-
-**Notable Skills**: Athletics 10
-
-**Traits**: **Faster Than the Joke Suggests** - Advantage on any roll to avoid being Surprised.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Pope Lick Monster
-
-Lives on and under a rail trestle, and the voice it throws is the only reason anyone gets close enough to fall.
-
-**Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 10m
-
-**Claws / Hooves**: 4, Melee
-
-**Notable Skills**: Stealth 8
-
-**Traits**: **Voice Mimicry** - imitates a familiar voice or sound from a distance; a Perception roll made to pinpoint its actual location takes Disadvantage as long as it keeps calling. **High Ground** - Advantage on an attack made from an elevated perch against a target below.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Beast of Bladenboro
-
-North Carolina livestock turn up dead with barely a mark on them and no tracks worth following.
-
-**Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 10m
-
-**Bite**: 5, Melee
-
-**Notable Skills**: Stealth 9
-
-**Traits**: **Silent Kill** - Advantage on an attack made against a target that hasn't detected it.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Ozark Howler
-
-The howl reaches farther than the animal ever does, which is exactly why nobody trusts it isn't close.
-
-**Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 11m
-
-**Bite / Claws**: 4, Melee
-
-**Notable Skills**: Intimidation 8, Stealth 7
-
-**Traits**: **Howl** (once per encounter) - anyone within Close range takes Disadvantage on their next roll, rattled by a sound with nothing visibly behind it.
-
-</td></tr></table>
-
----
-
-## Nightmare Creatures
-
-Urban-fantasy and horror archetypes, built entirely on this system's own mechanics. None of these reference Gifts or Ki - every ability below is self-contained, the same way a rattlesnake's venom or a skunk's spray is.
-
-**Nightmare Creatures**: Vampire · Werewolf · Ghoul · Bound Corpse · Lesser Devil · Changeling · Hexcrafter · Skinshifter · Gravefeeder Swarm · Bound Effigy · Wailer · Poltergeist · Hellhound · Mimic · Plague-Bearer
-
----
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Vampire
-
-Passes for human right up until it doesn't need to anymore.
-
-**Soak** 2 · **Attack** 7 · **Defense** 7 · **Health Levels** 6 · **Movement Rate** 10m
-
-**Bite / Claws**: 4, Melee. **Blood Drain**: against a target it has Grappled, a successful bite heals it 1 Health Level at the start of each of its turns for the rest of the Scene.
-
-**Notable Skills**: Persuasion 9, Stealth 8
-
-**Traits**: **Predatory Charm** - Advantage on Persuasion and Deception rolls made to get close to a target who hasn't been warned about it. **Sunlight-Averse** - Disadvantage on all rolls made in direct daylight.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Werewolf
-
-Whatever it was before doesn't matter once the shape has finished changing.
-
-**Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 12m
-
-**Claws / Bite**: 6, Melee
-
-**Notable Skills**: Athletics 9, Perception 8
-
-**Traits**: **Regeneration** - heals 1 Health Level at the start of each of its turns. **Silver Vulnerable** - damage from a silver weapon against it is unsoakable.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Ghoul
-
-Lives off what the cemetery and the morgue don't miss, and what its bite leaves behind doesn't heal clean.
-
-**Soak** 2 · **Attack** 5 · **Defense** 5 · **Health Levels** 5 · **Movement Rate** 8m
-
-**Claws / Bite**: 4, Melee. **Fouled Wound**: a target hit and left untreated takes Disadvantage on Physical rolls until the wound is properly cleaned.
-
-**Notable Skills**: Stealth 8
-
-**Traits**: **Carrion Sense** - Advantage on Perception rolls to locate fresh graves, corpses, or already-wounded targets.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Bound Corpse
-
-Something is still using the body. The body itself stopped being the important part a while ago.
-
-**Soak** 3 · **Attack** 6 · **Defense** 4 · **Health Levels** 6 · **Movement Rate** 7m
-
-**Whatever It's Carrying**: 4, Melee
-
-**Traits**: **Tethered, Not Alive** - immune to Fear and Intimidation, doesn't need to breathe, and taking it past 0 Health Levels only disperses it for the Scene; it re-forms at the corpse's resting place unless the remains themselves are destroyed or the tether is broken by other means (GM's call). **Cold Presence** - anyone within Close range takes Disadvantage on Perception rolls.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Lesser Devil
-
-Doesn't need to win the fight if it can talk someone else into losing it for them.
-
-**Soak** 2 · **Attack** 6 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 10m (short flight)
-
-**Claws / Horns**: 4, Melee
-
-**Notable Skills**: Persuasion 9, Deception 8
-
-**Traits**: **Goading** - Advantage on Persuasion rolls made to provoke a target into a rash or reckless action. **Fire Vulnerable** - fire damage against it is unsoakable.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Changeling
-
-Wears a borrowed face well enough that the real question isn't whether it's lying, it's how long it's been standing in someone else's life.
-
-**Soak** 1 · **Attack** 3 · **Defense** 8 · **Health Levels** 3 · **Movement Rate** 9m
-
-**Knife** (only if cornered): 2, Melee
-
-**Notable Skills**: Deception 10, Persuasion 9
-
-**Traits**: **Glamour** - Advantage on any Deception roll made to pass as a specific person it has studied closely. **Cracks Both Ways** - a target who succeeds on a Perception roll to see through the glamour gains Advantage on their next roll against it.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Hexcrafter
-
-Ordinary until the ritual finishes. The trick is stopping it before that happens.
-
-**Soak** 0 · **Attack** 3 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 8m
-
-**Athame** (only if cornered): 1, Melee. **Hex** (once per Scene, requires several uninterrupted rounds to complete - GM's call on timing): a single target within Sight range takes Disadvantage on all rolls for the rest of the Scene once the ritual completes.
-
-**Notable Skills**: Perception 7
-
-**Traits**: **Fragile Without Preparation** - has no combat trait beyond the above; entirely dependent on allies, terrain, or fleeing if interrupted mid-ritual.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Skinshifter
-
-A full night of watching is all it needs before it can wear someone else's face and voice convincingly.
-
-**Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 9m
-
-**Claws**: 3, Melee
-
-**Notable Skills**: Deception 10, Stealth 8
-
-**Traits**: **Perfect Copy** - after studying a specific target overnight, can take on their appearance and voice; noticing anything wrong requires a Perception roll at Disadvantage. **Reverts Under Stress** - snaps back to its true, indistinct form the instant it takes any Health Level damage.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Gravefeeder Swarm
-
-Rats and roaches don't usually hunt in formation. This mass does.
-
-**Soak** 0 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 7m
-
-**Bites / Stings**: 3, Melee
-
-**Traits**: **Swarm** (as Rat Swarm). **Unnatural Hunger** - actively pursues rather than scatters, and anything else drawn to a fresh kill gets Advantage on Perception rolls to track a target it has already fed on this Scene.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Bound Effigy
-
-Stone, clay, or scrap, animated and given exactly one job.
-
-**Soak** 6 · **Attack** 6 · **Defense** 3 · **Health Levels** 8 · **Movement Rate** 6m
-
-**Slam**: 6, Melee
-
-**Traits**: **Unliving** - immune to Fear, poison, and disease. **One Weak Point** - a Called Shot against its anchor (a rune, seam, or core, set by the GM on introduction) bypasses its Soak entirely.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Wailer
-
-Almost never lays a hand on anyone. It doesn't need to.
-
-**Soak** 1 · **Attack** 2 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 8m (drifts)
-
-**Cry** (once per Scene, Mental attack, dice pool 6, Far range, no to-hit roll required - triggered by hearing it): dice resolve per-die against Psyche as normal, a connecting die costing a Sanity Level same as any other Mental attack, and can push a target to Overwhelmed on repeated failures in the same Scene.
-
-**Notable Skills**: Perception 9
-
-**Traits**: **Rarely Physical** - almost never closes to melee; the cry is the entire threat.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Poltergeist
-
-Bound to one room, one object, one unfinished business - and everything not nailed down in that space is a weapon.
-
-**Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 0m (cannot leave the bound location)
-
-**Thrown Objects**: 4, Close to Far
-
-**Traits**: **Bound to a Place** - immune to anything that doesn't target its anchor object directly (set by the GM on introduction); attacks against anything else pass through with no effect. **Escalates** - its Attack rises by 1, to a maximum of 8, for every full round that passes without anyone leaving the bound location.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Hellhound
-
-Runs a scent down for miles and doesn't lose interest once it's found what it was chasing.
-
-**Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 14m
-
-**Bite**: 6, Melee. 1 point of damage from a successful bite is unsoakable (the wound smolders).
-
-**Notable Skills**: Perception 9, Athletics 9
-
-**Traits**: **Pack Tactics** (as Feral Dog). **Hunts by Scent** - once it has a target's scent, Advantage on Perception rolls to track them across any terrain short of open water.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Mimic
-
-Furniture, cargo, a parked car, anything still enough to be overlooked - until someone reaches for it.
-
-**Soak** 2 · **Attack** 6 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 3m (until it strikes)
-
-**Bite / Engulf**: 5, Melee. Advantage on its first attack against a target that approached believing it was ordinary terrain or an object.
-
-**Notable Skills**: Stealth 10
-
-**Traits**: **Grapple on Contact** - a target hit by its first attack is automatically Grappled; breaking free uses the standard contested Grapple rule.
-
-</td></tr></table>
-
-<table class="adversary-card"><tr><td markdown="1">
-
-### Plague-Bearer
-
-Shows up wherever something is already going wrong and makes sure it keeps going wrong.
-
-**Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 8m
-
-**Cane / Blade**: 3, Melee. **Contagion**: on a successful hit, the target must resist or take Disadvantage on Physical rolls until treated, worsening rather than healing without care.
-
-**Notable Skills**: Intimidation 7, Perception 8
-
-**Traits**: **Wading Through Sickness** - immune to any disease or poison effect, including its own.
 
 </td></tr></table>
