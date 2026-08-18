@@ -203,14 +203,17 @@ export default function buildRollerPanel(state, data, { refreshHeader = () => {}
   }
 
   const damageSection = buildDamageRollSection(state, data, refreshHeader);
-  // The damage roller's Ki Infusion checkboxes need to reflect the
-  // character's *current* Ki, which can change from outside this section
-  // entirely (a Gift Check failure, most directly) - Roll Damage already
-  // refreshes its own boost row after spending Ki, so the only other spot
-  // that needs to reach in here is Gift Check, wired below.
+  const attackRollSection = buildAttackRollSection(state, data, refreshHeader, refreshHeader);
+  // The damage rollers' Ki Infusion checkboxes (the standalone one and the
+  // one nested inside Attack Roll) need to reflect the character's
+  // *current* Ki, which can change from outside either section entirely
+  // (a Gift Check failure, most directly) - each already refreshes its own
+  // boost row after spending Ki itself, so the only other spot that needs
+  // to reach in here is Gift Check, wired below.
   function refreshKiDependents() {
     refreshHeader();
     damageSection.refreshBoostRow();
+    attackRollSection.refreshBoostRow();
   }
 
   wrap.append(
@@ -222,6 +225,7 @@ export default function buildRollerPanel(state, data, { refreshHeader = () => {}
     togglesRow,
     rollBtn,
     resultEl,
+    attackRollSection,
     buildGiftCheckSection(state, data, refreshKiDependents),
     damageSection,
     buildResourceCheckSection(state, data),
@@ -333,13 +337,190 @@ function buildResourceCheckSection(state, data) {
   return section;
 }
 
+// Attack Roll - the full two-step sequence from
+// rules.md#the-passive-wall-triad---soak-presence-psyche: a to-hit roll
+// (Attribute + Skill vs. the target's Defense, used directly as Difficulty
+// since both run 0-10) using the same core roll engine as Core Roll above,
+// and only on a success (plain or critical) does the damage dice pool
+// reveal itself - a critical failure or plain failure never reaches step
+// two. Reuses buildDamageRollSection wholesale for that second step rather
+// than duplicating its dice-pool/Ki-Infusion logic.
+function buildAttackRollSection(state, data, refreshHeader, refreshDependents) {
+  const section = el('div', { class: 'roller-gift-check' });
+
+  let selectedSkill = UNTRAINED_VALUE;
+  let selectedAttribute = data.attributes[0].name;
+  let selectedDefense = 5;
+  let advantageOn = false;
+  let disadvantageOn = false;
+
+  const skillSelect = el(
+    'select',
+    {
+      onChange: (e) => {
+        selectedSkill = e.target.value;
+        renderAttributeVisibility();
+        renderTierGrantNote();
+      },
+    },
+    [
+      el('option', { value: UNTRAINED_VALUE }, 'No Skill (Untrained)'),
+      ...data.skillCatalog.map((s) =>
+        el('option', { value: s.name }, `${s.name} - ${skillTierName(data, state.skills[s.name])}`),
+      ),
+    ],
+  );
+
+  const attributeGroup = el('div', { class: 'attribute-radio-group' });
+  function renderAttributeGroup() {
+    attributeGroup.innerHTML = '';
+    data.attributes.forEach((a) => {
+      const id = `atk-attr-${a.name}`;
+      attributeGroup.append(
+        el('label', { class: 'attribute-radio', for: id }, [
+          el('input', {
+            type: 'radio',
+            id,
+            name: 'atk-attribute',
+            value: a.name,
+            checked: selectedAttribute === a.name ? '' : undefined,
+            onChange: () => {
+              selectedAttribute = a.name;
+            },
+          }),
+          ` ${a.name} (${state.attributes[a.name]})`,
+        ]),
+      );
+    });
+  }
+  renderAttributeGroup();
+
+  function currentTier() {
+    if (selectedSkill === UNTRAINED_VALUE) return 0;
+    return state.skills[selectedSkill];
+  }
+
+  function renderAttributeVisibility() {
+    attributeGroup.style.display = currentTier() === 0 ? 'none' : 'flex';
+  }
+  renderAttributeVisibility();
+
+  const tierGrantNote = el('p', { class: 'roller-tier-note' });
+  function renderTierGrantNote() {
+    const grant = SKILL_TIERS[currentTier()].grantsAdvantage;
+    tierGrantNote.textContent = grant
+      ? `${SKILL_TIERS[currentTier()].name} already grants ${grant === 'advantage' ? 'Advantage' : 'Disadvantage'} from its Tier - checking the opposite box below cancels it back to Normal, it doesn't reverse it.`
+      : '';
+  }
+  renderTierGrantNote();
+
+  // Defense reads directly off the Difficulty Chart (rules.md: "Defense
+  // becomes the attacker's Difficulty") - same select and same data source
+  // as Core Roll's Difficulty dropdown, just relabeled for what it means
+  // here: the target's Defense score, not a GM-picked task difficulty.
+  const defenseSelect = el(
+    'select',
+    {
+      onChange: (e) => {
+        selectedDefense = Number(e.target.value);
+      },
+    },
+    data.difficultyChart.map((d) =>
+      el(
+        'option',
+        { value: d.difficulty, selected: d.difficulty === selectedDefense ? '' : undefined },
+        `${d.difficulty} - ${d.label}`,
+      ),
+    ),
+  );
+
+  const togglesRow = el('div', { class: 'roller-toggles' });
+  function renderToggles() {
+    togglesRow.innerHTML = '';
+    togglesRow.append(
+      toggleBox('Advantage', advantageOn, () => {
+        advantageOn = !advantageOn;
+        if (advantageOn) disadvantageOn = false;
+        renderToggles();
+      }),
+      toggleBox('Disadvantage', disadvantageOn, () => {
+        disadvantageOn = !disadvantageOn;
+        if (disadvantageOn) advantageOn = false;
+        renderToggles();
+      }),
+    );
+  }
+  renderToggles();
+
+  const toHitResultEl = el('div', { class: 'roller-result' });
+  const damageSubSection = buildDamageRollSection(state, data, refreshDependents, 'Damage (attack connected)');
+  damageSubSection.style.display = 'none';
+
+  const rollBtn = el('button', {
+    type: 'button',
+    class: 'roll-btn',
+    text: 'Roll to Hit',
+    onClick: () => {
+      const tier = currentTier();
+      const attributeValue = tier === 0 ? 0 : state.attributes[selectedAttribute];
+      const result = performCoreRoll({
+        attribute: attributeValue,
+        difficulty: selectedDefense,
+        skillTier: tier,
+        extraAdvantage: advantageOn ? 1 : 0,
+        extraDisadvantage: disadvantageOn ? 1 : 0,
+        klotho: state.subStats.Klotho,
+      });
+
+      if (result.luckyNumber) {
+        state.currentFateTokens += 1;
+        refreshHeader();
+      }
+
+      const hit = result.outcome === 'success' || result.outcome === 'critical-success';
+      damageSubSection.style.display = hit ? '' : 'none';
+
+      toHitResultEl.innerHTML = '';
+      const skillLabel = selectedSkill === UNTRAINED_VALUE ? 'Untrained' : `${selectedSkill} (${result.tierName})`;
+      toHitResultEl.append(
+        ...[
+          el('p', {}, [
+            el('strong', {}, `${skillLabel} vs Defense ${result.target}`),
+            result.mode !== 'normal' ? ` (${result.mode === 'advantage' ? 'Advantage' : 'Disadvantage'})` : '',
+          ]),
+          el('p', {}, diceSummary(result.roll)),
+          el('p', { class: outcomeClass(result.outcome) }, [
+            el('strong', {}, hit ? `${outcomeLabel(result.outcome)} - the attack connects` : `${outcomeLabel(result.outcome)} - the attack misses`),
+          ]),
+          result.reroll ? el('p', {}, `Master's reroll: ${diceSummary(result.reroll)}`) : null,
+          result.luckyNumber ? el('p', { class: 'status-ok' }, 'Lucky Number! +1 Fate Token.') : null,
+        ].filter((n) => n != null),
+      );
+    },
+  });
+
+  section.append(
+    el('h4', {}, 'Attack Roll'),
+    el('div', { class: 'roller-row' }, [el('label', {}, 'Skill'), skillSelect]),
+    attributeGroup,
+    el('div', { class: 'roller-row' }, [el('label', {}, "Target's Defense"), defenseSelect]),
+    tierGrantNote,
+    togglesRow,
+    rollBtn,
+    toHitResultEl,
+    damageSubSection,
+  );
+  section.refreshBoostRow = damageSubSection.refreshBoostRow;
+  return section;
+}
+
 // Damage dice pool - weapon/Gift attacks, per-die resolution against a
 // wall stat with an optional pre-committed Ki Infusion boost (see
 // rules.md#the-passive-wall-triad---soak-presence-psyche and #ki-infusion).
 // Dice count and the target's wall value are typed in directly rather than
 // looked up from a weapon/Gift catalog - see the discussion in
 // character-creator.notes.md for why that's out of scope for this pass.
-function buildDamageRollSection(state, data, refreshHeader) {
+function buildDamageRollSection(state, data, refreshHeader, heading = 'Damage Roll') {
   const section = el('div', { class: 'roller-gift-check' });
 
   let attackType = 'Physical';
@@ -469,7 +650,7 @@ function buildDamageRollSection(state, data, refreshHeader) {
   });
 
   section.append(
-    el('h4', {}, 'Damage Roll'),
+    el('h4', {}, heading),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Attack Type'), typeSelect]),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Dice'), diceInput]),
     el('div', { class: 'roller-row' }, [el('label', {}, "Target's Wall"), wallInput]),
