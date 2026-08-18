@@ -67,26 +67,21 @@ export default function buildGearShop(state, data) {
 
   function attemptPurchase(category, item) {
     const cw = currentCreationWealth(state);
-    if (item.wealth <= cw) {
-      addGearPurchase(state, { category, name: item.name, wealth: item.wealth, loss: 0 });
-      resultEl.innerHTML = '';
-    } else {
-      const gap = item.wealth - cw;
-      const result = performWealthCheck({ creationWealth: cw, gap });
-      addGearPurchase(state, { category, name: item.name, wealth: item.wealth, loss: result.loss });
-      resultEl.innerHTML = '';
-      resultEl.append(
-        el('p', {}, `Rolled ${result.roll.dice.join(', ')} → ${result.roll.sum} vs target ${result.target}`),
-        el('p', { class: outcomeClass(result.outcome) }, [el('strong', {}, outcomeLabel(result.outcome))]),
-        el(
-          'p',
-          {},
-          result.loss
-            ? `${item.name} acquired - creation-Wealth drops to ${currentCreationWealth(state)}.`
-            : `${item.name} acquired free and clear.`,
-        ),
-      );
-    }
+    const gap = item.wealth - cw;
+    const result = performWealthCheck({ creationWealth: cw, gap });
+    addGearPurchase(state, { category, name: item.name, wealth: item.wealth, loss: result.loss });
+    resultEl.innerHTML = '';
+    resultEl.append(
+      el('p', {}, `Rolled ${result.roll.dice.join(', ')} → ${result.roll.sum} vs target ${result.target}`),
+      el('p', { class: outcomeClass(result.outcome) }, [el('strong', {}, outcomeLabel(result.outcome))]),
+      el(
+        'p',
+        {},
+        result.loss
+          ? `${item.name} acquired - creation-Wealth drops to ${currentCreationWealth(state)}.`
+          : `${item.name} acquired free and clear.`,
+      ),
+    );
     renderSummary();
     renderPurchased();
     renderCategories();
@@ -106,12 +101,11 @@ export default function buildGearShop(state, data) {
           {},
           cat.items.map((item) => {
             const buyable = item.wealth != null;
-            const affordable = buyable && (item.wealth <= cw || item.wealth - cw <= cw);
+            const gap = item.wealth - cw;
+            const affordable = buyable && gap <= cw;
             const label = !buyable
               ? '-'
-              : item.wealth <= cw
-                ? 'Buy (free)'
-                : `Buy (Wealth Check, gap ${item.wealth - cw})`;
+              : `Buy (Wealth Check, risks ${Math.max(1, gap)} on failure)`;
             return el('tr', {}, [
               ...otherHeaders.map((h) => el('td', {}, item[h] ?? '')),
               el('td', {}, buyable ? String(item.wealth) : '-'),
@@ -153,7 +147,7 @@ export default function buildGearShop(state, data) {
     el(
       'p',
       { class: 'detail' },
-      'Items at or under your current creation-Wealth are free. Items above it may need a Wealth Check - a gap bigger than your current creation-Wealth means it can\'t be afforded at all. This pool is temporary bookkeeping for character creation only - it never touches your purchased Wealth Resource Level.',
+      'Every item needs a Wealth Check - there\'s no more automatic free purchase, even for something at or under your current creation-Wealth. A gap bigger than your current creation-Wealth means it can\'t be afforded at all. This pool is temporary bookkeeping for character creation only - it never touches your purchased Wealth Resource Level, and once creation ends every purchase uses the normal Pushing a Resource rule instead.',
     ),
     summaryEl,
     categoriesWrap,

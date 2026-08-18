@@ -19,17 +19,15 @@ Each Resource's Level table below defines what's available for free, no roll req
 
 Buying gear (see [Weapons & Equipment](weapons.md)) at character creation uses a dedicated procedure, not the general [Pushing a Resource](#pushing-a-resource) rule above.
 
-A character's **creation-Wealth** starts at **2**, unless they spent Resources Pool points on Wealth, in which case their purchased Level is used instead. Every gear item carries its own **Wealth rating** - the Level needed to get it for free, no roll, no limit on how many such items a character takes.
+A character's **creation-Wealth** starts at **2**, unless they spent Resources Pool points on Wealth, in which case their purchased Level is used instead. Every gear item carries its own **Wealth rating**. **Every purchase during character creation requires a roll - there is no automatic free item, even one at or under current creation-Wealth.**
 
-For an item whose Wealth rating exceeds the character's current creation-Wealth:
-
-1. Find the **gap**: the item's Wealth rating minus current creation-Wealth.
+1. Find the **gap**: the item's Wealth rating minus current creation-Wealth. This can be zero or negative for an item at or under current creation-Wealth.
 2. If the gap is **more than current creation-Wealth**, the item can't be afforded at all - no roll.
 3. Otherwise, roll a **Wealth Check**: 2d10 against creation-Wealth + Difficulty **6**, roll-under, standard critical results apply.
    - **Success**: the item is free.
-   - **Failure**: the character still gets the item. Creation-Wealth drops by the gap (or by **1** if the gap is exactly 1). A **critical failure** doubles this loss.
+   - **Failure**: the character still gets the item. Creation-Wealth drops by the gap, **floored at a minimum of 1** - even an inexpensive item with no real gap still costs at least 1 Level on a failed roll. A **critical failure** doubles this loss.
 
-Creation-Wealth carries across every purchase made during this shopping pass - once no remaining item is affordable (free or via a viable roll), gear shopping is over for this character creation. **This pool is temporary bookkeeping only**: it has no effect on the character's actual Wealth Resource once play begins, which stays at whatever Level was actually purchased.
+Creation-Wealth carries across every purchase made during this shopping pass - once no remaining item is affordable (via a viable roll), gear shopping is over for this character creation. **This pool is temporary bookkeeping only**: it has no effect on the character's actual Wealth Resource once play begins, which stays at whatever Level was actually purchased. Once creation ends, this procedure stops applying entirely - every purchase from then on uses the general [Pushing a Resource](#pushing-a-resource) rule above, unaffected by anything that happened during creation shopping.
 
 | Resource | What Scales by Level |
 |---|---|
