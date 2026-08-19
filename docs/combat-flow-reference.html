@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Combat Flow Reference - 20 Below</title>
+<title>Player's Quick Reference - 20 Below</title>
 <link rel="icon" type="image/x-icon" href="assets/brand/favicon.ico" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
 <link rel="apple-touch-icon" href="assets/brand/favicon-128.png" />
@@ -45,44 +45,71 @@
     line-height: 1.5;
     margin-bottom: 2rem;
   }
-  .step {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  .step-number {
-    flex-shrink: 0;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    background: var(--accent-dim);
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.1rem;
-  }
-  .step-body {
-    flex: 1;
+  a { color: var(--accent); }
+
+  .toc {
     background: var(--panel);
     border: 1px solid var(--panel-border);
     border-radius: var(--radius);
-    padding: 1rem 1.25rem;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
   }
-  .step-body h2 {
-    margin: 0 0 0.5rem;
-    font-size: 1.1rem;
-  }
-  .step-body p {
+  .toc h2 {
     margin: 0 0 0.75rem;
-    line-height: 1.5;
-    color: var(--text);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-dim);
   }
-  .step-body p:last-child {
+  .toc ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    line-height: 1.9;
+  }
+  .toc a { text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  .faq-section {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+    scroll-margin-top: 1.5rem;
+  }
+  .faq-section:nth-of-type(even) {
+    background: var(--bg);
+  }
+  .faq-section h2 {
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--panel-border);
+  }
+  .faq-section > p {
+    line-height: 1.6;
+    margin: 0 0 1rem;
+  }
+  .faq-section > p:last-child {
     margin-bottom: 0;
   }
+
+  .chart-frame {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .chart-frame img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .chart-caption {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+  }
+
   .roll-box {
     background: var(--bg);
     border: 1px solid var(--accent-dim);
@@ -92,226 +119,250 @@
     color: var(--accent);
     display: inline-block;
   }
-  .bracket-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
-  .bracket-card {
-    flex: 1 1 160px;
-    background: var(--bg);
-    border: 1px solid var(--panel-border);
-    border-radius: var(--radius);
-    padding: 0.75rem;
-  }
-  .bracket-name {
-    font-weight: 700;
-    color: var(--accent);
-    margin-bottom: 0.2rem;
-  }
-  .bracket-actions {
-    font-size: 0.8rem;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    margin-bottom: 0.4rem;
-  }
-  .bracket-desc {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
   .aside {
     font-size: 0.85rem;
     color: var(--text-dim);
-  }
-  .resolve-list {
-    margin: 0 0 0.75rem;
-    padding-left: 1.25rem;
-    line-height: 1.6;
-  }
-  .resolve-list li {
-    margin-bottom: 0.3rem;
-  }
-  a { color: var(--accent); }
-  h2.section-heading {
-    margin: 2.5rem 0 1rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid var(--panel-border);
-    font-size: 1.3rem;
-  }
-  .step-letter {
-    flex-shrink: 0;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    background: var(--panel);
-    border: 1px solid var(--panel-border);
-    color: var(--text-dim);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.1rem;
   }
 </style>
 </head>
 <body>
 <main>
   <a class="back-link" href="../index.html">&larr; Back to 20 Below</a>
-  <h1>Combat Flow Reference</h1>
+  <h1>Player's Quick Reference</h1>
   <p class="note">
-    A plain-language walkthrough of how a fight actually plays out, step by step, with the exact roll for each part.
-    See <a href="../rules/rules.html#combat">rules.md</a> for the full rules text.
+    A plain-language answer to the questions that come up most at the table, with the exact roll for each one.
+    See <a href="../rules/rules.html">rules.md</a> for the full rules text.
   </p>
 
-  <div class="step">
-    <div class="step-number">1</div>
-    <div class="step-body">
-      <h2>Initiative</h2>
-      <p>At the start of the fight, everyone rolls once to see who acts first. This order holds for the entire fight - you don't re-roll each round.</p>
-      <div class="roll-box">1d10 + Initiative sub-stat</div>
+  <nav class="toc">
+    <h2>Questions</h2>
+    <ol>
+      <li><a href="#how-do-i-use-a-skill">How Do I Use a Skill?</a></li>
+      <li><a href="#how-do-i-use-my-resources">How Do I Use My Resources?</a></li>
+      <li><a href="#how-does-fate-work">How Does Fate Work?</a></li>
+      <li><a href="#how-does-ki-work">How Does Ki Work?</a></li>
+      <li><a href="#how-does-combat-work">How Does Combat Work?</a></li>
+      <li><a href="#how-does-initiative-work">How Does Initiative Work?</a></li>
+      <li><a href="#how-do-action-brackets-work">How Do Action Brackets Work?</a></li>
+      <li><a href="#how-do-i-attack">How Do I Attack?</a></li>
+      <li><a href="#how-do-i-deal-damage">How Do I Deal Damage?</a></li>
+      <li><a href="#what-happens-to-my-health">What Happens to My Health?</a></li>
+      <li><a href="#what-happens-to-my-poise">What Happens to My Poise?</a></li>
+      <li><a href="#what-happens-to-my-sanity">What Happens to My Sanity?</a></li>
+      <li><a href="#how-do-i-use-a-gift">How Do I Use a Gift?</a></li>
+      <li><a href="#what-are-advantage-and-disadvantage">What Are Advantage and Disadvantage?</a></li>
+      <li><a href="#how-far-can-i-move">How Far Can I Move?</a></li>
+      <li><a href="#what-does-armor-do">What Does Armor Do?</a></li>
+      <li><a href="#how-do-called-shots-work">How Do Called Shots Work?</a></li>
+      <li><a href="#what-is-distracted">What Is Distracted?</a></li>
+      <li><a href="#what-is-surprised">What Is Surprised?</a></li>
+    </ol>
+  </nav>
+
+  <section class="faq-section" id="how-do-i-use-a-skill">
+    <h2>How Do I Use a Skill?</h2>
+    <p>Pick the Attribute that best fits how you're doing the thing - any of the five can pair with any Skill, as long as you can tie it to one of your character's own Descriptors. Say you're using Persuasion to lean on an informant: instead of defaulting to whichever Attribute usually pairs with Persuasion, you could argue for Fire instead, because your character bought the Ferocity Descriptor <em>Ruthless</em> - you're not charming this person, you're making it very clear what happens if they don't talk. Any Skill can pair with any Attribute this way, as long as a real, established piece of your character backs up the pairing instead of an excuse invented on the spot. Add that Attribute to the Difficulty the GM sets for the task, then roll.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/skill-attribute-fan.svg" alt="A Skill isn't locked to one Attribute. Any Skill can pair with Earth, Air, Fire, Water, or Moira, as long as the pairing is grounded in one of the character's own Descriptors." />
     </div>
-  </div>
+    <div class="roll-box">Attribute + Difficulty, roll 2d10</div>
+    <p>Equal to or under your target number is a success. Over it is a failure. A roll of 2 (both dice show 1) is always a critical success, and a roll of 20 (both dice show 10) is always a critical failure - no matter what your target number was.</p>
+    <p class="aside">No applicable Skill for the task? You still roll, but the Attribute doesn't apply - your target number is just the Difficulty on its own (0-10).</p>
+  </section>
 
-  <div class="step">
-    <div class="step-number">2</div>
-    <div class="step-body">
-      <h2>Declare Action Bracket</h2>
-      <p>Each round, before anyone acts, every character quietly picks how they're playing it this round: <strong>Fast</strong>, <strong>Normal</strong>, or <strong>Slow</strong>. This decides how many actions you get and when you act relative to everyone else.</p>
-      <div class="bracket-grid">
-        <div class="bracket-card">
-          <div class="bracket-name">Fast</div>
-          <div class="bracket-actions">1 action</div>
-          <div class="bracket-desc">A snap shot, a move, one Skill use. Acts first, but that's all you get.</div>
-        </div>
-        <div class="bracket-card">
-          <div class="bracket-name">Normal</div>
-          <div class="bracket-actions">2 actions</div>
-          <div class="bracket-desc">Move and attack, for example. Acts second - the balanced middle.</div>
-        </div>
-        <div class="bracket-card">
-          <div class="bracket-name">Slow</div>
-          <div class="bracket-actions">1 action, empowered</div>
-          <div class="bracket-desc">Acts last, but that one action allows called shots and gets Advantage.</div>
-        </div>
-      </div>
+  <section class="faq-section" id="how-do-i-use-my-resources">
+    <h2>How Do I Use My Resources?</h2>
+    <p>Each Resource you own - say, Wealth - has a free tier: anything within its Level's own description just happens, no roll needed. It's only when you want to reach past that free scope that you roll a <strong>Resource Check</strong>. The GM sets a <strong>Resource Index</strong> from 1 to 6 for how far beyond your Resource's ordinary reach the ask is - it inverts just like Defense, so a <em>lower</em> Resource Index is easier (1 adds 9 to your target) and a <em>higher</em> one is harder (6 adds only 4).</p>
+    <div class="roll-box">Resource Level + (10 &minus; Resource Index), roll 2d10</div>
+    <div class="chart-frame">
+      <img src="assets/diagrams/resource-index-curve.svg" alt="A lower Resource Index adds more to your target number, making the check easier. Resource Index 1 adds 9, Resource Index 6 adds only 4, the minimum any Resource Check can add." />
     </div>
-  </div>
+    <p>Say your Wealth is Level 3 and you want to swing something past what Level 3 normally covers - the GM calls it a Resource Index of 3. Your target number is 3 + (10 &minus; 3) = 10. Roll 2d10: 10 or under, the money comes together and nothing else happens. Over 10, you still pull it off - a Resource Check never stops you from getting what you were after - but your Wealth drops to Level 2 until the start of next Month, stretched thin from calling in favors and draining accounts.</p>
+    <p class="aside"><strong>Reaching beyond your means:</strong> you can attempt a Resource Index up to 2 higher than your Resource's current Level - anything further out of reach can't be attempted at all. Reaching that far always gets you what you wanted, but drops the Resource all the way to 0 for the Month, win or lose - unless you roll a critical success, which lets you off with no cost at all. Resource Index 6 always counts as reaching that far, no matter how high your Resource actually is - it's the one case even a critical success can't save.</p>
+  </section>
 
-  <div class="step">
-    <div class="step-number">3</div>
-    <div class="step-body">
-      <h2>Resolve Actions</h2>
-      <p>Once everyone's declared, the round actually plays out in three passes:</p>
-      <ol class="resolve-list">
-        <li><strong>All Fast actions</strong> happen first, in Initiative order.</li>
-        <li>Then <strong>all Normal actions</strong>, in Initiative order.</li>
-        <li>Then <strong>all Slow actions</strong>, in Initiative order.</li>
-      </ol>
-      <p class="aside">Spending 1 Ki bumps your bracket up one step (Slow &rarr; Normal, or Normal &rarr; Fast); 2 Ki bumps it up two steps at once.</p>
+  <section class="faq-section" id="how-does-fate-work">
+    <h2>How Does Fate Work?</h2>
+    <p>Fate Tokens are what you spend to bend a bad roll, dodge a bad situation, or just declare that something goes your way. Every time you spend one, you immediately risk your Ki - a separate pool from your Fate Tokens - with a quick roll called a Fatigue Check.</p>
+    <div class="roll-box">Fatigue Check: roll 2d10 vs. Ki</div>
+    <div class="chart-frame">
+      <img src="assets/diagrams/fate-spend-flow.svg" alt="Spending a Fate Token triggers a Fatigue Check, 2d10 against your Ki. Success costs nothing further. Failure loses 1 Ki, but the Fate Token's effect happens either way." />
     </div>
-  </div>
+    <p>Succeed, and the token's effect just happens, no further cost. Fail, and you lose 1 point of Ki until you rest it back (a Short Rest refills some, a Full Night's Rest fills it completely) - your body paying the toll for that stroke of fortune.</p>
+    <p>A single Fate Token buys one of five things, flat cost every time: ignore one of your Flaws for the rest of the scene, succeed at a roll automatically with no dice involved, gain Advantage on a roll you're not already trained for, shrug off a bad status like Flustered or Exhausted, or refill your Ki pool completely, right there in the moment.</p>
+    <p>Want something bigger than that - bending the actual fiction, not just a roll? That's <strong>Kotodama</strong>: spend Fate Tokens to declare a fact and have the world bend to make it true. The bigger the claim, the farther it reaches, and the harder it'd be to explain away after the fact, the more it costs - and multiple characters can pool their tokens together for something none of them could manage alone.</p>
+    <p class="aside">You can only spend Fate Tokens so many times per Scene - your Stamina score sets that cap, no matter how many tokens you're actually holding. And every token you spend hands the GM one back, to spend on complications and twists of their own - spending big doesn't just cost you, it hands the GM more to work with too.</p>
+  </section>
 
-  <h2 class="section-heading">How Attacks Work</h2>
-
-  <div class="step">
-    <div class="step-letter">A</div>
-    <div class="step-body">
-      <h2>Do You Even Hit?</h2>
-      <p>Before anything else, you have to actually land the hit. This works the same whether you're swinging a fist, saying something cutting, or pushing into someone's mind - roll your Attribute + Skill against how hard the target is to hit.</p>
-      <div class="roll-box">Attribute + Skill vs. target's Defense</div>
-      <p>Roll 2d10 and add them up. If your total is <strong>equal to or less than</strong> your target number, you hit. Higher than that, and it's a miss - nothing happens this time.</p>
+  <section class="faq-section" id="how-does-ki-work">
+    <h2>How Does Ki Work?</h2>
+    <p>Ki is your body's own reserve of extra capability - separate from Fate Tokens, and not something you earn moment to moment. It's fixed by your build: average your Soak, Initiative, Ferocity, Stamina, and Atropos sub-stats, then double the result.</p>
+    <div class="roll-box">Ki = average of Soak / Initiative / Ferocity / Stamina / Atropos, doubled</div>
+    <div class="chart-frame">
+      <img src="assets/diagrams/ki-four-jobs.svg" alt="Ki serves as the target number for a Fatigue Check, and can be directly spent three ways: to preserve a Health or Sanity Level, to bump an Action Bracket up a step, or to boost an attack die via Ki Infusion." />
     </div>
-  </div>
+    <p>You already met one job Ki does above: it's the number a Fatigue Check rolls against. Beyond that, you can spend Ki three more ways, all direct spends with no roll involved. 1 Ki preserves a Health Level or Sanity Level that would otherwise be lost - cancelling the hit before it happens. Poise works differently: Ki can't stop a Poise hit from landing, but once you're at 0 Poise, 1 Ki refills it straight back to full. 1 Ki also bumps your Action Bracket up a step - Slow to Normal, or Normal to Fast, with 2 Ki jumping both steps at once. And 1 Ki per die boosts an attack die, adding your own Ferocity, Presence, or Psyche to that die's result, decided before you see how any of the dice actually land.</p>
+    <p class="aside">Only a Fatigue Check risks losing Ki. Preserving a Level, bumping a Bracket, and boosting a die are all direct spends - no roll, no risk, and none of them count against your Stamina's per-Scene Fate Token cap.</p>
+    <p>A Short Rest gives back half your Klotho, rounded up. A Full Night's Rest fills Ki all the way back up.</p>
+  </section>
 
-  <div class="step">
-    <div class="step-letter">B</div>
-    <div class="step-body">
-      <h2>How Much Gets Through?</h2>
-      <p>Now roll a handful of dice - how many depends on what you're using (a weapon, a Gift, whatever fits the attack). Check each die one at a time against the target's toughness for that kind of attack: <strong>Soak</strong> for a physical hit, <strong>Presence</strong> for words, <strong>Psyche</strong> for a mental push.</p>
-      <div class="roll-box">Each die vs. Soak / Presence / Psyche</div>
-      <p>A die <strong>higher than</strong> that number gets through. A die <strong>equal to or lower</strong> just bounces off, no effect. Each connecting die costs the target one Health Level, Poise, or Sanity - whichever fits the attack.</p>
-      <p class="aside">Spending 1 Ki per die lets you boost that die, adding your own Ferocity (Physical), Presence (Social), or Psyche (Mental) to its result - decided before any dice are rolled, not after seeing a bad one. Enough boosted dice can crack through even a maxed-out wall.</p>
+  <section class="faq-section" id="how-does-combat-work">
+    <h2>How Does Combat Work?</h2>
+    <p>Everyone rolls Initiative once, at the very start of the fight - that order holds for the whole thing, no re-rolling each round. From there, every fight runs on the same loop, whether the attack is a fist, a threat, or a mind reaching where it isn't welcome: declare how you're playing the round, act in that order, roll to see if you land the hit, then roll to see how much of it actually gets through.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/combat-overview-flow.svg" alt="Combat overview flow chart: Initiative is rolled once and holds for the whole fight. Then each round: Declare Action Bracket, then Act in Bracket Order, then Roll to Hit (Attacker's Attribute vs. Defender's Defense). A miss ends the attack. A hit rolls damage dice, each resolved individually against the defender's wall (Soak, Presence, or Psyche) - a die at or below the wall is absorbed with no effect, a die above it connects and costs the defender one Health, Poise, or Sanity Level." />
+      <p class="chart-caption">The shape of every fight, start to finish. Each piece gets its own answer below.</p>
     </div>
-  </div>
+    <p>The rest of this page walks through each step of that loop in detail - what "Attribute vs. Defense" actually means, how the damage dice work, and how you recover afterward.</p>
+  </section>
 
-  <h2 class="section-heading">How Damage Works</h2>
+  <section class="faq-section" id="how-does-initiative-work">
+    <h2>How Does Initiative Work?</h2>
+    <p>Roll once, right at the start of the fight - that order holds for the whole thing, no re-rolling each round.</p>
+    <div class="roll-box">1d10 + Initiative, highest acts first</div>
+    <p class="aside">This is one of the only rolls in the game where higher is better, not lower - along with damage dice (a higher result is more likely to connect), it's the exception to the roll-under shape almost everything else in 20 Below uses.</p>
+  </section>
 
-  <div class="step">
-    <div class="step-letter">C</div>
-    <div class="step-body">
-      <h2>Health Levels (Physical)</h2>
-      <p>Think of Health Levels as a row of boxes, not one big number - each box takes exactly one hit before it's gone. Everyone starts with 5, plus whatever they've put into their Health sub-stat.</p>
-      <div class="roll-box">5 + Health sub-stat</div>
-      <p>At 0, you're unconscious and can't act. Go far enough past that and you die. One attack can never wipe out more boxes than it takes to reach 0 - even a huge hit just lands you exactly at 0, no further. Once you're already at 0, any later attack can only take one more box, no matter how many dice connect.</p>
-      <p class="aside">Spending 1 Ki cancels the loss of one Health Level - 1 Ki per Level saved, and you can spend more than one at once. Dropping to 0 anyway leaves a permanent scar. See <a href="scars.html">Scars</a>.</p>
+  <section class="faq-section" id="how-do-action-brackets-work">
+    <h2>How Do Action Brackets Work?</h2>
+    <p>Once Initiative is set for the fight, every round starts the same way: before anyone acts, each character quietly picks one of three Action Brackets for that round. It decides both how many actions you get and when you act relative to everyone else.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/action-brackets-comparison.svg" alt="Fast gives one action and acts first. Normal gives two actions and acts second. Slow gives one empowered action, allowing called shots and Advantage, and acts last." />
     </div>
-  </div>
+    <p><strong>Fast</strong> trades action count for speed - a snap shot, a move, a single Skill use, but only the one action. <strong>Normal</strong> is the balanced middle: two actions, like moving and then attacking, acting second. <strong>Slow</strong> trades speed for power - still just one action, but it allows called shots and gets Advantage on the attack; the tradeoff is going last.</p>
+    <p>Once everyone's declared, the round plays out in three passes: every Fast character acts first, then every Normal character, then every Slow character - within each pass, whoever rolled higher on Initiative goes first.</p>
+    <p class="aside">Spending 1 Ki bumps your declared Bracket up a step - Slow to Normal, or Normal to Fast - buying back speed at the cost of the resource. 2 Ki bumps two steps at once, straight from Slow to Fast.</p>
+  </section>
 
-  <div class="step">
-    <div class="step-letter">D</div>
-    <div class="step-body">
-      <h2>Poise (Social)</h2>
-      <p>Poise is also a row of boxes, one hit each, starting at 5 plus your Presence sub-stat - but it tracks your composure under Social attack instead of physical harm: cutting words, humiliation, pressure.</p>
-      <div class="roll-box">5 + Presence</div>
-      <p>The one difference: Poise can't go below 0. Once you're there, you're as Flustered as it gets - stuck at Disadvantage - but nothing worse happens after that.</p>
-      <p class="aside">Spending 1 Ki cancels the loss of one Poise Level, same rate as Health - 1 Ki per Level saved.</p>
+  <section class="faq-section" id="how-do-i-attack">
+    <h2>How Do I Attack?</h2>
+    <p>Every attack - a punch, a threat, a mind reaching where it isn't welcome - starts the same way: roll your Attribute against the target's Defense. No Skill involved, just the attacker's Attribute against how hard the target is to touch.</p>
+    <div class="roll-box">Attribute + Defense, roll 2d10</div>
+    <p>Which Attribute? Earth, Air, Fire, or Water - whichever matches how you're actually attempting the attack, not your weapon, and never Moira. Smashing through a guard is Earth. A precise thrust through an opening is Air. A furious, relentless assault is Fire. Reading your opponent and striking the moment they overextend is Water. Two characters swinging the exact same sword can use two different Attributes here, because the element describes the approach, not the tool in your hand.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/attack-elements-row.svg" alt="Earth is Force, Air is Precision, Fire is Intensity, Water is Adaptation. Moira is never an attacking element." />
     </div>
-  </div>
+    <p>Equal to or under your target number, you hit and move on to rolling damage. Over it, you miss - nothing happens this time. The same critical rule applies as anywhere else: a roll of 2 is always a critical success, a roll of 20 is always a critical failure, no matter the target number.</p>
+    <p class="aside">Declare your approach before you roll, not after seeing how the dice land. And this choice only feeds the to-hit roll - it doesn't change what category the attack is (Physical, Social, or Mental) or what damage your weapon actually deals.</p>
+  </section>
 
-  <div class="step">
-    <div class="step-letter">E</div>
-    <div class="step-body">
-      <h2>Sanity (Mental)</h2>
-      <p>Sanity is also a row of boxes, one hit each, starting at 5 plus your Psyche sub-stat - tracking your grip on your own mind under Mental attack.</p>
-      <div class="roll-box">5 + Psyche</div>
-      <p>Unlike Poise, Sanity can drop below 0. At 0 you're <strong>Overwhelmed</strong> - a temporary bad mental trait, Disadvantage, but you can still act on your own. Push it below 0 and you're <strong>Shattered</strong> - you can't act alone anymore, someone has to lead you. Dropping below 0 always leaves a lasting mental scar, even after you recover.</p>
-      <p class="aside">Spending 1 Ki cancels the loss of one Sanity Level, same rate as Health. See <a href="scars.html">Scars</a>.</p>
+  <section class="faq-section" id="how-do-i-deal-damage">
+    <h2>How Do I Deal Damage?</h2>
+    <p>Once your attack hits, roll a handful of dice - how many depends on what you're using (a weapon, a Gift, whatever fits the attack). Check each die one at a time against the target's toughness for that kind of attack: <strong>Soak</strong> for a Physical hit, <strong>Presence</strong> for a Social one, <strong>Psyche</strong> for a Mental one.</p>
+    <div class="roll-box">Each die vs. Soak / Presence / Psyche</div>
+    <p>A die <strong>higher</strong> than that number connects. A die <strong>equal to or lower</strong> just bounces off, no effect. Each connecting die costs the target one Health Level, Poise, or Sanity - whichever fits the attack. A heavier weapon doesn't hit harder per die, it just rolls more dice - more independent chances for one of them to connect.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/damage-per-die-resolution.svg" alt="Physical attack per-die resolution chart: a weapon rating sets how many d10 are rolled. Each die is compared individually against the defender's Soak - in this example, Soak 6. A die of 3 or 6 is at or below Soak and is absorbed with no effect. A die of 9 or 10 is above Soak and connects, costing 1 Health Level." />
+      <p class="chart-caption">Soak 6, four dice rolled: 3 and 6 bounce off, 9 and 10 connect - two Health Levels lost from this one attack.</p>
     </div>
-  </div>
+    <p class="aside">A wall stat of 10 fully blocks every unboosted die, guaranteed. Spending 1 Ki per die lets you boost that specific die, adding your own Ferocity (Physical), Presence (Social), or Psyche (Mental) to its result - decided before any of the attack's dice are rolled, not chosen afterward to salvage a bad one. Enough boosted dice can crack even a maxed-out wall.</p>
+  </section>
 
-  <h2 class="section-heading">Healing Damage</h2>
-
-  <div class="step">
-    <div class="step-letter">F</div>
-    <div class="step-body">
-      <h2>Health Levels</h2>
-      <p>Rest is the normal way back. A short breather patches up some of your boxes based on your Health sub-stat; a full night's sleep patches up every box you've lost.</p>
-      <div class="roll-box">Short Rest: Health sub-stat &divide; 2 (round up) &middot; Full Night's Rest: full</div>
-      <p class="aside">If you're already below 0, healing is slower - 1 Health Level per day of rest, until you're back up to 0. Normal recovery picks up again from there.</p>
+  <section class="faq-section" id="what-happens-to-my-health">
+    <h2>What Happens to My Health?</h2>
+    <p>Health Levels aren't a number that ticks down - think of them as a row of boxes, each one able to absorb exactly one connecting hit before it's gone. Everyone starts with 5, plus whatever you've put into your Health sub-stat.</p>
+    <div class="roll-box">Health Levels = 5 + Health</div>
+    <div class="chart-frame">
+      <img src="assets/diagrams/health-track.svg" alt="Health Levels are a row of boxes, each absorbing one hit. Once all are lost, further damage pushes into negative territory rather than a hard stop." />
     </div>
-  </div>
+    <p>At 0, you're unconscious and can't act. A single attack can never carry you straight past 0 into negative territory - even a huge hit just lands you exactly at 0, no further, no matter how many dice connected. Once you're already at 0, though, any later attack can only take one more Level, no matter how many dice connect that time.</p>
+    <p>Health Levels can still go negative from there - drop low enough (at or below your negative Health sub-stat) and you die. Normally this plays out off-screen, since an unconscious character can't act or know what's happening; Unstoppable is the one Boon that keeps you conscious and acting through that same range instead of blacking out at 0.</p>
+    <p class="aside">Spending 1 Ki cancels the loss of one Health Level entirely - 1 Ki per Level, and you can spend more than one at once. Dropping to 0 anyway leaves a permanent scar, purely cosmetic; dropping below 0 can instead impose a real Flaw until you're fully healed back to 0. The Healing and Regeneration Gifts both grant immunity to the scar, for whoever they're used on.</p>
+    <p>Recovery: a Short Rest heals half your Health sub-stat, rounded up. A Full Night's Rest heals you back to full. If you're already below 0, healing is slower - 1 Health Level per rest, Short or Full, until you're back up to 0. Normal recovery picks up again from there.</p>
+  </section>
 
-  <div class="step">
-    <div class="step-letter">G</div>
-    <div class="step-body">
-      <h2>Poise</h2>
-      <p>A short breather patches up some of your lost Poise based on your Presence; a full night's sleep patches up all of it.</p>
-      <div class="roll-box">Short Rest: Presence &divide; 2 (round up) &middot; Full Night's Rest: full</div>
+  <section class="faq-section" id="what-happens-to-my-poise">
+    <h2>What Happens to My Poise?</h2>
+    <p>Poise is the same row-of-boxes shape as Health, but it tracks your composure under Social attack instead - cutting words, humiliation, pressure. You start with 5, plus whatever you've put into your Presence sub-stat.</p>
+    <div class="roll-box">Poise = 5 + Presence</div>
+    <div class="chart-frame">
+      <img src="assets/diagrams/poise-track.svg" alt="Poise mirrors Health Levels but cannot drop below 0. Once at 0, a character is Flustered - further connecting Social dice have no additional effect." />
     </div>
-  </div>
+    <p>The one real difference from Health: Poise can't go below 0. Once you're there, you're already as Flustered as it gets - further connecting Social dice just don't do anything more.</p>
+    <p><strong>Flustered</strong> gives you Disadvantage on all Social rolls, and on anything else where composure matters, for the rest of the Scene. You can spend an action to roll Presence against a Difficulty to shake it off early - succeed, and the condition ends right there.</p>
+    <p class="aside">Ki works differently here than it does for Health: it can't stop a Poise hit from landing in the first place. But once you're at 0, spending 1 Ki refills your Poise straight back to full.</p>
+    <p>Recovery: a Short Rest heals half your Presence, rounded up. A Full Night's Rest heals you back to full. Dropping to 0 leaves a purely cosmetic social tell - a nervous habit, a reputation quirk - no mechanical effect, and no Gift grants immunity to it.</p>
+  </section>
 
-  <div class="step">
-    <div class="step-letter">H</div>
-    <div class="step-body">
-      <h2>Sanity</h2>
-      <p>A short breather patches up some of your lost Sanity based on your Psyche; a full night's sleep patches up all of it.</p>
-      <div class="roll-box">Short Rest: Psyche &divide; 2 (round up) &middot; Full Night's Rest: full</div>
-      <p class="aside"><strong>Overwhelmed</strong> (at 0) clears once you're away from whatever caused it and get a chance to rest - or by spending 1 Ki, which also fills Sanity back to full. <strong>Shattered</strong> (below 0) clears via the same two triggers - removal from the stimulus plus rest, or spending 1 Ki - but either one only refills you to 1, not full; normal recovery continues from there.</p>
+  <section class="faq-section" id="what-happens-to-my-sanity">
+    <h2>What Happens to My Sanity?</h2>
+    <p>Sanity is the same row-of-boxes shape as Health, tracking your grip on your own mind under Mental attack. You start with 5, plus whatever you've put into your Psyche sub-stat.</p>
+    <div class="roll-box">Sanity = 5 + Psyche</div>
+    <div class="chart-frame">
+      <img src="assets/diagrams/sanity-track.svg" alt="Sanity mirrors Health Levels. At 0 a character is Overwhelmed; below 0 they are Shattered and can't act alone." />
     </div>
-  </div>
+    <p>Sanity crosses zero exactly like Health does - a single attack can never carry you straight past 0, and once you're already at 0, any later attack can only take one more Level no matter how many dice connect. Unlike Poise, though, Sanity keeps going into negative territory.</p>
+    <p><strong>At 0, you're Overwhelmed</strong>: a temporary bad mental trait plus Disadvantage on your rolls, but you can still act on your own. It clears once you're away from whatever caused it and get a chance to rest, or by spending 1 Ki, which also fills Sanity back to full.</p>
+    <p><strong>Below 0, you're Shattered</strong>: panicky, babbling, unable to act alone - someone has to lead or drag you. It clears the same two ways, removal-plus-rest or 1 Ki, but either one only brings you back to 1, not full; normal recovery picks up from there. Dropping below 0 always leaves a permanent mental scar, even if you recover with Ki.</p>
+    <p class="aside">Spending 1 Ki can also cancel the loss of a Sanity Level outright, the same as Health - 1 Ki per Level, before the hit ever lands. That's separate from the Ki spend above, which only comes into play once you're already at 0 or below.</p>
+    <p>Recovery: a Short Rest heals half your Psyche, rounded up. A Full Night's Rest heals you back to full.</p>
+  </section>
 
-  <div class="step">
-    <div class="step-letter">I</div>
-    <div class="step-body">
-      <h2>Ki</h2>
-      <p>A short breather refills some of your spent Ki based on your Klotho; a full night's sleep refills it completely.</p>
-      <div class="roll-box">Short Rest: Klotho &divide; 2 (round up) &middot; Full Night's Rest: full</div>
+  <section class="faq-section" id="how-do-i-use-a-gift">
+    <h2>How Do I Use a Gift?</h2>
+    <p>There's no single "Gift roll" - using a Gift means checking that Gift's own entry for which of three tools it actually calls for, since not every Gift uses all three, or even any of them.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/gift-three-tools.svg" alt="Using a Gift can call for a roll reusing an existing resolution type, a direct Ki cost, or a Gift Check against Ki plus Stamina. Not every Gift uses all three." />
     </div>
-  </div>
+    <p>Some Gifts need an actual roll, and when they do, it's always a roll you already know how to make: a weapon-style attack, the same self-paired Presence or Psyche attack shape as any Social or Mental attack, or a plain Attribute + Difficulty check. Some Gifts have a flat <strong>Ki cost</strong> instead - a direct spend, no roll at all, called out explicitly in that Gift's own text.</p>
+    <p>And some Gifts risk a <strong>Gift Check</strong>: a resource-risk roll against your own Ki and Stamina combined.</p>
+    <div class="roll-box">Gift Check: roll 2d10 vs. Ki + Stamina</div>
+    <p>Succeed, and using the Gift costs you nothing extra. Fail, and you lose 1 Ki until it's refilled - either way, the Gift's effect still happens.</p>
+    <p class="aside">These three tools aren't exclusive - a single Gift can call for more than one at once, say an attack roll to land it plus a Gift Check to actually trigger the effect. Always check the specific Gift and Level you're using; there's no one universal formula that covers all of them.</p>
+  </section>
 
-  <p class="note">Two Gifts can speed any of this up: <a href="../rules/gifts.html#healing">Healing</a> lets someone else mend you faster, and <a href="../rules/gifts.html#regeneration">Regeneration</a> does the same thing to yourself.</p>
+  <section class="faq-section" id="what-are-advantage-and-disadvantage">
+    <h2>What Are Advantage and Disadvantage?</h2>
+    <p>Both change how many dice you roll, not your target number. Since 20 Below is roll-under, lower is always better - so Advantage helps you and Disadvantage hurts you, but they work through the exact same mechanism.</p>
+    <div class="roll-box">Advantage: roll 3d10, keep the lowest two &middot; Disadvantage: roll 3d10, keep the highest two</div>
+    <div class="chart-frame">
+      <img src="assets/diagrams/advantage-disadvantage-dice.svg" alt="Both roll 3d10. Advantage keeps the lowest two results and discards the highest. Disadvantage keeps the highest two results and discards the lowest." />
+    </div>
+    <p>You need a specific rule to actually grant either one - an Expert or Master Skill Training Tier, fighting with your off-hand, a Fate Token spend, and so on. Nothing gives you Advantage or Disadvantage just because a scene feels tense.</p>
+    <p class="aside">Both are binary - stacking more sources of the same one doesn't compound it into something bigger. Have sources of both at once? They cancel 1-for-1, and whatever's left over after canceling is what applies. Equal sources on both sides cancel out completely, and you just roll normally.</p>
+  </section>
+
+  <section class="faq-section" id="how-far-can-i-move">
+    <h2>How Far Can I Move?</h2>
+    <p>Distance in a fight isn't measured on a grid - it's tracked in four loose <strong>Range Bands</strong>: Melee, Close, Near, and Far. The GM assigns them per scene rather than counting squares, and they're what weapon reach, targeting, and spotting all key off of.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/range-bands-ladder.svg" alt="Distance is tracked in four loose bands: Melee, Close, Near, and Far. Spending a full Movement Rate shifts one band." />
+    </div>
+    <div class="roll-box">Movement Rate = 5 + Air, in meters</div>
+    <p>You can move up to your Movement Rate as part of a Fast action's one action, or as the move component of a Normal action. As a rough conversion, not a strict count, spending a full Movement Rate shifts you one Range Band - though the GM can just narrate a shift directly when the fiction obviously calls for it, without making anyone do the math.</p>
+  </section>
+
+  <section class="faq-section" id="what-does-armor-do">
+    <h2>What Does Armor Do?</h2>
+    <p>Armor doesn't add to your Soak - it's its own separate layer, with its own <strong>Hardness</strong> (a threshold on the same 0-10 scale as Soak) and its own Health Levels, tracked apart from yours. Every piece covers one of two Zones: Body or Head.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/armor-zones.svg" alt="Normal attacks resolve against Body-Zone armor. Only a called shot, legal as a Slow Action Bracket, can target Head-Zone armor instead." />
+    </div>
+    <p>While it still has Health Levels left, armor intercepts every die aimed at the Zone it covers, before your own Soak ever gets involved.</p>
+    <div class="roll-box">Die &le; Hardness: deflected free &middot; Die &gt; Hardness: stopped, costs the armor 1 Health Level</div>
+    <p>Either way, you take nothing while the armor holds - a die that beats Hardness still doesn't touch you, it just costs the armor a Health Level instead. An armor item never loses more than 1 Health Level per attack, no matter how many dice beat its Hardness that time.</p>
+    <p class="aside">Once an armor item hits 0 Health Levels, it's broken - it stops covering its Zone entirely, and dice resolve straight against your own Soak until it's repaired. Ki Spend to Preserve only ever protects your own Health or Sanity (or, for Poise, its own separate refill-after-0 rule) - none of that can prevent or undo an armor Health Level loss. And armor doesn't stack: own two items covering the same Zone, and only one is actually worn there at a time.</p>
+  </section>
+
+  <section class="faq-section" id="how-do-called-shots-work">
+    <h2>How Do Called Shots Work?</h2>
+    <p>Normally an attack automatically resolves against a target's Body-Zone armor, and their Head-Zone armor does nothing to stop it. A called shot flips that - it's the only way to specifically target the Head Zone instead.</p>
+    <p class="aside">Called shots are legal only as a Slow Action Bracket - the same action that already grants you Advantage on the attack. If the target has Head-Zone armor, it - and only it - resolves against the called shot; Body-Zone armor doesn't apply at all. No Head-Zone armor at all just means the shot goes straight through to the target's own Soak.</p>
+  </section>
+
+  <section class="faq-section" id="what-is-distracted">
+    <h2>What Is Distracted?</h2>
+    <p>Taking a Health Level or getting hit by a Kotodama effect while you're resolving a Slow Action Bracket action can break your concentration. When that happens, roll to hold focus.</p>
+    <div class="roll-box">Atropos + Difficulty, roll 2d10</div>
+    <p>Succeed, and your action resolves exactly as declared. Fail, and it downgrades to a Normal action instead - you still act, but you lose the called-shot option and the Advantage that made it a Slow action in the first place.</p>
+    <p class="aside">Distracted isn't only a Slow-action thing - a Gift, an environmental hazard, or GM fiat can impose it any time. Outside a Slow action, the same roll applies, but failure just imposes Disadvantage on whatever triggered it instead of downgrading an action. Concentration grants immunity to being Distracted, regardless of the source.</p>
+  </section>
+
+  <section class="faq-section" id="what-is-surprised">
+    <h2>What Is Surprised?</h2>
+    <p>If you haven't noticed a threat before a fight begins, you're Surprised - usually because an opposing Stealth roll beat your Perception, or the GM judges the fiction calls for it.</p>
+    <p class="aside">A Surprised character rolls at Disadvantage on everything - attacks, and any other roll where being ready matters - for the rest of the round they're caught in. It clears automatically once that round ends, no roll needed. Alertness grants immunity to being Surprised while conscious.</p>
+  </section>
 
 </main>
 </body>
