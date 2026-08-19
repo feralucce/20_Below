@@ -173,23 +173,6 @@ While it still has Health Levels remaining, armor intercepts every die aimed at 
 - **A normal attack always resolves against Body-Zone armor.** Head-Zone armor does nothing against it.
 - **A called shot** - legal only as a [Slow Action Bracket](#action-brackets) - lets the attacker specifically target the Head Zone instead. That attack resolves against the defender's Head-Zone armor (or no armor at all, if they have none), and Body-Zone armor doesn't apply to it.
 
-#### Social & Mental Attacks - Skill-Based Dice Count
-
-Physical attacks get their dice count from a weapon; Social and Mental attacks made through a [Gift](gifts.md) get theirs from the Gift's own Level. After the attacker's to-hit roll succeeds, an **ungifted** Social or Mental attack - nothing but a relevant [Skill](skills.md), no Gift involved - rolls dice equal to the Skill's **Training Tier + 1**:
-
-| Skill Tier | Dice Rolled |
-|---|---|
-| 0 (Untrained) | 1 |
-| 1 (Novice) | 2 |
-| 2 (Trained) | 3 |
-| 3 (Adept) | 4 |
-| 4 (Expert) | 5 |
-| 5 (Master) | 6 |
-
-Each die is resolved individually against the defender's **Presence** (Social) or **Psyche** (Mental) wall - the identical per-die mechanic Physical attacks use against Soak. This lands on the same numbers escalating attack Gifts like Enthrall and Protocol already use for their own dice-by-Level climb (**2/3/4/5/6d10**, Levels 1-5), so Skill Tier and Gift Level share one ladder - it doesn't matter whether the dice come from training or a Gift.
-
-As with any Social or Mental attack, additional [Ki Infusion](#ki-infusion) (1 Ki per die) can push individual dice further, per the usual rule.
-
 #### Potence
 
 Potence (Earth's other sub-stat: raw physical power/strength - carrying capacity, immovability, mass, forcing/breaking things) splits into two jobs:
@@ -328,6 +311,17 @@ Defense is **universal across all three attack types** - Physical, Social, and M
 The tradeoff across all three: **Fast trades action count for going first**, **Normal is the balanced middle (two actions, middling position)**, **Slow trades speed for a single, more powerful, concentrated action**.
 
 A player can spend **1 Ki per step** to bump their declared band up (Slow → Normal, or Normal → Fast) - buying back speed at the cost of the resource. Spending 2 Ki moves two steps at once (Slow → Fast).
+
+#### Combat Actions
+
+What an action actually *lets you do*, beyond a plain Attack or Move - filling in Fast's one action, either of Normal's two, or Slow's single empowered action. A Gift or weapon that states its own action cost always overrides these.
+
+- **Dash** (Normal) - spend both actions on movement. Move up to **2× Movement Rate**, nothing else this round.
+- **Run** (Slow) - spend the single action purely on movement, forgoing the called-shot/Advantage benefit entirely. Move up to **4× Movement Rate**, nothing else this round. The tradeoff is real: Running covers the most ground of any option, but Slow still resolves last - full commitment to a sprint means you're not reacting quickly to anything else.
+- **Diving for Cover** (Fast) - throw yourself out of the line of danger. Move up to your Movement Rate immediately; since Fast resolves first, you're already repositioned before anyone in the Normal or Slow bands acts against you this round. If that move puts you behind real cover or breaks line of sight, GM's call, attacks that need to see or reach you simply can't this round. It's Fast's only action - no attack, no called shot, nothing else - and because you went down in a hurry, you're at **Disadvantage** on anything needing stable footing until you spend an action getting back up.
+- **Reckless** - no action cost, just declared for the round. **Advantage** on all your attack rolls this round; attacks against you gain **Advantage** this round too.
+- **Cautious Attack** (Normal) - your attack rolls at **Disadvantage**; attacks against you suffer **Disadvantage** until your next turn.
+- **Full Defense** (Normal) - you cannot attack this round; your other Normal action can still be spent moving. Attacks against you suffer **Disadvantage**, and your **Defense drops by 4** (floored at 0) until your next turn.
 
 #### Movement & Range
 
