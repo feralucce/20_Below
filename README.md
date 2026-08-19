@@ -32,6 +32,22 @@ This page is the table of contents. Start at the top and work down; later docume
 | [Weapons & Equipment](rules/weapons.md) | Weapon dice, range, and ammo, plus armor and general gear. |
 | [Advancement](rules/advancement.md) | Post-creation XP costs - what's set, what's still open. |
 
+## Player References
+
+| Document | What it covers |
+|---|---|
+| [Louis' Reference Chart](docs/louis-reference-chart.html) | Quick-reference copy of the color-coded Difficulty Chart. |
+| [Player's Quick Reference](docs/combat-flow-reference.html) | Plain-language answers to the questions that come up most at the table, with every roll spelled out. |
+| [Status Effects](docs/status-effects.html) | Every status effect in the system - trigger, effect, and how each one clears. |
+
+## GM References
+
+| Document | What it covers |
+|---|---|
+| [Adversary Index](rules/adversary-index.md) | Ready-to-run stat blocks: mundane animals, plus a reusable Dire/Giant/Mutated variant template. |
+| [Cryptids](rules/cryptids.md) | American folklore creatures, treated as real but rare in a modern setting. |
+| [Nightmare Creatures](rules/nightmare-creatures.md) | Original urban-fantasy and horror archetypes, built entirely on the system's own mechanics. |
+
 ## For Playtesters
 
 This is a system in active development. Some numbers (post-creation XP costs, a few melee weapon ratings) are still placeholders, flagged as such in their own documents. If something reads unclear or plays oddly, that's exactly the kind of feedback this playtest is for.
