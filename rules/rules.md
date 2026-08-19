@@ -173,6 +173,23 @@ While it still has Health Levels remaining, armor intercepts every die aimed at 
 - **A normal attack always resolves against Body-Zone armor.** Head-Zone armor does nothing against it.
 - **A called shot** - legal only as a [Slow Action Bracket](#action-brackets) - lets the attacker specifically target the Head Zone instead. That attack resolves against the defender's Head-Zone armor (or no armor at all, if they have none), and Body-Zone armor doesn't apply to it.
 
+#### Social & Mental Attacks - Skill-Based Dice Count
+
+Physical attacks get their dice count from a weapon; Social and Mental attacks made through a [Gift](gifts.md) get theirs from the Gift's own Level. After the attacker's to-hit roll succeeds, an **ungifted** Social or Mental attack - nothing but a relevant [Skill](skills.md), no Gift involved - rolls dice equal to the Skill's **Training Tier + 1**:
+
+| Skill Tier | Dice Rolled |
+|---|---|
+| 0 (Untrained) | 1 |
+| 1 (Novice) | 2 |
+| 2 (Trained) | 3 |
+| 3 (Adept) | 4 |
+| 4 (Expert) | 5 |
+| 5 (Master) | 6 |
+
+Each die is resolved individually against the defender's **Presence** (Social) or **Psyche** (Mental) wall - the identical per-die mechanic Physical attacks use against Soak. This lands on the same numbers escalating attack Gifts like Enthrall and Protocol already use for their own dice-by-Level climb (**2/3/4/5/6d10**, Levels 1-5), so Skill Tier and Gift Level share one ladder - it doesn't matter whether the dice come from training or a Gift.
+
+As with any Social or Mental attack, additional [Ki Infusion](#ki-infusion) (1 Ki per die) can push individual dice further, per the usual rule.
+
 #### Potence
 
 Potence (Earth's other sub-stat: raw physical power/strength - carrying capacity, immovability, mass, forcing/breaking things) splits into two jobs:

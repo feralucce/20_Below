@@ -260,11 +260,13 @@ Your will can simply overwrite someone else's, at least for a moment. Look them 
 
 | Level | Effect |
 |---|---|
-| 1 | Requires eye contact. Spend **1 Ki** and roll your Psyche dice per-die against the target's Psyche wall - a connecting die lets you issue a single-word command ("stop," "sleep," "drop it") that they obey for one action or moment. Commands resulting in self-harm or serious injury automatically fail. |
-| 2 | Commands can now be full sentences rather than a single word, and can be complex - multi-step instructions, conditional logic, or nuanced requests - not just simple directives. |
-| 3 | You may implant a delayed/triggered command - it stays dormant until a specific condition you set occurs, then executes automatically. |
-| 4 | Repeated exposure builds suggestibility: each successful use of this Gift on the same person grants **Advantage** on your next attempt against them, cumulative and lasting until they're free of your influence for an extended stretch (GM's call). |
-| 5 | The self-harm/serious-injury safeguard no longer applies - commands can now be harmful, even lethal. |
+| 1 | Requires eye contact. Spend **1 Ki** and roll **2d10** per-die against the target's Psyche wall - a connecting die lets you issue a single-word command ("stop," "sleep," "drop it") that they obey for one action or moment. Commands resulting in self-harm or serious injury automatically fail. |
+| 2 | Dice rise to **3d10**. Commands can now be full sentences rather than a single word, and can be complex - multi-step instructions, conditional logic, or nuanced requests - not just simple directives. |
+| 3 | Dice rise to **4d10**. You may implant a delayed/triggered command - it stays dormant until a specific condition you set occurs, then executes automatically. |
+| 4 | Dice rise to **5d10**. Repeated exposure builds suggestibility: each successful use of this Gift on the same person grants **Advantage** on your next attempt against them, cumulative and lasting until they're free of your influence for an extended stretch (GM's call). |
+| 5 | Dice rise to **6d10**. The self-harm/serious-injury safeguard no longer applies - commands can now be harmful, even lethal. |
+
+As with any Mental attack, additional [Ki Infusion](rules.md#ki-infusion) (1 Ki per die) can push individual dice further by adding your own Psyche, per the usual rule.
 
 **Adders**:
 
@@ -714,11 +716,13 @@ Beyond command, beyond obedience - you can push your own consciousness into some
 
 | Level | Effect |
 |---|---|
-| 1 | Requires touch. Spend **1 Ki** and roll your Psyche dice per-die against the target's Psyche wall - a connecting die lets you possess their body for the rest of the scene. Your own body goes limp and undefended while you're away. |
-| 2 | Touch is no longer required - possession can be attempted at **Close range**. |
-| 3 | Range extends to **Near**. Possession duration becomes indefinite - lasting until you choose to return or are forcibly expelled, not capped at a scene. |
-| 4 | Range extends to **Far**. While possessing, you gain full access to the host's Skills, Boons, and other Gifts, using their body's full capability as your own. |
-| 5 | You may possess a new target instantly, snapping from one host directly into another without returning to your own body first, so long as you can make eye contact with the new target. |
+| 1 | Requires touch. Spend **1 Ki** and roll **2d10** per-die against the target's Psyche wall - a connecting die lets you possess their body for the rest of the scene. Your own body goes limp and undefended while you're away. |
+| 2 | Dice rise to **3d10**. Touch is no longer required - possession can be attempted at **Close range**. |
+| 3 | Dice rise to **4d10**. Range extends to **Near**. Possession duration becomes indefinite - lasting until you choose to return or are forcibly expelled, not capped at a scene. |
+| 4 | Dice rise to **5d10**. Range extends to **Far**. While possessing, you gain full access to the host's Skills, Boons, and other Gifts, using their body's full capability as your own. |
+| 5 | Dice rise to **6d10**. You may possess a new target instantly, snapping from one host directly into another without returning to your own body first, so long as you can make eye contact with the new target. |
+
+As with any Mental attack, additional [Ki Infusion](rules.md#ki-infusion) (1 Ki per die) can push individual dice further by adding your own Psyche, per the usual rule.
 
 **Adders**:
 
