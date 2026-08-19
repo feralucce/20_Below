@@ -38,6 +38,11 @@ export function createInitialState(data) {
     resourcePenalties[r.name] = 0;
   });
 
+  const resourceZeroed = {}; // resourceName -> true if a "reaching beyond your means" Resource Check zeroed it out for the Month
+  data.resources.forEach((r) => {
+    resourceZeroed[r.name] = false;
+  });
+
   return {
     name: '',
     concept: '',
@@ -50,6 +55,7 @@ export function createInitialState(data) {
     boons: [], // [{ name, points, tier }] - Special Movement (repeatable) can appear more than once
     resources,
     resourcePenalties,
+    resourceZeroed,
     gifts: [], // [{ name, level, adders: string[], limiters: string[] }]
     flaws: [], // [{ name, level }]
     // Wealth-at-Creation gear shopping (see resources.md#wealth-at-character-creation)
@@ -162,10 +168,15 @@ export function resourcesPoolRemaining(state, data) {
 // A failed check drops a Resource's *effective* Level by 1 (floored at 1)
 // until the app's user manually clears it once a Month has passed in
 // fiction - there's no in-game calendar here to auto-expire it against.
-// The penalty is tracked separately from the purchased Level itself so
-// point-cost accounting (resourcesPointsSpent above) is never affected.
+// "Reaching beyond your means" is a separate, harsher penalty - it zeroes
+// the Resource out entirely (not floored at 1), tracked in its own
+// resourceZeroed map so the normal floor-at-1 logic below doesn't blunt
+// it. Both penalties are tracked separately from the purchased Level
+// itself so point-cost accounting (resourcesPointsSpent above) is never
+// affected.
 
 export function effectiveResourceLevel(state, resourceName) {
+  if (state.resourceZeroed[resourceName]) return 0;
   const level = state.resources[resourceName] ?? 0;
   const penalty = state.resourcePenalties[resourceName] ?? 0;
   return Math.max(Math.min(level, 1), level - penalty);
@@ -177,8 +188,13 @@ export function applyResourceCheckFailure(state, resourceName) {
   state.resourcePenalties[resourceName] = Math.min(Math.max(level - 1, 0), current + 1);
 }
 
+export function applyResourceCheckZeroOut(state, resourceName) {
+  state.resourceZeroed[resourceName] = true;
+}
+
 export function clearResourcePenalty(state, resourceName) {
   state.resourcePenalties[resourceName] = 0;
+  state.resourceZeroed[resourceName] = false;
 }
 
 // creation-Wealth starts at 2, unless Wealth was actually purchased from the

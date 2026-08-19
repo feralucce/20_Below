@@ -93,9 +93,10 @@ export default function buildGearShop(state, data) {
     categoriesWrap.innerHTML = '';
     const cw = currentCreationWealth(state);
     data.equipment.forEach((cat) => {
+      const nameHeader = cat.headers[0];
       const otherHeaders = cat.headers.filter((h) => h !== cat.headers[0] && h !== 'Wealth');
       const table = el('table', {}, [
-        el('thead', {}, el('tr', {}, [...otherHeaders, 'Wealth', ''].map((h) => el('th', {}, h)))),
+        el('thead', {}, el('tr', {}, [nameHeader, ...otherHeaders, 'Wealth', ''].map((h) => el('th', {}, h)))),
         el(
           'tbody',
           {},
@@ -107,6 +108,7 @@ export default function buildGearShop(state, data) {
               ? '-'
               : `Buy (Wealth Check, risks ${Math.max(1, gap)} on failure)`;
             return el('tr', {}, [
+              el('td', {}, item.name ?? ''),
               ...otherHeaders.map((h) => el('td', {}, item[h] ?? '')),
               el('td', {}, buyable ? String(item.wealth) : '-'),
               el(

@@ -10,10 +10,16 @@ A Resource represents a currency or standing the character can draw on or lean o
 
 ## Pushing a Resource
 
-Each Resource's Level table below defines what's available for free, no roll required. When a character wants to draw on a Resource for something beyond that free scope, roll a **Resource Check**: **2d10** against **Resource Level + Difficulty**, roll-under, using the same [Difficulty Chart](rules.md#difficulty-chart) as any other roll - Difficulty set by how far beyond the Resource's current Level the request reaches. Critical results apply as normal (a roll of 2 is always a success, a roll of 20 is always a failure, regardless of the target number). No Skill is involved - a flat roll against the Resource itself, the same shape as the [Gift Check](gifts.md#resolution).
+Each Resource's Level table below defines what's available for free, no roll required. When a character wants to draw on a Resource for something beyond that free scope, roll a **Resource Check**: **2d10** against **Resource Level + (10 − Resource Index)**, roll-under. Critical results apply as normal (a roll of 2 is always a success, a roll of 20 is always a failure, regardless of the target number). No Skill is involved - a flat roll against the Resource itself, the same shape as the [Gift Check](gifts.md#resolution).
+
+**Resource Index** is a flat **1-6** rating for how far beyond a Resource's ordinary reach the request goes - its own scale, not the general [Difficulty Chart](rules.md#difficulty-chart). It inverts the same way [Defense](rules.md#defense-derived-stat) does: a *lower* Resource Index is easier (Resource Index 1 adds **9** to the target), a *higher* one is harder (Resource Index 6 adds only **4**, the minimum any Resource Check can add).
 
 - **Success**: the character gets what they were after, no further cost.
 - **Failure**: the character still gets what they were after - the ask goes through either way - but the Resource's Level drops by **1** (to a minimum of 1) until the start of the next **Month**, representing it stretched thin: savings drained, favors called in, goodwill spent. A Resource at a reduced Level uses that lower Level for everything, including further Resource Checks made while it's still reduced.
+
+**Reaching beyond your means**: a Resource Index up to **2 higher** than the Resource's current effective Level can be attempted - anything further out of reach can't be attempted at all. Reaching that far always gets the character what they were after, but drops the Resource's Level to **0** for a Month (not just 1) regardless of whether the roll succeeded or failed - **unless the roll is a critical success**, which resolves the attempt as an ordinary free success with no cost at all.
+
+**Resource Index 6** is always treated as reaching 2 levels beyond the Resource's current Level, no matter how high that Level actually is - and it's the one case a critical success can't save: a Resource Index 6 attempt always drops the Resource to 0 for a Month, full stop, even on a critical success.
 
 ## Wealth at Character Creation
 
