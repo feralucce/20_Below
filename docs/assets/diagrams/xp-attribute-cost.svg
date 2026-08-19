@@ -1,0 +1,32 @@
+<svg width="680" height="220" viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Attribute raise cost climbs steeply</title>
+<desc>Raising an Attribute costs the current rating times 9 XP - from 9 XP at rating 1 up to 81 XP at rating 9, going to 10.</desc>
+<rect x="30" y="155.6" width="55" height="14.4" rx="4" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<rect x="100" y="141.1" width="55" height="28.9" rx="4" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<rect x="170" y="126.7" width="55" height="43.3" rx="4" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<rect x="240" y="112.2" width="55" height="57.8" rx="4" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<rect x="310" y="97.8" width="55" height="72.2" rx="4" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<rect x="380" y="83.3" width="55" height="86.7" rx="4" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<rect x="450" y="68.9" width="55" height="101.1" rx="4" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<rect x="520" y="54.4" width="55" height="115.6" rx="4" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<rect x="590" y="40.0" width="55" height="130.0" rx="4" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<text x="57.5" y="147.6" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#eaf5fb">9</text>
+<text x="57.5" y="190.0" text-anchor="middle" font-family="sans-serif" font-size="11"  fill="#8fadbe">1→2</text>
+<text x="127.5" y="133.1" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#eaf5fb">18</text>
+<text x="127.5" y="190.0" text-anchor="middle" font-family="sans-serif" font-size="11"  fill="#8fadbe">2→3</text>
+<text x="197.5" y="118.7" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#eaf5fb">27</text>
+<text x="197.5" y="190.0" text-anchor="middle" font-family="sans-serif" font-size="11"  fill="#8fadbe">3→4</text>
+<text x="267.5" y="104.2" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#eaf5fb">36</text>
+<text x="267.5" y="190.0" text-anchor="middle" font-family="sans-serif" font-size="11"  fill="#8fadbe">4→5</text>
+<text x="337.5" y="89.8" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#eaf5fb">45</text>
+<text x="337.5" y="190.0" text-anchor="middle" font-family="sans-serif" font-size="11"  fill="#8fadbe">5→6</text>
+<text x="407.5" y="75.3" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#eaf5fb">54</text>
+<text x="407.5" y="190.0" text-anchor="middle" font-family="sans-serif" font-size="11"  fill="#8fadbe">6→7</text>
+<text x="477.5" y="60.9" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#eaf5fb">63</text>
+<text x="477.5" y="190.0" text-anchor="middle" font-family="sans-serif" font-size="11"  fill="#8fadbe">7→8</text>
+<text x="547.5" y="46.4" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#eaf5fb">72</text>
+<text x="547.5" y="190.0" text-anchor="middle" font-family="sans-serif" font-size="11"  fill="#8fadbe">8→9</text>
+<text x="617.5" y="32.0" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#eaf5fb">81</text>
+<text x="617.5" y="190.0" text-anchor="middle" font-family="sans-serif" font-size="11"  fill="#8fadbe">9→10</text>
+<text x="340" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">Current rating → next rating</text>
+</svg>

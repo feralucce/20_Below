@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Advancement Reference - 20 Below</title>
+<link rel="icon" type="image/x-icon" href="assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --accent-dim: #1c3548;
+    --danger: #e0685c;
+    --radius: 8px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  main {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  .back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  h1 {
+    margin: 1rem 0 0.5rem;
+    letter-spacing: 0.02em;
+  }
+  .note {
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  a { color: var(--accent); }
+
+  .toc {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .toc h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-dim);
+  }
+  .toc ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    line-height: 1.9;
+  }
+  .toc a { text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  .xp-section {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+    scroll-margin-top: 1.5rem;
+  }
+  .xp-section:nth-of-type(even) {
+    background: var(--bg);
+  }
+  .xp-section h2 {
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--panel-border);
+  }
+  .xp-section > p {
+    line-height: 1.6;
+    margin: 0 0 1rem;
+  }
+  .xp-section > p:last-child {
+    margin-bottom: 0;
+  }
+
+  .roll-box {
+    background: var(--bg);
+    border: 1px solid var(--accent-dim);
+    border-radius: var(--radius);
+    padding: 0.6rem 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: inline-block;
+  }
+  .aside {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+  .cost-table th,
+  .cost-table td {
+    border: 1px solid var(--panel-border);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+  }
+  .cost-table th {
+    color: var(--text-dim);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .chart-frame {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .chart-frame img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+</head>
+<body>
+<main>
+  <a class="back-link" href="../index.html">&larr; Back to 20 Below</a>
+  <h1>Advancement Reference</h1>
+  <p class="note">
+    Every post-creation XP cost in the system, in plain "how much does this cost me" form. See
+    <a href="../rules/advancement.html">Advancement</a> for the full rules text this page summarizes.
+  </p>
+
+  <nav class="toc">
+    <h2>Questions</h2>
+    <ol>
+      <li><a href="#earning-xp">How do I earn XP?</a></li>
+      <li><a href="#attributes">How much to raise an Attribute?</a></li>
+      <li><a href="#skills">How much to raise a Skill Tier?</a></li>
+      <li><a href="#resources">How much to raise a Resource Level?</a></li>
+      <li><a href="#boons">How much for a new Boon?</a></li>
+      <li><a href="#descriptors">How much for an extra Sub-Stat Descriptor?</a></li>
+      <li><a href="#gifts">How much for a new Gift, or to raise an existing one?</a></li>
+      <li><a href="#adders">How much for a Gift Adder?</a></li>
+      <li><a href="#limiters">How much to buy off a Limiter?</a></li>
+    </ol>
+  </nav>
+
+  <section class="xp-section" id="earning-xp">
+    <h2>How do I earn XP?</h2>
+    <p><strong>Up to 5 XP per session</strong>, split across five flat categories - the GM awards each independently, so a session can land anywhere from 0 to 5:</p>
+    <table class="cost-table">
+      <tr><th>Category</th><th>XP</th><th>What it's for</th></tr>
+      <tr><td>Attendance / Participation</td><td>1</td><td>Showed up and played.</td></tr>
+      <tr><td>Good Roleplaying</td><td>1</td><td>Played the character well.</td></tr>
+      <tr><td>Heroism / Risk Faced</td><td>1</td><td>Took a real risk in character.</td></tr>
+      <tr><td>Learning / Discovery</td><td>1</td><td>Learned something significant about the character, plot, or world.</td></tr>
+      <tr><td>Standout Moment</td><td>1</td><td>GM's discretion - an especially memorable beat.</td></tr>
+    </table>
+    <p class="aside"><strong>Story Awards:</strong> separate from the per-session cap - occasional larger lump-sum grants for completing a major arc, defeating a significant villain, or hitting a defined campaign milestone.</p>
+  </section>
+
+  <section class="xp-section" id="attributes">
+    <h2>How much to raise an Attribute?</h2>
+    <div class="roll-box">current rating &times; 9 XP</div>
+    <p>Raising an Attribute from, say, 5 to 6 costs <strong>45 XP</strong> (the current rating before the raise). Also grants 1 free Sub-Stat point to split between that Attribute's two sub-stats, same as at creation.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/xp-attribute-cost.svg" alt="Raising an Attribute costs the current rating times 9 XP - from 9 XP at rating 1 up to 81 XP at rating 9, going to 10." />
+    </div>
+  </section>
+
+  <section class="xp-section" id="skills">
+    <h2>How much to raise a Skill Tier?</h2>
+    <div class="roll-box">current tier &times; 2 XP</div>
+    <p>Going from Trained (Tier 2) to Adept (Tier 3) costs <strong>4 XP</strong> - the tier you're leaving, not the one you're entering.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/xp-skill-cost.svg" alt="Raising a Skill Tier costs the current tier times 2 XP - free from Untrained to Novice, up to 8 XP from Expert to Master." />
+    </div>
+  </section>
+
+  <section class="xp-section" id="resources">
+    <h2>How much to raise a Resource Level?</h2>
+    <div class="roll-box">flat 3 XP per Level</div>
+    <p>Same price no matter what Level you're starting from.</p>
+  </section>
+
+  <section class="xp-section" id="boons">
+    <h2>How much for a new Boon?</h2>
+    <p><strong>2&times; its creation-pool cost</strong>:</p>
+    <table class="cost-table">
+      <tr><th>Tier</th><th>Creation cost</th><th>Advancement (XP)</th></tr>
+      <tr><td>Trivial</td><td>1</td><td>2</td></tr>
+      <tr><td>Lesser</td><td>3</td><td>6</td></tr>
+      <tr><td>Greater</td><td>5</td><td>10</td></tr>
+      <tr><td>Legendary</td><td>7</td><td>14</td></tr>
+    </table>
+  </section>
+
+  <section class="xp-section" id="descriptors">
+    <h2>How much for an extra Sub-Stat Descriptor?</h2>
+    <p><strong>The first 3</strong> extra Descriptors on a given sub-stat cost a flat <strong>1 XP</strong> each. Past that:</p>
+    <div class="roll-box">current Descriptor count on that sub-stat &times; 1 XP</div>
+    <p>So a sub-stat's 4th extra Descriptor (its 4th overall past the free ones) costs 4 XP, its 5th costs 5 XP, and so on - it keeps climbing the more of that sub-stat's flavor you've already written.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/xp-descriptor-cost.svg" alt="The first 3 extra Descriptors on a sub-stat cost a flat 1 XP each. Past that, cost equals the current Descriptor count times 1 XP." />
+    </div>
+  </section>
+
+  <section class="xp-section" id="gifts">
+    <h2>How much for a new Gift, or to raise an existing one?</h2>
+    <p><strong>Acquiring a Gift for the first time (Level 0 &rarr; 1):</strong></p>
+    <div class="roll-box">(7 &minus; Limiters) XP, floored at 1</div>
+    <p>Plus any Adders bought in the same purchase, at their own cost (see below).</p>
+    <p><strong>Raising a Gift you already have:</strong></p>
+    <div class="roll-box">(current level &times; 5) &minus; Limiters XP, floored at 1</div>
+    <div class="chart-frame">
+      <img src="assets/diagrams/xp-gift-level-cost.svg" alt="Raising a Gift you already have costs the current level times 5 XP, before any Limiter discount - from 5 XP at Level 1 up to 20 XP going from Level 4 to 5." />
+    </div>
+    <p class="aside">Both formulas subtract 1 XP per Limiter the Gift carries, same discount shape as creation-time Gift pricing - just never below 1 XP no matter how many Limiters are stacked.</p>
+  </section>
+
+  <section class="xp-section" id="adders">
+    <h2>How much for a Gift Adder?</h2>
+    <p><strong>2&times; its creation-time point cost:</strong></p>
+    <table class="cost-table">
+      <tr><th>Tier</th><th>Creation cost</th><th>Advancement (XP)</th></tr>
+      <tr><td>Lesser</td><td>3</td><td>6</td></tr>
+      <tr><td>Greater</td><td>6</td><td>12</td></tr>
+    </table>
+    <p class="aside">Same price whether bought at acquisition or added later - Adders don't get more expensive with time, unlike Levels. <strong>Not yet correct in the Character Creator app</strong> - the Advancement tab's Adder "Buy" button already exists, but currently charges the creation-time point cost (3/6) instead of this new advancement rate (6/12). Coming in a future update.</p>
+  </section>
+
+  <section class="xp-section" id="limiters">
+    <h2>How much to buy off a Limiter?</h2>
+    <div class="roll-box">3 &times; current Gift Level XP, per Limiter removed</div>
+    <p>Buying off one Limiter on a Gift currently at Level 4 costs <strong>12 XP</strong>. Each stacked Limiter is priced and removed independently - buying off one doesn't affect what the others still cost.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/xp-limiter-buyoff-cost.svg" alt="Buying off one Limiter costs 3 times the Gift's current level in XP - 3 XP at Level 1 up to 15 XP at Level 5, per Limiter removed." />
+    </div>
+    <p class="aside">Not yet available as a button in the Character Creator app - the formula is locked in, but the app's Advancement tab doesn't have a Limiter buy-off control wired up yet. Coming in a future update.</p>
+  </section>
+
+</main>
+</body>
+</html>

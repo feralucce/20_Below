@@ -58,5 +58,6 @@ The single source of truth for every tunable number in the system - pool sizes, 
 | Gift Level raise - XP multiplier (current level × N) | 5 |
 | Gift Limiter Discount, Advancement (per Limiter) | 1 |
 | Gift Limiter Floor, Advancement (minimum XP) | 1 |
-| Gift Adder XP - Lesser | 3 |
-| Gift Adder XP - Greater | 6 |
+| Gift Adder XP - Lesser | 6 |
+| Gift Adder XP - Greater | 12 |
+| Gift Limiter Buy-off - XP multiplier (current Gift Level × N) | 3 |

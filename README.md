@@ -39,6 +39,7 @@ This page is the table of contents. Start at the top and work down; later docume
 | [Louis' Reference Chart](docs/louis-reference-chart.html) | Quick-reference copy of the color-coded Difficulty Chart. |
 | [Player's Quick Reference](docs/combat-flow-reference.html) | Plain-language answers to the questions that come up most at the table, with every roll spelled out. |
 | [Status Effects](docs/status-effects.html) | Every status effect in the system - trigger, effect, and how each one clears. |
+| [Advancement Reference](docs/advancement-reference.html) | Every post-creation XP cost, in plain "how much does this cost me" form. |
 
 ## GM References
 
