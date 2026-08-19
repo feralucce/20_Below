@@ -2,7 +2,7 @@
 
 A starting Skill list scoped to a **modern-world base campaign**. Per [skills.md](skills.md), **none of these are locked to an Attribute** and **this list is not exhaustive** - players and GMs should freely add, split, merge, or rename entries to fit a specific character or campaign. It exists to save table time at character creation, not to fence in what a character can plausibly do.
 
-**Broad by design, not narrow**: matching the existing [Specialties](skills.md#specialties) approach used elsewhere (Science, Crafting, Piloting, Performance), entries here stay wide on purpose - a single point spent training *Mechanics* should feel like it was worth the character point and the XP that pushed it up a tier, not like it only covers one narrow task. Where a real distinction exists within a broad Skill (a specific science, a specific trade, a specific vehicle class, a specific instrument), that's a Specialty layered on top of the Skill, not a reason to split the Skill itself.
+**Broad by design, not narrow**: entries here stay wide on purpose - a single point spent training *Mechanics* should feel like it was worth the character point and the XP that pushed it up a tier, not like it only covers one narrow task. Where a real distinction exists within a broad Skill (a specific science, a specific trade, a specific vehicle class, a specific instrument), that's flavor a player describes, not a reason to split the Skill itself.
 
 ## Skills
 
@@ -24,7 +24,7 @@ A starting Skill list scoped to a **modern-world base campaign**. Per [skills.md
 | Concealment | Hiding objects, caches, or hideouts from a determined search. |
 | Contortion | Fitting through tight spaces and slipping restraints through flexibility. |
 | Cooking | Preparing food, from the everyday to the exceptional. |
-| Crafting | Building and repairing goods in a chosen trade - broad by default; specialize by material/trade (e.g. *Woodworking*, *Metalworking*) via Specialty. |
+| Crafting | Building and repairing goods in a chosen trade - covers any material or trade broadly (woodworking, metalworking, and so on) under one roll. |
 | Cryptography | Creating and breaking codes, ciphers, and encryption. |
 | Deception | Lying, bluffing, and fast talk. |
 | Demolitions | Safely handling, placing, and detonating explosives. |
@@ -36,7 +36,7 @@ A starting Skill list scoped to a **modern-world base campaign**. Per [skills.md
 | Etiquette | Navigating social and professional protocol correctly. |
 | Farming | Cultivating crops and managing livestock. |
 | Finance | Economics, markets, and accounting. |
-| Firearms | Handguns, long guns, and other modern ranged weapons - specialize by category (e.g. *Pistols*, *Rifles*) via Specialty if desired. |
+| Firearms | Handguns, long guns, and other modern ranged weapons, covered broadly under one Skill. |
 | First Aid | Immediate, field-level treatment - stabilizing, bandaging, CPR. |
 | Fishing | Catching fish by line, net, or spear. |
 | Forgery | Producing convincing fake documents, signatures, IDs, and digital records. |
@@ -64,16 +64,16 @@ A starting Skill list scoped to a **modern-world base campaign**. Per [skills.md
 | Networking | Building and leveraging connections in professional, corporate, or elite circles. |
 | Occult | Esoteric lore, ritual, and the world's hidden supernatural undercurrent - grounds a character's understanding of things like Moira, fate, and what a connecting Social/Mental die is actually reaching into. Included by default rather than genre-flagged, since the setting's fated-heroes premise makes it broadly relevant rather than an opt-in module. |
 | Perception | Noticing details and spotting hidden things. |
-| Performance | Acting, music, dance, or oratory before an audience - broad by default; specialize by discipline via Specialty. |
+| Performance | Acting, music, dance, or oratory before an audience, covered broadly under one Skill regardless of discipline. |
 | Persuasion | Honest argument and diplomacy. |
-| Piloting | Operating aircraft or watercraft - broad by default; specialize by vehicle type (e.g. *Fixed-Wing*, *Helicopters*, *Boats*) via Specialty. |
+| Piloting | Operating aircraft or watercraft, covered broadly under one Skill regardless of vehicle type. |
 | Politics | The workings of governments, agencies, and factions. |
 | Psychoanalysis | Therapy and treating mental trauma. |
 | Psychology | Understanding minds, motivations, and behavior. |
 | Public Speaking | Commanding a room and structuring a spoken argument, distinct from theatrical Performance. |
 | Religion | Theology, doctrine, and religious practice. |
 | Research | Finding information through records, libraries, databases, and open sources - distinct from scene-based Investigation. |
-| Science | Broad scientific knowledge - specialize by discipline (e.g. *Chemistry*, *Biology*, *Astrophysics*) via Specialty. |
+| Science | Broad scientific knowledge, covering any discipline (chemistry, biology, astrophysics, and so on) under one Skill. |
 | Seduction | Winning someone over through romantic or physical appeal. |
 | Security | Bypassing physical locks, safes, and alarm systems. |
 | Shadowing | Following someone without being noticed. |
