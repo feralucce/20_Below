@@ -133,7 +133,7 @@ Chosen once, at creation: **Always There** (visible and permanent - can't be hid
 | 2 | Damage rises to **3d10**. |
 | 3 | Damage rises to **4d10**. Additionally, you may spend **1 Ki** on a successful hit to add a minor rending effect - the wound bleeds, imposing Disadvantage on the target's next roll before it's tended to or the scene ends. |
 | 4 | Damage rises to **5d10**. The rending effect intensifies - Disadvantage now persists on all of the target's rolls until the wound is treated or the scene ends, not just their next one. |
-| 5 | Damage rises to **6d10** (matching a heavy/anti-materiel weapon). The rending effect still costs 1 Ki per use. If Stowable was chosen, deploying your claws/fangs no longer triggers the Gift Check. |
+| 5 | Damage rises to **6d10**. The rending effect still costs 1 Ki per use. If Stowable was chosen, deploying your claws/fangs no longer triggers the Gift Check. |
 
 **Adders**:
 
