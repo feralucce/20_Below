@@ -1,18 +1,6 @@
-import { fetchText } from './parse/markdown.js';
-import { parseAttributes, parseEverymanSkills } from './parse/attributes.js';
-import { parseNatures } from './parse/nature.js';
-import { parseSkillTiers, parseSkillCatalog } from './parse/skills.js';
-import { parseBoons } from './parse/boons.js';
-import { parseResources } from './parse/resources.js';
-import { parseGifts, parseGiftCheckText } from './parse/gifts.js';
-import { parseFlaws } from './parse/flaws.js';
-import { parseSampleDescriptors } from './parse/descriptors.js';
-import { parseCosts } from './parse/costs.js';
-import { parseDifficultyChart } from './parse/difficulty.js';
-import { parseEquipment } from './parse/weapons.js';
 import { createInitialState, allPoolsSummary } from './state.js';
 import { el, poolBadge } from './ui.js';
-import { isDesktopApp, saveCharacterToFile, listSavedCharacters, loadCharacterFromFile } from './desktop-storage.js';
+import { loadRulesData } from './rules-data.js';
 
 import stepIdentity from './steps/01-identity.js';
 import stepNature from './steps/02-nature.js';
@@ -56,50 +44,6 @@ const poolSummary = document.getElementById('pool-summary');
 const btnBack = document.getElementById('btn-back');
 const btnNext = document.getElementById('btn-next');
 const btnReset = document.getElementById('btn-reset');
-const fileControls = document.getElementById('character-file-controls');
-
-async function loadRulesData() {
-  const [creationMd, fateMd, skillsMd, premadeMd, boonsMd, resourcesMd, giftsMd, flawsMd, rulesMd, costsMd, weaponsMd] =
-    await Promise.all(
-      [
-        '../rules/character-creation.md',
-        '../rules/fate.md',
-        '../rules/skills.md',
-        '../rules/premade-skills.md',
-        '../rules/boons.md',
-        '../rules/resources.md',
-        '../rules/gifts.md',
-        '../rules/flaws.md',
-        '../rules/rules.md',
-        '../rules/costs.md',
-        '../rules/weapons.md',
-      ].map(fetchText),
-    );
-
-  const costs = parseCosts(costsMd);
-
-  return {
-    // parseAttributes(creationMd) still supplies structural data (the
-    // Attribute/sub-stat lists, Figured Characteristics formulas) - every
-    // numeric cost it also used to scrape out of character-creation.md's
-    // prose is overridden below by costs.md, the app's actual source for
-    // tunable numbers now (see rules/costs.md).
-    ...parseAttributes(creationMd),
-    ...costs,
-    everymanSkills: parseEverymanSkills(creationMd),
-    natures: parseNatures(fateMd),
-    skillTiers: parseSkillTiers(skillsMd),
-    skillCatalog: parseSkillCatalog(premadeMd),
-    boons: parseBoons(boonsMd),
-    resources: parseResources(resourcesMd),
-    gifts: parseGifts(giftsMd, costs.giftAdderCost),
-    giftCheckText: parseGiftCheckText(giftsMd),
-    flaws: parseFlaws(flawsMd),
-    sampleDescriptors: parseSampleDescriptors(rulesMd),
-    difficultyChart: parseDifficultyChart(rulesMd),
-    equipment: parseEquipment(weaponsMd),
-  };
-}
 
 function loadSavedState(data) {
   try {
@@ -113,14 +57,6 @@ function loadSavedState(data) {
 
 function saveState(state) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-}
-
-// Replaces every own key on `target` with `source`'s, in place - `state` is
-// a `const` binding closed over everywhere, so loading a saved character
-// mutates its contents rather than rebinding the variable.
-function replaceStateContents(target, source) {
-  Object.keys(target).forEach((key) => delete target[key]);
-  Object.assign(target, source);
 }
 
 async function main() {
@@ -150,116 +86,6 @@ async function main() {
     btnBack.disabled = currentStep === 0;
     btnNext.disabled = currentStep === STEPS.length - 1;
     rerenderPools();
-  }
-
-  // Reads a character JSON export (from either build - a plain download,
-  // an emailed file, whatever) and merges it over a fresh initial state,
-  // same shape as loadSavedState/the desktop Load select. No validation of
-  // the imported content against the current rules data - an export from
-  // an older rules version could carry a since-renamed Gift/Skill/Resource
-  // name forward silently. Accepted risk, not handled.
-  function applyImportedCharacter(jsonText) {
-    const loaded = JSON.parse(jsonText);
-    replaceStateContents(state, { ...createInitialState(data), ...loaded });
-    currentStep = 0;
-    rerenderStep();
-  }
-
-  // Plain HTML file input works fine for the browser build, but a WebView2
-  // <input type=file> inside the packaged Tauri app never opens a native
-  // dialog at all (confirmed live - a genuine OS-level click on the button
-  // produced no dialog anywhere on screen, not a permissions/CSP block,
-  // just not wired up the same way a browser tab is) - so the desktop build
-  // uses Tauri's own dialog plugin instead, reading the chosen path through
-  // the fs plugin the same way the existing Load select already does.
-  const importInput = el('input', {
-    type: 'file',
-    accept: 'application/json,.json',
-    style: 'display:none',
-    onChange: async (e) => {
-      const file = e.target.files[0];
-      e.target.value = '';
-      if (!file) return;
-      try {
-        applyImportedCharacter(await file.text());
-      } catch (err) {
-        console.error(err);
-        alert(`Failed to import "${file.name}" - not a valid character file.`);
-      }
-    },
-  });
-  const importBtn = el('button', {
-    type: 'button',
-    class: 'import-btn',
-    text: 'Import character…',
-    onClick: async () => {
-      if (!isDesktopApp) {
-        importInput.click();
-        return;
-      }
-      try {
-        const path = await window.__TAURI__.dialog.open({
-          multiple: false,
-          filters: [{ name: 'Character', extensions: ['json'] }],
-        });
-        if (!path) return;
-        applyImportedCharacter(await window.__TAURI__.fs.readTextFile(path));
-      } catch (err) {
-        console.error(err);
-        alert('Failed to import - not a valid character file.');
-      }
-    },
-  });
-
-  async function renderFileControls() {
-    if (!fileControls) return;
-    fileControls.innerHTML = '';
-    fileControls.append(importInput, importBtn);
-
-    if (!isDesktopApp) return;
-
-    const select = el('select', { class: 'character-select' }, [
-      el('option', { value: '' }, 'Load a saved character…'),
-    ]);
-    try {
-      (await listSavedCharacters()).forEach((name) => {
-        select.appendChild(el('option', { value: name }, name));
-      });
-    } catch (err) {
-      console.error('Failed to list saved characters', err);
-    }
-    select.addEventListener('change', async () => {
-      const name = select.value;
-      if (!name) return;
-      try {
-        const loaded = await loadCharacterFromFile(name);
-        replaceStateContents(state, { ...createInitialState(data), ...loaded });
-        currentStep = 0;
-        rerenderStep();
-      } catch (err) {
-        console.error(err);
-        alert(`Failed to load "${name}".`);
-      } finally {
-        select.value = '';
-      }
-    });
-
-    const saveBtn = el('button', {
-      type: 'button',
-      class: 'save-btn',
-      text: 'Save',
-      onClick: async () => {
-        try {
-          await saveCharacterToFile(state);
-          await renderFileControls();
-        } catch (err) {
-          console.error(err);
-          alert('Save failed.');
-        }
-      },
-    });
-
-    fileControls.append(select, saveBtn);
   }
 
   function renderNav() {
@@ -309,7 +135,6 @@ async function main() {
   });
 
   rerenderStep();
-  renderFileControls();
 }
 
 main();
