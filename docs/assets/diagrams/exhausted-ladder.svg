@@ -1,0 +1,25 @@
+<svg width="680" height="200" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Exhausted stacks through five escalating levels</title>
+<desc>Each failed endurance check adds one level of Exhausted, from Disadvantage on Physical rolls at level 1 up through full collapse at level 5.</desc>
+
+<rect x="35" y="130" width="110" height="40" rx="6" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<text x="90" y="153" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="16" font-weight="700" fill="#eaf5fb">1</text>
+
+<rect x="160" y="110" width="110" height="60" rx="6" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<text x="215" y="143" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="16" font-weight="700" fill="#eaf5fb">2</text>
+
+<rect x="285" y="90" width="110" height="80" rx="6" fill="#3a2e14" stroke="#e0a85c" stroke-width="1.5"/>
+<text x="340" y="133" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="16" font-weight="700" fill="#eaf5fb">3</text>
+
+<rect x="410" y="70" width="110" height="100" rx="6" fill="#3a2417" stroke="#e0a85c" stroke-width="1.5"/>
+<text x="465" y="123" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="16" font-weight="700" fill="#eaf5fb">4</text>
+
+<rect x="535" y="50" width="110" height="120" rx="6" fill="#2e1a17" stroke="#e0685c" stroke-width="1.5"/>
+<text x="590" y="113" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="16" font-weight="700" fill="#eaf5fb">5</text>
+
+<text x="90" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Phys. Disadv.</text>
+<text x="215" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">All Disadv.</text>
+<text x="340" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e0a85c">Move &#215;&#189;</text>
+<text x="465" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e0a85c">No Slow</text>
+<text x="590" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e0685c">Collapse</text>
+</svg>

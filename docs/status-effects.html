@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Status Effects - 20 Below</title>
+<link rel="icon" type="image/x-icon" href="assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --accent-dim: #1c3548;
+    --danger: #e0685c;
+    --radius: 8px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  main {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  .back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  h1 {
+    margin: 1rem 0 0.5rem;
+    letter-spacing: 0.02em;
+  }
+  .note {
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  a { color: var(--accent); }
+
+  .toc {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .toc h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-dim);
+  }
+  .toc ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    line-height: 1.9;
+  }
+  .toc a { text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  .status-section {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+    scroll-margin-top: 1.5rem;
+  }
+  .status-section:nth-of-type(even) {
+    background: var(--bg);
+  }
+  .status-section h2 {
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--panel-border);
+  }
+  .status-section > p {
+    line-height: 1.6;
+    margin: 0 0 1rem;
+  }
+  .status-section > p:last-child {
+    margin-bottom: 0;
+  }
+
+  .roll-box {
+    background: var(--bg);
+    border: 1px solid var(--accent-dim);
+    border-radius: var(--radius);
+    padding: 0.6rem 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: inline-block;
+  }
+  .aside {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+
+  .chart-frame {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .chart-frame img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .exhausted-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+  .exhausted-table th,
+  .exhausted-table td {
+    border: 1px solid var(--panel-border);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+  }
+  .exhausted-table th {
+    color: var(--text-dim);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .exhausted-table tr:last-child td {
+    color: var(--danger);
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+<main>
+  <a class="back-link" href="../index.html">&larr; Back to 20 Below</a>
+  <h1>Status Effects</h1>
+  <p class="note">
+    Every status effect currently defined in the system - what triggers it, what it does, and how it clears.
+    This isn't necessarily a permanently closed list; more may be added as the rules keep developing.
+  </p>
+
+  <nav class="toc">
+    <h2>Effects</h2>
+    <ol>
+      <li><a href="#distracted">Distracted</a></li>
+      <li><a href="#surprised">Surprised</a></li>
+      <li><a href="#flustered">Flustered</a></li>
+      <li><a href="#overwhelmed">Overwhelmed</a></li>
+      <li><a href="#shattered">Shattered</a></li>
+      <li><a href="#exhausted">Exhausted</a></li>
+    </ol>
+  </nav>
+
+  <section class="status-section" id="distracted">
+    <h2>Distracted</h2>
+    <p><strong>Trigger:</strong> losing a Health Level, or being the target of a Kotodama effect, while resolving a Slow Action Bracket action. A Gift, an environmental hazard, or GM fiat can also impose it directly, whether or not a Slow action is involved.</p>
+    <div class="roll-box">Atropos + Difficulty, roll 2d10, to hold focus</div>
+    <div class="chart-frame">
+      <img src="assets/diagrams/distracted-flow.svg" alt="Losing a Health Level or being targeted by Kotodama while resolving a Slow action triggers a roll to hold focus. Success resolves the action as declared. Failure downgrades a Slow action to Normal, or imposes Disadvantage outside a Slow action." />
+    </div>
+    <p><strong>Effect:</strong> if the trigger happened during a Slow action, failing the roll downgrades that action to a Normal one, losing the called-shot option and the Advantage that made it Slow in the first place. Outside a Slow action, failure instead imposes Disadvantage on whatever triggered it.</p>
+    <p class="aside"><strong>Clears:</strong> resolved immediately by the roll itself - success or failure, there's nothing lingering afterward. Concentration grants immunity to being Distracted, regardless of the source.</p>
+  </section>
+
+  <section class="status-section" id="surprised">
+    <h2>Surprised</h2>
+    <p><strong>Trigger:</strong> not noticing a threat before combat begins - typically because an opposing Stealth roll beat your Perception, or the GM judges the fiction calls for it.</p>
+    <p><strong>Effect:</strong> Disadvantage on everything - attacks, and any other roll where being ready matters - for the rest of the round you're caught in.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/surprised-timeline.svg" alt="Surprised imposes Disadvantage on everything for the remainder of the round it triggers in, then clears automatically once that round ends." />
+    </div>
+    <p class="aside"><strong>Clears:</strong> automatically, once that round ends - no roll needed. Alertness grants immunity to being Surprised while conscious.</p>
+  </section>
+
+  <section class="status-section" id="flustered">
+    <h2>Flustered</h2>
+    <p><strong>Trigger:</strong> your Poise reaching 0.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/poise-track.svg" alt="Poise mirrors Health Levels but cannot drop below 0. Once at 0, a character is Flustered." />
+    </div>
+    <p><strong>Effect:</strong> Disadvantage on all Social rolls, and on anything else where composure matters (GM's call), for the rest of the Scene.</p>
+    <div class="roll-box">Presence + Difficulty, roll 2d10, to shake it off early</div>
+    <p class="aside"><strong>Clears:</strong> lasts the rest of the Scene by default, but you can spend an action to roll Presence against a Difficulty and end it immediately on success. No Gift currently grants immunity to Flustered - intentional.</p>
+  </section>
+
+  <section class="status-section" id="overwhelmed">
+    <h2>Overwhelmed</h2>
+    <p><strong>Trigger:</strong> your Sanity reaching 0.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/sanity-track.svg" alt="Sanity mirrors Health Levels. At 0 a character is Overwhelmed; below 0 they are Shattered and can't act alone." />
+    </div>
+    <p><strong>Effect:</strong> a temporary negative mental trait, plus Disadvantage on your rolls. You can still act on your own.</p>
+    <p class="aside"><strong>Clears:</strong> once you're removed from whatever caused it and get a chance to rest, or by spending 1 Ki - which also refills Sanity back to full.</p>
+  </section>
+
+  <section class="status-section" id="shattered">
+    <h2>Shattered</h2>
+    <p><strong>Trigger:</strong> your Sanity dropping below 0.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/sanity-track.svg" alt="Sanity mirrors Health Levels. At 0 a character is Overwhelmed; below 0 they are Shattered and can't act alone." />
+    </div>
+    <p><strong>Effect:</strong> panicky, babbling, unable to act on your own - someone has to lead or drag you.</p>
+    <p class="aside"><strong>Clears:</strong> the same two ways as Overwhelmed - removal-plus-rest, or 1 Ki - but either one only restores Sanity to 1, not fully; normal recovery resumes from there. Dropping below 0 always leaves a permanent mental scar, even if you recover with Ki.</p>
+  </section>
+
+  <section class="status-section" id="exhausted">
+    <h2>Exhausted</h2>
+    <p><strong>Trigger:</strong> pushing a sustained physical exertion (forced marching, hard labor, running flat-out) past its free baseline duration, set by your Stamina. Each additional unit of time beyond that baseline requires a roll.</p>
+    <div class="roll-box">Water + Difficulty, roll 2d10 (Difficulty drops each successive check)</div>
+    <p><strong>Effect:</strong> cumulative, stacking one level at a time on a failed check:</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/exhausted-ladder.svg" alt="Each failed endurance check adds one level of Exhausted, from Disadvantage on Physical rolls at level 1 up through full collapse at level 5." />
+    </div>
+    <table class="exhausted-table">
+      <tr><th>Level</th><th>Effect</th></tr>
+      <tr><td>1</td><td>Disadvantage on Physical rolls</td></tr>
+      <tr><td>2</td><td>Disadvantage on all rolls</td></tr>
+      <tr><td>3</td><td>Movement Rate halved</td></tr>
+      <tr><td>4</td><td>Can't take Slow actions</td></tr>
+      <tr><td>5</td><td>Collapse - unconscious, can't act until rested</td></tr>
+    </table>
+    <p class="aside"><strong>Clears:</strong> a Short Rest drops one level; a Full Night's Rest clears it entirely - the same Short/Full split Health Level recovery uses.</p>
+  </section>
+
+</main>
+</body>
+</html>
