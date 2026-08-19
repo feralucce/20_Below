@@ -4,15 +4,18 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>20 Below</title>
+<link rel="icon" type="image/x-icon" href="docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="docs/assets/brand/favicon-128.png" />
 <style>
   :root {
-    --bg: #14161c;
-    --panel: #1d2028;
-    --panel-border: #2f3341;
-    --text: #e8e9ee;
-    --text-dim: #9ba0b0;
-    --accent: #7aa2f7;
-    --accent-dim: #3b4a6b;
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --accent-dim: #1c3548;
     --radius: 8px;
     font-family: "Segoe UI", system-ui, sans-serif;
   }
@@ -36,6 +39,12 @@
     margin: 0;
     letter-spacing: 0.05em;
     font-size: 2.5rem;
+  }
+  .wordmark {
+    max-width: min(420px, 90%);
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
   .subtitle {
     color: var(--text-dim);
@@ -117,7 +126,7 @@
 <body>
 <main>
   <header>
-    <h1>20 Below</h1>
+    <h1><img class="wordmark" src="docs/assets/brand/wordmark.png" alt="20 Below" /></h1>
     <p class="subtitle">A fated-heroes tabletop RPG</p>
   </header>
 
