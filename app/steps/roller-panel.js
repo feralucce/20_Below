@@ -3,7 +3,13 @@ import { performCoreRoll, SKILL_TIERS } from '../roller/core.js';
 import { performGiftCheck } from '../roller/giftCheck.js';
 import { performResourceCheck } from '../roller/resourceCheck.js';
 import { rollDamagePool } from '../roller/damage.js';
-import { skillTierName, effectiveResourceLevel, applyResourceCheckFailure, clearResourcePenalty } from '../state.js';
+import {
+  skillTierName,
+  effectiveResourceLevel,
+  applyResourceCheckFailure,
+  applyResourceCheckZeroOut,
+  clearResourcePenalty,
+} from '../state.js';
 
 // Physical/Social/Mental each pair a wall stat (what the target's dice are
 // checked against), the attacker's own matching Ki Infusion boost sub-stat,
@@ -255,17 +261,21 @@ export default function buildRollerPanel(state, data, { refreshHeader = () => {}
 }
 
 // Pushing a Resource (resources.md#pushing-a-resource): 2d10 against
-// Resource Level + Difficulty, ordinary critical success/failure rule, no
-// Skill involved. A failed check never denies the ask - it only drops the
-// Resource's effective Level (state.resourcePenalties) until manually
-// cleared, since the app has no in-game calendar to auto-expire "a Month"
-// against.
+// Resource Level + (10 - Resource Index), ordinary critical success/
+// failure rule, no Skill involved. A normal-range check never denies the
+// ask - it only drops the Resource's effective Level (state.
+// resourcePenalties) until manually cleared, since the app has no
+// in-game calendar to auto-expire "a Month" against. Reaching beyond your
+// means (Resource Index up to 2 higher than the current effective Level,
+// or Index 6 always) zeroes the Resource out instead (state.
+// resourceZeroed), unless the roll is a critical success - except Index 6
+// itself, which is never saved by a crit.
 function buildResourceCheckSection(state, data) {
   const section = el('div', { class: 'roller-gift-check' });
 
   const ownedResources = data.resources.filter((r) => state.resources[r.name] > 0);
   let selectedResource = ownedResources[0]?.name ?? null;
-  let selectedDifficulty = 5;
+  let selectedResourceIndex = 3;
 
   const resourceSelect = el(
     'select',
@@ -273,6 +283,7 @@ function buildResourceCheckSection(state, data) {
       onChange: (e) => {
         selectedResource = e.target.value;
         renderSummary();
+        renderResourceIndexOptions();
       },
     },
     ownedResources.map((r) =>
@@ -280,21 +291,37 @@ function buildResourceCheckSection(state, data) {
     ),
   );
 
-  const difficultySelect = el(
-    'select',
-    {
-      onChange: (e) => {
-        selectedDifficulty = Number(e.target.value);
-      },
+  // Resource Index is a flat 1-6 scale, its own thing rather than the
+  // general Difficulty Chart - bare numbers only, no descriptive labels.
+  // An Index more than 2 above the Resource's current effective Level is
+  // simply out of reach and disabled, except Index 6, which is always
+  // attemptable (resources.md: "always treated as reaching 2 levels
+  // beyond the Resource's current Level, no matter how high that Level
+  // actually is").
+  const resourceIndexSelect = el('select', {
+    onChange: (e) => {
+      selectedResourceIndex = Number(e.target.value);
     },
-    data.difficultyChart.map((d) =>
-      el(
-        'option',
-        { value: d.difficulty, selected: d.difficulty === selectedDifficulty ? '' : undefined },
-        `${d.difficulty} - ${d.label}`,
-      ),
-    ),
-  );
+  });
+  function renderResourceIndexOptions() {
+    const effective = selectedResource ? effectiveResourceLevel(state, selectedResource) : 0;
+    resourceIndexSelect.innerHTML = '';
+    for (let ri = 1; ri <= 6; ri++) {
+      const reachable = ri === 6 || ri - effective <= 2;
+      resourceIndexSelect.append(
+        el(
+          'option',
+          {
+            value: ri,
+            selected: ri === selectedResourceIndex ? '' : undefined,
+            disabled: reachable ? undefined : '',
+          },
+          `${ri}`,
+        ),
+      );
+    }
+  }
+  renderResourceIndexOptions();
 
   const summaryEl = el('p', {});
   const clearBtn = el('button', {
@@ -303,6 +330,7 @@ function buildResourceCheckSection(state, data) {
     onClick: () => {
       clearResourcePenalty(state, selectedResource);
       renderSummary();
+      renderResourceIndexOptions();
     },
   });
 
@@ -313,11 +341,14 @@ function buildResourceCheckSection(state, data) {
       return;
     }
     const effective = effectiveResourceLevel(state, selectedResource);
+    const zeroed = state.resourceZeroed[selectedResource];
     const penalty = state.resourcePenalties[selectedResource] ?? 0;
-    summaryEl.textContent = penalty
-      ? `Effective Level ${effective} (reduced from ${state.resources[selectedResource]} by a prior failure).`
-      : `Current Level ${effective}.`;
-    clearBtn.disabled = !penalty;
+    summaryEl.textContent = zeroed
+      ? `Effective Level 0 (zeroed out by reaching beyond your means).`
+      : penalty
+        ? `Effective Level ${effective} (reduced from ${state.resources[selectedResource]} by a prior failure).`
+        : `Current Level ${effective}.`;
+    clearBtn.disabled = !zeroed && !penalty;
   }
   renderSummary();
 
@@ -330,18 +361,26 @@ function buildResourceCheckSection(state, data) {
     disabled: selectedResource ? undefined : '',
     onClick: () => {
       const resourceLevel = effectiveResourceLevel(state, selectedResource);
-      const result = performResourceCheck({ resourceLevel, difficulty: selectedDifficulty });
-      if (result.resourceReduced) {
+      const result = performResourceCheck({ resourceLevel, resourceIndex: selectedResourceIndex });
+      if (result.resourceZeroed) {
+        applyResourceCheckZeroOut(state, selectedResource);
+      } else if (result.resourceReduced) {
         applyResourceCheckFailure(state, selectedResource);
       }
       renderSummary();
+      renderResourceIndexOptions();
       resultEl.innerHTML = '';
+      const costLine = result.resourceZeroed
+        ? `${selectedResource} drops to 0 until a Month passes - reaching that far beyond your means always costs everything${result.outcome === 'critical-success' ? ' (Resource Index 6 isn\'t saved by a critical success)' : ''}.`
+        : result.resourceReduced
+          ? `${selectedResource} drops to Level ${effectiveResourceLevel(state, selectedResource)} until a Month passes.`
+          : result.beyondMeans
+            ? `Critical success - ${selectedResource} is unaffected even reaching this far beyond your means.`
+            : `${selectedResource} is unaffected - you got what you were after.`;
       resultEl.append(
         el('p', {}, `Rolled ${result.roll.dice.join(', ')} → ${result.roll.sum} vs target ${result.target}`),
         el('p', { class: outcomeClass(result.outcome) }, [el('strong', {}, outcomeLabel(result.outcome))]),
-        el('p', {}, result.resourceReduced
-          ? `${selectedResource} drops to Level ${effectiveResourceLevel(state, selectedResource)} until a Month passes.`
-          : `${selectedResource} is unaffected - you got what you were after.`),
+        el('p', {}, costLine),
       );
     },
   });
@@ -349,7 +388,7 @@ function buildResourceCheckSection(state, data) {
   section.append(
     el('h4', {}, 'Resource Check'),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Resource'), resourceSelect]),
-    el('div', { class: 'roller-row' }, [el('label', {}, 'Difficulty'), difficultySelect]),
+    el('div', { class: 'roller-row' }, [el('label', {}, 'Resource Index'), resourceIndexSelect]),
     summaryEl,
     el('div', { style: 'display:flex;gap:0.5rem;' }, [rollBtn, clearBtn]),
     resultEl,
@@ -401,10 +440,11 @@ function buildAttackRollSection(state, data, refreshHeader) {
   }
   renderAttributeGroup();
 
-  // Defense reads directly off the Difficulty Chart (rules.md: "Defense
-  // becomes the attacker's Difficulty") - same data source as Skill Roll's
-  // Difficulty dropdown, just relabeled for what it means here: the
-  // target's Defense score, not a GM-picked task difficulty.
+  // Defense runs the same 0-10 scale as the Difficulty Chart (rules.md:
+  // "Defense becomes the attacker's Difficulty"), but shown as bare
+  // numbers here - a Defense score isn't a GM-picked task difficulty, so
+  // the Difficulty Chart's descriptive labels ("Nearly Impossible", etc.)
+  // don't apply to what this dropdown means.
   const defenseSelect = el(
     'select',
     {
@@ -416,7 +456,7 @@ function buildAttackRollSection(state, data, refreshHeader) {
       el(
         'option',
         { value: d.difficulty, selected: d.difficulty === selectedDefense ? '' : undefined },
-        `${d.difficulty} - ${d.label}`,
+        `${d.difficulty}`,
       ),
     ),
   );
