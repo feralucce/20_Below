@@ -120,7 +120,7 @@ Descriptors are the concrete hook a player points to when [arguing a Skill pairi
 
 ### The Passive Wall Triad - Soak, Presence, Psyche
 
-Every attack, regardless of type, resolves in the same two steps. **First, a to-hit roll**: the attacker's Attribute + Skill against the target's [Defense](#defense-derived-stat) as Difficulty - a normal core roll, and the same formula whether the attack is a fist, a threat, or a mind reaching where it isn't welcome. **Only a success reaches step two.** Then the attack's dice are resolved against the relevant wall stat, per die:
+Every attack, regardless of type, resolves in the same two steps. **First, a to-hit roll**: the attacker's Attribute (Earth, Air, Fire, or Water - whichever fits the attack) against the target's [Defense](#defense-derived-stat) as Difficulty, no Skill involved - a straight Attribute-vs-Defense roll, the same formula whether the attack is a fist, a threat, or a mind reaching where it isn't welcome. **Only a success reaches step two.** Then the attack's dice are resolved against the relevant wall stat, per die:
 
 - **Soak** - wall against **Physical** damage dice.
 - **Presence** - wall against **Social** attack dice.
