@@ -1,12 +1,12 @@
 :root {
   color-scheme: light dark;
-  --bg: #14161c;
-  --panel: #1d2028;
-  --panel-border: #2f3341;
-  --text: #e8e9ee;
-  --text-dim: #9ba0b0;
-  --accent: #7aa2f7;
-  --accent-dim: #3b4a6b;
+  --bg: #0a1720;
+  --panel: #12232e;
+  --panel-border: #24404f;
+  --text: #eaf5fb;
+  --text-dim: #8fadbe;
+  --accent: #3d84c4;
+  --accent-dim: #1c3548;
   --danger: #e0685c;
   --ok: #6fbf73;
   --gold: #e0a85c;
@@ -102,6 +102,14 @@ body {
 .app-header h1 {
   margin: 0;
   letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.header-icon {
+  vertical-align: middle;
 }
 
 .subtitle {
