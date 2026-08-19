@@ -54,6 +54,12 @@ export default function buildRollerPanel(state, data, { refreshHeader = () => {}
   let selectedDifficulty = 5;
   let advantageOn = false;
   let disadvantageOn = false;
+  // Jack of All Trades (boons.md): Tier 1 grants a Trained baseline in
+  // every Skill. Rather than tracking which Boons a character owns, this
+  // is a manual override - checking it floors the roll's effective Tier at
+  // Trained (2), same as buying the Boon would, without touching the
+  // Skill's own purchased Tier or requiring the app to model Boon effects.
+  let joatOn = false;
 
   const skillSelect = el(
     'select',
@@ -96,9 +102,11 @@ export default function buildRollerPanel(state, data, { refreshHeader = () => {}
   }
   renderAttributeGroup();
 
+  // Jack of All Trades floors the effective Tier at Trained (2) - it never
+  // lowers an already-better Tier, it only lifts Untrained/Novice up.
   function currentTier() {
-    if (selectedSkill === UNTRAINED_VALUE) return 0;
-    return state.skills[selectedSkill];
+    const purchasedTier = selectedSkill === UNTRAINED_VALUE ? 0 : state.skills[selectedSkill];
+    return joatOn ? Math.max(purchasedTier, 2) : purchasedTier;
   }
 
   function renderAttributeVisibility() {
@@ -106,10 +114,23 @@ export default function buildRollerPanel(state, data, { refreshHeader = () => {}
   }
   renderAttributeVisibility();
 
-  // The selected Skill's own Tier can already grant Advantage or
-  // Disadvantage (Adept/Expert/Master, Novice respectively) before either
-  // toggle box is touched - the toggles are an *additional* source that
-  // stacks with the Tier's own grant via the binary cancellation rule
+  const joatCheckbox = el('label', { class: 'roller-row' }, [
+    el('input', {
+      type: 'checkbox',
+      checked: joatOn ? '' : undefined,
+      onChange: (e) => {
+        joatOn = e.target.checked;
+        renderAttributeVisibility();
+        renderTierGrantNote();
+      },
+    }),
+    ' Jack of All Trades (treat this Skill as at least Trained)',
+  ]);
+
+  // The effective Tier can already grant Advantage or Disadvantage
+  // (Adept/Expert/Master, Novice respectively) before either toggle box is
+  // touched - the toggles are an *additional* source that stacks with the
+  // Tier's own grant via the binary cancellation rule
   // (rules.md#advantage--disadvantage), not a direct override. This note
   // makes that visible so a toggle that seems to "do nothing" (because it
   // canceled the Tier's own grant back to Normal) isn't mistaken for a bug.
@@ -203,31 +224,30 @@ export default function buildRollerPanel(state, data, { refreshHeader = () => {}
   }
 
   const damageSection = buildDamageRollSection(state, data, refreshHeader);
-  const attackRollSection = buildAttackRollSection(state, data, refreshHeader, refreshHeader);
-  // The damage rollers' Ki Infusion checkboxes (the standalone one and the
-  // one nested inside Attack Roll) need to reflect the character's
-  // *current* Ki, which can change from outside either section entirely
-  // (a Gift Check failure, most directly) - each already refreshes its own
-  // boost row after spending Ki itself, so the only other spot that needs
-  // to reach in here is Gift Check, wired below.
+  const attackRollSection = buildAttackRollSection(state, data, refreshHeader);
+  // The damage roller's Ki Infusion checkboxes need to reflect the
+  // character's *current* Ki, which can change from outside this section
+  // entirely (a Gift Check failure, most directly) - Roll Damage already
+  // refreshes its own boost row after spending Ki, so the only other spot
+  // that needs to reach in here is Gift Check, wired below.
   function refreshKiDependents() {
     refreshHeader();
     damageSection.refreshBoostRow();
-    attackRollSection.refreshBoostRow();
   }
 
   wrap.append(
-    el('h4', {}, 'Core Roll'),
+    attackRollSection,
+    damageSection,
+    el('h4', {}, 'Skill Roll'),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Skill'), skillSelect]),
     attributeGroup,
+    joatCheckbox,
     el('div', { class: 'roller-row' }, [el('label', {}, 'Difficulty'), difficultySelect]),
     tierGrantNote,
     togglesRow,
     rollBtn,
     resultEl,
-    attackRollSection,
     buildGiftCheckSection(state, data, refreshKiDependents),
-    damageSection,
     buildResourceCheckSection(state, data),
   );
 
@@ -337,44 +357,30 @@ function buildResourceCheckSection(state, data) {
   return section;
 }
 
-// Attack Roll - the full two-step sequence from
-// rules.md#the-passive-wall-triad---soak-presence-psyche: a to-hit roll
-// (Attribute + Skill vs. the target's Defense, used directly as Difficulty
-// since both run 0-10) using the same core roll engine as Core Roll above,
-// and only on a success (plain or critical) does the damage dice pool
-// reveal itself - a critical failure or plain failure never reaches step
-// two. Reuses buildDamageRollSection wholesale for that second step rather
-// than duplicating its dice-pool/Ki-Infusion logic.
-function buildAttackRollSection(state, data, refreshHeader, refreshDependents) {
+// Attack Roll - rules.md#the-passive-wall-triad---soak-presence-psyche's
+// to-hit step: a straight Attribute-vs-Defense roll, no Skill involved at
+// all. Only Earth/Air/Fire/Water are offered - Moira (Fate/the
+// supernatural) isn't a combat Attribute and never applies to a to-hit
+// roll. Reuses the core roll engine with a fixed Tier of 2 (Trained): that
+// Tier's shape is exactly "use the Attribute, no auto Advantage/
+// Disadvantage, no crit widening, no Master reroll" - precisely a plain
+// Attribute-vs-Difficulty roll with no Skill-Tier modifiers layered on.
+const ATTACK_ATTRIBUTES = ['Earth', 'Air', 'Fire', 'Water'];
+const PLAIN_ATTACK_TIER = 2;
+
+function buildAttackRollSection(state, data, refreshHeader) {
   const section = el('div', { class: 'roller-gift-check' });
 
-  let selectedSkill = UNTRAINED_VALUE;
-  let selectedAttribute = data.attributes[0].name;
+  const attackAttributes = data.attributes.filter((a) => ATTACK_ATTRIBUTES.includes(a.name));
+  let selectedAttribute = attackAttributes[0]?.name;
   let selectedDefense = 5;
   let advantageOn = false;
   let disadvantageOn = false;
 
-  const skillSelect = el(
-    'select',
-    {
-      onChange: (e) => {
-        selectedSkill = e.target.value;
-        renderAttributeVisibility();
-        renderTierGrantNote();
-      },
-    },
-    [
-      el('option', { value: UNTRAINED_VALUE }, 'No Skill (Untrained)'),
-      ...data.skillCatalog.map((s) =>
-        el('option', { value: s.name }, `${s.name} - ${skillTierName(data, state.skills[s.name])}`),
-      ),
-    ],
-  );
-
   const attributeGroup = el('div', { class: 'attribute-radio-group' });
   function renderAttributeGroup() {
     attributeGroup.innerHTML = '';
-    data.attributes.forEach((a) => {
+    attackAttributes.forEach((a) => {
       const id = `atk-attr-${a.name}`;
       attributeGroup.append(
         el('label', { class: 'attribute-radio', for: id }, [
@@ -395,29 +401,10 @@ function buildAttackRollSection(state, data, refreshHeader, refreshDependents) {
   }
   renderAttributeGroup();
 
-  function currentTier() {
-    if (selectedSkill === UNTRAINED_VALUE) return 0;
-    return state.skills[selectedSkill];
-  }
-
-  function renderAttributeVisibility() {
-    attributeGroup.style.display = currentTier() === 0 ? 'none' : 'flex';
-  }
-  renderAttributeVisibility();
-
-  const tierGrantNote = el('p', { class: 'roller-tier-note' });
-  function renderTierGrantNote() {
-    const grant = SKILL_TIERS[currentTier()].grantsAdvantage;
-    tierGrantNote.textContent = grant
-      ? `${SKILL_TIERS[currentTier()].name} already grants ${grant === 'advantage' ? 'Advantage' : 'Disadvantage'} from its Tier - checking the opposite box below cancels it back to Normal, it doesn't reverse it.`
-      : '';
-  }
-  renderTierGrantNote();
-
   // Defense reads directly off the Difficulty Chart (rules.md: "Defense
-  // becomes the attacker's Difficulty") - same select and same data source
-  // as Core Roll's Difficulty dropdown, just relabeled for what it means
-  // here: the target's Defense score, not a GM-picked task difficulty.
+  // becomes the attacker's Difficulty") - same data source as Skill Roll's
+  // Difficulty dropdown, just relabeled for what it means here: the
+  // target's Defense score, not a GM-picked task difficulty.
   const defenseSelect = el(
     'select',
     {
@@ -453,20 +440,17 @@ function buildAttackRollSection(state, data, refreshHeader, refreshDependents) {
   renderToggles();
 
   const toHitResultEl = el('div', { class: 'roller-result' });
-  const damageSubSection = buildDamageRollSection(state, data, refreshDependents, 'Damage (attack connected)');
-  damageSubSection.style.display = 'none';
 
   const rollBtn = el('button', {
     type: 'button',
     class: 'roll-btn',
     text: 'Roll to Hit',
     onClick: () => {
-      const tier = currentTier();
-      const attributeValue = tier === 0 ? 0 : state.attributes[selectedAttribute];
+      const attributeValue = state.attributes[selectedAttribute];
       const result = performCoreRoll({
         attribute: attributeValue,
         difficulty: selectedDefense,
-        skillTier: tier,
+        skillTier: PLAIN_ATTACK_TIER,
         extraAdvantage: advantageOn ? 1 : 0,
         extraDisadvantage: disadvantageOn ? 1 : 0,
         klotho: state.subStats.Klotho,
@@ -478,21 +462,18 @@ function buildAttackRollSection(state, data, refreshHeader, refreshDependents) {
       }
 
       const hit = result.outcome === 'success' || result.outcome === 'critical-success';
-      damageSubSection.style.display = hit ? '' : 'none';
 
       toHitResultEl.innerHTML = '';
-      const skillLabel = selectedSkill === UNTRAINED_VALUE ? 'Untrained' : `${selectedSkill} (${result.tierName})`;
       toHitResultEl.append(
         ...[
           el('p', {}, [
-            el('strong', {}, `${skillLabel} vs Defense ${result.target}`),
+            el('strong', {}, `${selectedAttribute} vs Defense ${result.target}`),
             result.mode !== 'normal' ? ` (${result.mode === 'advantage' ? 'Advantage' : 'Disadvantage'})` : '',
           ]),
           el('p', {}, diceSummary(result.roll)),
           el('p', { class: outcomeClass(result.outcome) }, [
             el('strong', {}, hit ? `${outcomeLabel(result.outcome)} - the attack connects` : `${outcomeLabel(result.outcome)} - the attack misses`),
           ]),
-          result.reroll ? el('p', {}, `Master's reroll: ${diceSummary(result.reroll)}`) : null,
           result.luckyNumber ? el('p', { class: 'status-ok' }, 'Lucky Number! +1 Fate Token.') : null,
         ].filter((n) => n != null),
       );
@@ -501,16 +482,12 @@ function buildAttackRollSection(state, data, refreshHeader, refreshDependents) {
 
   section.append(
     el('h4', {}, 'Attack Roll'),
-    el('div', { class: 'roller-row' }, [el('label', {}, 'Skill'), skillSelect]),
     attributeGroup,
     el('div', { class: 'roller-row' }, [el('label', {}, "Target's Defense"), defenseSelect]),
-    tierGrantNote,
     togglesRow,
     rollBtn,
     toHitResultEl,
-    damageSubSection,
   );
-  section.refreshBoostRow = damageSubSection.refreshBoostRow;
   return section;
 }
 

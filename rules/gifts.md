@@ -391,7 +391,7 @@ You don't need to say a word to command a room's attention - it simply happens, 
 
 | Level | Effect |
 |---|---|
-| 1 | Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** + Skill vs. their Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die locks their attention onto you for the scene: awe, dread, or fascination, your choice. No specific action compelled, just overwhelming presence. |
+| 1 | Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die locks their attention onto you for the scene: awe, dread, or fascination, your choice. No specific action compelled, just overwhelming presence. |
 | 2 | Dice rise to **3d10**. Effect now reaches everyone perceiving you within Close range - each target gets their own to-hit roll and, on success, their own dice vs. their Presence wall. |
 | 3 | Dice rise to **4d10**. You may split the effect's flavor by target in the same use - dread for hostiles, awe or magnetism for allies/bystanders. |
 | 4 | **No to-hit roll required anymore** - your presence is overwhelming enough that it simply rolls **5d10** per-die against the target's Presence wall directly. Repeated exposure builds a hold: each successful use on the same person grants **Advantage** on your next attempt against them, cumulative, lasting until they're away from you for an extended stretch (GM's call). |
@@ -764,7 +764,7 @@ You don't issue one-off commands - that's Domination's territory. You set the ru
 
 | Level | Effect |
 |---|---|
-| 1 | Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** + Skill vs. their Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die binds them to one simple rule of conduct you declare ("don't raise your voice," "don't lie to me," "don't draw a weapon") for the rest of the Scene. Breaking the rule costs them **Disadvantage** on the roll that breaks it. |
+| 1 | Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die binds them to one simple rule of conduct you declare ("don't raise your voice," "don't lie to me," "don't draw a weapon") for the rest of the Scene. Breaking the rule costs them **Disadvantage** on the roll that breaks it. |
 | 2 | Dice rise to **3d10**. You may declare up to two rules at once on the same target. |
 | 3 | Dice rise to **4d10**. You may bind up to **two targets** at once, each resolved individually against their own Presence wall and their own rule set. |
 | 4 | **No to-hit roll required anymore** - it simply rolls **5d10** per-die against each target's Presence wall directly. Up to **three targets** at once, each able to hold up to **three rules**. |
