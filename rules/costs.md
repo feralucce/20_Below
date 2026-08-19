@@ -1,6 +1,6 @@
 # Costs
 
-The single source of truth for every tunable number in the system - pool sizes, per-point rates, and Advancement XP costs. **The app reads this file directly**; the same numbers are also written into character-creation.md, gifts.md, boons.md, and advancement.md as human-readable prose for players, but those copies don't drive anything - if you change a number here, update the matching prose there too so they don't drift.
+The single source of truth for every tunable number in the system - pool sizes, per-point rates, and Advancement XP costs. **The app reads this file directly**; the same numbers are also written into character-creation.md, gifts.md, boons.md, and docs/advancement-reference.html as human-readable prose for players, but those copies don't drive anything - if you change a number here, update the matching prose there too so they don't drift.
 
 ## Creation Pools
 
