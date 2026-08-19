@@ -63,13 +63,13 @@ This is intentional: under the 2d10 curve, an untrained character faces poor odd
 
 Covers **all three attack types** - Physical, Social, and Mental - with the same shape and the same currency. The baseline attack die is raw and unboosted - `d10` vs. the defender's wall (Soak/Presence/Psyche as appropriate), so a wall of 10 fully negates it, guaranteed (0% connect). Before the dice are rolled, a player declares which individual dice they're boosting and spends **1 Ki per die** committed - each boosted die then adds the player's own matching sub-stat (**Ferocity** for Physical, **Presence** for Social, **Psyche** for Mental) to its own result once rolled. Boosts are committed blind, before any of the attack's dice are seen - not chosen afterward to salvage an underperforming roll. A boosted die is compared as `d10 + [matching sub-stat]` vs. the wall, same threshold rule (result > wall connects).
 
-This is a **direct Ki spend**, the same category as [spending Ki to preserve a Health Level, Poise, or Sanity Level](#ki-spend-to-preserve-a-health-level-poise-or-sanity-level) and [Bump Action Bracket](fate.md#ki-the-pool-formerly-risk-pool) - **not** a Fate Token spend, so it does **not** trigger the [Fatigue Check](fate.md#fatigue-check) and does **not** count against [Stamina's per-Scene spend cap](fate.md#staminas-job).
+This is a **direct Ki spend**, the same category as [spending Ki to preserve a Health Level or Sanity Level](#ki-spend-to-preserve-a-health-level-or-sanity-level) and [Bump Action Bracket](fate.md#ki-the-pool-formerly-risk-pool) - **not** a Fate Token spend, so it does **not** trigger the [Fatigue Check](fate.md#fatigue-check) and does **not** count against [Stamina's per-Scene spend cap](fate.md#staminas-job).
 
 Full negation is still the honest baseline: an unboosted attack against a maxed wall can never get through, but a player willing to spend Ki can crack even a Soak/Presence/Psyche of 10 - a boosted die with a matching sub-stat of 10 is a guaranteed connect, while a rating of 2 only gives a 20% chance per boosted die.
 
-### Ki Spend to Preserve a Health Level, Poise, or Sanity Level
+### Ki Spend to Preserve a Health Level or Sanity Level
 
-A player may spend **1 point from Ki** (the pool - distinct from [Fate Tokens](fate.md), the resource players earn/spend) to **cancel the loss of one Health Level, Poise, or Sanity Level**, at a cost of 1 Ki per Level preserved. Multiple Ki can be spent to preserve multiple Levels, even across different tracks from the same attack.
+A player may spend **1 point from Ki** (the pool - distinct from [Fate Tokens](fate.md), the resource players earn/spend) to **cancel the loss of one Health Level or Sanity Level**, at a cost of 1 Ki per Level preserved. Multiple Ki can be spent to preserve multiple Levels, even across both tracks from the same attack. **Poise works differently and isn't covered by this rule** - Ki can't prevent a Poise loss; see [Poise](#poise) for its own Ki-refill rule instead.
 
 ## Attributes
 
@@ -167,7 +167,7 @@ While it still has Health Levels remaining, armor intercepts every die aimed at 
 
 **Once an armor item's Health Levels reach 0, it's broken.** It stops covering its Zone entirely - dice resolve straight against the wearer's own Soak, per the normal per-die rule above - until repaired (a downtime/GM-adjudicated task, not modeled further here).
 
-**Ki Spend to Preserve** (see [above](#ki-spend-to-preserve-a-health-level-poise-or-sanity-level)) only ever applies to the wearer's own Health, Poise, or Sanity - it can't prevent or undo an armor Health Level loss.
+**Ki Spend to Preserve** (see [above](#ki-spend-to-preserve-a-health-level-or-sanity-level)) only ever applies to the wearer's own Health or Sanity (or, for Poise, its own separate refill-after-0 rule) - it can't prevent or undo an armor Health Level loss.
 
 - **Armor doesn't stack within a Zone.** If a character owns more than one item covering the same Zone, only one can be worn there at a time - their choice which.
 - **A normal attack always resolves against Body-Zone armor.** Head-Zone armor does nothing against it.

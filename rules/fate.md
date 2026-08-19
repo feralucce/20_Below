@@ -65,6 +65,7 @@ Fate Tokens are spent on [Kotodama](#kotodama), or on any of the following, each
 - **Automatic Success** - a single roll succeeds outright, no dice involved. Fate Tokens are rare enough that this stays a flat cost regardless of the Difficulty being bypassed.
 - **Boost a Check** - gain Advantage on a single roll. Distinct from the [Skill Training Tiers](skills.md#training-tiers)' own Advantage: Adept and above grant it permanently, but only on rolls using that one trained Skill. This covers everything else, an Untrained roll, an off-Skill Attribute check, anything you're not otherwise good at.
 - **Shrug Off an Effect** - ignore a negative status or condition (Distracted, Surprised, Flustered, Overwhelmed, Exhausted, or similar) for a moment.
+- **Refill Ki** - your Ki pool refills completely, right there in the moment, no need to wait for a rest.
 
 Characters with [Iron Will](boons.md) may also spend 1 Fate Token to **Assert Your Will** - declare "my will is my own" and flatly negate an attempt to intimidate or dominate you, no roll. A micro-Kotodama: same shape as the main mechanic, but flat-costed and scoped narrowly to defending your own mind.
 
@@ -84,7 +85,7 @@ Every time a player spends a Fate Token, they immediately make a **Fatigue Check
 Ki has four jobs:
 
 1. **Target number for the Fatigue Check** (above).
-2. **Direct spend**: 1 point from Ki preserves one [Health Level](rules.md#health-levels) that would otherwise be lost to an unsoaked hit.
+2. **Direct spend**: 1 point from Ki preserves one [Health Level or Sanity Level](rules.md#ki-spend-to-preserve-a-health-level-or-sanity-level) that would otherwise be lost to an unsoaked hit. Poise works differently - see [Poise](rules.md#poise).
 3. **Direct spend**: 1 Ki per step to move up one [Action Bracket](rules.md#action-brackets) (Slow → Normal, or Normal → Fast; 2 Ki moves two steps at once).
 4. **Direct spend**: 1 Ki per die to boost an attack die - see [Ki Infusion](rules.md#ki-infusion), covering all three attack types (Physical/Ferocity, Social/Presence, Mental/Psyche).
 
