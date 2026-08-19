@@ -1,0 +1,16 @@
+<svg width="560" height="220" viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Gift Level raise cost climbs with current level</title>
+<desc>Raising a Gift you already have costs the current level times 5 XP, before any Limiter discount - from 5 XP at Level 1 up to 20 XP going from Level 4 to 5.</desc>
+<rect x="30" y="137.5" width="100" height="32.5" rx="4" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<rect x="155" y="105.0" width="100" height="65.0" rx="4" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<rect x="280" y="72.5" width="100" height="97.5" rx="4" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<rect x="405" y="40.0" width="100" height="130.0" rx="4" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1.5"/>
+<text x="80.0" y="129.5" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#eaf5fb">5 XP</text>
+<text x="80.0" y="190.0" text-anchor="middle" font-family="sans-serif" font-size="12"  fill="#8fadbe">Lv 1→2</text>
+<text x="205.0" y="97.0" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#eaf5fb">10 XP</text>
+<text x="205.0" y="190.0" text-anchor="middle" font-family="sans-serif" font-size="12"  fill="#8fadbe">Lv 2→3</text>
+<text x="330.0" y="64.5" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#eaf5fb">15 XP</text>
+<text x="330.0" y="190.0" text-anchor="middle" font-family="sans-serif" font-size="12"  fill="#8fadbe">Lv 3→4</text>
+<text x="455.0" y="32.0" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#eaf5fb">20 XP</text>
+<text x="455.0" y="190.0" text-anchor="middle" font-family="sans-serif" font-size="12"  fill="#8fadbe">Lv 4→5</text>
+</svg>
