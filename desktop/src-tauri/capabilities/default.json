@@ -21,11 +21,11 @@
     },
     {
       "identifier": "fs:allow-write-text-file",
-      "allow": [{ "path": "$APPDATA/characters/**" }]
+      "allow": [{ "path": "$APPDATA/characters/*" }]
     },
     {
       "identifier": "fs:allow-read-text-file",
-      "allow": [{ "path": "$APPDATA/characters/**" }]
+      "allow": [{ "path": "$APPDATA/characters/*" }]
     },
     {
       "identifier": "fs:allow-read-text-file",
