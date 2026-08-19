@@ -130,6 +130,19 @@ Presence (Fire) and Psyche (Air) both mirror **Soak exactly** - the identical pe
 
 For all three: each attack die is resolved individually against the relevant wall stat. Die ≤ wall stat is fully absorbed; die > wall stat connects. A wall stat of 10 guarantees 0% connect chance per die - true, complete negation - unless the attacker spends **Ki** (1 per die) to add their own matching Attack sub-stat to that specific die, per [Ki Infusion](#ki-infusion). A connecting Physical die costs a Health Level, a connecting Social die costs a Poise, a connecting Mental die costs a Sanity.
 
+### Choosing the Attacking Element
+
+Which of Earth/Air/Fire/Water applies to a to-hit roll is set by **how the character is attempting the attack**, not by their weapon or a Skill - there are no weapon-specific attack skills. The same weapon can be used with any of the four elements depending on the approach described:
+
+- **Earth - Force.** Overpowering the target through raw physical strength - *"I put my entire weight behind the blow and smash through his guard."*
+- **Air - Precision.** Succeeding through speed, timing, or exploiting an opening - *"I wait for him to move his guard, then thrust through the opening."*
+- **Fire - Intensity.** Overwhelming through aggression and ferocity - *"I charge him screaming and attack relentlessly, trying to force him back."*
+- **Water - Adaptation.** Responding to the opponent and turning their action back on them - *"I let his attack pass, redirect his momentum, and strike when he overextends."*
+
+All four examples above use the same sword - the weapon never determines the element. **Moira is never an attacking element**; Atropos only ever sets Defense.
+
+The player describes the attempt **before** rolling, and the GM confirms which element fits - not chosen retroactively to fish for a better number. This choice only sets which Attribute feeds the to-hit roll; it's not a second roll, doesn't change the attack's category (Physical/Social/Mental), and doesn't change what damage the weapon deals.
+
 ### Earth
 
 #### Physical Attacks - Weapon Damage & Per-Die Resolution
