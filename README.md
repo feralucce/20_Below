@@ -24,13 +24,12 @@ This page is the table of contents. Start at the top and work down; later docume
 | [Gifts](rules/gifts.md) | Supernatural powers - the full catalog. |
 | [Flaws](rules/flaws.md) | Character-creation disadvantages, Boons' mirror image. |
 
-## Fate, Equipment & Advancement
+## Fate & Equipment
 
 | Document | What it covers |
 |---|---|
 | [Fate](rules/fate.md) | Nature, Fate Tokens, Kotodama, and Ki's fatigue economy. |
 | [Weapons & Equipment](rules/weapons.md) | Weapon dice, range, and ammo, plus armor and general gear. |
-| [Advancement](rules/advancement.md) | Post-creation XP costs - what's set, what's still open. |
 
 ## Player References
 

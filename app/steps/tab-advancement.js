@@ -293,7 +293,7 @@ export default function buildAdvancementTab(state, data, refresh) {
 
   wrap.append(
     el('h2', {}, 'Advancement'),
-    el('p', { class: 'detail' }, 'Post-creation XP spend, see rules/advancement.md. Award XP per session at the table, enter the running total below.'),
+    el('p', { class: 'detail' }, 'Post-creation XP spend, see the Advancement Reference doc. Award XP per session at the table, enter the running total below.'),
     el('div', { class: 'field' }, [
       el('label', {}, 'XP Earned (total, running)'),
       el('input', {
