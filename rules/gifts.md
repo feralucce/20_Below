@@ -684,6 +684,35 @@ Years of discipline turned your body itself into the weapon. Where anyone else n
 - **All In**: while Guard is active, you can't take any action besides moving up to half your Movement Rate - no partial commitment.
 - **Telegraphed**: an opponent who's seen you fight before gets Advantage on their first attack roll against you each combat, recognizing your stance on sight.
 
+### Necromancy
+
+Death isn't the end of the story here, it's a resource. You've learned to reach past the thread Atropos already cut and pull threadbare echoes back across it, binding them to your will and drawing on the vitality they left behind. What answers isn't the person who died, just something obedient enough to fight and bleed for you.
+
+Chosen once, at creation, purely cosmetic: the form your raised dead take (bone constructs, wrapped corpses, spectral soldiers, whatever fits the character).
+
+| Level | Effect |
+|---|---|
+| 1 | **Raise the Dead**: spend 1 Ki as a Slow action to raise up to **2** skeletal thralls from nearby remains. Each has Soak 1, Defense 5, Health Levels 2, your own Movement Rate, and a natural-weapon Attack of 1d10 (resolved per-die vs. Soak, same mechanic as any weapon). They act immediately after you in the turn order, taking a Fast or Normal action each round (never Slow), and have no Skills or Gifts of their own. They last until destroyed or dismissed. **Necrotic Touch**: as a Normal action, make a Physical attack (Attribute vs. Defense, as usual) dealing **2d10** vs. Soak - each connecting die heals you 1 Health Level (never past your maximum), drawing their vitality straight into your own. |
+| 2 | Raise up to **3** thralls at once. Necrotic Touch's dice rise to **3d10**. |
+| 3 | Raise up to **4** thralls at once, and each one's Attack rises to **2d10**. Necrotic Touch's dice rise to **4d10**. |
+| 4 | Raise up to **5** thralls at once. **Wither**: spend 1 Ki on a successful Necrotic Touch hit to also impose Disadvantage on the target's next roll, their strength visibly sapped. |
+| 5 | Necrotic Touch's dice rise to **6d10**. Once per Scene, spend **2 Ki** to unleash **Legion's Toll**: every thrall you currently command instantly unravels into a burst of necrotic force, each one making one last Attack roll against everyone within Melee range of it, then all are destroyed. |
+
+**Adders**:
+
+- **Grave Whisper** (Lesser, 3 pts): touch a corpse and roll Moira + Difficulty to ask it one question about its own death, answered as a faint, disjointed impression, not real testimony.
+- **Reinforced Bones** (Lesser, 3 pts): your thralls' Health Levels rise by 1 each, at every Level.
+- **Hungry Grave** (Greater, 6 pts): whenever a thrall you command is destroyed, spend 1 Ki to raise a replacement immediately as a Fast action, instead of waiting for your next Slow action.
+- **Bonecrafter** (Greater, 6 pts): as a Normal action, meld every thrall you currently command into a single, larger creature - a bone giant, a mass of fused corpses, whatever form you choose. Its Health Levels equal the sum of the merged thralls' current Health Levels, **+3**; its Attack still uses the same dice rating an individual thrall has at your current Gift Level (Soak and Defense unchanged). It counts as one creature taking one action in the turn order, replacing every merged thrall until it's destroyed - raise a fresh batch of thralls normally afterward.
+- **Shared Suffering** (Greater, 6 pts): once per Scene, when you would drop to 0 Health Levels, spend 2 Ki to instead sacrifice every thrall you currently command and stay at 1 Health Level.
+
+**Limiters**:
+
+- **Brittle Legion**: your thralls' Health Levels are permanently 1 lower at every Level, minimum 1.
+- **One at a Time**: Necrotic Touch and commanding thralls can't be used in the same round - using one locks out the other until your next turn.
+- **Grave-Bound**: your thralls can never move more than Close range from you - stray past that and they collapse instantly.
+- **No Whispers**: Necrotic Touch's healing never applies - it still deals damage, but grants you nothing back.
+
 ### Peripheral
 
 You fade from notice and memory. Not literal invisibility - people can still see you if they look - but nothing about you holds their attention or sticks in their mind afterward.
