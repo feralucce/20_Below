@@ -41,7 +41,6 @@ This page is the table of contents. Start at the top and work down; later docume
 | [Advancement Reference](docs/advancement-reference.html) | Every post-creation XP cost, in plain "how much does this cost me" form. |
 | [Creation-Wealth Reference](docs/creation-wealth-reference.html) | How gear shopping actually works at character creation, spelled out step by step. |
 | [Scars](docs/scars.html) | What happens when Health, Sanity, or Poise crosses zero, plus a working list of flavor for each. |
-| [Changelog](docs/changelog.html) | Every rules and app update, newest first. |
 
 ## GM References
 
@@ -50,6 +49,12 @@ This page is the table of contents. Start at the top and work down; later docume
 | [Adversary Index](rules/adversary-index.md) | Ready-to-run stat blocks: mundane animals, plus a reusable Dire/Giant/Mutated variant template. |
 | [Cryptids](rules/cryptids.md) | American folklore creatures, treated as real but rare in a modern setting. |
 | [Nightmare Creatures](rules/nightmare-creatures.md) | Original urban-fantasy and horror archetypes, built entirely on the system's own mechanics. |
+
+## Changelog
+
+| Document | What it covers |
+|---|---|
+| [Changelog](docs/changelog.html) | Every rules and app update, newest first. |
 
 ## For Playtesters
 
