@@ -297,7 +297,7 @@ function buildHeader(state, data, figured, { interactive = false, refresh = () =
     refresh();
   };
   const setPoise = (v) => {
-    state.currentPoise = Math.max(0, Math.min(figured.Poise, v));
+    state.currentPoise = Math.min(figured.Poise, v);
     refresh();
   };
   const setSanity = (v) => {
