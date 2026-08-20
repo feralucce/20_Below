@@ -280,6 +280,46 @@ As with any Mental attack, additional [Ki Infusion](rules.md#ki-infusion) (1 Ki 
 - **Fragile Hold**: any command that would cause the target visible distress or conflict with their core values ends immediately and can't be reattempted against them for a full Day.
 - **Marked Predator**: anyone who succeeds a Psyche roll against you afterward instinctively recognizes you as a Domination user on sight, permanently, whether or not they were ever a target.
 
+### Drone Swarm
+
+You carry more allies than you can hold in your hands - a rack of interchangeable drones you deploy, direct, and occasionally ride shotgun inside, seeing through their sensors as if they were your own eyes.
+
+**Drone Chassis** (every deployed drone, regardless of type): **Soak** 1 · **Defense** 5 · **Health Levels** 2 · **Movement Rate** matches your own · **Output Rating** 2, rising with your Gift Level. No Skills or Gifts of its own. Acts immediately after you in the turn order, taking a Fast or Normal action each round (never Slow).
+
+| Level | Effect |
+|---|---|
+| 1 | **Deploy Drones**: spend 1 Ki as a Slow action to deploy up to **2** drones from your gear, each built as one of nine types (below), chosen when constructed. Reconfiguring a drone into a different type takes **2 hours** of dedicated work outside of combat - the drone count never changes, just what each one is. Drones last until destroyed or recalled. **Jack In**: as a Normal action, sync fully with one deployed drone, adding **+2** to its Output Rating for as long as you stay jacked in - but your own body goes still and undefended (no actions, can't notice threats) until you disengage (a Fast action) or the drone is destroyed. |
+| 2 | Deploy up to **3** drones. Output Rating rises to **3**. |
+| 3 | Deploy up to **4** drones. Output Rating rises to **4**. |
+| 4 | Deploy up to **5** drones. Output Rating rises to **5**. **Overwatch**: when a drone is destroyed, spend 1 Ki to have it use its type ability one last time, at its current Output Rating, before it goes down. |
+| 5 | Output Rating rises to **6**, and your body is no longer fully defenseless while jacked in - it can still take Fast actions (moving, ducking for cover), just not perceive normally. Once per Scene, spend **2 Ki** for **Full Barrage**: every Combat-type drone you command fires at once, all their dice pooled into a single attack against one target. |
+
+**Drone Types** (chosen per drone, reconfigurable per the Level 1 rule):
+
+1. **Combat**: mounted weapon. Attack (Output Rating d10), resolved per-die vs. the target's Soak, Presence, or Psyche as fits the attack.
+2. **Healing**: as its action, touch a willing target within Melee range and restore Health Levels equal to half its Output Rating, round up.
+3. **Shielding**: as its action, project a barrier over one ally within Melee range, granting them Soak equal to its Output Rating until the start of your next turn (stacks with their own Soak).
+4. **Remote Operation**: as its action, route one roll through the drone instead of acting in person - make a Skill check or device interaction as if you were standing where it is, using your own stats.
+5. **Surveillance**: while active, automatically know the number and rough position of hostile creatures within Near range, no roll - everyone on your side gains Advantage on Perception rolls to spot ambushes there.
+6. **Jamming**: as its action, target one enemy within Near range; they suffer Disadvantage on their next roll involving a device, sensor, or remote link.
+7. **Decoy**: as its action, the drone mimics your own signature closely enough that an attacker targeting you may target it instead, GM's call on plausibility.
+8. **Transport**: as its action, carry one willing Melee-range ally (or a load of gear) up to its own Movement Rate.
+9. **Repair**: as its action, touch damaged equipment, armor, or a vehicle and restore its Health Levels equal to half its Output Rating, round up - objects only, not living creatures.
+
+**Adders**:
+
+- **Redundant Systems** (Lesser, 3 pts): drones' Health Levels rise by 1 each, at every Level.
+- **Rapid Redeploy** (Lesser, 3 pts): when a drone is destroyed, spend 1 Ki to deploy a replacement immediately as a Fast action.
+- **Swarm Tactics** (Greater, 6 pts): while jacked into one drone, every other deployed drone's Output Rating also gains the +2 Jack-In bonus, coordinated off the same sync.
+- **Emergency Eject** (Greater, 6 pts): if your jacked-in drone is destroyed, spend 1 Ki to disengage cleanly instead of the normal disorientation (Disadvantage on your next roll).
+
+**Limiters**:
+
+- **Short Leash**: drones (and Jack In) stop functioning beyond Close range of you.
+- **One at a Time**: while jacked into one drone, every other deployed drone freezes in place until you disengage.
+- **Fragile Fleet**: drones' Health Levels are permanently 1 lower at every Level, minimum 1.
+- **Exposed While Jacked**: Level 5's "still take Fast actions" benefit never applies - your body stays fully defenseless the whole time, at every Level.
+
 ### Duplication
 
 One of you was never going to be enough. Split off a copy, then another, each one fully you, at least for a little while.
