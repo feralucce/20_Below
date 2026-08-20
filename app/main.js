@@ -1,6 +1,7 @@
 import { createInitialState, allPoolsSummary } from './state.js';
 import { el, poolBadge } from './ui.js';
 import { loadRulesData } from './rules-data.js';
+import { isDesktopApp } from './desktop-storage.js';
 
 import stepIdentity from './steps/01-identity.js';
 import stepNature from './steps/02-nature.js';
@@ -59,7 +60,25 @@ function saveState(state) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 }
 
+// Desktop-only: the web build has no meaningful "version" of its own, it's
+// just whatever's currently on main. window.__TAURI__.app.getVersion() reads
+// straight from tauri.conf.json at build time, so this can't drift the way
+// the landing page's hand-edited download link/caption did.
+async function showAppVersion() {
+  if (!isDesktopApp) return;
+  const versionEl = document.getElementById('app-version');
+  if (!versionEl) return;
+  try {
+    const version = await window.__TAURI__.app.getVersion();
+    versionEl.textContent = `Desktop v${version}`;
+  } catch (err) {
+    console.error('Failed to read app version', err);
+  }
+}
+
 async function main() {
+  showAppVersion();
+
   let data;
   try {
     data = await loadRulesData();
