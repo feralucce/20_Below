@@ -67,6 +67,7 @@ export function parseCosts(costsMd) {
       giftLimiterDiscount: adv['Gift Limiter Discount, Advancement (per Limiter)'],
       giftLimiterFloor: adv['Gift Limiter Floor, Advancement (minimum XP)'],
       giftAdderXp: { Lesser: adv['Gift Adder XP - Lesser'], Greater: adv['Gift Adder XP - Greater'] },
+      giftLimiterBuyoffXpMultiplier: adv['Gift Limiter Buy-off - XP multiplier (current Gift Level × N)'],
     },
   };
 }
