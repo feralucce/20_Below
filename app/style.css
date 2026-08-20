@@ -139,6 +139,13 @@ body {
   color: var(--text-dim);
 }
 
+.app-version {
+  margin: 0.15rem 0 0;
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  font-family: "Consolas", monospace;
+}
+
 .step-nav {
   display: flex;
   flex-wrap: wrap;
