@@ -38,6 +38,8 @@ Attacking a target within a weapon's **Normal** range carries no penalty. Attack
 | Anti-materiel rifle | Heavy | 10 | 300m / 800m | 5 rounds | 1 action | 5 |
 | Squad automatic weapon | Heavy | 10 | 300m / 800m | 100 rounds | 1 action | 4 |
 
+**Ammo Recovery**: Bow/Crossbow bolts and Thrown weapons, unlike spent firearm cartridges, can be physically picked back up. If the character controls the battlefield once a fight ends, recover **half the ammo spent, rounded down** - GM's call if the terrain makes that impractical (a river, a burning building, a fight that moved on before it could be searched).
+
 ## Armor
 
 Purpose-built protective gear only - ordinary clothing, even sturdy clothing, doesn't qualify. Every item covers one of two **Zones**, **Body** or **Head**, and carries its own **Hardness** and **Health Levels** - see [Armor & Called Shots](rules.md#armor--called-shots) for the full two-stage per-die mechanic, why armor doesn't stack within a Zone, and how a called shot targets Head-Zone armor specifically.
