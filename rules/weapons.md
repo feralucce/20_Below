@@ -24,8 +24,10 @@ Attacking a target within a weapon's **Normal** range carries no penalty. Attack
 | Short sword | One-handed blade | 7 | Melee | - | - | 2 |
 | Hatchet | One-handed blade | 7 | Melee | - | - | 1 |
 | Machete | Large blade | 7 | Melee | - | - | 1 |
-| Recurve bow | Bow | 3 | 20m / 50m | 12 (quiver) | Free | 2 |
-| Crossbow | Bow | 3 | 20m / 50m | 12 (quiver) | 1 action | 2 |
+| Recurve bow | Bow | 5 | 20m / 50m | 12 (quiver) | Free | 2 |
+| Compound bow | Bow | 7 | 25m / 60m | 12 (quiver) | Free | 3 |
+| Crossbow | Bow | 7 | 20m / 50m | 12 (quiver) | 1 action | 2 |
+| English longbow | Bow | 10 | 30m / 70m | 12 (quiver) | Free | 4 |
 | Two-handed sword | Polearm / two-handed | 10 | Melee | - | - | 2 |
 | Battle spear | Polearm / two-handed | 10 | Melee | - | - | 2 |
 | Compact pistol | Handgun | 5 | 15m / 40m | 15 rounds | 1 action | 2 |
