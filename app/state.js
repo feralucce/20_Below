@@ -525,7 +525,8 @@ export function healthStatus(current, healthSubStat) {
 }
 
 export function poiseStatus(current) {
-  return current <= 0 ? 'Flustered' : null;
+  if (current < 0) return 'Humiliated';
+  return current === 0 ? 'Flustered' : null;
 }
 
 export function sanityStatus(current) {
@@ -534,10 +535,10 @@ export function sanityStatus(current) {
 }
 
 // Short Rest and Full Night's Rest recovery (see rules.md#health-level-recovery,
-// #sanity, #ki). Health and Sanity share the same below-0 exception, confirmed
-// 2026-08-14: any rest, Short or Full, only recovers 1 Level and caps at 0 -
-// never the normal partial rate, never a full heal, while already below 0.
-// Poise never goes below 0, so it has no such exception.
+// #sanity, #ki). Health, Sanity, and Poise share the same below-0 exception,
+// confirmed 2026-08-14 (Health/Sanity) and extended to Poise 2026-08-20: any
+// rest, Short or Full, only recovers 1 Level and caps at 0 - never the normal
+// partial rate, never a full heal, while already below 0.
 function restLevel(current, max, subStatValue, isFullRest) {
   if (current < 0) {
     return Math.min(0, current + 1);
@@ -551,9 +552,7 @@ export function applyRest(state, isFullRest) {
   const s = state.subStats;
   state.currentHealth = restLevel(state.currentHealth, figured['Health Levels'], s.Health, isFullRest);
   state.currentSanity = restLevel(state.currentSanity, figured.Sanity, s.Psyche, isFullRest);
-  state.currentPoise = isFullRest
-    ? figured.Poise
-    : Math.min(figured.Poise, state.currentPoise + Math.ceil(s.Presence / 2));
+  state.currentPoise = restLevel(state.currentPoise, figured.Poise, s.Presence, isFullRest);
   state.currentKi = isFullRest ? figured.Ki : Math.min(figured.Ki, state.currentKi + Math.ceil(s.Klotho / 2));
 }
 
