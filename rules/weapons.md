@@ -10,31 +10,33 @@ Range is given as **Normal / Long**, in meters - the same unit as [Movement Rate
 
 Attacking a target within a weapon's **Normal** range carries no penalty. Attacking at **Long** range imposes **Disadvantage** on the attack roll, stacking with any other Advantage/Disadvantage source per the usual [binary rule](rules.md#advantage--disadvantage). Beyond Long range, the target can't be attacked with that weapon at all.
 
-| Weapon | Category | Damage | Range (Normal / Long) | Ammo | Wealth |
-|---|---|---|---|---|---|
-| Fists, feet | Unarmed | 1 | Melee | - | - |
-| Combat knife | Knife | 5 | Melee | - | 1 |
-| Switchblade | Knife | 5 | Melee | - | 1 |
-| Baseball bat | Improvised | 5 | Melee | - | 1 |
-| Metal pipe | Improvised | 5 | Melee | - | 1 |
-| Throwing knife | Thrown | 2 | 5m / 15m | 1 per throw | 1 |
-| Hand axe | Thrown | 2 | 5m / 15m | 1 per throw | 1 |
-| Short sword | One-handed blade | 7 | Melee | - | 2 |
-| Hatchet | One-handed blade | 7 | Melee | - | 1 |
-| Machete | Large blade | 7 | Melee | - | 1 |
-| Recurve bow | Bow | 3 | 20m / 50m | 12 (quiver) | 2 |
-| Crossbow | Bow | 3 | 20m / 50m | 12 (quiver) | 2 |
-| Two-handed sword | Polearm / two-handed | 10 | Melee | - | 2 |
-| Battle spear | Polearm / two-handed | 10 | Melee | - | 2 |
-| Compact pistol | Handgun | 5 | 15m / 40m | 15 rounds | 2 |
-| Heavy revolver | Handgun | 5 | 15m / 40m | 6 rounds | 2 |
-| Compact SMG | Submachine gun | 6 | 25m / 60m | 30 rounds | 3 |
-| Tactical carbine | Rifle | 7 | 100m / 250m | 20 rounds | 3 |
-| Hunting rifle | Rifle | 7 | 100m / 250m | 5 rounds | 2 |
-| Pump shotgun | Shotgun | 8 | 5m / 15m | 6 shells | 2 |
-| Sawed-off shotgun | Shotgun | 8 | 5m / 15m | 2 shells | 2 |
-| Anti-materiel rifle | Heavy | 10 | 300m / 800m | 5 rounds | 5 |
-| Squad automatic weapon | Heavy | 10 | 300m / 800m | 100 rounds | 4 |
+**Reload** is the action cost to refill a weapon's Ammo back to full once it runs dry - see [Reload](rules.md#combat-actions) for what each tier means.
+
+| Weapon | Category | Damage | Range (Normal / Long) | Ammo | Reload | Wealth |
+|---|---|---|---|---|---|---|
+| Fists, feet | Unarmed | 1 | Melee | - | - | - |
+| Combat knife | Knife | 5 | Melee | - | - | 1 |
+| Switchblade | Knife | 5 | Melee | - | - | 1 |
+| Baseball bat | Improvised | 5 | Melee | - | - | 1 |
+| Metal pipe | Improvised | 5 | Melee | - | - | 1 |
+| Throwing knife | Thrown | 2 | 5m / 15m | 1 per throw | - | 1 |
+| Hand axe | Thrown | 2 | 5m / 15m | 1 per throw | - | 1 |
+| Short sword | One-handed blade | 7 | Melee | - | - | 2 |
+| Hatchet | One-handed blade | 7 | Melee | - | - | 1 |
+| Machete | Large blade | 7 | Melee | - | - | 1 |
+| Recurve bow | Bow | 3 | 20m / 50m | 12 (quiver) | Free | 2 |
+| Crossbow | Bow | 3 | 20m / 50m | 12 (quiver) | 1 action | 2 |
+| Two-handed sword | Polearm / two-handed | 10 | Melee | - | - | 2 |
+| Battle spear | Polearm / two-handed | 10 | Melee | - | - | 2 |
+| Compact pistol | Handgun | 5 | 15m / 40m | 15 rounds | 1 action | 2 |
+| Heavy revolver | Handgun | 5 | 15m / 40m | 6 rounds | 1 action | 2 |
+| Compact SMG | Submachine gun | 6 | 25m / 60m | 30 rounds | 1 action | 3 |
+| Tactical carbine | Rifle | 7 | 100m / 250m | 20 rounds | 1 action | 3 |
+| Hunting rifle | Rifle | 7 | 100m / 250m | 5 rounds | 1 action | 2 |
+| Pump shotgun | Shotgun | 8 | 5m / 15m | 6 shells | Slow action | 2 |
+| Sawed-off shotgun | Shotgun | 8 | 5m / 15m | 2 shells | Slow action | 2 |
+| Anti-materiel rifle | Heavy | 10 | 300m / 800m | 5 rounds | 1 action | 5 |
+| Squad automatic weapon | Heavy | 10 | 300m / 800m | 100 rounds | 1 action | 4 |
 
 ## Armor
 
