@@ -97,6 +97,31 @@ Animals sense something in you that overrides their instincts - an inborn trust 
 - **No Companion**: you never gain the free Animal Companion at Level 2. Can be bought off later with XP, per the standard [Limiter buy-off](../docs/advancement-reference.html#limiters) rate.
 - **Vocal Component**: using the Gift requires speaking or making an audible animal call. Doesn't work if you're silenced, gagged, or otherwise unable to vocalize.
 
+### Berserker
+
+Pain doesn't slow you down, it feeds you. The worse it gets, the less anything but the fight in front of you matters.
+
+| Level | Effect |
+|---|---|
+| 1 | **Rising Fury**: while you have at least 1 Health Level missing, add bonus dice to your Physical attacks equal to half your missing Health Levels (round down), capped at **2**. While any Fury bonus is active, you're at Disadvantage on Social and Mental rolls - nothing gets through but the fight in front of you. |
+| 2 | Fury's cap rises to **3**. |
+| 3 | Fury's cap rises to **4**, and its bonus also applies to your Soak - the same fury that sharpens your strikes also numbs what would otherwise put you down. |
+| 4 | Fury's cap rises to **5**. The Level 1 Disadvantage no longer applies to Social rolls - a raging fury reads as pure menace, not incoherence - just Mental rolls now. |
+| 5 | Fury's cap rises to **6**. Once per Scene, as a free action, trigger **Last Stand**: your Fury bonus locks at its maximum for the rest of the Scene, regardless of your actual missing Health Levels. |
+
+**Adders**:
+
+- **Feeds on Pain** (Lesser, 3 pts): Fury's bonus dice also apply to Melee grapples and contested Potence rolls, not just attacks.
+- **Undying Focus** (Lesser, 3 pts): Level 4's Social exemption extends to Mental rolls too - Fury no longer imposes Disadvantage on anything.
+- **Contagious Rage** (Greater, 6 pts): once per Scene, spend 1 Ki to grant one ally within Close range half your current Fury bonus (round down) as bonus dice on their own next Physical attack.
+- **Overflowing** (Greater, 6 pts): Last Stand can be triggered a second time per Scene, though the second use costs 1 Ki.
+
+**Limiters**:
+
+- **No Off Switch**: Fury's Disadvantage never goes away, even at Level 4+ - it always applies to Social and Mental rolls both.
+- **Reckless Momentum**: while any Fury bonus is active, you can't voluntarily retreat or disengage from a fight you're already in.
+- **Crash**: when your Fury bonus drops back to 0 (healed past the missing-HL threshold, or the Scene ends), you're at Disadvantage on all rolls until your next Short Rest.
+
 ### Clairvoyance
 
 Distance means nothing to your sight. Close your eyes and your awareness slips free of your body, drifting to a place you know or can picture - a room down the hall, a city across the world - letting you see and hear what's happening there as if you stood in it yourself.
@@ -146,6 +171,32 @@ Chosen once, at creation: **Always There** (visible and permanent - can't be hid
 - **Feral Grip**: can't hold, use, or manipulate manufactured weapons or fine tools while your claws/fangs are deployed.
 - **One-Way Weapon**: the Stowable option is unavailable - your claws/fangs are always Always There, visible and permanent, no choice at creation.
 - **Fragile Edge**: your natural weapon's damage die drops by one step (6d10 caps at 5d10, etc.) against anything with Soak equal to or greater than your Potence.
+
+### Conjured Armory
+
+Your weapon was never really in your hand, it was always somewhere else, waiting. A thought and a flicker of will is all it takes to bring it across.
+
+Chosen once, at creation: your **signature weapon**, any single item from [weapons.md](weapons.md)'s catalog.
+
+| Level | Effect |
+|---|---|
+| 1 | Summon your signature weapon into your hand as a **Fast action**, no Ki cost. It deals its normal listed Damage and range. Dismissing it is free and instant. It never runs dry - ammo, if any, is never actually a concern, though you're free to roleplay reloading. |
+| 2 | You may now conjure **any** weapon from the full catalog, not just your signature - reselect freely each time you summon. |
+| 3 | The conjured weapon's Damage rises **+2** above its normal listed rating, capped at the system's usual **10**. |
+| 4 | Summoning becomes a **free action** - no action cost at all, folding seamlessly into any attack. You're never caught without a weapon in hand. |
+| 5 | The Damage bonus (Level 3) rises to **+4** above the weapon's normal rating, still capped at 10. Once per Scene, spend **1 Ki** to conjure a weapon so precise it ignores **3** points of the target's Soak for that single attack. |
+
+**Adders**:
+
+- **Bonded Blade** (Lesser, 3 pts): your signature weapon carries a permanent edge no other conjured weapon does - its Damage bonus (Level 3+) is always **+1** higher than any other weapon you conjure, forged specifically for your hand.
+- **Armory of Anything** (Lesser, 3 pts): your conjured weapons can include improvised or exotic options beyond the standard catalog (a chainsaw, a fire axe, a katana pulled from pure aesthetic) - GM's call on stats, using the closest catalog equivalent.
+- **Twin Draw** (Greater, 6 pts): once per Scene, conjure a second weapon alongside your first at no extra cost, usable for a second attack within the same Normal action bracket.
+
+**Limiters**:
+
+- **Slow Return**: dismissing a weapon isn't instant - it takes a full Fast action to banish it.
+- **Borrowed, Not Owned**: a conjured weapon vanishes if it ever leaves your grip involuntarily (disarmed, knocked away) - you must re-summon rather than immediately recall it.
+- **Visible Conjuring**: summoning is never subtle - it's always an obvious flash or effect visible to everyone nearby, no way to conceal that you're using a Gift.
 
 ### Copycat
 
@@ -477,6 +528,40 @@ Gravity is a suggestion you've learned to decline. Whether it's feathered wings,
 - **Fair Weather Flier**: you can't fly in severe weather (storms, high wind, heavy turbulence) - GM's call on what qualifies.
 - **Grounded Recovery**: if reduced to 0 Health Levels or knocked unconscious while flying, you fall and take normal fall damage - no automatic soft landing.
 
+### Forcefield
+
+Not armor, not really, a barrier of pure will held taut around a body, or several. It doesn't care what's coming at it, only that it isn't getting through.
+
+Chosen once, at creation: your Forcefield's **Form**.
+
+1. **Wielded Shield** - held in one hand, front arc only, matching a real ballistic shield's own limits. Hardness and Health Levels are always **+1** above the numbers below. Covers only yourself - never projects onto an ally, at any Level.
+2. **Bubble Barrier** - no hands required. Instead of a single target, it covers **everyone** within its current range, including you - starting at Melee (Level 1), extending to Close (Level 3) and Near (Level 4), same range numbers as below just read as a radius. Hardness and Health Levels are always **-2** below the numbers listed.
+3. **Personal Barrier** - exactly as below: full Hardness and Health Levels, covers both Zones, a single target (yourself, or one ally within range once Level 3+).
+
+The barrier occupies the same Zone(s) as any worn armor and follows the normal rule that **armor doesn't stack within a Zone** - raising it over a Zone that's already covered by real armor replaces that armor's protection for as long as the barrier holds, it doesn't add to it. **Maintaining the barrier requires a [Gift Check](#resolution) every turn it stays up - failure costs 1 Ki, at any Level.**
+
+| Level | Effect |
+|---|---|
+| 1 | As a **Normal action**, no Ki cost, raise the barrier: **Hardness 3**, **Health Levels 2** (before your Form's modifier), resolved with the exact same two-stage mechanic as [worn armor](rules.md#armor--called-shots) - it covers **both** Body and Head Zones at once. Lasts until depleted or dismissed (a Fast action to drop early). |
+| 2 | Hardness rises to **4**, Health Levels rise to **3**. |
+| 3 | Hardness rises to **5**, Health Levels rise to **4**. Personal Barrier may now be raised over one ally within Melee range instead of yourself; Bubble Barrier's radius extends to Close. |
+| 4 | Hardness rises to **6**, Health Levels rise to **5**. Personal Barrier's ally range extends to Close; Bubble Barrier's radius extends to Near. |
+| 5 | Hardness rises to **7**, Health Levels rise to **6**. Once per Scene, spend **1 Ki** to instantly restore a depleted barrier to full Health Levels, re-raising it as a Fast action. |
+
+**Adders**:
+
+- **Reinforced Barrier** (Lesser, 3 pts): the barrier's Health Levels rise by 1, at every Level.
+- **Instant Raise** (Lesser, 3 pts): activating the barrier is a Fast action instead of Normal.
+- **Shared Burden** (Greater, 6 pts): once per Scene, when someone the barrier covers would lose a Health Level to a hit it didn't stop, spend 1 Ki to redirect that loss to the barrier's own Health Levels instead.
+- **Wide Guard** (Greater, 6 pts): Personal Barrier can cover up to two allies simultaneously once you reach Level 3, each tracked separately (no effect on Wielded Shield or Bubble Barrier).
+
+**Limiters**:
+
+- **One at a Time**: Personal Barrier can never be raised for yourself and an ally simultaneously - projecting it onto someone else means going without it yourself.
+- **Slow to Reform**: once depleted, the barrier can't be raised again until a Short Rest, regardless of Level.
+- **Visible Shimmer**: the barrier is always visibly active whenever raised, a faint shimmer anyone can notice - no way to conceal that it's up.
+- **Exhausting Maintenance**: the Gift Check's failure cost rises to 2 Ki instead of 1, at every Level.
+
 ### Gadgeteer
 
 Given enough scrap, a workbench, and a spare few minutes, you can build almost anything - a device that shouldn't be possible with the parts on hand, working exactly as intended the moment it's finished. Not slow, careful engineering; a burst of inspired, borderline-supernatural craftsmanship that turns junk into function.
@@ -723,6 +808,30 @@ Years of discipline turned your body itself into the weapon. Where anyone else n
 - **Marked Hands**: your unarmed Damage bonus doesn't apply against a target wearing modern ballistic/plate armor - GM's call on what qualifies.
 - **All In**: while Guard is active, you can't take any action besides moving up to half your Movement Rate - no partial commitment.
 - **Telegraphed**: an opponent who's seen you fight before gets Advantage on their first attack roll against you each combat, recognizing your stance on sight.
+
+### Memory Manipulation
+
+A memory is just a story your mind keeps telling itself. You've learned to walk in and rewrite a page.
+
+| Level | Effect |
+|---|---|
+| 1 | Requires touch. Spend **1 Ki**; make the standard to-hit roll (**Air** vs. their Defense). On success, roll **2d10** per-die against their Psyche wall - a connecting die erases one specific, recent memory (something from the last few minutes: a name overheard, a face seen, this exact encounter). |
+| 2 | Dice rise to **3d10**. You may implant a simple false memory in place of the erased one, instead of leaving a blank. |
+| 3 | Dice rise to **4d10**. Range extends to **Close**, touch no longer required. You can now target older, more significant memories, not just recent ones. |
+| 4 | **No to-hit roll required anymore** - it simply rolls **5d10** per-die against the target's Psyche wall directly. |
+| 5 | Dice rise to **6d10**, still no to-hit roll. Once per Scene, an edit also scrubs any physical evidence of your involvement from the target's immediate perception - footage glitches, notes stop making sense to them, whatever would otherwise contradict the new memory. |
+
+**Adders**:
+
+- **Selective Erasure** (Lesser, 3 pts): erase one specific detail from a broader memory instead of the whole thing - they keep the encounter, just not your face in it.
+- **False Trail** (Lesser, 3 pts): an implanted memory (Level 2+) can point the target toward a specific false belief or action you choose, not just a generic replacement.
+- **Group Edit** (Greater, 6 pts): spend 1 additional Ki to affect up to 3 targets simultaneously with the same edit, instead of resolving them one at a time.
+
+**Limiters**:
+
+- **Recent Only**: you can never affect memories older than a Day, regardless of Level - Level 3's upgrade to older memories never applies.
+- **Leaves a Seam**: an edited memory always has a small, detectable inconsistency a thorough investigation (or another telepath) can find.
+- **One Edit, Once**: you can never target the same person's memory twice - the first edit is permanent and final.
 
 ### Necromancy
 
