@@ -57,6 +57,10 @@ A standard ladder of duration used wherever a rule needs to name "how long": **R
 
 This is intentional: under the 2d10 curve, an untrained character faces poor odds at anything above Difficulty 5 or so, and Difficulty 0 (Nearly Impossible) is a flat impossibility untrained (target 0 is below 2d10's minimum roll of 2).
 
+### Rests
+
+Two recovery windows referenced throughout the rules - **Short Rest** and **Full Night's Rest** - anchored to real time. A **Short Rest** takes roughly **1 hour** of genuine downtime; only **one** Short Rest's worth of recovery can be gained between Full Night's Rests, no stacking a second hour spent resting for a second round of healing. A **Full Night's Rest** is a full, largely uninterrupted night's sleep.
+
 ## Ki
 
 ### Ki Infusion
