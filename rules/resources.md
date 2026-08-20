@@ -38,12 +38,26 @@ Creation-Wealth carries across every purchase made during this shopping pass - o
 | Resource | What Scales by Level |
 |---|---|
 | Base | How developed, defended, or well-equipped the headquarters/safehouse is |
+| Black Market Access | How deep into illegal or off-the-books trade the connections reach |
 | Contacts | How large, capable, or well-placed the network is |
+| Corporate Backing | How much a legitimate business entity can move, fund, or cover |
+| Debts Owed | How much real leverage is owed, in favors people can't easily refuse |
 | Fame | How widely recognized the character is, and how strongly people react to it |
 | Followers | How many, how skilled, or how loyal the group is |
 | Fringe Benefit | The reach/exclusivity of the license, membership, clearance, or legal right |
+| Guild Standing | How much rank and pull the character holds within a specific trade or professional body |
+| Informant Network | How wide and reliable the web of low-level eyes and ears is |
+| Legal Counsel | How capable and well-connected the lawyer or legal team is |
+| Media Contact | How much a story can be shaped, planted, or killed before it runs |
+| Medical Access | How much discreet, high-quality medical care can be called on |
 | Occult Library | How comprehensive, rare, or dangerous the collection of esoteric material is |
+| Safehouse Network | How many scattered bolt-holes are maintained, and how well-stocked each is |
+| Sanctuary Standing | How protected the character is within one specific safe territory |
+| Signature Possession | How significant the one prized item owned actually is |
+| Spiritual Standing | How much weight the character's name carries within a specific religious or spiritual community |
 | System Access | How deep and wide the character's reach into digital systems and networks already is |
+| Territory | How much real ground answers to the character specifically |
+| Underworld Reputation | How known, trusted, or feared the character is within criminal and hidden-world circles |
 | Vehicle | How distinctive, capable, or valuable the vehicle is |
 | Wealth | How much disposable financial resource is available to draw on |
 
@@ -80,4 +94,44 @@ Creation-Wealth carries across every purchase made during this shopping pass - o
 | 3 | Wealthy; owns property outright, can make major purchases freely |
 | 4 | Very wealthy; can finance a major undertaking outright |
 | 5 | A fortune large enough to move markets or bankroll entire operations |
+
+| Level | Safehouse Network | Underworld Reputation | Medical Access |
+|---|---|---|---|
+| 1 | One additional modest bolt-hole beyond your main Base - a spare room, a lockup, somewhere to lay low for a night | A name a few low-level players recognize and treat with mild caution | A single sympathetic nurse or paramedic willing to patch you up off the books |
+| 2 | A small handful of bolt-holes across a city, each stocked with basic supplies and a change of clothes | Known within a specific city's criminal scene as someone not worth crossing | A private doctor who treats you (and a few others) no questions asked |
+| 3 | A network spanning a region, each site defensible and stocked for an extended stay | Respected or feared across a city's underworld broadly, name carries real weight in negotiations | A small discreet clinic with real equipment, staffed by people who won't talk |
+| 4 | A network reaching into neighboring regions, with a few sites hardened and hidden well enough to withstand real searching | Known regionally among serious players - crime bosses, cartels, syndicates - as someone to reckon with | A private hospital wing or trauma team on standby, capable of handling serious, unusual injuries |
+| 5 | A network spanning the whole country (or equivalent scale), any site capable of disappearing you completely, indefinitely | A legend in the underworld nationally or beyond, invoked as a cautionary tale or a name that opens (or closes) any door | A world-class covert medical operation, capable of handling anything short of death itself, anywhere you can reach it |
+
+| Level | Legal Counsel | Media Contact | Black Market Access |
+|---|---|---|---|
+| 1 | A single competent lawyer, reliable for everyday trouble | One sympathetic local journalist willing to hear you out | A single fence or dealer for common contraband |
+| 2 | A small firm that can handle real charges and knows which favors to call in | A standing relationship with a local outlet - can get a story placed or softened | A working relationship with a local black-market network - weapons, drugs, stolen goods |
+| 3 | A firm with real courtroom pull and connections into the local justice system | Real pull with a regional news network - can plant, spike, or reframe a story reliably | Real standing with a regional network, access to rarer or more dangerous goods |
+| 4 | A firm capable of making serious charges quietly disappear, with reach into regional courts and agencies | Influence reaching national media - a story dies or runs the way you want it to, most of the time | Deep pull into a national or international smuggling network, most anything can be found for a price |
+| 5 | Legal firepower capable of making almost anything short of the worst crimes vanish, nationally | Command of the narrative at a national or international level - what the world believes happened is substantially up to you | A name in the black market itself - you don't just buy from the network, you're a fixture in it, able to source almost anything that exists |
+
+| Level | Spiritual Standing | Corporate Backing | Informant Network |
+|---|---|---|---|
+| 1 | A respected member of a local congregation or circle | A small business willing to carry you on the books, light cover and minor funding | A couple of regular tipsters in one neighborhood |
+| 2 | A trusted figure within a wider spiritual community, sought out for guidance | A real company with legitimate revenue, able to fund modest operations and provide solid cover | A working network across a city - cabbies, bartenders, doormen - who pass along what they see |
+| 3 | Real authority within the community - your word carries weight in real decisions | A mid-size company with real assets, capable of funding serious operations and absorbing real scrutiny | A broad network spanning a whole city's worth of ordinary people, reliable and reasonably fast |
+| 4 | A recognized leader or elder, influence reaching related communities elsewhere | A major regional company, resources and cover to match, capable of weathering real investigation | A network with regional reach, fast enough to catch developing situations as they happen |
+| 5 | A figure of real spiritual significance, recognized and deferred to across the faith or tradition broadly | A multinational corporation's backing, effectively bottomless resources and cover strong enough to survive nearly anything | An extensive network reaching anywhere relevant, near-real-time awareness of anything worth knowing |
+
+| Level | Signature Possession | Sanctuary Standing | Guild Standing |
+|---|---|---|---|
+| 1 | A well-made, quality item - reliable, a cut above ordinary | A single establishment where you're recognized and safe from casual trouble | A dues-paying member in reasonably good standing |
+| 2 | An item with a real history or reputation of its own, recognized by those who know to look | A small protected zone - a block, a building complex - where real trouble is unwelcome | A recognized, respected member, able to call in modest favors |
+| 3 | A genuinely rare or exceptional item, sought after by serious collectors or rivals | A genuine sanctuary territory, actively enforced, real consequences for violating it | A senior member with real influence over local guild decisions |
+| 4 | An item of real renown, recognized on sight by anyone versed in its field | A significant, well-known sanctuary, respected and enforced across multiple factions | A leadership figure, influence reaching the guild's regional or national body |
+| 5 | A legendary item, known even to people who've never seen it - and often coveted because of it | A sanctuary recognized and honored practically everywhere relevant, violating it carries consequences almost no one is willing to risk | A defining figure within the guild itself, decisions of real consequence run through you |
+
+| Level | Debts Owed | Territory |
+|---|---|---|
+| 1 | One person who owes you a real, acknowledged favor | A single block or building genuinely under your influence |
+| 2 | A small handful of people who owe you, each for something genuinely significant | A modest neighborhood where your word carries real weight |
+| 3 | A broader circle of real debts, enough to call in meaningful help when it matters | A significant district, actively held and defended |
+| 4 | Debts owed by people with real capability or standing of their own, favors that can move real weight | A substantial stretch of a city, real infrastructure and people answering to you |
+| 5 | A web of serious debts reaching people of real power, the kind of leverage that can bend outcomes that matter | Territory on the scale of a city or region, genuinely yours in every practical sense |
 
