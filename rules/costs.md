@@ -19,7 +19,7 @@ The single source of truth for every tunable number in the system - pool sizes, 
 | Attribute Floor (starting free rating) | 1 |
 | Attribute Cap (creation-time max) | 10 |
 | Skill Tier Point Cost (per tier) | 1 |
-| Resource Level Cost | 2 |
+| Resource Level Cost | 1 |
 | Gift Level Cost | 3 |
 | Gift Limiter Discount (per Limiter, per Level) | 1 |
 | Gift Limiter Floor (minimum points/Level) | 1 |

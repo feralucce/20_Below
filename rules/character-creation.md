@@ -100,7 +100,7 @@ Spend your **10-point Boons Pool** on [Boons](boons.md), priced at Trivial (1), 
 
 ## 9. Resources
 
-Spend your **6-point Resources Pool** on [Resources](resources.md), a flat 2 points per level. Resources cover the material/logistical side of a character - money, gear, a base of operations, that kind of backing - distinct from Boons' personal knacks and Gifts' supernatural power.
+Spend your **6-point Resources Pool** on [Resources](resources.md), a flat 1 point per level. Resources cover the material/logistical side of a character - money, gear, a base of operations, that kind of backing - distinct from Boons' personal knacks and Gifts' supernatural power.
 
 Buying starting gear (see [Weapons & Equipment](weapons.md)) uses its own procedure - see [Wealth at Character Creation](resources.md#wealth-at-character-creation) and step 13, below. It comes after Discretionary Points (step 12) rather than here, since Discretionary points can raise Wealth itself, and creation-Wealth needs to be fully settled before gear shopping runs its math against it.
 
