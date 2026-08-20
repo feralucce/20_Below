@@ -41,6 +41,7 @@ This page is the table of contents. Start at the top and work down; later docume
 | [Advancement Reference](docs/advancement-reference.html) | Every post-creation XP cost, in plain "how much does this cost me" form. |
 | [Creation-Wealth Reference](docs/creation-wealth-reference.html) | How gear shopping actually works at character creation, spelled out step by step. |
 | [Scars](docs/scars.html) | What happens when Health, Sanity, or Poise crosses zero, plus a working list of flavor for each. |
+| [Changelog](docs/changelog.html) | Every rules and app update, newest first. |
 
 ## GM References
 

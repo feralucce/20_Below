@@ -121,40 +121,6 @@
     border-top: 1px solid var(--panel-border);
   }
   a { color: var(--accent); }
-  .changelog-list {
-    list-style: none;
-    padding: 0;
-    margin: 0.75rem 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .changelog-entry {
-    background: var(--panel);
-    border: 1px solid var(--panel-border);
-    border-radius: var(--radius);
-    padding: 0.6rem 1rem;
-  }
-  .changelog-date {
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 0.85rem;
-    font-family: "Consolas", monospace;
-    display: block;
-    margin-bottom: 0.15rem;
-  }
-  .changelog-text {
-    color: var(--text);
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-  h3.changelog-heading {
-    color: var(--text-dim);
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin: 1.5rem 0 0;
-  }
 </style>
 </head>
 <body>
@@ -259,6 +225,10 @@
       <div class="name">Scars</div>
       <div class="desc">What happens when Health, Sanity, or Poise crosses zero, plus a working list of flavor for each.</div>
     </a>
+    <a class="doc-card" href="docs/changelog.html">
+      <div class="name">Changelog</div>
+      <div class="desc">Every rules and app update, newest first.</div>
+    </a>
   </div>
 
   <h2>GM References</h2>
@@ -276,65 +246,6 @@
       <div class="desc">Original urban-fantasy and horror archetypes, built entirely on the system's own mechanics.</div>
     </a>
   </div>
-
-  <h2>Changelog</h2>
-  <p class="intro" style="margin-top:0;">Newest entries first. Starts 2026-08-20 - not backdated to earlier development history.</p>
-
-  <h3 class="changelog-heading">Rules</h3>
-  <ul class="changelog-list">
-    <li class="changelog-entry">
-      <span class="changelog-date">8-20-2026 1251</span>
-      <span class="changelog-text">New Creation-Wealth Reference doc, spelling out the gear-shopping procedure at character creation step by step, with a flowchart diagram. Closes the second of two "new reference docs" flagged since RP-10 - Advancement Reference was the first.</span>
-    </li>
-    <li class="changelog-entry">
-      <span class="changelog-date">8-20-2026 1209</span>
-      <span class="changelog-text">Balance-tested Bow dice ratings against the Soak math, split into three tiers: Recurve bow raised to 5 (Handgun-tier), new Compound bow entry at 7 (Rifle-tier), Crossbow raised to 7 to match, new English longbow entry at 10 (Heavy-tier). Closes the last of weapons.md's four tracked sub-gaps.</span>
-    </li>
-    <li class="changelog-entry">
-      <span class="changelog-date">8-20-2026 1147</span>
-      <span class="changelog-text">Added an Ammo Recovery rule for Bow/Crossbow and Thrown weapons: recover half the ammo spent (rounded down) if you control the battlefield after a fight, unlike firearm cartridges which aren't reusable.</span>
-    </li>
-    <li class="changelog-entry">
-      <span class="changelog-date">8-20-2026 1130</span>
-      <span class="changelog-text">Added reload rules, a longstanding gap: a new Reload Combat Action, with cost varying by how the weapon actually loads (magazine/speed-loader/chain-fed and crossbow take one action, a tube-fed shotgun takes a Slow action, a quiver-drawn recurve bow reloads free). New Reload column on weapons.md's Basic Weapons table.</span>
-    </li>
-    <li class="changelog-entry">
-      <span class="changelog-date">8-20-2026 1020</span>
-      <span class="changelog-text">Built out the Scars mechanic fully: Poise now goes negative (new Humiliated status, no death threshold), Mental Scars finally defined (was flagged as TBD), Battle Scars now accumulate and can be healed away after a Month by Healing/Regeneration. New Flaw: Shaken Confidence. New docs/scars.html with 27 Physical, 23 Mental, and 15 Social scar flavor options.</span>
-    </li>
-    <li class="changelog-entry">
-      <span class="changelog-date">8-20-2026 0927</span>
-      <span class="changelog-text">Added 9 new Boons (Animal Rapport, Compact Frame, Iron Grip, Lie Detector, Never Winded, Quick Study, Restful Trance, Unshakeable Alibi, Weathered). Also newly defined Short Rest/Full Night's Rest duration and frequency, a real rules gap Restful Trance surfaced.</span>
-    </li>
-    <li class="changelog-entry">
-      <span class="changelog-date">8-20-2026 0841</span>
-      <span class="changelog-text">Added 3 new Flaws: Item of Power (a Gift depends on an external item), Ritual Required (a Gift needs preparation time), Incantations (a Gift needs a spoken trigger).</span>
-    </li>
-    <li class="changelog-entry">
-      <span class="changelog-date">8-20-2026 0830</span>
-      <span class="changelog-text">Added 14 new Resources (Safehouse Network, Underworld Reputation, Medical Access, Legal Counsel, Media Contact, Black Market Access, Spiritual Standing, Corporate Backing, Informant Network, Signature Possession, Sanctuary Standing, Guild Standing, Debts Owed, Territory), full 5-level tables for each.</span>
-    </li>
-    <li class="changelog-entry">
-      <span class="changelog-date">8-20-2026 0817</span>
-      <span class="changelog-text">Resource creation cost halved: 1 point per level instead of 2 (pool stays 6 points, now buys 6 levels of Resources total instead of 3).</span>
-    </li>
-    <li class="changelog-entry">
-      <span class="changelog-date">8-20-2026 0812</span>
-      <span class="changelog-text">Created changelog. Added 6 Gifts (Necromancy, Drone Swarm, Berserker, Conjured Armory, Memory Manipulation, Forcefield) and 1 Boon (Always Connected). Defined Milestone Award, the Combat Actions list, and Limiter buy-off costs. Various fixes and cleanup.</span>
-    </li>
-  </ul>
-
-  <h3 class="changelog-heading">App</h3>
-  <ul class="changelog-list">
-    <li class="changelog-entry">
-      <span class="changelog-date">8-20-2026 1039</span>
-      <span class="changelog-text">Fixed the character sheet's Poise track to match the new negative-Poise rule (Humiliated status, correct below-0 rest recovery cap). Wired up the Limiter buy-off control on the Advancement tab. Fixed the Gift Adder "Buy" button to charge the correct Advancement XP rate instead of the creation-time cost.</span>
-    </li>
-    <li class="changelog-entry">
-      <span class="changelog-date">8-20-2026 0812</span>
-      <span class="changelog-text">Applied site-wide brand color theming. Rebuilt the Dice Roller. Fixed Import, Load, and Export functions.</span>
-    </li>
-  </ul>
 
   <h2>License</h2>
   <p><strong>20 Below Core Rules</strong> by Feralucce Savage is released under the ORC License, a perpetual, irrevocable open license for tabletop game mechanics.</p>
