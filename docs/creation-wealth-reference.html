@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Creation-Wealth Reference - 20 Below</title>
+<link rel="icon" type="image/x-icon" href="assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --accent-dim: #1c3548;
+    --danger: #e0685c;
+    --radius: 8px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  main {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  .back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  h1 {
+    margin: 1rem 0 0.5rem;
+    letter-spacing: 0.02em;
+  }
+  .note {
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  a { color: var(--accent); }
+
+  .toc {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .toc h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-dim);
+  }
+  .toc ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    line-height: 1.9;
+  }
+  .toc a { text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  .xp-section {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+    scroll-margin-top: 1.5rem;
+  }
+  .xp-section:nth-of-type(even) {
+    background: var(--bg);
+  }
+  .xp-section h2 {
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--panel-border);
+  }
+  .xp-section > p {
+    line-height: 1.6;
+    margin: 0 0 1rem;
+  }
+  .xp-section > p:last-child {
+    margin-bottom: 0;
+  }
+
+  .roll-box {
+    background: var(--bg);
+    border: 1px solid var(--accent-dim);
+    border-radius: var(--radius);
+    padding: 0.6rem 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: inline-block;
+  }
+  .aside {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+  .cost-table th,
+  .cost-table td {
+    border: 1px solid var(--panel-border);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+  }
+  .cost-table th {
+    color: var(--text-dim);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .chart-frame {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .chart-frame img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .example {
+    background: var(--bg);
+    border-left: 3px solid var(--accent-dim);
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+  .example strong { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <a class="back-link" href="../index.html">&larr; Back to 20 Below</a>
+  <h1>Creation-Wealth Reference</h1>
+  <p class="note">
+    How gear shopping actually works at character creation - a separate procedure from Pushing a Resource once play begins. See <a href="../rules/weapons.md">Weapons & Equipment</a> for the full gear catalog.
+  </p>
+
+  <nav class="toc">
+    <h2>Questions</h2>
+    <ol>
+      <li><a href="#starting-wealth">What is my wealth at character creation?</a></li>
+      <li><a href="#buying-gear">How do I buy an item?</a></li>
+      <li><a href="#outcomes">What happens after I roll?</a></li>
+      <li><a href="#after-creation">Does this affect my Wealth once play begins?</a></li>
+    </ol>
+  </nav>
+
+  <section class="xp-section" id="starting-wealth">
+    <h2>What is my wealth at character creation?</h2>
+    <div class="roll-box">2, unless you bought the Wealth Resource</div>
+    <p>Every character starts creation shopping with a creation-Wealth of <strong>2</strong>. If you spent Resources Pool points on the <strong>Wealth</strong> Resource during creation, your purchased Level replaces that flat 2 outright - it's not the higher of the two, just whichever one actually applies.</p>
+    <div class="example"><strong>Example:</strong> a character who put no Resources Pool points into Wealth shops with a creation-Wealth of 2. A character who bought Wealth up to Level 4 shops with a creation-Wealth of 4 instead.</div>
+  </section>
+
+  <section class="xp-section" id="buying-gear">
+    <h2>How do I buy an item?</h2>
+    <p>Every item on the gear catalog carries its own <strong>Wealth rating</strong>. Buying one is a three-step check, and <strong>every purchase requires a roll</strong> - there's no automatic free item, even one at or under your current creation-Wealth.</p>
+    <div class="chart-frame">
+      <img src="assets/diagrams/wealth-at-creation-flow.svg" alt="Pick an item, find the gap between its Wealth rating and current creation-Wealth. If the gap is more than creation-Wealth, the item can't be afforded at all - no roll. Otherwise, roll a Wealth Check: 2d10 against creation-Wealth plus 6, roll-under. Success means the item is free. Failure still gets the item, but creation-Wealth drops by the gap, floored at 1, doubled on a critical failure." />
+    </div>
+    <p><strong>1. Find the gap</strong> - the item's Wealth rating minus your current creation-Wealth. This can be zero, or even negative, for an item at or under what you've got.</p>
+    <p><strong>2. Check you can afford it</strong> - if the gap is more than your current creation-Wealth, the item is out of reach entirely. No roll happens.</p>
+    <p><strong>3. Roll a Wealth Check</strong> - <span class="roll-box">2d10 vs. creation-Wealth + 6</span>, roll-under, standard critical results apply.</p>
+    <div class="example"><strong>Example:</strong> starting creation-Wealth 2, eyeing a Bomb disposal suit (Wealth 5). Gap = 5 &minus; 2 = 3, which is more than the current creation-Wealth of 2 - out of reach, no roll possible this pass. A Compact SMG (Wealth 3) has a gap of only 1, well within reach - roll away.</div>
+  </section>
+
+  <section class="xp-section" id="outcomes">
+    <h2>What happens after I roll?</h2>
+    <p><strong>Success:</strong> the item is free - creation-Wealth doesn't move at all.</p>
+    <p><strong>Failure:</strong> you still get the item either way - but creation-Wealth drops by the gap, <strong>floored at a minimum loss of 1</strong>. Even an item with no real gap still costs at least 1 Level on a failed roll. A <strong>critical failure</strong> doubles that loss.</p>
+    <div class="example"><strong>Example:</strong> a character who bought Wealth up to Level 4 shops for a Tactical vest (also Wealth 4) - the gap is 0, since it matches exactly. The roll still happens (target: creation-Wealth 4 + 6 = 10). On success, the vest is free. On a plain failure, the floored-at-1 minimum still applies even though the gap was 0 - creation-Wealth drops from 4 to 3. On a critical failure, that loss doubles to 2, dropping creation-Wealth to 2.</div>
+    <p class="aside">Creation-Wealth carries across every purchase made during this shopping pass - it keeps dropping (or staying put on successes) until nothing left on the list is affordable via a viable roll, at which point gear shopping for this character is over.</p>
+  </section>
+
+  <section class="xp-section" id="after-creation">
+    <h2>Does this affect my Wealth once play begins?</h2>
+    <div class="roll-box">No - it's temporary bookkeeping only</div>
+    <p>Whatever your creation-Wealth ends up at after shopping has <strong>no effect</strong> on your actual Wealth Resource once play starts - that stays at whatever Level you actually purchased with Resources Pool points (or 0, if you didn't buy any). Once character creation ends, this whole procedure stops applying. Every Wealth purchase from then on uses the general <a href="../rules/resources.md#pushing-a-resource">Pushing a Resource</a> rule instead, completely unaffected by anything that happened during creation shopping.</p>
+  </section>
+
+</main>
+</body>
+</html>
