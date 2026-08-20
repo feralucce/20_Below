@@ -33,6 +33,7 @@ Flaws are the mirror image of [Boons](boons.md) - disadvantages, quirks, or comp
 | Reliance | = Level | A behavioral compulsion, substance dependency, or medical/physical condition - see [Reliance](#reliance) below for the 5-level breakdown. |
 | Ritual Required | = Level | A Gift doesn't answer the instant it's reached for - it has to be called, coaxed, or earned each time - see [Ritual Required](#ritual-required) below for the 5-level breakdown. |
 | Secret | = Level | Something the character desperately doesn't want revealed - see [Secret](#secret) below for the 5-level breakdown. |
+| Shaken Confidence | = Level | A lasting loss of social self-assurance from one specific defining humiliation - see [Shaken Confidence](#shaken-confidence) below for the 5-level breakdown. |
 | Short Fuse | = Level | Quick to anger, prone to losing composure under provocation - see [Short Fuse](#short-fuse) below for the 5-level breakdown. |
 | Soft-Hearted | = Level | Struggles to act against the vulnerable, even when it costs them - see [Soft-Hearted](#soft-hearted) below for the 5-level breakdown. |
 | Speech Impediment | = Level | A stutter, accent, or other trait that hampers verbal communication - see [Speech Impediment](#speech-impediment) below for the 5-level breakdown. |
@@ -288,3 +289,15 @@ A Gift only answers to a spoken word - distinct from a Gift's own [Limiters](gif
 | 3 | Two or more Gifts each require their own spoken incantation to activate. |
 | 4 | Every Gift you have requires its own spoken incantation - none of your capability works if you can't speak clearly. |
 | 5 | As Level 4, and the incantation must be spoken clean, with no other exertion that Round - sprinting, grappling, or taking a hit while attempting one fails it outright, forcing you to start over next round. |
+
+## Shaken Confidence
+
+One specific, defining humiliation left a real mark - not on the body, on the nerve. A natural fit for the genuine Flaw a below-zero [Poise scar](rules.md#poise) can impose, though it can also just be taken directly at creation like any other Flaw.
+
+| Level | Effect |
+|---|---|
+| 1 | A specific type of social situation (public speaking, a rivalry, one particular person) triggers a flicker of doubt - costs a beat, nothing more. |
+| 2 | Real hesitation in that situation - a genuine, recoverable setback if pushed through anyway. |
+| 3 | Active avoidance of that situation where possible; forced into it, performs at a real disadvantage. |
+| 4 | The doubt bleeds into adjacent situations, not just the original trigger - a broader loss of confidence. |
+| 5 | A pervasive, crippling lack of social self-assurance - even routine interactions carry real hesitation, not just the original trigger. |

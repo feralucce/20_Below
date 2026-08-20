@@ -626,6 +626,8 @@ Where you press your hands, the wound remembers what it looked like before. Pois
 | 4 | Reaches supernatural-origin poisons, curses, and conditions too, not just mundane ones. Ki cost for a supernatural cure rises to **2**. |
 | 5 | Given a full **Day** of dedicated care and **3 Ki**, you can heal even normally-permanent harm on someone else: a lost limb, lasting disfigurement. |
 
+Additionally, given a full **Month** of thorough, repeated application (regular dedicated sessions across that Month, GM's call on frequency), you can heal away a below-zero Flaw-scar (Health, Sanity, or Poise - see [Battle Scars](rules.md#battle-scars)) entirely, on someone else.
+
 **Adders**:
 
 - **Second Hands** (Lesser, 3 pts): spend a second 1 Ki to heal a second target in the same Round, bypassing the normal once-per-Round cap.
@@ -1028,6 +1030,8 @@ Your body refuses to stay broken. Wounds that would sideline anyone else for wee
 | 3 | Spend **1 Ki** to instantly recover 1 Health Level at any time, even mid-combat - usable once per **Round**. |
 | 4 | Passive recovery improves further to 1 Health Level per **Round** of dedicated rest (near-instant between exchanges). The Ki-spend combat heal from Level 3 can now be used twice per Round. |
 | 5 | Given a full **Day** of rest, you can recover from even normally-permanent harm - a lost limb, lasting disfigurement. Ki cost for the combat heal drops to **0**. |
+
+Additionally, given a full **Month** of rest, you can heal away a below-zero Flaw-scar (Health, Sanity, or Poise - see [Battle Scars](rules.md#battle-scars)) entirely, on yourself only.
 
 **Adders**:
 
