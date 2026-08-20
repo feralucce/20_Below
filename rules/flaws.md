@@ -23,12 +23,15 @@ Flaws are the mirror image of [Boons](boons.md) - disadvantages, quirks, or comp
 | Gun-Shy | = Level | Falters when violence breaks out - see [Gun-Shy](#gun-shy) below for the 5-level breakdown. |
 | Illiterate | = Level | Cannot read or write, to some degree - see [Illiterate](#illiterate) below for the 5-level breakdown. |
 | Impaired Senses | = Level | A missing or significantly impaired sense - see [Impaired Senses](#impaired-senses) below for the 5-level breakdown. |
+| Incantations | = Level | A Gift only works if the character can speak a specific phrase aloud - see [Incantations](#incantations) below for the 5-level breakdown. |
+| Item of Power | = Level | A Gift's capability lives, at least in part, in something the character carries rather than in themselves - see [Item of Power](#item-of-power) below for the 5-level breakdown. |
 | Lame | = Level | Permanently reduced mobility from an old injury or condition - see [Lame](#lame) below for the 5-level breakdown. |
 | Notable Appearance | = Level | Something about how you look draws stares and reactions - see [Notable Appearance](#notable-appearance) below for the 5-level breakdown. |
 | Notoriety | = Level | How widely and how badly the character is known - see [Notoriety](#notoriety) below for the 5-level breakdown. |
 | Overconfident | = Level | Consistently underestimates danger or overestimates their own ability - see [Overconfident](#overconfident) below for the 5-level breakdown. |
 | Pariah | = Level | Others hold a specific prejudice against the character (species, background, origin, etc.) - see [Pariah](#pariah) below for the 5-level breakdown. |
 | Reliance | = Level | A behavioral compulsion, substance dependency, or medical/physical condition - see [Reliance](#reliance) below for the 5-level breakdown. |
+| Ritual Required | = Level | A Gift doesn't answer the instant it's reached for - it has to be called, coaxed, or earned each time - see [Ritual Required](#ritual-required) below for the 5-level breakdown. |
 | Secret | = Level | Something the character desperately doesn't want revealed - see [Secret](#secret) below for the 5-level breakdown. |
 | Short Fuse | = Level | Quick to anger, prone to losing composure under provocation - see [Short Fuse](#short-fuse) below for the 5-level breakdown. |
 | Soft-Hearted | = Level | Struggles to act against the vulnerable, even when it costs them - see [Soft-Hearted](#soft-hearted) below for the 5-level breakdown. |
@@ -249,3 +252,39 @@ Each level's effect is cumulative - it keeps every lower level's penalty and add
 | 3 | A significant impediment - regularly slows or garbles speech enough that real effort is needed to be understood. |
 | 4 | A severe impediment - verbal communication is unreliable; often misunderstood or unable to get a full thought out under pressure. |
 | 5 | Effectively unable to communicate verbally in any reliable way - must rely on writing, gestures, or another person to speak for them. |
+
+## Item of Power
+
+Your capability isn't fully your own - it lives, at least in part, in something you carry. Distinct from a Gift's own [Limiters](gifts.md) (which discount that specific Gift's point cost): this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts the character already has.
+
+| Level | Effect |
+|---|---|
+| 1 | One specific Gift only works while you're in possession of a particular item - well-secured or hard to casually separate from you (a tattoo, an implant, something bonded to you), but losing it locks out that one Gift entirely until it's recovered. |
+| 2 | As Level 1, but the item is a real, ordinary object - a ring, a blade, a pendant - that can be stolen, confiscated, or lost in a struggle like any other possession. |
+| 3 | Two or more Gifts are bound to the same item instead of just one - losing it locks out everything tied to it at once. |
+| 4 | Every Gift you have depends on retaining the item - lose it, and you're left with nothing but your ordinary Skills, Boons, and Attributes until it's recovered. |
+| 5 | As Level 4, and the item itself is something genuinely easy to take, damage, or lose - not secured, not bonded, not hard to separate from you at all. Anyone who thinks to try has a real shot at disarming you completely. |
+
+## Ritual Required
+
+Your power doesn't answer the instant you reach for it - it has to be called, coaxed, or earned each time. Distinct from a Gift's own [Limiters](gifts.md): this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts the character already has.
+
+| Level | Effect |
+|---|---|
+| 1 | One specific Gift requires a short ritual - roughly a minute of chanting, gestures, or preparation - before its first use each Scene. Once performed, that Gift stays primed and usable normally for the rest of the Scene. |
+| 2 | The same Gift now requires that ritual before every single use, not just once per Scene - each activation costs the full minute of setup again. |
+| 3 | The ritual itself grows heavier - roughly ten minutes, real focus required. Anything that would normally cause [Distracted](rules.md#distracted) interrupts it outright, forcing you to start over. |
+| 4 | Every Gift you have requires the Level 3 ritual before its first use each Scene, not just one - priming your full capability takes real, dedicated time. |
+| 5 | Every Gift requires the full ritual before every single use, with no priming grace at all - full setup, every time, for everything you can do. |
+
+## Incantations
+
+A Gift only answers to a spoken word - distinct from a Gift's own [Limiters](gifts.md) like Animal Friendship's Vocal Component: this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts the character already has.
+
+| Level | Effect |
+|---|---|
+| 1 | One specific Gift requires speaking a short trigger phrase aloud to activate - audible to anyone nearby, and it simply doesn't work if you're unable to speak (silenced, gagged, underwater, and the like). |
+| 2 | The phrase grows more specific - a full sentence, verse, or exact wording - long and distinct enough that garbling or rushing it fails the activation outright. |
+| 3 | Two or more Gifts each require their own spoken incantation to activate. |
+| 4 | Every Gift you have requires its own spoken incantation - none of your capability works if you can't speak clearly. |
+| 5 | As Level 4, and the incantation must be spoken clean, with no other exertion that Round - sprinting, grappling, or taking a hit while attempting one fails it outright, forcing you to start over next round. |
