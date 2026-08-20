@@ -19,6 +19,8 @@ import {
   refundAdvancementGiftLevel,
   buyAdvancementGiftAdder,
   refundAdvancementGiftAdder,
+  buyoffAdvancementLimiter,
+  refundAdvancementLimiterBuyoff,
 } from '../state.js';
 import { renderBoonPicker } from './07-boons.js';
 
@@ -192,7 +194,7 @@ function giftsSection(state, data, refresh) {
     el(
       'h3',
       {},
-      `Gifts (new Gift ${data.advancement.newGiftBaseXp} XP, raise = current level × ${data.advancement.giftLevelXpMultiplier} XP, both reduced by Limiters, floored at ${data.advancement.giftLimiterFloor}; Adders: Lesser ${data.advancement.giftAdderXp.Lesser} / Greater ${data.advancement.giftAdderXp.Greater} XP)`,
+      `Gifts (new Gift ${data.advancement.newGiftBaseXp} XP, raise = current level × ${data.advancement.giftLevelXpMultiplier} XP, both reduced by Limiters, floored at ${data.advancement.giftLimiterFloor}; Adders: Lesser ${data.advancement.giftAdderXp.Lesser} / Greater ${data.advancement.giftAdderXp.Greater} XP; Limiter buy-off: current level × ${data.advancement.giftLimiterBuyoffXpMultiplier} XP)`,
     ),
   );
   data.gifts.forEach((gift) => {
@@ -237,14 +239,15 @@ function giftsSection(state, data, refresh) {
       gift.adders.forEach((adder) => {
         const owned = gState.adders.includes(adder.name);
         const boughtHere = (state.advancementPurchases.GiftAdders?.[gift.name] ?? []).includes(adder.name);
+        const adderXp = data.advancement.giftAdderXp[adder.tier];
         addersRow.appendChild(
           el('div', { style: 'display:flex;gap:0.5rem;align-items:center;margin:0.15rem 0;' }, [
-            el('span', {}, `${adder.name} (${adder.tier}, ${adder.points} XP)${owned ? ' - owned' : ''}`),
+            el('span', {}, `${adder.name} (${adder.tier}, ${adderXp} XP)${owned ? ' - owned' : ''}`),
             !owned
               ? el('button', {
                   type: 'button',
                   text: 'Buy',
-                  disabled: adder.points > remaining ? '' : undefined,
+                  disabled: adderXp > remaining ? '' : undefined,
                   onClick: () => {
                     buyAdvancementGiftAdder(state, gift.name, adder.name);
                     refresh();
@@ -265,6 +268,45 @@ function giftsSection(state, data, refresh) {
         );
       });
       card.appendChild(addersRow);
+    }
+
+    if (level > 0 && gift.limiters.length) {
+      const limitersRow = el('div', { style: 'margin:0.25rem 0 0.5rem 0.5rem;' });
+      const buyoffXp = level * data.advancement.giftLimiterBuyoffXpMultiplier;
+      gift.limiters.forEach((limiter) => {
+        const held = gState.limiters.includes(limiter.name);
+        const boughtOffHere = (state.advancementPurchases.LimiterBuyoffs?.[gift.name] ?? []).some(
+          (entry) => entry.limiterName === limiter.name,
+        );
+        if (!held && !boughtOffHere) return;
+        limitersRow.appendChild(
+          el('div', { style: 'display:flex;gap:0.5rem;align-items:center;margin:0.15rem 0;' }, [
+            el('span', {}, `${limiter.name}${held ? '' : ' - bought off'}`),
+            held
+              ? el('button', {
+                  type: 'button',
+                  text: `Buy off (${buyoffXp} XP)`,
+                  disabled: buyoffXp > remaining ? '' : undefined,
+                  onClick: () => {
+                    buyoffAdvancementLimiter(state, data, gift.name, limiter.name);
+                    refresh();
+                  },
+                })
+              : null,
+            !held && boughtOffHere
+              ? el('button', {
+                  type: 'button',
+                  text: 'Undo',
+                  onClick: () => {
+                    refundAdvancementLimiterBuyoff(state, gift.name, limiter.name);
+                    refresh();
+                  },
+                })
+              : null,
+          ]),
+        );
+      });
+      if (limitersRow.children.length) card.appendChild(limitersRow);
     }
     section.appendChild(card);
   });
