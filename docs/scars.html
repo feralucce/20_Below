@@ -15,6 +15,8 @@
     --text: #eaf5fb;
     --text-dim: #8fadbe;
     --accent: #3d84c4;
+    --accent-dim: #1c3548;
+    --danger: #e0685c;
     --radius: 8px;
     font-family: "Segoe UI", system-ui, sans-serif;
   }
@@ -39,22 +41,253 @@
     margin: 1rem 0 0.5rem;
     letter-spacing: 0.02em;
   }
-  .coming-soon {
+  .note {
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  a { color: var(--accent); }
+
+  .toc {
     background: var(--panel);
     border: 1px solid var(--panel-border);
     border-radius: var(--radius);
-    padding: 1.5rem;
-    color: var(--text-dim);
-    line-height: 1.5;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
   }
-  a { color: var(--accent); }
+  .toc h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-dim);
+  }
+  .toc ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    line-height: 1.9;
+  }
+  .toc a { text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  .scar-section {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+    scroll-margin-top: 1.5rem;
+  }
+  .scar-section:nth-of-type(even) {
+    background: var(--bg);
+  }
+  .scar-section h2 {
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--panel-border);
+  }
+  .scar-section h3 {
+    font-size: 1rem;
+    color: var(--text-dim);
+    margin: 1.5rem 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .scar-section > p {
+    line-height: 1.6;
+    margin: 0 0 1rem;
+  }
+  .scar-section > p:last-child {
+    margin-bottom: 0;
+  }
+
+  .roll-box {
+    background: var(--bg);
+    border: 1px solid var(--accent-dim);
+    border-radius: var(--radius);
+    padding: 0.6rem 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  .aside {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+  }
+
+  .scar-list {
+    columns: 1;
+    margin: 0.5rem 0 1rem;
+    padding-left: 1.25rem;
+    line-height: 1.7;
+  }
+  @media (min-width: 640px) {
+    .scar-list { columns: 2; column-gap: 1.5rem; }
+  }
+  .scar-list li {
+    break-inside: avoid;
+  }
+
+  .flaw-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .flaw-tag {
+    background: var(--accent-dim);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 0.25rem 0.6rem;
+    font-size: 0.85rem;
+  }
 </style>
 </head>
 <body>
 <main>
   <a class="back-link" href="combat-flow-reference.html">&larr; Back to Player's Quick Reference</a>
   <h1>Scars</h1>
-  <div class="coming-soon">Coming soon.</div>
+  <p class="note">
+    What actually happens when Health, Sanity, or Poise crosses zero - the permanent mark it leaves, and a working list of flavor
+    to draw from instead of improvising one from scratch every time.
+  </p>
+
+  <nav class="toc">
+    <h2>Sections</h2>
+    <ol>
+      <li><a href="#how-scars-work">How Do Scars Work?</a></li>
+      <li><a href="#physical-scars">Physical Scars</a></li>
+      <li><a href="#mental-scars">Mental Scars</a></li>
+      <li><a href="#social-scars">Social Scars</a></li>
+    </ol>
+  </nav>
+
+  <section class="scar-section" id="how-scars-work">
+    <h2>How Do Scars Work?</h2>
+    <p>All three tracks - <a href="../rules/rules.html#health-levels">Health</a>, <a href="../rules/rules.html#sanity">Sanity</a>, and <a href="../rules/rules.html#poise">Poise</a> - work the same way once they cross zero.</p>
+    <p><strong>At exactly 0</strong> (Unconscious, Overwhelmed, or Flustered), a fresh scar is purely cosmetic - a mark, a tell, a habit, whatever fits. No mechanical effect on its own.</p>
+    <p><strong>Dropping below 0</strong> (into negative Health, Shattered Sanity, or Humiliated Poise) always leaves a permanent scar, and the GM may impose a genuine <a href="../rules/flaws.html">Flaw</a> instead of a purely cosmetic one - lasting until that track is fully healed back to 0, GM's call in consultation with the player on which Flaw actually fits the harm taken.</p>
+    <p class="aside"><strong>Scars accumulate</strong> - each fresh crossing, after healing back up in between, adds a new one rather than replacing the last. A below-zero Flaw-scar grants no Flaw points of its own; it's a consequence the GM imposes, not a creation-time build choice. The <a href="../rules/gifts.html#healing">Healing</a> and <a href="../rules/gifts.html#regeneration">Regeneration</a> Gifts both grant immunity to the cosmetic tier only - neither can prevent or undo a below-zero Flaw-scar in the moment. That Flaw-scar can instead be healed away entirely given a full <strong>Month</strong>: Regeneration does it on yourself through rest alone; Healing does it on someone else through thorough, repeated application across that Month.</p>
+  </section>
+
+  <section class="scar-section" id="physical-scars">
+    <h2>Physical Scars</h2>
+    <p>Triggered by <a href="../rules/rules.html#health-levels">Health Levels</a> crossing zero.</p>
+    <h3>Cosmetic (at 0 Health)</h3>
+    <ol class="scar-list">
+      <li>A jagged scar across the wound site, visible but doesn't impede</li>
+      <li>A permanent limp on rough terrain</li>
+      <li>A patch of skin that never healed right - discolored, numb to light touch</li>
+      <li>A voice roughened or lowered permanently</li>
+      <li>A missing fingertip or toe - functional, just gone</li>
+      <li>A streak of hair gone stark white or gray from the wound site</li>
+      <li>A faint tremor in one hand at rest, vanishing under real focus</li>
+      <li>Eyes that don't quite match anymore</li>
+      <li>A patch that never grows hair again</li>
+      <li>Joints that ache and predict weather changes</li>
+      <li>A visible burn or frost pattern mapped permanently onto skin</li>
+      <li>Breathing that's audibly different under exertion - a whistle, a rasp</li>
+      <li>A crooked bone that healed slightly off, visible on an X-ray but otherwise unnoticeable</li>
+      <li>Scar tissue thick enough to be felt through clothing</li>
+      <li>A nail that grows in permanently misshapen</li>
+      <li>Skin that flushes or pales unusually fast at that spot</li>
+      <li>A knee or shoulder that pops audibly on certain movements, harmless but noticeable</li>
+      <li>A patch of skin that no longer tans or burns the way the rest does</li>
+      <li>A scar that aches faintly whenever the weather turns cold</li>
+      <li>Slightly reduced flexibility in one joint - cosmetic stiffness, not real impairment</li>
+      <li>A permanent goosebump-like texture over the old wound site</li>
+      <li>Teeth that chipped and were never quite fixed right</li>
+      <li>A faint, bruise-like discoloration that never fully fades</li>
+      <li>A small patch of numbness from old nerve damage</li>
+      <li>A scar that catches light oddly - faintly visible under blacklight or certain conditions</li>
+      <li>Slightly asymmetrical features from an old fracture that reset imperfectly</li>
+      <li>A permanent callus on a palm or sole from old repeated strain</li>
+    </ol>
+    <h3>Flaw-Scar (below 0 Health)</h3>
+    <div class="flaw-tags">
+      <span class="flaw-tag">Lame</span>
+      <span class="flaw-tag">Impaired Senses</span>
+      <span class="flaw-tag">Notable Appearance</span>
+      <span class="flaw-tag">Fragile</span>
+      <span class="flaw-tag">Speech Impediment</span>
+    </div>
+  </section>
+
+  <section class="scar-section" id="mental-scars">
+    <h2>Mental Scars</h2>
+    <p>Triggered by <a href="../rules/rules.html#sanity">Sanity</a> crossing zero.</p>
+    <h3>Cosmetic (at 0 Sanity)</h3>
+    <ol class="scar-list">
+      <li>A tic that flares under stress - touching the scar, tapping a rhythm</li>
+      <li>A recurring intrusive thought about the incident, easily dismissed but never fully gone</li>
+      <li>A specific object you now can't be without, though you function fine if separated from it</li>
+      <li>A genuine blank spot for the worst moment itself, though everything around it is intact</li>
+      <li>A smell, sound, or phrase that makes you flinch, just for a beat</li>
+      <li>Talking in your sleep about it, unknowingly</li>
+      <li>A changed relationship to something ordinary (can't watch a certain kind of media, avoid a certain place)</li>
+      <li>A new permanent habit picked up from the stress - counting, humming, checking locks</li>
+      <li>A specific number, date, or word that now feels unlucky or significant, without being able to say why</li>
+      <li>Difficulty holding eye contact when a conversation brushes the same topic</li>
+      <li>A new taste or aversion to a specific food tied to the memory</li>
+      <li>Automatically counting exits or escape routes on entering any room</li>
+      <li>A private, harmless bedtime ritual that wasn't there before</li>
+      <li>A mild wariness of a type of person resembling someone from the incident, not an individual</li>
+      <li>Genuine discomfort with one specific genre or kind of media</li>
+      <li>Talking quietly to yourself when alone, working through something unresolved</li>
+      <li>A changed relationship to darkness or silence - needing a light on, or needing background noise</li>
+      <li>Writing things down obsessively you'd normally just remember, not trusting your own memory the same way</li>
+      <li>A flinch at being touched unexpectedly from one specific direction</li>
+      <li>Preferring to sit facing exits or doors, without consciously deciding to</li>
+      <li>A recurring, harmless dream fragment that resurfaces under stress</li>
+      <li>Over-explaining or over-apologizing in moments that echo the original incident</li>
+      <li>A private phrase or word you use only in your own head to steady yourself</li>
+    </ol>
+    <h3>Flaw-Scar (below 0 Sanity)</h3>
+    <div class="flaw-tags">
+      <span class="flaw-tag">Anxiety</span>
+      <span class="flaw-tag">Short Fuse</span>
+      <span class="flaw-tag">Amnesia</span>
+      <span class="flaw-tag">Soft-Hearted</span>
+      <span class="flaw-tag">Overconfident</span>
+      <span class="flaw-tag">Secret</span>
+    </div>
+  </section>
+
+  <section class="scar-section" id="social-scars">
+    <h2>Social Scars</h2>
+    <p>Triggered by <a href="../rules/rules.html#poise">Poise</a> crossing zero. Unlike Health and Sanity, Poise has no death threshold - social trauma can leave lasting damage, but never kills on its own.</p>
+    <h3>Cosmetic (at 0 Poise)</h3>
+    <ol class="scar-list">
+      <li>A nervous habit that surfaces under real social pressure - fidgeting, a verbal tic, avoiding eye contact</li>
+      <li>A specific phrase or turn of speech you now overuse without noticing</li>
+      <li>A reputation quirk that follows you in certain circles - "the one who choked at..."</li>
+      <li>A changed laugh - shorter, more guarded than it used to be</li>
+      <li>A tendency to over-rehearse anything important before saying it out loud</li>
+      <li>A specific social setting (a stage, a boardroom, a particular kind of crowd) that now makes you visibly stiffen</li>
+      <li>A habit of downplaying your own achievements before anyone else can</li>
+      <li>A go-to deflection joke you reach for whenever a conversation gets too real</li>
+      <li>A slightly too-careful way of choosing words around one specific topic</li>
+      <li>A physical tell - a hand to the collar, a shift in stance - that reads as discomfort to anyone paying attention</li>
+      <li>An overcorrected confidence in low-stakes situations, masking real unease in higher-stakes ones</li>
+      <li>A story you tell about the incident that's just slightly different from what actually happened</li>
+      <li>A specific compliment or criticism that visibly throws you off script, every time</li>
+      <li>A preference for written communication over face-to-face when the stakes are real</li>
+      <li>A practiced neutral expression that slips only under real, direct pressure</li>
+    </ol>
+    <h3>Flaw-Scar (below 0 Poise)</h3>
+    <div class="flaw-tags">
+      <span class="flaw-tag">Notoriety</span>
+      <span class="flaw-tag">Pariah</span>
+      <span class="flaw-tag">Secret</span>
+      <span class="flaw-tag">Speech Impediment</span>
+      <span class="flaw-tag">Short Fuse</span>
+      <span class="flaw-tag">Shaken Confidence</span>
+    </div>
+    <p class="aside"><strong>Humiliated</strong> (below 0 Poise) is the social parallel to Shattered - unable to take the lead, negotiate, or be trusted to speak for the group, though still fully able to act on your own. See <a href="../rules/rules.html#humiliated">Humiliated</a> for the full status.</p>
+  </section>
+
 </main>
 </body>
 </html>

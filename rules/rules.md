@@ -234,7 +234,9 @@ Sanity mirrors Health Levels too, tracking a character's grip on their own mind 
 
 **At 0 Sanity, a character is Overwhelmed**: they gain a temporary negative mental trait (a Flaw - exact mechanic to be defined later) and are at Disadvantage on rolls. They can still act on their own. Overwhelmed clears when the character is removed from the stimulus that caused it and given a chance to rest, or by spending 1 Ki, which also refills Sanity to full.
 
-**Below 0, a character is Shattered**: panicky, babbling, unable to act on their own - they have to be led or dragged. Shattered clears when 1 Ki is spent or a Short Rest or Full Night's Rest passes, either of which restores Sanity only to 1, not fully - normal recovery resumes from there on the next rest. **Dropping below 0 always leaves a permanent mental scar**, regardless of how the character recovers afterward, even a Ki-funded refill doesn't erase it. The scar mechanic itself is not yet defined - flagged for a later, deeper pass.
+**Below 0, a character is Shattered**: panicky, babbling, unable to act on their own - they have to be led or dragged. Shattered clears when 1 Ki is spent or a Short Rest or Full Night's Rest passes, either of which restores Sanity only to 1, not fully - normal recovery resumes from there on the next rest.
+
+**Mental scars**: dropping to 0 Sanity leaves a purely cosmetic mental tell (a tic, an intrusive thought, a private ritual), no mechanical effect beyond Overwhelmed's own temporary trait above. **Dropping below 0 always leaves a permanent mental scar**, regardless of how the character recovers afterward - even a Ki-funded refill doesn't erase it. This scar can instead be a genuine, lasting [Flaw](flaws.md), GM's call in consultation with the player on which fits (Anxiety, Short Fuse, Amnesia, Soft-Hearted, Overconfident, and Secret are natural fits), distinct from Overwhelmed's own temporary trait and lasting until Sanity is healed back to 0 the slow way - same shape [Battle Scars](#battle-scars) and [Poise](#poise)'s below-zero rule both use.
 
 ### Fire
 
@@ -243,14 +245,15 @@ Sanity mirrors Health Levels too, tracking a character's grip on their own mind 
 Poise mirrors [Health Levels](#health-levels), tracking composure under Social attack instead of Physical.
 
 - **`PC Poise = 5 + Presence`.** NPCs default to a flat 5. Each Level is a binary hit-box, same shape as Health.
-- **Poise cannot drop below 0.** Once at 0, further connecting Social dice have no additional effect - you're already as Flustered as you get.
 - **At 0 Poise**, a character becomes [Flustered](#flustered).
+- **Crossing zero** works identically to Health Levels: a single attack can never carry a character straight past 0 into negative territory - excess connecting dice are discarded, landing exactly at 0. Once already at 0, any further attack can only remove 1 Poise, total, regardless of how many dice connect.
+- **Below 0 Poise**, a character becomes [Humiliated](#humiliated). **There is no death threshold for Poise** - social trauma can leave lasting damage, but never kills on its own.
 
-**Recovery**: Short Rest heals `Presence ÷ 2` (round up); Full Night's Rest heals fully.
+**Recovery**: Short Rest heals `Presence ÷ 2` (round up); Full Night's Rest heals fully. **Reduced below 0 Poise**: instead of the rates above, recover 1 Poise per Short Rest or Full Night's Rest, until back to 0.
 
-**Ki cannot prevent a Poise loss.** Once Poise reaches 0, spending **1 Ki refills it back to full**, reflecting how quickly social standing can turn around in the moment.
+**Ki cannot prevent a Poise loss.** At exactly 0 Poise (Flustered, not yet Humiliated), spending **1 Ki refills it back to full** - reflecting how quickly ordinary social standing can turn around in the moment. **Once below 0 (Humiliated), that same Ki spend - or a Short Rest or Full Night's Rest - only restores Poise to 1, not full**, same shape Sanity's Shattered recovery uses; normal recovery resumes from there.
 
-**Poise scars**: dropping to 0 leaves a purely cosmetic social tell (a nervous habit, a reputation quirk), no mechanical effect. No Gift currently grants immunity to this - intentional.
+**Poise scars**: dropping to 0 leaves a purely cosmetic social tell (a nervous habit, a reputation quirk), no mechanical effect. No Gift currently grants immunity to this - intentional. **Dropping below 0 can instead impose a genuine [Flaw](flaws.md)**, lasting until Poise is healed back to 0 the slow way - GM's call, in consultation with the player, on which Flaw fits (Notoriety, Pariah, Secret, Speech Impediment, Short Fuse, and the purpose-built [Shaken Confidence](flaws.md#shaken-confidence) are natural fits).
 
 ### Water
 
@@ -278,6 +281,8 @@ At **0 Health Levels**, a character falls unconscious and can't act. Health Leve
 Dropping to 0 Health Levels leaves a permanent mark - a scar, a limp, a changed voice, whatever fits the wound. **Purely cosmetic, no mechanical effect.** The [Healing](gifts.md#healing) and [Regeneration](gifts.md#regeneration) Gifts both grant immunity to it, for the target they're used on.
 
 Dropping below 0 Health Levels can instead impose a genuine [Flaw](flaws.md), lasting until the character is fully healed back to 0. GM's call, in consultation with the player, on which Flaw fits the harm taken.
+
+**Scars accumulate** - each fresh crossing of a 0 or below-0 threshold (Health, Sanity, or Poise), after healing back up in between, adds a new scar rather than replacing the last one. A below-zero Flaw-scar grants no Flaw points of its own - it's a consequence the GM imposes, not a creation-time build choice. Healing and Regeneration's immunity (above) only ever covers the cosmetic tier - it can't prevent or undo a below-zero Flaw-scar. That Flaw-scar can instead be healed away entirely given a full **Month**: see [Regeneration](gifts.md#regeneration) and [Healing](gifts.md#healing) for how each Gift handles it.
 
 ### Moira
 
@@ -357,3 +362,11 @@ A character whose [Poise](#poise) reaches 0 becomes **Flustered**.
 **A Flustered character rolls at Disadvantage on all Social rolls**, and on any other roll where composure matters (GM's call, same standard as Surprise), for the rest of the Scene.
 
 A Flustered character may spend an action to roll **Presence + Difficulty** to shake it off early, ending the condition immediately on success.
+
+#### Humiliated
+
+A character whose [Poise](#poise) drops below 0 becomes **Humiliated** - a step past Flustered.
+
+**A Humiliated character can't take the lead, negotiate, or be trusted to speak for the group** - socially deferring and complying rather than asserting themselves. Unlike Shattered (see [Sanity](#sanity)), a Humiliated character still acts fully on their own; this is social paralysis, not physical.
+
+Humiliated clears once Poise is restored back to 0 (see [Poise recovery](#poise) - Ki, a Short Rest, or a Full Night's Rest only restores it to 1 while still below 0, not a full refill).
