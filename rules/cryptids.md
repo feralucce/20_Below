@@ -42,7 +42,7 @@ American folklore cryptids, treated as real but rare in a modern setting. Sighti
 
 ### Sasquatch
 
-Big enough that most encounters end with it walking away rather than fighting - the stories about the ones that didn't are the ones that get told.
+Big enough that most encounters end with it walking away rather than fighting - the stories about the ones that didn't are the ones that get told. It stands eight or nine feet at the shoulder, matted dark fur over a frame built like a doorway, and moves through heavy timber without snapping a twig. Most parties never see it - they hear brush give way somewhere close, find a footprint or a flattened patch of undergrowth, and it's already gone. Corner it, wound it, or threaten its young and that quiet ends fast: it closes distance in a few strides and starts throwing whatever's within reach, logs and stones included, hard enough to break bone.
 
 **Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 10m
 
@@ -58,7 +58,7 @@ Big enough that most encounters end with it walking away rather than fighting - 
 
 ### Chupacabra
 
-Ranchers lose livestock to it long before anyone gets a clear look.
+Ranchers lose livestock to it long before anyone gets a clear look. It's low-slung and quick, more coyote than legend up close, with patchy hide and a hunched gait that keeps it low to the ground. It works pens and pastures at night, slipping through fence lines and gaps in coops, and it's usually finished and gone before anyone with a flashlight makes it outside. What sticks with witnesses isn't the animal itself but the aftermath - drained, punctured carcasses and no blood trail leading anywhere.
 
 **Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 9m
 
@@ -74,7 +74,7 @@ Ranchers lose livestock to it long before anyone gets a clear look.
 
 ### Mothman
 
-Shows up before something goes wrong, or that's how the stories always get told after the fact.
+Shows up before something goes wrong, or that's how the stories always get told after the fact. Tall, winged, faceless but for two eyes that catch light red at a distance, it perches on towers and rooflines and watches rather than approaches. It rarely lands near people and almost never attacks - the claws exist mostly for the record books. What unsettles a table is the timing: it's seen once, clearly, right before something bad happens nearby, and nobody who saw it can explain why looking at it left them rattled.
 
 **Soak** 1 · **Attack** 4 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 16m (flight)
 
@@ -90,7 +90,7 @@ Shows up before something goes wrong, or that's how the stories always get told 
 
 ### Jersey Devil
 
-Hooved, winged, and loud about it - the scream carries farther than the sighting ever does.
+Hooved, winged, and loud about it - the scream carries farther than the sighting ever does. Picture a goat's head and hindquarters grafted onto bat wings and a forked tail, moving low over the Pine Barrens canopy at a dead run before it ever takes flight. It hunts loud on purpose, using the shriek to scatter and disorient before it closes in with claws and teeth. Most witnesses remember the sound first and the shape second, if they remember the shape at all.
 
 **Soak** 2 · **Attack** 5 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 14m (flight)
 
@@ -106,7 +106,7 @@ Hooved, winged, and loud about it - the scream carries farther than the sighting
 
 ### Lake Monster
 
-Every deep, cold lake seems to have one story like it. This is the generic write-up; rename it to whatever local legend fits the table.
+Every deep, cold lake seems to have one story like it. This is the generic write-up; rename it to whatever local legend fits the table. Long-bodied and dark, it surfaces only for a heartbeat - a hump, a ripple, a shape under the boat - before going under again. It hunts by staying hidden until something gets close to the water's edge or leans too far over a gunwale, then closes the distance from below in a single rush and bites or crushes before its target can react. It never comes ashore, which is the only reliable way to end an encounter with it.
 
 **Soak** 4 · **Attack** 6 · **Defense** 4 · **Health Levels** 8 · **Movement Rate** 10m (water only)
 
@@ -120,7 +120,7 @@ Every deep, cold lake seems to have one story like it. This is the generic write
 
 ### Thunderbird
 
-Wingspan alone is enough to convince most witnesses they saw something that shouldn't exist.
+Wingspan alone is enough to convince most witnesses they saw something that shouldn't exist. It rides high on thermals and storm fronts, dark against dark clouds, and its wingbeats are audible before it's visible. It hunts from altitude, folding in and diving talons-first, and prefers to strike during or just ahead of bad weather when it's hardest to track against the sky. A clear-day sighting is rare enough that most reports come from people caught out in a storm who looked up at the wrong moment.
 
 **Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 18m (flight)
 
@@ -136,7 +136,7 @@ Wingspan alone is enough to convince most witnesses they saw something that shou
 
 ### Dogman
 
-Upright when it wants distance covered fast, on all fours when it wants to close in quiet.
+Upright when it wants distance covered fast, on all fours when it wants to close in quiet. Its build reads as canine everywhere but the shoulders and stance - a wolf's head and a man's height, moving between the two gaits without breaking stride. Most sightings are roadside or at the treeline, upright and walking like a person until it notices it's been seen, at which point it drops low and closes fast. It favors overwhelming speed over stealth once committed, crossing open ground faster than anything its size should.
 
 **Soak** 2 · **Attack** 6 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 12m
 
@@ -152,7 +152,7 @@ Upright when it wants distance covered fast, on all fours when it wants to close
 
 ### Hodag
 
-Squat, spined, and stubborn about its territory - the Wisconsin logging camps that first told stories about it weren't exaggerating the attitude.
+Squat, spined, and stubborn about its territory - the Wisconsin logging camps that first told stories about it weren't exaggerating the attitude. It's low and heavy, more toad than lizard, with a ridge of bony spines down its back and short legs built for digging rather than running. It dens in hollows and root cellars and rarely leaves them, which makes most encounters happen because someone got curious about a hole in the ground. It doesn't chase - if you back off from its den, it lets you go.
 
 **Soak** 3 · **Attack** 4 · **Defense** 4 · **Health Levels** 5 · **Movement Rate** 5m
 
@@ -166,7 +166,7 @@ Squat, spined, and stubborn about its territory - the Wisconsin logging camps th
 
 ### Fresno Nightcrawler
 
-Two legs, no visible arms or head, and no recorded case of it ever doing anything but walk away.
+Two legs, no visible arms or head, and no recorded case of it ever doing anything but walk away. What's usually seen is a pair of pale, spindly legs supporting a small round body, crossing a yard or a field at an unhurried pace, like furniture that's decided to relocate itself. It never reacts to being watched, never speeds up, never turns toward anyone who approaches. There's nothing to fight here - the entry is built for a party that spots it at a distance, argues about what they just saw, and never gets close enough to find out more.
 
 **Soak** 0 · **Attack** 1 · **Defense** 9 · **Health Levels** 2 · **Movement Rate** 4m
 
@@ -180,7 +180,7 @@ Two legs, no visible arms or head, and no recorded case of it ever doing anythin
 
 ### Flatwoods Monster
 
-Hisses, hovers, and leaves behind a smell that lingers for hours after it's gone.
+Hisses, hovers, and leaves behind a smell that lingers for hours after it's gone. It's tall and thin under a hood-shaped head, with two small lights where eyes should be, and it moves by gliding a few feet off the ground rather than walking. Approach too close and it lets out a burst of acrid mist before retreating, leaving anyone caught in it coughing and unsteady. It never presses an advantage - the moment it's directly engaged, it withdraws into its own cloud and is gone by the time the air clears.
 
 **Soak** 1 · **Attack** 3 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 6m (glides)
 
@@ -196,7 +196,7 @@ Hisses, hovers, and leaves behind a smell that lingers for hours after it's gone
 
 ### Beast of Bray Road
 
-Roadside sightings, always at night, always gone by the time headlights swing back around.
+Roadside sightings, always at night, always gone by the time headlights swing back around. It's built like a wolf standing wrong - too tall, too broad through the shoulders, upright when it crosses open ground. It works the edges of roads and fields, keeping pace with a car or watching from a fence line before closing on foot traffic caught out after dark. Most stories agree on one detail: by the time anyone gets a second look, it's already off the shoulder and into the field, and the headlights never catch it twice.
 
 **Soak** 2 · **Attack** 6 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 12m
 
@@ -212,7 +212,7 @@ Roadside sightings, always at night, always gone by the time headlights swing ba
 
 ### Loveland Frogman
 
-Reeds and riverbanks hide it well enough that most reports are just a shape and a splash.
+Reeds and riverbanks hide it well enough that most reports are just a shape and a splash. Mottled green-gray skin and a hunched, frog-like build let it disappear into a riverbank the moment it stops moving. It waits low in the reeds or submerged near the bank until something wanders into range, then covers the last few feet in a single leap. Once the attack fails to land clean, it's back in the water and gone - it doesn't stick around to finish a fight it didn't win on the first jump.
 
 **Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 8m (12m in water)
 
@@ -228,7 +228,7 @@ Reeds and riverbanks hide it well enough that most reports are just a shape and 
 
 ### Black-Eyed Children
 
-They knock, they ask to come in, and the wrongness is entirely in how ordinary the request sounds coming from something that looks at you like that.
+They knock, they ask to come in, and the wrongness is entirely in how ordinary the request sounds coming from something that looks at you like that. They pass for kids at a glance - same height, same clothes, same polite phrasing - until the porch light catches their eyes and there's no white in them at all. They never force their way in and never raise their voice; they just keep asking, reasonably, patiently, in a way that makes saying yes feel easier than it should. If actually attacked they don't fight back at all, they just leave, which somehow doesn't make anyone feel better about it.
 
 **Soak** 0 · **Attack** 2 · **Defense** 6 · **Health Levels** 2 · **Movement Rate** 8m
 
@@ -242,7 +242,7 @@ They knock, they ask to come in, and the wrongness is entirely in how ordinary t
 
 ### Hopkinsville Goblins
 
-Small, pale, all-limbs humanoids that come out at night in numbers and don't scare easy.
+Small, pale, all-limbs humanoids that come out at night in numbers and don't scare easy. Individually they're barely three feet tall, with oversized heads and long thin arms that move wrong for their size, but they're rarely encountered alone. They work rooflines, fences, and low structures instead of open ground, coordinating attacks from multiple angles at once, and gunfire or a solid hit doesn't make them retreat the way most animals would. What people remember afterward is less the shape of any one of them and more how many there suddenly were.
 
 **Soak** 0 · **Attack** 3 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 6m
 
@@ -258,7 +258,7 @@ Small, pale, all-limbs humanoids that come out at night in numbers and don't sca
 
 ### Jackalope
 
-The joke wears off the first time one actually charges.
+The joke wears off the first time one actually charges. It looks exactly like the postcard - a jackrabbit with a small rack of antlers - right up until it puts its head down and closes twenty feet before anyone's finished laughing. It's fast even by rabbit standards, all quick starts and sharp cuts, and it uses the antlers like a battering ram rather than a weapon that needs finesse. Most people who've been gored by one describe the same thing: they never saw it coming because nothing that looks that stupid should move that fast.
 
 **Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 3 · **Movement Rate** 14m
 
@@ -274,7 +274,7 @@ The joke wears off the first time one actually charges.
 
 ### Pope Lick Monster
 
-Lives on and under a rail trestle, and the voice it throws is the only reason anyone gets close enough to fall.
+Lives on and under a rail trestle, and the voice it throws is the only reason anyone gets close enough to fall. Part man, part goat in silhouette, it keeps to the trestle's beams and shadows, rarely showing itself fully. What it does instead is call out - a familiar voice, a cry for help, footsteps that aren't its own - to draw people out onto the tracks or up into the girders where the footing is bad and the drop is worse. It strikes from above when it can, using the height rather than raw strength to make its attacks count.
 
 **Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 10m
 
@@ -290,7 +290,7 @@ Lives on and under a rail trestle, and the voice it throws is the only reason an
 
 ### Beast of Bladenboro
 
-North Carolina livestock turn up dead with barely a mark on them and no tracks worth following.
+North Carolina livestock turn up dead with barely a mark on them and no tracks worth following. It's cat-like in build, low and muscular, with a coat that reads as shadow more than color in low light. It stalks its prey for long stretches before committing, staying downwind and out of sight until it's close enough to end things in a single bite. Anything that spots it before that first strike lands has a real fight on its hands; anything that doesn't usually doesn't get a second chance to notice.
 
 **Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 10m
 
@@ -306,7 +306,7 @@ North Carolina livestock turn up dead with barely a mark on them and no tracks w
 
 ### Ozark Howler
 
-The howl reaches farther than the animal ever does, which is exactly why nobody trusts it isn't close.
+The howl reaches farther than the animal ever does, which is exactly why nobody trusts it isn't close. Thickset and dark-coated, somewhere between a big cat and a wolf in outline, it keeps to ridgelines and dense timber where it's rarely seen even when it's heard clearly. Its howl carries for miles across the hollows, and it uses that reach on purpose - a single call can rattle a camp long before the animal itself is anywhere nearby. When it does close in, it favors thick brush and blind approaches, relying on the same instinct that just spent an hour listening for a howl to not notice it walking in under cover.
 
 **Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 11m
 
