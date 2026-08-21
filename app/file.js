@@ -1,4 +1,4 @@
-import { createInitialState } from './state.js';
+import { mergeCharacterState } from './state.js';
 import { el } from './ui.js';
 import { loadRulesData } from './rules-data.js';
 import { isDesktopApp, saveCharacterToFile, listSavedCharacters, loadCharacterFromFile } from './desktop-storage.js';
@@ -18,15 +18,16 @@ function showStatus(message, isError = false) {
   status.className = isError ? 'file-status error' : 'file-status';
 }
 
-// Merges a loaded/imported character over a fresh initial state (same shape
-// loadSavedState in main.js uses), writes it as the new working draft, then
-// hands off to the character creator - this page has no rendering of its
-// own for step data, just file operations. No validation of the loaded
-// content against the current rules data - an export from an older rules
-// version could carry a since-renamed Gift/Skill/Resource name forward
-// silently. Accepted risk, not handled.
+// Merges a loaded/imported character over a fresh initial state (see
+// mergeCharacterState in state.js - same helper loadSavedState in main.js
+// uses), writes it as the new working draft, then hands off to the
+// character creator - this page has no rendering of its own for step data,
+// just file operations. A catalog entry *renamed* since the character was
+// saved (a Gift/Skill/Resource that no longer exists under that name)
+// isn't caught here - that's a different, narrower risk than a new entry
+// being *added*, which mergeCharacterState does handle.
 function applyCharacterAndReturn(data, loaded) {
-  const merged = { ...createInitialState(data), ...loaded };
+  const merged = mergeCharacterState(data, loaded);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
   window.location.href = 'index.html';
 }

@@ -100,6 +100,38 @@ export function createInitialState(data) {
   };
 }
 
+// Merges a loaded/saved character (from the auto-persisted draft, Import, or
+// Load) over a fresh initial state built from the current rules data. A
+// plain shallow spread lets an old save's dictionary-shaped fields
+// (resources, skills, etc.) fully replace the fresh ones - silently
+// dropping any catalog entry added to the rules since the character was
+// saved, which then multiplies to NaN/null in pool math the moment that
+// field is summed (confirmed live: a character predating a Resources
+// expansion broke this way on import). Deep-merges those specific
+// dictionary fields key-by-key instead so a new catalog entry defaults in
+// cleanly, while every other field (scalars, arrays like gifts/flaws/boons,
+// nested objects like discretionaryPurchases) is taken from the loaded save
+// as-is, same as before.
+const CATALOG_DICT_FIELDS = [
+  'attributes',
+  'subStats',
+  'descriptors',
+  'extraDescriptors',
+  'skills',
+  'resources',
+  'resourcePenalties',
+  'resourceZeroed',
+];
+
+export function mergeCharacterState(data, loaded) {
+  const fresh = createInitialState(data);
+  const merged = { ...fresh, ...loaded };
+  CATALOG_DICT_FIELDS.forEach((field) => {
+    merged[field] = { ...fresh[field], ...(loaded[field] || {}) };
+  });
+  return merged;
+}
+
 // ---- Pools ----
 
 export function attributePointsSpent(state, data) {
