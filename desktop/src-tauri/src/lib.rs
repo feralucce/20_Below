@@ -64,6 +64,18 @@ fn load_character(app: tauri::AppHandle, name: String) -> Result<String, String>
   std::fs::read_to_string(&path).map_err(|e| e.to_string())
 }
 
+// Import reads a file the user picked via the dialog plugin, which can be
+// anywhere on disk - not just the app's own characters folder, so this
+// can't reuse characters_dir's scoping. It hits the exact same fs-plugin
+// ACL bug documented above (the JS-side window.__TAURI__.fs.readTextFile
+// call has no fs:allow-* permission granted, since the 2026-08-20 cleanup
+// removed them all as "dead" without checking Import still used one) -
+// same fix, a custom command doing the read directly with no ACL involved.
+#[tauri::command]
+fn read_character_file(path: String) -> Result<String, String> {
+  std::fs::read_to_string(&path).map_err(|e| e.to_string())
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
   tauri::Builder::default()
@@ -72,7 +84,8 @@ pub fn run() {
     .invoke_handler(tauri::generate_handler![
       save_character,
       list_characters,
-      load_character
+      load_character,
+      read_character_file
     ])
     .setup(|app| {
       if cfg!(debug_assertions) {
