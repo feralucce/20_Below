@@ -138,6 +138,16 @@ export function skillsPointsSpent(state, data) {
 }
 
 export function skillsPoolRemaining(state, data) {
+  // Jack of all Trades Tier 1 (5 points) already grants Trained in every
+  // Skill for free and caps every Skill at Trained - so the Skills Pool has
+  // nothing useful left to buy. Blocking it here (rather than just letting a
+  // player decline to spend it) stops those points from being freed up for
+  // anything else, which would make an already-strong Boon overpowered.
+  // Tier 2 (7 points) lifts the cap, so the pool works normally again.
+  const jackOfAllTrades = state.boons.find((b) => b.name === 'Jack of all Trades');
+  if (jackOfAllTrades && jackOfAllTrades.points === 5) {
+    return 0 - skillsPointsSpent(state, data);
+  }
   const total = data.skillsPoolTotal + state.discretionaryExtra.Skills;
   return total - skillsPointsSpent(state, data);
 }
