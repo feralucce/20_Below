@@ -48,7 +48,11 @@ async function main() {
   // produced no dialog anywhere on screen, not a permissions/CSP block,
   // just not wired up the same way a browser tab is) - so the desktop build
   // uses Tauri's own dialog plugin instead, reading the chosen path through
-  // the fs plugin the same way the Load select already does.
+  // the custom read_character_file command (see lib.rs) rather than the fs
+  // plugin's own readTextFile - that JS API has no fs:allow-* permission
+  // granted since the 2026-08-20 capabilities cleanup, so every real Import
+  // was silently failing with a permission error shown as "not a valid
+  // character file" until this was caught and fixed.
   const importInput = el('input', {
     type: 'file',
     accept: 'application/json,.json',
@@ -80,7 +84,7 @@ async function main() {
           filters: [{ name: 'Character', extensions: ['json'] }],
         });
         if (!path) return;
-        applyCharacterAndReturn(data, JSON.parse(await window.__TAURI__.fs.readTextFile(path)));
+        applyCharacterAndReturn(data, JSON.parse(await window.__TAURI__.core.invoke('read_character_file', { path })));
       } catch (err) {
         console.error(err);
         showStatus('Failed to import - not a valid character file.', true);
