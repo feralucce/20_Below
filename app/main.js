@@ -1,4 +1,4 @@
-import { createInitialState, allPoolsSummary } from './state.js';
+import { createInitialState, mergeCharacterState, allPoolsSummary } from './state.js';
 import { el, poolBadge } from './ui.js';
 import { loadRulesData } from './rules-data.js';
 import { isDesktopApp } from './desktop-storage.js';
@@ -50,7 +50,7 @@ function loadSavedState(data) {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return createInitialState(data);
-    return { ...createInitialState(data), ...JSON.parse(raw) };
+    return mergeCharacterState(data, JSON.parse(raw));
   } catch {
     return createInitialState(data);
   }
