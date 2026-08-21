@@ -10,12 +10,16 @@ export default {
   title: 'Skills',
   render(container, { state, data, rerenderStep, rerenderPools }) {
     const remaining = skillsPoolRemaining(state, data);
+    const jackOfAllTrades = state.boons.find((b) => b.name === 'Jack of all Trades');
+    const poolBlocked = jackOfAllTrades && jackOfAllTrades.points === 5;
     container.append(
       el('h2', {}, 'Skills'),
       el(
         'p',
         {},
-        `Everyman Skills (${data.everymanSkills.join(', ')}) start Trained for free. Beyond that, a ${data.skillsPoolTotal}-point pool, 1 point per tier climbed. Remaining: ${remaining}.`,
+        poolBlocked
+          ? `Jack of all Trades (Tier 1) already gives you Trained in every Skill and caps every Skill at Trained - the Skills Pool has nothing left to buy, so it's locked at 0 rather than freed up for anything else. Remaining: ${remaining}.`
+          : `Everyman Skills (${data.everymanSkills.join(', ')}) start Trained for free. Beyond that, a ${data.skillsPoolTotal}-point pool, 1 point per tier climbed. Remaining: ${remaining}.`,
       ),
     );
 
