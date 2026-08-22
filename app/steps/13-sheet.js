@@ -249,10 +249,20 @@ function buildGearPurchaseEntries(state) {
   ];
 }
 
+function buildEverymanGearEntry(state) {
+  const pkg = state.everymanGearPackage;
+  if (!pkg) return [];
+  return [
+    el('h3', {}, 'Everyman Gear Package'),
+    el('p', {}, [el('strong', {}, `${pkg.name} `), `(Level ${pkg.level}) - ${pkg.contents}`]),
+  ];
+}
+
 function buildGearTab(state, data) {
   return [
     el('h3', {}, 'Resources'),
     el('ul', {}, buildResourceEntries(state, data)),
+    ...buildEverymanGearEntry(state),
     el('h3', {}, 'Gear'),
     ...buildGearPurchaseEntries(state),
   ];

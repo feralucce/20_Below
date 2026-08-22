@@ -64,6 +64,10 @@ export function createInitialState(data) {
     // or successfully-checked item.
     gearPurchases: [],
     creationWealthLoss: 0,
+    // Everyman Gear Packages (weapons.md#everyman-gear-packages) - a free,
+    // no-roll alternative to Wealth Check shopping. Exactly one pick, or
+    // null if the player shopped normally instead. { level, name, contents }.
+    everymanGearPackage: null,
     // Pool-points'-worth of extra capacity bought via Discretionary, added
     // on top of each target's base pool total. Gifts is tracked separately
     // (see giftsDiscretionaryContribution) since its per-unit cost varies
@@ -242,12 +246,25 @@ export function clearResourcePenalty(state, resourceName) {
 // creation-Wealth starts at 2, unless Wealth was actually purchased from the
 // Resources Pool, in which case that purchased Level is used instead (not
 // the higher of the two - see resources.md#wealth-at-character-creation).
+// Destitute (flaws.md#destitute) overrides both of those to a flat 0 at
+// every Level it's taken - that's the whole point of the Flaw, per its own
+// rules text ("Creation-Wealth is 0 instead of the default 2"). Checked here
+// rather than in currentCreationWealth so both the Wealth Check shop's gap
+// math (via currentCreationWealth's own floor of 1, below) and the Everyman
+// Gear Package picker's eligibility (weapons.md#everyman-gear-packages,
+// which needs the real unfloored 0 to gate Level 0 exclusively) read the
+// same starting number.
 export function creationWealthBase(state) {
+  if (state.flaws.some((f) => f.name === 'Destitute')) return 0;
   return state.resources.Wealth > 0 ? state.resources.Wealth : 2;
 }
 
 export function currentCreationWealth(state) {
   return Math.max(1, creationWealthBase(state) - state.creationWealthLoss);
+}
+
+export function setEverymanGearPackage(state, pkg) {
+  state.everymanGearPackage = pkg;
 }
 
 function nextGearPurchaseId(state) {

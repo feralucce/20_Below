@@ -9,7 +9,7 @@ import { parseFlaws } from './parse/flaws.js';
 import { parseSampleDescriptors } from './parse/descriptors.js';
 import { parseCosts } from './parse/costs.js';
 import { parseDifficultyChart } from './parse/difficulty.js';
-import { parseEquipment } from './parse/weapons.js';
+import { parseEquipment, parseEverymanGearPackages } from './parse/weapons.js';
 
 // Shared between main.js (the character creator) and file.js (Save/Load/
 // Import) - both need the same parsed rules shape to build createInitialState
@@ -54,5 +54,6 @@ export async function loadRulesData() {
     sampleDescriptors: parseSampleDescriptors(rulesMd),
     difficultyChart: parseDifficultyChart(rulesMd),
     equipment: parseEquipment(weaponsMd),
+    everymanGearPackages: parseEverymanGearPackages(weaponsMd),
   };
 }
