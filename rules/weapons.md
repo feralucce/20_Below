@@ -129,3 +129,43 @@ Driving/Piloting Skill required to operate; combat or pursuit use falls under Co
 | Armored transport van | Soak 6, 4 Health Levels (per the object reference chart), several passengers ride behind that Soak | 4 |
 | Light helicopter | Full 3D movement, requires Piloting | 5 |
 | Small fixed-wing aircraft | Requires Piloting (Fixed-Wing) | 5 |
+
+### Everyman Gear Packages
+
+A free alternative to [Wealth Check](resources.md#wealth-at-character-creation) shopping, not a replacement for it - a character can still shop normally with their creation-Wealth on top of taking a package below. At character creation, pick **exactly one** package from every package at or under your creation-Wealth Level, free, no roll. Access is cumulative downward: a creation-Wealth 2 character (the default, if no points were spent on Wealth) can pick any single package from the Level 1 or Level 2 lists below, not just Level 2's. Level 0 packages are only reachable by a creation-Wealth of 0, which currently only comes from the [Destitute](flaws.md#destitute) Flaw.
+
+**Level 0** (creation-Wealth 0 - Destitute)
+
+- **Whatever's Left** - the clothes on your back, a bedroll, a pocketknife (Switchblade), less than a day's food.
+- **One Bag, Ready to Move** - a packed duffel bag, a Multitool, a hand-me-down phone (Smartphone) barely holding a charge.
+- **Borrowed Roof** - a key to somewhere that isn't really yours, a Tactical flashlight, one good coat.
+
+**Level 1** (Financially comfortable)
+
+- **Steady Job Kit** - Smartphone, Multitool, Field rations & water purifier (a well-stocked kitchen), a wardrobe good enough for interviews and dates.
+- **Weekend Warrior** - Bicycle, Tent & sleeping gear, Rope & climbing kit, Binoculars.
+- **City Renter's Setup** - Smartphone, Lockpick set (the front door sticks), Field rations & water purifier, Tactical flashlight (the power's spotty).
+
+**Level 2** (Well-off)
+
+- **Home & Hearth** - Economy sedan, First aid kit, Laptop/hacking rig, a paid-off lease.
+- **Home Defense** - Compact pistol (licensed), First aid kit, Tactical flashlight, a home security system (flavor).
+- **Weekend Traveler** - Motorcycle, Satellite phone, Field stimulant, Rope & climbing kit.
+
+**Level 3** (Wealthy)
+
+- **Executive Traveler** - Armored sedan, Forged documents, Satellite phone, Encrypted comms set.
+- **Serious Collector** - Tactical carbine (licensed), Night vision goggles, Concealable vest, a proper home range/vault.
+- **Weekend Estate** - Off-road SUV, Speedboat, Advanced trauma kit, a private dock.
+
+**Level 4** (Very wealthy)
+
+- **Corporate Backing** - Armored transport van, Encrypted comms set, Laptop/hacking rig, a small trusted staff (flavor).
+- **Private Security Contract** - Tactical vest, Compact SMG, Signal jammer, a retained security team (flavor).
+- **Serious Insulation** - EMP device, Ballistic shield, Forged documents, a legal team on retainer (flavor).
+
+**Level 5** (A fortune)
+
+- **Old Money** - Concealable vest, Antitoxin, a name that opens doors, staff to handle logistics (flavor).
+- **Fortress** - Full tactical rig, EMP device, Ballistic shield, private security on retainer (flavor).
+- **Untouchable** - Advanced trauma kit, Forged documents, Satellite phone, the kind of wealth that solves most problems with a phone call rather than gear (flavor).

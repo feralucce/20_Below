@@ -18,6 +18,7 @@ Flaws are the mirror image of [Boons](boons.md) - disadvantages, quirks, or comp
 | Berserk | = Level | Once triggered, must keep fighting at full intensity - see [Berserk](#berserk) below for the 5-level breakdown. |
 | Code of Conduct | = Level | A self-imposed rule the character won't break, even when breaking it would help - see [Code of Conduct](#code-of-conduct) below for the 5-level breakdown. |
 | Dependent | = Level | Someone relies on the character and must be protected or provided for - see [Dependent](#dependent) below for the 5-level breakdown. |
+| Destitute | = Level | Chronic financial hardship, from a rough patch to genuinely having nothing - see [Destitute](#destitute) below for the 5-level breakdown. |
 | Directionless | = Level | A poor, unreliable sense of direction - see [Directionless](#directionless) below for the 5-level breakdown. |
 | Fragile | = Level | The body works against you - see [Fragile](#fragile) below for the 5-level breakdown. |
 | Gun-Shy | = Level | Falters when violence breaks out - see [Gun-Shy](#gun-shy) below for the 5-level breakdown. |
@@ -109,6 +110,18 @@ Each level's effect is cumulative - it keeps every lower level's restriction and
 | 3 | A dependent who can't protect themselves and needs real intervention when trouble finds them - a young child, an elderly parent, someone seriously ill. |
 | 4 | A dependent who is a frequent liability - regularly endangered by the character's own life (enemies, work, reputation), requiring real risk to protect. |
 | 5 | A dependent who is entirely helpless without the character and a prime target - enemies know exactly who to threaten to get to the character. |
+
+## Destitute
+
+Each level's effect is cumulative - it keeps every lower level's complication and adds its own.
+
+| Level | Effect |
+|---|---|
+| 1 | A rough patch. [Creation-Wealth](resources.md#wealth-at-character-creation) is **0** instead of the default 2 for gear shopping at creation - see [Everyman Gear Packages](weapons.md#everyman-gear-packages) for what's still available at Level 0. Doesn't follow the character past creation; whatever put them here (a lost job, a bad breakup, a bad month) is already turning around. |
+| 2 | Chronically tight. As Level 1, and it doesn't go away - living paycheck to paycheck, or with no paycheck at all, is an ongoing fact of the character's life, however their Resources ended up built. |
+| 3 | Real precarity. As Level 2, and something concrete is currently unstable - unreliable housing, an unreliable income source, or a debt actively being chased. |
+| 4 | Genuinely impoverished. As Level 3, and it's visible enough that people react to it on sight - shapes first impressions the same way Notable Appearance or Notoriety do, just for money instead of looks or reputation. |
+| 5 | Nothing left. As Level 4, and there's no safety net at all - no one to call for a loan, no fallback plan, and whatever put the character here is bad enough to be a real, ongoing story hook (GM's call on specifics). |
 
 ## Directionless
 
