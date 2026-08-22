@@ -284,6 +284,14 @@ export function removeGearPurchase(state, id) {
   state.gearPurchases = state.gearPurchases.filter((p) => p.id !== id);
 }
 
+// Clears every Wealth Check purchase and its accumulated loss, returning
+// currentCreationWealth() to creationWealthBase() - the page's own starting
+// state (2, or the bought Wealth Resource Level, or 0 if Destitute).
+export function resetGearPurchases(state) {
+  state.gearPurchases = [];
+  state.creationWealthLoss = 0;
+}
+
 // A Limiter drops the cost of every Level of its Gift, floored at a
 // minimum, stacking with no ceiling on how many can be taken. Discount
 // and floor both come from rules/costs.md (see rules/gifts.md#points).

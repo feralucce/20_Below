@@ -9,6 +9,7 @@ import {
   creationWealthBase,
   addGearPurchase,
   removeGearPurchase,
+  resetGearPurchases,
 } from '../state.js';
 import { performWealthCheck } from '../roller/wealthCheck.js';
 
@@ -155,6 +156,19 @@ export default function buildGearShop(state, data) {
     categoriesWrap,
     resultEl,
     el('h4', {}, 'Purchased Gear'),
+    el('button', {
+      type: 'button',
+      text: 'Reset All Purchases',
+      onClick: () => {
+        if (!state.gearPurchases.length && !state.creationWealthLoss) return;
+        if (!window.confirm('Remove every purchased item and reset creation-Wealth back to its starting value? This can\'t be undone.')) return;
+        resetGearPurchases(state);
+        resultEl.innerHTML = '';
+        renderSummary();
+        renderPurchased();
+        renderCategories();
+      },
+    }),
     purchasedList,
   );
   return wrap;
