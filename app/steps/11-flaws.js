@@ -1,4 +1,4 @@
-import { el, counterRow, renderMarkdown } from '../ui.js';
+import { el, counterRow, renderMarkdown, renderSelectedAvailable } from '../ui.js';
 import { flawsPointsGranted } from '../state.js';
 
 function getOrCreateFlawState(state, name) {
@@ -23,10 +23,7 @@ export default {
       ),
     );
 
-    const listEl = el('div', { class: 'pick-list' });
-    container.appendChild(listEl);
-
-    data.flaws.forEach((flaw) => {
+    function renderCard(flaw) {
       const fState = getOrCreateFlawState(state, flaw.name);
       const card = el('div', { class: 'pick-card' });
       const levelRows = flaw.levels
@@ -50,7 +47,14 @@ export default {
         }),
         el('div', { class: 'detail', html: levelRows }),
       );
-      listEl.appendChild(card);
+      return card;
+    }
+
+    renderSelectedAvailable(container, {
+      label: 'Flaws',
+      getItems: () => data.flaws,
+      isSelected: (flaw) => getOrCreateFlawState(state, flaw.name).level > 0,
+      renderCard,
     });
   },
 };

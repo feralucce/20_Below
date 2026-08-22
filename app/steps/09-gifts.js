@@ -1,4 +1,4 @@
-import { el, counterRow, renderMarkdown } from '../ui.js';
+import { el, counterRow, renderMarkdown, renderSelectedAvailable } from '../ui.js';
 import {
   giftsPoolRemaining,
   giftLevelCost,
@@ -36,10 +36,7 @@ export default {
       ),
     );
 
-    const listEl = el('div', { class: 'pick-list' });
-    container.appendChild(listEl);
-
-    data.gifts.forEach((gift) => {
+    function renderCard(gift) {
       const gState = getOrCreateGiftState(state, gift.name);
       const card = el('div', { class: 'pick-card' });
       const perLevel = giftLevelCost(data, gState.limiters.length);
@@ -110,7 +107,14 @@ export default {
         card.appendChild(el('p', { class: 'hint' }, 'No standard Level table for this Gift - see Gift Menus.'));
       }
       card.appendChild(el('div', { class: 'detail', html: renderMarkdown(gift.markdown) }));
-      listEl.appendChild(card);
+      return card;
+    }
+
+    renderSelectedAvailable(container, {
+      label: 'Gifts',
+      getItems: () => data.gifts,
+      isSelected: (gift) => getOrCreateGiftState(state, gift.name).level > 0,
+      renderCard,
     });
   },
 };

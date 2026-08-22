@@ -1,4 +1,4 @@
-import { el, counterRow } from '../ui.js';
+import { el, counterRow, renderSelectedAvailable } from '../ui.js';
 import { skillsPoolRemaining, skillTierName } from '../state.js';
 
 function inline(md) {
@@ -36,43 +36,47 @@ export default {
           placeholder: 'Filter skills...',
           onInput: (e) => {
             filterValue = e.target.value.toLowerCase();
-            renderList();
+            picker.render();
           },
         }),
       ]),
     );
 
-    const listEl = el('div', { class: 'pick-list' });
-    container.appendChild(listEl);
     let filterValue = '';
+    const baselineOf = (s) => (data.everymanSkills.includes(s.name) ? 2 : 0);
+    const isSelected = (s) => state.skills[s.name] > baselineOf(s);
 
-    function renderList() {
-      listEl.innerHTML = '';
-      data.skillCatalog
-        .filter((s) => s.name.toLowerCase().includes(filterValue))
-        .forEach((s) => {
-          const baseline = data.everymanSkills.includes(s.name) ? 2 : 0;
-          const rem = skillsPoolRemaining(state, data);
-          const row = el('div', { class: 'pick-card' });
-          row.append(
-            counterRow({
-              name: `${s.name}${baseline ? ' (Everyman)' : ''}`,
-              get: () => state.skills[s.name],
-              set: (v) => {
-                state.skills[s.name] = v;
-              },
-              min: baseline,
-              max: () => Math.min(5, state.skills[s.name] + rem),
-              format: (v) => skillTierName(data, v),
-              onChange: () => {
-                rerenderPools();
-                renderList();
-              },
-            }),
-          );
-          listEl.appendChild(row);
-        });
+    function renderCard(s) {
+      const baseline = baselineOf(s);
+      const rem = skillsPoolRemaining(state, data);
+      const row = el('div', { class: 'pick-card' });
+      row.append(
+        counterRow({
+          name: `${s.name}${baseline ? ' (Everyman)' : ''}`,
+          get: () => state.skills[s.name],
+          set: (v) => {
+            state.skills[s.name] = v;
+          },
+          min: baseline,
+          max: () => Math.min(5, state.skills[s.name] + rem),
+          format: (v) => skillTierName(data, v),
+          onChange: () => {
+            rerenderPools();
+            picker.render();
+          },
+        }),
+      );
+      return row;
     }
-    renderList();
+
+    const picker = renderSelectedAvailable(container, {
+      label: 'Skills',
+      // Selected skills always show regardless of the search box; unselected
+      // ones are filtered so the search box still narrows what you're
+      // browsing to pick next.
+      getItems: () => data.skillCatalog.filter((s) => isSelected(s) || s.name.toLowerCase().includes(filterValue)),
+      isSelected,
+      renderCard,
+    });
   },
 };

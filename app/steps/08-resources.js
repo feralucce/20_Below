@@ -1,4 +1,4 @@
-import { el, counterRow, renderMarkdown } from '../ui.js';
+import { el, counterRow, renderMarkdown, renderSelectedAvailable } from '../ui.js';
 import { resourcesPoolRemaining } from '../state.js';
 
 export default {
@@ -15,10 +15,7 @@ export default {
       ),
     );
 
-    const listEl = el('div', { class: 'pick-list' });
-    container.appendChild(listEl);
-
-    data.resources.forEach((r) => {
+    function renderCard(r) {
       const card = el('div', { class: 'pick-card' });
       const levelTable = el('table', { class: 'menu-table' }, [
         el('tr', {}, [el('th', {}, 'Level'), el('th', {}, r.scales)]),
@@ -46,7 +43,14 @@ export default {
         }),
         el('div', { class: 'detail' }, levelTable),
       );
-      listEl.appendChild(card);
+      return card;
+    }
+
+    renderSelectedAvailable(container, {
+      label: 'Resources',
+      getItems: () => data.resources,
+      isSelected: (r) => state.resources[r.name] > 0,
+      renderCard,
     });
   },
 };
