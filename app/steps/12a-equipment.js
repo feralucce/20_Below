@@ -5,11 +5,12 @@
 
 import { el } from '../ui.js';
 import buildGearShop from './gear-shop.js';
+import buildEverymanGear from './everyman-gear.js';
 
 export default {
   id: 'equipment',
   title: 'Equipment',
   render(container, { state, data }) {
-    container.append(el('h2', {}, 'Equipment'), buildGearShop(state, data));
+    container.append(el('h2', {}, 'Equipment'), buildEverymanGear(state, data), buildGearShop(state, data));
   },
 };

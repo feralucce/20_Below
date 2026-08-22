@@ -8,29 +8,33 @@ import stepNature from './steps/02-nature.js';
 import stepAttributes from './steps/03-attributes.js';
 import stepSubstats from './steps/04-substats.js';
 import stepDescriptors from './steps/05-descriptors.js';
-import stepSkills from './steps/06-skills.js';
 import stepBoons from './steps/07-boons.js';
+import stepFlaws from './steps/11-flaws.js';
+import stepSkills from './steps/06-skills.js';
 import stepResources from './steps/08-resources.js';
 import stepGifts from './steps/09-gifts.js';
 import stepGiftMenus from './steps/10-gift-menus.js';
-import stepFlaws from './steps/11-flaws.js';
 import stepDiscretionary from './steps/12-discretionary.js';
 import stepEquipment from './steps/12a-equipment.js';
 import stepSheet from './steps/13-sheet.js';
 import stepRoller from './steps/14-roller.js';
 
+// Order is deliberately not the same as the file numbering (01-14, historical
+// build order) - this is the actual wizard sequence shown to the user, last
+// changed to move Boons/Flaws ahead of Skills so both point-granting steps
+// land before the pools they can feed.
 const STEPS = [
   stepIdentity,
   stepNature,
   stepAttributes,
   stepSubstats,
   stepDescriptors,
-  stepSkills,
   stepBoons,
+  stepFlaws,
+  stepSkills,
   stepResources,
   stepGifts,
   stepGiftMenus,
-  stepFlaws,
   stepDiscretionary,
   stepEquipment,
   stepSheet,
@@ -76,8 +80,39 @@ async function showAppVersion() {
   }
 }
 
+// Desktop-only: releases are published as GitHub Releases on the public
+// 20_Below repo (not the private desktop mirror), so this is a plain
+// anonymous fetch - no auth needed. Silently does nothing if offline or the
+// API call fails, rather than risk a false "needs updating" reading.
+const LATEST_RELEASE_URL = 'https://api.github.com/repos/feralucce/20_Below/releases/latest';
+
+async function checkVersionStatus() {
+  if (!isDesktopApp) return;
+  const ledEl = document.getElementById('version-led');
+  if (!ledEl) return;
+  try {
+    const current = await window.__TAURI__.app.getVersion();
+    const res = await fetch(LATEST_RELEASE_URL, { cache: 'no-store' });
+    if (!res.ok) return;
+    const release = await res.json();
+    const latest = String(release.tag_name || '').replace(/^v/, '');
+    if (!latest) return;
+    ledEl.hidden = false;
+    if (latest === current) {
+      ledEl.textContent = 'Up to date';
+      ledEl.className = 'version-led ok';
+    } else {
+      ledEl.textContent = 'Needs updating';
+      ledEl.className = 'version-led needs-update';
+    }
+  } catch (err) {
+    console.error('Failed to check version status', err);
+  }
+}
+
 async function main() {
   showAppVersion();
+  checkVersionStatus();
 
   let data;
   try {

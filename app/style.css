@@ -146,6 +146,45 @@ body {
   font-family: "Consolas", monospace;
 }
 
+.version-led {
+  margin: 0.4rem 0 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: "Consolas", monospace;
+}
+
+.version-led.ok {
+  color: var(--ok);
+  text-shadow: 0 0 6px var(--ok), 0 0 14px var(--ok);
+}
+
+.version-led.needs-update {
+  color: var(--danger);
+  text-shadow: 0 0 6px var(--danger), 0 0 14px var(--danger);
+  animation: version-led-flicker 3.2s infinite steps(1, end);
+}
+
+@keyframes version-led-flicker {
+  0%, 100% { opacity: 1; }
+  4% { opacity: 0.25; }
+  6% { opacity: 1; }
+  8% { opacity: 0.15; }
+  9% { opacity: 1; }
+  40% { opacity: 1; }
+  42% { opacity: 0.3; }
+  44% { opacity: 1; }
+  70% { opacity: 1; }
+  71% { opacity: 0.2; }
+  73% { opacity: 0.7; }
+  75% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .version-led.needs-update { animation: none; opacity: 0.6; }
+}
+
 .step-nav {
   display: flex;
   flex-wrap: wrap;
