@@ -56,6 +56,41 @@ export function counterRow({ name, hint, get, set, min = 0, max = 99, format, on
   return row;
 }
 
+// Splits a catalog into two headed groups - anything currently "selected"
+// (per `isSelected`) pops up to a `Selected {label}` list, everything else
+// stays down in `Available {label}`. Mirrors the Boons step's Selected/
+// Available split for the simpler "one card per catalog entry, 0-5 counter"
+// shape used by Skills, Gifts, Resources, and Flaws. Returns a `render()`
+// you can call again after state changes (e.g. a filter box) or wire up to
+// call itself via each card's onChange.
+export function renderSelectedAvailable(container, { label, getItems, isSelected, renderCard }) {
+  const selectedEl = el('div', { class: 'pick-list' });
+  const availableEl = el('div', { class: 'pick-list' });
+  container.append(
+    el('h3', {}, `Selected ${label}`),
+    selectedEl,
+    el('h3', {}, `Available ${label}`),
+    availableEl,
+  );
+
+  function render() {
+    selectedEl.innerHTML = '';
+    availableEl.innerHTML = '';
+    const items = getItems();
+    const selected = items.filter(isSelected);
+    const available = items.filter((item) => !isSelected(item));
+    if (selected.length === 0) {
+      selectedEl.appendChild(el('p', { class: 'detail' }, `No ${label} selected yet.`));
+    } else {
+      selected.forEach((item) => selectedEl.appendChild(renderCard(item)));
+    }
+    available.forEach((item) => availableEl.appendChild(renderCard(item)));
+  }
+
+  render();
+  return { render };
+}
+
 export function renderMarkdown(md) {
   if (window.marked) return window.marked.parse(md);
   return `<pre>${md}</pre>`;
