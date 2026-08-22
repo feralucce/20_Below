@@ -7,6 +7,9 @@ Thumbs.db
 docs/design-log.md
 docs/restore-points.md
 
+# Commercial creature-pack JSON exports - sold content, never public
+Sale Packages/
+
 # Generated staging copy of app/+rules/+docs for the desktop build's
 # frontendDist - rebuilt fresh by desktop/scripts/stage-frontend.ps1 before
 # every build/dev run, never hand-edited or committed.
