@@ -17,20 +17,23 @@ export function renderBoonPicker(container, ctx, allBoons, { source, getRemainin
       return;
     }
     state.boons.forEach((b, i) => {
-      selectedEl.appendChild(
-        el('div', { class: 'pick-card', style: 'display:flex;justify-content:space-between;align-items:center;' }, [
-          el('span', {}, `${b.name} (${b.tier ?? ''} ${b.points} pts${b.source === 'discretionary' ? ', via Discretionary' : ''})`),
-          el('button', {
-            type: 'button',
-            text: 'Remove',
-            onClick: () => {
-              removeBoon(state, i);
-              rerenderPools();
-              rerenderStep();
-            },
-          }),
-        ]),
-      );
+      const nameEl = el('span', {}, `${b.name} (${b.tier ?? ''} ${b.points} pts${b.source === 'discretionary' ? ', via Discretionary' : ''})`);
+      const headerRow = el('div', { style: 'display:flex;justify-content:space-between;align-items:center;' }, [
+        nameEl,
+        el('button', {
+          type: 'button',
+          text: 'Remove',
+          onClick: () => {
+            removeBoon(state, i);
+            rerenderPools();
+            rerenderStep();
+          },
+        }),
+      ]);
+      const boonData = allBoons.find((boon) => boon.name === b.name);
+      const detailEl = el('div', { class: 'detail', html: boonData ? renderMarkdown(boonData.effect) : '' });
+      makeTwirl(nameEl, detailEl);
+      selectedEl.appendChild(el('div', { class: 'pick-card' }, [headerRow, detailEl]));
     });
   }
 

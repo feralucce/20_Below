@@ -46,17 +46,11 @@ export default {
       ]);
     }
 
-    // Available: name + counter, click the name to twirl the level table out.
+    // Name + counter, click the name to twirl the level table out - same
+    // in both the Selected and Available lists.
     function renderCard(r) {
       const card = el('div', { class: 'pick-card' });
       card.append(counterRow({ ...counterCfg(r), detail: levelTableFor(r) }));
-      return card;
-    }
-
-    // Selected: just the name and counter - no description clutter.
-    function renderSelectedCard(r) {
-      const card = el('div', { class: 'pick-card' });
-      card.append(counterRow(counterCfg(r)));
       return card;
     }
 
@@ -65,7 +59,6 @@ export default {
       getItems: () => data.resources,
       isSelected: (r) => state.resources[r.name] > 0,
       renderCard,
-      renderSelectedCard,
     });
   },
 };

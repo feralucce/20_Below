@@ -49,17 +49,11 @@ export default {
       return el('div', { class: 'detail', html: levelRows });
     }
 
-    // Available: name + counter, click the name to twirl the levels/blurb out.
+    // Name + counter, click the name to twirl the levels/blurb out - same
+    // in both the Selected and Available lists.
     function renderCard(flaw) {
       const card = el('div', { class: 'pick-card' });
       card.append(counterRow({ ...counterCfg(flaw), detail: descriptionFor(flaw) }));
-      return card;
-    }
-
-    // Selected: just the name and counter - no description clutter.
-    function renderSelectedCard(flaw) {
-      const card = el('div', { class: 'pick-card' });
-      card.append(counterRow(counterCfg(flaw)));
       return card;
     }
 
@@ -68,7 +62,6 @@ export default {
       getItems: () => data.flaws,
       isSelected: (flaw) => getOrCreateFlawState(state, flaw.name).level > 0,
       renderCard,
-      renderSelectedCard,
     });
   },
 };
