@@ -55,20 +55,10 @@ export default {
       };
     }
 
-    // The Gift's full writeup, plus the "see Gift Menus" note where it
-    // applies - twirled out from the Available list by clicking its name.
-    function descriptionFor(gift) {
-      const wrap = el('div', {});
-      if (gift.menu) {
-        wrap.appendChild(el('p', { class: 'hint' }, 'No standard Level table for this Gift - see Gift Menus.'));
-      }
-      wrap.appendChild(el('div', { class: 'detail', html: renderMarkdown(gift.markdown) }));
-      return wrap;
-    }
-
-    // Adders/limiters checkboxes - twirled out from the Selected list by
-    // clicking the Gift's name, once you've actually put a level into it.
-    function addersLimitersFor(gift) {
+    // Adders/limiters checkboxes, plus the "see Gift Menus" note and the
+    // Gift's full writeup - twirled out (both Available and Selected) by
+    // clicking the Gift's name.
+    function detailFor(gift) {
       const gState = getOrCreateGiftState(state, gift.name);
       const wrap = el('div', {});
       if (gift.adders.length) {
@@ -115,27 +105,19 @@ export default {
         });
         wrap.appendChild(limitersRow);
       }
+      if (gift.menu) {
+        wrap.appendChild(el('p', { class: 'hint' }, 'No standard Level table for this Gift - see Gift Menus.'));
+      }
+      wrap.appendChild(el('div', { class: 'detail', html: renderMarkdown(gift.markdown) }));
       return wrap;
     }
 
-    // Available: name + counter, click the name to twirl the description out.
+    // Name + counter, click the name to twirl the entire detail out
+    // (adders/limiters, then the full description) - same in both the
+    // Selected and Available lists.
     function renderCard(gift) {
       const card = el('div', { class: 'pick-card' });
-      card.append(counterRow({ ...counterCfg(gift), detail: descriptionFor(gift) }));
-      return card;
-    }
-
-    // Selected: name + counter, click the name to twirl adders/limiters out
-    // instead - the description stays back in the Available entry.
-    function renderSelectedCard(gift) {
-      const card = el('div', { class: 'pick-card' });
-      const hasAddersOrLimiters = gift.adders.length > 0 || gift.limiters.length > 0;
-      card.append(
-        counterRow({
-          ...counterCfg(gift),
-          detail: hasAddersOrLimiters ? addersLimitersFor(gift) : undefined,
-        }),
-      );
+      card.append(counterRow({ ...counterCfg(gift), detail: detailFor(gift) }));
       return card;
     }
 
@@ -144,7 +126,6 @@ export default {
       getItems: () => data.gifts,
       isSelected: (gift) => getOrCreateGiftState(state, gift.name).level > 0,
       renderCard,
-      renderSelectedCard,
     });
   },
 };
