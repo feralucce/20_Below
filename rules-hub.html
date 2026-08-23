@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>20 Below - Rules &amp; Character Creator</title>
+<link rel="icon" type="image/x-icon" href="docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="docs/assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --accent-dim: #1c3548;
+    --radius: 8px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  header {
+    text-align: center;
+    padding: 1.5rem 0 1rem;
+  }
+  h1 {
+    margin: 0;
+    letter-spacing: 0.05em;
+    font-size: 2.5rem;
+  }
+  .wordmark {
+    max-width: min(420px, 90%);
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .subtitle {
+    color: var(--text-dim);
+    margin: 0.5rem 0 0;
+  }
+  .intro {
+    color: var(--text-dim);
+    text-align: center;
+    max-width: 640px;
+    margin: 1rem auto 2rem;
+    line-height: 1.5;
+  }
+  .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+  .cta a {
+    background: var(--accent-dim);
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 0.9rem 1.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .cta a:hover {
+    background: var(--accent);
+    color: var(--bg);
+  }
+  .cta-meta {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+  h2 {
+    border-bottom: 1px solid var(--panel-border);
+    padding-bottom: 0.4rem;
+    margin-top: 2.5rem;
+  }
+  .doc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .doc-card {
+    display: block;
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .doc-card:hover {
+    border-color: var(--accent);
+  }
+  .doc-card .name {
+    font-weight: 600;
+  }
+  .doc-card .desc {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-top: 0.15rem;
+  }
+  .note {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--panel-border);
+  }
+  a { color: var(--accent); }
+  .back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <a class="back-link" href="index.html">&larr; Back to the 20 Below hub</a>
+  <header>
+    <h1><img class="wordmark" src="docs/assets/brand/wordmark.png" alt="20 Below" /></h1>
+    <p class="subtitle">A fated-heroes tabletop RPG</p>
+  </header>
+
+  <p class="intro">
+    Five elemental Attributes, a 2d10 roll-under core, and supernatural Gifts layered on top of a grounded modern world.
+    Start with the Character Creator below, or read the rules directly.
+  </p>
+
+  <div class="cta">
+    <a href="app/index.html" target="_blank" rel="noopener">Open the Character Creator &rarr;</a>
+  </div>
+  <div class="cta">
+    <a href="https://github.com/feralucce/20_Below/releases/download/v0.9.2/20-below-desktop_0.9.2_x64-setup.exe">Download Desktop App (Windows) &rarr;</a>
+    <p class="cta-meta">v0.9.2 &middot; Last updated 2026-08-23 07:39 AM</p>
+  </div>
+
+  <h2>Start Here</h2>
+  <div class="doc-list">
+    <a class="doc-card" href="rules/glossary.html">
+      <div class="name">Glossary</div>
+      <div class="desc">Every term worth knowing before character creation - Attributes, sub-stats, Gifts, Fate Tokens, and more, alphabetized.</div>
+    </a>
+    <a class="doc-card" href="rules/rules.html">
+      <div class="name">Rules</div>
+      <div class="desc">The core mechanic (the 2d10 roll, Difficulty, Advantage/Disadvantage), Ki, the five Attributes and what they govern, and Combat.</div>
+    </a>
+    <a class="doc-card" href="rules/character-creation.html">
+      <div class="name">Character Creation</div>
+      <div class="desc">The full 15-step walkthrough for building a character, start to finish.</div>
+    </a>
+  </div>
+
+  <h2>Character Options</h2>
+  <div class="doc-list">
+    <a class="doc-card" href="rules/skills.html">
+      <div class="name">Skills</div>
+      <div class="desc">How Skills work, Training Tiers, and Everyman Skills.</div>
+    </a>
+    <a class="doc-card" href="rules/premade-skills.html">
+      <div class="name">Premade Skills</div>
+      <div class="desc">A starting Skill list for a modern-world campaign.</div>
+    </a>
+    <a class="doc-card" href="rules/boons.html">
+      <div class="name">Boons</div>
+      <div class="desc">Small, permanent character perks.</div>
+    </a>
+    <a class="doc-card" href="rules/resources.html">
+      <div class="name">Resources</div>
+      <div class="desc">Money, gear, contacts, and other material backing.</div>
+    </a>
+    <a class="doc-card" href="rules/gifts.html">
+      <div class="name">Gifts</div>
+      <div class="desc">Supernatural powers - the full catalog.</div>
+    </a>
+    <a class="doc-card" href="rules/flaws.html">
+      <div class="name">Flaws</div>
+      <div class="desc">Character-creation disadvantages, Boons' mirror image.</div>
+    </a>
+  </div>
+
+  <h2>Fate &amp; Equipment</h2>
+  <div class="doc-list">
+    <a class="doc-card" href="rules/fate.html">
+      <div class="name">Fate</div>
+      <div class="desc">Nature, Fate Tokens, Kotodama, and Ki's fatigue economy.</div>
+    </a>
+    <a class="doc-card" href="rules/weapons.html">
+      <div class="name">Equipment</div>
+      <div class="desc">Weapon dice, range, and ammo, plus armor and general gear.</div>
+    </a>
+  </div>
+
+  <h2>Player References</h2>
+  <div class="doc-list">
+    <a class="doc-card" href="docs/louis-reference-chart.html">
+      <div class="name">Louis' Reference Chart</div>
+      <div class="desc">Quick-reference copy of the color-coded Difficulty Chart.</div>
+    </a>
+    <a class="doc-card" href="docs/combat-flow-reference.html">
+      <div class="name">Player's Quick Reference</div>
+      <div class="desc">Plain-language answers to the questions that come up most at the table, with every roll spelled out.</div>
+    </a>
+    <a class="doc-card" href="docs/status-effects.html">
+      <div class="name">Status Effects</div>
+      <div class="desc">Every status effect in the system - trigger, effect, and how each one clears.</div>
+    </a>
+    <a class="doc-card" href="docs/advancement-reference.html">
+      <div class="name">Advancement Reference</div>
+      <div class="desc">Every post-creation XP cost, in plain "how much does this cost me" form.</div>
+    </a>
+    <a class="doc-card" href="docs/creation-wealth-reference.html">
+      <div class="name">Creation-Wealth Reference</div>
+      <div class="desc">How gear shopping actually works at character creation, spelled out step by step.</div>
+    </a>
+    <a class="doc-card" href="docs/scars.html">
+      <div class="name">Scars</div>
+      <div class="desc">What happens when Health, Sanity, or Poise crosses zero, plus a working list of flavor for each.</div>
+    </a>
+  </div>
+
+  <h2>GM References</h2>
+  <div class="doc-list">
+    <a class="doc-card" href="rules/adversary-index.html">
+      <div class="name">Adversary Index</div>
+      <div class="desc">Ready-to-run stat blocks: mundane animals, plus a reusable Dire/Giant/Mutated variant template.</div>
+    </a>
+    <a class="doc-card" href="rules/cryptids.html">
+      <div class="name">Cryptids</div>
+      <div class="desc">American folklore creatures, treated as real but rare in a modern setting.</div>
+    </a>
+    <a class="doc-card" href="rules/nightmare-creatures.html">
+      <div class="name">Nightmare Creatures</div>
+      <div class="desc">Original urban-fantasy and horror archetypes, built entirely on the system's own mechanics.</div>
+    </a>
+  </div>
+
+  <h2>Changelog</h2>
+  <div class="doc-list">
+    <a class="doc-card" href="docs/changelog.html">
+      <div class="name">Changelog</div>
+      <div class="desc">Every rules and app update, newest first.</div>
+    </a>
+  </div>
+
+  <h2 id="license">License</h2>
+  <p><strong>20 Below Core Rules</strong> by Feralucce Savage is released under the ORC License, a perpetual, irrevocable open license for tabletop game mechanics.</p>
+
+  <p><strong>ORC Notice</strong><br>
+  This product is licensed under the ORC License located at the Library of Congress at TX 9-307-067 and available online at various locations including <a href="https://azoralaw.com/orclicense/">azoralaw.com/orclicense</a> and others. All warranties are disclaimed as set forth therein.</p>
+
+  <p><strong>Attribution</strong><br>
+  This product is based on the following Licensed Material: <em>20 Below Core Rules</em>, Copyright &copy; 2026 Feralucce Savage.<br>
+  If you use this Licensed Material in your own published work, please credit it as follows: <em>[Title of Your Work]</em>, based on <em>20 Below Core Rules</em>, Copyright &copy; 2026 Feralucce Savage, available at <a href="https://github.com/feralucce/20_Below">github.com/feralucce/20_Below</a>.</p>
+
+  <p><strong>Reserved Material</strong><br>
+  Reserved Material elements in this product include, but are not limited to: the title "20 Below" and all associated logos and branding; the names, flavor text, and narrative descriptions of individual Gifts, Boons, and Flaws (the Gift, Boon, and Flaw <em>systems</em> themselves - their point costs, structure, and resolution mechanics - are Licensed Material); the 20 Below Character Creator and 20 Below Desktop applications, including their source code, design, and implementation, which are separate copyrighted works not licensed under the ORC License; and any genre, setting, or supplemental content not expressly published under this notice.</p>
+
+  <p><strong>Expressly Designated Licensed Material</strong><br>
+  None at this time.</p>
+
+  <p class="note">
+    This is a system in active development. Some numbers (post-creation XP costs, a few melee weapon ratings) are still placeholders, flagged as such in their own documents.
+    If something reads unclear or plays oddly, that's exactly the kind of feedback this playtest is for.
+    Source and full history at <a href="https://github.com/feralucce/20_Below">github.com/feralucce/20_Below</a>.
+  </p>
+</main>
+</body>
+</html>
