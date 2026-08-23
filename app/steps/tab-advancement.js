@@ -24,6 +24,23 @@ import {
 } from '../state.js';
 import { renderBoonPicker } from './07-boons.js';
 
+// A collapsed-by-default category - click its name to twirl the whole
+// section (every item inside it) open, matching the Discretionary Points
+// page's same treatment. Returns the content element to append items into;
+// titleText becomes the always-visible summary line.
+function sectionWrap(titleText) {
+  const details = el('details', { class: 'pick-card' });
+  const content = el('div', { style: 'margin-top:0.75rem;' });
+  details.append(el('summary', {}, titleText), content);
+  return { details, content };
+}
+
+// A brief, always-visible reminder of what an item is, under its row -
+// distinct from Gifts/Boons' existing full-description twirls.
+function briefDetail(text) {
+  return el('p', { class: 'detail', style: 'color:var(--text-dim);font-size:0.85rem;margin:0 0 0.75rem;' }, text);
+}
+
 function descriptorInputs(container, state, data, subName, refresh) {
   const slots = descriptorSlots(state, subName);
   const arr = state.descriptors[subName];
@@ -47,8 +64,7 @@ function descriptorInputs(container, state, data, subName, refresh) {
 }
 
 function attributesSection(state, data, refresh) {
-  const section = el('div', {});
-  section.append(el('h3', {}, `Attributes (current rating × ${data.advancement.attributeXpMultiplier} XP)`));
+  const { details, content: section } = sectionWrap(`Attributes (current rating × ${data.advancement.attributeXpMultiplier} XP)`);
   data.attributes.forEach((a) => {
     const rating = state.attributes[a.name];
     const cost = rating * data.advancement.attributeXpMultiplier;
@@ -80,6 +96,7 @@ function attributesSection(state, data, refresh) {
           }),
         ]),
       ]),
+      briefDetail(a.description),
     );
 
     const subRemaining = subStatPoolRemaining(state, data, a.name);
@@ -109,12 +126,11 @@ function attributesSection(state, data, refresh) {
     [subA, subB].forEach((subName) => descriptorInputs(card, state, data, subName, refresh));
     section.appendChild(card);
   });
-  return section;
+  return details;
 }
 
 function skillsSection(state, data, refresh) {
-  const section = el('div', {});
-  section.append(el('h3', {}, `Skills (current tier × ${data.advancement.skillTierXpMultiplier} XP)`));
+  const { details, content: section } = sectionWrap(`Skills (current tier × ${data.advancement.skillTierXpMultiplier} XP)`);
   const filterInput = el('input', { type: 'text', placeholder: 'Filter skills...' });
   const listEl = el('div', { class: 'pick-list' });
   section.append(filterInput, listEl);
@@ -142,23 +158,24 @@ function skillsSection(state, data, refresh) {
           onChange: refresh,
         });
         row.classList.add('counter-row-compact');
-        listEl.appendChild(row);
+        const wrap = el('div', {}, [row, briefDetail(s.definition)]);
+        listEl.appendChild(wrap);
       });
   }
   filterInput.addEventListener('input', renderList);
   renderList();
-  return section;
+  return details;
 }
 
 function resourcesSection(state, data, refresh) {
-  const section = el('div', {});
   const flat = data.advancement.resourceXpPerLevel;
-  section.append(el('h3', {}, `Resources (flat ${flat} XP/level)`));
+  const { details, content: section } = sectionWrap(`Resources (flat ${flat} XP/level)`);
   data.resources.forEach((r) => {
     const level = state.resources[r.name];
     const remaining = xpRemaining(state, data);
     const bought = state.advancementPurchases.Resources[r.name] ?? 0;
-    section.append(
+    const card = el('div', { class: 'pick-card' });
+    card.append(
       el('div', { class: 'counter-row' }, [
         el('span', { class: 'name' }, `${r.name} - Level ${level}`),
         bought > 0
@@ -183,19 +200,16 @@ function resourcesSection(state, data, refresh) {
             })
           : null,
       ]),
+      briefDetail(r.scales),
     );
+    section.appendChild(card);
   });
-  return section;
+  return details;
 }
 
 function giftsSection(state, data, refresh) {
-  const section = el('div', {});
-  section.append(
-    el(
-      'h3',
-      {},
-      `Gifts (new Gift ${data.advancement.newGiftBaseXp} XP, raise = current level × ${data.advancement.giftLevelXpMultiplier} XP, both reduced by Limiters, floored at ${data.advancement.giftLimiterFloor}; Adders: Lesser ${data.advancement.giftAdderXp.Lesser} / Greater ${data.advancement.giftAdderXp.Greater} XP; Limiter buy-off: current level × ${data.advancement.giftLimiterBuyoffXpMultiplier} XP)`,
-    ),
+  const { details, content: section } = sectionWrap(
+    `Gifts (new Gift ${data.advancement.newGiftBaseXp} XP, raise = current level × ${data.advancement.giftLevelXpMultiplier} XP, both reduced by Limiters, floored at ${data.advancement.giftLimiterFloor}; Adders: Lesser ${data.advancement.giftAdderXp.Lesser} / Greater ${data.advancement.giftAdderXp.Greater} XP; Limiter buy-off: current level × ${data.advancement.giftLimiterBuyoffXpMultiplier} XP)`,
   );
   data.gifts.forEach((gift) => {
     const gState = state.gifts.find((g) => g.name === gift.name);
@@ -310,19 +324,18 @@ function giftsSection(state, data, refresh) {
     }
     section.appendChild(card);
   });
-  return section;
+  return details;
 }
 
 function boonsSection(state, data, refresh) {
-  const section = el('div', {});
-  section.append(el('h3', {}, `Boons (× ${data.advancement.boonXpMultiplier} creation cost)`));
+  const { details, content: section } = sectionWrap(`Boons (× ${data.advancement.boonXpMultiplier} creation cost)`);
   renderBoonPicker(section, { state, rerenderStep: refresh, rerenderPools: () => {} }, data.boons, {
     source: 'advancement',
     getRemaining: () => xpRemaining(state, data),
     toCurrency: (points) => points * data.advancement.boonXpMultiplier,
     currencyLabel: 'XP',
   });
-  return section;
+  return details;
 }
 
 export default function buildAdvancementTab(state, data, refresh) {
