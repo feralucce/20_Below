@@ -2,6 +2,11 @@ import { mergeCharacterState } from './state.js';
 import { el } from './ui.js';
 import { loadRulesData } from './rules-data.js';
 import { isDesktopApp, saveCharacterToFile, listSavedCharacters, loadCharacterFromFile } from './desktop-storage.js';
+import {
+  saveCharacterToLocalStorage,
+  listSavedCharactersLocalStorage,
+  loadCharacterFromLocalStorage,
+} from './web-storage.js';
 
 const STORAGE_KEY = '20below-character-draft';
 
@@ -94,21 +99,29 @@ async function main() {
 
   controls.append(importInput, importBtn);
 
+  // Desktop saves to named files in the app's own data directory; the
+  // browser has no filesystem access at all, so it keeps the same named
+  // characters in localStorage instead - same Save/Load UX either way, just
+  // a different (and, for the browser, per-browser-only) backing store.
+  const listNames = isDesktopApp ? listSavedCharacters : async () => listSavedCharactersLocalStorage();
+  const loadByName = isDesktopApp ? loadCharacterFromFile : async (name) => loadCharacterFromLocalStorage(name);
+  const saveDraft = isDesktopApp ? saveCharacterToFile : async (draft) => saveCharacterToLocalStorage(draft);
+
   if (!isDesktopApp) {
-    const note = el(
-      'p',
-      { class: 'file-note' },
-      'Saving and loading named characters is a desktop-app feature. In the browser, your in-progress character is kept automatically - use Import to bring in a character exported elsewhere.',
+    controls.append(
+      el(
+        'p',
+        { class: 'file-note' },
+        "Saved characters are kept in this browser only - they won't follow you to a different device or browser. Use Export/Import to move a character elsewhere.",
+      ),
     );
-    controls.append(note);
-    return;
   }
 
   const select = el('select', { class: 'character-select' }, [
     el('option', { value: '' }, 'Load a saved character…'),
   ]);
   try {
-    (await listSavedCharacters()).forEach((name) => {
+    (await listNames()).forEach((name) => {
       select.appendChild(el('option', { value: name }, name));
     });
   } catch (err) {
@@ -119,7 +132,7 @@ async function main() {
     const name = select.value;
     if (!name) return;
     try {
-      applyCharacterAndReturn(data, await loadCharacterFromFile(name));
+      applyCharacterAndReturn(data, await loadByName(name));
     } catch (err) {
       console.error(err);
       showStatus(`Failed to load "${name}".`, true);
@@ -138,8 +151,8 @@ async function main() {
         return;
       }
       try {
-        const filename = await saveCharacterToFile(draft);
-        showStatus(`Saved as "${filename}".`);
+        const savedAs = await saveDraft(draft);
+        showStatus(`Saved as "${savedAs}".`);
       } catch (err) {
         console.error(err);
         showStatus('Save failed.', true);
