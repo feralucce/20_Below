@@ -23,30 +23,43 @@ export default {
       ),
     );
 
-    function renderCard(flaw) {
+    function counterCfg(flaw) {
       const fState = getOrCreateFlawState(state, flaw.name);
-      const card = el('div', { class: 'pick-card' });
+      return {
+        name: flaw.name,
+        get: () => fState.level,
+        set: (v) => {
+          fState.level = v;
+        },
+        min: 0,
+        max: 5,
+        onChange: () => {
+          rerenderStep();
+          rerenderPools();
+        },
+      };
+    }
+
+    function descriptionFor(flaw) {
       const levelRows = flaw.levels
         ? `<table><tr><th>Level</th><th>Effect</th></tr>${flaw.levels
             .map((l) => `<tr><td>${l.level}</td><td>${window.marked ? window.marked.parseInline(l.effect) : l.effect}</td></tr>`)
             .join('')}</table>`
         : renderMarkdown(flaw.blurb);
-      card.append(
-        counterRow({
-          name: flaw.name,
-          get: () => fState.level,
-          set: (v) => {
-            fState.level = v;
-          },
-          min: 0,
-          max: 5,
-          onChange: () => {
-            rerenderStep();
-            rerenderPools();
-          },
-        }),
-        el('div', { class: 'detail', html: levelRows }),
-      );
+      return el('div', { class: 'detail', html: levelRows });
+    }
+
+    // Available: name + counter, click the name to twirl the levels/blurb out.
+    function renderCard(flaw) {
+      const card = el('div', { class: 'pick-card' });
+      card.append(counterRow({ ...counterCfg(flaw), detail: descriptionFor(flaw) }));
+      return card;
+    }
+
+    // Selected: just the name and counter - no description clutter.
+    function renderSelectedCard(flaw) {
+      const card = el('div', { class: 'pick-card' });
+      card.append(counterRow(counterCfg(flaw)));
       return card;
     }
 
@@ -55,6 +68,7 @@ export default {
       getItems: () => data.flaws,
       isSelected: (flaw) => getOrCreateFlawState(state, flaw.name).level > 0,
       renderCard,
+      renderSelectedCard,
     });
   },
 };

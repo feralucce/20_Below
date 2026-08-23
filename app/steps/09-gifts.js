@@ -36,28 +36,41 @@ export default {
       ),
     );
 
-    function renderCard(gift) {
+    function counterCfg(gift) {
       const gState = getOrCreateGiftState(state, gift.name);
-      const card = el('div', { class: 'pick-card' });
       const perLevel = giftLevelCost(data, gState.limiters.length);
+      return {
+        name: `${gift.name}${gift.flagged ? ' [flagged, not final]' : ''}`,
+        hint: `${perLevel} pts/level, ${giftPointsSpent(gState, data)} pts spent`,
+        get: () => gState.level,
+        set: (v) => {
+          gState.level = v;
+        },
+        min: 0,
+        max: () => Math.min(5, gState.level + Math.floor(remaining / perLevel)),
+        onChange: () => {
+          rerenderStep();
+          rerenderPools();
+        },
+      };
+    }
 
-      card.append(
-        counterRow({
-          name: `${gift.name}${gift.flagged ? ' [flagged, not final]' : ''}`,
-          hint: `${perLevel} pts/level, ${giftPointsSpent(gState, data)} pts spent`,
-          get: () => gState.level,
-          set: (v) => {
-            gState.level = v;
-          },
-          min: 0,
-          max: () => Math.min(5, gState.level + Math.floor(remaining / perLevel)),
-          onChange: () => {
-            rerenderStep();
-            rerenderPools();
-          },
-        }),
-      );
+    // The Gift's full writeup, plus the "see Gift Menus" note where it
+    // applies - twirled out from the Available list by clicking its name.
+    function descriptionFor(gift) {
+      const wrap = el('div', {});
+      if (gift.menu) {
+        wrap.appendChild(el('p', { class: 'hint' }, 'No standard Level table for this Gift - see Gift Menus.'));
+      }
+      wrap.appendChild(el('div', { class: 'detail', html: renderMarkdown(gift.markdown) }));
+      return wrap;
+    }
 
+    // Adders/limiters checkboxes - twirled out from the Selected list by
+    // clicking the Gift's name, once you've actually put a level into it.
+    function addersLimitersFor(gift) {
+      const gState = getOrCreateGiftState(state, gift.name);
+      const wrap = el('div', {});
       if (gift.adders.length) {
         const addersRow = el('div', { style: 'margin:0.25rem 0 0.5rem 0.5rem;' });
         gift.adders.forEach((adder) => {
@@ -78,7 +91,7 @@ export default {
             ]),
           );
         });
-        card.appendChild(addersRow);
+        wrap.appendChild(addersRow);
       }
       if (gift.limiters.length) {
         const limitersRow = el('div', { style: 'margin:0 0 0.5rem 0.5rem;' });
@@ -100,13 +113,29 @@ export default {
             ]),
           );
         });
-        card.appendChild(limitersRow);
+        wrap.appendChild(limitersRow);
       }
+      return wrap;
+    }
 
-      if (gift.menu) {
-        card.appendChild(el('p', { class: 'hint' }, 'No standard Level table for this Gift - see Gift Menus.'));
-      }
-      card.appendChild(el('div', { class: 'detail', html: renderMarkdown(gift.markdown) }));
+    // Available: name + counter, click the name to twirl the description out.
+    function renderCard(gift) {
+      const card = el('div', { class: 'pick-card' });
+      card.append(counterRow({ ...counterCfg(gift), detail: descriptionFor(gift) }));
+      return card;
+    }
+
+    // Selected: name + counter, click the name to twirl adders/limiters out
+    // instead - the description stays back in the Available entry.
+    function renderSelectedCard(gift) {
+      const card = el('div', { class: 'pick-card' });
+      const hasAddersOrLimiters = gift.adders.length > 0 || gift.limiters.length > 0;
+      card.append(
+        counterRow({
+          ...counterCfg(gift),
+          detail: hasAddersOrLimiters ? addersLimitersFor(gift) : undefined,
+        }),
+      );
       return card;
     }
 
@@ -115,6 +144,7 @@ export default {
       getItems: () => data.gifts,
       isSelected: (gift) => getOrCreateGiftState(state, gift.name).level > 0,
       renderCard,
+      renderSelectedCard,
     });
   },
 };
