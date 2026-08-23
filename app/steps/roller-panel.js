@@ -61,8 +61,20 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
   const section = el('div', { class: 'roller-gift-check' });
   const resultEl = el('div', { class: 'roller-result' });
 
+  // A Skill rolls against its own Default Element unless the player
+  // challenges it (rules.md#sub-stat-descriptors, skills.md#skills-default-to-an-element)
+  // - picking the Skill sets the radio group to that default, but the group
+  // stays a free choice underneath so a challenge is just picking a
+  // different Attribute before rolling.
+  function defaultElementFor(skillName) {
+    if (skillName === UNTRAINED_VALUE) return data.attributes[0].name;
+    const skill = data.skillCatalog.find((s) => s.name === skillName);
+    const el = skill?.defaultElement;
+    return el && el !== 'Context-dependent' ? el : data.attributes[0].name;
+  }
+
   let selectedSkill = UNTRAINED_VALUE;
-  let selectedAttribute = data.attributes[0].name;
+  let selectedAttribute = defaultElementFor(selectedSkill);
   let selectedDifficulty = 5;
   let advantageOn = false;
   let disadvantageOn = false;
@@ -78,6 +90,8 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
     {
       onChange: (e) => {
         selectedSkill = e.target.value;
+        selectedAttribute = defaultElementFor(selectedSkill);
+        renderAttributeGroup();
         renderAttributeVisibility();
         renderTierGrantNote();
       },
@@ -90,9 +104,19 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
     ],
   );
 
+  const attributeNote = el('p', { class: 'roller-tier-note' });
+  function renderAttributeNote() {
+    const defaultEl = defaultElementFor(selectedSkill);
+    attributeNote.textContent =
+      selectedAttribute === defaultEl
+        ? `Using ${defaultEl}, this Skill's default.`
+        : `Challenging the default (${defaultEl}) with ${selectedAttribute} - needs a matching Descriptor.`;
+  }
+
   const attributeGroup = el('div', { class: 'attribute-radio-group' });
   function renderAttributeGroup() {
     attributeGroup.innerHTML = '';
+    const defaultEl = defaultElementFor(selectedSkill);
     data.attributes.forEach((a) => {
       const id = `roller-attr-${a.name}`;
       attributeGroup.append(
@@ -105,12 +129,14 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
             checked: selectedAttribute === a.name ? '' : undefined,
             onChange: () => {
               selectedAttribute = a.name;
+              renderAttributeNote();
             },
           }),
-          ` ${a.name} (${state.attributes[a.name]})`,
+          ` ${a.name} (${state.attributes[a.name]})${a.name === defaultEl ? ' - default' : ''}`,
         ]),
       );
     });
+    renderAttributeNote();
   }
   renderAttributeGroup();
 
@@ -122,7 +148,9 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
   }
 
   function renderAttributeVisibility() {
-    attributeGroup.style.display = currentTier() === 0 ? 'none' : 'flex';
+    const visible = currentTier() !== 0;
+    attributeGroup.style.display = visible ? 'flex' : 'none';
+    attributeNote.style.display = visible ? '' : 'none';
   }
   renderAttributeVisibility();
 
@@ -239,6 +267,7 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
     el('h4', {}, 'Skill Roll'),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Skill'), skillSelect]),
     attributeGroup,
+    attributeNote,
     joatCheckbox,
     el('div', { class: 'roller-row' }, [el('label', {}, 'Difficulty'), difficultySelect]),
     tierGrantNote,

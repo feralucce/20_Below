@@ -66,6 +66,17 @@ export default {
           },
         }),
       );
+      if (s.defaultElement) {
+        row.append(
+          el(
+            'p',
+            { class: 'detail', style: 'color:var(--text-dim);font-size:0.85rem;margin:0.15rem 0 0.5rem;' },
+            s.defaultElement === 'Context-dependent'
+              ? 'Default Element: set for this weapon when defined.'
+              : `Default Element: ${s.defaultElement} - challenge it with a Descriptor to use a different Attribute.`,
+          ),
+        );
+      }
       return row;
     }
 

@@ -62,7 +62,7 @@ export default {
       el(
         'p',
         {},
-        'Buy real Boons, Resources, Gifts, Skills, Attribute points, or Fate Tokens directly below, priced at the conversion rate. Extra Descriptors are bought per sub-stat back on the Descriptors step.',
+        'Buy real Boons, Resources, Gifts, Skills, Attribute points, or Fate Tokens directly below, priced at the conversion rate.',
       ),
     );
 
