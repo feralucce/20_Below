@@ -45,28 +45,30 @@ Each Attribute you raised in step 4 generates a pool of points equal to its own 
 
 ## 6. Descriptors
 
-For every point you spent in step 5, you get one Descriptor - a short word or phrase capturing a specific flavor of that sub-stat for this character (3 points in Soak might yield *Iron-skinned, Padded, Unyielding* - three distinct ways you shrug off harm, not three copies of the same idea). Free, no separate cost, and fixed once chosen.
+For every point you spent in step 5, you get one Descriptor - a short, one or two-word adjective capturing a specific flavor of that sub-stat for this character (3 points in Soak might yield *Hardy, Weathered, Unyielding* - three distinct ways you shrug off harm, not three copies of the same idea). Free, no separate cost, and fixed once chosen. Descriptors are core traits: there's no way to buy an extra one beyond what a sub-stat's points earn - if you want a broader spread, raise the sub-stat instead.
 
-Descriptors matter beyond flavor: they're what you point to when arguing a Skill+Attribute pairing in play ("I'm using Fire here because I'm being *Ruthless*"), grounding the argument in an established character fact instead of improvising one on the spot.
+Every Skill defaults to an Attribute/Element (see step 7). Descriptors matter beyond flavor: they're what you point to when *challenging* a Skill's default in play ("I'm using Fire here instead of the default, because I'm being *Brutal* about it"), grounding the argument in an established character fact instead of improvising one on the spot.
 
 **Sample Descriptors**, one starter list per sub-stat - write your own instead if none of these fit:
 
 | Sub-Stat | Sample Descriptors |
 |---|---|
-| Soak | Iron-Skinned, Padded, Unyielding, Thick-Hided, Stone-Boned, Numb to Pain, Armored Instinct, Bull-Necked, Weathered, Scarred and Solid |
-| Potence | Bull-Strong, Vice Grip, Bone-Crushing, Load-Bearing, Wiry but Deceptive, Mountain-Moving, Sinew and Steel, Unstoppable Momentum, Farmhand Strength, Brute Force |
-| Initiative | Hair-Trigger, Always Ready, Predatory Reflexes, First to React, Coiled Spring, Battle-Honed Instinct, Never Caught Flat-Footed, Twitch Reactions, Combat Sense, Anticipatory |
-| Psyche | Iron-Willed, Unshakeable Focus, Clear-Headed, Mental Fortress, Disciplined Mind, Meditative Calm, Sharp and Undistracted, Trained Concentration, Inner Stillness, Battle-Tested Nerves |
-| Ferocity | Killer Instinct, Relentless, Berserker's Edge, Simmering Rage, Predator's Focus, All-Out Aggression, Never Holds Back, Feral Intensity, Controlled Violence, Burning Determination |
-| Presence | Magnetic, Commanding, Larger Than Life, Effortlessly Charming, Quiet Authority, Impossible to Ignore, Natural Leader, Radiant Confidence, Star Power, Unforgettable |
-| Stamina | Tireless, Iron Lungs, Second Wind, Endurance Athlete, Never Slows Down, Marathon Body, Deep Reserves, Won't Quit, Built for the Long Haul, Steady Engine |
-| Health | Hard to Kill, Thick-Skinned Constitution, Stubbornly Alive, Built Like a Tank, Resilient Body, Keeps Getting Up, Tougher Than It Looks, Iron Constitution, Won't Stay Down, Deep Reserves of Vitality |
-| Atropos | Uncanny Reflexes, Never Where the Blow Lands, Ghost-Like Evasion, Danger Sense, Always a Step Ahead, Untouchable, Threads Part Around Them, Combat Precognition, Impossible to Pin Down, Fate's Own Guard |
-| Klotho | Charmed, Fortune's Favorite, Quick to Recover, Deep Well of Ki, Touched by Luck, Never Runs Dry, Fate's Darling, Second Chances, Uncannily Fortunate, Recharges Fast |
+| Soak | Hardy, Rugged, Stoic, Weathered, Unyielding, Sturdy, Grizzled, Armored |
+| Potence | Brawny, Herculean, Mighty, Strapping, Muscular, Titanic, Forceful, Robust |
+| Initiative | Alert, Reflexive, Twitchy, Vigilant, Quickened, Sharp-Eyed, Instinctive, Keen |
+| Psyche | Steadfast, Composed, Disciplined, Unshaken, Focused, Resolute, Headstrong, Serene |
+| Ferocity | Brutal, Savage, Relentless, Feral, Merciless, Ruthless, Vicious, Predatory |
+| Presence | Magnetic, Commanding, Charismatic, Radiant, Imposing, Captivating, Dominant, Alluring |
+| Stamina | Indefatigable, Tireless, Enduring, Hardened, Persistent, Unflagging, Dogged, Steady |
+| Health | Hale, Vital, Resilient, Stalwart, Ironclad, Unbreakable, Durable, Tenacious |
+| Atropos | Elusive, Untouchable, Evasive, Uncanny, Slippery, Precognitive, Nimble, Fated |
+| Klotho | Charmed, Lucky, Fortunate, Blessed, Favored, Serendipitous, Providential, Recharged |
 
 ## 7. Skills
 
 Every character gets the GM's **Everyman Skills** for free, at **Trained** - the baseline competence any functional adult in the setting would have just from living in it. This is a suggested list for a modern-world base campaign; the GM sets it per campaign and can trim or extend it.
+
+Every Skill you take, Everyman or otherwise, comes with a **default Attribute/Element** - see the *Default Element* column in the [Premade Skills](premade-skills.md#skills) list, or set one when you write a custom Skill. A roll uses that default unless you challenge it with a Descriptor from step 6.
 
 | Skill | Why it's baseline |
 |---|---|
@@ -122,7 +124,6 @@ Every character starts with **10 Discretionary points**, flat, plus whatever you
 |---|---|
 | Resources | 1 |
 | Skills | 1 |
-| Descriptors | 1 |
 | Fate Tokens | 1 |
 | Boons | 2 |
 | Gifts | 4 |

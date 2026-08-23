@@ -1,12 +1,14 @@
 # Skills
 
-Skills are not locked to a fixed Attribute.
+Every Skill has a default Attribute/Element. A player can challenge that default with a Descriptor.
 
-## Skills Are Not Attribute-Locked
+## Skills Default to an Element
 
-Any Skill can be paired with any of the five Attributes (Earth, Air, Fire, Water, Moira), provided the player can argue the pairing to the GM's satisfaction. The GM has final say on whether a proposed pairing fits the situation. In practice, that argument is grounded in one of the character's own [Sub-Stat Descriptors](rules.md#sub-stat-descriptors) - a specific chosen flavor of a sub-stat - rather than an improvised justification from scratch.
+Every Skill is pre-assigned a **default Attribute/Element** - see the *Default Element* column in [Premade Skills](premade-skills.md#skills) for the base campaign list, or set one when a custom Skill is created. Rolling a Skill normally uses its default: no argument needed, that's just how the character does that thing.
 
-**Pairings are re-argued every time, not banked as precedent** - a pairing that worked once may not hold up in a different situation, since the justification is about the specific circumstance, not a permanent fact about the character.
+**A player can challenge the default** and pair the Skill with a different Attribute instead, provided they can argue the pairing to the GM's satisfaction. The GM has final say on whether a proposed pairing fits the situation. That argument is grounded in one of the character's own [Sub-Stat Descriptors](rules.md#sub-stat-descriptors) - a specific chosen adjective the character already has - rather than an improvised justification from scratch. No Descriptor that fits, no challenge - the roll uses the default.
+
+**Challenges are re-argued every time, not banked as precedent** - a challenge that worked once may not hold up in a different situation, since the justification is about the specific circumstance, not a permanent reclassification of the Skill. The default itself never changes; only the single roll in front of you does.
 
 ## Training Tiers
 
