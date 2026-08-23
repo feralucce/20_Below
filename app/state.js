@@ -500,16 +500,32 @@ export function unspentBoonsPoolPoints(state, data) {
   return Math.max(0, data.boonsPoolTotal - poolFundedSpent);
 }
 
+// Unspent points from the base 21-point Gifts Pool also convert rather than
+// being lost - Limiters discount a Gift's per-Level cost (floored at 1), so
+// mixing limited and unlimited Gifts often doesn't divide the pool evenly.
+// giftsPoolRemaining() already nets out discretionary-funded Gift spend
+// (see giftsDiscretionaryContribution), so whatever's left there is
+// genuinely unspent base-pool points, not just "room the pool total was
+// puffed up to allow." Floored at 0 the same way Boons is, defensively.
+export function unspentGiftsPoolPoints(state, data) {
+  return Math.max(0, giftsPoolRemaining(state, data));
+}
+
 // The GM's cap (see the Discretionary Points step) applies only to Flaw-earned Discretionary,
-// same as it always has - Boons Pool leftover isn't a stacking-for-profit
+// same as it always has - Boons/Gifts Pool leftover isn't a stacking-for-profit
 // lever the way Flaws can be, it's just "don't lose points you didn't
-// spend," so it always converts in full regardless of the cap.
+// spend," so both always convert in full regardless of the cap.
 export function discretionaryTotal(state, data) {
   const flawBonus =
     state.discretionaryCap != null
       ? Math.min(flawsPointsGranted(state), state.discretionaryCap)
       : flawsPointsGranted(state);
-  return data.discretionaryBase + flawBonus + unspentBoonsPoolPoints(state, data);
+  return (
+    data.discretionaryBase +
+    flawBonus +
+    unspentBoonsPoolPoints(state, data) +
+    unspentGiftsPoolPoints(state, data) * data.giftsLeftoverRate
+  );
 }
 
 export function discretionaryPointsSpent(state, data) {

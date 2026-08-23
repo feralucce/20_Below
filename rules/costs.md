@@ -25,6 +25,7 @@ The single source of truth for every tunable number in the system - pool sizes, 
 | Gift Limiter Floor (minimum points/Level) | 1 |
 | Gift Adder Cost - Lesser | 3 |
 | Gift Adder Cost - Greater | 6 |
+| Gifts Pool Leftover Rate (Discretionary per unspent point) | 2 |
 | Boon Cost - Trivial | 1 |
 | Boon Cost - Lesser | 3 |
 | Boon Cost - Greater | 5 |

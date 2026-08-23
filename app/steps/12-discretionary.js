@@ -17,6 +17,7 @@ import {
   giftLevelCost,
   skillTierName,
   unspentBoonsPoolPoints,
+  unspentGiftsPoolPoints,
 } from '../state.js';
 import { renderBoonPicker } from './07-boons.js';
 
@@ -29,7 +30,9 @@ export default {
       const t = discretionaryTotal(state, data);
       const s = discretionaryPointsSpent(state, data);
       const r = discretionaryRemaining(state, data);
-      return `Base ${data.discretionaryBase} + ${flawsPointsGranted(state)} from Flaws + ${unspentBoonsPoolPoints(state, data)} unspent from Boons = ${t} total. Spent: ${s}. Remaining: ${r}.`;
+      const giftsLeftover = unspentGiftsPoolPoints(state, data);
+      const giftsLeftoverPoints = giftsLeftover * data.giftsLeftoverRate;
+      return `Base ${data.discretionaryBase} + ${flawsPointsGranted(state)} from Flaws + ${unspentBoonsPoolPoints(state, data)} unspent from Boons + ${giftsLeftoverPoints} unspent from Gifts (${giftsLeftover} pt${giftsLeftover === 1 ? '' : 's'} at ${data.giftsLeftoverRate}:1) = ${t} total. Spent: ${s}. Remaining: ${r}.`;
     }
     const summaryEl = el('p', {}, summaryText());
 
