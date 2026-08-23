@@ -21,6 +21,13 @@ import {
 } from '../state.js';
 import { renderBoonPicker } from './07-boons.js';
 
+// A brief, always-visible reminder of what an item is, under its
+// counterRow - distinct from the full-description twirls Gifts/Boons
+// already have (those stay click-to-open; this is short enough to just show).
+function briefDetail(text) {
+  return el('p', { class: 'detail', style: 'color:var(--text-dim);font-size:0.85rem;margin:0 0 0.75rem;' }, text);
+}
+
 export default {
   id: 'discretionary',
   title: 'Discretionary Points',
@@ -59,10 +66,22 @@ export default {
       ),
     );
 
+    // A collapsed-by-default category - click its name to twirl the whole
+    // section (every item inside it) open, same idea as the name-click
+    // twirls elsewhere, just scoped to a whole section instead of one item.
+    function section(titleText) {
+      const details = el('details', { class: 'pick-card' });
+      const content = el('div', { style: 'margin-top:0.75rem;' });
+      details.append(el('summary', {}, titleText), content);
+      container.appendChild(details);
+      return content;
+    }
+
     // ---- Fate Tokens (pure count, no separate item to pick) ----
     const rateFate = data.discretionaryRates['Fate Tokens'];
-    container.append(el('h3', {}, `Fate Tokens (${rateFate} Discretionary/token)`));
-    container.append(
+    const fateContent = section(`Fate Tokens (${rateFate} Discretionary/token)`);
+    fateContent.append(
+      briefDetail('Spent via Kotodama to assert a fact into the fiction directly - bend the world to make a claim true. See Fate Tokens.'),
       counterRow({
         name: 'Extra Fate Tokens',
         get: () => state.discretionaryExtra['Fate Tokens'],
@@ -81,10 +100,10 @@ export default {
 
     // ---- Attributes ----
     const rateAttr = data.discretionaryRates.Attributes;
-    container.append(el('h3', {}, `Attributes (${rateAttr} Discretionary/point)`));
+    const attrContent = section(`Attributes (${rateAttr} Discretionary/point)`);
     data.attributes.forEach((a) => {
       const bought = state.discretionaryPurchases.Attributes[a.name] ?? 0;
-      container.append(
+      attrContent.append(
         counterRow({
           name: a.name,
           get: () => state.attributes[a.name],
@@ -103,18 +122,17 @@ export default {
             rerenderPools();
           },
         }),
+        briefDetail(a.description),
       );
     });
 
     // ---- Resources ----
     const rateRes = data.discretionaryRates.Resources;
-    container.append(
-      el('h3', {}, `Resources (${data.resourceLevelCost * rateRes} Discretionary/level)`),
-    );
+    const resContent = section(`Resources (${data.resourceLevelCost * rateRes} Discretionary/level)`);
     data.resources.forEach((r) => {
       const bought = state.discretionaryPurchases.Resources[r.name] ?? 0;
       const unitCost = data.resourceLevelCost * rateRes;
-      container.append(
+      resContent.append(
         counterRow({
           name: r.name,
           get: () => state.resources[r.name],
@@ -130,12 +148,13 @@ export default {
             rerenderPools();
           },
         }),
+        briefDetail(r.scales),
       );
     });
 
     // ---- Gifts (Level, Adders, and Limiters, all from this one page) ----
     const rateGifts = data.discretionaryRates.Gifts;
-    container.append(el('h3', {}, `Gifts (${rateGifts} Discretionary/pool-point)`));
+    const giftsContent = section(`Gifts (${rateGifts} Discretionary/pool-point)`);
     data.gifts.forEach((gift) => {
       const gState = state.gifts.find((g) => g.name === gift.name);
       const level = gState?.level ?? 0;
@@ -147,8 +166,8 @@ export default {
         el('summary', {}, `${gift.name}${gift.flagged ? ' [flagged, not final]' : ''}`),
         el('div', { class: 'detail', html: renderMarkdown(gift.markdown) }),
       );
-      container.appendChild(card);
-      container.append(
+      giftsContent.appendChild(card);
+      giftsContent.append(
         counterRow({
           name: gift.name,
           hint: `${unitCost} Discretionary/level`,
@@ -202,7 +221,7 @@ export default {
               ]),
             );
           });
-          container.appendChild(addersRow);
+          giftsContent.appendChild(addersRow);
         }
         if (gift.limiters.length) {
           const limitersRow = el('div', { style: 'margin:0 0 1rem 0.5rem;' });
@@ -224,15 +243,15 @@ export default {
               ]),
             );
           });
-          container.appendChild(limitersRow);
+          giftsContent.appendChild(limitersRow);
         }
       }
     });
 
     // ---- Skills ----
     const rateSkills = data.discretionaryRates.Skills;
-    container.append(el('h3', {}, `Skills (${rateSkills} Discretionary/tier)`));
-    container.append(
+    const skillsContent = section(`Skills (${rateSkills} Discretionary/tier)`);
+    skillsContent.append(
       el('div', { class: 'field' }, [
         el('input', {
           type: 'text',
@@ -245,7 +264,7 @@ export default {
       ]),
     );
     const skillListEl = el('div', { class: 'pick-list' });
-    container.appendChild(skillListEl);
+    skillsContent.appendChild(skillListEl);
     let skillFilter = '';
 
     function renderSkillList() {
@@ -254,7 +273,8 @@ export default {
         .filter((s) => s.name.toLowerCase().includes(skillFilter))
         .forEach((s) => {
           const bought = state.discretionaryPurchases.Skills[s.name] ?? 0;
-          skillListEl.appendChild(
+          const row = el('div', {});
+          row.append(
             counterRow({
               name: s.name,
               get: () => state.skills[s.name],
@@ -275,15 +295,17 @@ export default {
                 renderSkillList();
               },
             }),
+            briefDetail(s.definition),
           );
+          skillListEl.appendChild(row);
         });
     }
     renderSkillList();
 
     // ---- Boons ----
     const rateBoons = data.discretionaryRates.Boons;
-    container.append(el('h3', {}, `Boons (${rateBoons}x Discretionary cost)`));
-    renderBoonPicker(container, ctx, data.boons, {
+    const boonsContent = section(`Boons (${rateBoons}x Discretionary cost)`);
+    renderBoonPicker(boonsContent, ctx, data.boons, {
       source: 'discretionary',
       getRemaining: () => discretionaryRemaining(state, data),
       toCurrency: (points) => points * rateBoons,
