@@ -1,16 +1,16 @@
-import { el, counterRow } from '../ui.js';
-import { descriptorSlots, discretionaryRemaining } from '../state.js';
+import { el } from '../ui.js';
+import { descriptorSlots } from '../state.js';
 
 export default {
   id: 'descriptors',
   title: 'Descriptors',
-  render(container, { state, data, rerenderStep, rerenderPools }) {
+  render(container, { state, data }) {
     container.append(
       el('h2', {}, 'Descriptors'),
       el(
         'p',
         {},
-        'For every point spent in a sub-stat, you get one free Descriptor - a short word or phrase capturing a specific flavor of it. Extra Descriptors beyond that cost Discretionary points (see the Discretionary Points step).',
+        "For every point spent in a sub-stat, you get one free Descriptor - a short, one or two-word adjective (Brawny, Brutal, Indefatigable, Headstrong) capturing a specific flavor of it. Core traits: free, fixed once chosen, and there's no way to buy an extra one beyond what a sub-stat's points earn. Every Skill defaults to an Attribute/Element - point to a Descriptor when you challenge that default in play.",
       ),
     );
 
@@ -46,24 +46,6 @@ export default {
           ]),
         );
       });
-
-      const rate = data.discretionaryRates.Descriptors ?? 1;
-      const discRemaining = discretionaryRemaining(state, data);
-      container.append(
-        counterRow({
-          name: 'Extra Descriptors (Discretionary)',
-          get: () => state.extraDescriptors[s.name],
-          set: (v) => {
-            state.extraDescriptors[s.name] = v;
-          },
-          min: 0,
-          max: () => state.extraDescriptors[s.name] + Math.floor(discRemaining / rate),
-          onChange: () => {
-            rerenderStep();
-            rerenderPools();
-          },
-        }),
-      );
     });
   },
 };

@@ -203,7 +203,7 @@ function buildAttributesTab(state, data) {
     el(
       'p',
       { class: 'attr-caption' },
-      'One Descriptor per point allocated to a sub-stat. Point to one when you argue a Skill and Attribute pairing.',
+      'One Descriptor per point allocated to a sub-stat. Point to one when you challenge a Skill\'s default Attribute/Element.',
     ),
   ];
 }

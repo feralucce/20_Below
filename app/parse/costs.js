@@ -61,8 +61,6 @@ export function parseCosts(costsMd) {
       skillTierXpMultiplier: adv['Skill Training Tier - XP multiplier (current tier × N)'],
       attributeXpMultiplier: adv['Attribute - XP multiplier (current rating × N)'],
       boonXpMultiplier: adv['Boon - XP multiplier (× creation cost)'],
-      descriptorFlatXp: adv['Descriptor - flat XP (first 3)'],
-      descriptorXpMultiplierAfter3: adv['Descriptor - XP multiplier after 3rd (current count × N)'],
       newGiftBaseXp: adv['New Gift - base XP (before Limiter discount)'],
       giftLevelXpMultiplier: adv['Gift Level raise - XP multiplier (current level × N)'],
       giftLimiterDiscount: adv['Gift Limiter Discount, Advancement (per Limiter)'],

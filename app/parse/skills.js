@@ -13,6 +13,7 @@ export function parseSkillCatalog(premadeMd) {
   const table = extractTableAfter(premadeMd, '## Skills');
   return table.rows.map((row) => ({
     name: row.Skill,
+    defaultElement: row['Default Element'],
     definition: row.Definition,
   }));
 }

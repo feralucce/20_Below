@@ -12,8 +12,6 @@ import {
   refundAdvancementSkillTier,
   buyAdvancementResourceLevel,
   refundAdvancementResourceLevel,
-  buyAdvancementDescriptor,
-  refundAdvancementDescriptor,
   advancementGiftLevelCostAt,
   buyAdvancementGiftLevel,
   refundAdvancementGiftLevel,

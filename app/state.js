@@ -18,10 +18,6 @@ export function createInitialState(data) {
   data.subStats.forEach((s) => {
     descriptors[s.name] = [];
   });
-  const extraDescriptors = {}; // subStatName -> count bought via Discretionary
-  data.subStats.forEach((s) => {
-    extraDescriptors[s.name] = 0;
-  });
 
   const skills = {}; // skillName -> tier (0-5). Everyman skills start at tier 2.
   data.skillCatalog.forEach((s) => {
@@ -50,7 +46,6 @@ export function createInitialState(data) {
     attributes,
     subStats,
     descriptors,
-    extraDescriptors,
     skills,
     boons: [], // [{ name, points, tier }] - Special Movement (repeatable) can appear more than once
     resources,
@@ -75,7 +70,6 @@ export function createInitialState(data) {
     discretionaryExtra: {
       Resources: 0,
       Skills: 0,
-      Descriptors: 0,
       'Fate Tokens': 0,
       Boons: 0,
       Attributes: 0,
@@ -97,7 +91,7 @@ export function createInitialState(data) {
     // XP cost recomputed live. Boons funded via Advancement are tagged with
     // source 'advancement' on the existing state.boons list instead, same
     // as Discretionary-funded Boons already are.
-    advancementPurchases: { Attributes: {}, Skills: {}, Resources: {}, Gifts: {}, Descriptors: {} },
+    advancementPurchases: { Attributes: {}, Skills: {}, Resources: {}, Gifts: {} },
     // [{ id, physical: bool, title, description }] - freeform Battle Scar
     // log, see rules.md#battle-scars. Purely narrative, no mechanical field.
     scars: [],
@@ -120,7 +114,6 @@ const CATALOG_DICT_FIELDS = [
   'attributes',
   'subStats',
   'descriptors',
-  'extraDescriptors',
   'skills',
   'resources',
   'resourcePenalties',
@@ -535,8 +528,6 @@ export function discretionaryPointsSpent(state, data) {
     spent += extra * (data.discretionaryRates[target] ?? 0);
   });
   spent += giftsDiscretionaryContribution(state, data) * (data.discretionaryRates.Gifts ?? 0);
-  const extraDescriptorCount = Object.values(state.extraDescriptors).reduce((a, b) => a + b, 0);
-  spent += extraDescriptorCount * (data.discretionaryRates.Descriptors ?? 0);
   return spent;
 }
 
@@ -549,9 +540,11 @@ export function skillTierName(data, tier) {
 }
 
 // ---- Descriptors ----
+// Descriptors are pure core traits (rules.md#sub-stat-descriptors): one per
+// point allocated to a sub-stat, no way to buy an extra one on top.
 
 export function descriptorSlots(state, subStatName) {
-  return state.subStats[subStatName] + state.extraDescriptors[subStatName];
+  return state.subStats[subStatName];
 }
 
 // ---- Figured Characteristics (computed live, formulas parsed but applied here) ----
@@ -718,36 +711,6 @@ function resourcesAdvancementXpSpent(state, data) {
   return totalLevels * data.advancement.resourceXpPerLevel;
 }
 
-// First 3 extra Descriptors on a sub-stat cost a flat rate each; the 4th
-// and beyond scale with the current count. `count` here is every extra
-// Descriptor on that sub-stat regardless of funding source (Discretionary
-// at creation or Advancement after), since the threshold is about how many
-// the sub-stat already has, not who paid for which one.
-function descriptorAdvancementCostAt(index, data) {
-  return index < 3 ? data.advancement.descriptorFlatXp : index * data.advancement.descriptorXpMultiplierAfter3;
-}
-
-export function buyAdvancementDescriptor(state, subStatName) {
-  state.extraDescriptors[subStatName] += 1;
-  state.advancementPurchases.Descriptors[subStatName] = (state.advancementPurchases.Descriptors[subStatName] ?? 0) + 1;
-}
-
-export function refundAdvancementDescriptor(state, subStatName) {
-  const bought = state.advancementPurchases.Descriptors[subStatName] ?? 0;
-  if (bought <= 0) return;
-  state.extraDescriptors[subStatName] -= 1;
-  state.advancementPurchases.Descriptors[subStatName] = bought - 1;
-}
-
-function descriptorsAdvancementXpSpent(state, data) {
-  let total = 0;
-  Object.entries(state.advancementPurchases.Descriptors).forEach(([name, count]) => {
-    if (!count) return;
-    total += sumTopN(state.extraDescriptors[name], count, (index) => descriptorAdvancementCostAt(index, data));
-  });
-  return total;
-}
-
 // New Gift (Level 0→1) uses a flat base instead of the level×multiplier
 // formula, same override v1 needed for the same reason (the formula
 // collapses to 0 at a starting level of 0).
@@ -872,7 +835,6 @@ export function xpSpent(state, data) {
     attributesAdvancementXpSpent(state, data) +
     skillsAdvancementXpSpent(state, data) +
     resourcesAdvancementXpSpent(state, data) +
-    descriptorsAdvancementXpSpent(state, data) +
     giftsLevelAdvancementXpSpent(state, data) +
     giftAddersAdvancementXpSpent(state, data) +
     limiterBuyoffsAdvancementXpSpent(state) +
