@@ -38,7 +38,6 @@ The single source of truth for every tunable number in the system - pool sizes, 
 |---|---|
 | Resources | 1 |
 | Skills | 1 |
-| Descriptors | 1 |
 | Fate Tokens | 1 |
 | Boons | 2 |
 | Gifts | 4 |
@@ -53,8 +52,6 @@ The single source of truth for every tunable number in the system - pool sizes, 
 | Skill Training Tier - XP multiplier (current tier × N) | 2 |
 | Attribute - XP multiplier (current rating × N) | 9 |
 | Boon - XP multiplier (× creation cost) | 2 |
-| Descriptor - flat XP (first 3) | 1 |
-| Descriptor - XP multiplier after 3rd (current count × N) | 1 |
 | New Gift - base XP (before Limiter discount) | 7 |
 | Gift Level raise - XP multiplier (current level × N) | 5 |
 | Gift Limiter Discount, Advancement (per Limiter) | 1 |

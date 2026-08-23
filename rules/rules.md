@@ -10,7 +10,7 @@ Roll **2d10** and sum them. Success if the result is **equal to or lower than** 
 
 Target number range: **1** (Attribute 1 + Difficulty 0) to **20** (Attribute 10 + Difficulty 10) - a target of 1 is below the lowest possible roll, i.e. an automatic failure, weighted toward the middle (11) rather than flat.
 
-**A Skill isn't locked to one Attribute.** Any Skill can pair with any of the five, provided the player can argue the pairing to the GM's satisfaction - grounded in one of the character's own [Descriptors](#sub-stat-descriptors), a specific chosen flavor of a sub-stat ("I'm using Fire here because I'm being *Ruthless*"), rather than an improvised justification from scratch. See [Skills](skills.md#skills-are-not-attribute-locked) for the full rule.
+**Every Skill has a default Attribute/Element.** That default is what the roll uses unless the player challenges it. A player can challenge the default and pair the Skill with a different Attribute instead, provided they can argue the pairing to the GM's satisfaction - grounded in one of the character's own [Descriptors](#sub-stat-descriptors), a specific chosen flavor of a sub-stat ("I'm using Fire here instead of Firearms' default Air, because I'm being *Brutal* about it"), rather than an improvised justification from scratch. See [Skills](skills.md#skills-default-to-an-element) for the full rule.
 
 ### Difficulty Chart
 
@@ -101,26 +101,28 @@ Separately, that same score generates a **pool of points equal to the Attribute'
 
 ### Sub-Stat Descriptors
 
-For every point a character allocates to a sub-stat, they gain one Descriptor - a short player-chosen word or phrase capturing one specific flavor of that sub-stat for this character. E.g. 3 points in Soak might yield *Iron-skinned, Padded, Unyielding* - three distinct ways the character shrugs off harm, not three copies of the same idea.
+For every point a character allocates to a sub-stat, they gain one Descriptor - a short player-chosen word capturing one specific flavor of that sub-stat for this character. E.g. 3 points in Soak might yield *Hardy, Weathered, Unyielding* - three distinct ways the character shrugs off harm, not three copies of the same idea.
 
-Descriptors are **free at character creation** (no separate cost beyond the point that earns them) and **fixed once chosen**. A character can also buy an extra Descriptor on a sub-stat without raising it: at creation, this costs a flat **1 Discretionary point** per extra Descriptor, no scaling. Buying one after creation instead costs XP - see the [Advancement Reference](../docs/advancement-reference.html#descriptors) for the exact cost.
+**Descriptors are core traits.** They're **free at character creation** (no separate cost beyond the point that earns them) and **fixed once chosen** - there is no way to buy an extra Descriptor beyond what a sub-stat's points earn, at creation or later. A character who wants a broader spread of Descriptors gets there by raising the sub-stat, not by purchasing the trait on its own.
 
-Descriptors are the concrete hook a player points to when [arguing a Skill pairing](skills.md#skills-are-not-attribute-locked) - grounding "I'm using Fire here because I'm being *Ruthless*" in an established character fact instead of an improvised justification each time.
+Descriptors are one or two-word adjectives, not phrases - *Brutal*, *Brawny*, *Indefatigable*, *Headstrong*, not "Killer Instinct, Relentless, and Simmering Rage all at once." Tight, punchy, and easy to say out loud at the table.
+
+**Every Skill defaults to an Attribute/Element** (see [Skills](skills.md#skills-default-to-an-element)). Descriptors are the concrete hook a player points to when challenging that default - grounding "I'm using Fire here because I'm being *Brutal*" in an established character fact instead of an improvised justification each time.
 
 **Sample Descriptors**, one starter list per sub-stat - a player is free to write their own instead:
 
 | Sub-Stat | Sample Descriptors |
 |---|---|
-| Soak | Iron-Skinned, Padded, Unyielding, Thick-Hided, Stone-Boned, Numb to Pain, Armored Instinct, Bull-Necked, Weathered, Scarred and Solid |
-| Potence | Bull-Strong, Vice Grip, Bone-Crushing, Load-Bearing, Wiry but Deceptive, Mountain-Moving, Sinew and Steel, Unstoppable Momentum, Farmhand Strength, Brute Force |
-| Initiative | Hair-Trigger, Always Ready, Predatory Reflexes, First to React, Coiled Spring, Battle-Honed Instinct, Never Caught Flat-Footed, Twitch Reactions, Combat Sense, Anticipatory |
-| Psyche | Iron-Willed, Unshakeable Focus, Clear-Headed, Mental Fortress, Disciplined Mind, Meditative Calm, Sharp and Undistracted, Trained Concentration, Inner Stillness, Battle-Tested Nerves |
-| Ferocity | Killer Instinct, Relentless, Berserker's Edge, Simmering Rage, Predator's Focus, All-Out Aggression, Never Holds Back, Feral Intensity, Controlled Violence, Burning Determination |
-| Presence | Magnetic, Commanding, Larger Than Life, Effortlessly Charming, Quiet Authority, Impossible to Ignore, Natural Leader, Radiant Confidence, Star Power, Unforgettable |
-| Stamina | Tireless, Iron Lungs, Second Wind, Endurance Athlete, Never Slows Down, Marathon Body, Deep Reserves, Won't Quit, Built for the Long Haul, Steady Engine |
-| Health | Hard to Kill, Thick-Skinned Constitution, Stubbornly Alive, Built Like a Tank, Resilient Body, Keeps Getting Up, Tougher Than It Looks, Iron Constitution, Won't Stay Down, Deep Reserves of Vitality |
-| Atropos | Uncanny Reflexes, Never Where the Blow Lands, Ghost-Like Evasion, Danger Sense, Always a Step Ahead, Untouchable, Threads Part Around Them, Combat Precognition, Impossible to Pin Down, Fate's Own Guard |
-| Klotho | Charmed, Fortune's Favorite, Quick to Recover, Deep Well of Ki, Touched by Luck, Never Runs Dry, Fate's Darling, Second Chances, Uncannily Fortunate, Recharges Fast |
+| Soak | Hardy, Rugged, Stoic, Weathered, Unyielding, Sturdy, Grizzled, Armored |
+| Potence | Brawny, Herculean, Mighty, Strapping, Muscular, Titanic, Forceful, Robust |
+| Initiative | Alert, Reflexive, Twitchy, Vigilant, Quickened, Sharp-Eyed, Instinctive, Keen |
+| Psyche | Steadfast, Composed, Disciplined, Unshaken, Focused, Resolute, Headstrong, Serene |
+| Ferocity | Brutal, Savage, Relentless, Feral, Merciless, Ruthless, Vicious, Predatory |
+| Presence | Magnetic, Commanding, Charismatic, Radiant, Imposing, Captivating, Dominant, Alluring |
+| Stamina | Indefatigable, Tireless, Enduring, Hardened, Persistent, Unflagging, Dogged, Steady |
+| Health | Hale, Vital, Resilient, Stalwart, Ironclad, Unbreakable, Durable, Tenacious |
+| Atropos | Elusive, Untouchable, Evasive, Uncanny, Slippery, Precognitive, Nimble, Fated |
+| Klotho | Charmed, Lucky, Fortunate, Blessed, Favored, Serendipitous, Providential, Recharged |
 
 ### The Passive Wall Triad - Soak, Presence, Psyche
 
