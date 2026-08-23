@@ -109,20 +109,20 @@ Descriptors are one or two-word adjectives, not phrases - *Brutal*, *Brawny*, *I
 
 **Every Skill defaults to an Attribute/Element** (see [Skills](skills.md#skills-default-to-an-element)). Descriptors are the concrete hook a player points to when challenging that default - grounding "I'm using Fire here because I'm being *Brutal*" in an established character fact instead of an improvised justification each time.
 
-**Sample Descriptors**, one starter list per sub-stat - a player is free to write their own instead:
+**Sample Descriptors**, 15 examples per sub-stat to jump-start character creation - these are just starting points, not a fixed list. A player is always free to write their own instead, as long as it's a short adjective capturing a real flavor of that sub-stat:
 
 | Sub-Stat | Sample Descriptors |
 |---|---|
-| Soak | Hardy, Rugged, Stoic, Weathered, Unyielding, Sturdy, Grizzled, Armored |
-| Potence | Brawny, Herculean, Mighty, Strapping, Muscular, Titanic, Forceful, Robust |
-| Initiative | Alert, Reflexive, Twitchy, Vigilant, Quickened, Sharp-Eyed, Instinctive, Keen |
-| Psyche | Steadfast, Composed, Disciplined, Unshaken, Focused, Resolute, Headstrong, Serene |
-| Ferocity | Brutal, Savage, Relentless, Feral, Merciless, Ruthless, Vicious, Predatory |
-| Presence | Magnetic, Commanding, Charismatic, Radiant, Imposing, Captivating, Dominant, Alluring |
-| Stamina | Indefatigable, Tireless, Enduring, Hardened, Persistent, Unflagging, Dogged, Steady |
-| Health | Hale, Vital, Resilient, Stalwart, Ironclad, Unbreakable, Durable, Tenacious |
-| Atropos | Elusive, Untouchable, Evasive, Uncanny, Slippery, Precognitive, Nimble, Fated |
-| Klotho | Charmed, Lucky, Fortunate, Blessed, Favored, Serendipitous, Providential, Recharged |
+| Soak | Hardy, Rugged, Stoic, Weathered, Unyielding, Sturdy, Grizzled, Armored, Callused, Thick-Skinned, Leathery, Battle-Worn, Steeled, Resistant, Flinty |
+| Potence | Brawny, Herculean, Mighty, Strapping, Muscular, Titanic, Forceful, Robust, Hulking, Sinewy, Vigorous, Burly, Formidable, Stout, Iron-Armed |
+| Initiative | Alert, Reflexive, Twitchy, Vigilant, Quickened, Sharp-Eyed, Instinctive, Keen, Fleet, Snappy, Watchful, Attentive, Sharp, Nimble-Minded, Anticipatory |
+| Psyche | Steadfast, Composed, Disciplined, Unshaken, Focused, Resolute, Headstrong, Serene, Level-Headed, Calm, Iron-Willed, Grounded, Unflappable, Determined, Clear-Headed |
+| Ferocity | Brutal, Savage, Relentless, Feral, Merciless, Ruthless, Vicious, Predatory, Fierce, Aggressive, Bloodthirsty, Wrathful, Untamed, Cutthroat, Rabid |
+| Presence | Magnetic, Commanding, Charismatic, Radiant, Imposing, Captivating, Dominant, Alluring, Striking, Charming, Bold, Regal, Magnificent, Unforgettable, Larger-Than-Life |
+| Stamina | Indefatigable, Tireless, Enduring, Hardened, Persistent, Unflagging, Dogged, Steady, Untiring, Unwavering, Gritty, Marathon-Bodied, Long-Winded, Driven, Unrelenting |
+| Health | Hale, Vital, Resilient, Stalwart, Ironclad, Unbreakable, Durable, Tenacious, Hearty, Sound, Thriving, Hard-to-Kill, Long-Lived, Wholesome, Sturdy-Framed |
+| Atropos | Elusive, Untouchable, Evasive, Uncanny, Slippery, Precognitive, Nimble, Fated, Slick, Ghostly, Unpredictable, Quick-Footed, Uncatchable, Foresighted, Cat-Like |
+| Klotho | Charmed, Lucky, Fortunate, Blessed, Favored, Serendipitous, Providential, Recharged, Fateful, Auspicious, Golden, Star-Touched, Bountiful, Effortless, Timely |
 
 ### The Passive Wall Triad - Soak, Presence, Psyche
 

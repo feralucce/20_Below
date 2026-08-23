@@ -23,7 +23,7 @@ export default {
       if (samples?.length) {
         container.append(
           el('p', { class: 'detail', style: 'margin:0 0 0.5rem;' }, [
-            el('strong', {}, 'Sample Descriptors: '),
+            el('strong', {}, 'Sample Descriptors (examples - write your own instead if none of these fit): '),
             samples.join(', '),
           ]),
         );
