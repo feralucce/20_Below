@@ -18,6 +18,8 @@ At character creation, each Gift Level costs a flat **3 points** from the [Gifts
 
 **Limiters** are a permanent, creation-time restriction chosen for one specific Gift. Each Limiter taken drops the cost of every Level of that Gift by 1 point. A character may stack as many different Limiters on a Gift as they want, but no combination can ever drop a Level's cost below 1 point.
 
+Because Limiters make the per-Level cost vary Gift to Gift, the 21-point pool won't always divide evenly once limited and unlimited Gifts are mixed. Any Gifts Pool points left unspent for that reason convert into [Discretionary points](character-creation.md#discretionary-points) at 2:1 rather than being lost.
+
 ## Resolution
 
 No new stat governs Gifts. Using a Gift draws on tools that already exist elsewhere in the system:

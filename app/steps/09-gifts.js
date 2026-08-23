@@ -32,7 +32,7 @@ export default {
       el(
         'p',
         {},
-        `Each Gift Level costs a flat ${data.giftLevelCost} points from a ${data.giftsPoolTotal}-point pool (Limiters reduce this per-Gift, floored at 1). Remaining: ${remaining}.`,
+        `Each Gift Level costs a flat ${data.giftLevelCost} points from a ${data.giftsPoolTotal}-point pool (Limiters reduce this per-Gift, floored at 1). Remaining: ${remaining}. Anything left unspent converts into Discretionary points (the Discretionary Points step) at ${data.giftsLeftoverRate}:1.`,
       ),
     );
 

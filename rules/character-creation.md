@@ -106,7 +106,7 @@ Buying starting gear (see [Weapons & Equipment](weapons.md)) uses its own proced
 
 ## 10. Gifts
 
-Spend your **21-point Gifts Pool** on [Gifts](gifts.md) - the supernatural powers a character can have. Each Gift Level costs a flat **3 points** (a Gift bought to Level 3 costs 9 points total, to Level 5 costs 15). You can also unlock Adders (permanent, optional upgrades to a Gift you already have) for **3 points (Lesser)** or **6 points (Greater)**, and take Limiters (permanent restrictions on one Gift) to knock **1 point off every Level of that Gift**, stacking with no ceiling but never dropping a Level below 1 point.
+Spend your **21-point Gifts Pool** on [Gifts](gifts.md) - the supernatural powers a character can have. Each Gift Level costs a flat **3 points** (a Gift bought to Level 3 costs 9 points total, to Level 5 costs 15). You can also unlock Adders (permanent, optional upgrades to a Gift you already have) for **3 points (Lesser)** or **6 points (Greater)**, and take Limiters (permanent restrictions on one Gift) to knock **1 point off every Level of that Gift**, stacking with no ceiling but never dropping a Level below 1 point. Because Limiters can leave the 21-point pool not dividing evenly, any Gifts Pool points left unspent convert into Discretionary points (step 12) at **2:1** rather than being lost.
 
 ## 11. Flaws
 
@@ -116,7 +116,7 @@ A Flaw with no real effect on play grants no points - if it doesn't actually mak
 
 ## 12. Discretionary Points
 
-Every character starts with **10 Discretionary points**, flat, plus whatever you picked up from Flaws in step 11 and any unspent Boons Pool points from step 8, converted 1:1. These don't convert 1:1 into every pool - spending them costs more the closer you get to raw supernatural power:
+Every character starts with **10 Discretionary points**, flat, plus whatever you picked up from Flaws in step 11, any unspent Boons Pool points from step 8 (converted 1:1), and any unspent Gifts Pool points from step 10 (converted 2:1). These don't convert 1:1 into every pool - spending them costs more the closer you get to raw supernatural power:
 
 | Target | Discretionary points per point |
 |---|---|

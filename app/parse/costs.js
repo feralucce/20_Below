@@ -44,6 +44,7 @@ export function parseCosts(costsMd) {
     giftLimiterDiscount: rates['Gift Limiter Discount (per Limiter, per Level)'],
     giftLimiterFloor: rates['Gift Limiter Floor (minimum points/Level)'],
     giftAdderCost: { Lesser: rates['Gift Adder Cost - Lesser'], Greater: rates['Gift Adder Cost - Greater'] },
+    giftsLeftoverRate: rates['Gifts Pool Leftover Rate (Discretionary per unspent point)'],
     boonTierCost: {
       Trivial: rates['Boon Cost - Trivial'],
       Lesser: rates['Boon Cost - Lesser'],
