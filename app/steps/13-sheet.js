@@ -12,6 +12,13 @@ import {
 import { downloadJson } from '../export/toJson.js';
 import buildAdvancementTab from './tab-advancement.js';
 import buildScarsTab from './tab-scars.js';
+import {
+  buildAttackRollSection,
+  buildDamageRollSection,
+  buildSkillRollSection,
+  buildGiftCheckSection,
+  buildResourceCheckSection,
+} from './roller-panel.js';
 
 function inline(md) {
   return window.marked ? window.marked.parseInline(md) : md;
@@ -201,7 +208,7 @@ function buildAttributesTab(state, data) {
   ];
 }
 
-function buildSkillsTab(state, data) {
+function buildSkillsTab(state, data, refresh, refreshHeader) {
   return [
     el(
       'ul',
@@ -215,22 +222,31 @@ function buildSkillsTab(state, data) {
       el('tr', {}, [el('th', {}, 'Tier'), el('th', {}, 'Roll')]),
       ...data.skillTiers.map((t) => el('tr', {}, [el('td', {}, t.name), el('td', { html: inline(t.roll) })])),
     ]),
+    buildSkillRollSection(state, data, refreshHeader),
   ];
 }
 
-function buildGiftsTab(state, data) {
+function buildGiftsTab(state, data, refresh, refreshHeader, refreshKiDependents) {
   return [
     el('ul', {}, buildGiftEntries(state, data)),
     el('p', { class: 'attr-caption', html: inline(data.giftCheckText) }),
+    buildGiftCheckSection(state, data, refreshKiDependents ?? refreshHeader),
   ];
 }
 
-function buildTraitsTab(state, data) {
+function buildBoonsFlawsTab(state, data) {
   return [
     el('h3', {}, 'Boons'),
     el('ul', {}, buildBoonEntries(state, data)),
     el('h3', {}, 'Flaws'),
     el('ul', {}, buildFlawEntries(state, data)),
+  ];
+}
+
+function buildResourcesTab(state, data) {
+  return [
+    el('ul', {}, buildResourceEntries(state, data)),
+    buildResourceCheckSection(state, data),
   ];
 }
 
@@ -258,10 +274,8 @@ function buildEverymanGearEntry(state) {
   ];
 }
 
-function buildGearTab(state, data) {
+function buildEquipmentTab(state, data) {
   return [
-    el('h3', {}, 'Resources'),
-    el('ul', {}, buildResourceEntries(state, data)),
     ...buildEverymanGearEntry(state),
     el('h3', {}, 'Gear'),
     ...buildGearPurchaseEntries(state),
@@ -287,13 +301,14 @@ function buildBiographyTab(state) {
 
 const TABS = [
   { id: 'attributes', label: 'Attributes', build: buildAttributesTab },
-  { id: 'skills', label: 'Skills', build: buildSkillsTab },
-  { id: 'gifts', label: 'Gifts', build: buildGiftsTab },
-  { id: 'traits', label: 'Traits', build: buildTraitsTab },
-  { id: 'gear', label: 'Gear', build: buildGearTab },
-  { id: 'advancement', label: 'Advancement', build: buildAdvancementTab, interactive: true },
+  { id: 'skills', label: 'Skills', build: buildSkillsTab, interactive: true },
+  { id: 'gifts', label: 'Gifts', build: buildGiftsTab, interactive: true },
+  { id: 'traits', label: 'Boons/Flaws', build: buildBoonsFlawsTab },
+  { id: 'resources', label: 'Resources', build: buildResourcesTab },
+  { id: 'gear', label: 'Equipment', build: buildEquipmentTab },
   { id: 'scars', label: 'Scars', build: buildScarsTab, interactive: true },
   { id: 'biography', label: 'Biography', build: buildBiographyTab },
+  { id: 'advancement', label: 'Advancement', build: buildAdvancementTab, interactive: true },
 ];
 
 // interactive=false renders a plain read-only snapshot (used by the hidden
@@ -409,16 +424,43 @@ export default {
     const tabContent = el('div', { class: 'tab-content' });
     const tabNav = el('div', { class: 'tab-nav' });
     const headerEl = el('div', {});
+    // Built once, outside the header's own render cycle - a Combat Roller
+    // roll needs to update the Ki/Fate Token trackers (via renderHeader),
+    // but renderHeader() only ever tears down headerEl itself, so this
+    // sibling element (and whatever the roll just displayed) survives that.
+    const combatRollerEl = el('div', { class: 'sheet-combat-roller' });
 
     function renderHeader() {
       headerEl.innerHTML = '';
       headerEl.append(...buildHeader(state, data, figured, { interactive: true, refresh: renderHeader }));
     }
 
+    // The damage roller's Ki Infusion checkboxes need to reflect the
+    // character's *current* Ki, which can change from outside the Combat
+    // Roller entirely (a Gift Check failure, most directly, from the Gifts
+    // tab) - refreshKiDependents is handed to anything that spends Ki
+    // elsewhere so it can pull the boost row's available count back in sync.
+    let damageSectionRef = null;
+    function renderCombatRoller() {
+      combatRollerEl.innerHTML = '';
+      damageSectionRef = buildDamageRollSection(state, data, renderHeader);
+      combatRollerEl.append(
+        el('h3', {}, 'Combat Roller'),
+        buildAttackRollSection(state, data, renderHeader),
+        damageSectionRef,
+      );
+    }
+    function refreshKiDependents() {
+      renderHeader();
+      damageSectionRef?.refreshBoostRow();
+    }
+
     function renderTabContent() {
       tabContent.innerHTML = '';
       const tab = TABS.find((t) => t.id === activeTab);
-      const nodes = tab.interactive ? tab.build(state, data, renderTabContent) : tab.build(state, data);
+      const nodes = tab.interactive
+        ? tab.build(state, data, renderTabContent, renderHeader, refreshKiDependents)
+        : tab.build(state, data);
       tabContent.append(...nodes.filter((n) => n != null));
     }
 
@@ -443,8 +485,9 @@ export default {
     renderTabNav();
     renderTabContent();
     renderHeader();
+    renderCombatRoller();
 
-    const sheet = el('div', { class: 'sheet', id: 'character-sheet' }, [headerEl, tabNav, tabContent]);
+    const sheet = el('div', { class: 'sheet', id: 'character-sheet' }, [headerEl, combatRollerEl, tabNav, tabContent]);
 
     const notesField = el('div', { class: 'field' }, [
       el('label', {}, 'Finishing Touches notes (equipment, appearance, anything else)'),

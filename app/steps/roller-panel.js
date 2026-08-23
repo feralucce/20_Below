@@ -51,8 +51,14 @@ function diceSummary(rollResult) {
   return `Rolled ${dice.join(', ')} → kept ${kept.join(', ')} = ${kept[0] + kept[1]}`;
 }
 
-export default function buildRollerPanel(state, data, { refreshHeader = () => {} } = {}) {
-  const wrap = el('div', { class: 'roller-panel' });
+// Skill Roll - the character sheet's Skills tab embeds this directly (see
+// tab.interactive wiring in 13-sheet.js). Only Skills the character is
+// actually Trained in (tier > 0) populate the dropdown, plus "Untrained" at
+// the top - a from-scratch roll against an unpurchased Skill is already
+// covered by that Untrained option, so listing every unpurchased Skill by
+// name too would just be a long wall of redundant Untrained entries.
+export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
+  const section = el('div', { class: 'roller-gift-check' });
   const resultEl = el('div', { class: 'roller-result' });
 
   let selectedSkill = UNTRAINED_VALUE;
@@ -78,9 +84,9 @@ export default function buildRollerPanel(state, data, { refreshHeader = () => {}
     },
     [
       el('option', { value: UNTRAINED_VALUE }, 'No Skill (Untrained)'),
-      ...data.skillCatalog.map((s) =>
-        el('option', { value: s.name }, `${s.name} - ${skillTierName(data, state.skills[s.name])}`),
-      ),
+      ...data.skillCatalog
+        .filter((s) => state.skills[s.name] > 0)
+        .map((s) => el('option', { value: s.name }, `${s.name} - ${skillTierName(data, state.skills[s.name])}`)),
     ],
   );
 
@@ -229,21 +235,7 @@ export default function buildRollerPanel(state, data, { refreshHeader = () => {}
     );
   }
 
-  const damageSection = buildDamageRollSection(state, data, refreshHeader);
-  const attackRollSection = buildAttackRollSection(state, data, refreshHeader);
-  // The damage roller's Ki Infusion checkboxes need to reflect the
-  // character's *current* Ki, which can change from outside this section
-  // entirely (a Gift Check failure, most directly) - Roll Damage already
-  // refreshes its own boost row after spending Ki, so the only other spot
-  // that needs to reach in here is Gift Check, wired below.
-  function refreshKiDependents() {
-    refreshHeader();
-    damageSection.refreshBoostRow();
-  }
-
-  wrap.append(
-    attackRollSection,
-    damageSection,
+  section.append(
     el('h4', {}, 'Skill Roll'),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Skill'), skillSelect]),
     attributeGroup,
@@ -253,11 +245,9 @@ export default function buildRollerPanel(state, data, { refreshHeader = () => {}
     togglesRow,
     rollBtn,
     resultEl,
-    buildGiftCheckSection(state, data, refreshKiDependents),
-    buildResourceCheckSection(state, data),
   );
 
-  return wrap;
+  return section;
 }
 
 // Pushing a Resource (resources.md#pushing-a-resource): 2d10 against
@@ -270,7 +260,7 @@ export default function buildRollerPanel(state, data, { refreshHeader = () => {}
 // or Index 6 always) zeroes the Resource out instead (state.
 // resourceZeroed), unless the roll is a critical success - except Index 6
 // itself, which is never saved by a crit.
-function buildResourceCheckSection(state, data) {
+export function buildResourceCheckSection(state, data) {
   const section = el('div', { class: 'roller-gift-check' });
 
   const ownedResources = data.resources.filter((r) => state.resources[r.name] > 0);
@@ -407,7 +397,7 @@ function buildResourceCheckSection(state, data) {
 const ATTACK_ATTRIBUTES = ['Earth', 'Air', 'Fire', 'Water'];
 const PLAIN_ATTACK_TIER = 2;
 
-function buildAttackRollSection(state, data, refreshHeader) {
+export function buildAttackRollSection(state, data, refreshHeader) {
   const section = el('div', { class: 'roller-gift-check' });
 
   const attackAttributes = data.attributes.filter((a) => ATTACK_ATTRIBUTES.includes(a.name));
@@ -537,7 +527,7 @@ function buildAttackRollSection(state, data, refreshHeader) {
 // Dice count and the target's wall value are typed in directly rather than
 // looked up from a weapon/Gift catalog - see the discussion in
 // character-creator.notes.md for why that's out of scope for this pass.
-function buildDamageRollSection(state, data, refreshHeader, heading = 'Damage Roll') {
+export function buildDamageRollSection(state, data, refreshHeader, heading = 'Damage Roll') {
   const section = el('div', { class: 'roller-gift-check' });
 
   let attackType = 'Physical';
@@ -684,7 +674,7 @@ function buildDamageRollSection(state, data, refreshHeader, heading = 'Damage Ro
 // against current Ki + Stamina. Success is free; failure costs 1 Ki,
 // deducted here immediately since there's no separate confirmation step
 // for a cost this small and automatic.
-function buildGiftCheckSection(state, data, refreshKiDependents) {
+export function buildGiftCheckSection(state, data, refreshKiDependents) {
   const section = el('div', { class: 'roller-gift-check' });
   const summary = el('p', {});
   const resultEl = el('div', { class: 'roller-result' });
