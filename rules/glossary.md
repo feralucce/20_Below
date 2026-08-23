@@ -10,7 +10,7 @@ Terms worth knowing before you go through [Character Creation](character-creatio
 
 **Air** — One of the five Attributes, the element of breath and motion. Covers agility, adaptability, and sharpness of mind - how fast you react, how well you keep pace with a changing situation, how clearly you think under pressure. Splits into Initiative and Psyche.
 
-**Atropos** — One of Moira's two sub-stats, named for the Fate who cuts the thread of life and cannot be turned aside. Determines your Defense (`10 - Atropos`) - how hard you are to hit in combat. Sample descriptors: Elusive, Untouchable, Evasive, Uncanny, Slippery, Precognitive, Nimble, Fated.
+**Atropos** — One of Moira's two sub-stats, named for the Fate who cuts the thread of life and cannot be turned aside. Determines your Defense (`10 - Atropos`) - how hard you are to hit in combat. Sample descriptors (examples, not a fixed list): Elusive, Untouchable, Evasive, Uncanny, Slippery, Precognitive, Nimble, Fated, Slick, Ghostly, Unpredictable, Quick-Footed, Uncatchable, Foresighted, Cat-Like.
 
 **Attribute** — One of the five elemental forces that shape who you are, Earth, Air, Fire, Water, and Moira, each a broad measure of natural capability drawn from the classical elements themselves. Assigned at character creation, each Attribute splits into two sub-stats.
 
@@ -38,7 +38,7 @@ Terms worth knowing before you go through [Character Creation](character-creatio
 
 **Fate Triggers** — What a Fate Token can be spent on: Kotodama, Overcome a Flaw, Automatic Success, Boost a Check, or Shrug Off an Effect. Each spend triggers a Fatigue Check.
 
-**Ferocity** — One of Fire's two sub-stats, the ember of will made manifest. Boosts a Physical attack die when you spend Ki to push a strike (Ki Infusion). Sample descriptors: Brutal, Savage, Relentless, Feral, Merciless, Ruthless, Vicious, Predatory.
+**Ferocity** — One of Fire's two sub-stats, the ember of will made manifest. Boosts a Physical attack die when you spend Ki to push a strike (Ki Infusion). Sample descriptors (examples, not a fixed list): Brutal, Savage, Relentless, Feral, Merciless, Ruthless, Vicious, Predatory, Fierce, Aggressive, Bloodthirsty, Wrathful, Untamed, Cutthroat, Rabid.
 
 **Fire** — One of the five Attributes, the element of drive and hunger. Covers aggression and force of personality - how hard you push, how much of yourself you bring to a confrontation, verbal or physical. Splits into Ferocity and Presence.
 
@@ -48,17 +48,17 @@ Terms worth knowing before you go through [Character Creation](character-creatio
 
 **Gift Check** — A resource-risk roll for using certain Gifts: 2d10 against current Ki + Stamina, roll-under. Success is free; failure costs 1 Ki.
 
-**Health** — One of Water's two sub-stats, the depth of the well you draw endurance from. Determines your Health Levels (`5 + Health`) - how many hits you can take before going down. Sample descriptors: Hale, Vital, Resilient, Stalwart, Ironclad, Unbreakable, Durable, Tenacious.
+**Health** — One of Water's two sub-stats, the depth of the well you draw endurance from. Determines your Health Levels (`5 + Health`) - how many hits you can take before going down. Sample descriptors (examples, not a fixed list): Hale, Vital, Resilient, Stalwart, Ironclad, Unbreakable, Durable, Tenacious, Hearty, Sound, Thriving, Hard-to-Kill, Long-Lived, Wholesome, Sturdy-Framed.
 
 **Health Levels** — A count of discrete hit-boxes, not a numeric HP pool. `5 + Health`. Each Level absorbs one connecting hit; at 0 you fall unconscious.
 
-**Initiative** — One of Air's two sub-stats, the spark of readiness that decides who moves first. Rolled once at the start of combat (`1d10 + Initiative`) to set turn order for the whole fight. Sample descriptors: Alert, Reflexive, Twitchy, Vigilant, Quickened, Sharp-Eyed, Instinctive, Keen.
+**Initiative** — One of Air's two sub-stats, the spark of readiness that decides who moves first. Rolled once at the start of combat (`1d10 + Initiative`) to set turn order for the whole fight. Sample descriptors (examples, not a fixed list): Alert, Reflexive, Twitchy, Vigilant, Quickened, Sharp-Eyed, Instinctive, Keen, Fleet, Snappy, Watchful, Attentive, Sharp, Nimble-Minded, Anticipatory.
 
 **Ki** — The resource pool that fuels supernatural ability use. `Average of Soak, Initiative, Ferocity, Stamina, and Atropos, doubled`. Spent directly to preserve Health Levels, boost attack dice, or bump an Action Bracket; also the target number for the Fatigue Check.
 
 **Ki Infusion** — Spending 1 Ki per die to add your matching sub-stat (Ferocity, Presence, or Psyche) to an attack die before rolling, pushing past a defender's wall that would otherwise fully negate an unboosted hit.
 
-**Klotho** — One of Moira's two sub-stats, the thread being spun even now. Governs Ki Regeneration rate and sets your Lucky Number. Sample descriptors: Charmed, Lucky, Fortunate, Blessed, Favored, Serendipitous, Providential, Recharged.
+**Klotho** — One of Moira's two sub-stats, the thread being spun even now. Governs Ki Regeneration rate and sets your Lucky Number. Sample descriptors (examples, not a fixed list): Charmed, Lucky, Fortunate, Blessed, Favored, Serendipitous, Providential, Recharged, Fateful, Auspicious, Golden, Star-Touched, Bountiful, Effortless, Timely.
 
 **Limiter** — A permanent, creation-time restriction chosen for one specific Gift. Each one taken drops the cost of every Level of that Gift by 1 point, stackable with no ceiling but never below 1 point per Level.
 
@@ -70,11 +70,11 @@ Terms worth knowing before you go through [Character Creation](character-creatio
 
 **Poise** — Composure under Social attack, mirroring Health Levels. `5 + Presence`. At 0 you become Flustered.
 
-**Potence** — One of Earth's two sub-stats, the weight of stone given to muscle and bone. Raw strength - carrying capacity, forcing/breaking things, contested strength. Sample descriptors: Brawny, Herculean, Mighty, Strapping, Muscular, Titanic, Forceful, Robust.
+**Potence** — One of Earth's two sub-stats, the weight of stone given to muscle and bone. Raw strength - carrying capacity, forcing/breaking things, contested strength. Sample descriptors (examples, not a fixed list): Brawny, Herculean, Mighty, Strapping, Muscular, Titanic, Forceful, Robust, Hulking, Sinewy, Vigorous, Burly, Formidable, Stout, Iron-Armed.
 
-**Presence** — One of Fire's two sub-stats, the heat that draws every eye in the room. Resists Social attacks, and sets how many dice you roll when making one. Sample descriptors: Magnetic, Commanding, Charismatic, Radiant, Imposing, Captivating, Dominant, Alluring.
+**Presence** — One of Fire's two sub-stats, the heat that draws every eye in the room. Resists Social attacks, and sets how many dice you roll when making one. Sample descriptors (examples, not a fixed list): Magnetic, Commanding, Charismatic, Radiant, Imposing, Captivating, Dominant, Alluring, Striking, Charming, Bold, Regal, Magnificent, Unforgettable, Larger-Than-Life.
 
-**Psyche** — One of Air's two sub-stats, the current that carries a clear mind through the storm. Resists Mental attacks, and sets how many dice you roll when making one. Sample descriptors: Steadfast, Composed, Disciplined, Unshaken, Focused, Resolute, Headstrong, Serene.
+**Psyche** — One of Air's two sub-stats, the current that carries a clear mind through the storm. Resists Mental attacks, and sets how many dice you roll when making one. Sample descriptors (examples, not a fixed list): Steadfast, Composed, Disciplined, Unshaken, Focused, Resolute, Headstrong, Serene, Level-Headed, Calm, Iron-Willed, Grounded, Unflappable, Determined, Clear-Headed.
 
 **Resource** — Material or logistical backing a character can buy - money, gear, a base of operations - distinct from Boons' personal knacks and Gifts' supernatural power.
 
@@ -86,9 +86,9 @@ Terms worth knowing before you go through [Character Creation](character-creatio
 
 **Skill Training Tier** — How trained you are in a given Skill, six rungs: Untrained, Novice, Trained, Adept, Expert, Master. Each tier changes how the core roll is built, from no Attribute at all up through Advantage and widened critical ranges.
 
-**Soak** — One of Earth's two sub-stats, the hide the world's blows can't quite get through. Resists Physical damage - the wall an attacker's dice have to beat to hurt you. Sample descriptors: Hardy, Rugged, Stoic, Weathered, Unyielding, Sturdy, Grizzled, Armored.
+**Soak** — One of Earth's two sub-stats, the hide the world's blows can't quite get through. Resists Physical damage - the wall an attacker's dice have to beat to hurt you. Sample descriptors (examples, not a fixed list): Hardy, Rugged, Stoic, Weathered, Unyielding, Sturdy, Grizzled, Armored, Callused, Thick-Skinned, Leathery, Battle-Worn, Steeled, Resistant, Flinty.
 
-**Stamina** — One of Water's two sub-stats, the reserve that keeps a body moving past its limit. Caps how many Fate Tokens you can spend per Scene; also your endurance against non-combat exhaustion. Sample descriptors: Indefatigable, Tireless, Enduring, Hardened, Persistent, Unflagging, Dogged, Steady.
+**Stamina** — One of Water's two sub-stats, the reserve that keeps a body moving past its limit. Caps how many Fate Tokens you can spend per Scene; also your endurance against non-combat exhaustion. Sample descriptors (examples, not a fixed list): Indefatigable, Tireless, Enduring, Hardened, Persistent, Unflagging, Dogged, Steady, Untiring, Unwavering, Gritty, Marathon-Bodied, Long-Winded, Driven, Unrelenting.
 
 **Surprised** — A condition triggered when a character hasn't noticed a threat before combat begins. While Surprised, you roll at Disadvantage on everything until the round ends.
 
