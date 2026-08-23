@@ -645,30 +645,34 @@ body {
 
 .tab-nav {
   display: flex;
-  gap: 0.25rem;
-  padding: 0.5rem 1.5rem 0;
+  gap: 0.35rem;
+  padding: 0.75rem 1.5rem;
   flex-wrap: wrap;
   border-bottom: 1px solid var(--panel-border);
 }
 
 .tab-btn {
-  background: none;
-  border: none;
-  border-bottom: 2px solid transparent;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
   color: var(--text-dim);
-  padding: 0.6rem 0.75rem;
-  font-size: 0.85rem;
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
   cursor: pointer;
 }
 
 .tab-btn.active {
+  border-color: var(--accent);
   color: var(--text);
-  border-bottom-color: var(--accent);
-  font-weight: 700;
 }
 
 .tab-content {
   padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.sheet-combat-roller {
+  padding: 0 1.5rem 1rem;
+  border-bottom: 1px solid var(--panel-border);
 }
 
 .sheet h3 {
