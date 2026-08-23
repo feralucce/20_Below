@@ -1,4 +1,4 @@
-import { el, renderMarkdown } from '../ui.js';
+import { el, renderMarkdown, makeTwirl } from '../ui.js';
 import { boonsPoolRemaining, addBoon, removeBoon } from '../state.js';
 
 // Shared by the Boons step (spend the Boons pool) and the Discretionary Points step (spend Discretionary
@@ -41,8 +41,9 @@ export function renderBoonPicker(container, ctx, allBoons, { source, getRemainin
       const alreadyTaken = state.boons.some((b) => b.name === boon.name);
       const disable = alreadyTaken && !boon.repeatable;
       const card = el('div', { class: 'pick-card' });
+      const nameEl = el('span', {}, boon.name + (disable ? ' (taken)' : ''));
       const headerRow = el('div', { style: 'display:flex;justify-content:space-between;align-items:center;gap:0.5rem;flex-wrap:wrap;' }, [
-        el('span', {}, boon.name + (disable ? ' (taken)' : '')),
+        nameEl,
       ]);
       const btnRow = el('div', { style: 'display:flex;gap:0.5rem;flex-wrap:wrap;' });
       boon.costs.forEach((cost) => {
@@ -61,7 +62,9 @@ export function renderBoonPicker(container, ctx, allBoons, { source, getRemainin
         );
       });
       headerRow.appendChild(btnRow);
-      card.append(headerRow, el('div', { class: 'detail', html: renderMarkdown(boon.effect) }));
+      const detailEl = el('div', { class: 'detail', html: renderMarkdown(boon.effect) });
+      makeTwirl(nameEl, detailEl);
+      card.append(headerRow, detailEl);
       listEl.appendChild(card);
     });
   }

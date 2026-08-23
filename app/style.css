@@ -359,6 +359,24 @@ body {
   flex: 1;
 }
 
+.name-toggle {
+  cursor: pointer;
+  user-select: none;
+}
+
+.name-toggle::before {
+  content: '▸';
+  display: inline-block;
+  margin-right: 0.35rem;
+  font-size: 0.75em;
+  color: var(--text-dim);
+  transition: transform 0.1s ease;
+}
+
+.name-toggle.open::before {
+  transform: rotate(90deg);
+}
+
 .counter-row .value {
   min-width: 2ch;
   text-align: center;

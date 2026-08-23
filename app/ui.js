@@ -19,12 +19,33 @@ export function el(tag, attrs = {}, children = []) {
   return node;
 }
 
+// Wires a name element to show/hide a detail element on click - the "click
+// the name, its description twirls out" interaction shared by Boons'
+// Available list, Gifts/Resources/Flaws' Available list (description) and
+// Gifts' Selected list (adders/limiters). Kept separate from the +/- clicks
+// on a counterRow, which live in sibling buttons untouched by this.
+export function makeTwirl(nameEl, detailEl, { startOpen = false } = {}) {
+  nameEl.classList.add('name-toggle');
+  let open = startOpen;
+  detailEl.style.display = open ? '' : 'none';
+  nameEl.classList.toggle('open', open);
+  nameEl.addEventListener('click', () => {
+    open = !open;
+    detailEl.style.display = open ? '' : 'none';
+    nameEl.classList.toggle('open', open);
+  });
+  return { get open() { return open; } };
+}
+
 // A labeled +/- counter row. `get`/`set` read and write the current numeric
 // value; `min`/`max` may be numbers or functions of no args (re-evaluated on
 // every render so they can depend on pool remaining elsewhere in the app).
 // `format`, if given, renders the displayed value (e.g. a tier number as its
 // tier name) without changing the underlying numeric get/set/min/max logic.
-export function counterRow({ name, hint, get, set, min = 0, max = 99, format, onChange }) {
+// `detail`, if given, is an element hidden by default and twirled open by
+// clicking the name (via makeTwirl) - the row itself (name + counter) always
+// stays visible either way.
+export function counterRow({ name, hint, get, set, min = 0, max = 99, format, onChange, detail }) {
   const row = el('div', { class: 'counter-row' });
   const nameEl = el('span', { class: 'name' }, hint ? `${name} (${hint})` : name);
   const valueEl = el('span', { class: 'value' }, format ? format(get()) : String(get()));
@@ -53,17 +74,23 @@ export function counterRow({ name, hint, get, set, min = 0, max = 99, format, on
     },
   });
   row.append(nameEl, minusBtn, valueEl, plusBtn);
-  return row;
+  if (!detail) return row;
+  makeTwirl(nameEl, detail);
+  return el('div', {}, [row, detail]);
 }
 
 // Splits a catalog into two headed groups - anything currently "selected"
 // (per `isSelected`) pops up to a `Selected {label}` list, everything else
 // stays down in `Available {label}`. Mirrors the Boons step's Selected/
 // Available split for the simpler "one card per catalog entry, 0-5 counter"
-// shape used by Skills, Gifts, Resources, and Flaws. Returns a `render()`
-// you can call again after state changes (e.g. a filter box) or wire up to
-// call itself via each card's onChange.
-export function renderSelectedAvailable(container, { label, getItems, isSelected, renderCard }) {
+// shape used by Skills, Gifts, Resources, and Flaws. `renderCard` builds the
+// Available card (name + counter, description twirled out on click);
+// `renderSelectedCard` builds the Selected card and defaults to `renderCard`
+// if omitted - pass it explicitly when Selected should look different (e.g.
+// Gifts twirl adders/limiters there instead of the description). Returns a
+// `render()` you can call again after state changes (e.g. a filter box) or
+// wire up to call itself via each card's onChange.
+export function renderSelectedAvailable(container, { label, getItems, isSelected, renderCard, renderSelectedCard }) {
   const selectedEl = el('div', { class: 'pick-list' });
   const availableEl = el('div', { class: 'pick-list' });
   container.append(
@@ -72,6 +99,7 @@ export function renderSelectedAvailable(container, { label, getItems, isSelected
     el('h3', {}, `Available ${label}`),
     availableEl,
   );
+  const selectedRenderer = renderSelectedCard || renderCard;
 
   function render() {
     selectedEl.innerHTML = '';
@@ -82,7 +110,7 @@ export function renderSelectedAvailable(container, { label, getItems, isSelected
     if (selected.length === 0) {
       selectedEl.appendChild(el('p', { class: 'detail' }, `No ${label} selected yet.`));
     } else {
-      selected.forEach((item) => selectedEl.appendChild(renderCard(item)));
+      selected.forEach((item) => selectedEl.appendChild(selectedRenderer(item)));
     }
     available.forEach((item) => availableEl.appendChild(renderCard(item)));
   }
