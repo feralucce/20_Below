@@ -3,9 +3,11 @@ import {
   createInitialState,
   importCharacter,
   removeFromRoster,
+  duplicateRosterEntry,
   setRole,
   setInitiative,
   rollInitiativeFor,
+  rollAllNonPCInitiative,
   allInitiativeSet,
   beginCombat,
   setBracket,
@@ -149,7 +151,20 @@ function renderRosterScreen() {
     return wrap;
   }
 
-  wrap.appendChild(el('h2', { class: 'section-heading' }, 'Roster & Initiative'));
+  wrap.appendChild(
+    el('div', { class: 'section-heading-row' }, [
+      el('h2', { class: 'section-heading' }, 'Roster & Initiative'),
+      el('button', {
+        class: 'small-btn',
+        text: 'Roll All NPCs & Allies',
+        disabled: state.roster.some((c) => c.role !== 'PC') ? undefined : '',
+        onClick: () => {
+          rollAllNonPCInitiative(state);
+          render();
+        },
+      }),
+    ]),
+  );
 
   const grid = el('div', { class: 'roster-grid' });
   state.roster.forEach((c) => {
@@ -183,6 +198,15 @@ function renderRosterScreen() {
         roleToggle(c),
         initCell,
         statTracks(c),
+        el('button', {
+          class: 'small-btn',
+          text: '+ Another',
+          title: `Add another ${c.name.replace(/ \(\d+\)$/, '')}`,
+          onClick: () => {
+            duplicateRosterEntry(state, c.id);
+            render();
+          },
+        }),
         el('button', {
           class: 'remove-btn',
           text: '×',

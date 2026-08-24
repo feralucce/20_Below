@@ -282,6 +282,22 @@ h2.section-heading {
   margin: 2rem 0 1rem;
 }
 h2.section-heading:first-child { margin-top: 0; }
+.section-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--panel-border);
+  padding-bottom: 0.5rem;
+  margin: 2rem 0 1rem;
+}
+.section-heading-row:first-child { margin-top: 0; }
+.section-heading-row h2.section-heading {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
 
 /* ---- turn spotlight ---- */
 .spotlight {
