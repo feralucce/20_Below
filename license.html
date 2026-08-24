@@ -27,17 +27,112 @@
     color: var(--text);
     min-height: 100vh;
   }
+
+  /* ---- top nav ---- */
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 1.5rem;
+    background: rgba(10, 23, 32, 0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--panel-border);
+  }
+  .site-nav .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+  .site-nav .brand img {
+    height: 28px;
+    width: auto;
+    display: block;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 0.3rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .nav-links a:hover {
+    color: var(--text);
+    border-color: var(--accent);
+  }
+  .nav-links .soon {
+    color: var(--text-dim);
+    font-size: 0.92rem;
+    font-weight: 600;
+    opacity: 0.5;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .nav-links .soon .pill {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border: 1px solid var(--panel-border);
+    border-radius: 999px;
+    padding: 0.1rem 0.45rem;
+  }
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+    color: var(--text);
+    width: 38px;
+    height: 34px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  @media (max-width: 680px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      background: var(--panel);
+      border-bottom: 1px solid var(--panel-border);
+      padding: 0.5rem 1.5rem 1rem;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; padding: 0.6rem 0; border-bottom: 1px solid var(--panel-border); }
+    .nav-links li:last-child { border-bottom: none; }
+  }
+
   main {
     max-width: 780px;
     margin: 0 auto;
     padding: 2rem 1.5rem 4rem;
   }
   a { color: var(--accent); }
-  .back-link {
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 0.9rem;
-  }
   .eyebrow {
     font-size: 0.78rem;
     text-transform: uppercase;
@@ -104,9 +199,21 @@
 </style>
 </head>
 <body>
+  <nav class="site-nav">
+    <a class="brand" href="index.html">
+      <img src="docs/assets/brand/favicon-128.png" alt="" />
+      20 BELOW
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" id="navToggle">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="rules-hub.html">Rules &amp; Creator</a></li>
+      <li><a href="https://feralucce.github.io/Backwater_Static/" target="_blank" rel="noopener">Backwater Static</a></li>
+      <li><a href="license.html">ORC License</a></li>
+      <li><span class="soon">Store <span class="pill">Soon</span></span></li>
+      <li><a href="https://github.com/feralucce/20_Below" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </nav>
 <main>
-  <a class="back-link" href="index.html">&larr; Back to the 20 Below hub</a>
-
   <p class="eyebrow">Open by Design</p>
   <h1>ORC License</h1>
 
@@ -166,5 +273,13 @@
     Source and full history at <a href="https://github.com/feralucce/20_Below">github.com/feralucce/20_Below</a>.
   </p>
 </main>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    var links = document.getElementById('navLinks');
+    var open = links.classList.toggle('open');
+    this.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
 </body>
 </html>
