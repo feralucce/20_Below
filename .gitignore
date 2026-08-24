@@ -14,3 +14,4 @@ Sale Packages/
 # frontendDist - rebuilt fresh by desktop/scripts/stage-frontend.ps1 before
 # every build/dev run, never hand-edited or committed.
 desktop/src-tauri/frontend-dist/
+combat-tracker-desktop/src-tauri/frontend-dist/

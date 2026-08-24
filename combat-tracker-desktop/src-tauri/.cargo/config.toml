@@ -1,0 +1,6 @@
+# Build output is redirected outside the repo entirely - a target/ folder
+# living inside frontend-dist's parent tree would get bundled into itself,
+# growing without bound. Separate target-dir from the Character Creator
+# desktop app's (20below) so the two builds don't share/clobber cache.
+[build]
+target-dir = "C:/Users/feral/.tauri-targets/combat-tracker"
