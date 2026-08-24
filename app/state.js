@@ -615,12 +615,17 @@ export function sanityStatus(current) {
 // confirmed 2026-08-14 (Health/Sanity) and extended to Poise 2026-08-20: any
 // rest, Short or Full, only recovers 1 Level and caps at 0 - never the normal
 // partial rate, never a full heal, while already below 0.
+//
+// A Short Rest always recovers at least 1, even at 0 in the governing
+// sub-stat (Math.ceil(0 / 2) would otherwise be 0, healing nothing) -
+// confirmed 2026-08-24, applies above 0 only; the below-0 case already
+// always recovers exactly 1.
 function restLevel(current, max, subStatValue, isFullRest) {
   if (current < 0) {
     return Math.min(0, current + 1);
   }
   if (isFullRest) return max;
-  return Math.min(max, current + Math.ceil(subStatValue / 2));
+  return Math.min(max, current + Math.max(1, Math.ceil(subStatValue / 2)));
 }
 
 export function applyRest(state, isFullRest) {
@@ -629,7 +634,9 @@ export function applyRest(state, isFullRest) {
   state.currentHealth = restLevel(state.currentHealth, figured['Health Levels'], s.Health, isFullRest);
   state.currentSanity = restLevel(state.currentSanity, figured.Sanity, s.Psyche, isFullRest);
   state.currentPoise = restLevel(state.currentPoise, figured.Poise, s.Presence, isFullRest);
-  state.currentKi = isFullRest ? figured.Ki : Math.min(figured.Ki, state.currentKi + Math.ceil(s.Klotho / 2));
+  state.currentKi = isFullRest
+    ? figured.Ki
+    : Math.min(figured.Ki, state.currentKi + Math.max(1, Math.ceil(s.Klotho / 2)));
 }
 
 // ---- Advancement (post-creation XP spend, see docs/advancement-reference.html) ----
