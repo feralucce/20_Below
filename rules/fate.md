@@ -76,7 +76,7 @@ Every time a player spends a Fate Token, they immediately make a **Fatigue Check
 - **Success** - no effect, the spend goes through with no cost beyond the token itself.
 - **Failure** - lose **1 point from Ki**, until it's refilled.
 
-**Refill**: a Short Rest restores `Klotho ÷ 2` Ki (round up); a Full Night's Rest restores Ki fully. These are the big damn heroes, after all - Ki isn't meant to be a slow trickle back.
+**Refill**: a Short Rest restores `Klotho ÷ 2` Ki (round up, minimum 1); a Full Night's Rest restores Ki fully. These are the big damn heroes, after all - Ki isn't meant to be a slow trickle back.
 
 ### Ki (the pool)
 

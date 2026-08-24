@@ -232,7 +232,7 @@ Sanity mirrors Health Levels too, tracking a character's grip on their own mind 
 
 - **`PC Sanity = 5 + Psyche`.** NPCs default to a flat 5. Each Level is a binary hit-box.
 - **Crossing zero** works identically to Health Levels.
-- **General recovery** matches Health/Poise: Short Rest heals `Psyche ÷ 2` (round up); Full Night's Rest heals fully.
+- **General recovery** matches Health/Poise: Short Rest heals `Psyche ÷ 2` (round up, minimum 1); Full Night's Rest heals fully.
 
 **At 0 Sanity, a character is Overwhelmed**: they gain a temporary negative mental trait (a Flaw - exact mechanic to be defined later) and are at Disadvantage on rolls. They can still act on their own. Overwhelmed clears when the character is removed from the stimulus that caused it and given a chance to rest, or by spending 1 Ki, which also refills Sanity to full.
 
@@ -251,7 +251,7 @@ Poise mirrors [Health Levels](#health-levels), tracking composure under Social a
 - **Crossing zero** works identically to Health Levels: a single attack can never carry a character straight past 0 into negative territory - excess connecting dice are discarded, landing exactly at 0. Once already at 0, any further attack can only remove 1 Poise, total, regardless of how many dice connect.
 - **Below 0 Poise**, a character becomes [Humiliated](#humiliated). **There is no death threshold for Poise** - social trauma can leave lasting damage, but never kills on its own.
 
-**Recovery**: Short Rest heals `Presence ÷ 2` (round up); Full Night's Rest heals fully. **Reduced below 0 Poise**: instead of the rates above, recover 1 Poise per Short Rest or Full Night's Rest, until back to 0.
+**Recovery**: Short Rest heals `Presence ÷ 2` (round up, minimum 1); Full Night's Rest heals fully. **Reduced below 0 Poise**: instead of the rates above, recover 1 Poise per Short Rest or Full Night's Rest, until back to 0.
 
 **Ki cannot prevent a Poise loss.** At exactly 0 Poise (Flustered, not yet Humiliated), spending **1 Ki refills it back to full** - reflecting how quickly ordinary social standing can turn around in the moment. **Once below 0 (Humiliated), that same Ki spend - or a Short Rest or Full Night's Rest - only restores Poise to 1, not full**, same shape Sanity's Shattered recovery uses; normal recovery resumes from there.
 
@@ -274,7 +274,7 @@ At **0 Health Levels**, a character falls unconscious and can't act. Health Leve
 
 #### Health Level Recovery
 
-- **Short Rest**: heal Health Levels equal to your Health sub-stat divided by 2, round up.
+- **Short Rest**: heal Health Levels equal to your Health sub-stat divided by 2, round up, minimum 1.
 - **Full Night's Rest**: heal all lost Health Levels, back to full.
 - **Reduced below 0 Health Levels**: instead of the rates above, recover 1 Health Level per Short Rest or Full Night's Rest, until back to 0.
 
@@ -292,7 +292,7 @@ Dropping below 0 Health Levels can instead impose a genuine [Flaw](flaws.md), la
 
 Two passive functions, both "gives" like Health/Soak/Presence/Psyche - no roll, no spend:
 
-1. **Ki Regeneration** - a Short Rest restores `Klotho ÷ 2` Ki (round up); a Full Night's Rest restores Ki fully. See [Ki's refill](fate.md#fatigue-check).
+1. **Ki Regeneration** - a Short Rest restores `Klotho ÷ 2` Ki (round up, minimum 1); a Full Night's Rest restores Ki fully. See [Ki's refill](fate.md#fatigue-check).
 2. **Lucky Number** - a character's lucky number equals their **Klotho rating**. Whenever the result of one of the character's own core rolls - the [core roll](#core-mechanic)'s 2d10 or an Advantage/Disadvantage 3d10 - equals their Klotho rating, they immediately gain **1 Fate Token**, automatic, no choice, no cost, and never more than one per roll. It's the roll's result that has to match, not any individual die within it - does not apply to damage dice pools (weapon dice, Gift dice, the Potence contested dice pool, or any other bulk multi-die pool resolved per-die against a wall).
 
 #### Defense (Derived Stat)
