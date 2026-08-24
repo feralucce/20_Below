@@ -166,54 +166,19 @@
     background: var(--accent-dim);
     color: var(--text);
   }
-
-  /* second-level flyout submenus (e.g. Downloads > Owlbear.Rodeo > ...) */
-  .has-subdropdown {
-    position: relative;
-  }
-  .has-subdropdown > a::after,
-  .has-subdropdown > .soon::after {
-    content: " \25B8";
-    font-size: 0.7em;
+  .dropdown-heading {
+    padding: 0.5rem 0.6rem 0.2rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     color: var(--text-dim);
-    float: right;
-    margin-left: 0.6rem;
+    border-top: 1px solid var(--panel-border);
+    margin-top: 0.3rem;
   }
-  .subdropdown {
-    display: none;
-    position: absolute;
-    top: -0.4rem;
-    left: 100%;
-    min-width: 220px;
-    background: var(--panel);
-    border: 1px solid var(--panel-border);
-    border-radius: var(--radius);
-    padding: 0.4rem;
-    margin: 0 0 0 0.4rem;
-    list-style: none;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
-    z-index: 40;
-  }
-  .has-subdropdown:hover > .subdropdown,
-  .has-subdropdown:focus-within > .subdropdown {
-    display: block;
-  }
-  .subdropdown li {
-    padding: 0;
-    border: none;
-  }
-  .subdropdown a,
-  .subdropdown li > .soon {
-    display: block;
-    padding: 0.45rem 0.6rem;
-    font-size: 0.85rem;
-    font-weight: 500;
-    border-radius: 5px;
-    white-space: normal;
-  }
-  .subdropdown a:hover {
-    background: var(--accent-dim);
-    color: var(--text);
+  .dropdown li.dropdown-heading:first-child {
+    border-top: none;
+    margin-top: 0;
   }
 
   @media (max-width: 900px) {
@@ -250,19 +215,6 @@
       padding: 0 0 0 1rem;
     }
     .dropdown a { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-dim); }
-    .has-subdropdown > a::after,
-    .has-subdropdown > .soon::after { display: none; }
-    .subdropdown {
-      display: block;
-      position: static;
-      background: none;
-      border: none;
-      box-shadow: none;
-      margin: 0.3rem 0 0.3rem;
-      padding: 0 0 0 1rem;
-    }
-    .subdropdown a,
-    .subdropdown li > .soon { padding: 0.35rem 0; font-size: 0.82rem; color: var(--text-dim); }
   }
 
   main {
@@ -424,31 +376,19 @@
       <li class="has-dropdown">
         <a href="#">Downloads</a>
         <ul class="dropdown">
-          <li class="has-subdropdown">
-            <a href="app/index.html" target="_blank" rel="noopener">Character Creator</a>
-            <ul class="subdropdown">
-              <li><a href="https://github.com/feralucce/20_Below/releases/download/v0.9.2/20-below-desktop_0.9.2_x64-setup.exe">Character Creator Desktop (Windows) &middot; v0.9.2</a></li>
-              <li><a href="gm-app/index.html" target="_blank" rel="noopener">Combat Tracker <span class="pill beta">Beta</span></a></li>
-              <li><a href="https://github.com/feralucce/20_Below/releases/download/combat-tracker-v0.1.0/20-below-combat-tracker_0.1.0_x64-setup.exe">Combat Tracker Desktop (Windows) &middot; v0.1.0</a></li>
-            </ul>
-          </li>
-          <li class="has-subdropdown">
-            <span class="soon" tabindex="0">Backwater Static Assets <span class="pill">Soon</span></span>
-            <ul class="subdropdown">
-              <li><span class="soon">Maps</span></li>
-              <li><span class="soon">NPCs</span></li>
-              <li><span class="soon">Loose Anomalies</span></li>
-              <li><span class="soon">Anomalous Items Index</span></li>
-            </ul>
-          </li>
-          <li class="has-subdropdown">
-            <a href="#">Owlbear.Rodeo</a>
-            <ul class="subdropdown">
-              <li><a href="https://feralucce.github.io/20_Below_Dice/" target="_blank" rel="noopener">20 Below Dice</a></li>
-              <li><a href="https://feralucce.github.io/20_Below_Roster/" target="_blank" rel="noopener">20 Below Roster</a></li>
-              <li><a href="https://feralucce.github.io/20_Below_Bestiary/" target="_blank" rel="noopener">20 Below Bestiary</a></li>
-            </ul>
-          </li>
+          <li class="dropdown-heading">Character Creator</li>
+          <li><a href="app/index.html" target="_blank" rel="noopener">Character Creator (Web App)</a></li>
+          <li><a href="https://github.com/feralucce/20_Below/releases/download/v0.9.2/20-below-desktop_0.9.2_x64-setup.exe">Character Creator Desktop (Windows) &middot; v0.9.2</a></li>
+          <li><a href="https://github.com/feralucce/20_Below/releases/download/combat-tracker-v0.1.0/20-below-combat-tracker_0.1.0_x64-setup.exe">Combat Tracker Desktop (Windows) &middot; v0.1.0</a></li>
+          <li class="dropdown-heading">Backwater Static Assets <span class="pill">Soon</span></li>
+          <li><span class="soon">Maps</span></li>
+          <li><span class="soon">NPCs</span></li>
+          <li><span class="soon">Loose Anomalies</span></li>
+          <li><span class="soon">Anomalous Items Index</span></li>
+          <li class="dropdown-heading">Owlbear.Rodeo</li>
+          <li><a href="https://feralucce.github.io/20_Below_Dice/" target="_blank" rel="noopener">20 Below Dice</a></li>
+          <li><a href="https://feralucce.github.io/20_Below_Roster/" target="_blank" rel="noopener">20 Below Roster</a></li>
+          <li><a href="https://feralucce.github.io/20_Below_Bestiary/" target="_blank" rel="noopener">20 Below Bestiary</a></li>
         </ul>
       </li>
       <li><a href="https://feralucce.github.io/Backwater_Static/" target="_blank" rel="noopener">Backwater Static</a></li>
