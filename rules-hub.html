@@ -94,13 +94,20 @@
     gap: 0.4rem;
     white-space: nowrap;
   }
-  .nav-links .soon .pill {
+  .pill {
     font-size: 0.6rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     border: 1px solid var(--panel-border);
     border-radius: 999px;
     padding: 0.1rem 0.45rem;
+  }
+  .pill.beta {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .dropdown a .pill {
+    margin-left: 0.4rem;
   }
   .nav-toggle {
     display: none;
@@ -346,6 +353,7 @@
           <li><a href="rules/cryptids.html">Cryptids</a></li>
           <li><a href="rules/nightmare-creatures.html">Nightmare Creatures</a></li>
           <li><a href="docs/louis-reference-chart.html">Difficulty Chart</a></li>
+          <li><a href="gm-app/index.html" target="_blank" rel="noopener">GM Tracker <span class="pill beta">Beta</span></a></li>
         </ul>
       </li>
       <li><a href="https://feralucce.github.io/Backwater_Static/" target="_blank" rel="noopener">Backwater Static</a></li>
