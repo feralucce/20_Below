@@ -53,6 +53,38 @@ export function removeFromRoster(state, id) {
   state.roster = state.roster.filter((c) => c.id !== id);
 }
 
+// Adds a fresh copy of an existing roster entry - same source/role, full
+// Health/Poise/Sanity/Ki, no Initiative or Action Bracket carried over.
+// Encounters routinely need several of the same imported creature (four
+// wolves, a pack of Foundation agents) without re-importing the file each
+// time. Auto-numbers the name (Wolf, Wolf (2), Wolf (3)...) - based on how
+// many same-named entries already exist, not on the clicked copy's own
+// number - so duplicating any copy keeps the whole group numbered
+// correctly and distinguishable in the turn order.
+export function duplicateRosterEntry(state, id) {
+  const c = state.roster.find((x) => x.id === id);
+  if (!c) return;
+  const baseName = c.name.replace(/ \(\d+\)$/, '');
+  const existing = state.roster.filter((x) => x.name === baseName || x.name.startsWith(`${baseName} (`));
+  const name = existing.length === 0 ? baseName : `${baseName} (${existing.length + 1})`;
+  const entry = {
+    id: nextId++,
+    role: c.role,
+    name,
+    source: c.source,
+    figured: c.figured,
+    currentHealth: c.figured['Health Levels'],
+    currentPoise: c.figured.Poise,
+    currentSanity: c.figured.Sanity,
+    currentKi: c.figured.Ki,
+    initiative: null,
+    bracket: null,
+    kiSpentThisRound: 0,
+  };
+  state.roster.push(entry);
+  return entry;
+}
+
 export function setRole(state, id, role) {
   const c = state.roster.find((x) => x.id === id);
   if (c) c.role = role;
@@ -76,6 +108,14 @@ export function rollInitiativeFor(state, id) {
 
 export function allInitiativeSet(state) {
   return state.roster.length > 0 && state.roster.every((c) => c.initiative != null);
+}
+
+// Rolls (or re-rolls) Initiative for every NPC and Ally in one go - PCs are
+// untouched, since those are always the player's own manually-entered roll.
+export function rollAllNonPCInitiative(state) {
+  state.roster.forEach((c) => {
+    if (c.role !== 'PC') rollInitiativeFor(state, c.id);
+  });
 }
 
 // Rolled once at the start of combat, per rules.md#combat-order - never
