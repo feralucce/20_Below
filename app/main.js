@@ -82,7 +82,12 @@ async function showAppVersion() {
 // 20_Below repo (not the private desktop mirror), so this is a plain
 // anonymous fetch - no auth needed. Silently does nothing if offline or the
 // API call fails, rather than risk a false "needs updating" reading.
-const LATEST_RELEASE_URL = 'https://api.github.com/repos/feralucce/20_Below/releases/latest';
+//
+// The repo now also hosts Combat Tracker Desktop releases (tagged
+// combat-tracker-vX.Y.Z, 2026-08-24) on the same /releases feed, so
+// /releases/latest can point at the wrong product - listing releases and
+// picking the first bare vX.Y.Z tag finds this app's own latest instead.
+const RELEASES_LIST_URL = 'https://api.github.com/repos/feralucce/20_Below/releases';
 
 async function checkVersionStatus() {
   if (!isDesktopApp) return;
@@ -90,10 +95,12 @@ async function checkVersionStatus() {
   if (!ledEl) return;
   try {
     const current = await window.__TAURI__.app.getVersion();
-    const res = await fetch(LATEST_RELEASE_URL, { cache: 'no-store' });
+    const res = await fetch(RELEASES_LIST_URL, { cache: 'no-store' });
     if (!res.ok) return;
-    const release = await res.json();
-    const latest = String(release.tag_name || '').replace(/^v/, '');
+    const releases = await res.json();
+    const ownRelease = releases.find((r) => /^v\d+\.\d+\.\d+$/.test(r.tag_name || ''));
+    if (!ownRelease) return;
+    const latest = ownRelease.tag_name.replace(/^v/, '');
     if (!latest) return;
     ledEl.hidden = false;
     if (latest === current) {
