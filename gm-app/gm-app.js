@@ -167,7 +167,10 @@ function renderRosterScreen() {
   );
 
   const grid = el('div', { class: 'roster-grid' });
-  state.roster.forEach((c) => {
+  const sortedRoster = [...state.roster].sort(
+    (a, b) => ROLES.indexOf(a.role) - ROLES.indexOf(b.role) || a.name.localeCompare(b.name),
+  );
+  sortedRoster.forEach((c) => {
     const initCell =
       c.role !== 'PC'
         ? el('div', { style: 'display:flex;align-items:center;gap:0.4rem;' }, [
