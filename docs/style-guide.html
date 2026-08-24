@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Style Guide - 20 Below</title>
+<meta name="description" content="20 Below's brand color palette - core UI tokens and the Combat Tracker's semantic role colors, with hex codes and usage notes." />
+<link rel="icon" type="image/x-icon" href="assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --accent-dim: #1c3548;
+    --pc: #5ecb6b;
+    --npc: #e0685c;
+    --brass: #c39a5a;
+    --radius: 10px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  .back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  header {
+    text-align: center;
+    margin: 1.5rem 0 2.5rem;
+  }
+  .eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-dim);
+    margin: 0 0 0.6rem;
+  }
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 0.02em;
+  }
+  h2 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--panel-border);
+    padding-bottom: 0.5rem;
+    margin: 2.5rem 0 1.25rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1rem;
+  }
+  .swatch {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .swatch .fill {
+    height: 84px;
+  }
+  .swatch .info {
+    padding: 0.75rem 0.9rem 0.9rem;
+  }
+  .swatch .name {
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .swatch .token {
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    margin-top: 0.15rem;
+  }
+  .swatch .hex {
+    font-family: "Consolas", "Courier New", monospace;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-top: 0.4rem;
+    letter-spacing: 0.02em;
+  }
+  .swatch .use {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-top: 0.3rem;
+    line-height: 1.4;
+  }
+  .note {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--panel-border);
+  }
+</style>
+</head>
+<body>
+<main>
+  <a class="back-link" href="../rules-hub.html">&larr; 20 Below</a>
+
+  <header>
+    <p class="eyebrow">Visual Identity</p>
+    <h1>Style Guide</h1>
+  </header>
+
+  <h2>Core Palette</h2>
+  <div class="grid">
+    <div class="swatch">
+      <div class="fill" style="background:#0a1720"></div>
+      <div class="info">
+        <div class="name">Background</div>
+        <div class="token">--bg</div>
+        <div class="hex">#0A1720</div>
+        <div class="use">Page background</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="fill" style="background:#12232e"></div>
+      <div class="info">
+        <div class="name">Panel</div>
+        <div class="token">--panel</div>
+        <div class="hex">#12232E</div>
+        <div class="use">Cards, dropdowns, raised surfaces</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="fill" style="background:#24404f"></div>
+      <div class="info">
+        <div class="name">Panel Border</div>
+        <div class="token">--panel-border</div>
+        <div class="hex">#24404F</div>
+        <div class="use">Dividers, card borders</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="fill" style="background:#eaf5fb"></div>
+      <div class="info">
+        <div class="name">Text</div>
+        <div class="token">--text</div>
+        <div class="hex">#EAF5FB</div>
+        <div class="use">Primary text</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="fill" style="background:#8fadbe"></div>
+      <div class="info">
+        <div class="name">Text Dim</div>
+        <div class="token">--text-dim</div>
+        <div class="hex">#8FADBE</div>
+        <div class="use">Secondary text, captions, labels</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="fill" style="background:#3d84c4"></div>
+      <div class="info">
+        <div class="name">Accent</div>
+        <div class="token">--accent</div>
+        <div class="hex">#3D84C4</div>
+        <div class="use">Links, active states, brand blue</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="fill" style="background:#1c3548"></div>
+      <div class="info">
+        <div class="name">Accent Dim</div>
+        <div class="token">--accent-dim</div>
+        <div class="hex">#1C3548</div>
+        <div class="use">Hover backgrounds, CTA fill</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Semantic / Role Colors <span style="text-transform:none; letter-spacing:0; font-weight:400;">(Combat Tracker)</span></h2>
+  <div class="grid">
+    <div class="swatch">
+      <div class="fill" style="background:#5ecb6b"></div>
+      <div class="info">
+        <div class="name">PC</div>
+        <div class="token">--pc</div>
+        <div class="hex">#5ECB6B</div>
+        <div class="use">Player character role color</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="fill" style="background:#c39a5a"></div>
+      <div class="info">
+        <div class="name">Ally</div>
+        <div class="token">--ally</div>
+        <div class="hex">#C39A5A</div>
+        <div class="use">Friendly NPC - shared with Backwater Static's brass</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="fill" style="background:#e0685c"></div>
+      <div class="info">
+        <div class="name">NPC / Danger</div>
+        <div class="token">--npc / --danger</div>
+        <div class="hex">#E0685C</div>
+        <div class="use">Enemy role, critical/low-stat warnings</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="note">Typography: "Segoe UI" / system-ui across the site and app. This page covers 20 Below only - Backwater Static uses its own separate palette (Fraunces/Source Serif 4/Space Mono, brass/static-pink/cyan on a dark green ground).</p>
+</main>
+</body>
+</html>
