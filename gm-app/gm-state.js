@@ -1,4 +1,4 @@
-// GM Tracker state: a roster of imported characters (PCs and NPCs, both
+// 20 Below Combat Tracker state: a roster of imported characters (PCs and NPCs, both
 // just Character Creator JSON exports - this app does no creation of its
 // own) plus the live combat round/turn state.
 //
@@ -25,9 +25,9 @@ export function createInitialState() {
 let nextId = 1;
 
 // Imports one already-exported character JSON (from the Character
-// Creator's own "Download JSON") as a new roster entry. Defaults to NPC -
-// the GM flips it to PC per entry, since nothing in the file itself
-// distinguishes the two.
+// Creator's own "Download JSON") as a new roster entry. Defaults to NPC
+// (enemy) - the GM flips it to PC or Ally (a friendly NPC) per entry,
+// since nothing in the file itself distinguishes any of the three.
 export function importCharacter(state, rawJson) {
   const source = JSON.parse(rawJson);
   const figured = computeFiguredCharacteristics(source);
