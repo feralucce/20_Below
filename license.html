@@ -164,6 +164,16 @@
     background: var(--accent-dim);
     color: var(--text);
   }
+  .dropdown-heading {
+    padding: 0.5rem 0.6rem 0.2rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    border-top: 1px solid var(--panel-border);
+    margin-top: 0.3rem;
+  }
 
   @media (max-width: 900px) {
     .nav-links { gap: 1rem; }
@@ -285,10 +295,13 @@
         <a href="rules-hub.html">Start Here</a>
         <ul class="dropdown">
           <li><a href="docs/combat-flow-reference.html">Player's Quick Reference</a></li>
+          <li><a href="rules/character-creation.html">Character Creation</a></li>
+          <li class="dropdown-heading">Downloads</li>
+          <li><a href="app/index.html" target="_blank" rel="noopener">Character Creator</a></li>
+          <li><a href="https://github.com/feralucce/20_Below/releases/download/v0.9.2/20-below-desktop_0.9.2_x64-setup.exe">Desktop App (Windows)</a></li>
           <li><a href="docs/louis-reference-chart.html">Difficulty Chart</a></li>
           <li><a href="rules/glossary.html">Glossary</a></li>
           <li><a href="rules/rules.html">Rules</a></li>
-          <li><a href="rules/character-creation.html">Character Creation</a></li>
           <li><a href="docs/changelog.html">Changelog</a></li>
         </ul>
       </li>
