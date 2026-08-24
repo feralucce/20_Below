@@ -81,25 +81,27 @@ function statTracks(c) {
   ]);
 }
 
+const ROLES = ['PC', 'Ally', 'NPC'];
+
 function roleToggle(c) {
-  return el('div', { class: 'role-toggle' }, [
-    el('button', {
-      class: `pc${c.role === 'PC' ? ' active pc' : ''}`,
-      text: 'PC',
-      onClick: () => {
-        setRole(state, c.id, 'PC');
-        render();
-      },
-    }),
-    el('button', {
-      class: `npc${c.role === 'NPC' ? ' active npc' : ''}`,
-      text: 'NPC',
-      onClick: () => {
-        setRole(state, c.id, 'NPC');
-        render();
-      },
-    }),
-  ]);
+  return el(
+    'div',
+    { class: 'role-toggle' },
+    ROLES.map((role) =>
+      el('button', {
+        class: `${role.toLowerCase()}${c.role === role ? ` active ${role.toLowerCase()}` : ''}`,
+        text: role,
+        onClick: () => {
+          setRole(state, c.id, role);
+          render();
+        },
+      }),
+    ),
+  );
+}
+
+function roleClass(c) {
+  return `role-${c.role.toLowerCase()}`;
 }
 
 // ---- Roster screen (import, roles, initiative, and Begin Combat) ----
@@ -143,7 +145,7 @@ function renderRosterScreen() {
   );
 
   if (state.roster.length === 0) {
-    wrap.appendChild(el('div', { class: 'empty-state' }, 'No one imported yet. Import your PCs and NPCs to get started.'));
+    wrap.appendChild(el('div', { class: 'empty-state' }, 'No one imported yet. Import your PCs, Allies, and NPCs to get started.'));
     return wrap;
   }
 
@@ -152,7 +154,7 @@ function renderRosterScreen() {
   const grid = el('div', { class: 'roster-grid' });
   state.roster.forEach((c) => {
     const initCell =
-      c.role === 'NPC'
+      c.role !== 'PC'
         ? el('div', { style: 'display:flex;align-items:center;gap:0.4rem;' }, [
             el('span', { class: 'init-value' }, String(c.initiative ?? '—')),
             el('button', {
@@ -176,8 +178,8 @@ function renderRosterScreen() {
           });
 
     grid.appendChild(
-      el('div', { class: 'roster-card' }, [
-        el('span', { class: 'roster-name' }, c.name),
+      el('div', { class: `roster-card ${roleClass(c)}` }, [
+        el('span', { class: `roster-name ${roleClass(c)}` }, c.name),
         roleToggle(c),
         initCell,
         statTracks(c),
@@ -242,8 +244,8 @@ function renderDeclareScreen() {
   const grid = el('div', { class: 'roster-grid' });
   state.roster.forEach((c) => {
     grid.appendChild(
-      el('div', { class: 'roster-card' }, [
-        el('span', { class: 'roster-name' }, c.name),
+      el('div', { class: `roster-card ${roleClass(c)}` }, [
+        el('span', { class: `roster-name ${roleClass(c)}` }, c.name),
         el('span', { class: 'init-value', title: 'Initiative' }, String(c.initiative)),
         bracketButtons(c),
         c.bracket && c.bracket !== 'Fast'
@@ -301,7 +303,7 @@ function renderResolvingScreen() {
   wrap.appendChild(
     el('div', { class: 'spotlight' }, [
       el('div', { class: 'round-label' }, `Round ${state.combat.round} · Turn ${state.combat.turnIndex + 1} of ${state.combat.resolutionOrder.length}`),
-      el('div', { class: 'name' }, current.name),
+      el('div', { class: `name ${roleClass(current)}` }, current.name),
       el('div', { class: 'meta' }, [
         el('span', { class: `bracket-badge ${current.bracket.toLowerCase()}` }, current.bracket),
         el('span', {}, `Initiative ${current.initiative}`),
@@ -325,8 +327,8 @@ function renderResolvingScreen() {
     const isCurrent = idx === state.combat.turnIndex;
     const isDone = idx < state.combat.turnIndex;
     grid.appendChild(
-      el('div', { class: `roster-card${isCurrent ? ' current-turn' : ''}${isDone ? ' done-turn' : ''}` }, [
-        el('span', { class: 'roster-name' }, c.name),
+      el('div', { class: `roster-card ${roleClass(c)}${isCurrent ? ' current-turn' : ''}${isDone ? ' done-turn' : ''}` }, [
+        el('span', { class: `roster-name ${roleClass(c)}` }, c.name),
         el('span', { class: `bracket-badge ${c.bracket.toLowerCase()}` }, c.bracket),
         el('span', { class: 'init-value', title: 'Initiative' }, String(c.initiative)),
         statTracks(c),
