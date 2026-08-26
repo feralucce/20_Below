@@ -260,7 +260,6 @@
       align-items: center;
       overflow-x: auto;
       overflow-anchor: none;
-      scroll-snap-type: x proximity;
       -webkit-overflow-scrolling: touch;
       gap: 1.25rem;
       padding: 1.5rem 1.25rem;
@@ -276,7 +275,6 @@
       width: auto;
       height: 65vh;
       max-height: 65vh;
-      scroll-snap-align: start;
     }
     .finale-panel { pointer-events: auto; }
     .swipe-hint {
@@ -311,7 +309,6 @@
     align-items: center;
     overflow-x: auto;
     overflow-anchor: none;
-    scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
     gap: 1.25rem;
     padding: 1.5rem 1.25rem;
@@ -331,7 +328,6 @@
     width: auto;
     height: 65vh;
     max-height: 65vh;
-    scroll-snap-align: start;
     opacity: 1 !important;
   }
   .no-js .finale-panel,
@@ -400,14 +396,13 @@
     });
 
     // Mobile browsers (confirmed on real devices, both Chrome and
-    // DuckDuckGo) resolve this carousel's initial scroll-snap position to
-    // card 4 instead of card 1, and mandatory snapping was refusing to
-    // scroll back past wherever it landed - switched to proximity
-    // snapping (see CSS) so it's never a hard lock, and force scrollLeft
-    // back to 0 at several checkpoints here since the wrong position
-    // seems to get set at some point after DOM parsing (image decode,
-    // font swap, or the browser's own late re-snap), not reliably at any
-    // single one of them.
+    // DuckDuckGo) opened this carousel scrolled to card 4 instead of
+    // card 1, and wouldn't scroll back - happened with both mandatory
+    // and proximity CSS scroll-snap, so the CSS dropped scroll-snap
+    // entirely (plain free-scrolling now). Still force scrollLeft back
+    // to 0 at a few checkpoints as a safety net, since the wrong initial
+    // position wasn't reliably traceable to any single moment (image
+    // decode, font swap, etc.).
     var fanStageEl = document.querySelector('.fan-stage');
     if (fanStageEl) {
       var userTouchedCarousel = false;
