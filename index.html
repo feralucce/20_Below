@@ -630,8 +630,36 @@
         });
 
         // The fan sequence is standalone: it ends at the finale (logo +
-        // tagline + Continue button), and does NOT auto-advance into the
-        // landing page - the button below is the only way onward.
+        // tagline + Continue button) and stops there for real - scrolling
+        // further is blocked until Continue is clicked, which is the only
+        // way into the landing page.
+        var scrollLocked = false;
+        var lockScrollY = 0;
+
+        function holdAtEnd(self) {
+          scrollLocked = true;
+          lockScrollY = self.end;
+          if (window.scrollY > lockScrollY) window.scrollTo(0, lockScrollY);
+        }
+
+        window.addEventListener(
+          'wheel',
+          function (e) {
+            if (scrollLocked && e.deltaY > 0 && window.scrollY >= lockScrollY - 1) e.preventDefault();
+          },
+          { passive: false }
+        );
+        window.addEventListener(
+          'touchmove',
+          function (e) {
+            if (scrollLocked && window.scrollY >= lockScrollY - 1) e.preventDefault();
+          },
+          { passive: false }
+        );
+        window.addEventListener('scroll', function () {
+          if (scrollLocked && window.scrollY > lockScrollY) window.scrollTo(0, lockScrollY);
+        });
+
         var steps = cards.length + 1; // 6 card-entrance beats + fan-exit/finale-reveal beat
         var tl = gsap.timeline({
           scrollTrigger: {
@@ -652,7 +680,12 @@
             onUpdate: function (self) {
               finale.style.pointerEvents = self.progress > 0.98 ? 'auto' : 'none';
             },
+            onLeave: holdAtEnd,
           },
+        });
+
+        document.querySelector('.continue-btn').addEventListener('click', function () {
+          scrollLocked = false;
         });
 
         // Beat 0: hero intro fades out while card 1 settles in, upright.
