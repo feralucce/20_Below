@@ -42,7 +42,7 @@
   .site-nav {
     position: sticky;
     top: 0;
-    z-index: 30;
+    z-index: 50;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -137,35 +137,44 @@
     .nav-links li:last-child { border-bottom: none; }
   }
 
-  main {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 0 1.5rem 4rem;
+  /* ==== Pinned flip sequence (desktop/tablet: JS-driven via GSAP) ==== */
+  .pin-sequence {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .pin-panel {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+  }
+  .panel-inner {
+    max-width: 560px;
+    text-align: center;
   }
 
-  /* ---- how-it-works hero ---- */
-  .story-hero {
-    text-align: center;
-    padding: 3.5rem 0 3rem;
-  }
-  .story-hero .logo-mark {
-    max-width: 90px;
+  /* hero panel (panel 1) */
+  .panel-inner .logo-mark-sm {
+    max-width: 80px;
     height: auto;
-    margin: 0 auto 1.25rem;
+    margin: 0 auto 1.1rem;
     display: block;
   }
-  .story-hero h1 {
+  .hero-title {
     font-family: "Anton", "Segoe UI", sans-serif;
     font-weight: 400;
     text-transform: uppercase;
-    font-size: clamp(2.1rem, 7vw, 3.6rem);
+    font-size: clamp(2rem, 6.5vw, 3.4rem);
     letter-spacing: 0.01em;
     line-height: 1.05;
     margin: 0;
     color: var(--text);
   }
-  .story-hero h1 span { color: var(--accent); }
-  .story-hero .subtitle {
+  .hero-title span { color: var(--accent); }
+  .hero-subtitle {
     font-family: "Montserrat", "Segoe UI", sans-serif;
     font-weight: 500;
     text-transform: uppercase;
@@ -175,164 +184,103 @@
     margin: 0.9rem 0 0;
   }
 
-  /* ---- scroll story steps ---- */
-  .story-step {
-    position: relative;
-    padding: 3rem 0 4rem;
-    border-top: 1px solid var(--panel-border);
-  }
-  .step-sticky {
-    position: sticky;
-    top: 65px;
-    z-index: 5;
-    display: flex;
-    align-items: center;
-    gap: 0.9rem;
-    padding: 0.9rem 0;
-    background: linear-gradient(var(--bg) 75%, transparent);
-  }
-  .step-badge {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 2px solid var(--step-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 1.4rem;
-    color: var(--step-color);
-    box-shadow: 0 0 14px -2px var(--step-color);
-    flex-shrink: 0;
-    background: var(--bg);
-  }
-  .step-title {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    font-size: 1.4rem;
-    color: var(--text);
-    margin: 0;
-  }
-  .step-content {
-    max-width: 560px;
-    margin: 2.25rem auto 0;
-    text-align: center;
-  }
-  /* JS adds .reveal-pending right before observing, so content stays
-     visible by default if JS fails or IntersectionObserver never fires -
-     the fade-in is a bonus, not a requirement to see the content at all. */
-  .step-content.reveal-pending {
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  .step-content.reveal-pending.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .step-content.reveal-pending { opacity: 1; transform: none; transition: none; }
-  }
-  .step-art {
-    max-width: 260px;
-    width: 100%;
+  /* step panels (2-8) - single cropped image per step, straight from the
+     finalized infographic, rather than separately hand-styled text/art */
+  .step-panel-img {
+    display: block;
+    max-height: 82vh;
+    max-width: 90vw;
+    width: auto;
     height: auto;
-    margin: 0 auto 1.5rem;
-    display: block;
-  }
-  .step-art.wide {
-    max-width: 420px;
-    border-radius: var(--radius);
-  }
-  .step-body {
-    font-family: "Montserrat", "Segoe UI", sans-serif;
-    color: var(--text-dim);
-    font-size: 1.02rem;
-    line-height: 1.65;
-    margin: 0 0 1.5rem;
-  }
-  .step-stamp {
-    display: inline-block;
-    font-family: "Bebas Neue", sans-serif;
-    letter-spacing: 0.05em;
-    font-size: 0.95rem;
-    color: var(--step-color);
-    border: 1px solid var(--step-color);
-    border-radius: 8px;
-    padding: 0.5rem 1.1rem;
-    box-shadow: 0 0 12px -4px var(--step-color);
+    margin: 0 auto;
   }
 
-  /* ---- step 5 flowchart ---- */
-  .flow-diagram {
-    max-width: 380px;
-    margin: 0 auto 1.5rem;
-  }
-  .flow-diagram svg { display: block; width: 100%; height: auto; }
-
-  /* ---- step 6 outcome list ---- */
-  .outcome-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    max-width: 320px;
-    margin: 0 auto 1.5rem;
-  }
-  .outcome-row {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: var(--panel);
-    border: 1px solid var(--row-color);
-    border-radius: 8px;
-    padding: 0.6rem 1rem;
-    box-shadow: 0 0 10px -4px var(--row-color);
-  }
-  .outcome-mark {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 1.1rem;
-    color: var(--row-color);
-    width: 24px;
-    text-align: center;
-    flex-shrink: 0;
-  }
-  .outcome-label {
-    font-family: "Montserrat", "Segoe UI", sans-serif;
-    font-weight: 600;
-    font-size: 0.92rem;
-    color: var(--text);
-  }
-
-  /* ---- closing ---- */
-  .story-close {
-    text-align: center;
-    padding: 3rem 0 1rem;
-  }
-  .loop-banner {
-    display: block;
-    width: 100vw;
-    max-width: 1400px;
-    margin: 0 auto 2rem;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .story-close .tagline {
+  /* tagline panel (9) */
+  .closing-tagline {
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 0.04em;
-    font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+    font-size: clamp(1.4rem, 4.5vw, 2.2rem);
     color: var(--accent);
     margin: 0;
   }
-  .story-close .byline {
-    font-family: "Montserrat", "Segoe UI", sans-serif;
-    color: var(--text-dim);
-    font-size: 0.85rem;
-    margin: 0.6rem 0 0;
+
+  /* logo panel (10) */
+  .logo-panel .logo-mark-big {
+    max-width: 280px;
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 36px rgba(61, 132, 196, 0.45));
   }
-  .story-close .byline strong { color: var(--text); font-weight: 600; }
+
+  /* Mobile / no-JS / reduced-motion fallback: plain stacked scroll, no pin */
+  @media (max-width: 780px) {
+    .pin-sequence { height: auto; overflow: visible; }
+    .pin-panel {
+      position: relative;
+      inset: auto;
+      min-height: 70vh;
+      border-top: 1px solid var(--panel-border);
+    }
+    .pin-panel:first-child { border-top: none; }
+  }
+  .no-js .pin-sequence,
+  .reduced-motion .pin-sequence {
+    height: auto;
+    overflow: visible;
+  }
+  .no-js .pin-panel,
+  .reduced-motion .pin-panel {
+    position: relative;
+    inset: auto;
+    min-height: 70vh;
+    border-top: 1px solid var(--panel-border);
+    transform: none !important;
+  }
+  .no-js .pin-panel:first-child,
+  .reduced-motion .pin-panel:first-child {
+    border-top: none;
+  }
+
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  /* ---- landing hero (the pre-existing front page, reached after the flip sequence) ---- */
+  header.hero {
+    text-align: center;
+    padding: 3.5rem 0 2.5rem;
+  }
+  .eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--text-dim);
+    margin: 0 0 1.25rem;
+  }
+  .wordmark {
+    max-width: min(380px, 85%);
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .hero-tagline {
+    font-family: "Fraunces", "Segoe UI", system-ui, serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--text-dim);
+    margin: 1.1rem 0 0;
+  }
+  .hero-pitch {
+    color: var(--text-dim);
+    max-width: 620px;
+    margin: 1.25rem auto 0;
+    line-height: 1.65;
+  }
 
   /* ---- free banner ---- */
   .free-banner {
@@ -343,7 +291,7 @@
     border: 1px solid var(--accent);
     border-radius: var(--radius);
     padding: 1.1rem 1.4rem;
-    margin: 2.5rem 0 2rem;
+    margin: 0 0 2rem;
   }
   .free-banner .badge {
     font-family: "Fraunces", "Segoe UI", system-ui, serif;
@@ -481,140 +429,66 @@
     </ul>
   </nav>
 
-  <main>
-    <header class="story-hero">
-      <img class="logo-mark" src="docs/assets/hero/logo-mark.png" alt="20 Below" />
-      <h1>HOW <span>20 BELOW</span> WORKS</h1>
-      <p class="subtitle">A Character-Driven RPG of Fate, the Gifted, and Worlds Below Our Own</p>
-    </header>
-
-    <section class="story-step" style="--step-color:#d9d9d9">
-      <div class="step-sticky">
-        <div class="step-badge">1</div>
-        <h2 class="step-title">The World Presents a Problem</h2>
+  <div class="pin-sequence" id="pinSequence">
+    <div class="pin-panel">
+      <div class="panel-inner">
+        <img class="logo-mark-sm" src="docs/assets/hero/logo-mark.png" alt="" />
+        <h1 class="hero-title">HOW <span>20 BELOW</span> WORKS</h1>
+        <p class="hero-subtitle">A Character-Driven RPG of Fate, the Gifted, and Worlds Below Our Own</p>
       </div>
-      <div class="step-content">
-        <img class="step-art" src="docs/assets/hero/cosmic-silhouette.jpg" alt="A towering silhouetted figure against a starfield" style="border-radius: var(--radius);" />
-        <p class="step-body">The GM sets the scene and describes the situation. Something stands in your way or calls you to action.</p>
-        <span class="step-stamp">Narrative First. The Story Drives Everything.</span>
-      </div>
-    </section>
-
-    <section class="story-step" style="--step-color:#3d84c4">
-      <div class="step-sticky">
-        <div class="step-badge">2</div>
-        <h2 class="step-title">Choose Your Approach</h2>
-      </div>
-      <div class="step-content">
-        <img class="step-art" src="docs/assets/hero/five-elements.png" alt="The five elements: Water, Fire, Earth, Air, and Moira" />
-        <p class="step-body">Decide how your hero will meet the challenge. Choose the element that best fits your approach.</p>
-        <span class="step-stamp">Five Elements. Countless Approaches.</span>
-      </div>
-    </section>
-
-    <section class="story-step" style="--step-color:#3fd0e0">
-      <div class="step-sticky">
-        <div class="step-badge">3</div>
-        <h2 class="step-title">Calculate Your Target</h2>
-      </div>
-      <div class="step-content">
-        <img class="step-art" src="docs/assets/hero/element-difficulty.png" alt="Element plus Difficulty target icon" />
-        <p class="step-body">The target number is calculated by adding your element and the difficulty set by the GM.</p>
-        <span class="step-stamp">Your Abilities Guide Your Fate.</span>
-      </div>
-    </section>
-
-    <section class="story-step" style="--step-color:#d99a3d">
-      <div class="step-sticky">
-        <div class="step-badge">4</div>
-        <h2 class="step-title">Roll 2d10</h2>
-      </div>
-      <div class="step-content">
-        <img class="step-art" src="docs/assets/hero/dice.png" alt="Two ten-sided dice showing 7 and 3" />
-        <p class="step-body">2 is a critical success. 20 is a critical failure.</p>
-        <span class="step-stamp">Two Dice. Countless Outcomes.</span>
-      </div>
-    </section>
-
-    <section class="story-step" style="--step-color:#a06fd1">
-      <div class="step-sticky">
-        <div class="step-badge">5</div>
-        <h2 class="step-title">Compare Your Roll to Your Target Number</h2>
-      </div>
-      <div class="step-content">
-        <div class="flow-diagram">
-          <svg width="380" height="200" viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Roll versus target flowchart: a roll of 12 against a target of 14 succeeds, a roll of 16 fails">
-            <defs>
-              <marker id="flowArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M0,0 L10,5 L0,10 z" fill="#5c7d92"/>
-              </marker>
-            </defs>
-            <rect x="130" y="10" width="120" height="46" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
-            <text x="190" y="28" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="11" font-weight="500" fill="#eaf5fb">Target Number</text>
-            <text x="190" y="45" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="700" fill="#eaf5fb">14</text>
-            <line x1="160" y1="56" x2="100" y2="86" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#flowArrow)"/>
-            <line x1="220" y1="56" x2="280" y2="86" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#flowArrow)"/>
-            <rect x="20" y="88" width="160" height="60" rx="8" fill="#16281c" stroke="#6fbf73" stroke-width="1"/>
-            <text x="100" y="108" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" font-weight="500" fill="#eaf5fb">Roll: 12</text>
-            <text x="100" y="124" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="10" fill="#8fd4a0">12 &#8804; 14</text>
-            <text x="100" y="140" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" font-weight="700" fill="#8fd4a0">SUCCESS</text>
-            <rect x="200" y="88" width="160" height="60" rx="8" fill="#2e1a17" stroke="#e0685c" stroke-width="1"/>
-            <text x="280" y="108" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" font-weight="500" fill="#eaf5fb">Roll: 16</text>
-            <text x="280" y="124" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="10" fill="#f0a89c">16 &gt; 14</text>
-            <text x="280" y="140" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" font-weight="700" fill="#f0a89c">FAILURE</text>
-            <text x="190" y="178" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">2 always succeeds. 20 always fails.</text>
-          </svg>
-        </div>
-        <span class="step-stamp">Roll Under to Succeed.</span>
-      </div>
-    </section>
-
-    <section class="story-step" style="--step-color:#d9455f">
-      <div class="step-sticky">
-        <div class="step-badge">6</div>
-        <h2 class="step-title">Determine the Outcome</h2>
-      </div>
-      <div class="step-content">
-        <div class="outcome-list">
-          <div class="outcome-row" style="--row-color:#a06fd1">
-            <span class="outcome-mark">2</span>
-            <span class="outcome-label">Critical Success</span>
-          </div>
-          <div class="outcome-row" style="--row-color:#7bc47f">
-            <span class="outcome-mark">&#10003;</span>
-            <span class="outcome-label">Success</span>
-          </div>
-          <div class="outcome-row" style="--row-color:#d99a3d">
-            <span class="outcome-mark">&#10007;</span>
-            <span class="outcome-label">Failure</span>
-          </div>
-          <div class="outcome-row" style="--row-color:#d9455f">
-            <span class="outcome-mark">20</span>
-            <span class="outcome-label">Catastrophic Failure</span>
-          </div>
-        </div>
-        <p class="step-body">The result tells you what happens - and how the world changes.</p>
-        <span class="step-stamp">Every Roll Moves the Story Forward.</span>
-      </div>
-    </section>
-
-    <section class="story-step" style="--step-color:#7bc47f">
-      <div class="step-sticky">
-        <div class="step-badge">7</div>
-        <h2 class="step-title">The Story Continues</h2>
-      </div>
-      <div class="step-content">
-        <img class="step-art wide" src="docs/assets/hero/portal-figures.jpg" alt="Two silhouetted figures facing a glowing portal" />
-        <p class="step-body">The GM describes the outcome. Face the consequences. Keep playing.</p>
-        <span class="step-stamp">Fate Answers When You Act.</span>
-      </div>
-    </section>
-
-    <div class="story-close">
-      <img class="loop-banner" src="docs/assets/hero/loop-banner.webp" alt="The full loop: the world sets the stage, you choose your approach, calculate your target number, roll 2d10, compare your roll to your target, determine the outcome, accept your fate, and the cycle begins again" />
-      <p class="tagline">Five Elements. Infinite Outcomes. Your Story.</p>
-      <p class="byline"><strong>20 Below</strong> &nbsp;|&nbsp; 20belowrpg.com</p>
     </div>
+
+    <div class="pin-panel">
+      <img class="step-panel-img" src="docs/assets/hero/step-panel-1.webp" alt="Step 1: The World Presents a Problem. The GM sets the scene and describes the situation. Something stands in your way or calls you to action. Narrative First. The Story Drives Everything." />
+    </div>
+
+    <div class="pin-panel">
+      <img class="step-panel-img" src="docs/assets/hero/step-panel-2.webp" alt="Step 2: Choose Your Approach. Decide how your hero will meet the challenge. Choose the element that best fits your approach. Five Elements. Countless Approaches." />
+    </div>
+
+    <div class="pin-panel">
+      <img class="step-panel-img" src="docs/assets/hero/step-panel-3.webp" alt="Step 3: Calculate Your Target. The target number is calculated by adding your element and the difficulty set by the GM. Your Abilities Guide Your Fate." />
+    </div>
+
+    <div class="pin-panel">
+      <img class="step-panel-img" src="docs/assets/hero/step-panel-4.webp" alt="Step 4: Roll 2d10. 2 is a critical success. 20 is a critical failure. Two Dice. Countless Outcomes." />
+    </div>
+
+    <div class="pin-panel">
+      <img class="step-panel-img" src="docs/assets/hero/step-panel-5.webp" alt="Step 5: Compare Your Roll to Your Target Number. Roll 2d10; if the result is less than or equal to the target number it succeeds, otherwise it fails. 2 always succeeds. 20 always fails. Roll Under to Succeed." />
+    </div>
+
+    <div class="pin-panel">
+      <img class="step-panel-img" src="docs/assets/hero/step-panel-6.webp" alt="Step 6: Determine the Outcome - Critical Success, Success, Failure, or Catastrophic Failure. The result tells you what happens and how the world changes. Every Roll Moves the Story Forward." />
+    </div>
+
+    <div class="pin-panel">
+      <img class="step-panel-img" src="docs/assets/hero/step-panel-7.webp" alt="Step 7: The Story Continues. The GM describes the outcome. Face the consequences. Keep playing. Fate Answers When You Act." />
+    </div>
+
+    <div class="pin-panel">
+      <div class="panel-inner">
+        <p class="closing-tagline">Five Elements. Infinite Outcomes.<br />Your Story.</p>
+      </div>
+    </div>
+
+    <div class="pin-panel logo-panel">
+      <div class="panel-inner">
+        <img class="logo-mark-big" src="docs/assets/hero/logo-mark.png" alt="20 Below" />
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <header class="hero">
+      <p class="eyebrow">A Tabletop RPG Universe</p>
+      <img class="wordmark" src="docs/assets/brand/wordmark.png" alt="20 Below" />
+      <p class="hero-tagline">Five elements. Fated heroes. A world just beneath the surface of ours.</p>
+      <p class="hero-pitch">
+        20 Below is a genre-agnostic, fated-heroes tabletop RPG - a 2d10 roll-under core, five elemental
+        Attributes, and supernatural Gifts layered over whatever world you bring to it.
+      </p>
+    </header>
 
     <div class="free-banner">
       <div class="badge display">Free. Always.</div>
@@ -659,25 +533,73 @@
       var open = links.classList.toggle('open');
       this.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+  </script>
 
-    if ('IntersectionObserver' in window) {
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+    (function () {
+      var initialized = false;
+
+      function isNarrow() {
+        return window.matchMedia('(max-width: 780px)').matches;
+      }
+
+      function initPinSequence() {
+        if (initialized) return;
+        var gsapLoaded = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
+        if (!gsapLoaded || isNarrow()) return;
+
+        initialized = true;
+        gsap.registerPlugin(ScrollTrigger);
+        var panels = gsap.utils.toArray('.pin-panel');
+        panels.forEach(function (panel, i) {
+          if (i > 0) gsap.set(panel, { yPercent: 100 });
         });
-      }, { threshold: 0.2 });
-      document.querySelectorAll('.step-content').forEach(function (el) {
-        el.classList.add('reveal-pending');
-        observer.observe(el);
-      });
-    } else {
-      document.querySelectorAll('.step-content').forEach(function (el) {
-        el.classList.add('is-visible');
-      });
-    }
+
+        var tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#pinSequence',
+            start: 'top top',
+            end: function () { return '+=' + window.innerHeight * (panels.length - 1); },
+            pin: true,
+            scrub: 1,
+            snap: {
+              snapTo: 1 / (panels.length - 1),
+              duration: 0.4,
+              ease: 'power1.inOut',
+            },
+          },
+        });
+
+        panels.forEach(function (panel, i) {
+          if (i === panels.length - 1) return;
+          tl.to(panel, { yPercent: -100, ease: 'none' }, i)
+            .to(panels[i + 1], { yPercent: 0, ease: 'none' }, i);
+        });
+      }
+
+      // Mobile/no-JS/reduced-motion fallback: panels just stack and scroll
+      // normally (see the @media/.reduced-motion CSS rules), no pinning.
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('reduced-motion');
+        return;
+      }
+
+      // This script tag is the last thing in <body>, after two CDN
+      // downloads - by the time it runs, 'load' may already have fired
+      // (confirmed happening in testing). An addEventListener('load', ...)
+      // attached after the event already fired silently never runs, so
+      // check readyState first and only fall back to the listener if load
+      // genuinely hasn't happened yet. A resize listener also retries in
+      // case the viewport was transiently narrow the first time this ran.
+      if (document.readyState === 'complete') {
+        initPinSequence();
+      } else {
+        window.addEventListener('load', initPinSequence);
+      }
+      window.addEventListener('resize', initPinSequence);
+    })();
   </script>
 </body>
 </html>
