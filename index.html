@@ -203,25 +203,7 @@
     will-change: transform, opacity;
   }
 
-  /* finale reveal - logo mark + closing tagline, sticky so it fades in
-     place rather than scrolling off, revealing main underneath it. The
-     extra height beyond 100vh is the room the panel gets to sit still
-     while it fades. */
-  .finale-reveal {
-    position: relative;
-    height: 190vh;
-  }
-  .finale-panel {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 1.5rem;
-    background: var(--bg) center/cover no-repeat;
-    background-image: url('docs/assets/hero/pin-bg.webp');
-  }
+  /* finale stage - logo mark + closing tagline together */
   .finale-panel .logo-mark-big {
     max-width: 220px;
     width: 50%;
@@ -262,15 +244,6 @@
       transform: none !important;
       width: min(80vw, 320px);
     }
-    .finale-reveal { height: auto; }
-    .finale-panel {
-      position: relative;
-      top: auto;
-      height: auto;
-      min-height: 70vh;
-      background-image: none;
-      border-top: 1px solid var(--panel-border);
-    }
   }
   .no-js .pin-sequence,
   .reduced-motion .pin-sequence {
@@ -306,19 +279,10 @@
     width: min(80vw, 320px);
     opacity: 1 !important;
   }
-  .no-js .finale-reveal,
-  .reduced-motion .finale-reveal {
-    height: auto;
-  }
-  .no-js .finale-panel,
-  .reduced-motion .finale-panel {
-    position: relative;
-    top: auto;
-    height: auto;
-    min-height: 70vh;
-    background-image: none;
-    border-top: 1px solid var(--panel-border);
+  .no-js main,
+  .reduced-motion main {
     opacity: 1 !important;
+    margin-top: 0 !important;
   }
 
   main {
@@ -518,10 +482,8 @@
       <img class="fan-card" src="docs/assets/hero/card-6.webp" alt="Step 6: Determine the Outcome - Critical Success, Success, Failure, or Catastrophic Failure. The result tells you what happens and how the world changes. Every Roll Moves the Story Forward." />
       <img class="fan-card" src="docs/assets/hero/card-7.webp" alt="Step 7: The Story Continues. The GM describes the outcome. Face the consequences. Keep playing. Fate Answers When You Act." />
     </div>
-  </div>
 
-  <div class="finale-reveal">
-    <div class="finale-panel">
+    <div class="pin-stage finale-panel">
       <div class="panel-inner">
         <img class="logo-mark-big" src="docs/assets/hero/logo-mark.png" alt="20 Below" />
         <p class="closing-tagline">Five Elements. Infinite Outcomes.<br />Your Story.</p>
@@ -602,14 +564,10 @@
         initialized = true;
         gsap.registerPlugin(ScrollTrigger);
 
-        // Pull main up so it already sits behind the sticky finale panel
-        // instead of only arriving after the panel is fully gone - this is
-        // what makes the panel's fade actually reveal main underneath it,
-        // rather than fading to blank and then scrolling main into place.
-        gsap.set('main', { marginTop: '-100vh' });
-
         var hero = document.querySelector('.hero-intro');
         var fanStage = document.querySelector('.fan-stage');
+        var finale = document.querySelector('.finale-panel');
+        var main = document.querySelector('main');
         var cards = gsap.utils.toArray('.fan-card');
 
         // Resting slot for card index i (0-based) once it's been buried by
@@ -625,6 +583,8 @@
           };
         }
 
+        gsap.set(finale, { opacity: 0 });
+        gsap.set(main, { opacity: 0, marginTop: '-100vh' });
         cards.forEach(function (card, i) {
           var slot = restSlot(i);
           gsap.set(card, {
@@ -638,7 +598,17 @@
           });
         });
 
-        var steps = cards.length + 1; // 6 card-entrance beats + fan-exit beat
+        // Once the user scrolls all the way to the finale, the transition
+        // into the landing page is a timed auto-fade (onLeave below), not
+        // more scroll-scrubbed animation - the scroll drops away and the
+        // page just arrives. marginTop:-100vh on main keeps it sitting
+        // directly behind the finale panel the whole time, so it's actually
+        // visible through that fade instead of appearing only after it
+        // completes. The trigger is killed once the fade starts: left
+        // alive, its scrubbed progress stays clamped at 1 on every further
+        // scroll event and keeps reasserting finale's opacity back to 1,
+        // fighting the fade tween below.
+        var steps = cards.length + 1; // 6 card-entrance beats + fan-exit/finale-reveal beat
         var tl = gsap.timeline({
           scrollTrigger: {
             trigger: '#pinSequence',
@@ -650,6 +620,19 @@
               snapTo: 1 / steps,
               duration: 0.4,
               ease: 'power1.inOut',
+            },
+            onLeave: function () {
+              // Detach finale from the scrubbed timeline's control first:
+              // self.kill() was tried here and reverted finale's opacity
+              // back to its pre-animation value as a side effect, and just
+              // leaving the scrubbed tween in place means every later
+              // scroll event re-clamps its progress to 1 and re-asserts
+              // opacity:1, fighting this fade. Killing only the tween that
+              // targets finale avoids both problems.
+              gsap.killTweensOf(finale);
+              gsap.timeline({ defaults: { duration: 0.9, ease: 'power2.inOut' } })
+                .to(finale, { opacity: 0 }, 0)
+                .to(main, { opacity: 1 }, 0);
             },
           },
         });
@@ -668,24 +651,11 @@
             .to(cards[i - 1], { rotate: restSlot(i - 1).rotate, ease: 'none' }, i);
         }
 
-        // Final beat: the fan slides up and off, revealing the finale
-        // section (a separate sticky-fade ScrollTrigger below hands that
-        // off into the main page content).
-        tl.to(fanStage, { yPercent: -130, opacity: 0, ease: 'none' }, cards.length);
-
-        // The finale panel is CSS position:sticky, so it holds still on
-        // screen for the length of .finale-reveal's extra height while this
-        // fades its opacity to 0 - a true fade, not a scroll, into main.
-        gsap.to('.finale-panel', {
-          opacity: 0,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: '.finale-reveal',
-            start: 'top top',
-            end: 'bottom bottom',
-            scrub: true,
-          },
-        });
+        // Final beat: the fan slides up and off while the finale panel
+        // (logo mark + closing tagline) fades in. Reaching the end of this
+        // beat is what fires onLeave above.
+        tl.to(fanStage, { yPercent: -130, opacity: 0, ease: 'none' }, cards.length)
+          .to(finale, { opacity: 1, ease: 'none' }, cards.length);
       }
 
       // Mobile/no-JS/reduced-motion fallback: panels just stack and scroll
