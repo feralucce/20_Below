@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="assets/brand/favicon-128.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0a1720;
@@ -150,7 +150,7 @@
   .hero-demo h3 span { color: var(--accent); }
   .hero-demo p {
     position: relative;
-    font-family: "Oswald", "Segoe UI", sans-serif;
+    font-family: "Montserrat", "Segoe UI", sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -174,9 +174,9 @@
     box-shadow: 0 0 10px -2px var(--step-color);
   }
   .step-chip .n {
-    font-family: "Oswald", sans-serif;
-    font-weight: 700;
-    font-size: 1.1rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
     color: var(--step-color);
   }
   .step-chip .hex {
@@ -205,20 +205,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Oswald", sans-serif;
-    font-weight: 700;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
     color: var(--step-color);
     margin-bottom: 0.75rem;
   }
   .glow-card h4 {
-    font-family: "Oswald", sans-serif;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     margin: 0 0 0.4rem;
     color: var(--text);
   }
   .glow-card p {
+    font-family: "Montserrat", "Segoe UI", sans-serif;
     font-size: 0.85rem;
     color: var(--text-dim);
     line-height: 1.5;
@@ -226,11 +229,11 @@
   }
   .glow-card .stamp {
     display: inline-block;
-    font-family: "Oswald", sans-serif;
-    font-weight: 600;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--step-color);
     border: 1px solid var(--step-color);
     border-radius: 6px;
@@ -440,7 +443,67 @@
     <span class="stamp">Roll Under to Succeed</span>
   </div>
 
-  <p class="note">Typography: display headlines in <strong>Anton</strong> (the poster/impact face), labels and card copy in <strong>Oswald</strong> (condensed, uppercase). Both are free Google Fonts. Elsewhere on the site: "Segoe UI" / system-ui, unchanged. Backwater Static uses its own separate palette (Fraunces/Source Serif 4/Space Mono, brass/static-pink/cyan on a dark green ground).</p>
+  <h2>Typography</h2>
+  <div class="grid">
+    <div class="swatch">
+      <div class="info" style="padding-top:1.1rem;">
+        <div class="name">Segoe UI / system-ui</div>
+        <div class="token">site-wide default</div>
+        <div style="font-family:'Segoe UI', system-ui, sans-serif; font-size:1.3rem; margin-top:0.5rem; color:var(--text);">20 Below</div>
+        <div class="use">Body text and UI across rules pages, the app, and the Combat Tracker</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="info" style="padding-top:1.1rem;">
+        <div class="name">Anton</div>
+        <div class="token">Google Font · front page hero only</div>
+        <div style="font-family:'Anton', sans-serif; font-size:1.5rem; margin-top:0.5rem; color:var(--text);">20 Below</div>
+        <div class="use">Big display headlines ("HOW 20 BELOW WORKS")</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="info" style="padding-top:1.1rem;">
+        <div class="name">Bebas Neue</div>
+        <div class="token">Google Font · front page hero only</div>
+        <div style="font-family:'Bebas Neue', sans-serif; font-size:1.5rem; margin-top:0.5rem; color:var(--text); letter-spacing:0.03em;">20 BELOW</div>
+        <div class="use">Step badges, titles, and the colored stamp callouts</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="info" style="padding-top:1.1rem;">
+        <div class="name">Montserrat</div>
+        <div class="token">Google Font · front page hero only</div>
+        <div style="font-family:'Montserrat', sans-serif; font-weight:500; font-size:1.15rem; margin-top:0.5rem; color:var(--text);">20 Below</div>
+        <div class="use">Subtitle and card body copy in the hero system</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="info" style="padding-top:1.1rem;">
+        <div class="name">Fraunces</div>
+        <div class="token">Google Font · Backwater Static</div>
+        <div style="font-family:'Fraunces', serif; font-style:italic; font-size:1.4rem; margin-top:0.5rem; color:var(--text);">Backwater Static</div>
+        <div class="use">Backwater Static's wordmark, used on index.html's campaign card only</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="info" style="padding-top:1.1rem;">
+        <div class="name">Space Mono</div>
+        <div class="token">Google Font · Backwater Static</div>
+        <div style="font-family:'Space Mono', monospace; font-size:1.1rem; margin-top:0.5rem; color:var(--text);">STATIC</div>
+        <div class="use">Uppercase labels on Backwater Static's campaign card</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="info" style="padding-top:1.1rem;">
+        <div class="name">Consolas</div>
+        <div class="token">system monospace</div>
+        <div style="font-family:'Consolas', 'Courier New', monospace; font-size:1.1rem; margin-top:0.5rem; color:var(--text);">#3D84C4</div>
+        <div class="use">Hex codes and CSS tokens on this style guide</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="note">Anton, Bebas Neue, and Montserrat are proposed for the front-page hero system only (see above) - not used anywhere else on the site yet. Fraunces and Space Mono are Backwater Static's own faces, appearing on 20 Below's <code>index.html</code> only for its campaign card. Everything else on the site uses "Segoe UI" / system-ui.</p>
 </main>
 </body>
 </html>
