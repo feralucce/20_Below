@@ -203,7 +203,15 @@
     will-change: transform, opacity;
   }
 
-  /* finale stage - logo mark + closing tagline together */
+  /* finale stage - logo mark, closing tagline, and the button onward.
+     pointer-events:none by default since this stage sits on top of the
+     other two the whole time (later in DOM order = painted on top,
+     regardless of opacity) - without this the Continue button below
+     would be clickable well before it's actually visible. JS flips it
+     back to auto once the stage is actually revealed. */
+  .finale-panel {
+    pointer-events: none;
+  }
   .finale-panel .logo-mark-big {
     max-width: 220px;
     width: 50%;
@@ -218,6 +226,24 @@
     font-size: clamp(1.4rem, 4.5vw, 2.2rem);
     color: var(--accent);
     margin: 0;
+  }
+  .continue-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.7rem 1.8rem;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    color: var(--text);
+    text-decoration: none;
+    font-family: "Montserrat", "Segoe UI", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+  }
+  .continue-btn:hover {
+    background: var(--accent-dim);
+    transform: translateY(-2px);
   }
 
   /* Mobile / no-JS / reduced-motion fallback: plain stacked scroll, no pin */
@@ -244,6 +270,7 @@
       transform: none !important;
       width: min(80vw, 320px);
     }
+    .finale-panel { pointer-events: auto; }
   }
   .no-js .pin-sequence,
   .reduced-motion .pin-sequence {
@@ -279,10 +306,9 @@
     width: min(80vw, 320px);
     opacity: 1 !important;
   }
-  .no-js main,
-  .reduced-motion main {
-    opacity: 1 !important;
-    margin-top: 0 !important;
+  .no-js .finale-panel,
+  .reduced-motion .finale-panel {
+    pointer-events: auto;
   }
 
   main {
@@ -487,11 +513,12 @@
       <div class="panel-inner">
         <img class="logo-mark-big" src="docs/assets/hero/logo-mark.png" alt="20 Below" />
         <p class="closing-tagline">Five Elements. Infinite Outcomes.<br />Your Story.</p>
+        <a class="continue-btn" href="#mainContent">Continue &darr;</a>
       </div>
     </div>
   </div>
 
-  <main>
+  <main id="mainContent">
     <header class="hero">
       <img class="wordmark" src="docs/assets/brand/wordmark.png" alt="20 Below" />
       <p class="hero-tagline">Five elements. Fated heroes. A world just beneath the surface of ours.</p>
@@ -544,6 +571,12 @@
       var open = links.classList.toggle('open');
       this.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+
+    // Plain anchor jump works with no JS at all; this just smooths it out.
+    document.querySelector('.continue-btn').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.getElementById('mainContent').scrollIntoView({ behavior: 'smooth' });
+    });
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -567,7 +600,6 @@
         var hero = document.querySelector('.hero-intro');
         var fanStage = document.querySelector('.fan-stage');
         var finale = document.querySelector('.finale-panel');
-        var main = document.querySelector('main');
         var cards = gsap.utils.toArray('.fan-card');
 
         // Resting slot for card index i (0-based) once it's been buried by
@@ -584,7 +616,6 @@
         }
 
         gsap.set(finale, { opacity: 0 });
-        gsap.set(main, { opacity: 0, marginTop: '-100vh' });
         cards.forEach(function (card, i) {
           var slot = restSlot(i);
           gsap.set(card, {
@@ -598,16 +629,9 @@
           });
         });
 
-        // Once the user scrolls all the way to the finale, the transition
-        // into the landing page is a timed auto-fade (onLeave below), not
-        // more scroll-scrubbed animation - the scroll drops away and the
-        // page just arrives. marginTop:-100vh on main keeps it sitting
-        // directly behind the finale panel the whole time, so it's actually
-        // visible through that fade instead of appearing only after it
-        // completes. The trigger is killed once the fade starts: left
-        // alive, its scrubbed progress stays clamped at 1 on every further
-        // scroll event and keeps reasserting finale's opacity back to 1,
-        // fighting the fade tween below.
+        // The fan sequence is standalone: it ends at the finale (logo +
+        // tagline + Continue button), and does NOT auto-advance into the
+        // landing page - the button below is the only way onward.
         var steps = cards.length + 1; // 6 card-entrance beats + fan-exit/finale-reveal beat
         var tl = gsap.timeline({
           scrollTrigger: {
@@ -621,18 +645,12 @@
               duration: 0.4,
               ease: 'power1.inOut',
             },
-            onLeave: function () {
-              // Detach finale from the scrubbed timeline's control first:
-              // self.kill() was tried here and reverted finale's opacity
-              // back to its pre-animation value as a side effect, and just
-              // leaving the scrubbed tween in place means every later
-              // scroll event re-clamps its progress to 1 and re-asserts
-              // opacity:1, fighting this fade. Killing only the tween that
-              // targets finale avoids both problems.
-              gsap.killTweensOf(finale);
-              gsap.timeline({ defaults: { duration: 0.9, ease: 'power2.inOut' } })
-                .to(finale, { opacity: 0 }, 0)
-                .to(main, { opacity: 1 }, 0);
+            // finale sits on top of the whole sequence the entire time
+            // (see the .finale-panel CSS comment), so its Continue button
+            // must stay unclickable until it's actually the thing on
+            // screen - otherwise it's clickable from scroll position zero.
+            onUpdate: function (self) {
+              finale.style.pointerEvents = self.progress > 0.98 ? 'auto' : 'none';
             },
           },
         });
@@ -652,8 +670,7 @@
         }
 
         // Final beat: the fan slides up and off while the finale panel
-        // (logo mark + closing tagline) fades in. Reaching the end of this
-        // beat is what fires onLeave above.
+        // (logo mark + closing tagline + Continue button) fades in.
         tl.to(fanStage, { yPercent: -130, opacity: 0, ease: 'none' }, cards.length)
           .to(finale, { opacity: 1, ease: 'none' }, cards.length);
       }
