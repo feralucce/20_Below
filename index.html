@@ -246,31 +246,53 @@
     transform: translateY(-2px);
   }
 
-  /* Mobile / no-JS / reduced-motion fallback: plain stacked scroll, no pin */
+  /* Mobile / no-JS / reduced-motion fallback: no pin. Hero and finale are
+     a plain stacked block each (sized to their content, not forced to
+     70vh - that left huge dead space around a couple of lines of text).
+     The 7 cards become a horizontal swipe carousel instead of one long
+     vertical stack, so getting through the intro is one screen's worth
+     of swiping rather than several screens of scrolling. */
+  .swipe-hint { display: none; }
   @media (max-width: 780px) {
     .pin-sequence { height: auto; overflow: visible; background-image: none; }
     .pin-stage {
       position: relative;
       inset: auto;
-      min-height: 70vh;
+      padding: 3.5rem 1.5rem;
       border-top: 1px solid var(--panel-border);
     }
     .pin-stage:first-child { border-top: none; }
     .fan-stage {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.25rem;
-      padding: 2.5rem 1.5rem;
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 1.5rem 0;
+      scrollbar-width: none;
     }
+    .fan-stage::-webkit-scrollbar { display: none; }
     .fan-card {
       position: relative;
       left: auto;
       bottom: auto;
       transform: none !important;
-      width: min(80vw, 320px);
+      flex: 0 0 100%;
+      width: 100%;
+      height: 65vh;
+      max-width: 100%;
+      max-height: 65vh;
+      object-fit: contain;
+      scroll-snap-align: center;
     }
     .finale-panel { pointer-events: auto; }
+    .swipe-hint {
+      display: block;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      padding: 0 1.5rem 1rem;
+    }
   }
   .no-js .pin-sequence,
   .reduced-motion .pin-sequence {
@@ -282,7 +304,7 @@
   .reduced-motion .pin-stage {
     position: relative;
     inset: auto;
-    min-height: 70vh;
+    padding: 3.5rem 1.5rem;
     border-top: 1px solid var(--panel-border);
   }
   .no-js .pin-stage:first-child,
@@ -292,10 +314,16 @@
   .no-js .fan-stage,
   .reduced-motion .fan-stage {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-    padding: 2.5rem 1.5rem;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 1.5rem 0;
+    scrollbar-width: none;
+  }
+  .no-js .fan-stage::-webkit-scrollbar,
+  .reduced-motion .fan-stage::-webkit-scrollbar {
+    display: none;
   }
   .no-js .fan-card,
   .reduced-motion .fan-card {
@@ -303,12 +331,26 @@
     left: auto;
     bottom: auto;
     transform: none !important;
-    width: min(80vw, 320px);
+    flex: 0 0 100%;
+    width: 100%;
+    height: 65vh;
+    max-width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+    scroll-snap-align: center;
     opacity: 1 !important;
   }
   .no-js .finale-panel,
   .reduced-motion .finale-panel {
     pointer-events: auto;
+  }
+  .no-js .swipe-hint,
+  .reduced-motion .swipe-hint {
+    display: block;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    padding: 0 1.5rem 1rem;
   }
 </style>
 </head>
@@ -346,6 +388,7 @@
       <img class="fan-card" src="docs/assets/hero/card-6.webp" alt="Step 6: Determine the Outcome - Critical Success, Success, Failure, or Catastrophic Failure. The result tells you what happens and how the world changes. Every Roll Moves the Story Forward." />
       <img class="fan-card" src="docs/assets/hero/card-7.webp" alt="Step 7: The Story Continues. The GM describes the outcome. Face the consequences. Keep playing. Fate Answers When You Act." />
     </div>
+    <p class="swipe-hint">Swipe for more &rarr;</p>
 
     <div class="pin-stage finale-panel">
       <div class="panel-inner">
