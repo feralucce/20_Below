@@ -203,7 +203,25 @@
     will-change: transform, opacity;
   }
 
-  /* finale stage - logo mark + closing tagline together */
+  /* finale reveal - logo mark + closing tagline, sticky so it fades in
+     place rather than scrolling off, revealing main underneath it. The
+     extra height beyond 100vh is the room the panel gets to sit still
+     while it fades. */
+  .finale-reveal {
+    position: relative;
+    height: 190vh;
+  }
+  .finale-panel {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    background: var(--bg) center/cover no-repeat;
+    background-image: url('docs/assets/hero/pin-bg.webp');
+  }
   .finale-panel .logo-mark-big {
     max-width: 220px;
     width: 50%;
@@ -244,6 +262,15 @@
       transform: none !important;
       width: min(80vw, 320px);
     }
+    .finale-reveal { height: auto; }
+    .finale-panel {
+      position: relative;
+      top: auto;
+      height: auto;
+      min-height: 70vh;
+      background-image: none;
+      border-top: 1px solid var(--panel-border);
+    }
   }
   .no-js .pin-sequence,
   .reduced-motion .pin-sequence {
@@ -279,8 +306,18 @@
     width: min(80vw, 320px);
     opacity: 1 !important;
   }
-  .no-js main,
-  .reduced-motion main {
+  .no-js .finale-reveal,
+  .reduced-motion .finale-reveal {
+    height: auto;
+  }
+  .no-js .finale-panel,
+  .reduced-motion .finale-panel {
+    position: relative;
+    top: auto;
+    height: auto;
+    min-height: 70vh;
+    background-image: none;
+    border-top: 1px solid var(--panel-border);
     opacity: 1 !important;
   }
 
@@ -294,13 +331,6 @@
   header.hero {
     text-align: center;
     padding: 3.5rem 0 2.5rem;
-  }
-  .eyebrow {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--text-dim);
-    margin: 0 0 1.25rem;
   }
   .wordmark {
     max-width: min(380px, 85%);
@@ -488,8 +518,10 @@
       <img class="fan-card" src="docs/assets/hero/card-6.webp" alt="Step 6: Determine the Outcome - Critical Success, Success, Failure, or Catastrophic Failure. The result tells you what happens and how the world changes. Every Roll Moves the Story Forward." />
       <img class="fan-card" src="docs/assets/hero/card-7.webp" alt="Step 7: The Story Continues. The GM describes the outcome. Face the consequences. Keep playing. Fate Answers When You Act." />
     </div>
+  </div>
 
-    <div class="pin-stage finale-panel">
+  <div class="finale-reveal">
+    <div class="finale-panel">
       <div class="panel-inner">
         <img class="logo-mark-big" src="docs/assets/hero/logo-mark.png" alt="20 Below" />
         <p class="closing-tagline">Five Elements. Infinite Outcomes.<br />Your Story.</p>
@@ -499,7 +531,6 @@
 
   <main>
     <header class="hero">
-      <p class="eyebrow">A Tabletop RPG Universe</p>
       <img class="wordmark" src="docs/assets/brand/wordmark.png" alt="20 Below" />
       <p class="hero-tagline">Five elements. Fated heroes. A world just beneath the surface of ours.</p>
       <p class="hero-pitch">
@@ -571,11 +602,15 @@
         initialized = true;
         gsap.registerPlugin(ScrollTrigger);
 
+        // Pull main up so it already sits behind the sticky finale panel
+        // instead of only arriving after the panel is fully gone - this is
+        // what makes the panel's fade actually reveal main underneath it,
+        // rather than fading to blank and then scrolling main into place.
+        gsap.set('main', { marginTop: '-100vh' });
+
         var hero = document.querySelector('.hero-intro');
         var fanStage = document.querySelector('.fan-stage');
-        var finale = document.querySelector('.finale-panel');
         var cards = gsap.utils.toArray('.fan-card');
-        var main = document.querySelector('main');
 
         // Resting slot for card index i (0-based) once it's been buried by
         // later cards. The most recently dealt card is always upright; each
@@ -590,8 +625,6 @@
           };
         }
 
-        gsap.set(finale, { opacity: 0 });
-        gsap.set(main, { opacity: 0 });
         cards.forEach(function (card, i) {
           var slot = restSlot(i);
           gsap.set(card, {
@@ -605,7 +638,7 @@
           });
         });
 
-        var steps = cards.length + 2; // 6 card-entrance beats + fan-exit beat + main-reveal beat
+        var steps = cards.length + 1; // 6 card-entrance beats + fan-exit beat
         var tl = gsap.timeline({
           scrollTrigger: {
             trigger: '#pinSequence',
@@ -635,12 +668,24 @@
             .to(cards[i - 1], { rotate: restSlot(i - 1).rotate, ease: 'none' }, i);
         }
 
-        // Final beat: the fan slides up and off, revealing the finale panel,
-        // which then fades into the main page content.
-        tl.to(fanStage, { yPercent: -130, opacity: 0, ease: 'none' }, cards.length)
-          .to(finale, { opacity: 1, ease: 'none' }, cards.length)
-          .to(finale, { opacity: 0, ease: 'none' }, cards.length + 1)
-          .to(main, { opacity: 1, ease: 'none' }, cards.length + 1);
+        // Final beat: the fan slides up and off, revealing the finale
+        // section (a separate sticky-fade ScrollTrigger below hands that
+        // off into the main page content).
+        tl.to(fanStage, { yPercent: -130, opacity: 0, ease: 'none' }, cards.length);
+
+        // The finale panel is CSS position:sticky, so it holds still on
+        // screen for the length of .finale-reveal's extra height while this
+        // fades its opacity to 0 - a true fade, not a scroll, into main.
+        gsap.to('.finale-panel', {
+          opacity: 0,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.finale-reveal',
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: true,
+          },
+        });
       }
 
       // Mobile/no-JS/reduced-motion fallback: panels just stack and scroll
