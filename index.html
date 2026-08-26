@@ -673,14 +673,6 @@
         el.classList.add('reveal-pending');
         observer.observe(el);
       });
-      // Safety net: if the observer never fires for some reason (seen in at
-      // least one automated test harness that doesn't composite frames),
-      // don't leave content stuck invisible - force it in after a beat.
-      setTimeout(function () {
-        document.querySelectorAll('.step-content.reveal-pending:not(.is-visible)').forEach(function (el) {
-          el.classList.add('is-visible');
-        });
-      }, 1500);
     } else {
       document.querySelectorAll('.step-content').forEach(function (el) {
         el.classList.add('is-visible');
