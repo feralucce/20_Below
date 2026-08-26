@@ -260,7 +260,7 @@
       align-items: center;
       overflow-x: auto;
       overflow-anchor: none;
-      scroll-snap-type: x mandatory;
+      scroll-snap-type: x proximity;
       -webkit-overflow-scrolling: touch;
       gap: 1.25rem;
       padding: 1.5rem 1.25rem;
@@ -311,7 +311,7 @@
     align-items: center;
     overflow-x: auto;
     overflow-anchor: none;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
     gap: 1.25rem;
     padding: 1.5rem 1.25rem;
@@ -399,15 +399,28 @@
       this.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
-    // Belt-and-suspenders for the mobile card carousel: some mobile
-    // browsers resolve the initial scroll-snap position using stale
-    // geometry (seen landing mid-deck on real devices even with
-    // overflow-anchor:none set), so force it back to card 1 explicitly.
+    // Mobile browsers (confirmed on real devices, both Chrome and
+    // DuckDuckGo) resolve this carousel's initial scroll-snap position to
+    // card 4 instead of card 1, and mandatory snapping was refusing to
+    // scroll back past wherever it landed - switched to proximity
+    // snapping (see CSS) so it's never a hard lock, and force scrollLeft
+    // back to 0 at several checkpoints here since the wrong position
+    // seems to get set at some point after DOM parsing (image decode,
+    // font swap, or the browser's own late re-snap), not reliably at any
+    // single one of them.
     var fanStageEl = document.querySelector('.fan-stage');
     if (fanStageEl) {
-      fanStageEl.scrollLeft = 0;
-      window.addEventListener('load', function () {
-        fanStageEl.scrollLeft = 0;
+      var userTouchedCarousel = false;
+      fanStageEl.addEventListener('touchstart', function () { userTouchedCarousel = true; }, { passive: true });
+      fanStageEl.addEventListener('wheel', function () { userTouchedCarousel = true; }, { passive: true });
+      var resetFanScroll = function () {
+        if (!userTouchedCarousel) fanStageEl.scrollLeft = 0;
+      };
+      resetFanScroll();
+      document.addEventListener('DOMContentLoaded', resetFanScroll);
+      window.addEventListener('load', resetFanScroll);
+      [0, 50, 150, 300, 600, 1000].forEach(function (delay) {
+        window.setTimeout(resetFanScroll, delay);
       });
     }
   </script>
