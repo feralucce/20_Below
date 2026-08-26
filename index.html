@@ -137,13 +137,15 @@
     .nav-links li:last-child { border-bottom: none; }
   }
 
-  /* ==== Pinned flip sequence (desktop/tablet: JS-driven via GSAP) ==== */
+  /* ==== Pinned fan sequence (desktop/tablet: JS-driven via GSAP) ==== */
   .pin-sequence {
     position: relative;
     height: 100vh;
     overflow: hidden;
+    background: var(--bg) center/cover no-repeat;
+    background-image: url('docs/assets/hero/pin-bg.webp');
   }
-  .pin-panel {
+  .pin-stage {
     position: absolute;
     inset: 0;
     display: flex;
@@ -156,7 +158,7 @@
     text-align: center;
   }
 
-  /* hero panel (panel 1) */
+  /* hero-intro stage */
   .panel-inner .logo-mark-sm {
     max-width: 80px;
     height: auto;
@@ -184,18 +186,30 @@
     margin: 0.9rem 0 0;
   }
 
-  /* step panels (2-8) - single cropped image per step, straight from the
-     finalized infographic, rather than separately hand-styled text/art */
-  .step-panel-img {
-    display: block;
-    max-height: 82vh;
-    max-width: 90vw;
-    width: auto;
+  /* fan stage - the 7 step cards accumulate here into a poker-hand fan */
+  .fan-stage {
+    position: relative;
+  }
+  .fan-card {
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    width: clamp(170px, 24vw, 300px);
     height: auto;
-    margin: 0 auto;
+    transform-origin: 50% 100%;
+    filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.6));
+    will-change: transform, opacity;
   }
 
-  /* tagline panel (9) */
+  /* finale stage - logo mark + closing tagline together */
+  .finale-panel .logo-mark-big {
+    max-width: 220px;
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem;
+    filter: drop-shadow(0 0 36px rgba(61, 132, 196, 0.45));
+  }
   .closing-tagline {
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 0.04em;
@@ -204,43 +218,68 @@
     margin: 0;
   }
 
-  /* logo panel (10) */
-  .logo-panel .logo-mark-big {
-    max-width: 280px;
-    width: 60%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    filter: drop-shadow(0 0 36px rgba(61, 132, 196, 0.45));
-  }
-
   /* Mobile / no-JS / reduced-motion fallback: plain stacked scroll, no pin */
   @media (max-width: 780px) {
-    .pin-sequence { height: auto; overflow: visible; }
-    .pin-panel {
+    .pin-sequence { height: auto; overflow: visible; background-image: none; }
+    .pin-stage {
       position: relative;
       inset: auto;
       min-height: 70vh;
       border-top: 1px solid var(--panel-border);
     }
-    .pin-panel:first-child { border-top: none; }
+    .pin-stage:first-child { border-top: none; }
+    .fan-stage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 2.5rem 1.5rem;
+    }
+    .fan-card {
+      position: relative;
+      left: auto;
+      bottom: auto;
+      transform: none !important;
+      width: min(80vw, 320px);
+    }
   }
   .no-js .pin-sequence,
   .reduced-motion .pin-sequence {
     height: auto;
     overflow: visible;
+    background-image: none;
   }
-  .no-js .pin-panel,
-  .reduced-motion .pin-panel {
+  .no-js .pin-stage,
+  .reduced-motion .pin-stage {
     position: relative;
     inset: auto;
     min-height: 70vh;
     border-top: 1px solid var(--panel-border);
-    transform: none !important;
   }
-  .no-js .pin-panel:first-child,
-  .reduced-motion .pin-panel:first-child {
+  .no-js .pin-stage:first-child,
+  .reduced-motion .pin-stage:first-child {
     border-top: none;
+  }
+  .no-js .fan-stage,
+  .reduced-motion .fan-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2.5rem 1.5rem;
+  }
+  .no-js .fan-card,
+  .reduced-motion .fan-card {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none !important;
+    width: min(80vw, 320px);
+    opacity: 1 !important;
+  }
+  .no-js main,
+  .reduced-motion main {
+    opacity: 1 !important;
   }
 
   main {
@@ -430,7 +469,7 @@
   </nav>
 
   <div class="pin-sequence" id="pinSequence">
-    <div class="pin-panel">
+    <div class="pin-stage hero-intro">
       <div class="panel-inner">
         <img class="logo-mark-sm" src="docs/assets/hero/logo-mark.png" alt="" />
         <h1 class="hero-title">HOW <span>20 BELOW</span> WORKS</h1>
@@ -438,43 +477,20 @@
       </div>
     </div>
 
-    <div class="pin-panel">
-      <img class="step-panel-img" src="docs/assets/hero/step-panel-1.webp" alt="Step 1: The World Presents a Problem. The GM sets the scene and describes the situation. Something stands in your way or calls you to action. Narrative First. The Story Drives Everything." />
+    <div class="pin-stage fan-stage" id="fanStage">
+      <img class="fan-card" src="docs/assets/hero/card-1.webp" alt="Step 1: The World Presents a Problem. The GM sets the scene and describes the situation. Something stands in your way or calls you to action. Narrative First. The Story Drives Everything." />
+      <img class="fan-card" src="docs/assets/hero/card-2.webp" alt="Step 2: Choose Your Approach. Decide how your hero will meet the challenge. Choose the element that best fits your approach. Five Elements. Countless Approaches." />
+      <img class="fan-card" src="docs/assets/hero/card-3.webp" alt="Step 3: Calculate Your Target. The target number is calculated by adding your element and the difficulty set by the GM. Your Abilities Guide Your Fate." />
+      <img class="fan-card" src="docs/assets/hero/card-4.webp" alt="Step 4: Roll 2d10. 2 is a critical success. 20 is a critical failure. Two Dice. Countless Outcomes." />
+      <img class="fan-card" src="docs/assets/hero/card-5.webp" alt="Step 5: Compare Your Roll to Your Target Number. Roll 2d10; if the result is less than or equal to the target number it succeeds, otherwise it fails. 2 always succeeds. 20 always fails. Roll Under to Succeed." />
+      <img class="fan-card" src="docs/assets/hero/card-6.webp" alt="Step 6: Determine the Outcome - Critical Success, Success, Failure, or Catastrophic Failure. The result tells you what happens and how the world changes. Every Roll Moves the Story Forward." />
+      <img class="fan-card" src="docs/assets/hero/card-7.webp" alt="Step 7: The Story Continues. The GM describes the outcome. Face the consequences. Keep playing. Fate Answers When You Act." />
     </div>
 
-    <div class="pin-panel">
-      <img class="step-panel-img" src="docs/assets/hero/step-panel-2.webp" alt="Step 2: Choose Your Approach. Decide how your hero will meet the challenge. Choose the element that best fits your approach. Five Elements. Countless Approaches." />
-    </div>
-
-    <div class="pin-panel">
-      <img class="step-panel-img" src="docs/assets/hero/step-panel-3.webp" alt="Step 3: Calculate Your Target. The target number is calculated by adding your element and the difficulty set by the GM. Your Abilities Guide Your Fate." />
-    </div>
-
-    <div class="pin-panel">
-      <img class="step-panel-img" src="docs/assets/hero/step-panel-4.webp" alt="Step 4: Roll 2d10. 2 is a critical success. 20 is a critical failure. Two Dice. Countless Outcomes." />
-    </div>
-
-    <div class="pin-panel">
-      <img class="step-panel-img" src="docs/assets/hero/step-panel-5.webp" alt="Step 5: Compare Your Roll to Your Target Number. Roll 2d10; if the result is less than or equal to the target number it succeeds, otherwise it fails. 2 always succeeds. 20 always fails. Roll Under to Succeed." />
-    </div>
-
-    <div class="pin-panel">
-      <img class="step-panel-img" src="docs/assets/hero/step-panel-6.webp" alt="Step 6: Determine the Outcome - Critical Success, Success, Failure, or Catastrophic Failure. The result tells you what happens and how the world changes. Every Roll Moves the Story Forward." />
-    </div>
-
-    <div class="pin-panel">
-      <img class="step-panel-img" src="docs/assets/hero/step-panel-7.webp" alt="Step 7: The Story Continues. The GM describes the outcome. Face the consequences. Keep playing. Fate Answers When You Act." />
-    </div>
-
-    <div class="pin-panel">
-      <div class="panel-inner">
-        <p class="closing-tagline">Five Elements. Infinite Outcomes.<br />Your Story.</p>
-      </div>
-    </div>
-
-    <div class="pin-panel logo-panel">
+    <div class="pin-stage finale-panel">
       <div class="panel-inner">
         <img class="logo-mark-big" src="docs/assets/hero/logo-mark.png" alt="20 Below" />
+        <p class="closing-tagline">Five Elements. Infinite Outcomes.<br />Your Story.</p>
       </div>
     </div>
   </div>
@@ -552,31 +568,73 @@
 
         initialized = true;
         gsap.registerPlugin(ScrollTrigger);
-        var panels = gsap.utils.toArray('.pin-panel');
-        panels.forEach(function (panel, i) {
-          if (i > 0) gsap.set(panel, { yPercent: 100 });
+
+        var hero = document.querySelector('.hero-intro');
+        var fanStage = document.querySelector('.fan-stage');
+        var finale = document.querySelector('.finale-panel');
+        var cards = gsap.utils.toArray('.fan-card');
+        var main = document.querySelector('main');
+
+        // Fan slot for card index i (0-based) in a 7-card poker-hand spread
+        // pivoting from the bottom center of the fan stage.
+        var mid = (cards.length - 1) / 2;
+        function fanSlot(i) {
+          var offset = i - mid;
+          return {
+            rotate: offset * 8,
+            x: offset * 48,
+            y: -Math.abs(offset) * 8,
+          };
+        }
+
+        gsap.set(finale, { opacity: 0 });
+        gsap.set(main, { opacity: 0 });
+        cards.forEach(function (card, i) {
+          var slot = fanSlot(i);
+          gsap.set(card, {
+            xPercent: -50,
+            zIndex: i + 1,
+            rotate: slot.rotate,
+            x: i === 0 ? slot.x : '70vw',
+            y: slot.y,
+            opacity: i === 0 ? 0 : 1,
+            scale: i === 0 ? 0.85 : 1,
+          });
         });
 
+        var steps = cards.length + 2; // 6 card-entrance beats + fan-exit beat + main-reveal beat
         var tl = gsap.timeline({
           scrollTrigger: {
             trigger: '#pinSequence',
             start: 'top top',
-            end: function () { return '+=' + window.innerHeight * (panels.length - 1); },
+            end: function () { return '+=' + window.innerHeight * steps; },
             pin: true,
             scrub: 1,
             snap: {
-              snapTo: 1 / (panels.length - 1),
+              snapTo: 1 / steps,
               duration: 0.4,
               ease: 'power1.inOut',
             },
           },
         });
 
-        panels.forEach(function (panel, i) {
-          if (i === panels.length - 1) return;
-          tl.to(panel, { yPercent: -100, ease: 'none' }, i)
-            .to(panels[i + 1], { yPercent: 0, ease: 'none' }, i);
-        });
+        // Beat 0: hero intro fades out while card 1 settles into the fan.
+        var slot0 = fanSlot(0);
+        tl.to(hero, { opacity: 0, scale: 0.92, ease: 'none' }, 0)
+          .to(cards[0], { opacity: 1, scale: 1, x: slot0.x, ease: 'none' }, 0);
+
+        // Beats 1-6: cards 2-7 slide in from the right and land in the fan.
+        for (var i = 1; i < cards.length; i++) {
+          var slot = fanSlot(i);
+          tl.to(cards[i], { x: slot.x, ease: 'none' }, i);
+        }
+
+        // Final beat: the fan slides up and off, revealing the finale panel,
+        // which then fades into the main page content.
+        tl.to(fanStage, { yPercent: -130, opacity: 0, ease: 'none' }, cards.length)
+          .to(finale, { opacity: 1, ease: 'none' }, cards.length)
+          .to(finale, { opacity: 0, ease: 'none' }, cards.length + 1)
+          .to(main, { opacity: 1, ease: 'none' }, cards.length + 1);
       }
 
       // Mobile/no-JS/reduced-motion fallback: panels just stack and scroll
