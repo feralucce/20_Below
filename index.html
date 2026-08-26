@@ -186,10 +186,12 @@
     margin: 0.9rem 0 0;
   }
 
-  /* fan stage - the 7 step cards accumulate here into a poker-hand fan */
-  .fan-stage {
-    position: relative;
-  }
+  /* fan stage - the 7 step cards accumulate here into a poker-hand fan.
+     No position override here: it inherits position:absolute; inset:0
+     from .pin-stage, which is what actually gives it its full-bleed
+     size - a stray "position: relative" here previously collapsed it
+     to zero height, since .pin-stage's rule and this one have equal
+     specificity and this one came later. */
   .fan-card {
     position: absolute;
     left: 50%;
