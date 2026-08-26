@@ -577,14 +577,15 @@
         var cards = gsap.utils.toArray('.fan-card');
         var main = document.querySelector('main');
 
-        // Fan slot for card index i (0-based) in a 7-card poker-hand spread
-        // pivoting from the bottom center of the fan stage.
-        var mid = (cards.length - 1) / 2;
-        function fanSlot(i) {
-          var offset = i - mid;
+        // Resting slot for card index i (0-based) once it's been buried by
+        // later cards. The most recently dealt card is always upright; each
+        // card only tilts into the fan once the next one lands on top of it.
+        var last = cards.length - 1;
+        function restSlot(i) {
+          var offset = i - last;
           return {
-            rotate: offset * 8,
-            x: offset * 48,
+            rotate: offset * 7,
+            x: offset * 38,
             y: -Math.abs(offset) * 8,
           };
         }
@@ -592,12 +593,12 @@
         gsap.set(finale, { opacity: 0 });
         gsap.set(main, { opacity: 0 });
         cards.forEach(function (card, i) {
-          var slot = fanSlot(i);
+          var slot = restSlot(i);
           gsap.set(card, {
             xPercent: -50,
             zIndex: i + 1,
-            rotate: slot.rotate,
-            x: i === 0 ? slot.x : '70vw',
+            rotate: 0,
+            x: i === 0 ? slot.x : '100vw',
             y: slot.y,
             opacity: i === 0 ? 0 : 1,
             scale: i === 0 ? 0.85 : 1,
@@ -620,15 +621,18 @@
           },
         });
 
-        // Beat 0: hero intro fades out while card 1 settles into the fan.
-        var slot0 = fanSlot(0);
+        // Beat 0: hero intro fades out while card 1 settles in, upright.
+        var slot0 = restSlot(0);
         tl.to(hero, { opacity: 0, scale: 0.92, ease: 'none' }, 0)
           .to(cards[0], { opacity: 1, scale: 1, x: slot0.x, ease: 'none' }, 0);
 
-        // Beats 1-6: cards 2-7 slide in from the right and land in the fan.
+        // Beats 1-6: each new card slides in from the right and lands
+        // upright on top, while the card it's landing on tilts out of the
+        // way into its resting fan angle at the same time.
         for (var i = 1; i < cards.length; i++) {
-          var slot = fanSlot(i);
-          tl.to(cards[i], { x: slot.x, ease: 'none' }, i);
+          var slot = restSlot(i);
+          tl.to(cards[i], { x: slot.x, y: slot.y, ease: 'none' }, i)
+            .to(cards[i - 1], { rotate: restSlot(i - 1).rotate, ease: 'none' }, i);
         }
 
         // Final beat: the fan slides up and off, revealing the finale panel,
