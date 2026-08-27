@@ -202,6 +202,12 @@
     filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.6));
     will-change: transform, opacity;
   }
+  /* .fan-track only does anything on mobile (see media query below) - on
+     desktop its children are position:absolute (removed from flow), so
+     this box stays empty/invisible and doesn't interfere with the GSAP
+     fan. .fan-nav (the mobile Prev/Next buttons) stays hidden here. */
+  .fan-track { display: flex; }
+  .fan-nav { display: none; }
 
   /* finale stage - closing tagline and the button onward. pointer-events:
      none by default since this stage sits on top of the other two the
@@ -255,28 +261,48 @@
     }
     .pin-stage:first-child { border-top: none; }
     .fan-stage {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      overflow-x: auto;
-      overflow-anchor: none;
-      -webkit-overflow-scrolling: touch;
-      gap: 1.25rem;
-      padding: 1.5rem 1.25rem;
-      scrollbar-width: none;
+      position: relative;
+      overflow: hidden;
+      padding: 1.5rem 0;
     }
-    .fan-stage::-webkit-scrollbar { display: none; }
+    .fan-track {
+      width: 100%;
+      transition: transform 0.35s ease;
+      will-change: transform;
+    }
     .fan-card {
       position: relative;
       left: auto;
       bottom: auto;
       transform: none !important;
-      flex: 0 0 auto;
-      width: auto;
+      flex: 0 0 100%;
+      width: 100%;
+      max-width: 100%;
       height: 65vh;
       max-height: 65vh;
+      object-fit: contain;
     }
     .finale-panel { pointer-events: auto; }
+    .fan-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      z-index: 5;
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-top: -1.25rem;
+      border-radius: 999px;
+      border: 1px solid var(--panel-border);
+      background: rgba(10, 23, 32, 0.75);
+      color: var(--text);
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+    .fan-nav:disabled { opacity: 0.3; }
+    .fan-prev { left: 0.5rem; }
+    .fan-next { right: 0.5rem; }
     .swipe-hint {
       display: block;
       text-align: center;
@@ -304,19 +330,15 @@
   }
   .no-js .fan-stage,
   .reduced-motion .fan-stage {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow-x: auto;
-    overflow-anchor: none;
-    -webkit-overflow-scrolling: touch;
-    gap: 1.25rem;
-    padding: 1.5rem 1.25rem;
-    scrollbar-width: none;
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem 0;
   }
-  .no-js .fan-stage::-webkit-scrollbar,
-  .reduced-motion .fan-stage::-webkit-scrollbar {
-    display: none;
+  .no-js .fan-track,
+  .reduced-motion .fan-track {
+    width: 100%;
+    transition: transform 0.35s ease;
+    will-change: transform;
   }
   .no-js .fan-card,
   .reduced-motion .fan-card {
@@ -324,15 +346,47 @@
     left: auto;
     bottom: auto;
     transform: none !important;
-    flex: 0 0 auto;
-    width: auto;
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
     height: 65vh;
     max-height: 65vh;
+    object-fit: contain;
     opacity: 1 !important;
   }
   .no-js .finale-panel,
   .reduced-motion .finale-panel {
     pointer-events: auto;
+  }
+  .no-js .fan-nav,
+  .reduced-motion .fan-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: -1.25rem;
+    border-radius: 999px;
+    border: 1px solid var(--panel-border);
+    background: rgba(10, 23, 32, 0.75);
+    color: var(--text);
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  .no-js .fan-nav:disabled,
+  .reduced-motion .fan-nav:disabled {
+    opacity: 0.3;
+  }
+  .no-js .fan-prev,
+  .reduced-motion .fan-prev {
+    left: 0.5rem;
+  }
+  .no-js .fan-next,
+  .reduced-motion .fan-next {
+    right: 0.5rem;
   }
   .no-js .swipe-hint,
   .reduced-motion .swipe-hint {
@@ -370,15 +424,19 @@
     </div>
 
     <div class="pin-stage fan-stage" id="fanStage">
-      <img class="fan-card" src="docs/assets/hero/card-1.webp" alt="Step 1: The World Presents a Problem. The GM sets the scene and describes the situation. Something stands in your way or calls you to action. Narrative First. The Story Drives Everything." />
-      <img class="fan-card" src="docs/assets/hero/card-2.webp" alt="Step 2: Choose Your Approach. Decide how your hero will meet the challenge. Choose the element that best fits your approach. Five Elements. Countless Approaches." />
-      <img class="fan-card" src="docs/assets/hero/card-3.webp" alt="Step 3: Calculate Your Target. The target number is calculated by adding your element and the difficulty set by the GM. Your Abilities Guide Your Fate." />
-      <img class="fan-card" src="docs/assets/hero/card-4.webp" alt="Step 4: Roll 2d10. 2 is a critical success. 20 is a critical failure. Two Dice. Countless Outcomes." />
-      <img class="fan-card" src="docs/assets/hero/card-5.webp" alt="Step 5: Compare Your Roll to Your Target Number. Roll 2d10; if the result is less than or equal to the target number it succeeds, otherwise it fails. 2 always succeeds. 20 always fails. Roll Under to Succeed." />
-      <img class="fan-card" src="docs/assets/hero/card-6.webp" alt="Step 6: Determine the Outcome - Critical Success, Success, Failure, or Catastrophic Failure. The result tells you what happens and how the world changes. Every Roll Moves the Story Forward." />
-      <img class="fan-card" src="docs/assets/hero/card-7.webp" alt="Step 7: The Story Continues. The GM describes the outcome. Face the consequences. Keep playing. Fate Answers When You Act." />
+      <button class="fan-nav fan-prev" type="button" aria-label="Previous step">&larr;</button>
+      <div class="fan-track">
+        <img class="fan-card" src="docs/assets/hero/card-1.webp" alt="Step 1: The World Presents a Problem. The GM sets the scene and describes the situation. Something stands in your way or calls you to action. Narrative First. The Story Drives Everything." />
+        <img class="fan-card" src="docs/assets/hero/card-2.webp" alt="Step 2: Choose Your Approach. Decide how your hero will meet the challenge. Choose the element that best fits your approach. Five Elements. Countless Approaches." />
+        <img class="fan-card" src="docs/assets/hero/card-3.webp" alt="Step 3: Calculate Your Target. The target number is calculated by adding your element and the difficulty set by the GM. Your Abilities Guide Your Fate." />
+        <img class="fan-card" src="docs/assets/hero/card-4.webp" alt="Step 4: Roll 2d10. 2 is a critical success. 20 is a critical failure. Two Dice. Countless Outcomes." />
+        <img class="fan-card" src="docs/assets/hero/card-5.webp" alt="Step 5: Compare Your Roll to Your Target Number. Roll 2d10; if the result is less than or equal to the target number it succeeds, otherwise it fails. 2 always succeeds. 20 always fails. Roll Under to Succeed." />
+        <img class="fan-card" src="docs/assets/hero/card-6.webp" alt="Step 6: Determine the Outcome - Critical Success, Success, Failure, or Catastrophic Failure. The result tells you what happens and how the world changes. Every Roll Moves the Story Forward." />
+        <img class="fan-card" src="docs/assets/hero/card-7.webp" alt="Step 7: The Story Continues. The GM describes the outcome. Face the consequences. Keep playing. Fate Answers When You Act." />
+      </div>
+      <button class="fan-nav fan-next" type="button" aria-label="Next step">&rarr;</button>
     </div>
-    <p class="swipe-hint">Swipe for more &rarr;</p>
+    <p class="swipe-hint">Swipe or tap the arrows &rarr;</p>
 
     <div class="pin-stage finale-panel">
       <div class="panel-inner">
@@ -395,28 +453,48 @@
       this.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
-    // Mobile browsers (confirmed on real devices, both Chrome and
-    // DuckDuckGo) opened this carousel scrolled to card 4 instead of
-    // card 1, and wouldn't scroll back - happened with both mandatory
-    // and proximity CSS scroll-snap, so the CSS dropped scroll-snap
-    // entirely (plain free-scrolling now). Still force scrollLeft back
-    // to 0 at a few checkpoints as a safety net, since the wrong initial
-    // position wasn't reliably traceable to any single moment (image
-    // decode, font swap, etc.).
+    // Real-device testing (Chrome and DuckDuckGo) showed the mobile
+    // carousel opening on card 4 and refusing to scroll back to 1-3, no
+    // matter what combination of CSS scroll-snap settings (mandatory,
+    // proximity, none at all) was tried - so this doesn't use native
+    // horizontal scrolling at all anymore. It's a fixed index (0 on
+    // load, always) driving a CSS transform on .fan-track, moved by
+    // tapping the arrows or swiping. No scrollLeft/scroll-snap involved
+    // anywhere, so none of that ambiguity applies.
     var fanStageEl = document.querySelector('.fan-stage');
-    if (fanStageEl) {
-      var userTouchedCarousel = false;
-      fanStageEl.addEventListener('touchstart', function () { userTouchedCarousel = true; }, { passive: true });
-      fanStageEl.addEventListener('wheel', function () { userTouchedCarousel = true; }, { passive: true });
-      var resetFanScroll = function () {
-        if (!userTouchedCarousel) fanStageEl.scrollLeft = 0;
+    var fanTrackEl = document.querySelector('.fan-track');
+    var fanCards = document.querySelectorAll('.fan-card');
+    var fanPrevBtn = document.querySelector('.fan-prev');
+    var fanNextBtn = document.querySelector('.fan-next');
+    if (fanStageEl && fanTrackEl && fanCards.length) {
+      var fanIndex = 0;
+
+      var renderFan = function () {
+        fanTrackEl.style.transform = 'translateX(-' + fanIndex * 100 + '%)';
+        if (fanPrevBtn) fanPrevBtn.disabled = fanIndex === 0;
+        if (fanNextBtn) fanNextBtn.disabled = fanIndex === fanCards.length - 1;
       };
-      resetFanScroll();
-      document.addEventListener('DOMContentLoaded', resetFanScroll);
-      window.addEventListener('load', resetFanScroll);
-      [0, 50, 150, 300, 600, 1000].forEach(function (delay) {
-        window.setTimeout(resetFanScroll, delay);
-      });
+      var goToFan = function (i) {
+        fanIndex = Math.max(0, Math.min(fanCards.length - 1, i));
+        renderFan();
+      };
+
+      if (fanPrevBtn) fanPrevBtn.addEventListener('click', function () { goToFan(fanIndex - 1); });
+      if (fanNextBtn) fanNextBtn.addEventListener('click', function () { goToFan(fanIndex + 1); });
+
+      var fanTouchStartX = null;
+      fanStageEl.addEventListener('touchstart', function (e) {
+        fanTouchStartX = e.touches[0].clientX;
+      }, { passive: true });
+      fanStageEl.addEventListener('touchend', function (e) {
+        if (fanTouchStartX === null) return;
+        var deltaX = e.changedTouches[0].clientX - fanTouchStartX;
+        fanTouchStartX = null;
+        if (deltaX < -40) goToFan(fanIndex + 1);
+        else if (deltaX > 40) goToFan(fanIndex - 1);
+      }, { passive: true });
+
+      renderFan();
     }
   </script>
 
