@@ -256,6 +256,9 @@
     .pin-stage {
       position: relative;
       inset: auto;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
       padding: 3.5rem 1.5rem;
       border-top: 1px solid var(--panel-border);
     }
@@ -263,6 +266,9 @@
     .fan-stage {
       position: relative;
       overflow: hidden;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
       padding: 1.5rem 0;
     }
     .fan-track {
@@ -320,6 +326,9 @@
   .reduced-motion .pin-stage {
     position: relative;
     inset: auto;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 3.5rem 1.5rem;
     border-top: 1px solid var(--panel-border);
   }
@@ -331,6 +340,9 @@
   .reduced-motion .fan-stage {
     position: relative;
     overflow: hidden;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1.5rem 0;
   }
   .no-js .fan-track,
@@ -468,11 +480,32 @@
     if (fanStageEl && fanTrackEl && fanCards.length) {
       var fanIndex = 0;
 
+      function fanCarouselActive() {
+        return window.matchMedia('(max-width: 780px)').matches || document.documentElement.classList.contains('reduced-motion');
+      }
+
+      // Only ever touch .fan-track's transform when the mobile carousel
+      // is actually the active layout. Setting a transform (even a
+      // no-op translateX(0)) on .fan-track unconditionally broke the
+      // desktop fan: per the CSS Transforms spec, ANY element with a
+      // transform value other than none becomes the containing block
+      // for its absolutely-positioned descendants, regardless of its
+      // own position value. .fan-track has no size on desktop (its
+      // GSAP-positioned .fan-card children are position:absolute and
+      // don't contribute to it), so it collapsed to 0x0 and every card
+      // started computing left:50%/bottom:8% against that empty box
+      // instead of .fan-stage - hence cards appearing shifted into a
+      // corner and partly off-screen.
       var renderFan = function () {
-        fanTrackEl.style.transform = 'translateX(-' + fanIndex * 100 + '%)';
+        if (fanCarouselActive()) {
+          fanTrackEl.style.transform = 'translateX(-' + fanIndex * 100 + '%)';
+        } else {
+          fanTrackEl.style.transform = '';
+        }
         if (fanPrevBtn) fanPrevBtn.disabled = fanIndex === 0;
         if (fanNextBtn) fanNextBtn.disabled = fanIndex === fanCards.length - 1;
       };
+      window.addEventListener('resize', renderFan);
       var goToFan = function (i) {
         fanIndex = Math.max(0, Math.min(fanCards.length - 1, i));
         renderFan();
