@@ -177,7 +177,7 @@ While it still has Health Levels remaining, armor intercepts every die aimed at 
 
 - **Armor doesn't stack within a Zone.** If a character owns more than one item covering the same Zone, only one can be worn there at a time - their choice which.
 - **A normal attack always resolves against Body-Zone armor.** Head-Zone armor does nothing against it.
-- **A called shot** - legal only as a [Slow Action Bracket](#action-brackets) - lets the attacker specifically target the Head Zone instead. That attack resolves against the defender's Head-Zone armor (or no armor at all, if they have none), and Body-Zone armor doesn't apply to it.
+- **A called shot** - an attack aimed at something specific rather than at the target generally: a hand, a knee, a strap, a weapon, a sensor. It's declared as part of a [Slow Action](#action-brackets), and spending Ki to [bump the bracket](#action-brackets) carries it along rather than cancelling it. What a successful called shot accomplishes is the GM's call, and depends on what was aimed at. Where it interacts with armor, a called shot to the **Head Zone** resolves against the defender's Head-Zone armor (or no armor at all, if they have none), and Body-Zone armor doesn't apply to it.
 
 #### Potence
 
