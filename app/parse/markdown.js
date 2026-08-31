@@ -14,6 +14,16 @@ const REPO_FETCH_TIMEOUT_MS = 5000;
 // tauri.conf.json, which is what actually exposes window.__TAURI__.
 const isDesktopApp = typeof window !== 'undefined' && Boolean(window.__TAURI__);
 
+// Set when a desktop live fetch fails and the snapshot bundled into the
+// installer is served instead. That snapshot is only as current as the release
+// the user installed, so the UI surfaces it rather than silently showing stale
+// rules - see the rules-source indicator in main.js.
+let servedFromBundle = false;
+
+export function isServingBundledRules() {
+  return servedFromBundle;
+}
+
 async function fetchFromGitHub(repoRelativePath) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), REPO_FETCH_TIMEOUT_MS);
@@ -31,6 +41,16 @@ async function fetchFromGitHub(repoRelativePath) {
   }
 }
 
+// Every parser here is line-oriented, and the table regex in particular
+// anchors on `$` with only [ \t] allowed before it - so a CRLF file leaves a
+// stray \r that makes tables invisible and throws "Not enough lines to be a
+// table". GitHub raw and Pages both serve LF, but a Windows checkout is CRLF
+// (core.autocrlf), and that checkout is what the desktop build bundles.
+// Normalize once, here, so it cannot matter where the markdown came from.
+export function normalizeEol(text) {
+  return text.replace(/\r\n/g, '\n');
+}
+
 export async function fetchText(path) {
   if (isDesktopApp) {
     // Every call site passes a path like "../rules/rules.md", relative to
@@ -38,14 +58,15 @@ export async function fetchText(path) {
     // the repo root, which is exactly what the GitHub raw URL needs.
     const repoRelativePath = path.replace(/^(\.\.\/)+/, '');
     const live = await fetchFromGitHub(repoRelativePath);
-    if (live !== null) return live;
+    if (live !== null) return normalizeEol(live);
+    servedFromBundle = true;
   }
 
   const res = await fetch(path);
   if (!res.ok) {
     throw new Error(`Failed to load ${path}: ${res.status} ${res.statusText}`);
   }
-  return res.text();
+  return normalizeEol(await res.text());
 }
 
 function escapeRegex(text) {

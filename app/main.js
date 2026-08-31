@@ -2,6 +2,7 @@ import { createInitialState, mergeCharacterState, allPoolsSummary } from './stat
 import { el, poolBadge } from './ui.js';
 import { loadRulesData } from './rules-data.js';
 import { isDesktopApp } from './desktop-storage.js';
+import { isServingBundledRules } from './parse/markdown.js';
 
 import stepIdentity from './steps/01-identity.js';
 import stepNature from './steps/02-nature.js';
@@ -115,6 +116,29 @@ async function checkVersionStatus() {
   }
 }
 
+// Where the rules the app just parsed actually came from. The desktop build
+// fetches live from main and only falls back to the snapshot bundled into the
+// installer when that fails (offline, DNS, timeout) - which is silent by
+// design, and shouldn't be. The browser build is served alongside the repo and
+// is always live, so it gets no indicator.
+function showRulesSource() {
+  if (!isDesktopApp) return;
+  const ledEl = document.getElementById('rules-led');
+  if (!ledEl) return;
+  ledEl.hidden = false;
+  if (isServingBundledRules()) {
+    ledEl.textContent = 'Offline - bundled rules';
+    ledEl.title =
+      'No connection to the repo, so the rules bundled with this installer are being used. '
+      + 'They are only as current as the version you installed. Reconnect and reopen to get the latest.';
+    ledEl.className = 'version-led stale';
+  } else {
+    ledEl.textContent = 'Live rules';
+    ledEl.title = 'Rules loaded live from the repository - up to date.';
+    ledEl.className = 'version-led ok';
+  }
+}
+
 async function main() {
   showAppVersion();
   checkVersionStatus();
@@ -122,6 +146,7 @@ async function main() {
   let data;
   try {
     data = await loadRulesData();
+    showRulesSource();
   } catch (err) {
     console.error(err);
     panel.innerHTML = `<p class="error">Failed to load or parse the rules data. If a rules file's structure changed, the parser in app/parse/ may need a matching update.\n\n${err.message}</p>`;
