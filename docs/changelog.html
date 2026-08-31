@@ -96,6 +96,10 @@
   <h3 class="changelog-heading">Rules</h3>
   <ul class="changelog-list">
     <li class="changelog-entry">
+      <span class="changelog-date">8-31-2026</span>
+      <span class="changelog-text">Glossary expanded and rewritten in the Player&rsquo;s Guide&rsquo;s voice - 68 entries to 76, adding Attack, Wall, Called Shot, Condition, and Level, plus separate entries for Fast, Normal, and Slow Actions. &ldquo;Wall&rdquo; in particular was jargon leaned on across four entries and never actually defined anywhere. Called shots broadened from head-only to anything specific you can name - a hand, a knee, the strap holding a pack on, a camera housing, the weapon pointed at you - with what landing one accomplishes left to the GM; the head stays the one case the armor Zone system models. Spending Ki to bump the Action Bracket now carries a called shot along with it, while Distracted&rsquo;s forced downgrade still strips it.</span>
+    </li>
+    <li class="changelog-entry">
       <span class="changelog-date">8-24-2026</span>
       <span class="changelog-text">Short Rest recovery now always heals at least 1 (Health Levels, Poise, Sanity, Ki) - the round-up-half-your-sub-stat rate could heal 0 outright at sub-stat 0, since half of 0 rounds up to 0.</span>
     </li>
@@ -167,6 +171,10 @@
 
   <h3 class="changelog-heading">App</h3>
   <ul class="changelog-list">
+    <li class="changelog-entry">
+      <span class="changelog-date">8-31-2026 1445</span>
+      <span class="changelog-text">Desktop v0.9.4. The app pulls rules live from the repository and quietly falls back to the copy bundled in your installer when it can&rsquo;t reach the network - it now tells you which it&rsquo;s using, a green &ldquo;Live rules&rdquo; or an amber &ldquo;Offline - bundled rules&rdquo; with a note explaining that bundled rules are only as current as the version you installed. Also fixes a bug that could stop the app loading at all while offline: bundled rules files could carry Windows line endings, which made every rules table invisible to the parser.</span>
+    </li>
     <li class="changelog-entry">
       <span class="changelog-date">8-24-2026 1342</span>
       <span class="changelog-text">Short Rest recovery bugfix (see Rules above) carried into the desktop build. Also fixed the desktop app's own "Up to date"/"Needs updating" version check, which started reading the wrong release once the new Combat Tracker Desktop app began publishing to the same repo's release feed. Desktop v0.9.3.</span>
