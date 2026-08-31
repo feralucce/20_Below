@@ -166,6 +166,13 @@ body {
   animation: version-led-flicker 3.2s infinite steps(1, end);
 }
 
+/* Serving the installer's bundled rules snapshot instead of live ones. A
+   warning, not an error - the app works, the rules may just be behind. */
+.version-led.stale {
+  color: var(--gold);
+  text-shadow: 0 0 6px var(--gold), 0 0 14px var(--gold);
+}
+
 @keyframes version-led-flicker {
   0%, 100% { opacity: 1; }
   4% { opacity: 0.25; }

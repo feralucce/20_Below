@@ -17,7 +17,10 @@ import { dirname, join } from 'node:path';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const parser = (f) => pathToFileURL(join(here, 'parse', f)).href;
-const md = (f) => readFileSync(join(here, '..', 'rules', f), 'utf8');
+// Normalized the same way fetchText does at runtime, so this checks the
+// parsers against the text the app actually sees rather than failing on a
+// Windows checkout's CRLF.
+const md = (f) => readFileSync(join(here, '..', 'rules', f), 'utf8').replace(/\r\n/g, '\n');
 
 const { parseAttributes, parseEverymanSkills } = await import(parser('attributes.js'));
 const { parseBoons } = await import(parser('boons.js'));
