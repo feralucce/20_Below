@@ -1,139 +1,161 @@
 # Glossary
 
-Terms worth knowing before you go through [Character Creation](character-creation.md). Scoped to what the walkthrough itself uses - combat-only vocabulary gets defined where it's first needed, in [rules.md](rules.md).
+This chapter isn’t meant for reading. Not in the normal way, at least. It’s a reference that collects the terms that everything is scaffolded around and gives them a simple, short definition.
 
-**Action Bracket** — One of three timing categories (Fast, Normal, Slow) a character declares each combat round. Fast acts first but gets only one action; Normal acts second with two actions; Slow acts last but its single action is empowered (Advantage, called shots). Within each bracket, characters act in Initiative order before resolution moves to the next bracket.
+I recommend skimming it at least once before you build your character so there is less mystery when the terms are used in the [character creation walkthrough](character-creation.md). After that, come back to it whenever you need to.
 
-**Adder** — A permanent, optional upgrade to a Gift you already have, unlocked once for a one-time point cost (Lesser or Greater). Separate from the Ki cost of actually using it in play, which is paid per the Gift's own text each time.
+Everything mentioned in the character creation walkthrough is defined here. I also put some terms in here that mostly come up in a fight because other entries mention them and a glossary that sends you to another location in the book isn’t of much use to anybody. The rest of the combat-only terminology is defined where it’s first needed, in [rules.md](rules.md).
 
-**Advantage / Disadvantage** — Instead of the normal roll, you roll an extra die: Advantage rolls 3d10 and keeps the lowest two (better odds of success), Disadvantage rolls 3d10 and keeps the highest two (worse odds). Not a flat modifier to your roll.
+Some entries have a line of flavor text along with their mechanics. That is on purpose - those terms are more than just their mechanics.
 
-**Air** — One of the five Attributes, the element of breath and motion. Covers agility, adaptability, and sharpness of mind - how fast you react, how well you keep pace with a changing situation, how clearly you think under pressure. Splits into Initiative and Psyche.
+**Action Bracket** — Each combat round is broken into one of three categories - Fast, Normal, and Slow. Players declare their Action Bracket at the beginning (the top) of each round. Each Action Bracket acts in order of Initiative. Fast Actions happen first, Normal Actions follow and Slow Actions happen last.
 
-**Atropos** — One of Moira's two sub-stats, named for the Fate who cuts the thread of life and cannot be turned aside. Determines your Defense (`10 - Atropos`) - how hard you are to hit in combat. Sample descriptors (examples, not a fixed list): Elusive, Untouchable, Evasive, Uncanny, Slippery, Precognitive, Nimble, Fated, Slick, Ghostly, Unpredictable, Quick-Footed, Uncatchable, Foresighted, Cat-Like.
+**Adder** — An Adder is a permanent, but optional, upgrade to a Gift. These upgrades customize your Gifts and make them more powerful.
 
-**Attribute** — One of the five elemental forces that shape who you are, Earth, Air, Fire, Water, and Moira, each a broad measure of natural capability drawn from the classical elements themselves. Assigned at character creation, each Attribute splits into two sub-stats.
+**Advantage/Disadvantage** — When Fate smiles (or frowns) on you - you roll an extra die. Advantage rolls 3d10 and keeps the lowest two. Disadvantage rolls 3d10 and keeps the highest two.
 
-**Boon** — A small, permanent advantage that doesn't fit under Skills or Gifts - a grab bag of perks that matter in play through what they let you do or claim, not through added dice. No numerical bonus to rolls. Most have no levels; a handful are exceptions bought as one of two, three, or four tiers.
+**Air** — One of the five Elements that defines the essence of a character - breath and weather, never in one place long. Air is the Attribute that covers agility, adaptability, intelligence, sharpness of mind, how fast you react, and how well you handle it when things change around you. It is further divided into Initiative and Psyche.
 
-**Bump Action Bracket** — A direct Ki spend (1 Ki per step) to move a declared action up one Action Bracket - Slow to Normal, or Normal to Fast. 2 Ki moves two steps at once. No roll, no Fatigue Check.
+**Atropos** — One of Moira’s two sub-stats, named for the Fate who cuts the thread and can’t be turned aside. It sets your Defense - how hard you are to hit - at 10 minus your Atropos. Sample descriptors: Elusive, Untouchable, Slippery, Ghostly, Cat-Like, and so on.
 
-**Carrying Capacity** — How much weight a character can lift, carry, or drag under ordinary conditions: `Potence² x 10 kg`. Squared rather than linear so low Potence stays mundane while high Potence scales dramatically.
+**Attack** — Any deliberate attempt to hurt someone, in any of the three ways the game recognizes - Physical, Social, or Mental. All three run on the same two steps. First you have to connect: roll your Attribute against their Defense, no Skill involved. Only if that lands do you roll the attack’s dice, and those go against the matching Wall - Soak, Presence, or Psyche. A Physical die that gets through costs a Health Level, a Social die costs Poise, a Mental die costs Sanity.
 
-**Core Roll** — The system's basic action resolution: roll 2d10, add them, and compare the total to your target number. Equal to or under succeeds; over fails. The target number is your Attribute + the GM's Difficulty (in combat, the defender's Defense stands in for Difficulty).
+**Attribute** — One of the five universal forces that shape your character - Earth, Air, Fire, Water and Moira. Each Element is a broad measure of your natural (or supernatural) capabilities that are pulled from the classical elements themselves. These are assigned at character creation. Each Attribute governs two sub-stats.
 
-**Critical Success / Critical Failure** — A natural roll of 2 (both dice showing 1) is a critical success; a natural 20 (both showing 10) is a critical failure. Some Skill Training Tiers widen the critical-success range or soften a critical failure.
+**Boon** — A small, permanent perk that isn’t a Skill and isn’t a Gift. Boons don’t add to your dice - they let you do or claim something you otherwise couldn’t. Most are a flat yes-or-no; a handful come in tiers.
 
-**Defense** — A derived stat, `10 - Atropos`. Becomes the attacker's Difficulty when they attack you - how hard you are to hit.
+**Bump Action Bracket** — Spend 1 Ki to move a declared action up a step - Slow to Normal, or Normal to Fast. Two Ki jumps two steps. No roll, no Fatigue Check; you’re just buying speed with Ki.
 
-**Descriptor** — A short, one or two-word adjective (*Brutal*, *Brawny*, *Indefatigable*, *Headstrong*) capturing a specific flavor of a sub-stat you've put points into - a core trait, free from the sub-stat point that earns it and never separately purchasable. The concrete hook you point to when challenging a Skill's default Element in play.
+**Called Shot** — Picking out something specific to hit instead of just hitting them - a hand, a knee, the strap holding their pack on, the camera housing on a drone, the weapon they’re pointing at you. A Called Shot is a Slow Action. What landing it does depends on what you aimed at, and that’s the GM’s call.
 
-**Dice Notation** — "XdY" means roll X dice of Y sides each and add the results. 20 Below uses ten-sided dice: 2d10 is two of them summed (2-20), 1d10 is one, 3d10 is three (Advantage and Disadvantage).
+**Carrying Capacity** — How much you can lift, carry, or drag without straining: your Potence squared, times ten, in kilograms. Squared rather than flat, so a strong character pulls dramatically ahead of an ordinary one.
 
-**Difficulty** — A number from 0-10 the GM sets per roll, 0 nearly impossible, 10 trivially easy. Added to your Attribute to form the target number for the core roll. In combat, a defender's own Defense stat becomes the attacker's Difficulty.
+**Condition** — The catch-all for a temporary bad state you can be put into - Distracted, Surprised, Flustered, Exhausted, Overwhelmed, and the rest. Each has its own trigger and its own way out, under its own entry. A Fate Token can shrug any of them off for a moment.
 
-**Discretionary Points** — A flexible pool (10, plus more from Flaws) spendable at character creation across Resources, Skills, Fate Tokens, Boons, Gifts, or Attributes.
+**Core Roll** — The basic move of the whole system. Roll 2d10, add them up, and check the total against your target number (your Attribute plus the Difficulty). Land on or under it and you succeed; go over and you don’t.
 
-**Distracted** — A condition triggered by losing a Health Level or being hit by a Kotodama effect while resolving a Slow Action Bracket. Requires an Atropos + Difficulty roll to hold focus, or the action downgrades to Normal (losing its Advantage/called-shot benefit).
+**Critical Success / Critical Failure** — Roll a 2 - both dice showing 1 - and it’s a critical success, the best possible result. Roll a 20 - both showing 10 - and it’s a critical failure. A few Skill tiers widen the good end or cushion the bad one.
 
-**Earth** — One of the five Attributes, the element of flesh and stone, the unshaken ground beneath everything else. Covers raw physical power - how strong you are, how hard you hit, how much punishment your body shrugs off. Splits into Soak and Potence.
+**Defense** — How hard you are to hit: 10 minus your Atropos. When someone attacks you, your Defense is the number they have to beat.
 
-**Everyman Skills** — A GM-set list of baseline Skills every character gets free, at Trained, reflecting the competence any functional adult in the setting would have just from living in it.
+**Descriptor** — A one- or two-word adjective - Brutal, Brawny, Indefatigable, Headstrong - that pins down the flavor of a sub-stat you’ve invested in. You get one free with the point that earns it, and it’s the hook you point at when you want a Skill to run off a different Element than usual.
 
-**Exhausted** — A cumulative condition (levels 1-5) from pushing a sustained effort past what Stamina covers for free. Each level stacks a worsening penalty. A Short Rest removes one level; a Full Night's Rest clears it.
+**Dice Notation** — “XdY” means “roll X dice with Y sides and add them up.” 20 Below runs on ten-sided dice, so 2d10 is two of them totaled (a 2 to 20), 1d10 is one, and 3d10 is three - that’s Advantage and Disadvantage.
 
-**Fate Token** — The earn/spend currency, gained through Nature, voluntary Disadvantage, Flaws, daily regeneration, Milestones, or GM discretion. Spent on Kotodama or the standard Fate Triggers.
+**Difficulty** — A 0-to-10 dial the GM sets for each roll - 0 is nearly impossible, 10 is trivial. It gets added to your Attribute to form the target number. In a fight, the target’s Defense takes Difficulty’s place.
 
-**Fate Triggers** — What a Fate Token can be spent on: Kotodama, Overcome a Flaw, Automatic Success, Boost a Check, Shrug Off an Effect, or Refill Ki. Each spend triggers a Fatigue Check.
+**Discretionary Points** — A loose pool - 10 to start, plus whatever your Flaws hand you - that you can spend at creation on almost anything: Resources, Skills, Fate Tokens, Boons, Gifts, or Attributes.
 
-**Fatigue Check** — Triggered every time a player spends a Fate Token: roll 2d10 against current Ki, roll-under, same shape as the core roll. Success costs nothing beyond the token; failure drops Ki by 1 until it refills. The direct Ki spends (preserving a Level, bumping an Action Bracket, Ki Infusion) don't trigger one.
+**Distracted** — What happens when you take a hit, or catch a Kotodama effect, part-way through a Slow Action. Roll Atropos + Difficulty to keep your focus; miss it and the action drops to a Normal one, losing the called shot and the Advantage that made going Slow worth it.
 
-**Ferocity** — One of Fire's two sub-stats, the ember of will made manifest. Boosts a Physical attack die when you spend Ki to push a strike (Ki Infusion). Sample descriptors (examples, not a fixed list): Brutal, Savage, Relentless, Feral, Merciless, Ruthless, Vicious, Predatory, Fierce, Aggressive, Bloodthirsty, Wrathful, Untamed, Cutthroat, Rabid.
+**Earth** — One of the five Elements that defines the essence of a character - flesh and stone, the solid ground under everything else. Earth is the Attribute that covers raw physical force, endurance and mass, how strong you are, how hard you hit, and how much you can take before you stop being able to take it. It is further divided into Soak and Potence.
 
-**Figured Characteristics** — The stats you don't buy but compute from earlier choices: Health Levels, Poise, Sanity, Defense, Movement Rate, Carrying Capacity, and Ki. Step 14 of Character Creation.
+**Everyman Skills** — A short list, set by the GM, of things everyone can just do - the competence any working adult picks up by living in the world. Every character gets them free, at Trained.
 
-**Fire** — One of the five Attributes, the element of drive and hunger. Covers aggression and force of personality - how hard you push, how much of yourself you bring to a confrontation, verbal or physical. Splits into Ferocity and Presence.
+**Exhausted** — Wear from pushing a hard effort past what your Stamina covers. It stacks in levels, 1 through 5, each one worse than the last. A Short Rest clears one level; a full night’s sleep clears the lot.
 
-**Flaw** — An optional character-creation disadvantage, Boons' mirror image. Each one lists its own point value, which feeds your Discretionary Points. A Flaw with no real effect on play grants no points.
+**Fast Action** — The Fast bracket. You go before everyone in Normal or Slow, but you only get the one action - a move, an attack, or a single Skill use. You’re trading how much you do for going first.
 
-**Flustered** — The condition a character enters at 0 Poise: Disadvantage on all Social rolls, and any roll where composure matters, until the end of the Scene. An action spent on a Presence + Difficulty roll ends it early on a success.
+**Fate Token** — The currency you earn and spend. You pick them up from your Nature, from taking Disadvantage on purpose, from your Flaws, from a daily top-up, from story Milestones, or whenever the GM hands one over. You spend them on Kotodama or the Fate Triggers.
 
-**Game Master (GM)** — The one player who runs the game: sets scenes, plays every NPC and adversary, calls for rolls and sets their Difficulty, and adjudicates the rules. Everyone else plays a single character.
+**Fate Triggers** — The things a Fate Token buys: a Kotodama, shrugging off one of your Flaws for a Scene, an automatic success, Advantage on a roll, shrugging off a condition, or a full Ki refill. Every one of them makes you roll a Fatigue Check afterward.
 
-**Gift** — A supernatural power a character can have - magic, psionics, mutation, divine blessing, or whatever fits the campaign's genre. Each Gift is unique and narrow in scope, a specific named capability rather than a broad umbrella, and has 5 cumulative levels representing how big, strong, or wide its effect grows.
+**Fatigue Check** — The catch on spending Fate Tokens. Every time you spend one, roll 2d10 against your current Ki - under is good, same as the core roll. Pass and there’s no extra cost; fail and you lose a point of Ki until it comes back. Spending Ki directly - to save a Level, bump a bracket, or fuel Ki Infusion - doesn’t set one off.
 
-**Gift Check** — A resource-risk roll for using certain Gifts: 2d10 against current Ki + Stamina, roll-under. Success is free; failure costs 1 Ki.
+**Ferocity** — One of Fire’s two sub-stats, will burned down to an ember. When you spend Ki to put more behind a physical strike - that’s Ki Infusion - Ferocity is what you’re adding. Sample descriptors: Brutal, Savage, Relentless, Merciless, Feral, and so on.
 
-**Health** — One of Water's two sub-stats, the depth of the well you draw endurance from. Determines your Health Levels (`5 + Health`) - how many hits you can take before going down. Sample descriptors (examples, not a fixed list): Hale, Vital, Resilient, Stalwart, Ironclad, Unbreakable, Durable, Tenacious, Hearty, Sound, Thriving, Hard-to-Kill, Long-Lived, Wholesome, Sturdy-Framed.
+**Figured Characteristics** — The stats you don’t buy - they fall out of choices you already made. Health Levels, Poise, Sanity, Defense, Movement Rate, Carrying Capacity, and Ki. You work them out at step 14 of character creation.
 
-**Health Levels** — A count of discrete hit-boxes, not a numeric HP pool. `5 + Health`. Each Level absorbs one connecting hit; at 0 you fall unconscious.
+**Fire** — One of the five Elements that defines the essence of a character - drive and hunger. Fire is the Attribute that covers push and force of personality, appetite and intensity, how hard you lean on a situation, how much of yourself you put into a confrontation, and whether anyone in the room can ignore you while you’re doing it. It is further divided into Ferocity and Presence.
 
-**Humiliated** — The state below 0 Poise, a step past Flustered: the character can't take the lead, negotiate, or speak for the group, deferring and complying instead. They still act on their own; it's social, not physical. Clears once Poise is restored to 0.
+**Flaw** — An optional problem you take on at creation - the mirror of a Boon. Each one is worth a set number of points that feed your Discretionary pool. If a Flaw never actually costs you anything in play, it’s worth nothing.
 
-**Initiative** — One of Air's two sub-stats, the spark of readiness that decides who moves first. Rolled once at the start of combat (`1d10 + Initiative`) to set turn order for the whole fight. Sample descriptors (examples, not a fixed list): Alert, Reflexive, Twitchy, Vigilant, Quickened, Sharp-Eyed, Instinctive, Keen, Fleet, Snappy, Watchful, Attentive, Sharp, Nimble-Minded, Anticipatory.
+**Flustered** — Where you land at 0 Poise. Every Social roll - and anything else that needs composure - is at Disadvantage until the Scene ends. You can spend an action and a Presence + Difficulty roll to shake it off early.
 
-**Ki** — The resource pool that fuels supernatural ability use. `Average of Soak, Initiative, Ferocity, Stamina, and Atropos, doubled`. Spent directly to preserve Health or Sanity Levels, boost attack dice, or bump an Action Bracket; also the target number for the Fatigue Check.
+**Game Master (GM)** — The person running the game. They set the scenes, play everyone who isn’t a player character, decide when to roll and how hard, and have the final call on the rules. Everyone else runs a single character.
 
-**Ki Infusion** — Spending 1 Ki per die to add your matching sub-stat (Ferocity, Presence, or Psyche) to an attack die before rolling, pushing past a defender's wall that would otherwise fully negate an unboosted hit.
+**Gift** — A genuinely supernatural ability - magic, psionics, a mutation, a blessing, whatever suits the setting. Each one is a single, specific, named thing rather than a broad category, and each has five levels that stack, the effect getting bigger or stronger as you climb.
 
-**Klotho** — One of Moira's two sub-stats, the thread being spun even now. Governs Ki Regeneration rate and sets your Lucky Number. Sample descriptors (examples, not a fixed list): Charmed, Lucky, Fortunate, Blessed, Favored, Serendipitous, Providential, Recharged, Fateful, Auspicious, Golden, Star-Touched, Bountiful, Effortless, Timely.
+**Gift Check** — The risk some Gifts carry when you use them. Roll 2d10 against your Ki plus Stamina, under to pass. Pass and it’s free; fail and it costs you a point of Ki.
 
-**Kotodama** — (言霊, "word spirit") Spending Fate Tokens to assert a fact into the story directly, rather than affecting a die roll. The player states something true about the world and pays a cost built from Magnitude, Range, Plausibility, and an optional Duration surcharge; the fiction bends to match. Players may pool Fate Tokens to afford a claim none could alone.
+**Health** — One of Water’s two sub-stats, the depth of the well you draw endurance from. It sets your Health Levels - 5 plus your Health - which is how many hits you can take before you drop. Sample descriptors: Hale, Resilient, Stalwart, Unbreakable, Hard-to-Kill, and so on.
 
-**Limiter** — A permanent, creation-time restriction chosen for one specific Gift. Each one taken drops the cost of every Level of that Gift by 1 point, stackable with no ceiling but never below 1 point per Level.
+**Health Levels** — How many hits you can take, as a row of boxes rather than a pool of points. You have 5 plus your Health. Each solid hit checks one off; at zero, you’re out.
 
-**Lucky Number** — Equals your Klotho rating. Whenever the result of one of your own core rolls (the 2d10, or an Advantage/Disadvantage 3d10) equals that number, you immediately gain 1 Fate Token, automatic, never more than one per roll. The total has to match, not a single die, and bulk damage-dice pools don't count.
+**Humiliated** — One step past Flustered, where you go if Poise drops below 0. You can’t take the lead, negotiate, or speak for the group - you defer and go along. You’re still acting under your own power; it’s your standing that’s broken, not your body. It clears when Poise climbs back to 0.
 
-**Milestone Award** — A Fate Token granted to every PC when the party overcomes a significant challenge (a climactic fight, a decisive turn in the story), roughly once per session.
+**Initiative** — One of Air’s two sub-stats, the flick of readiness that decides who moves first. You roll it once at the start of a fight - 1d10 plus your Initiative - and that order holds for the whole thing. Sample descriptors: Alert, Reflexive, Vigilant, Sharp-Eyed, Quick, and so on.
 
-**Moira** — One of the five Attributes, the element of fate and the threads no mortal hand can see. Governs the supernatural, luck, and destiny itself. Splits into Atropos and Klotho.
+**Ki** — The pool that powers everything supernatural. It’s the average of your five combat sub-stats - Soak, Initiative, Ferocity, Stamina, Atropos - doubled. You spend it straight to save a Health or Sanity Level, to put more behind an attack, or to move up an Action Bracket, and it doubles as the target number for the Fatigue Check.
 
-**Movement Rate** — `5 + Air`, in meters. How far you can move as part of a Fast action's one action or a Normal action's move component.
+**Ki Infusion** — Paying 1 Ki per die to add a sub-stat - Ferocity, Presence, or Psyche, whichever matches the attack - to that die before you roll. It’s how you push a hit through a wall that would otherwise stop it cold.
 
-**Nature** — A short archetype capturing a core drive or way of engaging with the world, chosen from a starter list or written custom. Playing to it at a dramatically appropriate moment earns a Fate Token.
+**Klotho** — One of Moira’s two sub-stats, the thread still being spun. It sets how fast your Ki comes back and fixes your Lucky Number. Sample descriptors: Charmed, Fortunate, Blessed, Star-Touched, Timely, and so on.
 
-**NPC** — Non-player character. Anyone run by the GM rather than a player. NPCs use simplified stats (walls default to a flat 5).
+**Kotodama** — (言霊, “word spirit.”) Spending Fate Tokens to state something true about the world instead of touching a die roll. You say it, you pay for it - the cost is built from how big it is, how far it reaches, how believable it is, and whether it has to last - and the story rearranges to fit. Several players can pool tokens for something none of them could afford alone.
 
-**Overwhelmed** — The condition a character enters at 0 Sanity: a temporary negative mental trait and Disadvantage on rolls, but still acting on their own. Clears once removed from the cause and allowed to rest, or by spending 1 Ki (which also refills Sanity).
+**Level** — A step on a ladder. Several different things in the game use them, and they don’t otherwise have much to do with each other. Gifts have five Levels, each stacking on the last. Resources run 1 to 5. Health, Poise, and Sanity are counted in Levels - boxes you check off as you take hits. Exhausted stacks in levels of its own, 1 through 5. When a rule just says “Level,” the thing it’s attached to tells you which ladder it means.
 
-**PC** — Player character. The one character a player controls.
+**Limiter** — A permanent catch you accept on one specific Gift at creation. Each one you take knocks a point off the cost of every Level of that Gift. Stack them as deep as you like, but never below 1 point per Level.
 
-**Poise** — Composure under Social attack, mirroring Health Levels. `5 + Presence`. At 0 you become Flustered; below 0, Humiliated. Poise has no death threshold.
+**Lucky Number** — Your Klotho rating, doing double duty. Any time one of your own core rolls comes up exactly equal to it - the 2d10 total, or the kept pair on an Advantage or Disadvantage roll - you get a Fate Token, free, no more than one per roll. It’s the total that has to match, not a single die, and big handfuls of damage dice don’t count.
 
-**Potence** — One of Earth's two sub-stats, the weight of stone given to muscle and bone. Raw strength - carrying capacity, forcing/breaking things, contested strength. Sample descriptors (examples, not a fixed list): Brawny, Herculean, Mighty, Strapping, Muscular, Titanic, Forceful, Robust, Hulking, Sinewy, Vigorous, Burly, Formidable, Stout, Iron-Armed.
+**Milestone Award** — A Fate Token for every player when the group clears a real hurdle - the fight a session was building toward, a turning point in the story. Figure about one a session.
 
-**Presence** — One of Fire's two sub-stats, the heat that draws every eye in the room. Resists Social attacks, and sets how many dice you roll when making one. Sample descriptors (examples, not a fixed list): Magnetic, Commanding, Charismatic, Radiant, Imposing, Captivating, Dominant, Alluring, Striking, Charming, Bold, Regal, Magnificent, Unforgettable, Larger-Than-Life.
+**Moira** — One of the five Elements that defines the essence of a character - fate, and the threads nobody living gets to see. Moira is the Attribute that covers luck, destiny, and the supernatural itself, how the world bends around you, and whether it bends your way. It is further divided into Atropos and Klotho.
 
-**Psyche** — One of Air's two sub-stats, the current that carries a clear mind through the storm. Resists Mental attacks, and sets how many dice you roll when making one. Sample descriptors (examples, not a fixed list): Steadfast, Composed, Disciplined, Unshaken, Focused, Resolute, Headstrong, Serene, Level-Headed, Calm, Iron-Willed, Grounded, Unflappable, Determined, Clear-Headed.
+**Movement Rate** — How far you can move in a step, in meters: 5 plus your Air. That’s the move on a Fast Action, or the move half of a Normal one.
 
-**Resource** — Material or logistical backing a character can buy - money, gear, a base of operations - distinct from Boons' personal knacks and Gifts' supernatural power.
+**Nature** — A short label for what drives your character, or how they meet the world - picked from a list or written yourself. Lean into it at the right dramatic moment and you earn a Fate Token.
 
-**Resource Check** — A roll to push a Resource beyond what its Level normally covers for free: 2d10 against Resource Level + Difficulty, roll-under, standard critical results apply. Success is free; failure still gets the character what they were after, but the Resource's Level drops by 1 (floored at 1) until a Month passes.
+**Normal Action** — The Normal bracket - the middle option. Two actions this round, usually a move and something else, resolved after the Fast crowd and before the Slow one.
 
-**Rests** — Two recovery windows. A Short Rest is about an hour of genuine downtime; only one counts between Full Night's Rests. A Full Night's Rest is a full night's sleep. Health, Sanity, Poise, and Ki all recover on both, at their own rates.
+**NPC** — Anyone the GM plays instead of a player - short for non-player character. They run on trimmed-down stats; their walls sit at a flat 5 unless the GM says otherwise.
 
-**Sanity** — Grip on your own mind under Mental attack, mirroring Health Levels. `5 + Psyche`. At 0 you're Overwhelmed; below 0, Shattered.
+**Overwhelmed** — Where you land at 0 Sanity. You pick up a temporary bad mental trait and roll everything at Disadvantage, but you’re still yourself and still acting. It lifts once you’re away from whatever caused it and get to rest - or you spend 1 Ki, which also fills Sanity back up.
 
-**Scene** — A rung on the Time Bands ladder: one continuous stretch of action in roughly one place, such as a single fight or conversation. Some limits reset per Scene (the Fate Token spend cap, Flustered).
+**PC** — The one character at the table that’s yours - short for player character.
 
-**Shattered** — The state below 0 Sanity: panicked and unable to act unaided, needing to be led clear. Recovery (1 Ki, or a rest) only brings Sanity back to 1, and dropping below 0 always leaves a permanent mental scar.
+**Poise** — Your composure when someone comes at you socially, tracked as boxes like Health. You have 5 plus your Presence. Hit 0 and you’re Flustered; drop below and you’re Humiliated. Poise can’t kill you - there’s no bottom that ends the character.
 
-**Skill** — A learned, practiced competence. Every Skill has a default Attribute/Element; a player can challenge that default and pair the Skill with a different Attribute instead, provided they can argue the pairing to the GM's satisfaction, grounded in one of their Descriptors.
+**Potence** — One of Earth’s two sub-stats, stone poured into muscle. Straight strength - what you can carry, what you can break, who wins when two people push against each other. Sample descriptors: Brawny, Mighty, Herculean, Hulking, Iron-Armed, and so on.
 
-**Skill Training Tier** — How trained you are in a given Skill, six rungs: Untrained, Novice, Trained, Adept, Expert, Master. Each tier changes how the core roll is built, from no Attribute at all up through Advantage and widened critical ranges.
+**Presence** — One of Fire’s two sub-stats, the heat that turns every head in the room. It’s your wall against Social attacks, and it sets how many dice you throw when you make one. Sample descriptors: Magnetic, Commanding, Radiant, Imposing, Regal, and so on.
 
-**Soak** — One of Earth's two sub-stats, the hide the world's blows can't quite get through. Resists Physical damage - the wall an attacker's dice have to beat to hurt you. Sample descriptors (examples, not a fixed list): Hardy, Rugged, Stoic, Weathered, Unyielding, Sturdy, Grizzled, Armored, Callused, Thick-Skinned, Leathery, Battle-Worn, Steeled, Resistant, Flinty.
+**Psyche** — One of Air’s two sub-stats, the steady current that carries a clear head through a storm. It’s your wall against Mental attacks, and it sets how many dice you throw when you make one. Sample descriptors: Steadfast, Composed, Unshaken, Iron-Willed, Clear-Headed, and so on.
 
-**Stamina** — One of Water's two sub-stats, the reserve that keeps a body moving past its limit. Caps how many Fate Tokens you can spend per Scene; also your endurance against non-combat exhaustion. Sample descriptors (examples, not a fixed list): Indefatigable, Tireless, Enduring, Hardened, Persistent, Unflagging, Dogged, Steady, Untiring, Unwavering, Gritty, Marathon-Bodied, Long-Winded, Driven, Unrelenting.
+**Resource** — Stuff and support you can buy - money, gear, a place to work out of. Not a personal knack (that’s a Boon) and not supernatural (that’s a Gift), just backing.
 
-**Sub-stat** — Each Attribute divides into two sub-stats (Earth into Soak and Potence, Air into Initiative and Psyche, and so on). Sub-stats are where character-creation points land, what Descriptors attach to, and what most derived stats are built from.
+**Resource Check** — A roll to lean on a Resource harder than its Level covers for free. Roll 2d10 against the Resource’s Level plus Difficulty, under to pass. Pass and it costs nothing. Fail and you still get what you were after, but the Resource drops a Level (never below 1) until a Month goes by.
 
-**Surprised** — A condition triggered when a character hasn't noticed a threat before combat begins. While Surprised, you roll at Disadvantage on everything until the round ends.
+**Rests** — Two ways to recover. A Short Rest is about an hour of real downtime, and you only get the benefit of one between full nights. A Full Night’s Rest is a proper night’s sleep. Health, Sanity, Poise, and Ki all come back on both, each at its own pace.
 
-**Target Number** — The number a core roll must land on or under: your Attribute + the GM's Difficulty. See Core Roll.
+**Sanity** — Your grip on your own mind under a Mental attack, tracked as boxes like Health. You have 5 plus your Psyche. At 0 you’re Overwhelmed; below 0, Shattered.
 
-**Time Bands** — The standard ladder of durations used whenever a rule needs to say "how long": Round, Minute (~10 rounds), Scene, Day, Month, Year. The Round is the base unit; any duration is in Rounds unless a longer band is named.
+**Scene** — One unbroken stretch of the story in roughly one place - a fight, a conversation, a chase. It’s a rung on the Time Bands ladder, and a few limits reset when a new one starts (your Fate Token cap for the Scene, Flustered).
 
-**Untrained Roll** — A roll made with no applicable Skill. Your Attribute doesn't apply - the target number is Difficulty alone.
+**Shattered** — Below 0 Sanity. You’re panicking and can’t act on your own - someone has to lead you clear. A point of Ki or a rest only brings Sanity back to 1, and going below 0 always leaves a permanent mark on the character.
 
-**Water** — One of the five Attributes, the element of tide and undertow. Covers perception and empathy - how attuned you are to the world and the people in it, and how much you can endure before you're worn down. Splits into Stamina and Health.
+**Skill** — Something you’ve learned and practiced. Every Skill has a home Element it normally rolls off, but you can argue for a different one in the moment - as long as you can point to a Descriptor that backs the pairing and sell it to the GM.
+
+**Skill Training Tier** — How good you are at a Skill, on a six-step ladder: Untrained, Novice, Trained, Adept, Expert, Master. Each step changes how you build the roll - from no Attribute at all, up to rolling with Advantage and a wider critical range.
+
+**Slow Action** — The Slow bracket. One action, and you go last - but it’s a better action. It can be a called shot and it rolls with Advantage. You’re trading speed for one concentrated, harder-hitting move. (All spellcasting is Slow.)
+
+**Soak** — One of Earth’s two sub-stats, the hide the world’s hits don’t quite get through. It’s your wall against physical damage - the number an attacker’s dice have to clear to actually hurt you. Sample descriptors: Hardy, Rugged, Unyielding, Thick-Skinned, Battle-Worn, and so on.
+
+**Stamina** — One of Water’s two sub-stats, the reserve that keeps you going past the point most people stop. It caps how many Fate Tokens you can spend in a Scene, and it’s what you lean on against exhaustion outside a fight. Sample descriptors: Tireless, Enduring, Dogged, Unflagging, Relentless, and so on.
+
+**Sub-stat** — The two halves each Attribute splits into - Earth into Soak and Potence, Air into Initiative and Psyche, and so on down the line. Sub-stats are where your creation points actually go, where Descriptors attach, and what most of the figured stats are built from.
+
+**Surprised** — Getting caught before a fight starts with no idea it’s coming. Until the round ends, you roll everything at Disadvantage.
+
+**Target Number** — The number a core roll has to hit or come under: your Attribute plus the Difficulty. See Core Roll.
+
+**Time Bands** — The standard ladder the rules use whenever something needs a duration: Round, Minute (about ten rounds), Scene, Day, Month, Year. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
+
+**Untrained Roll** — A roll for something you have no Skill in. Your Attribute doesn’t help here - the target number is just the Difficulty.
+
+**Wall** — The number an attack’s dice have to beat to do anything to you. You have three, one for each kind of attack - Soak against Physical, Presence against Social, Psyche against Mental. Once an attack has connected, its dice are checked one at a time: any die over your Wall gets through and costs you a Level, and any die at or under it is absorbed completely. A Wall of 10 can’t be beaten by an ordinary die at all - the only way through is Ki Infusion. NPCs run on a flat 5 unless the GM says otherwise.
+
+**Water** — One of the five Elements that defines the essence of a character - tide and undertow. Water is the Attribute that covers perception and empathy, patience and staying power, how tuned in you are to the world and the people in it, and how much you can weather before it wears you down. It is further divided into Stamina and Health.
