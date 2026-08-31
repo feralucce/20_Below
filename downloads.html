@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>20 Below - ORC License</title>
-<meta name="description" content="20 Below is released under the ORC License so anyone can build for it - write adventures, design settings, publish and sell your own supplements, free of the mechanics themselves." />
+<title>20 Below - Downloads</title>
+<meta name="description" content="Downloads for 20 Below - the desktop character creator and combat tracker, and the Owlbear Rodeo extensions." />
 <link rel="icon" type="image/x-icon" href="docs/assets/brand/favicon.ico" />
 <link rel="icon" type="image/png" sizes="32x32" href="docs/assets/brand/favicon-32.png" />
 <link rel="apple-touch-icon" href="docs/assets/brand/favicon-128.png" />
@@ -28,7 +28,7 @@
     min-height: 100vh;
   }
 
-/* ---- top nav ---- */
+  /* ---- top nav ---- */
   .site-nav {
     position: sticky;
     top: 0;
@@ -216,68 +216,99 @@
     .dropdown a { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-dim); }
   }
 
-
   main {
-    max-width: 780px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 2rem 1.5rem 4rem;
   }
-  a { color: var(--accent); }
+  header {
+    text-align: center;
+    padding: 1rem 0 1rem;
+  }
+  h1 {
+    margin: 0;
+    letter-spacing: 0.02em;
+    font-size: 2rem;
+  }
   .eyebrow {
     font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.14em;
     color: var(--text-dim);
-    margin: 1.5rem 0 0.5rem;
-  }
-  h1 {
     margin: 0 0 0.75rem;
-    letter-spacing: 0.02em;
+  }
+  .subtitle {
+    color: var(--text-dim);
+    margin: 0.5rem 0 0;
   }
   .intro {
     color: var(--text-dim);
-    line-height: 1.7;
-    font-size: 1.05rem;
-    margin-bottom: 1.5rem;
+    text-align: center;
+    max-width: 640px;
+    margin: 1rem auto 2rem;
+    line-height: 1.5;
   }
-  .pitch-box {
+  .wordmark {
+    max-width: min(420px, 90%);
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+  .cta a {
     background: var(--accent-dim);
+    color: var(--text);
+    text-decoration: none;
     border: 1px solid var(--accent);
     border-radius: var(--radius);
-    padding: 1.1rem 1.4rem;
-    margin-bottom: 2.5rem;
-    line-height: 1.6;
+    padding: 0.9rem 1.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .cta a:hover {
+    background: var(--accent);
+    color: var(--bg);
+  }
+  .cta-meta {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
   }
   h2 {
     border-bottom: 1px solid var(--panel-border);
     padding-bottom: 0.4rem;
     margin-top: 2.5rem;
   }
-  .breakdown {
+  .doc-list {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-    margin: 1.5rem 0 2.5rem;
+    gap: 0.5rem;
   }
-  .breakdown-card {
+  .doc-card {
+    display: block;
     background: var(--panel);
     border: 1px solid var(--panel-border);
     border-radius: var(--radius);
-    padding: 0.9rem 1.1rem;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--text);
   }
-  .breakdown-card.open { border-left: 3px solid var(--accent); }
-  .breakdown-card.reserved { border-left: 3px solid var(--text-dim); }
-  .breakdown-card .label {
-    font-weight: 700;
+  .doc-card:hover {
+    border-color: var(--accent);
+  }
+  .doc-card .name {
+    font-weight: 600;
+  }
+  .doc-card .desc {
+    color: var(--text-dim);
     font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.3rem;
+    margin-top: 0.15rem;
   }
-  .breakdown-card.open .label { color: var(--accent); }
-  .breakdown-card.reserved .label { color: var(--text-dim); }
-  .breakdown-card p { margin: 0; color: var(--text-dim); font-size: 0.92rem; line-height: 1.55; }
-  .legal p { line-height: 1.6; }
   .note {
     color: var(--text-dim);
     font-size: 0.9rem;
@@ -285,6 +316,22 @@
     margin-top: 2.5rem;
     padding-top: 1rem;
     border-top: 1px solid var(--panel-border);
+  }
+  a { color: var(--accent); }
+  .doc-card.soon {
+    opacity: 0.6;
+    cursor: default;
+  }
+  .doc-card.soon:hover { border-color: var(--panel-border); }
+  .doc-card .desc code {
+    display: inline-block;
+    margin-top: 0.35rem;
+    font-size: 0.78rem;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border-radius: 4px;
+    padding: 0.15rem 0.4rem;
+    word-break: break-all;
   }
 </style>
 </head>
@@ -348,63 +395,72 @@
     </ul>
   </nav>
 <main>
-  <p class="eyebrow">Open by Design</p>
-  <h1>ORC License</h1>
+  <header>
+    <p class="eyebrow">Apps &amp; Extensions</p>
+    <h1>Downloads</h1>
+    <p class="subtitle">Tools for running 20 Below - at the table, on a virtual tabletop, or on your own machine.</p>
+  </header>
 
-  <p class="intro">
-    20 Below is released under the ORC License on purpose: we want everyone to be able to create
-    content for 20 Below, not just play it. Write your own adventures. Design your own setting.
-    Publish a supplement and sell it - without asking permission, and without paying a fee for the
-    mechanics underneath. The system is the foundation; what you build on it is yours.
+  <p class="note" style="margin-top:0">
+    None of this is required to play. The rules are free and complete on their own, and the character creator
+    runs in your browser with nothing to install &mdash;
+    <a href="app/index.html" target="_blank" rel="noopener">open the web app</a>.
   </p>
 
-  <div class="pitch-box">
-    That's not just a nice sentiment - the ORC License makes it a legal guarantee. The core mechanics
-    (the roll, the Attributes, the Skill and Gift/Boon/Flaw <em>systems</em>) are Licensed Material,
-    free for anyone to build on, remix, and publish commercially, forever, irrevocably. A short list
-    of specific creative content - the 20 Below name, individual Gift/Boon/Flaw flavor text, the apps
-    themselves - stays Reserved. Everything else is open.
+  <h2>Desktop</h2>
+  <div class="doc-list">
+    <a class="doc-card" href="https://github.com/feralucce/20_Below/releases/download/v0.9.4/20-below-desktop_0.9.4_x64-setup.exe">
+      <div class="name">Character Creator <span class="pill">Windows &middot; v0.9.4</span></div>
+      <div class="desc">The whole character creator as a native app. Pulls the current rules whenever it can reach the internet, and falls back to the copy it shipped with when it can't.</div>
+    </a>
+    <a class="doc-card" href="https://github.com/feralucce/20_Below/releases/download/combat-tracker-v0.1.0/20-below-combat-tracker_0.1.0_x64-setup.exe">
+      <div class="name">Combat Tracker <span class="pill">Windows &middot; v0.1.0</span></div>
+      <div class="desc">Run a fight without a virtual tabletop: Initiative, Action Brackets, turn order, and Health, Poise, Sanity and Ki for everyone in the scene.</div>
+    </a>
   </div>
 
-  <h2>What's Open vs. Reserved</h2>
-  <div class="breakdown">
-    <div class="breakdown-card open">
-      <div class="label">Open - Licensed Material</div>
-      <p>The core mechanics: the 2d10 roll, Difficulty, Advantage/Disadvantage, the five Attributes and
-      their sub-stats, Ki, combat resolution, and the Gift/Boon/Flaw/Skill <em>systems</em> themselves -
-      their point costs, structure, and how they resolve. Build a genre book, a setting, a full
-      commercial product on top of this, freely.</p>
-    </div>
-    <div class="breakdown-card reserved">
-      <div class="label">Reserved - Not Licensed</div>
-      <p>The title "20 Below" and its branding; the specific names and flavor text of individual Gifts,
-      Boons, and Flaws already published; the 20 Below Character Creator and Desktop apps (source code,
-      design, implementation); and any genre or setting content - like Backwater Static - not expressly
-      released as Licensed Material.</p>
+  <h2>Owlbear Rodeo</h2>
+  <p class="note">
+    In Owlbear Rodeo, open the extensions menu, choose to add a custom extension, and paste the URL below the
+    description. They're free, and they read the same character JSON the creator exports.
+  </p>
+  <div class="doc-list">
+    <a class="doc-card" href="https://feralucce.github.io/20_Below_Dice/" target="_blank" rel="noopener">
+      <div class="name">20 Below Dice</div>
+      <div class="desc">The player-facing roller: core rolls, Advantage and Disadvantage, and damage pools, optionally tied to your own character.
+        <br /><code>https://feralucce.github.io/20_Below_Dice/manifest.json</code></div>
+    </a>
+    <a class="doc-card" href="https://feralucce.github.io/20_Below_Roster/" target="_blank" rel="noopener">
+      <div class="name">20 Below Roster</div>
+      <div class="desc">The GM's panel: every character in the session, plus a full combat tracker - Initiative, Action Brackets, turn order, damage tracks, and tokens linked to the scene.
+        <br /><code>https://feralucce.github.io/20_Below_Roster/manifest.json</code></div>
+    </a>
+    <a class="doc-card" href="https://feralucce.github.io/20_Below_Bestiary/" target="_blank" rel="noopener">
+      <div class="name">20 Below Bestiary</div>
+      <div class="desc">Load a night's worth of monster and NPC exports and drop their tokens straight onto the map.
+        <br /><code>https://feralucce.github.io/20_Below_Bestiary/manifest.json</code></div>
+    </a>
+  </div>
+
+  <h2>Roll20</h2>
+  <div class="doc-list">
+    <div class="doc-card soon">
+      <div class="name">Roll20 support <span class="pill">Soon</span></div>
+      <div class="desc">Not built yet. Owlbear Rodeo came first because its extension API is open and free to publish to.</div>
     </div>
   </div>
 
-  <h2>The Legal Text</h2>
-  <div class="legal">
-    <p><strong>20 Below Core Rules</strong> by Feralucce Savage is released under the ORC License, a perpetual, irrevocable open license for tabletop game mechanics.</p>
-
-    <p><strong>ORC Notice</strong><br>
-    This product is licensed under the ORC License located at the Library of Congress at TX 9-307-067 and available online at various locations including <a href="https://azoralaw.com/orclicense/">azoralaw.com/orclicense</a> and others. All warranties are disclaimed as set forth therein.</p>
-
-    <p><strong>Attribution</strong><br>
-    This product is based on the following Licensed Material: <em>20 Below Core Rules</em>, Copyright &copy; 2026 Feralucce Savage.<br>
-    If you use this Licensed Material in your own published work, please credit it as follows: <em>[Title of Your Work]</em>, based on <em>20 Below Core Rules</em>, Copyright &copy; 2026 Feralucce Savage, available at <a href="https://github.com/feralucce/20_Below">github.com/feralucce/20_Below</a>.</p>
-
-    <p><strong>Reserved Material</strong><br>
-    Reserved Material elements in this product include, but are not limited to: the title "20 Below" and all associated logos and branding; the names, flavor text, and narrative descriptions of individual Gifts, Boons, and Flaws (the Gift, Boon, and Flaw <em>systems</em> themselves - their point costs, structure, and resolution mechanics - are Licensed Material); the 20 Below Character Creator and 20 Below Desktop applications, including their source code, design, and implementation, which are separate copyrighted works not licensed under the ORC License; and any genre, setting, or supplemental content not expressly published under this notice.</p>
-
-    <p><strong>Expressly Designated Licensed Material</strong><br>
-    None at this time.</p>
+  <h2>Backwater Static Assets</h2>
+  <div class="doc-list">
+    <div class="doc-card soon">
+      <div class="name">Maps, NPCs &amp; Anomalies <span class="pill">Soon</span></div>
+      <div class="desc">Table-ready material for <a href="https://feralucce.github.io/Backwater_Static/" target="_blank" rel="noopener">Backwater Static</a> - maps, NPC exports, Loose Anomalies, and the Anomalous Items Index. Free, like the setting itself.</div>
+    </div>
   </div>
 
   <p class="note">
-    Questions about what you can build, or want to talk about publishing something for 20 Below?
-    Source and full history at <a href="https://github.com/feralucce/20_Below">github.com/feralucce/20_Below</a>.
+    Part of the <a href="rules-hub.html">20 Below</a> core rules. Source and full history at
+    <a href="https://github.com/feralucce/20_Below" target="_blank" rel="noopener">github.com/feralucce/20_Below</a>.
   </p>
 </main>
 
