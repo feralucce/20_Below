@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "20-below-combat-tracker",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "identifier": "com.feralucce.twentybelow.combattracker",
   "build": {
     "frontendDist": "frontend-dist",
@@ -12,8 +12,8 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "20 Below Combat Tracker",
-        "url": "gm-app/index.html",
+        "title": "20 Below Battle Tracker",
+        "url": "tracker/index.html",
         "width": 1200,
         "height": 850,
         "resizable": true,
