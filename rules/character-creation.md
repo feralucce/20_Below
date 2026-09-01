@@ -65,8 +65,8 @@ Every Skill defaults to an Attribute/Element (see step 7). Descriptors matter be
 | Presence | Magnetic, Commanding, Charismatic, Radiant, Imposing, Captivating, Dominant, Alluring, Striking, Charming, Bold, Regal, Magnificent, Unforgettable, Larger-Than-Life |
 | Stamina | Indefatigable, Tireless, Enduring, Hardened, Persistent, Unflagging, Dogged, Steady, Untiring, Unwavering, Gritty, Marathon-Bodied, Long-Winded, Driven, Unrelenting |
 | Health | Hale, Vital, Resilient, Stalwart, Ironclad, Unbreakable, Durable, Tenacious, Hearty, Sound, Thriving, Hard-to-Kill, Long-Lived, Wholesome, Sturdy-Framed |
-| Atropos | Elusive, Untouchable, Evasive, Uncanny, Slippery, Precognitive, Nimble, Fated, Slick, Ghostly, Unpredictable, Quick-Footed, Uncatchable, Foresighted, Cat-Like |
-| Klotho | Charmed, Lucky, Fortunate, Blessed, Favored, Serendipitous, Providential, Recharged, Fateful, Auspicious, Golden, Star-Touched, Bountiful, Effortless, Timely |
+| Atropos | Fated, Untouchable, Uncanny, Ghostly, Warded, Veiled, Overlooked, Passed-Over, Unmarked, Inviolate, Unsevered, Thread-Bound, Unreachable, Spared, Unbroken |
+| Klotho | Lucky, Charmed, Serendipitous, Auspicious, Star-Touched, Timely, Quickening, Renewing, Replenishing, Rekindling, Brimming, Deep-Welled, Spring-Fed, Ever-Spinning, Unspent |
 
 ## 7. Skills
 
