@@ -16,7 +16,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Air** — One of the five Elements that defines the essence of a character - breath and weather, never in one place long. Air is the Attribute that covers agility, adaptability, intelligence, sharpness of mind, how fast you react, and how well you handle it when things change around you. It is further divided into Initiative and Psyche.
 
-**Atropos** — One of Moira’s two sub-stats, named for the Fate who cuts the thread and can’t be turned aside. It sets your Defense - how hard you are to hit - at 10 minus your Atropos. Sample descriptors: Fated, Untouchable, Uncanny, Unsevered, Passed-Over, and so on.
+**Atropos** — One of Moira’s two sub-stats, named for the Fate who cuts the thread and can’t be turned aside. It sets your Defense - how hard you are to touch by a blade, a word, or a mind alike - at 10 minus your Atropos. Sample descriptors: Fated, Untouchable, Uncanny, Unsevered, Passed-Over, and so on.
 
 **Attack** — Any deliberate attempt to hurt someone, in any of the three ways the game recognizes - Physical, Social, or Mental. All three run on the same two steps. First you have to connect: roll your Attribute against their Defense, no Skill involved. Only if that lands do you roll the attack’s dice, and those go against the matching Wall - Soak, Presence, or Psyche. A Physical die that gets through costs a Health Level, a Social die costs Poise, a Mental die costs Sanity.
 
@@ -36,7 +36,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Critical Success / Critical Failure** — Roll a 2 - both dice showing 1 - and it’s a critical success, the best possible result. Roll a 20 - both showing 10 - and it’s a critical failure. A few Skill tiers widen the good end or cushion the bad one.
 
-**Defense** — How hard you are to hit: 10 minus your Atropos. When someone attacks you, your Defense is the number they have to beat.
+**Defense** — How hard you are to touch: 10 minus your Atropos. Fate doesn’t distinguish the shape of the blow, so the same number answers a blade, a word meant to wound, and a mind reaching where it isn’t welcome. When someone attacks you, your Defense is the number they have to beat.
 
 **Descriptor** — A one- or two-word adjective - Brutal, Brawny, Indefatigable, Headstrong - that pins down the flavor of a sub-stat you’ve invested in. You get one free with the point that earns it, and it’s the hook you point at when you want a Skill to run off a different Element than usual.
 
