@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>20 Below Roster</title>
+<link rel="icon" type="image/svg+xml" href="https://feralucce.github.io/20_Below_Roster/icon.svg" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-2: #0e1c26;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --text-faint: #5c7686;
+    --accent: #3d84c4;
+    --accent-dim: #1c3548;
+    --ok: #4caf7d;
+    --danger: #d1584f;
+    --gold: #d4af6a;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 18px;
+  }
+  body { padding: 0.6rem 0.7rem 0.8rem; }
+  h1 {
+    font-size: 0.95rem;
+    margin: 0 0 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    letter-spacing: 0.02em;
+  }
+  label {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-faint);
+    margin-bottom: 0.2rem;
+  }
+
+  .file-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--panel-2);
+    border: 1px dashed var(--panel-border);
+    color: var(--text-dim);
+    border-radius: 5px;
+    padding: 0.6rem;
+    font-size: 0.78rem;
+    cursor: pointer;
+    margin-bottom: 0.6rem;
+  }
+  .file-btn:hover { border-color: var(--accent); color: var(--text); }
+  #addFile { display: none; }
+
+  .small-link {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 0.7rem;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 0 0.6rem;
+  }
+
+  .roster-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 0.6rem;
+  }
+  .roster-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-left: 3px solid var(--panel-border);
+    border-radius: 5px;
+    padding: 0.45rem 0.6rem;
+    cursor: pointer;
+  }
+  .roster-item:hover { border-color: var(--accent); }
+  .roster-item.active { background: var(--accent-dim); border-left-color: var(--gold); border-color: var(--accent); }
+  .roster-item .ri-name { font-weight: 700; font-size: 0.85rem; }
+  .roster-item .ri-concept { font-size: 0.68rem; color: var(--text-faint); font-style: italic; }
+  .roster-item .ri-remove {
+    background: none;
+    border: 1px solid var(--panel-border);
+    color: var(--text-faint);
+    border-radius: 4px;
+    font-size: 0.65rem;
+    padding: 0.1rem 0.35rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+  }
+  .ri-broken { color: var(--danger); font-size: 0.68rem; }
+  .list-empty { color: var(--text-faint); font-size: 0.75rem; font-style: italic; padding: 0.3rem 0; }
+
+  .detail-wrap {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+    padding: 0.6rem 0.65rem;
+  }
+  .detail-back {
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 0.7rem;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .char-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
+  .char-name { font-family: Georgia, serif; font-size: 1.15rem; font-weight: 700; color: var(--gold); }
+  .char-concept { font-size: 0.75rem; color: var(--text-dim); font-style: italic; margin-top: 0.1rem; }
+  .char-clear {
+    background: none;
+    border: 1px solid var(--panel-border);
+    color: var(--text-faint);
+    border-radius: 4px;
+    font-size: 0.62rem;
+    padding: 0.15rem 0.4rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .char-section { margin-top: 0.65rem; }
+  .char-section-title {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-faint);
+    border-bottom: 1px solid var(--panel-border);
+    padding-bottom: 0.15rem;
+    margin-bottom: 0.35rem;
+  }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.35rem; }
+  .stat-chip {
+    background: var(--panel-2);
+    border: 1px solid var(--panel-border);
+    border-radius: 4px;
+    padding: 0.3rem 0.35rem;
+    text-align: center;
+  }
+  .stat-chip .v { font-size: 1rem; font-weight: 700; color: var(--text); }
+  .stat-chip .k { font-size: 0.58rem; text-transform: uppercase; color: var(--text-faint); letter-spacing: 0.03em; }
+  .attr-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 0;
+    font-size: 0.75rem;
+    border-bottom: 1px solid var(--panel-2);
+  }
+  .attr-row .an { color: var(--text-dim); }
+  .attr-row .av { color: var(--text); font-weight: 700; }
+  .attr-row .subs { color: var(--text-faint); font-size: 0.68rem; }
+  .tag-list { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+  .tag {
+    background: var(--panel-2);
+    border: 1px solid var(--panel-border);
+    border-radius: 3px;
+    padding: 0.15rem 0.4rem;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+  }
+  .tag .tv { color: var(--gold); font-weight: 600; }
+  .item-line { font-size: 0.75rem; padding: 0.15rem 0; color: var(--text-dim); }
+  .item-line .in { color: var(--text); }
+  .item-sub { font-size: 0.65rem; color: var(--text-faint); padding-left: 0.6rem; }
+  .empty-note { font-size: 0.72rem; color: var(--text-faint); margin-top: 0.3rem; line-height: 1.4; }
+
+  /* ---- Combat tracker ---- */
+
+  .combat-bar {
+    background: var(--panel-2);
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+    padding: 0.5rem 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+  .combat-bar.active { border-color: var(--gold); }
+  .cb-top { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+  .cb-phase {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-faint);
+  }
+  .cb-round { font-size: 0.85rem; font-weight: 700; color: var(--gold); }
+  .cb-turn { font-size: 0.78rem; color: var(--text); margin-top: 0.25rem; }
+  .cb-turn .who { font-weight: 700; color: var(--gold); }
+  .cb-actions { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.45rem; }
+
+  .btn {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    color: var(--text-dim);
+    border-radius: 4px;
+    font-size: 0.7rem;
+    padding: 0.28rem 0.55rem;
+    cursor: pointer;
+  }
+  .btn:hover:not(:disabled) { border-color: var(--accent); color: var(--text); }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn.primary { background: var(--accent-dim); border-color: var(--accent); color: var(--text); font-weight: 600; }
+  .btn.danger:hover:not(:disabled) { border-color: var(--danger); color: var(--danger); }
+  .btn.on { background: var(--accent-dim); border-color: var(--gold); color: var(--text); font-weight: 700; }
+
+  .roster-item.on-turn { border-left-color: var(--gold); background: var(--accent-dim); box-shadow: 0 0 0 1px var(--gold) inset; }
+  /* Already acted this round - dropped to the bottom and dimmed, but still
+     fully usable, since they can take damage after their own turn. */
+  .roster-item.acted { opacity: 0.5; }
+  .roster-item.acted:hover { opacity: 1; }
+  .roster-item { flex-wrap: wrap; }
+  .ri-main { display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 0.5rem; }
+  .ri-meta { display: flex; align-items: center; gap: 0.3rem; flex-shrink: 0; }
+  .role-chip {
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 3px;
+    padding: 0.1rem 0.3rem;
+    border: 1px solid var(--panel-border);
+    color: var(--text-faint);
+    cursor: pointer;
+    background: none;
+  }
+  .role-PC { color: var(--ok); border-color: var(--ok); }
+  .role-Ally { color: var(--accent); border-color: var(--accent); }
+  .role-NPC { color: var(--danger); border-color: var(--danger); }
+
+  .ri-combat {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 0.4rem;
+    padding-top: 0.4rem;
+    border-top: 1px solid var(--panel-2);
+  }
+  .init-box {
+    width: 3.1rem;
+    background: var(--panel-2);
+    border: 1px solid var(--panel-border);
+    color: var(--text);
+    border-radius: 4px;
+    font-size: 0.72rem;
+    padding: 0.22rem 0.3rem;
+    text-align: center;
+  }
+  .mini-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-faint); }
+
+  .track {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    background: var(--panel-2);
+    border: 1px solid var(--panel-border);
+    border-radius: 4px;
+    padding: 0.1rem 0.2rem;
+  }
+  .track .tk { font-size: 0.55rem; text-transform: uppercase; color: var(--text-faint); letter-spacing: 0.04em; }
+  .track .tv { font-size: 0.75rem; font-weight: 700; min-width: 2.2rem; text-align: center; }
+  .track button {
+    background: none;
+    border: none;
+    color: var(--text-faint);
+    cursor: pointer;
+    font-size: 0.8rem;
+    line-height: 1;
+    padding: 0 0.15rem;
+  }
+  .track button:hover { color: var(--text); }
+  .track.hurt .tv { color: var(--gold); }
+  .track.down .tv { color: var(--danger); }
+  .status-chip {
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    border-radius: 3px;
+    padding: 0.08rem 0.28rem;
+  }
+
+  .token-btn { font-size: 0.62rem; padding: 0.2rem 0.4rem; }
+  .token-btn.linked { color: var(--ok); border-color: var(--ok); }
+  .obr-note {
+    font-size: 0.66rem;
+    color: var(--text-faint);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+  }
+</style>
+</head>
+<body>
+
+<h1><img src="https://feralucce.github.io/20_Below_Roster/icon.svg" alt="" width="20" height="20" /> 20 Below Roster</h1>
+
+<label class="file-btn" for="addFile">Add character JSON(s)&hellip;</label>
+<input type="file" id="addFile" accept="application/json,.json" multiple />
+<div class="empty-note" style="margin-top:-0.3rem;margin-bottom:0.6rem">Export characters from the <a href="https://20belowrpg.com/app/" target="_blank" style="color:var(--accent)">20 Below character creator</a> (Sheet step &rarr; Save/Export) - players and NPCs both work. Read-only, no editing here.</div>
+
+<div id="obrNote" class="obr-note" style="display:none"></div>
+
+<div id="combatBar" class="combat-bar"></div>
+
+<div id="rosterList" class="roster-list"><div class="list-empty">No characters loaded yet.</div></div>
+
+<div id="detail" style="display:none" class="detail-wrap">
+  <button class="detail-back" id="backBtn">&larr; Back to roster</button>
+  <div id="charView"></div>
+</div>
+
+<script type="module">
+  const STORAGE_KEY = "twentybelow-roster.characters";
+  const COMBAT_KEY = "twentybelow-roster.combat";
+  let roster = []; // [{ id, text, state|null, error|null }]
+  let activeId = null;
+
+  // ---- Shared combat engine ----
+  //
+  // The rules math and the whole round/turn engine live in the main
+  // 20_Below repo and are copied in by scripts/sync-roster.mjs - see
+  // lib/README.md. They ship with the extension rather than being fetched
+  // from the site, because unlike the small status helpers this had been
+  // fetching before, a combat engine has no sensible offline fallback.
+  //
+  // The same module backs the standalone web tracker and the desktop app,
+  // so all three can't drift on how a round actually runs.
+  import * as engine from "../app/combat/model.js";
+  const { ROLES, BRACKETS, computeFiguredCharacteristics } = engine;
+
+  // ---- Owlbear bridge ----
+  //
+  // Loaded dynamically and tolerated when absent, so the panel still works
+  // opened directly in a browser (which is also how it gets tested) - only
+  // the token-linking features go quiet.
+  let OBR = null;
+  let obrReady = false;
+
+  async function initOBR() {
+    try {
+      const mod = await import("https://cdn.jsdelivr.net/npm/@owlbear-rodeo/sdk@3.1.0/+esm");
+      OBR = mod.default;
+      if (!OBR || !OBR.isAvailable) throw new Error("not in Owlbear");
+      await new Promise((resolve) => OBR.onReady(resolve));
+      obrReady = true;
+      // A token deleted from the scene should not leave a dead link behind.
+      OBR.scene.items.onChange((items) => {
+        if (engine.pruneTokens(combat, items.map((i) => i.id))) {
+          saveCombat();
+          renderList();
+        }
+      });
+    } catch (e) {
+      obrReady = false;
+      const note = document.getElementById("obrNote");
+      note.style.display = "";
+      note.textContent =
+        "Token linking needs Owlbear Rodeo. Everything else - Initiative, Action Brackets, turn order and damage - works here.";
+    }
+    renderList();
+  }
+
+  const TIER_NAMES = ["Untrained", "Novice", "Trained", "Adept", "Expert", "Master"];
+  const ATTR_SUBS = {
+    Earth: ["Soak", "Potence"],
+    Air: ["Initiative", "Psyche"],
+    Fire: ["Ferocity", "Presence"],
+    Water: ["Stamina", "Health"],
+    Moira: ["Atropos", "Klotho"],
+  };
+
+  function effectiveResourceLevel(state, name) {
+    if (state.resourceZeroed && state.resourceZeroed[name]) return 0;
+    const level = (state.resources && state.resources[name]) ?? 0;
+    const penalty = (state.resourcePenalties && state.resourcePenalties[name]) ?? 0;
+    return Math.max(Math.min(level, 1), level - penalty);
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  }
+
+  function renderCharacter(state) {
+    const figured = computeFiguredCharacteristics(state);
+    const natureLabel = state.nature && state.nature.custom
+      ? state.nature.custom.label
+      : (state.nature && state.nature.picked) || null;
+
+    const attrRows = Object.entries(state.attributes || {}).map(([name, val]) => {
+      const subs = (ATTR_SUBS[name] || []).map((s) => `${s} ${(state.subStats && state.subStats[s]) ?? 0}`).join(" · ");
+      return `<div class="attr-row"><span class="an">${escapeHtml(name)}</span><span class="subs">${escapeHtml(subs)}</span><span class="av">${val}</span></div>`;
+    }).join("");
+
+    const statChips = Object.entries(figured).map(([k, v]) => {
+      let cur = "";
+      if (k === "Health Levels" && state.currentHealth != null) cur = `${state.currentHealth}/`;
+      if (k === "Poise" && state.currentPoise != null) cur = `${state.currentPoise}/`;
+      if (k === "Sanity" && state.currentSanity != null) cur = `${state.currentSanity}/`;
+      if (k === "Ki" && state.currentKi != null) cur = `${state.currentKi}/`;
+      return `<div class="stat-chip"><div class="v">${cur}${v}</div><div class="k">${escapeHtml(k)}</div></div>`;
+    }).join("");
+
+    const trainedSkills = Object.entries(state.skills || {}).filter(([, tier]) => tier > 0);
+    const skillsHtml = trainedSkills.length
+      ? `<div class="tag-list">${trainedSkills.map(([name, tier]) => `<span class="tag">${escapeHtml(name)} <span class="tv">${TIER_NAMES[tier] || tier}</span></span>`).join("")}</div>`
+      : `<div class="item-line">None trained.</div>`;
+
+    const boons = state.boons || [];
+    const boonsHtml = boons.length
+      ? boons.map((b) => `<div class="item-line"><span class="in">${escapeHtml(b.name)}</span>${b.tier ? ` (Tier ${b.tier})` : ""}</div>`).join("")
+      : `<div class="item-line">None.</div>`;
+
+    const resourceEntries = Object.keys(state.resources || {}).map((name) => [name, effectiveResourceLevel(state, name)]).filter(([, lvl]) => lvl > 0);
+    const resourcesHtml = resourceEntries.length
+      ? `<div class="tag-list">${resourceEntries.map(([name, lvl]) => `<span class="tag">${escapeHtml(name)} <span class="tv">${lvl}</span></span>`).join("")}</div>`
+      : `<div class="item-line">None.</div>`;
+
+    const gifts = state.gifts || [];
+    const giftsHtml = gifts.length
+      ? gifts.map((g) => {
+          const extras = [];
+          if (g.adders && g.adders.length) extras.push(`Adders: ${g.adders.join(", ")}`);
+          if (g.limiters && g.limiters.length) extras.push(`Limiters: ${g.limiters.join(", ")}`);
+          return `<div class="item-line"><span class="in">${escapeHtml(g.name)}</span> — Level ${g.level}</div>` +
+            (extras.length ? `<div class="item-sub">${escapeHtml(extras.join(" · "))}</div>` : "");
+        }).join("")
+      : `<div class="item-line">None.</div>`;
+
+    const flaws = state.flaws || [];
+    const flawsHtml = flaws.length
+      ? `<div class="tag-list">${flaws.map((f) => `<span class="tag">${escapeHtml(f.name)}${f.level ? ` <span class="tv">${f.level}</span>` : ""}</span>`).join("")}</div>`
+      : `<div class="item-line">None.</div>`;
+
+    const scars = state.scars || [];
+    const scarsHtml = scars.length
+      ? scars.map((s) => `<div class="item-line"><span class="in">${escapeHtml(s.title)}</span> (${s.physical ? "Physical" : "Mental"})</div>`).join("")
+      : "";
+
+    const fateLine = state.currentFateTokens != null ? `<div class="item-line">Fate Tokens: <span class="in">${state.currentFateTokens}</span></div>` : "";
+    const xpLine = state.xpEarned != null ? `<div class="item-line">XP earned: <span class="in">${state.xpEarned}</span></div>` : "";
+    const notesHtml = state.finishingNotes
+      ? `<p>${escapeHtml(state.finishingNotes).replace(/\n\n+/g, "</p><p>").replace(/\n/g, "<br>")}</p>`
+      : "";
+
+    document.getElementById("charView").innerHTML = `
+      <div class="char-header">
+        <div>
+          <div class="char-name">${escapeHtml(state.name || "Unnamed")}</div>
+          <div class="char-concept">${escapeHtml(state.concept || "")}${natureLabel ? ` &middot; ${escapeHtml(natureLabel)}` : ""}</div>
+        </div>
+      </div>
+
+      ${notesHtml ? `<div class="char-section" style="margin-top:0"><div class="char-section-title">Notes</div><div class="item-line" style="line-height:1.5">${notesHtml}</div></div>` : ""}
+
+      <div class="char-section">
+        <div class="char-section-title">Figured Characteristics</div>
+        <div class="stat-grid">${statChips}</div>
+        ${fateLine}${xpLine}
+      </div>
+
+      <div class="char-section">
+        <div class="char-section-title">Attributes</div>
+        ${attrRows}
+      </div>
+
+      <div class="char-section">
+        <div class="char-section-title">Skills</div>
+        ${skillsHtml}
+      </div>
+
+      <div class="char-section">
+        <div class="char-section-title">Boons</div>
+        ${boonsHtml}
+      </div>
+
+      <div class="char-section">
+        <div class="char-section-title">Resources</div>
+        ${resourcesHtml}
+      </div>
+
+      <div class="char-section">
+        <div class="char-section-title">Gifts</div>
+        ${giftsHtml}
+      </div>
+
+      <div class="char-section">
+        <div class="char-section-title">Flaws</div>
+        ${flawsHtml}
+      </div>
+
+      ${scars.length ? `<div class="char-section"><div class="char-section-title">Scars</div>${scarsHtml}</div>` : ""}
+    `;
+  }
+
+  // ---- Combat state ----
+  //
+  // The engine is lib/combat/model.js (generated - see lib/README.md), shared
+  // with the standalone web tracker and the desktop app so none of the three
+  // can drift on how a round runs. The split: the engine owns the rules, this
+  // file owns persistence and redrawing.
+  //
+  // Combat lives in its own storage key, keyed by roster entry id, so an
+  // existing saved roster loads untouched and combat can be cleared without
+  // losing the characters.
+  let combat = engine.createCombat();
+
+  function saveCombat() {
+    try {
+      localStorage.setItem(COMBAT_KEY, JSON.stringify(combat));
+    } catch (e) {}
+  }
+
+  // Everything the engine acts on: roster entries whose file actually parsed.
+  function combatants() {
+    return roster.filter((r) => r.state);
+  }
+
+  function combatEntry(r) {
+    return engine.entryFor(combat, r);
+  }
+
+  // Every mutation is the same three steps - change state, persist, redraw.
+  // Most need the combat bar redrawn too (a button enabling, the phase
+  // changing); the few that only affect one row pass renderList instead.
+  function act(fn, redraw) {
+    fn();
+    saveCombat();
+    (redraw || renderAll)();
+  }
+
+  function cycleRole(r) { act(() => engine.cycleRole(combat, r), renderList); }
+  function rollInitiative(r) { act(() => engine.rollInitiative(combat, r)); }
+  function rollAllNonPC() { act(() => engine.rollAllNonPC(combat, combatants())); }
+  function beginCombat() { act(() => engine.beginCombat(combat, combatants())); }
+  function endCombat() { act(() => engine.endCombat(combat)); }
+  function bumpBracket(r) { act(() => engine.bumpBracket(combat, r)); }
+  function setBracket(r, bracket) { act(() => engine.setBracket(combat, r, bracket)); }
+  function setInitiative(r, value) { act(() => engine.setInitiative(combat, r, value)); }
+  function adjustTrack(r, track, delta) {
+    act(() => engine.adjustTrack(combat, r, track, delta), renderList);
+  }
+
+  function resolveRound() {
+    act(() => engine.resolveRound(combat, combatants()));
+    highlightCurrentToken();
+  }
+
+  function advanceTurn() {
+    act(() => engine.advanceTurn(combat, combatants()));
+    highlightCurrentToken();
+  }
+
+  // Read-only passthroughs, so the render code reads the same either way.
+  const allInitiativeSet = () => engine.allInitiativeSet(combat, combatants());
+  const allBracketsDeclared = () => engine.allBracketsDeclared(combat, combatants());
+  const currentTurnId = () => engine.currentTurnId(combat);
+  const hasActed = (id) => engine.hasActed(combat, id);
+  const trackStatus = (track, value, r) => engine.trackStatus(track, value, r);
+
+  // ---- Token linking ----
+
+  async function linkToken(r) {
+    if (!obrReady) return;
+    const sel = await OBR.player.getSelection();
+    if (!sel || sel.length === 0) {
+      const note = document.getElementById("obrNote");
+      note.style.display = "";
+      note.textContent = "Select a token on the scene first, then click Link again.";
+      return;
+    }
+    const items = await OBR.scene.items.getItems(sel);
+    const item = items[0];
+    const e = combatEntry(r);
+    e.tokenId = item.id;
+    e.tokenName = item.name || item.text?.plainText || "Token";
+    saveCombat();
+    document.getElementById("obrNote").style.display = "none";
+    renderList();
+  }
+
+  function unlinkToken(r) {
+    const e = combatEntry(r);
+    e.tokenId = null;
+    e.tokenName = null;
+    saveCombat();
+    renderList();
+  }
+
+  // Selecting the token is the least intrusive way to point at whose turn
+  // it is - it uses Owlbear's own selection outline rather than adding and
+  // cleaning up scene items of our own.
+  async function highlightCurrentToken() {
+    if (!obrReady) return;
+    const id = currentTurnId();
+    if (!id) return;
+    const r = roster.find((x) => x.id === id);
+    const e = r && combat.entries[r.id];
+    if (e && e.tokenId) {
+      try { await OBR.player.select([e.tokenId]); } catch (err) {}
+    }
+  }
+
+  // ---- Roster management ----
+
+  function saveRoster() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(roster.map((r) => ({ id: r.id, text: r.text }))));
+    } catch (e) {
+      // storage unavailable - roster still works for this session
+    }
+  }
+
+  function parseEntry(id, text) {
+    try {
+      const state = JSON.parse(text);
+      if (!state || typeof state !== "object" || !state.attributes || !state.subStats) {
+        return { id, text, state: null, error: "Not a 20 Below character export" };
+      }
+      return { id, text, state, error: null };
+    } catch (e) {
+      return { id, text, state: null, error: "Invalid JSON" };
+    }
+  }
+
+  function addCharacterText(text) {
+    const id = `c${Date.now()}${Math.random().toString(36).slice(2, 7)}`;
+    const entry = parseEntry(id, text);
+    roster.push(entry);
+    saveRoster();
+    renderAll();
+    if (entry.state) selectCharacter(id);
+  }
+
+  function removeCharacter(id) {
+    roster = roster.filter((r) => r.id !== id);
+    saveRoster();
+    // Drop their combat state too, and pull them out of a turn order that
+    // may already be running, so removing a downed NPC mid-fight is safe.
+    engine.removeCombatant(combat, id);
+    saveCombat();
+    if (activeId === id) {
+      activeId = null;
+      document.getElementById("detail").style.display = "none";
+    }
+    renderAll();
+  }
+
+  function selectCharacter(id) {
+    const entry = roster.find((r) => r.id === id);
+    if (!entry || !entry.state) return;
+    activeId = id;
+    renderCharacter(entry.state);
+    document.getElementById("detail").style.display = "";
+    renderList();
+  }
+
+  function renderAll() {
+    renderCombatBar();
+    renderList();
+  }
+
+  function renderCombatBar() {
+    const bar = document.getElementById("combatBar");
+    const list = combatants();
+    if (list.length === 0) { bar.style.display = "none"; return; }
+    bar.style.display = "";
+    bar.className = "combat-bar" + (combat.started ? " active" : "");
+
+    if (!combat.started) {
+      const ready = allInitiativeSet();
+      bar.innerHTML = `
+        <div class="cb-top">
+          <span class="cb-phase">Out of combat</span>
+          <span class="cb-round">${list.length} in roster</span>
+        </div>
+        <div class="cb-turn">${ready
+          ? "Initiative set for everyone."
+          : "Set Initiative for each character - roll for Allies and NPCs, type in what the players rolled."}</div>
+        <div class="cb-actions">
+          <button class="btn" id="rollAllBtn">Roll all non-PC Initiative</button>
+          <button class="btn primary" id="beginBtn" ${ready ? "" : "disabled"}>Begin combat</button>
+        </div>`;
+      document.getElementById("rollAllBtn").addEventListener("click", rollAllNonPC);
+      document.getElementById("beginBtn").addEventListener("click", beginCombat);
+      return;
+    }
+
+    if (combat.turnIndex < 0) {
+      const ready = allBracketsDeclared();
+      bar.innerHTML = `
+        <div class="cb-top">
+          <span class="cb-phase">Declare phase</span>
+          <span class="cb-round">Round ${combat.round}</span>
+        </div>
+        <div class="cb-turn">${ready
+          ? "All Action Brackets declared."
+          : "Declare an Action Bracket for everyone, then resolve the round."}</div>
+        <div class="cb-actions">
+          <button class="btn primary" id="resolveBtn" ${ready ? "" : "disabled"}>Resolve round</button>
+          <button class="btn danger" id="endBtn">End combat</button>
+        </div>`;
+      document.getElementById("resolveBtn").addEventListener("click", resolveRound);
+      document.getElementById("endBtn").addEventListener("click", endCombat);
+      return;
+    }
+
+    const id = currentTurnId();
+    const r = roster.find((x) => x.id === id);
+    const e = r ? combatEntry(r) : null;
+    const pos = combat.turnIndex + 1;
+    const total = combat.resolutionOrder.length;
+    const last = pos === total;
+    bar.innerHTML = `
+      <div class="cb-top">
+        <span class="cb-phase">Resolving &middot; ${pos} of ${total}</span>
+        <span class="cb-round">Round ${combat.round}</span>
+      </div>
+      <div class="cb-turn">Now acting: <span class="who">${escapeHtml(r ? r.state.name || "Unnamed" : "-")}</span>${
+        e ? ` &middot; ${escapeHtml(e.bracket)} &middot; Init ${e.initiative}` : ""}</div>
+      <div class="cb-actions">
+        <button class="btn primary" id="nextBtn">${last ? "End round" : "Next turn"}</button>
+        <button class="btn danger" id="endBtn">End combat</button>
+      </div>`;
+    document.getElementById("nextBtn").addEventListener("click", advanceTurn);
+    document.getElementById("endBtn").addEventListener("click", endCombat);
+  }
+
+  // The per-character combat strip: role, Initiative, Action Bracket during
+  // the declare phase, the four tracks, and the token link.
+  function combatRowHtml(r) {
+    const e = combatEntry(r);
+    const f = computeFiguredCharacteristics(r.state);
+    const declaring = combat.started && combat.turnIndex < 0;
+
+    const initCell = e.role === "PC"
+      ? `<span class="mini-label">Init</span><input class="init-box" type="number" data-init="${r.id}" value="${e.initiative ?? ""}" />`
+      : `<span class="mini-label">Init</span><input class="init-box" type="number" data-init="${r.id}" value="${e.initiative ?? ""}" />
+         <button class="btn" data-roll="${r.id}" title="Roll 1d10 + Initiative">Roll</button>`;
+
+    const brackets = declaring
+      ? BRACKETS.map((b) => `<button class="btn${e.bracket === b ? " on" : ""}" data-bracket="${r.id}" data-b="${b}">${b}</button>`).join("")
+        + `<button class="btn" data-bump="${r.id}" title="Spend 1 Ki to move up a bracket" ${
+            !e.bracket || e.currentKi <= 0 || e.bracket === "Fast" ? "disabled" : ""}>Bump (1 Ki)</button>`
+      : "";
+
+    const tracks = combat.started
+      ? [["Health", e.currentHealth, f["Health Levels"]],
+         ["Poise", e.currentPoise, f.Poise],
+         ["Sanity", e.currentSanity, f.Sanity],
+         ["Ki", e.currentKi, f.Ki]].map(([name, cur, max]) => {
+          const status = trackStatus(name, cur, r);
+          const cls = cur <= 0 ? "down" : cur < max ? "hurt" : "";
+          return `<div class="track ${cls}">
+              <span class="tk">${name === "Health" ? "HP" : name.slice(0, 3)}</span>
+              <button data-adj="${r.id}" data-t="${name}" data-d="-1">&minus;</button>
+              <span class="tv">${cur}/${max}</span>
+              <button data-adj="${r.id}" data-t="${name}" data-d="1">+</button>
+            </div>${status ? `<span class="status-chip">${status}</span>` : ""}`;
+        }).join("")
+      : "";
+
+    const token = obrReady
+      ? e.tokenId
+        ? `<button class="btn token-btn linked" data-unlink="${r.id}" title="${escapeHtml(e.tokenName || "")} - click to unlink">Token: ${escapeHtml((e.tokenName || "linked").slice(0, 14))}</button>`
+        : `<button class="btn token-btn" data-link="${r.id}" title="Select a token on the scene, then click">Link token</button>`
+      : "";
+
+    return `<div class="ri-combat">${initCell}${brackets}${tracks}${token}</div>`;
+  }
+
+  // The list stays in the order characters were added right through setup
+  // and the declare phase - rolling Initiative and picking brackets doesn't
+  // move anything, so rows don't shift around while you're still typing
+  // numbers in.
+  //
+  // Resolve round is what reorders it. From then until the round ends the
+  // list is the turn order rotated to start at whoever is up: the current
+  // combatant sits at the top, everyone still to act follows in bracket
+  // and Initiative order, and those who have already gone collect at the
+  // bottom in the order they went. With a big roster that keeps the active
+  // character on screen without scrolling, and reads as a "who's left"
+  // queue. They stay in the list rather than being hidden because a
+  // character who has already acted can still take damage afterwards.
+  //
+  // Anything not in the turn order - a file that failed to load, or someone
+  // added mid-round - sits at the very bottom rather than being dropped.
+  function displayOrder() {
+    const rotated = engine.rotatedOrder(combat);
+    if (!rotated) return roster;
+    const rank = new Map(rotated.map((id, i) => [id, i]));
+    return roster.slice().sort((a, b) => {
+      const ra = rank.has(a.id) ? rank.get(a.id) : Infinity;
+      const rb = rank.has(b.id) ? rank.get(b.id) : Infinity;
+      return ra - rb;
+    });
+  }
+
+  function renderList() {
+    const listEl = document.getElementById("rosterList");
+    if (roster.length === 0) {
+      listEl.innerHTML = '<div class="list-empty">No characters loaded yet.</div>';
+      renderCombatBar();
+      return;
+    }
+    listEl.innerHTML = "";
+    displayOrder().forEach((entry) => {
+      const div = document.createElement("div");
+      const onTurn = combat.started && currentTurnId() === entry.id;
+      const acted = hasActed(entry.id);
+      div.className = `roster-item${entry.id === activeId ? " active" : ""}${onTurn ? " on-turn" : ""}${acted ? " acted" : ""}`;
+      if (entry.state) {
+        const natureLabel = entry.state.nature && entry.state.nature.custom
+          ? entry.state.nature.custom.label
+          : (entry.state.nature && entry.state.nature.picked) || "";
+        const ce = combatEntry(entry);
+        div.innerHTML = `
+          <div class="ri-main">
+            <div>
+              <div class="ri-name">${escapeHtml(entry.state.name || "Unnamed")}</div>
+              <div class="ri-concept">${escapeHtml(entry.state.concept || natureLabel || "")}</div>
+            </div>
+            <div class="ri-meta">
+              <button class="role-chip role-${ce.role}" data-role="${entry.id}" title="Click to change role">${ce.role}</button>
+              <button class="ri-remove" data-id="${entry.id}">Remove</button>
+            </div>
+          </div>
+          ${combatRowHtml(entry)}
+        `;
+        div.addEventListener("click", (e) => {
+          if (e.target.closest(".ri-remove") || e.target.closest(".ri-combat") || e.target.closest(".role-chip")) return;
+          selectCharacter(entry.id);
+        });
+        div.querySelector("[data-role]").addEventListener("click", (ev) => {
+          ev.stopPropagation();
+          cycleRole(entry);
+        });
+        const initEl = div.querySelector("[data-init]");
+        if (initEl) {
+          initEl.addEventListener("change", (ev) => {
+            setInitiative(entry, ev.target.value);
+          });
+        }
+        const rollEl = div.querySelector("[data-roll]");
+        if (rollEl) rollEl.addEventListener("click", (ev) => { ev.stopPropagation(); rollInitiative(entry); });
+        div.querySelectorAll("[data-bracket]").forEach((b) => {
+          b.addEventListener("click", (ev) => {
+            ev.stopPropagation();
+            setBracket(entry, b.dataset.b);
+          });
+        });
+        const bumpEl = div.querySelector("[data-bump]");
+        if (bumpEl) bumpEl.addEventListener("click", (ev) => { ev.stopPropagation(); bumpBracket(entry); });
+        div.querySelectorAll("[data-adj]").forEach((b) => {
+          b.addEventListener("click", (ev) => {
+            ev.stopPropagation();
+            adjustTrack(entry, b.dataset.t, Number(b.dataset.d));
+          });
+        });
+        const linkEl = div.querySelector("[data-link]");
+        if (linkEl) linkEl.addEventListener("click", (ev) => { ev.stopPropagation(); linkToken(entry); });
+        const unlinkEl = div.querySelector("[data-unlink]");
+        if (unlinkEl) unlinkEl.addEventListener("click", (ev) => { ev.stopPropagation(); unlinkToken(entry); });
+      } else {
+        div.innerHTML = `
+          <div>
+            <div class="ri-name ri-broken">Couldn't load this file</div>
+            <div class="ri-concept">${escapeHtml(entry.error || "Unknown error")}</div>
+          </div>
+          <button class="ri-remove" data-id="${entry.id}">Remove</button>
+        `;
+      }
+      div.querySelector(".ri-remove").addEventListener("click", (e) => {
+        e.stopPropagation();
+        removeCharacter(entry.id);
+      });
+      listEl.appendChild(div);
+    });
+  }
+
+  document.getElementById("addFile").addEventListener("change", (e) => {
+    const files = [...e.target.files];
+    files.forEach((file) => {
+      const reader = new FileReader();
+      reader.onload = () => addCharacterText(reader.result);
+      reader.readAsText(file);
+    });
+    e.target.value = "";
+  });
+
+  document.getElementById("backBtn").addEventListener("click", () => {
+    activeId = null;
+    document.getElementById("detail").style.display = "none";
+    renderList();
+  });
+
+  // Load persisted roster
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      roster = parsed.map((r) => parseEntry(r.id, r.text));
+    }
+  } catch (e) {}
+
+  // Load persisted combat state. Written by a later version than the saved
+  // roster in the worst case, so anything referring to a character that is
+  // no longer loaded is dropped rather than left dangling in the turn order.
+  try {
+    const savedCombat = localStorage.getItem(COMBAT_KEY);
+    if (savedCombat) {
+      const parsed = JSON.parse(savedCombat);
+      if (parsed && typeof parsed === "object" && parsed.entries) {
+        combat = engine.reconcile(
+          Object.assign(engine.createCombat(), parsed),
+          roster.map((r) => r.id),
+        );
+      }
+    }
+  } catch (e) {}
+
+  renderAll();
+  initOBR();
+</script>
+</body>
+</html>
