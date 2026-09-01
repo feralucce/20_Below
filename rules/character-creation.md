@@ -43,6 +43,8 @@ Each Attribute you raised in step 4 generates a pool of points equal to its own 
 | Moira | Atropos | Feeds Defense (how hard you are to hit). |
 | Moira | Klotho | Ki Regeneration rate and your Lucky Number. |
 
+Moira itself, beyond its two sub-stats, caps how many Fate Tokens the character can hold at once - see [Holding Fate Tokens](fate.md#holding-fate-tokens).
+
 ## 6. Descriptors
 
 For every point you spent in step 5, you get one Descriptor - a short, one or two-word adjective capturing a specific flavor of that sub-stat for this character (3 points in Soak might yield *Hardy, Weathered, Unyielding* - three distinct ways you shrug off harm, not three copies of the same idea). Free, no separate cost, and fixed once chosen. Descriptors are core traits: there's no way to buy an extra one beyond what a sub-stat's points earn - if you want a broader spread, raise the sub-stat instead.
@@ -149,7 +151,7 @@ These aren't purchased - they're computed directly from the choices you already 
 
 ## 15. Finishing Touches
 
-- **Starting Fate Tokens**: every character begins play with **1**, matching the flat daily regeneration rate - more can be bought with Discretionary points at step 12, 1:1.
+- **Starting Fate Tokens**: every character begins play with **1**, matching the flat daily regeneration rate - more can be bought with Discretionary points at step 12, 1:1, up to your **Moira** score. Moira caps how many Fate Tokens a character can hold at once (see [Holding Fate Tokens](fate.md#holding-fate-tokens)), so points spent past that cap buy nothing.
 - Anything else that falls outside the numbered steps above - final appearance/personality details building on your step 2 concept, and any last GM sign-off on the finished sheet.
 
 The character is ready to play.
