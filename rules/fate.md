@@ -57,6 +57,23 @@ Pick one of these, or [write your own](#writing-a-custom-nature).
 
 **No double-dipping**: a single scene beat pays out **at most one Fate Token**, even if it could honestly be described as both playing to your Nature and invoking a Flaw (or any other two triggers above) at once - e.g. a Soft-Hearted character with a Caregiver Nature stopping to help someone vulnerable. Pick whichever source fits best and pay out once.
 
+### Holding Fate Tokens
+
+A character can hold at most **[Moira score]** Fate Tokens at once. A Token earned while
+already at that cap is lost rather than banked - including the daily regeneration and
+Milestone awards.
+
+This is a separate limit from [Stamina](#staminas-job)'s spend cap, and the two do different
+jobs: **Moira limits how many Fate Tokens you can have; Stamina limits how many you can spend
+in a Scene.** A high-Moira, low-Stamina character sits on a deep reserve they can only draw on
+slowly; the reverse burns through a shallow one fast.
+
+Because every Attribute starts at 1, a character who put nothing into Moira holds exactly one
+Fate Token. Spend it and they are empty until the next sunrise, unless they earn one by playing
+to their Nature, having a Flaw invoked, taking Disadvantage on purpose, or the GM handing one
+over. The [Lucky Number](rules.md#klotho) cannot help them: it equals Klotho, and a Moira of 1
+leaves Klotho at 0 or 1, neither of which a 2d10 total can ever equal.
+
 ## Fate Triggers
 
 Fate Tokens are spent on [Kotodama](#kotodama), or on any of the following, each a flat **1 Fate Token**:

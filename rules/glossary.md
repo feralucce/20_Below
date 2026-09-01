@@ -56,7 +56,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Fast Action** — The Fast bracket. You go before everyone in Normal or Slow, but you only get the one action - a move, an attack, or a single Skill use. You’re trading how much you do for going first.
 
-**Fate Token** — The currency you earn and spend. You pick them up from your Nature, from taking Disadvantage on purpose, from your Flaws, from a daily top-up, from story Milestones, or whenever the GM hands one over. You spend them on Kotodama or the Fate Triggers.
+**Fate Token** — The currency you earn and spend. You pick them up from your Nature, from taking Disadvantage on purpose, from your Flaws, from a daily top-up, from story Milestones, or whenever the GM hands one over. You spend them on Kotodama or the Fate Triggers. You can hold as many as your Moira and no more — anything earned at that cap is lost rather than banked.
 
 **Fate Triggers** — The things a Fate Token buys: a Kotodama, shrugging off one of your Flaws for a Scene, an automatic success, Advantage on a roll, shrugging off a condition, or a full Ki refill. Every one of them makes you roll a Fatigue Check afterward.
 
@@ -102,7 +102,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Milestone Award** — A Fate Token for every player when the group clears a real hurdle - the fight a session was building toward, a turning point in the story. Figure about one a session.
 
-**Moira** — One of the five Elements that defines the essence of a character - fate, and the threads nobody living gets to see. Moira is the Attribute that covers luck, destiny, and the supernatural itself, how the world bends around you, and whether it bends your way. It is further divided into Atropos and Klotho.
+**Moira** — One of the five Elements that defines the essence of a character - fate, and the threads nobody living gets to see. It also caps how many Fate Tokens you can hold at once. Moira is the Attribute that covers luck, destiny, and the supernatural itself, how the world bends around you, and whether it bends your way. It is further divided into Atropos and Klotho.
 
 **Movement Rate** — How far you can move in a step, in meters: 5 plus your Air. That’s the move on a Fast Action, or the move half of a Normal one.
 
