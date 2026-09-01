@@ -16,7 +16,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Air** — One of the five Elements that defines the essence of a character - breath and weather, never in one place long. Air is the Attribute that covers agility, adaptability, intelligence, sharpness of mind, how fast you react, and how well you handle it when things change around you. It is further divided into Initiative and Psyche.
 
-**Atropos** — One of Moira’s two sub-stats, named for the Fate who cuts the thread and can’t be turned aside. It sets your Defense - how hard you are to hit - at 10 minus your Atropos. Sample descriptors: Elusive, Untouchable, Slippery, Ghostly, Cat-Like, and so on.
+**Atropos** — One of Moira’s two sub-stats, named for the Fate who cuts the thread and can’t be turned aside. It sets your Defense - how hard you are to hit - at 10 minus your Atropos. Sample descriptors: Fated, Untouchable, Uncanny, Unsevered, Passed-Over, and so on.
 
 **Attack** — Any deliberate attempt to hurt someone, in any of the three ways the game recognizes - Physical, Social, or Mental. All three run on the same two steps. First you have to connect: roll your Attribute against their Defense, no Skill involved. Only if that lands do you roll the attack’s dice, and those go against the matching Wall - Soak, Presence, or Psyche. A Physical die that gets through costs a Health Level, a Social die costs Poise, a Mental die costs Sanity.
 
@@ -90,7 +90,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Ki Infusion** — Paying 1 Ki per die to add a sub-stat - Ferocity, Presence, or Psyche, whichever matches the attack - to that die before you roll. It’s how you push a hit through a wall that would otherwise stop it cold.
 
-**Klotho** — One of Moira’s two sub-stats, the thread still being spun. It sets how fast your Ki comes back and fixes your Lucky Number. Sample descriptors: Charmed, Fortunate, Blessed, Star-Touched, Timely, and so on.
+**Klotho** — One of Moira’s two sub-stats, the thread still being spun. It sets how fast your Ki comes back and fixes your Lucky Number. Sample descriptors: Charmed, Star-Touched, Quickening, Replenishing, Ever-Spinning, and so on.
 
 **Kotodama** — (言霊, “word spirit.”) Spending Fate Tokens to state something true about the world instead of touching a die roll. You say it, you pay for it - the cost is built from how big it is, how far it reaches, how believable it is, and whether it has to last - and the story rearranges to fit. Several players can pool tokens for something none of them could afford alone.
 
