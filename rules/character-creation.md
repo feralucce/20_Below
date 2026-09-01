@@ -40,7 +40,7 @@ Each Attribute you raised in step 4 generates a pool of points equal to its own 
 | Fire | Presence | Resists Social attacks, and sets how many dice you roll when making one. |
 | Water | Stamina | Caps how many Fate Tokens you can spend per Scene; also your endurance against non-combat exhaustion. |
 | Water | Health | Feeds your Health Levels (how many hits you can take). |
-| Moira | Atropos | Feeds Defense (how hard you are to hit). |
+| Moira | Atropos | Feeds Defense (how hard you are to touch at all - blade, word, or mind). |
 | Moira | Klotho | Ki Regeneration rate and your Lucky Number. |
 
 Moira itself, beyond its two sub-stats, caps how many Fate Tokens the character can hold at once - see [Holding Fate Tokens](fate.md#holding-fate-tokens).
