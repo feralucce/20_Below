@@ -1,4 +1,4 @@
-import { createInitialState, mergeCharacterState, allPoolsSummary } from './state.js';
+import { createInitialState, mergeCharacterState, allPoolsSummary, clampFateTokenPurchases } from './state.js';
 import { el, poolBadge } from './ui.js';
 import { loadRulesData } from './rules-data.js';
 import { isDesktopApp } from './desktop-storage.js';
@@ -156,13 +156,19 @@ async function main() {
   const state = loadSavedState(data);
   let currentStep = 0;
 
+  // The Fate Token cap moves with Moira, which is itself buyable, so any
+  // change can strand Tokens above the new cap - lowering Moira has to refund
+  // them. Re-applied at the top of both render entry points: the step panel
+  // has to be built from already-clamped state, or it draws the stale count.
   function rerenderPools() {
+    clampFateTokenPurchases(state, data);
     poolSummary.innerHTML = '';
     allPoolsSummary(state, data).forEach((p) => poolSummary.appendChild(poolBadge(p.label, p.remaining)));
     saveState(state);
   }
 
   function rerenderStep() {
+    clampFateTokenPurchases(state, data);
     panel.innerHTML = '';
     const ctx = { state, data, rerenderStep, rerenderPools };
     STEPS[currentStep].render(panel, ctx);

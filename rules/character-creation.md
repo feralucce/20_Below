@@ -45,6 +45,8 @@ Each Attribute you raised in step 4 generates a pool of points equal to its own 
 
 Moira itself, beyond its two sub-stats, caps how many Fate Tokens the character can hold at once - see [Holding Fate Tokens](fate.md#holding-fate-tokens).
 
+Health is worth a second look before you leave it at 0. Every character has 5 Health Levels before the sub-stat is counted, so dumping it doesn't leave you fragile in a fight - it leaves you with nothing underneath the fight. A character with 0 Health still drops unconscious at 0 Health Levels like anyone else, but dies on the very next hit instead of bleeding out with time for someone to reach them. See [Health Levels](rules.md#health-levels).
+
 ## 6. Descriptors
 
 For every point you spent in step 5, you get one Descriptor - a short, one or two-word adjective capturing a specific flavor of that sub-stat for this character (3 points in Soak might yield *Hardy, Weathered, Unyielding* - three distinct ways you shrug off harm, not three copies of the same idea). Free, no separate cost, and fixed once chosen. Descriptors are core traits: there's no way to buy an extra one beyond what a sub-stat's points earn - if you want a broader spread, raise the sub-stat instead.
