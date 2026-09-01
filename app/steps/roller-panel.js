@@ -9,6 +9,7 @@ import {
   applyResourceCheckFailure,
   applyResourceCheckZeroOut,
   clearResourcePenalty,
+  fateTokenCap,
 } from '../state.js';
 
 // Physical/Social/Mental each pair a wall stat (what the target's dice are
@@ -238,7 +239,9 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
       });
 
       if (result.luckyNumber) {
-        state.currentFateTokens += 1;
+        // A Token earned at the Moira cap is lost, not banked
+        // (rules/fate.md#holding-fate-tokens).
+        state.currentFateTokens = Math.min(fateTokenCap(state), state.currentFateTokens + 1);
         refreshHeader();
       }
 
@@ -516,7 +519,9 @@ export function buildAttackRollSection(state, data, refreshHeader) {
       });
 
       if (result.luckyNumber) {
-        state.currentFateTokens += 1;
+        // A Token earned at the Moira cap is lost, not banked
+        // (rules/fate.md#holding-fate-tokens).
+        state.currentFateTokens = Math.min(fateTokenCap(state), state.currentFateTokens + 1);
         refreshHeader();
       }
 

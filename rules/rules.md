@@ -270,6 +270,8 @@ Every character starts with **5 Health Levels**, flat, before anything else is a
 
 At **0 Health Levels**, a character falls unconscious and can't act. Health Levels can still be tracked into negative territory from further damage - at **Health Levels ≤ −(Health sub-stat)**, the character dies. Ordinarily this negative range plays out off-screen, since an unconscious character can't act or be aware of it; [Unstoppable](boons.md#major) is the exception that lets a character stay conscious and act throughout that same negative range instead of blacking out at 0.
 
+Falling unconscious at 0 is unconditional - it happens on the way down no matter what the Health sub-stat is. What the Health sub-stat buys is how far past 0 a character can be carried before the threshold catches them. **A character who put nothing into Health has no distance there at all**: still the flat 5 Health Levels, still unconscious at 0, but a death threshold of 0 as well, so the next hit that lands takes them to −1 and kills them outright. No bleeding out, nobody dragging them clear. Every point in Health is another hit's worth of that window.
+
 **Crossing zero**: a single attack can never carry a character straight past 0 into negative territory. If enough connecting dice from one attack would carry a character's Health Levels below 0, the excess is simply discarded - they land exactly at 0, no further, no matter how many dice connected. **Once a character is already at 0 Health Levels** - unconscious under the rule above, or still conscious via Unstoppable - **any further attack can only remove 1 Health Level, total, regardless of how many dice connect.**
 
 #### Health Level Recovery

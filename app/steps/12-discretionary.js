@@ -18,6 +18,9 @@ import {
   skillTierName,
   unspentBoonsPoolPoints,
   unspentGiftsPoolPoints,
+  fateTokenCap,
+  fateTokensBuyable,
+  startingFateTokens,
 } from '../state.js';
 import { renderBoonPicker } from './07-boons.js';
 
@@ -80,8 +83,16 @@ export default {
     // ---- Fate Tokens (pure count, no separate item to pick) ----
     const rateFate = data.discretionaryRates['Fate Tokens'];
     const fateContent = section(`Fate Tokens (${rateFate} Discretionary/token)`);
+    const fateBuyable = fateTokensBuyable(state, data);
     fateContent.append(
       briefDetail('Spent via Kotodama to assert a fact into the fiction directly - bend the world to make a claim true. See Fate Tokens.'),
+      el(
+        'p',
+        { class: 'hint' },
+        fateBuyable === 0
+          ? `Moira ${fateTokenCap(state)} caps you at ${fateTokenCap(state)} Fate Token${fateTokenCap(state) === 1 ? '' : 's'}, which the flat starting Token already covers. Raise Moira first if you want more.`
+          : `Holding ${startingFateTokens(state, data)} / ${fateTokenCap(state)} - Moira caps how many Fate Tokens you can hold, so points spent past that buy nothing.`,
+      ),
       counterRow({
         name: 'Extra Fate Tokens',
         get: () => state.discretionaryExtra['Fate Tokens'],
@@ -89,8 +100,13 @@ export default {
           state.discretionaryExtra['Fate Tokens'] = v;
         },
         min: 0,
+        // Two ceilings at once: what's affordable, and what Moira lets the
+        // character actually hold (rules/fate.md#holding-fate-tokens).
         max: () =>
-          state.discretionaryExtra['Fate Tokens'] + Math.floor(discretionaryRemaining(state, data) / rateFate),
+          Math.min(
+            state.discretionaryExtra['Fate Tokens'] + Math.floor(discretionaryRemaining(state, data) / rateFate),
+            fateTokensBuyable(state, data),
+          ),
         onChange: () => {
           rerenderStep();
           rerenderPools();

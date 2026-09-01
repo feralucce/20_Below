@@ -8,6 +8,7 @@ import {
   sanityStatus,
   applyRest,
   effectiveResourceLevel,
+  fateTokenCap,
 } from '../state.js';
 import { downloadJson } from '../export/toJson.js';
 import buildAdvancementTab from './tab-advancement.js';
@@ -55,8 +56,9 @@ function damageTracker(label, current, max, color, statusFn, onChange, interacti
 }
 
 // Ki and Fate Tokens don't fit the pip-boxes model - Ki's max can run well
-// past what's reasonable to draw as boxes, and Fate Tokens has no max at
-// all - so both get a plain stepping counter instead.
+// past what's reasonable to draw as boxes, and Fate Tokens caps at Moira,
+// which is low enough that boxes would look odd next to Health's row - so
+// both get a plain stepping counter instead.
 function counterTracker(label, current, max, onChange, interactive) {
   return el('div', { class: 'field-box' }, [
     el('span', { class: 'field-label' }, label),
@@ -334,7 +336,7 @@ function buildHeader(state, data, figured, { interactive = false, refresh = () =
     refresh();
   };
   const setFate = (v) => {
-    state.currentFateTokens = Math.max(0, v);
+    state.currentFateTokens = Math.max(0, Math.min(fateTokenCap(state), v));
     refresh();
   };
 
@@ -371,7 +373,7 @@ function buildHeader(state, data, figured, { interactive = false, refresh = () =
       damageTracker('Poise', state.currentPoise, figured.Poise, 'var(--gold)', poiseStatus, setPoise, interactive),
       damageTracker('Sanity', state.currentSanity, figured.Sanity, 'var(--air)', sanityStatus, setSanity, interactive),
       counterTracker('Ki', state.currentKi, figured.Ki, setKi, interactive),
-      counterTracker('Fate Tokens', state.currentFateTokens, null, setFate, interactive),
+      counterTracker('Fate Tokens', state.currentFateTokens, fateTokenCap(state), setFate, interactive),
     ]),
 
     el('div', { class: 'sheet-mini-row' }, [
