@@ -25,7 +25,8 @@ $files = @(
     "tracker\index.html",
     "app\state.js",
     "app\roller\core.js",
-    "app\combat\model.js"
+    "app\combat\model.js",
+    "app\media.js"
 )
 
 foreach ($f in $files) {
