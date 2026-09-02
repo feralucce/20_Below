@@ -36,7 +36,7 @@ Per-Attribute example tasks (a Fire example vs. an Earth example at the same Dif
 
 **Critical results, regardless of target number:**
 
-- **A roll of 2** (both dice show 1) - critical success.
+- **A roll of 2** (both dice show 1) - critical success. In combat this has a specific effect, see [Critical Hits](#critical-hits).
 - **A roll of 20** (both dice show 10) - critical failure.
 
 ### Advantage / Disadvantage
@@ -308,6 +308,16 @@ Moira's combat sub-stat, **Atropos**, named for the Fate who cuts the thread of 
 Defense is **universal across all three attack types** - Physical, Social, and Mental all resolve their [to-hit roll](#the-passive-wall-triad---soak-presence-psyche) against the same Defense number. Defense becomes the attacker's Difficulty (see the [Difficulty Chart](#difficulty-chart)); since Difficulty runs 0 (hardest) to 10 (trivial), the subtraction inverts Atropos correctly: Atropos 0 → Defense 10 (trivial to hit), Atropos 10 → Defense 0 (nearly impossible to hit).
 
 ## Combat
+
+### Critical Hits
+
+A **critical success on the to-hit roll doubles the number of damage dice** the attack rolls. A weapon that normally throws 5d10 throws 10d10; one that throws 3d10 throws 6d10.
+
+The extra dice are ordinary dice. They face the same wall, and [Ki Infusion](#ki-infusion) works on them exactly as it does on the rest - so realising a critical against a high wall costs Ki like anything else, and a character with an empty pool gets a smaller critical than one with a full pool.
+
+Doubling cannot kill on its own. The [crossing-zero](#health-levels) rule still applies: however many dice connect, a single attack can only ever bring a target to **0**, never past it. Against a player character or anyone else who survives being dropped, a critical is what takes them out of the fight rather than what ends their life. Against most opponents, 0 is the end of it.
+
+Note that the [Skill Training Tiers](skills.md#training-tiers) that widen the critical range do **not** apply here: an attack is a straight Attribute-vs-Defense roll with no Skill involved, so a critical hit lands on a natural 2 for everyone. What does move the odds is **Advantage** - which a [Slow action](#action-brackets) grants, taking a critical from a 1% chance to roughly 2.8%.
 
 ### Combat Order
 
