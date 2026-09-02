@@ -25,8 +25,8 @@ Because Limiters make the per-Level cost vary Gift to Gift, the 21-point pool wo
 No new stat governs Gifts. Using a Gift draws on tools that already exist elsewhere in the system:
 
 - **The roll**, where one applies, reuses the standard mechanics already in place - weapon/Physical resolution, Presence/Psyche's self-paired attack shape, or a plain `Attribute + Difficulty` check - rather than each Gift inventing its own roll type.
-- **Ki cost**, where one applies, is a direct spend (no roll, no Fatigue Check) called out explicitly per Gift level, the same category as Ki Infusion or Bump Action Bracket.
-- **The Gift Check**, where one applies, is a resource-risk roll: 2d10 against current Ki + Stamina (roll-under). Success - free. Failure - lose 1 Ki, until refilled.
+- **Ki cost**, where one applies, is a direct spend (no roll) called out explicitly per Gift level, the same category as Ki Infusion or Bump Action Bracket.
+- **The Gift Check**, where one applies, is a resource-risk roll: 2d10 against **current Ki** (roll-under), the same shape as a [core roll](rules.md#core-mechanic). Success - free. Failure - lose 1 Ki, until refilled. Because it reads current Ki rather than your maximum, Gifts are dependable while you are fresh and get unreliable once you have spent the day.
 
 None of these three apply automatically to every Gift or every level - each is a tool, used on a Gift-by-Gift, level-by-level basis as the specific effect calls for it.
 

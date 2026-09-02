@@ -24,7 +24,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Boon** — A small, permanent perk that isn’t a Skill and isn’t a Gift. Boons don’t add to your dice - they let you do or claim something you otherwise couldn’t. Most are a flat yes-or-no; a handful come in tiers.
 
-**Bump Action Bracket** — Spend 1 Ki to move a declared action up a step - Slow to Normal, or Normal to Fast. Two Ki jumps two steps. No roll, no Fatigue Check; you’re just buying speed with Ki.
+**Bump Action Bracket** — Spend 1 Ki to move a declared action up a step - Slow to Normal, or Normal to Fast. Two Ki jumps two steps. No roll, no check; you’re just buying speed with Ki.
 
 **Called Shot** — Picking out something specific to hit instead of just hitting them - a hand, a knee, the strap holding their pack on, the camera housing on a drone, the weapon they’re pointing at you. A Called Shot is a Slow Action. What landing it does depends on what you aimed at, and that’s the GM’s call.
 
@@ -58,9 +58,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Fate Token** — The currency you earn and spend. You pick them up from your Nature, from taking Disadvantage on purpose, from your Flaws, from a daily top-up, from story Milestones, or whenever the GM hands one over. You spend them on Kotodama or the Fate Triggers. You can hold as many as your Moira and no more — anything earned at that cap is lost rather than banked.
 
-**Fate Triggers** — The things a Fate Token buys: a Kotodama, shrugging off one of your Flaws for a Scene, an automatic success, Advantage on a roll, shrugging off a condition, or a full Ki refill. Every one of them makes you roll a Fatigue Check afterward.
-
-**Fatigue Check** — The catch on spending Fate Tokens. Every time you spend one, roll 2d10 against your current Ki - under is good, same as the core roll. Pass and there’s no extra cost; fail and you lose a point of Ki until it comes back. Spending Ki directly - to save a Level, bump a bracket, or fuel Ki Infusion - doesn’t set one off.
+**Fate Triggers** — The things a Fate Token buys: a Kotodama, shrugging off one of your Flaws for a Scene, an automatic success, Advantage on a roll, shrugging off a condition, or a full Ki refill. Spending the Token is the whole cost - nothing else is rolled.
 
 **Ferocity** — One of Fire’s two sub-stats, will burned down to an ember. When you spend Ki to put more behind a physical strike - that’s Ki Infusion - Ferocity is what you’re adding. Sample descriptors: Brutal, Savage, Relentless, Merciless, Feral, and so on.
 
@@ -76,7 +74,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Gift** — A genuinely supernatural ability - magic, psionics, a mutation, a blessing, whatever suits the setting. Each one is a single, specific, named thing rather than a broad category, and each has five levels that stack, the effect getting bigger or stronger as you climb.
 
-**Gift Check** — The risk some Gifts carry when you use them. Roll 2d10 against your Ki plus Stamina, under to pass. Pass and it’s free; fail and it costs you a point of Ki.
+**Gift Check** — The risk some Gifts carry when you use them. Roll 2d10 against your current Ki, under to pass. Pass and it’s free; fail and it costs you a point of Ki.
 
 **Health** — One of Water’s two sub-stats, the depth of the well you draw endurance from. It sets your Health Levels - 5 plus your Health - which is how many hits you can take before you drop. It’s also how far past 0 you can be carried before you die, so a Health of 0 means the first hit after you drop kills you. Sample descriptors: Hale, Resilient, Stalwart, Unbreakable, Hard-to-Kill, and so on.
 
@@ -86,11 +84,11 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Initiative** — One of Air’s two sub-stats, the flick of readiness that decides who moves first. You roll it once at the start of a fight - 1d10 plus your Initiative - and that order holds for the whole thing. Sample descriptors: Alert, Reflexive, Vigilant, Sharp-Eyed, Quick, and so on.
 
-**Ki** — The pool that powers everything supernatural. It’s the average of your five combat sub-stats - Soak, Initiative, Ferocity, Stamina, Atropos - doubled. You spend it straight to save a Health or Sanity Level, to put more behind an attack, or to move up an Action Bracket, and it doubles as the target number for the Fatigue Check.
+**Ki** — The pool that powers everything supernatural. It’s your strongest Element plus 8, so every character has one worth spending - 13 at the least, 18 at the most. You spend it to save a Health or Sanity Level, to put more behind an attack, to move up an Action Bracket, and to use most Gifts. A Short Rest brings back Klotho points of it; a full night brings it all back.
 
 **Ki Infusion** — Paying 1 Ki per die to add a sub-stat - Ferocity, Presence, or Psyche, whichever matches the attack - to that die before you roll. It’s how you push a hit through a wall that would otherwise stop it cold.
 
-**Klotho** — One of Moira’s two sub-stats, the thread still being spun. It sets how fast your Ki regenerates and fixes your Lucky Number. Sample descriptors: Charmed, Star-Touched, Quickening, Replenishing, Ever-Spinning, and so on.
+**Klotho** — One of Moira’s two sub-stats, the thread still being spun. It sets how much Ki a Short Rest brings back and fixes your Lucky Number. Sample descriptors: Charmed, Star-Touched, Quickening, Replenishing, Ever-Spinning, and so on.
 
 **Kotodama** — (言霊, “word spirit.”) Spending Fate Tokens to state something true about the world instead of touching a die roll. You say it, you pay for it - the cost is built from how big it is, how far it reaches, how believable it is, and whether it has to last - and the story rearranges to fit. Several players can pool tokens for something none of them could afford alone.
 

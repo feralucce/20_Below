@@ -149,7 +149,7 @@ These aren't purchased - they're computed directly from the choices you already 
 | Defense | 10 - Atropos |
 | Movement Rate | 5 + Air, in meters |
 | Carrying Capacity | Potence² x 10 kg |
-| Ki | Average of Soak, Initiative, Ferocity, Stamina, and Atropos, doubled |
+| Ki | Your strongest Element + 8 |
 
 ## 15. Finishing Touches
 

@@ -67,7 +67,7 @@ Two recovery windows referenced throughout the rules - **Short Rest** and **Full
 
 Covers **all three attack types** - Physical, Social, and Mental - with the same shape and the same currency. The baseline attack die is raw and unboosted - `d10` vs. the defender's wall (Soak/Presence/Psyche as appropriate), so a wall of 10 fully negates it, guaranteed (0% connect). Before the dice are rolled, a player declares which individual dice they're boosting and spends **1 Ki per die** committed - each boosted die then adds the player's own matching sub-stat (**Ferocity** for Physical, **Presence** for Social, **Psyche** for Mental) to its own result once rolled. Boosts are committed blind, before any of the attack's dice are seen - not chosen afterward to salvage an underperforming roll. A boosted die is compared as `d10 + [matching sub-stat]` vs. the wall, same threshold rule (result > wall connects).
 
-This is a **direct Ki spend**, the same category as [spending Ki to preserve a Health Level or Sanity Level](#ki-spend-to-preserve-a-health-level-or-sanity-level) and [Bump Action Bracket](fate.md#ki-the-pool-formerly-risk-pool) - **not** a Fate Token spend, so it does **not** trigger the [Fatigue Check](fate.md#fatigue-check) and does **not** count against [Stamina's per-Scene spend cap](fate.md#staminas-job).
+This is a **direct Ki spend**, the same category as [spending Ki to preserve a Health Level or Sanity Level](#ki-spend-to-preserve-a-health-level-or-sanity-level) and [Bump Action Bracket](fate.md#ki-the-pool-formerly-risk-pool) - **not** a Fate Token spend, so it does **not** count against [Stamina's per-Scene spend cap](fate.md#staminas-job).
 
 Full negation is still the honest baseline: an unboosted attack against a maxed wall can never get through, but a player willing to spend Ki can crack even a Soak/Presence/Psyche of 10 - a boosted die with a matching sub-stat of 10 is a guaranteed connect, while a rating of 2 only gives a 20% chance per boosted die.
 
@@ -294,7 +294,7 @@ Dropping below 0 Health Levels can instead impose a genuine [Flaw](flaws.md), la
 
 Two passive functions, both "gives" like Health/Soak/Presence/Psyche - no roll, no spend:
 
-1. **Ki Regeneration** - a Short Rest restores `Klotho ÷ 2` Ki (round up, minimum 1); a Full Night's Rest restores Ki fully. See [Ki's refill](fate.md#fatigue-check).
+1. **Ki Regeneration** - a Short Rest restores `Klotho` Ki (minimum 1); a Full Night's Rest restores Ki fully. See [Ki's refill](fate.md#ki-the-pool).
 2. **Lucky Number** - a character's lucky number equals their **Klotho rating**. Whenever the result of one of the character's own core rolls - the [core roll](#core-mechanic)'s 2d10 or an Advantage/Disadvantage 3d10 - equals their Klotho rating, they immediately gain **1 Fate Token**, automatic, no choice, no cost, and never more than one per roll. It's the roll's result that has to match, not any individual die within it - does not apply to damage dice pools (weapon dice, Gift dice, the Potence contested dice pool, or any other bulk multi-die pool resolved per-die against a wall).
 
 #### Defense (Derived Stat)

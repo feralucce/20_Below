@@ -27,7 +27,7 @@ export default {
       el(
         'p',
         {},
-        `Your current Gift Check target: Ki (${computeFiguredCharacteristics(state).Ki}) + Stamina (${state.subStats.Stamina}) = ${giftCheckTarget(state)}.`,
+        `Your Gift Check target is your current Ki: ${giftCheckTarget(state)} (max ${computeFiguredCharacteristics(state).Ki}).`,
       ),
       el(
         'p',
