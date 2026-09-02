@@ -1,4 +1,5 @@
-import { blockHelp } from './blocks.js';
+const V = new URL(import.meta.url).search;
+const { blockHelp } = await import('./blocks.js' + V);
 
 /* The document a new user sees, which doubles as the syntax reference.
  * The block list is generated from blocks.js, so adding a block type

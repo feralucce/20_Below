@@ -13,7 +13,8 @@
  * ignored, so adding new ones later cannot break old documents.
  */
 
-import { applyBlocks } from './blocks.js';
+const V = new URL(import.meta.url).search;
+const { applyBlocks } = await import('./blocks.js' + V);
 
 const PAGE_MARKER = /^\\page[ \t]*(.*)$/;
 

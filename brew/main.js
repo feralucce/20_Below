@@ -1,6 +1,9 @@
-import { render } from './render.js';
-import { sample } from './sample.js';
-import * as files from './files.js';
+/* Carry this module's version query down to its imports, so the whole
+   graph busts together. See the note in index.html. */
+const V = new URL(import.meta.url).search;
+const { render } = await import('./render.js' + V);
+const { sample } = await import('./sample.js' + V);
+const files = await import('./files.js' + V);
 
 const editor   = document.getElementById('editor');
 const preview  = document.getElementById('preview');
