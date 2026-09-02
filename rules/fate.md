@@ -86,27 +86,19 @@ Fate Tokens are spent on [Kotodama](#kotodama), or on any of the following, each
 
 Characters with [Iron Will](boons.md) may also spend 1 Fate Token to **Assert Your Will** - declare "my will is my own" and flatly negate an attempt to intimidate or dominate you, no roll. A micro-Kotodama: same shape as the main mechanic, but flat-costed and scoped narrowly to defending your own mind.
 
-## Fatigue Check
+## Ki (the pool)
 
-Every time a player spends a Fate Token, they immediately make a **Fatigue Check** - roll 2d10 against **Ki** (see below), same roll-under shape as the [core roll](rules.md#core-mechanic), with Ki's current total standing in for a target number instead of a GM-set Difficulty.
+**Fate Tokens are the resource players earn and spend; Ki is the pool that powers everything superhuman a character does.** Ki is deliberately common: **Ki = your strongest Element + 8**, which puts every character between **13 and 18** regardless of how they built the rest of the sheet. Whatever a character is *most* is what channels their Ki - the frail specialist draws on as much as the bruiser.
 
-- **Success** - no effect, the spend goes through with no cost beyond the token itself.
-- **Failure** - lose **1 point from Ki**, until it's refilled.
+Ki has three jobs, all of them direct spends - no roll, no check, and none of them interact with [Stamina's per-Scene Fate Token cap](#staminas-job):
 
-**Refill**: a Short Rest restores `Klotho ÷ 2` Ki (round up, minimum 1); a Full Night's Rest restores Ki fully. These are the big damn heroes, after all - Ki isn't meant to be a slow trickle back.
+1. 1 point from Ki preserves one [Health Level or Sanity Level](rules.md#ki-spend-to-preserve-a-health-level-or-sanity-level) that would otherwise be lost to an unsoaked hit. Poise works differently - see [Poise](rules.md#poise).
+2. 1 Ki per step to move up one [Action Bracket](rules.md#action-brackets) (Slow → Normal, or Normal → Fast; 2 Ki moves two steps at once).
+3. 1 Ki per die to boost an attack die - see [Ki Infusion](rules.md#ki-infusion), covering all three attack types (Physical/Ferocity, Social/Presence, Mental/Psyche).
 
-### Ki (the pool)
+Most [Gifts](gifts.md) also cost Ki to use, called out per Gift and per Level, and some of them additionally call for a [Gift Check](gifts.md#resolution) rolled against current Ki.
 
-**Fate Tokens are the resource players earn and spend; Ki is the pool that gets risked when they do.** Ki is the wellspring of a character's superhuman capability. **Ki = the average of all five combat sub-stats (Soak, Initiative, Ferocity, Stamina, Atropos), doubled** to land in the 2-20 range.
-
-Ki has four jobs:
-
-1. **Target number for the Fatigue Check** (above).
-2. **Direct spend**: 1 point from Ki preserves one [Health Level or Sanity Level](rules.md#ki-spend-to-preserve-a-health-level-or-sanity-level) that would otherwise be lost to an unsoaked hit. Poise works differently - see [Poise](rules.md#poise).
-3. **Direct spend**: 1 Ki per step to move up one [Action Bracket](rules.md#action-brackets) (Slow → Normal, or Normal → Fast; 2 Ki moves two steps at once).
-4. **Direct spend**: 1 Ki per die to boost an attack die - see [Ki Infusion](rules.md#ki-infusion), covering all three attack types (Physical/Ferocity, Social/Presence, Mental/Psyche).
-
-Jobs 2-4 are direct spends - no roll, no Fatigue Check, no Stamina spend-cap interaction, since none of those are tied to Fate Token spending specifically.
+**Refill**: a Short Rest restores **Klotho** Ki (minimum 1); a Full Night's Rest restores Ki fully. These are the big damn heroes, after all - Ki isn't meant to be a slow trickle back.
 
 ### Stamina's Job
 

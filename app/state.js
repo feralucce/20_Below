@@ -557,8 +557,10 @@ export function descriptorSlots(state, subStatName) {
 
 export function computeFiguredCharacteristics(state) {
   const s = state.subStats;
-  const ki =
-    ((s.Soak + s.Initiative + s.Ferocity + s.Stamina + s.Atropos) / 5) * 2;
+  // Ki is deliberately common: strongest Element + 8, so every character lands
+  // between 13 and 18 (the flattest legal spread still has a 5 somewhere).
+  // Whatever a character is most is what channels their Ki.
+  const ki = Math.max(...Object.values(state.attributes)) + 8;
   return {
     'Health Levels': 5 + s.Health,
     Poise: 5 + s.Presence,
@@ -570,9 +572,9 @@ export function computeFiguredCharacteristics(state) {
   };
 }
 
-// Gift Check target number: current Ki + Stamina (see rules/gifts.md#resolution).
+// Gift Check target number: current Ki (see rules/gifts.md#resolution).
 export function giftCheckTarget(state) {
-  return computeFiguredCharacteristics(state).Ki + state.subStats.Stamina;
+  return state.currentKi ?? computeFiguredCharacteristics(state).Ki;
 }
 
 // Moira caps how many Fate Tokens a character can hold at once
@@ -670,7 +672,7 @@ export function applyRest(state, isFullRest) {
   state.currentPoise = restLevel(state.currentPoise, figured.Poise, s.Presence, isFullRest);
   state.currentKi = isFullRest
     ? figured.Ki
-    : Math.min(figured.Ki, state.currentKi + Math.max(1, Math.ceil(s.Klotho / 2)));
+    : Math.min(figured.Ki, state.currentKi + Math.max(1, s.Klotho));
 }
 
 // ---- Advancement (post-creation XP spend, see docs/advancement-reference.html) ----
