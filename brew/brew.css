@@ -119,6 +119,12 @@ button:hover,select:hover{background:var(--ui-accent-dim); border-color:var(--ui
 button:active{transform:scale(.98)}
 button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--ui-accent); color:#fff}
 #status{color:var(--ui-dim); font-size:12px; white-space:nowrap}
+/* A link styled as a toolbar button - it navigates, so it stays an <a>. */
+.btn-link{
+  font-size:13px; color:var(--ui-text); text-decoration:none;
+  border:1px solid var(--ui-border); border-radius:6px; padding:6px 11px;
+}
+.btn-link:hover{background:var(--ui-accent-dim); border-color:var(--ui-accent)}
 
 #split{flex:1 1 auto; display:flex; min-height:0}
 #editor{
