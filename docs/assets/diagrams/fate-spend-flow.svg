@@ -1,31 +1,29 @@
-<svg width="680" height="270" viewBox="0 0 680 270" xmlns="http://www.w3.org/2000/svg" role="img">
-<title>Spending a Fate Token risks a Fatigue Check</title>
-<desc>Spending a Fate Token triggers a Fatigue Check, 2d10 against your Ki. Success costs nothing further. Failure loses 1 Ki, but the Fate Token's effect happens either way.</desc>
+<svg width="680" height="230" viewBox="0 0 680 230" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Spending a Fate Token</title>
+<desc>Spending a Fate Token buys its effect directly, with no follow-up roll. Two separate limits apply: Stamina caps how many you can spend in a Scene, and Moira caps how many you can hold at once.</desc>
 <defs>
 <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
 <path d="M0,0 L10,5 L0,10 z" fill="#5c7d92"/>
 </marker>
 </defs>
 
-<rect x="240" y="20" width="200" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
-<text x="340" y="45" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Spend a Fate Token</text>
+<rect x="40" y="26" width="200" height="58" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="140" y="48" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Spend a Fate Token</text>
+<text x="140" y="68" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="11" fill="#8fadbe">the token is the whole cost</text>
 
-<line x1="340" y1="70" x2="340" y2="100" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="240" y1="55" x2="316" y2="55" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-<rect x="220" y="100" width="240" height="56" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
-<text x="340" y="122" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Fatigue Check</text>
-<text x="340" y="140" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">roll 2d10 vs. Ki</text>
+<rect x="324" y="26" width="220" height="58" rx="8" fill="#16281c" stroke="#6fbf73" stroke-width="1"/>
+<text x="434" y="48" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">The effect happens</text>
+<text x="434" y="68" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="11" fill="#8fd4a0">no roll, nothing else at risk</text>
 
-<line x1="290" y1="156" x2="210" y2="192" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
-<line x1="390" y1="156" x2="470" y2="192" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="340" y="118" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">two limits, at opposite ends</text>
 
-<rect x="100" y="194" width="220" height="56" rx="8" fill="#16281c" stroke="#6fbf73" stroke-width="1"/>
-<text x="210" y="216" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Success</text>
-<text x="210" y="234" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fd4a0">no further cost</text>
+<rect x="70" y="142" width="230" height="58" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="185" y="164" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="13" font-weight="500" fill="#eaf5fb">Stamina</text>
+<text x="185" y="184" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="11" fill="#8fadbe">how many you can spend in a Scene</text>
 
-<rect x="360" y="194" width="220" height="56" rx="8" fill="#2e1a17" stroke="#e0685c" stroke-width="1"/>
-<text x="470" y="216" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Failure</text>
-<text x="470" y="234" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#f0a89c">lose 1 Ki</text>
-
-<text x="340" y="264" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">either way, the Fate Token's effect happens</text>
+<rect x="380" y="142" width="230" height="58" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="495" y="164" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="13" font-weight="500" fill="#eaf5fb">Moira</text>
+<text x="495" y="184" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="11" fill="#8fadbe">how many you can hold at once</text>
 </svg>
