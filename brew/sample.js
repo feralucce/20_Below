@@ -10,7 +10,7 @@ const F = String.fromCharCode(96).repeat(3); // a code fence
 
 function blockList() {
   return blockHelp()
-    .map((b) => '::: ' + b.name + (b.takesTitle ? ' Optional title' : '') + '\n    ' + b.help)
+    .map((b) => '::: ' + b.name + (b.takesTitle ? ' Optional title' : '') + '\n  ' + b.help)
     .join('\n\n');
 }
 
@@ -26,13 +26,16 @@ export function sample() {
     'Everything in this tool is one of two markers. That is the whole syntax.',
     '',
     F,
-    B + 'page                     starts a new page',
-    B + 'page cols=1              ...as a single column',
-    B + 'page bg=parchment        ...with a background',
+    B + 'page',
+    B + 'page cols=1',
+    B + 'page bg=parchment',
     '',
-    '::: name Optional title   opens a block',
-    ':::                       closes it',
+    '::: name Optional title',
+    ':::',
     F,
+    '',
+    'The first starts a new page - as one column, or with a background,',
+    'if you say so. The second opens a block; the bare colons close it.',
     '',
     '## The blocks',
     '',
@@ -59,10 +62,10 @@ export function sample() {
     'Images are referenced by URL, so they travel with the document.',
     '',
     F,
-    '![alt text](https://20belowrpg.com/assets/logo-mark.png)',
+    '![alt text](https://your-host/art.png)',
     '',
     '::: figure A caption for the image',
-    '![](https://20belowrpg.com/assets/logo-mark.png)',
+    '![](https://your-host/art.png)',
     ':::',
     F,
     '',

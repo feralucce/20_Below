@@ -183,8 +183,20 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 .page a{color:var(--accent); text-decoration:none}
 .page hr{border:0; border-top:1px solid var(--rule); margin:1em 0}
 .page img{max-width:100%}
-.page code{font-family:'Space Mono',Consolas,monospace; font-size:9pt; background:var(--panel); padding:.1em .3em; border-radius:3px}
-.page pre{font-family:'Space Mono',Consolas,monospace; font-size:9pt; background:var(--panel); padding:.6em .8em; border-radius:4px; overflow:auto; break-inside:avoid}
+.page code{
+  font-family:'Space Mono',Consolas,monospace; font-size:9pt;
+  background:var(--panel); padding:.1em .3em; border-radius:3px;
+  overflow-wrap:anywhere;                 /* a long token must not widen the column */
+}
+/* Code wraps rather than scrolling. A scrollbar means nothing on paper,
+   and anything past the edge would simply be clipped out of the PDF. */
+.page pre{
+  font-family:'Space Mono',Consolas,monospace; font-size:9pt;
+  background:var(--panel); padding:.6em .8em; border-radius:4px;
+  break-inside:avoid; overflow:visible;
+  white-space:pre-wrap; overflow-wrap:anywhere;
+}
+.page pre code{background:none; padding:0; font-size:inherit}
 
 .page blockquote{
   margin:0 0 .8em; padding:.5em .9em;
@@ -193,8 +205,14 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 }
 
 /* ---- tables ---- */
-.page table{width:100%; border-collapse:collapse; margin:0 0 .8em; font-size:10.5pt; break-inside:avoid}
-.page th,.page td{border:1px solid var(--rule); padding:.32em .5em; text-align:left; vertical-align:top}
+.page table{
+  width:100%; table-layout:fixed; border-collapse:collapse;
+  margin:0 0 .8em; font-size:9.5pt; break-inside:avoid;
+}
+.page th,.page td{
+  border:1px solid var(--rule); padding:.32em .5em;
+  text-align:left; vertical-align:top; overflow-wrap:anywhere;
+}
 .page thead th{
   background:var(--panel-2); color:var(--head);
   font-family:'Bebas Neue',"Segoe UI",system-ui,sans-serif; font-weight:400;
