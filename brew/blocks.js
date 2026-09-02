@@ -78,7 +78,7 @@ const BLOCK = /^:::[ \t]*([a-zA-Z][\w-]*)(?:\.([a-zA-Z][\w-]*))?[ \t]*(.*)$([\s\
  * proposed, and this is their first use. A name not on this list is
  * ignored rather than emitted, so a typo cannot leave a dead class. */
 export const VARIANTS = [
-  'pc', 'ally', 'npc', 'danger',
+  'pc', 'ally', 'npc', 'danger', 'text', 'accent',
   'earth', 'air', 'fire', 'water', 'moira',
 ];
 

@@ -35,6 +35,8 @@
   --v-ally:#c39a5a;
   --v-npc:#e0685c;
   --v-danger:#e0685c;
+  --v-text:#eaf5fb;
+  --v-accent:#3d84c4;
   --v-earth:#8a6d4e;
   --v-air:#a8c9e0;
   --v-fire:#e0663f;
@@ -65,6 +67,8 @@
   --v-ally:#a8a8a8;
   --v-npc:#a8a8a8;
   --v-danger:#a8a8a8;
+  --v-text:#f5f5f5;
+  --v-accent:#a8a8a8;
   --v-earth:#a8a8a8;
   --v-air:#a8a8a8;
   --v-fire:#a8a8a8;
@@ -289,6 +293,8 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 .page .aside--fire{border-left-color:var(--v-fire)}
 .page .aside--water{border-left-color:var(--v-water)}
 .page .aside--moira{border-left-color:var(--v-moira)}
+.page .aside--text{border-left-color:var(--v-text)}
+.page .aside--accent{border-left-color:var(--v-accent)}
 
 .page .box--pc{border-color:var(--v-pc)}
 .page .box--ally{border-color:var(--v-ally)}
@@ -298,6 +304,8 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 .page .box--fire{border-color:var(--v-fire)}
 .page .box--water{border-color:var(--v-water)}
 .page .box--moira{border-color:var(--v-moira)}
+.page .box--text{border-color:var(--v-text)}
+.page .box--accent{border-color:var(--v-accent)}
 
 .page .box--pc .block-title{color:var(--v-pc)}
 .page .box--ally .block-title{color:var(--v-ally)}
@@ -307,6 +315,8 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 .page .box--fire .block-title{color:var(--v-fire)}
 .page .box--water .block-title{color:var(--v-water)}
 .page .box--moira .block-title{color:var(--v-moira)}
+.page .box--text .block-title{color:var(--v-text)}
+.page .box--accent .block-title{color:var(--v-accent)}
 
 /* A roll box is a solid stamp, so the variant colours the border and
    the text rather than flooding the fill - a saturated fill behind
@@ -319,6 +329,8 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 .page .roll-box--fire{border-color:var(--v-fire); color:var(--v-fire)}
 .page .roll-box--water{border-color:var(--v-water); color:var(--v-water)}
 .page .roll-box--moira{border-color:var(--v-moira); color:var(--v-moira)}
+.page .roll-box--text{border-color:var(--v-text); color:var(--v-text)}
+.page .roll-box--accent{border-color:var(--v-accent); color:var(--v-accent)}
 
 .page .figure .caption{
   display:block; margin-top:.35em; color:var(--page-dim);
