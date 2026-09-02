@@ -21,10 +21,14 @@
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-/* Renders <div class="cls"> with an optional title span. */
-const div = (cls, titleClass = 'block-title') => (title, body) => {
-  const head = title.trim() ? `<span class="${titleClass}">${esc(title.trim())}</span>\n\n` : '';
-  return `<div class="${cls}">\n\n${head}${body.trim()}\n\n</div>`;
+/* A variant adds a second class, so the base styling stays in one place
+   and the colour is a thin override on top of it. */
+const cls = (base, variant) => (variant ? `${base} ${base}--${variant}` : base);
+
+/* Renders <div class="base"> with an optional title span. */
+const div = (base) => (title, body, variant) => {
+  const head = title.trim() ? `<span class="block-title">${esc(title.trim())}</span>\n\n` : '';
+  return `<div class="${cls(base, variant)}">\n\n${head}${body.trim()}\n\n</div>`;
 };
 
 export const BLOCKS = {
@@ -46,14 +50,15 @@ export const BLOCKS = {
   roll: {
     help: 'a centred roll or formula, for things the reader will look up mid-game',
     takesTitle: false,
-    render: (_title, body) => `<div class="roll-box">\n\n${body.trim()}\n\n</div>`,
+    render: (_title, body, variant) =>
+      `<div class="${cls('roll-box', variant)}">\n\n${body.trim()}\n\n</div>`,
   },
   figure: {
     help: 'an image with a caption - the title is the caption',
     takesTitle: true,
-    render: (title, body) => {
+    render: (title, body, variant) => {
       const cap = title.trim() ? `\n\n<span class="caption">${esc(title.trim())}</span>` : '';
-      return `<figure class="figure">\n\n${body.trim()}${cap}\n\n</figure>`;
+      return `<figure class="${cls('figure', variant)}">\n\n${body.trim()}${cap}\n\n</figure>`;
     },
   },
 };
@@ -64,8 +69,18 @@ export const BLOCKS = {
  * block further down. */
 const FENCE = /^([ \t]*)(```+|~~~+)[^\n]*\n[\s\S]*?^\1?\2[ \t]*$/gm;
 
-/* ::: name [title] ... ::: - non-greedy, so sibling blocks do not merge. */
-const BLOCK = /^:::[ \t]*([a-zA-Z][\w-]*)[ \t]*(.*)$([\s\S]*?)^:::[ \t]*$/gm;
+/* ::: name[.variant] [title] ... ::: - non-greedy, so sibling blocks
+ * do not merge. */
+const BLOCK = /^:::[ \t]*([a-zA-Z][\w-]*)(?:\.([a-zA-Z][\w-]*))?[ \t]*(.*)$([\s\S]*?)^:::[ \t]*$/gm;
+
+/* Colour variants, from docs/style-guide.html. The semantic roles come
+ * from the Battle Tracker set; the Element colours are listed there as
+ * proposed, and this is their first use. A name not on this list is
+ * ignored rather than emitted, so a typo cannot leave a dead class. */
+export const VARIANTS = [
+  'pc', 'ally', 'npc', 'danger',
+  'earth', 'air', 'fire', 'water', 'moira',
+];
 
 /* Private-use characters as the placeholder delimiters. A block's body
  * is trimmed before it is re-emitted, so a space-delimited placeholder
@@ -81,11 +96,13 @@ export function applyBlocks(md) {
   // Repeat so blocks nested one inside another are both handled.
   for (let pass = 0; pass < 3; pass++) {
     let changed = false;
-    md = md.replace(BLOCK, (whole, name, title, body) => {
+    md = md.replace(BLOCK, (whole, name, variant, title, body) => {
       const block = BLOCKS[name.toLowerCase()];
       if (!block) return whole;          // unknown name: leave it visible
+      const v = variant && VARIANTS.includes(variant.toLowerCase())
+        ? variant.toLowerCase() : '';
       changed = true;
-      return block.render(block.takesTitle ? title : '', body);
+      return block.render(block.takesTitle ? title : '', body, v);
     });
     if (!changed) break;
   }
