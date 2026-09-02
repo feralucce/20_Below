@@ -86,7 +86,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Ki** — The pool that powers everything supernatural. It’s your strongest Element plus 8, so every character has one worth spending - 13 at the least, 18 at the most. You spend it to save a Health or Sanity Level, to put more behind an attack, to move up an Action Bracket, and to use most Gifts. A Short Rest brings back Klotho points of it; a full night brings it all back.
 
-**Ki Infusion** — Paying 1 Ki per die to add a sub-stat - Ferocity, Presence, or Psyche, whichever matches the attack - to that die before you roll. It’s how you push a hit through a wall that would otherwise stop it cold.
+**Ki Infusion** — Paying 1 Ki per die to add a sub-stat - Ferocity, Presence, or Psyche, whichever matches the attack - to that die. You roll the damage dice first and then choose which to boost, so nothing is spent on a die that already got through. It’s how you push a hit through a wall that would otherwise stop it cold.
 
 **Klotho** — One of Moira’s two sub-stats, the thread still being spun. It sets how much Ki a Short Rest brings back and fixes your Lucky Number. Sample descriptors: Charmed, Star-Touched, Quickening, Replenishing, Ever-Spinning, and so on.
 
