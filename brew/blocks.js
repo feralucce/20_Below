@@ -53,6 +53,25 @@ export const BLOCKS = {
     render: (_title, body, variant) =>
       `<div class="${cls('roll-box', variant)}">\n\n${body.trim()}\n\n</div>`,
   },
+  stat: {
+    help: 'a creature or NPC stat block - paste one straight out of the Adversary Index',
+    takesTitle: true,
+    /* The stat line is the anchor of a stat block, so it is picked out
+     * and given its own strip. It is recognised by the middot the
+     * Adversary Index already uses to separate the figures, which means
+     * an existing block pastes in with nothing to rewrite. */
+    render: (title, body, variant) => {
+      const head = title.trim()
+        ? `<span class="block-title">${esc(title.trim())}</span>\n\n`
+        : '';
+      const lines = body.trim().split('\n').map((line) =>
+        line.includes(' · ')
+          ? `<div class="stat-line">\n\n${line.trim()}\n\n</div>`
+          : line,
+      );
+      return `<div class="${cls('stat', variant)}">\n\n${head}${lines.join('\n')}\n\n</div>`;
+    },
+  },
   figure: {
     help: 'an image with a caption - the title is the caption',
     takesTitle: true,
