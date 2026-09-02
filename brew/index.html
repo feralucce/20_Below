@@ -50,6 +50,21 @@
 
 <input id="file" type="file" accept=".md,.markdown,.txt,text/markdown" hidden />
 
-<script type="module" src="main.js"></script>
+<script type="module">
+/* Cache-busting for the module graph.
+ *
+ * A browser caches ES modules by URL, and a plain reload does not
+ * refetch them - so an edit could sit on disk, be served correctly,
+ * and still not appear. That bit us repeatedly.
+ *
+ * The entry module gets a version query, and every module passes its
+ * own query down to whatever it imports (see main.js), so the whole
+ * graph busts together. The value is the current time, so a reload
+ * always runs what is on disk - the JS is about 30 KB in total, and
+ * the fonts and CSS still cache normally.
+ */
+const v = Date.now();
+import(`./main.js?v=${v}`);
+</script>
 </body>
 </html>
