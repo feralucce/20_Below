@@ -27,6 +27,19 @@
   --accent:#3d84c4;
   --head:#eaf5fb;
   --shadow:rgba(0,0,0,.55);
+
+  /* Variant tints, from docs/style-guide.html. Semantic roles are the
+     Battle Tracker set; the Element colours are proposed there and this
+     is their first use. */
+  --v-pc:#5ecb6b;
+  --v-ally:#c39a5a;
+  --v-npc:#e0685c;
+  --v-danger:#e0685c;
+  --v-earth:#8a6d4e;
+  --v-air:#a8c9e0;
+  --v-fire:#e0663f;
+  --v-water:#078f9b;
+  --v-moira:#a06fd1;
 }
 
 /* ---- page palette: GREYSCALE ----
@@ -43,6 +56,20 @@
   --accent:#a8a8a8;
   --head:#ffffff;
   --shadow:rgba(0,0,0,.55);
+
+  /* A B&W print cannot carry eight hues. Rather than let them collapse
+     into near-identical greys, every variant falls back to the accent -
+     colour-coding is a colour feature, and a greyscale run should say
+     in words what the colour would have said. */
+  --v-pc:#a8a8a8;
+  --v-ally:#a8a8a8;
+  --v-npc:#a8a8a8;
+  --v-danger:#a8a8a8;
+  --v-earth:#a8a8a8;
+  --v-air:#a8a8a8;
+  --v-fire:#a8a8a8;
+  --v-water:#a8a8a8;
+  --v-moira:#a8a8a8;
 }
 
 /* ---- page geometry ----
@@ -252,6 +279,47 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 
 .page .figure{margin:0 0 .9em; break-inside:avoid}
 .page .figure img{display:block; width:100%; height:auto}
+/* Variants: a thin colour override on the base block. Generated for
+   every name in blocks.js VARIANTS - keep the two lists in step. */
+.page .aside--pc{border-left-color:var(--v-pc)}
+.page .aside--ally{border-left-color:var(--v-ally)}
+.page .aside--npc,.page .aside--danger{border-left-color:var(--v-npc)}
+.page .aside--earth{border-left-color:var(--v-earth)}
+.page .aside--air{border-left-color:var(--v-air)}
+.page .aside--fire{border-left-color:var(--v-fire)}
+.page .aside--water{border-left-color:var(--v-water)}
+.page .aside--moira{border-left-color:var(--v-moira)}
+
+.page .box--pc{border-color:var(--v-pc)}
+.page .box--ally{border-color:var(--v-ally)}
+.page .box--npc,.page .box--danger{border-color:var(--v-npc)}
+.page .box--earth{border-color:var(--v-earth)}
+.page .box--air{border-color:var(--v-air)}
+.page .box--fire{border-color:var(--v-fire)}
+.page .box--water{border-color:var(--v-water)}
+.page .box--moira{border-color:var(--v-moira)}
+
+.page .box--pc .block-title{color:var(--v-pc)}
+.page .box--ally .block-title{color:var(--v-ally)}
+.page .box--npc .block-title,.page .box--danger .block-title{color:var(--v-npc)}
+.page .box--earth .block-title{color:var(--v-earth)}
+.page .box--air .block-title{color:var(--v-air)}
+.page .box--fire .block-title{color:var(--v-fire)}
+.page .box--water .block-title{color:var(--v-water)}
+.page .box--moira .block-title{color:var(--v-moira)}
+
+/* A roll box is a solid stamp, so the variant colours the border and
+   the text rather than flooding the fill - a saturated fill behind
+   Bebas Neue at 13pt loses legibility in CMYK. */
+.page .roll-box--pc{border-color:var(--v-pc); color:var(--v-pc)}
+.page .roll-box--ally{border-color:var(--v-ally); color:var(--v-ally)}
+.page .roll-box--npc,.page .roll-box--danger{border-color:var(--v-npc); color:var(--v-npc)}
+.page .roll-box--earth{border-color:var(--v-earth); color:var(--v-earth)}
+.page .roll-box--air{border-color:var(--v-air); color:var(--v-air)}
+.page .roll-box--fire{border-color:var(--v-fire); color:var(--v-fire)}
+.page .roll-box--water{border-color:var(--v-water); color:var(--v-water)}
+.page .roll-box--moira{border-color:var(--v-moira); color:var(--v-moira)}
+
 .page .figure .caption{
   display:block; margin-top:.35em; color:var(--page-dim);
   font-family:'Space Mono',Consolas,monospace; font-size:8.5pt;
