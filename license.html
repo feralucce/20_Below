@@ -277,6 +277,32 @@
   .breakdown-card.open .label { color: var(--accent); }
   .breakdown-card.reserved .label { color: var(--text-dim); }
   .breakdown-card p { margin: 0; color: var(--text-dim); font-size: 0.92rem; line-height: 1.55; }
+  .marks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .mark-card {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    flex: 1 1 240px;
+    text-align: center;
+  }
+  .mark-card.on-light { background: #eaf5fb; }
+  .mark-card img { width: 130px; height: auto; display: block; margin: 0 auto 0.7rem; }
+  .mark-card .label {
+    font-weight: 700;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-dim);
+  }
+  .mark-card.on-light .label { color: #12232e; }
+  .mark-card a { color: var(--accent); font-size: 0.85rem; }
+  .mark-card.on-light a { color: #1c3548; }
   .legal p { line-height: 1.6; }
   .note {
     color: var(--text-dim);
@@ -383,6 +409,44 @@
       released as Licensed Material.</p>
     </div>
   </div>
+
+  <h2>Powered by 20 Below</h2>
+  <p>If you publish something for this system, we would love you to put one of these on it.</p>
+
+  <div class="marks">
+    <div class="mark-card">
+      <img src="docs/assets/branding/powered_by_transparent.png" alt="Powered by 20 Below, pale lettering on a transparent background" />
+      <div class="label">For dark covers</div>
+      <a href="docs/assets/branding/powered_by_transparent.png" download>Download PNG</a>
+    </div>
+    <div class="mark-card on-light">
+      <img src="docs/assets/branding/powered_by_dark.png" alt="Powered by 20 Below, pale lettering on its own dark ground" />
+      <div class="label">For light covers</div>
+      <a href="docs/assets/branding/powered_by_dark.png" download>Download PNG</a>
+    </div>
+  </div>
+
+  <div class="pitch-box">
+    <p><strong>This is a request, not a requirement.</strong> The ORC License is irrevocable and we
+    cannot add conditions to it, so nothing obliges you to carry the mark - your product is just as
+    legitimate without it, and we will never come after anyone for leaving it off.</p>
+
+    <p style="margin-bottom:0">We ask because it helps all of us. A reader who has played 20 Below can
+    spot at a glance that your book will work with the character they already have, the dice they
+    already own, and the rules they already know. That recognition is worth more to a small publisher
+    than any amount of explaining on a back cover - and every product carrying it makes the next one
+    easier to find. The system gets bigger, and everyone building on it gets found more easily.</p>
+  </div>
+
+  <p>Use whichever version reads better against your cover. Please keep it legible and unaltered -
+  don't recolour it, stretch it, or rebuild it - and don't use it in a way that suggests we published
+  your work or endorsed its contents. Beyond that, put it wherever it looks right: back cover, title
+  page, storefront listing, itch page.</p>
+
+  <p class="note">The name, logo and trade dress are Reserved Material, and no trademark rights pass
+  under the ORC License - so permission to use the mark comes from us directly rather than from the
+  license. Consider this that permission, on the terms above. If you want to do something with it
+  that those terms don't cover, ask.</p>
 
   <h2>The Legal Text</h2>
   <div class="legal">
