@@ -239,7 +239,7 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
       });
 
       if (result.luckyNumber) {
-        // A Token earned at the Moira cap is lost, not banked
+        // A Token earned at the holding cap is lost, not banked
         // (rules/fate.md#holding-fate-tokens).
         state.currentFateTokens = Math.min(fateTokenCap(state), state.currentFateTokens + 1);
         refreshHeader();
@@ -519,7 +519,7 @@ export function buildAttackRollSection(state, data, refreshHeader) {
       });
 
       if (result.luckyNumber) {
-        // A Token earned at the Moira cap is lost, not banked
+        // A Token earned at the holding cap is lost, not banked
         // (rules/fate.md#holding-fate-tokens).
         state.currentFateTokens = Math.min(fateTokenCap(state), state.currentFateTokens + 1);
         refreshHeader();

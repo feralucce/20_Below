@@ -126,7 +126,7 @@ export function mergeCharacterState(data, loaded) {
   CATALOG_DICT_FIELDS.forEach((field) => {
     merged[field] = { ...fresh[field], ...(loaded[field] || {}) };
   });
-  // Exports saved before the Moira cap existed can carry more Fate Tokens
+  // Exports saved before the holding cap existed can carry more Fate Tokens
   // than the character is now allowed to hold, in the build and in play both.
   clampFateTokenPurchases(merged, data);
   if (merged.currentFateTokens != null) {
@@ -577,11 +577,11 @@ export function giftCheckTarget(state) {
   return state.currentKi ?? computeFiguredCharacteristics(state).Ki;
 }
 
-// Moira caps how many Fate Tokens a character can hold at once
-// (rules/fate.md#holding-fate-tokens). Distinct from Stamina, which caps how
-// many can be *spent* per Scene - that one isn't the creator's business.
+// Stamina governs the whole Fate Token economy: it caps how many a character
+// can hold (x3) as well as how many can be spent per Scene, the latter not
+// being the creator's business (rules/fate.md#holding-fate-tokens).
 export function fateTokenCap(state) {
-  return state.attributes.Moira;
+  return state.subStats.Stamina * 3;
 }
 
 // How many extra Fate Tokens Discretionary points can actually buy: the gap
@@ -590,11 +590,11 @@ export function fateTokensBuyable(state, data) {
   return Math.max(0, fateTokenCap(state) - data.startingFateTokens);
 }
 
-// Moira is itself raisable with Discretionary points, so the cap moves while
-// the player is spending. Lowering Moira afterwards has to give the points
-// back rather than strand them on Tokens the character can't hold - dropping
-// discretionaryExtra does exactly that, since the spend is derived from it.
-// Called from the single render choke point, so it runs after every change.
+// Stamina is raisable while the player spends (its Attribute can be bought,
+// and its own points reallocated), so the cap moves mid-build. Lowering it
+// afterwards has to give the points back rather than strand them on Tokens
+// the character can't hold - dropping discretionaryExtra does exactly that,
+// since the spend is derived from it. Called from the render choke point.
 export function clampFateTokenPurchases(state, data) {
   const buyable = fateTokensBuyable(state, data);
   if (state.discretionaryExtra['Fate Tokens'] > buyable) {
