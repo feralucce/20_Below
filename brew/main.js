@@ -1,5 +1,5 @@
 import { render } from './render.js';
-import { blockHelp } from './blocks.js';
+import { sample } from './sample.js';
 import * as files from './files.js';
 
 const editor   = document.getElementById('editor');
@@ -21,7 +21,7 @@ const TRIMS = {
 };
 
 const prefs = Object.assign(
-  { palette: 'colour', layout: 'digital', trim: 'letter', cols: '1', zoom: 'fit' },
+  { palette: 'colour', layout: 'digital', trim: 'letter', cols: '2', zoom: 'fit' },
   load(PREFS) || {},
 );
 
@@ -142,7 +142,7 @@ document.getElementById('drag').addEventListener('mouseup', applyZoom);
 
 document.getElementById('btn-help').onclick = () => {
   if (editor.value.trim() && !confirm('Replace what is in the editor with the syntax sample?')) return;
-  editor.value = SAMPLE;
+  editor.value = sample();
   draw();
 };
 
@@ -169,57 +169,7 @@ document.getElementById('drag').addEventListener('mousedown', (e) => {
   window.addEventListener('mouseup', up);
 });
 
-/* ---------- sample / syntax reference ---------- */
-const SAMPLE = `# Your Supplement Title
-
-Ordinary markdown works throughout: **bold**, *italic*, lists, tables,
-links and > blockquotes all render in the 20 Below style.
-
-## Page control
-
-Start a new printed page with a marker on its own line. Options are
-optional and can be combined. Markers inside a code fence, like these,
-are ignored.
-
-\`\`\`
-\\page
-\\page cols=2
-\\page bg=parchment
-\`\`\`
-
-## Blocks
-
-\`\`\`
-${blockHelp().join('\n\n')}
-\`\`\`
-
-::: aside Designer's note
-Blocks take markdown inside them, so **emphasis**, lists and tables
-all work here too.
-:::
-
-!! Roll 2d10 vs. your target number
-
-## Tables
-
-| Element | Splits into | Governs |
-|---|---|---|
-| Earth | Soak / Potence | Force and what you can take |
-| Air | Initiative / Psyche | Speed and clarity |
-| Moira | Atropos / Klotho | Fate, Defense, Ki recovery |
-
-\\page cols=2
-
-# A second page
-
-This one is set in two columns. Text flows down the left column and
-then continues in the right.
-
-Because pagination is manual, you decide where every page ends -
-which means the layout never surprises you between edits.
-`;
-
 /* ---------- boot ---------- */
-editor.value = load(DRAFT) || SAMPLE;
+editor.value = load(DRAFT) || sample();
 applyPrefs();
 draw();

@@ -1,3 +1,5 @@
+@import url('fonts/fonts.css');
+
 /* =============================================================
    20 Below Brewer
    Palette tokens are split from geometry on purpose: palette is
@@ -111,8 +113,8 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
     calc(var(--margin) + var(--bleed) + var(--safe));
   background:var(--page-bg);
   color:var(--page-fg);
-  font-family:Georgia,"Iowan Old Style",serif;
-  font-size:11.5pt; line-height:1.55;
+  font-family:'Montserrat',"Segoe UI",system-ui,sans-serif;
+  font-size:10.5pt; line-height:1.6;
   box-shadow:0 3px 22px var(--shadow);
   overflow:hidden;
   zoom:var(--zoom);
@@ -138,29 +140,51 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 .page[data-bg="stone"]{background-image:url("backgrounds/stone.jpg")}
 */
 
-.page > .flow{position:relative; z-index:1; height:100%}
-.page[data-cols="2"] > .flow{column-count:2; column-gap:0.38in}
+.page > .flow{position:relative; z-index:1; height:100%; column-count:2; column-gap:0.38in}
+/* Two columns is the default. A page opts out with: \page cols=1 */
+.page[data-cols="1"] > .flow{column-count:1}
+
 /* A page title spans the spread rather than sitting in one column.
    Lower headings stay in-column so sections can start mid-column. */
-.page[data-cols="2"] > .flow > h1{column-span:all}
+.page > .flow > h1{column-span:all}
+
+/* ::: wide - break out of the columns. A spanning element splits the
+   flow, so content after it resumes in fresh columns below it. */
+.page .wide{column-span:all; margin:0 0 .8em}
+.page .wide > :last-child{margin-bottom:0}
 
 /* ---- typography ---- */
+/* Display faces per docs/style-guide.html: Anton for the headline,
+   Bebas Neue for titles and labels, Montserrat for everything else. */
 .page h1,.page h2,.page h3,.page h4{
-  font-family:"Segoe UI",system-ui,sans-serif; line-height:1.22;
-  margin:0 0 .35em; color:var(--head); break-after:avoid;
+  line-height:1.15; margin:0 0 .35em; color:var(--head); break-after:avoid;
 }
-.page h1{font-size:23pt; margin-top:0; border-bottom:2px solid var(--accent); padding-bottom:.1em}
-.page h2{font-size:16pt; margin-top:1em; border-bottom:1px solid var(--rule); padding-bottom:.08em}
-.page h3{font-size:13pt; margin-top:.9em; color:var(--accent)}
-.page h4{font-size:11.5pt; margin-top:.8em; font-style:italic; color:var(--page-dim)}
+.page h1{
+  font-family:'Anton',"Segoe UI",system-ui,sans-serif; font-weight:400;
+  font-size:30pt; letter-spacing:.01em; text-transform:uppercase;
+  margin-top:0; border-bottom:2px solid var(--accent); padding-bottom:.06em;
+}
+.page h2{
+  font-family:'Bebas Neue',"Segoe UI",system-ui,sans-serif; font-weight:400;
+  font-size:19pt; letter-spacing:.02em;
+  margin-top:1em; border-bottom:1px solid var(--rule); padding-bottom:.06em;
+}
+.page h3{
+  font-family:'Bebas Neue',"Segoe UI",system-ui,sans-serif; font-weight:400;
+  font-size:15pt; letter-spacing:.02em; margin-top:.9em; color:var(--accent);
+}
+.page h4{
+  font-family:'Montserrat',"Segoe UI",system-ui,sans-serif; font-weight:600;
+  font-size:10.5pt; margin-top:.8em; color:var(--page-dim);
+}
 .page p{margin:0 0 .7em}
 .page ul,.page ol{margin:0 0 .7em; padding-left:1.25em}
 .page li{margin-bottom:.22em}
 .page a{color:var(--accent); text-decoration:none}
 .page hr{border:0; border-top:1px solid var(--rule); margin:1em 0}
 .page img{max-width:100%}
-.page code{font-family:ui-monospace,Consolas,monospace; font-size:10pt; background:var(--panel); padding:.1em .3em; border-radius:3px}
-.page pre{background:var(--panel); padding:.6em .8em; border-radius:4px; overflow:auto; break-inside:avoid}
+.page code{font-family:'Space Mono',Consolas,monospace; font-size:9pt; background:var(--panel); padding:.1em .3em; border-radius:3px}
+.page pre{font-family:'Space Mono',Consolas,monospace; font-size:9pt; background:var(--panel); padding:.6em .8em; border-radius:4px; overflow:auto; break-inside:avoid}
 
 .page blockquote{
   margin:0 0 .8em; padding:.5em .9em;
@@ -173,27 +197,47 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 .page th,.page td{border:1px solid var(--rule); padding:.32em .5em; text-align:left; vertical-align:top}
 .page thead th{
   background:var(--panel-2); color:var(--head);
-  font-family:"Segoe UI",system-ui,sans-serif; font-weight:600;
+  font-family:'Bebas Neue',"Segoe UI",system-ui,sans-serif; font-weight:400;
+  font-size:11pt; letter-spacing:.03em;
 }
 .page tbody tr:nth-child(even){background:var(--panel)}
 
 /* =============================================================
-   Blocks. Each has one class; blocks.js owns the syntax.
+   Blocks. One class each; blocks.js owns the syntax.
    Add a block by adding a rule here and an entry there.
    ============================================================= */
+.page .block-title{
+  display:block; margin-bottom:.3em; color:var(--head);
+  font-family:'Bebas Neue',"Segoe UI",system-ui,sans-serif; font-weight:400;
+  font-size:13pt; letter-spacing:.02em;
+}
+
 .page .aside{
-  background:var(--panel); border:1px solid var(--rule); border-left:4px solid var(--accent);
-  padding:.7em .9em; margin:0 0 .8em; font-size:10.5pt; break-inside:avoid;
+  background:var(--panel); border-left:4px solid var(--accent);
+  padding:.7em .9em; margin:0 0 .8em; font-size:9.5pt; break-inside:avoid;
 }
 .page .aside > :last-child{margin-bottom:0}
-.page .aside .block-title{
-  display:block; margin-bottom:.3em; color:var(--head);
-  font-family:"Segoe UI",system-ui,sans-serif; font-weight:600; font-size:11pt;
+
+.page .box{
+  background:var(--panel); border:1px solid var(--rule);
+  padding:.7em .9em; margin:0 0 .8em; border-radius:4px; break-inside:avoid;
 }
+.page .box > :last-child{margin-bottom:0}
+
 .page .roll-box{
   background:var(--panel-2); border:1px solid var(--accent); color:var(--head);
-  font-family:"Segoe UI",system-ui,sans-serif; font-weight:600; text-align:center;
-  padding:.5em .8em; margin:0 0 .8em; border-radius:4px; break-inside:avoid;
+  font-family:'Bebas Neue',"Segoe UI",system-ui,sans-serif; font-size:13pt;
+  letter-spacing:.03em; text-align:center;
+  padding:.45em .8em; margin:0 0 .8em; border-radius:4px; break-inside:avoid;
+}
+.page .roll-box > p{margin:0}
+
+.page .figure{margin:0 0 .9em; break-inside:avoid}
+.page .figure img{display:block; width:100%; height:auto}
+.page .figure .caption{
+  display:block; margin-top:.35em; color:var(--page-dim);
+  font-family:'Space Mono',Consolas,monospace; font-size:8.5pt;
+  letter-spacing:.02em; text-transform:uppercase;
 }
 
 /* =============================================================
