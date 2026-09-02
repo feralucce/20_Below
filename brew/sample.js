@@ -5,12 +5,23 @@ const { blockHelp } = await import('./blocks.js' + V);
  * The block list is generated from blocks.js, so adding a block type
  * makes it appear here automatically. */
 
-const B = String.fromCharCode(92);   // a single backslash
-const F = String.fromCharCode(96).repeat(3); // a code fence
+const B = String.fromCharCode(92);            // a single backslash
+const F = String.fromCharCode(96).repeat(3);  // a code fence
+const T = String.fromCharCode(96);            // one backtick, inline code
 
-function blockList() {
+/* Each block demonstrates itself: the rendered block contains its own
+ * invocation, so the syntax and the result are the same object on the
+ * page. Generated from the registry, so a new block documents itself.
+ *
+ * The invocation is written as inline code, which keeps the line from
+ * starting with colons - a bare ::: at the start of a line would close
+ * the very block it is sitting inside. */
+function blockDemos() {
   return blockHelp()
-    .map((b) => '::: ' + b.name + (b.takesTitle ? ' Optional title' : '') + '\n  ' + b.help)
+    .map((b) => {
+      const open = '::: ' + b.name + (b.takesTitle ? ' A title' : '');
+      return [open, T + open + T, '', b.help + '.', ':::'].join('\n');
+    })
     .join('\n\n');
 }
 
@@ -39,9 +50,9 @@ export function sample() {
     '',
     '## The blocks',
     '',
-    F,
-    blockList(),
-    F,
+    'Each block below was produced by the command printed inside it.',
+    '',
+    blockDemos(),
     '',
     "::: aside Designer's note",
     'Blocks take markdown inside them, so **emphasis**, lists, tables and',
