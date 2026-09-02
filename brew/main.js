@@ -9,7 +9,7 @@ const fileIn   = document.getElementById('file');
 const pageRule = document.getElementById('page-rule');
 
 const DRAFT = '20below-brew-draft';
-const PREFS = '20below-brew-prefs';
+const PREFS = '20below-brew-prefs-v2';
 
 /* Trim sizes. Adding one here is all that is needed - the value
  * feeds both the on-screen page and the injected @page rule. */
@@ -21,7 +21,7 @@ const TRIMS = {
 };
 
 const prefs = Object.assign(
-  { palette: 'colour', layout: 'digital', trim: 'letter', cols: '2', zoom: 'fit' },
+  { palette: 'colour', layout: 'digital', trim: 'letter', zoom: 'fit' },
   load(PREFS) || {},
 );
 
@@ -53,7 +53,6 @@ function applyPrefs() {
     prefs.palette === 'grey' ? 'Greyscale' : 'Full colour';
   document.getElementById('btn-layout').textContent =
     prefs.layout === 'pod' ? 'POD (gutters + bleed)' : 'Digital';
-  document.getElementById('btn-cols').textContent = `Columns: ${prefs.cols}`;
   document.getElementById('sel-trim').value = prefs.trim;
   document.getElementById('sel-zoom').value = prefs.zoom;
   applyZoom();
@@ -77,7 +76,7 @@ function applyZoom() {
 window.addEventListener('resize', applyZoom);
 
 function draw() {
-  const count = render(editor.value, preview, { cols: prefs.cols });
+  const count = render(editor.value, preview);
   store(DRAFT, editor.value);
   const words = editor.value.trim() ? editor.value.trim().split(/\s+/).length : 0;
   status.textContent =
@@ -119,12 +118,6 @@ document.getElementById('btn-palette').onclick = () => {
 document.getElementById('btn-layout').onclick = () => {
   prefs.layout = prefs.layout === 'pod' ? 'digital' : 'pod';
   applyPrefs();
-};
-
-document.getElementById('btn-cols').onclick = () => {
-  prefs.cols = prefs.cols === '1' ? '2' : '1';
-  applyPrefs();
-  draw();
 };
 
 document.getElementById('sel-trim').onchange = (e) => {

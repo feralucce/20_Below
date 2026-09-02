@@ -49,7 +49,9 @@ export function render(src, container, defaults = {}) {
   const pages = paginate(src);
   container.innerHTML = pages
     .map(({ options, markdown }) => {
-      const cols = options.cols || defaults.cols || '1';
+      // Two columns unless the page asks for one. Not a tool setting:
+      // a saved preference must never silently restyle a document.
+      const cols = options.cols || defaults.cols || '2';
       const bg = options.bg || defaults.bg || '';
       const attrs = [`data-cols="${cols}"`];
       if (bg) attrs.push(`data-bg="${bg}"`);
