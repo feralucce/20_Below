@@ -72,19 +72,43 @@ function applyZoom() {
   }
   const page = preview.querySelector('.page');
   if (!page) return;
+  /* Measure at scale 1. offsetWidth already reflects the current zoom,
+     so reading it while zoomed and dividing again compounds - which
+     drove the value negative and silently disabled fitting. */
+  preview.style.setProperty('--zoom', '1');
+  const natural = page.offsetWidth;
   const avail = preview.clientWidth - 40;
-  const natural = page.offsetWidth * (parseFloat(getComputedStyle(page).zoom) || 1);
-  preview.style.setProperty('--zoom', natural ? Math.min(1, avail / natural).toFixed(3) : 1);
+  const zoom = natural > 0 && avail > 0 ? Math.min(1, avail / natural) : 1;
+  preview.style.setProperty('--zoom', Math.max(0.1, zoom).toFixed(3));
 }
 window.addEventListener('resize', applyZoom);
+
+/* A page is min-height, not fixed height, so too much content does not
+ * get clipped - the page simply grows, and then spills across several
+ * physical sheets when printed, with the margins and background of one.
+ * Nothing is lost, but the page stops being a page. Mark any that have
+ * outgrown the sheet so it is visible before printing. */
+function flagOverflow() {
+  let over = 0;
+  for (const page of preview.querySelectorAll('.page')) {
+    const sheet = parseFloat(getComputedStyle(page).minHeight) || 0;
+    const spills = sheet > 0 && page.offsetHeight > sheet + 4;
+    page.classList.toggle('overflowing', spills);
+    if (spills) over += 1;
+  }
+  return over;
+}
 
 function draw() {
   const count = render(editor.value, preview);
   store(DRAFT, editor.value);
   const words = editor.value.trim() ? editor.value.trim().split(/\s+/).length : 0;
-  status.textContent =
-    `${count} page${count === 1 ? '' : 's'} · ${words} words · ${files.currentName()}`;
   applyZoom();
+  const over = flagOverflow();
+  status.textContent =
+    `${count} page${count === 1 ? '' : 's'} · ${words} words · ${files.currentName()}`
+    + (over ? ` · ${over} page${over === 1 ? '' : 's'} longer than the sheet` : '');
+  status.classList.toggle('warn', over > 0);
 }
 
 let timer;
