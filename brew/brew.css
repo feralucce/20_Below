@@ -298,6 +298,48 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 }
 .page .roll-box > p{margin:0}
 
+/* A stat block reads as one object, so it never splits across a column
+   or a page. The stat line gets its own strip - it is the thing a GM
+   scans for mid-fight. */
+.page .stat{
+  background:var(--panel); border:1px solid var(--rule);
+  border-top:3px solid var(--accent);
+  padding:.7em .9em; margin:0 0 .9em; font-size:9.5pt;
+  break-inside:avoid; page-break-inside:avoid;
+}
+.page .stat > :last-child{margin-bottom:0}
+.page .stat .block-title{
+  font-size:14pt; margin-bottom:.15em; color:var(--head);
+}
+.page .stat .stat-line{
+  background:var(--panel-2); border-radius:3px;
+  padding:.35em .55em; margin:0 0 .55em;
+  font-size:9pt; line-height:1.5;
+}
+.page .stat .stat-line p{margin:0}
+.page .stat p{margin:0 0 .45em}
+
+/* Variants recolour the top rule and the name. */
+.page .stat--pc{border-top-color:var(--v-pc)}
+.page .stat--ally{border-top-color:var(--v-ally)}
+.page .stat--npc,.page .stat--danger{border-top-color:var(--v-npc)}
+.page .stat--text{border-top-color:var(--v-text)}
+.page .stat--accent{border-top-color:var(--v-accent)}
+.page .stat--earth{border-top-color:var(--v-earth)}
+.page .stat--air{border-top-color:var(--v-air)}
+.page .stat--fire{border-top-color:var(--v-fire)}
+.page .stat--water{border-top-color:var(--v-water)}
+.page .stat--moira{border-top-color:var(--v-moira)}
+
+.page .stat--pc .block-title{color:var(--v-pc)}
+.page .stat--ally .block-title{color:var(--v-ally)}
+.page .stat--npc .block-title,.page .stat--danger .block-title{color:var(--v-npc)}
+.page .stat--earth .block-title{color:var(--v-earth)}
+.page .stat--air .block-title{color:var(--v-air)}
+.page .stat--fire .block-title{color:var(--v-fire)}
+.page .stat--water .block-title{color:var(--v-water)}
+.page .stat--moira .block-title{color:var(--v-moira)}
+
 .page .figure{margin:0 0 .9em; break-inside:avoid}
 .page .figure img{display:block; width:100%; height:auto}
 /* Variants: a thin colour override on the base block. Generated for
