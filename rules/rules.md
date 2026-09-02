@@ -37,7 +37,7 @@ Per-Attribute example tasks (a Fire example vs. an Earth example at the same Dif
 **Critical results, regardless of target number:**
 
 - **A roll of 2** (both dice show 1) - critical success. In combat this has a specific effect, see [Critical Hits](#critical-hits).
-- **A roll of 20** (both dice show 10) - critical failure.
+- **A roll of 20** (both dice show 10) - catastrophic failure.
 
 ### Advantage / Disadvantage
 

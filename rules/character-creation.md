@@ -96,7 +96,7 @@ Beyond Everyman, you have a **15-point Skills Pool**. Each training tier costs a
 | Trained | Attribute + Difficulty. |
 | Adept | Attribute + Difficulty, with Advantage. |
 | Expert | Same as Adept, plus critical success widens to a roll of 2 or 3. |
-| Master | Same as Expert, plus a critical failure gets one reroll (can only downgrade to a normal failure, never turn into a success). |
+| Master | Same as Expert, plus a catastrophic failure gets one reroll (can only downgrade to a normal failure, never turn into a success). |
 
 This is a creation-time budget only - advancing further after play starts costs XP instead, priced separately.
 
