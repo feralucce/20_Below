@@ -2,7 +2,7 @@ import { el } from '../ui.js';
 import { performCoreRoll, SKILL_TIERS } from '../roller/core.js';
 import { performGiftCheck } from '../roller/giftCheck.js';
 import { performResourceCheck } from '../roller/resourceCheck.js';
-import { rollDamagePool } from '../roller/damage.js';
+import { rollDamagePool, applyBoosts, worthBoosting } from '../roller/damage.js';
 import {
   skillTierName,
   effectiveResourceLevel,
@@ -429,7 +429,7 @@ export function buildResourceCheckSection(state, data) {
 const ATTACK_ATTRIBUTES = ['Earth', 'Air', 'Fire', 'Water'];
 const PLAIN_ATTACK_TIER = 2;
 
-export function buildAttackRollSection(state, data, refreshHeader) {
+export function buildAttackRollSection(state, data, refreshHeader, onCritical = () => {}) {
   const section = el('div', { class: 'roller-gift-check' });
 
   const attackAttributes = data.attributes.filter((a) => ATTACK_ATTRIBUTES.includes(a.name));
@@ -526,6 +526,10 @@ export function buildAttackRollSection(state, data, refreshHeader) {
       }
 
       const hit = result.outcome === 'success' || result.outcome === 'critical-success';
+      const crit = result.outcome === 'critical-success';
+      // Arm or disarm the damage panel to match this roll, so a critical
+      // never has to be remembered and a normal hit never leaves it armed.
+      onCritical(crit);
 
       toHitResultEl.innerHTML = '';
       toHitResultEl.append(
@@ -538,6 +542,7 @@ export function buildAttackRollSection(state, data, refreshHeader) {
           el('p', { class: outcomeClass(result.outcome) }, [
             el('strong', {}, hit ? `${outcomeLabel(result.outcome)} - the attack connects` : `${outcomeLabel(result.outcome)} - the attack misses`),
           ]),
+          crit ? el('p', { class: 'status-ok' }, [el('strong', {}, 'Critical hit - damage dice doubled.')]) : null,
           result.luckyNumber ? el('p', { class: 'status-ok' }, 'Lucky Number! +1 Fate Token.') : null,
         ].filter((n) => n != null),
       );
@@ -606,101 +611,138 @@ export function buildDamageRollSection(state, data, refreshHeader, heading = 'Da
     },
   });
 
-  // Each boosted die costs 1 Ki - can't check more boxes than the
-  // character currently has, and at 0 Ki none are checkable at all.
-  const boostRow = el('div', { class: 'roller-boost-row' });
-  function renderBoostRow() {
-    const info = ATTACK_TYPES[attackType];
-    boostRow.innerHTML = '';
-    boostRow.append(
-      el(
-        'span',
-        { class: 'boost-label' },
-        `Ki Infusion (+${state.subStats[info.boostStat]} ${info.boostStat} per boosted die, 1 Ki each - ${state.currentKi} Ki available):`,
-      ),
-    );
-    for (let i = 0; i < diceCount; i++) {
-      const checked = boostedDice.has(i);
-      const atCap = !checked && boostedDice.size >= state.currentKi;
-      boostRow.append(
-        el('label', { class: atCap ? 'boost-die boost-die-disabled' : 'boost-die' }, [
-          el('input', {
-            type: 'checkbox',
-            checked: checked ? '' : undefined,
-            disabled: atCap ? '' : undefined,
-            onChange: (e) => {
-              if (e.target.checked) boostedDice.add(i);
-              else boostedDice.delete(i);
-              renderBoostRow();
-            },
-          }),
-          ` ${i + 1}`,
-        ]),
-      );
-    }
-  }
-  renderBoostRow();
+  // Ki Infusion is chosen after the roll (rules.md#ki-infusion), so the
+  // panel works in two beats: roll the pool, then decide what to spend on
+  // it. `pool` holds the rolled dice between those beats; null means
+  // nothing has been rolled yet.
+  let pool = null;
+  let critical = false;
+
+  const critToggle = el('input', {
+    type: 'checkbox',
+    onChange: (e) => {
+      critical = e.target.checked;
+      renderSummary();
+    },
+  });
 
   const summaryEl = el('p', {});
   function renderSummary() {
     const info = ATTACK_TYPES[attackType];
-    summaryEl.textContent = `${attackType}: dice vs target's ${info.wallStat}, connecting dice cost the target a ${info.track === 'health' ? 'Health Level' : info.track === 'poise' ? 'Poise' : 'Sanity Level'}.`;
+    const track = info.track === 'health' ? 'Health Level' : info.track === 'poise' ? 'Poise' : 'Sanity Level';
+    summaryEl.textContent =
+      `${attackType}: ${critical ? diceCount * 2 : diceCount} dice vs the target's ${info.wallStat}` +
+      `${critical ? ' (doubled for a critical hit)' : ''}. Each connecting die costs the target a ${track}.`;
   }
-  renderSummary();
 
   const resultEl = el('div', { class: 'roller-result' });
+
+  // Renders the rolled dice with a boost toggle on each. Toggling spends or
+  // refunds Ki immediately, so the running Ki total on the sheet always
+  // matches what the panel shows.
+  function renderPool() {
+    const info = ATTACK_TYPES[attackType];
+    const boostAmount = state.subStats[info.boostStat];
+    resultEl.innerHTML = '';
+    if (!pool) return;
+
+    const applied = applyBoosts(pool, pool.chosen, boostAmount);
+    const worth = new Set(worthBoosting(pool, boostAmount));
+    const track = info.track === 'health' ? 'Levels' : info.track === 'poise' ? 'Poise' : 'Levels';
+
+    const dieRow = el('div', { class: 'roller-boost-row' });
+    applied.dice.forEach((d, i) => {
+      const chosen = pool.chosen.has(i);
+      // A die is only checkable if boosting it could change the outcome and
+      // there is Ki left to pay for it.
+      const useful = worth.has(i);
+      const atCap = !chosen && pool.chosen.size >= state.currentKi + pool.chosen.size - pool.paid;
+      const disabled = !useful || (!chosen && pool.paid >= state.currentKi + pool.paid && state.currentKi <= 0);
+      dieRow.append(
+        el('label', {
+          class: 'boost-die' + (disabled && !chosen ? ' boost-die-disabled' : '') + (d.connects ? ' boost-die-hit' : ''),
+          title: d.connects ? 'connects' : useful ? `boost for 1 Ki: ${d.raw}+${boostAmount}` : 'too far under the wall to save',
+        }, [
+          el('input', {
+            type: 'checkbox',
+            checked: chosen ? '' : undefined,
+            disabled: disabled && !chosen ? '' : undefined,
+            onChange: (e) => {
+              if (e.target.checked) {
+                if (state.currentKi <= 0) { e.target.checked = false; return; }
+                pool.chosen.add(i);
+                state.currentKi -= 1;
+                pool.paid += 1;
+              } else {
+                pool.chosen.delete(i);
+                state.currentKi += 1;
+                pool.paid -= 1;
+              }
+              refreshHeader();
+              renderPool();
+            },
+          }),
+          ` ${d.boosted ? `${d.raw}+${boostAmount}=${d.result}` : d.raw}`,
+        ]),
+      );
+    });
+
+    const unspent = worth.size - pool.chosen.size;
+    resultEl.append(
+      ...[
+        el('p', {}, [
+          el('strong', {}, `${applied.dice.length} dice vs wall ${pool.wall}`),
+          pool.critical ? ' - critical hit, doubled' : '',
+        ]),
+        dieRow,
+        el('p', {}, `Tick a die to spend 1 Ki and add ${boostAmount} ${info.boostStat} to it. ${state.currentKi} Ki left.`),
+        unspent > 0
+          ? el('p', { class: 'status-warn' }, `${unspent} more die${unspent === 1 ? '' : 's'} could still be carried over the wall.`)
+          : null,
+        el('p', { class: 'status-bad' }, [
+          el('strong', {}, `${applied.connectCount} connect - ${applied.connectCount} ${track} to the target`),
+        ]),
+        pool.paid > 0 ? el('p', {}, `${pool.paid} Ki spent on this attack.`) : null,
+      ].filter((n) => n != null),
+    );
+  }
 
   const rollBtn = el('button', {
     type: 'button',
     class: 'roll-btn',
     text: 'Roll Damage',
     onClick: () => {
-      // This is damage the character is dealing to a target (an NPC or
-      // another PC this app doesn't track), not damage to the character's
-      // own sheet - only the Ki Infusion spend, which is the attacking
-      // character's own resource, touches this character's state. The
-      // crossing-zero throttle isn't applied here either: it depends on
-      // the target's own current Health/Poise/Sanity, which this app has
-      // no visibility into for an NPC - the connect count itself is the
-      // damage dealt, for whoever's tracking the target's sheet to apply.
-      const info = ATTACK_TYPES[attackType];
-      const boostAmount = state.subStats[info.boostStat];
-      const kiSpent = boostedDice.size;
-      const result = rollDamagePool({ diceCount, wall, boostedDice: [...boostedDice], boostAmount });
-      const trackUnit = info.track === 'poise' ? 'Poise' : 'Levels';
-
-      state.currentKi = Math.max(0, state.currentKi - kiSpent);
-      refreshHeader();
-      boostedDice = new Set();
-      renderBoostRow();
-
-      resultEl.innerHTML = '';
-      resultEl.append(
-        ...[
-          el(
-            'p',
-            {},
-            `Rolled: ${result.dice.map((d) => (d.boosted ? `${d.raw}+${boostAmount}=${d.result}` : `${d.result}`)).join(', ')} vs wall ${wall}`,
-          ),
-          el('p', {}, [el('strong', {}, `${result.connectCount} of ${diceCount} connect`)]),
-          el('p', { class: 'status-bad' }, [el('strong', {}, `Damage dealt: ${result.connectCount} ${trackUnit}`)]),
-          kiSpent > 0 ? el('p', {}, `${kiSpent} Ki spent on boosted dice.`) : null,
-        ].filter((n) => n != null),
-      );
+      // Damage the character is dealing to someone else, not to their own
+      // sheet - only the Ki spend touches this character's state. The
+      // crossing-zero throttle is not applied here: it depends on the
+      // target's own current track, which this app cannot see for an NPC.
+      // The connect count is the damage dealt, for whoever holds that sheet.
+      pool = rollDamagePool({ diceCount, wall, critical });
+      pool.chosen = new Set();
+      pool.paid = 0;
+      renderPool();
     },
   });
+
+  renderSummary();
 
   section.append(
     el('h4', {}, heading),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Attack Type'), typeSelect]),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Dice'), diceInput]),
     el('div', { class: 'roller-row' }, [el('label', {}, "Target's Wall"), wallInput]),
-    boostRow,
+    el('div', { class: 'roller-row' }, [el('label', {}, 'Critical hit'), critToggle]),
     summaryEl,
     rollBtn,
     resultEl,
   );
-  section.refreshBoostRow = renderBoostRow;
+  // The to-hit roller arms this when it crits, so the two panels agree.
+  section.armCritical = (on) => {
+    critical = on;
+    critToggle.checked = on;
+    renderSummary();
+  };
+  section.refreshBoostRow = renderPool;
   return section;
 }
 
@@ -714,8 +756,9 @@ export function buildGiftCheckSection(state, data, refreshKiDependents) {
   const resultEl = el('div', { class: 'roller-result' });
 
   function updateSummary() {
-    const target = state.currentKi + state.subStats.Stamina;
-    summary.textContent = `Current Ki (${state.currentKi}) + Stamina (${state.subStats.Stamina}) = ${target}`;
+    // Rolls against current Ki alone now, not Ki + Stamina
+    // (rules/gifts.md#resolution).
+    summary.textContent = `Roll under your current Ki: ${state.currentKi}`;
   }
   updateSummary();
 
@@ -724,7 +767,7 @@ export function buildGiftCheckSection(state, data, refreshKiDependents) {
     class: 'roll-btn',
     text: 'Roll Gift Check',
     onClick: () => {
-      const result = performGiftCheck({ ki: state.currentKi, stamina: state.subStats.Stamina });
+      const result = performGiftCheck({ ki: state.currentKi });
       if (result.outcome === 'failure') {
         state.currentKi = Math.max(0, state.currentKi - 1);
         refreshKiDependents();
