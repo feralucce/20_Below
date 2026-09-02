@@ -56,7 +56,7 @@ function damageTracker(label, current, max, color, statusFn, onChange, interacti
 }
 
 // Ki and Fate Tokens don't fit the pip-boxes model - Ki's max can run well
-// past what's reasonable to draw as boxes, and Fate Tokens caps at Moira,
+// past what's reasonable to draw as boxes, and Fate Tokens caps at Stamina x 3,
 // which is low enough that boxes would look odd next to Health's row - so
 // both get a plain stepping counter instead.
 function counterTracker(label, current, max, onChange, interactive) {

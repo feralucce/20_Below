@@ -59,20 +59,21 @@ Pick one of these, or [write your own](#writing-a-custom-nature).
 
 ### Holding Fate Tokens
 
-A character can hold at most **[Moira score]** Fate Tokens at once. A Token earned while
-already at that cap is lost rather than banked - including the daily regeneration and
+A character can hold at most **[Stamina score] × 3** Fate Tokens at once. A Token earned
+while already at that cap is lost rather than banked - including the daily regeneration and
 Milestone awards.
 
-This is a separate limit from [Stamina](#staminas-job)'s spend cap, and the two do different
-jobs: **Moira limits how many Fate Tokens you can have; Stamina limits how many you can spend
-in a Scene.** A high-Moira, low-Stamina character sits on a deep reserve they can only draw on
-slowly; the reverse burns through a shallow one fast.
+Both Fate Token limits come from [Stamina](#staminas-job), and they are deliberately the same
+stat at two scales: **Stamina × 3 is how many you can hold; Stamina is how many you can spend
+in a single Scene.** So whatever a character's Stamina, they are carrying about three Scenes'
+worth of Fate Tokens and no more. Banking across a quiet stretch of play is possible, but it
+tops out quickly, and it tops out sooner for the character who could least afford to spend
+them anyway.
 
-Because every Attribute starts at 1, a character who put nothing into Moira holds exactly one
-Fate Token. Spend it and they are empty until the next sunrise, unless they earn one by playing
-to their Nature, having a Flaw invoked, taking Disadvantage on purpose, or the GM handing one
-over. The [Lucky Number](rules.md#klotho) cannot help them: it equals Klotho, and a Moira of 1
-leaves Klotho at 0 or 1, neither of which a 2d10 total can ever equal.
+A character with **Stamina 0 holds no Fate Tokens at all**, and cannot spend any either, since
+the per-Scene cap is the same score. Fate Tokens are simply not a resource that character has.
+That is the same shape as every other dumped sub-stat in the game - the floor is a wall, not a
+gentle slope.
 
 ## Fate Triggers
 
@@ -102,10 +103,11 @@ Most [Gifts](gifts.md) also cost Ki to use, called out per Gift and per Level, a
 
 ### Stamina's Job
 
-Action Brackets themselves (Fast/Normal/Slow) cost nothing to declare - that's just normal combat flow, not something Stamina governs. Instead, Stamina does two things:
+Action Brackets themselves (Fast/Normal/Slow) cost nothing to declare - that's just normal combat flow, not something Stamina governs. Instead, Stamina does three things:
 
-1. **Hard cap on Fate Token spends per Scene.** A character can spend Fate Tokens **at most [Stamina score] times per Scene** - the [Time Band](rules.md#time-bands) a combat encounter is contained within - regardless of how many Fate Tokens they actually have banked.
-2. **General endurance/exhaustion-resistance gauge.** Stamina sets a free baseline duration for any single sustained exertion (holding breath, forced marching, sustained labor, running flat-out) - Stamina Rounds, Minutes, Hours, or whatever [Time Band](rules.md#time-bands) unit fits the activity, GM's call. Past that baseline, roll **Water + Difficulty** once per additional unit of time, with Difficulty dropping by 1 each successive check. Failure imposes one level of **Exhausted**.
+1. **Hard cap on how many Fate Tokens a character can hold.** At most **[Stamina score] × 3** at once - see [Holding Fate Tokens](#holding-fate-tokens).
+2. **Hard cap on Fate Token spends per Scene.** A character can spend Fate Tokens **at most [Stamina score] times per Scene** - the [Time Band](rules.md#time-bands) a combat encounter is contained within - regardless of how many Fate Tokens they actually have banked.
+3. **General endurance/exhaustion-resistance gauge.** Stamina sets a free baseline duration for any single sustained exertion (holding breath, forced marching, sustained labor, running flat-out) - Stamina Rounds, Minutes, Hours, or whatever [Time Band](rules.md#time-bands) unit fits the activity, GM's call. Past that baseline, roll **Water + Difficulty** once per additional unit of time, with Difficulty dropping by 1 each successive check. Failure imposes one level of **Exhausted**.
 
 **Exhausted** is cumulative, each level stacking on top of the last:
 

@@ -90,8 +90,8 @@ export default {
         'p',
         { class: 'hint' },
         fateBuyable === 0
-          ? `Moira ${fateTokenCap(state)} caps you at ${fateTokenCap(state)} Fate Token${fateTokenCap(state) === 1 ? '' : 's'}, which the flat starting Token already covers. Raise Moira first if you want more.`
-          : `Holding ${startingFateTokens(state, data)} / ${fateTokenCap(state)} - Moira caps how many Fate Tokens you can hold, so points spent past that buy nothing.`,
+          ? `Stamina ${state.subStats.Stamina} caps you at ${fateTokenCap(state)} Fate Token${fateTokenCap(state) === 1 ? '' : 's'} (Stamina x 3), which the flat starting Token already covers. Raise Stamina first if you want more.`
+          : `Holding ${startingFateTokens(state, data)} / ${fateTokenCap(state)} - Stamina x 3 caps how many Fate Tokens you can hold, so points spent past that buy nothing.`,
       ),
       counterRow({
         name: 'Extra Fate Tokens',
@@ -100,7 +100,7 @@ export default {
           state.discretionaryExtra['Fate Tokens'] = v;
         },
         min: 0,
-        // Two ceilings at once: what's affordable, and what Moira lets the
+        // Two ceilings at once: what's affordable, and what Stamina lets the
         // character actually hold (rules/fate.md#holding-fate-tokens).
         max: () =>
           Math.min(

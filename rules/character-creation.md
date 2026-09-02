@@ -38,12 +38,12 @@ Each Attribute you raised in step 4 generates a pool of points equal to its own 
 | Air | Psyche | Resists Mental attacks, and sets how many dice you roll when making one. |
 | Fire | Ferocity | Boosts a Physical attack die when you spend Ki to push a strike. |
 | Fire | Presence | Resists Social attacks, and sets how many dice you roll when making one. |
-| Water | Stamina | Caps how many Fate Tokens you can spend per Scene; also your endurance against non-combat exhaustion. |
+| Water | Stamina | Caps how many Fate Tokens you can hold (× 3) and how many you can spend per Scene; also your endurance against non-combat exhaustion. |
 | Water | Health | Feeds your Health Levels (how many hits you can take). |
 | Moira | Atropos | Feeds Defense (how hard you are to touch at all - blade, word, or mind). |
 | Moira | Klotho | Ki Regeneration rate and your Lucky Number. |
 
-Moira itself, beyond its two sub-stats, caps how many Fate Tokens the character can hold at once - see [Holding Fate Tokens](fate.md#holding-fate-tokens).
+Stamina does double duty on Fate Tokens: it caps how many the character can hold (**Stamina × 3**) as well as how many they can spend in a Scene - see [Holding Fate Tokens](fate.md#holding-fate-tokens).
 
 Health is worth a second look before you leave it at 0. Every character has 5 Health Levels before the sub-stat is counted, so dumping it doesn't leave you fragile in a fight - it leaves you with nothing underneath the fight. A character with 0 Health still drops unconscious at 0 Health Levels like anyone else, but dies on the very next hit instead of bleeding out with time for someone to reach them. See [Health Levels](rules.md#health-levels).
 
@@ -153,7 +153,7 @@ These aren't purchased - they're computed directly from the choices you already 
 
 ## 15. Finishing Touches
 
-- **Starting Fate Tokens**: every character begins play with **1**, matching the flat daily regeneration rate - more can be bought with Discretionary points at step 12, 1:1, up to your **Moira** score. Moira caps how many Fate Tokens a character can hold at once (see [Holding Fate Tokens](fate.md#holding-fate-tokens)), so points spent past that cap buy nothing.
+- **Starting Fate Tokens**: every character begins play with **1**, matching the flat daily regeneration rate - more can be bought with Discretionary points at step 12, 1:1, up to **Stamina × 3**. That is the ceiling on how many Fate Tokens a character can hold at once (see [Holding Fate Tokens](fate.md#holding-fate-tokens)), so points spent past it buy nothing.
 - Anything else that falls outside the numbered steps above - final appearance/personality details building on your step 2 concept, and any last GM sign-off on the finished sheet.
 
 The character is ready to play.

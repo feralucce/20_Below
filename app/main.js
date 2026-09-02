@@ -156,8 +156,8 @@ async function main() {
   const state = loadSavedState(data);
   let currentStep = 0;
 
-  // The Fate Token cap moves with Moira, which is itself buyable, so any
-  // change can strand Tokens above the new cap - lowering Moira has to refund
+  // The Fate Token cap moves with Stamina, which is reallocable, so any
+  // change can strand Tokens above the new cap - lowering it has to refund
   // them. Re-applied at the top of both render entry points: the step panel
   // has to be built from already-clamped state, or it draws the stale count.
   function rerenderPools() {
