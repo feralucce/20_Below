@@ -67,9 +67,16 @@ const FENCE = /^([ \t]*)(```+|~~~+)[^\n]*\n[\s\S]*?^\1?\2[ \t]*$/gm;
 /* ::: name [title] ... ::: - non-greedy, so sibling blocks do not merge. */
 const BLOCK = /^:::[ \t]*([a-zA-Z][\w-]*)[ \t]*(.*)$([\s\S]*?)^:::[ \t]*$/gm;
 
+/* Private-use characters as the placeholder delimiters. A block's body
+ * is trimmed before it is re-emitted, so a space-delimited placeholder
+ * loses its delimiters and leaks as literal text; these survive trim
+ * and cannot occur in real prose. */
+const HOLD_A = '\uE000';
+const HOLD_B = '\uE001';
+
 export function applyBlocks(md) {
   const held = [];
-  md = md.replace(FENCE, (m) => ` FENCE${held.push(m) - 1} `);
+  md = md.replace(FENCE, (m) => `${HOLD_A}${held.push(m) - 1}${HOLD_B}`);
 
   // Repeat so blocks nested one inside another are both handled.
   for (let pass = 0; pass < 3; pass++) {
@@ -83,7 +90,7 @@ export function applyBlocks(md) {
     if (!changed) break;
   }
 
-  return md.replace(/ FENCE(\d+) /g, (_m, i) => held[Number(i)]);
+  return md.replace(new RegExp(HOLD_A + '(\\d+)' + HOLD_B, 'g'), (_m, i) => held[Number(i)]);
 }
 
 export function blockHelp() {
