@@ -37,7 +37,7 @@ export function performResourceCheck({ resourceLevel, resourceIndex }) {
       resourceZeroed = true;
     }
   } else {
-    resourceReduced = outcome === 'failure' || outcome === 'critical-failure';
+    resourceReduced = outcome === 'failure' || outcome === 'catastrophic-failure';
   }
 
   return { target, roll, outcome, resourceReduced, resourceZeroed, beyondMeans, gap };

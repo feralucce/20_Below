@@ -18,7 +18,7 @@ function outcomeLabel(outcome) {
     'critical-success': 'Critical Success',
     success: 'Success',
     failure: 'Failure',
-    'critical-failure': 'Critical Failure',
+    'catastrophic-failure': 'Catastrophic Failure',
   }[outcome];
 }
 

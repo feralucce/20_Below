@@ -56,13 +56,13 @@ function rollByMode(mode) {
 
 // Critical results apply "regardless of target number" - even a critical
 // success on an unreachable target counts as success, and vice versa for
-// critical failure. Expert/Master widen critical success to a roll of 2 or
-// 3; critical failure is always exactly a roll of 20 (uniquely (10,10) on
+// catastrophic failure. Expert/Master widen critical success to a roll of 2 or
+// 3; catastrophic failure is always exactly a roll of 20 (uniquely (10,10) on
 // two dice), never widened. See rules.md#difficulty-chart.
 export function classifyRoll(sum, target, widenCrit) {
   const critSuccessMax = widenCrit ? 3 : 2;
   if (sum <= critSuccessMax) return 'critical-success';
-  if (sum === 20) return 'critical-failure';
+  if (sum === 20) return 'catastrophic-failure';
   return sum <= target ? 'success' : 'failure';
 }
 
@@ -94,12 +94,12 @@ export function performCoreRoll({ attribute, difficulty, skillTier, extraAdvanta
   const luckyNumber = checkLuckyNumber(roll.sum, klotho);
   let reroll = null;
 
-  if (outcome === 'critical-failure' && tier.masterReroll) {
+  if (outcome === 'catastrophic-failure' && tier.masterReroll) {
     reroll = rollByMode(mode);
     const rerollOutcome = classifyRoll(reroll.sum, target, tier.widenCrit);
     // "if the second roll succeeds, it's treated as a normal failure" -
     // Master's reroll only ever strips the "critical" severity, never
-    // turns a critical failure into any kind of success.
+    // turns a catastrophic failure into any kind of success.
     if (rerollOutcome === 'success' || rerollOutcome === 'critical-success') {
       outcome = 'failure';
     }

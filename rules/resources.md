@@ -31,7 +31,7 @@ A character's **creation-Wealth** starts at **2**, unless they spent Resources P
 2. If the gap is **more than current creation-Wealth**, the item can't be afforded at all - no roll.
 3. Otherwise, roll a **Wealth Check**: 2d10 against creation-Wealth + Difficulty **6**, roll-under, standard critical results apply.
    - **Success**: the item is free.
-   - **Failure**: the character still gets the item. Creation-Wealth drops by the gap, **floored at a minimum of 1** - even an inexpensive item with no real gap still costs at least 1 Level on a failed roll. A **critical failure** doubles this loss.
+   - **Failure**: the character still gets the item. Creation-Wealth drops by the gap, **floored at a minimum of 1** - even an inexpensive item with no real gap still costs at least 1 Level on a failed roll. A **catastrophic failure** doubles this loss.
 
 Creation-Wealth carries across every purchase made during this shopping pass - once no remaining item is affordable (via a viable roll), gear shopping is over for this character creation. **This pool is temporary bookkeeping only**: it has no effect on the character's actual Wealth Resource once play begins, which stays at whatever Level was actually purchased. Once creation ends, this procedure stops applying entirely - every purchase from then on uses the general [Pushing a Resource](#pushing-a-resource) rule above, unaffected by anything that happened during creation shopping.
 

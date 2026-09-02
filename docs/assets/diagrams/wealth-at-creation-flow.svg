@@ -1,6 +1,6 @@
 <svg width="880" height="600" viewBox="0 0 880 600" xmlns="http://www.w3.org/2000/svg" role="img">
 <title>Wealth at Character Creation flow</title>
-<desc>Pick an item, find the gap between its Wealth rating and current creation-Wealth. If the gap is more than creation-Wealth, the item can't be afforded at all - no roll. Otherwise, roll a Wealth Check: 2d10 against creation-Wealth plus 6, roll-under. Success means the item is free. Failure still gets the item, but creation-Wealth drops by the gap, floored at 1, doubled on a critical failure.</desc>
+<desc>Pick an item, find the gap between its Wealth rating and current creation-Wealth. If the gap is more than creation-Wealth, the item can't be afforded at all - no roll. Otherwise, roll a Wealth Check: 2d10 against creation-Wealth plus 6, roll-under. Success means the item is free. Failure still gets the item, but creation-Wealth drops by the gap, floored at 1, doubled on a catastrophic failure.</desc>
 <defs>
 <marker id="arrow-wc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
 <path d="M0,0 L10,5 L0,10 z" fill="#5c7d92"/>
@@ -45,5 +45,5 @@
 <text x="750" y="464" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Failure</text>
 <text x="750" y="482" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#f0a89c">Item acquired anyway</text>
 <text x="750" y="500" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#f0a89c">Creation-Wealth drops by the gap</text>
-<text x="750" y="516" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#f0a89c">(min 1, &times;2 on a critical failure)</text>
+<text x="750" y="516" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#f0a89c">(min 1, &times;2 on a catastrophic failure)</text>
 </svg>

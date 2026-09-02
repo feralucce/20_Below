@@ -21,9 +21,9 @@ A Skill's **training tier** changes *how* the [core roll](rules.md#core-mechanic
 | 2 | Trained | Attribute + Difficulty |
 | 3 | Adept | Attribute + Difficulty, with **Advantage** |
 | 4 | Expert | Attribute + Difficulty, with Advantage, and **critical success widens to a roll of 2 or 3** |
-| 5 | Master | Same as Expert, plus: **on a critical failure, roll again** - if the second roll succeeds, it's treated as a normal failure, not a critical failure |
+| 5 | Master | Same as Expert, plus: **on a catastrophic failure, roll again** - if the second roll succeeds, it's treated as a normal failure, not a catastrophic failure |
 
-Each tier is strictly better than the last. Master's reroll only ever *removes the "critical" severity* from a failure (downgrading it to an ordinary failure on a second success) - it never turns a critical failure into any kind of success, and if the reroll also fails, the critical failure stands.
+Each tier is strictly better than the last. Master's reroll only ever *removes the "critical" severity* from a failure (downgrading it to an ordinary failure on a second success) - it never turns a catastrophic failure into any kind of success, and if the reroll also fails, the catastrophic failure stands.
 
 **Advantage/Disadvantage** are the [standalone core mechanic](rules.md#advantage--disadvantage): roll 3d10, keep the lowest two (Advantage) or highest two (Disadvantage).
 
