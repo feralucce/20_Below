@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>20 Below Brewer</title>
+<link rel="stylesheet" href="brew.css" />
+<style id="page-rule">@page { size: 8.5in 11in; margin: 0; }</style>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+<div id="bar">
+  <div class="title">20 Below Brewer <span>markdown in, print-ready pages out</span></div>
+
+  <button id="btn-open">Open</button>
+  <button id="btn-save">Save</button>
+  <button id="btn-saveas">Save as</button>
+
+  <span class="spacer"></span>
+
+  <label>Trim
+    <select id="sel-trim">
+      <option value="letter">Letter 8.5 &times; 11</option>
+      <option value="a4">A4 210 &times; 297</option>
+      <option value="trade">US Trade 6 &times; 9</option>
+      <option value="digest">Digest 5.5 &times; 8.5</option>
+    </select>
+  </label>
+  <button id="btn-palette" aria-pressed="false">Full colour</button>
+  <button id="btn-layout" aria-pressed="false">Digital</button>
+  <button id="btn-cols">Columns: 1</button>
+  <label>Zoom
+    <select id="sel-zoom">
+      <option value="fit">Fit</option>
+      <option value="0.5">50%</option>
+      <option value="0.75">75%</option>
+      <option value="1">100%</option>
+    </select>
+  </label>
+  <button id="btn-help">Syntax</button>
+  <button id="btn-print">Print / PDF</button>
+  <span id="status"></span>
+</div>
+
+<div id="split">
+  <textarea id="editor" spellcheck="false" placeholder="Paste your markdown here."></textarea>
+  <div id="drag" title="Drag to resize"></div>
+  <div id="preview" data-palette="colour" data-layout="digital"></div>
+</div>
+
+<input id="file" type="file" accept=".md,.markdown,.txt,text/markdown" hidden />
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
