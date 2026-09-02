@@ -187,7 +187,7 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 /* ---- typography ---- */
 /* Display faces per docs/style-guide.html: Anton for the headline,
    Bebas Neue for titles and labels, Montserrat for everything else. */
-.page h1,.page h2,.page h3,.page h4{
+.page h1,.page h2,.page h3,.page h4,.page h5,.page h6{
   line-height:1.15; margin:0 0 .35em; color:var(--head); break-after:avoid;
 }
 .page h1{
@@ -206,7 +206,18 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 }
 .page h4{
   font-family:'Montserrat',"Segoe UI",system-ui,sans-serif; font-weight:600;
-  font-size:10.5pt; margin-top:.8em; color:var(--page-dim);
+  font-size:10.5pt; margin-top:.8em;
+}
+/* Five and six sit below body size and lean on case and colour rather
+   than scale - there is nowhere left to go downward at 10.5pt body. */
+.page h5{
+  font-family:'Montserrat',"Segoe UI",system-ui,sans-serif; font-weight:600;
+  font-size:9pt; letter-spacing:.08em; text-transform:uppercase;
+  margin-top:.8em; color:var(--accent);
+}
+.page h6{
+  font-family:'Montserrat',"Segoe UI",system-ui,sans-serif; font-weight:600;
+  font-size:9.5pt; font-style:italic; margin-top:.8em; color:var(--page-dim);
 }
 .page p{margin:0 0 .7em}
 .page ul,.page ol{margin:0 0 .7em; padding-left:1.25em}

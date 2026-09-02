@@ -2,7 +2,7 @@
    graph busts together. See the note in index.html. */
 const V = new URL(import.meta.url).search;
 const { render } = await import('./render.js' + V);
-const { sample } = await import('./sample.js' + V);
+const { guide, starter } = await import('./sample.js' + V);
 const files = await import('./files.js' + V);
 
 const editor   = document.getElementById('editor');
@@ -136,10 +136,17 @@ document.getElementById('sel-zoom').onchange = (e) => {
 /* Dragging the split changes the available width, so refit. */
 document.getElementById('drag').addEventListener('mouseup', applyZoom);
 
-document.getElementById('btn-help').onclick = () => {
-  if (editor.value.trim() && !confirm('Replace what is in the editor with the syntax sample?')) return;
-  editor.value = sample();
+document.getElementById('btn-new').onclick = () => {
+  if (editor.value.trim() && !confirm('Start a new document? What is in the editor will be replaced.')) return;
+  editor.value = starter();
   draw();
+};
+
+/* The reference opens in its own window so it can sit beside the
+   document being written rather than replacing it. */
+document.getElementById('btn-reference').onclick = () => {
+  window.open('reference.html', '20below-brew-reference',
+    'width=1100,height=900,menubar=no,toolbar=no');
 };
 
 /* Ctrl/Cmd+S saves rather than triggering the browser's page save. */
@@ -166,6 +173,6 @@ document.getElementById('drag').addEventListener('mousedown', (e) => {
 });
 
 /* ---------- boot ---------- */
-editor.value = load(DRAFT) || sample();
+editor.value = load(DRAFT) || guide();
 applyPrefs();
 draw();
