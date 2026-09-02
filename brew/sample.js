@@ -1,21 +1,32 @@
 const V = new URL(import.meta.url).search;
-const { blockHelp } = await import('./blocks.js' + V);
+const { blockHelp, VARIANTS } = await import('./blocks.js' + V);
 
-/* The document a new user sees, which doubles as the syntax reference.
- * The block list is generated from blocks.js, so adding a block type
- * makes it appear here automatically. */
+/* Two documents.
+ *
+ *   guide()   - the visual reference. Everything the tool can do,
+ *               shown as source and then as the result it produces.
+ *               Opened in its own window by the Reference button, and
+ *               loaded on a first visit.
+ *   starter() - what the New button gives you. Deliberately almost
+ *               empty; the reference is a click away.
+ *
+ * The block and colour lists are generated from blocks.js, so adding
+ * either one documents itself with no second place to update.
+ */
 
 const B = String.fromCharCode(92);            // a single backslash
 const F = String.fromCharCode(96).repeat(3);  // a code fence
 const T = String.fromCharCode(96);            // one backtick, inline code
 
-/* Each block demonstrates itself: the rendered block contains its own
- * invocation, so the syntax and the result are the same object on the
- * page. Generated from the registry, so a new block documents itself.
- *
- * The invocation is written as inline code, which keeps the line from
- * starting with colons - a bare ::: at the start of a line would close
- * the very block it is sitting inside. */
+/* Source, then the same source rendered. The point of the guide is
+ * that you never have to imagine the result. */
+function demo(...lines) {
+  return [F, ...lines, F, '', ...lines].join('\n');
+}
+
+/* Each block rendered with its own invocation printed inside it. The
+ * invocation is inline code so its line does not start with colons - a
+ * bare ::: would close the very block it is sitting in. */
 function blockDemos() {
   return blockHelp()
     .map((b) => {
@@ -25,111 +36,100 @@ function blockDemos() {
     .join('\n\n');
 }
 
-export function sample() {
+/* One roll box per colour, labelled with its own name. */
+function colourDemos() {
+  return VARIANTS.filter((v) => v !== 'npc')
+    .map((v) => ['::: roll.' + v, v.charAt(0).toUpperCase() + v.slice(1), ':::'].join('\n'))
+    .join('\n\n');
+}
+
+export function starter() {
   return [
-    '# Your Supplement',
+    '# Title',
     '',
-    'Ordinary markdown works throughout: **bold**, *italic*, lists, links,',
-    'tables and > blockquotes. Pages are two columns by default.',
+    'Start writing. Two columns by default; the Reference button opens',
+    'a guide to everything the tool can do.',
     '',
-    '## Two things to learn',
+  ].join('\n');
+}
+
+export function guide() {
+  return [
+    '# The Brewer',
     '',
-    'Everything in this tool is one of two markers. That is the whole syntax.',
+    'Everything this tool can do, shown as the markdown that produces it',
+    'and then as the result. Pages are two columns by default.',
+    '',
+    '## Two markers',
+    '',
+    'The whole syntax is two things.',
     '',
     F,
     B + 'page',
     B + 'page cols=1',
     B + 'page bg=parchment',
     '',
-    '::: name Optional title',
+    '::: name A title',
     ':::',
     F,
     '',
     'The first starts a new page - as one column, or with a background,',
     'if you say so. The second opens a block; the bare colons close it.',
     '',
-    '## The blocks',
+    B + 'page cols=1',
     '',
-    'Each block below was produced by the command printed inside it.',
+    '# Headings',
     '',
-    blockDemos(),
+    'Six levels. This page is set to one column, because a level-one',
+    'heading spans the full measure by design and would otherwise break',
+    'the demonstration in half.',
     '',
-    "::: aside Designer's note",
-    'Blocks take markdown inside them, so **emphasis**, lists, tables and',
-    'images all work in here too.',
-    ':::',
+    demo('# Heading one'),
     '',
-    '::: box When to use a box',
-    'A box holds a rule or an example. A sidebar holds an aside. Use whichever',
-    'matches what the reader is meant to do with it.',
-    ':::',
+    demo('## Heading two'),
     '',
-    '::: roll',
-    'Roll 2d10 vs. your target number',
-    ':::',
+    demo('### Heading three'),
     '',
-    '## Colour',
+    demo('#### Heading four'),
     '',
-    'Any block takes a colour from the style guide, written after a dot.',
-    'Roles are pc, ally, npc and danger; Elements are earth, air, fire,',
-    'water and moira.',
+    demo('##### Heading five'),
     '',
-    F,
-    '::: box.danger Title',
-    '::: roll.fire',
-    '::: aside.moira Title',
-    F,
+    demo('###### Heading six'),
     '',
-    '::: box.danger A warning',
-    'Danger and npc share the red from the Battle Tracker.',
-    ':::',
+    B + 'page',
     '',
-    '::: roll.moira',
-    'Moira',
-    ':::',
+    '# Ordinary markdown',
     '',
-    '::: aside.water Water',
-    'Element colours tint the rule, not the fill, so body text keeps its',
-    'contrast.',
-    ':::',
+    '## Emphasis',
     '',
-    '### Every colour',
+    demo('**bold**, *italic*, ***both***, and `inline code`.'),
     '',
-    '::: roll.earth',
-    'Earth',
-    ':::',
+    '## Lists',
     '',
-    '::: roll.air',
-    'Air',
-    ':::',
+    demo('- a bulleted item', '- another item', '  - and one indented'),
     '',
-    '::: roll.fire',
-    'Fire',
-    ':::',
+    demo('1. a numbered item', '2. the next one', '3. and a third'),
     '',
-    '::: roll.water',
-    'Water',
-    ':::',
+    '## Links',
     '',
-    '::: roll.moira',
-    'Moira',
-    ':::',
+    demo('[a link](https://20belowrpg.com)'),
     '',
-    '::: roll.pc',
-    'PC',
-    ':::',
+    '## Blockquotes',
     '',
-    '::: roll.ally',
-    'Ally',
-    ':::',
+    demo('> A quotation, or a line of read-aloud text.'),
     '',
-    '::: roll.text',
-    'Text',
-    ':::',
+    '## Rules',
     '',
-    '::: roll.accent',
-    'Accent',
-    ':::',
+    demo('---'),
+    '',
+    '## Tables',
+    '',
+    demo(
+      '| Element | Splits into |',
+      '|---|---|',
+      '| Earth | Soak / Potence |',
+      '| Moira | Atropos / Klotho |',
+    ),
     '',
     '## Images',
     '',
@@ -137,18 +137,23 @@ export function sample() {
     '',
     F,
     '![alt text](https://your-host/art.png)',
-    '',
-    '::: figure A caption for the image',
-    '![](https://your-host/art.png)',
-    ':::',
     F,
+    '',
+    B + 'page',
+    '',
+    '# The blocks',
+    '',
+    'Each block below was produced by the command printed inside it.',
+    '',
+    blockDemos(),
+    '',
+    '## Wide',
+    '',
+    'A wide block spans both columns. Spanning splits the flow, so text',
+    'after one starts again below it.',
     '',
     '::: wide',
     '### Wide content',
-    '',
-    'Wrap anything in a wide block and it spans both columns - big tables,',
-    'full-bleed art, a chart. Spanning splits the flow, so text after a wide',
-    'block starts again below it.',
     '',
     '| Element | Splits into | Governs |',
     '|---|---|---|',
@@ -159,14 +164,43 @@ export function sample() {
     '| Moira | Atropos / Klotho | Fate, Defense, Ki recovery |',
     ':::',
     '',
-    'Text after the wide block picks up here, in columns again.',
+    B + 'page',
+    '',
+    '# Colour',
+    '',
+    'Any block takes a colour from the style guide, written after a dot.',
+    '',
+    F,
+    '::: box.danger A title',
+    '::: roll.fire',
+    '::: aside.moira A title',
+    F,
+    '',
+    '::: box.danger A danger box',
+    'Danger and npc share the red from the Battle Tracker.',
+    ':::',
+    '',
+    '::: aside.water A water aside',
+    'Colour tints the rule and the title, not the fill, so body text',
+    'keeps its contrast.',
+    ':::',
+    '',
+    '## Every colour',
+    '',
+    colourDemos(),
+    '',
+    '::: aside In greyscale',
+    'Every colour collapses to one grey. A black and white print cannot',
+    'carry nine hues, so say in words what the colour would have said.',
+    ':::',
     '',
     B + 'page cols=1',
     '',
     '# A single-column page',
     '',
-    'Set a page to one column when it wants the full measure - a title page,',
-    'a full-page illustration, or a long table that reads better wide.',
+    'Set with ' + T + B + 'page cols=1' + T + ' when a page wants the full measure - a',
+    'title page, a full-page illustration, or a long table that reads',
+    'better wide.',
     '',
   ].join('\n');
 }
