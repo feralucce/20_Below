@@ -4,24 +4,47 @@
 
 import { rollD10 } from './core.js';
 
-// Ki Infusion boosts are committed blind, before any dice are rolled - the
-// caller passes which die indices (0-based) are boosted, decided before
-// this function ever generates a result. `boostAmount` is the attacker's
-// own matching sub-stat (Ferocity for Physical, Presence for Social,
-// Psyche for Mental), added to that specific die's raw result. Die ≤ wall
-// is absorbed; die > wall connects - a wall of 10 guarantees 0% connect
-// on an unboosted die, true full negation.
-export function rollDamagePool({ diceCount, wall, boostedDice = [], boostAmount = 0 }) {
-  const boosted = new Set(boostedDice);
+// Roll the pool. Ki Infusion is decided AFTER this, with the dice on the
+// table (rules.md#ki-infusion) - so rolling and boosting are two steps,
+// and this one knows nothing about Ki. Die > wall connects; a wall of 10
+// guarantees 0% connect on an unboosted die, true full negation.
+//
+// `critical` doubles the dice: a critical success on the to-hit roll
+// doubles the damage dice rolled (rules.md#critical-hits). The extra dice
+// are ordinary dice facing the same wall.
+export function rollDamagePool({ diceCount, wall, critical = false }) {
+  const count = critical ? diceCount * 2 : diceCount;
   const dice = [];
-  for (let i = 0; i < diceCount; i++) {
+  for (let i = 0; i < count; i++) {
     const raw = rollD10();
-    const isBoosted = boosted.has(i);
-    const result = isBoosted ? raw + boostAmount : raw;
-    dice.push({ raw, boosted: isBoosted, result, connects: result > wall });
+    dice.push({ raw, boosted: false, result: raw, connects: raw > wall });
   }
-  const connectCount = dice.filter((d) => d.connects).length;
-  return { dice, wall, connectCount };
+  return { dice, wall, critical, diceRolled: count, connectCount: dice.filter((d) => d.connects).length };
+}
+
+// Apply Ki Infusion to an already-rolled pool. `boostedDice` holds the
+// 0-based indices the player chose after seeing the roll; `boostAmount` is
+// their matching sub-stat (Ferocity/Presence/Psyche). Returns a new pool -
+// the original is left alone so a choice can be taken back before it is paid
+// for. One Ki per boosted die.
+export function applyBoosts(pool, boostedDice, boostAmount) {
+  const boosted = new Set(boostedDice);
+  const dice = pool.dice.map((d, i) => {
+    const isBoosted = boosted.has(i);
+    const result = isBoosted ? d.raw + boostAmount : d.raw;
+    return { ...d, boosted: isBoosted, result, connects: result > pool.wall };
+  });
+  return { ...pool, dice, connectCount: dice.filter((d) => d.connects).length, kiSpent: boosted.size };
+}
+
+// Which dice are worth spending a Ki on: the ones that failed but that the
+// sub-stat can carry over the wall. Boosting anything else is wasted, which
+// is the whole point of choosing after the roll.
+export function worthBoosting(pool, boostAmount) {
+  return pool.dice
+    .map((d, i) => ({ d, i }))
+    .filter(({ d }) => !d.connects && d.raw + boostAmount > pool.wall)
+    .map(({ i }) => i);
 }
 
 // Applies connecting dice to a Health Level or Sanity Level track, honoring

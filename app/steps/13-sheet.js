@@ -448,7 +448,11 @@ export default {
       damageSectionRef = buildDamageRollSection(state, data, renderHeader);
       combatRollerEl.append(
         el('h3', {}, 'Combat Roller'),
-        buildAttackRollSection(state, data, renderHeader),
+        // A critical to-hit doubles the damage dice, so the attack roller
+        // arms the damage panel rather than leaving the player to remember.
+        buildAttackRollSection(state, data, renderHeader, (crit) => {
+          damageSectionRef?.armCritical?.(crit);
+        }),
         damageSectionRef,
       );
     }
