@@ -183,27 +183,27 @@
 
   <section class="faq-section" id="how-does-fate-work">
     <h2>How Does Fate Work?</h2>
-    <p>Fate Tokens are what you spend to bend a bad roll, dodge a bad situation, or just declare that something goes your way. Every time you spend one, you immediately risk your Ki - a separate pool from your Fate Tokens - with a quick roll called a Fatigue Check.</p>
-    <div class="roll-box">Fatigue Check: roll 2d10 vs. Ki</div>
+    <p>Fate Tokens are what you spend to bend a bad roll, dodge a bad situation, or just declare that something goes your way. Spending one costs you the token and nothing else - no follow-up roll, no risk to any other pool.</p>
     <div class="chart-frame">
-      <img src="assets/diagrams/fate-spend-flow.svg" alt="Spending a Fate Token triggers a Fatigue Check, 2d10 against your Ki. Success costs nothing further. Failure loses 1 Ki, but the Fate Token's effect happens either way." />
+      <img src="assets/diagrams/fate-spend-flow.svg" alt="Spending a Fate Token buys its effect directly. Two limits apply: Stamina caps how many you can spend in a Scene, and Moira caps how many you can hold at once." />
     </div>
-    <p>Succeed, and the token's effect just happens, no further cost. Fail, and you lose 1 point of Ki until you rest it back (a Short Rest refills some, a Full Night's Rest fills it completely) - your body paying the toll for that stroke of fortune.</p>
+    <p>Two limits shape how you use them, and they sit at opposite ends. Your <strong>Stamina</strong> caps how many you can spend in a single Scene. Your <strong>Moira</strong> caps how many you can hold at once - anything earned while you're already at that ceiling is lost rather than banked.</p>
     <p>A single Fate Token buys one of five things, flat cost every time: ignore one of your Flaws for the rest of the scene, succeed at a roll automatically with no dice involved, gain Advantage on a roll you're not already trained for, shrug off a bad status like Flustered or Exhausted, or refill your Ki pool completely, right there in the moment.</p>
     <p>Want something bigger than that - bending the actual fiction, not just a roll? That's <strong>Kotodama</strong>: spend Fate Tokens to declare a fact and have the world bend to make it true. The bigger the claim, the farther it reaches, and the harder it'd be to explain away after the fact, the more it costs - and multiple characters can pool their tokens together for something none of them could manage alone.</p>
-    <p class="aside">You can only spend Fate Tokens so many times per Scene - your Stamina score sets that cap, no matter how many tokens you're actually holding. And every token you spend hands the GM one back, to spend on complications and twists of their own - spending big doesn't just cost you, it hands the GM more to work with too.</p>
+    <p class="aside">You can only spend Fate Tokens so many times per Scene - your Stamina score sets that cap, no matter how many tokens you're actually holding, and your Moira sets how many you can hold in the first place. And every token you spend hands the GM one back, to spend on complications and twists of their own - spending big doesn't just cost you, it hands the GM more to work with too.</p>
   </section>
 
   <section class="faq-section" id="how-does-ki-work">
     <h2>How Does Ki Work?</h2>
-    <p>Ki is your body's own reserve of extra capability - separate from Fate Tokens, and not something you earn moment to moment. It's fixed by your build: average your Soak, Initiative, Ferocity, Stamina, and Atropos sub-stats, then double the result.</p>
-    <div class="roll-box">Ki = average of Soak / Initiative / Ferocity / Stamina / Atropos, doubled</div>
+    <p>Ki is your body's own reserve of extra capability - separate from Fate Tokens, and not something you earn moment to moment. It's deliberately common: take your strongest Element and add 8. Nothing else about your build touches it, so every character in the game lands between 13 and 18, and the frail specialist draws on the same deep tank as the walking wall.</p>
+    <div class="roll-box">Ki = your strongest Element + 8</div>
     <div class="chart-frame">
-      <img src="assets/diagrams/ki-four-jobs.svg" alt="Ki serves as the target number for a Fatigue Check, and can be directly spent three ways: to preserve a Health or Sanity Level, to bump an Action Bracket up a step, or to boost an attack die via Ki Infusion." />
+      <img src="assets/diagrams/ki-spends.svg" alt="Ki is spent three ways, all direct: to preserve a Health or Sanity Level, to bump an Action Bracket up a step, or to boost an attack die via Ki Infusion. Most Gifts also cost Ki to use." />
     </div>
-    <p>You already met one job Ki does above: it's the number a Fatigue Check rolls against. Beyond that, you can spend Ki three more ways, all direct spends with no roll involved. 1 Ki preserves a Health Level or Sanity Level that would otherwise be lost - cancelling the hit before it happens. Poise works differently: Ki can't stop a Poise hit from landing, but once you're at 0 Poise, 1 Ki refills it straight back to full. 1 Ki also bumps your Action Bracket up a step - Slow to Normal, or Normal to Fast, with 2 Ki jumping both steps at once. And 1 Ki per die boosts an attack die, adding your own Ferocity, Presence, or Psyche to that die's result, decided before you see how any of the dice actually land.</p>
-    <p class="aside">Only a Fatigue Check risks losing Ki. Preserving a Level, bumping a Bracket, and boosting a die are all direct spends - no roll, no risk, and none of them count against your Stamina's per-Scene Fate Token cap.</p>
-    <p>A Short Rest gives back half your Klotho, rounded up (minimum 1). A Full Night's Rest fills Ki all the way back up.</p>
+    <p>You spend Ki three ways, all direct spends with no roll involved. 1 Ki preserves a Health Level or Sanity Level that would otherwise be lost - cancelling the hit before it happens. Poise works differently: Ki can't stop a Poise hit from landing, but once you're at 0 Poise, 1 Ki refills it straight back to full. 1 Ki also bumps your Action Bracket up a step - Slow to Normal, or Normal to Fast, with 2 Ki jumping both steps at once. And 1 Ki per die boosts an attack die, adding your own Ferocity, Presence, or Psyche to that die's result, decided before you see how any of the dice actually land.</p>
+    <p>Most Gifts cost Ki to use as well, called out per Gift and per Level, and some of them additionally call for a Gift Check - see below.</p>
+    <p class="aside">None of the three direct spends costs you anything but the Ki - no roll, no risk, and none of them count against your Stamina's per-Scene Fate Token cap.</p>
+    <p>A Short Rest gives back Klotho Ki (minimum 1). A Full Night's Rest fills Ki all the way back up.</p>
   </section>
 
   <section class="faq-section" id="how-does-combat-work">
@@ -302,12 +302,12 @@
     <h2>How Do I Use a Gift?</h2>
     <p>There's no single "Gift roll" - using a Gift means checking that Gift's own entry for which of three tools it actually calls for, since not every Gift uses all three, or even any of them.</p>
     <div class="chart-frame">
-      <img src="assets/diagrams/gift-three-tools.svg" alt="Using a Gift can call for a roll reusing an existing resolution type, a direct Ki cost, or a Gift Check against Ki plus Stamina. Not every Gift uses all three." />
+      <img src="assets/diagrams/gift-three-tools.svg" alt="Using a Gift can call for a roll reusing an existing resolution type, a direct Ki cost, or a Gift Check against current Ki. Not every Gift uses all three." />
     </div>
     <p>Some Gifts need an actual roll, and when they do, it's always a roll you already know how to make: a weapon-style attack, the same self-paired Presence or Psyche attack shape as any Social or Mental attack, or a plain Attribute + Difficulty check. Some Gifts have a flat <strong>Ki cost</strong> instead - a direct spend, no roll at all, called out explicitly in that Gift's own text.</p>
-    <p>And some Gifts risk a <strong>Gift Check</strong>: a resource-risk roll against your own Ki and Stamina combined.</p>
-    <div class="roll-box">Gift Check: roll 2d10 vs. Ki + Stamina</div>
-    <p>Succeed, and using the Gift costs you nothing extra. Fail, and you lose 1 Ki until it's refilled - either way, the Gift's effect still happens.</p>
+    <p>And some Gifts risk a <strong>Gift Check</strong>: a resource-risk roll against the Ki you have left right now, not the Ki you started with.</p>
+    <div class="roll-box">Gift Check: roll 2d10 vs. current Ki</div>
+    <p>Succeed, and using the Gift costs you nothing extra. Fail, and you lose 1 Ki until it's refilled - either way, the Gift's effect still happens. Because the check reads your remaining pool, your Gifts are dependable while you're fresh and get unreliable once you've spent the day.</p>
     <p class="aside">These three tools aren't exclusive - a single Gift can call for more than one at once, say an attack roll to land it plus a Gift Check to actually trigger the effect. Always check the specific Gift and Level you're using; there's no one universal formula that covers all of them.</p>
   </section>
 
