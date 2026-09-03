@@ -287,6 +287,14 @@ function buildGearPurchaseEntries(state) {
   ];
 }
 
+function buildFlavorItemEntries(state) {
+  if (!state.flavorItems?.length) return [];
+  return [
+    el('h3', {}, 'Odds and Ends'),
+    el('ul', {}, state.flavorItems.map((t) => el('li', {}, t))),
+  ];
+}
+
 function buildEverymanGearEntry(state) {
   const pkg = state.everymanGearPackage;
   if (!pkg) return [];
@@ -301,6 +309,7 @@ function buildEquipmentTab(state, data) {
     ...buildEverymanGearEntry(state),
     el('h3', {}, 'Gear'),
     ...buildGearPurchaseEntries(state),
+    ...buildFlavorItemEntries(state),
   ];
 }
 

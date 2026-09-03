@@ -300,33 +300,93 @@ A free alternative to [Wealth Check](resources.md#wealth-at-character-creation) 
 - **Whatever's Left** - the clothes on your back, a bedroll, a pocketknife (Switchblade), less than a day's food.
 - **One Bag, Ready to Move** - a packed duffel bag, a Multitool, a hand-me-down phone (Smartphone) barely holding a charge.
 - **Borrowed Roof** - a key to somewhere that isn't really yours, a Tactical flashlight, one good coat.
+- **Shelter Queue** - a sleeping bag, a Switchblade, a Life straw, and the schedule of which places still take you after nine.
+- **Car That Runs, Mostly** - a car you sleep in more than you drive, a Multitool, a Portable charger, and a blanket that smells like the car.
+- **Day Labor** - steel-toed boots, a Hand saw, work gloves, and a phone number that sometimes calls back.
+- **Off the Grid** - a Tent, a Fire starter kit, Water purification tablets, and a Compass older than you are.
+- **Busker** - an instrument worth more than everything else you own, a Skateboard, a hat to put down, and a corner that's yours by nine a.m.
+- **Just Out** - a paper bag of your own returned belongings, a Sewing / repair kit, a Two-way radio, and a list of people you're not supposed to call.
+- **Kitchen Back Door** - an apron nobody asked for back, a Combat knife you call a kitchen knife, Field rations & water purifier, and a manager who looks the other way.
+- **The Squat** - Bolt cutters, a Tactical flashlight, Paracord (100ft), and a building the city has forgotten about.
+- **Scrapper** - a Pickaxe, a Utility trailer with one good wheel, work gloves, and a route through every alley worth walking.
+- **Everything in the Backpack** - a backpack that goes where you go, a Snake bite kit, a Fire starter kit, and no fixed address.
 
 **Level 1** (Financially comfortable)
 
 - **Steady Job Kit** - Smartphone, Multitool, Field rations & water purifier (a well-stocked kitchen), a wardrobe good enough for interviews and dates.
 - **Weekend Warrior** - Bicycle, Tent & sleeping gear, Rope & climbing kit, Binoculars.
 - **City Renter's Setup** - Smartphone, Lockpick set (the front door sticks), Field rations & water purifier, Tactical flashlight (the power's spotty).
+- **Night Class** - Tablet / e-reader, Portable charger / power bank, Compass, and a bus pass with your name worn off it.
+- **Line Cook** - Combat knife (a real knife roll), Trauma shears, Burn gel / dressing, and shoes that never come clean.
+- **The Handy One** - Multitool, Hand saw, Crowbar, and a garage full of other people's unfinished projects.
+- **Weekend Medic** - Tourniquet, SAM splint, Naloxone (Narcan) kit, and a volunteer badge with the training behind it.
+- **Neighborhood Watch** - Binoculars, Two-way radio, Trail camera, Tactical flashlight.
+- **Angler** - Kayak / canoe, Field rations & water purifier, Paracord (100ft), and a spot you don't tell people about.
+- **Trailhead Regular** - Tent & sleeping gear, Fire starter kit, Snake bite kit, Ice axe.
+- **Amateur Radio** - Two-way radio, Solar charger, Action / body camera, and an antenna the neighbors have complained about twice.
+- **Locked Out Again** - Lockpick set, Bolt cutters, Switchblade, and a reputation for getting into things.
+- **Quiet Apartment** - Smartphone, Tablet / e-reader, Sewing / repair kit, and a door with three locks on it.
 
 **Level 2** (Well-off)
 
 - **Home & Hearth** - Economy sedan, First aid kit, Laptop/hacking rig, a paid-off lease.
 - **Home Defense** - Compact pistol (licensed), First aid kit, Tactical flashlight, a home security system (flavor).
 - **Weekend Traveler** - Motorcycle, Satellite phone, Field stimulant, Rope & climbing kit.
+- **Field Researcher** - Laptop / hacking rig, Laser rangefinder, Nice backpack, Chemical analysis kit.
+- **Paramedic Off Shift** - First aid kit, IV kit & fluids, Antitoxin, Cargo van.
+- **Contractor** - Cargo van, Welding torch, Breaching kit, Gas mask / respirator.
+- **Courier** - Motorcycle, Encrypted burner phone, Nice backpack, and a route through the city nobody else knows.
+- **Private Investigator** - Hidden camera, Directional microphone, Economy sedan, Forged documents.
+- **Backcountry Guide** - ATV / dirt bike, Avalanche beacon, Oxygen tank, Ascender / rappel kit.
+- **Hobby Shooter** - Hunting rifle (licensed), Recurve bow, Laser rangefinder, and a range membership older than some of the staff.
+- **Home Studio** - Laptop / hacking rig, AI assistant earpiece, Encrypted comms set, and a spare room with foam on the walls.
+- **Small Boat, Big Water** - Jetski, Water desalinator, Life straw / portable water filter, Paracord (100ft).
+- **Fixer's Rolodex** - Encrypted burner phone, Forged documents, Uniform disguise, RFID cloner.
 
 **Level 3** (Wealthy)
 
 - **Executive Traveler** - Armored sedan, Forged documents, Satellite phone, Encrypted comms set.
 - **Serious Collector** - Tactical carbine (licensed), Night vision goggles, Concealable vest, a proper home range/vault.
 - **Weekend Estate** - Off-road SUV, Speedboat, Advanced trauma kit, a private dock.
+- **Investigative Journalist** - Armored sedan, Laser listening device, Facial recognition tablet, Forged badge / credentials.
+- **Trauma Surgeon** - Advanced trauma kit, Surgical kit, Defibrillator (AED), Off-road SUV.
+- **Security Consultant** - Concealable vest, Compact SMG, Biometric scanner lock, Signal jammer.
+- **Mountain Rescue** - Off-road SUV, Recon drone, Thermal imaging scope, Oxygen tank.
+- **Cat Burglar** - Safecracking kit, Grapple gloves, Night vision goggles, Camera jammer.
+- **Bounty Hunter** - Armored sedan, Tactical carbine (licensed), Stab vest, Hidden tracker dart.
+- **Balloonist** - Hot air balloon, Satellite phone, Binoculars, and a landowner who tolerates the early mornings.
+- **Demolition Crew** - Thermite charge, Breaching kit, Hazmat suit, Fire axe.
+- **Wire Man** - Wiretap kit, Signal triangulator, Long-range parabolic dish, Police scanner.
+- **Riverboat** - Speedboat, Harpoon gun, Water desalinator, and a dock nobody inspects.
 
 **Level 4** (Very wealthy)
 
 - **Corporate Backing** - Armored transport van, Encrypted comms set, Laptop/hacking rig, a small trusted staff (flavor).
 - **Private Security Contract** - Tactical vest, Compact SMG, Signal jammer, a retained security team (flavor).
 - **Serious Insulation** - EMP device, Ballistic shield, Forged documents, a legal team on retainer (flavor).
+- **Corporate Extraction** - Armored transport van, Portable jammer array, Tactical vest, Forged badge / credentials.
+- **Air Surveillance** - Thermal drone, Night-vision drone, Recon drone, Satellite uplink.
+- **Diplomatic Detail** - Armored sedan, Ballistic helmet, Encrypted comms set, Riot shield.
+- **Ordnance Disposal** - EMP device, Hazmat suit, Breaching kit, Thermite charge.
+- **Heavy Support** - Squad automatic weapon, Tactical vest, Ballistic helmet, Two-way radio.
+- **Black Site Logistics** - Armored transport van, Satellite uplink, Forged documents, and a manifest that doesn't match the cargo.
+- **Signals Intelligence** - Portable jammer array, Signal triangulator, Wiretap kit, Satellite uplink.
+- **Field Hospital** - Advanced trauma kit, Surgical kit, Defibrillator (AED), Armored transport van.
+- **Traditionalist** - English longbow, Plate armor, Warhammer, and a family that has been doing this a long time.
+- **Grenadier** - Grenade launcher, Tactical vest, Ballistic helmet, Gas mask / respirator.
 
 **Level 5** (A fortune)
 
 - **Old Money** - Concealable vest, Antitoxin, a name that opens doors, staff to handle logistics (flavor).
 - **Fortress** - Full tactical rig, EMP device, Ballistic shield, private security on retainer (flavor).
 - **Untouchable** - Advanced trauma kit, Forged documents, Satellite phone, the kind of wealth that solves most problems with a phone call rather than gear (flavor).
+- **Air Wing** - Light helicopter, Satellite uplink, Encrypted comms set, and a pilot on retainer (flavor).
+- **Deep Water** - Mini-submarine, Water desalinator, Oxygen tank, and a research charter nobody reads past the first page (flavor).
+- **Own Airfield** - Small fixed-wing aircraft, Satellite phone, Parachute, and a strip that isn't on the charts.
+- **Column** - Armored personnel carrier, Full tactical rig, Squad automatic weapon, and a crew who have done this before (flavor).
+- **Countersniper** - Anti-materiel rifle, Thermal imaging scope, Ghillie suit, Laser rangefinder.
+- **Hazard Team** - Bomb disposal suit, Hazmat suit, EMP device, Portable jammer array.
+- **Clean Hands** - Forged documents, DNA-scrubbing wipes, Face-changing prosthetics kit, and a firm that bills by the hour and asks nothing (flavor).
+- **Private Clinic** - Surgical kit, Advanced trauma kit, Defibrillator (AED), and a doctor who doesn't file paperwork (flavor).
+- **The Collection** - Katana, Two-handed sword, Plate armor, and a climate-controlled room with the provenance to match (flavor).
+- **Quiet Money** - Armored sedan, Encrypted comms set, Biometric scanner lock, and the kind of accountant who is never surprised (flavor).
