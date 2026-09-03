@@ -419,6 +419,48 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 }
 .page .roll-box > p{margin:0}
 
+/* A skill entry. Compact on purpose - these come in runs of dozens, and
+   they have to tile down a column without any one of them shouting. The
+   left rule takes the element's colour, which is read out of the title
+   by blocks.js rather than typed twice. */
+.page .skill{
+  background:var(--panel); border-left:3px solid var(--accent);
+  padding:.55em .75em; margin:0 0 .55em; border-radius:3px;
+  font-size:9.5pt; break-inside:avoid;
+}
+.page .skill > :last-child{margin-bottom:0}
+.page .skill-name{
+  font-family:var(--font-head); font-weight:var(--font-head-weight);
+  text-transform:var(--font-head-case);
+  font-size:12pt; color:var(--head); letter-spacing:.02em;
+}
+.page .skill-elem{
+  display:inline-block; margin-left:.45em; padding:.05em .4em;
+  border:1px solid var(--rule); border-radius:3px;
+  font-family:var(--font-mono); font-size:7.5pt;
+  letter-spacing:.08em; text-transform:uppercase;
+  color:var(--page-dim); vertical-align:.15em;
+}
+/* The flavour line is the voice; the description under it is the rule.
+   Keeping them visually distinct is the whole point of the block. */
+.page .skill-flavour{
+  color:var(--accent); font-style:italic;
+  margin:.25em 0 .4em;
+}
+.page .skill-flavour > p{margin:0}
+
+/* Element colours, matching the roll-box and stat variants. */
+.page .skill--earth{border-left-color:var(--v-earth)}
+.page .skill--earth .skill-flavour{color:var(--v-earth)}
+.page .skill--air{border-left-color:var(--v-air)}
+.page .skill--air .skill-flavour{color:var(--v-air)}
+.page .skill--fire{border-left-color:var(--v-fire)}
+.page .skill--fire .skill-flavour{color:var(--v-fire)}
+.page .skill--water{border-left-color:var(--v-water)}
+.page .skill--water .skill-flavour{color:var(--v-water)}
+.page .skill--moira{border-left-color:var(--v-moira)}
+.page .skill--moira .skill-flavour{color:var(--v-moira)}
+
 /* A stat block reads as one object, so it never splits across a column
    or a page. The stat line gets its own strip - it is the thing a GM
    scans for mid-fight. */
