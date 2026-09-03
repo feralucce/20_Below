@@ -4,7 +4,7 @@
 // Level, cumulative downward. Split out the same way gear-shop.js was split
 // from 08-resources.js - a self-contained interactive block.
 
-import { el } from '../ui.js';
+import { el, captureOpenDetails, restoreOpenDetails } from '../ui.js';
 import { creationWealthBase, setEverymanGearPackage } from '../state.js';
 
 export default function buildEverymanGear(state, data) {
@@ -16,6 +16,7 @@ export default function buildEverymanGear(state, data) {
   }
 
   function render() {
+    const openDetails = captureOpenDetails(listWrap);
     listWrap.innerHTML = '';
     const eligibleBase = creationWealthBase(state);
     const current = state.everymanGearPackage;
@@ -32,11 +33,19 @@ export default function buildEverymanGear(state, data) {
         lvl.packages.forEach((pkg) => {
           const isSelected =
             current && current.level === lvl.level && current.name === pkg.name;
-          const card = el('div', {
+          // A twirl-down card like every other pick in the app - there are
+          // thirteen per level now, and a wall of open ones is unreadable.
+          // The summary carries the pick marker so the chosen package is
+          // still obvious with all of them shut.
+          const card = el('details', {
             class: `pick-card everyman-gear-card${isSelected ? ' selected' : ''}`,
+            open: isSelected ? '' : undefined,
           });
           card.append(
-            el('strong', {}, pkg.name),
+            el('summary', {}, [
+              el('span', {}, pkg.name),
+              isSelected ? el('span', { class: 'cost' }, 'Selected') : null,
+            ]),
             el('p', { class: 'detail' }, pkg.contents),
             el('button', {
               type: 'button',
@@ -53,6 +62,7 @@ export default function buildEverymanGear(state, data) {
         levelWrap.appendChild(cards);
         listWrap.appendChild(levelWrap);
       });
+    restoreOpenDetails(listWrap, openDetails);
   }
 
   render();
