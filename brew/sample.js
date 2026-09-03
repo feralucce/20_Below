@@ -43,6 +43,56 @@ function colourDemos() {
     .join('\n\n');
 }
 
+/* One page that touches every themed token, for themes.html to render
+ * side by side. Deliberately short and dense: a theme is judged on how
+ * a heading sits against body copy, how a rule reads against the page,
+ * and whether a boxed panel still separates from the ground - not on
+ * how much text fits. The caller passes cols=1, and this has to fit a
+ * single 6x9 page without spilling into a second column, so keep it
+ * tight when adding to it.
+ */
+export function themeSample() {
+  return [
+    '# Deep Water',
+    '',
+    'Body copy sets the register of a theme more than any heading does.',
+    'Read at size, against the page ground, with a [link](#) and some',
+    T + 'inline code' + T + ' in it.',
+    '',
+    '## Second level',
+    '',
+    '### Third level, which takes the accent',
+    '',
+    '> A blockquote leans on the accent for its rule and the dim text',
+    '> colour for its body.',
+    '',
+    '::: box A boxed callout',
+    'Panel against page. These two sit close together on purpose, so',
+    'this is where a greyscale ramp fails first.',
+    ':::',
+    '',
+    '::: aside',
+    'An aside is the accent doing structural work, not decorative.',
+    ':::',
+    '',
+    '| Column | Reads against |',
+    '|---|---|',
+    '| Header row | the second panel tone |',
+    '| Body row | the page ground |',
+    '',
+    '::: stat Marsh Revenant',
+    'Health 5 | Soak 3 | Ferocity 4',
+    'The stat line is what a GM scans mid-fight, so it has to stay',
+    'legible in every theme and both palettes.',
+    ':::',
+    '',
+    '::: roll.pc',
+    'Roll boxes carry the variant colours',
+    ':::',
+    '',
+  ].join('\n');
+}
+
 export function starter() {
   return [
     '# Title',
@@ -55,7 +105,7 @@ export function starter() {
 
 export function guide() {
   return [
-    '# The Brewer',
+    '# The Brewery',
     '',
     'Everything this tool can do, shown as the markdown that produces it',
     'and then as the result. Pages are two columns by default.',

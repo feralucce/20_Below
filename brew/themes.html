@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Brewery - Themes</title>
+<link rel="stylesheet" href="brew.css" />
+<style>
+/* A comparison sheet, not part of the tool. Every pane is a real
+   render through brew.css in an iframe, so this page cannot drift
+   from what the Brewery actually produces - if a theme changes,
+   this changes with it. Adding a theme means adding it to THEMES
+   below and nowhere else. */
+/* brew.css pins html,body to height:100% for the app's flex layout.
+   Left alone, this sheet scrolls inside body instead of the document,
+   which breaks anchor scrolling and the scrollbar the reader expects. */
+html,body{height:auto; overflow:visible}
+body{
+  display:block;
+  background:var(--ui-bg); color:var(--ui-text);
+  font-family:"Segoe UI",system-ui,sans-serif;
+  padding:22px 26px 60px;
+}
+h1{font-size:20px; margin:0 0 4px; letter-spacing:.02em}
+.lede{color:var(--ui-dim); font-size:13px; margin:0 0 24px; max-width:70ch; line-height:1.55}
+.theme-row{margin:0 0 34px}
+.theme-row > h2{
+  font-size:15px; margin:0 0 10px; padding-bottom:6px;
+  border-bottom:1px solid var(--ui-border); letter-spacing:.02em;
+}
+.panes{display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap}
+.pane{flex:1 1 320px; min-width:300px; max-width:520px}
+.pane > h3{
+  font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.08em;
+  color:var(--ui-dim); margin:0 0 7px;
+}
+.pane iframe{
+  width:100%; border:1px solid var(--ui-border); border-radius:6px;
+  display:block; background:#000;
+}
+.tokens{
+  margin-top:8px; display:flex; flex-wrap:wrap; gap:5px;
+}
+.tok{
+  display:flex; align-items:center; gap:5px;
+  font-size:10.5px; color:var(--ui-dim);
+  background:var(--ui-panel); border:1px solid var(--ui-border);
+  border-radius:4px; padding:2px 6px;
+}
+.tok i{width:10px; height:10px; border-radius:2px; display:block; border:1px solid rgba(255,255,255,.18)}
+</style>
+</head>
+<body>
+
+<h1>Themes</h1>
+<p class="lede">
+  Each theme rendered in full colour and in greyscale, from the same source page.
+  Every pane is a real render through <code>brew.css</code>, so this sheet cannot
+  drift from what the Brewery produces. Greyscale is a print mode applied
+  <em>to</em> a theme, not a rival of one, which is why each theme carries its own
+  grey ramp rather than sharing one.
+</p>
+
+<div id="rows"></div>
+
+<script type="module">
+const THEMES = [
+  { id: 'core',      label: '20 Below Core' },
+  { id: 'backwater', label: 'Backwater Static' },
+];
+const PALETTES = [
+  { id: 'colour', label: 'Full colour' },
+  { id: 'grey',   label: 'Greyscale' },
+];
+/* The tokens worth eyeballing per pane - the ones that carry the look
+   and the ones most likely to collapse into each other. */
+const SWATCHES = ['--page-bg', '--panel', '--panel-2', '--rule', '--accent', '--page-fg', '--page-dim'];
+
+const rows = document.getElementById('rows');
+const probe = document.createElement('div');
+probe.id = 'preview';
+probe.style.display = 'none';
+document.body.appendChild(probe);
+
+for (const theme of THEMES) {
+  const row = document.createElement('div');
+  row.className = 'theme-row';
+  row.innerHTML = `<h2>${theme.label}</h2><div class="panes"></div>`;
+  const panes = row.querySelector('.panes');
+
+  for (const pal of PALETTES) {
+    const pane = document.createElement('div');
+    pane.className = 'pane';
+
+    /* Read the live computed values straight out of brew.css rather
+       than repeating them here, so the swatches are always the truth. */
+    probe.dataset.theme = theme.id;
+    probe.dataset.palette = pal.id;
+    const cs = getComputedStyle(probe);
+    const chips = SWATCHES.map((t) => {
+      const v = cs.getPropertyValue(t).trim();
+      return `<span class="tok"><i style="background:${v}"></i>${t.replace('--', '')} ${v}</span>`;
+    }).join('');
+
+    pane.innerHTML =
+      `<h3>${pal.label}</h3>` +
+      `<iframe loading="lazy" src="themes-pane.html?theme=${theme.id}&palette=${pal.id}" height="760"></iframe>` +
+      `<div class="tokens">${chips}</div>`;
+    panes.appendChild(pane);
+  }
+  rows.appendChild(row);
+}
+
+/* Panes report their natural page height so nothing is clipped. */
+addEventListener('message', (e) => {
+  const h = e.data && e.data.paneHeight;
+  if (!h) return;
+  for (const f of document.querySelectorAll('.pane iframe')) {
+    if (f.contentWindow === e.source) f.height = h + 2;
+  }
+});
+</script>
+</body>
+</html>

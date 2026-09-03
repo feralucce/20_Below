@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>20 Below Brewer</title>
+<title>The Brewery</title>
 <link rel="stylesheet" href="brew.css" />
 <style id="page-rule">@page { size: 8.5in 11in; margin: 0; }</style>
 <script src="../vendor/marked.min.js"></script>
@@ -11,7 +11,7 @@
 <body>
 
 <div id="bar">
-  <div class="title">20 Below Brewer <span>markdown in, print-ready pages out</span></div>
+  <div class="title">The Brewery <span>markdown in, print-ready pages out</span></div>
 
   <button id="btn-new">New</button>
   <button id="btn-open">Open</button>
@@ -20,6 +20,12 @@
 
   <span class="spacer"></span>
 
+  <label>Theme
+    <select id="sel-theme">
+      <option value="core">20 Below Core</option>
+      <option value="backwater">Backwater Static</option>
+    </select>
+  </label>
   <label>Trim
     <select id="sel-trim">
       <option value="letter">Letter 8.5 &times; 11</option>
@@ -47,7 +53,7 @@
 <div id="split">
   <textarea id="editor" spellcheck="false" placeholder="Paste your markdown here."></textarea>
   <div id="drag" title="Drag to resize"></div>
-  <div id="preview" data-palette="colour" data-layout="digital"></div>
+  <div id="preview" data-theme="core" data-palette="colour" data-layout="digital"></div>
 </div>
 
 <input id="file" type="file" accept=".md,.markdown,.txt,text/markdown" hidden />

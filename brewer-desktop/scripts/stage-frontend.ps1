@@ -1,14 +1,14 @@
-# Builds a clean staging copy of just the files the Brewer desktop app
+# Builds a clean staging copy of just the files the Brewery desktop app
 # actually needs to serve into src-tauri/frontend-dist, which
 # tauri.conf.json's frontendDist points at. Run automatically by Tauri
 # before each build/dev via beforeBuildCommand/beforeDevCommand.
 #
-# The app serves brew/index.html - the same page as the web Brewer at
+# The app serves brew/index.html - the same page as the web Brewery at
 # /brew/, so the two stay in step.
 #
 # It ships separately from the Character Creator on purpose: a player
 # rolling up a character has no use for a page-layout tool, and the
-# Brewer's fonts and example files are dead weight in that installer.
+# Brewery's fonts and example files are dead weight in that installer.
 #
 # The relative layout matters: brew/index.html loads the markdown renderer
 # as ../vendor/marked.min.js and its Licence button opens ../license.html,

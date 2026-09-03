@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Theme pane</title>
+<link rel="stylesheet" href="brew.css" />
+<style>
+  /* This page is only ever an iframe inside themes.html. No chrome,
+     no editor - just one page rendered under one theme. */
+  html,body{height:auto;overflow:visible;background:transparent}
+  #preview{padding:0;overflow:visible}
+  /* .flow is height:100%, which only resolves against a definite
+     height. In the app the page gets one from the flex chain; here
+     the document is auto-height, so state it directly - without this
+     the column box collapses to zero and every line lands below the
+     page and is clipped away by its overflow:hidden. */
+  #preview .page{
+    margin:0; box-shadow:none;
+    height:calc(var(--trim-h) + (var(--bleed) * 2));
+  }
+</style>
+<script src="../vendor/marked.min.js"></script>
+</head>
+<body>
+<div id="preview"></div>
+<script type="module">
+/* Same cache-busting contract as index.html: the entry carries a
+   version query and every module passes its own query down. */
+const v = Date.now();
+const params = new URLSearchParams(location.search);
+const { render } = await import(`./render.js?v=${v}`);
+const { themeSample } = await import(`./sample.js?v=${v}`);
+
+const preview = document.getElementById('preview');
+preview.dataset.theme = params.get('theme') || 'core';
+preview.dataset.palette = params.get('palette') || 'colour';
+preview.style.setProperty('--trim-w', '6in');
+preview.style.setProperty('--trim-h', '9in');
+render(themeSample(), preview, { cols: '1' });
+
+/* Scale the whole page down to the pane's width, then tell the parent
+   how tall that makes it. Comparing themes means seeing the whole page
+   at once - a pane that crops a 6in page to its left 3.5in hides
+   exactly the panels and rules being judged.
+   Measured at zoom 1 first: offsetWidth already reflects the current
+   zoom, so reading it while scaled and dividing again compounds. */
+function fit() {
+  const page = preview.querySelector('.page');
+  if (!page) return;
+  preview.style.setProperty('--zoom', '1');
+  const natural = page.offsetWidth;
+  const avail = document.documentElement.clientWidth - 2;
+  if (!natural || !avail) return;
+  const z = Math.min(1, avail / natural);
+  preview.style.setProperty('--zoom', String(z));
+  /* offsetHeight reports the UNZOOMED layout height, so the painted
+     height has to be scaled by hand - reporting it raw leaves every
+     pane with a band of dead space under the page. */
+  parent.postMessage({ paneHeight: Math.ceil(page.offsetHeight * z) }, '*');
+}
+
+document.fonts.ready.then(fit);
+addEventListener('resize', fit);
+fit();
+</script>
+</body>
+</html>
