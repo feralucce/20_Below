@@ -53,6 +53,114 @@ export const BLOCKS = {
     render: (_title, body, variant) =>
       `<div class="${cls('roll-box', variant)}">\n\n${body.trim()}\n\n</div>`,
   },
+  gift: {
+    help: 'a gift entry - flavour first, then "**1** ..." level lines; Adders and Limiters get their own strips',
+    takesTitle: true,
+    /* The largest entries in the book: five levels each, plus Adders and
+     * Limiters. Levels get the numbered ladder the other entries use;
+     * Adders and Limiters are labelled runs rather than numbered, so they
+     * are picked out by their heading instead. */
+    render: (title, body, variant) => {
+      const paras = body.trim().split(/\n\s*\n/);
+      const flavour = paras.length > 1 ? paras.shift() : '';
+      const head = `<span class="gift-name">${esc(title.trim())}</span>`;
+      const fl = flavour
+        ? `<div class="gift-flavour">\n\n${flavour}\n\n</div>\n\n`
+        : '';
+      let section = '';
+      const rest = paras.map((p) => {
+        const t = p.trim();
+        const label = t.match(/^\*\*(Adders?|Limiters?)\*\*:?\s*$/i);
+        if (label) {
+          section = label[1].toLowerCase().replace(/s$/, '');
+          return `<span class="gift-section">${esc(label[1])}</span>`;
+        }
+        const lvl = t.match(/^\*\*(\d+)\*\*\s*(.*)$/s);
+        if (lvl) {
+          section = '';
+          return `<div class="gift-level">\n\n<span class="gift-n">${esc(lvl[1])}</span>${lvl[2]}\n\n</div>`;
+        }
+        return section
+          ? `<div class="gift-opt gift-opt--${section}">\n\n${t}\n\n</div>`
+          : p;
+      }).join('\n\n');
+      return `<div class="${cls('gift', variant)}">\n\n${head}\n\n${fl}${rest}\n\n</div>`;
+    },
+  },
+  flaw: {
+    help: 'a flaw entry - flavour line first, then the summary, then "**1** ..." level lines',
+    takesTitle: true,
+    /* Structurally a Resource - every Flaw is rated 1-5 and the ladder is
+     * the substance - but it reads as the opposite thing, so it carries
+     * the danger tint rather than the accent. Worth the separate block
+     * for that alone: a reader flicking through should never mistake a
+     * Flaw for something they are buying. */
+    render: (title, body, variant) => {
+      const paras = body.trim().split(/\n\s*\n/);
+      const flavour = paras.length > 1 ? paras.shift() : '';
+      const head = `<span class="flaw-name">${esc(title.trim())}</span>`;
+      const fl = flavour
+        ? `<div class="flaw-flavour">\n\n${flavour}\n\n</div>\n\n`
+        : '';
+      const rest = paras.map((p) => {
+        const m = p.trim().match(/^\*\*(\d+)\*\*\s*(.*)$/s);
+        return m
+          ? `<div class="flaw-level">\n\n<span class="flaw-n">${esc(m[1])}</span>${m[2]}\n\n</div>`
+          : p;
+      }).join('\n\n');
+      return `<div class="${cls('flaw', variant)}">\n\n${head}\n\n${fl}${rest}\n\n</div>`;
+    },
+  },
+  resource: {
+    help: 'a resource entry - flavour line first, then the summary, then "**1** ..." level lines',
+    takesTitle: true,
+    /* Every Resource is rated 1-5 and the ladder is the substance of the
+     * entry, so a level line gets its rating in a badge and its text on
+     * one row. A paragraph that does not open with **N** is left as
+     * ordinary prose, which is what the summary line above them is. */
+    render: (title, body, variant) => {
+      const paras = body.trim().split(/\n\s*\n/);
+      const flavour = paras.length > 1 ? paras.shift() : '';
+      const head = `<span class="res-name">${esc(title.trim())}</span>`;
+      const fl = flavour
+        ? `<div class="res-flavour">\n\n${flavour}\n\n</div>\n\n`
+        : '';
+      const rest = paras.map((p) => {
+        const m = p.trim().match(/^\*\*(\d+)\*\*\s*(.*)$/s);
+        return m
+          ? `<div class="res-level">\n\n<span class="res-n">${esc(m[1])}</span>${m[2]}\n\n</div>`
+          : p;
+      }).join('\n\n');
+      return `<div class="${cls('resource', variant)}">\n\n${head}\n\n${fl}${rest}\n\n</div>`;
+    },
+  },
+  boon: {
+    help: 'a boon entry - title it "Name (cost)", flavour line first, then the rule; tier lines are picked out',
+    takesTitle: true,
+    /* Same shape as a skill entry, with one addition: most Boons are a
+     * flat cost, but sixteen are bought as one of two, three or four
+     * tiers. A line beginning "Tier N (...)" is lifted onto its own
+     * strip so a reader can see at a glance which ones have that
+     * structure without reading the paragraph first. */
+    render: (title, body, variant) => {
+      const m = title.trim().match(/^(.*?)\s*\(([^)]+)\)\s*$/);
+      const name = (m ? m[1] : title).trim();
+      const cost = m ? m[2].trim() : '';
+      const paras = body.trim().split(/\n\s*\n/);
+      const flavour = paras.length > 1 ? paras.shift() : '';
+      const pill = cost ? `<span class="boon-cost">${esc(cost)}</span>` : '';
+      const head = `<span class="boon-name">${esc(name)}</span>${pill}`;
+      const fl = flavour
+        ? `<div class="boon-flavour">\n\n${flavour}\n\n</div>\n\n`
+        : '';
+      const rest = paras.map((p) => (
+        /^\*\*Tier\b/.test(p.trim())
+          ? `<div class="boon-tier">\n\n${p.trim()}\n\n</div>`
+          : p
+      )).join('\n\n');
+      return `<div class="${cls('boon', variant)}">\n\n${head}\n\n${fl}${rest}\n\n</div>`;
+    },
+  },
   skill: {
     help: 'a skill entry - title it "Name (Element)", flavour line first, rules after',
     takesTitle: true,

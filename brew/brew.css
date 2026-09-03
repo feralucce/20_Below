@@ -419,6 +419,144 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 }
 .page .roll-box > p{margin:0}
 
+/* A gift entry. The biggest thing in the book - five levels plus Adders
+   and Limiters - so it gets a little more room than the other entry
+   blocks and does not try to be compact. Adders and Limiters are runs of
+   options rather than a ladder, so they are labelled instead of
+   numbered, and tinted apart from each other: one is something you buy,
+   the other is something you accept. */
+.page .gift{
+  background:var(--panel); border-left:3px solid var(--v-moira);
+  padding:.6em .8em; margin:0 0 .7em; border-radius:3px;
+  font-size:9.5pt; break-inside:avoid;
+}
+.page .gift > :last-child{margin-bottom:0}
+.page .gift-name{
+  font-family:var(--font-head); font-weight:var(--font-head-weight);
+  text-transform:var(--font-head-case);
+  font-size:13pt; color:var(--head); letter-spacing:.02em;
+}
+.page .gift-flavour{
+  color:var(--v-moira); font-style:italic; margin:.25em 0 .45em;
+}
+.page .gift-flavour > p{margin:0}
+.page .gift-level{
+  display:flex; gap:.5em; align-items:baseline; margin:.2em 0;
+}
+.page .gift-level > p{margin:0}
+.page .gift-n{
+  flex:0 0 auto; min-width:1.15em; text-align:center;
+  background:var(--panel-2); border-radius:2px;
+  font-family:var(--font-mono); font-size:8pt; font-weight:700;
+  color:var(--v-moira); padding:.05em .25em;
+}
+.page .gift-section{
+  display:block; margin:.5em 0 .2em;
+  font-family:var(--font-mono); font-size:7.5pt;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--page-dim);
+}
+.page .gift-opt{
+  border-left:2px solid var(--rule); padding-left:.6em; margin:.15em 0 .15em .2em;
+}
+.page .gift-opt > p{margin:0}
+.page .gift-opt--adder{border-left-color:var(--v-pc)}
+.page .gift-opt--limiter{border-left-color:var(--v-danger)}
+
+/* A flaw entry. Structurally identical to a Resource, deliberately not
+   coloured like one: it carries the danger tint so a reader flicking
+   through never mistakes a Flaw for something they are buying. */
+.page .flaw{
+  background:var(--panel); border-left:3px solid var(--v-danger);
+  padding:.55em .75em; margin:0 0 .55em; border-radius:3px;
+  font-size:9.5pt; break-inside:avoid;
+}
+.page .flaw > :last-child{margin-bottom:0}
+.page .flaw-name{
+  font-family:var(--font-head); font-weight:var(--font-head-weight);
+  text-transform:var(--font-head-case);
+  font-size:12pt; color:var(--head); letter-spacing:.02em;
+}
+.page .flaw-flavour{
+  color:var(--v-danger); font-style:italic; margin:.25em 0 .4em;
+}
+.page .flaw-flavour > p{margin:0}
+.page .flaw-level{
+  display:flex; gap:.5em; align-items:baseline;
+  margin:.18em 0; padding-left:.1em;
+}
+.page .flaw-level > p{margin:0}
+.page .flaw-n{
+  flex:0 0 auto;
+  min-width:1.15em; text-align:center;
+  background:var(--panel-2); border-radius:2px;
+  font-family:var(--font-mono); font-size:8pt; font-weight:700;
+  color:var(--v-danger); padding:.05em .25em;
+}
+
+/* A resource entry. The 1-5 ladder is the substance, so each level gets
+   its rating in a badge and sits on its own row - a reader looking up
+   "what does Wealth 3 get me" should find it without reading 1 and 2. */
+.page .resource{
+  background:var(--panel); border-left:3px solid var(--accent);
+  padding:.55em .75em; margin:0 0 .55em; border-radius:3px;
+  font-size:9.5pt; break-inside:avoid;
+}
+.page .resource > :last-child{margin-bottom:0}
+.page .res-name{
+  font-family:var(--font-head); font-weight:var(--font-head-weight);
+  text-transform:var(--font-head-case);
+  font-size:12pt; color:var(--head); letter-spacing:.02em;
+}
+.page .res-flavour{
+  color:var(--accent); font-style:italic; margin:.25em 0 .4em;
+}
+.page .res-flavour > p{margin:0}
+.page .res-level{
+  display:flex; gap:.5em; align-items:baseline;
+  margin:.18em 0; padding-left:.1em;
+}
+.page .res-level > p{margin:0}
+.page .res-n{
+  flex:0 0 auto;
+  min-width:1.15em; text-align:center;
+  background:var(--panel-2); border-radius:2px;
+  font-family:var(--font-mono); font-size:8pt; font-weight:700;
+  color:var(--accent); padding:.05em .25em;
+}
+
+/* A boon entry. Same density as a skill - these arrive in runs too - but
+   the cost sits where the element does on a skill, and tier lines get
+   their own indented strip so the sixteen tiered Boons read differently
+   at a glance from the twenty-six flat ones. */
+.page .boon{
+  background:var(--panel); border-left:3px solid var(--accent);
+  padding:.55em .75em; margin:0 0 .55em; border-radius:3px;
+  font-size:9.5pt; break-inside:avoid;
+}
+.page .boon > :last-child{margin-bottom:0}
+.page .boon-name{
+  font-family:var(--font-head); font-weight:var(--font-head-weight);
+  text-transform:var(--font-head-case);
+  font-size:12pt; color:var(--head); letter-spacing:.02em;
+}
+.page .boon-cost{
+  display:inline-block; margin-left:.45em; padding:.05em .4em;
+  border:1px solid var(--rule); border-radius:3px;
+  font-family:var(--font-mono); font-size:7.5pt;
+  letter-spacing:.06em; text-transform:uppercase;
+  color:var(--page-dim); vertical-align:.15em;
+}
+.page .boon-flavour{
+  color:var(--accent); font-style:italic; margin:.25em 0 .4em;
+}
+.page .boon-flavour > p{margin:0}
+.page .boon-tier{
+  border-left:2px solid var(--rule); padding-left:.6em;
+  margin:.3em 0 .3em .2em;
+}
+.page .boon-tier > p{margin:0 0 .25em}
+.page .boon-tier > :last-child{margin-bottom:0}
+
 /* A skill entry. Compact on purpose - these come in runs of dozens, and
    they have to tile down a column without any one of them shouting. The
    left rule takes the element's colour, which is read out of the title
