@@ -134,8 +134,20 @@
     font-size: 0.7em;
     color: var(--text-dim);
   }
+  /* Kept in the layout and hidden with visibility rather than toggled
+     with display: none, which cannot be transitioned and so gave the
+     menu no grace period at all - a pixel of overshoot closed it. */
   .dropdown {
-    display: none;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-4px);
+    /* Opens briskly, closes on a delay, so crossing a corner or
+       overshooting an item does not dismiss it. */
+    transition: opacity 0.12s ease,
+                transform 0.12s ease,
+                visibility 0s linear 0.12s;
     position: absolute;
     top: 100%;
     left: 0;
@@ -149,9 +161,38 @@
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
     z-index: 30;
   }
+  /* The 0.5rem margin above the panel is dead space the pointer has to
+     cross on its way down, and crossing it dropped :hover.
+     Bridging it with a pseudo-element on .dropdown does not work: the
+     panel is pointer-events:none until it is hovered, and it cannot be
+     hovered through a bridge it does not yet accept pointers on.
+     Extending the list item's own box downward does work - the pointer
+     never leaves .has-dropdown in the first place. Negative margin
+     keeps the bar's layout unchanged. */
+  .has-dropdown {
+    padding-bottom: 0.7rem;
+    margin-bottom: -0.7rem;
+  }
+  /* .open is set by site-nav.js, which holds the menu for a moment after
+     the pointer leaves. :hover and :focus-within stay as well, so the
+     menu still works with JavaScript off - just without the grace
+     period. */
+  .has-dropdown.open .dropdown,
   .has-dropdown:hover .dropdown,
   .has-dropdown:focus-within .dropdown {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    transition: opacity 0.12s ease,
+                transform 0.12s ease,
+                visibility 0s;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .dropdown { transition: visibility 0s linear 0.12s; transform: none; }
+    .has-dropdown.open .dropdown,
+    .has-dropdown:hover .dropdown,
+    .has-dropdown:focus-within .dropdown { transition: visibility 0s; }
   }
   .dropdown li {
     padding: 0;
@@ -219,6 +260,13 @@
     .has-dropdown > a::after { display: none; }
     .dropdown {
       display: block;
+      /* Always shown here - the mobile panel is an expanded list, not a
+         hover menu, so the desktop hidden state has to be undone. */
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: none;
+      transition: none;
       position: static;
       background: none;
       border: none;
@@ -226,5 +274,8 @@
       margin: 0.5rem 0 0;
       padding: 0 0 0 1rem;
     }
+    /* No gap to bridge when the list is static, and the negative margin
+       would pull the next item up over this one. */
+    .has-dropdown { padding-bottom: 0; margin-bottom: 0; }
     .dropdown a { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-dim); }
   }
