@@ -30,7 +30,10 @@ export default {
               state.subStats[subName] = v;
             },
             min: 0,
-            max: () => state.subStats[subName] + subStatPoolRemaining(state, data, a.name),
+            max: () => Math.min(
+              data.subStatCap,
+              state.subStats[subName] + subStatPoolRemaining(state, data, a.name),
+            ),
             onChange: () => {
               rerenderStep();
               rerenderPools();

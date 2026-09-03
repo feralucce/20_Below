@@ -84,7 +84,10 @@ function attributesSection(state, data, refresh) {
           el('button', {
             type: 'button',
             text: `Raise to ${rating + 1} (${cost} XP)`,
-            disabled: cost > remaining ? '' : undefined,
+            // An Attribute stops at the rating where both of its sub-stats are
+            // full (rules/costs.md, Universal Caps) - there is nothing left for
+            // a further point to grant.
+            disabled: cost > remaining || rating >= data.attributeMax ? '' : undefined,
             onClick: () => {
               buyAdvancementAttributePoint(state, a.name);
               refresh();
@@ -113,7 +116,10 @@ function attributesSection(state, data, refresh) {
               state.subStats[subName] = v;
             },
             min: () => floor,
-            max: () => state.subStats[subName] + subStatPoolRemaining(state, data, a.name),
+            max: () => Math.min(
+              data.subStatCap,
+              state.subStats[subName] + subStatPoolRemaining(state, data, a.name),
+            ),
             onChange: refresh,
           }),
         );

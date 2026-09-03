@@ -9,6 +9,7 @@ import {
   applyResourceCheckFailure,
   applyResourceCheckZeroOut,
   clearResourcePenalty,
+  elementCritSteps,
   fateTokenCap,
 } from '../state.js';
 
@@ -236,12 +237,14 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
         extraAdvantage: advantageOn ? 1 : 0,
         extraDisadvantage: disadvantageOn ? 1 : 0,
         klotho: state.subStats.Klotho,
+        attributeRollCap: data.attributeRollCap,
+        critSteps: elementCritSteps(state, data, selectedAttribute),
       });
 
       if (result.luckyNumber) {
         // A Token earned at the holding cap is lost, not banked
         // (rules/fate.md#holding-fate-tokens).
-        state.currentFateTokens = Math.min(fateTokenCap(state), state.currentFateTokens + 1);
+        state.currentFateTokens = Math.min(fateTokenCap(state, data), state.currentFateTokens + 1);
         refreshHeader();
       }
 
@@ -516,12 +519,14 @@ export function buildAttackRollSection(state, data, refreshHeader, onCritical = 
         extraAdvantage: advantageOn ? 1 : 0,
         extraDisadvantage: disadvantageOn ? 1 : 0,
         klotho: state.subStats.Klotho,
+        attributeRollCap: data.attributeRollCap,
+        critSteps: elementCritSteps(state, data, selectedAttribute),
       });
 
       if (result.luckyNumber) {
         // A Token earned at the holding cap is lost, not banked
         // (rules/fate.md#holding-fate-tokens).
-        state.currentFateTokens = Math.min(fateTokenCap(state), state.currentFateTokens + 1);
+        state.currentFateTokens = Math.min(fateTokenCap(state, data), state.currentFateTokens + 1);
         refreshHeader();
       }
 

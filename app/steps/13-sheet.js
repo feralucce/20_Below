@@ -8,6 +8,8 @@ import {
   sanityStatus,
   applyRest,
   effectiveResourceLevel,
+  elementCritSteps,
+  elementAutoSuccesses,
   fateTokenCap,
 } from '../state.js';
 import { downloadJson } from '../export/toJson.js';
@@ -162,6 +164,20 @@ function buildFlawEntries(state, data) {
 
 const ATTR_COLORS = { Earth: 'var(--earth)', Air: 'var(--air)', Fire: 'var(--fire)', Water: 'var(--water)', Moira: 'var(--moira)' };
 
+// The Element-over-cap payouts worth showing on the sheet. The Fate ceiling
+// already shows up in the header's Fate Token tracker, so it is not repeated
+// here; the critical band and the per-Scene auto-successes have nowhere else
+// to appear. Returns null below the cap, which `el` skips.
+function overCapNote(state, data, attrName) {
+  const crit = elementCritSteps(state, data, attrName);
+  const auto = elementAutoSuccesses(state, data, attrName);
+  if (!crit && !auto) return null;
+  const bits = [];
+  if (auto) bits.push(`${auto} auto-success${auto === 1 ? '' : 'es'} per Scene at Difficulty 6+`);
+  if (crit) bits.push(`critical on 2-${2 + crit}`);
+  return el('div', { class: 'detail', style: 'margin-top:0.4rem;' }, bits.join(' · '));
+}
+
 function buildAttributesTab(state, data) {
   return [
     el(
@@ -185,6 +201,10 @@ function buildAttributesTab(state, data) {
               el('div', { class: 'sub-value' }, String(state.subStats[subB])),
             ]),
           ]),
+          // Past its roll cap an Element pays out on its own steps, and the
+          // auto-successes in particular are a per-Scene resource the player
+          // has no other way to see. Only rendered when there is one.
+          overCapNote(state, data, a.name),
         ]);
       }),
     ),
@@ -336,7 +356,7 @@ function buildHeader(state, data, figured, { interactive = false, refresh = () =
     refresh();
   };
   const setFate = (v) => {
-    state.currentFateTokens = Math.max(0, Math.min(fateTokenCap(state), v));
+    state.currentFateTokens = Math.max(0, Math.min(fateTokenCap(state, data), v));
     refresh();
   };
 
@@ -373,7 +393,7 @@ function buildHeader(state, data, figured, { interactive = false, refresh = () =
       damageTracker('Poise', state.currentPoise, figured.Poise, 'var(--gold)', poiseStatus, setPoise, interactive),
       damageTracker('Sanity', state.currentSanity, figured.Sanity, 'var(--air)', sanityStatus, setSanity, interactive),
       counterTracker('Ki', state.currentKi, figured.Ki, setKi, interactive),
-      counterTracker('Fate Tokens', state.currentFateTokens, fateTokenCap(state), setFate, interactive),
+      counterTracker('Fate Tokens', state.currentFateTokens, fateTokenCap(state, data), setFate, interactive),
     ]),
 
     el('div', { class: 'sheet-mini-row' }, [
