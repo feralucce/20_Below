@@ -164,7 +164,8 @@ nav_section: options
       <li><a href="#boons">How much for a new Boon?</a></li>
       <li><a href="#gifts">How much for a new Gift, or to raise an existing one?</a></li>
       <li><a href="#adders">How much for a Gift Adder?</a></li>
-      <li><a href="#limiters">How much to buy off a Limiter?</a></li>
+      <li><a href="#flaws">How much to shed a Flaw?</a></li>
+      <li><a href="#past-ten">What happens past 10?</a></li>
     </ol>
   </nav>
 
@@ -185,7 +186,7 @@ nav_section: options
   <section class="xp-section" id="attributes">
     <h2>How much to raise an Attribute?</h2>
     <div class="roll-box">current rating &times; 9 XP</div>
-    <p>Raising an Attribute from, say, 5 to 6 costs <strong>45 XP</strong> (the current rating before the raise). Also grants 1 free Sub-Stat point to split between that Attribute's two sub-stats, same as at creation.</p>
+    <p>Raising an Attribute from, say, 5 to 6 costs <strong>45 XP</strong> (the current rating before the raise). Also grants 1 free Sub-Stat point to put in either of that Attribute's two sub-stats, and 1 Descriptor for the sub-stat you chose - same as at creation.</p>
     <div class="chart-frame">
       <img src="assets/diagrams/xp-attribute-cost.svg" alt="Raising an Attribute costs the current rating times 9 XP - from 9 XP at rating 1 up to 81 XP at rating 9, going to 10." />
     </div>
@@ -193,11 +194,13 @@ nav_section: options
 
   <section class="xp-section" id="skills">
     <h2>How much to raise a Skill Tier?</h2>
-    <div class="roll-box">current tier &times; 2 XP</div>
-    <p>Going from Trained (Tier 2) to Adept (Tier 3) costs <strong>4 XP</strong> - the tier you're leaving, not the one you're entering.</p>
+    <div class="roll-box">a new Skill: 3 XP &nbsp;&middot;&nbsp; each tier after: current tier &times; 2 XP</div>
+    <p>Acquiring a Skill at all - Untrained to Novice - costs a flat <strong>3 XP</strong>. It is priced on its own because it buys more than any later tier does: an Untrained roll gets no Attribute at all, so the target number is the Difficulty by itself.</p>
+    <p>After that, a tier costs the tier you're leaving, not the one you're entering. Trained (Tier 2) to Adept (Tier 3) costs <strong>4 XP</strong>.</p>
     <div class="chart-frame">
-      <img src="assets/diagrams/xp-skill-cost.svg" alt="Raising a Skill Tier costs the current tier times 2 XP - free from Untrained to Novice, up to 8 XP from Expert to Master." />
+      <img src="assets/diagrams/xp-skill-cost.svg" alt="Acquiring a Skill costs a flat 3 XP from Untrained to Novice; every tier after that costs the current tier times 2 XP, from 2 XP up to 8 XP from Expert to Master." />
     </div>
+    <p class="aside">23 XP takes any Skill from Untrained to Master.</p>
   </section>
 
   <section class="xp-section" id="resources">
@@ -242,14 +245,27 @@ nav_section: options
     <p class="aside">Same price whether bought at acquisition or added later - Adders don't get more expensive with time, unlike Levels.</p>
   </section>
 
-  <section class="xp-section" id="limiters">
-    <h2>How much to buy off a Limiter?</h2>
-    <div class="roll-box">3 &times; current Gift Level XP, per Limiter removed</div>
-    <p>Buying off one Limiter on a Gift currently at Level 4 costs <strong>12 XP</strong>. Each stacked Limiter is priced and removed independently - buying off one doesn't affect what the others still cost.</p>
-    <div class="chart-frame">
-      <img src="assets/diagrams/xp-limiter-buyoff-cost.svg" alt="Buying off one Limiter costs 3 times the Gift's current level in XP - 3 XP at Level 1 up to 15 XP at Level 5, per Limiter removed." />
-    </div>
-    <p class="aside">Priced at the moment a Limiter is bought off, using the Gift's Level right then - raising the Gift further afterward doesn't retroactively change what an already-removed Limiter cost.</p>
+  
+  <section class="xp-section" id="flaws">
+    <h2>How much to shed a Flaw?</h2>
+    <div class="roll-box">3 &times; the points the Flaw granted</div>
+    <p>A Minor Flaw that granted 1 point costs <strong>3 XP</strong> to be rid of; a Moderate that granted 3 costs <strong>9 XP</strong>; a Major that granted 5 costs <strong>15 XP</strong>. A leveled Flaw costs 3 XP per level and comes off one level at a time - Amnesia at 4 can become Amnesia at 2 for 6 XP.</p>
+    <p class="aside">Worth weighing first: Flaws pay you. Every time one is invoked, by you or the GM, you collect a Fate Token, so shedding one closes an income stream. Spending a Token to <em>Overcome a Flaw</em> already sets it aside for a single scene.</p>
+  </section>
+
+  <section class="xp-section" id="past-ten">
+    <h2>What happens past 10?</h2>
+    <p>10 is a creation cap, not a ceiling - XP raises an Attribute higher. What it does not raise is the roll: <strong>an Element contributes at most 10 to any target number</strong>, so a character with Earth 18 rolls exactly like one with Earth 10.</p>
+    <p>Every point past 10 is still 1 sub-stat point and 1 Descriptor. No sub-stat exceeds 10, so <strong>an Attribute of 20 is the point at which both of its sub-stats are full</strong> - the ceiling is where the arithmetic runs out, not a number chosen for it.</p>
+    <p>The two figured characteristics that read the Attribute itself keep climbing with it, uncapped: <strong>Ki</strong> (strongest Element + 8) and <strong>Movement Rate</strong> (5 + Air, in meters). Earth 20 is a Ki pool of 28; Air 20 is a 25-meter stride.</p>
+    <table class="cost-table">
+      <tr><th>Every</th><th>Grants</th><th>At Attribute 20</th></tr>
+      <tr><td>3 points past 10</td><td>+1 to your Fate Token ceiling, above the usual Stamina &times; 3. Stacks across Attributes.</td><td>+3</td></tr>
+      <tr><td>4 points past 10</td><td>1 automatic success per scene on a roll using that Element, at Difficulty 6 or better. Each Element tracks its own.</td><td>2 per scene</td></tr>
+      <tr><td>5 points past 10</td><td>+1 to your critical success band on any roll using that Element.</td><td>critical on 2-4</td></tr>
+    </table>
+    <p class="aside">The critical band is the only thing in the system that widens a critical on an <em>attack</em> - an attack is a straight Attribute against Defense with no Skill in it, so Training Tiers never reach it. Critical on a 2 is 1%; on 2-4 it is 6%, and a critical hit doubles the damage dice.</p>
+    <p class="aside">None of it is reachable quickly. 10 to 11 alone is 90 XP, and the full climb from 10 to 20 is 1,305.</p>
   </section>
 
 </main>

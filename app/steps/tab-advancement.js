@@ -17,8 +17,6 @@ import {
   refundAdvancementGiftLevel,
   buyAdvancementGiftAdder,
   refundAdvancementGiftAdder,
-  buyoffAdvancementLimiter,
-  refundAdvancementLimiterBuyoff,
 } from '../state.js';
 import { renderBoonPicker } from './07-boons.js';
 
@@ -128,7 +126,7 @@ function attributesSection(state, data, refresh) {
 }
 
 function skillsSection(state, data, refresh) {
-  const { details, content: section } = sectionWrap(`Skills (current tier × ${data.advancement.skillTierXpMultiplier} XP)`);
+  const { details, content: section } = sectionWrap(`Skills (new Skill ${data.advancement.newSkillXp} XP, then current tier × ${data.advancement.skillTierXpMultiplier} XP)`);
   const filterInput = el('input', { type: 'text', placeholder: 'Filter skills...' });
   const listEl = el('div', { class: 'pick-list' });
   section.append(filterInput, listEl);
@@ -140,7 +138,7 @@ function skillsSection(state, data, refresh) {
       .filter((s) => s.name.toLowerCase().includes(filter))
       .forEach((s) => {
         const tier = state.skills[s.name];
-        const cost = tier * data.advancement.skillTierXpMultiplier;
+        const cost = tier === 0 ? data.advancement.newSkillXp : tier * data.advancement.skillTierXpMultiplier;
         const bought = state.advancementPurchases.Skills[s.name] ?? 0;
         const row = counterRow({
           name: s.name,
@@ -207,7 +205,7 @@ function resourcesSection(state, data, refresh) {
 
 function giftsSection(state, data, refresh) {
   const { details, content: section } = sectionWrap(
-    `Gifts (new Gift ${data.advancement.newGiftBaseXp} XP, raise = current level × ${data.advancement.giftLevelXpMultiplier} XP, both reduced by Limiters, floored at ${data.advancement.giftLimiterFloor}; Adders: Lesser ${data.advancement.giftAdderXp.Lesser} / Greater ${data.advancement.giftAdderXp.Greater} XP; Limiter buy-off: current level × ${data.advancement.giftLimiterBuyoffXpMultiplier} XP)`,
+    `Gifts (new Gift ${data.advancement.newGiftBaseXp} XP, raise = current level × ${data.advancement.giftLevelXpMultiplier} XP, both reduced by Limiters, floored at ${data.advancement.giftLimiterFloor}; Adders: Lesser ${data.advancement.giftAdderXp.Lesser} / Greater ${data.advancement.giftAdderXp.Greater} XP)`,
   );
   data.gifts.forEach((gift) => {
     const gState = state.gifts.find((g) => g.name === gift.name);
@@ -282,43 +280,15 @@ function giftsSection(state, data, refresh) {
       card.appendChild(addersRow);
     }
 
-    if (level > 0 && gift.limiters.length) {
+    // Limiters are permanent - they define what the Gift is, and no amount of
+    // XP removes one. Listed here so the constraint stays visible while the
+    // player is spending on the Gift, but there is nothing to click.
+    if (gift.limiters.length && gState.limiters.length) {
       const limitersRow = el('div', { style: 'margin:0.25rem 0 0.5rem 0.5rem;' });
-      const buyoffXp = level * data.advancement.giftLimiterBuyoffXpMultiplier;
-      gift.limiters.forEach((limiter) => {
-        const held = gState.limiters.includes(limiter.name);
-        const boughtOffHere = (state.advancementPurchases.LimiterBuyoffs?.[gift.name] ?? []).some(
-          (entry) => entry.limiterName === limiter.name,
-        );
-        if (!held && !boughtOffHere) return;
-        limitersRow.appendChild(
-          el('div', { style: 'display:flex;gap:0.5rem;align-items:center;margin:0.15rem 0;' }, [
-            el('span', {}, `${limiter.name}${held ? '' : ' - bought off'}`),
-            held
-              ? el('button', {
-                  type: 'button',
-                  text: `Buy off (${buyoffXp} XP)`,
-                  disabled: buyoffXp > remaining ? '' : undefined,
-                  onClick: () => {
-                    buyoffAdvancementLimiter(state, data, gift.name, limiter.name);
-                    refresh();
-                  },
-                })
-              : null,
-            !held && boughtOffHere
-              ? el('button', {
-                  type: 'button',
-                  text: 'Undo',
-                  onClick: () => {
-                    refundAdvancementLimiterBuyoff(state, gift.name, limiter.name);
-                    refresh();
-                  },
-                })
-              : null,
-          ]),
-        );
+      gState.limiters.forEach((name) => {
+        limitersRow.appendChild(el('div', { class: 'muted', style: 'margin:0.15rem 0;' }, `Limiter: ${name}`));
       });
-      if (limitersRow.children.length) card.appendChild(limitersRow);
+      card.appendChild(limitersRow);
     }
     section.appendChild(card);
   });
