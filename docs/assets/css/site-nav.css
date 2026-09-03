@@ -173,6 +173,22 @@
     padding-bottom: 0.7rem;
     margin-bottom: -0.7rem;
   }
+  /* That padding still left a few pixels of nav showing between the item
+     and the panel - measured at 4px, which is plenty to drop the pointer
+     and make the menu feel like it is fighting you. The panel carries its
+     own transparent lip upward to overlap it, so the two boxes meet with
+     no seam.
+     This works now where it did not before: the lip belongs to the panel,
+     which is only pointer-events:auto while open, and opening is now the
+     script's job rather than something the lip has to accomplish. */
+  .dropdown::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -0.85rem;
+    height: 0.85rem;
+  }
   /* .open is set by site-nav.js, which holds the menu for a moment after
      the pointer leaves. :hover and :focus-within stay as well, so the
      menu still works with JavaScript off - just without the grace
@@ -277,5 +293,6 @@
     /* No gap to bridge when the list is static, and the negative margin
        would pull the next item up over this one. */
     .has-dropdown { padding-bottom: 0; margin-bottom: 0; }
+    .dropdown::before { content: none; }
     .dropdown a { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-dim); }
   }
