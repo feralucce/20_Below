@@ -1,0 +1,208 @@
+/* The site navigation, in one place.
+ *
+ * This used to live inline in every page: six copies of the full nav
+ * with dropdowns, two copies of a shorter one, and twenty-four pages
+ * with no site nav at all. Any change meant editing it everywhere and
+ * nothing reported a copy that had drifted.
+ *
+ * Paired with _includes/site-nav.html. Both are loaded with absolute
+ * paths so one copy works at any depth - the site is served from the
+ * domain root (CNAME 20belowrpg.com), and the project-pages URL
+ * redirects there.
+ *
+ * Colours come from each page's own :root palette, which every page
+ * already defines, so the nav takes on the page it sits in.
+ */
+
+
+  /* ---- top nav ---- */
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 1.5rem;
+    background: rgba(10, 23, 32, 0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--panel-border);
+  }
+  .site-nav .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+  }
+  .site-nav .brand img {
+    height: 28px;
+    width: auto;
+    display: block;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links > li {
+    position: relative;
+  }
+  .nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 0.3rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    white-space: nowrap;
+  }
+  .nav-links > li > a:hover {
+    color: var(--text);
+    border-color: var(--accent);
+  }
+  .nav-links .soon {
+    color: var(--text-dim);
+    font-size: 0.88rem;
+    font-weight: 600;
+    opacity: 0.5;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+  }
+  .pill {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border: 1px solid var(--panel-border);
+    border-radius: 999px;
+    padding: 0.1rem 0.45rem;
+  }
+  .pill.beta {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  /* .name .pill is gm-references.html's doc-card version pills; it had
+     been added to this selector on that page only. Kept here so the
+     rule stays in one place. */
+  .dropdown a .pill,
+  .name .pill {
+    margin-left: 0.4rem;
+  }
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+    color: var(--text);
+    width: 38px;
+    height: 34px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  /* dropdown submenus - hover/focus on desktop */
+  .has-dropdown > a::after {
+    content: " \25BE";
+    font-size: 0.7em;
+    color: var(--text-dim);
+  }
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 0.4rem;
+    margin: 0.5rem 0 0;
+    list-style: none;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    z-index: 30;
+  }
+  .has-dropdown:hover .dropdown,
+  .has-dropdown:focus-within .dropdown {
+    display: block;
+  }
+  .dropdown li {
+    padding: 0;
+    border: none;
+  }
+  .dropdown a,
+  .dropdown li > .soon {
+    display: block;
+    padding: 0.45rem 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 5px;
+    border-bottom: none;
+    white-space: normal;
+  }
+  .dropdown a:hover {
+    background: var(--accent-dim);
+    color: var(--text);
+  }
+  .dropdown-heading {
+    padding: 0.5rem 0.6rem 0.2rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    border-top: 1px solid var(--panel-border);
+    margin-top: 0.3rem;
+  }
+  .dropdown li.dropdown-heading:first-child {
+    border-top: none;
+    margin-top: 0;
+  }
+
+  @media (max-width: 900px) {
+    .nav-links { gap: 1rem; }
+  }
+  @media (max-width: 780px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      max-height: calc(100vh - 60px);
+      overflow-y: auto;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      background: var(--panel);
+      border-bottom: 1px solid var(--panel-border);
+      padding: 0.5rem 1.5rem 1rem;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links > li { width: 100%; padding: 0.6rem 0; border-bottom: 1px solid var(--panel-border); }
+    .nav-links > li:last-child { border-bottom: none; }
+    .has-dropdown > a::after { display: none; }
+    .dropdown {
+      display: block;
+      position: static;
+      background: none;
+      border: none;
+      box-shadow: none;
+      margin: 0.5rem 0 0;
+      padding: 0 0 0 1rem;
+    }
+    .dropdown a { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-dim); }
+  }

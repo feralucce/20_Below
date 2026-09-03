@@ -51,10 +51,15 @@ body {
   font-size: 0.85rem;
 }
 
-.file-link {
+.header-links {
   position: absolute;
   top: 1.25rem;
   left: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.file-link {
   background: var(--panel);
   border: 1px solid var(--accent);
   color: var(--accent);
@@ -72,6 +77,10 @@ body {
 @media (max-width: 640px) {
   .app-header {
     padding-top: 0.75rem;
+  }
+  .header-links {
+    position: static;
+    display: block;
   }
   .reset-btn,
   .file-link {

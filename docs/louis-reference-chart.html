@@ -1,3 +1,6 @@
+---
+nav_section: start
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -53,8 +56,10 @@
   }
   a { color: var(--accent); }
 </style>
+<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
 <body>
+{% include site-nav.html %}
 <main>
   <a class="back-link" href="../index.html">&larr; Back to 20 Below</a>
   <h1>Difficulty Chart</h1>
@@ -65,5 +70,6 @@
   </p>
   <img src="assets/diagrams/difficulty-chart.svg" alt="Difficulty Chart, red to blue, 0 Nearly Impossible through 10 Trivial" />
 </main>
+<script src="/docs/assets/js/site-nav.js"></script>
 </body>
 </html>
