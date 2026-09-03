@@ -1,0 +1,74 @@
+{%- comment -%}
+The site navigation. One copy, included everywhere.
+
+Paths are absolute so this works identically at the root, in /rules/
+and in /docs/. The site is served from the domain root (CNAME
+20belowrpg.com) and the project-pages URL redirects there.
+
+A page marks its own section by setting `nav_section` in its front
+matter - one of: start, options, combat, gm, downloads, license. The
+matching top-level item gets aria-current, so a reader can see where
+they are. Omitting it is fine; nothing is then marked.
+
+Styles live in /docs/assets/css/site-nav.css. The toggle behaviour is
+in /docs/assets/js/site-nav.js.
+{%- endcomment -%}
+<nav class="site-nav">
+  <a class="brand" href="/home.html">
+    <img src="/docs/assets/brand/favicon-128.png" alt="" />
+    20 BELOW
+  </a>
+  <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" id="navToggle">&#9776;</button>
+  <ul class="nav-links" id="navLinks">
+    <li class="has-dropdown">
+      <a href="/rules-hub.html"{% if page.nav_section == "start" %} aria-current="page"{% endif %}>Start Here</a>
+      <ul class="dropdown">
+        <li><a href="/docs/combat-flow-reference.html">Player's Quick Reference</a></li>
+        <li><a href="/rules/character-creation.html">Character Creation</a></li>
+        <li><a href="/app/index.html" target="_blank" rel="noopener">Character Creator</a></li>
+        <li><a href="/docs/louis-reference-chart.html">Difficulty Chart</a></li>
+        <li><a href="/rules/glossary.html">Glossary</a></li>
+        <li><a href="/rules/rules.html">Rules</a></li>
+        <li><a href="/docs/changelog.html">Changelog</a></li>
+      </ul>
+    </li>
+    <li class="has-dropdown">
+      <a href="/character-options.html"{% if page.nav_section == "options" %} aria-current="page"{% endif %}>Character Options</a>
+      <ul class="dropdown">
+        <li><a href="/rules/skills.html">Skills</a></li>
+        <li><a href="/rules/premade-skills.html">Premade Skills</a></li>
+        <li><a href="/rules/boons.html">Boons</a></li>
+        <li><a href="/rules/resources.html">Resources</a></li>
+        <li><a href="/rules/gifts.html">Gifts</a></li>
+        <li><a href="/rules/flaws.html">Flaws</a></li>
+        <li><a href="/docs/advancement-reference.html">Advancement Reference</a></li>
+      </ul>
+    </li>
+    <li class="has-dropdown">
+      <a href="/combat-equipment.html"{% if page.nav_section == "combat" %} aria-current="page"{% endif %}>Combat &amp; Equipment</a>
+      <ul class="dropdown">
+        <li><a href="/rules/fate.html">Fate</a></li>
+        <li><a href="/rules/weapons.html">Equipment</a></li>
+        <li><a href="/docs/creation-wealth-reference.html">Creation-Wealth Reference</a></li>
+        <li><a href="/docs/status-effects.html">Status Effects</a></li>
+        <li><a href="/docs/scars.html">Scars</a></li>
+      </ul>
+    </li>
+    <li class="has-dropdown">
+      <a href="/gm-references.html"{% if page.nav_section == "gm" %} aria-current="page"{% endif %}>GM References</a>
+      <ul class="dropdown">
+        <li><a href="/rules/adversary-index.html">Adversary Index</a></li>
+        <li><a href="/rules/cryptids.html">Cryptids</a></li>
+        <li><a href="/rules/nightmare-creatures.html">Nightmare Creatures</a></li>
+        <li><a href="/docs/louis-reference-chart.html">Difficulty Chart</a></li>
+        <li><a href="/tracker/index.html" target="_blank" rel="noopener">20 Below Battle Tracker</a></li>
+        <li><a href="/brew/index.html" target="_blank" rel="noopener">The Brewery</a></li>
+      </ul>
+    </li>
+    <li><a href="/downloads.html"{% if page.nav_section == "downloads" %} aria-current="page"{% endif %}>Downloads</a></li>
+    <li><a href="https://feralucce.github.io/Backwater_Static/" target="_blank" rel="noopener">Backwater Static</a></li>
+    <li><a href="/license.html"{% if page.nav_section == "license" %} aria-current="page"{% endif %}>License</a></li>
+    <li><span class="soon">Store <span class="pill">Soon</span></span></li>
+    <li><a href="https://github.com/feralucce/20_Below" target="_blank" rel="noopener">GitHub</a></li>
+  </ul>
+</nav>
