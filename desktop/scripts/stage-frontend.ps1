@@ -23,10 +23,10 @@ New-Item -ItemType Directory -Path $stagingDir | Out-Null
 # come from a CDN, which meant the installed app could not render its own
 # rules text without an internet connection.
 #
-# The Brewer is deliberately not here. It ships as its own installer from
+# The Brewery is deliberately not here. It ships as its own installer from
 # brewer-desktop/, because a player creating a character has no use for a
 # layout tool.
-$folders = @("app", "rules", "docs", "vendor")
+$folders = @("app", "rules", "vendor")
 
 foreach ($folder in $folders) {
     $source = Join-Path $repoRoot $folder
@@ -34,4 +34,18 @@ foreach ($folder in $folders) {
     Copy-Item -Path $source -Destination $dest -Recurse -Force
 }
 
-Write-Host "Staged frontend assets ($($folders -join ', ')) to $stagingDir"
+# docs/ used to be staged whole, which put 6.7 MB of hero art and reference
+# scans into the installer to serve three favicons - and dragged
+# style-guide.html along with it, the one file in the creator's payload that
+# mentioned another setting. The app links nothing else out of docs/: the
+# references to advancement-reference.html in app/state.js are source
+# comments, not URLs. Verified by grepping every 'docs' mention in app/.
+$brand = Join-Path $repoRoot "docs\assets\brand"
+if (-not (Test-Path $brand)) {
+    throw "Missing source folder: $brand"
+}
+$brandDest = Join-Path $stagingDir "docs\assets\brand"
+New-Item -ItemType Directory -Path $brandDest -Force | Out-Null
+Copy-Item -Path (Join-Path $brand "*") -Destination $brandDest -Recurse -Force
+
+Write-Host "Staged frontend assets ($($folders -join ', '), docs/assets/brand) to $stagingDir"
