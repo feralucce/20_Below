@@ -33,7 +33,7 @@ const div = (base) => (title, body, variant) => {
 
 export const BLOCKS = {
   wide: {
-    help: 'spans both columns - use for big tables, art, anything that needs the full page',
+    help: 'spans both columns, for big tables and art',
     takesTitle: false,
     render: (_title, body) => `<div class="wide">\n\n${body.trim()}\n\n</div>`,
   },
@@ -54,7 +54,7 @@ export const BLOCKS = {
       `<div class="${cls('roll-box', variant)}">\n\n${body.trim()}\n\n</div>`,
   },
   gift: {
-    help: 'a gift entry - flavour first, then "**1** ..." level lines; Adders and Limiters get their own strips',
+    help: 'a gift entry - flavour, five levels, then Adders and Limiters',
     takesTitle: true,
     /* The largest entries in the book: five levels each, plus Adders and
      * Limiters. Levels get the numbered ladder the other entries use;
@@ -88,7 +88,7 @@ export const BLOCKS = {
     },
   },
   flaw: {
-    help: 'a flaw entry - flavour line first, then the summary, then "**1** ..." level lines',
+    help: 'a flaw entry - flavour, summary, then five levels',
     takesTitle: true,
     /* Structurally a Resource - every Flaw is rated 1-5 and the ladder is
      * the substance - but it reads as the opposite thing, so it carries
@@ -112,7 +112,7 @@ export const BLOCKS = {
     },
   },
   resource: {
-    help: 'a resource entry - flavour line first, then the summary, then "**1** ..." level lines',
+    help: 'a resource entry - flavour, summary, then five levels',
     takesTitle: true,
     /* Every Resource is rated 1-5 and the ladder is the substance of the
      * entry, so a level line gets its rating in a badge and its text on
@@ -135,7 +135,7 @@ export const BLOCKS = {
     },
   },
   boon: {
-    help: 'a boon entry - title it "Name (cost)", flavour line first, then the rule; tier lines are picked out',
+    help: 'a boon entry - title it "Name (cost)", flavour, then the rule',
     takesTitle: true,
     /* Same shape as a skill entry, with one addition: most Boons are a
      * flat cost, but sixteen are bought as one of two, three or four
@@ -162,7 +162,7 @@ export const BLOCKS = {
     },
   },
   skill: {
-    help: 'a skill entry - title it "Name (Element)", flavour line first, rules after',
+    help: 'a skill entry - title it "Name (Element)", flavour, then rules',
     takesTitle: true,
     /* The element is read out of the title rather than typed a second
      * time as a variant, so the colour can never disagree with the text
@@ -187,7 +187,7 @@ export const BLOCKS = {
     },
   },
   stat: {
-    help: 'a creature or NPC stat block - paste one straight out of the Adversary Index',
+    help: 'a stat block, pasted straight out of the Adversary Index',
     takesTitle: true,
     /* The stat line is the anchor of a stat block, so it is picked out
      * and given its own strip. It is recognised by the middot the
