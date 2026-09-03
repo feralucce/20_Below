@@ -59,8 +59,11 @@ function rollByMode(mode) {
 // catastrophic failure. Expert/Master widen critical success to a roll of 2 or
 // 3; catastrophic failure is always exactly a roll of 20 (uniquely (10,10) on
 // two dice), never widened. See rules.md#difficulty-chart.
-export function classifyRoll(sum, target, widenCrit) {
-  const critSuccessMax = widenCrit ? 3 : 2;
+// `extraCritSteps`: widening from an Element raised past its roll cap, which
+// stacks on top of the Skill Tier's own and, unlike the Tier's, also reaches
+// attack rolls (rules.md#critical-hits - an attack carries no Skill at all).
+export function classifyRoll(sum, target, widenCrit, extraCritSteps = 0) {
+  const critSuccessMax = 2 + (widenCrit ? 1 : 0) + extraCritSteps;
   if (sum <= critSuccessMax) return 'critical-success';
   if (sum === 20) return 'catastrophic-failure';
   return sum <= target ? 'success' : 'failure';
@@ -79,24 +82,32 @@ function checkLuckyNumber(sum, klotho) {
 // `extraAdvantage`/`extraDisadvantage`: sources beyond the Skill Tier's own
 // (e.g. off-hand Disadvantage, a Gift's Advantage), combined via the same
 // binary stacking rule as the Tier's own grant.
-export function performCoreRoll({ attribute, difficulty, skillTier, extraAdvantage = 0, extraDisadvantage = 0, klotho = null }) {
+export function performCoreRoll({
+  attribute, difficulty, skillTier,
+  extraAdvantage = 0, extraDisadvantage = 0, klotho = null,
+  // An Element never contributes more than this to a target number, however
+  // high it is raised (rules/costs.md, Universal Caps). Callers should pass
+  // data.attributeRollCap; the default mirrors the file so a caller that
+  // forgets still caps rather than silently uncapping.
+  attributeRollCap = 10, critSteps = 0,
+}) {
   const tier = SKILL_TIERS[skillTier];
   if (!tier) throw new Error(`Unknown Skill Tier: ${skillTier}`);
 
-  const target = tier.usesAttribute ? attribute + difficulty : difficulty;
+  const target = tier.usesAttribute ? Math.min(attribute, attributeRollCap) + difficulty : difficulty;
 
   const advantageSources = extraAdvantage + (tier.grantsAdvantage === 'advantage' ? 1 : 0);
   const disadvantageSources = extraDisadvantage + (tier.grantsAdvantage === 'disadvantage' ? 1 : 0);
   const mode = resolveAdvantageState(advantageSources, disadvantageSources);
 
   let roll = rollByMode(mode);
-  let outcome = classifyRoll(roll.sum, target, tier.widenCrit);
+  let outcome = classifyRoll(roll.sum, target, tier.widenCrit, critSteps);
   const luckyNumber = checkLuckyNumber(roll.sum, klotho);
   let reroll = null;
 
   if (outcome === 'catastrophic-failure' && tier.masterReroll) {
     reroll = rollByMode(mode);
-    const rerollOutcome = classifyRoll(reroll.sum, target, tier.widenCrit);
+    const rerollOutcome = classifyRoll(reroll.sum, target, tier.widenCrit, critSteps);
     // "if the second roll succeeds, it's treated as a normal failure" -
     // Master's reroll only ever strips the "critical" severity, never
     // turns a catastrophic failure into any kind of success.

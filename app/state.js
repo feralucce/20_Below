@@ -130,7 +130,7 @@ export function mergeCharacterState(data, loaded) {
   // than the character is now allowed to hold, in the build and in play both.
   clampFateTokenPurchases(merged, data);
   if (merged.currentFateTokens != null) {
-    merged.currentFateTokens = Math.min(merged.currentFateTokens, fateTokenCap(merged));
+    merged.currentFateTokens = Math.min(merged.currentFateTokens, fateTokenCap(merged, data));
   }
   return merged;
 }
@@ -577,17 +577,49 @@ export function giftCheckTarget(state) {
   return state.currentKi ?? computeFiguredCharacteristics(state).Ki;
 }
 
+// An Element raised past its roll cap stops adding to target numbers and pays
+// out on its own steps instead - see rules/costs.md, Universal Caps and the
+// "Attribute over 10" rates. Each effect is floor(points past the cap / N),
+// so they arrive at different ratings rather than all at once.
+export function attributePointsOverCap(state, data, attrName) {
+  return Math.max(0, state.attributes[attrName] - data.attributeRollCap);
+}
+
+export function elementCritSteps(state, data, attrName) {
+  return Math.floor(
+    attributePointsOverCap(state, data, attrName) / data.advancement.attributeOverCapCritStep,
+  );
+}
+
+export function elementAutoSuccesses(state, data, attrName) {
+  return Math.floor(
+    attributePointsOverCap(state, data, attrName) / data.advancement.attributeOverCapAutoSuccessStep,
+  );
+}
+
+// Unlike the other two, this one is not per-Element: every Attribute's spill
+// adds to the same ceiling.
+function fateCeilingBonus(state, data) {
+  return Object.keys(state.attributes).reduce(
+    (sum, name) => sum + Math.floor(
+      attributePointsOverCap(state, data, name) / data.advancement.attributeOverCapFateStep,
+    ),
+    0,
+  );
+}
+
 // Stamina governs the whole Fate Token economy: it caps how many a character
 // can hold (x3) as well as how many can be spent per Scene, the latter not
-// being the creator's business (rules/fate.md#holding-fate-tokens).
-export function fateTokenCap(state) {
-  return state.subStats.Stamina * 3;
+// being the creator's business (rules/fate.md#holding-fate-tokens). Elements
+// pushed past the roll cap raise that ceiling further.
+export function fateTokenCap(state, data) {
+  return state.subStats.Stamina * 3 + fateCeilingBonus(state, data);
 }
 
 // How many extra Fate Tokens Discretionary points can actually buy: the gap
 // between the flat starting count and the character's current cap.
 export function fateTokensBuyable(state, data) {
-  return Math.max(0, fateTokenCap(state) - data.startingFateTokens);
+  return Math.max(0, fateTokenCap(state, data) - data.startingFateTokens);
 }
 
 // Stamina is raisable while the player spends (its Attribute can be bought,
@@ -604,7 +636,7 @@ export function clampFateTokenPurchases(state, data) {
 
 export function startingFateTokens(state, data) {
   return Math.min(
-    fateTokenCap(state),
+    fateTokenCap(state, data),
     data.startingFateTokens + state.discretionaryExtra['Fate Tokens'],
   );
 }

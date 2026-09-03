@@ -90,8 +90,8 @@ export default {
         'p',
         { class: 'hint' },
         fateBuyable === 0
-          ? `Stamina ${state.subStats.Stamina} caps you at ${fateTokenCap(state)} Fate Token${fateTokenCap(state) === 1 ? '' : 's'} (Stamina x 3), which the flat starting Token already covers. Raise Stamina first if you want more.`
-          : `Holding ${startingFateTokens(state, data)} / ${fateTokenCap(state)} - Stamina x 3 caps how many Fate Tokens you can hold, so points spent past that buy nothing.`,
+          ? `Stamina ${state.subStats.Stamina} caps you at ${fateTokenCap(state, data)} Fate Token${fateTokenCap(state, data) === 1 ? '' : 's'} (Stamina x 3), which the flat starting Token already covers. Raise Stamina first if you want more.`
+          : `Holding ${startingFateTokens(state, data)} / ${fateTokenCap(state, data)} - Stamina x 3 caps how many Fate Tokens you can hold, so points spent past that buy nothing.`,
       ),
       counterRow({
         name: 'Extra Fate Tokens',
