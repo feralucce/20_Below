@@ -58,4 +58,4 @@ This page is the table of contents. Start at the top and work down; later docume
 
 ## For Playtesters
 
-This is a system in active development. Some numbers (post-creation XP costs, a few melee weapon ratings) are still placeholders, flagged as such in their own documents. If something reads unclear or plays oddly, that's exactly the kind of feedback this playtest is for.
+This is a system in active development, and its numbers are still being played against each other rather than settled. If something reads unclear or plays oddly, that's exactly the kind of feedback this playtest is for.
