@@ -23,10 +23,23 @@ const TRIMS = {
   digest: { label: 'Digest 5.5 x 8.5',w: '5.5in',  h: '8.5in' },
 };
 
+/* Themes. A theme is one setting or genre's look - colour and
+ * typography together, defined in brew.css. Adding one means a block
+ * pair there, an entry here, and nothing else.
+ *
+ * Themes are ours, not the reader's: a creator picks from this list
+ * and cannot author their own, which is what keeps everything made
+ * with this tool looking like the same product line. */
+const THEMES = {
+  core:      { label: '20 Below Core' },
+  backwater: { label: 'Backwater Static' },
+};
+
 const prefs = Object.assign(
-  { palette: 'colour', layout: 'digital', trim: 'letter', zoom: 'fit' },
+  { theme: 'core', palette: 'colour', layout: 'digital', trim: 'letter', zoom: 'fit' },
   load(PREFS) || {},
 );
+if (!THEMES[prefs.theme]) prefs.theme = 'core';
 
 function load(key) {
   try { return JSON.parse(localStorage.getItem(key) || 'null'); } catch { return null; }
@@ -46,6 +59,7 @@ function applyPageRule() {
 
 function applyPrefs() {
   const t = TRIMS[prefs.trim] || TRIMS.letter;
+  preview.dataset.theme   = THEMES[prefs.theme] ? prefs.theme : 'core';
   preview.dataset.palette = prefs.palette === 'grey' ? 'grey' : 'colour';
   preview.dataset.layout  = prefs.layout  === 'pod'  ? 'pod'  : 'digital';
   preview.style.setProperty('--trim-w', t.w);
@@ -56,6 +70,7 @@ function applyPrefs() {
     prefs.palette === 'grey' ? 'Greyscale' : 'Full colour';
   document.getElementById('btn-layout').textContent =
     prefs.layout === 'pod' ? 'POD (gutters + bleed)' : 'Digital';
+  document.getElementById('sel-theme').value = prefs.theme;
   document.getElementById('sel-trim').value = prefs.trim;
   document.getElementById('sel-zoom').value = prefs.zoom;
   applyZoom();
@@ -136,6 +151,11 @@ document.getElementById('btn-saveas').onclick = async () => {
 };
 
 document.getElementById('btn-print').onclick = () => window.print();
+
+document.getElementById('sel-theme').onchange = (e) => {
+  prefs.theme = e.target.value;
+  applyPrefs();
+};
 
 document.getElementById('btn-palette').onclick = () => {
   prefs.palette = prefs.palette === 'grey' ? 'colour' : 'grey';

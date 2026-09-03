@@ -1,10 +1,10 @@
 <#
 .SYNOPSIS
-  Convert a PDF exported from the 20 Below Brewer into a CMYK (or
+  Convert a PDF exported from the Brewery into a CMYK (or
   greyscale) PDF/X file suitable for print-on-demand upload.
 
 .DESCRIPTION
-  The Brewer's "Print / PDF" button produces an RGB PDF, because that
+  The Brewery's "Print / PDF" button produces an RGB PDF, because that
   is all a browser can produce. Print-on-demand services want CMYK and
   PDF/X compliance - DriveThruRPG asks for PDF/X-1a:2001 or
   PDF/X-3:2002, CMYK for colour interiors, and 300 dpi images.
@@ -13,7 +13,7 @@
   definition file itself, so there is nothing to hand-edit.
 
   What it does NOT do: add bleed or move anything on the page. Set the
-  Brewer to POD layout before printing and the geometry is already
+  Brewery to POD layout before printing and the geometry is already
   right. This step only converts colour and stamps the PDF/X metadata.
 
 .PARAMETER Path
@@ -23,7 +23,7 @@
   Where to write the result. Defaults to <input>-pdfx.pdf.
 
 .PARAMETER Gray
-  Convert to DeviceGray instead of CMYK. Use this for the Brewer's
+  Convert to DeviceGray instead of CMYK. Use this for the Brewery's
   Greyscale palette, when the interior is being printed black and white.
 
 .PARAMETER Version

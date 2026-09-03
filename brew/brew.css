@@ -1,7 +1,7 @@
 @import url('fonts/fonts.css');
 
 /* =============================================================
-   20 Below Brewer
+   The Brewery
    Palette tokens are split from geometry on purpose: palette is
    Colour vs Greyscale, geometry is Digital vs POD. They combine
    freely, so adding a fourth mode later means adding tokens, not
@@ -14,10 +14,48 @@
   --ui-text:#eaf5fb; --ui-dim:#8fadbe; --ui-accent:#3d84c4; --ui-accent-dim:#1c3548;
 }
 
-/* ---- page palette: COLOUR (default) ----
-   Values are the site palette. Anything a block needs should be
-   added here first, then mirrored in the greyscale block below. */
+/* =============================================================
+   Themes.
+
+   A theme is the look of one setting or genre. It owns colour AND
+   typography - a recolour alone still reads as 20 Below in a
+   different hue, because the typefaces carry most of the genre.
+
+   Two axes, deliberately independent:
+     data-theme   = core | backwater      which setting
+     data-palette = colour | grey         full colour or print B&W
+
+   Greyscale is a print-cost mode, not a theme. Someone working in
+   Backwater Static wants THEIR theme in greyscale, not a rival of
+   it - so each theme brings its own grey ramp, tuned against its
+   own colours rather than derived from them. A luminance conversion
+   would collapse tokens that sit only a step or two apart.
+
+   Adding a theme means adding two blocks below, an <option> in
+   index.html, and nothing else.
+   ============================================================= */
+
+/* ---- shared: typography roles ----
+   Weight and case travel with the face. Anton at 400 is a heavy
+   display face; Fraunces at 400 in the same slot looks broken, so
+   the weight is part of the theme rather than the rule. */
 #preview{
+  --font-display:'Anton',"Segoe UI",system-ui,sans-serif;
+  --font-display-weight:400;
+  --font-display-case:uppercase;
+  --font-head:'Bebas Neue',"Segoe UI",system-ui,sans-serif;
+  --font-head-weight:400;
+  --font-head-case:none;
+  --font-body:'Montserrat',"Segoe UI",system-ui,sans-serif;
+  --font-mono:'Space Mono',Consolas,monospace;
+}
+
+/* ---- 20 BELOW CORE: colour (default) ----
+   The site palette, from docs/style-guide.html. Anything a block
+   needs should be added here first, then mirrored into every other
+   block below. */
+#preview,
+#preview[data-theme="core"]{
   --page-bg:#0a1720;
   --page-fg:#eaf5fb;
   --page-dim:#8fadbe;
@@ -44,11 +82,12 @@
   --v-moira:#a06fd1;
 }
 
-/* ---- page palette: GREYSCALE ----
+/* ---- 20 BELOW CORE: greyscale ----
    Not a filter. A luminance conversion collapses bg/panel (10 grey
    steps apart) and panel-2/rule (9 apart), so each token is mapped
    to a chosen grey with real separation instead. */
-#preview[data-palette="grey"]{
+#preview[data-palette="grey"],
+#preview[data-theme="core"][data-palette="grey"]{
   --page-bg:#141414;
   --page-fg:#f5f5f5;
   --page-dim:#c8c8c8;
@@ -74,6 +113,74 @@
   --v-fire:#a8a8a8;
   --v-water:#a8a8a8;
   --v-moira:#a8a8a8;
+}
+
+/* ---- BACKWATER STATIC: colour ----
+   Lifted from the setting's own hub page rather than invented.
+   Roles follow how that page already uses them: brass is links,
+   static pink is the signature, cyan is the secondary label, dread
+   is the GM/danger colour. Serif throughout - the swamp-gothic
+   register the condensed sans of Core cannot reach. */
+#preview[data-theme="backwater"]{
+  --page-bg:#0e1512;
+  --page-fg:#e4ece9;
+  --page-dim:#8ea3a0;
+  --panel:#121b1c;
+  --panel-2:#16211f;
+  --rule:#223333;
+  --accent:#ef5c93;
+  --head:#e4ece9;
+  --shadow:rgba(0,0,0,.65);
+
+  --v-pc:#3fe0c9;
+  --v-ally:#c39a5a;
+  --v-npc:#9c4436;
+  --v-danger:#9c4436;
+  --v-text:#e4ece9;
+  --v-accent:#ef5c93;
+  --v-earth:#7a6438;
+  --v-air:#8ea3a0;
+  --v-fire:#9c4436;
+  --v-water:#276a5f;
+  --v-moira:#8a3a5c;
+
+  --font-display:'Fraunces',Georgia,serif;
+  --font-display-weight:600;
+  --font-display-case:none;
+  --font-head:'Fraunces',Georgia,serif;
+  --font-head-weight:600;
+  --font-head-case:none;
+  --font-body:'Source Serif 4',Georgia,"Times New Roman",serif;
+  --font-mono:'Space Mono',Consolas,monospace;
+}
+
+/* ---- BACKWATER STATIC: greyscale ----
+   Its own ramp, not Core's. The colour theme sits on a green-black
+   ground where Core sits on blue-black, and its panels are much
+   closer to the page than Core's are, so lifting Core's greys here
+   would flatten the separation the theme relies on. */
+#preview[data-theme="backwater"][data-palette="grey"]{
+  --page-bg:#121212;
+  --page-fg:#f2f2f2;
+  --page-dim:#bdbdbd;
+  --panel:#242424;
+  --panel-2:#3a3a3a;
+  --rule:#5c5c5c;
+  --accent:#b4b4b4;
+  --head:#ffffff;
+  --shadow:rgba(0,0,0,.65);
+
+  --v-pc:#b4b4b4;
+  --v-ally:#b4b4b4;
+  --v-npc:#b4b4b4;
+  --v-danger:#b4b4b4;
+  --v-text:#f2f2f2;
+  --v-accent:#b4b4b4;
+  --v-earth:#b4b4b4;
+  --v-air:#b4b4b4;
+  --v-fire:#b4b4b4;
+  --v-water:#b4b4b4;
+  --v-moira:#b4b4b4;
 }
 
 /* ---- page geometry ----
@@ -151,7 +258,7 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
     calc(var(--margin) + var(--bleed) + var(--safe));
   background:var(--page-bg);
   color:var(--page-fg);
-  font-family:'Montserrat',"Segoe UI",system-ui,sans-serif;
+  font-family:var(--font-body);
   font-size:10.5pt; line-height:1.6;
   box-shadow:0 3px 22px var(--shadow);
   overflow:hidden;
@@ -210,32 +317,33 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
   line-height:1.15; margin:0 0 .35em; color:var(--head); break-after:avoid;
 }
 .page h1{
-  font-family:'Anton',"Segoe UI",system-ui,sans-serif; font-weight:400;
-  font-size:30pt; letter-spacing:.01em; text-transform:uppercase;
+  font-family:var(--font-display); font-weight:var(--font-display-weight);
+  font-size:30pt; letter-spacing:.01em; text-transform:var(--font-display-case);
   margin-top:0; border-bottom:2px solid var(--accent); padding-bottom:.06em;
 }
 .page h2{
-  font-family:'Bebas Neue',"Segoe UI",system-ui,sans-serif; font-weight:400;
-  font-size:19pt; letter-spacing:.02em;
+  font-family:var(--font-head); font-weight:var(--font-head-weight);
+  font-size:19pt; letter-spacing:.02em; text-transform:var(--font-head-case);
   margin-top:1em; border-bottom:1px solid var(--rule); padding-bottom:.06em;
 }
 .page h3{
-  font-family:'Bebas Neue',"Segoe UI",system-ui,sans-serif; font-weight:400;
+  font-family:var(--font-head); font-weight:var(--font-head-weight);
   font-size:15pt; letter-spacing:.02em; margin-top:.9em; color:var(--accent);
+  text-transform:var(--font-head-case);
 }
 .page h4{
-  font-family:'Montserrat',"Segoe UI",system-ui,sans-serif; font-weight:600;
+  font-family:var(--font-body); font-weight:600;
   font-size:10.5pt; margin-top:.8em;
 }
 /* Five and six sit below body size and lean on case and colour rather
    than scale - there is nowhere left to go downward at 10.5pt body. */
 .page h5{
-  font-family:'Montserrat',"Segoe UI",system-ui,sans-serif; font-weight:600;
+  font-family:var(--font-body); font-weight:600;
   font-size:9pt; letter-spacing:.08em; text-transform:uppercase;
   margin-top:.8em; color:var(--accent);
 }
 .page h6{
-  font-family:'Montserrat',"Segoe UI",system-ui,sans-serif; font-weight:600;
+  font-family:var(--font-body); font-weight:600;
   font-size:9.5pt; font-style:italic; margin-top:.8em; color:var(--page-dim);
 }
 .page p{margin:0 0 .7em}
@@ -245,14 +353,14 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 .page hr{border:0; border-top:1px solid var(--rule); margin:1em 0}
 .page img{max-width:100%}
 .page code{
-  font-family:'Space Mono',Consolas,monospace; font-size:9pt;
+  font-family:var(--font-mono); font-size:9pt;
   background:var(--panel); padding:.1em .3em; border-radius:3px;
   overflow-wrap:anywhere;                 /* a long token must not widen the column */
 }
 /* Code wraps rather than scrolling. A scrollbar means nothing on paper,
    and anything past the edge would simply be clipped out of the PDF. */
 .page pre{
-  font-family:'Space Mono',Consolas,monospace; font-size:9pt;
+  font-family:var(--font-mono); font-size:9pt;
   background:var(--panel); padding:.6em .8em; border-radius:4px;
   break-inside:avoid; overflow:visible;
   white-space:pre-wrap; overflow-wrap:anywhere;
@@ -276,8 +384,8 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 }
 .page thead th{
   background:var(--panel-2); color:var(--head);
-  font-family:'Bebas Neue',"Segoe UI",system-ui,sans-serif; font-weight:400;
-  font-size:11pt; letter-spacing:.03em;
+  font-family:var(--font-head); font-weight:var(--font-head-weight);
+  font-size:11pt; letter-spacing:.03em; text-transform:var(--font-head-case);
 }
 .page tbody tr:nth-child(even){background:var(--panel)}
 
@@ -287,8 +395,8 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
    ============================================================= */
 .page .block-title{
   display:block; margin-bottom:.3em; color:var(--head);
-  font-family:'Bebas Neue',"Segoe UI",system-ui,sans-serif; font-weight:400;
-  font-size:13pt; letter-spacing:.02em;
+  font-family:var(--font-head); font-weight:var(--font-head-weight);
+  font-size:13pt; letter-spacing:.02em; text-transform:var(--font-head-case);
 }
 
 .page .aside{
@@ -305,7 +413,7 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 
 .page .roll-box{
   background:var(--panel-2); border:1px solid var(--accent); color:var(--head);
-  font-family:'Bebas Neue',"Segoe UI",system-ui,sans-serif; font-size:13pt;
+  font-family:var(--font-head); font-weight:var(--font-head-weight); font-size:13pt;
   letter-spacing:.03em; text-align:center;
   padding:.45em .8em; margin:0 0 .8em; border-radius:4px; break-inside:avoid;
 }
@@ -406,7 +514,7 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 
 .page .figure .caption{
   display:block; margin-top:.35em; color:var(--page-dim);
-  font-family:'Space Mono',Consolas,monospace; font-size:8.5pt;
+  font-family:var(--font-mono); font-size:8.5pt;
   letter-spacing:.02em; text-transform:uppercase;
 }
 

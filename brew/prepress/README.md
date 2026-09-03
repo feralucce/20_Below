@@ -1,6 +1,6 @@
 # Prepress
 
-The Brewer's **Print / PDF** button produces an RGB PDF, because that is the
+The Brewery's **Print / PDF** button produces an RGB PDF, because that is the
 only thing a browser can produce. Print-on-demand services want something
 stricter. DriveThruRPG, for example, asks for:
 
@@ -9,7 +9,7 @@ stricter. DriveThruRPG, for example, asks for:
 - **PDF/X-1a:2001 or PDF/X-3:2002** compliance
 - text kept at least **0.5in** inside the page edge
 
-The Brewer's **POD** layout already handles the last one, along with gutters
+The Brewery's **POD** layout already handles the last one, along with gutters
 and a 0.125in bleed. This script handles the rest.
 
 ## What it does
@@ -18,7 +18,7 @@ and a 0.125in bleed. This script handles the rest.
 metadata. It generates the PDF/X definition file itself, so there is nothing
 to hand-edit.
 
-**It does not move anything on the page.** Set the Brewer to POD layout
+**It does not move anything on the page.** Set the Brewery to POD layout
 before printing and the geometry is already correct. This step only changes
 colour and adds the compliance metadata.
 
@@ -33,7 +33,7 @@ PATH or under `Program Files\gs`.
 # colour interior, PDF/X-1a (the default)
 .\to-pdfx.ps1 supplement.pdf
 
-# black and white interior - pair with the Brewer's Greyscale palette
+# black and white interior - pair with the Brewery's Greyscale palette
 .\to-pdfx.ps1 supplement.pdf -Gray
 
 # with the profile your printer actually asked for
