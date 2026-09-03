@@ -23,7 +23,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    /* The bar wraps rather than running off the right edge. There are
+       nine top-level items and the widest labels are long, so on a
+       narrow-but-not-mobile window they do not fit on one line. */
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
     padding: 0.85rem 1.5rem;
     background: rgba(10, 23, 32, 0.92);
     backdrop-filter: blur(6px);
@@ -47,10 +51,21 @@
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 1.4rem;
+    flex-wrap: wrap;
+    /* Tighter between rows than between items, so a wrapped second line
+       reads as part of the same bar rather than a separate one. */
+    gap: 0.5rem 1.4rem;
     list-style: none;
     margin: 0;
     padding: 0;
+    /* flex-basis 0, not auto: with auto the list's full content width is
+       its basis, which pushes the whole list onto its own line below the
+       brand before it ever wraps internally. At 0 it takes whatever the
+       brand leaves and wraps within that, so the brand keeps its place
+       on the first line. */
+    flex: 1 1 0;
+    justify-content: flex-end;
+    min-width: 0;
   }
   .nav-links > li {
     position: relative;
@@ -185,7 +200,14 @@
       max-height: calc(100vh - 60px);
       overflow-y: auto;
       flex-direction: column;
+      /* The bar wraps on desktop; this panel must not. It is a column
+         with a bounded height, so wrapping would spill the tail of the
+         menu into a second column off the right edge instead of
+         scrolling. */
+      flex-wrap: nowrap;
       align-items: flex-start;
+      justify-content: flex-start;
+      flex: 0 1 auto;
       gap: 0;
       background: var(--panel);
       border-bottom: 1px solid var(--panel-border);
