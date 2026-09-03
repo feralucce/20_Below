@@ -24,6 +24,11 @@ export function parseCosts(costsMd) {
     discretionaryRates[row.Target] = Number(row['Discretionary points per point']);
   });
 
+  const caps = {};
+  extractTableAfter(costsMd, '## Universal Caps').rows.forEach((row) => {
+    caps[row.Cap] = Number(row.Value);
+  });
+
   const adv = {};
   extractTableAfter(costsMd, '## Advancement (XP) Rates').rows.forEach((row) => {
     adv[row.Item] = Number(row.Value);
@@ -55,6 +60,10 @@ export function parseCosts(costsMd) {
 
     discretionaryRates,
 
+    attributeRollCap: caps['Attribute contribution to a roll'],
+    subStatCap: caps['Sub-Stat maximum'],
+    attributeMax: caps['Attribute maximum'],
+
     advancement: {
       xpPerSession: adv['XP per Session (max)'],
       resourceXpPerLevel: adv['Resources - XP per level'],
@@ -66,7 +75,11 @@ export function parseCosts(costsMd) {
       giftLimiterDiscount: adv['Gift Limiter Discount, Advancement (per Limiter)'],
       giftLimiterFloor: adv['Gift Limiter Floor, Advancement (minimum XP)'],
       giftAdderXp: { Lesser: adv['Gift Adder XP - Lesser'], Greater: adv['Gift Adder XP - Greater'] },
-      giftLimiterBuyoffXpMultiplier: adv['Gift Limiter Buy-off - XP multiplier (current Gift Level × N)'],
+      newSkillXp: adv['New Skill (Untrained → Novice) - flat XP'],
+      flawBuyoffXpMultiplier: adv['Flaw Buy-off - XP multiplier (× points granted)'],
+      attributeOverCapFateStep: adv['Attribute over 10 - Fate ceiling +1 per N points'],
+      attributeOverCapAutoSuccessStep: adv['Attribute over 10 - auto-success per scene per N points'],
+      attributeOverCapCritStep: adv['Attribute over 10 - critical band +1 per N points'],
     },
   };
 }

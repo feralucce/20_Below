@@ -58,4 +58,21 @@ The single source of truth for every tunable number in the system - pool sizes, 
 | Gift Limiter Floor, Advancement (minimum XP) | 1 |
 | Gift Adder XP - Lesser | 6 |
 | Gift Adder XP - Greater | 12 |
-| Gift Limiter Buy-off - XP multiplier (current Gift Level × N) | 3 |
+| New Skill (Untrained → Novice) - flat XP | 3 |
+| Flaw Buy-off - XP multiplier (× points granted) | 3 |
+| Attribute over 10 - Fate ceiling +1 per N points | 3 |
+| Attribute over 10 - auto-success per scene per N points | 4 |
+| Attribute over 10 - critical band +1 per N points | 5 |
+
+## Universal Caps
+
+Apply at creation and after it alike. An Attribute may be raised past 10 with XP,
+but never contributes more than 10 to a roll; since every Attribute point grants
+one sub-stat point and no sub-stat exceeds 10, an Attribute of 20 is the point at
+which both of its sub-stats are full.
+
+| Cap | Value |
+|---|---|
+| Attribute contribution to a roll | 10 |
+| Sub-Stat maximum | 10 |
+| Attribute maximum | 20 |

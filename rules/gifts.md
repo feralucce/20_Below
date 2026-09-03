@@ -96,7 +96,7 @@ Animals sense something in you that overrides their instincts - an inborn trust 
 **Limiters**:
 
 - **Single Species**: the Gift only works on one chosen species, not animals in general.
-- **No Companion**: you never gain the free Animal Companion at Level 2. Can be bought off later with XP, per the standard [Limiter buy-off](../docs/advancement-reference.html#limiters) rate.
+- **No Companion**: you never gain the free Animal Companion at Level 2. Like every Limiter, this is permanent - it defines what the Gift is, and no amount of XP removes it.
 - **Vocal Component**: using the Gift requires speaking or making an audible animal call. Doesn't work if you're silenced, gagged, or otherwise unable to vocalize.
 
 ### Berserker

@@ -732,7 +732,12 @@ function skillsAdvancementXpSpent(state, data) {
   let total = 0;
   Object.entries(state.advancementPurchases.Skills).forEach(([name, count]) => {
     if (!count) return;
-    total += sumTopN(state.skills[name], count, (tier) => tier * data.advancement.skillTierXpMultiplier);
+    total += sumTopN(state.skills[name], count, (tier) => (
+      // Untrained -> Novice is an acquisition, not a rung: tier 0 x N is 0,
+      // and it buys more than any later tier does (an Untrained roll gets no
+      // Attribute at all). It carries its own flat price.
+      tier === 0 ? data.advancement.newSkillXp : tier * data.advancement.skillTierXpMultiplier
+    ));
   });
   return total;
 }
@@ -829,40 +834,6 @@ function giftAddersAdvancementXpSpent(state, data) {
   return total;
 }
 
-// Limiter buy-off (see docs/advancement-reference.html#limiters): 3 × the
-// Gift's current Level XP, per Limiter, priced at the moment it's removed.
-// Unlike Gift Levels/Adders, a bought-off Limiter can't be recomputed live
-// from a stored count (its price depends on the Level at removal time, which
-// may keep changing afterward), so the XP actually paid is stored on the
-// purchase record itself and summed directly, same as a Boon's own points
-// are captured at purchase.
-export function buyoffAdvancementLimiter(state, data, giftName, limiterName) {
-  const g = state.gifts.find((x) => x.name === giftName);
-  if (!g || !g.limiters.includes(limiterName)) return;
-  const xpPaid = g.level * data.advancement.giftLimiterBuyoffXpMultiplier;
-  g.limiters = g.limiters.filter((l) => l !== limiterName);
-  if (!state.advancementPurchases.LimiterBuyoffs) state.advancementPurchases.LimiterBuyoffs = {};
-  const list = (state.advancementPurchases.LimiterBuyoffs[giftName] ??= []);
-  list.push({ limiterName, xpPaid });
-}
-
-export function refundAdvancementLimiterBuyoff(state, giftName, limiterName) {
-  const list = state.advancementPurchases.LimiterBuyoffs?.[giftName] ?? [];
-  const idx = list.findIndex((entry) => entry.limiterName === limiterName);
-  if (idx === -1) return;
-  list.splice(idx, 1);
-  const g = state.gifts.find((x) => x.name === giftName);
-  if (g && !g.limiters.includes(limiterName)) g.limiters.push(limiterName);
-}
-
-function limiterBuyoffsAdvancementXpSpent(state) {
-  let total = 0;
-  Object.values(state.advancementPurchases.LimiterBuyoffs ?? {}).forEach((entries) => {
-    entries.forEach((entry) => (total += entry.xpPaid));
-  });
-  return total;
-}
-
 // Boons bought via Advancement reuse the existing `state.boons` list with
 // source 'advancement' (see addBoon/removeBoon) - their XP cost is the
 // Boon's own creation-pool points times the Advancement markup, computed
@@ -880,7 +851,6 @@ export function xpSpent(state, data) {
     resourcesAdvancementXpSpent(state, data) +
     giftsLevelAdvancementXpSpent(state, data) +
     giftAddersAdvancementXpSpent(state, data) +
-    limiterBuyoffsAdvancementXpSpent(state) +
     boonsAdvancementXpSpent(state, data)
   );
 }
