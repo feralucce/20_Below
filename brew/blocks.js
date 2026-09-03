@@ -53,6 +53,31 @@ export const BLOCKS = {
     render: (_title, body, variant) =>
       `<div class="${cls('roll-box', variant)}">\n\n${body.trim()}\n\n</div>`,
   },
+  skill: {
+    help: 'a skill entry - title it "Name (Element)", flavour line first, rules after',
+    takesTitle: true,
+    /* The element is read out of the title rather than typed a second
+     * time as a variant, so the colour can never disagree with the text
+     * beside it. The first paragraph of the body is the flavour line;
+     * everything after it is the technical description. A block with a
+     * single paragraph is all description and no flavour, which is fine. */
+    render: (title, body, variant) => {
+      const m = title.trim().match(/^(.*?)\s*\(([^)]+)\)\s*$/);
+      const name = (m ? m[1] : title).trim();
+      const elem = m ? m[2].trim() : '';
+      const key = elem.toLowerCase();
+      const paras = body.trim().split(/\n\s*\n/);
+      const flavour = paras.length > 1 ? paras.shift() : '';
+      const rest = paras.join('\n\n');
+      const pill = elem ? `<span class="skill-elem">${esc(elem)}</span>` : '';
+      const head = `<span class="skill-name">${esc(name)}</span>${pill}`;
+      const fl = flavour
+        ? `<div class="skill-flavour">\n\n${flavour}\n\n</div>\n\n`
+        : '';
+      const cl = cls('skill', VARIANTS.includes(key) ? key : (variant || ''));
+      return `<div class="${cl}">\n\n${head}\n\n${fl}${rest}\n\n</div>`;
+    },
+  },
   stat: {
     help: 'a creature or NPC stat block - paste one straight out of the Adversary Index',
     takesTitle: true,
