@@ -34,8 +34,6 @@ None of these three apply automatically to every Gift or every level - each is a
 
 ### Alternate Form
 
-**[FLAGGED - not final. Menu and point costs may need rebalancing once played against the other Gifts. Revisit once the rest of the Gift list is built.]**
-
 The body is not a fixed thing, not for you. At will, you can shed your ordinary shape for another - a specific creature both mundane and impossible, a drift of mist, a living shadow, or some other secondary state, each granting capabilities your normal body could never manage. What the alternate form actually *is* - the creature, the state, the theme - is defined once, at creation, and stays consistent every time you take it.
 
 Transforming is a Slow action and triggers a [Gift Check](#resolution) - success free, failure costs 1 Ki, the transformation happens either way. The form lasts until voluntarily dropped, no ongoing cost to maintain.
@@ -919,8 +917,6 @@ As with any Mental attack, additional [Ki Infusion](rules.md#ki-infusion) (1 Ki 
 - **One-Way Door**: returning to your own body isn't automatic. You must win another Psyche roll against the host to leave, same as entering.
 
 ### Precognition
-
-**[FLAGGED - may be overpowered as written, especially Level 5's "rarely blindsided" clause. Revisit once played.]**
 
 The future leaks through, uninvited and unclear - a flash of what's about to happen, a half-second warning before the blow lands, a dream that turns out to have been true. You don't control when it comes, only how well you've learned to listen when it does.
 
