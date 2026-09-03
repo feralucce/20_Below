@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "20-below-desktop",
-  "version": "0.10.0",
-  "identifier": "com.feralucce.twentybelow",
+  "productName": "20-below-brewer",
+  "version": "0.1.0",
+  "identifier": "com.feralucce.twentybelow.brewer",
   "build": {
     "frontendDist": "frontend-dist",
     "beforeDevCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/stage-frontend.ps1",
@@ -12,10 +12,10 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "20 Below",
-        "url": "app/index.html",
-        "width": 1100,
-        "height": 800,
+        "title": "20 Below Brewer",
+        "url": "brew/index.html",
+        "width": 1400,
+        "height": 900,
         "resizable": true,
         "fullscreen": false
       }
