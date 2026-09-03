@@ -63,6 +63,10 @@ export function createInitialState(data) {
     // no-roll alternative to Wealth Check shopping. Exactly one pick, or
     // null if the player shopped normally instead. { level, name, contents }.
     everymanGearPackage: null,
+    // Gear the catalog will never list - a cardboard box, a dead man's watch.
+    // Free, unlimited, no Wealth Level and no mechanical effect, so it needs
+    // no bookkeeping beyond existing on the sheet. Plain strings.
+    flavorItems: [],
     // Pool-points'-worth of extra capacity bought via Discretionary, added
     // on top of each target's base pool total. Gifts is tracked separately
     // (see giftsDiscretionaryContribution) since its per-unit cost varies
@@ -274,6 +278,15 @@ export function addGearPurchase(state, { category, name, wealth, loss = 0 }) {
   const id = nextGearPurchaseId(state);
   state.gearPurchases.push({ id, category, name, wealth, loss });
   state.creationWealthLoss += loss;
+}
+
+export function addFlavorItem(state, text) {
+  const clean = String(text).trim();
+  if (clean) state.flavorItems.push(clean);
+}
+
+export function removeFlavorItem(state, index) {
+  state.flavorItems.splice(index, 1);
 }
 
 export function removeGearPurchase(state, id) {
