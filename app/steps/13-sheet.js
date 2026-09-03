@@ -1,4 +1,4 @@
-import { el, renderMarkdown } from '../ui.js';
+import { el, renderMarkdown, captureOpenDetails, restoreOpenDetails } from '../ui.js';
 import {
   computeFiguredCharacteristics,
   skillTierName,
@@ -482,12 +482,14 @@ export default {
     }
 
     function renderTabContent() {
+      const openDetails = captureOpenDetails(tabContent);
       tabContent.innerHTML = '';
       const tab = TABS.find((t) => t.id === activeTab);
       const nodes = tab.interactive
         ? tab.build(state, data, renderTabContent, renderHeader, refreshKiDependents)
         : tab.build(state, data);
       tabContent.append(...nodes.filter((n) => n != null));
+      restoreOpenDetails(tabContent, openDetails);
     }
 
     function renderTabNav() {

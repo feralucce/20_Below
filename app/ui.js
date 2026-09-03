@@ -128,3 +128,35 @@ export function poolBadge(label, remaining) {
   const cls = remaining < 0 ? 'pool negative' : 'pool';
   return el('span', { class: cls }, `${label}: ${remaining}`);
 }
+
+// Every re-render rebuilds its container from scratch (innerHTML = ''), which
+// silently collapses any <details> the reader had twirled open - so clicking a
+// +/- inside one closed the card it lived in. Snapshot which are open before
+// the wipe and reopen the same ones after.
+//
+// Keyed by summary text plus its ordinal among identical summaries, so two
+// cards with the same name (a Gift and a Skill both called "Flight", say)
+// don't restore each other. Nothing here needs the elements to survive, which
+// is the point - the new DOM is matched by label, not by identity.
+function detailsKeys(root) {
+  const seen = new Map();
+  const keys = [];
+  root.querySelectorAll('details').forEach((d) => {
+    const label = d.querySelector('summary')?.textContent ?? '';
+    const n = seen.get(label) ?? 0;
+    seen.set(label, n + 1);
+    keys.push({ el: d, key: `${label}\u0000${n}` });
+  });
+  return keys;
+}
+
+export function captureOpenDetails(root) {
+  return new Set(detailsKeys(root).filter(({ el: d }) => d.open).map(({ key }) => key));
+}
+
+export function restoreOpenDetails(root, open) {
+  if (!open || !open.size) return;
+  detailsKeys(root).forEach(({ el: d, key }) => {
+    if (open.has(key)) d.open = true;
+  });
+}

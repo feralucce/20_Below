@@ -469,6 +469,29 @@ export function giftsDiscretionaryContribution(state, data) {
   return total;
 }
 
+// What those same purchases actually cost in Discretionary points, which is
+// NOT the pool contribution above times the rate. Gifts are the one target
+// charged per Level rather than per pool point (rules/costs.md, Discretionary
+// Rates): a Level is a flat 4 however many Limiters it carries, and an Adder
+// costs what it is worth in Levels - a Lesser Adder is one Level, a Greater
+// is two. The pool bookkeeping still runs on pool points; only the price here
+// is flat.
+export function giftsDiscretionarySpent(state, data) {
+  const rate = data.discretionaryRates.Gifts ?? 0;
+  let spent = 0;
+  Object.values(state.discretionaryPurchases.Gifts).forEach((levels) => {
+    spent += (levels || 0) * rate;
+  });
+  Object.entries(state.discretionaryPurchases.GiftAdders).forEach(([giftName, adderNames]) => {
+    const giftData = data.gifts.find((x) => x.name === giftName);
+    adderNames.forEach((adderName) => {
+      const adder = giftData?.adders.find((a) => a.name === adderName);
+      if (adder) spent += Math.round((adder.points / data.giftLevelCost) * rate);
+    });
+  });
+  return spent;
+}
+
 export function addBoon(state, name, cost, source) {
   state.boons.push({ name, points: cost.points, tier: cost.tier, source });
   if (source === 'discretionary') {
@@ -530,10 +553,10 @@ export function discretionaryTotal(state, data) {
 export function discretionaryPointsSpent(state, data) {
   let spent = 0;
   Object.entries(state.discretionaryExtra).forEach(([target, extra]) => {
-    if (target === 'Gifts') return; // computed separately, see giftsDiscretionaryContribution
+    if (target === 'Gifts') return; // priced per Level, see giftsDiscretionarySpent
     spent += extra * (data.discretionaryRates[target] ?? 0);
   });
-  spent += giftsDiscretionaryContribution(state, data) * (data.discretionaryRates.Gifts ?? 0);
+  spent += giftsDiscretionarySpent(state, data);
   return spent;
 }
 
