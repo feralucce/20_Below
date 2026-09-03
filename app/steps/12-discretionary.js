@@ -14,7 +14,6 @@ import {
   refundGiftLevel,
   buyDiscretionaryGiftAdder,
   refundDiscretionaryGiftAdder,
-  giftLevelCost,
   skillTierName,
   unspentBoonsPoolPoints,
   unspentGiftsPoolPoints,
@@ -170,13 +169,15 @@ export default {
 
     // ---- Gifts (Level, Adders, and Limiters, all from this one page) ----
     const rateGifts = data.discretionaryRates.Gifts;
-    const giftsContent = section(`Gifts (${rateGifts} Discretionary/pool-point)`);
+    const giftsContent = section(`Gifts (${rateGifts} Discretionary/Level)`);
     data.gifts.forEach((gift) => {
       const gState = state.gifts.find((g) => g.name === gift.name);
       const level = gState?.level ?? 0;
       const bought = state.discretionaryPurchases.Gifts[gift.name] ?? 0;
-      const perLevelPool = giftLevelCost(data, gState?.limiters.length ?? 0);
-      const unitCost = perLevelPool * rateGifts;
+      // Gifts are the one Discretionary rate charged per Level rather than per
+      // pool point (see rules/costs.md, Discretionary Rates) - a flat price a
+      // Limiter does not discount, unlike the Gifts-pool and XP prices.
+      const unitCost = rateGifts;
       const card = el('details', { class: 'pick-card' });
       card.append(
         el('summary', {}, `${gift.name}${gift.flagged ? ' [flagged, not final]' : ''}`),
@@ -207,7 +208,7 @@ export default {
           gift.adders.forEach((adder) => {
             const owned = gState?.adders.includes(adder.name);
             const boughtHere = (state.discretionaryPurchases.GiftAdders[gift.name] ?? []).includes(adder.name);
-            const adderCost = adder.points * rateGifts;
+            const adderCost = Math.round((adder.points / data.giftLevelCost) * rateGifts);
             addersRow.appendChild(
               el('div', { style: 'display:flex;gap:0.5rem;align-items:center;margin:0.15rem 0;font-size:0.85rem;' }, [
                 el('span', {}, `${adder.name} (${adder.tier}, ${adderCost} Discretionary)${owned ? ' - owned' : ''}`),

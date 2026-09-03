@@ -133,6 +133,12 @@ Every character starts with **10 Discretionary points**, flat, plus whatever you
 | Gifts | 4 |
 | Attributes | 8 |
 
+**Gifts are priced per Level, not per pool point** - a flat 4 Discretionary buys one
+Gift Level regardless of how many Limiters it carries, and a Gift Adder costs what its
+points are worth in Levels (a Lesser Adder is one Level, 4; a Greater is two, 8).
+Every other row on this table is per pool point: a Boon costs its own creation points
+times 2, an Attribute point costs 8, and so on.
+
 ## 13. Equipment
 
 Buy starting gear from the full [Weapons & Equipment](weapons.md) catalog, spending against your **creation-Wealth** - see [Wealth at Character Creation](resources.md#wealth-at-character-creation) for the full procedure (starting value, the Wealth Check, what happens on a failure). This step comes after Discretionary Points (step 12) rather than alongside Resources (step 9), since Discretionary points can raise the Wealth Resource itself, and creation-Wealth needs to be fully settled first.
