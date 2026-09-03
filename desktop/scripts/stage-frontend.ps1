@@ -1,5 +1,5 @@
 # Builds a clean staging copy of just the files the desktop app actually
-# needs to serve (app/, rules/, docs/) into src-tauri/frontend-dist, which
+# needs to serve into src-tauri/frontend-dist, which
 # tauri.conf.json's frontendDist points at. Run automatically by Tauri
 # before each build/dev via beforeBuildCommand/beforeDevCommand.
 #
@@ -19,10 +19,19 @@ if (Test-Path $stagingDir) {
 }
 New-Item -ItemType Directory -Path $stagingDir | Out-Null
 
-foreach ($folder in @("app", "rules", "docs")) {
+# vendor/ holds the markdown renderer app/index.html loads - it used to
+# come from a CDN, which meant the installed app could not render its own
+# rules text without an internet connection.
+#
+# The Brewer is deliberately not here. It ships as its own installer from
+# brewer-desktop/, because a player creating a character has no use for a
+# layout tool.
+$folders = @("app", "rules", "docs", "vendor")
+
+foreach ($folder in $folders) {
     $source = Join-Path $repoRoot $folder
     $dest = Join-Path $stagingDir $folder
     Copy-Item -Path $source -Destination $dest -Recurse -Force
 }
 
-Write-Host "Staged frontend assets (app/, rules/, docs/) to $stagingDir"
+Write-Host "Staged frontend assets ($($folders -join ', ')) to $stagingDir"
