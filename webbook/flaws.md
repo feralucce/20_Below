@@ -480,34 +480,3 @@ A stutter, accent, or other trait that hampers verbal communication.
 
 **5.** Effectively unable to communicate verbally in any reliable way - must rely on writing, gestures, or another person to speak for them.
 </div>
-
-## The Flaws, at a glance
-
-| Flaw | Points | Effect |
-|---|---|---|
-| Amnesia | = Level | Missing memories from part of the character's past - see [Amnesia](#amnesia) below for the 5-level breakdown. |
-| Antagonist | = Level | Someone or something opposes the character - a personal rival, a dedicated enemy, or a determined hunter - see [Antagonist](#antagonist) below for the 5-level breakdown. |
-| Anxiety | = Level | A deeply rooted anxiety disorder - see [Anxiety](#anxiety) below for the 5-level breakdown. |
-| Berserk | = Level | Once triggered, must keep fighting at full intensity - see [Berserk](#berserk) below for the 5-level breakdown. |
-| Code of Conduct | = Level | A self-imposed rule the character won't break, even when breaking it would help - see [Code of Conduct](#code-of-conduct) below for the 5-level breakdown. |
-| Dependent | = Level | Someone relies on the character and must be protected or provided for - see [Dependent](#dependent) below for the 5-level breakdown. |
-| Destitute | = Level | Chronic financial hardship, from a rough patch to genuinely having nothing - see [Destitute](#destitute) below for the 5-level breakdown. |
-| Directionless | = Level | A poor, unreliable sense of direction - see [Directionless](#directionless) below for the 5-level breakdown. |
-| Fragile | = Level | The body works against you - see [Fragile](#fragile) below for the 5-level breakdown. |
-| Gun-Shy | = Level | Falters when violence breaks out - see [Gun-Shy](#gun-shy) below for the 5-level breakdown. |
-| Illiterate | = Level | Cannot read or write, to some degree - see [Illiterate](#illiterate) below for the 5-level breakdown. |
-| Impaired Senses | = Level | A missing or significantly impaired sense - see [Impaired Senses](#impaired-senses) below for the 5-level breakdown. |
-| Incantations | = Level | A Gift only works if the character can speak a specific phrase aloud - see [Incantations](#incantations) below for the 5-level breakdown. |
-| Item of Power | = Level | A Gift's capability lives, at least in part, in something the character carries rather than in themselves - see [Item of Power](#item-of-power) below for the 5-level breakdown. |
-| Lame | = Level | Permanently reduced mobility from an old injury or condition - see [Lame](#lame) below for the 5-level breakdown. |
-| Notable Appearance | = Level | Something about how you look draws stares and reactions - see [Notable Appearance](#notable-appearance) below for the 5-level breakdown. |
-| Notoriety | = Level | How widely and how badly the character is known - see [Notoriety](#notoriety) below for the 5-level breakdown. |
-| Overconfident | = Level | Consistently underestimates danger or overestimates their own ability - see [Overconfident](#overconfident) below for the 5-level breakdown. |
-| Pariah | = Level | Others hold a specific prejudice against the character (species, background, origin, etc.) - see [Pariah](#pariah) below for the 5-level breakdown. |
-| Reliance | = Level | A behavioral compulsion, substance dependency, or medical/physical condition - see [Reliance](#reliance) below for the 5-level breakdown. |
-| Ritual Required | = Level | A Gift doesn't answer the instant it's reached for - it has to be called, coaxed, or earned each time - see [Ritual Required](#ritual-required) below for the 5-level breakdown. |
-| Secret | = Level | Something the character desperately doesn't want revealed - see [Secret](#secret) below for the 5-level breakdown. |
-| Shaken Confidence | = Level | A lasting loss of social self-assurance from one specific defining humiliation - see [Shaken Confidence](#shaken-confidence) below for the 5-level breakdown. |
-| Short Fuse | = Level | Quick to anger, prone to losing composure under provocation - see [Short Fuse](#short-fuse) below for the 5-level breakdown. |
-| Soft-Hearted | = Level | Struggles to act against the vulnerable, even when it costs them - see [Soft-Hearted](#soft-hearted) below for the 5-level breakdown. |
-| Speech Impediment | = Level | A stutter, accent, or other trait that hampers verbal communication - see [Speech Impediment](#speech-impediment) below for the 5-level breakdown. |

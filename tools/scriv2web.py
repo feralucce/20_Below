@@ -301,36 +301,6 @@ def wrap_headed_entries(chunks, after, lists_by_name=None):
     return out
 
 
-# Chapters whose scannable master list lives only in rules/. The prose reads
-# well and the table looks things up; the book carries both.
-AT_A_GLANCE = {
-    "flaws":     ("rules/flaws.md",          "## Flaw List", "The Flaws, at a glance"),
-    # Skills and Boons deliberately have none. Their entries already read as a
-    # list of cards, and repeating all of them underneath as a table was more
-    # scroll than lookup.
-}
-
-
-def at_a_glance(slug):
-    """The master table from a rules file, as a closing reference section."""
-    spec = AT_A_GLANCE.get(slug)
-    if not spec:
-        return None
-    path, heading, title = spec
-    text = io.open(os.path.join(ROOT, path), encoding="utf-8").read()
-    if heading not in text:
-        return None
-    rows = []
-    for line in text[text.index(heading):].split("\n")[1:]:
-        if line.startswith("|"):
-            rows.append(line)
-        elif rows:
-            break
-    if len(rows) < 3:
-        return None
-    return "## %s\n\n%s" % (title, "\n".join(rows))
-
-
 def yaml_quote(text):
     return '"' + text.replace('\\', '\\\\').replace('"', '\\"') + '"'
 
@@ -386,9 +356,6 @@ def main():
             chunks = wrap_headed_entries(
                 chunks, "## The Gift List",
                 gift_lists(os.path.join(ROOT, "rules", "gifts.md")))
-        glance = at_a_glance(slug)
-        if glance:
-            chunks.append(glance)
         prev_slug = CHAPTERS[i - 1][1] if i else None
         next_slug = CHAPTERS[i + 1][1] if i + 1 < len(CHAPTERS) else None
 
