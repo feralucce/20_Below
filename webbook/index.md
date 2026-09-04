@@ -9,17 +9,55 @@ nav_section: start
 The whole book, chapter by chapter. This is the same text as the print
 edition - the manuscript is the source, and this is generated from it.
 
-1. [Introduction](/webbook/introduction.html)
-2. [Glossary](/webbook/glossary.html)
-3. [Creating a Character](/webbook/creating-a-character.html)
-4. [How to Play](/webbook/how-to-play.html)
-5. [Skills](/webbook/skills.html)
-6. [Boons](/webbook/boons.html)
-7. [Resources](/webbook/resources.html)
-8. [Gifts](/webbook/gifts.html)
-9. [Flaws](/webbook/flaws.html)
-10. [Fate](/webbook/fate.html)
-11. [Weapons & Equipment](/webbook/equipment.html)
-12. [Advancement](/webbook/advancement.html)
+<div class="toc">
+<div class="aside aside--water toc-card" markdown="0">
+<span class="block-title"><span class="toc-num">1</span><a href="/webbook/introduction.html">Introduction</a></span>
+<p>What the game is about: the people who look at the man behind the curtain, and what they can do once they have.</p>
+</div>
+<div class="aside aside--water toc-card" markdown="0">
+<span class="block-title"><span class="toc-num">2</span><a href="/webbook/glossary.html">Glossary</a></span>
+<p>Every term the rest of the book leans on, defined once and kept short. Skim it before you build, then flip back whenever you need it.</p>
+</div>
+<div class="aside aside--water toc-card" markdown="0">
+<span class="block-title"><span class="toc-num">3</span><a href="/webbook/creating-a-character.html">Creating a Character</a></span>
+<p>Fifteen steps, most of them a few seconds long, in an order that keeps you from painting yourself into a corner.</p>
+</div>
+<div class="aside aside--water toc-card" markdown="0">
+<span class="block-title"><span class="toc-num">4</span><a href="/webbook/how-to-play.html">How to Play</a></span>
+<p>Two dice mechanics. The Core Roll handles almost everything; the second one only comes up when something is trying to hurt you.</p>
+</div>
+<div class="aside aside--water toc-card" markdown="0">
+<span class="block-title"><span class="toc-num">5</span><a href="/webbook/skills.html">Skills</a></span>
+<p>Elements are what you are made of. Skills are what you have actually done with it - the training, the hours, the scar tissue.</p>
+</div>
+<div class="aside aside--water toc-card" markdown="0">
+<span class="block-title"><span class="toc-num">6</span><a href="/webbook/boons.html">Boons</a></span>
+<p>Small permanent pieces of good luck. The quiet part of a character, and the quiet part decides more scenes than you would think.</p>
+</div>
+<div class="aside aside--water toc-card" markdown="0">
+<span class="block-title"><span class="toc-num">7</span><a href="/webbook/resources.html">Resources</a></span>
+<p>What you have, who you know, and what picks up when you call. Rated in Levels, where a higher Level is the same Resource reaching further.</p>
+</div>
+<div class="aside aside--water toc-card" markdown="0">
+<span class="block-title"><span class="toc-num">8</span><a href="/webbook/gifts.html">Gifts</a></span>
+<p>The thing your character can do that other people cannot. Narrow on purpose, five defined levels each, and what it looks like is your setting's business.</p>
+</div>
+<div class="aside aside--water toc-card" markdown="0">
+<span class="block-title"><span class="toc-num">9</span><a href="/webbook/flaws.html">Flaws</a></span>
+<p>You promise the table your character will make things harder for themselves. The system promises to pay you for it.</p>
+</div>
+<div class="aside aside--water toc-card" markdown="0">
+<span class="block-title"><span class="toc-num">10</span><a href="/webbook/fate.html">Fate</a></span>
+<p>Nature, Tokens and Ki: where the thumb on the scale comes from, and what it costs to press.</p>
+</div>
+<div class="aside aside--water toc-card" markdown="0">
+<span class="block-title"><span class="toc-num">11</span><a href="/webbook/equipment.html">Weapons &amp; Equipment</a></span>
+<p>The part of your character you can lose in a river. Dice you are carrying, and Soak you did not have to be born with.</p>
+</div>
+<div class="aside aside--water toc-card" markdown="0">
+<span class="block-title"><span class="toc-num">12</span><a href="/webbook/advancement.html">Advancement</a></span>
+<p>You earn XP for playing and spend it on whatever you like, in whatever order. No classes, no levels, nothing telling you what comes next.</p>
+</div>
+</div>
 
-Chapter 13, Running the Game, is still being written.
+<p class="toc-foot">Chapter 13, Running the Game, is still being written.</p>
