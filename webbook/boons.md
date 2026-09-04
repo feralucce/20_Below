@@ -31,15 +31,23 @@ Boons have a mirror-image counterpart, Flaws - character-creation disadvantages 
 
 ## The Boon List
 
-**Alertness (3, Lesser).** *You’ve never once been the person who says “wait, what was that?” You were already turning.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Alertness</span><span class="entry-tag">3, Lesser</span></p>
+<p class="entry-flavour">You’ve never once been the person who says “wait, what was that?” You were already turning.</p>
 
 Immune to being Surprised while conscious, unless under a mind-altering effect that would specifically allow it.
+</div>
 
-**Alternate Identity (5, Greater).** *There is a second you. He has a dentist, a lease, and a library card, and none of it leads back here.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Alternate Identity</span><span class="entry-tag">5, Greater</span></p>
+<p class="entry-flavour">There is a second you. He has a dentist, a lease, and a library card, and none of it leads back here.</p>
 
 A fully realized second identity - name, history, and papers that hold up under real scrutiny - keeping your real self insulated from what it does.
+</div>
 
-**Always Connected (3, 5, or 7).** *Everyone else is holding their phone up at the window. You’ve already sent it.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Always Connected</span><span class="entry-tag">3, 5, or 7</span></p>
+<p class="entry-flavour">Everyone else is holding their phone up at the window. You’ve already sent it.</p>
 
 Bought as one of three tiers (each includes every lower tier’s benefit - no need to buy more than one).
 
@@ -48,60 +56,96 @@ Bought as one of three tiers (each includes every lower tier’s benefit - no ne
 **Tier 2 (5, Greater)**: the same connection, but it’s not tied to any device - a cybernetic implant of your own, granting the same access even fully divested of every belonging and piece of gear you own.
 
 **Tier 3 (7, Legendary)**: the same connection as Tier 2, but through some means beyond ordinary technology (a lingering enchantment, a telepathic relay, quantum entanglement, whatever fits the character) - unbreakable so long as you remain on this plane of existence, immune even to the exceptions Tier 1 allowed.
+</div>
 
-**Ambidextrous (1, Trivial).** *Whichever hand is free is the good hand.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Ambidextrous</span><span class="entry-tag">1, Trivial</span></p>
+<p class="entry-flavour">Whichever hand is free is the good hand.</p>
 
 Ignore the Disadvantage normally imposed for performing a task with your off-hand.
+</div>
 
-**Animal Rapport (1, Trivial).** *Dogs cross the street toward you. Nobody has ever explained why, least of all you.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Animal Rapport</span><span class="entry-tag">1, Trivial</span></p>
+<p class="entry-flavour">Dogs cross the street toward you. Nobody has ever explained why, least of all you.</p>
 
 Animals read you as safe and trustworthy on sight, calmer and friendlier around you than they’d otherwise be - no communication, just instinct.
+</div>
 
-**Common Sense (7, Legendary).** *Some quiet part of you says “don’t” a half-second before the rest of you was going to.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Common Sense</span><span class="entry-tag">7, Legendary</span></p>
+<p class="entry-flavour">Some quiet part of you says “don’t” a half-second before the rest of you was going to.</p>
 
 The GM will give you a heads-up before you commit to an obviously terrible decision.
+</div>
 
-**Compact Frame (3, Lesser).** *You’ve never once had to turn sideways and hope. You just went through.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Compact Frame</span><span class="entry-tag">3, Lesser</span></p>
+<p class="entry-flavour">You’ve never once had to turn sideways and hope. You just went through.</p>
 
 Fit through spaces, gaps, and crowds an ordinary body couldn’t, and blend into a packed room without trying.
+</div>
 
-**Concentration (5, Greater).** *The building can come down around you. You’ll finish the sentence.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Concentration</span><span class="entry-tag">5, Greater</span></p>
+<p class="entry-flavour">The building can come down around you. You’ll finish the sentence.</p>
 
 Immune to being Distracted, regardless of source (damage, Kotodama, Gifts, environmental hazards) - a Slow action always resolves as declared.
+</div>
 
-**Danger Sense (5, Greater).** *Something is wrong in this room and you knew it before you could have said what.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Danger Sense</span><span class="entry-tag">5, Greater</span></p>
+<p class="entry-flavour">Something is wrong in this room and you knew it before you could have said what.</p>
 
 May ask the GM at any reasonable moment whether there’s danger nearby; the GM must give a truthful (if vague, gut-feeling-level) answer. Additionally, roll **2d10 for Initiative and keep the higher die** (instead of the normal single 1d10), then add your Initiative sub-stat as usual.
+</div>
 
-**Displaced Echoes (3 or 5).** *Sound arrives at you slightly out of order, and once you stopped fighting that, it started being useful.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Displaced Echoes</span><span class="entry-tag">3 or 5</span></p>
+<p class="entry-flavour">Sound arrives at you slightly out of order, and once you stopped fighting that, it started being useful.</p>
 
 Bought as one of two tiers (the higher includes the lower’s benefit - no need to buy both).
 
 **Tier 1 (3, Lesser)**: perfectly imitate any voice or sound you’ve heard - undetectable unless a listener has a specific reason to doubt it, in which case they may roll Insight + Difficulty (GM sets Difficulty by how good their reason for suspicion is) to see through it.
 
 **Tier 2 (5, Greater)**: additionally, throw your voice to make it seem to originate from any point in your line of sight.
+</div>
 
-**Double-Jointed (3, Lesser).** *Your joints hold a position the human body has opinions about.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Double-Jointed</span><span class="entry-tag">3, Lesser</span></p>
+<p class="entry-flavour">Your joints hold a position the human body has opinions about.</p>
 
 For Escapology rolls, treat your Skill Training Tier as one tier higher than your actual tier, with a minimum of Trained - even an Untrained or Novice character rolls Escapology as if Trained. Trained rolls as if Adept, Adept as if Expert, Expert as if Master. (Master stays Master.)
+</div>
 
-**Eidetic Memory (5 or 7).** *You don’t remember it. You’re still looking at it.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Eidetic Memory</span><span class="entry-tag">5 or 7</span></p>
+<p class="entry-flavour">You don’t remember it. You’re still looking at it.</p>
 
 Bought as one of two tiers (the higher includes the lower’s benefit - no need to buy both).
 
 **Tier 1 (5, Greater)**: perfect recall of anything you’ve actually experienced and attended to - things you saw, read, or heard.
 
 **Tier 2 (7, Legendary)**: perfect recall of literally anything you’ve ever perceived, attended to or not - a page glimpsed once, background chatter, something in peripheral vision.
+</div>
 
-**Enchanting Voice (5, Greater).** *You said good morning and they decided you were fine. That’s the whole trick and you can’t switch it off.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Enchanting Voice</span><span class="entry-tag">5, Greater</span></p>
+<p class="entry-flavour">You said good morning and they decided you were fine. That’s the whole trick and you can’t switch it off.</p>
 
 Anyone who hears you speak has their initial reaction/disposition nudged a step more favorably. Additionally, choose one voice-dependent Skill (Charm, Deception, Performance, Persuasion, Public Speaking, or Seduction) at creation: treat your Skill Training Tier as one tier higher than your actual tier for that Skill, with a minimum of Trained (same shape as Double-Jointed’s Escapology bump).
+</div>
 
-**Encyclopedic Knowledge (3, Lesser).** *You read something about this once. You always did.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Encyclopedic Knowledge</span><span class="entry-tag">3, Lesser</span></p>
+<p class="entry-flavour">You read something about this once. You always did.</p>
 
 When you want to know something relevant about a topic - history, science, esoteric trivia, nearly anything - roll **Air + Difficulty** directly (GM sets Difficulty by how obscure the fact is; no Skill or Training Tier involved). Success - the GM tells you the relevant fact, though you can’t say where or how you learned it. Failure - nothing surfaces.
+</div>
 
-**Extra Limbs (1, 3, 5, or 7).** *More arms than the furniture expects.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Extra Limbs</span><span class="entry-tag">1, 3, 5, or 7</span></p>
+<p class="entry-flavour">More arms than the furniture expects.</p>
 
 Bought as one of four tiers (each includes every lower tier’s benefit - no need to buy more than one). You have more limbs than an ordinary person - extra arms, tentacles, or something else the body has simply grown in, each one just as functional as your original set.
 
@@ -112,16 +156,25 @@ Bought as one of four tiers (each includes every lower tier’s benefit - no nee
 **Tier 3 (5, Greater)**: three extra limbs - they can actively assist a task you’re already attempting, granting Advantage on any roll where an extra hand or two would help (Escapology, forcing/breaking something, climbing).
 
 **Tier 4 (7, Legendary)**: four or more extra limbs, full independent use - perform up to two simple parallel tasks per round instead of one, and gain Advantage on any physical task benefiting from more hands, including grappling or restraining an opponent.
+</div>
 
-**Eye for the Opening (5, Greater).** *You don’t aim better than anyone else. You just notice the half-second where it stops mattering how good they are.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Eye for the Opening</span><span class="entry-tag">5, Greater</span></p>
+<p class="entry-flavour">You don’t aim better than anyone else. You just notice the half-second where it stops mattering how good they are.</p>
 
 Your critical range on attack rolls widens - a roll of **2 or 3** is a critical hit, not just a 2. An attack uses no Skill, so no Training Tier can widen it for you; this is the only thing that does. Applies to Physical, Social and Mental attacks alike.
+</div>
 
-**Eye for the Strange (5, Greater).** *Everyone else saw a room. You saw a room that was wrong, and you can point at which part.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Eye for the Strange</span><span class="entry-tag">5, Greater</span></p>
+<p class="entry-flavour">Everyone else saw a room. You saw a room that was wrong, and you can point at which part.</p>
 
 When something supernatural is happening around you, roll **Moira + Difficulty** directly (GM sets Difficulty by how subtle/hidden it is; no Skill or Training Tier involved). Success - the GM tells you something supernatural is present and gives you a relevant detail. Failure - you still feel something resonating in the threads of fate, leaving you uneasy with no concrete information.
+</div>
 
-**Familiar (1, 3, 5, or 7).** *Something followed you home and never left, and it is smarter than it has any business being.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Familiar</span><span class="entry-tag">1, 3, 5, or 7</span></p>
+<p class="entry-flavour">Something followed you home and never left, and it is smarter than it has any business being.</p>
 
 Bought as one of four tiers (each includes every lower tier’s benefit - no need to buy more than one). You have a dedicated companion of your own: a bound spirit, an animated servant, a talking object, an unusually capable person, whatever fits the concept. Not necessarily magical, not necessarily built by you, just yours.
 
@@ -132,8 +185,11 @@ Bought as one of four tiers (each includes every lower tier’s benefit - no nee
 **Tier 3 (5, Greater)**: it becomes a genuine asset in a crisis, not just a convenience - Master in its specialty Skill, and capable of holding its own if things turn dangerous (a butler who’s also a bodyguard, luggage that can flatten an attacker, a spirit with real teeth), GM’s call on the exact shape, fitting its nature.
 
 **Tier 4 (7, Legendary)**: it’s a legend in its own right, recognized (or feared) independent of you. Effectively unkillable in any permanent sense - destroyed, it eventually finds its way back to you, rebuilt, reformed, or returned, one way or another.
+</div>
 
-**Features (1, 3, 5, or 7).** *You are visibly not built the way most people are built, and you stopped apologizing for it a long time ago.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Features</span><span class="entry-tag">1, 3, 5, or 7</span></p>
+<p class="entry-flavour">You are visibly not built the way most people are built, and you stopped apologizing for it a long time ago.</p>
 
 Bought as one of four tiers (each includes every lower tier’s benefit - no need to buy more than one). Small, genuine biological quirks set you apart from an ordinary person - a functional tail with real balance and grip, gills that actually work, a natural pouch, thick fur, or coloration nobody could mistake for human. Cosmetic on their own, but each one does something real.
 
@@ -144,36 +200,54 @@ Bought as one of four tiers (each includes every lower tier’s benefit - no nee
 **Tier 3 (5, Greater)**: choose a 3rd feature.
 
 **Tier 4 (7, Legendary)**: choose a 4th feature.
+</div>
 
-**Feign Death (3 or 5).** *You can stop, entirely, on purpose. Getting started again is the part that takes nerve.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Feign Death</span><span class="entry-tag">3 or 5</span></p>
+<p class="entry-flavour">You can stop, entirely, on purpose. Getting started again is the part that takes nerve.</p>
 
 Bought as one of two tiers (the higher includes the lower’s benefit - no need to buy both).
 
 **Tier 1 (3, Lesser)**: convincingly fool onlookers - and a casual medical check - into believing you’re dead or unconscious, on your own choice.
 
 **Tier 2 (5, Greater)**: dead to all means of detection, including rigorous or technological examination - full voluntary control over your own vital signs and biofeedback, deep enough to fool sophisticated medical equipment.
+</div>
 
-**Higher Purpose (7, Legendary).** *Something isn’t finished with you yet. You’d rather not think too hard about what.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Higher Purpose</span><span class="entry-tag">7, Legendary</span></p>
+<p class="entry-flavour">Something isn’t finished with you yet. You’d rather not think too hard about what.</p>
 
 Once per major story arc, you cannot be permanently killed or written out of the story by anything short of a dramatically appropriate death - you’re meant for something greater, and the universe isn’t done with you yet.
+</div>
 
-**Innate Compass (1 or 3).** *You have never been lost. Turned around, occasionally. Never lost.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Innate Compass</span><span class="entry-tag">1 or 3</span></p>
+<p class="entry-flavour">You have never been lost. Turned around, occasionally. Never lost.</p>
 
 Bought as one of two tiers (the higher includes the lower’s benefit - no need to buy both).
 
 **Tier 1 (1, Trivial)**: always know true north and roughly what time it is, no matter where you are.
 
 **Tier 2 (3, Lesser)**: additionally, for any place you’ve been before, you always know the direction and rough distance to it.
+</div>
 
-**Iron Grip (3, Lesser).** *Whatever’s in your hand stays in your hand. They can try.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Iron Grip</span><span class="entry-tag">3, Lesser</span></p>
+<p class="entry-flavour">Whatever’s in your hand stays in your hand. They can try.</p>
 
 Immune to being disarmed against your will - a weapon or item stays in your hand until you choose to let go.
+</div>
 
-**Iron Stomach (1, Trivial).** *You’ve eaten worse. Considerably worse, and on purpose.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Iron Stomach</span><span class="entry-tag">1, Trivial</span></p>
+<p class="entry-flavour">You’ve eaten worse. Considerably worse, and on purpose.</p>
 
 Eat or drink almost anything without illness.
+</div>
 
-**Iron Will (3, 5, or 7).** *They pushed, and found out that pushing was all they had.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Iron Will</span><span class="entry-tag">3, 5, or 7</span></p>
+<p class="entry-flavour">They pushed, and found out that pushing was all they had.</p>
 
 Bought as one of three tiers (each includes every lower tier’s benefit - no need to buy more than one).
 
@@ -182,16 +256,22 @@ Bought as one of three tiers (each includes every lower tier’s benefit - no ne
 **Tier 2 (5, Greater)**: additionally, Advantage to resist any other attempt to read you (including future supernatural effects), and unlocks **Assert Your Will** as a Fate Trigger - spend 1 Fate Token to flatly negate an attempt to intimidate or dominate you, no roll.
 
 **Tier 3 (7, Legendary)**: additionally, full passive immunity to domination, possession, mind control, and any attempt to read you whatsoever - no roll, no cost, automatic. You can still be deceived, but never puppeted or read.
+</div>
 
-**Jack of all Trades (5 or 7).** *You’ve done a bit of everything, badly, which turns out to be an enormous head start.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Jack of all Trades</span><span class="entry-tag">5 or 7</span></p>
+<p class="entry-flavour">You’ve done a bit of everything, badly, which turns out to be an enormous head start.</p>
 
 Bought as one of two tiers (the higher includes the lower’s benefit - no need to buy both).
 
 **Tier 1 (5, Greater)**: your baseline in every Skill is Trained, including ones you’ve never trained in or even heard named before - but your ceiling in any Skill is capped at Trained, permanently, even if you spend points to raise it further. Any of your 15-point Skills Pool left unspent because of that cap is simply unspent - it doesn’t convert into points for Attributes, Resources, or anything else.
 
 **Tier 2 (7, Legendary)**: the Tier 1 cap is lifted - Skills you specifically invest in can still climb past Trained toward Adept, Expert, or Master as normal.
+</div>
 
-**Lie Detector (3, 5, or 7).** *It’s not the words. It’s the half-beat before them, every single time.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Lie Detector</span><span class="entry-tag">3, 5, or 7</span></p>
+<p class="entry-flavour">It’s not the words. It’s the half-beat before them, every single time.</p>
 
 Bought as one of three tiers (each includes every lower tier’s benefit - no need to buy more than one).
 
@@ -200,8 +280,11 @@ Bought as one of three tiers (each includes every lower tier’s benefit - no ne
 **Tier 2 (5, Greater)**: additionally, gain Advantage on that same Insight roll, stacking with the Tier 1 bump - even a careful evasion or partial truth doesn’t slip past easily.
 
 **Tier 3 (7, Legendary)**: additionally, a direct, deliberate lie told straight to your face registers automatically, no roll needed - though you still won’t know the truth, only that you weren’t told it.
+</div>
 
-**Light Sleeper (1, 3, or 5).** *You woke up before the sound finished.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Light Sleeper</span><span class="entry-tag">1, 3, or 5</span></p>
+<p class="entry-flavour">You woke up before the sound finished.</p>
 
 Bought as one of three tiers (each includes the lower tier’s benefit - no need to buy more than one).
 
@@ -210,12 +293,18 @@ Bought as one of three tiers (each includes the lower tier’s benefit - no need
 **Tier 2 (3, Lesser)**: additionally, you’re never automatically Surprised while asleep - roll Perception even while asleep to notice a threat, same as if you were awake.
 
 **Tier 3 (5, Greater)**: additionally, waking from a disturbance doesn’t cost you your position in the round - you act on your normal Initiative immediately rather than losing the first exchange getting your bearings.
+</div>
 
-**Lightning Calculator (1, Trivial).** *The number is just there. You didn’t work it out; it arrived.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Lightning Calculator</span><span class="entry-tag">1, Trivial</span></p>
+<p class="entry-flavour">The number is just there. You didn’t work it out; it arrived.</p>
 
 Instant, effortless mental processing of complex calculations - arithmetic, odds and statistics, trajectories, logistics, or any other math-driven estimate - done in your head, accurately, that would normally take pen, paper, or a calculator.
+</div>
 
-**Natural Linguist (1, 3, 5, or 7).** *Languages come apart in your hands like something already labeled.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Natural Linguist</span><span class="entry-tag">1, 3, 5, or 7</span></p>
+<p class="entry-flavour">Languages come apart in your hands like something already labeled.</p>
 
 Bought as one of four tiers (each includes every lower tier’s benefit - no need to buy more than one).
 
@@ -226,16 +315,25 @@ Bought as one of four tiers (each includes every lower tier’s benefit - no nee
 **Tier 3 (5, Greater)**: learn a new human language to fluency after mere minutes of interaction.
 
 **Tier 4 (7, Legendary)**: learn *any* language, including non-human or otherwise exotic communication systems - the time required scales with how alien it is (a terrestrial animal’s calls might take a day; a species that communicates via color-shifting skin patches might take weeks).
+</div>
 
-**Never Off Balance (3, Lesser).** *You’ve fallen enough times to have opinions about it, and none of them involve staying down.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Never Off Balance</span><span class="entry-tag">3, Lesser</span></p>
+<p class="entry-flavour">You’ve fallen enough times to have opinions about it, and none of them involve staying down.</p>
 
 On a catastrophic failure on an attack roll, roll again. If the second roll succeeds, the catastrophic failure is downgraded to an ordinary miss - it never becomes a hit, and if the second roll also fails the catastrophic failure stands. The same shape as Master, for the one roll no Training Tier reaches.
+</div>
 
-**Never Winded (3, Lesser).** *You are still going. You’ll explain later how.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Never Winded</span><span class="entry-tag">3, Lesser</span></p>
+<p class="entry-flavour">You are still going. You’ll explain later how.</p>
 
 Hold your breath far longer than an ordinary person, and shrug off exhaustion from cold, heat, or thin air that would slow anyone else.
+</div>
 
-**Oathbound (3, 5, or 7).** *You gave your word, and it turns out your word is load-bearing.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Oathbound</span><span class="entry-tag">3, 5, or 7</span></p>
+<p class="entry-flavour">You gave your word, and it turns out your word is load-bearing.</p>
 
 Bought as one of three tiers (each includes every lower tier’s benefit - no need to buy more than one). A promise made to you is never as easy to walk away from as an ordinary promise. It sticks in the mind, hard to shake, and something in the exchange takes on real, felt weight.
 
@@ -244,24 +342,39 @@ Bought as one of three tiers (each includes every lower tier’s benefit - no ne
 **Tier 2 (5, Greater)**: a significant oath sworn to you genuinely resists being broken - in the moment someone tries, the GM may call for a Atropos + Difficulty roll from them to go through with it anyway; failure means they can’t bring themselves to act against it for the rest of the scene.
 
 **Tier 3 (7, Legendary)**: an oath sworn to you is, for all practical purposes, unbreakable - any attempt to act against it automatically fails, no roll needed.
+</div>
 
-**Quick Study (1, Trivial).** *Show you once. That’s usually enough, which people find unsettling.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Quick Study</span><span class="entry-tag">1, Trivial</span></p>
+<p class="entry-flavour">Show you once. That’s usually enough, which people find unsettling.</p>
 
 Pick up new information or a demonstrated technique unusually fast - GM’s call on how much time it actually saves.
+</div>
 
-**Restful Trance (3, Lesser).** *Three hours and you’re new. Nobody who has watched you do it thinks it looks restful.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Restful Trance</span><span class="entry-tag">3, Lesser</span></p>
+<p class="entry-flavour">Three hours and you’re new. Nobody who has watched you do it thinks it looks restful.</p>
 
 A Full Night’s Rest only requires **3 hours** of actual sleep to grant its full benefit. A Short Rest only requires **15 minutes** instead of the normal hour, though the normal one-per-Full-Night’s-Rest cap still applies.
+</div>
 
-**Special Movement (3 (Lesser), may be purchased multiple times).** *You move in a way that shouldn’t work. It works. Don’t ask.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Special Movement (3 (Lesser), may be purchased multiple times)</span></p>
+<p class="entry-flavour">You move in a way that shouldn’t work. It works. Don’t ask.</p>
 
 Choose a specific, narrow locomotion trick that shouldn’t work but does: **Water-Walking** (cross any liquid surface as easily as solid ground), **Wall-Crawling** (climb any surface, including ceilings, as easily and securely as flat ground), **Tunneling** (dig through earth, sand, or similarly soft material at your normal Movement Rate), or **Untrackable** (leave no scent, footprint, or trail; mundane tracking, and most supernatural tracking, simply fails to find a path). May be bought more than once; each purchase must choose a different mode.
+</div>
 
-**Speed Reading (1, Trivial).** *You’ve finished the page while they’re still on the first paragraph.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Speed Reading</span><span class="entry-tag">1, Trivial</span></p>
+<p class="entry-flavour">You’ve finished the page while they’re still on the first paragraph.</p>
 
 Read or skim at exceptional speed.
+</div>
 
-**Steadfast Presence (3, 5, or 7).** *The room settles when you’re in it, and it settles more the worse things get.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Steadfast Presence</span><span class="entry-tag">3, 5, or 7</span></p>
+<p class="entry-flavour">The room settles when you’re in it, and it settles more the worse things get.</p>
 
 Bought as one of three tiers (each includes every lower tier’s benefit - no need to buy more than one).
 
@@ -270,8 +383,11 @@ Bought as one of three tiers (each includes every lower tier’s benefit - no ne
 **Tier 2 (5, Greater)**: additionally, allies within your Movement Rate are inspired by your presence, gaining Advantage on any roll made to resist fear or intimidation.
 
 **Tier 3 (7, Legendary)**: additionally, allies within that same range share your full immunity to fear - any attempt to frighten or intimidate them automatically fails too.
+</div>
 
-**Trained by a Master (1, 3, 5, or 7).** *Somebody who was genuinely the best taught you, and it shows in the small things.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Trained by a Master</span><span class="entry-tag">1, 3, 5, or 7</span></p>
+<p class="entry-flavour">Somebody who was genuinely the best taught you, and it shows in the small things.</p>
 
 Bought as one of four tiers (each includes every lower tier’s benefit - no need to buy more than one). Each tier named below grants one additional Skill you can name (up to 4 total) *and* one additional use per session (up to 4 total). At the moment of failure, freely choose which named Skill the use applies to - uses aren’t locked to a specific Skill in advance, and can all be spent on a single Skill in the same session if you want.
 
@@ -282,15 +398,72 @@ Bought as one of four tiers (each includes every lower tier’s benefit - no nee
 **Tier 3 (5, Greater)**: 3 named Skills, 3 uses per session.
 
 **Tier 4 (7, Legendary)**: 4 named Skills, 4 uses per session. A spent use treats a failure on the chosen Skill as a success instead.
+</div>
 
-**Unshakeable Alibi (3, Lesser).** *There is always a story, it always holds, and you’ve never once had to invent it under pressure.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Unshakeable Alibi</span><span class="entry-tag">3, Lesser</span></p>
+<p class="entry-flavour">There is always a story, it always holds, and you’ve never once had to invent it under pressure.</p>
 
 Always have a plausible, verifiable-sounding cover story ready on short notice - GM’s call on how far it holds up under real scrutiny.
+</div>
 
-**Unstoppable (7, Legendary).** *Zero is not a number that means anything to you yet.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Unstoppable</span><span class="entry-tag">7, Legendary</span></p>
+<p class="entry-flavour">Zero is not a number that means anything to you yet.</p>
 
 Being reduced to 0 Health Levels doesn’t render you unconscious - you keep going into negative Health Levels, down to the same −(Health sub-stat) death threshold everyone eventually hits, instead of blacking out at 0. While in that negative range: (1) you’re extremely hurt but conscious - you can talk, move, and act at rest with no restriction; (2) any exertion - combat, strenuous effort, or moving quickly - costs **1 Ki** per instance.
+</div>
 
-**Weathered (3, Lesser).** *The weather is happening to everyone. You’ve simply declined to make it a topic.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Weathered</span><span class="entry-tag">3, Lesser</span></p>
+<p class="entry-flavour">The weather is happening to everyone. You’ve simply declined to make it a topic.</p>
 
 Shrug off extreme heat, cold, and harsh weather that would meaningfully slow or endanger an ordinary person.
+</div>
+
+## The Boons, at a glance
+
+| Boon | Points | Effect |
+|---|---|---|
+| Alertness | 3 (Lesser) | Immune to being [Surprised](rules.md#surprise) while conscious, unless under a mind-altering effect that would specifically allow it. |
+| Alternate Identity | 5 (Greater) | A fully realized second identity - name, history, and papers that hold up under real scrutiny - keeping your real self insulated from what it does. |
+| Always Connected | 3, 5, or 7 | Bought as one of three tiers (each includes every lower tier's benefit - no need to buy more than one).<br>**Tier 1 (3, Lesser)**: your mobile/portable computing devices are always online under normal conditions - no dead zones, no dropped signal, no service gaps. Supernatural interference, deliberate technological jamming, or genuinely extreme circumstances (miles underground, fully off-grid) can still block it, GM's call, but ordinary everyday conditions never do.<br>**Tier 2 (5, Greater)**: the same connection, but it's not tied to any device - a cybernetic implant of your own, granting the same access even fully divested of every belonging and piece of gear you own.<br>**Tier 3 (7, Legendary)**: the same connection as Tier 2, but through some means beyond ordinary technology (a lingering enchantment, a telepathic relay, quantum entanglement, whatever fits the character) - unbreakable so long as you remain on this plane of existence, immune even to the exceptions Tier 1 allowed. |
+| Ambidextrous | 1 (Trivial) | Ignore the [Disadvantage](rules.md#advantage--disadvantage) normally imposed for performing a task with your off-hand. |
+| Animal Rapport | 1 (Trivial) | Animals read you as safe and trustworthy on sight, calmer and friendlier around you than they'd otherwise be - no communication, just instinct. |
+| Common Sense | 7 (Legendary) | The GM will give you a heads-up before you commit to an obviously terrible decision. |
+| Compact Frame | 3 (Lesser) | Fit through spaces, gaps, and crowds an ordinary body couldn't, and blend into a packed room without trying. |
+| Concentration | 5 (Greater) | Immune to being [Distracted](rules.md#distracted), regardless of source (damage, Kotodama, Gifts, environmental hazards) - a Slow action always resolves as declared. |
+| Danger Sense | 5 (Greater) | May ask the GM at any reasonable moment whether there's danger nearby; the GM must give a truthful (if vague, gut-feeling-level) answer. Additionally, roll **2d10 for Initiative and keep the higher die** (instead of the normal single 1d10), then add your Initiative sub-stat as usual. |
+| Displaced Echoes | 3 or 5 | Bought as one of two tiers (the higher includes the lower's benefit - no need to buy both).<br>**Tier 1 (3, Lesser)**: perfectly imitate any voice or sound you've heard - undetectable unless a listener has a specific reason to doubt it, in which case they may roll Insight + Difficulty (GM sets Difficulty by how good their reason for suspicion is) to see through it.<br>**Tier 2 (5, Greater)**: additionally, throw your voice to make it seem to originate from any point in your line of sight. |
+| Double-Jointed | 3 (Lesser) | For Escapology rolls, treat your [Skill Training Tier](skills.md#training-tiers) as one tier higher than your actual tier, with a minimum of Trained - even an Untrained or Novice character rolls Escapology as if Trained. Trained rolls as if Adept, Adept as if Expert, Expert as if Master. (Master stays Master.) |
+| Eidetic Memory | 5 or 7 | Bought as one of two tiers (the higher includes the lower's benefit - no need to buy both).<br>**Tier 1 (5, Greater)**: perfect recall of anything you've actually experienced and attended to - things you saw, read, or heard.<br>**Tier 2 (7, Legendary)**: perfect recall of literally anything you've ever perceived, attended to or not - a page glimpsed once, background chatter, something in peripheral vision. |
+| Enchanting Voice | 5 (Greater) | Anyone who hears you speak has their initial reaction/disposition nudged a step more favorably. Additionally, choose one voice-dependent Skill (Charm, Deception, Performance, Persuasion, Public Speaking, or Seduction) at creation: treat your [Skill Training Tier](skills.md#training-tiers) as one tier higher than your actual tier for that Skill, with a minimum of Trained (same shape as [Double-Jointed](#boon-list)'s Escapology bump). |
+| Encyclopedic Knowledge | 3 (Lesser) | When you want to know something relevant about a topic - history, science, esoteric trivia, nearly anything - roll **Air + Difficulty** directly (GM sets Difficulty by how obscure the fact is; no Skill or Training Tier involved). Success - the GM tells you the relevant fact, though you can't say where or how you learned it. Failure - nothing surfaces. |
+| Extra Limbs | 1, 3, 5, or 7 | Bought as one of four tiers (each includes every lower tier's benefit - no need to buy more than one). You have more limbs than an ordinary person - extra arms, tentacles, or something else the body has simply grown in, each one just as functional as your original set.<br>**Tier 1 (1, Trivial)**: one extra limb, usable for simple parallel tasks (hold, brace, steady something) alongside whatever you're already doing.<br>**Tier 2 (3, Lesser)**: two extra limbs - you can hold or ready an additional item at all times (a second weapon, a shield, a tool), always available without needing to draw it.<br>**Tier 3 (5, Greater)**: three extra limbs - they can actively assist a task you're already attempting, granting Advantage on any roll where an extra hand or two would help (Escapology, forcing/breaking something, climbing).<br>**Tier 4 (7, Legendary)**: four or more extra limbs, full independent use - perform up to two simple parallel tasks per round instead of one, and gain Advantage on any physical task benefiting from more hands, including grappling or restraining an opponent. |
+| Eye for the Opening | 5 (Greater) | Your critical range on attack rolls widens - a roll of **2 or 3** is a [critical hit](rules.md#critical-hits), not just a 2. An attack uses no Skill, so no [Training Tier](skills.md#training-tiers) can widen it for you; this is the only thing that does. Applies to Physical, Social and Mental attacks alike. |
+| Eye for the Strange | 5 (Greater) | When something supernatural is happening around you, roll **Moira + Difficulty** directly (GM sets Difficulty by how subtle/hidden it is; no Skill or Training Tier involved). Success - the GM tells you something supernatural is present and gives you a relevant detail. Failure - you still feel something resonating in the threads of fate, leaving you uneasy with no concrete information. |
+| Familiar | 1, 3, 5, or 7 | Bought as one of four tiers (each includes every lower tier's benefit - no need to buy more than one). You have a dedicated companion of your own: a bound spirit, an animated servant, a talking object, an unusually capable person, whatever fits the concept. Not necessarily magical, not necessarily built by you, just yours.<br>**Tier 1 (1, Trivial)**: a capable helper with a real specialty, Trained in one relevant Skill of your choice, reliably useful for everyday tasks fitting its nature. Mostly narrative utility, not built for danger.<br>**Tier 2 (3, Lesser)**: its competence deepens - Expert in its specialty Skill, plus Trained in two more Skills fitting its nature. Can act on your behalf, unsupervised, for simple tasks.<br>**Tier 3 (5, Greater)**: it becomes a genuine asset in a crisis, not just a convenience - Master in its specialty Skill, and capable of holding its own if things turn dangerous (a butler who's also a bodyguard, luggage that can flatten an attacker, a spirit with real teeth), GM's call on the exact shape, fitting its nature.<br>**Tier 4 (7, Legendary)**: it's a legend in its own right, recognized (or feared) independent of you. Effectively unkillable in any permanent sense - destroyed, it eventually finds its way back to you, rebuilt, reformed, or returned, one way or another. |
+| Features | 1, 3, 5, or 7 | Bought as one of four tiers (each includes every lower tier's benefit - no need to buy more than one). Small, genuine biological quirks set you apart from an ordinary person - a functional tail with real balance and grip, gills that actually work, a natural pouch, thick fur, or coloration nobody could mistake for human. Cosmetic on their own, but each one does something real.<br>**Tier 1 (1, Trivial)**: choose 1 minor feature (functional tail, gills, fur, pouch, distinct coloration, or similar) - each grants a small, fitting benefit: a tail aids balance, gills allow underwater breathing, fur grants minor cold resistance, a pouch holds a few small items hands-free, distinct coloration/camouflage blends into a matching environment.<br>**Tier 2 (3, Lesser)**: choose a 2nd feature.<br>**Tier 3 (5, Greater)**: choose a 3rd feature.<br>**Tier 4 (7, Legendary)**: choose a 4th feature. |
+| Feign Death | 3 or 5 | Bought as one of two tiers (the higher includes the lower's benefit - no need to buy both).<br>**Tier 1 (3, Lesser)**: convincingly fool onlookers - and a casual medical check - into believing you're dead or unconscious, on your own choice.<br>**Tier 2 (5, Greater)**: dead to all means of detection, including rigorous or technological examination - full voluntary control over your own vital signs and biofeedback, deep enough to fool sophisticated medical equipment. |
+| Higher Purpose | 7 (Legendary) | Once per major story arc, you cannot be permanently killed or written out of the story by anything short of a dramatically appropriate death - you're meant for something greater, and the universe isn't done with you yet. |
+| Innate Compass | 1 or 3 | Bought as one of two tiers (the higher includes the lower's benefit - no need to buy both).<br>**Tier 1 (1, Trivial)**: always know true north and roughly what time it is, no matter where you are.<br>**Tier 2 (3, Lesser)**: additionally, for any place you've been before, you always know the direction and rough distance to it. |
+| Iron Grip | 3 (Lesser) | Immune to being disarmed against your will - a weapon or item stays in your hand until you choose to let go. |
+| Iron Stomach | 1 (Trivial) | Eat or drink almost anything without illness. |
+| Iron Will | 3, 5, or 7 | Bought as one of three tiers (each includes every lower tier's benefit - no need to buy more than one).<br>**Tier 1 (3, Lesser)**: immune to being read via [Insight](premade-skills.md) - an attempt to read your emotions, tells, or intentions through Insight automatically fails.<br>**Tier 2 (5, Greater)**: additionally, [Advantage](rules.md#advantage--disadvantage) to resist any other attempt to read you (including future supernatural effects), and unlocks **Assert Your Will** as a [Fate Trigger](fate.md#fate-triggers) - spend 1 Fate Token to flatly negate an attempt to intimidate or dominate you, no roll.<br>**Tier 3 (7, Legendary)**: additionally, full passive immunity to domination, possession, mind control, and any attempt to read you whatsoever - no roll, no cost, automatic. You can still be deceived, but never puppeted or read. |
+| Jack of all Trades | 5 or 7 | Bought as one of two tiers (the higher includes the lower's benefit - no need to buy both).<br>**Tier 1 (5, Greater)**: your baseline in every Skill is Trained, including ones you've never trained in or even heard named before - but your ceiling in any Skill is capped at Trained, permanently, even if you spend points to raise it further. Any of your 15-point Skills Pool left unspent because of that cap is simply unspent - it doesn't convert into points for Attributes, Resources, or anything else.<br>**Tier 2 (7, Legendary)**: the Tier 1 cap is lifted - Skills you specifically invest in can still climb past Trained toward Adept, Expert, or Master as normal. |
+| Lie Detector | 3, 5, or 7 | Bought as one of three tiers (each includes every lower tier's benefit - no need to buy more than one).<br>**Tier 1 (3, Lesser)**: for Insight rolls made specifically to catch someone in a lie, treat your [Skill Training Tier](skills.md#training-tiers) as one tier higher than your actual tier, with a minimum of Trained (same shape as [Double-Jointed](#boon-list)'s Escapology bump).<br>**Tier 2 (5, Greater)**: additionally, gain [Advantage](rules.md#advantage--disadvantage) on that same Insight roll, stacking with the Tier 1 bump - even a careful evasion or partial truth doesn't slip past easily.<br>**Tier 3 (7, Legendary)**: additionally, a direct, deliberate lie told straight to your face registers automatically, no roll needed - though you still won't know the truth, only that you weren't told it. |
+| Light Sleeper | 1, 3, or 5 | Bought as one of three tiers (each includes the lower tier's benefit - no need to buy more than one).<br>**Tier 1 (1, Trivial)**: wake instantly at the slightest disturbance.<br>**Tier 2 (3, Lesser)**: additionally, you're never automatically [Surprised](rules.md#surprise) while asleep - roll Perception even while asleep to notice a threat, same as if you were awake.<br>**Tier 3 (5, Greater)**: additionally, waking from a disturbance doesn't cost you your position in the round - you act on your normal Initiative immediately rather than losing the first exchange getting your bearings. |
+| Lightning Calculator | 1 (Trivial) | Instant, effortless mental processing of complex calculations - arithmetic, odds and statistics, trajectories, logistics, or any other math-driven estimate - done in your head, accurately, that would normally take pen, paper, or a calculator. |
+| Natural Linguist | 1, 3, 5, or 7 | Bought as one of four tiers (each includes every lower tier's benefit - no need to buy more than one).<br>**Tier 1 (1, Trivial)**: when first hearing an unfamiliar language, you can often piece together rough meaning and grammar patterns from listening alone (GM's call how much you catch).<br>**Tier 2 (3, Lesser)**: learn a new human language to fluency after a single day of real exposure or study.<br>**Tier 3 (5, Greater)**: learn a new human language to fluency after mere minutes of interaction.<br>**Tier 4 (7, Legendary)**: learn *any* language, including non-human or otherwise exotic communication systems - the time required scales with how alien it is (a terrestrial animal's calls might take a day; a species that communicates via color-shifting skin patches might take weeks). |
+| Never Off Balance | 3 (Lesser) | On a catastrophic failure on an attack roll, roll again. If the second roll succeeds, the catastrophic failure is downgraded to an ordinary miss - it never becomes a hit, and if the second roll also fails the catastrophic failure stands. The same shape as [Master](skills.md#training-tiers), for the one roll no Training Tier reaches. |
+| Never Winded | 3 (Lesser) | Hold your breath far longer than an ordinary person, and shrug off exhaustion from cold, heat, or thin air that would slow anyone else. |
+| Oathbound | 3, 5, or 7 | Bought as one of three tiers (each includes every lower tier's benefit - no need to buy more than one). A promise made to you is never as easy to walk away from as an ordinary promise. It sticks in the mind, hard to shake, and something in the exchange takes on real, felt weight.<br>**Tier 1 (3, Lesser)**: anyone who breaks a promise made to you suffers Disadvantage on their next roll afterward, shaken by having done it.<br>**Tier 2 (5, Greater)**: a significant oath sworn to you genuinely resists being broken - in the moment someone tries, the GM may call for a Atropos + Difficulty roll from them to go through with it anyway; failure means they can't bring themselves to act against it for the rest of the scene.<br>**Tier 3 (7, Legendary)**: an oath sworn to you is, for all practical purposes, unbreakable - any attempt to act against it automatically fails, no roll needed. |
+| Quick Study | 1 (Trivial) | Pick up new information or a demonstrated technique unusually fast - GM's call on how much time it actually saves. |
+| Restful Trance | 3 (Lesser) | A Full Night's Rest only requires **3 hours** of actual sleep to grant its full benefit. A [Short Rest](rules.md#rests) only requires **15 minutes** instead of the normal hour, though the normal one-per-Full-Night's-Rest cap still applies. |
+| Special Movement | 3 (Lesser), may be purchased multiple times | Choose a specific, narrow locomotion trick that shouldn't work but does: **Water-Walking** (cross any liquid surface as easily as solid ground), **Wall-Crawling** (climb any surface, including ceilings, as easily and securely as flat ground), **Tunneling** (dig through earth, sand, or similarly soft material at your normal Movement Rate), or **Untrackable** (leave no scent, footprint, or trail; mundane tracking, and most supernatural tracking, simply fails to find a path). May be bought more than once; each purchase must choose a different mode. |
+| Speed Reading | 1 (Trivial) | Read or skim at exceptional speed. |
+| Steadfast Presence | 3, 5, or 7 | Bought as one of three tiers (each includes every lower tier's benefit - no need to buy more than one).<br>**Tier 1 (3, Lesser)**: immune to fear - any attempt to frighten or intimidate you automatically fails.<br>**Tier 2 (5, Greater)**: additionally, allies within your [Movement Rate](rules.md#movement--range) are inspired by your presence, gaining [Advantage](rules.md#advantage--disadvantage) on any roll made to resist fear or intimidation.<br>**Tier 3 (7, Legendary)**: additionally, allies within that same range share your full immunity to fear - any attempt to frighten or intimidate them automatically fails too. |
+| Trained by a Master | 1, 3, 5, or 7 | Bought as one of four tiers (each includes every lower tier's benefit - no need to buy more than one). Each tier named below grants one additional Skill you can name (up to 4 total) *and* one additional use per session (up to 4 total). At the moment of failure, freely choose which named Skill the use applies to - uses aren't locked to a specific Skill in advance, and can all be spent on a single Skill in the same session if you want.<br>**Tier 1 (1, Trivial)**: 1 named Skill, 1 use per session.<br>**Tier 2 (3, Lesser)**: 2 named Skills, 2 uses per session.<br>**Tier 3 (5, Greater)**: 3 named Skills, 3 uses per session.<br>**Tier 4 (7, Legendary)**: 4 named Skills, 4 uses per session. A spent use treats a failure on the chosen Skill as a success instead. |
+| Unshakeable Alibi | 3 (Lesser) | Always have a plausible, verifiable-sounding cover story ready on short notice - GM's call on how far it holds up under real scrutiny. |
+| Unstoppable | 7 (Legendary) | Being reduced to 0 [Health Levels](rules.md#health-levels) doesn't render you unconscious - you keep going into negative Health Levels, down to the same −(Health sub-stat) death threshold everyone eventually hits, instead of blacking out at 0. While in that negative range: (1) you're extremely hurt but conscious - you can talk, move, and act at rest with no restriction; (2) any exertion - combat, strenuous effort, or moving quickly - costs **1 Ki** per instance. |
+| Weathered | 3 (Lesser) | Shrug off extreme heat, cold, and harsh weather that would meaningfully slow or endanger an ordinary person. |

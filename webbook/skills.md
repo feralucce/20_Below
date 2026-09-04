@@ -89,358 +89,719 @@ One entry breaks that rule on purpose. **Special Weapons** is a single specific 
 
 Every entry lists its default Element in brackets.
 
-**Academics (Air).** *The library shut at ten and you were still there at ten. Somebody had to know this, and it turned out to be you.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Academics</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">The library shut at ten and you were still there at ten. Somebody had to know this, and it turned out to be you.</p>
 
 General scholarship, history, and literature.
+</div>
 
-**Acrobatics (Air).** *Falling is easy. Falling on purpose, and getting up afterward, is the part that takes years.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Acrobatics</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Falling is easy. Falling on purpose, and getting up afterward, is the part that takes years.</p>
 
 Balance, tumbling, and controlled falls.
+</div>
 
-**Animal Handling (Water).** *Animals don’t care what you say. They care how you stand, how you breathe, and whether your hands are quiet.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Animal Handling</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">Animals don’t care what you say. They care how you stand, how you breathe, and whether your hands are quiet.</p>
 
 Training, calming, and directing animals.
+</div>
 
-**Appraisal (Air).** *It’s the weight that gives it away. That, and the way the seller won’t quite look at it.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Appraisal</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">It’s the weight that gives it away. That, and the way the seller won’t quite look at it.</p>
 
 Judging the value and authenticity of goods.
+</div>
 
-**Archery (Air).** *Draw, settle, breathe out, let go. The same four things they’ve always been, and the string still won’t forgive a flinch.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Archery</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Draw, settle, breathe out, let go. The same four things they’ve always been, and the string still won’t forgive a flinch.</p>
 
 Bows and crossbows. This Skill is distinct from Firearms. The two share some instincts about wind and distance, but the training doesn’t transfer in either direction.
+</div>
 
-**Athletics (Earth).** *Your body will do more than you think and less than you hoped. The gap between those is where this lives.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Athletics</span><span class="entry-tag">Earth</span></p>
+<p class="entry-flavour">Your body will do more than you think and less than you hoped. The gap between those is where this lives.</p>
 
 Running, jumping, climbing, and lifting under exertion.
+</div>
 
-**Barter (Fire).** *Never want it visibly. The moment they know you want it, the price stops being yours.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Barter</span><span class="entry-tag">Fire</span></p>
+<p class="entry-flavour">Never want it visibly. The moment they know you want it, the price stops being yours.</p>
 
 Striking favorable trades and deals.
+</div>
 
-**Bribery (Air).** *The trick isn’t the money. It’s knowing who takes it, how, and what they need to be able to tell themselves afterward.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Bribery</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">The trick isn’t the money. It’s knowing who takes it, how, and what they need to be able to tell themselves afterward.</p>
 
 Knowing how much, how, and who to pay to get what you want.
+</div>
 
-**Bureaucracy (Air).** *Somewhere in this building is one person who can sign this. Everyone else is a corridor.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Bureaucracy</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Somewhere in this building is one person who can sign this. Everyone else is a corridor.</p>
 
 Navigating institutions, paperwork, permits, and red tape to get things done.
+</div>
 
-**Charm (Fire).** *You didn’t do anything. You were just easy to be around, and by the end of it they’d decided you were on their side.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Charm</span><span class="entry-tag">Fire</span></p>
+<p class="entry-flavour">You didn’t do anything. You were just easy to be around, and by the end of it they’d decided you were on their side.</p>
 
 Ingratiation and drawing people in.
+</div>
 
-**Combat Driving/Piloting (Air).** *Everybody can drive. Almost nobody can drive while the back window is coming apart.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Combat Driving/Piloting</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Everybody can drive. Almost nobody can drive while the back window is coming apart.</p>
 
 Operating a vehicle under fire or in a chase. This is a separate Skill from ordinary Driving or Piloting; competence in traffic says nothing about competence under fire.
+</div>
 
-**Composition (Water).** *Anyone can put the words down. Getting them to land in the right order, on the right beat, is a different job.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Composition</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">Anyone can put the words down. Getting them to land in the right order, on the right beat, is a different job.</p>
 
 Writing music, poetry, or stories with real craft.
+</div>
 
-**Computer Use (Air).** *You know the setting exists. You know it’s three menus deep and named something stupid. You find it anyway.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Computer Use</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">You know the setting exists. You know it’s three menus deep and named something stupid. You find it anyway.</p>
 
 General computing, software, and programming. This Skill is distinct from Hacking - the same machine, but one of you is asking it politely.
+</div>
 
-**Concealment (Water).** *The best hiding place is somewhere so boring a searching eye slides off it without stopping.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Concealment</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">The best hiding place is somewhere so boring a searching eye slides off it without stopping.</p>
 
 Hiding objects, caches, or hideouts from a determined search.
+</div>
 
-**Contortion (Air).** *The gap is smaller than you are. That’s a negotiation, not a verdict.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Contortion</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">The gap is smaller than you are. That’s a negotiation, not a verdict.</p>
 
 Fitting through tight spaces and slipping restraints through flexibility.
+</div>
 
-**Cooking (Water).** *Anyone can follow a recipe. The trick is the moment you stop needing one and start tasting instead.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Cooking</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">Anyone can follow a recipe. The trick is the moment you stop needing one and start tasting instead.</p>
 
 Preparing food, from the everyday to the exceptional.
+</div>
 
-**Crafting (Earth).** *Measure it, cut it, discover you were wrong, do it again. That’s the whole trade, and it never stops being the whole trade.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Crafting</span><span class="entry-tag">Earth</span></p>
+<p class="entry-flavour">Measure it, cut it, discover you were wrong, do it again. That’s the whole trade, and it never stops being the whole trade.</p>
 
 Building and repairing goods in a chosen trade. One Skill covers any material or trade - woodworking, metalworking, whatever you practice - because the habits of hand and eye carry across all of them.
+</div>
 
-**Cryptography (Air).** *Every code is a promise that only the right people can read this. You work one side of that promise or the other.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Cryptography</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Every code is a promise that only the right people can read this. You work one side of that promise or the other.</p>
 
 Creating and breaking codes, ciphers, and encryption.
+</div>
 
-**Deception (Water).** *The best lie is ninety percent true, delivered by someone already bored of the subject.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Deception</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">The best lie is ninety percent true, delivered by someone already bored of the subject.</p>
 
 Lying, bluffing, and fast talk.
+</div>
 
-**Demolitions (Earth).** *Anyone can make a bang. The skill is the bang being exactly this big, exactly there, exactly now.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Demolitions</span><span class="entry-tag">Earth</span></p>
+<p class="entry-flavour">Anyone can make a bang. The skill is the bang being exactly this big, exactly there, exactly now.</p>
 
 Safely handling, placing, and detonating explosives.
+</div>
 
-**Disguise (Water).** *Nobody looks at faces. They look at posture, clothes, and whether you belong - and all three of those are choices.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Disguise</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">Nobody looks at faces. They look at posture, clothes, and whether you belong - and all three of those are choices.</p>
 
 Altering appearance to convincingly pass as someone else.
+</div>
 
-**Divination (Moira).** *Cards, bones, tea leaves, the dream you can’t shake off. Fate will answer a direct question. It just won’t answer kindly, or on time.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Divination</span><span class="entry-tag">Moira</span></p>
+<p class="entry-flavour">Cards, bones, tea leaves, the dream you can’t shake off. Fate will answer a direct question. It just won’t answer kindly, or on time.</p>
 
 Reading omens, portents, and the shape of what’s coming.
+</div>
 
-**Driving (Air).** *Point it, feed it fuel, don’t hit anything. Most days that’s genuinely all it takes.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Driving</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Point it, feed it fuel, don’t hit anything. Most days that’s genuinely all it takes.</p>
 
 Operating ground vehicles in ordinary traffic and terrain.
+</div>
 
-**Electronics (Air).** *Somewhere on this board is one component that’s given up. Everything else is fine. Finding out which is the job.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Electronics</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Somewhere on this board is one component that’s given up. Everything else is fine. Finding out which is the job.</p>
 
 Building, repairing, and modifying electronic devices and circuitry.
+</div>
 
-**Engineering (Air).** *Everything still standing is an argument with gravity that somebody won on paper first.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Engineering</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Everything still standing is an argument with gravity that somebody won on paper first.</p>
 
 Theoretical and design knowledge of structures and systems.
+</div>
 
-**Escapology (Water).** *Restraints are built for the shape of an average person who isn’t trying very hard. You’re neither.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Escapology</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">Restraints are built for the shape of an average person who isn’t trying very hard. You’re neither.</p>
 
 Breaking free of restraints and confined spaces under pressure.
+</div>
 
-**Etiquette (Fire).** *There is a correct fork, and the point was never the fork. The point is that you knew, and they saw you know.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Etiquette</span><span class="entry-tag">Fire</span></p>
+<p class="entry-flavour">There is a correct fork, and the point was never the fork. The point is that you knew, and they saw you know.</p>
 
 Navigating social and professional protocol correctly.
+</div>
 
-**Farming (Earth).** *The work doesn’t care that you’re tired, and the season doesn’t care that you’re behind.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Farming</span><span class="entry-tag">Earth</span></p>
+<p class="entry-flavour">The work doesn’t care that you’re tired, and the season doesn’t care that you’re behind.</p>
 
 Cultivating crops and managing livestock.
+</div>
 
-**Finance (Air).** *Money doesn’t move mysteriously. It moves for reasons, and the reasons are written down somewhere.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Finance</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Money doesn’t move mysteriously. It moves for reasons, and the reasons are written down somewhere.</p>
 
 Economics, markets, and accounting.
+</div>
 
-**Firearms (Air).** *It’s a machine for putting a small thing exactly where you’re looking. Everything hard about it lives in the word exactly.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Firearms</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">It’s a machine for putting a small thing exactly where you’re looking. Everything hard about it lives in the word exactly.</p>
 
 Handguns, long guns, and other modern ranged weapons, under one Skill.
+</div>
 
-**First Aid (Water).** *You’re not fixing them. You’re keeping them alive long enough to reach somebody who can.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">First Aid</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">You’re not fixing them. You’re keeping them alive long enough to reach somebody who can.</p>
 
 Immediate, field-level treatment - stabilizing, bandaging, CPR.
+</div>
 
-**Fishing (Water).** *Most of it is waiting. The waiting is not a flaw in the activity, whatever your companions say.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Fishing</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">Most of it is waiting. The waiting is not a flaw in the activity, whatever your companions say.</p>
 
 Catching fish by line, net, or spear.
+</div>
 
-**Forgery (Air).** *It doesn’t have to be perfect. It has to survive a tired person’s eight-second glance.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Forgery</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">It doesn’t have to be perfect. It has to survive a tired person’s eight-second glance.</p>
 
 Producing convincing fake documents, signatures, IDs, and digital records.
+</div>
 
-**Gaming (Moira).** *The cards don’t remember. The people across the table do, and that’s the game you’re actually playing.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Gaming</span><span class="entry-tag">Moira</span></p>
+<p class="entry-flavour">The cards don’t remember. The people across the table do, and that’s the game you’re actually playing.</p>
 
 Skill at games of strategy, chance, and wagering - tabletop, esports, or otherwise.
+</div>
 
-**Hacking (Air).** *Systems get built by people under deadline. You’re looking for the shortcut somebody took at two in the morning, two years ago.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Hacking</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Systems get built by people under deadline. You’re looking for the shortcut somebody took at two in the morning, two years ago.</p>
 
 Bypassing digital security - accounts, networks, cameras, and devices.
+</div>
 
-**Holistic Medicine (Water).** *Older than the hospital and, in a few specific things, still better. Knowing which few is the skill.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Holistic Medicine</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">Older than the hospital and, in a few specific things, still better. Knowing which few is the skill.</p>
 
 Herbal remedies, folk medicine, and non-clinical healing traditions.
+</div>
 
-**Housekeeping (Earth).** *A house left alone doesn’t stay still. It quietly comes apart, and somebody has to be quietly stopping it.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Housekeeping</span><span class="entry-tag">Earth</span></p>
+<p class="entry-flavour">A house left alone doesn’t stay still. It quietly comes apart, and somebody has to be quietly stopping it.</p>
 
 Running and maintaining a household efficiently.
+</div>
 
-**Hunting (Moira).** *You’re not looking for the animal. You’re looking for where the animal has to be, and getting there first.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Hunting</span><span class="entry-tag">Moira</span></p>
+<p class="entry-flavour">You’re not looking for the animal. You’re looking for where the animal has to be, and getting there first.</p>
 
 Tracking, catching, and field-dressing game.
+</div>
 
-**Improvised Weapons (Water).** *There’s no weapon in the room. There is a chair, a bottle, and a tire iron, and you’ve stopped seeing the difference.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Improvised Weapons</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">There’s no weapon in the room. There is a chair, a bottle, and a tire iron, and you’ve stopped seeing the difference.</p>
 
 Fighting effectively with whatever’s at hand instead of a purpose-built weapon.
+</div>
 
-**Insight (Moira).** *They said the words. You heard the pause before them, and the pause was the honest part.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Insight</span><span class="entry-tag">Moira</span></p>
+<p class="entry-flavour">They said the words. You heard the pause before them, and the pause was the honest part.</p>
 
 Reading people, sensing motive and deception - a read that goes past ordinary attention.
+</div>
 
-**Interrogation (Fire).** *Everyone gives you something. Most of it’s a lie, and the lie is where you start.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Interrogation</span><span class="entry-tag">Fire</span></p>
+<p class="entry-flavour">Everyone gives you something. Most of it’s a lie, and the lie is where you start.</p>
 
 Extracting information from an unwilling subject.
+</div>
 
-**Intimidation (Fire).** *You don’t have to say what happens next. You only have to be visibly willing to find out.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Intimidation</span><span class="entry-tag">Fire</span></p>
+<p class="entry-flavour">You don’t have to say what happens next. You only have to be visibly willing to find out.</p>
 
 Coercing others through implied or explicit threat.
+</div>
 
-**Intrigue (Air).** *Nobody in the room is saying what they want. That’s fine - what they want is legible anyway, if you watch who they’re watching.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Intrigue</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Nobody in the room is saying what they want. That’s fine - what they want is legible anyway, if you watch who they’re watching.</p>
 
 Scheming, maneuvering, and reading the undercurrents of institutional or political conflict.
+</div>
 
-**Invention (Air).** *Plans are for things that already exist. This is the other thing.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Invention</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Plans are for things that already exist. This is the other thing.</p>
 
 Designing and building original devices, not just following existing plans.
+</div>
 
-**Investigation (Moira).** *It’s all there and it doesn’t add up, and then it does, and you couldn’t tell anyone when it changed.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Investigation</span><span class="entry-tag">Moira</span></p>
+<p class="entry-flavour">It’s all there and it doesn’t add up, and then it does, and you couldn’t tell anyone when it changed.</p>
 
 Following clues at a scene and drawing sound conclusions.
+</div>
 
-**Law (Air).** *The law is enormous, slow, and written by people. All three of those are usable.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Law</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">The law is enormous, slow, and written by people. All three of those are usable.</p>
 
 Legal codes, procedure, and precedent.
+</div>
 
-**Leadership (Fire).** *People will follow somebody who seems to know where they’re going. It helps enormously if you do.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Leadership</span><span class="entry-tag">Fire</span></p>
+<p class="entry-flavour">People will follow somebody who seems to know where they’re going. It helps enormously if you do.</p>
 
 Commanding respect and rallying others to act.
+</div>
 
-**Linguistics (Air).** *Languages aren’t lists of words. They’re a shape, and once you’ve seen a few shapes the next one arrives faster.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Linguistics</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Languages aren’t lists of words. They’re a shape, and once you’ve seen a few shapes the next one arrives faster.</p>
 
 Learning, translating, and analyzing languages.
+</div>
 
-**Literacy (Air).** *Somebody wrote this down meaning to be understood, and you’re holding up your end.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Literacy</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Somebody wrote this down meaning to be understood, and you’re holding up your end.</p>
 
 Reading and writing a specific language. This is a separate thing from speaking it; plenty of fluent speakers can’t read a word.
+</div>
 
-**Mechanics (Earth).** *It made a noise it doesn’t usually make. That noise is the whole diagnosis, if you’ve heard enough of them.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Mechanics</span><span class="entry-tag">Earth</span></p>
+<p class="entry-flavour">It made a noise it doesn’t usually make. That noise is the whole diagnosis, if you’ve heard enough of them.</p>
 
 Repair and maintenance of vehicles and machinery.
+</div>
 
-**Medicine (Water).** *Diagnosis is mostly ruling things out. What’s left is either the answer or the thing you missed.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Medicine</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">Diagnosis is mostly ruling things out. What’s left is either the answer or the thing you missed.</p>
 
 Surgery, diagnosis, and long-term clinical treatment.
+</div>
 
-**Melee Combat (Earth).** *Reach, timing, and the willingness to close. Most fights are decided by the third one.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Melee Combat</span><span class="entry-tag">Earth</span></p>
+<p class="entry-flavour">Reach, timing, and the willingness to close. Most fights are decided by the third one.</p>
 
 Bladed, blunt, or improvised weapons at arm’s reach.
+</div>
 
-**Natural World (Water).** *Everything out here is eating, avoiding being eaten, or waiting. Knowing which tells you what happens next.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Natural World</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">Everything out here is eating, avoiding being eaten, or waiting. Knowing which tells you what happens next.</p>
 
 Knowledge of flora, fauna, ecosystems, and the environment.
+</div>
 
-**Navigation (Moira).** *You couldn’t say how you know which way is back. You just haven’t been wrong about it yet.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Navigation</span><span class="entry-tag">Moira</span></p>
+<p class="entry-flavour">You couldn’t say how you know which way is back. You just haven’t been wrong about it yet.</p>
 
 Plotting a course and avoiding getting lost, on foot, by vehicle, or otherwise.
+</div>
 
-**Networking (Fire).** *You don’t need to know the answer. You need to know who does, and to have been pleasant to them once.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Networking</span><span class="entry-tag">Fire</span></p>
+<p class="entry-flavour">You don’t need to know the answer. You need to know who does, and to have been pleasant to them once.</p>
 
 Building and leveraging connections in professional, corporate, or elite circles.
+</div>
 
-**Occult (Moira).** *Most of it is nonsense. A specific, dangerous fraction of it isn’t, and telling those apart is the entire discipline.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Occult</span><span class="entry-tag">Moira</span></p>
+<p class="entry-flavour">Most of it is nonsense. A specific, dangerous fraction of it isn’t, and telling those apart is the entire discipline.</p>
 
 Esoteric lore, ritual, and the world’s hidden supernatural undercurrent.
+</div>
 
-**Perception (Water).** *Everyone looked at the room. You looked at the room and noticed the thing that had been moved.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Perception</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">Everyone looked at the room. You looked at the room and noticed the thing that had been moved.</p>
 
 Noticing details and spotting hidden things.
+</div>
 
-**Performance (Fire).** *The audience will forgive a mistake. They won’t forgive you visibly noticing it.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Performance</span><span class="entry-tag">Fire</span></p>
+<p class="entry-flavour">The audience will forgive a mistake. They won’t forgive you visibly noticing it.</p>
 
 Acting, music, dance, or oratory before an audience, under one Skill whatever the medium.
+</div>
 
-**Persuasion (Fire).** *No trick and no pressure. Just the argument, made well, to somebody willing to hear it.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Persuasion</span><span class="entry-tag">Fire</span></p>
+<p class="entry-flavour">No trick and no pressure. Just the argument, made well, to somebody willing to hear it.</p>
 
 Honest argument and diplomacy.
+</div>
 
-**Piloting (Air).** *The ground is a long way down and it is extremely patient.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Piloting</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">The ground is a long way down and it is extremely patient.</p>
 
 Operating aircraft or watercraft, under one Skill whatever the vehicle.
+</div>
 
-**Politics (Air).** *Every institution is people with jobs they’d like to keep. Everything else follows from that.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Politics</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Every institution is people with jobs they’d like to keep. Everything else follows from that.</p>
 
 The workings of governments, agencies, and factions.
+</div>
 
-**Precognition (Moira).** *Not a vision. A wrongness, a few seconds early, and the discipline to move on it before you know why.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Precognition</span><span class="entry-tag">Moira</span></p>
+<p class="entry-flavour">Not a vision. A wrongness, a few seconds early, and the discipline to move on it before you know why.</p>
 
 A trained sensitivity to warnings from the threads of fate.
+</div>
 
-**Psychoanalysis (Water).** *The thing they’re describing isn’t the thing. Getting to the thing takes a long time and can’t be hurried.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Psychoanalysis</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">The thing they’re describing isn’t the thing. Getting to the thing takes a long time and can’t be hurried.</p>
 
 Therapy and treating mental trauma.
+</div>
 
-**Psychology (Water).** *People are consistent. Just never in the way they think they are.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Psychology</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">People are consistent. Just never in the way they think they are.</p>
 
 Understanding minds, motivations, and behavior.
+</div>
 
-**Public Speaking (Fire).** *A room is one animal with one mood, and you’re either changing it or being changed by it.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Public Speaking</span><span class="entry-tag">Fire</span></p>
+<p class="entry-flavour">A room is one animal with one mood, and you’re either changing it or being changed by it.</p>
 
 Commanding a room and structuring a spoken argument. This is a separate Skill from Performance - one is argument, the other is spectacle, and being good at one promises nothing about the other.
+</div>
 
-**Religion (Moira).** *Doctrine, history, practice, and what people actually do, which is never quite the same thing.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Religion</span><span class="entry-tag">Moira</span></p>
+<p class="entry-flavour">Doctrine, history, practice, and what people actually do, which is never quite the same thing.</p>
 
 Theology, doctrine, and religious practice.
+</div>
 
-**Research (Air).** *The answer is already written down. Somebody just filed it badly.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Research</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">The answer is already written down. Somebody just filed it badly.</p>
 
 Finding information through records, libraries, databases, and open sources. This is a separate Skill from Investigation: Investigation reads a scene, Research reads the record.
+</div>
 
-**Ritual Craft (Moira).** *The words matter. The order matters. Whether you believe them matters rather less than you’d hope.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Ritual Craft</span><span class="entry-tag">Moira</span></p>
+<p class="entry-flavour">The words matter. The order matters. Whether you believe them matters rather less than you’d hope.</p>
 
 Conducting rites, wards, and ceremonies meant to bind, invoke, or appease the supernatural. This is the hands-on practice rather than the scholarship behind it, which is Occult.
+</div>
 
-**Science (Air).** *The universe wrote its rules down somewhere. You’ve read enough of them to make a decent guess at the rest.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Science</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">The universe wrote its rules down somewhere. You’ve read enough of them to make a decent guess at the rest.</p>
 
 Broad scientific knowledge. One Skill covers every discipline - chemistry, biology, astrophysics - because a point spent here should buy you a scientist, not a specialist in one footnote.
+</div>
 
-**Security (Air).** *A lock is a delay sold as a decision. You’re the one who knows how long the delay actually is.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Security</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">A lock is a delay sold as a decision. You’re the one who knows how long the delay actually is.</p>
 
 Bypassing physical locks, safes, and alarm systems.
+</div>
 
-**Seduction (Fire).** *Attention is the whole currency. Giving it, withholding it, and knowing which one this moment wants.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Seduction</span><span class="entry-tag">Fire</span></p>
+<p class="entry-flavour">Attention is the whole currency. Giving it, withholding it, and knowing which one this moment wants.</p>
 
 Winning someone over through romantic or physical appeal.
+</div>
 
-**Shadowing (Water).** *Far enough back to be nobody, close enough to still be there when they turn.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Shadowing</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">Far enough back to be nobody, close enough to still be there when they turn.</p>
 
 Following someone without being noticed.
+</div>
 
-**Signal & Cipher (Air).** *Two people in a room full of people, having a conversation nobody else can hear.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Signal & Cipher</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Two people in a room full of people, having a conversation nobody else can hear.</p>
 
 Radio codes, hand signs, and other non-verbal communication systems.
+</div>
 
-**Sleight of Hand (Air).** *Hands are fast. Attention is slow. That gap is the entire trade.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Sleight of Hand</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Hands are fast. Attention is slow. That gap is the entire trade.</p>
 
 Pickpocketing, palming, and planting objects unnoticed.
+</div>
 
-**Smuggling (Water).** *The goods were never the problem. The paperwork, the timing, and one bored person at a checkpoint are the problem.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Smuggling</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">The goods were never the problem. The paperwork, the timing, and one bored person at a checkpoint are the problem.</p>
 
 Concealing and moving contraband past scrutiny, including modern screening and customs.
+</div>
 
-**Special Weapons.** *One specific thing that shouldn’t be in civilian hands, and you happen to know how it works.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Special Weapons</span></p>
+<p class="entry-flavour">One specific thing that shouldn’t be in civilian hands, and you happen to know how it works.</p>
 
 A single exotic or restricted-access weapon system, defined per character when it comes up - including its Element. Nobody starts with it.
+</div>
 
-**Stealth (Air).** *Slow is quiet. Everybody learns that the hard way, usually once.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Stealth</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Slow is quiet. Everybody learns that the hard way, usually once.</p>
 
 Moving unseen and unheard.
+</div>
 
-**Stewardship (Air).** *Somebody has to know what’s actually in the accounts, and it’s remarkable how often nobody does.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Stewardship</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Somebody has to know what’s actually in the accounts, and it’s remarkable how often nobody does.</p>
 
 Managing a budget, staff, property, or an organization’s resources.
+</div>
 
-**Streetwise (Moira).** *You can tell which corner is fine and which one isn’t from half a block away, and you couldn’t explain how.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Streetwise</span><span class="entry-tag">Moira</span></p>
+<p class="entry-flavour">You can tell which corner is fine and which one isn’t from half a block away, and you couldn’t explain how.</p>
 
 Navigating criminal culture, gangs, and underworld contacts.
+</div>
 
-**Surveillance (Water).** *Long, dull, and unforgiving. The one hour you stopped watching is the hour it happened.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Surveillance</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">Long, dull, and unforgiving. The one hour you stopped watching is the hour it happened.</p>
 
 Observing a target or location without being detected - physical stakeouts and technical monitoring both.
+</div>
 
-**Survival (Earth).** *The wilderness isn’t trying to kill you. It simply doesn’t care, which turns out to be worse.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Survival</span><span class="entry-tag">Earth</span></p>
+<p class="entry-flavour">The wilderness isn’t trying to kill you. It simply doesn’t care, which turns out to be worse.</p>
 
 Foraging, shelter, water, and enduring somewhere that offers no help.
+</div>
 
-**Swimming (Earth).** *Water is fine until it’s cold, or deep, or moving. Then it’s a fight, and a patient one.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Swimming</span><span class="entry-tag">Earth</span></p>
+<p class="entry-flavour">Water is fine until it’s cold, or deep, or moving. Then it’s a fight, and a patient one.</p>
 
 Moving efficiently and enduring in open water.
+</div>
 
-**Systems Operation (Air).** *A wall of readouts that means nothing to anybody else and something very specific to you.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Systems Operation</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">A wall of readouts that means nothing to anybody else and something very specific to you.</p>
 
 Operating and interpreting complex consoles, sensors, and industrial or vehicle control systems.
+</div>
 
-**Tactics (Air).** *Fights are won by whoever decided where they’d happen. That’s the job.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Tactics</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Fights are won by whoever decided where they’d happen. That’s the job.</p>
 
 Planning and directing group action, especially in conflict, without doing the fighting yourself.
+</div>
 
-**Thrown Weapons (Air).** *Distance, spin, and one moment to let go.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Thrown Weapons</span><span class="entry-tag">Air</span></p>
+<p class="entry-flavour">Distance, spin, and one moment to let go.</p>
 
 Knives, javelins, axes, and other weapons thrown by hand. The instincts are their own; a good archer is not automatically a good thrower.
+</div>
 
-**Tracking (Moira).** *The trail goes cold and you keep walking, and you’re right, and you couldn’t say why.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Tracking</span><span class="entry-tag">Moira</span></p>
+<p class="entry-flavour">The trail goes cold and you keep walking, and you’re right, and you couldn’t say why.</p>
 
 Following physical trails.
+</div>
 
-**Tradecraft (Water).** *Dead drops, signals, cover, and the discipline to be forgettable on purpose.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Tradecraft</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">Dead drops, signals, cover, and the discipline to be forgettable on purpose.</p>
 
 Spy fieldcraft - dead drops, signals, cover identities, evasion, counter-surveillance.
+</div>
 
-**Unarmed Combat (Earth).** *No reach, no edge, nothing between you and them.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Unarmed Combat</span><span class="entry-tag">Earth</span></p>
+<p class="entry-flavour">No reach, no edge, nothing between you and them.</p>
 
 Brawling, martial arts, and grappling. Also the attacker’s Skill when taking hold of someone who doesn’t want to be held.
+</div>
 
-**Veterinary Medicine (Water).** *The patient can’t tell you where it hurts, and will bite you for finding out.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Veterinary Medicine</span><span class="entry-tag">Water</span></p>
+<p class="entry-flavour">The patient can’t tell you where it hurts, and will bite you for finding out.</p>
 
 Diagnosing and treating animals.
+</div>
+
+## The Skills, at a glance
+
+| Skill | Default Element | Definition |
+|---|---|---|
+| Academics | Air | General scholarship, history, and literature. |
+| Acrobatics | Air | Balance, tumbling, and controlled falls. |
+| Animal Handling | Water | Training, calming, and directing animals. |
+| Appraisal | Air | Judging the value and authenticity of goods. |
+| Archery | Air | Bows and crossbows - drawing, aiming, and loosing a mechanically stored-energy ranged weapon. Kept as a distinct niche Skill in a modern setting rather than merged into Firearms, since almost nobody trains it as a byproduct of anything else. |
+| Athletics | Earth | Running, jumping, climbing, and lifting under exertion. |
+| Barter | Fire | Striking favorable trades and deals. |
+| Bribery | Air | Knowing how much, how, and who to pay to get what you want. |
+| Bureaucracy | Air | Navigating institutions, paperwork, permits, and red tape to get things done. |
+| Charm | Fire | Ingratiation and drawing people in. |
+| Combat Driving/Piloting | Air | Operating a vehicle under fire or in a chase, distinct from ordinary Driving/Piloting. |
+| Composition | Water | Writing music, poetry, or stories with real craft. |
+| Computer Use | Air | General computing, software, and programming - distinct from Hacking's adversarial focus. |
+| Concealment | Water | Hiding objects, caches, or hideouts from a determined search. |
+| Contortion | Air | Fitting through tight spaces and slipping restraints through flexibility. |
+| Cooking | Water | Preparing food, from the everyday to the exceptional. |
+| Crafting | Earth | Building and repairing goods in a chosen trade - covers any material or trade broadly (woodworking, metalworking, and so on) under one roll. |
+| Cryptography | Air | Creating and breaking codes, ciphers, and encryption. |
+| Deception | Water | Lying, bluffing, and fast talk. |
+| Demolitions | Earth | Safely handling, placing, and detonating explosives. |
+| Disguise | Water | Altering appearance to convincingly pass as someone else. |
+| Divination | Moira | Reading omens, portents, and the shape of what's coming - cards, bones, dreams, and other traditional methods of putting a direct question to fate. |
+| Driving | Air | Operating ground vehicles in ordinary traffic and terrain. |
+| Electronics | Air | Building, repairing, and modifying electronic devices and circuitry. |
+| Engineering | Air | Theoretical and design knowledge of structures and systems. |
+| Escapology | Water | Breaking free of restraints and confined spaces under pressure. |
+| Etiquette | Fire | Navigating social and professional protocol correctly. |
+| Farming | Earth | Cultivating crops and managing livestock. |
+| Finance | Air | Economics, markets, and accounting. |
+| Firearms | Air | Handguns, long guns, and other modern ranged weapons, covered broadly under one Skill. |
+| First Aid | Water | Immediate, field-level treatment - stabilizing, bandaging, CPR. |
+| Fishing | Water | Catching fish by line, net, or spear. |
+| Forgery | Air | Producing convincing fake documents, signatures, IDs, and digital records. |
+| Gaming | Moira | Skill at games of strategy, chance, and wagering - tabletop, esports, or otherwise. |
+| Hacking | Air | Bypassing digital security - accounts, networks, cameras, and devices. |
+| Holistic Medicine | Water | Herbal remedies, folk medicine, and non-clinical healing traditions. |
+| Housekeeping | Earth | Running and maintaining a household efficiently. |
+| Hunting | Moira | Tracking, catching, and field-dressing game - the hunter's instinct for where the quarry will be, not just the physical stalk. |
+| Improvised Weapons | Water | Fighting effectively with whatever's at hand - a chair, a bottle, a tire iron - instead of a purpose-built weapon. |
+| Insight | Moira | Reading people, sensing motive and deception - an uncanny read that goes past ordinary empathy, closer to a hunch that turns out right. |
+| Interrogation | Fire | Extracting information from an unwilling subject. |
+| Intimidation | Fire | Coercing others through implied or explicit threat. |
+| Intrigue | Air | Scheming, maneuvering, and reading the undercurrents of institutional or political conflict. |
+| Invention | Air | Designing and building original devices, not just following existing plans. |
+| Investigation | Moira | Following clues at a scene and drawing sound conclusions - the intuitive leap that makes the threads line up, not just methodical logic. |
+| Law | Air | Legal codes, procedure, and precedent. |
+| Leadership | Fire | Commanding respect and rallying others to act. |
+| Linguistics | Air | Learning, translating, and analyzing languages. |
+| Literacy | Air | Reading and writing in a specific language, distinct from speaking it. |
+| Mechanics | Earth | Repair and maintenance of vehicles and machinery. |
+| Medicine | Water | Surgery, diagnosis, and long-term clinical treatment. |
+| Melee Combat | Earth | Bladed, blunt, or improvised weapons at arm's reach. |
+| Natural World | Water | Knowledge of flora, fauna, ecosystems, and the environment. |
+| Navigation | Moira | Plotting a course and avoiding getting lost, on foot, by vehicle, or otherwise - an uncanny knack for finding the way, not just dead reckoning. |
+| Networking | Fire | Building and leveraging connections in professional, corporate, or elite circles. |
+| Occult | Moira | Esoteric lore, ritual, and the world's hidden supernatural undercurrent - grounds a character's understanding of things like Moira, fate, and what a connecting Social/Mental die is actually reaching into. Included by default rather than genre-flagged, since the setting's fated-heroes premise makes it broadly relevant rather than an opt-in module. |
+| Perception | Water | Noticing details and spotting hidden things. |
+| Performance | Fire | Acting, music, dance, or oratory before an audience, covered broadly under one Skill regardless of discipline. |
+| Persuasion | Fire | Honest argument and diplomacy. |
+| Piloting | Air | Operating aircraft or watercraft, covered broadly under one Skill regardless of vehicle type. |
+| Politics | Air | The workings of governments, agencies, and factions. |
+| Precognition | Moira | A trained, practiced sensitivity to warnings from the threads of fate itself - a step beyond an ordinary hunch, though never a guarantee. |
+| Psychoanalysis | Water | Therapy and treating mental trauma. |
+| Psychology | Water | Understanding minds, motivations, and behavior. |
+| Public Speaking | Fire | Commanding a room and structuring a spoken argument, distinct from theatrical Performance. |
+| Religion | Moira | Theology, doctrine, and religious practice. |
+| Research | Air | Finding information through records, libraries, databases, and open sources - distinct from scene-based Investigation. |
+| Ritual Craft | Moira | Conducting rites, wards, and ceremonies meant to bind, invoke, or appease the supernatural - the hands-on practice of doing the working, distinct from Occult's theory of what it means. |
+| Science | Air | Broad scientific knowledge, covering any discipline (chemistry, biology, astrophysics, and so on) under one Skill. |
+| Seduction | Fire | Winning someone over through romantic or physical appeal. |
+| Security | Air | Bypassing physical locks, safes, and alarm systems. |
+| Shadowing | Water | Following someone without being noticed. |
+| Signal & Cipher | Air | Radio codes, hand signs, and other non-verbal communication systems. |
+| Sleight of Hand | Air | Pickpocketing, palming, and planting objects unnoticed. |
+| Smuggling | Water | Concealing and moving contraband past scrutiny - including modern screening and customs. |
+| Special Weapons | Context-dependent | An exception to the broad-skill norm: a single specific exotic or restricted-access weapon system (a particular explosive device, a military-grade platform, a supernatural armament). Defined per character as it comes up, not a default anyone starts with - including its Default Element. |
+| Stealth | Air | Moving unseen and unheard. |
+| Stewardship | Air | Managing a budget, staff, property, or organization's resources. |
+| Streetwise | Moira | Navigating criminal culture, gangs, and underworld contacts - a knack for being in the right place, reading the city's undercurrents by instinct as much as legwork. |
+| Surveillance | Water | Observing a target or location without being detected - physical stakeouts and technical surveillance (wiretaps, tracking, cameras) alike. |
+| Survival | Earth | Foraging, shelter, and enduring the wilderness. |
+| Swimming | Earth | Moving efficiently and enduring in open water. |
+| Systems Operation | Air | Operating and interpreting complex consoles, sensors, and industrial or vehicle control systems. |
+| Tactics | Air | Planning and directing group action, especially in conflict, without doing the fighting yourself. |
+| Thrown Weapons | Air | Knives, javelins, axes, and other bladed or weighted weapons thrown by hand - a different body mechanic and skillset from Archery's draw-and-release. |
+| Tracking | Moira | Following physical trails - a nose for which way the trail actually goes, not pure spoor-reading. |
+| Tradecraft | Water | Spy fieldcraft - dead drops, signals, cover identities, evasion, counter-surveillance. |
+| Unarmed Combat | Earth | Brawling, martial arts, and grappling. Also the attacker's Skill for the Grapple maneuver once [rules.md](rules.md) defines one. |
+| Veterinary Medicine | Water | Diagnosing and treating animals. |

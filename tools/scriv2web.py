@@ -146,6 +146,72 @@ def restore_tables(chunks, tables):
     return cleaned
 
 
+# An entry as the book writes it: "**Amnesia (= Level).** *flavour line*",
+# then its description, then any "**1**..**5**" level lines. The same shape
+# The Brewery's entry blocks render, so the web edition renders it the same
+# way - flavour set apart, the whole thing boxed.
+ENTRY = re.compile(r"^\*\*([^*]+?)\.\*\*\s+\*(.+)\*$")
+NAME_TAG = re.compile(r"^(.*?)\s*\(([^()]*)\)\s*$")
+
+
+def wrap_entries(chunks):
+    """Box each entry, so a reader can see where one stops and the next starts."""
+    out = []
+    i = 0
+    while i < len(chunks):
+        m = ENTRY.match(chunks[i])
+        if not m:
+            out.append(chunks[i]); i += 1; continue
+        name, flavour = m.group(1).strip(), m.group(2).strip()
+        tag = ""
+        nt = NAME_TAG.match(name)
+        if nt:
+            name, tag = nt.group(1).strip(), nt.group(2).strip()
+        i += 1
+        body = []
+        while i < len(chunks) and not chunks[i].startswith("#") and not ENTRY.match(chunks[i]):
+            body.append(chunks[i]); i += 1
+        head = '<p class="entry-head"><span class="entry-name">%s</span>%s</p>' % (
+            name, ('<span class="entry-tag">%s</span>' % tag) if tag else "")
+        card = ['<div class="entry" markdown="1">', head,
+                '<p class="entry-flavour">%s</p>' % flavour]
+        if body:
+            card.append("")
+            card.append("\n\n".join(body))
+        card.append("</div>")
+        out.append("\n".join(card))
+    return out
+
+
+# Chapters whose scannable master list lives only in rules/. The prose reads
+# well and the table looks things up; the book carries both.
+AT_A_GLANCE = {
+    "flaws":     ("rules/flaws.md",          "## Flaw List", "The Flaws, at a glance"),
+    "skills":    ("rules/premade-skills.md", "## Skills",    "The Skills, at a glance"),
+    "boons":     ("rules/boons.md",          "## Boon List", "The Boons, at a glance"),
+}
+
+
+def at_a_glance(slug):
+    """The master table from a rules file, as a closing reference section."""
+    spec = AT_A_GLANCE.get(slug)
+    if not spec:
+        return None
+    path, heading, title = spec
+    text = io.open(os.path.join(ROOT, path), encoding="utf-8").read()
+    if heading not in text:
+        return None
+    rows = []
+    for line in text[text.index(heading):].split("\n")[1:]:
+        if line.startswith("|"):
+            rows.append(line)
+        elif rows:
+            break
+    if len(rows) < 3:
+        return None
+    return "## %s\n\n%s" % (title, "\n".join(rows))
+
+
 def yaml_quote(text):
     return '"' + text.replace('\\', '\\\\').replace('"', '\\"') + '"'
 
@@ -176,6 +242,10 @@ def main():
         uuid, binder_title = chapter_uuid(frag)
         chunks = to_chunks(uuid)
         chunks = restore_tables(chunks, TABLES)
+        chunks = wrap_entries(chunks)
+        glance = at_a_glance(slug)
+        if glance:
+            chunks.append(glance)
         prev_slug = CHAPTERS[i - 1][1] if i else None
         next_slug = CHAPTERS[i + 1][1] if i + 1 < len(CHAPTERS) else None
 

@@ -75,7 +75,9 @@ Creation-Wealth carries across every purchase made during this shopping pass - o
 
 ## The Resources
 
-**Base.** *Somewhere that is yours, with a door you control and nobody’s name on the lease but the one you chose.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Base</span></p>
+<p class="entry-flavour">Somewhere that is yours, with a door you control and nobody’s name on the lease but the one you chose.</p>
 
 How developed, defended, or well-equipped the headquarters/safehouse is.
 
@@ -88,8 +90,11 @@ How developed, defended, or well-equipped the headquarters/safehouse is.
 **4.** Fortified and staffed, with serious defenses and advanced equipment
 
 **5.** A near-impenetrable, fully self-sufficient stronghold
+</div>
 
-**Black Market Access.** *There is a version of every shop that doesn’t ask, doesn’t record, and doesn’t remember. You know where those are.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Black Market Access</span></p>
+<p class="entry-flavour">There is a version of every shop that doesn’t ask, doesn’t record, and doesn’t remember. You know where those are.</p>
 
 How deep into illegal or off-the-books trade the connections reach.
 
@@ -102,8 +107,11 @@ How deep into illegal or off-the-books trade the connections reach.
 **4.** Deep pull into a national or international smuggling network, most anything can be found for a price
 
 **5.** A name in the black market itself - you don’t just buy from the network, you’re a fixture in it, able to source almost anything that exists
+</div>
 
-**Contacts.** *You don’t know the answer. You know four people, and one of them will.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Contacts</span></p>
+<p class="entry-flavour">You don’t know the answer. You know four people, and one of them will.</p>
 
 How large, capable, or well-placed the network is.
 
@@ -116,8 +124,11 @@ How large, capable, or well-placed the network is.
 **4.** An extensive network with regional reach, including a few influential names
 
 **5.** A vast network reaching into any relevant field or region, including powerful people
+</div>
 
-**Corporate Backing.** *Something enormous and legitimate has decided you’re useful, and enormous legitimate things move very slowly and very hard.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Corporate Backing</span></p>
+<p class="entry-flavour">Something enormous and legitimate has decided you’re useful, and enormous legitimate things move very slowly and very hard.</p>
 
 How much a legitimate business entity can move, fund, or cover.
 
@@ -130,8 +141,11 @@ How much a legitimate business entity can move, fund, or cover.
 **4.** A major regional company, resources and cover to match, capable of weathering real investigation
 
 **5.** A multinational corporation’s backing, effectively bottomless resources and cover strong enough to survive nearly anything
+</div>
 
-**Debts Owed.** *People owe you. Not favors exactly - the other kind, the kind they can’t get out of by being busy.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Debts Owed</span></p>
+<p class="entry-flavour">People owe you. Not favors exactly - the other kind, the kind they can’t get out of by being busy.</p>
 
 How much real leverage is owed, in favors people can’t easily refuse.
 
@@ -144,8 +158,11 @@ How much real leverage is owed, in favors people can’t easily refuse.
 **4.** Debts owed by people with real capability or standing of their own, favors that can move real weight
 
 **5.** A web of serious debts reaching people of real power, the kind of leverage that can bend outcomes that matter
+</div>
 
-**Fame.** *Rooms change when you enter them. Not always in the direction you’d like.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Fame</span></p>
+<p class="entry-flavour">Rooms change when you enter them. Not always in the direction you’d like.</p>
 
 How widely recognized the character is, and how strongly people react to it.
 
@@ -158,8 +175,11 @@ How widely recognized the character is, and how strongly people react to it.
 **4.** Broadly famous - recognized by strangers regularly
 
 **5.** World-renowned, a household name
+</div>
 
-**Followers.** *People who will actually go, when you say go.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Followers</span></p>
+<p class="entry-flavour">People who will actually go, when you say go.</p>
 
 How many, how skilled, or how loyal the group is.
 
@@ -172,8 +192,11 @@ How many, how skilled, or how loyal the group is.
 **4.** A sizable, well-organized group with real capability
 
 **5.** A substantial, highly capable and loyal organization
+</div>
 
-**Fringe Benefit.** *A card, a title, or a piece of paper that opens a door most people don’t know is a door.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Fringe Benefit</span></p>
+<p class="entry-flavour">A card, a title, or a piece of paper that opens a door most people don’t know is a door.</p>
 
 The reach/exclusivity of the license, membership, clearance, or legal right.
 
@@ -186,8 +209,11 @@ The reach/exclusivity of the license, membership, clearance, or legal right.
 **4.** High-level clearance - classified access, executive-level standing
 
 **5.** Near-total access - opens virtually any door in its domain
+</div>
 
-**Guild Standing.** *Within one trade, your name means something specific, and it means it without you being present.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Guild Standing</span></p>
+<p class="entry-flavour">Within one trade, your name means something specific, and it means it without you being present.</p>
 
 How much rank and pull the character holds within a specific trade or professional body.
 
@@ -200,8 +226,11 @@ How much rank and pull the character holds within a specific trade or profession
 **4.** A leadership figure, influence reaching the guild’s regional or national body
 
 **5.** A defining figure within the guild itself, decisions of real consequence run through you
+</div>
 
-**Informant Network.** *A lot of people who see a lot of small things, and the habit of telling you about them.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Informant Network</span></p>
+<p class="entry-flavour">A lot of people who see a lot of small things, and the habit of telling you about them.</p>
 
 How wide and reliable the web of low-level eyes and ears is.
 
@@ -214,8 +243,11 @@ How wide and reliable the web of low-level eyes and ears is.
 **4.** A network with regional reach, fast enough to catch developing situations as they happen
 
 **5.** An extensive network reaching anywhere relevant, near-real-time awareness of anything worth knowing
+</div>
 
-**Legal Counsel.** *Somebody whose entire job is standing between you and the consequences, and who is good at it.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Legal Counsel</span></p>
+<p class="entry-flavour">Somebody whose entire job is standing between you and the consequences, and who is good at it.</p>
 
 How capable and well-connected the lawyer or legal team is.
 
@@ -228,8 +260,11 @@ How capable and well-connected the lawyer or legal team is.
 **4.** A firm capable of making serious charges quietly disappear, with reach into regional courts and agencies
 
 **5.** Legal firepower capable of making almost anything short of the worst crimes vanish, nationally
+</div>
 
-**Media Contact.** *A story runs, or it doesn’t. Somebody decides that, and you know them.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Media Contact</span></p>
+<p class="entry-flavour">A story runs, or it doesn’t. Somebody decides that, and you know them.</p>
 
 How much a story can be shaped, planted, or killed before it runs.
 
@@ -242,8 +277,11 @@ How much a story can be shaped, planted, or killed before it runs.
 **4.** Influence reaching national media - a story dies or runs the way you want it to, most of the time
 
 **5.** Command of the narrative at a national or international level - what the world believes happened is substantially up to you
+</div>
 
-**Medical Access.** *Care that happens quietly, competently, and without a form asking how this occurred.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Medical Access</span></p>
+<p class="entry-flavour">Care that happens quietly, competently, and without a form asking how this occurred.</p>
 
 How much discreet, high-quality medical care can be called on.
 
@@ -256,8 +294,11 @@ How much discreet, high-quality medical care can be called on.
 **4.** A private hospital wing or trauma team on standby, capable of handling serious, unusual injuries
 
 **5.** A world-class covert medical operation, capable of handling anything short of death itself, anywhere you can reach it
+</div>
 
-**Occult Library.** *Shelves of things most people would find dull and a few people would burn the building to reach.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Occult Library</span></p>
+<p class="entry-flavour">Shelves of things most people would find dull and a few people would burn the building to reach.</p>
 
 How comprehensive, rare, or dangerous the collection of esoteric material is.
 
@@ -270,8 +311,11 @@ How comprehensive, rare, or dangerous the collection of esoteric material is.
 **4.** A renowned archive sought after by scholars and occultists alike, holding material found nowhere else publicly
 
 **5.** A legendary collection - texts thought lost or mythical; knowledge dangerous enough that possessing it alone draws attention
+</div>
 
-**Safehouse Network.** *Somewhere to go that isn’t home, in more than one direction, already stocked.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Safehouse Network</span></p>
+<p class="entry-flavour">Somewhere to go that isn’t home, in more than one direction, already stocked.</p>
 
 How many scattered bolt-holes are maintained, and how well-stocked each is.
 
@@ -284,8 +328,11 @@ How many scattered bolt-holes are maintained, and how well-stocked each is.
 **4.** A network reaching into neighboring regions, with a few sites hardened and hidden well enough to withstand real searching
 
 **5.** A network spanning the whole country (or equivalent scale), any site capable of disappearing you completely, indefinitely
+</div>
 
-**Sanctuary Standing.** *One patch of ground where you’re protected, and everyone on it knows it.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Sanctuary Standing</span></p>
+<p class="entry-flavour">One patch of ground where you’re protected, and everyone on it knows it.</p>
 
 How protected the character is within one specific safe territory.
 
@@ -298,8 +345,11 @@ How protected the character is within one specific safe territory.
 **4.** A significant, well-known sanctuary, respected and enforced across multiple factions
 
 **5.** A sanctuary recognized and honored practically everywhere relevant, violating it carries consequences almost no one is willing to risk
+</div>
 
-**Signature Possession.** *One object. Yours specifically, known to be yours, and worth something to somebody.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Signature Possession</span></p>
+<p class="entry-flavour">One object. Yours specifically, known to be yours, and worth something to somebody.</p>
 
 How significant the one prized item owned actually is.
 
@@ -312,8 +362,11 @@ How significant the one prized item owned actually is.
 **4.** An item of real renown, recognized on sight by anyone versed in its field
 
 **5.** A legendary item, known even to people who’ve never seen it - and often coveted because of it
+</div>
 
-**Spiritual Standing.** *Within one faith, your word carries weight that has nothing to do with what you can prove.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Spiritual Standing</span></p>
+<p class="entry-flavour">Within one faith, your word carries weight that has nothing to do with what you can prove.</p>
 
 How much weight the character’s name carries within a specific religious or spiritual community.
 
@@ -326,8 +379,11 @@ How much weight the character’s name carries within a specific religious or sp
 **4.** A recognized leader or elder, influence reaching related communities elsewhere
 
 **5.** A figure of real spiritual significance, recognized and deferred to across the faith or tradition broadly
+</div>
 
-**System Access.** *Doors that aren’t doors, opened with credentials that are genuinely yours.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">System Access</span></p>
+<p class="entry-flavour">Doors that aren’t doors, opened with credentials that are genuinely yours.</p>
 
 How deep and wide the character’s reach into digital systems and networks already is.
 
@@ -340,8 +396,11 @@ How deep and wide the character’s reach into digital systems and networks alre
 **4.** Deep access into high-security systems - classified government or corporate networks, real backdoors
 
 **5.** Near-total digital reach - access into almost any system that exists, the kind of reach that alarms anyone who learns of it
+</div>
 
-**Territory.** *Actual ground that answers to you. Not owned - that’s different, and easier.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Territory</span></p>
+<p class="entry-flavour">Actual ground that answers to you. Not owned - that’s different, and easier.</p>
 
 How much real ground answers to the character specifically.
 
@@ -354,8 +413,11 @@ How much real ground answers to the character specifically.
 **4.** A substantial stretch of a city, real infrastructure and people answering to you
 
 **5.** Territory on the scale of a city or region, genuinely yours in every practical sense
+</div>
 
-**Underworld Reputation.** *In the parts of town with no signage, people have heard of you, and they’ve heard something specific.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Underworld Reputation</span></p>
+<p class="entry-flavour">In the parts of town with no signage, people have heard of you, and they’ve heard something specific.</p>
 
 How known, trusted, or feared the character is within criminal and hidden-world circles.
 
@@ -368,8 +430,11 @@ How known, trusted, or feared the character is within criminal and hidden-world 
 **4.** Known regionally among serious players - crime bosses, cartels, syndicates - as someone to reckon with
 
 **5.** A legend in the underworld nationally or beyond, invoked as a cautionary tale or a name that opens (or closes) any door
+</div>
 
-**Vehicle.** *It gets you there, and people notice which one it is.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Vehicle</span></p>
+<p class="entry-flavour">It gets you there, and people notice which one it is.</p>
 
 How distinctive, capable, or valuable the vehicle is.
 
@@ -382,8 +447,11 @@ How distinctive, capable, or valuable the vehicle is.
 **4.** Rare and exceptional - armored, military-grade, or famous
 
 **5.** One-of-a-kind, legendary in capability or reputation
+</div>
 
-**Wealth.** *Money you can actually reach, which is a different thing from money you technically have.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Wealth</span></p>
+<p class="entry-flavour">Money you can actually reach, which is a different thing from money you technically have.</p>
 
 How much disposable financial resource is available to draw on.
 
@@ -396,3 +464,4 @@ How much disposable financial resource is available to draw on.
 **4.** Very wealthy; can finance a major undertaking outright
 
 **5.** A fortune large enough to move markets or bankroll entire operations
+</div>
