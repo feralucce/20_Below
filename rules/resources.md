@@ -6,7 +6,7 @@ A structurally different kind of thing from [Boons](boons.md): a scalable resour
 
 A Resource represents a currency or standing the character can draw on or lean on narratively - money, contacts, a reputation, a home base - not a bonus applied to a roll. Each Resource is rated **1-5**, and each level is a cumulative, defined step up in scope, not a numeric roll bonus.
 
-**Cost**: at character creation, each level costs a flat **1 point** from the [Resources pool](character-creation.md#resources-pool) - a Resource at Level 3 costs 3 points total. After creation, raising a Resource by one level costs a flat **3 XP** per step.
+**Cost**: at character creation, each level costs a flat **1 point** from the [Resources pool](character-creation.md#resources-pool) - a Resource at Level 3 costs 3 points total. After creation, acquiring a Resource you don't have costs a flat **4 XP**, and every level after that costs **3 XP per level you're leaving** - Level 1 to 2 costs 3, Level 4 to 5 costs 12.
 
 ## Pushing a Resource
 
