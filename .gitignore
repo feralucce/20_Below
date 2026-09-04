@@ -20,3 +20,6 @@ brewer-desktop/src-tauri/frontend-dist/
 # Manuscript -> Brewery conversion output (tools/scriv2brew.py). Regenerated
 # from the Scrivener project on demand - the manuscript is the source, not this.
 build/
+
+# Python bytecode from tools/
+__pycache__/

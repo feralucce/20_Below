@@ -4,3 +4,7 @@ defaults:
       path: "rules"
     values:
       layout: "rules"
+  - scope:
+      path: "webbook"
+    values:
+      layout: "webbook"
