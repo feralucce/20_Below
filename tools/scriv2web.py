@@ -191,7 +191,55 @@ def wrap_entries(chunks):
     return out
 
 
-def wrap_headed_entries(chunks, after):
+def gift_lists(path):
+    """Per Gift, its Adders and Limiters as the rules file bullets them.
+
+    The manuscript runs all three Adders together in one paragraph, so on the
+    page they arrive as a wall - "...no Ki cost. **Silent Landing** (Lesser,
+    3 pts): land without...". Splitting that back apart by punctuation is
+    guesswork; rules/gifts.md already has them as a list, one per line.
+    """
+    text = io.open(path, encoding="utf-8").read()
+    out = {}
+    for section in text.split("\n### ")[1:]:
+        name = section.split("\n", 1)[0].strip()
+        lists = {}
+        for label in ("Adders", "Limiters"):
+            m = re.search(r"^\*\*%s\*\*:?\s*$" % label, section, re.M)
+            if not m:
+                continue
+            bullets = []
+            for line in section[m.end():].split("\n"):
+                if line.startswith("- "):
+                    bullets.append(line)
+                elif bullets and line.strip():
+                    break
+            if bullets:
+                lists[label] = "\n".join(bullets)
+        out[name] = lists
+    return out
+
+
+def relist(body, lists):
+    """Swap a run-together Adders/Limiters paragraph for the bulleted version."""
+    out = []
+    expecting = None
+    for chunk in body:
+        label = chunk.strip("*: ").strip()
+        if chunk.startswith("**") and label in ("Adders", "Limiters"):
+            expecting = label
+            out.append(chunk)
+            continue
+        if expecting and lists.get(expecting):
+            out.append(lists[expecting])
+            expecting = None
+            continue
+        expecting = None
+        out.append(chunk)
+    return out
+
+
+def wrap_headed_entries(chunks, after, lists_by_name=None):
     """Box every "## Name" section following `after`, one card each.
 
     Gifts are not written like Skills or Boons - each is a heading with its
@@ -214,6 +262,8 @@ def wrap_headed_entries(chunks, after):
         body = []
         while i < len(chunks) and not chunks[i].startswith("## "):
             body.append(chunks[i]); i += 1
+        if lists_by_name:
+            body = relist(body, lists_by_name.get(head[3:].strip(), {}))
         card = ['<div class="entry entry-headed" markdown="1">', "", head, ""]
         if body and body[0].startswith("*") and body[0].endswith("*") and "\n" not in body[0]:
             card.append('<p class="entry-flavour">%s</p>' % body[0].strip("*").strip())
@@ -307,7 +357,9 @@ def main():
         chunks = restore_tables(chunks, tables_for.get(slug, []))
         chunks = wrap_entries(chunks)
         if slug == "gifts":
-            chunks = wrap_headed_entries(chunks, "## The Gift List")
+            chunks = wrap_headed_entries(
+                chunks, "## The Gift List",
+                gift_lists(os.path.join(ROOT, "rules", "gifts.md")))
         glance = at_a_glance(slug)
         if glance:
             chunks.append(glance)

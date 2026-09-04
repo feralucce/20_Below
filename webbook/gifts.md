@@ -61,11 +61,15 @@ The alternate form is built once, at creation, spending a points pool (below) on
 
 **Adders**
 
-**Partial Shift** (Lesser, 3 pts): shift a single body part (hands to claws, eyes, wings) without a full transformation - no action cost, no Gift Check - but only one build-menu option’s benefit applies at a time, not the whole form. **Extended Reserve** (Greater, 6 pts): the build-menu pool at every Level is permanently +3 points bigger. **Second Form** (Greater, 6 pts): build a second alternate form on the same pool, chosen independently at creation. Switching still triggers the Gift Check each time.
+- **Partial Shift** (Lesser, 3 pts): shift a single body part (hands to claws, eyes, wings) without a full transformation - no action cost, no Gift Check - but only one build-menu option's benefit applies at a time, not the whole form.
+- **Extended Reserve** (Greater, 6 pts): the build-menu pool at every Level is permanently +3 points bigger.
+- **Second Form** (Greater, 6 pts): build a second alternate form on the same pool, chosen independently at creation. Switching still triggers the Gift Check each time.
 
 **Limiters**
 
-**Slow to Invoke**: transforming takes a full Minute instead of a Slow action. **Involuntary Trigger**: the form activates automatically under a specific stress condition (mortal danger, strong emotion, GM’s call at creation) and can’t be suppressed once triggered. **Fixed Duration**: the form can’t be voluntarily dropped early. It lasts a flat Scene, then reverts on its own.
+- **Slow to Invoke**: transforming takes a full Minute instead of a Slow action.
+- **Involuntary Trigger**: the form activates automatically under a specific stress condition (mortal danger, strong emotion, GM's call at creation) and can't be suppressed once triggered.
+- **Fixed Duration**: the form can't be voluntarily dropped early. It lasts a flat Scene, then reverts on its own.
 
 **1** - 2 points
 
@@ -94,11 +98,16 @@ The alternate form is built once, at creation, spending a points pool (below) on
 
 **Adders**
 
-**Beast Steed** (Lesser, 3 pts): your Animal Companion can carry you as a mount. While mounted, your Movement Rate matches the Companion’s own. **Speak for the Wild** (Lesser, 3 pts): once per Scene, ask an animal what it’s seen or sensed recently - a real memory read, not just its current instinct-level state. **Swarm Companion** (Lesser, 3 pts): your Animal Companion is a swarm of small creatures (rats, birds, insects) acting as one, not a single creature. Same stats and progression as an ordinary Companion, but immune to attacks that require a single physical target, and takes double dice from any attack that hits an area. Stacks with Second Companion. **Second Companion** (Greater, 6 pts): gain a second Animal Companion, built and advanced identically to the first.
+- **Beast Steed** (Lesser, 3 pts): your Animal Companion can carry you as a mount. While mounted, your Movement Rate matches the Companion's own.
+- **Speak for the Wild** (Lesser, 3 pts): once per Scene, ask an animal what it's seen or sensed recently - a real memory read, not just its current instinct-level state.
+- **Swarm Companion** (Lesser, 3 pts): your Animal Companion is a swarm of small creatures (rats, birds, insects) acting as one, not a single creature. Same stats and progression as an ordinary Companion, but immune to attacks that require a single physical target, and takes double dice from any attack that hits an area. Stacks with Second Companion.
+- **Second Companion** (Greater, 6 pts): gain a second Animal Companion, built and advanced identically to the first.
 
 **Limiters**
 
-**Single Species**: the Gift only works on one chosen species, not animals in general. **No Companion**: you never gain the free Animal Companion at Level 2. Can be bought off later with XP, per the standard Limiter buy-off rate. **Vocal Component**: using the Gift requires speaking or making an audible animal call. Doesn’t work if you’re silenced, gagged, or otherwise unable to vocalize.
+- **Single Species**: the Gift only works on one chosen species, not animals in general.
+- **No Companion**: you never gain the free Animal Companion at Level 2. Like every Limiter, this is permanent - it defines what the Gift is, and no amount of XP removes it.
+- **Vocal Component**: using the Gift requires speaking or making an audible animal call. Doesn't work if you're silenced, gagged, or otherwise unable to vocalize.
 
 **1** - Roll **Moira + Difficulty** to calm an agitated animal or exchange simple, instinct-level understanding with it (hunger, fear, the direction of danger) - one ordinary animal at a time, within Close range. Is a Normal action. No Ki, no Gift Check.
 
@@ -119,11 +128,16 @@ The alternate form is built once, at creation, spending a points pool (below) on
 
 **Adders**
 
-**Feeds on Pain** (Lesser, 3 pts): Fury’s bonus dice also apply to Melee grapples and contested Potence rolls, not just attacks. **Undying Focus** (Lesser, 3 pts): Level 4’s Social exemption extends to Mental rolls too - Fury no longer imposes Disadvantage on anything. **Contagious Rage** (Greater, 6 pts): once per Scene, spend 1 Ki to grant one ally within Close range half your current Fury bonus (round down) as bonus dice on their own next Physical attack. **Overflowing** (Greater, 6 pts): Last Stand can be triggered a second time per Scene, though the second use costs 1 Ki.
+- **Feeds on Pain** (Lesser, 3 pts): Fury's bonus dice also apply to Melee grapples and contested Potence rolls, not just attacks.
+- **Undying Focus** (Lesser, 3 pts): Level 4's Social exemption extends to Mental rolls too - Fury no longer imposes Disadvantage on anything.
+- **Contagious Rage** (Greater, 6 pts): once per Scene, spend 1 Ki to grant one ally within Close range half your current Fury bonus (round down) as bonus dice on their own next Physical attack.
+- **Overflowing** (Greater, 6 pts): Last Stand can be triggered a second time per Scene, though the second use costs 1 Ki.
 
 **Limiters**
 
-**No Off Switch**: Fury’s Disadvantage never goes away, even at Level 4+ - it always applies to Social and Mental rolls both. **Reckless Momentum**: while any Fury bonus is active, you can’t voluntarily retreat or disengage from a fight you’re already in. **Crash**: when your Fury bonus drops back to 0 (healed past the missing-HL threshold, or the Scene ends), you’re at Disadvantage on all rolls until your next Short Rest.
+- **No Off Switch**: Fury's Disadvantage never goes away, even at Level 4+ - it always applies to Social and Mental rolls both.
+- **Reckless Momentum**: while any Fury bonus is active, you can't voluntarily retreat or disengage from a fight you're already in.
+- **Crash**: when your Fury bonus drops back to 0 (healed past the missing-HL threshold, or the Scene ends), you're at Disadvantage on all rolls until your next Short Rest.
 
 **1** - **Rising Fury**: while you have at least 1 Health Level missing, add bonus dice to your Physical attacks equal to half your missing Health Levels (round down), capped at **2**. While any Fury bonus is active, you’re at Disadvantage on Social and Mental rolls - nothing gets through but the fight in front of you.
 
@@ -144,11 +158,15 @@ The alternate form is built once, at creation, spending a points pool (below) on
 
 **Adders**
 
-**Split Focus** (Lesser, 3 pts): divide the vision between two locations at once, each getting a proportionally weaker (GM-adjudicated) picture, instead of one full-strength vision. **Anchor Point** (Lesser, 3 pts): designate a person or object beforehand. You may reflexively snap your vision to it once per Scene, even mid-action, without spending the normal Slow action to project. **Tandem Sight** (Greater, 6 pts): bring one other willing person along for the ride - they share what you see and hear for the vision’s duration, no separate roll needed.
+- **Split Focus** (Lesser, 3 pts): divide the vision between two locations at once, each getting a proportionally weaker (GM-adjudicated) picture, instead of one full-strength vision.
+- **Anchor Point** (Lesser, 3 pts): designate a person or object beforehand. You may reflexively snap your vision to it once per Scene, even mid-action, without spending the normal Slow action to project.
+- **Tandem Sight** (Greater, 6 pts): bring one other willing person along for the ride - they share what you see and hear for the vision's duration, no separate roll needed.
 
 **Limiters**
 
-**Vulnerable While Projecting**: your body is left slumped and unaware of its surroundings while your sight is elsewhere - no passive Perception, Disadvantage on any roll to notice danger to your physical body. **Tethered Sight**: the Gift only works on a fixed set of pre-tuned static locations - one slot per Level held in this Gift. Retargeting an existing slot to a new location requires spending a full evening or rest period retuning your sight to it. Level 4-5’s follow-a-person and unknown-location capabilities never apply, since every use has to land on one of your tuned slots. **One-Way Mirror**: anyone at the destination with a supernatural sense for it can always tell they’re being watched, no roll required.
+- **Vulnerable While Projecting**: your body is left slumped and unaware of its surroundings while your sight is elsewhere - no passive Perception, Disadvantage on any roll to notice danger to your physical body.
+- **Tethered Sight**: the Gift only works on a fixed set of pre-tuned static locations - one slot per Level held in this Gift. Retargeting an existing slot to a new location requires spending a full evening or rest period retuning your sight to it. Level 4-5's follow-a-person and unknown-location capabilities never apply, since every use has to land on one of your tuned slots.
+- **One-Way Mirror**: anyone at the destination with a supernatural sense for it can always tell they're being watched, no roll required.
 
 **1** - Roll **Moira + Difficulty** (harder the less familiar the place) to project your sight to somewhere you’ve personally been before. Is a Slow action, sight only - no sound - lasting a few minutes or until broken.
 
@@ -171,11 +189,15 @@ Chosen once, at creation: **Always There** (visible and permanent - can’t be h
 
 **Adders**
 
-**Honed Technique** (Lesser, 3 pts): practiced timing and footwork let you close the last few feet as part of the strike itself - your claws/fangs threaten Close range as well as Melee, no literal reach involved. **Venomous** (Lesser, 3 pts): add a poison to a successful hit: 1 Ki, target takes Disadvantage on physical rolls until treated, separate from and stacking with the rending effect. **Sunder** (Greater, 6 pts): on a successful hit, spend 1 Ki to also deal damage to a weapon or piece of equipment the target is holding/wearing, treating it as a second, simultaneous attack.
+- **Honed Technique** (Lesser, 3 pts): practiced timing and footwork let you close the last few feet as part of the strike itself - your claws/fangs threaten Close range as well as Melee, no literal reach involved.
+- **Venomous** (Lesser, 3 pts): add a poison to a successful hit: 1 Ki, target takes Disadvantage on physical rolls until treated, separate from and stacking with the rending effect.
+- **Sunder** (Greater, 6 pts): on a successful hit, spend 1 Ki to also deal damage to a weapon or piece of equipment the target is holding/wearing, treating it as a second, simultaneous attack.
 
 **Limiters**
 
-**Feral Grip**: can’t hold, use, or manipulate manufactured weapons or fine tools while your claws/fangs are deployed. **One-Way Weapon**: the Stowable option is unavailable - your claws/fangs are always Always There, visible and permanent, no choice at creation. **Fragile Edge**: your natural weapon’s damage die drops by one step (6d10 caps at 5d10, etc.) against anything with Soak equal to or greater than your Potence.
+- **Feral Grip**: can't hold, use, or manipulate manufactured weapons or fine tools while your claws/fangs are deployed.
+- **One-Way Weapon**: the Stowable option is unavailable - your claws/fangs are always Always There, visible and permanent, no choice at creation.
+- **Fragile Edge**: your natural weapon's damage die drops by one step (6d10 caps at 5d10, etc.) against anything with Soak equal to or greater than your Potence.
 
 **1** - Your claws or fangs deal **2d10**, resolved with the same per-die-vs-Soak mechanic as any weapon. Always available in Melee range - no action spent drawing or readying it. Always There costs nothing to use; Stowable triggers the Gift Check on each deployment.
 
@@ -198,11 +220,15 @@ Chosen once, at creation: your **signature weapon**, any single item from weapon
 
 **Adders**
 
-**Bonded Blade** (Lesser, 3 pts): your signature weapon carries a permanent edge no other conjured weapon does - its Damage bonus (Level 3+) is always **+1** higher than any other weapon you conjure, forged specifically for your hand. **Armory of Anything** (Lesser, 3 pts): your conjured weapons can include improvised or exotic options beyond the standard catalog (a chainsaw, a fire axe, a katana pulled from pure aesthetic) - GM’s call on stats, using the closest catalog equivalent. **Twin Draw** (Greater, 6 pts): once per Scene, conjure a second weapon alongside your first at no extra cost, usable for a second attack within the same Normal action bracket.
+- **Bonded Blade** (Lesser, 3 pts): your signature weapon carries a permanent edge no other conjured weapon does - its Damage bonus (Level 3+) is always **+1** higher than any other weapon you conjure, forged specifically for your hand.
+- **Armory of Anything** (Lesser, 3 pts): your conjured weapons can include improvised or exotic options beyond the standard catalog (a chainsaw, a fire axe, a katana pulled from pure aesthetic) - GM's call on stats, using the closest catalog equivalent.
+- **Twin Draw** (Greater, 6 pts): once per Scene, conjure a second weapon alongside your first at no extra cost, usable for a second attack within the same Normal action bracket.
 
 **Limiters**
 
-**Slow Return**: dismissing a weapon isn’t instant - it takes a full Fast action to banish it. **Borrowed, Not Owned**: a conjured weapon vanishes if it ever leaves your grip involuntarily (disarmed, knocked away) - you must re-summon rather than immediately recall it. **Visible Conjuring**: summoning is never subtle - it’s always an obvious flash or effect visible to everyone nearby, no way to conceal that you’re using a Gift.
+- **Slow Return**: dismissing a weapon isn't instant - it takes a full Fast action to banish it.
+- **Borrowed, Not Owned**: a conjured weapon vanishes if it ever leaves your grip involuntarily (disarmed, knocked away) - you must re-summon rather than immediately recall it.
+- **Visible Conjuring**: summoning is never subtle - it's always an obvious flash or effect visible to everyone nearby, no way to conceal that you're using a Gift.
 
 **1** - Summon your signature weapon into your hand as a **Fast action**, no Ki cost. It deals its normal listed Damage and range. Dismissing it is free and instant. It never runs dry - ammo, if any, is never actually a concern, though you’re free to roleplay reloading.
 
@@ -225,11 +251,15 @@ Chosen once, at creation: your **signature weapon**, any single item from weapon
 
 **Adders**
 
-**Retained Impression** (Lesser, 3 pts): once you’ve mimicked a specific person’s capability, watching them again re-triggers it at half Ki cost (rounded up) for the rest of that session. **Group Study** (Lesser, 3 pts): you may watch multiple targets in the same scene and hold a separate mimicked capability from each, rather than one overwriting the last. **Perfect Copy** (Greater, 6 pts): a mimicked Gift capability comes with any Adders the original had unlocked, not just its bare Level effect.
+- **Retained Impression** (Lesser, 3 pts): once you've mimicked a specific person's capability, watching them again re-triggers it at half Ki cost (rounded up) for the rest of that session.
+- **Group Study** (Lesser, 3 pts): you may watch multiple targets in the same scene and hold a separate mimicked capability from each, rather than one overwriting the last.
+- **Perfect Copy** (Greater, 6 pts): a mimicked Gift capability comes with any Adders the original had unlocked, not just its bare Level effect.
 
 **Limiters**
 
-**One at a Time**: you can only hold a single mimicked capability at once, at any Level - Level 5’s “all three at once” clause never applies. **Live Feed Only**: the target must still be within your sight when you activate a mimicked capability, not just at the moment you first watched it. **Echo, Not Original**: a mimicked Gift capability never benefits from your own Moira, Ki totals, or other bonuses beyond what the roll itself requires - it runs at the exact numbers you watched, even if worse than your own stats would produce.
+- **One at a Time**: you can only hold a single mimicked capability at once, at any Level - Level 5's "all three at once" clause never applies.
+- **Live Feed Only**: the target must still be within your sight when you activate a mimicked capability, not just at the moment you first watched it.
+- **Echo, Not Original**: a mimicked Gift capability never benefits from your own Moira, Ki totals, or other bonuses beyond what the roll itself requires - it runs at the exact numbers you watched, even if worse than your own stats would produce.
 
 **1** - Watch a target use a Skill, then spend **1 Ki** and roll **Moira + Difficulty** to borrow it: for the rest of the scene, use that Skill yourself, treated as Trained even with no training of your own (or your own tier, if already higher).
 
@@ -258,11 +288,16 @@ The build is set once at creation, spending a points pool (below) on the build m
 
 **Adders**
 
-**Overclock Surge** (Lesser, 3 pts): spend 1 Ki to push one installed augmentation to double effect for a single action. **Backup Power Cell** (Lesser, 3 pts): once per Scene, ignore an effect that would otherwise disable your augmentations. **Full Conversion** (Greater, 6 pts): the build-menu pool at every Level is permanently +3 points bigger. **Reconfigurable** (Greater, 6 pts): with an hour of focused work, swap your build-menu loadout for a different selection of equal or lesser total cost.
+- **Overclock Surge** (Lesser, 3 pts): spend 1 Ki to push one installed augmentation to double effect for a single action.
+- **Backup Power Cell** (Lesser, 3 pts): once per Scene, ignore an effect that would otherwise disable your augmentations.
+- **Full Conversion** (Greater, 6 pts): the build-menu pool at every Level is permanently +3 points bigger.
+- **Reconfigurable** (Greater, 6 pts): with an hour of focused work, swap your build-menu loadout for a different selection of equal or lesser total cost.
 
 **Limiters**
 
-**Vulnerable to EMP**: electromagnetic effects, a Technokinesis-style intrusion, or a dedicated anti-tech weapon disable your augmentations for the rest of the Scene on a hit. **Visible Hardware**: your augmentations are visible, not concealable under normal clothing - no passing as unaugmented. **Maintenance Dependent**: without downtime and access to tools between sessions, GM’s call whether an augmentation glitches out for the session.
+- **Vulnerable to EMP**: electromagnetic effects, a Technokinesis-style intrusion, or a dedicated anti-tech weapon disable your augmentations for the rest of the Scene on a hit.
+- **Visible Hardware**: your augmentations are visible, not concealable under normal clothing - no passing as unaugmented.
+- **Maintenance Dependent**: without downtime and access to tools between sessions, GM's call whether an augmentation glitches out for the session.
 
 **1** - 2 points
 
@@ -307,11 +342,15 @@ The build is set once at creation, spending a points pool (below) on the build m
 
 **Adders**
 
-**Lingering Dampener** (Lesser, 3 pts): the single-target tax/shutdown (Levels 1-3) persists for a full Day instead of just the rest of the scene. **Ki Bleed** (Lesser, 3 pts): when your field (Level 4+) is active, spend 1 Ki to siphon 1 Ki directly from a target inside it into your own pool. **Anchor the Field** (Greater, 6 pts): your field (Level 4+) stays up after you leave it or fall unconscious, persisting until the scene ends or you choose to drop it.
+- **Lingering Dampener** (Lesser, 3 pts): the single-target tax/shutdown (Levels 1-3) persists for a full Day instead of just the rest of the scene.
+- **Ki Bleed** (Lesser, 3 pts): when your field (Level 4+) is active, spend 1 Ki to siphon 1 Ki directly from a target inside it into your own pool.
+- **Anchor the Field** (Greater, 6 pts): your field (Level 4+) stays up after you leave it or fall unconscious, persisting until the scene ends or you choose to drop it.
 
 **Limiters**
 
-**Indiscriminate**: your field (Level 4+) can’t be tuned to exclude allies - it suppresses everyone inside, including yourself and your own Gift uses. **Warning Shimmer**: the air visibly distorts around you whenever this Gift is active at any Level - it can never be used covertly. **Costs You Too**: every Ki spend for this Gift is doubled, rounded up (so Level 1’s single-target tax costs 2 Ki instead of 1), at every Level, with no exceptions.
+- **Indiscriminate**: your field (Level 4+) can't be tuned to exclude allies - it suppresses everyone inside, including yourself and your own Gift uses.
+- **Warning Shimmer**: the air visibly distorts around you whenever this Gift is active at any Level - it can never be used covertly.
+- **Costs You Too**: every Ki spend for this Gift is doubled, rounded up (so Level 1's single-target tax costs 2 Ki instead of 1), at every Level, with no exceptions.
 
 **1** - Touch or **Close** range, single target. Spend **1 Ki**, no roll: for the rest of the scene, that target’s Gift uses cost double Ki, rounded up (a normally-free use instead costs 1 Ki).
 
@@ -334,11 +373,15 @@ As with any Mental attack, additional Ki Infusion (1 Ki per die) can push indivi
 
 **Adders**
 
-**Blind Command** (Lesser, 3 pts): issue a command over a phone call, recording, or any medium carrying your voice and intent, not just direct eye contact. **False Memory of Consent** (Lesser, 3 pts): the target has no memory of being commanded - the compliance feels, to them, like it was their own idea. **Standing Order** (Greater, 6 pts): a delayed/triggered command (Level 3+) can be reset and reused against the same target without needing to re-establish eye contact and pay the Ki cost again, so long as the original condition hasn’t yet fired.
+- **Blind Command** (Lesser, 3 pts): issue a command over a phone call, recording, or any medium carrying your voice and intent, not just direct eye contact.
+- **False Memory of Consent** (Lesser, 3 pts): the target has no memory of being commanded - the compliance feels, to them, like it was their own idea.
+- **Standing Order** (Greater, 6 pts): a delayed/triggered command (Level 3+) can be reset and reused against the same target without needing to re-establish eye contact and pay the Ki cost again, so long as the original condition hasn't yet fired.
 
 **Limiters**
 
-**One Word, Always**: commands never advance past Level 1’s single-word simplicity, regardless of Gift Level bought - Level 2’s sentence/complexity upgrade never applies. **Fragile Hold**: any command that would cause the target visible distress or conflict with their core values ends immediately and can’t be reattempted against them for a full Day. **Marked Predator**: anyone who succeeds a Psyche roll against you afterward instinctively recognizes you as a Domination user on sight, permanently, whether or not they were ever a target.
+- **One Word, Always**: commands never advance past Level 1's single-word simplicity, regardless of Gift Level bought - Level 2's sentence/complexity upgrade never applies.
+- **Fragile Hold**: any command that would cause the target visible distress or conflict with their core values ends immediately and can't be reattempted against them for a full Day.
+- **Marked Predator**: anyone who succeeds a Psyche roll against you afterward instinctively recognizes you as a Domination user on sight, permanently, whether or not they were ever a target.
 
 **1** - Requires eye contact. Spend **1 Ki** and roll **2d10** per-die against the target’s Psyche wall - a connecting die lets you issue a single-word command (“stop,” “sleep,” “drop it”) that they obey for one action or moment. Commands resulting in self-harm or serious injury automatically fail.
 
@@ -365,11 +408,17 @@ As with any Mental attack, additional Ki Infusion (1 Ki per die) can push indivi
 
 **Adders**
 
-**Redundant Systems** (Lesser, 3 pts): drones’ Health Levels rise by 1 each, at every Level. **Rapid Redeploy** (Lesser, 3 pts): when a drone is destroyed, spend 1 Ki to deploy a replacement immediately as a Fast action. **Swarm Tactics** (Greater, 6 pts): while jacked into one drone, every other deployed drone’s Output Rating also gains the +2 Jack-In bonus, coordinated off the same sync. **Emergency Eject** (Greater, 6 pts): if your jacked-in drone is destroyed, spend 1 Ki to disengage cleanly instead of the normal disorientation (Disadvantage on your next roll).
+- **Redundant Systems** (Lesser, 3 pts): drones' Health Levels rise by 1 each, at every Level.
+- **Rapid Redeploy** (Lesser, 3 pts): when a drone is destroyed, spend 1 Ki to deploy a replacement immediately as a Fast action.
+- **Swarm Tactics** (Greater, 6 pts): while jacked into one drone, every other deployed drone's Output Rating also gains the +2 Jack-In bonus, coordinated off the same sync.
+- **Emergency Eject** (Greater, 6 pts): if your jacked-in drone is destroyed, spend 1 Ki to disengage cleanly instead of the normal disorientation (Disadvantage on your next roll).
 
 **Limiters**
 
-**Short Leash**: drones (and Jack In) stop functioning beyond Close range of you. **One at a Time**: while jacked into one drone, every other deployed drone freezes in place until you disengage. **Fragile Fleet**: drones’ Health Levels are permanently 1 lower at every Level, minimum 1. **Exposed While Jacked**: Level 5’s “still take Fast actions” benefit never applies - your body stays fully defenseless the whole time, at every Level.
+- **Short Leash**: drones (and Jack In) stop functioning beyond Close range of you.
+- **One at a Time**: while jacked into one drone, every other deployed drone freezes in place until you disengage.
+- **Fragile Fleet**: drones' Health Levels are permanently 1 lower at every Level, minimum 1.
+- **Exposed While Jacked**: Level 5's "still take Fast actions" benefit never applies - your body stays fully defenseless the whole time, at every Level.
 
 **1** - **Deploy Drones**: spend 1 Ki as a Slow action to deploy up to **2** drones from your gear, each built as one of nine types (below), chosen when constructed. Reconfiguring a drone into a different type takes **2 hours** of dedicated work outside of combat - the drone count never changes, just what each one is. Drones last until destroyed or recalled. **Jack In**: as a Normal action, sync fully with one deployed drone, adding **+2** to its Output Rating for as long as you stay jacked in - but your own body goes still and undefended (no actions, can’t notice threats) until you disengage (a Fast action) or the drone is destroyed.
 
@@ -392,11 +441,16 @@ As with any Mental attack, additional Ki Infusion (1 Ki per die) can push indivi
 
 **Adders**
 
-**Tougher Copies** (Lesser, 3 pts): your clones’ Health Levels rise from 1 to 2. **Delayed Pop** (Lesser, 3 pts): when a clone would pop, spend 1 Ki to instead let it survive at 0 Health Levels for one more action before vanishing. **Combined Strike** (Greater, 6 pts): two or more clones (or you and a clone) attacking the same target in the same round add their dice pools together into a single attack roll, instead of resolving separately.
+- **Tougher Copies** (Lesser, 3 pts): your clones' Health Levels rise from 1 to 2.
+- **Delayed Pop** (Lesser, 3 pts): when a clone would pop, spend 1 Ki to instead let it survive at 0 Health Levels for one more action before vanishing.
+- **Combined Strike** (Greater, 6 pts): two or more clones (or you and a clone) attacking the same target in the same round add their dice pools together into a single attack roll, instead of resolving separately.
 
 **Limiters**
 
-**Shared Pain**: whenever a clone pops, you take 1 unsoakable Health Level and are at Disadvantage on your next roll. **Slow Split**: creating a clone is a Slow action instead of instantaneous, at every Level. **One Mind**: clones can’t act independently - every clone takes the exact same action you do, on your turn, mirrored rather than directed separately. **Severed Reach**: you must physically touch a clone to reabsorb it early and gain its memories - the Gift’s normal instant, no-action remote dismissal doesn’t apply.
+- **Shared Pain**: whenever a clone pops, you take 1 unsoakable Health Level and are at Disadvantage on your next roll.
+- **Slow Split**: creating a clone is a Slow action instead of instantaneous, at every Level.
+- **One Mind**: clones can't act independently - every clone takes the exact same action you do, on your turn, mirrored rather than directed separately.
+- **Severed Reach**: you must physically touch a clone to reabsorb it early and gain its memories - the Gift's normal instant, no-action remote dismissal doesn't apply.
 
 **1** - Spend **1 Ki** to create one duplicate of yourself: identical in appearance and Skills, but with only **1 Health Level**, popping instantly on any connecting hit. It acts immediately after you in the turn order, taking a Fast or Normal action each round (never Slow), and must stay within your line of sight. Lasts up to a Minute or until it pops. When it pops, or the duration ends, you instantly know everything it experienced.
 
@@ -419,11 +473,15 @@ Activating the aura is a Slow action. **Maintaining it requires a Gift Check eve
 
 **Adders**
 
-**Environmental Surge** (Lesser, 3 pts): +1 Ki. For one round, the Level 4 environmental effect pushes out one Range Band further than normal. **Elemental Weapon** (Lesser, 3 pts): imbue a held weapon with your aura’s element - it deals your current contact damage type alongside its own, no extra Ki cost. **Elemental Burst** (Greater, 6 pts): +1 Ki, once per activation. Pulse the aura outward - everyone within your current trigger range (whatever Melee/Close/Near your Level currently reaches) takes your contact damage simultaneously, not just someone who happens to touch or strike you.
+- **Environmental Surge** (Lesser, 3 pts): +1 Ki. For one round, the Level 4 environmental effect pushes out one Range Band further than normal.
+- **Elemental Weapon** (Lesser, 3 pts): imbue a held weapon with your aura's element - it deals your current contact damage type alongside its own, no extra Ki cost.
+- **Elemental Burst** (Greater, 6 pts): +1 Ki, once per activation. Pulse the aura outward - everyone within your current trigger range (whatever Melee/Close/Near your Level currently reaches) takes your contact damage simultaneously, not just someone who happens to touch or strike you.
 
 **Limiters**
 
-**Vulnerable Opposite**: you take double dice from attacks of one specific opposing element (GM-set to fit your chosen element, e.g. a fire aura leaves you vulnerable to ice). **Visible Aura**: the aura is always visibly active whenever raised - it can never be raised discreetly or concealed. **Exhausting Maintenance**: the Gift Check’s failure cost rises to 2 Ki instead of 1, at every Level.
+- **Vulnerable Opposite**: you take double dice from attacks of one specific opposing element (GM-set to fit your chosen element, e.g. a fire aura leaves you vulnerable to ice).
+- **Visible Aura**: the aura is always visibly active whenever raised - it can never be raised discreetly or concealed.
+- **Exhausting Maintenance**: the Gift Check's failure cost rises to 2 Ki instead of 1, at every Level.
 
 **1** - Before an incoming attack of your chosen element resolves, remove one quarter of its dice (rounded down), then resolve the rest normally against your Soak. Anyone who touches you takes 1d10 vs their Soak.
 
@@ -446,11 +504,15 @@ This Gift never deals direct damage, at any Level.
 
 **Adders**
 
-**Layered Effect** (Lesser, 3 pts): create two Level 1-scope effects with a single roll and action instead of one. **Domain Echo** (Lesser, 3 pts): an effect you create leaves a passive lingering trace after it ends (residual heat, faint darkness, static in the air) lasting a Scene - detectable by anyone investigating, no mechanical effect of its own. **Anchor the Domain** (Greater, 6 pts): the Level 5 merge lasts a full Scene instead of one Round, still once per Scene.
+- **Layered Effect** (Lesser, 3 pts): create two Level 1-scope effects with a single roll and action instead of one.
+- **Domain Echo** (Lesser, 3 pts): an effect you create leaves a passive lingering trace after it ends (residual heat, faint darkness, static in the air) lasting a Scene - detectable by anyone investigating, no mechanical effect of its own.
+- **Anchor the Domain** (Greater, 6 pts): the Level 5 merge lasts a full Scene instead of one Round, still once per Scene.
 
 **Limiters**
 
-**Single Sense Domain**: your effects only ever manifest through one sense at a time (sight-only, sound-only, etc.) - Level 1’s “full sensory picture” never applies. **Elemental Purity**: you can only manipulate a literal instance of your element already present in the scene (no darkness in broad daylight, no fire without an existing spark) - GM’s call on availability. **Costly Merge**: the Level 5 merge always costs 1 Ki to trigger, never free.
+- **Single Sense Domain**: your effects only ever manifest through one sense at a time (sight-only, sound-only, etc.) - Level 1's "full sensory picture" never applies.
+- **Elemental Purity**: you can only manipulate a literal instance of your element already present in the scene (no darkness in broad daylight, no fire without an existing spark) - GM's call on availability.
+- **Costly Merge**: the Level 5 merge always costs 1 Ki to trigger, never free.
 
 **1** - Roll **Moira + Difficulty** to shape an effect within your domain that touches a full sensory picture (not just one sense) or physically moves/reshapes something person-sized (a body’s worth of matter, a room’s worth of shadow, a sound that isn’t really there, the temperature of a room). No Range Band limit, works anywhere you can perceive or clearly reach with it. Is a Normal action. No Ki, no Gift Check.
 
@@ -475,11 +537,15 @@ This Gift never deals direct damage, at any Level.
 
 **Adders**
 
-**Redirected Momentum** (Lesser, 3 pts): +1 Ki, on an extra-action turn. Instead of (or alongside) attacking, shove or reposition a target you interact with by half your Movement Rate. **Blink Step** (Lesser, 3 pts): on a turn you spend Ki for the extra action, you may also move your full Movement Rate as a free action, not counted against your normal movement. **Afterimage** (Greater, 6 pts): +1 Ki, once per round, on an extra-action turn. When an attack against you would connect, treat it as striking an afterimage instead - the hit is negated entirely.
+- **Redirected Momentum** (Lesser, 3 pts): +1 Ki, on an extra-action turn. Instead of (or alongside) attacking, shove or reposition a target you interact with by half your Movement Rate.
+- **Blink Step** (Lesser, 3 pts): on a turn you spend Ki for the extra action, you may also move your full Movement Rate as a free action, not counted against your normal movement.
+- **Afterimage** (Greater, 6 pts): +1 Ki, once per round, on an extra-action turn. When an attack against you would connect, treat it as striking an afterimage instead - the hit is negated entirely.
 
 **Limiters**
 
-**Winded**: after the third extra-action Ki spend in a single Scene, you’re at Disadvantage on all rolls until you get a short rest. **Loud and Fast**: using the extra-action spend, at any Level, is always audible and visible to anyone nearby - no stealth use of this Gift. **Straight Line Only**: the extra action’s movement can only be used to move in a straight line - no sharp turns or complex maneuvering on a Ki-spend turn.
+- **Winded**: after the third extra-action Ki spend in a single Scene, you're at Disadvantage on all rolls until you get a short rest.
+- **Loud and Fast**: using the extra-action spend, at any Level, is always audible and visible to anyone nearby - no stealth use of this Gift.
+- **Straight Line Only**: the extra action's movement can only be used to move in a straight line - no sharp turns or complex maneuvering on a Ki-spend turn.
 
 **1** - At the beginning of combat, you may take one Fast or Normal action before anyone else acts - before even the Fast Action Bracket resolves. If more than one character has this Gift, they act among themselves in Initiative order, but all still act before the normal turn order begins.
 
@@ -502,11 +568,15 @@ As with any Social attack, additional Ki Infusion (1 Ki per die) can push indivi
 
 **Adders**
 
-**Voice and Image** (Lesser, 3 pts): works through a live phone call or video feed - the target doesn’t need to be in the same physical space, but it has to be real-time. **Recorded Echo** (Greater, 6 pts): the effect also works through a pre-recorded message - a video, a voicemail, a broadcast - landing on the target without you present or even active at the time it lands. **Undeniable** (Greater, 6 pts): at Level 4+, a connecting die also grants you Advantage on your very next direct Social roll against that same target this Scene, stacking with the passive lock.
+- **Voice and Image** (Lesser, 3 pts): works through a live phone call or video feed - the target doesn't need to be in the same physical space, but it has to be real-time.
+- **Recorded Echo** (Greater, 6 pts): the effect also works through a pre-recorded message - a video, a voicemail, a broadcast - landing on the target without you present or even active at the time it lands.
+- **Undeniable** (Greater, 6 pts): at Level 4+, a connecting die also grants you Advantage on your very next direct Social roll against that same target this Scene, stacking with the passive lock.
 
 **Limiters**
 
-**Must Be Seen**: the target has to actually see you, not just hear you - kills any voice-only or audio-only use. **Single Target Only**: the Level 2+ multi-target/crowd expansion never applies, regardless of Level bought - always resolves against one target. **Fades Fast**: the lock still lasts the full Scene, but only while you actively concentrate on maintaining it - losing focus (Distracted, taking an unrelated Slow action, or similar) ends it immediately instead of it lingering passively.
+- **Must Be Seen**: the target has to actually see you, not just hear you - kills any voice-only or audio-only use.
+- **Single Target Only**: the Level 2+ multi-target/crowd expansion never applies, regardless of Level bought - always resolves against one target.
+- **Fades Fast**: the lock still lasts the full Scene, but only while you actively concentrate on maintaining it - losing focus (Distracted, taking an unrelated Slow action, or similar) ends it immediately instead of it lingering passively.
 
 **1** - Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die locks their attention onto you for the scene: awe, dread, or fascination, your choice. No specific action compelled, just overwhelming presence.
 
@@ -527,11 +597,15 @@ As with any Social attack, additional Ki Infusion (1 Ki per die) can push indivi
 
 **Adders**
 
-**Passenger Overload** (Lesser, 3 pts): 1 Ki. Carry more than one person while flying (Level 4+ only). **Dive Bomb** (Lesser, 3 pts): spend 1 Ki to slam into a target from the air - Potence dice vs. their Soak, Close range only. **Sonic Boom** (Greater, 6 pts): 1 Ki. Everyone at Close range along your flight path takes 2d10 vs Soak and is knocked Prone if any die connects. Usable any time you move at flying speed, no cap on uses beyond the Ki cost itself.
+- **Passenger Overload** (Lesser, 3 pts): 1 Ki. Carry more than one person while flying (Level 4+ only).
+- **Dive Bomb** (Lesser, 3 pts): spend 1 Ki to slam into a target from the air - Potence dice vs. their Soak, Close range only.
+- **Sonic Boom** (Greater, 6 pts): 1 Ki. Everyone at Close range along your flight path takes 2d10 vs Soak and is knocked Prone if any die connects. Usable any time you move at flying speed, no cap on uses beyond the Ki cost itself.
 
 **Limiters**
 
-**Vulnerable Silhouette**: you’re always visible against the sky while flying, no concealment possible - Disadvantage on any Stealth roll made while airborne. **Fair Weather Flier**: you can’t fly in severe weather (storms, high wind, heavy turbulence) - GM’s call on what qualifies. **Grounded Recovery**: if reduced to 0 Health Levels or knocked unconscious while flying, you fall and take normal fall damage - no automatic soft landing.
+- **Vulnerable Silhouette**: you're always visible against the sky while flying, no concealment possible - Disadvantage on any Stealth roll made while airborne.
+- **Fair Weather Flier**: you can't fly in severe weather (storms, high wind, heavy turbulence) - GM's call on what qualifies.
+- **Grounded Recovery**: if reduced to 0 Health Levels or knocked unconscious while flying, you fall and take normal fall damage - no automatic soft landing.
 
 **1** - You can hover in place or fly at your normal ground Movement Rate. Taking off or landing is a Fast action; staying aloft is free once airborne. No Ki, no Gift Check.
 
@@ -558,11 +632,17 @@ The barrier occupies the same Zone(s) as any worn armor and follows the normal r
 
 **Adders**
 
-**Reinforced Barrier** (Lesser, 3 pts): the barrier’s Health Levels rise by 1, at every Level. **Instant Raise** (Lesser, 3 pts): activating the barrier is a Fast action instead of Normal. **Shared Burden** (Greater, 6 pts): once per Scene, when someone the barrier covers would lose a Health Level to a hit it didn’t stop, spend 1 Ki to redirect that loss to the barrier’s own Health Levels instead. **Wide Guard** (Greater, 6 pts): Personal Barrier can cover up to two allies simultaneously once you reach Level 3, each tracked separately (no effect on Wielded Shield or Bubble Barrier).
+- **Reinforced Barrier** (Lesser, 3 pts): the barrier's Health Levels rise by 1, at every Level.
+- **Instant Raise** (Lesser, 3 pts): activating the barrier is a Fast action instead of Normal.
+- **Shared Burden** (Greater, 6 pts): once per Scene, when someone the barrier covers would lose a Health Level to a hit it didn't stop, spend 1 Ki to redirect that loss to the barrier's own Health Levels instead.
+- **Wide Guard** (Greater, 6 pts): Personal Barrier can cover up to two allies simultaneously once you reach Level 3, each tracked separately (no effect on Wielded Shield or Bubble Barrier).
 
 **Limiters**
 
-**One at a Time**: Personal Barrier can never be raised for yourself and an ally simultaneously - projecting it onto someone else means going without it yourself. **Slow to Reform**: once depleted, the barrier can’t be raised again until a Short Rest, regardless of Level. **Visible Shimmer**: the barrier is always visibly active whenever raised, a faint shimmer anyone can notice - no way to conceal that it’s up. **Exhausting Maintenance**: the Gift Check’s failure cost rises to 2 Ki instead of 1, at every Level.
+- **One at a Time**: Personal Barrier can never be raised for yourself and an ally simultaneously - projecting it onto someone else means going without it yourself.
+- **Slow to Reform**: once depleted, the barrier can't be raised again until a Short Rest, regardless of Level.
+- **Visible Shimmer**: the barrier is always visibly active whenever raised, a faint shimmer anyone can notice - no way to conceal that it's up.
+- **Exhausting Maintenance**: the Gift Check's failure cost rises to 2 Ki instead of 1, at every Level.
 
 **1** - As a **Normal action**, no Ki cost, raise the barrier: **Hardness 3**, **Health Levels 2** (before your Form’s modifier), resolved with the exact same two-stage mechanic as worn armor - it covers **both** Body and Head Zones at once. Lasts until depleted or dismissed (a Fast action to drop early).
 
@@ -583,11 +663,15 @@ The barrier occupies the same Zone(s) as any worn armor and follows the normal r
 
 **Adders**
 
-**Stockpile** (Lesser, 3 pts): during downtime, pre-build up to 2 gadgets ahead of time to carry with you, ready to use later without spending build time in the moment. **Salvage Loop** (Lesser, 3 pts): when a gadget you built breaks or is destroyed, gain Advantage on your next Gadgeteer roll. **Overclock** (Greater, 6 pts): spend an extra 1 Ki when building a gadget to push it one function or damage/defense tier beyond what your Level normally allows. That gadget breaks after a single use, win or lose.
+- **Stockpile** (Lesser, 3 pts): during downtime, pre-build up to 2 gadgets ahead of time to carry with you, ready to use later without spending build time in the moment.
+- **Salvage Loop** (Lesser, 3 pts): when a gadget you built breaks or is destroyed, gain Advantage on your next Gadgeteer roll.
+- **Overclock** (Greater, 6 pts): spend an extra 1 Ki when building a gadget to push it one function or damage/defense tier beyond what your Level normally allows. That gadget breaks after a single use, win or lose.
 
 **Limiters**
 
-**Finite Supply**: you need physical scrap or parts on hand to build anything - this Gift doesn’t work with empty hands in a bare room. **One and Done**: only one Gadgeteer-built device can be functional at a time - building a new one instantly disables the previous one. **Loud Construction**: building a gadget, at any Level, is never quiet - always audible or visibly obvious, no stealthy use.
+- **Finite Supply**: you need physical scrap or parts on hand to build anything - this Gift doesn't work with empty hands in a bare room.
+- **One and Done**: only one Gadgeteer-built device can be functional at a time - building a new one instantly disables the previous one.
+- **Loud Construction**: building a gadget, at any Level, is never quiet - always audible or visibly obvious, no stealthy use.
 
 **1** - Given scrap and roughly an hour of focused work, roll **Air + Difficulty** (GM sets Difficulty by how complex the gadget is) to build one simple, single-function gadget - a lockpick set, a basic signal jammer, a simple sensor, a makeshift flashlight upgrade. It works reliably until broken or its narrow purpose is exhausted. No Ki cost.
 
@@ -610,11 +694,15 @@ The barrier occupies the same Zone(s) as any worn armor and follows the normal r
 
 **Adders**
 
-**Shared Reprieve** (Lesser, 3 pts): the same Ki spend delays a second, separate consequence at the same time, not just one. **Preemptive Ward** (Lesser, 3 pts): use this Gift before a consequence has even happened. If the thing you’re warding against occurs within the next Round, it’s automatically caught and delayed, no reaction timing needed. **Partial Release** (Greater, 6 pts): when a delayed consequence finally lands, spend 1 extra Ki (paid at the original delay) to reduce its severity by one step (GM’s call) instead of it landing at full force.
+- **Shared Reprieve** (Lesser, 3 pts): the same Ki spend delays a second, separate consequence at the same time, not just one.
+- **Preemptive Ward** (Lesser, 3 pts): use this Gift before a consequence has even happened. If the thing you're warding against occurs within the next Round, it's automatically caught and delayed, no reaction timing needed.
+- **Partial Release** (Greater, 6 pts): when a delayed consequence finally lands, spend 1 extra Ki (paid at the original delay) to reduce its severity by one step (GM's call) instead of it landing at full force.
 
 **Limiters**
 
-**Debt Comes Due**: when a delayed consequence finally lands, it lands harder, worsened by one step (GM’s call) rather than landing as originally sized. **Self Only**: you can only ever delay consequences affecting yourself, never someone else. **No Renewal**: Level 5’s renewal clause never applies. The Month-long delay always lapses for good at the end of its duration.
+- **Debt Comes Due**: when a delayed consequence finally lands, it lands harder, worsened by one step (GM's call) rather than landing as originally sized.
+- **Self Only**: you can only ever delay consequences affecting yourself, never someone else.
+- **No Renewal**: Level 5's renewal clause never applies. The Month-long delay always lapses for good at the end of its duration.
 
 **1** - Spend **1 Ki** to delay a minor consequence already in motion by **1 Round**, just long enough to react. No roll.
 
@@ -639,11 +727,15 @@ Additionally, given a full **Month** of thorough, repeated application (regular 
 
 **Adders**
 
-**Second Hands** (Lesser, 3 pts): spend a second 1 Ki to heal a second target in the same Round, bypassing the normal once-per-Round cap. **Lingering Mend** (Lesser, 3 pts): a Health Level you restore gains a one-time buffer: the next hit that would take it away is negated instead. **Preventive Dose** (Greater, 6 pts): spend 1 Ki to grant a target Advantage against contracting poison or disease for the rest of the scene, used before exposure rather than after.
+- **Second Hands** (Lesser, 3 pts): spend a second 1 Ki to heal a second target in the same Round, bypassing the normal once-per-Round cap.
+- **Lingering Mend** (Lesser, 3 pts): a Health Level you restore gains a one-time buffer: the next hit that would take it away is negated instead.
+- **Preventive Dose** (Greater, 6 pts): spend 1 Ki to grant a target Advantage against contracting poison or disease for the rest of the scene, used before exposure rather than after.
 
 **Limiters**
 
-**Cost to Self**: healing another person costs you 1 unsoakable Health Level of your own per use, in addition to the Ki cost. **Willing Only**: you can never heal an unconscious or unwilling target. Level 1’s “willing or unconscious” narrows to willing only. **Slow Hands**: every use of this Gift is a Slow action, at every Level.
+- **Cost to Self**: healing another person costs you 1 unsoakable Health Level of your own per use, in addition to the Ki cost.
+- **Willing Only**: you can never heal an unconscious or unwilling target. Level 1's "willing or unconscious" narrows to willing only.
+- **Slow Hands**: every use of this Gift is a Slow action, at every Level.
 
 **1** - Touch a willing or unconscious target and spend **1 Ki** to instantly restore 1 Health Level. Usable once per Round. No Gift Check.
 
@@ -664,11 +756,15 @@ Additionally, given a full **Month** of thorough, repeated application (regular 
 
 **Adders**
 
-**Cross-Sense Bleed** (Lesser, 3 pts): a second sense of your choice, different from your primary one, also gains Level 1’s penalty-stripping benefit. **Danger Instinct** (Lesser, 3 pts): once per Scene, if your enhanced sense would detect something dangerous while you’re not actively paying attention, you get a reflexive warning and Advantage on Initiative for that encounter. **Piercing Focus** (Greater, 6 pts): spend 1 Ki to pierce a barrier or concealment one tier beyond what your current Level would normally reach, for a single use.
+- **Cross-Sense Bleed** (Lesser, 3 pts): a second sense of your choice, different from your primary one, also gains Level 1's penalty-stripping benefit.
+- **Danger Instinct** (Lesser, 3 pts): once per Scene, if your enhanced sense would detect something dangerous while you're not actively paying attention, you get a reflexive warning and Advantage on Initiative for that encounter.
+- **Piercing Focus** (Greater, 6 pts): spend 1 Ki to pierce a barrier or concealment one tier beyond what your current Level would normally reach, for a single use.
 
 **Limiters**
 
-**Overload**: using your sense in an overwhelming environment (a loud crowd, bright lights, thick smells) forces a Moira + Difficulty roll or you’re Disadvantaged for a Round. **Single Direction**: your enhanced sense only covers a narrow cone, not all-around awareness. GM adjudicates facing. **Draining Focus**: obstacle-piercing always costs 1 Ki. Level 4’s free upgrade never applies.
+- **Overload**: using your sense in an overwhelming environment (a loud crowd, bright lights, thick smells) forces a Moira + Difficulty roll or you're Disadvantaged for a Round.
+- **Single Direction**: your enhanced sense only covers a narrow cone, not all-around awareness. GM adjudicates facing.
+- **Draining Focus**: obstacle-piercing always costs 1 Ki. Level 4's free upgrade never applies.
 
 **1** - Perception rolls that rely on your chosen sense ignore ordinary environmental penalties tied to it - darkness for night vision, distance for telescopic sight, background noise for hearing, and so on. No roll of its own needed; it just strips the penalty layer whenever it would apply. No Ki, no Gift Check.
 
@@ -689,11 +785,15 @@ Additionally, given a full **Month** of thorough, repeated application (regular 
 
 **Adders**
 
-**Rooted Strike** (Lesser, 3 pts): when a forcing attempt against you fails, spend 1 Ki to counter-shove the attacker by half your Movement Rate. **Grounding Field** (Lesser, 3 pts): as a Fast action, spend 1 Ki to extend your current Level’s resistance to one touched ally for the rest of the Round. **Unbreakable Line** (Greater, 6 pts): once per Scene, when an ally within Melee range would be forcibly moved, spend 1 Ki to intercept the effect. It targets you instead, resolved against your own resistance.
+- **Rooted Strike** (Lesser, 3 pts): when a forcing attempt against you fails, spend 1 Ki to counter-shove the attacker by half your Movement Rate.
+- **Grounding Field** (Lesser, 3 pts): as a Fast action, spend 1 Ki to extend your current Level's resistance to one touched ally for the rest of the Round.
+- **Unbreakable Line** (Greater, 6 pts): once per Scene, when an ally within Melee range would be forcibly moved, spend 1 Ki to intercept the effect. It targets you instead, resolved against your own resistance.
 
 **Limiters**
 
-**Flat Feet**: after you resist a forcing attempt with this Gift, your Movement Rate is halved for the next 2 Rounds. **One Failure, Done**: if you’re ever successfully moved despite this Gift, all its benefits stop for the rest of the Scene. **No Bracing**: this Gift’s benefits don’t apply if you’re Surprised or otherwise unaware of the attempt against you.
+- **Flat Feet**: after you resist a forcing attempt with this Gift, your Movement Rate is halved for the next 2 Rounds.
+- **One Failure, Done**: if you're ever successfully moved despite this Gift, all its benefits stop for the rest of the Scene.
+- **No Bracing**: this Gift's benefits don't apply if you're Surprised or otherwise unaware of the attempt against you.
 
 **1** - Gain **Advantage** on any roll to resist being pushed, tripped, knocked back, or thrown - including a Potence-based forcing attempt against you. No Ki, no Gift Check.
 
@@ -716,11 +816,15 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 
 **Adders**
 
-**Extended Phase** (Lesser, 3 pts): the duration at Levels 1-2 doubles (2 Rounds / 2 Minutes). **Solid Strike** (Lesser, 3 pts): while phased at Level 4+, spend 1 Ki to briefly re-solidify one limb for a single Physical attack, then re-phase immediately after. **Phase Walk** (Greater, 6 pts): pass through moving obstacles (a crowd, a struggling grapple, a closing door) as freely as static ones, not just stationary barriers.
+- **Extended Phase** (Lesser, 3 pts): the duration at Levels 1-2 doubles (2 Rounds / 2 Minutes).
+- **Solid Strike** (Lesser, 3 pts): while phased at Level 4+, spend 1 Ki to briefly re-solidify one limb for a single Physical attack, then re-phase immediately after.
+- **Phase Walk** (Greater, 6 pts): pass through moving obstacles (a crowd, a struggling grapple, a closing door) as freely as static ones, not just stationary barriers.
 
 **Limiters**
 
-**Slow Fade**: phasing takes a full Round to take effect instead of a Fast action, at every Level except Level 5’s reactive dodge. **Residual Static**: while phased, you’re still visible as a faint shimmer or outline. You’re never undetectable. **No Passengers**: Level 5’s extend-to-another-person clause never applies.
+- **Slow Fade**: phasing takes a full Round to take effect instead of a Fast action, at every Level except Level 5's reactive dodge.
+- **Residual Static**: while phased, you're still visible as a faint shimmer or outline. You're never undetectable.
+- **No Passengers**: Level 5's extend-to-another-person clause never applies.
 
 **1** - Spend **1 Ki** and a Fast action to phase for **1 Round** - pass through a thin barrier (a door, a thin wall). You can’t attack or be attacked while phased, and it ends automatically once you’re through.
 
@@ -741,11 +845,16 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 
 **Adders**
 
-**Shared Veil** (Lesser, 3 pts): spend 1 Ki to extend Level 3+’s sound/scent masking to one other touched person alongside you. **Peripheral Blur** (Lesser, 3 pts): even when detected by touch, tech, or a broken effect, anyone who detects you is at Disadvantage on any roll to precisely locate or target you. **Deep Cover** (Lesser, 3 pts): so long as you stay in one place and take no action, the effect’s duration extends to a full Scene instead of capping at 1 Minute. **Ghost Step** (Greater, 6 pts): while invisible, you leave no physical trace at all, no footprints, no disturbed dust, no broken cobwebs, foiling even mundane tracking methods.
+- **Shared Veil** (Lesser, 3 pts): spend 1 Ki to extend Level 3+'s sound/scent masking to one other touched person alongside you.
+- **Peripheral Blur** (Lesser, 3 pts): even when detected by touch, tech, or a broken effect, anyone who detects you is at Disadvantage on any roll to precisely locate or target you.
+- **Deep Cover** (Lesser, 3 pts): so long as you stay in one place and take no action, the effect's duration extends to a full Scene instead of capping at 1 Minute.
+- **Ghost Step** (Greater, 6 pts): while invisible, you leave no physical trace at all, no footprints, no disturbed dust, no broken cobwebs, foiling even mundane tracking methods.
 
 **Limiters**
 
-**Fragile Veil**: any physical contact, being touched or bumping into someone, breaks the invisibility instantly, at every Level. **Silence Required**: the Gift doesn’t work if you’re already speaking or making noise the moment you activate it. **Startled Reveal**: if something sudden and dangerous happens while you’re invisible, roll Moira + Difficulty or the effect breaks involuntarily.
+- **Fragile Veil**: any physical contact, being touched or bumping into someone, breaks the invisibility instantly, at every Level.
+- **Silence Required**: the Gift doesn't work if you're already speaking or making noise the moment you activate it.
+- **Startled Reveal**: if something sudden and dangerous happens while you're invisible, roll Moira + Difficulty or the effect breaks involuntarily.
 
 **1** - Spend **1 Ki** and a Fast action to turn invisible to sight only, so long as you remain stationary - moving or taking any action breaks the effect immediately. Touch, sound, scent, and technology can still detect you. Lasts up to 1 Minute or until broken.
 
@@ -766,11 +875,15 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 
 **Adders**
 
-**Wall Launch** (Lesser, 3 pts): use a vertical surface mid-jump to kick off and redirect, adding a second full jump distance to the same move, no Ki cost. **Silent Landing** (Lesser, 3 pts): land without sound or visible impact, no dust, no thud, no telltale sign you came down here. **Shockwave Leap** (Greater, 6 pts): the landing-impact attack (Level 4+) becomes a Near-range area effect instead of Close, for an extra 1 Ki on top of its normal cost.
+- **Wall Launch** (Lesser, 3 pts): use a vertical surface mid-jump to kick off and redirect, adding a second full jump distance to the same move, no Ki cost.
+- **Silent Landing** (Lesser, 3 pts): land without sound or visible impact, no dust, no thud, no telltale sign you came down here.
+- **Shockwave Leap** (Greater, 6 pts): the landing-impact attack (Level 4+) becomes a Near-range area effect instead of Close, for an extra 1 Ki on top of its normal cost.
 
 **Limiters**
 
-**Committed Arc**: once a jump begins, you can’t abort or land early. You cover the full distance you committed to. **Self-Inflicted Impact**: the landing-impact attack (Level 4+) also hits you for half the dice rolled. **No Redirect**: Level 2’s mid-air trajectory adjustment never applies.
+- **Committed Arc**: once a jump begins, you can't abort or land early. You cover the full distance you committed to.
+- **Self-Inflicted Impact**: the landing-impact attack (Level 4+) also hits you for half the dice rolled.
+- **No Redirect**: Level 2's mid-air trajectory adjustment never applies.
 
 **1** - From a standing start, jump forward up to **2x** your Movement Rate, or straight up up to **1x** your Movement Rate. Is a Fast action. No fall damage from a landing height within what you could jump. No Ki, no Gift Check.
 
@@ -791,11 +904,15 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 
 **Adders**
 
-**Shared Mark** (Lesser, 3 pts): spend 1 Ki to extend the mark’s tracking and Advantage benefits to one touched ally. **Lingering Scent** (Lesser, 3 pts): if the mark lapses at Levels 1-3, rough-direction awareness persists for one additional Scene before it fully fades. **First Blood** (Greater, 6 pts): the first successful hit against a marked target each encounter deals one extra damage die.
+- **Shared Mark** (Lesser, 3 pts): spend 1 Ki to extend the mark's tracking and Advantage benefits to one touched ally.
+- **Lingering Scent** (Lesser, 3 pts): if the mark lapses at Levels 1-3, rough-direction awareness persists for one additional Scene before it fully fades.
+- **First Blood** (Greater, 6 pts): the first successful hit against a marked target each encounter deals one extra damage die.
 
 **Limiters**
 
-**One Target Only**: you can only ever have one active mark at a time. Marking a new target instantly releases the old one. **Visible Focus**: your intense focus on the marked target is obvious to onlookers. Disadvantage on Stealth or Deception rolls made against anyone aware you have a mark active. **Personal Vendetta**: you can only mark someone who’s wronged you or someone you care about, GM’s call, not an arbitrary target.
+- **One Target Only**: you can only ever have one active mark at a time. Marking a new target instantly releases the old one.
+- **Visible Focus**: your intense focus on the marked target is obvious to onlookers. Disadvantage on Stealth or Deception rolls made against anyone aware you have a mark active.
+- **Personal Vendetta**: you can only mark someone who's wronged you or someone you care about, GM's call, not an arbitrary target.
 
 **1** - Spend **1 Ki** to mark a target you can currently see. For as long as the mark lasts (a Scene, renewable), you always know their rough direction and gain **Advantage** on any roll made to track or locate them specifically.
 
@@ -816,11 +933,15 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 
 **Adders**
 
-**Iron Body** (Lesser, 3 pts): while Guard is active, its Soak bonus also applies against harm that would normally bypass Soak entirely (fire, falls, GM’s call). **Flowing Counter** (Greater, 6 pts): if an attack misses you while Guard is active, spend 1 Ki for an immediate free unarmed attack against that attacker, no action cost. **Weaponized Body** (Lesser, 3 pts): your unarmed strikes count as wielding a weapon for any Skill, Boon, or Gift that specifically requires one.
+- **Iron Body** (Lesser, 3 pts): while Guard is active, its Soak bonus also applies against harm that would normally bypass Soak entirely (fire, falls, GM's call).
+- **Flowing Counter** (Greater, 6 pts): if an attack misses you while Guard is active, spend 1 Ki for an immediate free unarmed attack against that attacker, no action cost.
+- **Weaponized Body** (Lesser, 3 pts): your unarmed strikes count as wielding a weapon for any Skill, Boon, or Gift that specifically requires one.
 
 **Limiters**
 
-**Marked Hands**: your unarmed Damage bonus doesn’t apply against a target wearing modern ballistic/plate armor - GM’s call on what qualifies. **All In**: while Guard is active, you can’t take any action besides moving up to half your Movement Rate - no partial commitment. **Telegraphed**: an opponent who’s seen you fight before gets Advantage on their first attack roll against you each combat, recognizing your stance on sight.
+- **Marked Hands**: your unarmed Damage bonus doesn't apply against a target wearing modern ballistic/plate armor - GM's call on what qualifies.
+- **All In**: while Guard is active, you can't take any action besides moving up to half your Movement Rate - no partial commitment.
+- **Telegraphed**: an opponent who's seen you fight before gets Advantage on their first attack roll against you each combat, recognizing your stance on sight.
 
 **1** - Your unarmed strikes deal **3** Damage (up from the baseline 1), resolved with the same per-die-vs-Soak mechanic as a weapon. No Ki, no Gift Check. You also gain **Guard**: as your action, forgo attacking to brace instead, gaining Soak equal to half your Unarmed Damage (round up - **+2** at this Level) until the start of your next turn.
 
@@ -841,11 +962,15 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 
 **Adders**
 
-**Selective Erasure** (Lesser, 3 pts): erase one specific detail from a broader memory instead of the whole thing - they keep the encounter, just not your face in it. **False Trail** (Lesser, 3 pts): an implanted memory (Level 2+) can point the target toward a specific false belief or action you choose, not just a generic replacement. **Group Edit** (Greater, 6 pts): spend 1 additional Ki to affect up to 3 targets simultaneously with the same edit, instead of resolving them one at a time.
+- **Selective Erasure** (Lesser, 3 pts): erase one specific detail from a broader memory instead of the whole thing - they keep the encounter, just not your face in it.
+- **False Trail** (Lesser, 3 pts): an implanted memory (Level 2+) can point the target toward a specific false belief or action you choose, not just a generic replacement.
+- **Group Edit** (Greater, 6 pts): spend 1 additional Ki to affect up to 3 targets simultaneously with the same edit, instead of resolving them one at a time.
 
 **Limiters**
 
-**Recent Only**: you can never affect memories older than a Day, regardless of Level - Level 3’s upgrade to older memories never applies. **Leaves a Seam**: an edited memory always has a small, detectable inconsistency a thorough investigation (or another telepath) can find. **One Edit, Once**: you can never target the same person’s memory twice - the first edit is permanent and final.
+- **Recent Only**: you can never affect memories older than a Day, regardless of Level - Level 3's upgrade to older memories never applies.
+- **Leaves a Seam**: an edited memory always has a small, detectable inconsistency a thorough investigation (or another telepath) can find.
+- **One Edit, Once**: you can never target the same person's memory twice - the first edit is permanent and final.
 
 **1** - Requires touch. Spend **1 Ki**; make the standard to-hit roll (**Air** vs. their Defense). On success, roll **2d10** per-die against their Psyche wall - a connecting die erases one specific, recent memory (something from the last few minutes: a name overheard, a face seen, this exact encounter).
 
@@ -868,11 +993,18 @@ Chosen once, at creation, purely cosmetic: the form your raised dead take (bone 
 
 **Adders**
 
-**Grave Whisper** (Lesser, 3 pts): touch a corpse and roll Moira + Difficulty to ask it one question about its own death, answered as a faint, disjointed impression, not real testimony. **Reinforced Bones** (Lesser, 3 pts): your thralls’ Health Levels rise by 1 each, at every Level. **Hungry Grave** (Greater, 6 pts): whenever a thrall you command is destroyed, spend 1 Ki to raise a replacement immediately as a Fast action, instead of waiting for your next Slow action. **Bonecrafter** (Greater, 6 pts): as a Normal action, meld every thrall you currently command into a single, larger creature - a bone giant, a mass of fused corpses, whatever form you choose. Its Health Levels equal the sum of the merged thralls’ current Health Levels, **+3**; its Attack still uses the same dice rating an individual thrall has at your current Gift Level (Soak and Defense unchanged). It counts as one creature taking one action in the turn order, replacing every merged thrall until it’s destroyed - raise a fresh batch of thralls normally afterward. **Shared Suffering** (Greater, 6 pts): once per Scene, when you would drop to 0 Health Levels, spend 2 Ki to instead sacrifice every thrall you currently command and stay at 1 Health Level.
+- **Grave Whisper** (Lesser, 3 pts): touch a corpse and roll Moira + Difficulty to ask it one question about its own death, answered as a faint, disjointed impression, not real testimony.
+- **Reinforced Bones** (Lesser, 3 pts): your thralls' Health Levels rise by 1 each, at every Level.
+- **Hungry Grave** (Greater, 6 pts): whenever a thrall you command is destroyed, spend 1 Ki to raise a replacement immediately as a Fast action, instead of waiting for your next Slow action.
+- **Bonecrafter** (Greater, 6 pts): as a Normal action, meld every thrall you currently command into a single, larger creature - a bone giant, a mass of fused corpses, whatever form you choose. Its Health Levels equal the sum of the merged thralls' current Health Levels, **+3**; its Attack still uses the same dice rating an individual thrall has at your current Gift Level (Soak and Defense unchanged). It counts as one creature taking one action in the turn order, replacing every merged thrall until it's destroyed - raise a fresh batch of thralls normally afterward.
+- **Shared Suffering** (Greater, 6 pts): once per Scene, when you would drop to 0 Health Levels, spend 2 Ki to instead sacrifice every thrall you currently command and stay at 1 Health Level.
 
 **Limiters**
 
-**Brittle Legion**: your thralls’ Health Levels are permanently 1 lower at every Level, minimum 1. **One at a Time**: Necrotic Touch and commanding thralls can’t be used in the same round - using one locks out the other until your next turn. **Grave-Bound**: your thralls can never move more than Close range from you - stray past that and they collapse instantly. **No Whispers**: Necrotic Touch’s healing never applies - it still deals damage, but grants you nothing back.
+- **Brittle Legion**: your thralls' Health Levels are permanently 1 lower at every Level, minimum 1.
+- **One at a Time**: Necrotic Touch and commanding thralls can't be used in the same round - using one locks out the other until your next turn.
+- **Grave-Bound**: your thralls can never move more than Close range from you - stray past that and they collapse instantly.
+- **No Whispers**: Necrotic Touch's healing never applies - it still deals damage, but grants you nothing back.
 
 **1** - **Raise the Dead**: spend 1 Ki as a Slow action to raise up to **2** skeletal thralls from nearby remains. Each has Soak 1, Defense 5, Health Levels 2, your own Movement Rate, and a natural-weapon Attack of 1d10 (resolved per-die vs. Soak, same mechanic as any weapon). They act immediately after you in the turn order, taking a Fast or Normal action each round (never Slow), and have no Skills or Gifts of their own. They last until destroyed or dismissed. **Necrotic Touch**: as a Normal action, make a Physical attack (Attribute vs. Defense, as usual) dealing **2d10** vs. Soak - each connecting die heals you 1 Health Level (never past your maximum), drawing their vitality straight into your own.
 
@@ -893,11 +1025,15 @@ Chosen once, at creation, purely cosmetic: the form your raised dead take (bone 
 
 **Adders**
 
-**Selective Presence** (Lesser, 3 pts): choose specific individuals to be exempt from the effect at will - they perceive and remember you normally, everyone else doesn’t. **Fading Trail** (Lesser, 3 pts): physical evidence you leave behind (footprints, fingerprints, a dropped item) is similarly overlooked or dismissed, not just your presence itself. **Group Obscurity** (Greater, 6 pts): Level 4’s touch-extension covers everyone in a chain of physical contact at once, not just one other person.
+- **Selective Presence** (Lesser, 3 pts): choose specific individuals to be exempt from the effect at will - they perceive and remember you normally, everyone else doesn't.
+- **Fading Trail** (Lesser, 3 pts): physical evidence you leave behind (footprints, fingerprints, a dropped item) is similarly overlooked or dismissed, not just your presence itself.
+- **Group Obscurity** (Greater, 6 pts): Level 4's touch-extension covers everyone in a chain of physical contact at once, not just one other person.
 
 **Limiters**
 
-**Breaks on Contact**: any direct physical interaction (a touch, a handshake, being bumped into) instantly ends the effect for that Scene. **No Recordings**: the effect doesn’t fool cameras, recordings, or other non-living observation - only living memory and attention. **Loud Undoes It**: raising your voice, running, or otherwise drawing deliberate attention immediately breaks the effect.
+- **Breaks on Contact**: any direct physical interaction (a touch, a handshake, being bumped into) instantly ends the effect for that Scene.
+- **No Recordings**: the effect doesn't fool cameras, recordings, or other non-living observation - only living memory and attention.
+- **Loud Undoes It**: raising your voice, running, or otherwise drawing deliberate attention immediately breaks the effect.
 
 **1** - Activating is a Fast action and triggers a **Gift Check** - success free, failure costs 1 Ki, the effect happens either way. For the rest of the Scene, anyone not already actively focused on you must beat a **Perception + Difficulty** roll to notice what you’re doing, and even on a success, they’re at **Disadvantage** recalling details about you afterward.
 
@@ -922,11 +1058,15 @@ As with any Mental attack, additional Ki Infusion (1 Ki per die) can push indivi
 
 **Adders**
 
-**Anchor Line** (Lesser, 3 pts): when you possess a target, spend 1 additional Ki to sense if your original body enters danger for the duration of that possession, letting you snap back to it instantly as a reaction. **Distant Hop** (Lesser, 3 pts): Level 5’s instant target-switching only requires line of sight, not direct eye contact. **Mechanical Take** (Greater, 6 pts): this Gift also works on constructs and machines, not just living bodies.
+- **Anchor Line** (Lesser, 3 pts): when you possess a target, spend 1 additional Ki to sense if your original body enters danger for the duration of that possession, letting you snap back to it instantly as a reaction.
+- **Distant Hop** (Lesser, 3 pts): Level 5's instant target-switching only requires line of sight, not direct eye contact.
+- **Mechanical Take** (Greater, 6 pts): this Gift also works on constructs and machines, not just living bodies.
 
 **Limiters**
 
-**Fragile Grip**: if the host resists at any point during possession (GM’s call, under duress or extreme willpower), you’re expelled back to your own body immediately, unless you spend 1 Ki to hold on. **Echo Sickness**: after returning from a possession lasting longer than a Scene, you’re at Disadvantage on all rolls for the rest of that day. **One-Way Door**: returning to your own body isn’t automatic. You must win another Psyche roll against the host to leave, same as entering.
+- **Fragile Grip**: if the host resists at any point during possession (GM's call, under duress or extreme willpower), you're expelled back to your own body immediately, unless you spend 1 Ki to hold on.
+- **Echo Sickness**: after returning from a possession lasting longer than a Scene, you're at Disadvantage on all rolls for the rest of that day.
+- **One-Way Door**: returning to your own body isn't automatic. You must win another Psyche roll against the host to leave, same as entering.
 
 **1** - Requires touch. Spend **1 Ki** and roll **2d10** per-die against the target’s Psyche wall - a connecting die lets you possess their body for the rest of the scene. Your own body goes limp and undefended while you’re away.
 
@@ -947,11 +1087,15 @@ As with any Mental attack, additional Ki Infusion (1 Ki per die) can push indivi
 
 **Adders**
 
-**Shared Vision** (Lesser, 3 pts): once per Scene, share a passive flash with an ally in Melee range. They receive the warning too. **Second Impression** (Lesser, 3 pts): once per Scene, reroll a failed active-foresight roll (Level 2+). **Guided Hand** (Greater, 6 pts): spend 1 Ki so the Advantage from a foreseen attack (Level 3+) also applies to your next attack against that same attacker, not just your defense.
+- **Shared Vision** (Lesser, 3 pts): once per Scene, share a passive flash with an ally in Melee range. They receive the warning too.
+- **Second Impression** (Lesser, 3 pts): once per Scene, reroll a failed active-foresight roll (Level 2+).
+- **Guided Hand** (Greater, 6 pts): spend 1 Ki so the Advantage from a foreseen attack (Level 3+) also applies to your next attack against that same attacker, not just your defense.
 
 **Limiters**
 
-**Uncertain Visions**: every flash, passive or active, is vague and symbolic, never literal. The GM always delivers it as an interpretable image, not plain information. **Draining Sight**: after any active use (Level 2+), you’re at Disadvantage on your next roll. **Fewer Flashes**: Level 5’s always-on passive upgrade never applies. Passive flashes stay GM’s-call only regardless of Level bought.
+- **Uncertain Visions**: every flash, passive or active, is vague and symbolic, never literal. The GM always delivers it as an interpretable image, not plain information.
+- **Draining Sight**: after any active use (Level 2+), you're at Disadvantage on your next roll.
+- **Fewer Flashes**: Level 5's always-on passive upgrade never applies. Passive flashes stay GM's-call only regardless of Level bought.
 
 **1** - Passive and involuntary - at a dramatically appropriate moment (GM’s call), you receive a brief precognitive flash: a warning, a fragment of the near future. No roll, no action, purely a narrative tool the GM wields on your behalf.
 
@@ -974,11 +1118,16 @@ Ki Infusion still applies on top, same as any Social attack.
 
 **Adders**
 
-**Silent Imposition** (Lesser, 3 pts): the target has no memory of being bound - the rule feels like their own personal code, not something imposed on them. **Lasting Decree** (Greater, 6 pts): a rule set persists indefinitely once imposed, not capped at Scene/Day - it holds until you release it or the target manages to break free (GM’s call on the threshold). **Zealous Enforcement** (Greater, 6 pts): bound targets don’t just want the rule followed - they actively intervene, verbally or physically, to stop anyone else from breaking it.
+- **Silent Imposition** (Lesser, 3 pts): the target has no memory of being bound - the rule feels like their own personal code, not something imposed on them.
+- **Lasting Decree** (Greater, 6 pts): a rule set persists indefinitely once imposed, not capped at Scene/Day - it holds until you release it or the target manages to break free (GM's call on the threshold).
+- **Zealous Enforcement** (Greater, 6 pts): bound targets don't just want the rule followed - they actively intervene, verbally or physically, to stop anyone else from breaking it.
 
 **Limiters**
 
-**Spoken Aloud Only**: the rule has to be declared out loud in the target’s presence - no silent or written imposition. **Fragile Authority**: the first time a bound target successfully breaks a rule, even at the Disadvantage cost, the whole binding shatters immediately for them - no wearing it down over repeated attempts. **Reciprocal Bond**: while any binding is active, you’re also bound by the same rule yourself - you set the standard, you have to live by it too. **Undermined by Contradiction**: if you personally break a rule you’ve currently imposed on someone else, every active binding you’re holding shatters at once.
+- **Spoken Aloud Only**: the rule has to be declared out loud in the target's presence - no silent or written imposition.
+- **Fragile Authority**: the first time a bound target successfully breaks a rule, even at the Disadvantage cost, the whole binding shatters immediately for them - no wearing it down over repeated attempts.
+- **Reciprocal Bond**: while any binding is active, you're also bound by the same rule yourself - you set the standard, you have to live by it too.
+- **Undermined by Contradiction**: if you personally break a rule you've currently imposed on someone else, every active binding you're holding shatters at once.
 
 **1** - Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die binds them to one simple rule of conduct you declare (“don’t raise your voice,” “don’t lie to me,” “don’t draw a weapon”) for the rest of the Scene. Breaking the rule costs them **Disadvantage** on the roll that breaks it.
 
@@ -999,11 +1148,15 @@ Ki Infusion still applies on top, same as any Social attack.
 
 **Adders**
 
-**Gentle Touch** (Lesser, 3 pts): grip and manipulate liquids, gases, or loose particulate matter (sand, water, smoke) as a cohesive mass, something solid-object telekinesis normally can’t do. **Multi-Throw** (Lesser, 3 pts): the thrown-object attack (Level 3+) can hit a second target in the same Round at no additional Ki cost. **Crushing Grip** (Greater, 6 pts): spend 1 Ki to crush a gripped object or limb directly, Potence dice vs. Soak, no throw required, usable each round while the grip is maintained.
+- **Gentle Touch** (Lesser, 3 pts): grip and manipulate liquids, gases, or loose particulate matter (sand, water, smoke) as a cohesive mass, something solid-object telekinesis normally can't do.
+- **Multi-Throw** (Lesser, 3 pts): the thrown-object attack (Level 3+) can hit a second target in the same Round at no additional Ki cost.
+- **Crushing Grip** (Greater, 6 pts): spend 1 Ki to crush a gripped object or limb directly, Potence dice vs. Soak, no throw required, usable each round while the grip is maintained.
 
 **Limiters**
 
-**Line of Sight Only**: you must maintain unbroken line of sight to whatever you’re gripping. The effect ends instantly if that’s blocked. **One at a Time**: Level 4’s multi-object grip never applies. You’re limited to one object or person at a time, regardless of Level. **Backlash**: if a contested Potence attempt against a person fails, you’re at Disadvantage on all rolls for your next turn.
+- **Line of Sight Only**: you must maintain unbroken line of sight to whatever you're gripping. The effect ends instantly if that's blocked.
+- **One at a Time**: Level 4's multi-object grip never applies. You're limited to one object or person at a time, regardless of Level.
+- **Backlash**: if a contested Potence attempt against a person fails, you're at Disadvantage on all rolls for your next turn.
 
 **1** - Spend **1 Ki** to apply your Potence rating (both the flat carry/break give and the contested forcing dice pool) to an object within **Close** range, no touch required. Initiating is a Normal action; holding or moving something across subsequent rounds takes a Fast action each round to maintain concentration.
 
@@ -1026,11 +1179,15 @@ Ki Infusion still applies on top, same as any Social attack.
 
 **Adders**
 
-**Lingering Impression** (Lesser, 3 pts): after reading an object, you retain a faint sense of it for a Day, letting you recognize it or its owner again on a later touch without a fresh roll. **Emotional Resonance** (Lesser, 3 pts): once per Scene, ask specifically about the emotional state of whoever last handled the object, getting a clear answer even at Level 1’s flash tier. **Chain Reading** (Greater, 6 pts): read a second object that was in contact with the first at the time of the event in question, extending the vision to include it, for the same Ki cost.
+- **Lingering Impression** (Lesser, 3 pts): after reading an object, you retain a faint sense of it for a Day, letting you recognize it or its owner again on a later touch without a fresh roll.
+- **Emotional Resonance** (Lesser, 3 pts): once per Scene, ask specifically about the emotional state of whoever last handled the object, getting a clear answer even at Level 1's flash tier.
+- **Chain Reading** (Greater, 6 pts): read a second object that was in contact with the first at the time of the event in question, extending the vision to include it, for the same Ki cost.
 
 **Limiters**
 
-**Painful Echo**: a detailed vision always costs 1 unsoakable Health Level, even after the Ki cost drops to 0 at Level 5. **One Touch Only**: you can only ever read an object once. A second reading of the same object yields nothing new. **Overwhelmed by Violence**: if the object’s history includes a violent death or severe trauma, roll Moira + Difficulty or be Disadvantaged for the rest of the Scene.
+- **Painful Echo**: a detailed vision always costs 1 unsoakable Health Level, even after the Ki cost drops to 0 at Level 5.
+- **One Touch Only**: you can only ever read an object once. A second reading of the same object yields nothing new.
+- **Overwhelmed by Violence**: if the object's history includes a violent death or severe trauma, roll Moira + Difficulty or be Disadvantaged for the rest of the Scene.
 
 **1** - Touch an object and roll **Moira + Difficulty**. Ask **1** question about its most significant recent history - the answer comes as a vague impression, a flash of emotion or sense-memory. No Ki, no Gift Check.
 
@@ -1053,11 +1210,16 @@ Additionally, given a full **Month** of rest, you can heal away a below-zero Fla
 
 **Adders**
 
-**Battlefield Mend** (Lesser, 3 pts): the combat heal (Level 3+) can trigger reflexively the first time you’d drop to 0 Health Levels in a Scene, stabilizing you instantly. **Deep Reserves** (Lesser, 3 pts): the combat heal’s per-Round use cap increases by one at every Level (2/Round at Level 3, 3/Round at Level 4, etc.). **Overheal Buffer** (Lesser, 3 pts): once per Scene, using the combat heal while already at full Health Levels instead grants a temporary bonus Health Level that lasts until the Scene ends. **Rapid Mend** (Greater, 6 pts): the Level 5 permanent-harm recovery only needs a full Scene of dedicated rest instead of a full Day.
+- **Battlefield Mend** (Lesser, 3 pts): the combat heal (Level 3+) can trigger reflexively the first time you'd drop to 0 Health Levels in a Scene, stabilizing you instantly.
+- **Deep Reserves** (Lesser, 3 pts): the combat heal's per-Round use cap increases by one at every Level (2/Round at Level 3, 3/Round at Level 4, etc.).
+- **Overheal Buffer** (Lesser, 3 pts): once per Scene, using the combat heal while already at full Health Levels instead grants a temporary bonus Health Level that lasts until the Scene ends.
+- **Rapid Mend** (Greater, 6 pts): the Level 5 permanent-harm recovery only needs a full Scene of dedicated rest instead of a full Day.
 
 **Limiters**
 
-**Feed the Fire**: passive recovery requires actually eating a substantial meal during the rest period. It doesn’t work on an empty stomach. **No Instant Fix**: the Ki-gated combat heal (Level 3+) never applies. Passive recovery rates are the only way this Gift heals, at any Level. **Fragile Restoration**: a Health Level recovered by the combat heal (Level 3+) can be lost again by any single hit, even one that would normally deal no damage past Soak.
+- **Feed the Fire**: passive recovery requires actually eating a substantial meal during the rest period. It doesn't work on an empty stomach.
+- **No Instant Fix**: the Ki-gated combat heal (Level 3+) never applies. Passive recovery rates are the only way this Gift heals, at any Level.
+- **Fragile Restoration**: a Health Level recovered by the combat heal (Level 3+) can be lost again by any single hit, even one that would normally deal no damage past Soak.
 
 **1** - While resting (not fighting or exerting), recover 1 Health Level per **Scene** of rest.
 
@@ -1078,11 +1240,15 @@ Additionally, given a full **Month** of rest, you can heal away a below-zero Fla
 
 **Adders**
 
-**Instant Revert** (Lesser, 3 pts): once per Scene, revert to your true form as a Fast action instead of a Slow one, with no Gift Check. **Full Spectrum Mimicry** (Lesser, 3 pts): mimicry (Level 2+) extends to scent and body heat too, fooling animal senses and thermal imaging, not just sight and sound. **Living Disguise** (Greater, 6 pts): while mimicking a specific person, you also gain a working instinctive sense of how they’d act or react, enough to improvise their mannerisms convincingly under pressure.
+- **Instant Revert** (Lesser, 3 pts): once per Scene, revert to your true form as a Fast action instead of a Slow one, with no Gift Check.
+- **Full Spectrum Mimicry** (Lesser, 3 pts): mimicry (Level 2+) extends to scent and body heat too, fooling animal senses and thermal imaging, not just sight and sound.
+- **Living Disguise** (Greater, 6 pts): while mimicking a specific person, you also gain a working instinctive sense of how they'd act or react, enough to improvise their mannerisms convincingly under pressure.
 
 **Limiters**
 
-**Size Locked**: the mimicked form must stay within roughly your own mass (±25%). No shifting into something much larger or smaller. **Slow Return**: reverting to your true form always takes the same Slow action and Gift Check as transforming, at every Level. **Betraying Detail**: one small, GM-chosen detail of your true self always persists through the disguise (a birthmark, a habit, a scent), a fixed tell you don’t get to choose.
+- **Size Locked**: the mimicked form must stay within roughly your own mass (±25%). No shifting into something much larger or smaller.
+- **Slow Return**: reverting to your true form always takes the same Slow action and Gift Check as transforming, at every Level.
+- **Betraying Detail**: one small, GM-chosen detail of your true self always persists through the disguise (a birthmark, a habit, a scent), a fixed tell you don't get to choose.
 
 **1** - Is a Slow action and triggers a Gift Check - success free, failure costs 1 Ki, the transformation happens either way. Transform into a generic member of a broad category you’ve seen examples of (a dog, a police officer, a teenage boy) - not a specific individual. Appearance only, no voice. Undetectable unless an observer has specific reason to doubt it, in which case they may roll Insight + Difficulty to see through it.
 
@@ -1105,11 +1271,15 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 
 **Adders**
 
-**Extended Range** (Lesser, 3 pts): +1 Ki per use. The Move reaches one Range Band further than its current Level would normally allow. **Piercing Edge** (Lesser, 3 pts): the Move ignores a flat 2 points of the target’s relevant wall (Soak, Presence, or Psyche) before resolving. **Area of Effect** (Greater, 6 pts): +1 Ki per use. The Move affects everyone within its range/area rather than a single target - exact shape and extent defined when the Move is built, GM-approved.
+- **Extended Range** (Lesser, 3 pts): +1 Ki per use. The Move reaches one Range Band further than its current Level would normally allow.
+- **Piercing Edge** (Lesser, 3 pts): the Move ignores a flat 2 points of the target's relevant wall (Soak, Presence, or Psyche) before resolving.
+- **Area of Effect** (Greater, 6 pts): +1 Ki per use. The Move affects everyone within its range/area rather than a single target - exact shape and extent defined when the Move is built, GM-approved.
 
 **Limiters**
 
-**Telegraphed**: the Move requires an obvious, visible windup, a stance, a gesture, something a watching enemy learns to recognize. Anyone who’s seen it before gains Advantage on defending against it again. **One and Done**: the Move can only be used once per Scene, regardless of Level. **Costly Signature**: the Move’s Ki cost is always 1 higher than its Level would normally require, at every Level, including Level 1 (which costs 1 Ki instead of 0).
+- **Telegraphed**: the Move requires an obvious, visible windup, a stance, a gesture, something a watching enemy learns to recognize. Anyone who's seen it before gains Advantage on defending against it again.
+- **One and Done**: the Move can only be used once per Scene, regardless of Level.
+- **Costly Signature**: the Move's Ki cost is always 1 higher than its Level would normally require, at every Level, including Level 1 (which costs 1 Ki instead of 0).
 
 **1** - If an attack: deals **1d10** vs the target’s relevant wall. If non-damaging: produces one small, clearly-bounded effect (GM approval on scope). Using it is a Fast action. No Ki cost, no Gift Check.
 
@@ -1130,11 +1300,15 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 
 **Adders**
 
-**Partial Shift** (Lesser, 3 pts): grow or shrink just one part of your body, a hand, a foot, instead of the whole thing, for precision work without the full-body swing. **Momentum Slam** (Lesser, 3 pts): while enlarged, spend 1 Ki on a successful hit to add your current Soak bonus, halved (round down), as extra damage dice on that attack. **Proportional Gear** (Greater, 6 pts): carried objects and worn equipment resize along with you automatically, staying usable at any size instead of being left behind or crushed.
+- **Partial Shift** (Lesser, 3 pts): grow or shrink just one part of your body, a hand, a foot, instead of the whole thing, for precision work without the full-body swing.
+- **Momentum Slam** (Lesser, 3 pts): while enlarged, spend 1 Ki on a successful hit to add your current Soak bonus, halved (round down), as extra damage dice on that attack.
+- **Proportional Gear** (Greater, 6 pts): carried objects and worn equipment resize along with you automatically, staying usable at any size instead of being left behind or crushed.
 
 **Limiters**
 
-**Slow Growth**: activating this Gift is always a Slow action, at every Level. **Fixed Direction**: chosen once at creation, you can only ever grow or only ever shrink, never both. **Unscaled Gear**: your clothing and equipment never resize with you. Growing bursts your clothes; shrinking leaves you swimming in them, at Disadvantage on any roll requiring properly fitted gear until you adjust.
+- **Slow Growth**: activating this Gift is always a Slow action, at every Level.
+- **Fixed Direction**: chosen once at creation, you can only ever grow or only ever shrink, never both.
+- **Unscaled Gear**: your clothing and equipment never resize with you. Growing bursts your clothes; shrinking leaves you swimming in them, at Disadvantage on any roll requiring properly fitted gear until you adjust.
 
 **1** - Each use, choose one: grow or shrink your whole body by roughly half again your normal height in either direction, or stretch a single limb to extend your reach out to Close range instead of Melee. Is a Fast action. No Ki, no Gift Check.
 
@@ -1155,11 +1329,15 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 
 **Adders**
 
-**Rending Grip** (Lesser, 3 pts): the boosted attack (Level 3+) also disarms or crushes whatever the target is holding, on a hit. **Seismic Slam** (Lesser, 3 pts): spend 1 Ki to slam the ground, a shockwave dealing Potence dice vs. Soak to everyone at Close range along it. **Unstoppable Force** (Greater, 6 pts): spend 1 Ki when you land a hit. If enough dice connect to drop the target past 0 Health Levels in one blow, let it carry all the way through instead of stopping them at exactly 0.
+- **Rending Grip** (Lesser, 3 pts): the boosted attack (Level 3+) also disarms or crushes whatever the target is holding, on a hit.
+- **Seismic Slam** (Lesser, 3 pts): spend 1 Ki to slam the ground, a shockwave dealing Potence dice vs. Soak to everyone at Close range along it.
+- **Unstoppable Force** (Greater, 6 pts): spend 1 Ki when you land a hit. If enough dice connect to drop the target past 0 Health Levels in one blow, let it carry all the way through instead of stopping them at exactly 0.
 
 **Limiters**
 
-**Uncontrolled Force**: the boosted attack (Level 3+) always destroys any inanimate object it strikes alongside the target. You can’t pull the blow. **Ravenous Hunger**: using the boosted attack costs you 1 unsoakable Health Level each time, the strain of unleashing that much force. **Loud and Obvious**: your strength is never subtle. Even the passive Level 1+ bonus is visibly inhuman, no way to hide it.
+- **Uncontrolled Force**: the boosted attack (Level 3+) always destroys any inanimate object it strikes alongside the target. You can't pull the blow.
+- **Ravenous Hunger**: using the boosted attack costs you 1 unsoakable Health Level each time, the strain of unleashing that much force.
+- **Loud and Obvious**: your strength is never subtle. Even the passive Level 1+ bonus is visibly inhuman, no way to hide it.
 
 **1** - Treat your Potence as **2 higher** for Carrying Capacity and Break Threshold only. No Ki, no Gift Check.
 
@@ -1182,11 +1360,15 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 
 **Adders**
 
-**Distraction Cloud** (Lesser, 3 pts): while swarmed, spend 1 Ki to impose Disadvantage on all attacks a single target within your spread range makes for the rest of the Round, your components harassing them from every angle. **Instant Regroup** (Lesser, 3 pts): reforming is always a free action instead of whatever action cost your Level normally requires. **Split Focus** (Greater, 6 pts): while spread (Level 3+), attack two separate points independently instead of one uniform area, each resolved separately, same Ki cost.
+- **Distraction Cloud** (Lesser, 3 pts): while swarmed, spend 1 Ki to impose Disadvantage on all attacks a single target within your spread range makes for the rest of the Round, your components harassing them from every angle.
+- **Instant Regroup** (Lesser, 3 pts): reforming is always a free action instead of whatever action cost your Level normally requires.
+- **Split Focus** (Greater, 6 pts): while spread (Level 3+), attack two separate points independently instead of one uniform area, each resolved separately, same Ki cost.
 
 **Limiters**
 
-**Fragile Focus**: if a physical barrier interrupts your swarm mid-flow (a door slams shut, a window closes), you reform prematurely on the spot, ending the effect early. **Weather Locked**: strong wind, rain, or similar conditions impose Disadvantage on all actions while swarmed. **Always Costly**: the spread/attack Ki cost never drops to 0. Level 5’s mastery discount doesn’t apply.
+- **Fragile Focus**: if a physical barrier interrupts your swarm mid-flow (a door slams shut, a window closes), you reform prematurely on the spot, ending the effect early.
+- **Weather Locked**: strong wind, rain, or similar conditions impose Disadvantage on all actions while swarmed.
+- **Always Costly**: the spread/attack Ki cost never drops to 0. Level 5's mastery discount doesn't apply.
 
 **1** - Spend **1 Ki**; is a Slow action to break apart into your swarm form (a cloud of bugs, bats, drones, whatever fits). While swarmed, immune to single-target Physical attacks (they connect with mostly empty space), but any attack that hits an area instead deals double dice. You can flow through any gap large enough for a single one of your components (a crack under a door, a vent). Lasts up to a Minute. Reforming is a Normal action.
 
@@ -1207,11 +1389,15 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 
 **Adders**
 
-**Lingering Foothold** (Lesser, 3 pts): once you’ve connected to a device or system, retain a passive backdoor indefinitely, reconnecting instantly with no roll or Ki, until the device is reset, reformatted, or physically disconnected. **Ghost in Every Machine** (Lesser, 3 pts): Level 1’s passive awareness extends to Near range, and you also immediately sense which devices nearby are actively working against you, recording, transmitting, or armed, without needing to connect to any of them. **Overload Surge** (Greater, 6 pts): spend 1 Ki to fry a connected device instead of controlling it, disabling it outright and dealing a jolt of feedback (1d10 vs Soak) to anyone in direct contact with it.
+- **Lingering Foothold** (Lesser, 3 pts): once you've connected to a device or system, retain a passive backdoor indefinitely, reconnecting instantly with no roll or Ki, until the device is reset, reformatted, or physically disconnected.
+- **Ghost in Every Machine** (Lesser, 3 pts): Level 1's passive awareness extends to Near range, and you also immediately sense which devices nearby are actively working against you, recording, transmitting, or armed, without needing to connect to any of them.
+- **Overload Surge** (Greater, 6 pts): spend 1 Ki to fry a connected device instead of controlling it, disabling it outright and dealing a jolt of feedback (1d10 vs Soak) to anyone in direct contact with it.
 
 **Limiters**
 
-**Networked Only**: this Gift only works on devices already networked or powered on. Standalone, offline, or unpowered electronics are invisible to it. **Visible Interference**: connecting to a device causes visible interference nearby, flickering screens, dimming lights, tipping off anyone paying attention. **Slow Handshake**: every connection, at every Level, takes a full Round to establish instead of its normal action cost.
+- **Networked Only**: this Gift only works on devices already networked or powered on. Standalone, offline, or unpowered electronics are invisible to it.
+- **Visible Interference**: connecting to a device causes visible interference nearby, flickering screens, dimming lights, tipping off anyone paying attention.
+- **Slow Handshake**: every connection, at every Level, takes a full Round to establish instead of its normal action cost.
 
 **1** - Active electronics within Close range register at the edge of your awareness: a phone buzzing in a pocket, a camera panning, a server humming behind a wall. No roll, no Ki.
 
@@ -1232,11 +1418,15 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 
 **Adders**
 
-**Emotional Broadcast** (Lesser, 3 pts): once per Scene, project a simple emotion (fear, calm, doubt) into a target’s mind as a Mental attack, even before Level 4’s two-way link exists. **Group Mind** (Lesser, 3 pts): once a two-way link is established with someone (Level 4+), bridge one additional willing party into the same shared link. **Memory Lockpick** (Greater, 6 pts): spend an extra 1 Ki on a forced read (Level 3+) to target one specific memory or fact instead of a general surface impression, yielding a precise answer instead of a vague sensation.
+- **Emotional Broadcast** (Lesser, 3 pts): once per Scene, project a simple emotion (fear, calm, doubt) into a target's mind as a Mental attack, even before Level 4's two-way link exists.
+- **Group Mind** (Lesser, 3 pts): once a two-way link is established with someone (Level 4+), bridge one additional willing party into the same shared link.
+- **Memory Lockpick** (Greater, 6 pts): spend an extra 1 Ki on a forced read (Level 3+) to target one specific memory or fact instead of a general surface impression, yielding a precise answer instead of a vague sensation.
 
 **Limiters**
 
-**One Mind at a Time**: you can only maintain one link or active read at a time, even at Level 5. A new link severs the previous one automatically. **Echoes Linger**: a faint psychic echo lingers after any read or link. Other telepaths or psychics can detect that you were there. **Vulnerable Link**: while actively linked (Level 4+), you’re at Disadvantage against any Mental attack targeting you. The open channel cuts both ways.
+- **One Mind at a Time**: you can only maintain one link or active read at a time, even at Level 5. A new link severs the previous one automatically.
+- **Echoes Linger**: a faint psychic echo lingers after any read or link. Other telepaths or psychics can detect that you were there.
+- **Vulnerable Link**: while actively linked (Level 4+), you're at Disadvantage against any Mental attack targeting you. The open channel cuts both ways.
 
 **1** - Roll **Air + Difficulty** to read someone’s general emotional state - fear, anger, deception, attraction, whatever’s closest to the surface - requires them to be within Close range and perceivable to you. Success reveals the surface emotion; no specific thoughts, just the feeling underneath. No Ki, no Gift Check.
 
@@ -1257,11 +1447,15 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 
 **Adders**
 
-**Extended Portal** (Lesser, 3 pts): the portal (Level 4+) lasts a full Scene instead of a Minute. **Blind Jump Recovery** (Lesser, 3 pts): once per Scene, if a blink would land you somewhere dangerous, you may instantly abort and land back at your starting point instead, no Ki cost. **Extra Passenger** (Greater, 6 pts): bring up to three touched people along instead of just one, at Level 4+.
+- **Extended Portal** (Lesser, 3 pts): the portal (Level 4+) lasts a full Scene instead of a Minute.
+- **Blind Jump Recovery** (Lesser, 3 pts): once per Scene, if a blink would land you somewhere dangerous, you may instantly abort and land back at your starting point instead, no Ki cost.
+- **Extra Passenger** (Greater, 6 pts): bring up to three touched people along instead of just one, at Level 4+.
 
 **Limiters**
 
-**Echo Behind**: a visible or audible trace always marks both where you left and where you arrived. There’s no silent option. **Recoil**: after teleporting, you’re at Disadvantage on all rolls for the next Minute. **One-Way Portal Only**: Level 4’s portal never allows two-way travel. It opens once for you to step through, then closes immediately.
+- **Echo Behind**: a visible or audible trace always marks both where you left and where you arrived. There's no silent option.
+- **Recoil**: after teleporting, you're at Disadvantage on all rolls for the next Minute.
+- **One-Way Portal Only**: Level 4's portal never allows two-way travel. It opens once for you to step through, then closes immediately.
 
 **1** - Blink instantly to anywhere within line of sight, no matter the distance. Is a Fast action, and costs **1 Ki**. No Gift Check.
 
@@ -1282,11 +1476,15 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 
 **Adders**
 
-**Reflexive Retrieval** (Lesser, 3 pts): retrieving a stashed handheld item (Level 1 scope) is a reflexive action once per Round, not costing your Fast action. **Expanded Fold** (Lesser, 3 pts): storage capacity at every Level increases well beyond its normal scale, room for bulky or oversized items (a vehicle, furniture in bulk) that wouldn’t otherwise fit. **Physical Link** (Greater, 6 pts): bind the opening itself to a physical object big enough to actually climb through (a trunk, a door, a large bag), permanently, no Ki cost. Anyone who opens it can step through into your Threadspace, or pull items from it, the same way you can.
+- **Reflexive Retrieval** (Lesser, 3 pts): retrieving a stashed handheld item (Level 1 scope) is a reflexive action once per Round, not costing your Fast action.
+- **Expanded Fold** (Lesser, 3 pts): storage capacity at every Level increases well beyond its normal scale, room for bulky or oversized items (a vehicle, furniture in bulk) that wouldn't otherwise fit.
+- **Physical Link** (Greater, 6 pts): bind the opening itself to a physical object big enough to actually climb through (a trunk, a door, a large bag), permanently, no Ki cost. Anyone who opens it can step through into your Threadspace, or pull items from it, the same way you can.
 
 **Limiters**
 
-**Slow Threading**: opening the fold or door always takes a full Round instead of a Fast action, at every Level. **Guided Guests**: guests (Level 4+) can never navigate the Threadspace unassisted. They must be led by you at all times or risk getting lost. **Fragile Weave**: if the Threadspace is ever breached by an outside supernatural force (GM’s call, rare), everything currently stored inside is at risk of being lost or expelled.
+- **Slow Threading**: opening the fold or door always takes a full Round instead of a Fast action, at every Level.
+- **Guided Guests**: guests (Level 4+) can never navigate the Threadspace unassisted. They must be led by you at all times or risk getting lost.
+- **Fragile Weave**: if the Threadspace is ever breached by an outside supernatural force (GM's call, rare), everything currently stored inside is at risk of being lost or expelled.
 
 **1** - Stash or retrieve a handful of small objects (anything that fits in two hands) in a hidden fold in space only you can reach. Doing so is a Fast action. No Ki, no Gift Check.
 
@@ -1311,11 +1509,15 @@ Chosen once, at creation: how you perform the ritual that triggers this Gift, tr
 
 **Adders**
 
-**Ritual Shortcut** (Lesser, 3 pts): once per Scene, perform the ritual one action-band faster than your Level normally allows, at no extra Ki cost. **Precise Recall** (Lesser, 3 pts): revert an object you’ve personally transmuted back to its original form, at the same Ki cost as the original transformation, so long as nothing has altered it further since. **Mass Bank** (Greater, 6 pts): break something down without immediately rebuilding it, banking the freed mass for a later transmutation, up to your current Level’s mass cap.
+- **Ritual Shortcut** (Lesser, 3 pts): once per Scene, perform the ritual one action-band faster than your Level normally allows, at no extra Ki cost.
+- **Precise Recall** (Lesser, 3 pts): revert an object you've personally transmuted back to its original form, at the same Ki cost as the original transformation, so long as nothing has altered it further since.
+- **Mass Bank** (Greater, 6 pts): break something down without immediately rebuilding it, banking the freed mass for a later transmutation, up to your current Level's mass cap.
 
 **Limiters**
 
-**Irreversible Exchange**: once transmuted, an object can never be reverted to its original form, by this Gift or any other means. Equivalent exchange only runs one way. **Loud Working**: the ritual is never silent or discreet, always visibly or audibly obvious, at every Level. **Fixed Ritual Component**: your chosen ritual flavor requires a specific physical condition (a clear space to draw a circle, the ability to speak a chant, genuine silence to focus). The Gift simply fails if that condition is denied.
+- **Irreversible Exchange**: once transmuted, an object can never be reverted to its original form, by this Gift or any other means. Equivalent exchange only runs one way.
+- **Loud Working**: the ritual is never silent or discreet, always visibly or audibly obvious, at every Level.
+- **Fixed Ritual Component**: your chosen ritual flavor requires a specific physical condition (a clear space to draw a circle, the ability to speak a chant, genuine silence to focus). The Gift simply fails if that condition is denied.
 
 **1** - Touch a quantity of raw or simple material (up to roughly what you could carry) and spend **1 Ki**, then roll **Moira + Difficulty** to break it down and reconstruct it into a different simple object of equivalent mass and similar composition (loose stone into a crude wall, wood into a simple tool). Performing the ritual is a Slow action; the transmutation itself is instant once triggered.
 
@@ -1336,11 +1538,15 @@ Chosen once, at creation: how you perform the ritual that triggers this Gift, tr
 
 **Adders**
 
-**Painless** (Lesser, 3 pts): Advantage on any roll to resist the penalty effects of pain or injury, not immunity to the damage itself, just the body’s distraction from it. **Deep Reserve** (Lesser, 3 pts): when you do eat, drink, or sleep, a single session banks enough reserve to cover a stretch twice as long as your current Level would otherwise grant. **Instant Reset** (Greater, 6 pts): once per Day, instantly clear any accumulated deprivation effects with a moment’s focus, no need to actually eat, drink, or sleep to recover from them.
+- **Painless** (Lesser, 3 pts): Advantage on any roll to resist the penalty effects of pain or injury, not immunity to the damage itself, just the body's distraction from it.
+- **Deep Reserve** (Lesser, 3 pts): when you do eat, drink, or sleep, a single session banks enough reserve to cover a stretch twice as long as your current Level would otherwise grant.
+- **Instant Reset** (Greater, 6 pts): once per Day, instantly clear any accumulated deprivation effects with a moment's focus, no need to actually eat, drink, or sleep to recover from them.
 
 **Limiters**
 
-**Sudden Reckoning**: when this Gift’s duration finally runs out, all the deprivation you’d normally have felt gradually hits at once: Disadvantage on everything until you properly rest, eat, and drink. **Conscious Effort**: the passive benefits (Levels 1-2) require active concentration. They stop working while unconscious or surprised. **No Comfort**: not needing food, sleep, or rest doesn’t mean you don’t crave them. Disadvantage on any Social roll requiring you to convincingly pass as an ordinary person eating, sleeping, or resting normally.
+- **Sudden Reckoning**: when this Gift's duration finally runs out, all the deprivation you'd normally have felt gradually hits at once: Disadvantage on everything until you properly rest, eat, and drink.
+- **Conscious Effort**: the passive benefits (Levels 1-2) require active concentration. They stop working while unconscious or surprised.
+- **No Comfort**: not needing food, sleep, or rest doesn't mean you don't crave them. Disadvantage on any Social roll requiring you to convincingly pass as an ordinary person eating, sleeping, or resting normally.
 
 **1** - Hold your breath for a **Minute**. Hunger, thirst, and sleep needs stretch to roughly a **Day** between requirements instead of daily. No roll, no Ki, passive.
 
@@ -1363,11 +1569,15 @@ Chosen once, at creation: how you perform the ritual that triggers this Gift, tr
 
 **Adders**
 
-**Cleansing Touch** (Lesser, 3 pts): spend 1 Ki to purge a poison or disease from a touched ally instead of only yourself. **Preemptive Ward** (Lesser, 3 pts): once per Day, grant yourself Advantage against a specific known poison, disease, or aging effect before you’re ever exposed to it. **Halted Decay** (Greater, 6 pts): once per year of in-game time, subtly reverse a few years of accumulated aging, on top of the Level 4+ stopped-aging benefit.
+- **Cleansing Touch** (Lesser, 3 pts): spend 1 Ki to purge a poison or disease from a touched ally instead of only yourself.
+- **Preemptive Ward** (Lesser, 3 pts): once per Day, grant yourself Advantage against a specific known poison, disease, or aging effect before you're ever exposed to it.
+- **Halted Decay** (Greater, 6 pts): once per year of in-game time, subtly reverse a few years of accumulated aging, on top of the Level 4+ stopped-aging benefit.
 
 **Limiters**
 
-**Slow Purge**: your immunity isn’t instantaneous, at any Level. A poison or disease still runs its full course, symptoms included, for up to a Day before your body fights it off. The Level 3+ Ki purge still works, but only shortens that Day down to a Minute rather than clearing it outright. **Vulnerable Youth**: your immunity to aging (Level 4+) doesn’t protect against magical or supernatural rapid-aging effects specifically, only the natural passage of time. **Silent Carrier**: you’re personally immune, but you can still carry and unknowingly transmit disease to others without ever showing symptoms yourself.
+- **Slow Purge**: your immunity isn't instantaneous, at any Level. A poison or disease still runs its full course, symptoms included, for up to a Day before your body fights it off. The Level 3+ Ki purge still works, but only shortens that Day down to a Minute rather than clearing it outright.
+- **Vulnerable Youth**: your immunity to aging (Level 4+) doesn't protect against magical or supernatural rapid-aging effects specifically, only the natural passage of time.
+- **Silent Carrier**: you're personally immune, but you can still carry and unknowingly transmit disease to others without ever showing symptoms yourself.
 
 **1** - **Advantage** on any roll to resist poison. Immune outright to ordinary disease. No Ki, no Gift Check.
 
