@@ -2,12 +2,15 @@
    graph busts together. See the note in index.html. */
 const V = new URL(import.meta.url).search;
 const { render } = await import('./render.js' + V);
+const { autoPaginate, stripAutoBreaks } = await import('./autopage.js' + V);
 const { guide, starter } = await import('./sample.js' + V);
 const files = await import('./files.js' + V);
 
 const editor   = document.getElementById('editor');
 const preview  = document.getElementById('preview');
 const status   = document.getElementById('status');
+const fixPagesBtn = document.getElementById('btn-fixpages');
+const reBreakBtn  = document.getElementById('btn-rebreak');
 const fileIn   = document.getElementById('file');
 const pageRule = document.getElementById('page-rule');
 
@@ -104,6 +107,13 @@ window.addEventListener('resize', applyZoom);
  * Nothing is lost, but the page stops being a page. Mark any that have
  * outgrown the sheet so it is visible before printing. */
 function flagOverflow() {
+  // Measure unzoomed, whatever the preview is showing. Zoom scales the
+  // layout, and column rounding shifts with it by a few pixels either way -
+  // enough to flip the verdict on a page that only just fits. Print always
+  // renders at zoom 1 (see brew.css), so that is the only measurement that
+  // answers the question anyone is actually asking.
+  const shown = preview.style.getPropertyValue('--zoom');
+  preview.style.setProperty('--zoom', '1');
   let over = 0;
   for (const page of preview.querySelectorAll('.page')) {
     const sheet = parseFloat(getComputedStyle(page).minHeight) || 0;
@@ -111,6 +121,7 @@ function flagOverflow() {
     page.classList.toggle('overflowing', spills);
     if (spills) over += 1;
   }
+  if (shown) preview.style.setProperty('--zoom', shown);
   return over;
 }
 
@@ -124,6 +135,9 @@ function draw() {
     `${count} page${count === 1 ? '' : 's'} · ${words} words · ${files.currentName()}`
     + (over ? ` · ${over} page${over === 1 ? '' : 's'} longer than the sheet` : '');
   status.classList.toggle('warn', over > 0);
+  // Only offered when there is something to fix - a break inserted into a
+  // document that already fits would just be noise in the source.
+  fixPagesBtn.hidden = over === 0;
 }
 
 let timer;
@@ -150,11 +164,62 @@ document.getElementById('btn-saveas').onclick = async () => {
   if (saved) status.textContent = `saved ${saved}`;
 };
 
+/* Insert the breaks the document is missing. Only ever adds them: a \page you
+   wrote yourself keeps its place and its options. The result goes into the
+   editor rather than anywhere hidden, so it can be read, saved and undone
+   like anything else you typed. */
+/* Insert the breaks the document is missing.
+ *
+ * Fix pages only ever ADDS: a \page you wrote yourself keeps its place and
+ * its options, so nothing you decided deliberately can be moved.
+ *
+ * Re-break first strips the plain \page markers - the shape this tool writes -
+ * and lays the document out again. That matters after a layout change: POD has
+ * about 12% less room than digital, so breaks packed for one leave half-empty
+ * pages in the other, and adding to them only makes more. Breaks carrying
+ * options (cols=1, bg=parchment) are kept either way; a person typed those.
+ *
+ * Either way the result goes into the editor rather than anywhere hidden, so
+ * it can be read, saved and undone like anything else you typed.
+ */
+async function repaginate(button, { fromScratch }) {
+  const original = editor.value;
+  const label = button.textContent;
+  button.disabled = true;
+  button.textContent = 'Working...';
+  try {
+    const src = fromScratch ? stripAutoBreaks(original) : original;
+    const { markdown, added, stubborn } = await autoPaginate(src, preview, render);
+    editor.value = markdown;
+    draw();
+
+    const parts = [];
+    if (fromScratch) {
+      const dropped = (original.match(/^\\page[ \t]*$/gm) || []).length;
+      parts.push(`Re-broken from scratch${dropped ? `, dropping ${dropped} old break${dropped === 1 ? '' : 's'}` : ''}.`);
+    }
+    parts.push(added ? `Added ${added} page break${added === 1 ? '' : 's'}.` : 'Nothing to break.');
+    if (stubborn.length) {
+      parts.push(`${stubborn.length === 1 ? '1 block is' : stubborn.length + ' blocks are'} taller than a page alone, which no break can fix: ${stubborn.join('; ')}`);
+    }
+    status.textContent = parts.join(' ');
+    status.classList.toggle('warn', stubborn.length > 0);
+  } finally {
+    button.disabled = false;
+    button.textContent = label;
+  }
+}
+
+fixPagesBtn.onclick = () => repaginate(fixPagesBtn, { fromScratch: false });
+reBreakBtn.onclick = () => repaginate(reBreakBtn, { fromScratch: true });
+
 document.getElementById('btn-print').onclick = () => window.print();
 
 document.getElementById('sel-theme').onchange = (e) => {
   prefs.theme = e.target.value;
   applyPrefs();
+  // A theme changes typography, so it changes how tall a page's text runs.
+  draw();
 };
 
 document.getElementById('btn-palette').onclick = () => {
@@ -165,11 +230,16 @@ document.getElementById('btn-palette').onclick = () => {
 document.getElementById('btn-layout').onclick = () => {
   prefs.layout = prefs.layout === 'pod' ? 'digital' : 'pod';
   applyPrefs();
+  // POD has roughly 12% less room than digital - bleed grows the sheet but is
+  // trimmed off, while the gutter and safe inset come out of the text block.
+  // Without this redraw the overflow flags still describe the old geometry.
+  draw();
 };
 
 document.getElementById('sel-trim').onchange = (e) => {
   prefs.trim = e.target.value;
   applyPrefs();
+  draw();
 };
 
 document.getElementById('sel-zoom').onchange = (e) => {
