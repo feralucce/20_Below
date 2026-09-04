@@ -8,14 +8,16 @@
 <script src="../vendor/marked.min.js"></script>
 <style>
   body { margin: 0; background: #060d12; color: #eaf5fb; font-family: "Segoe UI", system-ui, sans-serif; }
-  #bar { display: flex; gap: .75rem; align-items: center; padding: .6rem 1rem; background: #0d1a22; border-bottom: 1px solid #24404f; position: sticky; top: 0; z-index: 10; }
+  #bar { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; padding: .6rem 1rem; background: #0d1a22; border-bottom: 1px solid #24404f; position: sticky; top: 0; z-index: 10; }
   #bar h1 { font-size: 1rem; margin: 0; font-weight: 600; }
   #bar .spacer { flex: 1; }
-  button, input { font: inherit; }
-  button { background: #1c3548; color: #eaf5fb; border: 1px solid #3d84c4; border-radius: 6px; padding: .3rem .7rem; cursor: pointer; }
+  #bar label { color: #8fadbe; font-size: .85rem; display: flex; gap: .35rem; align-items: center; }
+  button, input, select { font: inherit; }
+  button, select { background: #1c3548; color: #eaf5fb; border: 1px solid #3d84c4; border-radius: 6px; padding: .3rem .7rem; cursor: pointer; }
   button:disabled { opacity: .5; cursor: default; }
   #status { padding: .6rem 1rem; color: #8fadbe; }
-  #out { width: calc(100% - 2rem); height: 16rem; margin: 0 1rem 1rem; background: #0d1a22; color: #eaf5fb; border: 1px solid #24404f; border-radius: 6px; font-family: ui-monospace, "Cascadia Code", monospace; font-size: 12px; }
+  #status.bad { color: #e0685c; font-weight: 600; }
+  #out { width: calc(100% - 2rem); height: 14rem; margin: 0 1rem 1rem; background: #0d1a22; color: #eaf5fb; border: 1px solid #24404f; border-radius: 6px; font-family: ui-monospace, "Cascadia Code", monospace; font-size: 12px; }
   #preview { padding: 20px; }
 </style>
 </head>
@@ -23,7 +25,20 @@
 
 <div id="bar">
   <h1>Paginate for The Brewery</h1>
-  <span id="src"></span>
+  <label>Layout
+    <select id="sel-layout">
+      <option value="digital">Digital</option>
+      <option value="pod">POD (gutters + bleed)</option>
+    </select>
+  </label>
+  <label>Size
+    <select id="sel-trim">
+      <option value="letter">Letter 8.5 x 11</option>
+      <option value="a4">A4 210 x 297</option>
+      <option value="trade">US Trade 6 x 9</option>
+      <option value="digest">Digest 5.5 x 8.5</option>
+    </select>
+  </label>
   <span class="spacer"></span>
   <button id="copy" disabled>Copy markdown</button>
   <button id="download" disabled>Download .md</button>
@@ -31,27 +46,113 @@
 
 <div id="status">Loading…</div>
 <textarea id="out" spellcheck="false" readonly></textarea>
-<div id="preview" data-palette="colour" data-layout="digital" style="--zoom:0.45"></div>
+<div id="preview" data-palette="colour" data-layout="digital"></div>
 
 <script type="module">
 /* Packs a chapter's chunks into pages against the Brewery's own renderer.
  *
  * Pagination in the Brewery is manual by design - browsers will not reflow
- * content into fixed-size sheets, so the author says where a page ends.
- * Guessing at breaks by word count produces pages that overflow and get
- * silently clipped in print. So this fills a page one chunk at a time and
- * asks the real renderer, after every addition, whether the page has grown
- * past the sheet - the same test main.js uses to draw its red warning bar.
+ * content into fixed-size sheets, so the author says where a page ends. This
+ * fills a page one chunk at a time and asks the real renderer, after every
+ * addition, whether the page has grown past the sheet: the same test
+ * brew/main.js uses to draw its red warning bar.
+ *
+ * It has to pack under the SAME layout and trim the document will be printed
+ * at. POD is not digital with a border round it - it adds bleed, a 0.35in
+ * gutter and a 0.15in safe inset, so the text area is both shorter and
+ * narrower. Pages packed for digital letter do not fit a POD sheet, and each
+ * one spills onto a blank second sheet in print. So the controls default to
+ * whatever The Brewery itself last used, read from the same stored prefs.
  *
  * Usage:  tools/paginate.html?src=../build/<slug>.chunks.json
- * produced by tools/scriv2brew.py.
  */
+const BREW_PREFS = '20below-brew-prefs-v2';
+const TRIMS = {
+  letter: { w: '8.5in', h: '11in' },
+  a4:     { w: '210mm', h: '297mm' },
+  trade:  { w: '6in',   h: '9in' },
+  digest: { w: '5.5in', h: '8.5in' },
+};
+
 const params = new URLSearchParams(location.search);
 const src = params.get('src');
 const statusEl = document.getElementById('status');
 const outEl = document.getElementById('out');
 const preview = document.getElementById('preview');
-document.getElementById('src').textContent = src || '(no ?src= given)';
+const layoutSel = document.getElementById('sel-layout');
+const trimSel = document.getElementById('sel-trim');
+const copyBtn = document.getElementById('copy');
+const dlBtn = document.getElementById('download');
+
+// Start from The Brewery's own saved preferences, so "what I print" and "what
+// this packed for" are the same thing without anyone having to line them up.
+let brewPrefs = {};
+try { brewPrefs = JSON.parse(localStorage.getItem(BREW_PREFS) || '{}') || {}; } catch {}
+layoutSel.value = brewPrefs.layout === 'pod' ? 'pod' : 'digital';
+trimSel.value = TRIMS[brewPrefs.trim] ? brewPrefs.trim : 'letter';
+if (brewPrefs.theme) preview.dataset.theme = brewPrefs.theme;
+if (brewPrefs.palette) preview.dataset.palette = brewPrefs.palette;
+
+function applySettings() {
+  const t = TRIMS[trimSel.value] || TRIMS.letter;
+  preview.dataset.layout = layoutSel.value;
+  preview.style.setProperty('--trim-w', t.w);
+  preview.style.setProperty('--trim-h', t.h);
+  preview.style.setProperty('--zoom', '1');   // always measure unscaled
+}
+
+function firstPageOverflows() {
+  const page = preview.querySelector('.page');
+  const sheet = parseFloat(getComputedStyle(page).minHeight) || 0;
+  return sheet > 0 && page.offsetHeight > sheet + 4;
+}
+
+const isHeading = (c) => /^#{1,3} /.test(c);
+let markdown = '';
+
+function repaginate(chunks, title, render) {
+  applySettings();
+  const pages = [];
+  let cur = [];
+  for (const chunk of chunks) {
+    if (cur.length) {
+      render(cur.concat([chunk]).join('\n\n'), preview);
+      if (firstPageOverflows()) {
+        // Never end a page on a heading - it orphans the head from its text.
+        const carried = [];
+        while (cur.length && isHeading(cur[cur.length - 1])) carried.unshift(cur.pop());
+        pages.push(cur);
+        cur = carried.concat([chunk]);
+        continue;
+      }
+    }
+    cur.push(chunk);
+  }
+  if (cur.length) pages.push(cur);
+
+  // Built from char codes: a literal backslash-p is not a JS escape and
+  // survives templating badly. This cannot be mangled on the way through.
+  const NL = String.fromCharCode(10);
+  const BREAK = NL + NL + String.fromCharCode(92) + 'page' + NL + NL;
+  markdown = pages.map((p) => p.join(NL + NL)).join(BREAK) + NL;
+  outEl.value = markdown;
+
+  // Verify at full size, under the same settings, before shrinking to fit.
+  const count = render(markdown, preview);
+  const spills = [...preview.querySelectorAll('.page')].filter((p) => {
+    const sheet = parseFloat(getComputedStyle(p).minHeight) || 0;
+    return sheet > 0 && p.offsetHeight > sheet + 4;
+  }).length;
+  preview.style.setProperty('--zoom', '0.45');
+
+  const where = `${layoutSel.value === 'pod' ? 'POD' : 'Digital'}, ${trimSel.options[trimSel.selectedIndex].text}`;
+  statusEl.className = spills ? 'bad' : '';
+  statusEl.textContent = spills
+    ? `${title}: ${count} pages for ${where} - ${spills} STILL OVERFLOWING, each spills onto a blank sheet in print.`
+    : `${title}: ${chunks.length} chunks into ${count} pages for ${where} - none overflowing.`;
+  copyBtn.disabled = dlBtn.disabled = false;
+  return { count, spills };
+}
 
 if (!src) {
   statusEl.textContent = 'Pass ?src=../build/<slug>.chunks.json - run tools/scriv2brew.py first.';
@@ -64,65 +165,12 @@ if (!src) {
 
   const { render } = await import('../brew/render.js');
   const data = await (await fetch(src, { cache: 'no-store' })).json();
-  const chunks = data.chunks;
 
-  // Measure in the real preview, in normal flow, at zoom 1. An absolutely
-  // positioned off-screen container looks like it should work and does not:
-  // .flow is height:100% of the page, and out of flow the page stops growing
-  // when its content overruns, so nothing ever reports as overflowing.
-  const scratch = preview;
-  preview.style.setProperty('--zoom', '1');
+  const run = () => repaginate(data.chunks, data.title, render);
+  layoutSel.onchange = run;
+  trimSel.onchange = run;
+  run();
 
-  function overflows(md) {
-    render(md, scratch);
-    const page = scratch.querySelector('.page');
-    const sheet = parseFloat(getComputedStyle(page).minHeight) || 0;
-    return sheet > 0 && page.offsetHeight > sheet + 4;
-  }
-
-  const isHeading = (c) => /^#{1,3} /.test(c);
-  const pages = [];
-  let cur = [];
-
-  for (const chunk of chunks) {
-    if (cur.length && overflows(cur.concat([chunk]).join('\n\n'))) {
-      // Never end a page on a heading - it orphans the head from its text.
-      const carried = [];
-      while (cur.length && isHeading(cur[cur.length - 1])) carried.unshift(cur.pop());
-      pages.push(cur);
-      cur = carried.concat([chunk]);
-    } else {
-      cur.push(chunk);
-    }
-  }
-  if (cur.length) pages.push(cur);
-
-  // Built from char codes: a literal backslash-p in a JS string is not an
-  // escape, and survives copy/paste and templating badly. This cannot be
-  // mangled on the way through.
-  const NL = String.fromCharCode(10);
-  const BREAK = NL + NL + String.fromCharCode(92) + 'page' + NL + NL;
-  const markdown = pages.map((p) => p.join(NL + NL)).join(BREAK) + NL;
-
-  outEl.value = markdown;
-
-  // Re-render the finished markdown and confirm the packing actually held,
-  // then shrink the preview so all the pages fit on screen at once.
-  const count = render(markdown, preview);
-  const spills = [...preview.querySelectorAll('.page')].filter((p) => {
-    const sheet = parseFloat(getComputedStyle(p).minHeight) || 0;
-    return sheet > 0 && p.offsetHeight > sheet + 4;
-  }).length;
-  // Only now, with the check done at zoom 1, shrink it to fit on screen.
-  preview.style.setProperty('--zoom', '0.45');
-
-  statusEl.textContent =
-    `${data.title}: ${chunks.length} chunks packed into ${count} page${count === 1 ? '' : 's'}` +
-    (spills ? ` - ${spills} STILL OVERFLOWING, check the red bars below` : ' - none overflowing.');
-
-  const copyBtn = document.getElementById('copy');
-  const dlBtn = document.getElementById('download');
-  copyBtn.disabled = dlBtn.disabled = false;
   copyBtn.onclick = async () => {
     await navigator.clipboard.writeText(markdown);
     copyBtn.textContent = 'Copied';
@@ -132,7 +180,7 @@ if (!src) {
     const slug = (src.split('/').pop() || 'chapter').replace(/\.chunks\.json$/, '');
     const a = document.createElement('a');
     a.href = URL.createObjectURL(new Blob([markdown], { type: 'text/markdown' }));
-    a.download = slug + '.md';
+    a.download = `${slug}-${layoutSel.value}-${trimSel.value}.md`;
     a.click();
     URL.revokeObjectURL(a.href);
   };

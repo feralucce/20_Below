@@ -1,0 +1,191 @@
+# Advancement
+
+Your character walks out of the first session a little different from the one who walked in. After thirty sessions, they are somebody else. This chapter is how that happens: you earn XP for playing, and you spend it to make your character more powerful.
+
+There are no classes and no levels in 20 Below, so nothing tells you what you’re allowed to improve next. You earn XP and you spend it on whatever you want, in whatever order you want. A character who only ever raises one Skill is making a choice, not a mistake.
+
+What that turns into at the table is a budgeting problem, and a pleasant one. Some things are cheap enough to buy on the drive home. Some things you save for across a season. One of them - raising an Attribute - is a purchase you plan a whole campaign around. Knowing which is which is most of what this chapter is for.
+
+## Earning XP
+
+Up to **5 XP a session**, across five categories worth 1 each. The GM awards them independently, so a session can land anywhere from 0 to 5.
+
+Attendance and Participation. Showed up and played.
+
+Good Roleplaying. Played the character well.
+
+Heroism and Risk Faced. Took a real risk in character.
+
+Learning and Discovery. Learned something significant about the character, the plot, or the world.
+
+Standout Moment. The GM’s discretion - a beat somebody brings up again three sessions later.
+
+Four is a good session. Five is a great one. If your table is handing out five every week, the categories have stopped meaning anything, and your players will notice before you do.
+
+Story Awards sit outside that cap: lump sums for finishing a major arc, putting down a significant villain, or reaching a milestone the campaign was built around. There’s no formula for them. A GM who hands out ten at the end of a two-month arc hasn’t done anything wrong.
+
+## Spending It
+
+XP is awarded at the end of a session and spent before the next one starts. That’s the whole procedure. You don’t need to explain where the training happened, find a teacher, or account for downtime. Your character survived something and came out of it better at something. Write it down and come back next week.
+
+That’s deliberate. A justification requirement sounds great in the abstract, and then it turns into a twenty-minute argument about whether nine days of in-game travel is enough to explain a Skill tier. Nobody has ever enjoyed that argument.
+
+\page
+
+## What Everything Costs
+
+Every number in this chapter comes out of the same file the character creator reads, so the app and the book can’t disagree about a price.
+
+### Skills
+
+- New Skill, Untrained to Novice: **3 XP**
+- Raising a tier after that: **current tier x 2 XP**
+
+### Resources
+
+- New Resource: **4 XP**
+- Raising a level after that: **current level x 3 XP**
+
+### Boons
+
+- Trivial: **2 XP** - Lesser: **6 XP**
+- Greater: **10 XP** - Legendary: **14 XP**
+
+### Gifts
+
+- A new Gift, at Level 1: **7 XP**, minus 1 per Limiter, never below 1
+- Raising a Gift: current level x 5, minus 1 per Limiter, never below 1
+- Lesser Adder: **6 XP** - Greater Adder: **12 XP**
+
+### Attributes
+
+- Raising one: **current rating x 9 XP**
+
+### Flaws
+
+- Shedding one: three times the points it granted
+
+A note on how those multipliers read: you pay for the rung you’re leaving, not the one you’re stepping onto. Trained to Adept costs 4, because Trained is tier 2. Earth 6 to Earth 7 costs 54, because you’re standing on 6.
+
+## What That Actually Buys
+
+Prices don’t mean much on their own. Here’s what they look like against a real calendar.
+
+Call it 4 XP a session, which is a good table on an ordinary week. A weekly game earns about 200 XP a year.
+
+- A new Resource - **4 XP** - one session
+- A Resource, Level 1 to 2 - **3 XP** - one session
+- A Skill tier, Trained to Adept - **4 XP** - one session
+- A new Skill, up to Novice - **3 XP** - one session
+- A Greater Boon - **10 XP** - three sessions
+- A new Gift at Level 1 - **7 XP** - two sessions
+- One Skill, Untrained to Master - **23 XP** - six sessions
+- A Gift from Level 1 to 5 - **50 XP** - three months
+- An Attribute, 5 to 6 - **45 XP** - three months
+- An Attribute, 7 to 8 - **63 XP** - four months
+
+So: Skills and Resources are what you buy this month. Boons and Gifts are what you buy this season. An Attribute is what you save for while doing something else, and it will still be the largest single thing your character ever bought.
+
+\page
+
+That spread is the point. If everything cost about the same, every character would end the campaign looking like every other character. Instead you get people who are wide and people who are deep, because they made different bets a year ago.
+
+## Skills
+
+Skills are the cheapest thing on the sheet and they always will be. This is where a new character should spend most of their first fifty XP.
+
+The one purchase worth calling out is the first one. Untrained isn’t the bottom rung of the ladder - it’s the ground the ladder is standing on. An Untrained roll doesn’t get your Attribute at all; your target number is the Difficulty by itself. Novice gets you the Attribute, at Disadvantage.
+
+Watch what that does. Ronan has Earth 8 and wants to climb a knotted rope, Difficulty 7. Untrained, he needs a 7 or under, which the dice give him about one time in five. Novice, he needs 15 or under and rolls three dice keeping the worst two, which lands about two times in three.
+
+**Three XP.** That is the best purchase in this book, and it stays the best purchase every time you make it.
+
+Everything after it is the same ladder Skills always describe, one tier at a time, no skipping. Novice to Trained is 2. Trained to Adept is 4. Adept to Expert is 6. Expert to Master is 8. **Twenty-three XP** takes any Skill from nothing to Master, which is under six sessions of a single player’s XP, and it is entirely reasonable to spend a whole campaign never doing it once.
+
+## Resources
+
+**Four XP** to take a Resource you don’t have at all. After that, three times the level you’re leaving: Level 1 to 2 is 3, Level 4 to 5 is 12. Thirty-four takes one from nothing to its ceiling.
+
+Resources are the quietest purchase on the sheet and the one players forget. A Level 2 Contacts network becoming Level 4 costs fifteen XP and changes what kinds of problems you’re allowed to solve off-screen. Consider that before you spend forty-five on an Attribute.
+
+## Boons
+
+Twice what the Boon cost at creation. **Trivial 2, Lesser 6, Greater 10, Legendary 14.**
+
+Buying a Boon in play is buying a rule exception, so it wants a moment of thought about where it came from. Not a justification - I said you don’t need one and I meant it - just an eye toward whether Iron Will showing up in session twelve says something true about what your character has been through. Usually it does. That’s the fun part.
+
+## Gifts
+
+Gifts are the most expensive per-point thing you can buy, and the pricing has a shape worth understanding before you commit.
+
+\page
+
+A Gift you’ve never had costs 7 to acquire at Level 1. After that, each level costs the level you’re leaving times five: 5 to reach Level 2, 10 for Level 3, 15 for Level 4, 20 for Level 5. **Fifty-seven XP** takes a Gift from nothing to its ceiling.
+
+Limiters discount both formulas by 1 XP each, the same way they discount the creation price, and neither formula ever drops below 1 XP no matter how many you’ve stacked. A heavily limited Gift is cheap to buy and cheap to climb, and it is still limited every single session.
+
+Adders are flat: 6 for a Lesser, 12 for a Greater, whether you buy them the day you take the Gift or two years later. Unlike levels, they don’t get more expensive with time.
+
+Limiters, on the other hand, are forever. There is no price to remove one, because removing one isn’t a thing you can do. A Limiter isn’t a debt you took on to afford the Gift - it’s part of the description of what the Gift is. The Gift that only works in moonlight is a different ability from the one that works anywhere, and no amount of XP turns the first into the second.
+
+## Attributes
+
+**Current rating times nine.** Earth 5 to 6 is 45. Earth 7 to 8 is 63. Earth 9 to 10 is 81.
+
+This is the long game, and it is priced to be. Raising an Attribute is the only purchase that moves every roll you make with that Element at once, and the curve is steep enough that a character raises two or three of them across an entire campaign, not ten.
+
+Every Attribute point also grants one sub-stat point, to put in either of that Attribute’s two sub-stats, and one Descriptor for whichever one you chose. Exactly like creation. Raising Water gives you a point to spend on Stamina or Health and a new word describing how this character, specifically, endures.
+
+That is also the only way sub-stats ever go up. There’s no separate price for Soak or Psyche or Atropos; they climb when the Attribute above them climbs.
+
+## Past Ten
+
+**Ten is a creation cap, not a ceiling.** XP takes an Attribute higher.
+
+What it doesn’t take higher is the roll. **An Element contributes at most 10 to any target number, ever.** A character with Earth 18 makes the same roll as a character with Earth 10.
+
+Every point past ten is still a sub-stat point and a Descriptor. Since no sub-stat can exceed 10, **an Attribute of 20 is precisely the point at which both its sub-stats are full** - the ceiling isn’t a number I picked, it’s where the arithmetic runs out.
+
+\page
+
+So past ten, an Element stops making you accurate and starts making you formidable. Soak 10 means every attack that reaches you finds a wall. Health 10 means fifteen Health Levels. Both of the formulas that read the Attribute directly keep climbing with it, uncapped: Ki is your strongest Element plus 8, and Movement Rate is 5 plus Air in meters. Earth 20 is a Ki pool of 28. Air 20 is a twenty-five meter stride.
+
+Three more things accumulate as you climb, each on its own step.
+
+**Every 3 points past ten** raises your Fate Token ceiling by 1 above the usual Stamina x 3. These stack across Attributes: one Element at 20 and another at 15 is four extra Tokens you can hold.
+
+**Every 4 points past ten** grants one automatic success per scene on a roll using that Element, at Difficulty 6 or better. You don’t roll; the easy thing simply works. Hard rolls still get rolled. Each Element tracks its own.
+
+**Every 5 points past ten** widens your critical success band by one on any roll using that Element. Critical on a 2 becomes critical on 2 or 3 at fifteen, and 2 through 4 at twenty.
+
+That last one is the sharpest, and it is the only thing in the game that widens a critical on an attack. Skill tiers can’t - an attack is a straight Attribute against Defense with no Skill in it - so a natural 2 is a critical for everybody, and a critical doubles the damage dice. A 1% chance becomes 6%. That is what a lifetime spent inside one Element looks like from the other end of it.
+
+None of this is reachable quickly. Ten to eleven alone is 90 XP, and the full climb from ten to twenty is 1,305. Nobody finishes it. Somebody in a long campaign buys three points of it and becomes the reason the table is still alive.
+
+## Shedding a Flaw
+
+**Three times the points the Flaw granted you at creation.** A Minor Flaw that gave you 1 costs 3 to be rid of. A Major that gave you 5 costs 15. A leveled Flaw costs three per level, and comes off one level at a time - Amnesia at 4 can become Amnesia at 2 for six XP, and you can stop there.
+
+Think about it before you do it. Flaws pay you. Every time one gets invoked, by you or the GM, you collect a Fate Token, and a character who sheds their Flaws has quietly cut their own income. There’s also already a way out of a single bad moment: spend a Token to Overcome a Flaw and it doesn’t apply for the rest of the scene.
+
+Buy off the Flaw when the story has finished with it. Not when it’s inconvenient.
+
+## A Year of This
+
+Ronan’s table plays most weeks and averages a little under four XP a session. Across a year he banked **170**.
+
+\page
+
+- Firearms, Untrained to Adept - **9 XP**
+- Athletics, Trained to Expert - **10 XP**
+- Contacts, Level 2 to 4 - **15 XP**
+- Danger Sense, a Greater Boon - **10 XP**
+- Second Sight, a new Gift, to Level 3 **22 XP**
+- A Lesser Adder on it - **6 XP**
+- Shedding a Moderate Flaw - **9 XP**
+- Earth 6 to 7 - **54 XP**
+- Banked toward Earth 7 to 8 - **35 XP**
+
+Look at the bottom two lines. More than half of Ronan’s year went into one Attribute, and he isn’t finished. The other half bought him a gun he can actually use, a network that answers the phone, a supernatural ability he didn’t have in session one, and the end of something that had been following him since character creation.
+
+That’s a year. Most of it was cheap. The expensive thing was worth waiting for.
