@@ -147,6 +147,70 @@
     padding: 1rem 1.25rem;
     margin: 1.25rem 0;
   }
+  /* ---- cover hero ----
+   *
+   * The contents page is the book's front door, so it opens on the cover
+   * rather than on a heading. Side by side above 760px - the cover is a
+   * portrait 8.5x11, and left to itself it fills a laptop screen and
+   * pushes every chapter below the fold. Stacked below that, where a
+   * phone has the height to spare and the art is worth seeing whole.
+   *
+   * The art already carries the title and the tagline, so the h1 beside
+   * it names this edition instead of repeating them.
+   */
+  .cover-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+    margin: 0 0 2.5rem;
+  }
+  .cover-art {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    /* The cover is nearly black at its edges and the page is too. Without
+       this it dissolves into the background instead of reading as an
+       object sitting on it. */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55),
+                0 0 0 1px rgba(7, 143, 155, 0.18);
+  }
+  .cover-side h1 {
+    margin-top: 0;
+  }
+  .cover-lede {
+    color: var(--text-dim);
+    font-size: 1.05rem;
+  }
+  .cover-cta {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--v-water);
+    color: #04161a;
+    border-radius: var(--radius);
+    font-family: "Bebas Neue", "Segoe UI", system-ui, sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+  .cover-cta:hover,
+  .cover-cta:focus {
+    background: #0bb3c2;
+    color: #04161a;
+  }
+  @media (max-width: 760px) {
+    .cover-hero {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+      gap: 1.25rem;
+    }
+    .cover-art { max-width: 72vw; }
+  }
+
   /* ---- contents cards ----
    *
    * The Brewery's aside.water, brought over as-is: the colour tints the
@@ -250,7 +314,25 @@
 <main id="main">
   {% if page.chapter %}<a class="back-link" href="/webbook/">&larr; Contents</a>
   <p class="chapter-mark">Chapter {{ page.chapter }}</p>{% endif %}
+  {% if page.cover %}
+  <div class="cover-hero">
+    <img class="cover-art"
+         src="/docs/assets/cover/cover-720.webp"
+         srcset="/docs/assets/cover/cover-480.webp 480w,
+                 /docs/assets/cover/cover-720.webp 720w,
+                 /docs/assets/cover/cover-1080.webp 1080w"
+         sizes="(max-width: 760px) min(72vw, 320px), 360px"
+         width="720" height="932"
+         alt="The cover of 20 Below: two glowing eight-sided dice reading 7 and 3, hanging above a dark rocky landscape, ringed by the five element marks - Fate, Water, Fire, Air and Earth. The tagline reads: a character driven RPG of fate, the Gifted and worlds below our own." />
+    <div class="cover-side">
+      <h1>{{ page.title }}</h1>
+      {% if page.lede %}<p class="cover-lede">{{ page.lede }}</p>{% endif %}
+      <a class="cover-cta" href="/webbook/introduction.html">Start reading &rarr;</a>
+    </div>
+  </div>
+  {% else %}
   <h1>{{ page.title }}</h1>
+  {% endif %}
   {{ content }}
   {% if page.prev_url or page.next_url %}
   <nav class="chapter-feet">

@@ -400,16 +400,23 @@ def main():
         written.append((binder_title, slug, len(chunks), sum(len(c.split()) for c in chunks)))
 
     # The contents page.
+    # cover: true swings the layout into its front-door arrangement - the
+    # cover art beside the title, rather than a heading on its own. The
+    # lede rides in front matter because it belongs inside that block,
+    # above the generated body.
     lines = [
         "---",
         "layout: webbook",
         'title: "The Player\'s Guide"',
         "nav_section: start",
+        "cover: true",
+        "lede: >-",
+        "  The whole book, chapter by chapter. The same text as the print",
+        "  edition - the manuscript is the source, and this is generated",
+        "  from it.",
         "---",
         BANNER.rstrip("\n"),
         "",
-        "The whole book, chapter by chapter. This is the same text as the print",
-        "edition - the manuscript is the source, and this is generated from it.",
         "",
     ]
     # Contents cards, in the Brewery's aside.water style: the colour tints the
