@@ -41,7 +41,9 @@ Your nature is who your character is deep down. It’s what you do when the stak
 
 The Nature and Fate system don’t reward you for effectiveness or convenience. It rewards you for consistently playing your Nature.
 
-## Writing Your Own NatureIf none of the premade Natures quite do the trick, you can write your own. The following steps will guide you in the process. They are the same steps that were used to write the premade Natures.
+## Writing Your Own Nature
+
+If none of the premade Natures quite do the trick, you can write your own. The following steps will guide you in the process. They are the same steps that were used to write the premade Natures.
 
 **One or two words.** A label, not a paragraph. If it can’t be read at a glance, it’s too long.
 
@@ -163,7 +165,10 @@ If you put three points in Soak, you get three descriptors for Soak. They should
 
 These descriptors aren’t just decorative and descriptive - they are load bearing and one of the core ways that your Target Number is determined. Every skill defaults to a specific Element. When you want to use a different Element to roll, and you will, your Descriptors are how you do it.
 
-**Player**: I want Ronan to jump up to the top of the building. **GM**: That’s acrobatics, so it’s air. That’s a long way, so the difficulty is going to be a difficulty of four. Your air is 1. You have to roll a 5 or less. **Player**: Well, Ronan is Mighty. I think he’s strong enough to make that jump. **GM**: Yeah. I’ll allow that. Your Earth is 8, so you are aiming for a 12.
+**Player**: I want Ronan to jump up to the top of the building. 
+**GM**: That’s acrobatics, so it’s air. That’s a long way, so the difficulty is going to be a difficulty of four. Your air is 1. You have to roll a 5 or less. 
+**Player**: Well, Ronan is Mighty. I think he’s strong enough to make that jump. 
+**GM**: Yeah. I’ll allow that. Your Earth is 8, so you are aiming for a 12.
 
 Your descriptors are what you point to to justify using an element other than the default. The exchange above is one example of how it works. Intimidation relies on your Presence, so it defaults to fire. However, you can be Intimidating in many ways. For instance:
 
@@ -197,7 +202,9 @@ Descriptors aren’t decorative. Or, rather, they aren’t *just* decorative - t
 
 ## 7. Skills
 
-Skills come in two categories: Everyman Skills and Purchased Skills. The GM presents everyone with a list of **Everyman Skills.** These are skills that any functional adult in the setting can do because they live there. They are free. You have your Everyman Skills at Trained.
+Skills come in two categories: Everyman Skills and Purchased Skills. 
+
+The GM presents everyone with a list of **Everyman Skills.** These are skills that any functional adult in the setting can do because they live there. They are free. You have your Everyman Skills at Trained.
 
 A modern day campaign may have Athletics, Bureaucracy, Computer Use, Cooking, Driving, Etiquette, First Aid, Literacy, Persuasion, and Streetwise as its Everyman Skills, but it is up to your GM to decide.
 

@@ -104,13 +104,15 @@ Action Brackets themselves (Fast/Normal/Slow) cost nothing to declare - that’s
 
 A Short Rest drops one level of Exhausted; a Full Night’s Rest clears it entirely, mirroring Health Level Recovery’s own split.
 
-| # | Mutation | Effect |
-|---|---|---|
-| 1 | **Toxic Bite/Sting** | A target hit by its natural weapon must succeed a Water + Difficulty roll (GM sets Difficulty) or gain a level of Exhausted, until treated with an Antitoxin or First Aid Kit. |
-| 2 | **Regenerating** | Heals 1 Health Level at the start of each of its turns. |
-| 3 | **Radioactive Touch** | Anyone within Melee range at the start of its turn takes 1 unsoakable Health Level, unless wearing radiation-rated protection (GM's call). |
-| 4 | **Extra Limb(s)** | Makes two separate natural-weapon attacks per round instead of one, each its own to-hit roll. |
-| 5 | **Chitinous Plating** | Can't be targeted by a called shot (immune to the Armor & Called Shots mechanic's targeting). |
+**1** - Disadvantage on Physical rolls.
+
+**2** - Disadvantage on all rolls.
+
+**3** - Movement Rate halved.
+
+**4** - Can’t take Slow actions - too worn down for that kind of precision.
+
+**5** - Collapse: falls unconscious, can’t act until rested.
 
 ## Kotodama
 
@@ -126,23 +128,25 @@ Four tiers, one person acting alone, each step more exhausting than the last.
 
 **Pooled magnitude (5+ tokens), not yet detailed**: since 1-4 is explicitly what one person can do alone, nothing solo ever reaches 5 - pooling is just what happens once a group’s combined total exceeds any single member’s ceiling. **Tier 5** is its own step; **Tier 6+** is a flat ceiling where the exact token count stops mattering mechanically. Examples for both still TBD.
 
-| # | Mutation | Effect |
-|---|---|---|
-| 1 | **Toxic Bite/Sting** | A target hit by its natural weapon must succeed a Water + Difficulty roll (GM sets Difficulty) or gain a level of Exhausted, until treated with an Antitoxin or First Aid Kit. |
-| 2 | **Regenerating** | Heals 1 Health Level at the start of each of its turns. |
-| 3 | **Radioactive Touch** | Anyone within Melee range at the start of its turn takes 1 unsoakable Health Level, unless wearing radiation-rated protection (GM's call). |
-| 4 | **Extra Limb(s)** | Makes two separate natural-weapon attacks per round instead of one, each its own to-hit roll. |
+**1** - Minor coincidence - The flashlight was already in your pack; there’s just enough battery left to get the engine started; the key is under the mat; the door didn’t latch; your phone happens to have signal here
+
+**2** - Meaningful, deliberate change - A hidden door that might not have been there before; the stolen motorcycle is just around the corner; the perfect tool was left by the side of the road; the security camera was already pointed the other way; a witness remembers seeing something useful
+
+**3** - Decisive, unmistakable feat - A structure collapses or appears exactly where it’s needed; a patrol’s morale breaks all at once; a faction’s loyalty visibly flips in the moment; the crowd’s fear turns to anger, aimed at exactly the right target; the bridge holds together just long enough
+
+**4** - Solo ceiling - An NPC’s true nature or history is revealed to everyone present at once; a building that should be collapsing suddenly isn’t; a faction’s allegiance flips for good, not just the moment; a locked-down facility’s systems glitch out all at once; an entire crowd’s memory of what just happened is uncertain afterward
 
 ## Range - personal scale (1-4 tokens)
 
 A second, independent component for how far a Kotodama reaches. Only the “personal” end (bound to the character’s own body/location) is defined so far - scene/district/city/setting-scale range isn’t worked out yet.
 
-| # | Mutation | Effect |
-|---|---|---|
-| 1 | **Toxic Bite/Sting** | A target hit by its natural weapon must succeed a Water + Difficulty roll (GM sets Difficulty) or gain a level of Exhausted, until treated with an Antitoxin or First Aid Kit. |
-| 2 | **Regenerating** | Heals 1 Health Level at the start of each of its turns. |
-| 3 | **Radioactive Touch** | Anyone within Melee range at the start of its turn takes 1 unsoakable Health Level, unless wearing radiation-rated protection (GM's call). |
-| 4 | **Extra Limb(s)** | Makes two separate natural-weapon attacks per round instead of one, each its own to-hit roll. |
+**1** - Self / on your person - The flashlight in *your* pack
+
+**2** - Touch / arm’s reach - The door didn’t latch; the key’s under the mat
+
+**3** - Immediate vicinity / line of sight - The stolen motorcycle just around the corner; a hidden door across the room
+
+**4** - The space you’re in - The whole room, vehicle, or block you’re standing in - still bound to your own location
 
 ## Plausibility
 

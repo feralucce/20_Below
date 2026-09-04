@@ -89,7 +89,15 @@ def row_name(chunk):
     if "\n" in chunk:
         return None
     m = ROW.match(chunk)
-    return m.group(1).strip().lower() if m else None
+    if not m:
+        return None
+    name = m.group(1).strip().lower()
+    # A purely numeric key is not a name, it is a position, and every numbered
+    # table in the project shares it. Matching on one spliced the adversary
+    # index's mutation table into 49 Gifts, whose level lines open "**1**".
+    if not name or name.strip(".").isdigit():
+        return None
+    return name
 
 
 def restore_tables(chunks, tables):
@@ -183,6 +191,41 @@ def wrap_entries(chunks):
     return out
 
 
+def wrap_headed_entries(chunks, after):
+    """Box every "## Name" section following `after`, one card each.
+
+    Gifts are not written like Skills or Boons - each is a heading with its
+    flavour, Adders, Limiters and levels beneath it, not a single bolded
+    lead-in. So they are boxed by section instead, in the same card, and the
+    heading stays a real heading inside it: the anchor keeps working and the
+    chapter still has an outline.
+    """
+    try:
+        start = chunks.index(after)
+    except ValueError:
+        return chunks
+    out = chunks[:start + 1]
+    i = start + 1
+    while i < len(chunks):
+        if not chunks[i].startswith("## "):
+            out.append(chunks[i]); i += 1; continue
+        head = chunks[i]
+        i += 1
+        body = []
+        while i < len(chunks) and not chunks[i].startswith("## "):
+            body.append(chunks[i]); i += 1
+        card = ['<div class="entry entry-headed" markdown="1">', "", head, ""]
+        if body and body[0].startswith("*") and body[0].endswith("*") and "\n" not in body[0]:
+            card.append('<p class="entry-flavour">%s</p>' % body[0].strip("*").strip())
+            body = body[1:]
+        if body:
+            card.append("")
+            card.append("\n\n".join(body))
+        card.append("</div>")
+        out.append("\n".join(card))
+    return out
+
+
 # Chapters whose scannable master list lives only in rules/. The prose reads
 # well and the table looks things up; the book carries both.
 AT_A_GLANCE = {
@@ -230,19 +273,41 @@ def main():
     # Tables come from the rules files, prose from the manuscript - the split
     # webbook/README.md describes. Every rules file is offered, so a chapter
     # that flattens a table anywhere can find its columns.
-    global TABLES
-    TABLES = []
+    # Scoped per chapter, not pooled. A chapter should only ever be able to
+    # pull tables out of the rules file that covers the same subject; letting
+    # every file compete invites a match from somewhere unrelated.
+    sources = {
+        "equipment": ["weapons.md"],
+        "gifts":     ["gifts.md"],
+        "fate":      ["fate.md"],
+        "flaws":     ["flaws.md"],
+        "boons":     ["boons.md"],
+        "skills":    ["skills.md", "premade-skills.md"],
+        "resources": ["resources.md"],
+        "how-to-play":          ["rules.md"],
+        "creating-a-character": ["character-creation.md"],
+        "advancement":          ["costs.md"],
+        "glossary":             ["glossary.md"],
+        "introduction":         [],
+    }
     rules_dir = os.path.join(ROOT, "rules")
-    for name in sorted(os.listdir(rules_dir)):
-        if name.endswith(".md"):
-            TABLES.extend(rules_tables(os.path.join(rules_dir, name)))
+    tables_for = {}
+    for slug, names in sources.items():
+        acc = []
+        for name in names:
+            path = os.path.join(rules_dir, name)
+            if os.path.exists(path):
+                acc.extend(rules_tables(path))
+        tables_for[slug] = acc
     written = []
 
     for i, (frag, slug, section, title) in enumerate(CHAPTERS):
         uuid, binder_title = chapter_uuid(frag)
         chunks = to_chunks(uuid)
-        chunks = restore_tables(chunks, TABLES)
+        chunks = restore_tables(chunks, tables_for.get(slug, []))
         chunks = wrap_entries(chunks)
+        if slug == "gifts":
+            chunks = wrap_headed_entries(chunks, "## The Gift List")
         glance = at_a_glance(slug)
         if glance:
             chunks.append(glance)
