@@ -7,6 +7,9 @@
 <link rel="icon" type="image/x-icon" href="../docs/assets/brand/favicon.ico" />
 <link rel="icon" type="image/png" sizes="32x32" href="../docs/assets/brand/favicon-32.png" />
 <link rel="apple-touch-icon" href="../docs/assets/brand/favicon-128.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0a1720;
@@ -16,6 +19,7 @@
     --text-dim: #8fadbe;
     --accent: #3d84c4;
     --accent-dim: #1c3548;
+    --v-water: #078f9b;   /* style guide, Elements palette */
     --radius: 8px;
     font-family: "Segoe UI", system-ui, sans-serif;
   }
@@ -143,6 +147,67 @@
     padding: 1rem 1.25rem;
     margin: 1.25rem 0;
   }
+  /* ---- contents cards ----
+   *
+   * The Brewery's aside.water, brought over as-is: the colour tints the
+   * left rule and the title and never the fill, so the blurb keeps its
+   * full contrast against the panel. Same geometry, same Bebas heading,
+   * same #078F9B from the style guide's Elements palette.
+   */
+  .toc {
+    display: grid;
+    gap: 0.9rem;
+    margin: 2rem 0 2.5rem;
+  }
+  .toc-card {
+    position: relative;
+    background: var(--panel);
+    border-left: 4px solid var(--v-water);
+    padding: 0.9rem 1.1rem;
+  }
+  .toc-card .block-title {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--v-water);
+    font-family: "Bebas Neue", "Segoe UI", system-ui, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+  .toc-card .block-title a {
+    color: inherit;
+    text-decoration: none;
+  }
+  /* The link's box covers the card, so the whole card is the target
+     while the accessible name stays the chapter title alone. */
+  .toc-card .block-title a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+  .toc-num {
+    display: inline-block;
+    min-width: 1.6em;
+    color: var(--text-dim);
+  }
+  .toc-card p {
+    margin: 0;
+    color: var(--text);
+  }
+  .toc-card:hover,
+  .toc-card:focus-within {
+    background: var(--accent-dim);
+  }
+  .toc-card:focus-within {
+    outline: 2px solid var(--v-water);
+    outline-offset: 2px;
+  }
+  .toc-card .block-title a:focus { outline: none; }
+  .toc-foot {
+    color: var(--text-dim);
+    font-style: italic;
+  }
+
   .entry-head {
     margin: 0;
     display: flex;
@@ -182,9 +247,9 @@
 </head>
 <body>
 {% include site-nav.html %}
-<main>
-  <a class="back-link" href="/webbook/">&larr; Contents</a>
-  {% if page.chapter %}<p class="chapter-mark">Chapter {{ page.chapter }}</p>{% endif %}
+<main id="main">
+  {% if page.chapter %}<a class="back-link" href="/webbook/">&larr; Contents</a>
+  <p class="chapter-mark">Chapter {{ page.chapter }}</p>{% endif %}
   <h1>{{ page.title }}</h1>
   {{ content }}
   {% if page.prev_url or page.next_url %}
