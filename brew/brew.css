@@ -184,20 +184,28 @@
 }
 
 /* ---- page geometry ----
-   --trim-w/h come from the size selector. Digital uses even margins;
-   POD adds a gutter that alternates by page parity, plus bleed. */
+   --trim-w/h come from the size selector. Digital uses even margins; the
+   print profiles add a gutter that alternates by page parity, plus bleed.
+
+   Bleed is NOT symmetric. A printer trims the top, bottom and outside edges
+   and cuts nothing at the spine, because that edge is bound. So both KDP and
+   DriveThruRPG want a page that is trim + 0.125in WIDE and trim + 0.25in
+   TALL - bleed on three edges, not four. Adding it to all four (as this did
+   once) makes every page 0.125in too wide, and the printer answers by
+   rejecting the file or scaling it, which walks the text off its margins. */
 #preview{
   --trim-w:8.5in; --trim-h:11in;
   --margin:0.6in;
-  --gutter:0in;        /* extra inside margin, POD only */
-  --bleed:0in;         /* POD only */
-  --safe:0in;          /* extra inset for text, POD only */
+  --gutter:0in;        /* extra inside margin, print profiles only */
+  --bleed-out:0in;     /* trimmed edges: top, bottom, outside */
+  --safe:0in;          /* extra inset for text, print profiles only */
   --cols:1;
   --zoom:1;            /* preview only; print always renders at 1 */
 }
-#preview[data-layout="pod"]{
+#preview[data-layout="kdp"],
+#preview[data-layout="drivethru"]{
   --gutter:0.35in;
-  --bleed:0.125in;
+  --bleed-out:0.125in;
   --safe:0.15in;
 }
 
@@ -250,12 +258,14 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
    ============================================================= */
 .page{
   position:relative;
-  width:calc(var(--trim-w) + (var(--bleed) * 2));
-  min-height:calc(var(--trim-h) + (var(--bleed) * 2));
+  /* One bleed on the width (the outside edge), two on the height (top and
+     bottom). The spine edge is never trimmed, so it gets none. */
+  width:calc(var(--trim-w) + var(--bleed-out));
+  min-height:calc(var(--trim-h) + (var(--bleed-out) * 2));
   margin:0 auto 26px;
   padding:
-    calc(var(--margin) + var(--bleed) + var(--safe))
-    calc(var(--margin) + var(--bleed) + var(--safe));
+    calc(var(--margin) + var(--bleed-out) + var(--safe))
+    calc(var(--margin) + var(--bleed-out) + var(--safe));
   background:var(--page-bg);
   color:var(--page-fg);
   font-family:var(--font-body);
@@ -268,11 +278,12 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 /* Gutter: the inside edge is wider, and which edge is "inside"
    alternates. Driven off page parity rather than @page :left/:right,
    which browsers support poorly. */
-#preview[data-layout="pod"] .page:nth-child(odd){   /* recto */
-  padding-left:calc(var(--margin) + var(--bleed) + var(--safe) + var(--gutter));
+/* The spine edge carries the gutter and no bleed - nothing is trimmed there. */
+#preview:not([data-layout="digital"]) .page:nth-child(odd){   /* recto */
+  padding-left:calc(var(--margin) + var(--safe) + var(--gutter));
 }
-#preview[data-layout="pod"] .page:nth-child(even){  /* verso */
-  padding-right:calc(var(--margin) + var(--bleed) + var(--safe) + var(--gutter));
+#preview:not([data-layout="digital"]) .page:nth-child(even){  /* verso */
+  padding-right:calc(var(--margin) + var(--safe) + var(--gutter));
 }
 
 /* Content past the bottom of a page is clipped, and print would lose it

@@ -19,6 +19,22 @@ const PREFS = '20below-brew-prefs-v2';
 
 /* Trim sizes. Adding one here is all that is needed - the value
  * feeds both the on-screen page and the injected @page rule. */
+/* Output profiles. Digital is screen-only: no bleed, no gutter, even
+ * margins. Both print profiles want the same page - a printer trims the top,
+ * bottom and outside edges and cuts nothing at the spine, so bleed goes on
+ * three edges, giving trim + 0.125in wide by trim + 0.25in tall. They are
+ * kept apart because what they ask for around the page differs (PDF/X flavour,
+ * colour profile), and because naming the shop you are exporting for is worth
+ * more than one label reading "POD".
+ *   KDP:        https://kdp.amazon.com/en_US/help/topic/GVBQ3CMEQW3W2VL6
+ *   DriveThru:  https://help.drivethrupartners.com/hc/en-us/articles/12780800178583
+ */
+const LAYOUTS = {
+  digital:   { label: 'Digital',      bleed: '0in' },
+  drivethru: { label: 'DriveThruRPG', bleed: '0.125in' },
+  kdp:       { label: 'Amazon KDP',   bleed: '0.125in' },
+};
+
 const TRIMS = {
   letter: { label: 'Letter 8.5 x 11', w: '8.5in',  h: '11in' },
   a4:     { label: 'A4 210 x 297',    w: '210mm',  h: '297mm' },
@@ -55,24 +71,29 @@ function store(key, value) {
    inside the size descriptor, and the bleed changes with layout. --- */
 function applyPageRule() {
   const t = TRIMS[prefs.trim] || TRIMS.letter;
-  const bleed = prefs.layout === 'pod' ? '0.125in' : '0in';
+  const bleed = (LAYOUTS[prefs.layout] || LAYOUTS.digital).bleed;
+  // One bleed on the width, two on the height - see LAYOUTS. Getting this
+  // symmetric is what makes a printer reject the file or scale it.
   pageRule.textContent =
-    `@page { size: calc(${t.w} + ${bleed} * 2) calc(${t.h} + ${bleed} * 2); margin: 0; }`;
+    `@page { size: calc(${t.w} + ${bleed}) calc(${t.h} + ${bleed} * 2); margin: 0; }`;
 }
 
 function applyPrefs() {
   const t = TRIMS[prefs.trim] || TRIMS.letter;
   preview.dataset.theme   = THEMES[prefs.theme] ? prefs.theme : 'core';
   preview.dataset.palette = prefs.palette === 'grey' ? 'grey' : 'colour';
-  preview.dataset.layout  = prefs.layout  === 'pod'  ? 'pod'  : 'digital';
+  // 'pod' is the old two-way value. It put bleed on all four edges, which
+  // neither printer wants; KDP is the closer heir since that geometry came
+  // from an Amazon export.
+  if (prefs.layout === 'pod') prefs.layout = 'kdp';
+  if (!LAYOUTS[prefs.layout]) prefs.layout = 'digital';
+  preview.dataset.layout = prefs.layout;
   preview.style.setProperty('--trim-w', t.w);
   preview.style.setProperty('--trim-h', t.h);
   document.getElementById('btn-palette').setAttribute('aria-pressed', prefs.palette === 'grey');
-  document.getElementById('btn-layout').setAttribute('aria-pressed', prefs.layout === 'pod');
   document.getElementById('btn-palette').textContent =
     prefs.palette === 'grey' ? 'Greyscale' : 'Full colour';
-  document.getElementById('btn-layout').textContent =
-    prefs.layout === 'pod' ? 'POD (gutters + bleed)' : 'Digital';
+  document.getElementById('sel-layout').value = prefs.layout;
   document.getElementById('sel-theme').value = prefs.theme;
   document.getElementById('sel-trim').value = prefs.trim;
   document.getElementById('sel-zoom').value = prefs.zoom;
@@ -227,12 +248,13 @@ document.getElementById('btn-palette').onclick = () => {
   applyPrefs();
 };
 
-document.getElementById('btn-layout').onclick = () => {
-  prefs.layout = prefs.layout === 'pod' ? 'digital' : 'pod';
+document.getElementById('sel-layout').onchange = (e) => {
+  prefs.layout = e.target.value;
   applyPrefs();
-  // POD has roughly 12% less room than digital - bleed grows the sheet but is
-  // trimmed off, while the gutter and safe inset come out of the text block.
-  // Without this redraw the overflow flags still describe the old geometry.
+  // A print profile has roughly 12% less room than digital - bleed grows the
+  // sheet but is trimmed off, while the gutter and safe inset come out of the
+  // text block. Without this redraw the overflow flags would still describe
+  // the geometry you just left.
   draw();
 };
 
