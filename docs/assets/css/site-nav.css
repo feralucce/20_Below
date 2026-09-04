@@ -15,6 +15,33 @@
  */
 
 
+  /* ---- skip link ----
+   *
+   * The nav is about forty links deep once the dropdowns are counted.
+   * Without this, reaching a page's actual text by keyboard means forty
+   * tab presses, on every page, every time. Hidden off-screen until it
+   * takes focus, then it drops into the top-left corner as the first
+   * thing on the page.
+   */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    padding: 10px 16px;
+    background: var(--accent, #3d84c4);
+    color: #fff;
+    font: 600 15px/1.2 "Segoe UI", system-ui, sans-serif;
+    text-decoration: none;
+    border-radius: 0 0 8px 0;
+  }
+
+  .skip-link:focus {
+    left: 0;
+    outline: 3px solid #fff;
+    outline-offset: -3px;
+  }
+
   /* ---- top nav ---- */
   .site-nav {
     position: sticky;

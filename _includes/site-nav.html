@@ -12,7 +12,12 @@ they are. Omitting it is fine; nothing is then marked.
 
 Styles live in /docs/assets/css/site-nav.css. The toggle behaviour is
 in /docs/assets/js/site-nav.js.
+
+The skip link ahead of the nav is the first thing a keyboard or screen
+reader reaches on any page, and jumps past ~40 nav links to the page's
+own <main id="main">. It is invisible until focused.
 {%- endcomment -%}
+<a class="skip-link" href="#main">Skip to content</a>
 <nav class="site-nav">
   <a class="brand" href="/home.html">
     <img src="/docs/assets/brand/favicon-128.png" alt="" />
@@ -45,6 +50,7 @@ in /docs/assets/js/site-nav.js.
         <li><a href="/webbook/flaws.html">Flaws</a></li>
         <li><a href="/webbook/advancement.html">Advancement</a></li>
         <li><a href="/docs/advancement-reference.html">Advancement Reference</a></li>
+        <li><a href="/rules/costs.html">Costs Table</a></li>
       </ul>
     </li>
     <li class="has-dropdown">
@@ -66,6 +72,7 @@ in /docs/assets/js/site-nav.js.
         <li><a href="/docs/louis-reference-chart.html">Difficulty Chart</a></li>
         <li><a href="/tracker/index.html" target="_blank" rel="noopener">20 Below Battle Tracker</a></li>
         <li><a href="/brew/index.html" target="_blank" rel="noopener">The Brewery</a></li>
+        <li><a href="/docs/style-guide.html">Style Guide</a></li>
       </ul>
     </li>
     <li><a href="/downloads.html"{% if page.nav_section == "downloads" %} aria-current="page"{% endif %}>Downloads</a></li>
