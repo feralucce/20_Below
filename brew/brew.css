@@ -67,8 +67,8 @@
   --shadow:rgba(0,0,0,.55);
 
   /* Variant tints, from docs/style-guide.html. Semantic roles are the
-     Battle Tracker set; the Element colours are proposed there and this
-     is their first use. */
+     Battle Tracker set; the Element colours are that guide's Elements
+     palette. Keep the two in step. */
   --v-pc:#5ecb6b;
   --v-ally:#c39a5a;
   --v-npc:#e0685c;
@@ -666,6 +666,20 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 .page .aside--moira{border-left-color:var(--v-moira)}
 .page .aside--text{border-left-color:var(--v-text)}
 .page .aside--accent{border-left-color:var(--v-accent)}
+
+/* The aside's title takes the tint too, the way box's does. Without
+   these the sample's own line - "colour tints the rule and the title" -
+   was only half true for asides. */
+.page .aside--pc .block-title{color:var(--v-pc)}
+.page .aside--ally .block-title{color:var(--v-ally)}
+.page .aside--npc .block-title,.page .aside--danger .block-title{color:var(--v-npc)}
+.page .aside--earth .block-title{color:var(--v-earth)}
+.page .aside--air .block-title{color:var(--v-air)}
+.page .aside--fire .block-title{color:var(--v-fire)}
+.page .aside--water .block-title{color:var(--v-water)}
+.page .aside--moira .block-title{color:var(--v-moira)}
+.page .aside--text .block-title{color:var(--v-text)}
+.page .aside--accent .block-title{color:var(--v-accent)}
 
 .page .box--pc{border-color:var(--v-pc)}
 .page .box--ally{border-color:var(--v-ally)}
