@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Paginate a chapter for The Brewery</title>
+<link rel="stylesheet" href="../brew/brew.css" />
+<script src="../vendor/marked.min.js"></script>
+<style>
+  body { margin: 0; background: #060d12; color: #eaf5fb; font-family: "Segoe UI", system-ui, sans-serif; }
+  #bar { display: flex; gap: .75rem; align-items: center; padding: .6rem 1rem; background: #0d1a22; border-bottom: 1px solid #24404f; position: sticky; top: 0; z-index: 10; }
+  #bar h1 { font-size: 1rem; margin: 0; font-weight: 600; }
+  #bar .spacer { flex: 1; }
+  button, input { font: inherit; }
+  button { background: #1c3548; color: #eaf5fb; border: 1px solid #3d84c4; border-radius: 6px; padding: .3rem .7rem; cursor: pointer; }
+  button:disabled { opacity: .5; cursor: default; }
+  #status { padding: .6rem 1rem; color: #8fadbe; }
+  #out { width: calc(100% - 2rem); height: 16rem; margin: 0 1rem 1rem; background: #0d1a22; color: #eaf5fb; border: 1px solid #24404f; border-radius: 6px; font-family: ui-monospace, "Cascadia Code", monospace; font-size: 12px; }
+  #preview { padding: 20px; }
+</style>
+</head>
+<body>
+
+<div id="bar">
+  <h1>Paginate for The Brewery</h1>
+  <span id="src"></span>
+  <span class="spacer"></span>
+  <button id="copy" disabled>Copy markdown</button>
+  <button id="download" disabled>Download .md</button>
+</div>
+
+<div id="status">Loading…</div>
+<textarea id="out" spellcheck="false" readonly></textarea>
+<div id="preview" data-palette="colour" data-layout="digital" style="--zoom:0.45"></div>
+
+<script type="module">
+/* Packs a chapter's chunks into pages against the Brewery's own renderer.
+ *
+ * Pagination in the Brewery is manual by design - browsers will not reflow
+ * content into fixed-size sheets, so the author says where a page ends.
+ * Guessing at breaks by word count produces pages that overflow and get
+ * silently clipped in print. So this fills a page one chunk at a time and
+ * asks the real renderer, after every addition, whether the page has grown
+ * past the sheet - the same test main.js uses to draw its red warning bar.
+ *
+ * Usage:  tools/paginate.html?src=../build/<slug>.chunks.json
+ * produced by tools/scriv2brew.py.
+ */
+const params = new URLSearchParams(location.search);
+const src = params.get('src');
+const statusEl = document.getElementById('status');
+const outEl = document.getElementById('out');
+const preview = document.getElementById('preview');
+document.getElementById('src').textContent = src || '(no ?src= given)';
+
+if (!src) {
+  statusEl.textContent = 'Pass ?src=../build/<slug>.chunks.json - run tools/scriv2brew.py first.';
+} else {
+  // Webfonts change how tall everything is, and they load lazily. Measuring
+  // before they arrive lays text out in fallback metrics, so more content
+  // appears to fit than really does and the packed pages overflow in print -
+  // which is exactly how a blank sheet appeared in the first PDF off this tool.
+  await document.fonts.ready;
+
+  const { render } = await import('../brew/render.js');
+  const data = await (await fetch(src, { cache: 'no-store' })).json();
+  const chunks = data.chunks;
+
+  // Measure in the real preview, in normal flow, at zoom 1. An absolutely
+  // positioned off-screen container looks like it should work and does not:
+  // .flow is height:100% of the page, and out of flow the page stops growing
+  // when its content overruns, so nothing ever reports as overflowing.
+  const scratch = preview;
+  preview.style.setProperty('--zoom', '1');
+
+  function overflows(md) {
+    render(md, scratch);
+    const page = scratch.querySelector('.page');
+    const sheet = parseFloat(getComputedStyle(page).minHeight) || 0;
+    return sheet > 0 && page.offsetHeight > sheet + 4;
+  }
+
+  const isHeading = (c) => /^#{1,3} /.test(c);
+  const pages = [];
+  let cur = [];
+
+  for (const chunk of chunks) {
+    if (cur.length && overflows(cur.concat([chunk]).join('\n\n'))) {
+      // Never end a page on a heading - it orphans the head from its text.
+      const carried = [];
+      while (cur.length && isHeading(cur[cur.length - 1])) carried.unshift(cur.pop());
+      pages.push(cur);
+      cur = carried.concat([chunk]);
+    } else {
+      cur.push(chunk);
+    }
+  }
+  if (cur.length) pages.push(cur);
+
+  // Built from char codes: a literal backslash-p in a JS string is not an
+  // escape, and survives copy/paste and templating badly. This cannot be
+  // mangled on the way through.
+  const NL = String.fromCharCode(10);
+  const BREAK = NL + NL + String.fromCharCode(92) + 'page' + NL + NL;
+  const markdown = pages.map((p) => p.join(NL + NL)).join(BREAK) + NL;
+
+  outEl.value = markdown;
+
+  // Re-render the finished markdown and confirm the packing actually held,
+  // then shrink the preview so all the pages fit on screen at once.
+  const count = render(markdown, preview);
+  const spills = [...preview.querySelectorAll('.page')].filter((p) => {
+    const sheet = parseFloat(getComputedStyle(p).minHeight) || 0;
+    return sheet > 0 && p.offsetHeight > sheet + 4;
+  }).length;
+  // Only now, with the check done at zoom 1, shrink it to fit on screen.
+  preview.style.setProperty('--zoom', '0.45');
+
+  statusEl.textContent =
+    `${data.title}: ${chunks.length} chunks packed into ${count} page${count === 1 ? '' : 's'}` +
+    (spills ? ` - ${spills} STILL OVERFLOWING, check the red bars below` : ' - none overflowing.');
+
+  const copyBtn = document.getElementById('copy');
+  const dlBtn = document.getElementById('download');
+  copyBtn.disabled = dlBtn.disabled = false;
+  copyBtn.onclick = async () => {
+    await navigator.clipboard.writeText(markdown);
+    copyBtn.textContent = 'Copied';
+    setTimeout(() => { copyBtn.textContent = 'Copy markdown'; }, 1200);
+  };
+  dlBtn.onclick = () => {
+    const slug = (src.split('/').pop() || 'chapter').replace(/\.chunks\.json$/, '');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([markdown], { type: 'text/markdown' }));
+    a.download = slug + '.md';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  };
+}
+</script>
+</body>
+</html>
