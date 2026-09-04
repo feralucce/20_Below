@@ -57,7 +57,25 @@ The alternate form is built once, at creation, spending a points pool (below) on
 
 **Pool by Level**
 
+**1** - 2 points
+
+**2** - 5 points
+
+**3** - 9 points
+
+**4** - 13 points
+
+**5** - 18 points
+
 **Build menu**
+
+| Option | Cost | Effect |
+|---|---|---|
+| Sub-stat boost | 1 pt | +2 to one physical sub-stat (Soak, Ferocity, Stamina, Potence, or Initiative) while transformed. |
+| Attribute boost | 2 pts/point | +1 to one Attribute (Earth, Air, Fire, Water, or Moira) while transformed, up to the character's normal maximum. |
+| Environmental adaptation | 1 pt | Breathe underwater, see in total darkness, ignore extreme temperatures, or similar. |
+| Borrow a Gift Level | 3 pts/Level | Gain one Level of an existing Gift you don't otherwise hold while transformed, GM-approved for fit - same per-Level price as the [Gifts pool](character-creation.md#gifts-pool). |
+| Borrow a Boon | 1/3/5/7 pts | Gain a Boon you don't otherwise hold while transformed, at that Boon's own Trivial/Lesser/Greater/Legendary price. |
 
 **Adders**
 
@@ -70,24 +88,6 @@ The alternate form is built once, at creation, spending a points pool (below) on
 - **Slow to Invoke**: transforming takes a full Minute instead of a Slow action.
 - **Involuntary Trigger**: the form activates automatically under a specific stress condition (mortal danger, strong emotion, GM's call at creation) and can't be suppressed once triggered.
 - **Fixed Duration**: the form can't be voluntarily dropped early. It lasts a flat Scene, then reverts on its own.
-
-**1** - 2 points
-
-**2** - 5 points
-
-**3** - 9 points
-
-**4** - 13 points
-
-**5** - 18 points
-
-| Option | Cost | Effect |
-|---|---|---|
-| Sub-stat boost | 1 pt | +2 to one physical sub-stat (Soak, Ferocity, Stamina, Potence, or Initiative) while transformed. |
-| Attribute boost | 2 pts/point | +1 to one Attribute (Earth, Air, Fire, Water, or Moira) while transformed, up to the character's normal maximum. |
-| Environmental adaptation | 1 pt | Breathe underwater, see in total darkness, ignore extreme temperatures, or similar. |
-| Borrow a Gift Level | 3 pts/Level | Gain one Level of an existing Gift you don't otherwise hold while transformed, GM-approved for fit - same per-Level price as the [Gifts pool](character-creation.md#gifts-pool). |
-| Borrow a Boon | 1/3/5/7 pts | Gain a Boon you don't otherwise hold while transformed, at that Boon's own Trivial/Lesser/Greater/Legendary price. |
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -284,21 +284,6 @@ The build is set once at creation, spending a points pool (below) on the build m
 
 **Pool by Level**
 
-**Build menu**
-
-**Adders**
-
-- **Overclock Surge** (Lesser, 3 pts): spend 1 Ki to push one installed augmentation to double effect for a single action.
-- **Backup Power Cell** (Lesser, 3 pts): once per Scene, ignore an effect that would otherwise disable your augmentations.
-- **Full Conversion** (Greater, 6 pts): the build-menu pool at every Level is permanently +3 points bigger.
-- **Reconfigurable** (Greater, 6 pts): with an hour of focused work, swap your build-menu loadout for a different selection of equal or lesser total cost.
-
-**Limiters**
-
-- **Vulnerable to EMP**: electromagnetic effects, a Technokinesis-style intrusion, or a dedicated anti-tech weapon disable your augmentations for the rest of the Scene on a hit.
-- **Visible Hardware**: your augmentations are visible, not concealable under normal clothing - no passing as unaugmented.
-- **Maintenance Dependent**: without downtime and access to tools between sessions, GM's call whether an augmentation glitches out for the session.
-
 **1** - 2 points
 
 **2** - 5 points
@@ -308,6 +293,8 @@ The build is set once at creation, spending a points pool (below) on the build m
 **4** - 13 points
 
 **5** - 18 points
+
+**Build menu**
 
 | Option | Cost | Effect |
 |---|---|---|
@@ -332,6 +319,19 @@ The build is set once at creation, spending a points pool (below) on the build m
 | Grapple Line | 2 pts | A retractable cable launcher built into an arm - anchor and pull yourself to a point within Near range, or yank a target or object toward you. |
 | Nanite Medkit | 2 pts | A self-contained injector loaded with one dose of field-medicine nanites - once per Scene, stabilize yourself or an adjacent ally from dying, no roll. |
 | Integrated Weapon | 3 pts | A retractable blade, dart launcher, or similar built into a limb - counts as a Light weapon that can never be disarmed or left behind. |
+
+**Adders**
+
+- **Overclock Surge** (Lesser, 3 pts): spend 1 Ki to push one installed augmentation to double effect for a single action.
+- **Backup Power Cell** (Lesser, 3 pts): once per Scene, ignore an effect that would otherwise disable your augmentations.
+- **Full Conversion** (Greater, 6 pts): the build-menu pool at every Level is permanently +3 points bigger.
+- **Reconfigurable** (Greater, 6 pts): with an hour of focused work, swap your build-menu loadout for a different selection of equal or lesser total cost.
+
+**Limiters**
+
+- **Vulnerable to EMP**: electromagnetic effects, a Technokinesis-style intrusion, or a dedicated anti-tech weapon disable your augmentations for the rest of the Scene on a hit.
+- **Visible Hardware**: your augmentations are visible, not concealable under normal clothing - no passing as unaugmented.
+- **Maintenance Dependent**: without downtime and access to tools between sessions, GM's call whether an augmentation glitches out for the session.
 </div>
 
 <div class="entry entry-headed" markdown="1">
