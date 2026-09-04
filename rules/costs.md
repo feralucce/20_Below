@@ -54,7 +54,8 @@ times 2, an Attribute point costs 8, and so on.
 | Item | Value |
 |---|---|
 | XP per Session (max) | 5 |
-| Resources - XP per level | 3 |
+| New Resource (Level 0 → 1) - flat XP | 4 |
+| Resource Level - XP multiplier (current level × N) | 3 |
 | Skill Training Tier - XP multiplier (current tier × N) | 2 |
 | Attribute - XP multiplier (current rating × N) | 9 |
 | Boon - XP multiplier (× creation cost) | 2 |

@@ -66,7 +66,8 @@ export function parseCosts(costsMd) {
 
     advancement: {
       xpPerSession: adv['XP per Session (max)'],
-      resourceXpPerLevel: adv['Resources - XP per level'],
+      newResourceXp: adv['New Resource (Level 0 → 1) - flat XP'],
+      resourceLevelXpMultiplier: adv['Resource Level - XP multiplier (current level × N)'],
       skillTierXpMultiplier: adv['Skill Training Tier - XP multiplier (current tier × N)'],
       attributeXpMultiplier: adv['Attribute - XP multiplier (current rating × N)'],
       boonXpMultiplier: adv['Boon - XP multiplier (× creation cost)'],

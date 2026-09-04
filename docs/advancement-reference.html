@@ -205,8 +205,17 @@ nav_section: options
 
   <section class="xp-section" id="resources">
     <h2>How much to raise a Resource Level?</h2>
-    <div class="roll-box">flat 3 XP per Level</div>
-    <p>Same price no matter what Level you're starting from.</p>
+    <div class="roll-box">a new Resource: 4 XP &nbsp;&middot;&nbsp; each Level after: current level &times; 3 XP</div>
+    <p>Taking a Resource you don't have at all costs a flat <strong>4 XP</strong>. After that a Level costs three times the level you're leaving, not the one you're entering - Level 1 to 2 is <strong>3 XP</strong>, Level 4 to 5 is <strong>12 XP</strong>.</p>
+    <table class="cost-table">
+      <tr><th>Step</th><th>XP</th></tr>
+      <tr><td>None &rarr; Level 1</td><td>4</td></tr>
+      <tr><td>Level 1 &rarr; 2</td><td>3</td></tr>
+      <tr><td>Level 2 &rarr; 3</td><td>6</td></tr>
+      <tr><td>Level 3 &rarr; 4</td><td>9</td></tr>
+      <tr><td>Level 4 &rarr; 5</td><td>12</td></tr>
+    </table>
+    <p class="aside">34 XP takes a Resource from nothing to Level 5.</p>
   </section>
 
   <section class="xp-section" id="boons">

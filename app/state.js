@@ -823,8 +823,17 @@ export function refundAdvancementResourceLevel(state, resourceName) {
 }
 
 function resourcesAdvancementXpSpent(state, data) {
-  const totalLevels = Object.values(state.advancementPurchases.Resources).reduce((a, b) => a + b, 0);
-  return totalLevels * data.advancement.resourceXpPerLevel;
+  let total = 0;
+  Object.entries(state.advancementPurchases.Resources).forEach(([name, count]) => {
+    if (!count) return;
+    total += sumTopN(state.resources[name], count, (level) => (
+      // Acquiring a Resource is its own flat price - the multiplier collapses
+      // to 0 at level 0, and taking a Resource at all buys more than any
+      // single step up the ladder afterwards. Same shape as a new Skill.
+      level === 0 ? data.advancement.newResourceXp : level * data.advancement.resourceLevelXpMultiplier
+    ));
+  });
+  return total;
 }
 
 // New Gift (Level 0→1) uses a flat base instead of the level×multiplier

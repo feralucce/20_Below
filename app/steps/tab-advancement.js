@@ -170,10 +170,16 @@ function skillsSection(state, data, refresh) {
 }
 
 function resourcesSection(state, data, refresh) {
-  const flat = data.advancement.resourceXpPerLevel;
-  const { details, content: section } = sectionWrap(`Resources (flat ${flat} XP/level)`);
+  const newXp = data.advancement.newResourceXp;
+  const mult = data.advancement.resourceLevelXpMultiplier;
+  const { details, content: section } = sectionWrap(
+    `Resources (new Resource ${newXp} XP, then current level × ${mult} XP)`,
+  );
   data.resources.forEach((r) => {
     const level = state.resources[r.name];
+    // Acquiring one is a flat price; every step after is priced off the level
+    // being left, so the ladder gets steeper as it climbs.
+    const cost = level === 0 ? newXp : level * mult;
     const remaining = xpRemaining(state, data);
     const bought = state.advancementPurchases.Resources[r.name] ?? 0;
     const card = el('div', { class: 'pick-card' });
@@ -193,8 +199,8 @@ function resourcesSection(state, data, refresh) {
         level < 5
           ? el('button', {
               type: 'button',
-              text: `Raise (${flat} XP)`,
-              disabled: flat > remaining ? '' : undefined,
+              text: level === 0 ? `Take it (${cost} XP)` : `Raise (${cost} XP)`,
+              disabled: cost > remaining ? '' : undefined,
               onClick: () => {
                 buyAdvancementResourceLevel(state, r.name);
                 refresh();
