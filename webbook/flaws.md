@@ -23,7 +23,9 @@ Flaws are the mirror image of Boons - disadvantages, quirks, or complications a 
 
 ## The Flaws
 
-**Amnesia (= Level).** *There’s a shape in your history where something used to be. You’ve stopped poking at it, mostly.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Amnesia</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">There’s a shape in your history where something used to be. You’ve stopped poking at it, mostly.</p>
 
 Missing memories from part of the character’s past.
 
@@ -36,8 +38,11 @@ Missing memories from part of the character’s past.
 **4.** Most personal history is gone - only fragments remain. Still knows their own name and can act normally, but life before a certain point belongs to a stranger.
 
 **5.** Forgotten their entire identity - may not know what Skills or Boons/Gifts they have.
+</div>
 
-**Antagonist (= Level).** *Somebody out there is thinking about you right now, and not fondly.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Antagonist</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">Somebody out there is thinking about you right now, and not fondly.</p>
 
 Someone or something opposes the character - a personal rival, a dedicated enemy, or a determined hunter.
 
@@ -50,8 +55,11 @@ Someone or something opposes the character - a personal rival, a dedicated enemy
 **4.** A powerful, dangerous enemy or organization with real reach, actively hunting you.
 
 **5.** A nemesis-tier antagonist - extremely powerful, far-reaching, and personally invested in your downfall. Relentlessly hunts you as a top-priority target.
+</div>
 
-**Anxiety (= Level).** *The threat assessment never switches off. Most of what it reports is wrong, and knowing that has never once helped.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Anxiety</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">The threat assessment never switches off. Most of what it reports is wrong, and knowing that has never once helped.</p>
 
 A deeply rooted anxiety disorder.
 
@@ -64,8 +72,11 @@ A deeply rooted anxiety disorder.
 **4.** Panic attacks - sudden, incapacitating episodes of panic under stress, not just avoidance.
 
 **5.** A pervasive anxiety disorder - constant hypervigilance, frequent panic attacks, and deeply entrenched avoidance that fundamentally limits day-to-day life.
+</div>
 
-**Berserk (= Level).** *There’s a point past which you stop making decisions and start just continuing.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Berserk</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">There’s a point past which you stop making decisions and start just continuing.</p>
 
 Once triggered, must keep fighting at full intensity.
 
@@ -80,8 +91,11 @@ Each level’s effect is cumulative - it keeps every lower level’s restriction
 **4.** Levels 1-3, plus: the trigger doesn’t end just because the original threat is gone - any new hostile that appears keeps the fight going.
 
 **5.** Levels 1-4, plus: keeps fighting even when badly hurt - won’t retreat or stop to protect themselves, only stopping when physically unable to continue (unconscious, restrained, or no hostiles remain).
+</div>
 
-**Code of Conduct (= Level).** *There’s a line, and you’ve never crossed it. That has cost you, and it will again.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Code of Conduct</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">There’s a line, and you’ve never crossed it. That has cost you, and it will again.</p>
 
 A self-imposed rule the character won’t break, even when breaking it would help.
 
@@ -94,8 +108,11 @@ A self-imposed rule the character won’t break, even when breaking it would hel
 **4.** A severe restriction that limits options in dangerous or critical moments. Refuses to harm anyone significantly weaker than themselves; an enemy must always be given a chance to surrender before a killing blow; cannot break a vow even to save their own life.
 
 **5.** An absolute, life-defining restriction. I cannot kill anything, no matter the cost; a vow that cannot be broken under any circumstance, even to save the people they love; can never refuse a genuine request for help, regardless of personal danger.
+</div>
 
-**Dependent (= Level).** *Somebody’s safety is stitched to yours. They didn’t ask to be, and neither did you.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Dependent</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">Somebody’s safety is stitched to yours. They didn’t ask to be, and neither did you.</p>
 
 Someone relies on the character and must be protected or provided for.
 
@@ -108,8 +125,11 @@ Someone relies on the character and must be protected or provided for.
 **4.** A dependent who is a frequent liability - regularly endangered by the character’s own life (enemies, work, reputation), requiring real risk to protect.
 
 **5.** A dependent who is entirely helpless without the character and a prime target - enemies know exactly who to threaten to get to the character.
+</div>
 
-**Destitute (= Level).** *Money is a thing that happens to other people. You’ve gotten very good at the arithmetic of not having it.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Destitute</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">Money is a thing that happens to other people. You’ve gotten very good at the arithmetic of not having it.</p>
 
 Chronic financial hardship, from a rough patch to genuinely having nothing.
 
@@ -124,8 +144,11 @@ Each level’s effect is cumulative - it keeps every lower level’s complicatio
 **4.** Genuinely impoverished. As Level 3, and it’s visible enough that people react to it on sight - shapes first impressions the same way Notable Appearance or Notoriety do, just for money instead of looks or reputation.
 
 **5.** Nothing left. As Level 4, and there’s no safety net at all - no one to call for a loan, no fallback plan, and whatever put the character here is bad enough to be a real, ongoing story hook (GM’s call on specifics).
+</div>
 
-**Directionless (= Level).** *Everyone else seems to keep a map running somewhere behind their eyes. You never got issued one.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Directionless</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">Everyone else seems to keep a map running somewhere behind their eyes. You never got issued one.</p>
 
 A poor, unreliable sense of direction.
 
@@ -138,8 +161,11 @@ A poor, unreliable sense of direction.
 **4.** Severe - cannot reliably navigate even short, familiar routes without external aid; easily disoriented under any pressure or unfamiliar layout.
 
 **5.** No functional sense of direction whatsoever - completely dependent on others or tools to get anywhere; could get lost in their own home under stress or darkness.
+</div>
 
-**Fragile (= Level).** *Your body keeps a longer memory of damage than other people’s do.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Fragile</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">Your body keeps a longer memory of damage than other people’s do.</p>
 
 The body works against you.
 
@@ -152,8 +178,11 @@ The body works against you.
 **4.** Seriously compromised - sustained exertion risks real harm; even routine physical demands can trigger a flare-up or setback; wounds that would be minor for others become serious.
 
 **5.** The body is failing - barely able to sustain ordinary physical demands without real risk; any injury is dangerous and slow to heal; a single hard fight could be life-threatening regardless of what actually connects.
+</div>
 
-**Gun-Shy (= Level).** *It starts, and there’s a gap between when you should move and when you do.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Gun-Shy</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">It starts, and there’s a gap between when you should move and when you do.</p>
 
 Falters when violence breaks out.
 
@@ -168,8 +197,11 @@ Each level’s effect is cumulative - it keeps every lower level’s penalty and
 **4.** Levels 1-3, plus: while in combat, they act at Disadvantage.
 
 **5.** Levels 1-4, plus: the Ki-to-act requirement from Level 3 applies every round, not just the first - without spending Ki each round, they’re frozen entirely; when they do act, it’s at Disadvantage throughout.
+</div>
 
-**Illiterate (= Level).** *The letters are right there and they don’t resolve. You’ve built a whole life around not needing them to.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Illiterate</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">The letters are right there and they don’t resolve. You’ve built a whole life around not needing them to.</p>
 
 Cannot read or write, to some degree.
 
@@ -182,8 +214,11 @@ Cannot read or write, to some degree.
 **4.** Functionally illiterate everywhere, including their own native language - cannot meaningfully read or write at all.
 
 **5.** No concept of written language whatsoever - doesn’t register that symbols represent language in the first place.
+</div>
 
-**Impaired Senses (= Level).** *One of the channels is down, and you’ve rerouted around it well enough that people forget - right up until it matters.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Impaired Senses</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">One of the channels is down, and you’ve rerouted around it well enough that people forget - right up until it matters.</p>
 
 A missing or significantly impaired sense.
 
@@ -198,8 +233,11 @@ A missing or significantly impaired sense.
 **4.** Total loss of a primary sense - fully blind or fully deaf, relying entirely on other senses and/or tools/training to compensate.
 
 **5.** Total loss of multiple primary senses - both blind and deaf, or similarly extreme. Complete reliance on remaining senses and outside support.
+</div>
 
-**Incantations (= Level).** *It doesn’t work if you can’t say it. Something out there is listening for the words specifically.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Incantations</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">It doesn’t work if you can’t say it. Something out there is listening for the words specifically.</p>
 
 A Gift only works if the character can speak a specific phrase aloud.
 
@@ -214,8 +252,11 @@ A Gift only answers to a spoken word - distinct from a Gift’s own Limiters lik
 **4.** Every Gift you have requires its own spoken incantation - none of your capability works if you can’t speak clearly.
 
 **5.** As Level 4, and the incantation must be spoken clean, with no other exertion that Round - sprinting, grappling, or taking a hit while attempting one fails it outright, forcing you to start over next round.
+</div>
 
-**Item of Power (= Level).** *The thing you can do isn’t entirely in you. Some of it is in an object, and objects can be taken.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Item of Power</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">The thing you can do isn’t entirely in you. Some of it is in an object, and objects can be taken.</p>
 
 A Gift’s capability lives, at least in part, in something the character carries rather than in themselves.
 
@@ -230,8 +271,11 @@ Your capability isn’t fully your own - it lives, at least in part, in somethin
 **4.** Every Gift you have depends on retaining the item - lose it, and you’re left with nothing but your ordinary Skills, Boons, and Attributes until it’s recovered.
 
 **5.** As Level 4, and the item itself is something genuinely easy to take, damage, or lose - not secured, not bonded, not hard to separate from you at all. Anyone who thinks to try has a real shot at disarming you completely.
+</div>
 
-**Lame (= Level).** *The distance is the same as it always was. It just costs more now.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Lame</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">The distance is the same as it always was. It just costs more now.</p>
 
 Permanently reduced mobility from an old injury or condition.
 
@@ -244,8 +288,11 @@ Permanently reduced mobility from an old injury or condition.
 **4.** Severe impairment - mobility is a constant limiting factor; sustained or fast movement is difficult even with aids.
 
 **5.** Effectively immobile without significant support - a wheelchair or equivalent, or unable to move under their own power at all in a fight or chase.
+</div>
 
-**Notable Appearance (= Level).** *People remember you. Every single time, whether that’s useful or not.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Notable Appearance</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">People remember you. Every single time, whether that’s useful or not.</p>
 
 Something about how you look draws stares and reactions.
 
@@ -258,8 +305,11 @@ Something about how you look draws stares and reactions.
 **4.** A striking appearance that draws stares and comment everywhere, actively makes blending in impossible.
 
 **5.** An unmistakable, singular appearance - described in wanted posters and rumors alike; anyone who’s heard of them would recognize them on sight.
+</div>
 
-**Notoriety (= Level).** *Your name arrives in the room before you do, and it’s already said something you’d rather it hadn’t.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Notoriety</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">Your name arrives in the room before you do, and it’s already said something you’d rather it hadn’t.</p>
 
 How widely and how badly the character is known.
 
@@ -272,8 +322,11 @@ How widely and how badly the character is known.
 **4.** Widely infamous - recognized and reviled by strangers regularly.
 
 **5.** A notorious name nationwide or worldwide, actively shunned or targeted on reputation alone.
+</div>
 
-**Overconfident (= Level).** *You’ve been right often enough to stop checking, which is a habit with a shelf life.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Overconfident</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">You’ve been right often enough to stop checking, which is a habit with a shelf life.</p>
 
 Consistently underestimates danger or overestimates their own ability.
 
@@ -286,8 +339,11 @@ Consistently underestimates danger or overestimates their own ability.
 **4.** Reliably walks into situations that are clearly beyond them, refusing help or backup even when it’s obviously needed.
 
 **5.** Cannot recognize danger as danger until it’s already too late - repeatedly puts themselves and others at serious risk through sheer refusal to see their own limits.
+</div>
 
-**Pariah (= Level).** *There’s a category people put you in on sight, and no amount of being reasonable gets you out of it.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Pariah</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">There’s a category people put you in on sight, and no amount of being reasonable gets you out of it.</p>
 
 Others hold a specific prejudice against the character (species, background, origin, etc.).
 
@@ -300,8 +356,11 @@ Others hold a specific prejudice against the character (species, background, ori
 **4.** Systemic hostility - the prejudice has institutional teeth: denied legal protection, actively targeted by local authority, barred from whole industries or areas.
 
 **5.** Widespread, violent hostility - openly hunted, attacked, or persecuted for what they are; public life is dangerous.
+</div>
 
-**Reliance (= Level).** *There’s a thing you need, and the needing has its own schedule.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Reliance</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">There’s a thing you need, and the needing has its own schedule.</p>
 
 A behavioral compulsion, substance dependency, or medical/physical condition.
 
@@ -314,8 +373,11 @@ A behavioral compulsion, substance dependency, or medical/physical condition.
 **4.** A severe dependency with real danger if unmet. Hard addiction with physical withdrawal symptoms; a severe, life-threatening allergy on exposure; a compulsion strong enough to override better judgment in the moment.
 
 **5.** A life-controlling dependency. An addiction that incapacitates without regular access; a condition requiring constant, uninterruptible support to survive; a compulsion so absolute it defines every decision the character makes.
+</div>
 
-**Ritual Required (= Level).** *It answers, but not immediately. There’s a procedure, and the procedure takes as long as it takes.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Ritual Required</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">It answers, but not immediately. There’s a procedure, and the procedure takes as long as it takes.</p>
 
 A Gift doesn’t answer the instant it’s reached for - it has to be called, coaxed, or earned each time.
 
@@ -330,8 +392,11 @@ Your power doesn’t answer the instant you reach for it - it has to be called, 
 **4.** Every Gift you have requires the Level 3 ritual before its first use each Scene, not just one - priming your full capability takes real, dedicated time.
 
 **5.** Every Gift requires the full ritual before every single use, with no priming grace at all - full setup, every time, for everything you can do.
+</div>
 
-**Secret (= Level).** *One fact, and a life built carefully around it not coming out.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Secret</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">One fact, and a life built carefully around it not coming out.</p>
 
 Something the character desperately doesn’t want revealed.
 
@@ -344,8 +409,11 @@ Something the character desperately doesn’t want revealed.
 **4.** A dangerous secret - exposure invites real threats: legal jeopardy, violence, or being hunted by someone with the power to act on it.
 
 **5.** A world-shaking secret - exposure would be catastrophic, reshaping the character’s life entirely or endangering far more than just themselves.
+</div>
 
-**Shaken Confidence (= Level).** *Something happened once, in front of people, and some part of you never quite got up from it.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Shaken Confidence</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">Something happened once, in front of people, and some part of you never quite got up from it.</p>
 
 A lasting loss of social self-assurance from one specific defining humiliation.
 
@@ -360,8 +428,11 @@ One specific, defining humiliation left a real mark - not on the body, on the ne
 **4.** The doubt bleeds into adjacent situations, not just the original trigger - a broader loss of confidence.
 
 **5.** A pervasive, crippling lack of social self-assurance - even routine interactions carry real hesitation, not just the original trigger.
+</div>
 
-**Short Fuse (= Level).** *There’s a shorter distance than most people have between the provocation and the response.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Short Fuse</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">There’s a shorter distance than most people have between the provocation and the response.</p>
 
 Quick to anger, prone to losing composure under provocation.
 
@@ -374,8 +445,11 @@ Quick to anger, prone to losing composure under provocation.
 **4.** A serious liability under pressure - provocation reliably leads to real damage: burned bridges, real consequences, sometimes violence.
 
 **5.** Cannot reliably control themselves once triggered - provocation regularly leads to serious harm, to relationships or to people, with real consequences the character can’t walk back.
+</div>
 
-**Soft-Hearted (= Level).** *You know what the tactical answer is. You’ve simply never been able to make yourself give it.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Soft-Hearted</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">You know what the tactical answer is. You’ve simply never been able to make yourself give it.</p>
 
 Struggles to act against the vulnerable, even when it costs them.
 
@@ -388,8 +462,11 @@ Struggles to act against the vulnerable, even when it costs them.
 **4.** Cannot bring themselves to act against the vulnerable even when the stakes are severe - will let an opportunity or advantage slip away rather than cross that line.
 
 **5.** Will actively endanger themselves or the mission to protect or spare someone vulnerable, every time, no exceptions.
+</div>
 
-**Speech Impediment (= Level).** *The thought is clear and fast. Getting it out is the part that isn’t.*
+<div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Speech Impediment</span><span class="entry-tag">= Level</span></p>
+<p class="entry-flavour">The thought is clear and fast. Getting it out is the part that isn’t.</p>
 
 A stutter, accent, or other trait that hampers verbal communication.
 
@@ -402,3 +479,35 @@ A stutter, accent, or other trait that hampers verbal communication.
 **4.** A severe impediment - verbal communication is unreliable; often misunderstood or unable to get a full thought out under pressure.
 
 **5.** Effectively unable to communicate verbally in any reliable way - must rely on writing, gestures, or another person to speak for them.
+</div>
+
+## The Flaws, at a glance
+
+| Flaw | Points | Effect |
+|---|---|---|
+| Amnesia | = Level | Missing memories from part of the character's past - see [Amnesia](#amnesia) below for the 5-level breakdown. |
+| Antagonist | = Level | Someone or something opposes the character - a personal rival, a dedicated enemy, or a determined hunter - see [Antagonist](#antagonist) below for the 5-level breakdown. |
+| Anxiety | = Level | A deeply rooted anxiety disorder - see [Anxiety](#anxiety) below for the 5-level breakdown. |
+| Berserk | = Level | Once triggered, must keep fighting at full intensity - see [Berserk](#berserk) below for the 5-level breakdown. |
+| Code of Conduct | = Level | A self-imposed rule the character won't break, even when breaking it would help - see [Code of Conduct](#code-of-conduct) below for the 5-level breakdown. |
+| Dependent | = Level | Someone relies on the character and must be protected or provided for - see [Dependent](#dependent) below for the 5-level breakdown. |
+| Destitute | = Level | Chronic financial hardship, from a rough patch to genuinely having nothing - see [Destitute](#destitute) below for the 5-level breakdown. |
+| Directionless | = Level | A poor, unreliable sense of direction - see [Directionless](#directionless) below for the 5-level breakdown. |
+| Fragile | = Level | The body works against you - see [Fragile](#fragile) below for the 5-level breakdown. |
+| Gun-Shy | = Level | Falters when violence breaks out - see [Gun-Shy](#gun-shy) below for the 5-level breakdown. |
+| Illiterate | = Level | Cannot read or write, to some degree - see [Illiterate](#illiterate) below for the 5-level breakdown. |
+| Impaired Senses | = Level | A missing or significantly impaired sense - see [Impaired Senses](#impaired-senses) below for the 5-level breakdown. |
+| Incantations | = Level | A Gift only works if the character can speak a specific phrase aloud - see [Incantations](#incantations) below for the 5-level breakdown. |
+| Item of Power | = Level | A Gift's capability lives, at least in part, in something the character carries rather than in themselves - see [Item of Power](#item-of-power) below for the 5-level breakdown. |
+| Lame | = Level | Permanently reduced mobility from an old injury or condition - see [Lame](#lame) below for the 5-level breakdown. |
+| Notable Appearance | = Level | Something about how you look draws stares and reactions - see [Notable Appearance](#notable-appearance) below for the 5-level breakdown. |
+| Notoriety | = Level | How widely and how badly the character is known - see [Notoriety](#notoriety) below for the 5-level breakdown. |
+| Overconfident | = Level | Consistently underestimates danger or overestimates their own ability - see [Overconfident](#overconfident) below for the 5-level breakdown. |
+| Pariah | = Level | Others hold a specific prejudice against the character (species, background, origin, etc.) - see [Pariah](#pariah) below for the 5-level breakdown. |
+| Reliance | = Level | A behavioral compulsion, substance dependency, or medical/physical condition - see [Reliance](#reliance) below for the 5-level breakdown. |
+| Ritual Required | = Level | A Gift doesn't answer the instant it's reached for - it has to be called, coaxed, or earned each time - see [Ritual Required](#ritual-required) below for the 5-level breakdown. |
+| Secret | = Level | Something the character desperately doesn't want revealed - see [Secret](#secret) below for the 5-level breakdown. |
+| Shaken Confidence | = Level | A lasting loss of social self-assurance from one specific defining humiliation - see [Shaken Confidence](#shaken-confidence) below for the 5-level breakdown. |
+| Short Fuse | = Level | Quick to anger, prone to losing composure under provocation - see [Short Fuse](#short-fuse) below for the 5-level breakdown. |
+| Soft-Hearted | = Level | Struggles to act against the vulnerable, even when it costs them - see [Soft-Hearted](#soft-hearted) below for the 5-level breakdown. |
+| Speech Impediment | = Level | A stutter, accent, or other trait that hampers verbal communication - see [Speech Impediment](#speech-impediment) below for the 5-level breakdown. |
