@@ -204,38 +204,63 @@ def gift_lists(path):
     for section in text.split("\n### ")[1:]:
         name = section.split("\n", 1)[0].strip()
         lists = {}
-        for label in ("Adders", "Limiters"):
-            m = re.search(r"^\*\*%s\*\*:?\s*$" % label, section, re.M)
+        # Bulleted labels, and the tabled ones. "Pool by Level" is keyed 1..5,
+        # which is why the general table restorer will not touch it - every
+        # numbered table in the project shares those keys. Here the Gift is
+        # known by name, so its own table is unambiguous.
+        for label in ("Adders", "Limiters", "Pool by Level", "Build menu"):
+            m = re.search(r"^\*\*%s\*\*:?\s*$" % re.escape(label), section, re.M)
             if not m:
                 continue
-            bullets = []
+            block = []
             for line in section[m.end():].split("\n"):
-                if line.startswith("- "):
-                    bullets.append(line)
-                elif bullets and line.strip():
+                if line.startswith("- ") or line.startswith("|"):
+                    block.append(line)
+                elif block and line.strip():
                     break
-            if bullets:
-                lists[label] = "\n".join(bullets)
+            if block:
+                lists[label] = "\n".join(block)
         out[name] = lists
     return out
 
 
+LABELS = ("Adders", "Limiters", "Pool by Level", "Build menu")
+POOL_ROW = re.compile(r"^\*\*\d+\*\*\s*-\s*\d+\s*points\.?$")
+
+
 def relist(body, lists):
-    """Swap a run-together Adders/Limiters paragraph for the bulleted version."""
+    """Swap what the manuscript flattened for the rules file's own version.
+
+    Each label owns a different amount of what follows it, so each is consumed
+    on its own terms: Adders and Limiters are one run-together paragraph, the
+    pool is five numbered lines, the build menu is a table. Consuming by "skip
+    until the next label" instead would swallow the Gift's level lines, which
+    sit after the Limiters with nothing to mark where they start.
+    """
     out = []
-    expecting = None
-    for chunk in body:
+    i = 0
+    while i < len(body):
+        chunk = body[i]
         label = chunk.strip("*: ").strip()
-        if chunk.startswith("**") and label in ("Adders", "Limiters"):
-            expecting = label
-            out.append(chunk)
+        if not (chunk.startswith("**") and label in LABELS and lists.get(label)):
+            out.append(chunk); i += 1
             continue
-        if expecting and lists.get(expecting):
-            out.append(lists[expecting])
-            expecting = None
-            continue
-        expecting = None
         out.append(chunk)
+        out.append(lists[label])
+        i += 1
+        if label in ("Adders", "Limiters"):
+            if i < len(body) and body[i].strip("*: ").strip() not in LABELS:
+                i += 1
+        elif label == "Pool by Level":
+            while i < len(body) and POOL_ROW.match(body[i]):
+                i += 1
+        elif label == "Build menu":
+            while i < len(body) and (
+                body[i].startswith("|")
+                or (body[i].startswith("**") and " - " in body[i]
+                    and "\n" not in body[i] and not POOL_ROW.match(body[i]))
+            ):
+                i += 1
     return out
 
 
