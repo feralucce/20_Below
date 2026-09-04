@@ -57,15 +57,13 @@ The alternate form is built once, at creation, spending a points pool (below) on
 
 **Pool by Level**
 
-**1** - 2 points
-
-**2** - 5 points
-
-**3** - 9 points
-
-**4** - 13 points
-
-**5** - 18 points
+| Level | Pool |
+|---|---|
+| 1 | 2 points |
+| 2 | 5 points |
+| 3 | 9 points |
+| 4 | 13 points |
+| 5 | 18 points |
 
 **Build menu**
 
@@ -284,15 +282,13 @@ The build is set once at creation, spending a points pool (below) on the build m
 
 **Pool by Level**
 
-**1** - 2 points
-
-**2** - 5 points
-
-**3** - 9 points
-
-**4** - 13 points
-
-**5** - 18 points
+| Level | Pool |
+|---|---|
+| 1 | 2 points |
+| 2 | 5 points |
+| 3 | 9 points |
+| 4 | 13 points |
+| 5 | 18 points |
 
 **Build menu**
 
