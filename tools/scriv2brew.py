@@ -38,6 +38,12 @@ def decode(text):
     text = re.sub(r"\\u(-?\d+) ?\??", lambda m: chr(int(m.group(1)) % 65536), text)
     text = re.sub(r"\\'([0-9a-fA-F]{2})", lambda m: chr(int(m.group(1), 16)), text)
     text = text.replace(r"\tab ", "\t").replace(r"\tab", "\t")
+    # Scrivener sprinkles character-set control words through its runs -
+    # \loch \hich \dbch \af0 \uc1 and their friends. They carry no text, but
+    # left alone they read as literal gibberish mid-sentence. Anything still
+    # shaped like a control word at this point is one of those. Escaped braces
+    # are not (\{ is not a letter), so they survive to the line below.
+    text = re.sub(r"\\[a-zA-Z]+-?\d*[ ]?", "", text)
     text = text.replace(r"\{", "{").replace(r"\}", "}").replace("\\\\", "\\")
     return text
 
