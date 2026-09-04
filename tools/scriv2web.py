@@ -305,9 +305,9 @@ def wrap_headed_entries(chunks, after, lists_by_name=None):
 # well and the table looks things up; the book carries both.
 AT_A_GLANCE = {
     "flaws":     ("rules/flaws.md",          "## Flaw List", "The Flaws, at a glance"),
-    "boons":     ("rules/boons.md",          "## Boon List", "The Boons, at a glance"),
-    # Skills deliberately has none. Its 89 entries already read as a list of
-    # cards, and an 89-row table underneath them was more scroll than lookup.
+    # Skills and Boons deliberately have none. Their entries already read as a
+    # list of cards, and repeating all of them underneath as a table was more
+    # scroll than lookup.
 }
 
 
