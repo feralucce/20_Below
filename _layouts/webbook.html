@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ page.title }} | 20 Below</title>
+<link rel="icon" type="image/x-icon" href="../docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="../docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="../docs/assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --accent-dim: #1c3548;
+    --radius: 8px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    line-height: 1.6;
+  }
+  .back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  h1, h2, h3, h4 {
+    letter-spacing: 0.02em;
+  }
+  h1 {
+    margin: 1rem 0 0.5rem;
+  }
+  h2 {
+    border-bottom: 1px solid var(--panel-border);
+    padding-bottom: 0.4rem;
+    margin-top: 2.5rem;
+  }
+  h3 {
+    margin-top: 2rem;
+    color: var(--accent);
+  }
+  h4 {
+    margin-top: 1.5rem;
+  }
+  p, li {
+    color: var(--text);
+  }
+  a { color: var(--accent); }
+  strong { color: var(--text); }
+  hr {
+    border: none;
+    border-top: 1px solid var(--panel-border);
+    margin: 2.5rem 0;
+  }
+  code {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 4px;
+    padding: 0.1rem 0.35rem;
+    font-size: 0.9em;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.95rem;
+  }
+  th, td {
+    border: 1px solid var(--panel-border);
+    padding: 0.5rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--panel);
+    color: var(--text);
+  }
+  tr:nth-child(even) td {
+    background: rgba(255, 255, 255, 0.02);
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+    border: 1px solid var(--panel-border);
+  }
+  table.adversary-card {
+    width: 100%;
+    border-collapse: separate;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+  }
+  table.adversary-card td {
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    vertical-align: top;
+  }
+  table.adversary-card:nth-of-type(odd) td {
+    background: var(--panel);
+  }
+  table.adversary-card:nth-of-type(even) td {
+    background: var(--bg);
+  }
+  table.adversary-card h3 {
+    margin-top: 0;
+  }
+  .chapter-mark {
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    margin: 1.5rem 0 0;
+  }
+  .chapter-feet {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--panel-border);
+  }
+  .chapter-feet a { text-decoration: none; }
+</style>
+<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
+</head>
+<body>
+{% include site-nav.html %}
+<main>
+  <a class="back-link" href="/webbook/">&larr; Contents</a>
+  {% if page.chapter %}<p class="chapter-mark">Chapter {{ page.chapter }}</p>{% endif %}
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+  {% if page.prev_url or page.next_url %}
+  <nav class="chapter-feet">
+    {% if page.prev_url %}<a href="{{ page.prev_url }}">&larr; {{ page.prev_title }}</a>{% else %}<span></span>{% endif %}
+    {% if page.next_url %}<a href="{{ page.next_url }}">{{ page.next_title }} &rarr;</a>{% endif %}
+  </nav>
+  {% endif %}
+</main>
+<script src="/docs/assets/js/site-nav.js"></script>
+</body>
+</html>
