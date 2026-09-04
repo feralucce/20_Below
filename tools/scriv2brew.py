@@ -43,26 +43,37 @@ def decode(text):
     # left alone they read as literal gibberish mid-sentence. Anything still
     # shaped like a control word at this point is one of those. Escaped braces
     # are not (\{ is not a letter), so they survive to the line below.
+    # A soft break inside a paragraph is real content - it is how the
+    # manuscript separates a heading from the text under it when the two share
+    # one paragraph. Convert it before the sweep below, or the sweep deletes it
+    # and the two run together as "Writing Your Own NatureIf none of the...".
+    text = text.replace(r"\line ", "\n").replace(r"\line", "\n")
     text = re.sub(r"\\[a-zA-Z]+-?\d*[ ]?", "", text)
     text = text.replace(r"\{", "{").replace(r"\}", "}").replace("\\\\", "\\")
     return text
 
 
 def paragraphs(rtf):
-    """[(is_heading, [(bold, italic, text), ...]), ...]"""
+    """[(is_heading, [(bold, italic, text), ...]), ...]
+
+    A paragraph that opens at heading size and then continues at body size is
+    two things sharing one paragraph, and the manuscript does that - a heading
+    with its opening line tucked under it behind a soft break. Split it, or the
+    whole paragraph renders as one enormous heading.
+    """
     body = rtf.split("\\cf0\n", 1)[-1]
     out = []
     for chunk in re.split(r"\\par\b", body):
-        runs = []
-        heading = False
+        head, rest = [], []
         for f, fs, b, i, txt in RUN.findall(chunk):
             if not txt.strip() and "\t" not in decode(txt):
                 continue
-            if fs == "28":
-                heading = True
-            runs.append((b == "1", i == "1" or f == "2", decode(txt)))
-        if runs:
-            out.append((heading, runs))
+            run = (b == "1", i == "1" or f == "2", decode(txt))
+            (head if (fs == "28" and not rest) else rest).append(run)
+        if head:
+            out.append((True, head))
+        if rest:
+            out.append((False, rest))
     return out
 
 

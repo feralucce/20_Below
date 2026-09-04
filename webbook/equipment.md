@@ -332,9 +332,7 @@ A free alternative to Wealth Check shopping, not a replacement for it - a charac
 
 **Level 4** (Very wealthy)
 
-| Resource | What Scales by Level |
-|---|---|
-| Corporate Backing | How much a legitimate business entity can move, fund, or cover |
+**Corporate Backing** - Armored transport van, Encrypted comms set, Laptop/hacking rig, a small trusted staff (flavor). **Private Security Contract** - Tactical vest, Compact SMG, Signal jammer, a retained security team (flavor). **Serious Insulation** - EMP device, Ballistic shield, Forged documents, a legal team on retainer (flavor).
 
 **Level 5** (A fortune)
 

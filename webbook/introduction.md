@@ -23,7 +23,13 @@ The rest of this book is *how* they do it.
 
 What’s that? You don’t know what a TTRPG is? Well, allow me the pleasure of explaining it to you!
 
-Simple explanation: a tabletop roleplaying game is like a game of make-believe. You remember running around as a kid - roaming the neighborhood with your friends. The stick you found in the woods was your sword, your wizard’s staff or laser rifle. Remember those epic arguments?	Kevin: I got you!	Mia: No. You didn’t!	Kevin: Yes, I did!	Mia: Nope. You missed!	Kevin: You always cheat! I quit!A TTRPG is exactly like that, except when Kevin says, “I got you!”, there are rules in place so he can say, “I got you… honest.”
+Simple explanation: a tabletop roleplaying game is like a game of make-believe. You remember running around as a kid - roaming the neighborhood with your friends. The stick you found in the woods was your sword, your wizard’s staff or laser rifle. Remember those epic arguments?
+	Kevin: I got you!
+	Mia: No. You didn’t!
+	Kevin: Yes, I did!
+	Mia: Nope. You missed!
+	Kevin: You always cheat! I quit!
+A TTRPG is exactly like that, except when Kevin says, “I got you!”, there are rules in place so he can say, “I got you… honest.”
 
 Complex explanation: at the core, any tabletop roleplaying game is an exercise in collaborative storytelling. The game master crafts a world, creates the characters you interact with and sets events in motion. The players decide how their characters react in every situation. It is a mutual dance of give and take that guides a shared universe and story. When anything is in doubt - a physical stunt, a mystic effect, deception or a fight - fate settles it.
 
