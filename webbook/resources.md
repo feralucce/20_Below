@@ -29,7 +29,9 @@ Each Resource’s Level table below defines what’s available for free, no roll
 
 **Resource Index** is a flat **1-6** rating for how far beyond a Resource’s ordinary reach the request goes - its own scale, not the general Difficulty Chart. It inverts the same way Defense does: a *lower* Resource Index is easier (Resource Index 1 adds **9** to the target), a *higher* one is harder (Resource Index 6 adds only **4**, the minimum any Resource Check can add).
 
-**Success**: you get what you were after, at no further cost. **Failure**: you still get what you were after - the ask goes through either way - but the Resource’s Level drops by **1** (to a minimum of 1) until the start of the next **Month**, representing it stretched thin: savings drained, favors called in, goodwill spent. A Resource at a reduced Level uses that lower Level for everything, including further Resource Checks made while it’s still reduced.
+**Success**: you get what you were after, at no further cost.
+
+**Failure**: you still get what you were after - the ask goes through either way - but the Resource’s Level drops by **1** (to a minimum of 1) until the start of the next **Month**, representing it stretched thin: savings drained, favors called in, goodwill spent. A Resource at a reduced Level uses that lower Level for everything, including further Resource Checks made while it’s still reduced.
 
 **Reaching beyond your means**: a Resource Index up to **2 higher** than the Resource’s current effective Level can be attempted - anything further out of reach can’t be attempted at all. Reaching that far always gets you what you were after, but drops the Resource’s Level to **0** for a Month (not just 1) regardless of whether the roll succeeded or failed - **unless the roll is a critical success**, which resolves the attempt as an ordinary free success with no cost at all.
 
