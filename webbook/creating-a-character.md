@@ -143,11 +143,11 @@ Spend wisely.
 
 **Initiative** (Air): turn order in a fight.
 
-**Psyche** (Air): your wall against Mental attacks, and how many dice you throw making one.
+**Psyche** (Air): your wall against Mental attacks, and what a boosted die adds when you make one.
 
 **Ferocity** (Fire): what you add to a Physical strike when you spend Ki to put more behind it.
 
-**Presence** (Fire): your wall against Social attacks, and how many dice you throw making one.
+**Presence** (Fire): your wall against Social attacks, and what a boosted die adds when you make one.
 
 **Stamina** (Water): caps how many Fate Tokens you can hold (three times your Stamina) and how many you can spend in a Scene, and carries you against exhaustion outside a fight.
 
