@@ -158,6 +158,24 @@ Both of the currencies your players run on come from you, and the rules for both
 
 **And remember which way the transfer runs.** Every Token they spend lands in your pool. Being generous with Fate isn’t charity. It’s how you get paid.
 
+## The GM’s Own Pool
+
+Every Token a player spends lands in your pool, and the Fate chapter gives you three things to buy with it - a Twist, a Claim, or Hardening. This is how to use them without wrecking anything.
+
+**It’s a budget for consequences, and it balances itself.** A one-Token edit hands you one. A five-Token pooled claim hands you five. The size of the pushback scales with the size of the push, and you never have to sit there working out what a big Kotodama ought to cost the party - they already told you.
+
+**Never spend it to undo what they bought.** This is the one that matters, and getting it wrong kills the whole economy. A claim that has been paid for is true, and your pool does not buy it back. What it buys is what happens next. They asserted the guard was already asleep - fine, he is, and he was due to check in ten minutes ago, and somebody has just noticed he hasn’t. The claim stands. The world responds. Do it the other way once and you have taught your table that Fate Tokens purchase nothing, and they will never spend one again.
+
+**Spend it near where it came from.** The best complication is the one that grew out of the claim that funded it. They rewrote the records, so somebody is now looking for who rewrote the records. They made the storm arrive on time, so the storm is still there in the morning and the roads are gone. It costs you nothing to connect the two, and it makes the world feel like it noticed rather than like the GM did.
+
+**Spend it, and reasonably soon.** A pool that only ever grows tells the players their spending has no visible effect, and hoarding a dozen Tokens to dump in one evening reads as being punished for having played the game. Spend in ones and twos, close to when you earn them, and the table will feel a rhythm instead of an ambush.
+
+**Keep it where they can see it.** Actual tokens, in an actual bowl, in the middle of the table. Watching the pile grow as they spend does more for the tension of a session than anything you could say, and it makes the transfer real rather than something you’ve promised is happening on your side of the screen.
+
+**An overflowing pool means you’re not pressing.** If you’re sitting on fifteen and can’t think what to do with them, the game is too comfortable. That number is a measure of how much the players have been reshaping the world, and if the world hasn’t answered any of it, you have a setting that does not push back and a table that will eventually stop finding it interesting.
+
+**And this is the consensus, mechanically.** That’s all the pool is. Every Token in it is a place where somebody overruled the agreement, and the pile in front of you is how much the world has to say about it. Spending it is the world getting its turn.
+
 ## Catastrophic Failure
 
 A 20 - both dice showing 10 - is a catastrophic failure. That’s one roll in a hundred, which sounds like nothing until you count how many rolls a table makes in a night. In a session with real fighting in it, expect to see one.
