@@ -351,9 +351,18 @@ What an action actually *lets you do*, beyond a plain Attack or Move - filling i
 
 #### Movement & Range
 
-**Range Bands**: four abstract bands - **Melee, Close, Near, Far** - used for weapon reach, targeting, and spotting. The GM assigns them loosely per scene rather than measuring a map; no grid.
+**Range Bands**: four bands - **Melee, Close, Near, Far** - used for weapon reach, targeting, and spotting. There is no grid and no measuring tape, but each band is a defined span in meters, so the call means the same thing at every table and a weapon's range tells you what it reaches.
 
-**Movement Rate**: `5 + Air`, in **meters** - the same flat-floor-plus-Attribute shape as [Health Levels](#health-levels). A character can move up to their Movement Rate as part of a Fast action's one action or a Normal action's move component. As a rough conversion (not a strict count), **spending a full Movement Rate shifts one Range Band**; the GM can also just narrate a shift directly when the fiction obviously calls for it, without making players do the math.
+| Band | Distance | What it looks like |
+|---|---|---|
+| **Melee** | Contact, out to ~2m | Arm's reach |
+| **Close** | 2 to 10m | The same room, across a bar, the width of an alley |
+| **Near** | 10 to 50m | Across a street, the length of a corridor, the far side of a car park |
+| **Far** | Beyond 50m | Rooftop to rooftop, the far end of a warehouse |
+
+**Movement Rate**: `5 + Air`, in **meters** - the same flat-floor-plus-Attribute shape as [Health Levels](#health-levels). A character can move up to their Movement Rate as part of a Fast action's one action or a Normal action's move component, and a Normal action may spend **both** of its actions moving for **2x Movement Rate**. **Movement is measured in meters and the band follows from where you end up.** One move carries a character out of Melee into Close; a double move reaches into Near.
+
+**Sprint**: an all-out run, **5x Movement Rate**, is a **Slow action** and the only thing that character does that round - no attack, no second half, and they act last as Slow always does. A sprint crosses Near in a single turn and closes from Far in one or two.
 
 *The following are the status effects defined so far - Off Balance, Distracted, Surprise, Flustered, Humiliated. More are expected as combat rules develop further; this isn't the full list.*
 
