@@ -117,7 +117,7 @@ Each level's effect is cumulative - it keeps every lower level's complication an
 
 | Level | Effect |
 |---|---|
-| 1 | A rough patch. [Creation-Wealth](resources.md#wealth-at-character-creation) is **0** instead of the default 2 for gear shopping at creation - see [Everyman Gear Packages](weapons.md#everyman-gear-packages) for what's still available at Level 0. Doesn't follow the character past creation; whatever put them here (a lost job, a bad breakup, a bad month) is already turning around. |
+| 1 | A rough patch. [Creation-Wealth](resources.md#wealth-at-character-creation) is **0** instead of the default 2 for gear shopping at creation, and no Resources Pool or Discretionary points may be spent on Wealth while this Flaw is held - buy it off first - see [Everyman Gear Packages](weapons.md#everyman-gear-packages) for what's still available at Level 0. Doesn't follow the character past creation; whatever put them here (a lost job, a bad breakup, a bad month) is already turning around. |
 | 2 | Chronically tight. As Level 1, and it doesn't go away - living paycheck to paycheck, or with no paycheck at all, is an ongoing fact of the character's life, however their Resources ended up built. |
 | 3 | Real precarity. As Level 2, and something concrete is currently unstable - unreliable housing, an unreliable income source, or a debt actively being chased. |
 | 4 | Genuinely impoverished. As Level 3, and it's visible enough that people react to it on sight - shapes first impressions the same way Notable Appearance or Notoriety do, just for money instead of looks or reputation. |

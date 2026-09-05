@@ -25,7 +25,7 @@ Each Resource's Level table below defines what's available for free, no roll req
 
 Buying gear (see [Weapons & Equipment](weapons.md)) at character creation uses a dedicated procedure, not the general [Pushing a Resource](#pushing-a-resource) rule above.
 
-A character's **creation-Wealth** starts at **2**, unless they spent Resources Pool points on Wealth, in which case their purchased Level is used instead. Every gear item carries its own **Wealth rating**. **Every purchase during character creation requires a roll - there is no automatic free item, even one at or under current creation-Wealth.**
+A character's **creation-Wealth** starts at **2**, unless they spent Resources Pool points on Wealth, in which case their purchased Level is used instead. The [Destitute](flaws.md#destitute) Flaw overrides both: a Destitute character's creation-Wealth is **0**, and they cannot spend points on Wealth at all during character creation - the Flaw has to be bought off first. This applies only to creation; XP raises Wealth normally once play begins. Every gear item carries its own **Wealth rating**. **Every purchase during character creation requires a roll - there is no automatic free item, even one at or under current creation-Wealth.**
 
 1. Find the **gap**: the item's Wealth rating minus current creation-Wealth. This can be zero or negative for an item at or under current creation-Wealth.
 2. If the gap is **more than current creation-Wealth**, the item can't be afforded at all - no roll.
