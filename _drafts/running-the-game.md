@@ -120,6 +120,22 @@ The section above covers what an antagonist costs you mechanically. This one is 
 
 **Name the ones who should survive, and only those.** This is the mechanical decision from the section above, arriving as a storytelling one. A recurring antagonist has to be Named or the first good critical hit ends them. Decide that before the fight, not during it, and be honest with yourself about which it is - naming somebody mid-combat because you didn’t want to lose them is the moment a table stops believing the dice matter.
 
+## Running the Consensus
+
+The Fate chapter tells the players what the consensus is. This is your half of it, and it’s the part of running 20 Below that has no equivalent in another game.
+
+**The consensus is something you play, not a rule you enforce.** When a player spends Tokens to assert a fact, the transaction is already settled by the time it reaches you - they paid, it’s true. Your job starts after that. The world has just been told something it disagreed with, and the world is the thing you’re playing.
+
+**A Shout leaves witnesses, and witnesses are the mechanism.** Anybody who watched a locked vault door swing open on its own now believes something impossible happened. That belief doesn’t go anywhere. It’s a small permanent change to the agreement, made by the players, and it’s how a campaign accumulates. Six months of quiet Whispers change nothing about the world. One Shout in a crowded bar changes that bar forever, and everyone who drinks there.
+
+**Decide who notices, every time.** Not whether - who. Most people rationalize, that’s what the consensus is made of, and it’s why Whisper and Murmur cost so little. But somebody in that room is going to be the one who doesn’t. A child. A drunk nobody will believe anyway. Somebody who has seen this before and went quiet about it. That person is a scene you now have for free, and you didn’t have to plan it.
+
+**Pressure comes from attention, not from price.** When you want a Kotodama to cost more, the instinct is to raise the number. Don’t. The number is the players’ side of the deal and it’s already fair. What you have is the world - the guard who files a report, the camera nobody knew about, the person who starts asking around. Raise attention and you’ve made a claim expensive without touching a rule.
+
+**A place that has been pushed on feels wrong.** Where reality has been leaned against repeatedly, it stops sitting flat. Coincidences start arriving slightly too punctually. Two people remember the same evening differently and neither of them is lying. A room won’t hold a memory - people leave it and can’t quite say what was discussed. None of this is a mechanic and none of it needs a roll. It’s the texture of somewhere that has been argued with, and it’s the best warning you can give a table that they have been noticed.
+
+**Small claims should feel free, because they are.** Don’t let any of this make you stingy. The consensus genuinely has no opinion about whether that door latched, and a game where the GM makes a face every time somebody spends a Token is a game where nobody spends Tokens. Save the weight for the Shouts.
+
 ## Catastrophic Failure
 
 A 20 - both dice showing 10 - is a catastrophic failure. That’s one roll in a hundred, which sounds like nothing until you count how many rolls a table makes in a night. In a session with real fighting in it, expect to see one.
