@@ -92,8 +92,6 @@ Fate Tokens are spent on Kotodama, or on any of the following, each a flat **1 F
 
 **Automatic Success** - a single roll succeeds outright, no dice involved. Fate Tokens are rare enough that this stays a flat cost regardless of the Difficulty being bypassed.
 
-**Boost a Check** - gain Advantage on a single roll. Distinct from the Skill Training Tiers’ own Advantage - Adept and above grant it permanently, but only on rolls using that one trained Skill. This covers everything else: an Untrained roll, an off-Skill Attribute check, anything you’re not otherwise good at.
-
 **Shrug Off an Effect** - ignore a negative status or condition (Off Balance, Distracted, Surprised, Flustered, Overwhelmed, Exhausted, or similar) for a moment.
 
 **Refill Ki** - your Ki pool refills completely, right there in the moment, no need to wait for a rest.
