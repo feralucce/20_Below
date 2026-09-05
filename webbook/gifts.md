@@ -214,7 +214,7 @@ Chosen once, at creation: **Always There** (visible and permanent - can’t be h
 
 <p class="entry-flavour">Your weapon was never really in your hand. It was always somewhere else, waiting, and a thought and a flicker of will is all it takes to bring it across. You will never leave it behind, never have it taken, and never once have to explain to anyone why you are carrying it.</p>
 
-Chosen once, at creation: your **signature weapon**, any single item from weapons.md’s catalog.
+Chosen once, at creation: your **signature weapon**, any single item from the catalog in Weapons & Equipment.
 
 **Adders**
 

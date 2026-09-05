@@ -15,7 +15,7 @@ Your Elements are what you’re made of. Your Skills are what you’ve actually 
 
 Earth, Air, Fire, Water and Moira are huge. They’re the raw material of everything, which is exactly what makes them useless for answering an actual question. Nobody has ever picked a lock with Air. They picked it with Larceny, and Air is what they brought to the job.
 
-A Skill is the narrow, practiced thing. The training, the hours, the scar tissue. It’s the difference between a character who can set a broken arm and one who can only look at it and go a bit green. Every roll in the last chapter quietly assumed you had one of these. This is where they come from.
+A Skill is the narrow, practiced thing - the training, the hours, and the scar tissue you picked up getting them. It’s the difference between a character who can set a broken arm and one who can only look at it and go a bit green. Every roll in the last chapter quietly assumed you had one of these. This is where they come from.
 
 ## Every Skill Has an Element
 
@@ -23,13 +23,13 @@ Every Skill comes with a **default Element** - the Attribute a roll uses unless 
 
 That default isn’t a claim about what the Skill fundamentally is. It’s the assumption the roll starts from - the most ordinary way that thing gets done. Stealth defaults to Air because most sneaking is quiet feet and good timing. Athletics defaults to Earth because most exertion is just your body arguing with the world.
 
-Roll the default and nobody has to say anything. That’s the entire point of having one.
+Roll the default and nobody has to say anything about it. That’s why it’s there - so most rolls don’t turn into a conversation.
 
 ## Challenging the Default
 
 Sometimes the ordinary way isn’t your way.
 
-You can ask to pair a Skill with a different Element, and if the GM buys it, that’s the roll you make. There’s one condition, and it matters: **the argument has to come from one of your own Sub-Stat Descriptors**. A specific adjective you already wrote down. Not a clever sentence you came up with thirty seconds ago.
+You can ask to pair a Skill with a different Element, and if the GM buys it, that’s the roll you make. There’s one condition, and it matters - **the argument has to come from one of your own Sub-Stat Descriptors**. A specific adjective you already wrote down. Not a clever sentence you came up with thirty seconds ago.
 
 I know what you’re thinking, because I thought it too. Doesn’t that just mean everybody argues their way onto their best Element every single time? It would, without that condition. That’s what the condition is for. With it, a challenge has to be something your character already demonstrably is, and you only ever get as many of those as you wrote down.
 
@@ -41,9 +41,9 @@ I know what you’re thinking, because I thought it too. Doesn’t that just mea
 
 **GM**: That’ll do. Roll it on Earth.
 
-Two things about that. The GM has final say, and no is a complete answer. And the challenge was *re-argued*, not banked - that same Descriptor does nothing for Ronan an hour later when he’s trying to intimidate somebody over the phone. The circumstance did the work, not the precedent.
+Two things about that. The GM has final say, and no is a complete answer. And the challenge was *re-argued*, not banked - that same Descriptor does nothing for Ronan an hour later when he’s trying to intimidate somebody over the phone. It was the situation that earned him that roll, not the fact that he got away with it once.
 
-The default never changes. Only the roll in front of you does.
+The default on the page never changes. You just won an argument about one roll.
 
 ## Training Tiers
 
@@ -61,19 +61,19 @@ How much you know changes *how the roll gets built* - not by handing you a bonus
 
 **5 - Master**: Everything Expert gets, plus catastrophic failure loosens its grip. Roll a 20 and you roll again. If the second one succeeds, it was an ordinary failure after all.
 
-Read that last one carefully, because it’s narrower than it looks. The reroll only ever strips the *severity* off a failure. It never turns a 20 into a success, and if the second roll fails too, the catastrophic failure stands exactly as it was. Mastery doesn’t stop you having a bad day. It stops the bad day becoming a story.
+Read that last one carefully, because it’s narrower than it looks. The reroll only ever strips the *severity* off a failure. It never turns a 20 into a success, and if the second roll fails too, the catastrophic failure stands exactly as it was. So mastery won’t stop you having a bad day. It just keeps the worst version of it off the table.
 
 Every tier is strictly better than the one under it. There’s no rung where you trade something away, and no class or level track telling you when you’re allowed to climb. You buy tiers one at a time with XP, in whatever order you like. The Advancement chapter has the prices.
 
 ## Everyman Skills
 
-There are things any functioning adult can do, and charging players points for them is a tax on being a person.
+There are things any functioning adult can do, and I’m not charging you points for them. That’s a tax on being a person.
 
 So every character starts with a short list of Skills free, at **Tier 2, Trained**. The clean roll, not a token nod - baseline competence, because that’s what it’s meant to represent.
 
 20 Below doesn’t fix that list, and it can’t. What counts as ordinary depends entirely on where and when your game is set. Driving is unremarkable now and unthinkable in 1840. Literacy is assumed in one setting and rare in another. **The GM sets the Everyman list for their own campaign**, in the same conversation as tone and subject matter.
 
-For a present-day game, this list works: Athletics, Bureaucracy, Computer Use, Cooking, Driving, Etiquette, First Aid, Literacy, Persuasion and Streetwise. Trim it, extend it, argue about it - it’s a starting point, not a ruling.
+For a present-day game, this list works: Athletics, Bureaucracy, Computer Use, Cooking, Driving, Etiquette, First Aid, Literacy, Persuasion and Streetwise. Trim it or extend it to fit your game. I’m not going to pretend I know what counts as ordinary at your table.
 
 Notice what isn’t on it. Firearms, Medicine and Hacking aren’t there, and that’s deliberate. Those are real training that most people don’t pick up just by existing in the modern world, and they stay things a character has to actually invest in.
 
@@ -81,7 +81,7 @@ Notice what isn’t on it. Firearms, Medicine and Hacking aren’t there, and th
 
 What follows is a starting list for a modern-world campaign. It isn’t exhaustive, and it isn’t trying to be.
 
-Add to it. Split an entry, merge two, rename one so it sounds like your setting. The list exists to save time at character creation, not to fence in what a person can plausibly know how to do. If your character should have a Skill that isn’t here, they have it - pick an Element and write it down.
+Add to it. Split an entry, merge two, or rename one so it sounds like your setting. I put this list together to save you time at character creation, not to fence in what a person can plausibly know how to do. If your character should have a Skill that isn’t here, they have it - pick an Element and write it down.
 
 The entries are **broad on purpose**. A point spent on Crafting should feel like it bought something, not like it bought one narrow task. Where a real distinction lives inside a broad Skill - a particular science, a particular trade, a specific instrument - that’s flavor you describe, not a reason to split the Skill in half.
 

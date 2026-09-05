@@ -15,37 +15,43 @@ Resources are what you have, who you know, and what picks up when you call.
 
 A character isn’t just a list of things they can do. They have a bank balance, or they don’t. They’ve got somewhere to sleep that nobody else knows about, or they’re on a friend’s couch. They can get a lawyer at two in the morning, or they can’t. None of that is a Skill and none of it is a Gift, and all of it decides what’s on the table when things go sideways.
 
-Resources are rated in Levels, bought from the Resources pool at creation and raised later with XP at a flat rate per Level. A higher Level isn’t a different Resource - it’s the same one, reaching further.
-
-A structurally different kind of thing from Boons: a scalable resource on a 1-5 level scale, not a binary yes/no trait.
+Resources are rated in Levels. You buy them out of the Resources pool at creation and raise them later with XP, at a flat rate per Level. A higher Level isn’t a different Resource - it’s the same one, reaching further.
 
 ## What a Resource Is
 
-A Resource represents a currency or standing the character can draw on or lean on narratively - money, contacts, a reputation, a home base - not a bonus applied to a roll. Each Resource is rated **1-5**, and each level is a cumulative, defined step up in scope, not a numeric roll bonus.
+A Resource is something you draw on or lean on - money, contacts, a reputation, somewhere to go to ground. It is never a bonus on a roll. Every Resource is rated **1-5**, and each level is a defined step up in what you can reach, not a bigger number to add to something.
 
-**Cost**: at character creation, each level costs a flat **1 point** from the Resources pool - a Resource at Level 3 costs 3 points total. After creation, raising a Resource by one level costs a flat **3 XP** per step.
+Levels cost a flat **1 point** each out of the Resources pool at creation, so a Resource at Level 3 costs you 3 points. Once play begins, each new level costs a flat **3 XP**.
 
 ## Pushing a Resource
 
-Each Resource’s Level table below defines what’s available for free, no roll required. When a character wants to draw on a Resource for something beyond that free scope, roll a **Resource Check**: **2d10** against **Resource Level + (10 − Resource Index)**, roll-under. Critical results apply as normal (a roll of 2 is always a success, a roll of 20 is always a failure, regardless of the target number). No Skill is involved - a flat roll against the Resource itself, the same shape as the Gift Check.
+Each Resource’s Level table below defines what’s available for free, no roll required. When you want to draw on a Resource for something past that free scope, roll a **Resource Check**: **2d10** against **Resource Level + (10 − Resource Index)**, roll-under. Critical results apply as normal (a roll of 2 is always a success, a roll of 20 is always a failure, regardless of the target number). No Skill is involved - a flat roll against the Resource itself, the same shape as the Gift Check.
 
 **Resource Index** is a flat **1-6** rating for how far beyond a Resource’s ordinary reach the request goes - its own scale, not the general Difficulty Chart. It inverts the same way Defense does: a *lower* Resource Index is easier (Resource Index 1 adds **9** to the target), a *higher* one is harder (Resource Index 6 adds only **4**, the minimum any Resource Check can add).
 
-**Success**: the character gets what they were after, no further cost. **Failure**: the character still gets what they were after - the ask goes through either way - but the Resource’s Level drops by **1** (to a minimum of 1) until the start of the next **Month**, representing it stretched thin: savings drained, favors called in, goodwill spent. A Resource at a reduced Level uses that lower Level for everything, including further Resource Checks made while it’s still reduced.
+**Success**: you get what you were after, at no further cost. **Failure**: you still get what you were after - the ask goes through either way - but the Resource’s Level drops by **1** (to a minimum of 1) until the start of the next **Month**, representing it stretched thin: savings drained, favors called in, goodwill spent. A Resource at a reduced Level uses that lower Level for everything, including further Resource Checks made while it’s still reduced.
 
-**Reaching beyond your means**: a Resource Index up to **2 higher** than the Resource’s current effective Level can be attempted - anything further out of reach can’t be attempted at all. Reaching that far always gets the character what they were after, but drops the Resource’s Level to **0** for a Month (not just 1) regardless of whether the roll succeeded or failed - **unless the roll is a critical success**, which resolves the attempt as an ordinary free success with no cost at all.
+**Reaching beyond your means**: a Resource Index up to **2 higher** than the Resource’s current effective Level can be attempted - anything further out of reach can’t be attempted at all. Reaching that far always gets you what you were after, but drops the Resource’s Level to **0** for a Month (not just 1) regardless of whether the roll succeeded or failed - **unless the roll is a critical success**, which resolves the attempt as an ordinary free success with no cost at all.
 
 **Resource Index 6** is always treated as reaching 2 levels beyond the Resource’s current Level, no matter how high that Level actually is - and it’s the one case a critical success can’t save: a Resource Index 6 attempt always drops the Resource to 0 for a Month, full stop, even on a critical success.
 
 ## Wealth at Character Creation
 
-Buying gear (see Weapons & Equipment) at character creation uses a dedicated procedure, not the general Pushing a Resource rule above.
+Buying gear at creation (the catalog is over in Weapons & Equipment) runs on its own procedure, not the Pushing a Resource rule above. I split it off because shopping at creation happens all at once, against a pool that drains as you go, and the general rule assumes a single ask with a month to recover from it.
 
 A character’s **creation-Wealth** starts at **2**, unless they spent Resources Pool points on Wealth, in which case their purchased Level is used instead. Every gear item carries its own **Wealth rating**. **Every purchase during character creation requires a roll - there is no automatic free item, even one at or under current creation-Wealth.**
 
-1. Find the **gap**: the item’s Wealth rating minus current creation-Wealth. This can be zero or negative for an item at or under current creation-Wealth. 2. If the gap is **more than current creation-Wealth**, the item can’t be afforded at all - no roll. 3. Otherwise, roll a **Wealth Check**: 2d10 against creation-Wealth + Difficulty **6**, roll-under, standard critical results apply. - **Success**: the item is free. - **Failure**: the character still gets the item. Creation-Wealth drops by the gap, **floored at a minimum of 1** - even an inexpensive item with no real gap still costs at least 1 Level on a failed roll. A **catastrophic failure** doubles this loss.
+1. Find the **gap** - the item’s Wealth rating minus your current creation-Wealth. It can be zero or negative for something at or under what you have.
 
-Creation-Wealth carries across every purchase made during this shopping pass - once no remaining item is affordable (via a viable roll), gear shopping is over for this character creation. **This pool is temporary bookkeeping only**: it has no effect on the character’s actual Wealth Resource once play begins, which stays at whatever Level was actually purchased. Once creation ends, this procedure stops applying entirely - every purchase from then on uses the general Pushing a Resource rule above, unaffected by anything that happened during creation shopping.
+2. If the gap is **more than your current creation-Wealth**, you cannot afford it at all. No roll.
+
+3. Otherwise, roll a **Wealth Check** - 2d10 against creation-Wealth + Difficulty **6**, roll-under, with the standard critical results.
+
+**Success**: the item is free.
+
+**Failure**: you still get the item. Your creation-Wealth drops by the gap, and it never drops by less than **1** - even something cheap with no real gap costs you a Level on a failed roll. A **catastrophic failure** doubles that drop.
+
+Creation-Wealth carries across every purchase made during this shopping pass - once no remaining item is affordable (via a viable roll), gear shopping is over for this character creation. **This pool is temporary bookkeeping only**: it has no effect on your actual Wealth Resource once play begins, which stays at whatever Level you actually bought. Once creation ends, this procedure stops applying entirely - every purchase from then on uses the general Pushing a Resource rule above, unaffected by anything that happened during creation shopping.
 
 | Resource | What Scales by Level |
 |---|---|

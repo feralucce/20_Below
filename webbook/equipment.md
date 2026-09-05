@@ -19,7 +19,7 @@ Weapons set how many dice an attack rolls, independent of the Element behind it 
 
 Buying gear at creation runs on creation-Wealth rather than the ordinary Push procedure. That lives in the Resources chapter, and it’s worth reading before you go shopping.
 
-Each weapon’s **Damage** rating is how many d10 it rolls on a hit, resolved per-die against the defender’s Soak, as described in rules.md.
+Each weapon’s **Damage** rating is how many d10 it rolls on a hit, resolved per-die against the defender’s Soak, as described in How to Play.
 
 **Wealth** is the Wealth Level needed to get an item for free at character creation - see that section for the full purchasing procedure. It applies the same way to every table on this page, not just weapons.
 
