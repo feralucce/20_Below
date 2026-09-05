@@ -5,8 +5,9 @@ published**. Jekyll excludes any directory whose name starts with an
 underscore, so nothing here reaches the site.
 
 This exists for one reason: the manuscript is a Scrivener project living
-outside this repo, so a chapter that isn't in `webbook/` yet has no version
-control at all. A chapter in progress can represent a day's writing that
+outside this repo **on purpose** - one local home for all the prose,
+published by hand rather than as a side effect of editing - so a chapter
+that isn't in `webbook/` yet has no version control at all. A chapter in progress can represent a day's writing that
 exists only in one `.scriv` file. Dropping the generated markdown here after
 each writing session gives it a history.
 
