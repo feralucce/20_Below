@@ -1428,7 +1428,7 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 
 **2** - Range extends to **Near**. You can now read surface, unguarded thoughts as well as emotions - still resolved as Air + Difficulty; a target actively resisting simply raises the Difficulty (GM’s call), not yet a contested roll.
 
-**3** - Range extends to **Far**. Against a target actively resisting, you may now spend **1 Ki** to force the read as a genuine **Mental attack** - roll your Psyche dice per-die against their Psyche wall, breaching through to their surface thoughts and emotions on a connecting die.
+**3** - Range extends to **Far**. Against a target actively resisting, you may now spend **1 Ki** to force the read as a genuine **Mental attack** - roll 2d10 per-die against their Psyche wall, breaching through to their surface thoughts and emotions on a connecting die.
 
 **4** - You can now project your own thoughts into a target’s mind as well as read theirs - a genuine two-way telepathic link. For a willing or aware participant, this works at **Line of Sight** (as far as you can see them, not bound by the normal Range Bands). Forcing a read on an unwilling target (the Level 3 Mental attack) is capped at **Near**. Forced reads can now dig into deeper memories and guarded secrets, not just surface thoughts. Ki cost for forced reads stays **1**.
 
