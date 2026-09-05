@@ -53,6 +53,10 @@ nav_section: start
      one holds a single digit. Naming the narrow two lets each example
      set on one line, which is the difference between this sheet being
      three pages and four. */
+  /* A lookup table carries tighter rows than body copy. This one is read
+     a line at a time mid-roll, not left to right, and the extra leading
+     only costs page count. */
+  .wide--difficulty td,.wide--difficulty th{padding-top:.16em;padding-bottom:.16em}
   .wide--difficulty td:first-child,.wide--difficulty th:first-child{width:11%}
   .wide--difficulty td:nth-child(2),.wide--difficulty th:nth-child(2){width:22%}
   .wide--difficulty tbody tr:nth-child(1){background:hsla(356,72%,48%,.13)}
@@ -132,16 +136,25 @@ Generated from the same source the printed sheet uses.</p>
 <p><strong>Advantage</strong> - roll 3d10, keep the <strong>lowest</strong> two</p>
 <p><strong>Disadvantage</strong> - roll 3d10, keep the <strong>highest</strong> two</p>
 </div>
-<p>Both are binary - three sources are worth exactly one. They cancel one for one, and whatever is left over is what you get. They belong to the core roll only, never to damage dice.</p>
+<p>Both are binary - three sources are worth one. They cancel one for one. Core roll only, never damage dice.</p>
 <h2>What Your Target Is Worth</h2>
 <table>
 <thead><tr><th>Target</th><th>5</th><th>8</th><th>11</th><th>14</th><th>17</th></tr></thead>
 <tbody>
 <tr><td><strong>Succeeds</strong></td><td>10%</td><td>28%</td><td>55%</td><td>79%</td><td>94%</td></tr>
 </tbody></table>
-<p>One point of Difficulty is worth about ten points of probability in the middle of the curve and about two at either end.</p>
+<p>One point of Difficulty is worth ~10 points of probability mid-curve, ~2 at the extremes.</p>
 <h2>Getting Around</h2>
-<p><strong>Melee · Close · Near · Far.</strong> Movement Rate is <strong>5 + Air</strong> in metres, and a full Movement Rate shifts one band.</p>
+<table>
+<tbody>
+<tr><td><strong>Melee</strong></td><td>Contact, to ~2m</td></tr>
+<tr><td><strong>Close</strong></td><td>2-10m</td></tr>
+<tr><td><strong>Near</strong></td><td>10-50m</td></tr>
+<tr><td><strong>Far</strong></td><td>50m+</td></tr>
+</tbody></table>
+<p>Movement Rate is <strong>5 + Air</strong> in metres; you move in metres and the band follows. One move clears Melee into Close. A Normal action can spend both halves moving, for <strong>2x</strong>.</p>
+<p><strong>Sprint</strong> - 5x Movement Rate, a Slow action, and the only thing you do that round. Crosses Near in one turn, closes from Far in one or two.</p>
+<p><strong>Weapon range</strong> - no penalty inside <strong>Normal</strong>, Disadvantage out to <strong>Long</strong>, no shot past it.</p>
 </div>
 <hr class="page-split" />
 <div class="cols">

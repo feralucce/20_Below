@@ -25,7 +25,7 @@ Each weapon’s **Damage** rating is how many d10 it rolls on a hit, resolved pe
 
 ## Basic Weapons
 
-Range is given as **Normal / Long**, in meters - the same unit as Movement Rate. This is a separate, more precise system from Range Bands (Melee/Close/Near/Far), which stay in use for movement, positioning, and spotting - the two aren’t meant to line up.
+Range is given as **Normal / Long**, in meters - the same unit as Movement Rate and the Range Bands. A weapon’s Normal range tells you the band it’s built for: a shotgun’s five meters is Close, a handgun’s fifteen is Near, a hunting rifle’s hundred is Far.
 
 Attacking a target within a weapon’s **Normal** range carries no penalty. Attacking at **Long** range imposes **Disadvantage** on the attack roll, stacking with any other Advantage/Disadvantage source per the usual binary rule. Beyond Long range, the target can’t be attacked with that weapon at all.
 

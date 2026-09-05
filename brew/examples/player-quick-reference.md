@@ -31,7 +31,7 @@ Roll **2d10** under **Element + Difficulty**. Low is good.
 **Disadvantage** - roll 3d10, keep the **highest** two
 :::
 
-Both are binary - three sources are worth exactly one. They cancel one for one, and whatever is left over is what you get. They belong to the core roll only, never to damage dice.
+Both are binary - three sources are worth one. They cancel one for one. Core roll only, never damage dice.
 
 ## What Your Target Is Worth
 
@@ -39,11 +39,22 @@ Both are binary - three sources are worth exactly one. They cancel one for one, 
 |---|---|---|---|---|---|
 | **Succeeds** | 10% | 28% | 55% | 79% | 94% |
 
-One point of Difficulty is worth about ten points of probability in the middle of the curve and about two at either end.
+One point of Difficulty is worth ~10 points of probability mid-curve, ~2 at the extremes.
 
 ## Getting Around
 
-**Melee · Close · Near · Far.** Movement Rate is **5 + Air** in metres, and a full Movement Rate shifts one band.
+| | |
+|---|---|
+| **Melee** | Contact, to ~2m |
+| **Close** | 2-10m |
+| **Near** | 10-50m |
+| **Far** | 50m+ |
+
+Movement Rate is **5 + Air** in metres; you move in metres and the band follows. One move clears Melee into Close. A Normal action can spend both halves moving, for **2x**.
+
+**Sprint** - 5x Movement Rate, a Slow action, and the only thing you do that round. Crosses Near in one turn, closes from Far in one or two.
+
+**Weapon range** - no penalty inside **Normal**, Disadvantage out to **Long**, no shot past it.
 
 \page
 

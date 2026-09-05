@@ -245,9 +245,13 @@ Beyond attacking or moving, these are what you can spend an action on. Anything 
 
 ## Movement and Range
 
-There’s no grid and no measuring tape. Distance is four bands - **Melee, Close, Near and Far** - and the GM assigns them by feel.
+There’s no grid and no measuring tape. Distance is four bands - **Melee, Close, Near and Far** - and each one covers a real span of meters. The GM says which band a target is in, and these are what those words mean.
 
-Your **Movement Rate** is 5 plus your Air, in meters. You can move that far as your Fast action, or as the move half of a Normal one. As a rough conversion, a full Movement Rate shifts you one Range Band, but the GM can just tell you you’ve closed the distance when the fiction obviously says so.
+**Melee** is contact, out to about two meters - arm’s reach. **Close** is two to ten: the same room, across a bar, the width of an alley. **Near** is ten to fifty - across a street, the length of a corridor, the far side of a car park. **Far** is anything past fifty meters, rooftop to rooftop.
+
+Your **Movement Rate** is 5 plus your Air, in meters. You can move that far as your Fast action, or as the move half of a Normal one - and a Normal action can spend both of its halves moving, which covers twice your Movement Rate. You move in meters and the band follows from where you end up. One move carries you out of Melee into Close; a double move reaches into Near.
+
+**Sprint.** An all-out run - five times your Movement Rate - is a Slow action, and it is the only thing you do that round. No attack, no second half, nothing held back, and you go last, because that is what Slow means. A sprint crosses Near in a single turn and closes from Far in one or two.
 
 ## Conditions
 
