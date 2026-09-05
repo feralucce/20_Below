@@ -134,7 +134,29 @@ The Fate chapter tells the players what the consensus is. This is your half of i
 
 **A place that has been pushed on feels wrong.** Where reality has been leaned against repeatedly, it stops sitting flat. Coincidences start arriving slightly too punctually. Two people remember the same evening differently and neither of them is lying. A room won’t hold a memory - people leave it and can’t quite say what was discussed. None of this is a mechanic and none of it needs a roll. It’s the texture of somewhere that has been argued with, and it’s the best warning you can give a table that they have been noticed.
 
+**And a thin place is easier to push again.** Overwrite the same stretch of agreement often enough and it stops holding its shape - a file saved over once too often, a glitch in the matrix. The consensus there is corrupted, and corrupted things are easy to change. Charge less for a claim made somewhere that has already been rewritten. How much less is yours to decide, and it should follow how badly the place has been worn rather than any number I could put in a table.
+
+**Which cuts both ways, and that’s the interesting part.** A thin place is cheap for your players and cheap for everything else. Whatever else has been leaning on that spot is finding it easy too, and a neighbourhood where reality has stopped being reliable isn’t a good place to live. Thin places make excellent destinations and terrible homes.
+
 **Small claims should feel free, because they are.** Don’t let any of this make you stingy. The consensus genuinely has no opinion about whether that door latched, and a game where the GM makes a face every time somebody spends a Token is a game where nobody spends Tokens. Save the weight for the Shouts.
+
+## Awarding XP and Fate
+
+Both of the currencies your players run on come from you, and the rules for both are already written down - five XP categories in Advancement, six sources of Fate in the Fate chapter. This is about actually using them.
+
+**Award XP for what you want more of.** The five categories are deliberately not about winning. Nobody gets XP for killing the thing or finding the treasure. They get it for showing up, playing the character, taking a risk, learning something, and doing one thing everyone remembers. That’s the game telling your table what it values, once a week, in public. If you hand out Standout Moment to the same person every session, you’ve told the other four something you probably didn’t mean to.
+
+**Say what each point was for.** Out loud, by name, at the end of the session. It takes ninety seconds and it’s the single best teaching tool you have - a player who hears why somebody else earned Heroism and Risk Faced now knows what that category is worth, and you’ll see it in their play next week.
+
+**Three of the six Fate sources are yours.** Nature, voluntary Disadvantage and daily regeneration all happen without you. Invoking a Flaw, the Milestone Award and plain discretion are your call, and they’re the ones that go unused when a GM is busy.
+
+**Invoking a Flaw is a gift, not a punishment.** It looks like you’re making somebody’s night worse, and it pays them a Token for the trouble. New GMs sit on this because it feels mean. It isn’t - it’s the mechanism by which a Flaw stops being free points, and a player who took Short Fuse wants you to use it. Ask them once at session zero how hard they want it pushed, then push it that hard.
+
+**Take the Milestone seriously, including the weeks it feels small.** One Token to every player, roughly once a session, when the group clears a real hurdle. The temptation is to skip it when the session was quiet, but a quiet session that ends with a decision made is a milestone. Skip it too often and the daily regeneration becomes the whole economy, which is a slower and worse game.
+
+**Watch the cap.** A character holds at most Stamina x 3, and Tokens earned at the cap are gone rather than banked. A player sitting at cap is a player who isn’t spending, and that’s worth saying out loud to them - not as a rule reminder but as an invitation. They are holding a resource that is currently earning them nothing.
+
+**And remember which way the transfer runs.** Every Token they spend lands in your pool. Being generous with Fate isn’t charity. It’s how you get paid.
 
 ## Catastrophic Failure
 

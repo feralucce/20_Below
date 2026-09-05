@@ -62,7 +62,17 @@ Pick one of these, or write your own.
 
 ## Fate Gain
 
-**Nature** - playing to your Nature at a fitting moment (see above). **Voluntary Disadvantage** - a player may choose to take Disadvantage on a roll in exchange for a Fate Token. **Flaws** - every character has Flaws. When the GM *or* the player invokes a Flaw in a scene, the invoking side’s choice grants the player a Fate Token. **Daily Regeneration** - characters regain **1 Fate Token** at sunrise, every day. **Milestone Award** - when the party overcomes a significant challenge (a session’s climactic fight, defeating a notable threat, a decisive turning point in the story), the GM awards **1 Fate Token to every PC**, roughly once per session - rarer than that and it stops feeling like a beat worth marking; more often and it stops feeling like a milestone. **GM Discretion** - the GM can directly award a Fate Token for good roleplay or a clever idea, independent of the other triggers above.
+**Nature** - playing to your Nature at a fitting moment (see above).
+
+**Voluntary Disadvantage** - a player may choose to take Disadvantage on a roll in exchange for a Fate Token.
+
+**Flaws** - every character has Flaws. When the GM *or* the player invokes a Flaw in a scene, the invoking side’s choice grants the player a Fate Token.
+
+**Daily Regeneration** - characters regain **1 Fate Token** at sunrise, every day.
+
+**Milestone Award** - when the party overcomes a significant challenge (a session’s climactic fight, defeating a notable threat, a decisive turning point in the story), the GM awards **1 Fate Token to every PC**, roughly once per session - rarer than that and it stops feeling like a beat worth marking; more often and it stops feeling like a milestone.
+
+**GM Discretion** - the GM can directly award a Fate Token for good roleplay or a clever idea, independent of the other triggers above.
 
 **No double-dipping**: a single scene beat pays out **at most one Fate Token**, even if it could honestly be described as both playing to your Nature and invoking a Flaw (or any other two triggers above) at once - e.g. a Soft-Hearted character with a Caregiver Nature stopping to help someone vulnerable. Pick whichever source fits best and pay out once.
 
@@ -78,7 +88,15 @@ A character with **Stamina 0 holds no Fate Tokens at all**, and cannot spend any
 
 Fate Tokens are spent on Kotodama, or on any of the following, each a flat **1 Fate Token**:
 
-**Overcome a Flaw** - one of your Flaws doesn’t apply for the rest of the current scene. **Automatic Success** - a single roll succeeds outright, no dice involved. Fate Tokens are rare enough that this stays a flat cost regardless of the Difficulty being bypassed. **Boost a Check** - gain Advantage on a single roll. Distinct from the Skill Training Tiers’ own Advantage: Adept and above grant it permanently, but only on rolls using that one trained Skill. This covers everything else, an Untrained roll, an off-Skill Attribute check, anything you’re not otherwise good at. **Shrug Off an Effect** - ignore a negative status or condition (Off Balance, Distracted, Surprised, Flustered, Overwhelmed, Exhausted, or similar) for a moment. **Refill Ki** - your Ki pool refills completely, right there in the moment, no need to wait for a rest.
+**Overcome a Flaw** - one of your Flaws doesn’t apply for the rest of the current scene.
+
+**Automatic Success** - a single roll succeeds outright, no dice involved. Fate Tokens are rare enough that this stays a flat cost regardless of the Difficulty being bypassed.
+
+**Boost a Check** - gain Advantage on a single roll. Distinct from the Skill Training Tiers’ own Advantage - Adept and above grant it permanently, but only on rolls using that one trained Skill. This covers everything else: an Untrained roll, an off-Skill Attribute check, anything you’re not otherwise good at.
+
+**Shrug Off an Effect** - ignore a negative status or condition (Off Balance, Distracted, Surprised, Flustered, Overwhelmed, Exhausted, or similar) for a moment.
+
+**Refill Ki** - your Ki pool refills completely, right there in the moment, no need to wait for a rest.
 
 Characters with Iron Will may also spend 1 Fate Token to **Assert Your Will** - declare “my will is my own” and flatly negate an attempt to intimidate or dominate you, no roll. A micro-Kotodama: same shape as the main mechanic, but flat-costed and scoped narrowly to defending your own mind.
 
@@ -231,6 +249,16 @@ Magnitude, plus Range if you’re reaching past yourself, plus Plausibility, plu
 Two pairs in there are worth sitting with. The key costs 1, and the key with nobody around costs 2 - that second fact is a second thing the world has to agree to, and you pay for it. And the same vault door is a 4 or a 6 depending on nothing but who is standing in the lobby.
 
 That gap is the only lever in the whole system you can pull with planning instead of Tokens. Clear the room first.
+
+## Thin Places
+
+Reality isn’t equally solid everywhere.
+
+A stretch of agreement that has been overwritten enough times stops holding its shape. Think of a file saved over once too often, or a glitch in the matrix - the same cat through the same doorway twice, and nobody quite able to say why it bothered them. The consensus there is corrupted, and corrupted things are easy to change.
+
+Kotodama costs less in a thin place. How much less is the GM’s call, and there’s no table for it, because how worn a place is isn’t a number - it’s a fact about the story you’re all in. So ask. If you think you’re standing somewhere the world has already been argued with, say so, and find out what it’s worth.
+
+Two things worth knowing before you go looking for one. A thin place is cheap for everyone, not just you, and whatever else has been leaning on that spot is finding it easy too. And it got thin because somebody did this before you arrived. Somewhere cheap to rewrite is somewhere that has already been rewritten, and it’s fair to wonder by whom.
 
 ## Duration (optional surcharge)
 
