@@ -1,4 +1,4 @@
-import { el, counterRow, renderMarkdown } from '../ui.js';
+import { el, keyedDetails, counterRow, renderMarkdown } from '../ui.js';
 import {
   discretionaryTotal,
   discretionaryPointsSpent,
@@ -23,11 +23,32 @@ import {
 } from '../state.js';
 import { renderBoonPicker } from './07-boons.js';
 
-// A brief, always-visible reminder of what an item is, under its
-// counterRow - distinct from the full-description twirls Gifts/Boons
-// already have (those stay click-to-open; this is short enough to just show).
+// What an item actually is, twirled out from its own row by clicking the
+// name - the same interaction as every other pick in the app, so nobody has
+// to leave this page to look a definition up.
+//
+// Everything on this page is a catalog: 15 Attributes, 23 Resources, 49
+// Gifts, 89 Skills. Printed flat, the definitions bury the counters they
+// belong to; behind a twirl they are one click away and the page stays
+// scannable.
 function briefDetail(text) {
   return el('p', { class: 'detail', style: 'color:var(--text-dim);font-size:0.85rem;margin:0 0 0.75rem;' }, text);
+}
+
+// A Resource's level table, the same one the Resources step twirls out -
+// "Level 3" means nothing without it.
+function levelTableFor(r) {
+  return el('div', { class: 'detail' }, [
+    el('table', { class: 'menu-table' }, [
+      el('tr', {}, [el('th', {}, 'Level'), el('th', {}, r.scales)]),
+      ...[1, 2, 3, 4, 5].map((lvl) =>
+        el('tr', {}, [
+          el('td', {}, String(lvl)),
+          el('td', { html: renderMarkdown(r.levels[lvl] ?? '') }),
+        ]),
+      ),
+    ]),
+  ]);
 }
 
 export default {
@@ -72,7 +93,7 @@ export default {
     // section (every item inside it) open, same idea as the name-click
     // twirls elsewhere, just scoped to a whole section instead of one item.
     function section(titleText) {
-      const details = el('details', { class: 'pick-card' });
+      const details = keyedDetails(`disc-sec:${titleText}`, { class: 'pick-card' });
       const content = el('div', { style: 'margin-top:0.75rem;' });
       details.append(el('summary', {}, titleText), content);
       container.appendChild(details);
@@ -136,8 +157,9 @@ export default {
             rerenderStep();
             rerenderPools();
           },
+          key: `disc-attr:${a.name}`,
+          detail: briefDetail(a.description),
         }),
-        briefDetail(a.description),
       );
     });
 
@@ -162,8 +184,9 @@ export default {
             rerenderStep();
             rerenderPools();
           },
+          key: `disc-resource:${r.name}`,
+          detail: levelTableFor(r),
         }),
-        briefDetail(r.scales),
       );
     });
 
@@ -178,16 +201,12 @@ export default {
       // pool point (see rules/costs.md, Discretionary Rates) - a flat price a
       // Limiter does not discount, unlike the Gifts-pool and XP prices.
       const unitCost = rateGifts;
-      const card = el('details', { class: 'pick-card' });
-      card.append(
-        el('summary', {}, `${gift.name}${gift.flagged ? ' [flagged, not final]' : ''}`),
-        el('div', { class: 'detail', html: renderMarkdown(gift.markdown) }),
-      );
-      giftsContent.appendChild(card);
       giftsContent.append(
         counterRow({
-          name: gift.name,
+          name: `${gift.name}${gift.flagged ? ' [flagged, not final]' : ''}`,
           hint: `${unitCost} Discretionary/level`,
+          key: `disc-gift:${gift.name}`,
+          detail: el('div', { class: 'detail', html: renderMarkdown(gift.markdown) }),
           get: () => level,
           set: (v) => {
             if (v > level) buyGiftLevel(state, gift.name);
@@ -311,8 +330,9 @@ export default {
                 summaryEl.textContent = summaryText();
                 renderSkillList();
               },
+              key: `disc-skill:${s.name}`,
+              detail: briefDetail(s.definition),
             }),
-            briefDetail(s.definition),
           );
           skillListEl.appendChild(row);
         });
