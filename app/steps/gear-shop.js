@@ -35,9 +35,34 @@ export default function buildGearShop(state, data) {
 
   function renderSummary() {
     summaryEl.innerHTML = '';
+    const cw = currentCreationWealth(state);
     summaryEl.append(
-      el('strong', {}, `Current creation-Wealth: ${currentCreationWealth(state)}`),
+      el('strong', {}, `Current creation-Wealth: ${cw}`),
       ` (base ${creationWealthBase(state)}${state.creationWealthLoss ? `, -${state.creationWealthLoss} from failed checks` : ''})`,
+    );
+    // resources.md: "once no remaining item is affordable (via a viable
+    // roll), gear shopping is over for this character creation". Said out
+    // loud - every Buy button disabling itself with no explanation reads as
+    // a broken page rather than the end of the shopping pass.
+    if (!affordableCount()) {
+      summaryEl.append(
+        el('p', { class: 'hint' }, [
+          el('strong', {}, 'Gear shopping is over for this character. '),
+          'Nothing left in the catalog is affordable on a viable roll. Remove a purchase above to '
+          + 'get creation-Wealth back, or take an Everyman Gear Package instead - that one is free '
+          + 'and needs no roll. This pool is creation bookkeeping only; it never touches the Wealth '
+          + 'Resource Level the character actually plays with.',
+        ]),
+      );
+    }
+  }
+
+  // How many catalog items are still buyable at the current creation-Wealth.
+  function affordableCount() {
+    const cw = currentCreationWealth(state);
+    return data.equipment.reduce(
+      (n, cat) => n + cat.items.filter((i) => i.wealth != null && i.wealth - cw <= cw).length,
+      0,
     );
   }
 
