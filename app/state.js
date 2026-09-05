@@ -253,7 +253,7 @@ export function clearResourcePenalty(state, resourceName) {
 // every Level it's taken - that's the whole point of the Flaw, per its own
 // rules text ("Creation-Wealth is 0 instead of the default 2"). Checked here
 // rather than in currentCreationWealth so both the Wealth Check shop's gap
-// math (via currentCreationWealth's own floor of 1, below) and the Everyman
+// math and the Everyman
 // Gear Package picker's eligibility (weapons.md#everyman-gear-packages,
 // which needs the real unfloored 0 to gate Level 0 exclusively) read the
 // same starting number.
@@ -273,7 +273,18 @@ export function creationWealthBase(state) {
 }
 
 export function currentCreationWealth(state) {
-  return Math.max(1, creationWealthBase(state) - state.creationWealthLoss);
+  // Clamped at 0, not at 1. "Floored at a minimum of 1" in
+  // resources.md#wealth-at-character-creation is the FAILED ROLL'S COST -
+  // "even an inexpensive item with no real gap still costs at least 1 Level
+  // on a failed roll" - and wealthCheck.js already applies it there, as
+  // Math.max(1, gap). Applying it a second time to the result meant
+  // creation-Wealth could never fall below 1, so an item of Wealth 1 or 2
+  // stayed affordable no matter how many failed checks came before it. The
+  // same rule's closing line - "once no remaining item is affordable, gear
+  // shopping is over for this character creation" - could never fire. It
+  // fires now: no item in the catalog is Wealth 0, so a creation-Wealth of 0
+  // ends the shopping pass.
+  return Math.max(0, creationWealthBase(state) - state.creationWealthLoss);
 }
 
 export function setEverymanGearPackage(state, pkg) {
