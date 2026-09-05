@@ -177,6 +177,12 @@ Permanent is the free default - a spoken truth just sticks, no extra cost. Payin
 
 Rather than Fate Tokens just draining from players into nothing, **when a player spends a Fate Token, the GM gains one** in a separate GM-side pool - spending isn't just depletion, it's a transfer of leverage from the players' side of the table to the GM's.
 
-The GM's pool is **narrative-only** - it does **not** mirror the player [Fate Triggers](#fate-triggers) menu, no mechanical crunch bonuses for NPCs. Instead the GM spends their pool on **complications, twists, and consequences woven into the fiction** - not a flat "the NPC gets +2," but "the ambush was a distraction," "the ally you saved owed someone else a debt first," or any other fictional escalation.
+The pool buys three things, and every one of them is the world acting rather than a bonus bolted onto somebody's die roll.
+
+- **A Twist** - **1, 3, or 5+ Tokens.** Escalate what is already in motion. One Token is a small complication; three is a real turn in the scene; five or more reshapes the arc.
+- **A Claim** - the GM asserts a fact into the fiction, paying the same [Magnitude, Range and Plausibility](#kotodama) a player would, off the same tables.
+- **Hardening** - **1 Token per point.** Each Token raises the cost of the players' next Kotodama in this Scene by 1. The opposite number to a [thin place](#thin-places).
+
+**The rule that outranks all three: the pool never undoes a claim that was paid for.** A fact the players bought is true and stays true. The GM's Tokens buy what happens next, never a reversal.
 
 **Since the GM gains a Fate Token for every one a player spends, a bigger Kotodama spend automatically hands the GM proportionally more leverage** - no separate consequence math needed. Small edits barely move the GM's pool; massive pooled edits load it up considerably.
