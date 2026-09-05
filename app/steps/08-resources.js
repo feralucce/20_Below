@@ -1,5 +1,5 @@
 import { el, counterRow, renderMarkdown, renderSelectedAvailable } from '../ui.js';
-import { resourcesPoolRemaining } from '../state.js';
+import { resourcesPoolRemaining, canBuyWealthAtCreation } from '../state.js';
 
 export default {
   id: 'resources',
@@ -23,8 +23,12 @@ export default {
           state.resources[r.name] = v;
         },
         min: 0,
+        // Destitute holds Wealth at 0 for the whole of creation - the Flaw
+        // has to be bought off before any Wealth can be bought.
         max: () =>
-          Math.min(5, state.resources[r.name] + Math.floor(remaining / data.resourceLevelCost)),
+          r.name === 'Wealth' && !canBuyWealthAtCreation(state)
+            ? 0
+            : Math.min(5, state.resources[r.name] + Math.floor(remaining / data.resourceLevelCost)),
         onChange: () => {
           rerenderStep();
           rerenderPools();
@@ -51,6 +55,13 @@ export default {
     function renderCard(r) {
       const card = el('div', { class: 'pick-card' });
       card.append(counterRow({ ...counterCfg(r), key: `resource:${r.name}`, detail: levelTableFor(r) }));
+      if (r.name === 'Wealth' && !canBuyWealthAtCreation(state)) {
+        card.append(
+          el('p', { class: 'hint' },
+            'Destitute holds Wealth at 0 for character creation. Drop the Destitute Flaw first if '
+            + 'you want to buy Wealth - XP can raise it normally once play begins.'),
+        );
+      }
       return card;
     }
 
