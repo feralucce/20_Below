@@ -18,7 +18,11 @@
   'use strict';
 
   var API = 'https://api.github.com/repos/feralucce/20_Below/releases';
-  var CACHE = '20below-releases-v1';
+  /* Bumped to -v2 to drop every cache written before the downgrade guard
+     below existed: those entries are what put v0.10.0 back on a page whose
+     markup already said v0.10.1. */
+  var CACHE = '20below-releases-v2';
+  var CACHE_TTL = 15 * 60 * 1000;
 
   var PRODUCTS = {
     creator: { tag: /^v(\d+\.\d+\.\d+)$/,                asset: /^20-below-desktop_.*\.exe$/ },
@@ -57,6 +61,18 @@
     return null;
   }
 
+  /* "0.9.5" is older than "0.10.1" - string comparison gets that wrong, so
+     compare the numbers. */
+  function older(a, b) {
+    var x = a.split('.');
+    var y = b.split('.');
+    for (var i = 0; i < 3; i++) {
+      var d = (parseInt(x[i], 10) || 0) - (parseInt(y[i], 10) || 0);
+      if (d) return d < 0;
+    }
+    return false;
+  }
+
   function apply(releases) {
     var nodes = document.querySelectorAll('[data-latest]');
     for (var i = 0; i < nodes.length; i++) {
@@ -65,6 +81,16 @@
       if (!spec) continue;
       var hit = pick(releases, spec);
       if (!hit) continue;
+
+      /* This script exists to stop the hand-written links going stale, and
+         it was doing the opposite. Its cache lives in sessionStorage, which
+         survives as long as a tab is open - so a reader who had the page
+         open before a release got that release's own answer overwritten by
+         the pre-release one, and saw v0.10.0 on markup that said v0.10.1.
+         The rule the file already claimed to follow, now enforced: this can
+         only ever move a link forward. */
+      var inMarkup = (el.getAttribute('href') || '').match(/\/download\/v?(\d+\.\d+\.\d+)\//);
+      if (inMarkup && older(hit.version, inMarkup[1])) continue;
 
       el.href = hit.url;
 
@@ -86,15 +112,20 @@
     if (!document.querySelector('[data-latest]')) return;
 
     try {
-      var cached = sessionStorage.getItem(CACHE);
-      if (cached) { apply(JSON.parse(cached)); return; }
-    } catch (e) { /* private mode, or storage disabled - just fetch */ }
+      var cached = JSON.parse(sessionStorage.getItem(CACHE));
+      if (cached && cached.at && Date.now() - cached.at < CACHE_TTL) {
+        apply(cached.releases);
+        return;
+      }
+    } catch (e) { /* private mode, storage disabled, or an older cache shape */ }
 
     fetch(API, { cache: 'no-store' })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (releases) {
         if (!releases || !releases.length) return;
-        try { sessionStorage.setItem(CACHE, JSON.stringify(releases)); } catch (e) {}
+        try {
+          sessionStorage.setItem(CACHE, JSON.stringify({ at: Date.now(), releases: releases }));
+        } catch (e) {}
         apply(releases);
       })
       .catch(function () { /* offline or rate-limited: the markup stands */ });
