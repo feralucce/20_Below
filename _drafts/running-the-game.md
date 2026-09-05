@@ -104,6 +104,22 @@ Player characters and named NPCs are extraordinary. Everyone else isn’t, and t
 
 Named NPCs and player characters get the full treatment instead: unconscious at zero, dying below it, and every rule about recovery, Scars and lasting harm applies to them. Giving an NPC a name is therefore a mechanical decision as much as a narrative one. Name the ones who should be able to survive.
 
+## Antagonists
+
+The section above covers what an antagonist costs you mechanically. This one is about what makes one worth the trouble.
+
+**Give them something they want, and make it reasonable.** Not sympathetic - reasonable. Somebody who wants the same thing the players want, or wants something that can only be had by taking something the players need, is an antagonist. Somebody who wants suffering is a weather event with a face. The first kind generates scenes on its own. The second one needs you to keep inventing reasons for it to turn up.
+
+**The best ones are mirrors.** Take a thing a player character is, and build somebody who is that same thing without the brakes. The Avenger who never stopped. The Caregiver who decided the only way to protect people was to decide things for them. It works because the player recognises it before you explain it, and because every scene with that antagonist is quietly a scene about the player’s own character. You don’t have to say any of this out loud. They will get there.
+
+**Give them a Nature.** It’s free, it takes ten seconds, and it does most of your improvising for you. An antagonist with a Nature written down will behave consistently in scenes you didn’t plan, because you already know what they do when the pressure is on. It also means they can be predicted, which is what makes a recurring antagonist satisfying to finally beat - the players worked out how they think.
+
+**A Gifted antagonist is not just a strong one.** They’re a fulcrum, the same as the player characters, which means they can lean on the consensus too. That is a different kind of threat from somebody who is dangerous in a fight. A rival who can assert things into the world is competing with the players over what is true, and the evidence of them turns up as coincidence rather than as violence - records that don’t match, a witness whose account keeps changing, a building the party is certain was on the other side of the street.
+
+**Organizations are antagonists too, and the good ones believe in themselves.** An institution that thinks it’s doing the right thing, staffed by people who also think that, is harder to fight and far more interesting than one that knows it is evil. The people at the desk aren’t lying to the players. The gap is usually between what the organization tells its own staff and what the people at the top actually want, and the players finding that gap is a whole campaign.
+
+**Name the ones who should survive, and only those.** This is the mechanical decision from the section above, arriving as a storytelling one. A recurring antagonist has to be Named or the first good critical hit ends them. Decide that before the fight, not during it, and be honest with yourself about which it is - naming somebody mid-combat because you didn’t want to lose them is the moment a table stops believing the dice matter.
+
 ## Catastrophic Failure
 
 A 20 - both dice showing 10 - is a catastrophic failure. That’s one roll in a hundred, which sounds like nothing until you count how many rolls a table makes in a night. In a session with real fighting in it, expect to see one.
