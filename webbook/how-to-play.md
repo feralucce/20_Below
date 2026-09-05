@@ -35,7 +35,7 @@ Two results ignore your target number entirely.
 
 **Roll a 2** - both dice showing 1 - and it’s a critical success. The best thing that could have happened, and GMs are encouraged to be generous about what that means. What it does in a fight is under *Making an Attack*.
 
-**Roll a 20** - both dice showing 10 - and it’s a catastrophic failure.
+**Roll a 20** - both dice showing 10 - and it’s a catastrophic failure. Whatever you were attempting fails, and something else goes wrong on top of it - the GM decides what, out of whatever you were doing. In a fight it also leaves you **Off Balance** until the end of your next turn, rolling everything at Disadvantage. A Fate Token clears that, but never the rest of it.
 
 Neither one cares what your target number was. A critical success on a hopeless task still lands. A catastrophic failure on a walk in the park still hurts. Some Skill tiers widen the good end or take some of the sting out of the bad one, which is covered in Skills.
 

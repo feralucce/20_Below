@@ -45,7 +45,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Core Roll**: The basic move of the whole system. Roll 2d10, add them up, and check the total against your target number (your Attribute plus the Difficulty). Land on or under it and you succeed; go over and you don’t.
 
-**Critical Success / Catastrophic Failure**: Roll a 2 - both dice showing 1 - and it’s a critical success, the best possible result. Roll a 20 - both showing 10 - and it’s a catastrophic failure. A few Skill tiers widen the good end or cushion the bad one.
+**Critical Success / Catastrophic Failure**: Roll a 2 - both dice showing 1 - and it’s a critical success, the best possible result. Roll a 20 - both showing 10 - and it’s a catastrophic failure: the attempt fails and something else goes wrong with it, and in combat you are left Off Balance as well. A few Skill tiers widen the good end or cushion the bad one.
 
 **Defense**: How hard you are to touch: 10 minus your Atropos. Fate doesn’t distinguish the shape of the blow, so the same number answers a blade, a word meant to wound, and a mind reaching where it isn’t welcome. When someone attacks you, your Defense is the number they have to beat.
 
