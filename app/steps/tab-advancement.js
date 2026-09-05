@@ -1,4 +1,4 @@
-import { el, counterRow, renderMarkdown } from '../ui.js';
+import { el, keyedDetails, counterRow, renderMarkdown } from '../ui.js';
 import {
   subStatPoolRemaining,
   descriptorSlots,
@@ -25,7 +25,7 @@ import { renderBoonPicker } from './07-boons.js';
 // page's same treatment. Returns the content element to append items into;
 // titleText becomes the always-visible summary line.
 function sectionWrap(titleText) {
-  const details = el('details', { class: 'pick-card' });
+  const details = keyedDetails(`adv-sec:${titleText}`, { class: 'pick-card' });
   const content = el('div', { style: 'margin-top:0.75rem;' });
   details.append(el('summary', {}, titleText), content);
   return { details, content };
@@ -226,7 +226,9 @@ function giftsSection(state, data, refresh) {
     const cost = advancementGiftLevelCostAt(data, level, limiterCount);
     const remaining = xpRemaining(state, data);
     const boughtLevels = state.advancementPurchases.Gifts[gift.name] ?? 0;
-    const card = el('details', { class: 'pick-card' });
+    // Keyed by the Gift, not by the summary: the summary carries the level,
+    // and raising it is the click whose open card must survive.
+    const card = keyedDetails(`adv-gift:${gift.name}`, { class: 'pick-card' });
     card.append(
       el('summary', {}, `${gift.name} - Level ${level}`),
       el('div', { class: 'detail', html: renderMarkdown(gift.markdown) }),

@@ -32,7 +32,9 @@ export function renderBoonPicker(container, ctx, allBoons, { source, getRemainin
       ]);
       const boonData = allBoons.find((boon) => boon.name === b.name);
       const detailEl = el('div', { class: 'detail', html: boonData ? renderMarkdown(boonData.effect) : '' });
-      makeTwirl(nameEl, detailEl);
+      // Keyed by slot as well as name: a repeatable Boon can be held twice,
+      // and both copies are in this list.
+      makeTwirl(nameEl, detailEl, { key: `boon-sel:${source}:${i}:${b.name}` });
       selectedEl.appendChild(el('div', { class: 'pick-card' }, [headerRow, detailEl]));
     });
   }
@@ -66,7 +68,7 @@ export function renderBoonPicker(container, ctx, allBoons, { source, getRemainin
       });
       headerRow.appendChild(btnRow);
       const detailEl = el('div', { class: 'detail', html: renderMarkdown(boon.effect) });
-      makeTwirl(nameEl, detailEl);
+      makeTwirl(nameEl, detailEl, { key: `boon-avail:${source}:${boon.name}` });
       card.append(headerRow, detailEl);
       listEl.appendChild(card);
     });

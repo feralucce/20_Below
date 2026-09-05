@@ -1,4 +1,4 @@
-import { el, counterRow, renderMarkdown, renderSelectedAvailable } from '../ui.js';
+import { el, counterRow, renderMarkdown, renderMarkdownInline, renderSelectedAvailable } from '../ui.js';
 import { flawsPointsGranted } from '../state.js';
 
 function getOrCreateFlawState(state, name) {
@@ -43,7 +43,7 @@ export default {
     function descriptionFor(flaw) {
       const levelRows = flaw.levels
         ? `<table><tr><th>Level</th><th>Effect</th></tr>${flaw.levels
-            .map((l) => `<tr><td>${l.level}</td><td>${window.marked ? window.marked.parseInline(l.effect) : l.effect}</td></tr>`)
+            .map((l) => `<tr><td>${l.level}</td><td>${renderMarkdownInline(l.effect)}</td></tr>`)
             .join('')}</table>`
         : renderMarkdown(flaw.blurb);
       return el('div', { class: 'detail', html: levelRows });
@@ -53,7 +53,7 @@ export default {
     // in both the Selected and Available lists.
     function renderCard(flaw) {
       const card = el('div', { class: 'pick-card' });
-      card.append(counterRow({ ...counterCfg(flaw), detail: descriptionFor(flaw) }));
+      card.append(counterRow({ ...counterCfg(flaw), key: `flaw:${flaw.name}`, detail: descriptionFor(flaw) }));
       return card;
     }
 

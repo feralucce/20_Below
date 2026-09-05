@@ -50,7 +50,7 @@ export default {
     // in both the Selected and Available lists.
     function renderCard(r) {
       const card = el('div', { class: 'pick-card' });
-      card.append(counterRow({ ...counterCfg(r), detail: levelTableFor(r) }));
+      card.append(counterRow({ ...counterCfg(r), key: `resource:${r.name}`, detail: levelTableFor(r) }));
       return card;
     }
 

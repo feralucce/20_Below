@@ -117,7 +117,7 @@ export default {
     // Selected and Available lists.
     function renderCard(gift) {
       const card = el('div', { class: 'pick-card' });
-      card.append(counterRow({ ...counterCfg(gift), detail: detailFor(gift) }));
+      card.append(counterRow({ ...counterCfg(gift), key: `gift:${gift.name}`, detail: detailFor(gift) }));
       return card;
     }
 

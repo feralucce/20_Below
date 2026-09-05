@@ -1,4 +1,4 @@
-import { el, renderMarkdown, captureOpenDetails, restoreOpenDetails } from '../ui.js';
+import { el, renderMarkdown, renderMarkdownInline as inline } from '../ui.js';
 import {
   computeFiguredCharacteristics,
   skillTierName,
@@ -22,10 +22,6 @@ import {
   buildGiftCheckSection,
   buildResourceCheckSection,
 } from './roller-panel.js';
-
-function inline(md) {
-  return window.marked ? window.marked.parseInline(md) : md;
-}
 
 // Click a pip to set the fill level there (clicking a filled pip drops the
 // count to that pip; clicking an empty one heals up to and including it).
@@ -491,14 +487,12 @@ export default {
     }
 
     function renderTabContent() {
-      const openDetails = captureOpenDetails(tabContent);
       tabContent.innerHTML = '';
       const tab = TABS.find((t) => t.id === activeTab);
       const nodes = tab.interactive
         ? tab.build(state, data, renderTabContent, renderHeader, refreshKiDependents)
         : tab.build(state, data);
       tabContent.append(...nodes.filter((n) => n != null));
-      restoreOpenDetails(tabContent, openDetails);
     }
 
     function renderTabNav() {
