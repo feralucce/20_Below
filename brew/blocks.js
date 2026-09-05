@@ -35,7 +35,8 @@ export const BLOCKS = {
   wide: {
     help: 'spans both columns, for big tables and art',
     takesTitle: false,
-    render: (_title, body) => `<div class="wide">\n\n${body.trim()}\n\n</div>`,
+    render: (_title, body, variant) =>
+      `<div class="${cls('wide', variant)}">\n\n${body.trim()}\n\n</div>`,
   },
   aside: {
     help: 'a sidebar, set apart from the main text',
@@ -234,6 +235,12 @@ export const VARIANTS = [
   'earth', 'air', 'fire', 'water', 'moira',
 ];
 
+/* Variants that name a layout rather than a colour. Kept apart from
+ * VARIANTS because sample.js renders one swatch per colour, and a
+ * table is not a colour. Both lists are allowlists for the same
+ * reason: a misspelled variant should vanish, not emit a dead class. */
+export const LAYOUT_VARIANTS = ['difficulty'];
+
 /* Private-use characters as the placeholder delimiters. A block's body
  * is trimmed before it is re-emitted, so a space-delimited placeholder
  * loses its delimiters and leaks as literal text; these survive trim
@@ -251,8 +258,9 @@ export function applyBlocks(md) {
     md = md.replace(BLOCK, (whole, name, variant, title, body) => {
       const block = BLOCKS[name.toLowerCase()];
       if (!block) return whole;          // unknown name: leave it visible
-      const v = variant && VARIANTS.includes(variant.toLowerCase())
-        ? variant.toLowerCase() : '';
+      const lower = variant ? variant.toLowerCase() : '';
+      const v = lower && (VARIANTS.includes(lower) || LAYOUT_VARIANTS.includes(lower))
+        ? lower : '';
       changed = true;
       return block.render(block.takesTitle ? title : '', body, v);
     });
