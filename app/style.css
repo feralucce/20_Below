@@ -444,6 +444,13 @@ body {
   font-size: 0.85rem;
 }
 
+/* A cross-reference to another part of the rules, kept as text rather than a
+   link - see deadenCrossRefs() in ui.js. Marked so it still reads as "this
+   term is defined elsewhere", without inviting a click that goes nowhere. */
+.xref {
+  border-bottom: 1px dotted var(--text-dim);
+}
+
 .menu-table {
   width: 100%;
   border-collapse: collapse;
