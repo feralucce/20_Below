@@ -251,7 +251,9 @@ Your **Movement Rate** is 5 plus your Air, in meters. You can move that far as y
 
 ## Conditions
 
-Four states you can be put into. Three of them hurt you by taking dice away. The fourth one is worse than that.
+Five states you can be put into. Most of them hurt you by taking dice away. One of them is worse than that.
+
+**Off Balance.** You rolled a catastrophic failure in combat. You roll everything at Disadvantage until the end of your next turn. It does not stack, it clears on its own, and a Fate Token spent to Shrug Off an Effect clears it early - though it never undoes whatever else went wrong on that roll. The Never Off Balance Boon lets you reroll the failure that caused it.
 
 **Distracted.** You lose a Health Level, or get hit by a Kotodama, while resolving a Slow action. Roll Atropos plus Difficulty to hold your concentration. Succeed and the action goes off as declared. Fail and it drops to a Normal action, losing the called shot and the Advantage.
 

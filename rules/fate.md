@@ -82,7 +82,7 @@ Fate Tokens are spent on [Kotodama](#kotodama), or on any of the following, each
 - **Overcome a Flaw** - one of your Flaws doesn't apply for the rest of the current scene.
 - **Automatic Success** - a single roll succeeds outright, no dice involved. Fate Tokens are rare enough that this stays a flat cost regardless of the Difficulty being bypassed.
 - **Boost a Check** - gain Advantage on a single roll. Distinct from the [Skill Training Tiers](skills.md#training-tiers)' own Advantage: Adept and above grant it permanently, but only on rolls using that one trained Skill. This covers everything else, an Untrained roll, an off-Skill Attribute check, anything you're not otherwise good at.
-- **Shrug Off an Effect** - ignore a negative status or condition (Distracted, Surprised, Flustered, Overwhelmed, Exhausted, or similar) for a moment.
+- **Shrug Off an Effect** - ignore a negative status or condition ([Off Balance](rules.md#off-balance), Distracted, Surprised, Flustered, Overwhelmed, Exhausted, or similar) for a moment.
 - **Refill Ki** - your Ki pool refills completely, right there in the moment, no need to wait for a rest.
 
 Characters with [Iron Will](boons.md) may also spend 1 Fate Token to **Assert Your Will** - declare "my will is my own" and flatly negate an attempt to intimidate or dominate you, no roll. A micro-Kotodama: same shape as the main mechanic, but flat-costed and scoped narrowly to defending your own mind.

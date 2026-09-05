@@ -15,19 +15,21 @@ A Boon is a small, permanent piece of good luck. Not a power - a fact about you 
 
 Gifts are the loud part of a character. Boons are the quiet part, and the quiet part decides more scenes than you’d think. Being impossible to surprise will save your life more often than being able to throw fire, because getting caught out is how most people die and most fires aren’t necessary.
 
-You buy them at creation out of the Boons pool, and afterward with XP. Each one has a flat cost, and the costs sort into tiers: **Trivial** at 1, **Lesser** at 3, **Greater** at 5, **Legendary** at 7. A handful come in tiers of their own, where the higher tier already includes everything the lower ones gave you - buy the one you want, not all three.
+You buy them at creation out of the Boons pool, and afterward with XP. Each one has a flat cost, and those costs sort into four tiers - **Trivial** at 1, **Lesser** at 3, **Greater** at 5, **Legendary** at 7. A handful come in tiers of their own, where the higher tier already includes everything the lower ones gave you - buy the one you want, not all three.
 
-None of this is required. A character with no Boons at all is a perfectly good character, and those points went somewhere else.
+None of this is required. I’ve seen perfectly good characters with no Boons at all - those points just went somewhere else.
 
 ## How Boons Work
 
-Boons are a **grab bag** - small advantages that don’t fit under Skills (learned, practiced competence, see skills.md) or the not-yet-built Powers system (exceptional/supernatural capability). Boons:
+A Boon is a grab bag item. Skills are the things you practiced and Gifts are the things that shouldn’t be possible - a Boon is neither of those, which is exactly why the category exists.
 
-- **Have no levels or ranks**, with sixteen named exceptions (Eidetic Memory, Feign Death, Innate Compass, Displaced Echoes, and Jack of all Trades, each bought as one of two tiers; Light Sleeper, Steadfast Presence, Iron Will, Oathbound, Always Connected, and Lie Detector, each bought as one of three; Natural Linguist, Trained by a Master, Extra Limbs, Features, and Familiar, each bought as one of all four; and Special Movement, which isn’t tiered at all but may instead be **purchased multiple times**, once per locomotion mode). A character either has a Boon or doesn’t - there’s no 1-10 scale, no dots, no tiers. (The resource-type entries that *do* scale - Wealth, Contacts, Fringe Benefit, etc. - live in resources.md.) - **Do not grant numerical bonuses to rolls.** A Boon is usually a rule exception, an unlocked narrative option, or a standing fact about the character’s body or reputation - not a flat +N to some roll.
+**You either have a Boon or you don’t.** There’s no 1-10 scale, no dots, no ranks. If you want something that climbs by level, what you actually want is a Resource, and those get their own chapter.
 
-Boons have a mirror-image counterpart, Flaws - character-creation disadvantages built the same way (no levels, mostly non-numeric).
+Sixteen entries bend that rule, and I’d rather flag each one where it sits in the list than make you memorize them here. Most offer two, three or four tiers, and buying a higher tier already includes everything the lower ones gave you - so buy the one you want, not all of them. Special Movement is the odd one out. It isn’t tiered at all, but you can buy it more than once, once for each way of moving.
 
-**Points**: every Boon costs a flat number of points from the Boons pool, in one of four tiers - **Trivial (1)**, **Lesser (3)**, **Greater (5)**, **Legendary (7)**.
+**A Boon almost never hands you a bonus on a roll.** It’s usually a rule exception, an option you didn’t have before, or a standing fact about your body or your reputation. If you came here looking for +2 to something, you’re in the wrong chapter.
+
+Flaws are the mirror image of all this - built the same way, no levels, mostly non-numeric, and they pay you points instead of charging them.
 
 ## The Boon List
 

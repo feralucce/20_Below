@@ -355,7 +355,15 @@ What an action actually *lets you do*, beyond a plain Attack or Move - filling i
 
 **Movement Rate**: `5 + Air`, in **meters** - the same flat-floor-plus-Attribute shape as [Health Levels](#health-levels). A character can move up to their Movement Rate as part of a Fast action's one action or a Normal action's move component. As a rough conversion (not a strict count), **spending a full Movement Rate shifts one Range Band**; the GM can also just narrate a shift directly when the fiction obviously calls for it, without making players do the math.
 
-*The following are the status effects defined so far - Distracted, Surprise, Flustered. More are expected as combat rules develop further; this isn't the full list.*
+*The following are the status effects defined so far - Off Balance, Distracted, Surprise, Flustered, Humiliated. More are expected as combat rules develop further; this isn't the full list.*
+
+#### Off Balance
+
+A character who rolls a **catastrophic failure** on any roll during combat becomes **Off Balance** until the end of their next turn, in addition to whatever else that failure caused.
+
+**An Off Balance character rolls everything at Disadvantage.** The condition does not stack - a character is either Off Balance or is not, however many catastrophic failures they roll in a round - and it clears on its own with no action or roll required.
+
+A Fate Token spent on [Shrug Off an Effect](fate.md#fate-triggers) clears it immediately. That spend never undoes the separate consequence the catastrophic failure caused. [Never Off Balance](boons.md) grants a reroll of the triggering failure itself.
 
 #### Distracted
 

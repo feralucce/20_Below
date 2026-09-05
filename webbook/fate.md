@@ -78,7 +78,7 @@ A character with **Stamina 0 holds no Fate Tokens at all**, and cannot spend any
 
 Fate Tokens are spent on Kotodama, or on any of the following, each a flat **1 Fate Token**:
 
-**Overcome a Flaw** - one of your Flaws doesn’t apply for the rest of the current scene. **Automatic Success** - a single roll succeeds outright, no dice involved. Fate Tokens are rare enough that this stays a flat cost regardless of the Difficulty being bypassed. **Boost a Check** - gain Advantage on a single roll. Distinct from the Skill Training Tiers’ own Advantage: Adept and above grant it permanently, but only on rolls using that one trained Skill. This covers everything else, an Untrained roll, an off-Skill Attribute check, anything you’re not otherwise good at. **Shrug Off an Effect** - ignore a negative status or condition (Distracted, Surprised, Flustered, Overwhelmed, Exhausted, or similar) for a moment. **Refill Ki** - your Ki pool refills completely, right there in the moment, no need to wait for a rest.
+**Overcome a Flaw** - one of your Flaws doesn’t apply for the rest of the current scene. **Automatic Success** - a single roll succeeds outright, no dice involved. Fate Tokens are rare enough that this stays a flat cost regardless of the Difficulty being bypassed. **Boost a Check** - gain Advantage on a single roll. Distinct from the Skill Training Tiers’ own Advantage: Adept and above grant it permanently, but only on rolls using that one trained Skill. This covers everything else, an Untrained roll, an off-Skill Attribute check, anything you’re not otherwise good at. **Shrug Off an Effect** - ignore a negative status or condition (Off Balance, Distracted, Surprised, Flustered, Overwhelmed, Exhausted, or similar) for a moment. **Refill Ki** - your Ki pool refills completely, right there in the moment, no need to wait for a rest.
 
 Characters with Iron Will may also spend 1 Fate Token to **Assert Your Will** - declare “my will is my own” and flatly negate an attempt to intimidate or dominate you, no roll. A micro-Kotodama: same shape as the main mechanic, but flat-costed and scoped narrowly to defending your own mind.
 
@@ -118,6 +118,28 @@ A Short Rest drops one level of Exhausted; a Full Night’s Rest clears it entir
 
 *言霊* (kotodama, “word spirit”) - spending Fate Tokens to assert a fact into the fiction directly, rather than touching a die roll. A player states a fact about the world, spends Fate Tokens to back the claim, and the fiction bends to make it true.
 
+## Why It Costs What It Costs
+
+The world is the way it is because everyone agrees it is.
+
+That isn’t a metaphor and it isn’t philosophy. It’s the load-bearing fact of this game.
+
+There were monsters once. Not “people told stories about monsters” - there were monsters, in the woods, and everyone knew it. You didn’t go past the treeline after dark because of what was out there, and what was out there was out there because nobody alive doubted it. The agreement was total, so the monsters were real.
+
+Then we stopped believing. Not all at once and not on purpose - we lit the streets, we mapped the woods, we explained the noises one at a time. As the agreement thinned out, so did the monsters. There’s nothing in the woods now. We checked. We checked so thoroughly and so publicly that the checking itself became the thing everyone agreed on, and the woods emptied out to match.
+
+Reality is a vote nobody knew they were casting.
+
+Here’s the part that should worry you. It still works. If you could convince most of the human race that there’s an island off the west coast of America, and that the island has unicorns on it, then the island is there. Not that people would believe in it - it would be on the charts. Ships would have wrecked on it. It would have a history and a name, and somebody’s grandmother would have been born there. The world would rearrange itself around the agreement and hand you back a version where the island had always been, because that is what the world does.
+
+You can’t convince most of the human race of anything. That’s fine. You don’t have to.
+
+Your character is a fulcrum. That is what the Gifted *are* - the few whose will presses on reality directly, instead of going the long way around through persuading seven billion people. Everyone else gets a vote. You get to lean on the scale. Kotodama is you leaning.
+
+So that is the cost curve, and it is why the prices climb the way they do. You aren’t paying for the size of the effect. You are paying for how much agreement you have to overrule. A small claim slips through because the consensus was never firm on whether that door latched. A large one has to displace something a great many people are certain about, and their certainty is load-bearing.
+
+Which is why the biggest claims can’t be made alone. One person’s will against the reality of the masses only reaches so far.
+
 A claim’s total Fate Token cost is the **sum of independent components**, not one flat lookup on a single scale. Multiple players may **pool** their Fate Tokens together for a total no single character could afford alone.
 
 **Four components**: **Magnitude**, **Range**, **Plausibility**, and an optional **Duration** surcharge.
@@ -125,8 +147,6 @@ A claim’s total Fate Token cost is the **sum of independent components**, not 
 ## Magnitude - solo range (1-4 tokens)
 
 Four tiers, one person acting alone, each step more exhausting than the last.
-
-**Pooled magnitude (5+ tokens), not yet detailed**: since 1-4 is explicitly what one person can do alone, nothing solo ever reaches 5 - pooling is just what happens once a group’s combined total exceeds any single member’s ceiling. **Tier 5** is its own step; **Tier 6+** is a flat ceiling where the exact token count stops mattering mechanically. Examples for both still TBD.
 
 **1** - Minor coincidence - The flashlight was already in your pack; there’s just enough battery left to get the engine started; the key is under the mat; the door didn’t latch; your phone happens to have signal here
 
@@ -136,27 +156,81 @@ Four tiers, one person acting alone, each step more exhausting than the last.
 
 **4** - Solo ceiling - An NPC’s true nature or history is revealed to everyone present at once; a building that should be collapsing suddenly isn’t; a faction’s allegiance flips for good, not just the moment; a locked-down facility’s systems glitch out all at once; an entire crowd’s memory of what just happened is uncertain afterward
 
-## Range - personal scale (1-4 tokens)
+## Magnitude - pooled range (5+ tokens)
 
-A second, independent component for how far a Kotodama reaches. Only the “personal” end (bound to the character’s own body/location) is defined so far - scene/district/city/setting-scale range isn’t worked out yet.
+Everything above is what one person’s will manages on its own. Past that, the consensus pushes back harder than any single character can push.
 
-**1** - Self / on your person - The flashlight in *your* pack
+**Five and up always takes more than one of you.** It also works differently from the tiers above it - you don’t read the price off a list. Tell the GM what you are claiming, and they will tell you what it costs. At this scale the size of the change sets the number, and no table is going to anticipate what your table just decided to rewrite.
 
-**2** - Touch / arm’s reach - The door didn’t latch; the key’s under the mat
+**5** - Past any one person - A district keeps its power through a night it had no business surviving; an organization’s records of you are wrong in every copy at once; the storm breaks over the whole valley exactly when it is needed; everyone who died in one specific event is found alive; a standing order changes and nobody can name who gave it
 
-**3** - Immediate vicinity / line of sight - The stolen motorcycle just around the corner; a hidden door across the room
+**6+** - Universe-altering - The dead of a war are not dead, and never were; a language nobody has spoken in three hundred years is the one everyone grew up speaking; a continent that was on no map has always been there; a law of physics has an exception, and always did
 
-**4** - The space you’re in - The whole room, vehicle, or block you’re standing in - still bound to your own location
+At six and beyond you have stopped changing what happened. You are changing what was always true - and everyone alive remembers it that way, because their agreement is what you rewrote.
+
+## Range - how far it has to hold
+
+How far the change has to hold, which is another way of asking how many people’s agreement it has to survive.
+
+Everything within your own reach is free. Magnitude is already paying for a claim about the world right where you are standing, and charging twice for the same thing would price ordinary play out of existence. The bands below all cost nothing.
+
+Past that, you are reaching into places whose agreement you are not standing in the middle of, and it costs. There is no table for it yet - tell the GM how far you need the claim to hold and they will price it, the same way they price Magnitude 5 and up.
+
+**Free** - Self / on your person - The flashlight in *your* pack
+
+**Free** - Touch / arm’s reach - The door didn’t latch; the key’s under the mat
+
+**Free** - Immediate vicinity / line of sight - The stolen motorcycle just around the corner; a hidden door across the room
+
+**Free** - The space you’re in - The whole room, vehicle, or block you’re standing in - still bound to your own location
+
+**Priced by the GM** - Anywhere you are not - Another district, another city, a place you have only heard of
 
 ## Plausibility
 
-A third component: how deniable the claim is, independent of how big it is. **Three tiers, token costs not yet assigned**:
+How hard the claim is to explain away afterward, independent of how big it is. A claim nobody can rationalize forces people to notice the override, and a consensus that notices is a consensus that resists.
 
-| Tier | Description | Example |
-|---|---|---|
-| Whisper | Entirely within the range of normal luck - a witness wouldn't think twice | The door happened to not latch |
-| Murmur | Technically still possible, a notable stroke of luck a skeptic would talk themselves out of suspecting | Every camera on this block happened to be pointed the wrong way |
-| Shout | Flatly breaks what anyone present believes is possible - no rationalizing it away, and it's remembered | A locked vault door swings open with no one touching it |
+**Whisper, +0** - Entirely within the range of normal luck - a witness wouldn’t think twice - The door happened to not latch. The consensus never had an opinion on this one, so there is nothing to overrule and nothing to pay.
+
+**Murmur, +1** - Technically still possible, a notable stroke of luck a skeptic would talk themselves out of suspecting - Every camera on this block happened to be pointed the wrong way. The agreement bends. It does not break.
+
+**Shout, +3** - Flatly breaks what anyone present believes is possible - no rationalizing it away, and it’s remembered - A locked vault door swings open with no one touching it.
+
+Three, not two, because a Shout costs you twice. You overrule the agreement, and then everyone who watched you do it walks away believing something impossible happened - which is its own change to the world, and you are paying for that one too.
+
+**Which tier you are in is decided by who is watching, not by what you did.** The same claim is a Whisper alone in a stairwell and a Shout in a crowded bar. Work out who can see it before you work out what it costs.
+
+If nobody sees it at all, drop one tier, to a minimum of Whisper. The world still notices an open vault door. It just has to work out for itself what happened.
+
+## What That Adds Up To
+
+Magnitude, plus Range if you are reaching past yourself, plus Plausibility, plus a Duration surcharge if you want something other than permanent. Here is what that looks like on real claims.
+
+**1** - Your phone has signal down here - Magnitude 1, Whisper
+
+**1** - The key is under the mat - Magnitude 1, Whisper
+
+**2** - The key is under the mat, and nobody is around to see you use it - Magnitude 2, Whisper
+
+**2** - The fire door you are running for was propped open this morning - Magnitude 2, Whisper
+
+**3** - The camera on this corner happened to be pointed the other way - Magnitude 2, Murmur
+
+**4** - The patrol’s nerve breaks, all at once - Magnitude 3, Murmur
+
+**4** - The vault door swings open, empty building - Magnitude 3, Murmur
+
+**6** - The vault door swings open, crowded lobby - Magnitude 3, Shout
+
+**7** - The building that should be coming down isn’t - Magnitude 4, Shout
+
+**Pooled** - Everyone who died in the fire is found alive - Magnitude 5, the GM sets the number
+
+**Pooled** - The dead of that war were never dead - Magnitude 6+, the GM sets the number
+
+Two pairs in there are worth sitting with. The key costs 1, and the key with nobody around costs 2 - that second fact is a second thing the world has to agree to, and you pay for it. And the same vault door is a 4 or a 6 depending on nothing but who is standing in the lobby.
+
+That gap is the only lever in the whole system you can pull with planning instead of Tokens. Clear the room first.
 
 ## Duration (optional surcharge)
 
