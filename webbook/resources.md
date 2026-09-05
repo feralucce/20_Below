@@ -19,7 +19,7 @@ Resources are rated in Levels. You buy them out of the Resources pool at creatio
 
 ## What a Resource Is
 
-A Resource is something you draw on or lean on - money, contacts, a reputation, somewhere to go to ground. It is never a bonus on a roll. Every Resource is rated **1-5**, and each level is a defined step up in what you can reach, not a bigger number to add to something.
+A Resource is something you draw on or lean on - money, contacts, a reputation, somewhere to go to ground. It’s never a bonus on a roll. Every Resource is rated **1-5**, and each level is a defined step up in what you can reach, not a bigger number to add to something.
 
 Levels cost a flat **1 point** each out of the Resources pool at creation, so a Resource at Level 3 costs you 3 points. Once play begins, each new level costs a flat **3 XP**.
 
@@ -43,7 +43,7 @@ A character’s **creation-Wealth** starts at **2**, unless they spent Resources
 
 1. Find the **gap** - the item’s Wealth rating minus your current creation-Wealth. It can be zero or negative for something at or under what you have.
 
-2. If the gap is **more than your current creation-Wealth**, you cannot afford it at all. No roll.
+2. If the gap is **more than your current creation-Wealth**, you can’t afford it at all. No roll.
 
 3. Otherwise, roll a **Wealth Check** - 2d10 against creation-Wealth + Difficulty **6**, roll-under, with the standard critical results.
 

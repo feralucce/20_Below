@@ -130,13 +130,13 @@ Then we stopped believing. Not all at once and not on purpose - we lit the stree
 
 Reality is a vote nobody knew they were casting.
 
-Here’s the part that should worry you. It still works. If you could convince most of the human race that there’s an island off the west coast of America, and that the island has unicorns on it, then the island is there. Not that people would believe in it - it would be on the charts. Ships would have wrecked on it. It would have a history and a name, and somebody’s grandmother would have been born there. The world would rearrange itself around the agreement and hand you back a version where the island had always been, because that is what the world does.
+Here’s the part that should worry you. It still works. If you could convince most of the human race that there’s an island off the west coast of America, and that the island has unicorns on it, then the island is there. Not that people would believe in it - it would be on the charts. Ships would have wrecked on it. It would have a history and a name, and somebody’s grandmother would have been born there. The world would rearrange itself around the agreement and hand you back a version where the island had always been, because that’s what the world does.
 
 You can’t convince most of the human race of anything. That’s fine. You don’t have to.
 
-Your character is a fulcrum. That is what the Gifted *are* - the few whose will presses on reality directly, instead of going the long way around through persuading seven billion people. Everyone else gets a vote. You get to lean on the scale. Kotodama is you leaning.
+Your character is a fulcrum. That’s what the Gifted *are* - the few whose will presses on reality directly, instead of going the long way around through persuading seven billion people. Everyone else gets a vote. You get to lean on the scale. Kotodama is you leaning.
 
-So that is the cost curve, and it is why the prices climb the way they do. You aren’t paying for the size of the effect. You are paying for how much agreement you have to overrule. A small claim slips through because the consensus was never firm on whether that door latched. A large one has to displace something a great many people are certain about, and their certainty is load-bearing.
+So that’s the cost curve, and it’s why the prices climb the way they do. You aren’t paying for the size of the effect. You’re paying for how much agreement you’ve to overrule. A small claim slips through because the consensus was never firm on whether that door latched. A large one has to displace something a great many people are certain about, and their certainty is load-bearing.
 
 Which is why the biggest claims can’t be made alone. One person’s will against the reality of the masses only reaches so far.
 
@@ -160,21 +160,21 @@ Four tiers, one person acting alone, each step more exhausting than the last.
 
 Everything above is what one person’s will manages on its own. Past that, the consensus pushes back harder than any single character can push.
 
-**Five and up always takes more than one of you.** It also works differently from the tiers above it - you don’t read the price off a list. Tell the GM what you are claiming, and they will tell you what it costs. At this scale the size of the change sets the number, and no table is going to anticipate what your table just decided to rewrite.
+**Five and up always takes more than one of you.** It also works differently from the tiers above it - you don’t read the price off a list. Tell the GM what you’re claiming, and they will tell you what it costs. At this scale the size of the change sets the number, and no table is going to anticipate what your table just decided to rewrite.
 
-**5** - Past any one person - A district keeps its power through a night it had no business surviving; an organization’s records of you are wrong in every copy at once; the storm breaks over the whole valley exactly when it is needed; everyone who died in one specific event is found alive; a standing order changes and nobody can name who gave it
+**5** - Past any one person - A district keeps its power through a night it had no business surviving; an organization’s records of you’re wrong in every copy at once; the storm breaks over the whole valley exactly when it’s needed; everyone who died in one specific event is found alive; a standing order changes and nobody can name who gave it
 
-**6+** - Universe-altering - The dead of a war are not dead, and never were; a language nobody has spoken in three hundred years is the one everyone grew up speaking; a continent that was on no map has always been there; a law of physics has an exception, and always did
+**6+** - Universe-altering - The dead of a war aren’t dead, and never were; a language nobody has spoken in three hundred years is the one everyone grew up speaking; a continent that was on no map has always been there; a law of physics has an exception, and always did
 
-At six and beyond you have stopped changing what happened. You are changing what was always true - and everyone alive remembers it that way, because their agreement is what you rewrote.
+At six and beyond you’ve stopped changing what happened. You’re changing what was always true - and everyone alive remembers it that way, because their agreement is what you rewrote.
 
 ## Range - how far it has to hold
 
 How far the change has to hold, which is another way of asking how many people’s agreement it has to survive.
 
-Everything within your own reach is free. Magnitude is already paying for a claim about the world right where you are standing, and charging twice for the same thing would price ordinary play out of existence. The bands below all cost nothing.
+Everything within your own reach is free. Magnitude is already paying for a claim about the world right where you’re standing, and charging twice for the same thing would price ordinary play out of existence. The bands below all cost nothing.
 
-Past that, you are reaching into places whose agreement you are not standing in the middle of, and it costs. There is no table for it yet - tell the GM how far you need the claim to hold and they will price it, the same way they price Magnitude 5 and up.
+Past that, you’re reaching into places whose agreement you’re not standing in the middle of, and it costs. There’s no table for it yet - tell the GM how far you need the claim to hold and they will price it, the same way they price Magnitude 5 and up.
 
 **Free** - Self / on your person - The flashlight in *your* pack
 
@@ -184,27 +184,27 @@ Past that, you are reaching into places whose agreement you are not standing in 
 
 **Free** - The space you’re in - The whole room, vehicle, or block you’re standing in - still bound to your own location
 
-**Priced by the GM** - Anywhere you are not - Another district, another city, a place you have only heard of
+**Priced by the GM** - Anywhere you’re not - Another district, another city, a place you’ve only heard of
 
 ## Plausibility
 
 How hard the claim is to explain away afterward, independent of how big it is. A claim nobody can rationalize forces people to notice the override, and a consensus that notices is a consensus that resists.
 
-**Whisper, +0** - Entirely within the range of normal luck - a witness wouldn’t think twice - The door happened to not latch. The consensus never had an opinion on this one, so there is nothing to overrule and nothing to pay.
+**Whisper, +0** - Entirely within the range of normal luck - a witness wouldn’t think twice - The door happened to not latch. The consensus never had an opinion on this one, so there’s nothing to overrule and nothing to pay.
 
-**Murmur, +1** - Technically still possible, a notable stroke of luck a skeptic would talk themselves out of suspecting - Every camera on this block happened to be pointed the wrong way. The agreement bends. It does not break.
+**Murmur, +1** - Technically still possible, a notable stroke of luck a skeptic would talk themselves out of suspecting - Every camera on this block happened to be pointed the wrong way. The agreement bends. It doesn’t break.
 
 **Shout, +3** - Flatly breaks what anyone present believes is possible - no rationalizing it away, and it’s remembered - A locked vault door swings open with no one touching it.
 
-Three, not two, because a Shout costs you twice. You overrule the agreement, and then everyone who watched you do it walks away believing something impossible happened - which is its own change to the world, and you are paying for that one too.
+Three, not two, because a Shout costs you twice. You overrule the agreement, and then everyone who watched you do it walks away believing something impossible happened - which is its own change to the world, and you’re paying for that one too.
 
-**Which tier you are in is decided by who is watching, not by what you did.** The same claim is a Whisper alone in a stairwell and a Shout in a crowded bar. Work out who can see it before you work out what it costs.
+**Which tier you’re in is decided by who is watching, not by what you did.** The same claim is a Whisper alone in a stairwell and a Shout in a crowded bar. Work out who can see it before you work out what it costs.
 
 If nobody sees it at all, drop one tier, to a minimum of Whisper. The world still notices an open vault door. It just has to work out for itself what happened.
 
 ## What That Adds Up To
 
-Magnitude, plus Range if you are reaching past yourself, plus Plausibility, plus a Duration surcharge if you want something other than permanent. Here is what that looks like on real claims.
+Magnitude, plus Range if you’re reaching past yourself, plus Plausibility, plus a Duration surcharge if you want something other than permanent. Here’s what that looks like on real claims.
 
 **1** - Your phone has signal down here - Magnitude 1, Whisper
 
@@ -212,7 +212,7 @@ Magnitude, plus Range if you are reaching past yourself, plus Plausibility, plus
 
 **2** - The key is under the mat, and nobody is around to see you use it - Magnitude 2, Whisper
 
-**2** - The fire door you are running for was propped open this morning - Magnitude 2, Whisper
+**2** - The fire door you’re running for was propped open this morning - Magnitude 2, Whisper
 
 **3** - The camera on this corner happened to be pointed the other way - Magnitude 2, Murmur
 
