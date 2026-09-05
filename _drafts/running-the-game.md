@@ -80,6 +80,22 @@ Look at the gaps rather than the numbers. From 8 to 11 is three points of target
 
 **And the practical version of all of this: don’t fine-tune.** Pick the row on the ladder that sounds like the thing and move on. If the roll still feels wrong to you after that, the answer is almost never one more point of Difficulty. It’s Advantage, or Disadvantage, or no roll at all.
 
+## Ruling on the Fly
+
+Most of what you do at the table isn’t in any chapter. Somebody tries a thing the book didn’t anticipate, or argues for a reading that helps them, or asks what happens when a car hits you. You decide, out loud, in about four seconds. These are the four that come up most.
+
+**A player argues for a different Element.** This is the challenged-Element rule doing its job, and the condition is the whole of it - the argument has to come out of a Sub-Stat Descriptor they already wrote down, not a sentence they invented thirty seconds ago. Hold that line and the rest takes care of itself, because nobody has an unlimited supply of Descriptors. If the argument is good, say yes and let them roll it. If it isn’t, no is a complete answer, and you’ve already read that paragraph.
+
+**Somebody wants to do a thing with no Skill attached.** Pick the Element that the attempt actually runs on, set a Difficulty, and roll it untrained. Untrained is a real option in this system rather than a punishment - Difficulty alone, no Element - and it’s the honest answer when a character is doing something nobody trains for. Don’t invent a Skill on the spot. If it turns out to be a thing they do often, that’s what the next Advancement is for.
+
+**Something hurts somebody and it isn’t a weapon.** Damage is a count of d10 resolved one die at a time against Soak, so improvising it means picking a number of dice, and the weapon tables are the scale you already have. Fists are 1. A knife or a handgun is 5. A grenade launcher or an anti-materiel rifle is 10. So a bad fall down a stairwell sits near a knife. A car at speed sits at the top of the scale and probably past it. A burning room isn’t one big number, it’s a smaller one arriving every round until somebody leaves.
+
+Say the number out loud before the dice come out. A table will accept almost any ruling made in advance and almost none made afterward.
+
+**There are more enemies than you want to roll for.** Don’t roll for all of them. Decide how many connect - two of the six, say, because the other four are in each other’s way - and roll only those. Unnamed opposition dies at zero, so a crowd of them is a threat that shrinks fast once the party starts landing hits, and the interesting question is almost never which specific guard hit whom. If the fiction says a mob overwhelms somebody, let it overwhelm them and spend your dice on the part the players can still change.
+
+**And when none of that helps.** Rule in the direction that keeps the scene moving, tell the table it’s a ruling rather than a rule, and write it down if you liked it. A ruling you make twice the same way has become a house rule, and a house rule you can name is worth more than a page of mine.
+
 ## Named and Unnamed
 
 Player characters and named NPCs are extraordinary. Everyone else isn’t, and the rules treat them differently at exactly one point: what happens at zero.
