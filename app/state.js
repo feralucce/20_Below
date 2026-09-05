@@ -258,8 +258,18 @@ export function clearResourcePenalty(state, resourceName) {
 // which needs the real unfloored 0 to gate Level 0 exclusively) read the
 // same starting number.
 export function creationWealthBase(state) {
-  if (state.flaws.some((f) => f.name === 'Destitute')) return 0;
-  return state.resources.Wealth > 0 ? state.resources.Wealth : 2;
+  // Purchased Wealth wins outright: resources.md says creation-Wealth "starts
+  // at 2, unless they spent Resources Pool points on Wealth, in which case
+  // their purchased Level is used instead". Destitute moves the starting
+  // value from 2 to 0; it does not cap what points can buy back.
+  if (state.resources.Wealth > 0) return state.resources.Wealth;
+  // state.flaws carries an entry for EVERY Flaw once the Flaws step has been
+  // opened, level 0 meaning "not taken" - so the name alone proves nothing
+  // and the level has to be checked. Without this, merely visiting the Flaws
+  // step made every character Destitute: creation-Wealth 0, no Everyman
+  // package above Level 0, and a gear shop stuck at the floor of 1.
+  const destitute = state.flaws.find((f) => f.name === 'Destitute');
+  return destitute && destitute.level > 0 ? 0 : 2;
 }
 
 export function currentCreationWealth(state) {

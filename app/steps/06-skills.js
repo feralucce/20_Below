@@ -1,9 +1,5 @@
-import { el, counterRow, renderSelectedAvailable } from '../ui.js';
+import { el, counterRow, renderSelectedAvailable, renderMarkdownInline as inline } from '../ui.js';
 import { skillsPoolRemaining, skillTierName } from '../state.js';
-
-function inline(md) {
-  return window.marked ? window.marked.parseInline(md) : md;
-}
 
 export default {
   id: 'skills',
