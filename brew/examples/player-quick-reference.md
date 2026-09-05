@@ -114,7 +114,6 @@ Spend **1 Ki per step** to bump the Bracket you declared - Slow to Normal, or No
 |---|---|
 | **Overcome a Flaw** | It doesn't apply for the rest of the scene |
 | **Automatic Success** | One roll succeeds outright, no dice |
-| **Boost a Check** | Advantage on one roll |
 | **Shrug Off an Effect** | Clear a condition for a moment |
 | **Refill Ki** | Your whole pool, right now |
 
