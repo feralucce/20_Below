@@ -223,3 +223,21 @@ Two things it deliberately doesn’t do.
 **It does not put a sword through your own foot, or the person beside you.** A character who trained for years doesn’t do that because two dice came up ten. What they do is lose their weapon, their footing or their advantage, and then live with the next few seconds.
 
 Two things reach this roll. Master Training Tier doesn’t, because an attack uses no Skill and there’s no tier to lean on. The Never Off Balance Boon does exactly what its name says.
+
+## Pacing
+
+Most of this is true of running any game and you will have heard versions of it before. One piece of it is specific to this one, and it’s the piece GMs get wrong.
+
+**A Scene is a mechanical unit here, not just a way of talking.** Fate spends are capped per Scene. Gift abilities reset once per Scene. Flustered clears when the Scene does. There are more than forty separate rules in this book hanging off that word. So when you say “right, new scene” you’re not just changing the subject - you are handing everybody their per-Scene Fate capacity back and refreshing every once-per-Scene ability at the table. Do that three times during one fight and you have quietly made the fight much easier without deciding to.
+
+**Which cuts the other way too.** A long grinding sequence that is honestly several Scenes should be several Scenes. If the party fights through the lobby, regroups on the stairwell, and then hits the penthouse, that isn’t one Scene because it happened in one building. Being stingy with Scene breaks is its own kind of ruling, and it’s the one that makes players feel like their once-per-Scene abilities are decorative.
+
+**Cut a scene the moment the interesting thing has happened.** Not when the conversation ends. Not when everyone has had a turn. The moment the thing the scene was about has landed - the decision made, the lie caught, the door opened - say what happens and move. Almost every slow session is slow because scenes ran past their own endings.
+
+**Start late.** You don’t need the walk to the building, the drive over, or the part where they decide who knocks. Begin with somebody already knocking. Players fill in the approach themselves and they do it faster than you can narrate it.
+
+**Vary what a scene is for.** The XP categories are quietly telling you this - somebody has to be able to earn Learning and Discovery, and they can’t if every scene is a fight. A session that alternates between something to solve, somebody to talk to, and something that goes wrong will hand out four and five XP honestly. A session of five fights will hand out two, and you will find yourself inventing reasons to be generous.
+
+**Let downtime actually pass.** This system spends real time between the interesting bits. XP is spent between sessions. A pushed Resource stays reduced until the start of the next Month. Scars heal on their own schedule. If your campaign never advances the calendar, none of that machinery does anything, and a player who pushed a Resource to the wall is carrying a penalty forever. Move the clock. It costs one sentence.
+
+**And end the session on something unresolved.** Not a cliffhanger every week - that gets tiring and everyone can feel it being done to them. Just stop while something is still open. A session that ends with every thread tied off is a session nobody thinks about until next week, and the thinking-about-it is half of what you’re actually making here.
