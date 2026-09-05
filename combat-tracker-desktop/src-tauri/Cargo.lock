@@ -340,7 +340,7 @@ dependencies = [
 
 [[package]]
 name = "combat-tracker"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "log",
  "serde",
