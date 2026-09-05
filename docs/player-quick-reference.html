@@ -1,0 +1,199 @@
+---
+nav_section: start
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Player's Quick Reference - 20 Below</title>
+<meta name="description" content="The two-page 20 Below player reference: the core roll, the Difficulty ladder, Training Tiers, combat, Ki, Fate Tokens and conditions." />
+<link rel="icon" type="image/x-icon" href="assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/brand/favicon-128.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a1720; --panel: #12232e; --panel-border: #24404f;
+    --text: #eaf5fb; --text-dim: #8fadbe; --accent: #3d84c4; --accent-dim: #1c3548;
+    --water: #078F9B; --radius: 10px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.5; }
+  main { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+  h1 { font-family: "Bebas Neue", system-ui, sans-serif; font-size: 2.6rem;
+       letter-spacing: 0.02em; margin: 1rem 0 0.25rem; }
+  h2 { font-family: "Bebas Neue", system-ui, sans-serif; font-size: 1.7rem;
+       letter-spacing: 0.02em; color: var(--water); margin: 1.75rem 0 0.5rem;
+       border-bottom: 1px solid var(--panel-border); padding-bottom: 0.2rem; }
+  h3 { font-family: "Bebas Neue", system-ui, sans-serif; font-size: 1.25rem;
+       letter-spacing: 0.02em; margin: 0 0 0.4rem; color: var(--water); }
+  p { margin: 0.6rem 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.6rem 0 1rem;
+          background: var(--panel); border: 1px solid var(--panel-border);
+          border-radius: var(--radius); overflow: hidden; }
+  th, td { text-align: left; padding: 0.4rem 0.7rem; border-bottom: 1px solid var(--panel-border);
+           vertical-align: top; }
+  thead th { background: var(--accent-dim); font-size: 0.85rem; text-transform: uppercase;
+             letter-spacing: 0.04em; }
+  tbody tr:last-child td { border-bottom: none; }
+  td:first-child { white-space: nowrap; }
+  .block { background: var(--panel); border: 1px solid var(--panel-border);
+           border-left: 4px solid var(--water); border-radius: var(--radius);
+           padding: 0.8rem 1rem; margin: 1rem 0; }
+  .block.roll { text-align: center; font-size: 1.05rem; }
+  .block.roll p { margin: 0.25rem 0; }
+  .page-split { border: none; border-top: 2px dashed var(--panel-border); margin: 2.5rem 0 0; }
+  .sheet-note { color: var(--text-dim); font-size: 0.9rem; }
+  /* Two columns on a wide screen, one on a phone - it is a reference, not an essay. */
+  @media (min-width: 900px) {
+    .cols { column-count: 2; column-gap: 2.5rem; }
+    .cols > h2 { break-after: avoid; }
+    .cols > table, .cols > .block { break-inside: avoid; }
+  }
+  @media print {
+    body { background: #fff; color: #000; }
+    main { max-width: none; padding: 0; }
+    h2, h3 { color: #000; }
+    table, .block { background: #fff; border-color: #999; }
+    thead th { background: #eee; }
+    .page-split { break-after: page; border: none; margin: 0; }
+    .no-print { display: none; }
+  }
+</style>
+<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+<p class="sheet-note no-print">Two pages, meant to be printed and kept at the table.
+Everything here is also in the book - this is only the part you look up mid-roll.
+Generated from the same source the printed sheet uses.</p>
+<div class="cols"><h1>Player's Quick Reference</h1>
+<div class="block roll">
+<p>Roll <strong>2d10</strong> under <strong>Element + Difficulty</strong>. Low is good.</p>
+</div>
+<p><strong>2</strong> - both dice showing 1 - is a <strong>critical success</strong>, whatever the target was.</p>
+<p><strong>20</strong> - both showing 10 - is a <strong>catastrophic failure</strong>. The attempt fails, something else goes wrong on top of it, and in a fight you are <strong>Off Balance</strong> until the end of your next turn.</p>
+<div class="block wide">
+<table>
+<thead><tr><th>Difficulty</th><th></th><th>Something that hard</th></tr></thead>
+<tbody>
+<tr><td><strong>0</strong></td><td>Nearly Impossible</td><td>Catch an arrow out of the air mid-flight</td></tr>
+<tr><td><strong>1</strong></td><td>Extremely Hard</td><td>Pick a masterwork lock with no tools, blindfolded</td></tr>
+<tr><td><strong>2</strong></td><td>Very Hard</td><td>Scale a sheer, rain-slicked cliff face</td></tr>
+<tr><td><strong>3</strong></td><td>Hard</td><td>Convince a hostile guard captain to stand down</td></tr>
+<tr><td><strong>4</strong></td><td>Challenging</td><td>Track a careful quarry through a rainstorm</td></tr>
+<tr><td><strong>5</strong></td><td>Moderate</td><td>A tense but ordinary check under pressure</td></tr>
+<tr><td><strong>6</strong></td><td>Fairly Easy</td><td>Pick a simple lock with the right tools</td></tr>
+<tr><td><strong>7</strong></td><td>Easy</td><td>Climb a sturdy rope with knots tied in it</td></tr>
+<tr><td><strong>8</strong></td><td>Very Easy</td><td>Recall a well-known fact in your field</td></tr>
+<tr><td><strong>9</strong></td><td>Nearly Trivial</td><td>Walk a straight line on level ground</td></tr>
+<tr><td><strong>10</strong></td><td>Trivial</td><td>Tie your own shoes</td></tr>
+</tbody></table>
+</div>
+<h2>Training Tiers</h2>
+<table>
+<thead><tr><th></th><th>Tier</th><th>The roll you make</th></tr></thead>
+<tbody>
+<tr><td><strong>0</strong></td><td>Untrained</td><td>Difficulty only. No Element.</td></tr>
+<tr><td><strong>1</strong></td><td>Novice</td><td>Element + Difficulty, at Disadvantage</td></tr>
+<tr><td><strong>2</strong></td><td>Trained</td><td>Element + Difficulty</td></tr>
+<tr><td><strong>3</strong></td><td>Adept</td><td>Element + Difficulty, at Advantage</td></tr>
+<tr><td><strong>4</strong></td><td>Expert</td><td>As Adept, and a <strong>2 or 3</strong> is a critical success</td></tr>
+<tr><td><strong>5</strong></td><td>Master</td><td>As Expert, and a catastrophic failure gets one reroll, which can only soften it to an ordinary failure</td></tr>
+</tbody></table>
+<h2>Advantage and Disadvantage</h2>
+<div class="block roll">
+<p><strong>Advantage</strong> - roll 3d10, keep the <strong>lowest</strong> two</p>
+<p><strong>Disadvantage</strong> - roll 3d10, keep the <strong>highest</strong> two</p>
+</div>
+<p>Both are binary - three sources are worth exactly one. They cancel one for one, and whatever is left over is what you get. They belong to the core roll only, never to damage dice.</p>
+<h2>What Your Target Is Worth</h2>
+<table>
+<thead><tr><th>Target</th><th>5</th><th>8</th><th>11</th><th>14</th><th>17</th></tr></thead>
+<tbody>
+<tr><td><strong>Succeeds</strong></td><td>10%</td><td>28%</td><td>55%</td><td>79%</td><td>94%</td></tr>
+</tbody></table>
+<p>One point of Difficulty is worth about ten points of probability in the middle of the curve and about two at either end.</p>
+</div>
+<hr class="page-split" />
+<div class="cols">
+<h1>In a Fight</h1>
+<div class="block box">
+<h3>The round</h3>
+<p>Roll Initiative, declare your Action Bracket, act in order. Fast goes first, Slow goes last.</p>
+</div>
+<table>
+<thead><tr><th>Bracket</th><th>Actions</th><th></th></tr></thead>
+<tbody>
+<tr><td><strong>Fast</strong></td><td>1</td><td>You go first, and that is all you do</td></tr>
+<tr><td><strong>Normal</strong></td><td>2</td><td>A move and an attack, usually</td></tr>
+<tr><td><strong>Slow</strong></td><td>1</td><td>You go last. Called shots allowed, and you attack at Advantage</td></tr>
+</tbody></table>
+<p>Spend <strong>1 Ki per step</strong> to bump the Bracket you declared - Slow to Normal, or Normal to Fast.</p>
+<h2>Attacking</h2>
+<div class="block roll">
+<p><strong>Step one</strong> - 2d10 under Element + Difficulty vs. their Defense. Roll <strong>low</strong>.</p>
+<p><strong>Step two</strong> - your Damage in d10, each die separately against their Wall. Roll <strong>high</strong>.</p>
+</div>
+<table>
+<thead><tr><th>The Walls</th><th>Stops</th></tr></thead>
+<tbody>
+<tr><td><strong>Soak</strong></td><td>Physical attacks</td></tr>
+<tr><td><strong>Presence</strong></td><td>Social attacks</td></tr>
+<tr><td><strong>Psyche</strong></td><td>Mental attacks</td></tr>
+</tbody></table>
+<p><strong>Ki Infusion</strong> - roll the damage dice first, then spend <strong>1 Ki per die</strong> to add your matching sub-stat to that die. Ferocity for Physical, Presence for Social, Psyche for Mental.</p>
+<h2>Ki</h2>
+<div class="block roll">
+<p><strong>Ki = your strongest Element + 8</strong></p>
+</div>
+<h2>Fate Tokens</h2>
+<table>
+<thead><tr><th>You gain one from</th><th></th></tr></thead>
+<tbody>
+<tr><td><strong>Nature</strong></td><td>Playing to it when it costs you something</td></tr>
+<tr><td><strong>Flaws</strong></td><td>Either side invoking one in a scene</td></tr>
+<tr><td><strong>Disadvantage</strong></td><td>Taking it voluntarily on a roll</td></tr>
+<tr><td><strong>Sunrise</strong></td><td>1 per day</td></tr>
+<tr><td><strong>Milestone</strong></td><td>1 to every PC when the group clears a real hurdle</td></tr>
+<tr><td><strong>The GM</strong></td><td>For good play, whenever they like</td></tr>
+</tbody></table>
+<table>
+<thead><tr><th>Spend one to</th><th></th></tr></thead>
+<tbody>
+<tr><td><strong>Overcome a Flaw</strong></td><td>It doesn't apply for the rest of the scene</td></tr>
+<tr><td><strong>Automatic Success</strong></td><td>One roll succeeds outright, no dice</td></tr>
+<tr><td><strong>Boost a Check</strong></td><td>Advantage on one roll</td></tr>
+<tr><td><strong>Shrug Off an Effect</strong></td><td>Clear a condition for a moment</td></tr>
+<tr><td><strong>Refill Ki</strong></td><td>Your whole pool, right now</td></tr>
+</tbody></table>
+<p><strong>Hold at most Stamina x 3. Spend at most Stamina per Scene.</strong> A Token earned at the cap is lost.</p>
+<p><strong>Kotodama</strong> - assert a fact into the world. Cost is Magnitude + Range beyond yourself + Plausibility (Whisper 0, Murmur +1, Shout +3), and permanent is free.</p>
+<h2>Conditions</h2>
+<table>
+<tbody>
+<tr><td><strong>Off Balance</strong></td><td>Everything at Disadvantage until the end of your next turn. Doesn't stack</td></tr>
+<tr><td><strong>Distracted</strong></td><td>Atropos + Difficulty to hold a Slow action together</td></tr>
+<tr><td><strong>Surprised</strong></td><td>Everything at Disadvantage for the round</td></tr>
+<tr><td><strong>Flustered</strong></td><td>Poise hit 0. Social rolls at Disadvantage for the scene</td></tr>
+<tr><td><strong>Humiliated</strong></td><td>Poise below 0. You defer and comply</td></tr>
+<tr><td><strong>Shattered</strong></td><td>Sanity hit 0. Panicky and babbling, and you have to be led</td></tr>
+</tbody></table>
+<h2>At Zero</h2>
+<table>
+<tbody>
+<tr><td><strong>Health</strong></td><td>Unconscious, and dying below it</td></tr>
+<tr><td><strong>Poise</strong></td><td>Flustered, then Humiliated below 0</td></tr>
+<tr><td><strong>Sanity</strong></td><td>Shattered. 1 Ki or a rest brings you back to 1</td></tr>
+<tr><td><strong>An unnamed NPC</strong></td><td>Dead</td></tr>
+</tbody></table>
+<h2>Getting Around</h2>
+<p><strong>Melee · Close · Near · Far.</strong> Movement Rate is <strong>5 + Air</strong> in metres, and a full Movement Rate shifts one band.</p></div></main>
+<script src="/docs/assets/js/site-nav.js"></script>
+</body>
+</html>
