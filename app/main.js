@@ -1,5 +1,5 @@
 import { createInitialState, mergeCharacterState, allPoolsSummary, clampFateTokenPurchases } from './state.js';
-import { el, poolBadge, captureOpenDetails, restoreOpenDetails } from './ui.js';
+import { el, poolBadge } from './ui.js';
 import { loadRulesData } from './rules-data.js';
 import { isDesktopApp } from './desktop-storage.js';
 import { isServingBundledRules } from './parse/markdown.js';
@@ -169,11 +169,9 @@ async function main() {
 
   function rerenderStep() {
     clampFateTokenPurchases(state, data);
-    const openDetails = captureOpenDetails(panel);
     panel.innerHTML = '';
     const ctx = { state, data, rerenderStep, rerenderPools };
     STEPS[currentStep].render(panel, ctx);
-    restoreOpenDetails(panel, openDetails);
     renderNav();
     btnBack.disabled = currentStep === 0;
     btnNext.disabled = currentStep === STEPS.length - 1;

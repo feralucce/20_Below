@@ -4,7 +4,7 @@
 // Level, cumulative downward. Split out the same way gear-shop.js was split
 // from 08-resources.js - a self-contained interactive block.
 
-import { el, captureOpenDetails, restoreOpenDetails } from '../ui.js';
+import { el, keyedDetails } from '../ui.js';
 import { creationWealthBase, setEverymanGearPackage } from '../state.js';
 
 export default function buildEverymanGear(state, data) {
@@ -16,7 +16,6 @@ export default function buildEverymanGear(state, data) {
   }
 
   function render() {
-    const openDetails = captureOpenDetails(listWrap);
     listWrap.innerHTML = '';
     const eligibleBase = creationWealthBase(state);
     const current = state.everymanGearPackage;
@@ -37,7 +36,10 @@ export default function buildEverymanGear(state, data) {
           // thirteen per level now, and a wall of open ones is unreadable.
           // The summary carries the pick marker so the chosen package is
           // still obvious with all of them shut.
-          const card = el('details', {
+          // Keyed by package, not by summary: the summary gains the word
+          // "Selected" on the pick, and the old pick loses it, so matching
+          // on the label shut both of them.
+          const card = keyedDetails(`everyman:${packageKey(lvl.level, pkg.name)}`, {
             class: `pick-card everyman-gear-card${isSelected ? ' selected' : ''}`,
             open: isSelected ? '' : undefined,
           });
@@ -62,7 +64,6 @@ export default function buildEverymanGear(state, data) {
         levelWrap.appendChild(cards);
         listWrap.appendChild(levelWrap);
       });
-    restoreOpenDetails(listWrap, openDetails);
   }
 
   render();

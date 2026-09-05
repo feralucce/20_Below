@@ -3,7 +3,7 @@
 // 08-resources.js since it's a self-contained interactive block, same
 // pattern as roller-panel.js being split out of 14-roller.js.
 
-import { el } from '../ui.js';
+import { el, keyedDetails } from '../ui.js';
 import {
   currentCreationWealth,
   creationWealthBase,
@@ -128,7 +128,7 @@ export default function buildGearShop(state, data) {
           }),
         ),
       ]);
-      const details = el('details', {
+      const details = keyedDetails(`shop:${cat.category}`, {
         class: 'pick-card',
         open: openCategories.has(cat.category) ? '' : undefined,
       });
