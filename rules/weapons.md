@@ -293,7 +293,7 @@ Same Damage/per-die-vs-Soak resolution as [Basic Weapons](#basic-weapons) above,
 
 ### Everyman Gear Packages
 
-A free alternative to [Wealth Check](resources.md#wealth-at-character-creation) shopping, not a replacement for it - a character can still shop normally with their creation-Wealth on top of taking a package below. At character creation, pick **exactly one** package from every package at or under your creation-Wealth Level, free, no roll. Access is cumulative downward: a creation-Wealth 2 character (the default, if no points were spent on Wealth) can pick any single package from the Level 1 or Level 2 lists below, not just Level 2's. Level 0 packages are only reachable by a creation-Wealth of 0, which currently only comes from the [Destitute](flaws.md#destitute) Flaw.
+A free alternative to [Wealth Check](resources.md#wealth-at-character-creation) shopping, not a replacement for it - a character can still shop normally with their creation-Wealth on top of taking a package below. At character creation, pick **exactly one** package from every package at or under your creation-Wealth Level, free, no roll. Access is cumulative downward: a creation-Wealth 2 character (the default, if no points were spent on Wealth) can pick any single package from the Level 1 or Level 2 lists below, not just Level 2's. Level 0 packages are only reachable by a creation-Wealth of 0, which currently only comes from the [Destitute](flaws.md#destitute) Flaw - and a Destitute character takes one of these whatever else they bought, since the Flaw blocks spending points on Wealth at creation.
 
 **Level 0** (creation-Wealth 0 - Destitute)
 
