@@ -135,7 +135,7 @@ Chronic financial hardship, from a rough patch to genuinely having nothing.
 
 Each level’s effect is cumulative - it keeps every lower level’s complication and adds its own.
 
-**1.** A rough patch. Creation-Wealth is **0** instead of the default 2 for gear shopping at creation - see Everyman Gear Packages for what’s still available at Level 0. Doesn’t follow the character past creation; whatever put them here (a lost job, a bad breakup, a bad month) is already turning around.
+**1.** A rough patch. Creation-Wealth is **0** instead of the default 2 for gear shopping at creation, and no Resources Pool or Discretionary points may be spent on Wealth while this Flaw is held - buy it off first - see Everyman Gear Packages for what’s still available at Level 0. Doesn’t follow the character past creation; whatever put them here (a lost job, a bad breakup, a bad month) is already turning around.
 
 **2.** Chronically tight. As Level 1, and it doesn’t go away - living paycheck to paycheck, or with no paycheck at all, is an ongoing fact of the character’s life, however their Resources ended up built.
 
