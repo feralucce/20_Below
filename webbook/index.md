@@ -61,6 +61,8 @@ lede: >-
 <span class="block-title"><span class="toc-num">12</span><a href="/webbook/advancement.html">Advancement</a></span>
 <p>You earn XP for playing and spend it on whatever you like, in whatever order. No classes, no levels, nothing telling you what comes next.</p>
 </div>
+<div class="aside aside--water toc-card" markdown="0">
+<span class="block-title"><span class="toc-num">13</span><a href="/webbook/running-the-game.html">Running the Game</a></span>
+<p>For the person behind the screen. Setting Difficulty, ruling on the fly, running the consensus, and what to do with the pile of Fate Tokens the players keep handing you.</p>
 </div>
-
-<p class="toc-foot">Chapter 13, Running the Game, is still being written.</p>
+</div>

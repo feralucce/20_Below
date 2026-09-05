@@ -10,6 +10,9 @@ control at all. A chapter in progress can represent a day's writing that
 exists only in one `.scriv` file. Dropping the generated markdown here after
 each writing session gives it a history.
 
+Chapter 13 lived here from 2026-09-05 until it was finished the same
+day and published to `webbook/`. Nothing is in here right now.
+
 Regenerate with:
 
 ```
