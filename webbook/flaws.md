@@ -19,7 +19,15 @@ Flaws are chosen at creation and hand points back to spend elsewhere. Taking one
 
 Flaws are the mirror image of Boons - disadvantages, quirks, or complications a player can choose for their character.
 
-- Structured the same way as Boons: **no levels or ranks** for most entries - a character either has a Flaw or doesn’t. **Every Flaw is Leveled, rated 1-5**, mirroring Resources. - **No numeric penalties in most cases** - a Flaw is usually a narrative complication or rule restriction, not a flat -N to some roll. - **Taken only at character creation**, in exchange for something at creation. - **Points granted**: non-leveled Flaws grant **1, 3, or 5 points** (Minor/Moderate/Major). Leveled Flaws grant points **equal to the level taken** - Level 3 Amnesia grants 3 points, Level 5 grants 5. - **A Flaw with no actual effect grants no points.** If a Flaw doesn’t create any real difficulty for the character, it isn’t worth anything at character creation - e.g. a one-eyed character with no depth-perception penalty or narrative disadvantage from it (a common anime trope) doesn’t collect points for Impaired Senses just for having taken it cosmetically.
+Structured the same way as Boons: **no levels or ranks** for most entries - a character either has a Flaw or doesn’t. **Every Flaw is Leveled, rated 1-5**, mirroring Resources.
+
+**No numeric penalties in most cases** - a Flaw is usually a narrative complication or rule restriction, not a flat -N to some roll.
+
+**Taken only at character creation**, in exchange for something at creation.
+
+**Points granted**: non-leveled Flaws grant **1, 3, or 5 points** (Minor/Moderate/Major). Leveled Flaws grant points **equal to the level taken** - Level 3 Amnesia grants 3 points, Level 5 grants 5.
+
+**A Flaw with no actual effect grants no points.** If a Flaw doesn’t create any real difficulty for the character, it isn’t worth anything at character creation - a one-eyed character with no depth-perception penalty and no narrative disadvantage from it, a common anime trope, doesn’t collect points for Impaired Senses just for having taken it cosmetically.
 
 ## The Flaws
 
