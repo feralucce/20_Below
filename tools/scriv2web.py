@@ -244,6 +244,8 @@ def gift_lists(path):
 
 LABELS = ("Adders", "Limiters", "Pool by Level", "Build menu")
 POOL_ROW = re.compile(r"^\*\*\d+\*\*\s*-\s*\d+\s*points\.?$")
+# A Gift's Level lines open "**1** - ..." and sit after the Limiters.
+LEVEL_LINE = re.compile(r"^\*\*\d+\*\*")
 
 
 def relist(body, lists):
@@ -267,7 +269,14 @@ def relist(body, lists):
         out.append(lists[label])
         i += 1
         if label in ("Adders", "Limiters"):
-            if i < len(body) and body[i].strip("*: ").strip() not in LABELS:
+            # The manuscript used to run every entry together in one
+            # paragraph; each now gets its own. Consume all of them, and stop
+            # at the next label or at the Gift's numbered Level lines, which
+            # open with bold too and must survive.
+            while (i < len(body)
+                   and body[i].startswith("**")
+                   and body[i].strip("*: ").strip() not in LABELS
+                   and not LEVEL_LINE.match(body[i])):
                 i += 1
         elif label == "Pool by Level":
             while i < len(body) and POOL_ROW.match(body[i]):
