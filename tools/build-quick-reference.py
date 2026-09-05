@@ -22,13 +22,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "brew", "examples", "player-quick-reference.md")
 OUT = os.path.join(ROOT, "docs", "player-quick-reference.html")
 
-
 def inline(text):
     text = (text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
     text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
     text = re.sub(r"(?<!\*)\*([^*]+?)\*(?!\*)", r"<em>\1</em>", text)
     return text
-
 
 def render(md):
     out, lines, i = [], md.split("\n"), 0
@@ -97,7 +95,6 @@ def render(md):
         i += 1
     return out
 
-
 HEAD = """---
 nav_section: start
 ---
@@ -106,8 +103,8 @@ nav_section: start
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Player's Quick Reference - 20 Below</title>
-<meta name="description" content="The two-page 20 Below player reference: the core roll, the Difficulty ladder, Training Tiers, combat, Ki, Fate Tokens and conditions." />
+<title>20 Below at a Glance</title>
+<meta name="description" content="The 20 Below player reference: the core roll, the Difficulty ladder, Training Tiers, combat, Ki, Fate Tokens and conditions." />
 <link rel="icon" type="image/x-icon" href="assets/brand/favicon.ico" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
 <link rel="apple-touch-icon" href="assets/brand/favicon-128.png" />
@@ -146,6 +143,38 @@ nav_section: start
            padding: 0.8rem 1rem; margin: 1rem 0; }
   .block.roll { text-align: center; font-size: 1.05rem; }
   .block.roll p { margin: 0.25rem 0; }
+  /* The Difficulty ladder, hardest to easiest. Decoration only - the
+     name column carries the rung, so it survives greyscale and
+     anyone the colour does not reach. */
+  /* Fixed layout splits three columns into equal thirds, and the first
+     one holds a single digit. Naming the narrow two lets each example
+     set on one line, which is the difference between this sheet being
+     three pages and four. */
+  .wide--difficulty td:first-child,.wide--difficulty th:first-child{width:11%}
+  .wide--difficulty td:nth-child(2),.wide--difficulty th:nth-child(2){width:22%}
+  .wide--difficulty tbody tr:nth-child(1){background:hsla(356,72%,48%,.13)}
+  .wide--difficulty tbody tr:nth-child(1) td:first-child{background:hsla(356,72%,48%,.42);border-left:5px solid hsla(356,72%,46%,.95)}
+  .wide--difficulty tbody tr:nth-child(2){background:hsla(8,72%,48%,.13)}
+  .wide--difficulty tbody tr:nth-child(2) td:first-child{background:hsla(8,72%,48%,.42);border-left:5px solid hsla(8,72%,46%,.95)}
+  .wide--difficulty tbody tr:nth-child(3){background:hsla(20,72%,48%,.13)}
+  .wide--difficulty tbody tr:nth-child(3) td:first-child{background:hsla(20,72%,48%,.42);border-left:5px solid hsla(20,72%,46%,.95)}
+  .wide--difficulty tbody tr:nth-child(4){background:hsla(32,72%,48%,.13)}
+  .wide--difficulty tbody tr:nth-child(4) td:first-child{background:hsla(32,72%,48%,.42);border-left:5px solid hsla(32,72%,46%,.95)}
+  .wide--difficulty tbody tr:nth-child(5){background:hsla(44,72%,48%,.13)}
+  .wide--difficulty tbody tr:nth-child(5) td:first-child{background:hsla(44,72%,48%,.42);border-left:5px solid hsla(44,72%,46%,.95)}
+  .wide--difficulty tbody tr:nth-child(6){background:hsla(56,72%,48%,.13)}
+  .wide--difficulty tbody tr:nth-child(6) td:first-child{background:hsla(56,72%,48%,.42);border-left:5px solid hsla(56,72%,46%,.95)}
+  .wide--difficulty tbody tr:nth-child(7){background:hsla(72,72%,48%,.13)}
+  .wide--difficulty tbody tr:nth-child(7) td:first-child{background:hsla(72,72%,48%,.42);border-left:5px solid hsla(72,72%,46%,.95)}
+  .wide--difficulty tbody tr:nth-child(8){background:hsla(88,72%,48%,.13)}
+  .wide--difficulty tbody tr:nth-child(8) td:first-child{background:hsla(88,72%,48%,.42);border-left:5px solid hsla(88,72%,46%,.95)}
+  .wide--difficulty tbody tr:nth-child(9){background:hsla(104,72%,48%,.13)}
+  .wide--difficulty tbody tr:nth-child(9) td:first-child{background:hsla(104,72%,48%,.42);border-left:5px solid hsla(104,72%,46%,.95)}
+  .wide--difficulty tbody tr:nth-child(10){background:hsla(120,72%,48%,.13)}
+  .wide--difficulty tbody tr:nth-child(10) td:first-child{background:hsla(120,72%,48%,.42);border-left:5px solid hsla(120,72%,46%,.95)}
+  .wide--difficulty tbody tr:nth-child(11){background:hsla(136,72%,48%,.13)}
+  .wide--difficulty tbody tr:nth-child(11) td:first-child{background:hsla(136,72%,48%,.42);border-left:5px solid hsla(136,72%,46%,.95)}
+
   .page-split { border: none; border-top: 2px dashed var(--panel-border); margin: 2.5rem 0 0; }
   .sheet-note { color: var(--text-dim); font-size: 0.9rem; }
   /* Two columns on a wide screen, one on a phone - it is a reference, not an essay. */
@@ -169,7 +198,7 @@ nav_section: start
 <body>
 {% include site-nav.html %}
 <main id="main">
-<p class="sheet-note no-print">Two pages, meant to be printed and kept at the table.
+<p class="sheet-note no-print">Three pages, meant to be printed and kept at the table.
 Everything here is also in the book - this is only the part you look up mid-roll.
 Generated from the same source the printed sheet uses.</p>
 """
@@ -179,7 +208,6 @@ TAIL = """</main>
 </body>
 </html>
 """
-
 
 def main():
     md = io.open(SRC, encoding="utf-8").read()
@@ -191,6 +219,5 @@ def main():
     io.open(OUT, "w", encoding="utf-8", newline="\n").write(HEAD + body + TAIL)
     print("wrote %s" % os.path.relpath(OUT, ROOT))
     print("  %d source lines -> %d html lines" % (len(md.split("\n")), len(html)))
-
 
 main()

@@ -1,4 +1,4 @@
-# Player's Quick Reference
+# 20 Below at a Glance
 
 ::: roll
 Roll **2d10** under **Element + Difficulty**. Low is good.
@@ -8,7 +8,7 @@ Roll **2d10** under **Element + Difficulty**. Low is good.
 
 **20** - both showing 10 - is a **catastrophic failure**. The attempt fails, something else goes wrong on top of it, and in a fight you are **Off Balance** until the end of your next turn.
 
-::: wide
+::: wide.difficulty
 | Difficulty | | Something that hard |
 |---|---|---|
 | **0** | Nearly Impossible | Catch an arrow out of the air mid-flight |
@@ -23,17 +23,6 @@ Roll **2d10** under **Element + Difficulty**. Low is good.
 | **9** | Nearly Trivial | Walk a straight line on level ground |
 | **10** | Trivial | Tie your own shoes |
 :::
-
-## Training Tiers
-
-| | Tier | The roll you make |
-|---|---|---|
-| **0** | Untrained | Difficulty only. No Element. |
-| **1** | Novice | Element + Difficulty, at Disadvantage |
-| **2** | Trained | Element + Difficulty |
-| **3** | Adept | Element + Difficulty, at Advantage |
-| **4** | Expert | As Adept, and a **2 or 3** is a critical success |
-| **5** | Master | As Expert, and a catastrophic failure gets one reroll, which can only soften it to an ordinary failure |
 
 ## Advantage and Disadvantage
 
@@ -52,9 +41,26 @@ Both are binary - three sources are worth exactly one. They cancel one for one, 
 
 One point of Difficulty is worth about ten points of probability in the middle of the curve and about two at either end.
 
+## Getting Around
+
+**Melee · Close · Near · Far.** Movement Rate is **5 + Air** in metres, and a full Movement Rate shifts one band.
+
 \page
 
-# In a Fight
+# Training and Combat
+
+## Training Tiers
+
+| | Tier | The roll you make |
+|---|---|---|
+| **0** | Untrained | Difficulty only. No Element. |
+| **1** | Novice | Element + Difficulty, at Disadvantage |
+| **2** | Trained | Element + Difficulty |
+| **3** | Adept | Element + Difficulty, at Advantage |
+| **4** | Expert | As Adept, and a **2 or 3** is a critical success |
+| **5** | Master | As Expert, and a catastrophic failure gets one reroll, which can only soften it to an ordinary failure |
+
+## In a Fight
 
 ::: box The round
 Roll Initiative, declare your Action Bracket, act in order. Fast goes first, Slow goes last.
@@ -88,6 +94,10 @@ Spend **1 Ki per step** to bump the Bracket you declared - Slow to Normal, or No
 ::: roll
 **Ki = your strongest Element + 8**
 :::
+
+\page
+
+# Fate and Conditions
 
 ## Fate Tokens
 
@@ -131,7 +141,3 @@ Spend **1 Ki per step** to bump the Bracket you declared - Slow to Normal, or No
 | **Poise** | Flustered, then Humiliated below 0 |
 | **Sanity** | Shattered. 1 Ki or a rest brings you back to 1 |
 | **An unnamed NPC** | Dead |
-
-## Getting Around
-
-**Melee · Close · Near · Far.** Movement Rate is **5 + Air** in metres, and a full Movement Rate shifts one band.

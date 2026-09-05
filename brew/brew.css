@@ -321,6 +321,38 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 .page .wide{column-span:all; margin:0 0 .8em}
 .page .wide > :last-child{margin-bottom:0}
 
+/* The Difficulty ladder, hardest to easiest. The tint is decoration:
+   the name column says which rung it is, so the chart still reads
+   in greyscale, in print, and to anyone the colour does not reach. */
+/* Fixed layout splits three columns into equal thirds, and the first
+   one holds a single digit. Naming the narrow two lets each example
+   set on one line, which is the difference between this sheet being
+   three pages and four. */
+.page .wide--difficulty td:first-child,.page .wide--difficulty th:first-child{width:11%}
+.page .wide--difficulty td:nth-child(2),.page .wide--difficulty th:nth-child(2){width:22%}
+.page .wide--difficulty tbody tr:nth-child(1){background:hsla(356,72%,48%,.13)}
+.page .wide--difficulty tbody tr:nth-child(1) td:first-child{background:hsla(356,72%,48%,.42);border-left:5px solid hsla(356,72%,46%,.95)}
+.page .wide--difficulty tbody tr:nth-child(2){background:hsla(8,72%,48%,.13)}
+.page .wide--difficulty tbody tr:nth-child(2) td:first-child{background:hsla(8,72%,48%,.42);border-left:5px solid hsla(8,72%,46%,.95)}
+.page .wide--difficulty tbody tr:nth-child(3){background:hsla(20,72%,48%,.13)}
+.page .wide--difficulty tbody tr:nth-child(3) td:first-child{background:hsla(20,72%,48%,.42);border-left:5px solid hsla(20,72%,46%,.95)}
+.page .wide--difficulty tbody tr:nth-child(4){background:hsla(32,72%,48%,.13)}
+.page .wide--difficulty tbody tr:nth-child(4) td:first-child{background:hsla(32,72%,48%,.42);border-left:5px solid hsla(32,72%,46%,.95)}
+.page .wide--difficulty tbody tr:nth-child(5){background:hsla(44,72%,48%,.13)}
+.page .wide--difficulty tbody tr:nth-child(5) td:first-child{background:hsla(44,72%,48%,.42);border-left:5px solid hsla(44,72%,46%,.95)}
+.page .wide--difficulty tbody tr:nth-child(6){background:hsla(56,72%,48%,.13)}
+.page .wide--difficulty tbody tr:nth-child(6) td:first-child{background:hsla(56,72%,48%,.42);border-left:5px solid hsla(56,72%,46%,.95)}
+.page .wide--difficulty tbody tr:nth-child(7){background:hsla(72,72%,48%,.13)}
+.page .wide--difficulty tbody tr:nth-child(7) td:first-child{background:hsla(72,72%,48%,.42);border-left:5px solid hsla(72,72%,46%,.95)}
+.page .wide--difficulty tbody tr:nth-child(8){background:hsla(88,72%,48%,.13)}
+.page .wide--difficulty tbody tr:nth-child(8) td:first-child{background:hsla(88,72%,48%,.42);border-left:5px solid hsla(88,72%,46%,.95)}
+.page .wide--difficulty tbody tr:nth-child(9){background:hsla(104,72%,48%,.13)}
+.page .wide--difficulty tbody tr:nth-child(9) td:first-child{background:hsla(104,72%,48%,.42);border-left:5px solid hsla(104,72%,46%,.95)}
+.page .wide--difficulty tbody tr:nth-child(10){background:hsla(120,72%,48%,.13)}
+.page .wide--difficulty tbody tr:nth-child(10) td:first-child{background:hsla(120,72%,48%,.42);border-left:5px solid hsla(120,72%,46%,.95)}
+.page .wide--difficulty tbody tr:nth-child(11){background:hsla(136,72%,48%,.13)}
+.page .wide--difficulty tbody tr:nth-child(11) td:first-child{background:hsla(136,72%,48%,.42);border-left:5px solid hsla(136,72%,46%,.95)}
+
 /* ---- typography ---- */
 /* Display faces per docs/style-guide.html: Anton for the headline,
    Bebas Neue for titles and labels, Montserrat for everything else. */
