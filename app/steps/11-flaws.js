@@ -1,5 +1,5 @@
 import { el, counterRow, renderMarkdown, renderMarkdownInline, renderSelectedAvailable } from '../ui.js';
-import { flawsPointsGranted } from '../state.js';
+import { flawsPointsGranted, canTakeDestitute } from '../state.js';
 
 function getOrCreateFlawState(state, name) {
   let f = state.flaws.find((x) => x.name === name);
@@ -32,7 +32,10 @@ export default {
           fState.level = v;
         },
         min: 0,
-        max: 5,
+        // The other half of the Destitute/Wealth lock: a character who has
+        // already bought Wealth cannot take Destitute without giving it up.
+        // Blocked rather than silently refunding the Wealth they chose.
+        max: () => (flaw.name === 'Destitute' && !canTakeDestitute(state) ? fState.level : 5),
         onChange: () => {
           rerenderStep();
           rerenderPools();
@@ -54,6 +57,13 @@ export default {
     function renderCard(flaw) {
       const card = el('div', { class: 'pick-card' });
       card.append(counterRow({ ...counterCfg(flaw), key: `flaw:${flaw.name}`, detail: descriptionFor(flaw) }));
+      if (flaw.name === 'Destitute' && !canTakeDestitute(state)) {
+        card.append(
+          el('p', { class: 'hint' },
+            'Wealth is already bought, and Destitute sets creation-Wealth to 0. Drop Wealth back to '
+            + '0 on the Resources step if you want to take this Flaw.'),
+        );
+      }
       return card;
     }
 

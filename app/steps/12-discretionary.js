@@ -20,6 +20,7 @@ import {
   fateTokenCap,
   fateTokensBuyable,
   startingFateTokens,
+  canBuyWealthAtCreation,
 } from '../state.js';
 import { renderBoonPicker } from './07-boons.js';
 
@@ -178,8 +179,12 @@ export default {
             else refundResourceLevel(state, data, r.name);
           },
           min: state.resources[r.name] - bought,
+          // Destitute holds Wealth at 0 for the whole of creation, whichever
+          // pool the points would come from.
           max: () =>
-            Math.min(5, state.resources[r.name] + Math.floor(discretionaryRemaining(state, data) / unitCost)),
+            r.name === 'Wealth' && !canBuyWealthAtCreation(state)
+              ? state.resources[r.name] - bought
+              : Math.min(5, state.resources[r.name] + Math.floor(discretionaryRemaining(state, data) / unitCost)),
           onChange: () => {
             rerenderStep();
             rerenderPools();

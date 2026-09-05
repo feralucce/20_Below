@@ -257,19 +257,35 @@ export function clearResourcePenalty(state, resourceName) {
 // Gear Package picker's eligibility (weapons.md#everyman-gear-packages,
 // which needs the real unfloored 0 to gate Level 0 exclusively) read the
 // same starting number.
-export function creationWealthBase(state) {
-  // Purchased Wealth wins outright: resources.md says creation-Wealth "starts
-  // at 2, unless they spent Resources Pool points on Wealth, in which case
-  // their purchased Level is used instead". Destitute moves the starting
-  // value from 2 to 0; it does not cap what points can buy back.
-  if (state.resources.Wealth > 0) return state.resources.Wealth;
-  // state.flaws carries an entry for EVERY Flaw once the Flaws step has been
-  // opened, level 0 meaning "not taken" - so the name alone proves nothing
-  // and the level has to be checked. Without this, merely visiting the Flaws
-  // step made every character Destitute: creation-Wealth 0, no Everyman
-  // package above Level 0, and a gear shop stuck at the floor of 1.
+// Is Destitute actually taken? state.flaws carries an entry for EVERY Flaw
+// once the Flaws step has been opened, level 0 meaning "not taken", so the
+// name alone proves nothing and the level has to be checked. Without this,
+// merely visiting the Flaws step made every character Destitute.
+export function isDestitute(state) {
   const destitute = state.flaws.find((f) => f.name === 'Destitute');
-  return destitute && destitute.level > 0 ? 0 : 2;
+  return Boolean(destitute && destitute.level > 0);
+}
+
+export function creationWealthBase(state) {
+  // Destitute wins at creation, outright: "Creation-Wealth is 0 instead of
+  // the default 2" (flaws.md#destitute). It is not a lower starting point
+  // that points can climb out of - a Destitute character shops at 0 and
+  // takes a Level 0 Everyman package. Wealth cannot be bought at creation
+  // while it is held either; see canBuyWealthAtCreation below.
+  if (isDestitute(state)) return 0;
+  return state.resources.Wealth > 0 ? state.resources.Wealth : 2;
+}
+
+// Destitute and purchased Wealth cannot be held at once during creation -
+// the Flaw has to be bought off first. Blocked in both directions, because
+// either one can be picked up first, and blocking is better than quietly
+// undoing a choice the player already made.
+export function canBuyWealthAtCreation(state) {
+  return !isDestitute(state);
+}
+
+export function canTakeDestitute(state) {
+  return !(state.resources.Wealth > 0);
 }
 
 export function currentCreationWealth(state) {
@@ -435,6 +451,7 @@ export function refundSkillTier(state, skillName) {
 }
 
 export function buyResourceLevel(state, data, resourceName) {
+  if (resourceName === 'Wealth' && !canBuyWealthAtCreation(state)) return;
   state.resources[resourceName] += 1;
   state.discretionaryPurchases.Resources[resourceName] =
     (state.discretionaryPurchases.Resources[resourceName] ?? 0) + 1;
