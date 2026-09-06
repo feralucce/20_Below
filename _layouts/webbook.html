@@ -211,6 +211,31 @@
     .cover-art { max-width: 72vw; }
   }
 
+  /* ---- glossary cards ----
+   *
+   * The same water aside as the contents cards below. 75 definitions as
+   * plain bold-lead paragraphs read as one unbroken column however good
+   * they are - the left rule and the Bebas term give the eye somewhere to
+   * land, and the definition keeps full contrast because the colour only
+   * ever touches the rule and the title.
+   */
+  .gloss {
+    background: var(--panel);
+    border-left: 4px solid var(--v-water);
+    padding: 0.75rem 1rem;
+    margin: 0 0 0.8rem;
+  }
+  .gloss > :last-child { margin-bottom: 0; }
+  .gloss-term {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: var(--v-water);
+    font-family: "Bebas Neue", "Segoe UI", system-ui, sans-serif;
+    font-size: 1.35rem;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+
   /* ---- contents cards ----
    *
    * The Brewery's aside.water, brought over as-is: the colour tints the
