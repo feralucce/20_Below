@@ -510,7 +510,7 @@ You don't need to say a word to command a room's attention - it simply happens, 
 
 | Level | Effect |
 |---|---|
-| 1 | Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die locks their attention onto you for the scene: awe, dread, or fascination, your choice. No specific action compelled, just overwhelming presence. |
+| 1 | Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their [Social Defense](rules.md#defense-derived-stat)). On success, roll **2d10** per-die against their Presence wall - a connecting die locks their attention onto you for the scene: awe, dread, or fascination, your choice. No specific action compelled, just overwhelming presence. |
 | 2 | Dice rise to **3d10**. Effect now reaches everyone perceiving you within Close range - each target gets their own to-hit roll and, on success, their own dice vs. their Presence wall. |
 | 3 | Dice rise to **4d10**. You may split the effect's flavor by target in the same use - dread for hostiles, awe or magnetism for allies/bystanders. |
 | 4 | **No to-hit roll required anymore** - your presence is overwhelming enough that it simply rolls **5d10** per-die against the target's Presence wall directly. Repeated exposure builds a hold: each successful use on the same person grants **Advantage** on your next attempt against them, cumulative, lasting until they're away from you for an extended stretch (GM's call). |
@@ -843,7 +843,7 @@ A memory is just a story your mind keeps telling itself. You've learned to walk 
 
 | Level | Effect |
 |---|---|
-| 1 | Requires touch. Spend **1 Ki**; make the standard to-hit roll (**Air** vs. their Defense). On success, roll **2d10** per-die against their Psyche wall - a connecting die erases one specific, recent memory (something from the last few minutes: a name overheard, a face seen, this exact encounter). |
+| 1 | Requires touch. Spend **1 Ki**; make the standard to-hit roll (**Air** vs. their [Mental Defense](rules.md#defense-derived-stat)). On success, roll **2d10** per-die against their Psyche wall - a connecting die erases one specific, recent memory (something from the last few minutes: a name overheard, a face seen, this exact encounter). |
 | 2 | Dice rise to **3d10**. You may implant a simple false memory in place of the erased one, instead of leaving a blank. |
 | 3 | Dice rise to **4d10**. Range extends to **Close**, touch no longer required. You can now target older, more significant memories, not just recent ones. |
 | 4 | **No to-hit roll required anymore** - it simply rolls **5d10** per-die against the target's Psyche wall directly. |
@@ -972,7 +972,7 @@ You don't issue one-off commands - that's Domination's territory. You set the ru
 
 | Level | Effect |
 |---|---|
-| 1 | Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die binds them to one simple rule of conduct you declare ("don't raise your voice," "don't lie to me," "don't draw a weapon") for the rest of the Scene. Breaking the rule costs them **Disadvantage** on the roll that breaks it. |
+| 1 | Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their [Social Defense](rules.md#defense-derived-stat)). On success, roll **2d10** per-die against their Presence wall - a connecting die binds them to one simple rule of conduct you declare ("don't raise your voice," "don't lie to me," "don't draw a weapon") for the rest of the Scene. Breaking the rule costs them **Disadvantage** on the roll that breaks it. |
 | 2 | Dice rise to **3d10**. You may declare up to two rules at once on the same target. |
 | 3 | Dice rise to **4d10**. You may bind up to **two targets** at once, each resolved individually against their own Presence wall and their own rule set. |
 | 4 | **No to-hit roll required anymore** - it simply rolls **5d10** per-die against each target's Presence wall directly. Up to **three targets** at once, each able to hold up to **three rules**. |
@@ -1108,7 +1108,7 @@ Most Moves pair the obvious way. They don't have to, and the interesting ones do
 
 A **Presence** Move resolved against **Soak** is a beam of pure personal force that knocks people down - you aren't talking anyone into anything, you're bringing enough of yourself to bear that it lands like a hit. A **Ferocity** Move against **Presence** is a scream that breaks composure instead of bone. A **Psyche** Move against **Soak** is a stare that stops a heart.
 
-What the pairing never touches is the to-hit. That's still your Element against their [Defense](rules.md#defense-derived-stat), picked by how you're going about it, the same as any other attack. And it never changes what a connecting die costs - the wall decides that, always. Flavor the Move however you like; the wall is what the rules read.
+The wall you pick also picks your to-hit target, because there are three Defenses and each answers one kind of attack. A Move resolving against Soak rolls against Physical Defense, one against Presence rolls against [Social Defense](rules.md#defense-derived-stat), one against Psyche rolls against Mental Defense. What stays yours either way is the Element - picked by how you're going about it, the same as any other attack. And it never changes what a connecting die costs - the wall decides that, always. Flavor the Move however you like; the wall is what the rules read.
 
 | Level | Effect |
 |---|---|
