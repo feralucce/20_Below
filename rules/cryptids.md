@@ -27,7 +27,7 @@ American folklore cryptids, treated as real but rare in a modern setting. Sighti
 
 **How to read a stat block:**
 
-- **Soak** and **Defense** work exactly as they do for a PC - Soak resolves per-die against an attack (rules.md#physical-attacks--weapon-damage--per-die-resolution), Defense is the target number for an attacker's to-hit roll.
+- **Soak** and **Defense** work exactly as they do for a PC - Soak resolves per-die against an attack (rules.md#physical-attacks---weapon-damage--per-die-resolution), Defense is the target number for an attacker's to-hit roll.
 - **Attack** is the creature's own Attribute rating (1-10) for making that to-hit roll - roll 2d10 against Attack + the target's Defense (used as Difficulty, per rules.md#the-passive-wall-triad---soak-presence-psyche), standard critical results apply.
 - **Health Levels** work exactly as they do for a PC, with no below-0 range - a creature is out of the fight the instant it crosses 0.
 - **Movement Rate** is in meters, same as a PC's.
