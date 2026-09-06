@@ -139,7 +139,10 @@ export function parseGifts(giftsMd, giftAdderCost) {
 // than a hardcoded copy that could drift from the actual rules file.
 export function parseGiftCheckText(giftsMd) {
   const section = findSection(giftsMd, 'Resolution', '##');
-  const line = section.split('\n').find((l) => l.trim().startsWith('- **The Gift Check**'));
+  // Matched on the opening of the bold run rather than the whole of it: a
+  // voice pass moved the full stop inside the bold ("- **The Gift Check.**"),
+  // which silently stopped this matching and blanked the line in the app.
+  const line = section.split('\n').find((l) => l.trim().startsWith('- **The Gift Check'));
   if (!line) {
     console.warn('Gift Check bullet not found in gifts.md Resolution section');
     return '';

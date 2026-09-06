@@ -475,22 +475,58 @@ export const SIGNATURE_MOVE = 'Signature Move';
 export const ATTACK_SOURCES = ['Ferocity', 'Presence', 'Psyche'];
 export const ATTACK_WALLS = ['Soak', 'Presence', 'Psyche'];
 
-// Saves written before this field existed have no signature block, so
-// read through a default rather than writing one in on load - an
-// untouched Signature Move stays untouched.
-export function signatureBuild(gift) {
-  const s = gift && gift.signature;
-  return {
-    source: (s && s.source) || '',
-    wall: (s && s.wall) || '',
-    description: (s && s.description) || '',
-  };
+function blankMove() {
+  return { name: '', level: 1, source: '', wall: '', description: '' };
 }
 
-export function setSignatureField(state, field, value) {
+// Every Move a character holds. Saves predating multiple Moves carry a
+// single `signature` object and the Gift's own level; those migrate into a
+// one-Move list here rather than on load, so an untouched character is
+// never rewritten just by being opened.
+export function signatureMoves(gift) {
+  if (!gift) return [];
+  if (Array.isArray(gift.moves)) return gift.moves;
+  const s = gift.signature;
+  if (s || gift.level > 0) {
+    return [{
+      name: (s && s.name) || '',
+      level: gift.level || 1,
+      source: (s && s.source) || '',
+      wall: (s && s.wall) || '',
+      description: (s && s.description) || '',
+    }];
+  }
+  return [];
+}
+
+function movesOf(state) {
   const g = state.gifts.find((x) => x.name === SIGNATURE_MOVE);
+  if (!g) return null;
+  if (!Array.isArray(g.moves)) g.moves = signatureMoves(g);
+  return g;
+}
+
+export function addSignatureMove(state) {
+  const g = movesOf(state);
   if (!g) return;
-  g.signature = { ...signatureBuild(g), [field]: value };
+  g.moves.push(blankMove());
+  g.level = g.moves.reduce((n, m) => n + m.level, 0);
+}
+
+export function removeSignatureMove(state, index) {
+  const g = movesOf(state);
+  if (!g || !g.moves[index]) return;
+  g.moves.splice(index, 1);
+  g.level = g.moves.reduce((n, m) => n + m.level, 0);
+}
+
+export function setSignatureField(state, index, field, value) {
+  const g = movesOf(state);
+  if (!g || !g.moves[index]) return;
+  g.moves[index] = { ...g.moves[index], [field]: value };
+  // The Gift's own level is the sum of its Moves' levels, which is what
+  // the points pool charges for - each Move is bought separately.
+  g.level = g.moves.reduce((n, m) => n + m.level, 0);
 }
 export function buyGiftLevel(state, giftName) {
   let g = state.gifts.find((x) => x.name === giftName);

@@ -1098,7 +1098,9 @@ Your body ripples and reforms like water finding a new shape - skin, bone, and v
 
 Every seasoned fighter, mystic, or gifted soul eventually develops something that's uniquely theirs - a technique, a maneuver, a flourish of power that belongs to them and no one else, honed and personal in a way no textbook or master can teach directly. Signature Move is that: a custom ability built from scratch to fit the person who holds it, not pulled from a fixed list. It's usually an attack, but doesn't have to deal damage to qualify - a signature disarm, a signature escape, a signature show of force. Built level by level as your mastery of your own technique grows.
 
-Defined once, at creation: whether the Move is primarily an **attack** or a **non-damaging effect**. If it's an attack, you make two separate choices - and they don't have to match.
+**You can have more than one.** Signature Move is bought per Move: each one is its own purchase, with its own Levels at the usual 3 points apiece, and each gets a **name**. Two Level 3 Moves cost 18 points, the same as any other 18 points of Gift. Nothing stops a character carrying three, beyond the size of the pool.
+
+Each Move is defined once, at creation: whether it is primarily an **attack** or a **non-damaging effect**. If it's an attack, you make two separate choices - and they don't have to match.
 
 **The attack source.** **Ferocity**, **Presence** or **Psyche** - the sub-stat that powers the Move. This is what you add to a die when you spend Ki to infuse it, and it's the part that says what the Move is about you: raw aggression, sheer force of personality, or a mind that pushes.
 
