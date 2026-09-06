@@ -554,7 +554,7 @@ Unlike most owls, hunts by day as often as by night. Nearly pure white with a ro
 ::: stat Dire Feral Dog
 Something in the litter came out wrong - bigger jaw, bigger frame, none of the usual skittishness around people. It stands hip-high on an adult and carries itself like it already knows it can win a fight it used to lose. It still runs with whatever pack it can find, and a Dire dog leading a pack of ordinary strays turns a nuisance encounter into something that draws blood. Expect it to press an attack rather than break off, and to keep circling instead of scattering when the party fights back.
 
-**Soak** 2 · **Attack** 4 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 11m
+**Soak** 2 · **Attack** 4 · **Defense** 7 · **Health Levels** 6 · **Movement Rate** 11m
 
 **Bite**: 4, Melee
 
@@ -568,7 +568,7 @@ Something in the litter came out wrong - bigger jaw, bigger frame, none of the u
 ::: stat Giant Feral Dog
 Animal control gets a call about a "bear" and finds this instead, chained to a fence post it long ago outgrown. The chain is usually snapped or dragging by the time anyone with a weapon meets it. Up close it's built wrong for a dog - shoulders too wide, head too heavy - the kind of animal that shouldn't move as fast as it does. It still runs pack tactics if there's another canine nearby, turning a straightforward brawl into a coordinated mauling. Most people who see it once don't stick around to describe it accurately.
 
-**Soak** 3 · **Attack** 4 · **Defense** 4 · **Health Levels** 9 · **Movement Rate** 12m
+**Soak** 3 · **Attack** 4 · **Defense** 8 · **Health Levels** 9 · **Movement Rate** 12m
 
 **Bite**: 7, Melee
 
@@ -594,7 +594,7 @@ Every scar on it has already closed by the time you notice it was there. Its coa
 ::: stat Dire Guard Dog
 Whoever trained it either didn't know when to stop or wanted exactly this. It's built like a Dire Feral Dog but moves with a trained animal's discipline instead of a stray's opportunism - it holds a line, doesn't bark a warning it doesn't mean, and doesn't scatter when the fight turns against it. Its handler, if it has one, rarely needs to give a second command. Anyone it's set to guard against gets no benefit from catching it off guard.
 
-**Soak** 2 · **Attack** 5 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 11m
+**Soak** 2 · **Attack** 5 · **Defense** 7 · **Health Levels** 7 · **Movement Rate** 11m
 
 **Bite**: 5, Melee
 
@@ -606,7 +606,7 @@ Whoever trained it either didn't know when to stop or wanted exactly this. It's 
 ::: stat Giant Guard Dog
 A property line marked by a chain-link fence and a shape on the other side that makes the fence look optional. It's the size of a small horse and was trained before it got that big, which means its aggression was never recalibrated to match. Whoever set it loose on a property line usually doesn't come out to call it off. It doesn't retreat, and it doesn't need to be surprised twice.
 
-**Soak** 3 · **Attack** 5 · **Defense** 4 · **Health Levels** 10 · **Movement Rate** 12m
+**Soak** 3 · **Attack** 5 · **Defense** 8 · **Health Levels** 10 · **Movement Rate** 12m
 
 **Bite**: 8, Melee
 
@@ -632,7 +632,7 @@ It stopped needing rest between shifts a while ago, and nobody who feeds it has 
 ::: stat Dire Feral Cat
 Still fast, still small for its kind, but the claws now leave a wound worth stitches. It's barely bigger than an ordinary stray, just denser and meaner, which makes it easy to underestimate until it's already climbed something no one expected it to reach. It strikes and retreats rather than committing to a straight fight, using rooftops and fences as cover between passes. Cornering it does nothing useful - it treats a dead end as just another surface to climb.
 
-**Soak** 1 · **Attack** 3 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 10m
+**Soak** 1 · **Attack** 3 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 10m
 
 **Claws**: 3, Melee
 
@@ -646,7 +646,7 @@ Still fast, still small for its kind, but the claws now leave a wound worth stit
 ::: stat Giant Feral Cat
 House-cat proportions on something the size of a dog, which is somehow worse than either. It moves with all the twitchy, sudden quickness of a housecat, scaled up to something that can knock a person flat. It hunts the same way a normal feral cat does - low, quiet, then a single committed rush - except now the rush actually ends fights. It still treats any vertical surface as an escape route, so cornering it in a yard or alley is rarely as final as it looks.
 
-**Soak** 2 · **Attack** 3 · **Defense** 6 · **Health Levels** 8 · **Movement Rate** 11m
+**Soak** 2 · **Attack** 3 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 11m
 
 **Claws**: 6, Melee
 
@@ -672,7 +672,7 @@ It sits on a fence rail in plain daylight and takes people a solid minute to act
 ::: stat Dire Raccoon
 Twice the usual weight and none of the usual hesitation about approaching a lit porch. It moves with a raccoon's same deliberate, methodical curiosity, just heavier on its feet and slower to spook. Left alone it still won't start anything, but cornering it, threatening young, or catching it rabid turns a nuisance animal into a real problem fast. Its bite carries enough weight now to matter.
 
-**Soak** 2 · **Attack** 4 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 8m
+**Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 5 · **Movement Rate** 8m
 
 **Bite / Claws**: 3, Melee
 
@@ -684,7 +684,7 @@ Twice the usual weight and none of the usual hesitation about approaching a lit 
 ::: stat Giant Raccoon
 Tips over a dumpster instead of digging through it, and doesn't run when the lid clangs. It's built like a small bear wearing a raccoon's face, with the same ringed tail and masked eyes on a frame that no longer needs to be subtle about scavenging. Noise that would send an ordinary raccoon bolting barely registers. It's still not looking for a fight, but its size alone makes cornering it a genuinely bad idea.
 
-**Soak** 3 · **Attack** 4 · **Defense** 5 · **Health Levels** 8 · **Movement Rate** 9m
+**Soak** 3 · **Attack** 4 · **Defense** 9 · **Health Levels** 8 · **Movement Rate** 9m
 
 **Bite / Claws**: 6, Melee
 
@@ -710,7 +710,7 @@ It works a latch in the dark faster than most people manage in daylight. Nothing
 ::: stat Dire Skunk
 The stripe runs down a body twice the usual length, and the smell carries proportionally. It's not faster or more aggressive than an ordinary skunk, just bigger, and its warning stomp is correspondingly louder and easier to miss under pressure. Anyone who ignores that warning gets sprayed at a range and duration that outlasts what the smell usually implies. It would rather waddle off than fight, but the cloud it leaves behind lingers on gear and clothes long after it's gone.
 
-**Soak** 1 · **Attack** 2 · **Defense** 5 · **Health Levels** 4 · **Movement Rate** 6m
+**Soak** 1 · **Attack** 2 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 4m
 
 **Spray** (once per encounter, no Health Level cost): the cloud reaches farther and lingers longer than an ordinary skunk's - GM's call on exact range, but Close is a floor, not a ceiling.
 
@@ -724,7 +724,7 @@ The stripe runs down a body twice the usual length, and the smell carries propor
 ::: stat Giant Skunk
 Nobody's ever gotten close enough to measure it - the smell arrives first and settles the question. What little anyone's actually seen of it suggests something built more like a badger than a skunk, low and heavy and unhurried. It still gives fair warning before it sprays, but the spray itself covers ground an ordinary skunk's never could, and residue left on gear too close doesn't wash out easy. Most encounters end with the party retreating rather than the skunk.
 
-**Soak** 2 · **Attack** 2 · **Defense** 4 · **Health Levels** 7 · **Movement Rate** 7m
+**Soak** 2 · **Attack** 2 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 4m
 
 **Spray** (once per encounter, no Health Level cost): covers a full Range Band instead of just Close, and the residue is potent enough to ruin gear left nearby.
 
@@ -736,7 +736,7 @@ Nobody's ever gotten close enough to measure it - the smell arrives first and se
 ::: stat Mutated Skunk
 It doesn't wait for the warning stomp anymore - one gland has taken over for the other. Its usual black-and-white coloring has gone patchy and duller, like something about the gland changes underneath it too. It's lost the polite habit of announcing itself before it sprays, and what comes out now does more than smell bad. Anyone caught in range without protection is in for a genuinely bad afternoon, not just an inconvenient one.
 
-**Soak** 2 · **Attack** 2 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 4m
+**Soak** 1 · **Attack** 2 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 4m
 
 **Spray** (once per encounter, no Health Level cost): every target within Close range must wash off or take Disadvantage on all rolls for the rest of the Scene.
 
@@ -750,7 +750,7 @@ It doesn't wait for the warning stomp anymore - one gland has taken over for the
 ::: stat Dire Rat Swarm
 Bigger bodies than a rat swarm should have, moving with the same coordination as always. Individually each rat is pushing the size of a small cat, but they still move and bite as one mass, flowing around corners and through gaps like the swarm never noticed the size increase. Nothing about how you fight it changes - area attacks work, single-target ones don't - it just costs more to survive contact with it. The sound it makes crossing a room is different too, less scuttle and more thud.
 
-**Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 8m
+**Soak** 1 · **Attack** 4 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 8m
 
 **Bite**: 3, Melee
 
@@ -762,7 +762,7 @@ Bigger bodies than a rat swarm should have, moving with the same coordination as
 ::: stat Giant Rat Swarm
 What used to be a hundred small bodies is now a few dozen large ones, and the sound they make is different. Each individual rat is closer to a small dog than a rodent, though the swarm still moves and attacks as a single coordinated mass. It's easier to spot coming than an ordinary rat swarm, but that head start doesn't help much once it closes the distance. The bites land harder, and there are still more of them than anyone wants to count.
 
-**Soak** 2 · **Attack** 4 · **Defense** 6 · **Health Levels** 8 · **Movement Rate** 9m
+**Soak** 2 · **Attack** 4 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 9m
 
 **Bite**: 6, Melee
 
@@ -790,7 +790,7 @@ Every bite in the mass carries something that outlasts the bite itself. The rats
 ::: stat Dire Bull
 The fence it broke through wasn't the first, and the farmer stopped repairing that one. It's noticeably heavier through the shoulders than a working bull has any business being, and it doesn't spook the way livestock is supposed to. Once it commits to a charge it doesn't stop short, and anyone caught in the open when it does is better off finding something solid to get behind. Whatever set it off usually isn't around to say.
 
-**Soak** 4 · **Attack** 7 · **Defense** 4 · **Health Levels** 9 · **Movement Rate** 12m
+**Soak** 4 · **Attack** 7 · **Defense** 6 · **Health Levels** 9 · **Movement Rate** 12m
 
 **Gore**: 7, Melee
 
@@ -804,7 +804,7 @@ The fence it broke through wasn't the first, and the farmer stopped repairing th
 ::: stat Giant Bull
 A silhouette in the field that people mistake for a shed until it moves. It's genuinely too large for the fences and gates built to hold ordinary cattle, and it moves like something that's never once been stopped by trying. A full charge from it doesn't just knock a person down, it goes through whatever they were standing behind too. The farmers who still keep one usually keep it for a reason, and that reason is rarely a good one to ask about.
 
-**Soak** 5 · **Attack** 7 · **Defense** 3 · **Health Levels** 12 · **Movement Rate** 13m
+**Soak** 5 · **Attack** 7 · **Defense** 7 · **Health Levels** 12 · **Movement Rate** 13m
 
 **Gore**: 10, Melee
 
@@ -830,7 +830,7 @@ Fence posts snap clean against its shoulder and it barely slows down. Its hide h
 ::: stat Dire Wild Boar
 It's put on enough weight to stop caring what's in its way, tusks included. Its tusks have grown to match the rest of it, curling out past where a normal boar's would stop. It doesn't spook and doesn't retreat once it's committed to a target, barreling through brush and fencing the same way it goes through flesh. Knocking it down takes real effort - its low, wide stance makes it hard to trip even when it's bleeding.
 
-**Soak** 3 · **Attack** 6 · **Defense** 4 · **Health Levels** 7 · **Movement Rate** 10m
+**Soak** 3 · **Attack** 6 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 10m
 
 **Tusks**: 5, Melee
 
@@ -842,7 +842,7 @@ It's put on enough weight to stop caring what's in its way, tusks included. Its 
 ::: stat Giant Wild Boar
 Hunters who've seen it describe something closer to a small truck than a hog. Its tusks alone are the size of a person's forearm, and the rest of it is built to match. It charges with the same low-slung, unstoppable momentum as any boar, just carrying enough mass now to flip a parked car if it connects wrong. Nobody who's actually faced one recommends standing your ground.
 
-**Soak** 4 · **Attack** 6 · **Defense** 3 · **Health Levels** 10 · **Movement Rate** 11m
+**Soak** 4 · **Attack** 6 · **Defense** 7 · **Health Levels** 10 · **Movement Rate** 11m
 
 **Tusks**: 8, Melee
 
@@ -868,7 +868,7 @@ A tusk wound only makes it push harder into whatever caused it. Physically it do
 ::: stat Dire Aggressive Goose
 Same territorial streak, considerably more weight behind the wing that hits you. It's still recognizably a goose, just built like it's been eating better than any goose should. It doesn't back down from a fight it starts, and it doesn't stop chasing a target who's already left its territory the way an ordinary goose eventually does. Getting hit by that wing at full extension leaves a mark.
 
-**Soak** 1 · **Attack** 3 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 8m
+**Soak** 1 · **Attack** 3 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 8m
 
 **Bite / Wing Buffet**: 3, Melee
 
@@ -880,7 +880,7 @@ Same territorial streak, considerably more weight behind the wing that hits you.
 ::: stat Giant Aggressive Goose
 Nobody believes the story until they see the pond it now considers its property. It stands taller than most people's waists and hisses with a volume to match. It claims a stretch of shoreline the way an ordinary goose claims a nest, and it treats anyone who wanders too close, on purpose or not, exactly the same. It keeps attacking long after a normal animal would've backed off.
 
-**Soak** 2 · **Attack** 3 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 9m
+**Soak** 2 · **Attack** 3 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 9m
 
 **Bite / Wing Buffet**: 6, Melee
 
@@ -906,7 +906,7 @@ It doesn't seem to tire the way a goose should, and the neighbors have stopped m
 ::: stat Dire Spooked Horse
 A panicked animal that's outgrown its own stable and still hasn't calmed down. It's built bigger through the chest and legs than any horse should be, and whatever spooked it originally never really wore off. It doesn't need to plant and kick to hurt someone - just running through the space a person occupies does the job. Getting it to calm down takes more than the usual patience, if it's even possible anymore.
 
-**Soak** 2 · **Attack** 5 · **Defense** 4 · **Health Levels** 8 · **Movement Rate** 16m
+**Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 8 · **Movement Rate** 16m
 
 **Kick / Trample**: 6, Melee
 
@@ -920,7 +920,7 @@ A panicked animal that's outgrown its own stable and still hasn't calmed down. I
 ::: stat Giant Spooked Horse
 What starts as a runaway plow horse story usually ends with someone describing something the size of a delivery truck. It's too large for any stable or paddock built for a normal horse, which is usually how it ended up loose in the first place. Its panic hasn't diminished with its size, so it runs through fences, crowds, and anything else in its path with the same blind momentum. Standing in its way doesn't slow it down, it just adds to the wreckage.
 
-**Soak** 3 · **Attack** 5 · **Defense** 3 · **Health Levels** 11 · **Movement Rate** 17m
+**Soak** 3 · **Attack** 5 · **Defense** 7 · **Health Levels** 11 · **Movement Rate** 17m
 
 **Kick / Trample**: 9, Melee
 
@@ -946,7 +946,7 @@ It bolts at sounds nothing else in the field even registers, and it hears you co
 ::: stat Dire Feral Goat
 Bigger horns, bigger frame, same willingness to plant its feet and not back down. It carries itself with the same stubborn confidence as any feral goat, just with enough mass behind the horns now to actually hurt someone. It doesn't run from a fight and doesn't need much provocation to start one on rough terrain where it has the advantage. Chasing it up a slope is a losing proposition either way.
 
-**Soak** 2 · **Attack** 4 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 10m
+**Soak** 2 · **Attack** 4 · **Defense** 7 · **Health Levels** 6 · **Movement Rate** 10m
 
 **Headbutt**: 4, Melee
 
@@ -958,7 +958,7 @@ Bigger horns, bigger frame, same willingness to plant its feet and not back down
 ::: stat Giant Feral Goat
 It stands on a rock outcrop that most animals its size couldn't reach, let alone hold. It's built like a boulder with legs, thick through the shoulders in a way that shouldn't let it climb the way it does. It holds high ground out of pure habit and defends it the same way an ordinary goat defends a ledge, just with a headbutt that can put someone over the edge for real. Fighting it anywhere but flat, open ground favors the goat.
 
-**Soak** 3 · **Attack** 4 · **Defense** 4 · **Health Levels** 9 · **Movement Rate** 11m
+**Soak** 3 · **Attack** 4 · **Defense** 8 · **Health Levels** 9 · **Movement Rate** 11m
 
 **Headbutt**: 7, Melee
 
@@ -986,7 +986,7 @@ Its hide has taken on a texture closer to bark than fur, and a knife doesn't do 
 ::: stat Dire Coyote
 Bolder than a coyote has any right to be, and considerably harder to discourage. It's noticeably larger than the coyotes that usually work a territory, and it doesn't scatter at the first sign of resistance the way the species is known for. It still runs with whatever pack it can find and fights smarter for it, working a target from multiple angles instead of committing alone. Driving it off takes more than a shout and a thrown rock.
 
-**Soak** 2 · **Attack** 4 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 12m
+**Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m
 
 **Bite**: 4, Melee
 
@@ -998,7 +998,7 @@ Bolder than a coyote has any right to be, and considerably harder to discourage.
 ::: stat Giant Coyote
 Ranchers who lose stock to it stop calling it a coyote at all. It's built close to wolf-sized, with a coyote's rangy frame stretched to match. It hunts in loose packs the same way coyotes always have, but a pack anchored by something this size takes down prey that should be well outside its range. Livestock losses attributed to it tend to be larger and more frequent than anything an ordinary pack manages.
 
-**Soak** 3 · **Attack** 4 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 13m
+**Soak** 3 · **Attack** 4 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m
 
 **Bite**: 7, Melee
 
@@ -1024,7 +1024,7 @@ It crosses open ground in full moonlight and somehow still isn't the thing you n
 ::: stat Dire Wolf
 Old bones turn up in the region that are too large for any wolf on record, and the tracks nearby are fresh. It stands at a person's shoulder even before it rears up, with a bite built to match. It runs with a pack the way any wolf does, but its presence alone changes how the pack fights - once it's engaged a target, every other wolf in the group presses that same target instead of spreading thin. It's the animal that turns an ordinary wolf pack encounter into something the party doesn't walk away from lightly.
 
-**Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 13m
+**Soak** 3 · **Attack** 6 · **Defense** 7 · **Health Levels** 7 · **Movement Rate** 13m
 
 **Bite**: 6, Melee
 
@@ -1038,7 +1038,7 @@ Old bones turn up in the region that are too large for any wolf on record, and t
 ::: stat Giant Wolf
 A pack led by something the size of a horse doesn't behave like a normal pack anymore - it just wins faster. It's built at a scale that makes the rest of its pack look like pups by comparison, and it moves with the same easy confidence a horse-sized predator would have every right to. The pack organizes around it, and once it's committed to a target every wolf nearby gets the same advantage without needing to coordinate the attack directly. Fights against it end quickly, one way or the other.
 
-**Soak** 4 · **Attack** 6 · **Defense** 4 · **Health Levels** 10 · **Movement Rate** 14m
+**Soak** 4 · **Attack** 6 · **Defense** 8 · **Health Levels** 10 · **Movement Rate** 14m
 
 **Bite**: 9, Melee
 
@@ -1064,7 +1064,7 @@ A second, smaller jaw has grown along its flank, and it uses both without missin
 ::: stat Dire Wolverine
 It was already willing to fight anything - now it's willing to fight anything and win. It's built noticeably thicker through the shoulders and forelimbs than a normal wolverine, with claws to match. It doesn't retreat, doesn't de-escalate, and doesn't seem to calculate odds the way most predators do before committing. A fight against it only ends when one side is out of Health Levels or has genuinely broken contact - there's no middle option.
 
-**Soak** 4 · **Attack** 7 · **Defense** 4 · **Health Levels** 8 · **Movement Rate** 10m
+**Soak** 4 · **Attack** 7 · **Defense** 6 · **Health Levels** 8 · **Movement Rate** 10m
 
 **Bite / Claws**: 6, Melee
 
@@ -1076,7 +1076,7 @@ It was already willing to fight anything - now it's willing to fight anything an
 ::: stat Giant Wolverine
 Small for a bear and large for a wolverine, which puts it somewhere no one wants to meet in a den. It's built low and dense, more like a small bear than the weasel it descends from, with the same disproportionate strength wolverines are known for scaled up to match. It still fights with total commitment, no retreat and no bluff, which at this size makes it one of the more dangerous things in these woods pound for pound. Finding its den is the real warning sign - it means there's more than one encounter coming.
 
-**Soak** 5 · **Attack** 7 · **Defense** 3 · **Health Levels** 11 · **Movement Rate** 11m
+**Soak** 5 · **Attack** 7 · **Defense** 7 · **Health Levels** 11 · **Movement Rate** 11m
 
 **Bite / Claws**: 9, Melee
 
@@ -1104,7 +1104,7 @@ Every wound just seems to make it angrier, and it was already the wrong animal t
 ::: stat Dire Mountain Lion
 Bigger paws leave bigger prints, and the deer it's been taking down lately are elk-sized. Its frame is stretched noticeably longer than an ordinary mountain lion's, with the same lean muscle just scaled up. It hunts the way mountain lions always have, from cover, from above, from wherever the prey isn't looking, and that first strike lands with considerably more force behind it. Whatever's been feeding it lately has clearly been enough.
 
-**Soak** 3 · **Attack** 7 · **Defense** 5 · **Health Levels** 8 · **Movement Rate** 14m
+**Soak** 3 · **Attack** 7 · **Defense** 7 · **Health Levels** 8 · **Movement Rate** 14m
 
 **Claws / Bite**: 7, Melee
 
@@ -1118,7 +1118,7 @@ Bigger paws leave bigger prints, and the deer it's been taking down lately are e
 ::: stat Giant Mountain Lion
 The kind of animal state wildlife agencies quietly stop confirming exists once the reports get consistent. It's built at a scale that makes an ordinary mountain lion look like a house cat by comparison, but it moves with the same silent, low patience. It still hunts almost entirely from ambush, and a first strike from something this size against an unaware target is often the only strike that matters. The agencies that stop commenting on it usually have a reason.
 
-**Soak** 4 · **Attack** 7 · **Defense** 4 · **Health Levels** 11 · **Movement Rate** 15m
+**Soak** 4 · **Attack** 7 · **Defense** 8 · **Health Levels** 11 · **Movement Rate** 15m
 
 **Claws / Bite**: 10, Melee
 
@@ -1144,7 +1144,7 @@ It hears a held breath from across a clearing, which is the only warning anyone 
 ::: stat Dire Bobcat
 Twice the size of a normal bobcat and no less willing to launch from a branch overhead. Its tufted ears and stubby tail are unmistakably bobcat, just scaled to something that can knock a grown adult flat from a standing leap. It hunts from cover the same way it always has, dropping onto a target rather than chasing one down. The added weight behind that first strike is the whole difference.
 
-**Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 12m
+**Soak** 2 · **Attack** 5 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m
 
 **Claws**: 5, Melee
 
@@ -1156,7 +1156,7 @@ Twice the size of a normal bobcat and no less willing to launch from a branch ov
 ::: stat Giant Bobcat
 Drags a whole deer carcass up a tree with the ease of a normal bobcat carrying a rabbit. It's built with the same short-tailed, tufted-eared silhouette as an ordinary bobcat, just at a scale that changes what counts as normal prey. It still hunts from ambush and still favors cover over open ground, but there's very little in these woods it can't drag up a tree once it's caught. Encountering it usually means finding what it's already killed before finding the animal itself.
 
-**Soak** 3 · **Attack** 5 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 13m
+**Soak** 3 · **Attack** 5 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m
 
 **Claws**: 8, Melee
 
@@ -1182,7 +1182,7 @@ It goes flat against a rock face and simply isn't there anymore, even to a train
 ::: stat Dire Lynx
 The wide paws that keep a lynx on top of snow now carry considerably more weight. Everything about it is built to the same proportions as an ordinary lynx, just larger - the ruff, the tufted ears, the oversized paws that shouldn't work as well as they do in deep snow. It hunts from ambush the way any lynx does, using drifts and treeline for cover before closing the distance fast. It moves across terrain that should slow it down without losing any of that speed.
 
-**Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 12m
+**Soak** 2 · **Attack** 5 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m
 
 **Claws**: 5, Melee
 
@@ -1194,7 +1194,7 @@ The wide paws that keep a lynx on top of snow now carry considerably more weight
 ::: stat Giant Lynx
 Tracks in fresh snow that look right in every way except the size. It's built at a scale that makes those tracks span twice what anyone expects from the shape alone, still perfectly proportioned to a lynx's paw. It hunts the same ambush-and-close pattern as any lynx, just with reach and weight behind the strike that an ordinary one never had. Following those tracks back to their source is not usually a good idea.
 
-**Soak** 3 · **Attack** 5 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 13m
+**Soak** 3 · **Attack** 5 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m
 
 **Claws**: 8, Melee
 
@@ -1222,7 +1222,7 @@ It hunts just as well against a bright snowfield as it does in the dark of a pin
 ::: stat Dire Black Bear
 Stands taller than a grizzly should and still keeps the black bear's habit of avoiding a fight when it can. Its shoulders and skull are built noticeably larger than a black bear's usual proportions, closer to what people expect from a grizzly. Despite the size it keeps the same temperament as any black bear - it wants distance, not a confrontation, and will usually retreat if given the chance. The danger is what happens if that chance doesn't come, because it's no longer the more forgiving bear to corner.
 
-**Soak** 4 · **Attack** 6 · **Defense** 4 · **Health Levels** 10 · **Movement Rate** 11m
+**Soak** 4 · **Attack** 6 · **Defense** 6 · **Health Levels** 10 · **Movement Rate** 11m
 
 **Claws**: 7, Melee
 
@@ -1236,7 +1236,7 @@ Stands taller than a grizzly should and still keeps the black bear's habit of av
 ::: stat Giant Black Bear
 Even avoidant, something this size can knock a car onto its side just by leaning on it wrong. It's built at a scale that makes its usual mild temperament almost beside the point - its sheer mass does damage just by existing in a space. It still avoids conflict when it can and still prefers to retreat over engaging, but startling it at close range or cornering it is a mistake with consequences an ordinary black bear could never deliver. Most of the damage it causes isn't even deliberate.
 
-**Soak** 5 · **Attack** 6 · **Defense** 3 · **Health Levels** 13 · **Movement Rate** 12m
+**Soak** 5 · **Attack** 6 · **Defense** 7 · **Health Levels** 13 · **Movement Rate** 12m
 
 **Claws**: 10, Melee
 
@@ -1262,7 +1262,7 @@ A gash that should have laid it up for a season closes over in a matter of hours
 ::: stat Dire Grizzly Bear
 Already the animal you don't want to surprise - this one just has more mass behind the surprise. It's built noticeably heavier through the shoulders than an ordinary grizzly, with claws that leave correspondingly deeper marks on anything it swipes at. It reacts to being startled the same way any grizzly does, immediately and without hesitation, and there's no getting it to think twice once it's committed. Standing between it and whatever it's protecting is a bad place to be at any size, worse at this one.
 
-**Soak** 5 · **Attack** 9 · **Defense** 4 · **Health Levels** 12 · **Movement Rate** 12m
+**Soak** 5 · **Attack** 9 · **Defense** 6 · **Health Levels** 12 · **Movement Rate** 12m
 
 **Claws**: 9, Melee
 
@@ -1274,7 +1274,7 @@ Already the animal you don't want to surprise - this one just has more mass behi
 ::: stat Giant Grizzly Bear
 The kind of thing that leaves claw marks on a tree at a height that makes hikers turn around. Its full standing height puts it well above anything a normal grizzly could reach, and the marks it leaves on trees and doorframes tend to end conversations about whether the reports are exaggerated. It defends territory and cubs the same way any grizzly does, immediately and without warning shots. Getting knocked down or grappled by something this size is rarely something a person walks away from on their own power.
 
-**Soak** 6 · **Attack** 9 · **Defense** 3 · **Health Levels** 15 · **Movement Rate** 13m
+**Soak** 6 · **Attack** 9 · **Defense** 7 · **Health Levels** 15 · **Movement Rate** 13m
 
 **Claws**: 10, Melee
 
@@ -1300,7 +1300,7 @@ Standing near it too long leaves a low ache that won't go away until you've put 
 ::: stat Dire Polar Bear
 Already the largest thing that hunts people as food - this one just makes the math worse. It's built with the same thick, water-shedding coat and disproportionate strength as an ordinary polar bear, just scaled up in every dimension that matters in a fight. It hunts the same patient, methodical way through ice and open water, waiting out a target rather than chasing it down. Its reach and its bite both close the gap faster than anyone expects from something that size.
 
-**Soak** 5 · **Attack** 9 · **Defense** 4 · **Health Levels** 12 · **Movement Rate** 11m (no penalty in water)
+**Soak** 5 · **Attack** 9 · **Defense** 6 · **Health Levels** 12 · **Movement Rate** 11m (no penalty in water)
 
 **Claws / Bite**: 9, Melee
 
@@ -1314,7 +1314,7 @@ Already the largest thing that hunts people as food - this one just makes the ma
 ::: stat Giant Polar Bear
 Ice researchers who've filmed it from a distance still argue about the scale in the footage. There's nothing in the frame to compare it against out on open ice, which is exactly why the scale keeps getting disputed. It hunts the same way any polar bear does, patient and methodical, using open water and broken ice as cover before closing on a target. Once it's close, the argument about its size stops mattering.
 
-**Soak** 6 · **Attack** 9 · **Defense** 3 · **Health Levels** 15 · **Movement Rate** 12m (no penalty in water)
+**Soak** 6 · **Attack** 9 · **Defense** 7 · **Health Levels** 15 · **Movement Rate** 12m (no penalty in water)
 
 **Claws / Bite**: 10, Melee
 
@@ -1342,7 +1342,7 @@ Anyone who manages to land a hit on it comes away burned as much as bitten. Phys
 ::: stat Dire Rattlesnake
 Longer than any rattler has a right to be, and the rattle itself sounds wrong - too deep, too slow. It coils into loops that take up more ground than a rattlesnake should need, and the extra length behind the strike makes its range genuinely deceptive. It still gives the same courtesy warning before striking, rattling unless it's been grabbed or stepped on directly, but by the time that rattle registers as unusually low it's often too late to matter. The bite itself carries the same venom, just delivered with more force behind it.
 
-**Soak** 1 · **Attack** 6 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 5m
+**Soak** 1 · **Attack** 6 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m
 
 **Bite**: 3, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
 
@@ -1354,7 +1354,7 @@ Longer than any rattler has a right to be, and the rattle itself sounds wrong - 
 ::: stat Giant Rattlesnake
 A rockslide of coiled muscle that people mistake for a fallen log until the log moves. At rest it genuinely looks like terrain, a dead branch or a fallen log, until something disturbs it and the whole coil shifts at once. It still rattles before striking out of the same instinct as any rattlesnake, but the warning window is shorter relative to its reach. Getting struck by something this size delivers both more raw damage and the same venom an ordinary rattler carries.
 
-**Soak** 2 · **Attack** 6 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 6m
+**Soak** 2 · **Attack** 6 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m
 
 **Bite**: 6, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
 
@@ -1380,7 +1380,7 @@ One bite carries two different kinds of trouble now, and the second doesn't come
 ::: stat Dire Copperhead
 Its camouflage pattern has stretched with the extra length, and it's harder than ever to spot in leaf litter. It's noticeably longer than an ordinary copperhead but keeps the same banded, leaf-colored pattern, just stretched across more body to hide in. It doesn't rattle a warning the way a rattlesnake does, so the first sign of it is usually the strike itself. Its bite delivers the same venom as always, just with more force and reach behind it.
 
-**Soak** 1 · **Attack** 5 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 5m
+**Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m
 
 **Bite**: 3, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
@@ -1392,7 +1392,7 @@ Its camouflage pattern has stretched with the extra length, and it's harder than
 ::: stat Giant Copperhead
 Big enough now to take small game whole, which changes how it hunts more than how it looks. Its coloring and pattern are unmistakably copperhead, just wrapped around a body that's outgrown its usual prey list entirely. It hunts with more patience now, willing to wait out something bigger than a rodent, and it still gives no warning before it strikes. The venom hasn't changed, but the size behind the bite has.
 
-**Soak** 2 · **Attack** 5 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 6m
+**Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m
 
 **Bite**: 6, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
@@ -1414,7 +1414,7 @@ A second set of fangs has grown behind the first, doubling every strike it lands
 ::: stat Dire Cottonmouth
 It holds its ground in shallow water even against threats that would send an ordinary cottonmouth diving. It's built heavier and longer than a normal cottonmouth, thick enough through the body that it doesn't need to retreat the way the species usually does when threatened. It still hunts and strikes from shallow water and mud, using the same ambush patience, but it's far less willing to give up that ground once it's claimed it. Wading through its territory is a worse idea than it used to be.
 
-**Soak** 1 · **Attack** 5 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 5m (8m in water)
+**Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m (8m in water)
 
 **Bite**: 3, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
@@ -1426,7 +1426,7 @@ It holds its ground in shallow water even against threats that would send an ord
 ::: stat Giant Cottonmouth
 Fishermen who've hooked something in the shallows and reeled up a snake instead usually don't go back. It's thick enough through the body to be mistaken for a submerged log even when half-visible in the shallows. It hunts the same ambush pattern as any cottonmouth, holding still in muddy water until something wanders close enough to strike. Its size means that strike now covers more distance than anyone wading nearby is likely to expect.
 
-**Soak** 2 · **Attack** 5 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 6m (9m in water)
+**Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m (9m in water)
 
 **Bite**: 6, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
@@ -1450,7 +1450,7 @@ It can flood a stretch of shallow water with something in the air alone, no bite
 ::: stat Dire Alligator
 The waterline hides more of it than usual, simply because there's more to hide. Only the eyes and the ridge of its back usually break the surface, and both sit noticeably higher and wider apart than an ordinary alligator's. It hunts the same way any alligator does, holding perfectly still until a target wades or wanders close enough, then closing the distance in a single committed lunge. Its bite and the drag that follows carry more force behind them than the same move from a smaller animal.
 
-**Soak** 4 · **Attack** 7 · **Defense** 3 · **Health Levels** 9 · **Movement Rate** 8m (14m in water)
+**Soak** 4 · **Attack** 7 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 8m (14m in water)
 
 **Bite**: 8, Melee
 
@@ -1462,7 +1462,7 @@ The waterline hides more of it than usual, simply because there's more to hide. 
 ::: stat Giant Alligator
 Old-timers around the bayou have a name for this one and a firm rule about which stretch of water to avoid. It's large enough that its usual lying-in-wait posture leaves a wake even at rest, though most people never notice until it's too late to matter. It hunts with the same patience as any alligator, waiting for something to come to the water rather than chasing it on land. Whatever it drags under doesn't usually come back up on its own.
 
-**Soak** 5 · **Attack** 7 · **Defense** 3 · **Health Levels** 12 · **Movement Rate** 9m (15m in water)
+**Soak** 5 · **Attack** 7 · **Defense** 6 · **Health Levels** 12 · **Movement Rate** 9m (15m in water)
 
 **Bite**: 10, Melee
 
@@ -1488,7 +1488,7 @@ Its hide has gone from tough to genuinely impenetrable in places, thick plates w
 ::: stat Dire Snapping Turtle
 The shell alone is the size of a manhole cover, and the bite behind it hasn't gotten any gentler. Its shell has the rough, ridged look of an ordinary snapper's, just scaled up to something that could double as a table. It still spends most of its time buried in mud and silt, only becoming a problem once something steps too close or reaches into the water near it. Its bite hasn't lost any of the speed that makes snapping turtles dangerous out of proportion to how slow they look.
 
-**Soak** 5 · **Attack** 5 · **Defense** 3 · **Health Levels** 7 · **Movement Rate** 5m
+**Soak** 5 · **Attack** 5 · **Defense** 4 · **Health Levels** 7 · **Movement Rate** 3m
 
 **Bite**: 5, Melee
 
@@ -1500,7 +1500,7 @@ The shell alone is the size of a manhole cover, and the bite behind it hasn't go
 ::: stat Giant Snapping Turtle
 Kayakers give the deep bend in the river a wide berth after word gets around about what's living in it. What surfaces from that bend is easily mistaken for a boulder until it moves under its own power. It hunts the same patient, buried-in-the-silt way any snapping turtle does, and its bite closes with the same sudden speed, just carrying enough force now to take a paddle, or a hand, clean off. Pulling into its shell still buys it real protection while it waits out an attack.
 
-**Soak** 6 · **Attack** 5 · **Defense** 3 · **Health Levels** 10 · **Movement Rate** 6m
+**Soak** 6 · **Attack** 5 · **Defense** 5 · **Health Levels** 10 · **Movement Rate** 3m
 
 **Bite**: 8, Melee
 
@@ -1522,7 +1522,7 @@ A cracked shell is back to full thickness within days, no scar to show for it. N
 ::: stat Dire Gila Monster
 It moves no faster than before, but once it clamps down the grip is considerably harder to break. It's noticeably larger and heavier than an ordinary Gila monster, though it keeps the same slow, deliberate movement that makes it easy to avoid until it's already latched on. Once its jaws close, they don't open again without a real fight to pry them loose. The venom hasn't changed, but the extra size behind the bite means the grip itself is now the bigger problem.
 
-**Soak** 2 · **Attack** 4 · **Defense** 4 · **Health Levels** 5 · **Movement Rate** 5m
+**Soak** 2 · **Attack** 4 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 3m
 
 **Bite**: 4, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
 
@@ -1532,7 +1532,7 @@ It moves no faster than before, but once it clamps down the grip is considerably
 ::: stat Giant Gila Monster
 Its coloring is unmistakable even at a distance, which does nothing to help once you're in reach of it. The bright banded pattern that warns people off an ordinary Gila monster is just as visible on this one, stretched across a body big enough to be mistaken for something else entirely. It's no faster than a normal Gila monster and still telegraphs itself from a distance, but that warning does little good once someone's actually within its reach. Breaking free of its grip once it's bitten down takes considerably more effort than it used to.
 
-**Soak** 3 · **Attack** 4 · **Defense** 3 · **Health Levels** 8 · **Movement Rate** 6m
+**Soak** 3 · **Attack** 4 · **Defense** 7 · **Health Levels** 8 · **Movement Rate** 3m
 
 **Bite**: 7, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
 
@@ -1558,7 +1558,7 @@ The venom now carries an extra sting that lingers well past the bite itself. It 
 ::: stat Dire Black Widow
 The hourglass marking is now visible from across a room, on a body that shouldn't fit in most corners anymore. Legs alone can span a dinner plate, and the abdomen has gone glossy and swollen with venom sacs that never used to show. It still prefers ambush over pursuit, dropping from a web overhead rather than closing distance on the ground. The venom itself hasn't changed, just the size of the fangs delivering it - a single bite lands harder and closer to center mass. Anyone who's dealt with the ordinary version will recognize the shape of the threat immediately; it's the scale that throws them.
 
-**Soak** 1 · **Attack** 4 · **Defense** 5 · **Health Levels** 4 · **Movement Rate** 4m
+**Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 2m
 
 **Bite**: 3, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
 
@@ -1570,7 +1570,7 @@ The hourglass marking is now visible from across a room, on a body that shouldn'
 ::: stat Giant Black Widow
 Its web spans a doorway rather than a corner, strong enough to catch more than insects. The silk itself has thickened enough to snag birds and small dogs, and dead prey - some of it well beyond spider-sized - hangs wrapped in the strands like decorations nobody wants to look at closely. The spider rarely leaves the web at all, letting things wander in and die there before it bothers moving. Its size makes the bite proportionally worse, tearing as much as it punctures. Most people find the web before they find the spider, which is usually enough warning if they're paying attention.
 
-**Soak** 2 · **Attack** 4 · **Defense** 4 · **Health Levels** 7 · **Movement Rate** 5m
+**Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 2m
 
 **Bite**: 6, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
 
@@ -1594,7 +1594,7 @@ Crushing it doesn't end the encounter cleanly - whatever's in its body finds its
 ::: stat Dire Brown Recluse
 The bite is the same shape as always, just delivered by something considerably harder to miss. The violin marking across its back has stretched along with the rest of it, easy to spot even in bad light, though the animal is exactly as shy as its ordinary-sized relatives and would rather retreat into a wall cavity than fight. Problems start when someone corners it in a boot or a stack of boxes without realizing what they've reached into. The bite itself does little in the moment - the real danger shows up days later, when the tissue around it hasn't started healing right.
 
-**Soak** 1 · **Attack** 4 · **Defense** 5 · **Health Levels** 4 · **Movement Rate** 4m
+**Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 2m
 
 **Bite**: 3, Melee, **Venom**: no immediate Health Level loss, but the wound worsens without treatment over the following days - severity is the GM's call.
 
@@ -1604,7 +1604,7 @@ The bite is the same shape as always, just delivered by something considerably h
 ::: stat Giant Brown Recluse
 Found under boards in an old shed, in a size that makes the whole shed worth avoiding. It's built the same as any recluse, just scaled up past what the name implies, and it keeps to the same dark, undisturbed corners a normal one would favor. Encounters tend to happen the way they always have - somebody moves the wrong board or reaches into the wrong stack - except this time the bite comes from something the size of a dinner plate. The necrotic wound that follows is proportionally worse, and a lot harder to convince anyone it started that small.
 
-**Soak** 2 · **Attack** 4 · **Defense** 4 · **Health Levels** 7 · **Movement Rate** 5m
+**Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 2m
 
 **Bite**: 6, Melee, **Venom**: no immediate Health Level loss, but the wound worsens without treatment over the following days - severity is the GM's call.
 
@@ -1628,7 +1628,7 @@ Whatever it carries in its bite now works faster and meaner than the necrosis it
 ::: stat Dire Wasp Swarm
 Individual wasps the size of a thumb, still moving and stinging as one body. The nest producing them scales with the wasps, a papery structure the size of a beach ball tucked under eaves or in a hollow tree. They swarm exactly the way ordinary wasps do, boiling out in a mass the instant the nest is disturbed, just with each sting landing like a solid jab instead of a prick. Running is still the right answer, but outrunning a swarm this size takes more distance than people expect.
 
-**Soak** 1 · **Attack** 5 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 8m (flight)
+**Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 5 · **Movement Rate** 8m (flight)
 
 **Stings**: 4, Melee
 
@@ -1640,7 +1640,7 @@ Individual wasps the size of a thumb, still moving and stinging as one body. The
 ::: stat Giant Wasp Swarm
 The nest that produced it is the size of a car, and nobody's gone back to check on it twice. Individual wasps are now roughly the size of a forearm, visible from a distance as a moving cloud rather than a blur, and the sound alone is enough to clear a field. Tactics don't change from the ordinary swarm - overwhelm, sting, retreat if scattered - but the sheer mass involved means there's no outrunning it across open ground. Anyone who finds the nest before the swarm finds them has the only real advantage available.
 
-**Soak** 2 · **Attack** 5 · **Defense** 5 · **Health Levels** 8 · **Movement Rate** 9m (flight)
+**Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 8 · **Movement Rate** 9m (flight)
 
 **Stings**: 7, Melee
 
@@ -1662,7 +1662,7 @@ Every wasp in the mass carries two stingers instead of one, and both find their 
 ::: stat Dire Africanized Bee Swarm
 Already more aggressive than a normal hive, and now large enough to blot out a doorway. The hive itself has grown to match, a dense mass wedged into whatever gap it found first, wall cavity or hollow trunk alike. Provoke it and it doesn't stop at the property line the way most stinging insects do - it follows, crossing yards and rooflines to keep on a fleeing target. Outrunning it means putting real distance between the hive and whoever set it off, not just ducking around a corner.
 
-**Soak** 1 · **Attack** 5 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 8m (flight)
+**Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 8m (flight)
 
 **Stings**: 5, Melee
 
@@ -1672,7 +1672,7 @@ Already more aggressive than a normal hive, and now large enough to blot out a d
 ::: stat Giant Africanized Bee Swarm
 The hum alone is audible from a full block away, and it doesn't stop at property lines. At this scale the swarm reads less like insects and more like a moving weather front, a dark mass rolling low over rooftops toward whatever set it off. Individual bees are large enough to see wings and legs without squinting, and the sting that comes with that size leaves more of a mark than a normal hive's would. Its pursuit habit means the smart move is never engaging the hive in the first place.
 
-**Soak** 2 · **Attack** 5 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 9m (flight)
+**Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 9m (flight)
 
 **Stings**: 8, Melee
 
@@ -1694,7 +1694,7 @@ It carries a payload beyond the sting now, one it can loose all at once against 
 ::: stat Dire Scorpion
 Big enough now that the tail arcing overhead is the first thing anyone notices about it. The whole body has scaled up to match, claws included, so it reads less like something startled underfoot and more like something that has to be walked around. It still hunts the way scorpions always have, waiting low and striking fast with the tail rather than closing to grapple range. The venom hasn't changed potency, just delivery - a hit from a stinger this size lands with considerably more force behind the same disadvantage it always caused.
 
-**Soak** 2 · **Attack** 4 · **Defense** 5 · **Health Levels** 4 · **Movement Rate** 6m
+**Soak** 2 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 4m
 
 **Sting**: 3, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
@@ -1706,7 +1706,7 @@ Big enough now that the tail arcing overhead is the first thing anyone notices a
 ::: stat Giant Scorpion
 It doesn't hide under a rock anymore - there isn't a rock big enough. What passes for cover at this size is a rock outcropping or a collapsed structure, and it's visible well before it's within striking range if anyone's looking. The tail strike is the same motion as ever, just heavier, driven by a body with real mass behind it. Most people who run into one do so because they didn't believe the tracks were real until they saw what left them.
 
-**Soak** 3 · **Attack** 4 · **Defense** 4 · **Health Levels** 7 · **Movement Rate** 7m
+**Soak** 3 · **Attack** 4 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 4m
 
 **Sting**: 6, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
@@ -1732,7 +1732,7 @@ The exoskeleton has thickened into something closer to armor plate, and a blade 
 ::: stat Dire Red-Tailed Hawk
 Wingspan closer to a small aircraft, and the dive it drops into hits with a lot more behind it. Feathers and coloring are unmistakably hawk, just stretched across a frame that casts a real shadow when it circles overhead. It still hunts the way any red-tail does, riding thermals and watching for movement before committing to a stoop, but the impact at the bottom of that stoop can knock a grown man off his feet. Anyone caught in open ground when it starts circling has maybe a few seconds of warning before it's already committed.
 
-**Soak** 1 · **Attack** 6 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 17m (flight)
+**Soak** 1 · **Attack** 6 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 17m (flight)
 
 **Talons**: 4, Melee
 
@@ -1744,7 +1744,7 @@ Wingspan closer to a small aircraft, and the dive it drops into hits with a lot 
 ::: stat Giant Red-Tailed Hawk
 Farmers report livestock disappearing from open pasture in broad daylight, no drag marks anywhere - it simply carries them off. At this size the talons alone are the length of a hand, capable of closing around prey a normal hawk wouldn't consider. It still hunts in daylight, still relies on the same dive-and-strike approach, but the targets it's willing to go after now include things that walk on two legs. The absence of drag marks is the tell - anything it wants badly enough, it doesn't need to drag.
 
-**Soak** 2 · **Attack** 6 · **Defense** 6 · **Health Levels** 8 · **Movement Rate** 18m (flight)
+**Soak** 2 · **Attack** 6 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 18m (flight)
 
 **Talons**: 7, Melee
 
@@ -1770,7 +1770,7 @@ It picks out movement through fog and brush that would hide it from any normal s
 ::: stat Dire Great Horned Owl
 Still silent on the wing, which is somehow more unsettling given how much bigger the wing has gotten. The feather structure that mutes a normal owl's flight scales up right along with the body, so something the size of a large dog can close the last few meters without a sound. It hunts exactly the way a great horned owl always has, waiting on a high perch until dark and dropping onto anything that hasn't noticed it yet. The talons alone are enough to put someone on the ground before they've registered what hit them.
 
-**Soak** 1 · **Attack** 6 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 16m (flight)
+**Soak** 1 · **Attack** 6 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 16m (flight)
 
 **Talons**: 4, Melee
 
@@ -1784,7 +1784,7 @@ Still silent on the wing, which is somehow more unsettling given how much bigger
 ::: stat Giant Great Horned Owl
 A shape passes overhead at dusk large enough to blot out the last of the light. Wingspan at this size rivals a small plane, and the silence it keeps despite that size is the detail that unsettles people who've seen it and lived to describe it. It still favors the same ambush-from-above approach as any great horned owl, using darkness and its own quiet flight to close before a target reacts. Livestock losses at dusk in owl territory this large tend to go unexplained for a while, since nobody's looking up for something that quiet.
 
-**Soak** 2 · **Attack** 6 · **Defense** 6 · **Health Levels** 8 · **Movement Rate** 17m (flight)
+**Soak** 2 · **Attack** 6 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 17m (flight)
 
 **Talons**: 7, Melee
 
@@ -1810,7 +1810,7 @@ Daylight seems to throw off its aim in a way darkness never does. It's smaller t
 ::: stat Dire Turkey Vulture
 Circles higher and stays longer than a normal vulture would, patient in a way that reads as deliberate. The body underneath that patience has scaled up considerably, a wingspan wide enough that the circling shadow is visible from a long way off. It's still exactly what a turkey vulture has always been - a scavenger, not a hunter - and it won't engage unless cornered or repeatedly provoked. The unease it causes has less to do with any real threat and more with what it means that something's dying nearby, and that this is watching it happen.
 
-**Soak** 1 · **Attack** 2 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 14m (flight)
+**Soak** 1 · **Attack** 2 · **Defense** 8 · **Health Levels** 5 · **Movement Rate** 14m (flight)
 
 **Beak**: 3, Melee
 
@@ -1822,7 +1822,7 @@ Circles higher and stays longer than a normal vulture would, patient in a way th
 ::: stat Giant Turkey Vulture
 A wingspan wide enough to cast a shadow you notice before you notice the bird. It's built the same as any turkey vulture, bald red head and all, just scaled to a size that makes the silhouette genuinely startling the first time someone clocks it overhead. Like its smaller relatives it avoids conflict entirely, content to wait out whatever's dying rather than hasten it along. The real hazard is incidental - a bird this size landing near a camp or a road tends to draw attention nobody wants, provoked or not.
 
-**Soak** 2 · **Attack** 2 · **Defense** 5 · **Health Levels** 8 · **Movement Rate** 15m (flight)
+**Soak** 2 · **Attack** 2 · **Defense** 9 · **Health Levels** 8 · **Movement Rate** 15m (flight)
 
 **Beak**: 6, Melee
 
@@ -1850,7 +1850,7 @@ Even provoked, it rarely bites - it lets whatever's already wrong with its stoma
 ::: stat Dire Great White Shark
 Boat captains who've clocked its length on sonar stop taking clients out past the point. It's built like any great white, just considerably longer, and it hunts the same way - a silent approach from below followed by a single committed strike. Once it's decided a target is worth attacking, there's no reasoning it out of the pass; the bite alone is often enough to end an encounter before a second attack is needed. It never leaves the water, which at least means the danger has a clear boundary.
 
-**Soak** 4 · **Attack** 8 · **Defense** 4 · **Health Levels** 11 · **Movement Rate** 16m (water only)
+**Soak** 4 · **Attack** 8 · **Defense** 6 · **Health Levels** 11 · **Movement Rate** 16m (water only)
 
 **Bite**: 10, Melee
 
@@ -1864,7 +1864,7 @@ Boat captains who've clocked its length on sonar stop taking clients out past th
 ::: stat Giant Great White Shark
 The apex predator of open water just got a size class nothing else in that water can match. Length and girth both have scaled up well past any recorded great white, enough that boats its size would normally avoid become viable targets instead of obvious mismatches. It hunts with the same ambush-from-below approach as any great white, using size now instead of surprise to close the fight quickly once it commits. Confined to the water, but that's cold comfort to anything caught swimming, wading, or boating when it decides to surface.
 
-**Soak** 5 · **Attack** 8 · **Defense** 3 · **Health Levels** 14 · **Movement Rate** 17m (water only)
+**Soak** 5 · **Attack** 8 · **Defense** 7 · **Health Levels** 14 · **Movement Rate** 17m (water only)
 
 **Bite**: 10, Melee
 
@@ -1890,7 +1890,7 @@ The first taste of blood in the water only sharpens whatever comes next. It's sm
 ::: stat Dire Bull Shark
 Comfortable in the same shallow water it always was, just a great deal harder to miss now. It keeps to the murky rivers and shallows bull sharks are known for, a habitat most people don't associate with anything shark-sized until they're already in the water with it. It never breaks off an engagement once started, which makes it considerably more dangerous than its size alone would suggest - there's no waiting it out or hoping it loses interest. Wading in bull shark territory this size means committing to a fight it won't willingly end.
 
-**Soak** 3 · **Attack** 7 · **Defense** 4 · **Health Levels** 9 · **Movement Rate** 14m (water only, including shallows)
+**Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 9 · **Movement Rate** 14m (water only, including shallows)
 
 **Bite**: 8, Melee
 
@@ -1902,7 +1902,7 @@ Comfortable in the same shallow water it always was, just a great deal harder to
 ::: stat Giant Bull Shark
 Turns up in a river channel miles from the coast, in water that shouldn't hold anything this size. Its tolerance for fresh water hasn't changed, just the scale of what that tolerance allows it to bring inland - bridges, boat ramps, and swimming holes that were never considered shark territory suddenly are. It fights the same relentless way any bull shark does, refusing to disengage once committed, and a body this size backing that instinct up makes retreat the only reliable answer. Nobody expects to find one this far from open water, which is usually how it gets the first strike in.
 
-**Soak** 4 · **Attack** 7 · **Defense** 3 · **Health Levels** 12 · **Movement Rate** 15m (water only, including shallows)
+**Soak** 4 · **Attack** 7 · **Defense** 7 · **Health Levels** 12 · **Movement Rate** 15m (water only, including shallows)
 
 **Bite**: 10, Melee
 
@@ -1928,7 +1928,7 @@ A second row of fins has grown along its underside, letting it turn and strike i
 ::: stat Dire Piranha School
 The individual fish have grown past what any aquarium description would call a piranha. Each one in the school is now closer to a large trout in size, and the school itself moves as a single boiling mass the way piranha always have, just with considerably more bite behind every pass. The first wound drawn in the water sets the whole school off, and its bite gets noticeably worse for the rest of the encounter once that happens. Getting out of the water fast, before the first hit lands, matters more with this variant than almost any other.
 
-**Soak** 1 · **Attack** 5 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 12m (water only)
+**Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m (water only)
 
 **Bite**: 5, Melee
 
@@ -1940,7 +1940,7 @@ The individual fish have grown past what any aquarium description would call a p
 ::: stat Giant Piranha School
 A stretch of river that strips a carcass to bone in under a minute, no matter the size of the carcass. The individual fish are large enough now that the school reads as a single churning shape rather than countless small silver bodies, and the water itself seems to boil wherever it's feeding. Blood in the water triggers the same frenzy response as any piranha school, except at this scale the bite that follows is enough to take a limb rather than a chunk. Nothing that goes still in that stretch of river stays recognizable for long.
 
-**Soak** 2 · **Attack** 5 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 13m (water only)
+**Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m (water only)
 
 **Bite**: 8, Melee
 
@@ -1962,7 +1962,7 @@ Bites that should have killed half the school instead seem to close over within 
 ::: stat Dire Orca
 Even among orcas this one stands out, and the pod defers to it without hesitation. It's larger and more heavily built than any pod member around it, a difference visible even from a boat, and it moves through the water like something used to being obeyed. Orcas already hunt cooperatively, and this one coordinates its pod with a precision that goes well beyond instinct - flanking, herding, timing strikes together in ways that read as planned rather than reactive. Anyone who assumes they're dealing with one animal instead of a coordinated group is making the mistake that gets people killed around orcas generally.
 
-**Soak** 5 · **Attack** 10 · **Defense** 4 · **Health Levels** 13 · **Movement Rate** 18m (water only)
+**Soak** 5 · **Attack** 10 · **Defense** 6 · **Health Levels** 13 · **Movement Rate** 18m (water only)
 
 **Bite / Ram**: 10, Melee
 
@@ -1974,7 +1974,7 @@ Even among orcas this one stands out, and the pod defers to it without hesitatio
 ::: stat Giant Orca
 The only predator that hunts great white sharks, now scaled up to a size that makes the comparison almost unfair. Its bulk alone displaces enough water to be felt before it's seen, and a ram from something this size can stove in a hull that would survive a normal orca strike without much trouble. It leads its pod with the same coordinated intelligence any orca shows, just backed by considerably more physical force when the plan calls for a direct hit. Whatever the pod is hunting, this one is usually the reason it doesn't get away.
 
-**Soak** 6 · **Attack** 10 · **Defense** 3 · **Health Levels** 16 · **Movement Rate** 19m (water only)
+**Soak** 6 · **Attack** 10 · **Defense** 7 · **Health Levels** 16 · **Movement Rate** 19m (water only)
 
 **Bite / Ram**: 10, Melee
 
@@ -2000,7 +2000,7 @@ It tracks a boat's engine noise from a distance no sonar operator expects, and r
 ::: stat Dire Electric Eel
 Longer than any recorded specimen, and the charge it puts out lasts noticeably longer too. Length is the obvious change, easily doubling what anyone would expect from the species, coiled along a riverbed or drifting through flooded channels. It hunts the same way any electric eel does, discharging at close range without needing to touch a target directly, but whatever it hits stays disadvantaged for the better part of a scene instead of shaking it off quickly. Murky water hides it completely until the current in the water gives it away.
 
-**Soak** 1 · **Attack** 4 · **Defense** 5 · **Health Levels** 5 · **Movement Rate** 8m (water only)
+**Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 8m (water only)
 
 **Shock**: Close range, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls for a full Scene instead of just until the end of their next turn.
 
@@ -2012,7 +2012,7 @@ Longer than any recorded specimen, and the charge it puts out lasts noticeably l
 ::: stat Giant Electric Eel
 Whole sections of a flooded channel go dead quiet around it, fish and birds alike giving it a wide berth. Its reach has extended along with its length - the discharge now covers a stretch of water well beyond arm's reach, meaning proximity alone is enough to put someone in danger. Wildlife gives it space instinctively, which is often the only warning people get before wading into a channel that's gone unnaturally silent. The shock itself fades faster than the Dire variant's, but it happens from much further away.
 
-**Soak** 2 · **Attack** 4 · **Defense** 4 · **Health Levels** 8 · **Movement Rate** 9m (water only)
+**Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 8 · **Movement Rate** 9m (water only)
 
 **Shock**: extends out to Short range instead of just Close, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls until the end of their next turn.
 
@@ -2038,7 +2038,7 @@ Even out of the water, standing near it too long leaves a faint prickling under 
 ::: stat Dire Bison
 A herd animal that's outgrown the herd, and it doesn't wait for the rest to catch up before charging. It's visibly larger than the rest of whatever herd it travels with, if it travels with one at all, and it's lost some of the patience that keeps a normal bison from bothering with things that aren't food or a direct threat. The charge is the same lowered-head rush any bison uses, just carrying a lot more mass behind it. Getting clipped by one at speed does damage a normal bison charge wouldn't manage.
 
-**Soak** 4 · **Attack** 7 · **Defense** 4 · **Health Levels** 10 · **Movement Rate** 13m
+**Soak** 4 · **Attack** 7 · **Defense** 6 · **Health Levels** 10 · **Movement Rate** 13m
 
 **Gore / Trample**: 7, Melee
 
@@ -2050,7 +2050,7 @@ A herd animal that's outgrown the herd, and it doesn't wait for the rest to catc
 ::: stat Giant Bison
 The ground shakes before it's even visible over the ridge line. At this size a single animal is a landscape feature in its own right, and the charge that follows once it's decided something's a threat is less an attack than a natural disaster with intent behind it. It still telegraphs the same way any bison does - head down, a beat of stillness, then the rush - which is the only real warning anyone gets. Fences, vehicles, and most structures aren't built to survive a hit from something this size.
 
-**Soak** 5 · **Attack** 7 · **Defense** 3 · **Health Levels** 13 · **Movement Rate** 14m
+**Soak** 5 · **Attack** 7 · **Defense** 7 · **Health Levels** 13 · **Movement Rate** 14m
 
 **Gore / Trample**: 10, Melee
 
@@ -2076,7 +2076,7 @@ Dropping it doesn't end the danger - what happens next is best watched from well
 ::: stat Dire Moose
 The rack alone is wider than most doorframes, and it's just as willing to fight as an ordinary moose in rut. Everything about it has scaled up together - antlers, shoulders, the sheer height of it standing in a clearing - without changing the animal's underlying temperament. Outside of rutting season it's as avoidant as any moose, content to be left alone and to leave in turn. During rut, though, that same short temper backed by this much size and reach makes it one of the worse things to stumble across in the woods.
 
-**Soak** 4 · **Attack** 7 · **Defense** 4 · **Health Levels** 10 · **Movement Rate** 13m
+**Soak** 4 · **Attack** 7 · **Defense** 6 · **Health Levels** 10 · **Movement Rate** 13m
 
 **Antlers / Hooves**: 7, Melee
 
@@ -2090,7 +2090,7 @@ The rack alone is wider than most doorframes, and it's just as willing to fight 
 ::: stat Giant Moose
 Drivers who've hit a normal moose describe the damage as bad. Nobody's walked away from hitting this one. Its bulk alone makes it a hazard just standing in a road at dusk, legs long enough to put its body at windshield height on most vehicles. Like any moose it's seasonal about aggression, genuinely dangerous during rut and mostly avoidant the rest of the year, but a collision or an antler swing from something this size doesn't care what season it is.
 
-**Soak** 5 · **Attack** 7 · **Defense** 3 · **Health Levels** 13 · **Movement Rate** 14m
+**Soak** 5 · **Attack** 7 · **Defense** 7 · **Health Levels** 13 · **Movement Rate** 14m
 
 **Antlers / Hooves**: 10, Melee
 
@@ -2116,7 +2116,7 @@ The hide over its chest and flanks has hardened into something closer to bark th
 ::: stat Dire Elk
 Bigger, louder during rut, and considerably less likely to back off from a road or a campsite. It's built like any bull elk, just noticeably larger through the shoulders and rack, and its bugle during rutting season carries further than anyone expects the first time they hear it. It shares the moose's seasonal pattern, just milder - still capable of standing its ground against a person or a vehicle where a normal elk would move off. Camping near elk trails during rut is a worse idea with this variant around.
 
-**Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 8 · **Movement Rate** 14m
+**Soak** 3 · **Attack** 6 · **Defense** 7 · **Health Levels** 8 · **Movement Rate** 14m
 
 **Antlers / Hooves**: 6, Melee
 
@@ -2128,7 +2128,7 @@ Bigger, louder during rut, and considerably less likely to back off from a road 
 ::: stat Giant Elk
 A rack that would need its own trailer, on an animal that's stopped being camera-shy about it. Size alone makes it a landmark in whatever meadow it favors, visible well before anyone gets close enough to worry about its temperament. Its aggression follows the same seasonal pattern as a normal elk, milder than a moose's but still present during rut, and an animal this large doesn't need much aggression to be a serious problem when it decides to use its antlers.
 
-**Soak** 4 · **Attack** 6 · **Defense** 4 · **Health Levels** 11 · **Movement Rate** 15m
+**Soak** 4 · **Attack** 6 · **Defense** 8 · **Health Levels** 11 · **Movement Rate** 15m
 
 **Antlers / Hooves**: 9, Melee
 
@@ -2156,7 +2156,7 @@ It stands motionless at the treeline for so long that most people walk right pas
 ::: stat Dire Arctic Fox
 Bigger than the terrain usually allows, though the coat and the caution are exactly the same. It's closer to wolf-sized than fox-sized, a mismatch that throws off anyone tracking it by old assumptions about how big the prints should be. It keeps the same skittish, opportunistic temperament as any arctic fox, preferring to scavenge and retreat over engaging directly, and its white coat still vanishes against snow the instant it goes still. The size mostly matters when it decides not to retreat.
 
-**Soak** 1 · **Attack** 3 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 12m
+**Soak** 1 · **Attack** 3 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 12m
 
 **Bite**: 3, Melee
 
@@ -2170,7 +2170,7 @@ Bigger than the terrain usually allows, though the coat and the caution are exac
 ::: stat Giant Arctic Fox
 Tracks in fresh snow the size of a wolf's, from an animal that's never been mistaken for one before. At this scale the proportions are still unmistakably fox - short legs, rounded ears, thick coat - just stretched well past anything the species should reach. It's cautious by nature like any arctic fox, more likely to shadow a group from a distance than approach directly, which makes the size discrepancy in the tracks the first real clue something's wrong. Cornering one is a worse idea than the caution it usually shows would suggest.
 
-**Soak** 2 · **Attack** 3 · **Defense** 6 · **Health Levels** 8 · **Movement Rate** 13m
+**Soak** 2 · **Attack** 3 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 13m
 
 **Bite**: 6, Melee
 
@@ -2196,7 +2196,7 @@ Against a snowfield it simply isn't there until it wants to be, coat and all. It
 ::: stat Dire Snowy Owl
 The wingspan alone casts a shadow across the snow that most prey mistake for a cloud passing over. Everything about it is scaled-up snowy owl - white plumage, yellow eyes, the same broad silent wings - just large enough that the shadow it throws crossing open tundra is the first sign anything's overhead. It hunts in daylight as readily as at night, unlike its darkness-bound relatives, striking anything that hasn't noticed it coming. The talons alone are enough to put a person down in the first pass.
 
-**Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 16m (flight)
+**Soak** 1 · **Attack** 5 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 16m (flight)
 
 **Talons**: 4, Melee
 
@@ -2208,7 +2208,7 @@ The wingspan alone casts a shadow across the snow that most prey mistake for a c
 ::: stat Giant Snowy Owl
 Research stations that track it by transponder alone still don't believe the wingspan readings. At this size it's less a bird overhead than a shape blotting out a section of sky, silent despite the wingspan the way snowy owls always manage regardless of size. It hunts day or night with equal effectiveness, striking without the warning a darkness-only predator would give. Open tundra offers no real cover from something that can spot movement from that high and close the distance before anyone reacts.
 
-**Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 8 · **Movement Rate** 17m (flight)
+**Soak** 2 · **Attack** 5 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 17m (flight)
 
 **Talons**: 7, Melee
 
