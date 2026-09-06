@@ -33,7 +33,7 @@ Flaws are Boons in a mirror - the complications, quirks and bad hands you pick o
 <p class="entry-head"><span class="entry-name">Amnesia</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">There’s a shape in your history where something used to be. You’ve stopped poking at it, mostly.</p>
 
-Missing memories from part of the character’s past.
+Part of your past is missing.
 
 **1.** A single traumatic event is missing - one specific memory gone, everything else intact.
 
@@ -50,7 +50,7 @@ Missing memories from part of the character’s past.
 <p class="entry-head"><span class="entry-name">Antagonist</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">Somebody out there is thinking about you right now, and not fondly.</p>
 
-Someone or something opposes the character - a personal rival, a dedicated enemy, or a determined hunter.
+Someone or something is set against you - a rival, an enemy, a hunter who doesn’t give up.
 
 **1.** A minor rival - someone who competes with or needles you personally. Low capability, mostly a nuisance.
 
@@ -67,7 +67,7 @@ Someone or something opposes the character - a personal rival, a dedicated enemy
 <p class="entry-head"><span class="entry-name">Anxiety</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">The threat assessment never switches off. Most of what it reports is wrong, and knowing that has never once helped.</p>
 
-A deeply rooted anxiety disorder.
+Anxiety that doesn’t need a reason and doesn’t switch off.
 
 **1.** A specific, narrow fear or recurring nightmare - unsettling, but rarely interferes with function.
 
@@ -84,7 +84,7 @@ A deeply rooted anxiety disorder.
 <p class="entry-head"><span class="entry-name">Berserk</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">There’s a point past which you stop making decisions and start just continuing.</p>
 
-Once triggered, must keep fighting at full intensity.
+Once you’re going, you don’t stop until it’s over.
 
 Each level’s effect is cumulative - it keeps every lower level’s restriction and adds its own.
 
@@ -103,7 +103,7 @@ Each level’s effect is cumulative - it keeps every lower level’s restriction
 <p class="entry-head"><span class="entry-name">Code of Conduct</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">There’s a line, and you’ve never crossed it. That has cost you, and it will again.</p>
 
-A self-imposed rule the character won’t break, even when breaking it would help.
+A rule you set yourself and won’t break, even when breaking it would help.
 
 **1.** A minor, low-stakes personal restriction - inconvenient, rarely costly. Strict vegetarian/vegan; never tells even a white lie; always pays a debt the moment it’s owed; won’t enter a home uninvited.
 
@@ -120,7 +120,7 @@ A self-imposed rule the character won’t break, even when breaking it would hel
 <p class="entry-head"><span class="entry-name">Dependent</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">Somebody’s safety is stitched to yours. They didn’t ask to be, and neither did you.</p>
 
-Someone relies on the character and must be protected or provided for.
+Someone relies on you, and has to be protected or provided for.
 
 **1.** A dependent who mostly manages on their own - checks in occasionally, needs a little financial or emotional support now and then.
 
@@ -128,35 +128,35 @@ Someone relies on the character and must be protected or provided for.
 
 **3.** A dependent who can’t protect themselves and needs real intervention when trouble finds them - a young child, an elderly parent, someone seriously ill.
 
-**4.** A dependent who is a frequent liability - regularly endangered by the character’s own life (enemies, work, reputation), requiring real risk to protect.
+**4.** A dependent who is a frequent liability - regularly endangered by your own life (enemies, work, reputation), requiring real risk to protect.
 
-**5.** A dependent who is entirely helpless without the character and a prime target - enemies know exactly who to threaten to get to the character.
+**5.** A dependent who is entirely helpless without you and a prime target - enemies know exactly who to threaten to get to you.
 </div>
 
 <div class="entry" markdown="1">
 <p class="entry-head"><span class="entry-name">Destitute</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">Money is a thing that happens to other people. You’ve gotten very good at the arithmetic of not having it.</p>
 
-Chronic financial hardship, from a rough patch to genuinely having nothing.
+You have no money - anywhere from a bad patch to nothing at all.
 
 Each level’s effect is cumulative - it keeps every lower level’s complication and adds its own.
 
-**1.** A rough patch. Creation-Wealth is **0** instead of the default 2 for gear shopping at creation, and no Resources Pool or Discretionary points may be spent on Wealth while this Flaw is held - buy it off first - see Everyman Gear Packages for what’s still available at Level 0. Doesn’t follow the character past creation; whatever put them here (a lost job, a bad breakup, a bad month) is already turning around.
+**1.** A rough patch. Creation-Wealth is **0** instead of the default 2 for gear shopping at creation, and no Resources Pool or Discretionary points may be spent on Wealth while this Flaw is held - buy it off first - see Everyman Gear Packages for what’s still available at Level 0. Doesn’t follow you past creation; whatever put you here (a lost job, a bad breakup, a bad month) is already turning around.
 
-**2.** Chronically tight. As Level 1, and it doesn’t go away - living paycheck to paycheck, or with no paycheck at all, is an ongoing fact of the character’s life, however their Resources ended up built.
+**2.** Chronically tight. As Level 1, and it doesn’t go away - living paycheck to paycheck, or with no paycheck at all, is an ongoing fact of your life, however your Resources ended up built.
 
 **3.** Real precarity. As Level 2, and something concrete is currently unstable - unreliable housing, an unreliable income source, or a debt actively being chased.
 
 **4.** Genuinely impoverished. As Level 3, and it’s visible enough that people react to it on sight - shapes first impressions the same way Notable Appearance or Notoriety do, just for money instead of looks or reputation.
 
-**5.** Nothing left. As Level 4, and there’s no safety net at all - no one to call for a loan, no fallback plan, and whatever put the character here is bad enough to be a real, ongoing story hook (GM’s call on specifics).
+**5.** Nothing left. As Level 4, and there’s no safety net at all - no one to call for a loan, no fallback plan, and whatever put you here is bad enough to be a real, ongoing story hook (GM’s call on specifics).
 </div>
 
 <div class="entry" markdown="1">
 <p class="entry-head"><span class="entry-name">Directionless</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">Everyone else seems to keep a map running somewhere behind their eyes. You never got issued one.</p>
 
-A poor, unreliable sense of direction.
+You get lost. Reliably.
 
 **1.** A mildly unreliable sense of direction - occasionally turns around even in familiar places, rarely costs more than a moment.
 
@@ -190,7 +190,7 @@ The body works against you.
 <p class="entry-head"><span class="entry-name">Gun-Shy</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">It starts, and there’s a gap between when you should move and when you do.</p>
 
-Falters when violence breaks out.
+When violence starts, you falter.
 
 Each level’s effect is cumulative - it keeps every lower level’s penalty and adds its own.
 
@@ -209,7 +209,7 @@ Each level’s effect is cumulative - it keeps every lower level’s penalty and
 <p class="entry-head"><span class="entry-name">Illiterate</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">The letters are right there and they don’t resolve. You’ve built a whole life around not needing them to.</p>
 
-Cannot read or write, to some degree.
+You can’t read, to one degree or another.
 
 **1.** Illiterate only in the local language/script - fully literate (possibly exceptionally so) in their own.
 
@@ -226,9 +226,9 @@ Cannot read or write, to some degree.
 <p class="entry-head"><span class="entry-name">Impaired Senses</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">One of the channels is down, and you’ve rerouted around it well enough that people forget - right up until it matters.</p>
 
-A missing or significantly impaired sense.
+One of your senses is dulled, or gone.
 
-**A reminder of the general rule above**: if the impairment doesn’t actually impair the character - no depth-perception penalty, no missed cues, nothing a compensating sense or trained-around habit doesn’t fully cover - it isn’t worth points. This Flaw is the most obvious anime-trope case for that rule (the one-eyed swordsman who fights exactly as well as anyone with two eyes).
+**A reminder of the general rule above**: if the impairment doesn’t actually impair you - no depth-perception penalty, no missed cues, nothing a compensating sense or trained-around habit doesn’t fully cover - it isn’t worth points. This Flaw is the most obvious anime-trope case for that rule (the one-eyed swordsman who fights exactly as well as anyone with two eyes).
 
 **1.** A minor gap in one sense - reduced but functional (mild nearsightedness beyond normal correction, slight hearing loss in one ear, a dulled sense of smell). Real but manageable.
 
@@ -245,9 +245,9 @@ A missing or significantly impaired sense.
 <p class="entry-head"><span class="entry-name">Incantations</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">It doesn’t work if you can’t say it. Something out there is listening for the words specifically.</p>
 
-A Gift only works if the character can speak a specific phrase aloud.
+A Gift of yours only works if you can say a specific phrase out loud.
 
-A Gift only answers to a spoken word - distinct from a Gift’s own Limiters like Animal Friendship’s Vocal Component: this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts the character already has.
+A Gift only answers to a spoken word - distinct from a Gift’s own Limiters like Animal Friendship’s Vocal Component: this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts you already have.
 
 **1.** One specific Gift requires speaking a short trigger phrase aloud to activate - audible to anyone nearby, and it simply doesn’t work if you’re unable to speak (silenced, gagged, underwater, and the like).
 
@@ -264,9 +264,9 @@ A Gift only answers to a spoken word - distinct from a Gift’s own Limiters lik
 <p class="entry-head"><span class="entry-name">Item of Power</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">The thing you can do isn’t entirely in you. Some of it is in an object, and objects can be taken.</p>
 
-A Gift’s capability lives, at least in part, in something the character carries rather than in themselves.
+A Gift of yours lives, at least partly, in something you carry rather than in you.
 
-Your capability isn’t fully your own - it lives, at least in part, in something you carry. Distinct from a Gift’s own Limiters (which discount that specific Gift’s point cost): this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts the character already has.
+Your capability isn’t fully your own - it lives, at least in part, in something you carry. Distinct from a Gift’s own Limiters (which discount that specific Gift’s point cost): this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts you already have.
 
 **1.** One specific Gift only works while you’re in possession of a particular item - well-secured or hard to casually separate from you (a tattoo, an implant, something bonded to you), but losing it locks out that one Gift entirely until it’s recovered.
 
@@ -283,7 +283,7 @@ Your capability isn’t fully your own - it lives, at least in part, in somethin
 <p class="entry-head"><span class="entry-name">Lame</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">The distance is the same as it always was. It just costs more now.</p>
 
-Permanently reduced mobility from an old injury or condition.
+An old injury or condition took some of your mobility and kept it.
 
 **1.** A minor limp or stiffness - noticeable, doesn’t slow them down in any real way.
 
@@ -317,7 +317,7 @@ Something about how you look draws stares and reactions.
 <p class="entry-head"><span class="entry-name">Notoriety</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">Your name arrives in the room before you do, and it’s already said something you’d rather it hadn’t.</p>
 
-How widely and how badly the character is known.
+How widely, and how badly, you’re known.
 
 **1.** Known within a small local circle - a minor local bad reputation, occasional suspicion.
 
@@ -334,13 +334,13 @@ How widely and how badly the character is known.
 <p class="entry-head"><span class="entry-name">Overconfident</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">You’ve been right often enough to stop checking, which is a habit with a shelf life.</p>
 
-Consistently underestimates danger or overestimates their own ability.
+You underestimate danger, or overestimate yourself, and you do it consistently.
 
 **1.** Occasionally shrugs off a real warning - rarely costs anything, mostly just talk.
 
 **2.** Regularly takes on tasks slightly beyond them without checking first - real but recoverable setbacks.
 
-**3.** Habitually dismisses genuine danger and sound advice - costs the character and sometimes allies real setbacks.
+**3.** You habitually dismiss genuine danger and sound advice, and it costs you, and sometimes your allies, real setbacks.
 
 **4.** Reliably walks into situations that are clearly beyond them, refusing help or backup even when it’s obviously needed.
 
@@ -351,7 +351,7 @@ Consistently underestimates danger or overestimates their own ability.
 <p class="entry-head"><span class="entry-name">Pariah</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">There’s a category people put you in on sight, and no amount of being reasonable gets you out of it.</p>
 
-Others hold a specific prejudice against the character (species, background, origin, etc.).
+People hold a specific prejudice against you - your species, your background, where you came from.
 
 **1.** A minor prejudice - occasional dirty looks, mild social friction, rarely any material consequence.
 
@@ -368,7 +368,7 @@ Others hold a specific prejudice against the character (species, background, ori
 <p class="entry-head"><span class="entry-name">Reliance</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">There’s a thing you need, and the needing has its own schedule.</p>
 
-A behavioral compulsion, substance dependency, or medical/physical condition.
+Something you need - a compulsion, a substance, or a condition that has to be managed.
 
 **1.** A minor compulsion or mild reaction - inconvenient, rarely costly. A nervous habit like nail-biting; a mild seasonal allergy; a harmless lucky ritual before anything risky.
 
@@ -378,7 +378,7 @@ A behavioral compulsion, substance dependency, or medical/physical condition.
 
 **4.** A severe dependency with real danger if unmet. Hard addiction with physical withdrawal symptoms; a severe, life-threatening allergy on exposure; a compulsion strong enough to override better judgment in the moment.
 
-**5.** A life-controlling dependency. An addiction that incapacitates without regular access; a condition requiring constant, uninterruptible support to survive; a compulsion so absolute it defines every decision the character makes.
+**5.** A life-controlling dependency. An addiction that incapacitates without regular access; a condition requiring constant, uninterruptible support to survive; a compulsion so absolute it defines every decision you make.
 </div>
 
 <div class="entry" markdown="1">
@@ -387,7 +387,7 @@ A behavioral compulsion, substance dependency, or medical/physical condition.
 
 A Gift doesn’t answer the instant it’s reached for - it has to be called, coaxed, or earned each time.
 
-Your power doesn’t answer the instant you reach for it - it has to be called, coaxed, or earned each time. Distinct from a Gift’s own Limiters: this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts the character already has.
+Your power doesn’t answer the instant you reach for it - it has to be called, coaxed, or earned each time. Distinct from a Gift’s own Limiters: this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts you already have.
 
 **1.** One specific Gift requires a short ritual - roughly a minute of chanting, gestures, or preparation - before its first use each Scene. Once performed, that Gift stays primed and usable normally for the rest of the Scene.
 
@@ -404,24 +404,24 @@ Your power doesn’t answer the instant you reach for it - it has to be called, 
 <p class="entry-head"><span class="entry-name">Secret</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">One fact, and a life built carefully around it not coming out.</p>
 
-Something the character desperately doesn’t want revealed.
+Something you badly don’t want getting out.
 
 **1.** An embarrassing detail - mildly damaging to reputation if it got out, nothing more.
 
-**2.** A real secret - exposure would cost the character something genuine: a relationship, a job, a bit of standing.
+**2.** A real secret - exposure would cost you something genuine: a relationship, a job, a bit of standing.
 
-**3.** A serious secret - exposure would cause real, lasting damage to the character’s life or the lives of people they care about.
+**3.** A serious secret - exposure would cause real, lasting damage to your life, or the lives of people you care about.
 
 **4.** A dangerous secret - exposure invites real threats: legal jeopardy, violence, or being hunted by someone with the power to act on it.
 
-**5.** A world-shaking secret - exposure would be catastrophic, reshaping the character’s life entirely or endangering far more than just themselves.
+**5.** A world-shaking secret - exposure would be catastrophic, reshaping your life entirely, or endangering far more than just you.
 </div>
 
 <div class="entry" markdown="1">
 <p class="entry-head"><span class="entry-name">Shaken Confidence</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">Something happened once, in front of people, and some part of you never quite got up from it.</p>
 
-A lasting loss of social self-assurance from one specific defining humiliation.
+One specific humiliation took your footing in a room, and you never got it back.
 
 One specific, defining humiliation left a real mark - not on the body, on the nerve. A natural fit for the genuine Flaw a below-zero Poise scar can impose, though it can also just be taken directly at creation like any other Flaw.
 
@@ -440,7 +440,7 @@ One specific, defining humiliation left a real mark - not on the body, on the ne
 <p class="entry-head"><span class="entry-name">Short Fuse</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">There’s a shorter distance than most people have between the provocation and the response.</p>
 
-Quick to anger, prone to losing composure under provocation.
+You anger fast, and everybody can tell.
 
 **1.** Snaps at minor annoyances - sharp words, nothing lasting.
 
@@ -450,14 +450,14 @@ Quick to anger, prone to losing composure under provocation.
 
 **4.** A serious liability under pressure - provocation reliably leads to real damage: burned bridges, real consequences, sometimes violence.
 
-**5.** Cannot reliably control themselves once triggered - provocation regularly leads to serious harm, to relationships or to people, with real consequences the character can’t walk back.
+**5.** You can’t reliably control yourself once triggered - provocation regularly leads to serious harm, to relationships or to people, with real consequences you can’t walk back.
 </div>
 
 <div class="entry" markdown="1">
 <p class="entry-head"><span class="entry-name">Soft-Hearted</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">You know what the tactical answer is. You’ve simply never been able to make yourself give it.</p>
 
-Struggles to act against the vulnerable, even when it costs them.
+You struggle to act against the vulnerable, even when it costs you.
 
 **1.** Hesitates for a moment before acting against someone clearly weaker or in distress - costs a beat, nothing more.
 
@@ -474,7 +474,7 @@ Struggles to act against the vulnerable, even when it costs them.
 <p class="entry-head"><span class="entry-name">Speech Impediment</span><span class="entry-tag">= Level</span></p>
 <p class="entry-flavour">The thought is clear and fast. Getting it out is the part that isn’t.</p>
 
-A stutter, accent, or other trait that hampers verbal communication.
+A stutter, an accent, something that gets between you and being understood.
 
 **1.** A mild, noticeable quirk (a stutter under stress, a thick accent) - rarely actually hampers being understood.
 
