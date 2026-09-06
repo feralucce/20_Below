@@ -181,6 +181,10 @@ Same sword in all four. Describe what you’re doing before you roll, and the GM
 
 Moira is never an attacking Element. Atropos only ever sets Defense.
 
+One thing the Element never does is decide which wall you’re attacking. That’s set by what you’re attacking *with*. A weapon throws Physical dice at Soak however you swung it - charging in screaming is still Fire, and it’s still Soak that stops you. A Gift throws whatever its own entry says. And a Signature Move is the one that lets you choose: you pick the sub-stat that powers it and the wall it resolves against, separately, so a Move can run on your Presence and still land on somebody’s Soak.
+
+So yes - you can build an attack that is pure force of personality and still knocks people down. It just isn’t a Social attack, because Social means it went at their Poise. The flavor is yours. The wall is what the rules read.
+
 ## Spending Ki on the Dice
 
 Roll the damage dice first. With them on the table, you pick which ones to boost, at **1 Ki each**. A boosted die adds your matching sub-stat to its own result - Ferocity for Physical, Presence for Social, Psyche for Mental.

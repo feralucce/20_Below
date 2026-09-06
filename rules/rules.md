@@ -151,6 +151,8 @@ All four examples above use the same sword - the weapon never determines the ele
 
 The player describes the attempt **before** rolling, and the GM confirms which element fits - not chosen retroactively to fish for a better number. This choice only sets which Attribute feeds the to-hit roll; it's not a second roll, doesn't change the attack's category (Physical/Social/Mental), and doesn't change what damage the weapon deals.
 
+**What does set the category is the attack itself.** A weapon deals Physical dice against Soak no matter which Element carried the to-hit; a Gift deals whatever its own entry states; and [Signature Move](gifts.md#signature-move) is built with its attack source and its target wall chosen independently, so a Presence-powered Move can resolve against Soak. The Element is approach. The wall is category.
+
 ### Earth
 
 #### Physical Attacks - Weapon Damage & Per-Die Resolution
