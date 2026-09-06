@@ -55,7 +55,7 @@ The alternate form is built once, at creation, spending a points pool (below) on
 | Option | Cost | Effect |
 |---|---|---|
 | Sub-stat boost | 1 pt | +2 to one physical sub-stat (Soak, Ferocity, Stamina, Potence, or Initiative) while transformed. |
-| Attribute boost | 2 pts/point | +1 to one Attribute (Earth, Air, Fire, Water, or Moira) while transformed, up to the character's normal maximum. |
+| Attribute boost | 2 pts/point | +1 to one Attribute (Earth, Air, Fire, Water, or Moira) while transformed, up to your own normal maximum. |
 | Environmental adaptation | 1 pt | Breathe underwater, see in total darkness, ignore extreme temperatures, or similar. |
 | Borrow a Gift Level | 3 pts/Level | Gain one Level of an existing Gift you don't otherwise hold while transformed, GM-approved for fit - same per-Level price as the [Gifts pool](character-creation.md#gifts-pool). |
 | Borrow a Boon | 1/3/5/7 pts | Gain a Boon you don't otherwise hold while transformed, at that Boon's own Trivial/Lesser/Greater/Legendary price. |
@@ -426,7 +426,7 @@ One of you was never going to be enough. Split off a copy, then another, each on
 
 ### Elemental Aura
 
-Raise a battle aura of your chosen element around your body. "Element" is a broad catch-all, not limited to the four classical elements - fire, ice, lightning, steam, darkness, radiation, cosmic energy, void, magnetism, or whatever else fits the character's concept. Chosen once, at creation.
+Raise a battle aura of your chosen element around your body. "Element" is a broad catch-all, not limited to the four classical elements - fire, ice, lightning, steam, darkness, radiation, cosmic energy, void, magnetism, or whatever else fits what you actually are. Chosen once, at creation.
 
 Activating the aura is a Slow action. **Maintaining it requires a [Gift Check](#resolution) every turn it stays active - failure costs 1 Ki, at any Level.** At Level 5, a turn spent lashing out with the aura (below) skips the maintenance check entirely, since spending Ki to attack already covers the cost.
 
@@ -865,7 +865,7 @@ A memory is just a story your mind keeps telling itself. You've learned to walk 
 
 Death isn't the end of the story here, it's a resource. You've learned to reach past the thread Atropos already cut and pull threadbare echoes back across it, binding them to your will and drawing on the vitality they left behind. What answers isn't the person who died, just something obedient enough to fight and bleed for you.
 
-Chosen once, at creation, purely cosmetic: the form your raised dead take (bone constructs, wrapped corpses, spectral soldiers, whatever fits the character).
+Chosen once, at creation, purely cosmetic: the form your raised dead take (bone constructs, wrapped corpses, spectral soldiers, whatever fits the way you do this).
 
 | Level | Effect |
 |---|---|
@@ -1096,7 +1096,7 @@ Your body ripples and reforms like water finding a new shape - skin, bone, and v
 
 ### Signature Move
 
-Every seasoned fighter, mystic, or gifted soul eventually develops something that's uniquely theirs - a technique, a maneuver, a flourish of power that belongs to them and no one else, honed and personal in a way no textbook or master can teach directly. Signature Move is that: a custom ability built from scratch to fit the character who holds it, not pulled from a fixed list. It's usually an attack, but doesn't have to deal damage to qualify - a signature disarm, a signature escape, a signature show of force. Built level by level as the character's mastery of their own technique grows.
+Every seasoned fighter, mystic, or gifted soul eventually develops something that's uniquely theirs - a technique, a maneuver, a flourish of power that belongs to them and no one else, honed and personal in a way no textbook or master can teach directly. Signature Move is that: a custom ability built from scratch to fit the person who holds it, not pulled from a fixed list. It's usually an attack, but doesn't have to deal damage to qualify - a signature disarm, a signature escape, a signature show of force. Built level by level as your mastery of your own technique grows.
 
 Defined once, at creation: whether the Move is primarily an **attack** or a **non-damaging effect**. If it's an attack, you make two separate choices - and they don't have to match.
 
@@ -1116,7 +1116,7 @@ What the pairing never touches is the to-hit. That's still your Element against 
 | 2 | Damage rises to **2d10** (if an attack); the non-damaging effect's scope widens (still GM-approved, but a real step up from Level 1). Using the Move now costs **1 Ki**, in addition to the Fast action - that Ki spend is what bakes in one minor secondary effect layered onto the base Move (a small knockback, a brief off-balance status, a minor debuff). |
 | 3 | Damage rises to **3d10**. Range extends from Melee to **Close** (Levels 1-2 were Melee-only). The secondary effect from Level 2 upgrades to a moderate tier (a real knockdown, a genuine debuff, a short status lock, rather than just "brief"). Still 1 Ki per use. |
 | 4 | Damage rises to **4d10**. Range extends to **Near**. The secondary effect upgrades to a major tier (a real status condition, a significant forced reposition, a debuff with teeth). Ki cost rises to **2** per use. |
-| 5 | Damage rises to **5d10**. Range extends to **Far**. The secondary effect reaches its full, signature-defining scope (GM-approved - a finishing blow, a reality-bending flourish, whatever fits the character). Ki cost rises to **3** per use. |
+| 5 | Damage rises to **5d10**. Range extends to **Far**. The secondary effect reaches its full, signature-defining scope (GM-approved - a finishing blow, a reality-bending flourish, whatever fits the Move you built). Ki cost rises to **3** per use. |
 
 **Adders**:
 
