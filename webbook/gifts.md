@@ -1298,7 +1298,9 @@ Additionally, given a full **Month** of rest, you can heal away a below-zero Fla
 
 <p class="entry-flavour">Every seasoned fighter, mystic or gifted soul eventually develops something that is theirs - a technique, a maneuver, a flourish nobody taught them and nobody else does quite the same way. It has a name, whether or not you are the one who named it.</p>
 
-Defined once, at creation: whether the Move is primarily an **attack** or a **non-damaging effect**. If it’s an attack, you make two separate choices - and they don’t have to match.
+**You can have more than one.** Signature Move is bought per Move: each one is its own purchase, with its own Levels at the usual 3 points apiece, and each one gets a **name**. Two Moves at Level 3 cost 18 points, the same as any other 18 points of Gift. Nothing stops you carrying three except the size of the pool.
+
+Each Move is defined once, at creation: whether it is primarily an **attack** or a **non-damaging effect**. If it’s an attack, you make two separate choices - and they don’t have to match.
 
 **The attack source.Ferocity**, **Presence** or **Psyche** - the sub-stat that powers the Move. This is what you add to a die when you spend Ki to infuse it, and it’s the part that says what the Move is about you: raw aggression, sheer force of personality, or a mind that pushes.
 

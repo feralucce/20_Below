@@ -8,8 +8,10 @@ import {
   SIGNATURE_MOVE,
   ATTACK_SOURCES,
   ATTACK_WALLS,
-  signatureBuild,
+  signatureMoves,
   setSignatureField,
+  addSignatureMove,
+  removeSignatureMove,
 } from '../state.js';
 
 function getOrCreateGiftState(state, name) {
@@ -115,39 +117,89 @@ export default {
       // Nothing here touches pool maths, so none of it re-renders the
       // step - a rerender mid-sentence would take the textarea's focus
       // with it.
-      if (gift.name === SIGNATURE_MOVE && gState.level > 0) {
-        const build = signatureBuild(gState);
-        const pick = (label, field, options, hint) =>
-          el('label', { style: 'display:block;margin:0.4rem 0 0 0.5rem;font-size:0.85rem;' }, [
+      // A character can hold more than one Signature Move, and each is its
+      // own purchase - own name, own Levels, own source and wall. The Gift's
+      // counter is the sum, so the pool charges for all of them.
+      if (gift.name === SIGNATURE_MOVE) {
+        const moves = signatureMoves(gState);
+        const sig = el('div', { style: 'margin:0.25rem 0 0.75rem 0;' }, [
+          el('p', { class: 'hint', style: 'margin:0 0 0.4rem 0.5rem;' },
+            'Each Move is bought separately - its own Levels, its own name. '
+            + 'The source and the wall never have to match.'),
+        ]);
+
+        const pick = (i, label, field, options, hint, value) =>
+          el('label', { style: 'display:block;margin:0.35rem 0 0;font-size:0.85rem;' }, [
             `${label} `,
             el(
               'select',
-              { onChange: (e) => setSignatureField(state, field, e.target.value) },
+              { onChange: (e) => setSignatureField(state, i, field, e.target.value) },
               ['', ...options].map((o) =>
                 el('option', {
                   value: o,
-                  selected: build[field] === o ? '' : undefined,
+                  selected: value === o ? '' : undefined,
                   text: o || `- ${hint} -`,
                 }),
               ),
             ),
           ]);
-        const sig = el('div', { style: 'margin:0.25rem 0 0.75rem 0;' }, [
-          el('p', { class: 'hint', style: 'margin:0 0 0 0.5rem;' },
-            'Built once, at creation. The source and the wall do not have to match.'),
-          pick('Powered by', 'source', ATTACK_SOURCES, 'attack source'),
-          pick('Resolves against', 'wall', ATTACK_WALLS, 'target wall'),
-          el('label', { style: 'display:block;margin:0.5rem 0 0 0.5rem;font-size:0.85rem;' }, [
-            'What it looks like',
-            el('textarea', {
-              rows: 3,
-              style: 'display:block;width:100%;margin-top:0.2rem;',
-              text: build.description,
-              placeholder: 'Name it, and say what happens when you use it.',
-              onInput: (e) => setSignatureField(state, 'description', e.target.value),
+
+        moves.forEach((mv, i) => {
+          sig.appendChild(el('div', {
+            style: 'margin:0.5rem 0 0 0.5rem;padding:0.5rem;'
+              + 'border-left:3px solid var(--accent,#3d84c4);',
+          }, [
+            el('label', { style: 'display:block;font-size:0.85rem;' }, [
+              'Name ',
+              el('input', {
+                type: 'text',
+                value: mv.name,
+                placeholder: 'What do you call it?',
+                onInput: (e) => setSignatureField(state, i, 'name', e.target.value),
+              }),
+            ]),
+            el('label', { style: 'display:block;margin-top:0.35rem;font-size:0.85rem;' }, [
+              'Level ',
+              el(
+                'select',
+                {
+                  onChange: (e) => {
+                    setSignatureField(state, i, 'level', Number(e.target.value));
+                    rerenderStep();
+                    rerenderPools();
+                  },
+                },
+                [1, 2, 3, 4, 5].map((n) =>
+                  el('option', { value: String(n), selected: mv.level === n ? '' : undefined, text: String(n) })),
+              ),
+            ]),
+            pick(i, 'Powered by', 'source', ATTACK_SOURCES, 'attack source', mv.source),
+            pick(i, 'Resolves against', 'wall', ATTACK_WALLS, 'target wall', mv.wall),
+            el('label', { style: 'display:block;margin-top:0.4rem;font-size:0.85rem;' }, [
+              'What it looks like',
+              el('textarea', {
+                rows: 3,
+                style: 'display:block;width:100%;margin-top:0.2rem;',
+                text: mv.description,
+                placeholder: 'Say what happens when you use it.',
+                onInput: (e) => setSignatureField(state, i, 'description', e.target.value),
+              }),
+            ]),
+            el('button', {
+              type: 'button',
+              style: 'margin-top:0.4rem;font-size:0.8rem;',
+              text: 'Remove this Move',
+              onClick: () => { removeSignatureMove(state, i); rerenderStep(); rerenderPools(); },
             }),
-          ]),
-        ]);
+          ]));
+        });
+
+        sig.appendChild(el('button', {
+          type: 'button',
+          style: 'margin:0.5rem 0 0 0.5rem;',
+          text: moves.length ? 'Add another Move' : 'Add a Signature Move',
+          onClick: () => { addSignatureMove(state); rerenderStep(); rerenderPools(); },
+        }));
         wrap.appendChild(sig);
       }
       if (gift.menu) {
