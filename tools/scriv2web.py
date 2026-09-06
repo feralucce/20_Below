@@ -360,6 +360,12 @@ def wrap_headed_entries(chunks, after, lists_by_name=None):
     return out
 
 
+def count_cards(chunks, css_class):
+    """How many cards of one kind a chapter ended up with."""
+    needle = '<div class="' + css_class
+    return sum(c.count(needle) for c in chunks)
+
+
 def esc_html(text):
     return (text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
 
@@ -410,6 +416,9 @@ def main():
                 acc.extend(rules_tables(path))
         tables_for[slug] = acc
     written = []
+    # Transforms that ran and produced nothing. None of them raise, so
+    # without this the build reads as entirely successful.
+    hollow = []
 
     for i, (frag, slug, section, title, _blurb) in enumerate(CHAPTERS):
         uuid, binder_title = chapter_uuid(frag)
@@ -418,10 +427,22 @@ def main():
         chunks = wrap_entries(chunks)
         if slug == "glossary":
             chunks = gloss_cards(chunks)
+            # Dispatched by name, so it is meant to find terms. Zero means
+            # the entry shape moved, not that the chapter has none.
+            if not count_cards(chunks, "gloss"):
+                hollow.append(
+                    "glossary: gloss_cards wrapped nothing - has the "
+                    "**Term**: definition shape changed?")
         if slug == "gifts":
             chunks = wrap_headed_entries(
                 chunks, "## The Gift List",
                 gift_lists(os.path.join(ROOT, "rules", "gifts.md")))
+            # wrap_headed_entries swallows a missing heading and hands back
+            # the chapter untouched, so the miss is caught here instead.
+            if not count_cards(chunks, "entry entry-headed"):
+                hollow.append(
+                    "gifts: wrap_headed_entries boxed nothing - is the "
+                    "heading still \"## The Gift List\"?")
         prev_slug = CHAPTERS[i - 1][1] if i else None
         next_slug = CHAPTERS[i + 1][1] if i + 1 < len(CHAPTERS) else None
 
@@ -483,6 +504,11 @@ def main():
     lines.append("")
     io.open(os.path.join(OUT, "index.md"), "w", encoding="utf-8", newline="\n").write(
         "\n".join(lines))
+
+    if hollow:
+        print("")
+        for note in hollow:
+            print("  HOLLOW  %s" % note)
 
     total = sum(w for _, _, _, w in written)
     print("%d chapters -> %s" % (len(written), OUT))
