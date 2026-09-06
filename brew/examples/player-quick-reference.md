@@ -130,7 +130,7 @@ Same two steps as any attack. Element vs their **Social Defense** (10-Psyche) to
 
 **Somebody has to be watching** - **-1** unwitnessed, **+1** in front of people whose regard they need. Both floor at 1.
 
-**Mental attacks need a Gift.** There is no unarmed version, and that is the rule, not a gap.
+**Mental attacks need a Gift.** There's no unarmed version - that's the rule, not a gap.
 
 ## Conditions
 

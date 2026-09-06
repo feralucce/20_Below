@@ -225,11 +225,11 @@ Which gives you the dozens for free. Two people trade attacks, back and forth, a
 
 Every connecting die costs a Poise, so it grinds. Whoever reaches 0 first is Flustered, and in a dozens circle that is the whole game - Disadvantage on everything social for the rest of the scene, in front of everyone. Go below 0 and you’re Humiliated, and you defer to that room from then on.
 
-## Attacking Someone's Mind
+## Mental Attacks
 
-You can’t. Not without a Gift.
+**A Gift is the only way you will ever make one.** That’s the whole rule, and the rest of this section is what it means.
 
-That’s the one place the three attack types stop being symmetrical, and it’s deliberate. Anyone can throw a punch and anyone can throw an insult - a fist and a bad word are both standard human equipment. Reaching into somebody’s head is not.
+It is the one place the three attack types stop being symmetrical, and it’s deliberate. Anyone can throw a punch and anyone can throw an insult - a fist and a bad word are both standard human equipment. Reaching into somebody’s head is not, and no amount of nerve or leverage substitutes for the thing you either have or don’t.
 
 If your character has a Gift that does it, the Gift says how many dice it throws, and everything after that runs like any other attack: Element against their Mental Defense, then those dice one at a time against their Psyche, and every one that gets through costs them a Sanity. Ki buys a die through by adding your own Psyche. A Signature Move built to resolve against Psyche counts, because a Signature Move is a Gift.
 

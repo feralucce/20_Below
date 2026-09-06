@@ -609,7 +609,7 @@ As with any Social attack, additional Ki Infusion (1 Ki per die) can push indivi
 - **Single Target Only**: the Level 2+ multi-target/crowd expansion never applies, regardless of Level bought - always resolves against one target.
 - **Fades Fast**: the lock still lasts the full Scene, but only while you actively concentrate on maintaining it - losing focus (Distracted, taking an unrelated Slow action, or similar) ends it immediately instead of it lingering passively.
 
-**1** - Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die locks their attention onto you for the scene: awe, dread, or fascination, your choice. No specific action compelled, just overwhelming presence.
+**1** - Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their Social Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die locks their attention onto you for the scene: awe, dread, or fascination, your choice. No specific action compelled, just overwhelming presence.
 
 **2** - Dice rise to **3d10**. Effect now reaches everyone perceiving you within Close range - each target gets their own to-hit roll and, on success, their own dice vs. their Presence wall.
 
@@ -1003,7 +1003,7 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 - **Leaves a Seam**: an edited memory always has a small, detectable inconsistency a thorough investigation (or another telepath) can find.
 - **One Edit, Once**: you can never target the same person's memory twice - the first edit is permanent and final.
 
-**1** - Requires touch. Spend **1 Ki**; make the standard to-hit roll (**Air** vs. their Defense). On success, roll **2d10** per-die against their Psyche wall - a connecting die erases one specific, recent memory (something from the last few minutes: a name overheard, a face seen, this exact encounter).
+**1** - Requires touch. Spend **1 Ki**; make the standard to-hit roll (**Air** vs. their Mental Defense). On success, roll **2d10** per-die against their Psyche wall - a connecting die erases one specific, recent memory (something from the last few minutes: a name overheard, a face seen, this exact encounter).
 
 **2** - Dice rise to **3d10**. You may implant a simple false memory in place of the erased one, instead of leaving a blank.
 
@@ -1160,7 +1160,7 @@ Ki Infusion still applies on top, same as any Social attack.
 - **Reciprocal Bond**: while any binding is active, you're also bound by the same rule yourself - you set the standard, you have to live by it too.
 - **Undermined by Contradiction**: if you personally break a rule you've currently imposed on someone else, every active binding you're holding shatters at once.
 
-**1** - Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die binds them to one simple rule of conduct you declare (“don’t raise your voice,” “don’t lie to me,” “don’t draw a weapon”) for the rest of the Scene. Breaking the rule costs them **Disadvantage** on the roll that breaks it.
+**1** - Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their Social Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die binds them to one simple rule of conduct you declare (“don’t raise your voice,” “don’t lie to me,” “don’t draw a weapon”) for the rest of the Scene. Breaking the rule costs them **Disadvantage** on the roll that breaks it.
 
 **2** - Dice rise to **3d10**. You may declare up to two rules at once on the same target.
 
@@ -1308,7 +1308,7 @@ Most Moves pair the obvious way. They don’t have to, and the interesting ones 
 
 A **Presence** Move resolved against **Soak** is a beam of pure personal force that knocks people down - you aren’t talking anyone into anything, you’re bringing enough of yourself to bear that it lands like a hit. A **Ferocity** Move against **Presence** is a scream that breaks composure instead of bone. A **Psyche** Move against **Soak** is a stare that stops a heart.
 
-What the pairing never touches is the to-hit. That’s still your Element against their Defense, picked by how you’re going about it, the same as any other attack. And it never changes what a connecting die costs - the wall decides that, always. Flavor the Move however you like; the wall is what the rules read.
+The wall you pick also picks your to-hit target, because there are three Defenses and each answers one kind of attack. A Move resolving against Soak rolls against Physical Defense, one against Presence rolls against Social Defense, one against Psyche rolls against Mental Defense. What stays yours either way is the Element - picked by how you’re going about it, the same as any other attack. And it never changes what a connecting die costs - the wall decides that, always. Flavor the Move however you like; the wall is what the rules read.
 
 **Adders**
 
