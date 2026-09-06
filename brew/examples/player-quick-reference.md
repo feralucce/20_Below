@@ -108,9 +108,7 @@ Spend **1 Ki per step** to bump the Bracket you declared - Slow to Normal, or No
 
 \page
 
-# Attacking Socially
-
-## Attacking Socially
+# Social Attacks
 
 Defense differs by attack: **10-Atropos** physical, **10-Psyche** social, **10-Presence** mental.
 

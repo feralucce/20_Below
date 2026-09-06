@@ -195,7 +195,7 @@ One thing the Element never does is decide which wall you’re attacking. That�
 
 So yes - you can build an attack that is pure force of personality and still knocks people down. It just isn’t a Social attack, because Social means it went at their Poise. The flavor is yours. The wall is what the rules read.
 
-## Attacking Someone Socially
+## Social Attacks
 
 A weapon tells you how many dice a punch throws. Nothing hangs off your belt for this, so the dice come from somewhere else: what you brought to the conversation. The GM rates it when you say what you’re doing.
 
