@@ -141,7 +141,8 @@ Spend **1 Ki per step** to bump the Bracket you declared - Slow to Normal, or No
 | **Surprised** | Everything at Disadvantage for the round |
 | **Flustered** | Poise hit 0. Social rolls at Disadvantage for the scene |
 | **Humiliated** | Poise below 0. You defer and comply |
-| **Shattered** | Sanity hit 0. Panicky and babbling, and you have to be led |
+| **Overwhelmed** | Sanity hit 0. Disadvantage on everything, plus a temporary mental Flaw |
+| **Shattered** | Sanity below 0. Panicky and babbling; you have to be led |
 
 ## At Zero
 
@@ -149,5 +150,5 @@ Spend **1 Ki per step** to bump the Bracket you declared - Slow to Normal, or No
 |---|---|
 | **Health** | Unconscious, and dying below it |
 | **Poise** | Flustered, then Humiliated below 0 |
-| **Sanity** | Shattered. 1 Ki or a rest brings you back to 1 |
+| **Sanity** | Overwhelmed, then Shattered below 0 |
 | **An unnamed NPC** | Dead |

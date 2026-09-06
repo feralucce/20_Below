@@ -1282,7 +1282,7 @@ What the pairing never touches is the to-hit. That’s still your Element agains
 **Adders**
 
 - **Extended Range** (Lesser, 3 pts): +1 Ki per use. The Move reaches one Range Band further than its current Level would normally allow.
-- **Piercing Edge** (Lesser, 3 pts): the Move ignores a flat 2 points of the target's relevant wall (Soak, Presence, or Psyche) before resolving.
+- **Piercing Edge** (Lesser, 3 pts): the Move ignores a flat 2 points of the target's chosen wall before resolving.
 - **Area of Effect** (Greater, 6 pts): +1 Ki per use. The Move affects everyone within its range/area rather than a single target - exact shape and extent defined when the Move is built, GM-approved.
 
 **Limiters**

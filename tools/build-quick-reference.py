@@ -153,7 +153,7 @@ nav_section: start
   /* A lookup table carries tighter rows than body copy. This one is read
      a line at a time mid-roll, not left to right, and the extra leading
      only costs page count. */
-  .wide--difficulty td,.wide--difficulty th{padding-top:.16em;padding-bottom:.16em}
+  .wide--difficulty td,.wide--difficulty th{padding-top:.14em;padding-bottom:.14em}
   .wide--difficulty td:first-child,.wide--difficulty th:first-child{width:11%}
   .wide--difficulty td:nth-child(2),.wide--difficulty th:nth-child(2){width:22%}
   .wide--difficulty tbody tr:nth-child(1){background:hsla(356,72%,48%,.13)}

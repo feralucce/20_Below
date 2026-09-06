@@ -364,7 +364,7 @@ What an action actually *lets you do*, beyond a plain Attack or Move - filling i
 
 **Sprint**: an all-out run, **5x Movement Rate**, is a **Slow action** and the only thing that character does that round - no attack, no second half, and they act last as Slow always does. A sprint crosses Near in a single turn and closes from Far in one or two.
 
-*The following are the status effects defined so far - Off Balance, Distracted, Surprise, Flustered, Humiliated. More are expected as combat rules develop further; this isn't the full list.*
+*The following are the status effects defined so far - Off Balance, Distracted, Surprise, Flustered, Humiliated, plus [Overwhelmed and Shattered](#sanity), which Sanity defines. More are expected as combat rules develop further; this isn't the full list.*
 
 #### Off Balance
 
