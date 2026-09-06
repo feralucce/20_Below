@@ -74,7 +74,7 @@ The alternate form is built once, at creation, spending a points pool (below) on
 | Option | Cost | Effect |
 |---|---|---|
 | Sub-stat boost | 1 pt | +2 to one physical sub-stat (Soak, Ferocity, Stamina, Potence, or Initiative) while transformed. |
-| Attribute boost | 2 pts/point | +1 to one Attribute (Earth, Air, Fire, Water, or Moira) while transformed, up to the character's normal maximum. |
+| Attribute boost | 2 pts/point | +1 to one Attribute (Earth, Air, Fire, Water, or Moira) while transformed, up to your own normal maximum. |
 | Environmental adaptation | 1 pt | Breathe underwater, see in total darkness, ignore extreme temperatures, or similar. |
 | Borrow a Gift Level | 3 pts/Level | Gain one Level of an existing Gift you don't otherwise hold while transformed, GM-approved for fit - same per-Level price as the [Gifts pool](character-creation.md#gifts-pool). |
 | Borrow a Boon | 1/3/5/7 pts | Gain a Boon you don't otherwise hold while transformed, at that Boon's own Trivial/Lesser/Greater/Legendary price. |
@@ -498,7 +498,7 @@ As with any Mental attack, additional Ki Infusion (1 Ki per die) can push indivi
 
 ## Elemental Aura
 
-<p class="entry-flavour">You raise a battle aura of your chosen element around your body and wear it like weather. Element is a broad word here - fire, ice, lightning, steam, darkness, radiation, cosmic energy, void, magnetism, whatever the character actually is. It is chosen once, and after that everyone in the room knows exactly what you are, from across it.</p>
+<p class="entry-flavour">You raise a battle aura of your chosen element around your body and wear it like weather. Element is a broad word here - fire, ice, lightning, steam, darkness, radiation, cosmic energy, void, magnetism, whatever you actually are. It is chosen once, and after that everyone in the room knows exactly what you are, from across it.</p>
 
 Activating the aura is a Slow action. **Maintaining it requires a Gift Check every turn it stays active - failure costs 1 Ki, at any Level.** At Level 5, a turn spent lashing out with the aura (below) skips the maintenance check entirely, since spending Ki to attack already covers the cost.
 
@@ -1020,7 +1020,7 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 
 <p class="entry-flavour">Death is not the end of the story here. It is a resource. You reach past the thread Atropos already cut, pull the threadbare echo back across, bind it, and draw on the vitality it left behind. What answers is not the person. It is close enough to be useful and close enough to be unpleasant.</p>
 
-Chosen once, at creation, purely cosmetic: the form your raised dead take (bone constructs, wrapped corpses, spectral soldiers, whatever fits the character).
+Chosen once, at creation, purely cosmetic: the form your raised dead take (bone constructs, wrapped corpses, spectral soldiers, whatever fits the way you do this).
 
 **Adders**
 
@@ -1330,7 +1330,7 @@ What the pairing never touches is the to-hit. That’s still your Element agains
 
 **4** - Damage rises to **4d10**. Range extends to **Near**. The secondary effect upgrades to a major tier (a real status condition, a significant forced reposition, a debuff with teeth). Ki cost rises to **2** per use.
 
-**5** - Damage rises to **5d10**. Range extends to **Far**. The secondary effect reaches its full, signature-defining scope (GM-approved - a finishing blow, a reality-bending flourish, whatever fits the character). Ki cost rises to **3** per use.
+**5** - Damage rises to **5d10**. Range extends to **Far**. The secondary effect reaches its full, signature-defining scope (GM-approved - a finishing blow, a reality-bending flourish, whatever fits the Move you built). Ki cost rises to **3** per use.
 </div>
 
 <div class="entry entry-headed" markdown="1">
