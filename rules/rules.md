@@ -230,6 +230,17 @@ Potence (Earth's other sub-stat: raw physical power/strength - carrying capacity
 
 ### Air
 
+#### Mental Attacks - Gift-Sourced Only
+
+A Mental attack resolves exactly like a [Physical](#physical-attacks---weapon-damage--per-die-resolution) or [Social](#social-attacks---leverage--per-die-resolution) one: [to-hit](#the-passive-wall-triad---soak-presence-psyche) with the fitting [Element](#choosing-the-attacking-element) against the target's [Defense](#defense-derived-stat), then dice resolved **individually** against their **Psyche**, a connecting die costing **one [Sanity](#sanity)**. [Ki Infusion](#ki-infusion) adds the attacker's own Psyche, 1 Ki per die.
+
+**There is no baseline dice source, and this is deliberate.** A weapon gives Physical dice and [leverage](#social-attacks---leverage--per-die-resolution) gives Social dice; nothing gives an ordinary character Mental dice. The pool has to come from one of:
+
+- a **[Gift](gifts.md)** that states one - including a [Signature Move](gifts.md#signature-move) built to resolve against Psyche, since a Signature Move is a Gift;
+- a **creature's own stated pool** - see the adversary stat blocks, where a Nightmare's Cry is dice pool 6 and needs no to-hit roll at all.
+
+**Psyche is therefore the one wall a character without a Gift can never test.** A fist and a bad word are standard human equipment; a mind that pushes on another mind is not. Treat a player asking how to attack Psyche unaided as answered - they can't - rather than as a gap to house-rule around.
+
 #### Sanity
 
 Sanity mirrors Health Levels too, tracking a character's grip on their own mind against Mental attack.
