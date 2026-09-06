@@ -97,6 +97,32 @@ Animals sense something in you that overrides their instincts - an inborn trust 
 - **No Companion**: you never gain the free Animal Companion at Level 2. Like every Limiter, this is permanent - it defines what the Gift is, and no amount of XP removes it.
 - **Vocal Component**: using the Gift requires speaking or making an audible animal call. Doesn't work if you're silenced, gagged, or otherwise unable to vocalize.
 
+### Battle Sense
+
+You get the half-second before it happens. Not visions, and nothing useful for picking horses - just the shoulder that hasn't dropped yet, the weight already shifting onto the back foot. Everyone else in the room is reacting. You have simply been there a moment longer than they have.
+
+Reading an opponent costs **1 Ki**, declared on your turn - it takes no action. You can hold **one read at a time**; naming somebody new drops the one you had.
+
+| Level | Effect |
+|---|---|
+| 1 | Spend **1 Ki** and name one opponent you can see. Every attack you make against them is at **[Advantage](rules.md#advantage--disadvantage)** for the rest of the round. |
+| 2 | The read now lasts **the rest of the fight** rather than the round. Same 1 Ki, same one-at-a-time limit. |
+| 3 | Against a read opponent, your **critical hits land on a 2 or a 3** - the same shape as [Expert](skills.md#training-tiers), for the roll no Training Tier reaches. |
+| 4 | A read opponent **cannot gain Advantage against you**, from any source. You are already where they were going. |
+| 5 | Once per fight, take **one extra Fast action**, at any point you choose. It is Fast and it stays Fast - Ki cannot bump it to Normal or Slow, and it cannot be spent on a Slow action's called shot. |
+
+**Adders**:
+
+- **Cold Read** (Lesser, 3 pts): +1 Ki per use. Establish a read by watching someone fight *somebody else*, without attacking them yourself.
+- **Second Read** (Greater, 6 pts): hold **two** reads at once instead of one.
+- **Shared Read** (Greater, 6 pts): +1 Ki per use. One ally you can speak to gains your Advantage against the read opponent for one round.
+
+**Limiters**:
+
+- **Eyes Only**: you must be able to see them clearly. Darkness, smoke or heavy cover drops the read until you can see them again.
+- **Rattled**: losing a [Health Level](rules.md#health-levels) drops your current read. Re-establishing it costs Ki again.
+- **Costly Sense**: every Ki cost of this Gift is 1 higher, at every Level.
+
 ### Berserker
 
 Pain doesn't slow you down, it feeds you. The worse it gets, the less anything but the fight in front of you matters.
