@@ -108,7 +108,51 @@ Spend **1 Ki per step** to bump the Bracket you declared - Slow to Normal, or No
 
 \page
 
-# Fate and Conditions
+# Attacking Socially
+
+## Attacking Socially
+
+Same two steps as any attack. Element vs their **Defense** to land it, then dice one at a time vs their **Presence**, rolling high. Each connecting die costs a **Poise**. Ki Infusion adds your Presence.
+
+**The dice are what you brought.**
+
+| | |
+|---|---|
+| **1** | Nerve alone - a flat insult, a raised voice |
+| **2** | A real hit - a burn that lands, a point they can't wave off |
+| **3** | Something true that stings - a weakness named, a room already laughing |
+| **4** | Something they can't afford said - evidence, a secret, rank, an audience |
+| **5** | A reckoning - all of it, in front of everyone, no exit |
+
+**No opening at the top** - an unearned room caps you at 1, however good the material.
+
+**Repeats decay** - the same jab twice is -1 die, a third time nothing.
+
+**Somebody has to be watching** - **-1** unwitnessed, **+1** in front of people whose regard they need. Both floor at 1.
+
+**Mental attacks need a Gift.** There is no unarmed version, and that is the rule, not a gap.
+
+## Conditions
+
+| | |
+|---|---|
+| **Off Balance** | Everything at Disadvantage until the end of your next turn. Doesn't stack |
+| **Distracted** | Atropos + Difficulty to hold a Slow action together |
+| **Surprised** | Everything at Disadvantage for the round |
+| **Flustered** | Poise hit 0. Social rolls at Disadvantage for the scene |
+| **Humiliated** | Poise below 0. You defer and comply |
+| **Overwhelmed** | Sanity hit 0. Disadvantage on everything, plus a temporary mental Flaw |
+| **Shattered** | Sanity below 0. Panicky and babbling; you have to be led |
+
+\page
+
+# Ki, Fate and At Zero
+
+## Ki
+
+::: roll
+**Ki = your strongest Element + 8**
+:::
 
 ## Fate Tokens
 
@@ -131,18 +175,6 @@ Spend **1 Ki per step** to bump the Bracket you declared - Slow to Normal, or No
 **Hold at most Stamina x 3. Spend at most Stamina per Scene.** A Token earned at the cap is lost.
 
 **Kotodama** - assert a fact into the world. Cost is Magnitude + Range beyond yourself + Plausibility (Whisper 0, Murmur +1, Shout +3), and permanent is free.
-
-## Conditions
-
-| | |
-|---|---|
-| **Off Balance** | Everything at Disadvantage until the end of your next turn. Doesn't stack |
-| **Distracted** | Atropos + Difficulty to hold a Slow action together |
-| **Surprised** | Everything at Disadvantage for the round |
-| **Flustered** | Poise hit 0. Social rolls at Disadvantage for the scene |
-| **Humiliated** | Poise below 0. You defer and comply |
-| **Overwhelmed** | Sanity hit 0. Disadvantage on everything, plus a temporary mental Flaw |
-| **Shattered** | Sanity below 0. Panicky and babbling; you have to be led |
 
 ## At Zero
 
