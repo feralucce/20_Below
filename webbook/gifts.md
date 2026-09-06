@@ -21,7 +21,7 @@ That narrowness is deliberate, and it’s the main thing keeping Gifts from eati
 
 Every Gift has exactly **5 levels**, rated 1-5.
 
-Levels are cumulative and sequential - a character must hold the previous level before gaining the next. **A Gift’s Level is its magnitude** - how big, strong, or wide the effect is at that level. Each level explicitly defines what the character can do at that magnitude, building on the level before it. All 5 levels are defined up front when a Gift is created.
+Levels are a ladder and you climb it in order - you hold Level 2 before you can buy Level 3. **A Gift’s Level is its magnitude**: how big, how strong, how far. Each level says what you can do at that size, building on the one below. All five are written down when the Gift is made, so you know from the start what you’re working toward.
 
 ## Points
 
@@ -29,21 +29,25 @@ At character creation, each Gift Level costs a flat **3 points** from the Gifts 
 
 **Adders** come in two tiers, **Lesser (3 points)** and **Greater (6 points)**, paid once to unlock the option permanently; the Ki cost of actually using it each time is separate and paid per the Gift’s own text. Every Gift should offer at least 3 Adders.
 
-**Limiters** are a permanent, creation-time restriction chosen for one specific Gift. Each Limiter taken drops the cost of every Level of that Gift by 1 point. A character may stack as many different Limiters on a Gift as they want, but no combination can ever drop a Level’s cost below 1 point.
+**Limiters** are a permanent, creation-time restriction chosen for one specific Gift. Each Limiter taken drops the cost of every Level of that Gift by 1 point. Stack as many different Limiters on one Gift as you like, but no combination ever drops a Level below 1 point.
 
-Because Limiters make the per-Level cost vary Gift to Gift, the 21-point pool won’t always divide evenly once limited and unlimited Gifts are mixed. Any Gifts Pool points left unspent for that reason convert into Discretionary points at 2:1 rather than being lost.
+Limiters make Levels cost different amounts on different Gifts, so the 21-point pool won’t always come out even. Whatever you can’t spend converts to Discretionary points at 2:1. Nothing is lost for failing to divide neatly.
 
 ## Resolution
 
-No new stat governs Gifts. Using a Gift draws on tools that already exist elsewhere in the system:
+Gifts don’t add a stat. Using one reaches for tools the game already has.
 
-**The roll**, where one applies, reuses the standard mechanics already in place - weapon/Physical resolution, Presence/Psyche’s self-paired attack shape, or a plain **Attribute + Difficulty** check - rather than each Gift inventing its own roll type. **Ki cost**, where one applies, is a direct spend (no roll) called out explicitly per Gift level, the same category as Ki Infusion or Bump Action Bracket. **The Gift Check**, where one applies, is a resource-risk roll: 2d10 against **current Ki** (roll-under), the same shape as a core roll. Success - free. Failure - lose 1 Ki, until refilled. Because it reads current Ki rather than your maximum, Gifts are dependable while you are fresh and get unreliable once you have spent the day.
+**The roll.** When a Gift needs one, it borrows a roll you already know - weapon damage, the Presence or Psyche attack shape, or a plain **Attribute + Difficulty** check. No Gift invents its own.
 
-None of these three apply automatically to every Gift or every level - each is a tool, used on a Gift-by-Gift, level-by-level basis as the specific effect calls for it.
+**The Ki cost.** A flat spend, no roll, written into the level that charges it. The same kind of thing as Ki Infusion, or bumping your Bracket.
+
+**The Gift Check.** 2d10 under your **current Ki**, roll low, the same shape as any core roll. Succeed and it’s free. Fail and it costs you 1 Ki until you refill. It reads current Ki rather than your maximum, which is why Gifts are dependable while you’re fresh and start letting you down once the day has worn you thin.
+
+None of the three is automatic. Each Gift, and each level of it, says which it uses, if any.
 
 ## The Gift List
 
-Every entry defines all five levels up front. Levels are cumulative and sequential - you hold the one below before you take the next - and a Gift’s Level is its magnitude, not a different power wearing the same name.
+Every entry defines all five levels up front. A Gift’s Level is its magnitude - not a different power wearing the same name.
 
 <div class="entry entry-headed" markdown="1">
 
