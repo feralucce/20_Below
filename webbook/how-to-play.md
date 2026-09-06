@@ -215,6 +215,18 @@ Which gives you the dozens for free. Two people trade attacks, back and forth, a
 
 Every connecting die costs a Poise, so it grinds. Whoever reaches 0 first is Flustered, and in a dozens circle that is the whole game - Disadvantage on everything social for the rest of the scene, in front of everyone. Go below 0 and you’re Humiliated, and you defer to that room from then on.
 
+## Attacking Someone's Mind
+
+You can’t. Not without a Gift.
+
+That’s the one place the three attack types stop being symmetrical, and it’s deliberate. Anyone can throw a punch and anyone can throw an insult - a fist and a bad word are both standard human equipment. Reaching into somebody’s head is not.
+
+If your character has a Gift that does it, the Gift says how many dice it throws, and everything after that runs like any other attack: Element against their Defense, then those dice one at a time against their Psyche, and every one that gets through costs them a Sanity. Ki buys a die through by adding your own Psyche. A Signature Move built to resolve against Psyche counts, because a Signature Move is a Gift.
+
+If your character doesn’t have one, Psyche is a wall you have no way to push on. That is the answer, not a gap in the rules.
+
+Plenty of things out there are better equipped than you. A nightmare’s cry doesn’t bother with a to-hit roll and throws more dice than any person could bring to bear. Psyche is the wall you will spend the most time hiding behind and the least time attacking.
+
 ## Spending Ki on the Dice
 
 Roll the damage dice first. With them on the table, you pick which ones to boost, at **1 Ki each**. A boosted die adds your matching sub-stat to its own result - Ferocity for Physical, Presence for Social, Psyche for Mental.
