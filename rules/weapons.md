@@ -1,6 +1,6 @@
 # Weapons & Equipment
 
-Each weapon's **Damage** rating is how many d10 it rolls on a hit, resolved per-die against the defender's Soak, as described in [rules.md](rules.md#physical-attacks--weapon-damage--per-die-resolution).
+Each weapon's **Damage** rating is how many d10 it rolls on a hit, resolved per-die against the defender's Soak, as described in [rules.md](rules.md#physical-attacks---weapon-damage--per-die-resolution).
 
 **Wealth** is the [Wealth](resources.md#per-level-content) Level needed to get an item for free at [character creation](resources.md#wealth-at-character-creation) - see that section for the full purchasing procedure. It applies the same way to every table on this page, not just weapons.
 

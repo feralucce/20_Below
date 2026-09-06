@@ -185,6 +185,36 @@ One thing the Element never does is decide which wall you’re attacking. That�
 
 So yes - you can build an attack that is pure force of personality and still knocks people down. It just isn’t a Social attack, because Social means it went at their Poise. The flavor is yours. The wall is what the rules read.
 
+## Attacking Someone Socially
+
+A weapon tells you how many dice a punch throws. Nothing hangs off your belt for this, so the dice come from somewhere else: what you brought to the conversation. The GM rates it when you say what you’re doing.
+
+**One die.** Nerve, and nothing else. A flat insult, a raised voice, a threat everyone in the room knows you can’t back.
+
+**Two.** A real hit. A burn that lands, a joke at their expense that works, a fair point they can’t just wave off.
+
+**Three.** Something true, and it stings. A weakness named out loud, a failure dragged back up, a room that has already started laughing at them.
+
+**Four.** Something they can’t afford to have said. Evidence. A secret. A witness. Rank they have to answer to. An audience whose opinion they actually need.
+
+**Five.** A reckoning. All of it at once, in front of everyone who counts, and no door out.
+
+Everything after that runs exactly like a punch. Element against their Defense to land it, then that many dice, one at a time, against their Presence, rolling high. Every die that gets through costs them a Poise. Ki buys a die through the same way it always does, adding your Presence instead of your Ferocity.
+
+Three things keep that ladder honest.
+
+**You don’t get to open at the top.** The rating is what the moment supports, not what you’d like it to be. Walk up to a stranger and go straight for the reckoning and you have a 1, because you haven’t earned the room yet. Ratings climb as an exchange escalates.
+
+**Repeats lose their edge.** The same jab twice is worth less, and by the third time it’s worth nothing. Say something new or drop a die.
+
+**Somebody has to be watching.** Social damage is public damage. The identical burn is worth a die less with nobody there to hear it, and a die more in front of the people whose opinion they actually need. That is why the room is worth fighting over.
+
+## The Dozens
+
+Which gives you the dozens for free. Two people trade attacks, back and forth, and each one has to top the last or the exchange doesn’t escalate. So the ratings climb - a 1 to open, a 2 once you find the angle, a 3 when the crowd has warmed up and the material is getting close to the bone.
+
+Every connecting die costs a Poise, so it grinds. Whoever reaches 0 first is Flustered, and in a dozens circle that is the whole game - Disadvantage on everything social for the rest of the scene, in front of everyone. Go below 0 and you’re Humiliated, and you defer to that room from then on.
+
 ## Spending Ki on the Dice
 
 Roll the damage dice first. With them on the table, you pick which ones to boost, at **1 Ki each**. A boosted die adds your matching sub-stat to its own result - Ferocity for Physical, Presence for Social, Psyche for Mental.

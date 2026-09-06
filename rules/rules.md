@@ -246,6 +246,30 @@ Sanity mirrors Health Levels too, tracking a character's grip on their own mind 
 
 ### Fire
 
+#### Social Attacks - Leverage & Per-Die Resolution
+
+A social attack resolves exactly like a [Physical one](#physical-attacks---weapon-damage--per-die-resolution): [to-hit](#the-passive-wall-triad---soak-presence-psyche) with the [Element](#choosing-the-attacking-element) that fits the approach against the target's [Defense](#defense-derived-stat), then damage dice resolved **individually** against their **Presence**, a connecting die costing **one [Poise](#poise)**.
+
+**The dice come from leverage** - what the attacker brought to the exchange, not what they are. It is the direct analogue of the weapon setting Physical dice: the one part of an attack sourced from outside the character. The GM rates it when the attack is declared.
+
+| Dice | What you brought | Sounds like |
+|---|---|---|
+| **1** | Nerve, and nothing else | A flat insult, a raised voice, a threat they know can't be backed |
+| **2** | A real hit | A burn that lands, a joke at their expense that works, a fair point that can't be waved off |
+| **3** | Something true, and it stings | A weakness named aloud, a failure dragged back up, a room already laughing |
+| **4** | Something they can't afford to have said | Evidence, a secret, a witness, rank they must answer to, an audience whose opinion they need |
+| **5** | A reckoning | All of it at once, in front of everyone who counts, with no exit |
+
+Three constraints keep the ladder from collapsing upward:
+
+- **No opening at the top.** The rating is what the moment supports. An unearned room caps the attack at **1**, however good the material.
+- **Repeats decay.** The same line a second time is worth **-1 die**; a third time, nothing. New material or a smaller rating.
+- **Audience matters.** Social damage is public. **-1 die** with no witnesses; **+1** in front of people whose regard the target actually needs. Both floor at 1.
+
+[Ki Infusion](#ki-infusion) applies as it does to any attack - 1 Ki per die, adding the attacker's own **Presence** to that die.
+
+**The dozens** is this rule run in alternation: each attack must top the last or the exchange stops escalating, so ratings climb through the exchange rather than starting high. First participant to 0 Poise is [Flustered](#flustered); below 0, [Humiliated](#humiliated).
+
 #### Poise
 
 Poise mirrors [Health Levels](#health-levels), tracking composure under Social attack instead of Physical.
