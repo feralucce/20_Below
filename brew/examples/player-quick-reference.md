@@ -112,7 +112,9 @@ Spend **1 Ki per step** to bump the Bracket you declared - Slow to Normal, or No
 
 ## Attacking Socially
 
-Same two steps as any attack. Element vs their **Defense** to land it, then dice one at a time vs their **Presence**, rolling high. Each connecting die costs a **Poise**. Ki Infusion adds your Presence.
+Defense differs by attack: **10-Atropos** physical, **10-Psyche** social, **10-Presence** mental.
+
+Same two steps as any attack. Element vs their **Social Defense** (10-Psyche) to land it, then dice one at a time vs their **Presence**, rolling high. Each connecting die costs a **Poise**. Ki Infusion adds your Presence.
 
 **The dice are what you brought.**
 
@@ -124,7 +126,7 @@ Same two steps as any attack. Element vs their **Defense** to land it, then dice
 | **4** | Something they can't afford said - evidence, a secret, rank, an audience |
 | **5** | A reckoning - all of it, in front of everyone, no exit |
 
-**No opening at the top** - an unearned room caps you at 1, however good the material.
+**Earn the ceiling** - opening cold you have a 1, however good the line is. Every exchange that lands raises what you can reach by one, to a **maximum of 3**. Past 3 takes real material, not momentum.
 
 **Repeats decay** - the same jab twice is -1 die, a third time nothing.
 
