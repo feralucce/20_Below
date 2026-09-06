@@ -33,6 +33,12 @@ Each Resource’s Level table below defines what’s available for free, no roll
 
 **Failure**: you still get what you were after - the ask goes through either way - but the Resource’s Level drops by **1** (to a minimum of 1) until the start of the next **Month**, representing it stretched thin: savings drained, favors called in, goodwill spent. A Resource at a reduced Level uses that lower Level for everything, including further Resource Checks made while it’s still reduced.
 
+**Why it works like this.** The roll isn’t asking whether you’re rich. It’s asking what you can put your hands on right now. Wealth is liquid assets, not net worth - the money actually available this week, rather than the sum of everything you own.
+
+Which is why the Level drops instead of the ask failing. In college you could buy the pizza, and then you were done buying things for a while. As an adult a decent used car is still well within reach, and it will still flatten you for a month. Neither of those is a failure. You got the pizza. You got the car. You just can’t do it again yet.
+
+That’s the whole model, and it applies to every Resource, not only money. The ask goes through. What it costs you is your ability to make the next one.
+
 **Reaching beyond your means**: a Resource Index up to **2 higher** than the Resource’s current effective Level can be attempted - anything further out of reach can’t be attempted at all. Reaching that far always gets you what you were after, but drops the Resource’s Level to **0** for a Month (not just 1) regardless of whether the roll succeeded or failed - **unless the roll is a critical success**, which resolves the attempt as an ordinary free success with no cost at all.
 
 **Resource Index 6** is always treated as reaching 2 levels beyond the Resource’s current Level, no matter how high that Level actually is - and it’s the one case a critical success can’t save: a Resource Index 6 attempt always drops the Resource to 0 for a Month, full stop, even on a critical success.

@@ -17,6 +17,10 @@ Each Resource's Level table below defines what's available for free, no roll req
 - **Success**: the character gets what they were after, no further cost.
 - **Failure**: the character still gets what they were after - the ask goes through either way - but the Resource's Level drops by **1** (to a minimum of 1) until the start of the next **Month**, representing it stretched thin: savings drained, favors called in, goodwill spent. A Resource at a reduced Level uses that lower Level for everything, including further Resource Checks made while it's still reduced.
 
+**Why it works like this.** The Resource Check isn't asking whether the character is rich. It's asking what they can put their hands on right now. Wealth models **liquid assets, not net worth** - the money actually available this week, rather than the sum of everything owned.
+
+That is why a failed check drops the Level instead of refusing the ask. In college you could buy the pizza, and then you were done buying things for a while; as an adult a decent used car is well within reach and will still flatten you for a month. Neither is a failure - the ask goes through, and what it costs is the ability to make the next one. The same model applies to every Resource, not only money: favors called in and goodwill spent work the same way.
+
 **Reaching beyond your means**: a Resource Index up to **2 higher** than the Resource's current effective Level can be attempted - anything further out of reach can't be attempted at all. Reaching that far always gets the character what they were after, but drops the Resource's Level to **0** for a Month (not just 1) regardless of whether the roll succeeded or failed - **unless the roll is a critical success**, which resolves the attempt as an ordinary free success with no cost at all.
 
 **Resource Index 6** is always treated as reaching 2 levels beyond the Resource's current Level, no matter how high that Level actually is - and it's the one case a critical success can't save: a Resource Index 6 attempt always drops the Resource to 0 for a Month, full stop, even on a critical success.

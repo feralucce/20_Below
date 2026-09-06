@@ -18,3 +18,9 @@ A quick-reference summary of the current Attribute/sub-stat state. **This is a s
 ## Still Undefined
 
 [weapons.md](../rules/weapons.md)'s dice ratings (unbalanced first draft), Kotodama's Plausibility token costs and pooled Magnitude tiers, and other open questions tracked internally. **Health Level recovery, Battle Scars, what a connecting Social/Mental die costs the defender, and objects' resistance to Potence (reusing Soak, not a separate Hardness stat) are all resolved** - see [rules.md](../rules/rules.md#health-level-recovery), [#poise](../rules/rules.md#poise), [#sanity](../rules/rules.md#sanity), and [#potence](../rules/rules.md#potence).
+
+## Scope
+
+**The bestiary is a separate book, decided 2026-09-06.** [adversary-index.md](../rules/adversary-index.md) (180 entries, ~26,700 words), [cryptids.md](../rules/cryptids.md) (19, ~3,200) and [nightmare-creatures.md](../rules/nightmare-creatures.md) (16, ~3,000) total roughly 32,800 words - larger than any chapter in the core book, and about 46% of the manuscript's current length. They stay in `rules/` so the apps keep serving them, and they are not a missing chapter.
+
+An audit on the same date confirmed every other catalogue has reached the manuscript: 43 Boons, 27 Flaws, 50 Gifts, 23 Resources, 227 weapons and gear items, 89 Skills, with nothing missing on either side.
