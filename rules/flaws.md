@@ -6,38 +6,38 @@ Flaws are the mirror image of [Boons](boons.md) - disadvantages, quirks, or comp
 - **No numeric penalties in most cases** - a Flaw is usually a narrative complication or rule restriction, not a flat -N to some roll.
 - **Taken only at character creation**, in exchange for something at creation.
 - **Points granted**: **equal to the Level taken** - Level 3 Amnesia grants 3 points, Level 5 grants 5.
-- **A Flaw with no actual effect grants no points.** If a Flaw doesn't create any real difficulty for the character, it isn't worth anything at character creation - e.g. a one-eyed character with no depth-perception penalty or narrative disadvantage from it (a common anime trope) doesn't collect points for Impaired Senses just for having taken it cosmetically.
+- **A Flaw with no actual effect grants no points.** If a Flaw doesn't create any real difficulty for you, it isn't worth anything at character creation - e.g. a one-eyed character with no depth-perception penalty or narrative disadvantage from it (a common anime trope) doesn't collect points for Impaired Senses just for having taken it cosmetically.
 
 ## Flaw List
 
 | Flaw | Points | Effect |
 |---|---|---|
-| Amnesia | = Level | Missing memories from part of the character's past - see [Amnesia](#amnesia) below for the 5-level breakdown. |
-| Antagonist | = Level | Someone or something opposes the character - a personal rival, a dedicated enemy, or a determined hunter - see [Antagonist](#antagonist) below for the 5-level breakdown. |
-| Anxiety | = Level | A deeply rooted anxiety disorder - see [Anxiety](#anxiety) below for the 5-level breakdown. |
-| Berserk | = Level | Once triggered, must keep fighting at full intensity - see [Berserk](#berserk) below for the 5-level breakdown. |
-| Code of Conduct | = Level | A self-imposed rule the character won't break, even when breaking it would help - see [Code of Conduct](#code-of-conduct) below for the 5-level breakdown. |
-| Dependent | = Level | Someone relies on the character and must be protected or provided for - see [Dependent](#dependent) below for the 5-level breakdown. |
-| Destitute | = Level | Chronic financial hardship, from a rough patch to genuinely having nothing - see [Destitute](#destitute) below for the 5-level breakdown. |
-| Directionless | = Level | A poor, unreliable sense of direction - see [Directionless](#directionless) below for the 5-level breakdown. |
+| Amnesia | = Level | Part of your past is missing - see [Amnesia](#amnesia) below for the 5-level breakdown. |
+| Antagonist | = Level | Someone or something is set against you - a rival, an enemy, a hunter who doesn't give up - see [Antagonist](#antagonist) below for the 5-level breakdown. |
+| Anxiety | = Level | Anxiety that doesn't need a reason and doesn't switch off - see [Anxiety](#anxiety) below for the 5-level breakdown. |
+| Berserk | = Level | Once you're going, you don't stop until it's over - see [Berserk](#berserk) below for the 5-level breakdown. |
+| Code of Conduct | = Level | A rule you set yourself and won't break, even when breaking it would help - see [Code of Conduct](#code-of-conduct) below for the 5-level breakdown. |
+| Dependent | = Level | Someone relies on you, and has to be protected or provided for - see [Dependent](#dependent) below for the 5-level breakdown. |
+| Destitute | = Level | You have no money - anywhere from a bad patch to nothing at all - see [Destitute](#destitute) below for the 5-level breakdown. |
+| Directionless | = Level | You get lost. Reliably - see [Directionless](#directionless) below for the 5-level breakdown. |
 | Fragile | = Level | The body works against you - see [Fragile](#fragile) below for the 5-level breakdown. |
-| Gun-Shy | = Level | Falters when violence breaks out - see [Gun-Shy](#gun-shy) below for the 5-level breakdown. |
-| Illiterate | = Level | Cannot read or write, to some degree - see [Illiterate](#illiterate) below for the 5-level breakdown. |
-| Impaired Senses | = Level | A missing or significantly impaired sense - see [Impaired Senses](#impaired-senses) below for the 5-level breakdown. |
-| Incantations | = Level | A Gift only works if the character can speak a specific phrase aloud - see [Incantations](#incantations) below for the 5-level breakdown. |
-| Item of Power | = Level | A Gift's capability lives, at least in part, in something the character carries rather than in themselves - see [Item of Power](#item-of-power) below for the 5-level breakdown. |
-| Lame | = Level | Permanently reduced mobility from an old injury or condition - see [Lame](#lame) below for the 5-level breakdown. |
+| Gun-Shy | = Level | When violence starts, you falter - see [Gun-Shy](#gun-shy) below for the 5-level breakdown. |
+| Illiterate | = Level | You can't read, to one degree or another - see [Illiterate](#illiterate) below for the 5-level breakdown. |
+| Impaired Senses | = Level | One of your senses is dulled, or gone - see [Impaired Senses](#impaired-senses) below for the 5-level breakdown. |
+| Incantations | = Level | A Gift of yours only works if you can say a specific phrase out loud - see [Incantations](#incantations) below for the 5-level breakdown. |
+| Item of Power | = Level | A Gift of yours lives, at least partly, in something you carry rather than in you - see [Item of Power](#item-of-power) below for the 5-level breakdown. |
+| Lame | = Level | An old injury or condition took some of your mobility and kept it - see [Lame](#lame) below for the 5-level breakdown. |
 | Notable Appearance | = Level | Something about how you look draws stares and reactions - see [Notable Appearance](#notable-appearance) below for the 5-level breakdown. |
-| Notoriety | = Level | How widely and how badly the character is known - see [Notoriety](#notoriety) below for the 5-level breakdown. |
-| Overconfident | = Level | Consistently underestimates danger or overestimates their own ability - see [Overconfident](#overconfident) below for the 5-level breakdown. |
-| Pariah | = Level | Others hold a specific prejudice against the character (species, background, origin, etc.) - see [Pariah](#pariah) below for the 5-level breakdown. |
-| Reliance | = Level | A behavioral compulsion, substance dependency, or medical/physical condition - see [Reliance](#reliance) below for the 5-level breakdown. |
+| Notoriety | = Level | How widely, and how badly, you're known - see [Notoriety](#notoriety) below for the 5-level breakdown. |
+| Overconfident | = Level | You underestimate danger, or overestimate yourself, and you do it consistently - see [Overconfident](#overconfident) below for the 5-level breakdown. |
+| Pariah | = Level | People hold a specific prejudice against you - your species, your background, where you came from - see [Pariah](#pariah) below for the 5-level breakdown. |
+| Reliance | = Level | Something you need - a compulsion, a substance, or a condition that has to be managed - see [Reliance](#reliance) below for the 5-level breakdown. |
 | Ritual Required | = Level | A Gift doesn't answer the instant it's reached for - it has to be called, coaxed, or earned each time - see [Ritual Required](#ritual-required) below for the 5-level breakdown. |
-| Secret | = Level | Something the character desperately doesn't want revealed - see [Secret](#secret) below for the 5-level breakdown. |
-| Shaken Confidence | = Level | A lasting loss of social self-assurance from one specific defining humiliation - see [Shaken Confidence](#shaken-confidence) below for the 5-level breakdown. |
-| Short Fuse | = Level | Quick to anger, prone to losing composure under provocation - see [Short Fuse](#short-fuse) below for the 5-level breakdown. |
-| Soft-Hearted | = Level | Struggles to act against the vulnerable, even when it costs them - see [Soft-Hearted](#soft-hearted) below for the 5-level breakdown. |
-| Speech Impediment | = Level | A stutter, accent, or other trait that hampers verbal communication - see [Speech Impediment](#speech-impediment) below for the 5-level breakdown. |
+| Secret | = Level | Something you badly don't want getting out - see [Secret](#secret) below for the 5-level breakdown. |
+| Shaken Confidence | = Level | One specific humiliation took your footing in a room, and you never got it back - see [Shaken Confidence](#shaken-confidence) below for the 5-level breakdown. |
+| Short Fuse | = Level | You anger fast, and everybody can tell - see [Short Fuse](#short-fuse) below for the 5-level breakdown. |
+| Soft-Hearted | = Level | You struggle to act against the vulnerable, even when it costs you - see [Soft-Hearted](#soft-hearted) below for the 5-level breakdown. |
+| Speech Impediment | = Level | A stutter, an accent, something that gets between you and being understood - see [Speech Impediment](#speech-impediment) below for the 5-level breakdown. |
 
 ## Berserk
 
@@ -99,7 +99,7 @@ Each level's effect is cumulative - it keeps every lower level's restriction and
 | 2 | A real pull or trigger that occasionally costs something. A gambling habit that drains resources; an allergy requiring real caution (shellfish, bee stings); a compulsive need for background noise or routine that disrupts focus when broken. |
 | 3 | A genuine dependency that shapes daily life. Regular substance use requiring a fix on a schedule; a chronic condition needing daily management (insulin, medication); hoarding or obsessive behavior that actively strains relationships. |
 | 4 | A severe dependency with real danger if unmet. Hard addiction with physical withdrawal symptoms; a severe, life-threatening allergy on exposure; a compulsion strong enough to override better judgment in the moment. |
-| 5 | A life-controlling dependency. An addiction that incapacitates without regular access; a condition requiring constant, uninterruptible support to survive; a compulsion so absolute it defines every decision the character makes. |
+| 5 | A life-controlling dependency. An addiction that incapacitates without regular access; a condition requiring constant, uninterruptible support to survive; a compulsion so absolute it defines every decision you make. |
 
 ## Dependent
 
@@ -108,8 +108,8 @@ Each level's effect is cumulative - it keeps every lower level's restriction and
 | 1 | A dependent who mostly manages on their own - checks in occasionally, needs a little financial or emotional support now and then. |
 | 2 | A dependent who needs regular, real support - time, money, or care on a recurring basis, though not helpless. |
 | 3 | A dependent who can't protect themselves and needs real intervention when trouble finds them - a young child, an elderly parent, someone seriously ill. |
-| 4 | A dependent who is a frequent liability - regularly endangered by the character's own life (enemies, work, reputation), requiring real risk to protect. |
-| 5 | A dependent who is entirely helpless without the character and a prime target - enemies know exactly who to threaten to get to the character. |
+| 4 | A dependent who is a frequent liability - regularly endangered by your own life (enemies, work, reputation), requiring real risk to protect. |
+| 5 | A dependent who is entirely helpless without you and a prime target - enemies know exactly who to threaten to get to you. |
 
 ## Destitute
 
@@ -117,11 +117,11 @@ Each level's effect is cumulative - it keeps every lower level's complication an
 
 | Level | Effect |
 |---|---|
-| 1 | A rough patch. [Creation-Wealth](resources.md#wealth-at-character-creation) is **0** instead of the default 2 for gear shopping at creation, and no Resources Pool or Discretionary points may be spent on Wealth while this Flaw is held - buy it off first - see [Everyman Gear Packages](weapons.md#everyman-gear-packages) for what's still available at Level 0. Doesn't follow the character past creation; whatever put them here (a lost job, a bad breakup, a bad month) is already turning around. |
-| 2 | Chronically tight. As Level 1, and it doesn't go away - living paycheck to paycheck, or with no paycheck at all, is an ongoing fact of the character's life, however their Resources ended up built. |
+| 1 | A rough patch. [Creation-Wealth](resources.md#wealth-at-character-creation) is **0** instead of the default 2 for gear shopping at creation, and no Resources Pool or Discretionary points may be spent on Wealth while this Flaw is held - buy it off first - see [Everyman Gear Packages](weapons.md#everyman-gear-packages) for what's still available at Level 0. Doesn't follow you past creation; whatever put you here (a lost job, a bad breakup, a bad month) is already turning around. |
+| 2 | Chronically tight. As Level 1, and it doesn't go away - living paycheck to paycheck, or with no paycheck at all, is an ongoing fact of your life, however your Resources ended up built. |
 | 3 | Real precarity. As Level 2, and something concrete is currently unstable - unreliable housing, an unreliable income source, or a debt actively being chased. |
 | 4 | Genuinely impoverished. As Level 3, and it's visible enough that people react to it on sight - shapes first impressions the same way Notable Appearance or Notoriety do, just for money instead of looks or reputation. |
-| 5 | Nothing left. As Level 4, and there's no safety net at all - no one to call for a loan, no fallback plan, and whatever put the character here is bad enough to be a real, ongoing story hook (GM's call on specifics). |
+| 5 | Nothing left. As Level 4, and there's no safety net at all - no one to call for a loan, no fallback plan, and whatever put you here is bad enough to be a real, ongoing story hook (GM's call on specifics). |
 
 ## Directionless
 
@@ -167,7 +167,7 @@ Each level's effect is cumulative - it keeps every lower level's penalty and add
 
 ## Impaired Senses
 
-**A reminder of the general rule above**: if the impairment doesn't actually impair the character - no depth-perception penalty, no missed cues, nothing a compensating sense or trained-around habit doesn't fully cover - it isn't worth points. This Flaw is the most obvious anime-trope case for that rule (the one-eyed swordsman who fights exactly as well as anyone with two eyes).
+**A reminder of the general rule above**: if the impairment doesn't actually impair you - no depth-perception penalty, no missed cues, nothing a compensating sense or trained-around habit doesn't fully cover - it isn't worth points. This Flaw is the most obvious anime-trope case for that rule (the one-eyed swordsman who fights exactly as well as anyone with two eyes).
 
 | Level | Effect |
 |---|---|
@@ -223,7 +223,7 @@ Each level's effect is cumulative - it keeps every lower level's penalty and add
 |---|---|
 | 1 | Occasionally shrugs off a real warning - rarely costs anything, mostly just talk. |
 | 2 | Regularly takes on tasks slightly beyond them without checking first - real but recoverable setbacks. |
-| 3 | Habitually dismisses genuine danger and sound advice - costs the character and sometimes allies real setbacks. |
+| 3 | You habitually dismiss genuine danger and sound advice, and it costs you, and sometimes your allies, real setbacks. |
 | 4 | Reliably walks into situations that are clearly beyond them, refusing help or backup even when it's obviously needed. |
 | 5 | Cannot recognize danger as danger until it's already too late - repeatedly puts themselves and others at serious risk through sheer refusal to see their own limits. |
 
@@ -232,10 +232,10 @@ Each level's effect is cumulative - it keeps every lower level's penalty and add
 | Level | Effect |
 |---|---|
 | 1 | An embarrassing detail - mildly damaging to reputation if it got out, nothing more. |
-| 2 | A real secret - exposure would cost the character something genuine: a relationship, a job, a bit of standing. |
-| 3 | A serious secret - exposure would cause real, lasting damage to the character's life or the lives of people they care about. |
+| 2 | A real secret - exposure would cost you something genuine: a relationship, a job, a bit of standing. |
+| 3 | A serious secret - exposure would cause real, lasting damage to your life, or the lives of people you care about. |
 | 4 | A dangerous secret - exposure invites real threats: legal jeopardy, violence, or being hunted by someone with the power to act on it. |
-| 5 | A world-shaking secret - exposure would be catastrophic, reshaping the character's life entirely or endangering far more than just themselves. |
+| 5 | A world-shaking secret - exposure would be catastrophic, reshaping your life entirely, or endangering far more than just you. |
 
 ## Short Fuse
 
@@ -245,7 +245,7 @@ Each level's effect is cumulative - it keeps every lower level's penalty and add
 | 2 | Loses composure under real provocation - says or does something they regret, with real (if recoverable) social cost. |
 | 3 | Hard to talk down once provoked - regularly escalates situations that a calmer head could have defused. |
 | 4 | A serious liability under pressure - provocation reliably leads to real damage: burned bridges, real consequences, sometimes violence. |
-| 5 | Cannot reliably control themselves once triggered - provocation regularly leads to serious harm, to relationships or to people, with real consequences the character can't walk back. |
+| 5 | You can't reliably control yourself once triggered - provocation regularly leads to serious harm, to relationships or to people, with real consequences you can't walk back. |
 
 ## Soft-Hearted
 
@@ -269,7 +269,7 @@ Each level's effect is cumulative - it keeps every lower level's penalty and add
 
 ## Item of Power
 
-Your capability isn't fully your own - it lives, at least in part, in something you carry. Distinct from a Gift's own [Limiters](gifts.md) (which discount that specific Gift's point cost): this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts the character already has.
+Your capability isn't fully your own - it lives, at least in part, in something you carry. Distinct from a Gift's own [Limiters](gifts.md) (which discount that specific Gift's point cost): this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts you already have.
 
 | Level | Effect |
 |---|---|
@@ -281,7 +281,7 @@ Your capability isn't fully your own - it lives, at least in part, in something 
 
 ## Ritual Required
 
-Your power doesn't answer the instant you reach for it - it has to be called, coaxed, or earned each time. Distinct from a Gift's own [Limiters](gifts.md): this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts the character already has.
+Your power doesn't answer the instant you reach for it - it has to be called, coaxed, or earned each time. Distinct from a Gift's own [Limiters](gifts.md): this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts you already have.
 
 | Level | Effect |
 |---|---|
@@ -293,7 +293,7 @@ Your power doesn't answer the instant you reach for it - it has to be called, co
 
 ## Incantations
 
-A Gift only answers to a spoken word - distinct from a Gift's own [Limiters](gifts.md) like Animal Friendship's Vocal Component: this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts the character already has.
+A Gift only answers to a spoken word - distinct from a Gift's own [Limiters](gifts.md) like Animal Friendship's Vocal Component: this is a full character-creation Flaw, its points added to the general Flaws total like any other, chosen against one or more Gifts you already have.
 
 | Level | Effect |
 |---|---|
