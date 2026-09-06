@@ -5,6 +5,11 @@ import {
   giftPointsSpent,
   giftCheckTarget,
   computeFiguredCharacteristics,
+  SIGNATURE_MOVE,
+  ATTACK_SOURCES,
+  ATTACK_WALLS,
+  signatureBuild,
+  setSignatureField,
 } from '../state.js';
 
 function getOrCreateGiftState(state, name) {
@@ -104,6 +109,46 @@ export default {
           );
         });
         wrap.appendChild(limitersRow);
+      }
+      // Signature Move is built at purchase: which sub-stat powers it,
+      // which wall it resolves against, and what it actually looks like.
+      // Nothing here touches pool maths, so none of it re-renders the
+      // step - a rerender mid-sentence would take the textarea's focus
+      // with it.
+      if (gift.name === SIGNATURE_MOVE && gState.level > 0) {
+        const build = signatureBuild(gState);
+        const pick = (label, field, options, hint) =>
+          el('label', { style: 'display:block;margin:0.4rem 0 0 0.5rem;font-size:0.85rem;' }, [
+            `${label} `,
+            el(
+              'select',
+              { onChange: (e) => setSignatureField(state, field, e.target.value) },
+              ['', ...options].map((o) =>
+                el('option', {
+                  value: o,
+                  selected: build[field] === o ? '' : undefined,
+                  text: o || `- ${hint} -`,
+                }),
+              ),
+            ),
+          ]);
+        const sig = el('div', { style: 'margin:0.25rem 0 0.75rem 0;' }, [
+          el('p', { class: 'hint', style: 'margin:0 0 0 0.5rem;' },
+            'Built once, at creation. The source and the wall do not have to match.'),
+          pick('Powered by', 'source', ATTACK_SOURCES, 'attack source'),
+          pick('Resolves against', 'wall', ATTACK_WALLS, 'target wall'),
+          el('label', { style: 'display:block;margin:0.5rem 0 0 0.5rem;font-size:0.85rem;' }, [
+            'What it looks like',
+            el('textarea', {
+              rows: 3,
+              style: 'display:block;width:100%;margin-top:0.2rem;',
+              text: build.description,
+              placeholder: 'Name it, and say what happens when you use it.',
+              onInput: (e) => setSignatureField(state, 'description', e.target.value),
+            }),
+          ]),
+        ]);
+        wrap.appendChild(sig);
       }
       if (gift.menu) {
         wrap.appendChild(el('p', { class: 'hint' }, 'No standard Level table for this Gift - see Gift Menus.'));

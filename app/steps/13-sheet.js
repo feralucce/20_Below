@@ -13,6 +13,7 @@ import {
   fateTokenCap,
 } from '../state.js';
 import { downloadJson } from '../export/toJson.js';
+import { SIGNATURE_MOVE, signatureBuild } from '../state.js';
 import buildAdvancementTab from './tab-advancement.js';
 import buildScarsTab from './tab-scars.js';
 import {
@@ -124,8 +125,22 @@ function buildGiftEntries(state, data) {
           : null;
       const adderTexts = (giftData?.adders ?? []).filter((a) => g.adders.includes(a.name));
       const limiterTexts = (giftData?.limiters ?? []).filter((l) => g.limiters.includes(l.name));
+      // Signature Move carries a build the other Gifts do not: the
+      // sub-stat powering it and the wall it resolves against, which the
+      // player picked and which nothing else on the sheet would show.
+      const sig = g.name === SIGNATURE_MOVE ? signatureBuild(g) : null;
+      const sigLine =
+        sig && (sig.source || sig.wall)
+          ? el('p', {}, [
+              el('strong', {}, 'The Move: '),
+              `${sig.source || 'source not set'} vs ${sig.wall || 'wall not set'}`,
+            ])
+          : null;
+      const sigText = sig && sig.description ? el('p', { class: 'detail' }, sig.description) : null;
       return el('li', {}, [
         el('strong', {}, `${g.name} (Level ${g.level})`),
+        sigLine,
+        sigText,
         levelRows,
         adderTexts.length
           ? el('p', {}, [
