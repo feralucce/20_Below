@@ -18,6 +18,7 @@ publishing is a decision, not a side effect of a chapter existing.
 import io, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+NL = chr(10)
 ROOT = os.path.dirname(HERE)
 OUT = os.path.join(ROOT, "webbook")
 
@@ -209,6 +210,37 @@ def wrap_entries(chunks):
     return out
 
 
+GLOSS = re.compile(r"^\*\*([^*]+)\*\*:\s*(.+)$", re.S)
+
+
+def gloss_cards(chunks):
+    """Every glossary term as a water aside - name, then definition.
+
+    The chapter was 75 paragraphs of bold-lead prose in a single column,
+    which reads as one unbroken block however good the definitions are.
+    Same treatment as the netbook's contents cards: a water left rule and
+    a Bebas term, with the definition kept at full contrast against the
+    panel rather than tinted.
+
+    Only paragraphs shaped exactly like an entry are wrapped, so the
+    chapter's opening prose passes through untouched.
+    """
+    out = []
+    for chunk in chunks:
+        m = GLOSS.match(chunk.strip()) if not chunk.startswith("#") else None
+        if not m:
+            out.append(chunk)
+            continue
+        term, definition = m.group(1).strip(), m.group(2).strip()
+        out.append(NL.join([
+            '<div class="gloss" markdown="1">',
+            '<span class="gloss-term">%s</span>' % term,
+            "",
+            definition,
+            "</div>",
+        ]))
+    return out
+
 def gift_lists(path):
     """Per Gift, its Adders and Limiters as the rules file bullets them.
 
@@ -384,6 +416,8 @@ def main():
         chunks = to_chunks(uuid)
         chunks = restore_tables(chunks, tables_for.get(slug, []))
         chunks = wrap_entries(chunks)
+        if slug == "glossary":
+            chunks = gloss_cards(chunks)
         if slug == "gifts":
             chunks = wrap_headed_entries(
                 chunks, "## The Gift List",
