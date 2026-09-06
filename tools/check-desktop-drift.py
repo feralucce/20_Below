@@ -30,6 +30,14 @@ import re
 import subprocess
 import sys
 
+# Files living under a code path that the app never loads - developer
+# tooling run from the command line, imported by nothing and referenced by
+# neither index.html nor the Tauri staging script. Changing one cannot
+# reach a user, so it must not ask for an installer.
+DEV_ONLY = {
+    "app/verify-parsers.mjs",
+}
+
 # name, tag pattern, code paths (need a release), live paths (fetched at runtime)
 APPS = [
     ("Character Creator", r"^v(\d+)\.(\d+)\.(\d+)$",
@@ -71,7 +79,7 @@ def changed(tag, paths):
     if not paths:
         return []
     out = git("diff", "--name-only", "%s..HEAD" % tag, "--", *paths)
-    return [f for f in out.split("\n") if f]
+    return [f for f in out.split("\n") if f and f not in DEV_ONLY]
 
 
 def main():
