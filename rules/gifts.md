@@ -6,9 +6,9 @@ Gifts represent exceptional capability - magic, psionics, superpowers, divine bl
 
 Every Gift has exactly **5 levels**, rated 1-5.
 
-- Levels are cumulative and sequential - a character must hold the previous level before gaining the next.
-- **A Gift's Level is its magnitude** - how big, strong, or wide the effect is at that level. Each level explicitly defines what the character can do at that magnitude, building on the level before it.
-- All 5 levels are defined up front when a Gift is created.
+- Levels are a ladder and you climb it in order - you hold Level 2 before you can buy Level 3.
+- **A Gift's Level is its magnitude**: how big, how strong, how far. Each level says what you can do at that size, building on the one below.
+- All five are written down when the Gift is made, so you know from the start what you're working toward.
 
 ## Points
 
@@ -16,19 +16,19 @@ At character creation, each Gift Level costs a flat **3 points** from the [Gifts
 
 **Adders** come in two tiers, **Lesser (3 points)** and **Greater (6 points)**, paid once to unlock the option permanently; the Ki cost of actually using it each time is separate and paid per the Gift's own text. Every Gift should offer at least 3 Adders.
 
-**Limiters** are a permanent, creation-time restriction chosen for one specific Gift. Each Limiter taken drops the cost of every Level of that Gift by 1 point. A character may stack as many different Limiters on a Gift as they want, but no combination can ever drop a Level's cost below 1 point.
+**Limiters** are a permanent, creation-time restriction chosen for one specific Gift. Each Limiter taken drops the cost of every Level of that Gift by 1 point. Stack as many different Limiters on one Gift as you like, but no combination ever drops a Level below 1 point.
 
-Because Limiters make the per-Level cost vary Gift to Gift, the 21-point pool won't always divide evenly once limited and unlimited Gifts are mixed. Any Gifts Pool points left unspent for that reason convert into [Discretionary points](character-creation.md#discretionary-points) at 2:1 rather than being lost.
+Limiters make Levels cost different amounts on different Gifts, so the 21-point pool won't always come out even. Whatever you can't spend converts to [Discretionary points](character-creation.md#discretionary-points) at 2:1. Nothing is lost for failing to divide neatly.
 
 ## Resolution
 
-No new stat governs Gifts. Using a Gift draws on tools that already exist elsewhere in the system:
+Gifts don't add a stat. Using one reaches for tools the game already has.
 
-- **The roll**, where one applies, reuses the standard mechanics already in place - weapon/Physical resolution, Presence/Psyche's self-paired attack shape, or a plain `Attribute + Difficulty` check - rather than each Gift inventing its own roll type.
-- **Ki cost**, where one applies, is a direct spend (no roll) called out explicitly per Gift level, the same category as Ki Infusion or Bump Action Bracket.
-- **The Gift Check**, where one applies, is a resource-risk roll: 2d10 against **current Ki** (roll-under), the same shape as a [core roll](rules.md#core-mechanic). Success - free. Failure - lose 1 Ki, until refilled. Because it reads current Ki rather than your maximum, Gifts are dependable while you are fresh and get unreliable once you have spent the day.
+- **The roll.** When a Gift needs one, it borrows a roll you already know - weapon damage, the Presence or Psyche attack shape, or a plain `Attribute + Difficulty` check. No Gift invents its own.
+- **The Ki cost.** A flat spend, no roll, written into the level that charges it. The same kind of thing as Ki Infusion, or bumping your Bracket.
+- **The Gift Check.** 2d10 under your **current Ki**, roll low, the same shape as a [core roll](rules.md#core-mechanic). Succeed and it's free. Fail and it costs you 1 Ki until you refill. It reads current Ki rather than your maximum, which is why Gifts are dependable while you're fresh and start letting you down once the day has worn you thin.
 
-None of these three apply automatically to every Gift or every level - each is a tool, used on a Gift-by-Gift, level-by-level basis as the specific effect calls for it.
+None of the three is automatic. Each Gift, and each level of it, says which it uses, if any.
 
 ## Gift List
 
@@ -1072,11 +1072,21 @@ Your body ripples and reforms like water finding a new shape - skin, bone, and v
 
 Every seasoned fighter, mystic, or gifted soul eventually develops something that's uniquely theirs - a technique, a maneuver, a flourish of power that belongs to them and no one else, honed and personal in a way no textbook or master can teach directly. Signature Move is that: a custom ability built from scratch to fit the character who holds it, not pulled from a fixed list. It's usually an attack, but doesn't have to deal damage to qualify - a signature disarm, a signature escape, a signature show of force. Built level by level as the character's mastery of their own technique grows.
 
-Defined once, at creation: whether the Move is primarily an **attack** or a **non-damaging effect**, and - if an attack - which of the three attack types it uses (Physical/Ferocity, Social/Presence, or Mental/Psyche), resolved with the same per-die-vs-wall mechanic as a normal attack of that type.
+Defined once, at creation: whether the Move is primarily an **attack** or a **non-damaging effect**. If it's an attack, you make two separate choices - and they don't have to match.
+
+**The attack source.** **Ferocity**, **Presence** or **Psyche** - the sub-stat that powers the Move. This is what you add to a die when you spend Ki to infuse it, and it's the part that says what the Move is about you: raw aggression, sheer force of personality, or a mind that pushes.
+
+**The wall it resolves against.** **Soak**, **Presence** or **Psyche** - what the dice are rolled against, one at a time, and what decides the cost. A die through Soak costs a Health Level. Through Presence, a Poise. Through Psyche, a Sanity.
+
+Most Moves pair the obvious way. They don't have to, and the interesting ones don't.
+
+A **Presence** Move resolved against **Soak** is a beam of pure personal force that knocks people down - you aren't talking anyone into anything, you're bringing enough of yourself to bear that it lands like a hit. A **Ferocity** Move against **Presence** is a scream that breaks composure instead of bone. A **Psyche** Move against **Soak** is a stare that stops a heart.
+
+What the pairing never touches is the to-hit. That's still your Element against their [Defense](rules.md#defense-derived-stat), picked by how you're going about it, the same as any other attack. And it never changes what a connecting die costs - the wall decides that, always. Flavor the Move however you like; the wall is what the rules read.
 
 | Level | Effect |
 |---|---|
-| 1 | If an attack: deals **1d10** vs the target's relevant wall. If non-damaging: produces one small, clearly-bounded effect (GM approval on scope). Using it is a Fast action. No Ki cost, no Gift Check. |
+| 1 | If an attack: deals **1d10** vs the target's chosen wall. If non-damaging: produces one small, clearly-bounded effect (GM approval on scope). Using it is a Fast action. No Ki cost, no Gift Check. |
 | 2 | Damage rises to **2d10** (if an attack); the non-damaging effect's scope widens (still GM-approved, but a real step up from Level 1). Using the Move now costs **1 Ki**, in addition to the Fast action - that Ki spend is what bakes in one minor secondary effect layered onto the base Move (a small knockback, a brief off-balance status, a minor debuff). |
 | 3 | Damage rises to **3d10**. Range extends from Melee to **Close** (Levels 1-2 were Melee-only). The secondary effect from Level 2 upgrades to a moderate tier (a real knockdown, a genuine debuff, a short status lock, rather than just "brief"). Still 1 Ki per use. |
 | 4 | Damage rises to **4d10**. Range extends to **Near**. The secondary effect upgrades to a major tier (a real status condition, a significant forced reposition, a debuff with teeth). Ki cost rises to **2** per use. |
@@ -1085,7 +1095,7 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 **Adders**:
 
 - **Extended Range** (Lesser, 3 pts): +1 Ki per use. The Move reaches one Range Band further than its current Level would normally allow.
-- **Piercing Edge** (Lesser, 3 pts): the Move ignores a flat 2 points of the target's relevant wall (Soak, Presence, or Psyche) before resolving.
+- **Piercing Edge** (Lesser, 3 pts): the Move ignores a flat 2 points of the target's chosen wall before resolving.
 - **Area of Effect** (Greater, 6 pts): +1 Ki per use. The Move affects everyone within its range/area rather than a single target - exact shape and extent defined when the Move is built, GM-approved.
 
 **Limiters**:

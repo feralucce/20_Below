@@ -1267,7 +1267,17 @@ Additionally, given a full **Month** of rest, you can heal away a below-zero Fla
 
 <p class="entry-flavour">Every seasoned fighter, mystic or gifted soul eventually develops something that is theirs - a technique, a maneuver, a flourish nobody taught them and nobody else does quite the same way. It has a name, whether or not you are the one who named it.</p>
 
-Defined once, at creation: whether the Move is primarily an **attack** or a **non-damaging effect**, and - if an attack - which of the three attack types it uses (Physical/Ferocity, Social/Presence, or Mental/Psyche), resolved with the same per-die-vs-wall mechanic as a normal attack of that type.
+Defined once, at creation: whether the Move is primarily an **attack** or a **non-damaging effect**. If it’s an attack, you make two separate choices - and they don’t have to match.
+
+**The attack source.Ferocity**, **Presence** or **Psyche** - the sub-stat that powers the Move. This is what you add to a die when you spend Ki to infuse it, and it’s the part that says what the Move is about you: raw aggression, sheer force of personality, or a mind that pushes.
+
+**The wall it resolves against.Soak**, **Presence** or **Psyche** - what the dice are rolled against, one at a time, and what decides the cost. A die through Soak costs a Health Level. Through Presence, a Poise. Through Psyche, a Sanity.
+
+Most Moves pair the obvious way. They don’t have to, and the interesting ones don’t.
+
+A **Presence** Move resolved against **Soak** is a beam of pure personal force that knocks people down - you aren’t talking anyone into anything, you’re bringing enough of yourself to bear that it lands like a hit. A **Ferocity** Move against **Presence** is a scream that breaks composure instead of bone. A **Psyche** Move against **Soak** is a stare that stops a heart.
+
+What the pairing never touches is the to-hit. That’s still your Element against their Defense, picked by how you’re going about it, the same as any other attack. And it never changes what a connecting die costs - the wall decides that, always. Flavor the Move however you like; the wall is what the rules read.
 
 **Adders**
 
@@ -1281,7 +1291,7 @@ Defined once, at creation: whether the Move is primarily an **attack** or a **no
 - **One and Done**: the Move can only be used once per Scene, regardless of Level.
 - **Costly Signature**: the Move's Ki cost is always 1 higher than its Level would normally require, at every Level, including Level 1 (which costs 1 Ki instead of 0).
 
-**1** - If an attack: deals **1d10** vs the target’s relevant wall. If non-damaging: produces one small, clearly-bounded effect (GM approval on scope). Using it is a Fast action. No Ki cost, no Gift Check.
+**1** - If an attack: deals **1d10** vs the target’s chosen wall. If non-damaging: produces one small, clearly-bounded effect (GM approval on scope). Using it is a Fast action. No Ki cost, no Gift Check.
 
 **2** - Damage rises to **2d10** (if an attack); the non-damaging effect’s scope widens (still GM-approved, but a real step up from Level 1). Using the Move now costs **1 Ki**, in addition to the Fast action - that Ki spend is what bakes in one minor secondary effect layered onto the base Move (a small knockback, a brief off-balance status, a minor debuff).
 

@@ -466,6 +466,32 @@ export function refundResourceLevel(state, data, resourceName) {
   state.discretionaryExtra.Resources -= data.resourceLevelCost;
 }
 
+// Signature Move is the one Gift that is built rather than picked: the
+// player chooses which sub-stat powers it and which wall it resolves
+// against, and the two need not match (rules/gifts.md, Signature Move).
+// A Presence-sourced Move against Soak is a legal, and interesting,
+// build - so these are two independent lists, not three fixed pairs.
+export const SIGNATURE_MOVE = 'Signature Move';
+export const ATTACK_SOURCES = ['Ferocity', 'Presence', 'Psyche'];
+export const ATTACK_WALLS = ['Soak', 'Presence', 'Psyche'];
+
+// Saves written before this field existed have no signature block, so
+// read through a default rather than writing one in on load - an
+// untouched Signature Move stays untouched.
+export function signatureBuild(gift) {
+  const s = gift && gift.signature;
+  return {
+    source: (s && s.source) || '',
+    wall: (s && s.wall) || '',
+    description: (s && s.description) || '',
+  };
+}
+
+export function setSignatureField(state, field, value) {
+  const g = state.gifts.find((x) => x.name === SIGNATURE_MOVE);
+  if (!g) return;
+  g.signature = { ...signatureBuild(g), [field]: value };
+}
 export function buyGiftLevel(state, giftName) {
   let g = state.gifts.find((x) => x.name === giftName);
   if (!g) {
