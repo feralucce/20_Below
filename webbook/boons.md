@@ -121,6 +121,19 @@ For Escapology rolls, treat your Skill Training Tier as one tier higher than you
 </div>
 
 <div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Duelist</span><span class="entry-tag">3, 5, or 7</span></p>
+<p class="entry-flavour">You have done this more times than the person in front of you, and it shows in the first half-second.</p>
+
+An attack is a straight Attribute-against-Defense roll with no Skill in it, which means no Training Tier ever reaches one. This is that ladder, bought instead of trained. Each tier includes the ones below it.
+
+**Tier 1 (3, Lesser)**: name one weapon category, unarmed included. Attack rolls made with it are at Advantage - the same shape as Adept.
+
+**Tier 2 (5, Greater)**: with that weapon, a critical hit lands on a 2 or a 3 - the same shape as Expert.
+
+**Tier 3 (7, Legendary)**: name a second weapon category, which gains both. Held alongside Never Off Balance, which is the Master tier for the same roll, that completes the ladder.
+</div>
+
+<div class="entry" markdown="1">
 <p class="entry-head"><span class="entry-name">Eidetic Memory</span><span class="entry-tag">5 or 7</span></p>
 <p class="entry-flavour">You don’t remember it. You’re still looking at it.</p>
 
