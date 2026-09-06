@@ -23,11 +23,11 @@ Up to **5 XP a session**, across five categories worth 1 each. The GM awards the
 
 Attendance and Participation. Showed up and played.
 
-Good Roleplaying. Played the character well.
+Good Roleplaying. You played them well.
 
 Heroism and Risk Faced. Took a real risk in character.
 
-Learning and Discovery. Learned something significant about the character, the plot, or the world.
+Learning and Discovery. You learned something significant about your character, the plot, or the world.
 
 Standout Moment. The GM’s discretion - a beat somebody brings up again three sessions later.
 
@@ -137,7 +137,7 @@ Limiters, on the other hand, are forever. There is no price to remove one, becau
 
 **Current rating times nine.** Earth 5 to 6 is 45. Earth 7 to 8 is 63. Earth 9 to 10 is 81.
 
-This is the long game, and it is priced to be. Raising an Attribute is the only purchase that moves every roll you make with that Element at once, and the curve is steep enough that a character raises two or three of them across an entire campaign, not ten.
+This is the long game, and it is priced to be. Raising an Attribute is the only purchase that moves every roll you make with that Element at once, and the curve is steep enough that you raise two or three of them across an entire campaign, not ten.
 
 Every Attribute point also grants one sub-stat point, to put in either of that Attribute’s two sub-stats, and one Descriptor for whichever one you chose. Exactly like creation. Raising Water gives you a point to spend on Stamina or Health and a new word describing how this character, specifically, endures.
 
@@ -147,7 +147,7 @@ That is also the only way sub-stats ever go up. There’s no separate price for 
 
 **Ten is a creation cap, not a ceiling.** XP takes an Attribute higher.
 
-What it doesn’t take higher is the roll. **An Element contributes at most 10 to any target number, ever.** A character with Earth 18 makes the same roll as a character with Earth 10.
+What it doesn’t take higher is the roll. **An Element contributes at most 10 to any target number, ever.** Earth 18 makes the same roll Earth 10 does.
 
 Every point past ten is still a sub-stat point and a Descriptor. Since no sub-stat can exceed 10, **an Attribute of 20 is precisely the point at which both its sub-stats are full** - the ceiling isn’t a number I picked, it’s where the arithmetic runs out.
 
@@ -169,7 +169,7 @@ None of this is reachable quickly. Ten to eleven alone is 90 XP, and the full cl
 
 **Three times the points the Flaw granted you at creation.** A Minor Flaw that gave you 1 costs 3 to be rid of. A Major that gave you 5 costs 15. A leveled Flaw costs three per level, and comes off one level at a time - Amnesia at 4 can become Amnesia at 2 for six XP, and you can stop there.
 
-Think about it before you do it. Flaws pay you. Every time one gets invoked, by you or the GM, you collect a Fate Token, and a character who sheds their Flaws has quietly cut their own income. There’s also already a way out of a single bad moment: spend a Token to Overcome a Flaw and it doesn’t apply for the rest of the scene.
+Think about it before you do it. Flaws pay you. Every time one gets invoked, by you or the GM, you collect a Fate Token, and shedding your Flaws quietly cuts your own income. There’s also already a way out of a single bad moment: spend a Token to Overcome a Flaw and it doesn’t apply for the rest of the scene.
 
 Buy off the Flaw when the story has finished with it. Not when it’s inconvenient.
 

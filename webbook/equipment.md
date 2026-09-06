@@ -13,7 +13,7 @@ next_title: "Advancement"
 
 Gear is the part of your character you can lose in a river.
 
-Everything else on the sheet travels with you. Equipment doesn’t, and that’s most of what makes it interesting. A rifle is a handful of dice you’re carrying. Body armor is Soak you didn’t have to be born with. Both can be taken, broken, left in the other car, or handed over at a door, and the character underneath is still the character.
+Everything else on the sheet travels with you. Equipment doesn’t, and that’s most of what makes it interesting. A rifle is a handful of dice you’re carrying. Body armor is Soak you didn’t have to be born with. Both can be taken, broken, left in the other car, or handed over at a door, and you underneath are still you.
 
 Weapons set how many dice an attack rolls, independent of the Element behind it - a pistol does what a pistol does whether a soldier or an accountant is holding it. What changes is whether they hit, and what they can afford to spend making it count.
 
@@ -31,7 +31,7 @@ Attacking a target within a weapon’s **Normal** range carries no penalty. Atta
 
 **Reload** is the action cost to refill a weapon’s Ammo back to full once it runs dry - see Reload for what each tier means.
 
-**Ammo Recovery**: Bow-category arrows/bolts and Thrown weapons, unlike spent firearm cartridges, can be physically picked back up. If the character controls the battlefield once a fight ends, recover **half the ammo spent, rounded down** - GM’s call if the terrain makes that impractical (a river, a burning building, a fight that moved on before it could be searched).
+**Ammo Recovery**: Bow-category arrows/bolts and Thrown weapons, unlike spent firearm cartridges, can be physically picked back up. If you control the battlefield once a fight ends, recover **half the ammo spent, rounded down** - GM’s call if the terrain makes that impractical (a river, a burning building, a fight that moved on before it could be searched).
 
 | Weapon | Category | Damage | Range (Normal / Long) | Ammo | Reload | Wealth |
 |---|---|---|---|---|---|---|
@@ -167,7 +167,7 @@ Purpose-built protective gear only - ordinary clothing, even sturdy clothing, do
 | Breaching kit | Advantage on forced-entry rolls; treat your Potence as +2 for that Break Threshold check | 2 |
 | Compass | Never lost navigating with a map, no roll | 1 |
 | Crowbar | Advantage on forced-entry rolls against doors/windows specifically (not a full Breaching kit) | 1 |
-| Field rations & water purifier | Sustains a character in the field without a roll for an extended stretch | 1 |
+| Field rations & water purifier | Keeps you fed and watered in the field, no roll, for an extended stretch | 1 |
 | Fire axe | Advantage on forced-entry rolls against doors specifically - a low-tech cousin of the Breaching kit | 1 |
 | Fire starter kit | Reliable fire in any weather, no roll | 1 |
 | First aid kit | Consumed on use: Advantage on a roll to treat Health Levels | 2 |
@@ -312,7 +312,7 @@ Same Damage/per-die-vs-Soak resolution as Basic Weapons above, just built around
 
 ## Everyman Gear Packages
 
-A free alternative to Wealth Check shopping, not a replacement for it - a character can still shop normally with their creation-Wealth on top of taking a package below. At character creation, pick **exactly one** package from every package at or under your creation-Wealth Level, free, no roll. Access is cumulative downward: a creation-Wealth 2 character (the default, if no points were spent on Wealth) can pick any single package from the Level 1 or Level 2 lists below, not just Level 2’s. Level 0 packages are only reachable by a creation-Wealth of 0, which currently only comes from the Destitute Flaw.
+A free alternative to Wealth Check shopping, not a replacement for it - you can still shop normally with your creation-Wealth on top of taking a package below. At character creation, pick **exactly one** package from every package at or under your creation-Wealth Level, free, no roll. Access is cumulative downward: a creation-Wealth 2 character (the default, if no points were spent on Wealth) can pick any single package from the Level 1 or Level 2 lists below, not just Level 2’s. Level 0 packages are only reachable by a creation-Wealth of 0, which currently only comes from the Destitute Flaw.
 
 **Level 0** (creation-Wealth 0 - Destitute)
 
