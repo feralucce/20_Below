@@ -104,16 +104,58 @@ async function checkVersionStatus() {
     const latest = ownRelease.tag_name.replace(/^v/, '');
     if (!latest) return;
     ledEl.hidden = false;
-    if (latest === current) {
+    if (isNewer(latest, current)) {
+      ledEl.textContent = `Needs updating - v${latest} is out`;
+      ledEl.className = 'version-led needs-update';
+      offerUpdate(ownRelease);
+    } else {
       ledEl.textContent = 'Up to date';
       ledEl.className = 'version-led ok';
-    } else {
-      ledEl.textContent = 'Needs updating';
-      ledEl.className = 'version-led needs-update';
     }
   } catch (err) {
     console.error('Failed to check version status', err);
   }
+}
+
+// Knowing an update exists is only half of it - the LED has been telling
+// people to update without giving them a way to do it. This opens the
+// installer in the real browser rather than in the app's own webview,
+// which is what the opener plugin is for: a plain link would navigate the
+// window away from the character sheet the user is standing in.
+//
+// Prefers the .exe asset so the download just starts, and falls back to
+// the release page if a release ever has no installer attached.
+// Compare numerically, not with ===. A local build is often ahead of the
+// newest release - it is right now - and string inequality reads that as
+// 'needs updating', which was merely a wrong label until there was a
+// button under it offering to download the older installer.
+function isNewer(latest, current) {
+  const a = String(latest).split('.').map(Number);
+  const b = String(current).split('.').map(Number);
+  for (let i = 0; i < 3; i += 1) {
+    if ((a[i] || 0) !== (b[i] || 0)) return (a[i] || 0) > (b[i] || 0);
+  }
+  return false;
+}
+
+function offerUpdate(release) {
+  const btn = document.getElementById('get-update');
+  if (!btn) return;
+  const installer = (release.assets || [])
+    .find((a) => (a.name || '').toLowerCase().endsWith('.exe'));
+  const url = (installer && installer.browser_download_url) || release.html_url;
+  if (!url) return;
+  btn.hidden = false;
+  btn.onclick = async () => {
+    try {
+      await window.__TAURI__.opener.openUrl(url);
+    } catch (err) {
+      // Nothing useful to fall back to inside the webview, so say so
+      // rather than appearing to do nothing.
+      console.error('Failed to open the update link', err);
+      btn.textContent = 'Could not open the browser';
+    }
+  };
 }
 
 // Where the rules the app just parsed actually came from. The desktop build
