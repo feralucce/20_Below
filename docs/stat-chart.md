@@ -15,9 +15,9 @@ A quick-reference summary of the current Attribute/sub-stat state. **This is a s
 - **Ki** — average of all five combat sub-stats (Soak, Initiative, Ferocity, Stamina, Atropos), doubled. Target number for the Fatigue Check; depletes on failure, refilled by rest (Short Rest restores Klotho/2, minimum 1; Full Night's Rest restores fully); can also be spent directly — 1 Ki preserves 1 Health Level, Poise, or Sanity Level, 1 Ki per die for [Ki Infusion](../rules/rules.md#ki-infusion) on **any** attack type (Physical/Social/Mental, unified 2026-08-10), or 1 Ki per step to [Bump Action Bracket](../rules/rules.md#action-brackets).
 - **Fate Tokens** — the earn/spend currency. Gained via Nature, voluntary Disadvantage, Flaws, daily regen (flat 1 at sunrise, resolved 2026-08-12), Milestones, GM discretion. Spent on Kotodama (formerly separate Push the Fiction/Narrative Control, merged and renamed 2026-08-10), plus Overcome a Flaw, Automatic Success, and Shrug Off an Effect, all flat 1 token, resolved 2026-08-12. **Boost a Check removed 2026-09-05** - Automatic Success trumps it. At the same flat 1 token, nobody buys Advantage on a roll when the same token simply wins the roll. **Bump Action Bracket and Fate Token Infusion both moved to direct Ki spends, 2026-08-10.**
 
-## Still Undefined
+## Open Questions
 
-[weapons.md](../rules/weapons.md)'s dice ratings (unbalanced first draft), Kotodama's Plausibility token costs and pooled Magnitude tiers, and other open questions tracked internally. **Health Level recovery, Battle Scars, what a connecting Social/Mental die costs the defender, and objects' resistance to Potence (reusing Soak, not a separate Hardness stat) are all resolved** - see [rules.md](../rules/rules.md#health-level-recovery), [#poise](../rules/rules.md#poise), [#sanity](../rules/rules.md#sanity), and [#potence](../rules/rules.md#potence).
+Tracked in [design-log.md](design-log.md), which is the state of play for the whole project. The list that used to sit here went stale - every item on it (weapons.md's dice ratings, Kotodama's Plausibility costs and Magnitude tiers) has since been written.
 
 ## Scope
 
