@@ -143,6 +143,7 @@ Same two steps as any attack. Element vs their **Defense** to land it, then dice
 | **Humiliated** | Poise below 0. You defer and comply |
 | **Overwhelmed** | Sanity hit 0. Disadvantage on everything, plus a temporary mental Flaw |
 | **Shattered** | Sanity below 0. Panicky and babbling; you have to be led |
+| **Exhausted** | Stacks 1-5: Disadvantage on Physical, then on all, then half Move and no Fast, then +1 per Ki spend, then out cold |
 
 \page
 
