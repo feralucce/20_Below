@@ -1,35 +1,51 @@
 # -*- coding: utf-8 -*-
-"""Has anything a desktop app ships changed since that app was last released?
+"""Does any desktop app actually need a new release?
 
-Each desktop app bundles a copy of files from this repo. A release freezes
-that copy; every later edit to one of those files makes the shipped
-installer quietly stale. Nothing warns about it, because bumping a version
-and editing the rules are unrelated acts - which is how v0.10.2 shipped
-without the Off Balance condition on 2026-09-05, hours before that
-condition went live on the website.
+Each desktop app bundles a copy of files from this repo, and a release
+freezes that copy. But not every bundled file goes stale, because the
+Character Creator fetches rules/*.md live from raw.githubusercontent on
+every load (app/parse/markdown.js) and only falls back to the bundled
+snapshot when that fetch fails. An online user of an old Creator build is
+already reading today's rules.
 
-This compares each app's newest release tag against HEAD and reports any
-staged path that has moved since.
+So the question "do we need a new version" splits in two:
+
+  code   - shipped and never re-fetched. Changing it means a release, or
+           users keep running the old behaviour.
+  live   - fetched at runtime. Changing it reaches users immediately;
+           the bundled copy is only the offline fallback.
+
+Reporting those as one number is what made this tool cry wolf: it flagged
+the Creator every time a rules file moved, which is most days, and a
+check that is permanently red is a check nobody reads. That is the same
+failure it was written to catch - v0.10.2 shipped without the Off Balance
+condition because nothing said so out loud.
 
     python tools/check-desktop-drift.py
 
-Exits 1 if any app is stale, so it can gate a release step. The staged
-paths below must match each app's scripts/stage-frontend.ps1 - if you
-change what an app bundles, change it here too.
+Exits 1 only if code changed, so it can gate a release step. The paths
+below must match each app's scripts/stage-frontend.ps1.
 """
 import re
 import subprocess
 import sys
 
+# name, tag pattern, code paths (need a release), live paths (fetched at runtime)
 APPS = [
-    # name, tag pattern, the paths that app's staging script copies
     ("Character Creator", r"^v(\d+)\.(\d+)\.(\d+)$",
-     ["app", "rules", "vendor"]),
+     ["app", "vendor"],
+     # rules/*.md are pulled live by app/parse/markdown.js - the staged copy
+     # is the offline fallback only.
+     ["rules"]),
+
     ("The Brewery", r"^brewery-v(\d+)\.(\d+)\.(\d+)$",
-     ["brew", "vendor", "license.html"]),
+     ["brew", "vendor", "license.html"],
+     []),
+
     ("Battle Tracker", r"^combat-tracker-v(\d+)\.(\d+)\.(\d+)$",
      ["tracker/index.html", "app/state.js", "app/roller/core.js",
-      "app/combat/model.js", "app/media.js"]),
+      "app/combat/model.js", "app/media.js"],
+     []),
 ]
 
 
@@ -51,27 +67,42 @@ def newest_tag(pattern):
     return best
 
 
+def changed(tag, paths):
+    if not paths:
+        return []
+    out = git("diff", "--name-only", "%s..HEAD" % tag, "--", *paths)
+    return [f for f in out.split("\n") if f]
+
+
 def main():
-    stale = False
-    for name, pattern, paths in APPS:
+    needs_release = False
+    for name, pattern, code_paths, live_paths in APPS:
         tag = newest_tag(pattern)
         if not tag:
             print("%-20s no release tag found" % name)
             continue
-        changed = git("diff", "--name-only", "%s..HEAD" % tag, "--", *paths)
-        files = [f for f in changed.split("\n") if f]
-        if not files:
-            print("%-20s %-24s current" % (name, tag))
-            continue
-        stale = True
-        print("%-20s %-24s STALE - %d file(s) changed since:" % (name, tag, len(files)))
-        for f in files:
-            print("%-20s %-24s   %s" % ("", "", f))
 
-    if stale:
-        print("\nA stale app ships rules its users cannot see anywhere else.")
-        print("Rebuild and release, or accept the drift deliberately.")
-    return 1 if stale else 0
+        code = changed(tag, code_paths)
+        live = changed(tag, live_paths)
+
+        if code:
+            needs_release = True
+            print("%-20s %-24s NEEDS A RELEASE - %d code file(s):"
+                  % (name, tag, len(code)))
+            for f in code:
+                print("%-46s %s" % ("", f))
+        else:
+            print("%-20s %-24s current" % (name, tag))
+
+        if live:
+            print("%-46s (%d rules file(s) changed - fetched live, no release"
+                  " needed)" % ("", len(live)))
+
+    if needs_release:
+        print("\nCode changes only reach users through a new installer.")
+    else:
+        print("\nNothing needs a release.")
+    return 1 if needs_release else 0
 
 
 sys.exit(main())
