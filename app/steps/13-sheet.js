@@ -422,6 +422,14 @@ function buildHeader(state, data, figured, { interactive = false, refresh = () =
         el('div', { class: 'mini-value' }, String(figured.Defense)),
       ]),
       el('div', { class: 'field-box' }, [
+        el('span', { class: 'field-label' }, 'Social Def'),
+        el('div', { class: 'mini-value' }, String(figured['Social Defense'])),
+      ]),
+      el('div', { class: 'field-box' }, [
+        el('span', { class: 'field-label' }, 'Mental Def'),
+        el('div', { class: 'mini-value' }, String(figured['Mental Defense'])),
+      ]),
+      el('div', { class: 'field-box' }, [
         el('span', { class: 'field-label' }, 'Movement'),
         el('div', { class: 'mini-value' }, `${figured['Movement Rate']}m`),
       ]),

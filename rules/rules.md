@@ -128,7 +128,7 @@ Descriptors are one or two-word adjectives, not phrases - *Brutal*, *Brawny*, *I
 
 ### The Passive Wall Triad - Soak, Presence, Psyche
 
-Every attack, regardless of type, resolves in the same two steps. **First, a to-hit roll**: the attacker's Attribute (Earth, Air, Fire, or Water - whichever fits the attack) against the target's [Defense](#defense-derived-stat) as Difficulty, no Skill involved - a straight Attribute-vs-Defense roll, the same formula whether the attack is a fist, a threat, or a mind reaching where it isn't welcome. **Only a success reaches step two.** Then the attack's dice are resolved against the relevant wall stat, per die:
+Every attack, regardless of type, resolves in the same two steps. **First, a to-hit roll**: the attacker's Attribute (Earth, Air, Fire, or Water - whichever fits the attack) against the target's [Defense for that attack type](#defense-derived-stat) as Difficulty, no Skill involved - a straight Attribute-vs-Defense roll, the same formula whether the attack is a fist, a threat, or a mind reaching where it isn't welcome. **Only a success reaches step two.** Then the attack's dice are resolved against the relevant wall stat, per die:
 
 - **Soak** - wall against **Physical** damage dice.
 - **Presence** - wall against **Social** attack dice.
@@ -232,7 +232,7 @@ Potence (Earth's other sub-stat: raw physical power/strength - carrying capacity
 
 #### Mental Attacks - Gift-Sourced Only
 
-A Mental attack resolves exactly like a [Physical](#physical-attacks---weapon-damage--per-die-resolution) or [Social](#social-attacks---leverage--per-die-resolution) one: [to-hit](#the-passive-wall-triad---soak-presence-psyche) with the fitting [Element](#choosing-the-attacking-element) against the target's [Defense](#defense-derived-stat), then dice resolved **individually** against their **Psyche**, a connecting die costing **one [Sanity](#sanity)**. [Ki Infusion](#ki-infusion) adds the attacker's own Psyche, 1 Ki per die.
+A Mental attack resolves exactly like a [Physical](#physical-attacks---weapon-damage--per-die-resolution) or [Social](#social-attacks---leverage--per-die-resolution) one: [to-hit](#the-passive-wall-triad---soak-presence-psyche) with the fitting **[Mental Defense](#defense-derived-stat)** (`10 − Presence`) using the fitting [Element](#choosing-the-attacking-element), then dice resolved **individually** against their **Psyche**, a connecting die costing **one [Sanity](#sanity)**. [Ki Infusion](#ki-infusion) adds the attacker's own Psyche, 1 Ki per die.
 
 **There is no baseline dice source, and this is deliberate.** A weapon gives Physical dice and [leverage](#social-attacks---leverage--per-die-resolution) gives Social dice; nothing gives an ordinary character Mental dice. The pool has to come from one of:
 
@@ -259,7 +259,7 @@ Sanity mirrors Health Levels too, tracking a character's grip on their own mind 
 
 #### Social Attacks - Leverage & Per-Die Resolution
 
-A social attack resolves exactly like a [Physical one](#physical-attacks---weapon-damage--per-die-resolution): [to-hit](#the-passive-wall-triad---soak-presence-psyche) with the [Element](#choosing-the-attacking-element) that fits the approach against the target's [Defense](#defense-derived-stat), then damage dice resolved **individually** against their **Presence**, a connecting die costing **one [Poise](#poise)**.
+A social attack resolves exactly like a [Physical one](#physical-attacks---weapon-damage--per-die-resolution): [to-hit](#the-passive-wall-triad---soak-presence-psyche) with the [Element](#choosing-the-attacking-element) that fits the approach against the target's **[Social Defense](#defense-derived-stat)** (`10 − Psyche`), then damage dice resolved **individually** against their **Presence**, a connecting die costing **one [Poise](#poise)**.
 
 **The dice come from leverage** - what the attacker brought to the exchange, not what they are. It is the direct analogue of the weapon setting Physical dice: the one part of an attack sourced from outside the character. The GM rates it when the attack is declared.
 
@@ -273,7 +273,7 @@ A social attack resolves exactly like a [Physical one](#physical-attacks---weapo
 
 Three constraints keep the ladder from collapsing upward:
 
-- **No opening at the top.** The rating is what the moment supports. An unearned room caps the attack at **1**, however good the material.
+- **Earn the ceiling.** A cold open is capped at **1**, however good the material. Each exchange that lands raises the ceiling by **1**, to a **maximum of 3** - past 3 requires actual leverage (evidence, a secret, rank), not accumulated momentum.
 - **Repeats decay.** The same line a second time is worth **-1 die**; a third time, nothing. New material or a smaller rating.
 - **Audience matters.** Social damage is public. **-1 die** with no witnesses; **+1** in front of people whose regard the target actually needs. Both floor at 1.
 
@@ -338,11 +338,19 @@ Two passive functions, both "gives" like Health/Soak/Presence/Psyche - no roll, 
 
 #### Defense (Derived Stat)
 
-Moira's combat sub-stat, **Atropos**, named for the Fate who cuts the thread of life and cannot be turned aside, feeds a single derived number, **Defense** (`10 − Atropos`), that governs how hard a character is to touch by *any* means - a blade, a word meant to wound, or a mind reaching where it isn't welcome. Fate doesn't distinguish the shape of the blow; it just decides whether the thread gets cut.
+**Defense** is how hard a character is to *reach* - the to-hit target, before any wall is involved. There are **three of them**, one per attack type, each derived from a different sub-stat:
 
-**Defense = 10 − Atropos.**
+| Attack | Defense | Sub-stat | Why |
+|---|---|---|---|
+| **Physical** | `10 − Atropos` | Moira | Fate. The blade goes where the thread says it goes. |
+| **Social** | `10 − Psyche` | Air | Composure. A remark only lands if it can get a rise out of you. |
+| **Mental** | `10 − Presence` | Fire | Self. A mind reaching in finds the room already occupied. |
 
-Defense is **universal across all three attack types** - Physical, Social, and Mental all resolve their [to-hit roll](#the-passive-wall-triad---soak-presence-psyche) against the same Defense number. Defense becomes the attacker's Difficulty (see the [Difficulty Chart](#difficulty-chart)); since Difficulty runs 0 (hardest) to 10 (trivial), the subtraction inverts Atropos correctly: Atropos 0 → Defense 10 (trivial to hit), Atropos 10 → Defense 0 (nearly impossible to hit).
+**No sub-stat both deflects an attack and walls it.** Soak walls Physical, Presence walls Social, Psyche walls Mental - and none of those is the sub-stat that set the to-hit target for its own attack type. Presence walls Social but deflects Mental; Psyche walls Mental but deflects Social. Each attack type is therefore answered by two numbers drawn from two different Elements.
+
+That separation is the point. A single sub-stat doing both jobs would dominate every build - measured at a 3-die social attack, folding the wall and the to-hit into Presence widened the spread between Presence 0 and Presence 6 from 2.5x to 5.9x. Split, being hard to insult and being unbothered once an insult lands are two separate purchases.
+
+Defense becomes the attacker's Difficulty (see the [Difficulty Chart](#difficulty-chart)); since Difficulty runs 0 (hardest) to 10 (trivial), the subtraction inverts correctly: sub-stat 0 → Defense 10 (trivial to reach), sub-stat 10 → Defense 0 (nearly impossible).
 
 ## Combat
 

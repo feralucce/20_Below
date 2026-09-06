@@ -665,7 +665,14 @@ export function computeFiguredCharacteristics(state) {
     'Health Levels': 5 + s.Health,
     Poise: 5 + s.Presence,
     Sanity: 5 + s.Psyche,
+    // Each attack type is answered by two different stats from two
+    // different Elements: one keeps it from landing, another absorbs it
+    // once it does. Never the same stat for both, or that stat becomes the
+    // only one worth buying - Presence walls Social but deflects Mental,
+    // Psyche walls Mental but deflects Social.
     Defense: 10 - s.Atropos,
+    'Social Defense': 10 - s.Psyche,
+    'Mental Defense': 10 - s.Presence,
     'Movement Rate': 5 + state.attributes.Air,
     'Carrying Capacity': Math.pow(s.Potence, 2) * 10,
     Ki: Math.ceil(ki),

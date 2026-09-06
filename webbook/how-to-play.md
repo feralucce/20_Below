@@ -145,7 +145,17 @@ Which means a wall of 10 stops everything. Not most things - everything. A d10 c
 
 A connecting Physical die costs a Health Level. A connecting Social die costs a Poise. A connecting Mental die costs a Sanity.
 
-**Defense** is the fourth number in this family, and it’s the odd one out. Defense is 10 minus your Atropos, and it’s how hard you are to touch at all - by a blade, by a word, or by a mind. Fate doesn’t care what shape the blow takes. One number answers all three.
+**Defense** is the fourth number in this family, and there are three of them. Defense is how hard you are to touch at all - and what makes you hard to touch depends on what is coming.
+
+**Physical Defense is 10 minus your Atropos.** Fate. The blade goes where the thread says it goes, and yours hasn’t been cut yet.
+
+**Social Defense is 10 minus your Psyche.** Composure. A remark meant to wound only lands if it can get a rise out of you, and you are hard to rattle.
+
+**Mental Defense is 10 minus your Presence.** Self. A mind reaching into yours finds the room already occupied.
+
+Now look at which stat does which job, because it isn’t an accident. Soak stops Physical dice, Presence stops Social ones, Psyche stops Mental ones - and not one of those is the stat that kept the attack from landing in the first place. Presence walls a social attack but deflects a mental one. Psyche walls a mental attack but deflects a social one. Every kind of attack is answered by two different numbers out of two different Elements.
+
+That’s deliberate, and it’s the whole reason the table looks like that. If one stat both kept attacks from landing and soaked them when they did, it would be the only stat anybody bought, and every character sheet in the game would start to look the same. Split apart, being hard to insult and being unbothered once an insult lands are two different purchases. You get to be one, or the other, or spend twice and be both.
 
 ## Making an Attack
 
@@ -179,7 +189,7 @@ Your weapon doesn’t decide. Your approach does.
 
 Same sword in all four. Describe what you’re doing before you roll, and the GM confirms which Element fits. You don’t get to pick it afterward, once you’ve seen how the numbers landed.
 
-Moira is never an attacking Element. Atropos only ever sets Defense.
+Moira is never an attacking Element. Atropos only ever sets your Physical Defense.
 
 One thing the Element never does is decide which wall you’re attacking. That’s set by what you’re attacking *with*. A weapon throws Physical dice at Soak however you swung it - charging in screaming is still Fire, and it’s still Soak that stops you. A Gift throws whatever its own entry says. And a Signature Move is the one that lets you choose: you pick the sub-stat that powers it and the wall it resolves against, separately, so a Move can run on your Presence and still land on somebody’s Soak.
 
@@ -199,11 +209,11 @@ A weapon tells you how many dice a punch throws. Nothing hangs off your belt for
 
 **Five.** A reckoning. All of it at once, in front of everyone who counts, and no door out.
 
-Everything after that runs exactly like a punch. Element against their Defense to land it, then that many dice, one at a time, against their Presence, rolling high. Every die that gets through costs them a Poise. Ki buys a die through the same way it always does, adding your Presence instead of your Ferocity.
+Everything after that runs exactly like a punch. Element against their Social Defense to land it, then that many dice, one at a time, against their Presence, rolling high. Every die that gets through costs them a Poise. Ki buys a die through the same way it always does, adding your Presence instead of your Ferocity.
 
 Three things keep that ladder honest.
 
-**You don’t get to open at the top.** The rating is what the moment supports, not what you’d like it to be. Walk up to a stranger and go straight for the reckoning and you have a 1, because you haven’t earned the room yet. Ratings climb as an exchange escalates.
+**You have to earn the ceiling.** Opening cold you have a 1, however good the line is - nobody in the room has any investment in you yet. Every exchange that lands raises what you can reach by one, to a maximum of 3. Getting past 3 takes actual material - evidence, a secret, rank - not momentum.
 
 **Repeats lose their edge.** The same jab twice is worth less, and by the third time it’s worth nothing. Say something new or drop a die.
 
@@ -221,7 +231,7 @@ You can’t. Not without a Gift.
 
 That’s the one place the three attack types stop being symmetrical, and it’s deliberate. Anyone can throw a punch and anyone can throw an insult - a fist and a bad word are both standard human equipment. Reaching into somebody’s head is not.
 
-If your character has a Gift that does it, the Gift says how many dice it throws, and everything after that runs like any other attack: Element against their Defense, then those dice one at a time against their Psyche, and every one that gets through costs them a Sanity. Ki buys a die through by adding your own Psyche. A Signature Move built to resolve against Psyche counts, because a Signature Move is a Gift.
+If your character has a Gift that does it, the Gift says how many dice it throws, and everything after that runs like any other attack: Element against their Mental Defense, then those dice one at a time against their Psyche, and every one that gets through costs them a Sanity. Ki buys a die through by adding your own Psyche. A Signature Move built to resolve against Psyche counts, because a Signature Move is a Gift.
 
 If your character doesn’t have one, Psyche is a wall you have no way to push on. That is the answer, not a gap in the rules.
 
