@@ -401,7 +401,7 @@ What an action actually *lets you do*, beyond a plain Attack or Move - filling i
 
 **Sprint**: an all-out run, **5x Movement Rate**, is a **Slow action** and the only thing that character does that round - no attack, no second half, and they act last as Slow always does. A sprint crosses Near in a single turn and closes from Far in one or two.
 
-*The following are the status effects defined so far - Off Balance, Distracted, Surprise, Flustered, Humiliated, plus [Overwhelmed and Shattered](#sanity), which Sanity defines. More are expected as combat rules develop further; this isn't the full list.*
+*The following are the status effects defined so far - Off Balance, Distracted, Surprise, Flustered, Humiliated, [Exhausted](#exhausted), plus [Overwhelmed and Shattered](#sanity), which Sanity defines. More are expected as combat rules develop further; this isn't the full list.*
 
 #### Off Balance
 
@@ -441,3 +441,44 @@ A character whose [Poise](#poise) drops below 0 becomes **Humiliated** - a step 
 **A Humiliated character can't take the lead, negotiate, or be trusted to speak for the group** - socially deferring and complying rather than asserting themselves. Unlike Shattered (see [Sanity](#sanity)), a Humiliated character still acts fully on their own; this is social paralysis, not physical.
 
 Humiliated clears once Poise is restored back to 0 (see [Poise recovery](#poise) - Ki, a Short Rest, or a Full Night's Rest only restores it to 1 while still below 0, not a full refill).
+#### Exhausted
+
+The only Condition that **stacks**, in levels **1-5**. Taken from pushing an effort past what [Stamina](#poise) covers, or from [cold or heat](#common-hazards). Effects are cumulative:
+
+| Level | Effect |
+|---|---|
+| **1** | Disadvantage on Physical rolls |
+| **2** | Disadvantage on **all** rolls |
+| **3** | Movement Rate halved; **no Fast actions** |
+| **4** | Every Ki spend costs **+1** |
+| **5** | Unconscious, until warmed, cooled, or rested |
+
+A **Short Rest** clears one level; a **Full Night's Rest** clears all of them. A level taken from an environment cannot be cleared while the character is still in it - resting in the cold does not clear cold.
+
+#### Common Hazards
+
+Environmental damage uses the same per-die machinery as an attack, resolved against **Soak**, a connecting die costing one [Health Level](#health-levels). The [weapon table](weapons.md) is the scale: fists 1, knife or handgun 5, anti-materiel rifle 10.
+
+| Hazard | Dice |
+|---|---|
+| **Falling** | **1 per 2m**, capped at 10. Halved for water, deep snow, or similar |
+| **Burning room** | **1** at the end of each round in it |
+| **On fire** | **2** per round until extinguished (a Normal action, or a Fast one from a helper) |
+| **Vehicle, city speed** | **5** |
+| **Vehicle, at speed** | **10** |
+
+**No air** (drowning, smoke, suffocation) is the exception: the character lasts **Stamina rounds**, then loses **1 Health Level per round** with **no dice and no Soak** - there is nothing to soak.
+
+**Cold and heat cost [Exhausted](#exhausted) levels, not Health.** Appropriate gear negates cold entirely.
+
+| Exposure | Rate |
+|---|---|
+| Underdressed for cold | 1 level / hour |
+| Wet, windy, or ~-20&deg; | 1 level / half hour |
+| Immersed in cold water | 1 level / minute |
+| Hard exertion in real heat | 1 level / hour |
+| Without water | 1 level / hour regardless of exertion; nothing clears until they drink |
+| Enclosed, airless, unshaded heat | 1 level / half hour |
+
+Exposure kills by reaching **Exhausted 5** - unconscious - rather than by spending Health, which is how a blizzard threatens a character nobody has touched.
+

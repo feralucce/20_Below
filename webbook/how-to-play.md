@@ -301,7 +301,7 @@ Your **Movement Rate** is 5 plus your Air, in meters. You can move that far as y
 
 ## Conditions
 
-Seven states you can be put into. Most of them hurt you by taking dice away. Two of them are worse than that.
+Eight states you can be put into. Most of them hurt you by taking dice away. Three of them go further.
 
 **Off Balance.** You rolled a catastrophic failure in combat. You roll everything at Disadvantage until the end of your next turn. It does not stack, it clears on its own, and a Fate Token spent to Shrug Off an Effect clears it early - though it never undoes whatever else went wrong on that roll. The Never Off Balance Boon lets you reroll the failure that caused it.
 
@@ -318,3 +318,23 @@ Other things can make you Distracted too - a Gift, a collapsing building, an exp
 **Overwhelmed.** Your Sanity hit 0. You pick up a temporary mental Flaw - you and the GM agree what it is - and you roll everything at Disadvantage. You can still act, and you’re still yourself. It clears when you’re out of whatever did it to you and get a chance to rest, or for 1 Ki, which refills your Sanity on the way out.
 
 **Shattered.** Your Sanity went below 0, and this is the other one that doesn’t just cost you dice. You’re panicky and babbling and you can’t act on your own - somebody has to lead you, or drag you. It clears for 1 Ki or a rest, but either one only brings your Sanity back to 1, not full, and going below 0 always leaves a permanent mental scar however you climb out of it.
+
+**Exhausted.** The only one that stacks. You take levels of it, one through five, from pushing an effort past what your Stamina covers, or from cold, or from heat. **One** is Disadvantage on Physical rolls. **Two** is Disadvantage on everything. **Three** halves your Movement Rate and takes Fast actions away from you. **Four** adds 1 to the cost of every Ki spend. **Five** puts you on the ground, unconscious, until somebody gets you warm, cool, or rested. A Short Rest clears one level. A full night clears the lot.
+
+## Common Hazards
+
+The world hurts people without anybody swinging anything, and all of it runs on the same machinery: a number of d10, one at a time against your Soak, every die that gets through costing a Health Level. The weapon table is the scale. Fists are 1, a knife is 5, an anti-materiel rifle is 10. A hazard is a number on that same line.
+
+**Falling.** One die per two meters, up to ten. Off a kitchen counter isn’t worth rolling. A flight of stairs is about two. Three storeys down a stairwell is five, which is the same as being stabbed. Past twenty meters you are throwing ten dice and there is nothing worse to throw. Landing in water, deep snow or a hedge halves it.
+
+**Fire.** A burning room is one die at the end of every round you are still in it, and it doesn’t stop until you leave. Being on fire yourself is two, and it doesn’t stop until you put it out - a Normal action for you, a Fast one for somebody helping.
+
+**Getting hit by a vehicle.** Five dice at city speed. Ten at speed. Faster than that isn’t a roll, and your GM will say so before you step into the road.
+
+**No air.** Drowning, smoke, a bag over your head - you have Stamina rounds. After that it is one Health Level per round, and **Soak doesn’t help**, because there is nothing to soak. It is the one hazard armour is no use against.
+
+**Cold.** This is the one the game is named after, and it doesn’t take Health. It takes **Exhausted** levels, and gear is the whole defence. Dressed for it, nothing happens. Underdressed, a level an hour. Wet, or in a wind, or genuinely twenty below, a level every half hour. In cold water, a level a minute. And you cannot clear cold Exhausted while you are still cold - a Short Rest in a snowdrift is not a rest.
+
+**Heat.** The same ladder from the other end. Working hard in real heat is a level an hour. With no water it is a level an hour whatever you are doing, and nothing clears until you drink. Enclosed, airless and with no shade, a level every half hour.
+
+Neither one costs you a Health Level. They put you at Exhausted 5, which puts you on the ground, and out there that is the same thing. A blizzard is dangerous to somebody nobody has laid a finger on.
