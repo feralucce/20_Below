@@ -245,6 +245,20 @@ Because you choose after the roll, nothing is ever wasted. You never pay for a d
 
 This is what cracks a maxed wall. A boosted die from a character with a 10 in the matching sub-stat gets through anything, every time. A 2 in that sub-stat buys you a 20 percent chance on that die. That second one isn’t good odds, I know. It’s still infinitely better than the zero you had a moment ago.
 
+## Going Down
+
+Health Levels are boxes, not a pool. Each solid hit crosses one off. When the last one goes you’re at 0 and you’re unconscious - not dying, not rolling to hang on, just out of the fight and out of the scene.
+
+The row keeps going below zero, the same distance again. Eight Levels means you’re out at 0 and dead at minus eight. Whatever it took to put you down, it takes that much again to finish you.
+
+Two rules protect that space, and between them they’re why a fight so rarely kills anyone by accident.
+
+**One attack can never carry you past 0.** However many dice connect, you land exactly at zero. A bear that rolls ten dice at someone with three Levels left doesn’t tear them apart. It drops them.
+
+**Once you’re at 0, any further attack takes one Level. Total.** Not one per die - one. A body on the ground absorbs a grizzly’s entire turn for a single box. That is why people who go down usually get back up: finishing an unconscious character takes something standing over them, working at it, round after round, while everyone else is still swinging.
+
+So dying here is a thing somebody decides to do to you. Something has to want you dead and be given the time to manage it.
+
 ## How Long Things Take
 
 There’s one ladder of durations, used everywhere in this book: **Round, Minute, Scene, Day, Month, Year.** A Minute is about ten Rounds. The Round is the base unit, and anything measured in this game is measured in Rounds unless a longer band is named.
