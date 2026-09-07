@@ -23,13 +23,53 @@ DATA = os.path.join(SCRIV, "Files", "Data")
 RUN = re.compile(r"\{\\f(\d+)\\fs(\d+)\\b(\d)\\i(\d) ?(.*?)\}", re.S)
 
 
-def chapter_uuid(title_fragment):
+# The book these tools compile. The Draft folder holds more than one now,
+# so every chapter lookup says which.
+BOOK = "Player's Guide"
+
+
+def chapter_uuid(title_fragment, within=None):
+    """Find one chapter by a fragment of its binder title.
+
+    `within` names an ancestor folder - the book the chapter belongs to.
+    The Draft folder holds more than one book now, so a bare fragment can
+    match a chapter in each of them; without a scope this used to return
+    whichever came first in the file and build the wrong text with no
+    complaint at all. Two matches is an error, not a guess.
+    """
     r = ET.parse(os.path.join(SCRIV, "20 Below Mansuscript.scrivx")).getroot()
-    for b in r.iter("BinderItem"):
-        t = b.find("Title")
-        if t is not None and title_fragment.lower() in (t.text or "").lower():
-            return b.get("UUID"), t.text
-    raise SystemExit("no chapter matching %r" % title_fragment)
+
+    # ElementTree has no parent links, so walk down keeping the trail of
+    # folder titles above each item.
+    hits = []
+
+    def walk(node, trail):
+        for b in node.findall("./Children/BinderItem"):
+            t = b.find("Title")
+            title = (t.text or "") if t is not None else ""
+            if title_fragment.lower() in title.lower():
+                if within is None or any(within.lower() in a.lower() for a in trail):
+                    hits.append((b.get("UUID"), title, list(trail)))
+            walk(b, trail + [title])
+
+    for top in r.findall(".//Binder/BinderItem"):
+        t = top.find("Title")
+        title = (t.text or "") if t is not None else ""
+        if title_fragment.lower() in title.lower():
+            if within is None:
+                hits.append((top.get("UUID"), title, []))
+        walk(top, [title])
+
+    where = " in %r" % within if within else ""
+    if not hits:
+        raise SystemExit("no chapter matching %r%s" % (title_fragment, where))
+    if len(hits) > 1:
+        found = ", ".join("%s (under %s)" % (h[1], " / ".join(h[2]) or "Draft") for h in hits)
+        raise SystemExit(
+            "%r%s matches %d binder items - %s. Narrow the fragment, or pass "
+            "`within` to say which book you mean."
+            % (title_fragment, where, len(hits), found))
+    return hits[0][0], hits[0][1]
 
 
 def decode(text):
@@ -146,7 +186,7 @@ def to_chunks(uuid):
 
 if __name__ == "__main__":
     frag = sys.argv[1] if len(sys.argv) > 1 else "Chapter 12"
-    uuid, title = chapter_uuid(frag)
+    uuid, title = chapter_uuid(frag, within=BOOK)
     chunks = to_chunks(uuid)
 
     slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
