@@ -60,6 +60,12 @@ APPS = [
      ["brew", "vendor", "license.html"],
      []),
 
+    ("Encounter Prep", r"^prep-v(\d+)\.(\d+)\.(\d+)$",
+     # Only what stage-frontend.ps1 actually copies - the rest of app/ is
+     # the character creator and never reaches this installer.
+     ["prep", "app/state.js", "app/combat/encounter.js"],
+     []),
+
     ("Battle Tracker", r"^combat-tracker-v(\d+)\.(\d+)\.(\d+)$",
      ["tracker/index.html", "app/state.js", "app/roller/core.js",
       "app/combat/model.js", "app/media.js"],
