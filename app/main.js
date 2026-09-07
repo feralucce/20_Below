@@ -163,8 +163,52 @@ function offerUpdate(release) {
 // installer when that fails (offline, DNS, timeout) - which is silent by
 // design, and shouldn't be. The browser build is served alongside the repo and
 // is always live, so it gets no indicator.
+// The browser build is served alongside the repo, so its rules are always
+// live and the light is free to answer a different question: will this
+// still open with no signal? A worker that failed to register is invisible
+// otherwise - the app behaves perfectly until the moment you need it to
+// work offline, and then looks like an ordinary connection failure.
+async function showOfflineSupport() {
+  const ledEl = document.getElementById('rules-led');
+  if (!ledEl) return;
+
+  let reg = null;
+  if ('serviceWorker' in navigator) {
+    try {
+      reg = await navigator.serviceWorker.getRegistration();
+    } catch (err) {
+      reg = null; // storage blocked, or a context that forbids workers
+    }
+  }
+  const ready = Boolean(reg && (reg.active || navigator.serviceWorker.controller));
+
+  ledEl.hidden = false;
+  if (ready) {
+    ledEl.textContent = 'Offline ready';
+    ledEl.title =
+      'This page is stored on your device, so it opens without a signal. '
+      + 'Rules still refresh whenever you are online.';
+    ledEl.className = 'version-led ok';
+  } else {
+    ledEl.textContent = 'Online only';
+    ledEl.title =
+      'Offline support has not installed, so this page needs a connection to open. '
+      + 'Reload once while online; if it stays this way, your browser may be '
+      + 'blocking site data.';
+    ledEl.className = 'version-led stale';
+  }
+}
+
 function showRulesSource() {
-  if (!isDesktopApp) return;
+  if (!isDesktopApp) {
+    showOfflineSupport();
+    // The worker can take control a moment after the page loads, so the
+    // light is refreshed rather than left reading Online only forever.
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.addEventListener('controllerchange', showOfflineSupport);
+    }
+    return;
+  }
   const ledEl = document.getElementById('rules-led');
   if (!ledEl) return;
   ledEl.hidden = false;
