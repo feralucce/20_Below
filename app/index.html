@@ -18,9 +18,14 @@
 <script src="../vendor/marked.min.js"></script>
 <script>
   // Only on the web. The desktop build loads this same page through
-  // Tauri, where there is nothing to install and no network layer to
-  // cache - registering there would fail loudly for no benefit.
-  if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  // Tauri, which on Windows serves from http://tauri.localhost - so the
+  // protocol alone does not tell the two apart. A worker registered there
+  // would cache the app shell inside the installer's own origin and could
+  // keep serving the old one after an update, so Tauri is excluded by name.
+  if ("serviceWorker" in navigator
+      && location.protocol.startsWith("http")
+      && !window.__TAURI__
+      && !location.hostname.endsWith("tauri.localhost")) {
     window.addEventListener("load", () => {
       navigator.serviceWorker.register("sw.js").catch(() => {
         // No offline support this visit; the app still works online.
