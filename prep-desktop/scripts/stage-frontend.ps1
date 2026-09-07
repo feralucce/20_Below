@@ -1,4 +1,4 @@
-# Builds a clean staging copy of just the files Encounter Prep needs into
+# Builds a clean staging copy of just the files the Encounter Difficulty Calculator needs into
 # src-tauri/frontend-dist, which tauri.conf.json's frontendDist points at.
 # Run automatically by Tauri before each build/dev via
 # beforeBuildCommand/beforeDevCommand.

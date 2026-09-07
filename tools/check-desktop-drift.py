@@ -40,7 +40,7 @@ DEV_ONLY = {
 
 # Paths that sit inside one app's code tree without belonging to it.
 # app/combat/ is shared combat code - the Tracker's round engine and the
-# Encounter Prep tool's maths - kept under app/ so several pages can share
+# Encounter Difficulty Calculator's maths - kept under app/ so several pages can share
 # one copy. The Creator imports none of it and only carries it as dead
 # weight in the installer, so changing it must not ask Creator users to
 # reinstall.
@@ -60,7 +60,7 @@ APPS = [
      ["brew", "vendor", "license.html"],
      []),
 
-    ("Encounter Prep", r"^prep-v(\d+)\.(\d+)\.(\d+)$",
+    ("Encounter Difficulty Calculator", r"^prep-v(\d+)\.(\d+)\.(\d+)$",
      # Only what stage-frontend.ps1 actually copies - the rest of app/ is
      # the character creator and never reaches this installer.
      ["prep", "app/state.js", "app/combat/encounter.js"],

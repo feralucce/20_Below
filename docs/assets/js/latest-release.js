@@ -28,6 +28,10 @@
     creator: { tag: /^v(\d+\.\d+\.\d+)$/,                asset: /^20-below-desktop_.*\.exe$/ },
     tracker: { tag: /^combat-tracker-v(\d+\.\d+\.\d+)$/, asset: /^20-below-combat-tracker_.*\.exe$/ },
     brewery: { tag: /^brewery-v(\d+\.\d+\.\d+)$/,        asset: /^20-below-brewery_.*\.exe$/ },
+    /* Released as encounter-prep before the rename, so both asset names are
+       accepted - otherwise the older release would match the tag, find no
+       asset, and leave the link untouched for no visible reason. */
+    prep:    { tag: /^prep-v(\d+\.\d+\.\d+)$/,           asset: /^20-below-encounter-(difficulty-calculator|prep)_.*\.exe$/ },
   };
 
   function stamp(iso) {
