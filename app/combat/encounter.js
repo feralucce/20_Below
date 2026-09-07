@@ -76,6 +76,40 @@ export function diceFor(state, weaponDice) {
   return naturalDice(state) || DEFAULT_DICE;
 }
 
+// Weapon name -> damage dice, read out of weapons.md.
+//
+// Only tables with a Damage column are weapons: the gear and armour
+// tables have a Wealth column in the same position, and reading those
+// as damage would hand a character a tent that hits for two.
+export function weaponDamageTable(markdown) {
+  const table = {};
+  for (const block of markdown.replace(/\r\n/g, '\n').split(/^## /m)) {
+    const header = block.match(/^\|[^\n]*\|$/m);
+    if (!header || !header[0].includes('Damage')) continue;
+    const columns = header[0].split('|').slice(1, -1).map((c) => c.trim());
+    const at = columns.indexOf('Damage');
+    for (const line of block.split('\n')) {
+      if (!line.startsWith('|') || line.includes('---') || line === header[0]) continue;
+      const cells = line.split('|').slice(1, -1).map((c) => c.trim());
+      const dice = Number(cells[at]);
+      if (cells[0] && Number.isFinite(dice) && dice > 0) table[cells[0]] = dice;
+    }
+  }
+  return Object.keys(table).length ? table : null;
+}
+
+// Where the rules actually live. Fetched rather than bundled for the same
+// reason the character creator fetches them: an edit to weapons.md should
+// reach every tool without any of them being rebuilt.
+export const WEAPONS_URL =
+  'https://raw.githubusercontent.com/feralucce/20_Below/main/rules/weapons.md';
+
+export async function fetchWeaponDamage() {
+  const res = await fetch(WEAPONS_URL, { cache: 'no-store' });
+  if (!res.ok) throw new Error('weapons.md: ' + res.status);
+  return weaponDamageTable(await res.text());
+}
+
 function statsOf(state) {
   const f = computeFiguredCharacteristics(state);
   return {
