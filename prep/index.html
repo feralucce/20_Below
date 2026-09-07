@@ -122,30 +122,15 @@ Character files come from the <a href="https://20belowrpg.com/app/" style="color
   }
 
   // Damage dice for a player come from what they carry, which needs
-  // weapons.md. Fetched live from the repo, the same source the character
-  // creator reads; if it can't be reached, diceFor falls back to fists and
-  // the panel says so rather than quietly under-rating the party.
+  // weapons.md. The parsing lives with the maths in encounter.js so this
+  // page knows nothing about the shape of a rules table; if the fetch
+  // fails, diceFor falls back to fists and the panel says so rather than
+  // quietly under-rating the party.
   let weaponDice = null;
   let weaponsFailed = false;
   (async () => {
     try {
-      const res = await fetch("https://raw.githubusercontent.com/feralucce/20_Below/main/rules/weapons.md", { cache: "no-store" });
-      if (!res.ok) throw new Error(res.status);
-      const md = (await res.text()).replace(/\r\n/g, "\n");
-      const table = {};
-      for (const block of md.split(/^## /m)) {
-        const head = block.match(/^\|[^\n]*\|$/m);
-        if (!head || !head[0].includes("Damage")) continue;
-        const cols = head[0].split("|").slice(1, -1).map((c) => c.trim());
-        const dmgAt = cols.indexOf("Damage");
-        for (const line of block.split("\n")) {
-          if (!line.startsWith("|") || line.includes("---") || line === head[0]) continue;
-          const cells = line.split("|").slice(1, -1).map((c) => c.trim());
-          const d = Number(cells[dmgAt]);
-          if (cells[0] && Number.isFinite(d) && d > 0) table[cells[0]] = d;
-        }
-      }
-      weaponDice = Object.keys(table).length ? table : null;
+      weaponDice = await encounter.fetchWeaponDamage();
       weaponsFailed = !weaponDice;
     } catch (e) {
       weaponsFailed = true;
