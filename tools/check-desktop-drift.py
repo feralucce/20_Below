@@ -38,6 +38,16 @@ DEV_ONLY = {
     "app/verify-parsers.mjs",
 }
 
+# Paths that sit inside one app's code tree without belonging to it.
+# app/combat/ is shared combat code - the Tracker's round engine and the
+# Encounter Prep tool's maths - kept under app/ so several pages can share
+# one copy. The Creator imports none of it and only carries it as dead
+# weight in the installer, so changing it must not ask Creator users to
+# reinstall.
+NOT_OURS = {
+    "Character Creator": ("app/combat/",),
+}
+
 # name, tag pattern, code paths (need a release), live paths (fetched at runtime)
 APPS = [
     ("Character Creator", r"^v(\d+)\.(\d+)\.(\d+)$",
@@ -52,7 +62,6 @@ APPS = [
 
     ("Battle Tracker", r"^combat-tracker-v(\d+)\.(\d+)\.(\d+)$",
      ["tracker/index.html", "app/state.js", "app/roller/core.js",
-      "app/combat/encounter.js",
       "app/combat/model.js", "app/media.js"],
      []),
 ]
@@ -76,11 +85,13 @@ def newest_tag(pattern):
     return best
 
 
-def changed(tag, paths):
+def changed(tag, paths, not_ours=()):
     if not paths:
         return []
     out = git("diff", "--name-only", "%s..HEAD" % tag, "--", *paths)
-    return [f for f in out.split("\n") if f and f not in DEV_ONLY]
+    return [f for f in out.split("\n")
+            if f and f not in DEV_ONLY
+            and not any(f.startswith(prefix) for prefix in not_ours)]
 
 
 def main():
@@ -91,7 +102,7 @@ def main():
             print("%-20s no release tag found" % name)
             continue
 
-        code = changed(tag, code_paths)
+        code = changed(tag, code_paths, NOT_OURS.get(name, ()))
         live = changed(tag, live_paths)
 
         if code:

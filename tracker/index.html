@@ -329,23 +329,6 @@
     margin-bottom: 0.5rem;
     line-height: 1.35;
   }
-  .encounter {
-    border: 1px solid var(--line, #24323c); border-radius: 6px;
-    padding: 0.6rem 0.75rem; margin-bottom: 0.7rem; font-size: 0.85rem;
-  }
-  .encounter .enc-verdict { font-size: 1.05rem; font-weight: 600; }
-  .encounter .enc-sub { color: var(--text-dim, #8fadbe); margin-top: 0.15rem; }
-  .encounter .enc-line { color: var(--text-dim, #8fadbe); margin-top: 0.35rem; font-size: 0.78rem; }
-  .enc-trivial { color: #7fb069; } .enc-standard { color: #9ccfe0; }
-  .enc-hard { color: #e0c56b; } .enc-deadly { color: #e08a5b; }
-  .enc-overwhelming { color: #e05b5b; }
-  .count-box { display: inline-flex; align-items: center; gap: 0.15rem; }
-  .count-box button {
-    width: 1.3rem; height: 1.3rem; line-height: 1; padding: 0;
-    background: none; border: 1px solid var(--line, #24323c);
-    border-radius: 3px; color: inherit; cursor: pointer; font-size: 0.8rem;
-  }
-  .count-box span { min-width: 1.6rem; text-align: center; font-variant-numeric: tabular-nums; }
   .site-back { margin: 0 0 1rem; font-size: 0.85rem; }
   .site-back a { color: var(--text-dim, #8fadbe); text-decoration: none; }
   .site-back a:hover { text-decoration: underline; }
@@ -368,8 +351,6 @@
 
 <div id="combatBar" class="combat-bar"></div>
 
-<div id="encounterPanel" class="encounter" style="display:none"></div>
-
 <div id="rosterList" class="roster-list"><div class="list-empty">No characters loaded yet.</div></div>
 
 <div id="detail" style="display:none" class="detail-wrap">
@@ -380,54 +361,8 @@
 <script type="module">
   const STORAGE_KEY = "twentybelow-roster.characters";
   const COMBAT_KEY = "twentybelow-roster.combat";
-  const COUNT_KEY = "twentybelow-roster.counts";
   let roster = []; // [{ id, text, state|null, error|null }]
   let activeId = null;
-
-  // How many of each non-PC entry are on the table. One import, any
-  // number of wolves - the GM should not have to load the same file
-  // four times to ask what four of them would do.
-  let counts = {};
-  try { counts = JSON.parse(localStorage.getItem(COUNT_KEY) || '{}') || {}; } catch (e) { counts = {}; }
-  const countOf = (id) => Math.max(1, Number(counts[id]) || 1);
-  function setCount(id, n) {
-    counts[id] = Math.max(1, Math.min(99, n));
-    try { localStorage.setItem(COUNT_KEY, JSON.stringify(counts)); } catch (e) { /* session only */ }
-    renderAll();
-  }
-
-  // Damage dice for a player character come from what they are
-  // carrying, which needs weapons.md. Fetched once, live, from the same
-  // place the character creator reads its rules; if it cannot be
-  // reached, diceFor() falls back to fists and the panel says so.
-  let weaponDice = null;
-  let weaponDiceFailed = false;
-  (async () => {
-    try {
-      const res = await fetch('https://raw.githubusercontent.com/feralucce/20_Below/main/rules/weapons.md', { cache: 'no-store' });
-      if (!res.ok) throw new Error(res.status);
-      const md = (await res.text()).replace(/\r\n/g, '\n');
-      const table = {};
-      for (const block of md.split(/^## /m)) {
-        const head = block.match(/^\|[^\n]*\|$/m);
-        if (!head || !head[0].includes('Damage')) continue;
-        const cols = head[0].split('|').slice(1, -1).map((c) => c.trim());
-        const nameAt = 0;
-        const dmgAt = cols.indexOf('Damage');
-        for (const row of block.split('\n')) {
-          if (!row.startsWith('|') || row.includes('---') || row === head[0]) continue;
-          const cells = row.split('|').slice(1, -1).map((c) => c.trim());
-          const d = Number(cells[dmgAt]);
-          if (cells[nameAt] && Number.isFinite(d) && d > 0) table[cells[nameAt]] = d;
-        }
-      }
-      weaponDice = Object.keys(table).length ? table : null;
-      weaponDiceFailed = !weaponDice;
-    } catch (e) {
-      weaponDiceFailed = true;
-    }
-    renderAll();
-  })();
 
   // ---- Shared combat engine ----
   //
@@ -440,7 +375,6 @@
   // The same module backs the standalone web tracker and the desktop app,
   // so all three can't drift on how a round actually runs.
   import * as engine from "../app/combat/model.js";
-  import * as encounter from "../app/combat/encounter.js";
   import * as media from "../app/media.js";
   const { ROLES, BRACKETS, computeFiguredCharacteristics } = engine;
 
@@ -646,9 +580,7 @@
     (redraw || renderAll)();
   }
 
-  // A full redraw rather than just the list: role decides which side of the
-  // encounter panel a character counts towards, so the panel has to follow.
-  function cycleRole(r) { act(() => engine.cycleRole(combat, r)); }
+  function cycleRole(r) { act(() => engine.cycleRole(combat, r), renderList); }
   function rollInitiative(r) { act(() => engine.rollInitiative(combat, r)); }
   function rollAllNonPC() { act(() => engine.rollAllNonPC(combat, combatants())); }
   function beginCombat() { act(() => engine.beginCombat(combat, combatants())); }
@@ -834,47 +766,6 @@
   function renderAll() {
     renderCombatBar();
     renderList();
-    renderEncounter();
-  }
-
-  // Weighs whatever is currently on the table against whoever is
-  // marked PC. Roles default to NPC, so the panel stays hidden until
-  // the GM has actually said who the players are.
-  function renderEncounter() {
-    const el = document.getElementById('encounterPanel');
-    if (!el) return;
-    const live = roster.filter((r) => r.state);
-    const party = live.filter((r) => combatEntry(r).role === 'PC').map((r) => r.state);
-    const foes = live
-      .filter((r) => combatEntry(r).role === 'NPC')
-      .map((r) => ({ state: r.state, count: countOf(r.id), name: r.state.name || 'Unnamed' }));
-
-    if (!party.length || !foes.length) {
-      el.style.display = 'none';
-      return;
-    }
-    el.style.display = '';
-
-    const w = encounter.weigh(party, foes, weaponDice);
-
-    if (w.untouchable) {
-      el.innerHTML = `<div class=\"enc-verdict enc-overwhelming\">Nothing here can hurt it</div><div class=\"enc-sub\">Something on the table has Soak 10. Ordinary weapons are fully absorbed - the party needs Ki, a Gift, or another way through.</div>`;
-      return;
-    }
-
-    const each = w.parts
-      .map((pt) => `${pt.name}${pt.count > 1 ? ' \u00d7' + pt.count : ''} (${Math.round(pt.threat.value)})`)
-      .join(', ');
-    const total = Math.round(w.total);
-    const budget = Math.round(w.budget.value);
-
-    el.innerHTML = [
-      `<div class="enc-verdict enc-${w.band.name}">${w.band.name.toUpperCase()}</div>`,
-      `<div class="enc-sub">${w.band.says}. Threat ${total} against a Budget of ${budget}.</div>`,
-      `<div class="enc-line">${each}</div>`,
-      `<div class="enc-line">Party: ${w.budget.dice} damage dice, ${w.budget.health} Health Levels, average Soak ${w.budget.soak.toFixed(1)}${weaponDiceFailed ? ' &mdash; weapons.md could not be reached, so carried weapons count as fists' : ''}</div>`,
-      '<div class="enc-line">Bands count who goes down, not who dies.</div>',
-    ].join('');
   }
 
   function renderCombatBar() {
@@ -1043,25 +934,14 @@
             </div>
             <div class="ri-meta">
               <button class="role-chip role-${ce.role}" data-role="${entry.id}" title="Click to change role">${ce.role}</button>
-              ${ce.role === 'NPC' ? `<span class="count-box" title="How many of these are on the table"><button data-cminus="${entry.id}">&minus;</button><span>&times;${countOf(entry.id)}</span><button data-cplus="${entry.id}">+</button></span>` : ''}
               <button class="ri-remove" data-id="${entry.id}">Remove</button>
             </div>
           </div>
           ${combatRowHtml(entry)}
         `;
         div.addEventListener("click", (e) => {
-          if (e.target.closest(".ri-remove") || e.target.closest(".ri-combat") || e.target.closest(".role-chip") || e.target.closest(".count-box")) return;
+          if (e.target.closest(".ri-remove") || e.target.closest(".ri-combat") || e.target.closest(".role-chip")) return;
           selectCharacter(entry.id);
-        });
-        const cMinus = div.querySelector("[data-cminus]");
-        if (cMinus) cMinus.addEventListener("click", (ev) => {
-          ev.stopPropagation();
-          setCount(entry.id, countOf(entry.id) - 1);
-        });
-        const cPlus = div.querySelector("[data-cplus]");
-        if (cPlus) cPlus.addEventListener("click", (ev) => {
-          ev.stopPropagation();
-          setCount(entry.id, countOf(entry.id) + 1);
         });
         div.querySelector("[data-role]").addEventListener("click", (ev) => {
           ev.stopPropagation();

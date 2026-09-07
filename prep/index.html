@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>20 Below Encounter Prep</title>
+<link rel="icon" type="image/svg+xml" href="https://feralucce.github.io/20_Below_Roster/icon.svg" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-2: #0e1c26;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --text-faint: #5c7686;
+    --accent: #3d84c4;
+    --gold: #d4af6a;
+    --danger: #d1584f;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font-size: 17px; }
+  body { padding: 1rem 1.1rem 2rem; max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 1rem; margin: 0 0 0.3rem; display: flex; align-items: center; gap: 0.4rem; }
+  .site-back { margin: 0 0 1rem; font-size: 0.8rem; }
+  .site-back a { color: var(--text-dim); text-decoration: none; }
+  .site-back a:hover { text-decoration: underline; }
+  .lede { font-size: 0.8rem; color: var(--text-faint); margin: 0 0 1rem; line-height: 1.5; max-width: 62ch; }
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; align-items: start; }
+  @media (max-width: 780px) { .cols { grid-template-columns: 1fr; } }
+
+  .card { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 6px; padding: 0.7rem 0.8rem; }
+  .card h2 { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.07em;
+             color: var(--text-faint); margin: 0 0 0.5rem; font-weight: 600; }
+
+  .file-btn { display: block; text-align: center; background: var(--panel-2);
+    border: 1px dashed var(--panel-border); color: var(--text-dim); border-radius: 5px;
+    padding: 0.5rem; font-size: 0.75rem; cursor: pointer; margin-bottom: 0.35rem; }
+  .file-btn:hover { border-color: var(--accent); color: var(--text); }
+  input[type=file] { display: none; }
+  .drop.dragging { outline: 2px dashed var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+  .row { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem;
+         padding: 0.35rem 0; border-bottom: 1px solid var(--panel-2); font-size: 0.8rem; }
+  .row:last-child { border-bottom: none; }
+  .row .nm { font-weight: 600; }
+  .row .sub { font-size: 0.68rem; color: var(--text-faint); }
+  .row .kill { background: none; border: 1px solid var(--panel-border); color: var(--text-faint);
+    border-radius: 4px; font-size: 0.62rem; padding: 0.1rem 0.35rem; cursor: pointer; }
+  .empty { color: var(--text-faint); font-size: 0.75rem; font-style: italic; padding: 0.4rem 0; }
+
+  .count { display: inline-flex; align-items: center; gap: 0.2rem; }
+  .count button { width: 1.4rem; height: 1.4rem; padding: 0; line-height: 1; background: var(--panel-2);
+    border: 1px solid var(--panel-border); border-radius: 3px; color: var(--text); cursor: pointer; }
+  .count button:hover { border-color: var(--accent); }
+  .count .n { min-width: 1.9rem; text-align: center; font-variant-numeric: tabular-nums; }
+
+  .dice-in { width: 2.6rem; background: var(--panel-2); border: 1px solid var(--panel-border);
+    color: var(--text); border-radius: 3px; padding: 0.1rem 0.25rem; font-size: 0.75rem;
+    text-align: right; font-variant-numeric: tabular-nums; }
+
+  .verdict { margin-top: 0.9rem; border: 1px solid var(--panel-border); border-radius: 6px;
+    padding: 0.8rem 0.9rem; background: var(--panel); }
+  .verdict .band { font-size: 1.5rem; font-weight: 700; letter-spacing: 0.03em; }
+  .verdict .says { font-size: 0.85rem; color: var(--text-dim); margin-top: 0.15rem; }
+  .verdict .math { font-size: 0.72rem; color: var(--text-faint); margin-top: 0.5rem; line-height: 1.6; }
+  .b-trivial { color: #7fb069; } .b-standard { color: #9ccfe0; }
+  .b-hard { color: #e0c56b; } .b-deadly { color: #e08a5b; } .b-overwhelming { color: #e05b5b; }
+
+  .ladder { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-top: 0.3rem; }
+  .ladder span { font-size: 0.62rem; color: var(--text-faint); background: var(--panel-2);
+    border: 1px solid var(--panel-border); border-radius: 3px; padding: 0.05rem 0.3rem; }
+  .warn { color: var(--gold); font-size: 0.72rem; margin-top: 0.4rem; }
+</style>
+</head>
+<body>
+
+<h1><img src="https://feralucce.github.io/20_Below_Roster/icon.svg" alt="" width="20" height="20" /> 20 Below Encounter Prep</h1>
+<p class="site-back"><a href="https://20belowrpg.com/home.html">&larr; 20 Below</a></p>
+<p class="lede">Load the party once, then build a fight and see what it costs before anyone sits down.
+Character files come from the <a href="https://20belowrpg.com/app/" style="color:var(--accent)">character creator</a>; creature files are the same format, so a folder of them loads in one go.</p>
+
+<div class="cols">
+  <div class="card drop" id="partyDrop">
+    <h2>The party</h2>
+    <label class="file-btn" for="partyFiles">Add player character JSON(s)&hellip;</label>
+    <input type="file" id="partyFiles" accept="application/json,.json" multiple />
+    <label class="file-btn" for="partyFolder">&hellip;or a whole folder</label>
+    <input type="file" id="partyFolder" webkitdirectory directory multiple />
+    <div id="partyList"></div>
+  </div>
+
+  <div class="card drop" id="foeDrop">
+    <h2>On the table</h2>
+    <label class="file-btn" for="foeFiles">Add creature JSON(s)&hellip;</label>
+    <input type="file" id="foeFiles" accept="application/json,.json" multiple />
+    <label class="file-btn" for="foeFolder">&hellip;or a whole folder</label>
+    <input type="file" id="foeFolder" webkitdirectory directory multiple />
+    <div id="foeList"></div>
+  </div>
+</div>
+
+<div class="verdict" id="verdict"></div>
+
+<script type="module">
+  import * as encounter from "../app/combat/encounter.js";
+
+  const KEY = "twentybelow-prep.v1";
+  let party = [];   // [{ id, state }]
+  let foes = [];    // [{ id, state, count }]
+
+  try {
+    const saved = JSON.parse(localStorage.getItem(KEY) || "null");
+    if (saved) { party = saved.party || []; foes = saved.foes || []; }
+  } catch (e) { /* first run, or storage unavailable */ }
+
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify({ party, foes })); }
+    catch (e) { /* session only */ }
+  }
+
+  // Damage dice for a player come from what they carry, which needs
+  // weapons.md. Fetched live from the repo, the same source the character
+  // creator reads; if it can't be reached, diceFor falls back to fists and
+  // the panel says so rather than quietly under-rating the party.
+  let weaponDice = null;
+  let weaponsFailed = false;
+  (async () => {
+    try {
+      const res = await fetch("https://raw.githubusercontent.com/feralucce/20_Below/main/rules/weapons.md", { cache: "no-store" });
+      if (!res.ok) throw new Error(res.status);
+      const md = (await res.text()).replace(/\r\n/g, "\n");
+      const table = {};
+      for (const block of md.split(/^## /m)) {
+        const head = block.match(/^\|[^\n]*\|$/m);
+        if (!head || !head[0].includes("Damage")) continue;
+        const cols = head[0].split("|").slice(1, -1).map((c) => c.trim());
+        const dmgAt = cols.indexOf("Damage");
+        for (const line of block.split("\n")) {
+          if (!line.startsWith("|") || line.includes("---") || line === head[0]) continue;
+          const cells = line.split("|").slice(1, -1).map((c) => c.trim());
+          const d = Number(cells[dmgAt]);
+          if (cells[0] && Number.isFinite(d) && d > 0) table[cells[0]] = d;
+        }
+      }
+      weaponDice = Object.keys(table).length ? table : null;
+      weaponsFailed = !weaponDice;
+    } catch (e) {
+      weaponsFailed = true;
+    }
+    render();
+  })();
+
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const nextId = () => "e" + Date.now() + Math.random().toString(36).slice(2, 6);
+
+  async function addTo(which, fileList) {
+    const files = [...fileList].filter((f) => /\.json$/i.test(f.name));
+    for (const f of files) {
+      let state = null;
+      try { state = JSON.parse(await f.text()); } catch (e) { state = null; }
+      if (!state || !state.attributes || !state.subStats) continue; // not a 20 Below export
+      if (which === "party") party.push({ id: nextId(), state });
+      else foes.push({ id: nextId(), state, count: 1 });
+    }
+    save();
+    render();
+  }
+
+  function wire(dropId, filesId, folderId, which) {
+    const zone = document.getElementById(dropId);
+    document.getElementById(filesId).addEventListener("change", (e) => { addTo(which, e.target.files); e.target.value = ""; });
+    document.getElementById(folderId).addEventListener("change", (e) => { addTo(which, e.target.files); e.target.value = ""; });
+    zone.addEventListener("dragover", (e) => { e.preventDefault(); zone.classList.add("dragging"); });
+    zone.addEventListener("dragleave", () => zone.classList.remove("dragging"));
+    zone.addEventListener("drop", (e) => {
+      e.preventDefault();
+      zone.classList.remove("dragging");
+      addTo(which, e.dataTransfer.files);
+    });
+  }
+  wire("partyDrop", "partyFiles", "partyFolder", "party");
+  wire("foeDrop", "foeFiles", "foeFolder", "foes");
+
+  function renderParty() {
+    const el = document.getElementById("partyList");
+    if (!party.length) { el.innerHTML = '<div class="empty">No player characters loaded.</div>'; return; }
+    el.innerHTML = party.map((p) => {
+      const dice = encounter.diceFor(p.state, weaponDice);
+      const soak = (p.state.subStats && p.state.subStats.Soak) || 0;
+      const hl = 5 + ((p.state.subStats && p.state.subStats.Health) || 0);
+      return `<div class="row">
+        <div style="min-width:0">
+          <div class="nm">${esc(p.state.name || "Unnamed")}</div>
+          <div class="sub">Soak ${soak} &middot; ${hl} Health Levels</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.4rem">
+          <label class="sub" style="display:inline">dice
+            <input class="dice-in" type="number" min="1" max="20" value="${dice}" data-dice="${p.id}" />
+          </label>
+          <button class="kill" data-kill="${p.id}">&times;</button>
+        </div>
+      </div>`;
+    }).join("");
+  }
+
+  function renderFoes() {
+    const el = document.getElementById("foeList");
+    if (!foes.length) { el.innerHTML = '<div class="empty">Nothing on the table yet.</div>'; return; }
+    const budget = encounter.budgetOf(party.map((p) => p.state), weaponDice).value;
+    el.innerHTML = foes.map((f) => {
+      const t = encounter.threatOf(f.state, f.count, weaponDice);
+      const each = t.untouchable ? "&infin;" : Math.round(t.each);
+      // How many of this one creature reaches each band on its own - the
+      // quickest way to size a fight around a single kind of thing.
+      let ladder = "";
+      if (budget > 0 && !t.untouchable && t.each > 0) {
+        // The first count that lands in each band. Threat climbs with the
+        // square, so a band can be skipped entirely - one of a big creature
+        // is standard and two is deadly, with no number in between.
+        const first = new Map();
+        for (let n = 1; n <= 60; n += 1) {
+          const name = encounter.bandFor((n * n * t.each) / budget).name;
+          if (!first.has(name)) first.set(name, n);
+        }
+        const marks = encounter.BANDS
+          .filter((b) => b.name !== "trivial" && first.has(b.name))
+          .map((b) => `<span>${b.name} at ${first.get(b.name)}</span>`);
+        ladder = marks.length ? `<div class="ladder">${marks.join("")}</div>` : "";
+      }
+      return `<div class="row" style="align-items:flex-start">
+        <div style="min-width:0">
+          <div class="nm">${esc(f.state.name || "Unnamed")}</div>
+          <div class="sub">Soak ${t.soak} &middot; ${t.health} Health Levels &middot; ${t.dice} dice &middot; threat ${each} each</div>
+          ${ladder}
+        </div>
+        <div style="display:flex;align-items:center;gap:0.4rem">
+          <span class="count">
+            <button data-minus="${f.id}">&minus;</button>
+            <span class="n">&times;${f.count}</span>
+            <button data-plus="${f.id}">+</button>
+          </span>
+          <button class="kill" data-kill="${f.id}">&times;</button>
+        </div>
+      </div>`;
+    }).join("");
+  }
+
+  function renderVerdict() {
+    const el = document.getElementById("verdict");
+    if (!party.length || !foes.length) {
+      el.innerHTML = '<div class="says">Load a party and put something on the table.</div>';
+      return;
+    }
+    const w = encounter.weigh(party.map((p) => p.state), foes, weaponDice);
+    if (w.untouchable) {
+      el.innerHTML = '<div class="band b-overwhelming">Nothing here can hurt it</div>'
+        + '<div class="says">Something on the table has Soak 10. Every ordinary damage die is absorbed &mdash; '
+        + 'the party needs Ki, a Gift, or a way around the fight entirely.</div>';
+      return;
+    }
+    const names = w.parts.map((p) => `${esc(p.state.name || "Unnamed")}${p.count > 1 ? " &times;" + p.count : ""}`).join(", ");
+    el.innerHTML = [
+      `<div class="band b-${w.band.name}">${w.band.name.toUpperCase()}</div>`,
+      `<div class="says">${w.band.says}.</div>`,
+      `<div class="math">${names}<br />`,
+      `Threat ${Math.round(w.total)} against a Budget of ${Math.round(w.budget.value)}. `,
+      `Party: ${w.budget.dice} damage dice, ${w.budget.health} Health Levels, average Soak ${w.budget.soak.toFixed(1)}.<br />`,
+      `Bands count who goes down, not who dies.</div>`,
+      weaponsFailed ? '<div class="warn">weapons.md could not be reached, so carried weapons count as fists. Set each character\'s dice by hand.</div>' : "",
+    ].join("");
+  }
+
+  function render() {
+    renderParty();
+    renderFoes();
+    renderVerdict();
+  }
+
+  document.addEventListener("click", (e) => {
+    const plus = e.target.closest("[data-plus]");
+    const minus = e.target.closest("[data-minus]");
+    const kill = e.target.closest("[data-kill]");
+    if (plus) {
+      const f = foes.find((x) => x.id === plus.dataset.plus);
+      if (f) { f.count = Math.min(99, f.count + 1); save(); render(); }
+    } else if (minus) {
+      const f = foes.find((x) => x.id === minus.dataset.minus);
+      if (f) { f.count = Math.max(1, f.count - 1); save(); render(); }
+    } else if (kill) {
+      const id = kill.dataset.kill;
+      party = party.filter((x) => x.id !== id);
+      foes = foes.filter((x) => x.id !== id);
+      save();
+      render();
+    }
+  });
+
+  // A character carrying several weapons has no single right answer, and
+  // an unarmed one defaults to fists - so the dice are editable, and the
+  // override is stored on the character state the maths reads.
+  document.addEventListener("change", (e) => {
+    const box = e.target.closest("[data-dice]");
+    if (!box) return;
+    const p = party.find((x) => x.id === box.dataset.dice);
+    if (!p) return;
+    const n = Number(box.value);
+    p.state.encounterDice = Number.isFinite(n) && n > 0 ? n : undefined;
+    save();
+    render();
+  });
+
+  render();
+</script>
+</body>
+</html>
