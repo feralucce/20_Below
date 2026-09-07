@@ -116,8 +116,15 @@
   table.adversary-card:nth-of-type(even) td {
     background: var(--bg);
   }
-  table.adversary-card h3 {
+  /* The adversary index nests entries under a family heading, so a card's
+     own title is an h4 there and an h3 elsewhere. Both, or the title picks
+     up the top margin meant to separate sections. */
+  table.adversary-card h3,
+  table.adversary-card h4 {
     margin-top: 0;
+    /* A creature's name is what a reader scans for, so it keeps the accent
+       an h3 gets by default even though it is an h4 inside a family. */
+    color: var(--accent);
   }
 </style>
 <link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
