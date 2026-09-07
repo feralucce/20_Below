@@ -23,7 +23,7 @@ ROOT = os.path.dirname(HERE)
 OUT = os.path.join(ROOT, "webbook")
 
 sys.path.insert(0, HERE)
-from scriv2brew import chapter_uuid, to_chunks   # noqa: E402
+from scriv2brew import BOOK, chapter_uuid, to_chunks   # noqa: E402
 
 # (binder fragment, url slug, nav section, page title)
 #
@@ -421,7 +421,7 @@ def main():
     hollow = []
 
     for i, (frag, slug, section, title, _blurb) in enumerate(CHAPTERS):
-        uuid, binder_title = chapter_uuid(frag)
+        uuid, binder_title = chapter_uuid(frag, within=BOOK)
         chunks = to_chunks(uuid)
         chunks = restore_tables(chunks, tables_for.get(slug, []))
         chunks = wrap_entries(chunks)
