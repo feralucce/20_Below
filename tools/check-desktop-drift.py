@@ -52,6 +52,7 @@ APPS = [
 
     ("Battle Tracker", r"^combat-tracker-v(\d+)\.(\d+)\.(\d+)$",
      ["tracker/index.html", "app/state.js", "app/roller/core.js",
+      "app/combat/encounter.js",
       "app/combat/model.js", "app/media.js"],
      []),
 ]
