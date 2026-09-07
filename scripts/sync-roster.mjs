@@ -32,6 +32,7 @@ const LIB = [
   ['app/state.js', 'lib/state.js'],
   ['app/roller/core.js', 'lib/roller/core.js'],
   ['app/combat/model.js', 'lib/combat/model.js'],
+  ['app/combat/encounter.js', 'lib/combat/encounter.js'],
   ['app/media.js', 'lib/media.js'],
 ];
 
@@ -55,6 +56,7 @@ if (!page.includes(SOURCE_IMPORT)) {
   process.exit(1);
 }
 page = page.replace(SOURCE_IMPORT, EXTENSION_IMPORT);
+page = page.replace('"../app/combat/encounter.js"', '"./lib/combat/encounter.js"');
 page = page.replace('"../app/media.js"', '"./lib/media.js"');
 
 const BANNER = [
