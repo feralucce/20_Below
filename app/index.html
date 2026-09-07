@@ -6,9 +6,28 @@
 <title>20 Below - Character Creator</title>
 <link rel="icon" type="image/x-icon" href="../docs/assets/brand/favicon.ico" />
 <link rel="icon" type="image/png" sizes="32x32" href="../docs/assets/brand/favicon-32.png" />
-<link rel="apple-touch-icon" href="../docs/assets/brand/favicon-128.png" />
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="theme-color" content="#0a1720" />
+<!-- iOS ignores the manifest for standalone mode and reads these instead. -->
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="20 Below" />
 <link rel="stylesheet" href="style.css" />
 <script src="../vendor/marked.min.js"></script>
+<script>
+  // Only on the web. The desktop build loads this same page through
+  // Tauri, where there is nothing to install and no network layer to
+  // cache - registering there would fail loudly for no benefit.
+  if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("sw.js").catch(() => {
+        // No offline support this visit; the app still works online.
+      });
+    });
+  }
+</script>
 </head>
 <body>
 <header class="app-header">
