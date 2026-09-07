@@ -50,6 +50,24 @@ A catalog of threats a party might face outside of other player characters - not
 
 ---
 
+**How to read a stat block:**
+
+- **Soak** and **Defense** work exactly as they do for a PC - Soak resolves per-die against an attack (rules.md#physical-attacks---weapon-damage--per-die-resolution), Defense is the target number for an attacker's to-hit roll.
+- **Attack** is the creature's own Attribute rating (1-10) for making that to-hit roll - roll 2d10 against Attack + the target's Defense (used as Difficulty, per rules.md#the-passive-wall-triad---soak-presence-psyche), standard critical results apply.
+- **Health Levels** work exactly as they do for a PC, with no below-0 range - a creature is out of the fight the instant it crosses 0.
+- **Movement Rate** is in meters, same as a PC's.
+- Each **Natural Weapon** lists a Damage rating (d10 count, same 1-10 scale as [weapons.md](weapons.md)) and a range.
+- **Notable Skills** give a single number - treat it as the creature's full roll target whenever that Skill matters. Roll 2d10 against it, standard critical results apply, exactly like any other roll.
+- **Traits** describe anything that doesn't fit the fields above, written in terms of mechanics that already exist (Advantage/Disadvantage, Range Bands, Ki, etc.) rather than new ones.
+- **A small number of entries have an ability marked "no to-hit roll required."** Every attack normally starts with a to-hit roll against the target's Defense (rules.md#the-passive-wall-triad---soak-presence-psyche) - but a small handful of entries (things that affect you by being perceived rather than by striking you, like a banshee-style wail) don't fit that shape. For those specific abilities only, perceiving the source (a Perception check, or simply being in range and aware of it, GM's call) triggers the effect instead of a to-hit roll. Everything downstream of that - the dice resolving per-die against the relevant wall stat, Ki Spend to Preserve options for the target - works exactly like any other attack. Nothing else about the resolution changes.
+
+---
+
+
+Ordinary animals, native to a modern-day setting. None of these are supernatural - a description matching what a real specimen is actually capable of, run through the system's own math.
+
+---
+
 ## Domestic & Urban
 
 ### Dog
