@@ -1,7 +1,70 @@
 # Bestiary
 
-Generated from the 20 Below rules files by `scripts/bestiary-to-brew.mjs`.
-209 creatures. Re-run the script after the bestiary changes.
+The creatures are generated from the rules files and the prose from the manuscript, by `tools/build-bestiary.py`. Re-run it after either changes.
+
+\page
+
+# Running Adversaries
+
+Everything in this book is built on the rules the players already use, so you know how to run it. What a stat block does not tell you on its own is whether the thing in front of your party is a bad afternoon or a funeral. This chapter is about reading that off the page.
+
+## What Actually Makes Something Dangerous
+
+Three numbers, doing three different jobs.
+
+**Soak is a wall, and it is the first thing to read.** It doesn’t reduce damage. It deletes a share of it. Every damage die is checked against Soak on its own, and a die that doesn’t beat it does nothing at all - not less, nothing. Soak 3 throws away three dice in ten, forever, whatever the party is swinging. Soak 6 throws away six. Soak 10 can’t be hurt by an ordinary weapon at all, and you want to know that before you put one on the table rather than four rounds into the fight.
+
+So Soak isn’t a dial you nudge. It’s a gate. A party carrying knives and pipes will grind down something with Soak 6 and hate every round of it. The same party against Soak 2 will be done before anyone gets nervous.
+
+**Damage dice decide who falls over.** Put a creature’s dice next to the Health Levels of the softest character it can reach. If the dice outnumber them, it can put that character on the floor in a single turn. That is the calculation worth doing before a fight - not because the answer changes what you run, but because it tells you what you are risking.
+
+**Health Levels decide how long it keeps doing that.** On their own they threaten nobody. They are how many rounds the thing stays up and swinging. A creature with enormous Health Levels and two damage dice is a chore. A creature with four Health Levels and nine dice is a disaster that only gets one turn.
+
+\page
+
+## Numbers Are the Dial, and the Dial Is Steep
+
+One creature attacks once a round no matter how big it is. Six characters attack six times. That asymmetry never goes away, and it means a single monster - any single monster - is a poor threat to a group. Health Levels don’t fix it. You would need to triple them before the arithmetic changed, and by then you have built something that takes twenty minutes to kill.
+
+More creatures is the answer, and it climbs faster than it looks. Two creatures deal twice the damage and stay alive twice as long to keep dealing it, so both halves of the threat double together. **Double the pack, quadruple the danger.** Four wolves are a fight worth having. Eight are not four wolves twice.
+
+That is also why big creatures make a coarse dial. With stray dogs you can tune an encounter one animal at a time. With something the size of a bear you have two settings and nothing in between. If you want a fight to land somewhere precise, reach for the small things and add bodies.
+
+## Working It Out
+
+When you want a number rather than a feel, there is one.
+
+**A creature’s Threat** is its damage dice, times its Health Levels, divided by ten minus its Soak. **A pack of them** is that, times the number of creatures, times the number again. **Your party’s Budget** is 0.7, times their combined damage dice, times their combined Health Levels, divided by ten minus their average Soak.
+
+Threat over Budget is what the fight costs you. **Under 0.35**, nobody goes down. **Up to 0.75**, about one character drops. **Up to 1.4**, two or three drop. **Up to 3.0**, most of the party ends up on the floor. **Past that**, all of them.
+
+Work your party’s Budget out once and write it inside the cover. It only changes when they do.
+
+**These bands count bodies on the floor, not funerals.** Going down is what a fight does to you; dying is a separate thing, done deliberately, by something standing over you afterward with the time to finish. A party can lose every member of a fight and walk away from it, and that is the game working rather than the numbers failing.
+
+\page
+
+# Building Your Own
+
+The fastest way to build a creature is to find the animal in this book closest to the size and shape of what you want, copy its numbers, and change what actually needs changing. Most of what you invent is a bear with a different skin.
+
+If you would rather build from nothing, the order below keeps you out of trouble.
+
+**Start with Soak, and be careful with it.** This is the number that decides whether the fight is possible, not just how hard. Under 3 is flesh - the party will hurt it whenever they connect. 4 to 6 is armor, hide, or something that isn’t quite meat, and it will slow a fight down noticeably. Above 6, think hard: you are building something most weapons genuinely cannot handle, and unless the party has a way through - a Gift, Ki to spend, the right tool found earlier in the story - you have written a wall rather than an opponent. Save 8 and above for things the story says you run away from.
+
+**Then damage dice, against the people it will meet.** Look at the party’s Health Levels, take the lowest, and decide whether this thing should be able to drop that character in one turn. If yes, give it that many dice or more. If no, keep it under. Nothing else about the creature communicates as clearly to the table as that one choice.
+
+**Then Health Levels, which are pacing.** Five is a fight that is over as it starts. Ten is a few rounds. Fifteen is a set piece, and above that you are asking the table to keep rolling at something that has stopped surprising them. Big numbers here don’t make a creature frightening. They make it long.
+
+\page
+
+**Then Defense, which is reach and nothing else.** Low means hard to lay hands on, high means easy. It follows size and speed, not toughness - a hawk on the wing is hard to reach, a moose standing in a road is not. Don’t reach for it to make something tougher; that is what Soak and Health Levels are for, and using Defense that way produces creatures that are absurd to fight.
+
+**Then Attack**, which is only how reliably it connects, on the same 1-10 scale as everything else. A predator that hunts for a living sits at 6 or 7. Something clumsy sits at 2 or 3.
+
+**Then check it against something you know.** Work out its Threat and hold it next to an animal from the index. If your invention lands near a wolverine, it is a wolverine with a different face, and you already know how many to use. If it lands ten times higher than anything in the book, that isn’t automatically wrong - but it should be because you meant it, and the party should get a scene’s warning before they meet it.
+
+**Last, give it one thing the numbers don’t cover.** Every entry in this book has a Trait, and it is usually the part players remember - the pack that gets Advantage once it flanks you, the spray you can’t wash off, the thing that speeds up as it takes damage. Write it in terms of rules that already exist: Advantage, Disadvantage, Ki, Range Bands, a condition. A Trait that needs a new subsystem is a Trait that stops the table to explain itself.
 
 \page
 
@@ -2459,194 +2522,4 @@ The howl reaches farther than the animal ever does, which is exactly why nobody 
 **Notable Skills**: Intimidation 8, Stealth 7
 
 **Traits**: **Howl** (once per encounter) - anyone within Close range takes Disadvantage on their next roll, rattled by a sound with nothing visibly behind it.
-:::
-
-\page
-
-# Nightmare Creatures
-
-::: stat Vampire
-Passes for human right up until it doesn't need to anymore. The skin runs a shade too cool to the touch, and anyone who checks for a pulse doesn't find one. In conversation it reads people well - too well, closing distance a step at a time until the target notices too late that they're alone with it. Once it commits, it goes for a grapple and a bite rather than a straight fight, and keeps feeding as long as the grip holds. Direct sun is the one thing that visibly rattles it, and a party that notices it steering the evening toward windowless rooms has already caught the tell.
-
-**Soak** 2 · **Attack** 7 · **Defense** 7 · **Health Levels** 6 · **Movement Rate** 10m
-
-**Bite / Claws**: 4, Melee. **Blood Drain**: against a target it has Grappled, a successful bite heals it 1 Health Level at the start of each of its turns for the rest of the Scene.
-
-**Notable Skills**: Persuasion 9, Stealth 8
-
-**Traits**: **Predatory Charm** - Advantage on Persuasion and Deception rolls made to get close to a target who hasn't been warned about it. **Sunlight-Averse** - Disadvantage on all rolls made in direct daylight.
-:::
-
-\page
-
-::: stat Werewolf
-Whatever it was before doesn't matter once the shape has finished changing. The transformation itself is loud - joints popping, cloth tearing, a voice stretching into something between a growl and a scream - so there's usually a window before it's fully committed to it. Once it is, it fights like an animal with a grudge: claws and teeth, no feints, no retreat. Wounds that should slow it down don't, closing visibly between exchanges unless the weapon that made them was silver. A party that clocks the moon, or the change starting, gets the only warning it's going to give.
-
-**Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 12m
-
-**Claws / Bite**: 6, Melee
-
-**Notable Skills**: Athletics 9, Perception 8
-
-**Traits**: **Regeneration** - heals 1 Health Level at the start of each of its turns. **Silver Vulnerable** - damage from a silver weapon against it is unsoakable.
-:::
-
-::: stat Ghoul
-Lives off what the cemetery and the morgue don't miss, and what its bite leaves behind doesn't heal clean. It's gaunt and grey-skinned, moves in a low crouch, and smells like the dirt it digs through before it smells like anything else. It works graveyards and disaster sites rather than open streets, and would much rather take a wounded or already-dead target than start a fight from scratch. A bite left untreated festers instead of closing, which means the encounter isn't really over just because the ghoul is dead.
-
-**Soak** 2 · **Attack** 5 · **Defense** 5 · **Health Levels** 5 · **Movement Rate** 8m
-
-**Claws / Bite**: 4, Melee. **Fouled Wound**: a target hit and left untreated takes Disadvantage on Physical rolls until the wound is properly cleaned.
-
-**Notable Skills**: Stealth 8
-
-**Traits**: **Carrion Sense** - Advantage on Perception rolls to locate fresh graves, corpses, or already-wounded targets.
-:::
-
-\page
-
-::: stat Bound Corpse
-Something is still using the body. The body itself stopped being the important part a while ago. Slack joints and a gait that doesn't track right are usually the first things anyone notices, along with a cold that radiates off it before it's within arm's reach. It moves toward its target in a straight line with no hesitation, because whatever's inside it isn't afraid of losing the shell. Putting it down for the Scene doesn't end it - the remains still have to be found and dealt with, or it re-forms and comes back.
-
-**Soak** 3 · **Attack** 6 · **Defense** 4 · **Health Levels** 6 · **Movement Rate** 7m
-
-**Whatever It's Carrying**: 4, Melee
-
-**Traits**: **Tethered, Not Alive** - immune to Fear and Intimidation, doesn't need to breathe, and taking it past 0 Health Levels only disperses it for the Scene; it re-forms at the corpse's resting place unless the remains themselves are destroyed or the tether is broken by other means (GM's call). **Cold Presence** - anyone within Close range takes Disadvantage on Perception rolls.
-:::
-
-::: stat Lesser Devil
-Doesn't need to win the fight if it can talk someone else into losing it for them. It looks almost reasonable - well-dressed, soft-spoken, quick with a compliment - right up until the horns catch the light. It spends the opening of an encounter talking, needling at whichever PC seems angriest or most desperate, and only fights directly once the goading has failed. When it does fight, it's fast and airborne in short bursts, using the distance to keep talking between exchanges. Fire is the one thing that visibly rattles it, since it can't soak any damage from it at all.
-
-**Soak** 2 · **Attack** 6 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 10m (short flight)
-
-**Claws / Horns**: 4, Melee
-
-**Notable Skills**: Persuasion 9, Deception 8
-
-**Traits**: **Goading** - Advantage on Persuasion rolls made to provoke a target into a rash or reckless action. **Fire Vulnerable** - fire damage against it is unsoakable.
-:::
-
-\page
-
-::: stat Changeling
-Wears a borrowed face well enough that the real question isn't whether it's lying, it's how long it's been standing in someone else's life. Under the glamour there's nothing distinctive to see - it studies its target's mannerisms and speech patterns and reproduces them with unsettling accuracy. It avoids combat when it can, relying on the disguise to walk away from trouble rather than fight through it, and only draws the knife when cornered with no other way out. The one reliable tell is timing: a beat too long before it answers a question only the real person would know instantly.
-
-**Soak** 1 · **Attack** 3 · **Defense** 8 · **Health Levels** 3 · **Movement Rate** 9m
-
-**Knife** (only if cornered): 2, Melee
-
-**Notable Skills**: Deception 10, Persuasion 9
-
-**Traits**: **Glamour** - Advantage on any Deception roll made to pass as a specific person it has studied closely. **Cracks Both Ways** - a target who succeeds on a Perception roll to see through the glamour gains Advantage on their next roll against it.
-:::
-
-::: stat Hexcrafter
-Ordinary until the ritual finishes. The trick is stopping it before that happens. It looks like exactly what it's pretending to be - tired, unremarkable, easy to walk past - right up until it starts chalking symbols or muttering under its breath. It has nothing to fall back on if the ritual is interrupted: no real fight in it, just a knife it barely knows how to use and a strong urge to run. The real threat is the clock; once the hex completes, the damage is done and there's no talking or fighting it back.
-
-**Soak** 0 · **Attack** 3 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 8m
-
-**Athame** (only if cornered): 1, Melee. **Hex** (once per Scene, requires several uninterrupted rounds to complete - GM's call on timing): a single target within Sight range takes Disadvantage on all rolls for the rest of the Scene once the ritual completes.
-
-**Notable Skills**: Perception 7
-
-**Traits**: **Fragile Without Preparation** - has no combat trait beyond the above; entirely dependent on allies, terrain, or fleeing if interrupted mid-ritual.
-:::
-
-\page
-
-::: stat Skinshifter
-A full night of watching is all it needs before it can wear someone else's face and voice convincingly. Before the copy is made it's a blur of grey, indistinct features, easy to mistake for a shadow or a trick of the light. Once it's taken a shape it commits fully, reproducing speech patterns and small habits gathered from the night of observation, using that borrowed trust to get close rather than to fight. The one reliable tell is durability: the instant it takes any real damage, the borrowed face sloughs off and the true shape underneath is unmistakable.
-
-**Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 9m
-
-**Claws**: 3, Melee
-
-**Notable Skills**: Deception 10, Stealth 8
-
-**Traits**: **Perfect Copy** - after studying a specific target overnight, can take on their appearance and voice; noticing anything wrong requires a Perception roll at Disadvantage. **Reverts Under Stress** - snaps back to its true, indistinct form the instant it takes any Health Level damage.
-:::
-
-::: stat Gravefeeder Swarm
-Rats and roaches don't usually hunt in formation. This mass does, flowing as a single carpet of bodies that pours around obstacles and up walls instead of over them. It doesn't scatter the way a normal pest problem would when struck, and once it's tasted blood on a target it keeps coming, drawing every other scavenger nearby to finish what it started. The sound - thousands of small feet and mandibles - is usually the first warning, arriving just ahead of the smell.
-
-**Soak** 0 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 7m
-
-**Bites / Stings**: 3, Melee
-
-**Traits**: **Swarm** (as Rat Swarm). **Unnatural Hunger** - actively pursues rather than scatters, and anything else drawn to a fresh kill gets Advantage on Perception rolls to track a target it has already fed on this Scene.
-:::
-
-\page
-
-::: stat Bound Effigy
-Stone, clay, or scrap, animated and given exactly one job. It moves in slow, deliberate strides, has no expression to read and no hesitation to exploit, and doesn't stop for pain, fear, or reasoning because it has neither. Every attack is a heavy, telegraphed slam that an attentive party can see coming from across the room, but the damage behind it is real. Somewhere on its body - a rune, a seam, a fist-sized core - is the one point that isn't armored like the rest, and finding it under fire is usually the actual fight.
-
-**Soak** 6 · **Attack** 6 · **Defense** 3 · **Health Levels** 8 · **Movement Rate** 6m
-
-**Slam**: 6, Melee
-
-**Traits**: **Unliving** - immune to Fear, poison, and disease. **One Weak Point** - a Called Shot against its anchor (a rune, seam, or core, set by the GM on introduction) bypasses its Soak entirely.
-:::
-
-::: stat Wailer
-Almost never lays a hand on anyone. It doesn't need to. Something closer to a ghost than anything with a body - it drifts more than it walks, a thin and indistinct shape that rarely closes to arm's reach of anyone, spending most of an encounter simply being present and audible. Hearing it is what does the damage, so nobody needs to be looked at or approached to be hurt by it, which usually means the first sign something's wrong is someone doubling over for no visible reason. Its physical form barely matters - the cry is the whole creature.
-
-**Soak** 1 · **Attack** 2 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 8m (drifts)
-
-**Cry** (once per Scene, Mental attack, dice pool 6, Far range, no to-hit roll required - triggered by hearing it): dice resolve per-die against Psyche as normal, a connecting die costing a Sanity Level same as any other Mental attack, and can push a target to Overwhelmed on repeated failures in the same Scene.
-
-**Notable Skills**: Perception 9
-
-**Traits**: **Rarely Physical** - almost never closes to melee; the cry is the entire threat.
-:::
-
-\page
-
-::: stat Poltergeist
-Bound to one room, one object, one unfinished business - and everything not nailed down in that space is a weapon. There's rarely a body to look at, just cold spots, flickering lights, and objects sliding or flying with no visible hand behind them. It can't chase anyone past the edges of its space, so the longer anyone lingers, the worse it gets - throws come faster and land harder the more rounds pass without someone walking out the door. Finding and dealing with the anchor object is the only way to actually end the encounter rather than just outlast it.
-
-**Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 0m (cannot leave the bound location)
-
-**Thrown Objects**: 4, Close to Far
-
-**Traits**: **Bound to a Place** - immune to anything that doesn't target its anchor object directly (set by the GM on introduction); attacks against anything else pass through with no effect. **Escalates** - its Attack rises by 1, to a maximum of 8, for every full round that passes without anyone leaving the bound location.
-:::
-
-::: stat Hellhound
-Runs a scent down for miles and doesn't lose interest once it's found what it was chasing. Black-furred, low and rangy, with a faint smell of char that arrives before it does, it doesn't posture or circle the way a normal animal would - it closes distance fast and bites hard. Wounds from that bite keep smoking after the fight, a smell no one at the table forgets. Once it has a scent, distance and doors don't shake it; it tracks a target across almost anything short of open water, which makes running a much shorter-term plan than it looks like.
-
-**Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 14m
-
-**Bite**: 6, Melee. 1 point of damage from a successful bite is unsoakable (the wound smolders).
-
-**Notable Skills**: Perception 9, Athletics 9
-
-**Traits**: **Pack Tactics** (as Feral Dog). **Hunts by Scent** - once it has a target's scent, Advantage on Perception rolls to track them across any terrain short of open water.
-:::
-
-\page
-
-::: stat Mimic
-Furniture, cargo, a parked car, anything still enough to be overlooked - until someone reaches for it. It holds its disguised shape with total stillness, no breathing, no shifting weight, right up to the moment someone leans on it or opens it. The first attack comes with no warning at all, and whoever's caught by it is grabbed and held rather than just struck, the mouth or maw closing around a limb before the disguise even finishes falling apart. After that first grab it fights like exactly what it is: something built to ambush and hold, not to chase.
-
-**Soak** 2 · **Attack** 6 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 3m (until it strikes)
-
-**Bite / Engulf**: 5, Melee. Advantage on its first attack against a target that approached believing it was ordinary terrain or an object.
-
-**Notable Skills**: Stealth 10
-
-**Traits**: **Grapple on Contact** - a target hit by its first attack is automatically Grappled; breaking free uses the standard contested Grapple rule.
-:::
-
-::: stat Plague-Bearer
-Shows up wherever something is already going wrong and makes sure it keeps going wrong. It looks sickly and unremarkable, coughs when it doesn't need to, and favors abandoned buildings, hospitals, and disaster sites over anywhere healthy. It fights with a cane or a hidden blade rather than raw strength, and the real threat isn't the hit itself but what it leaves behind: a wound that doesn't heal on its own and gets worse the longer it goes untreated. It's immune to every sickness it carries, which is exactly why it never seems bothered by the places it chooses to wait.
-
-**Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 8m
-
-**Cane / Blade**: 3, Melee. **Contagion**: on a successful hit, the target must resist or take Disadvantage on Physical rolls until treated, worsening rather than healing without care.
-
-**Notable Skills**: Intimidation 7, Perception 8
-
-**Traits**: **Wading Through Sickness** - immune to any disease or poison effect, including its own.
 :::
