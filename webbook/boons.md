@@ -426,7 +426,7 @@ Always have a plausible, verifiable-sounding cover story ready on short notice -
 <p class="entry-head"><span class="entry-name">Unstoppable</span><span class="entry-tag">7, Legendary</span></p>
 <p class="entry-flavour">Zero is not a number that means anything to you yet.</p>
 
-Being reduced to 0 Health Levels doesn’t render you unconscious - you keep going into negative Health Levels, down to the same −(Health sub-stat) death threshold everyone eventually hits, instead of blacking out at 0. While in that negative range: (1) you’re extremely hurt but conscious - you can talk, move, and act at rest with no restriction; (2) any exertion - combat, strenuous effort, or moving quickly - costs **1 Ki** per instance.
+Being reduced to 0 Health Levels doesn’t render you unconscious - you keep going into negative Health Levels, down to the same −(Health Levels) death threshold everyone eventually hits, instead of blacking out at 0. While in that negative range: (1) you’re extremely hurt but conscious - you can talk, move, and act at rest with no restriction; (2) any exertion - combat, strenuous effort, or moving quickly - costs **1 Ki** per instance.
 </div>
 
 <div class="entry" markdown="1">
