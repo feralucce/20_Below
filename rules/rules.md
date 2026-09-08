@@ -43,7 +43,7 @@ Per-Attribute example tasks (a Fire example vs. an Earth example at the same Dif
 
 **Advantage** rolls **3d10 and keeps the lowest two** (summed); **Disadvantage** rolls **3d10 and keeps the highest two** (summed) - roll-under, so lower is always better. Usable wherever a specific rule grants it - currently the [Expert/Master Skill Training Tiers](skills.md#training-tiers), a character's off-hand (below), but not restricted to those.
 
-**Stacking**: Advantage and Disadvantage are each binary - having multiple sources of the same one doesn't compound it into something bigger. If a roll has sources of both at once, they cancel 1-for-1; whichever side has sources left over after canceling is what applies (still just plain Advantage or plain Disadvantage). Equal sources on both sides cancel out entirely and the roll is made normally.
+**Stacking**: count the sources. Each source of Advantage is **+1** and each source of Disadvantage is **-1**; add them up. **1 or more** rolls at Advantage, **0** rolls normally, **less than 0** rolls at Disadvantage. Neither one compounds - three sources of Advantage is still just Advantage, and the count only decides which side of zero you land on.
 
 ![The roll curve, with Advantage and Disadvantage](../docs/assets/diagrams/roll-curve-comparison.svg)
 

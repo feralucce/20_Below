@@ -25,10 +25,11 @@ export function rollPlain() {
   return { dice, kept: dice, sum: dice[0] + dice[1] };
 }
 
-// Advantage/Disadvantage are each binary - multiple sources of the same
-// one don't compound. Opposing sources cancel 1-for-1; whichever side has
-// leftover sources after canceling is what applies. Equal sources cancel
-// out entirely to a normal roll. See rules.md#advantage--disadvantage.
+// Count the sources: each Advantage is +1, each Disadvantage is -1, and the
+// total decides which side of zero the roll lands on. Neither compounds -
+// three sources of Advantage is still just Advantage. This is what the
+// subtraction below already did; the rules now say it the same way. See
+// rules.md#advantage--disadvantage.
 export function resolveAdvantageState(advantageSources, disadvantageSources) {
   const net = advantageSources - disadvantageSources;
   if (net > 0) return 'advantage';
