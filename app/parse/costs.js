@@ -78,6 +78,8 @@ export function parseCosts(costsMd) {
       giftAdderXp: { Lesser: adv['Gift Adder XP - Lesser'], Greater: adv['Gift Adder XP - Greater'] },
       newSkillXp: adv['New Skill (Untrained → Novice) - flat XP'],
       flawBuyoffXpMultiplier: adv['Flaw Buy-off - XP multiplier (× points granted)'],
+      kiXpMultiplier: adv['Ki - XP multiplier (current Ki × N)'],
+      kiMaxMultiplier: adv['Ki maximum (× figured Ki)'],
       attributeOverCapFateStep: adv['Attribute over 10 - Fate ceiling +1 per N points'],
       attributeOverCapAutoSuccessStep: adv['Attribute over 10 - auto-success per scene per N points'],
       attributeOverCapCritStep: adv['Attribute over 10 - critical band +1 per N points'],

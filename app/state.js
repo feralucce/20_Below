@@ -95,7 +95,7 @@ export function createInitialState(data) {
     // XP cost recomputed live. Boons funded via Advancement are tagged with
     // source 'advancement' on the existing state.boons list instead, same
     // as Discretionary-funded Boons already are.
-    advancementPurchases: { Attributes: {}, Skills: {}, Resources: {}, Gifts: {} },
+    advancementPurchases: { Attributes: {}, Skills: {}, Resources: {}, Gifts: {}, Ki: 0 },
     // [{ id, physical: bool, title, description }] - freeform Battle Scar
     // log, see rules.md#battle-scars. Purely narrative, no mechanical field.
     scars: [],
@@ -697,6 +697,10 @@ export function computeFiguredCharacteristics(state) {
   // between 13 and 18 (the flattest legal spread still has a 5 somewhere).
   // Whatever a character is most is what channels their Ki.
   const ki = Math.max(...Object.values(state.attributes)) + 8;
+  // Ki bought with XP sits on top of the figured value rather than
+  // replacing it, so raising an Element later still raises the pool
+  // and never quietly recalculates away something the player bought.
+  const boughtKi = state.advancementPurchases?.Ki ?? 0;
   return {
     'Health Levels': 5 + s.Health,
     Poise: 5 + s.Presence,
@@ -711,7 +715,10 @@ export function computeFiguredCharacteristics(state) {
     'Mental Defense': 10 - s.Presence,
     'Movement Rate': 5 + state.attributes.Air,
     'Carrying Capacity': Math.pow(s.Potence, 2) * 10,
-    Ki: Math.ceil(ki),
+    Ki: Math.ceil(ki) + boughtKi,
+    // What the pool would be with nothing bought - the cap is measured
+    // against this, not against itself.
+    'Figured Ki': Math.ceil(ki),
   };
 }
 
@@ -1028,6 +1035,48 @@ function boonsAdvancementXpSpent(state, data) {
     .reduce((sum, b) => sum + b.points * data.advancement.boonXpMultiplier, 0);
 }
 
+
+// Ki is bought a point at a time, each costing what the pool stands at
+// when it is bought - so the tenth point costs more than the first, and a
+// character who already channels a lot pays more to channel more.
+//
+// The ceiling is a multiple of the FIGURED value, not of the current one:
+// measuring against the running total would let each purchase raise its own
+// limit and the cap would never bind.
+export function kiPurchaseCost(state, data) {
+  return computeFiguredCharacteristics(state).Ki * data.advancement.kiXpMultiplier;
+}
+
+export function kiPurchaseCap(state, data) {
+  const f = computeFiguredCharacteristics(state);
+  return f['Figured Ki'] * data.advancement.kiMaxMultiplier;
+}
+
+export function canBuyKi(state, data) {
+  return computeFiguredCharacteristics(state).Ki < kiPurchaseCap(state, data);
+}
+
+export function buyAdvancementKi(state, data) {
+  if (!canBuyKi(state, data)) return;
+  state.advancementPurchases.Ki = (state.advancementPurchases.Ki ?? 0) + 1;
+}
+
+export function refundAdvancementKi(state) {
+  const bought = state.advancementPurchases.Ki ?? 0;
+  if (bought <= 0) return;
+  state.advancementPurchases.Ki = bought - 1;
+}
+
+// Each point cost the pool as it stood when bought, so the total is the run
+// of costs from the figured value up to where the purchases stopped.
+function kiAdvancementXpSpent(state, data) {
+  const bought = state.advancementPurchases?.Ki ?? 0;
+  if (!bought) return 0;
+  const base = computeFiguredCharacteristics(state)['Figured Ki'];
+  let total = 0;
+  for (let i = 0; i < bought; i += 1) total += (base + i) * data.advancement.kiXpMultiplier;
+  return total;
+}
 export function xpSpent(state, data) {
   return (
     attributesAdvancementXpSpent(state, data) +
@@ -1035,7 +1084,8 @@ export function xpSpent(state, data) {
     resourcesAdvancementXpSpent(state, data) +
     giftsLevelAdvancementXpSpent(state, data) +
     giftAddersAdvancementXpSpent(state, data) +
-    boonsAdvancementXpSpent(state, data)
+    boonsAdvancementXpSpent(state, data) +
+    kiAdvancementXpSpent(state, data)
   );
 }
 

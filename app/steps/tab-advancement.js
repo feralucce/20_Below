@@ -1,5 +1,11 @@
 import { el, keyedDetails, counterRow, renderMarkdown } from '../ui.js';
 import {
+  computeFiguredCharacteristics,
+  kiPurchaseCost,
+  kiPurchaseCap,
+  canBuyKi,
+  buyAdvancementKi,
+  refundAdvancementKi,
   subStatPoolRemaining,
   descriptorSlots,
   skillTierName,
@@ -325,6 +331,43 @@ function boonsSection(state, data, refresh) {
   return details;
 }
 
+
+// Ki is the only figured characteristic XP can touch directly. Everything
+// else on the sheet is derived and stays derived.
+function kiSection(state, data, refresh) {
+  const f = computeFiguredCharacteristics(state);
+  const base = f['Figured Ki'];
+  const cap = kiPurchaseCap(state, data);
+  const maxBought = cap - base;
+  const { details, content } = sectionWrap(
+    `Ki (${f.Ki} of a possible ${cap}, next point ${kiPurchaseCost(state, data)} XP)`,
+  );
+  content.appendChild(briefDetail(
+    'Ki is your strongest Element plus 8. XP can carry it to twice that, and '
+    + 'each point costs whatever the pool stands at when you buy it - so it gets '
+    + 'steeper the more you hold. Raising the Element itself lifts the ceiling.',
+  ));
+  content.appendChild(counterRow({
+    name: 'Ki bought with XP',
+    hint: `${kiPurchaseCost(state, data)} XP for the next`,
+    get: () => state.advancementPurchases?.Ki ?? 0,
+    set: (v) => {
+      const have = state.advancementPurchases?.Ki ?? 0;
+      if (v > have) buyAdvancementKi(state, data);
+      else refundAdvancementKi(state);
+    },
+    min: 0,
+    // Stop at the ceiling, or at what the remaining XP can actually pay for.
+    max: () => {
+      const have = state.advancementPurchases?.Ki ?? 0;
+      const affordable = xpRemaining(state, data) >= kiPurchaseCost(state, data);
+      return Math.min(maxBought, affordable ? have + 1 : have);
+    },
+    format: (v) => `${base + v}`,
+    onChange: refresh,
+  }));
+  return details;
+}
 export default function buildAdvancementTab(state, data, refresh) {
   const wrap = el('div', {});
   const summary = el('p', {});
@@ -358,6 +401,7 @@ export default function buildAdvancementTab(state, data, refresh) {
     resourcesSection(state, data, refresh),
     giftsSection(state, data, refresh),
     boonsSection(state, data, refresh),
+    kiSection(state, data, refresh),
   );
   return [wrap];
 }

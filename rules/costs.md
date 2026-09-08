@@ -67,6 +67,8 @@ times 2, an Attribute point costs 8, and so on.
 | Gift Adder XP - Greater | 12 |
 | New Skill (Untrained → Novice) - flat XP | 3 |
 | Flaw Buy-off - XP multiplier (× points granted) | 3 |
+| Ki - XP multiplier (current Ki × N) | 1 |
+| Ki maximum (× figured Ki) | 2 |
 | Attribute over 10 - Fate ceiling +1 per N points | 3 |
 | Attribute over 10 - auto-success per scene per N points | 4 |
 | Attribute over 10 - critical band +1 per N points | 5 |

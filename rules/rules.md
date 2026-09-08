@@ -47,7 +47,7 @@ Per-Attribute example tasks (a Fire example vs. an Earth example at the same Dif
 
 ![The roll curve, with Advantage and Disadvantage](../docs/assets/diagrams/roll-curve-comparison.svg)
 
-**Off-hand**: performing a task that requires manual dexterity or precision (attacking, fine manipulation, etc.) with your off-hand imposes Disadvantage on the roll. [Ambidextrous](boons.md#trivial) removes this penalty.
+**Off-hand**: performing a task that requires manual dexterity or precision (attacking, fine manipulation, etc.) with your off-hand imposes Disadvantage on the roll. [Ambidextrous](boons.md#boon-list) removes this penalty.
 
 ### Untrained Rolls
 
@@ -71,7 +71,7 @@ Covers **all three attack types** - Physical, Social, and Mental - with the same
 
 Spending after the roll means no Ki is ever wasted - not on a die that already got through, and not on one too far under the wall for the sub-stat to save. It buys the same damage as committing blind would have, for roughly half the Ki.
 
-This is a **direct Ki spend**, the same category as [spending Ki to preserve a Level](#ki-spend-to-preserve-a-level) and [Bump Action Bracket](fate.md#ki-the-pool-formerly-risk-pool) - **not** a Fate Token spend, so it does **not** count against [Stamina's per-Scene spend cap](fate.md#staminas-job).
+This is a **direct Ki spend**, the same category as [spending Ki to preserve a Level](#ki-spend-to-preserve-a-level) and [Bump Action Bracket](fate.md#ki-the-pool) - **not** a Fate Token spend, so it does **not** count against [Stamina's per-Scene spend cap](fate.md#staminas-job).
 
 Full negation is still the honest baseline: an unboosted attack against a maxed wall can never get through, but a player willing to spend Ki can crack even a Soak/Presence/Psyche of 10 - a boosted die with a matching sub-stat of 10 is a guaranteed connect, while a rating of 2 only gives a 20% chance per boosted die.
 
@@ -311,7 +311,7 @@ Every character starts with **5 Health Levels**, flat, before anything else is a
 - **`PC Health Levels = 5 + Health (sub-stat)`** - the flat baseline, plus whatever a PC invests in Water's Health sub-stat.
 - **NPCs will most often just be the flat 5**, with no Health sub-stat added - minor/"weenie" NPCs go down in a single connecting hit, while PCs are built tougher by default.
 
-At **0 Health Levels**, a character falls unconscious and can't act. Health Levels can still be tracked into negative territory from further damage, and **the negative range mirrors the positive one** - a character with 7 Health Levels is unconscious at 0 and dead at −7. Whatever it took to put them down, it takes that much again to finish them. Ordinarily that range plays out off-screen, since an unconscious character can't act or be aware of it; [Unstoppable](boons.md#major) is the exception that lets a character stay conscious and act throughout it instead of blacking out at 0.
+At **0 Health Levels**, a character falls unconscious and can't act. Health Levels can still be tracked into negative territory from further damage, and **the negative range mirrors the positive one** - a character with 7 Health Levels is unconscious at 0 and dead at −7. Whatever it took to put them down, it takes that much again to finish them. Ordinarily that range plays out off-screen, since an unconscious character can't act or be aware of it; [Unstoppable](boons.md#boon-list) is the exception that lets a character stay conscious and act throughout it instead of blacking out at 0.
 
 Falling unconscious at 0 is unconditional - it happens on the way down no matter how tough a character is. **The symmetry below zero is the point.** Everyone gets the same second chance their own toughness already earned them, rather than a separate allowance bolted on beside it. A character who put nothing into Health still has five Levels and five more below zero: quick to drop, but never one unlucky round from a funeral because of a choice made at creation. Every point of Health is still worth two hits - one before they drop, one after.
 
