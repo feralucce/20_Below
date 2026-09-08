@@ -45,6 +45,8 @@ Per-Attribute example tasks (a Fire example vs. an Earth example at the same Dif
 
 **Stacking**: Advantage and Disadvantage are each binary - having multiple sources of the same one doesn't compound it into something bigger. If a roll has sources of both at once, they cancel 1-for-1; whichever side has sources left over after canceling is what applies (still just plain Advantage or plain Disadvantage). Equal sources on both sides cancel out entirely and the roll is made normally.
 
+![The roll curve, with Advantage and Disadvantage](../docs/assets/diagrams/roll-curve-comparison.svg)
+
 **Off-hand**: performing a task that requires manual dexterity or precision (attacking, fine manipulation, etc.) with your off-hand imposes Disadvantage on the roll. [Ambidextrous](boons.md#trivial) removes this penalty.
 
 ### Untrained Rolls
