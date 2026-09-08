@@ -222,7 +222,10 @@ function giftsSection(state, data, refresh) {
   data.gifts.forEach((gift) => {
     const gState = state.gifts.find((g) => g.name === gift.name);
     const level = gState?.level ?? 0;
-    const limiterCount = gState?.limiters.length ?? 0;
+    // Optional chaining stops the whole chain when gState is missing, but not
+    // when gState exists without the array - an older save, or a Gift added
+    // by a path that did not initialise it.
+    const limiterCount = gState?.limiters?.length ?? 0;
     const cost = advancementGiftLevelCostAt(data, level, limiterCount);
     const remaining = xpRemaining(state, data);
     const boughtLevels = state.advancementPurchases.Gifts[gift.name] ?? 0;
@@ -261,7 +264,7 @@ function giftsSection(state, data, refresh) {
     if (level > 0 && gift.adders.length) {
       const addersRow = el('div', { style: 'margin:0.25rem 0 0.5rem 0.5rem;' });
       gift.adders.forEach((adder) => {
-        const owned = gState.adders.includes(adder.name);
+        const owned = (gState?.adders ?? []).includes(adder.name);
         const boughtHere = (state.advancementPurchases.GiftAdders?.[gift.name] ?? []).includes(adder.name);
         const adderXp = data.advancement.giftAdderXp[adder.tier];
         addersRow.appendChild(
@@ -297,7 +300,9 @@ function giftsSection(state, data, refresh) {
     // Limiters are permanent - they define what the Gift is, and no amount of
     // XP removes one. Listed here so the constraint stays visible while the
     // player is spending on the Gift, but there is nothing to click.
-    if (gift.limiters.length && gState.limiters.length) {
+    // gState is undefined for every Gift the character does not own, which is
+    // most of them - this threw and took the whole Advancement tab with it.
+    if (gift.limiters.length && gState?.limiters?.length) {
       const limitersRow = el('div', { style: 'margin:0.25rem 0 0.5rem 0.5rem;' });
       gState.limiters.forEach((name) => {
         limitersRow.appendChild(el('div', { class: 'muted', style: 'margin:0.15rem 0;' }, `Limiter: ${name}`));
