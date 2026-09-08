@@ -603,6 +603,27 @@ body {
   align-items: flex-start;
 }
 
+.tracker-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tracker-group-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  border-bottom: 1px solid var(--panel-border);
+  padding-bottom: 0.3rem;
+}
+
+.tracker-group-items {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
 .pip-row {
   display: flex;
   gap: 0.25rem;

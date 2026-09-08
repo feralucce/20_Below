@@ -202,7 +202,7 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
   );
 
   // Advantage/Disadvantage are mutually exclusive click-toggle boxes (same
-  // interaction as the sheet header's Health/Poise/Sanity pips) - clicking
+  // interaction as the sheet header's Vitals pips) - clicking
   // one on forces the other off. Rebuilt whole on every toggle rather than
   // diffed in place, simplest way to keep each box's pip class in sync.
   const togglesRow = el('div', { class: 'roller-toggles' });

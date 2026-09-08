@@ -30,7 +30,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Carrying Capacity** — How much you can lift, carry, or drag without straining: your Potence squared, times ten, in kilograms. Squared rather than flat, so a strong character pulls dramatically ahead of an ordinary one.
 
-**Condition** — The catch-all for a temporary bad state you can be put into - Distracted, Surprised, Flustered, Exhausted, Overwhelmed, and the rest. Each has its own trigger and its own way out, under its own entry. A Fate Token can shrug any of them off for a moment.
+**Condition** — The catch-all for a temporary bad state you can be put into - Distracted, Surprised, Flustered, Exhausted, Overwhelmed, Dying, and the rest. Each has its own trigger and its own way out, under its own entry. A Fate Token can shrug any of them off for a moment.
 
 **Core Roll** — The basic move of the whole system. Roll 2d10, add them up, and check the total against your target number (your Attribute plus the Difficulty). Land on or under it and you succeed; go over and you don’t.
 
@@ -45,6 +45,8 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 **Dice Notation** — “XdY” means “roll X dice with Y sides and add them up.” 20 Below runs on ten-sided dice, so 2d10 is two of them totaled (a 2 to 20), 1d10 is one, and 3d10 is three - that’s Advantage and Disadvantage.
 
 **Difficulty** — A 0-to-10 dial the GM sets for each roll - 0 is nearly impossible, 10 is trivial. It gets added to your Attribute to form the target number. In a fight, the target’s Defense takes Difficulty’s place.
+
+**Dying** — Where you are below 0 Health Levels: unconscious, still losing ground, and out of the fight until somebody stops it. The row runs the same distance below zero as above, so a character with 7 Health Levels is Dying from −1 and dead at −7 - whatever it took to put them down, it takes that much again to finish them.
 
 **Discretionary Points** — A loose pool - 10 to start, plus whatever your Flaws hand you - that you can spend at creation on almost anything: Resources, Skills, Fate Tokens, Boons, Gifts, or Attributes.
 
@@ -80,7 +82,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Health** — One of Water’s two sub-stats, the depth of the well you draw endurance from. It sets your Health Levels - 5 plus your Health - which is how many hits you can take before you drop. How far past 0 you can be carried before you die mirrors that same number, so a character with 8 Levels is out at 0 and dead at −8. Sample descriptors: Hale, Resilient, Stalwart, Unbreakable, Hard-to-Kill, and so on.
 
-**Health Levels** — How many hits you can take, as a row of boxes rather than a pool of points. You have 5 plus your Health. Each solid hit checks one off; at zero, you’re out. The row runs the same distance again below zero, and the far end of it is where you die.
+**Health Levels** — How many hits you can take, as a row of boxes rather than a pool of points. You have 5 plus your Health. Each solid hit checks one off; at zero, you’re out, and below zero you’re Dying. The row runs the same distance again below zero, and the far end of it is where you die.
 
 **Humiliated** — One step past Flustered, where you go if Poise drops below 0. You can’t take the lead, negotiate, or speak for the group - you defer and go along. You’re still acting under your own power; it’s your standing that’s broken, not your body. It clears when Poise climbs back to 0.
 
@@ -94,7 +96,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Kotodama** — (言霊, “word spirit.”) Spending Fate Tokens to state something true about the world instead of touching a die roll. You say it, you pay for it - the cost is built from how big it is, how far it reaches, how believable it is, and whether it has to last - and the story rearranges to fit. Several players can pool tokens for something none of them could afford alone.
 
-**Level** — A step on a ladder. Several different things in the game use them, and they don’t otherwise have much to do with each other. Gifts have five Levels, each stacking on the last. Resources run 1 to 5. Health, Poise, and Sanity are counted in Levels - boxes you check off as you take hits. Exhausted stacks in levels of its own, 1 through 5. When a rule just says “Level,” the thing it’s attached to tells you which ladder it means.
+**Level** — A step on a ladder. Several different things in the game use them, and they don’t otherwise have much to do with each other. Gifts have five Levels, each stacking on the last. Resources run 1 to 5. Your Vitals - Health, Poise, and Sanity - are counted in Levels, boxes you check off as you take hits. Exhausted stacks in levels of its own, 1 through 5. When a rule just says “Level,” the thing it’s attached to tells you which ladder it means.
 
 **Limiter** — A permanent catch you accept on one specific Gift at creation. Each one you take knocks a point off the cost of every Level of that Gift. Stack them as deep as you like, but never below 1 point per Level.
 
@@ -130,7 +132,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Rests** — Two ways to recover. A Short Rest is about an hour of real downtime, and you only get the benefit of one between full nights. A Full Night’s Rest is a proper night’s sleep. Health, Sanity, Poise, and Ki all come back on both, each at its own pace.
 
-**Sanity** — Your grip on your own mind under a Mental attack, tracked as boxes like Health. You have 5 plus your Psyche. At 0 you’re Overwhelmed; below 0, Shattered.
+**Sanity** — Your grip on your own mind under a Mental attack, tracked as boxes like Health. You have 5 plus your Psyche. At 0 you’re Overwhelmed; below 0, Shattered. The row runs the same distance again below zero, and the far end of it saddles you with a temporary mental health condition and puts your Sanity back to 0.
 
 **Scene** — One unbroken stretch of the story in roughly one place - a fight, a conversation, a chase. It’s a rung on the Time Bands ladder, and a few limits reset when a new one starts (your Fate Token cap for the Scene, Flustered).
 
@@ -155,6 +157,8 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 **Time Bands** — The standard ladder the rules use whenever something needs a duration: Round, Minute (about ten rounds), Scene, Day, Month, Year. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
 
 **Untrained Roll** — A roll for something you have no Skill in. Your Attribute doesn’t help here - the target number is just the Difficulty.
+
+**Vitals** — Health, Poise and Sanity: the three things an attack can take from you. Each is 5 plus a sub-stat, counted in Levels rather than points, and each runs the same distance below zero as it does above. A connecting Physical die costs Health, a Social die costs Poise, a Mental die costs Sanity, and a point of Ki preserves a Level on any of them. Ki itself is not a Vital - it’s the pool you spend, not a row you lose. See Wall for the other side of the same exchange.
 
 **Wall** — The number an attack’s dice have to beat to do anything to you. You have three, one for each kind of attack - Soak against Physical, Presence against Social, Psyche against Mental. Once an attack has connected, its dice are checked one at a time: any die over your Wall gets through and costs you a Level, and any die at or under it is absorbed completely. A Wall of 10 can’t be beaten by an ordinary die at all - the only way through is Ki Infusion. NPCs run on a flat 5 unless the GM says otherwise.
 
