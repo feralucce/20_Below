@@ -1,5 +1,5 @@
 // The 20 Below combat engine: roles, Initiative, Action Brackets, turn
-// order, and the Health/Poise/Sanity/Ki tracks.
+// order, the Vitals (Health, Poise, Sanity) and the Ki pool.
 //
 // Deliberately free of DOM, storage and platform APIs. Every function takes
 // state and returns or mutates it, so the same engine runs behind the
@@ -204,7 +204,7 @@ export function endCombat(combat) {
   });
 }
 
-// Health, Poise and Sanity go below zero on purpose - Dead, Humiliated and
+// The Vitals go below zero on purpose - Dead, Humiliated and
 // Shattered are real states in the rules, so only Ki floors at 0. The lower
 // bound is a sanity bound, not a rule.
 export function adjustTrack(combat, character, track, delta) {
@@ -214,12 +214,43 @@ export function adjustTrack(combat, character, track, delta) {
   const key = 'current' + track;
   const floor = track === 'Ki' ? 0 : -99;
   e[key] = Math.max(floor, Math.min(max, e[key] + delta));
+  // The note describes this adjustment only, so it starts clean each time.
+  e.floorNote = null;
+  applyVitalFloor(e, track, max, f);
   return e[key];
+}
+
+// Poise and Sanity have a bottom; Health's bottom is death and needs no
+// bookkeeping. Reaching -(full) resets the Vital to 0 - back to Flustered or
+// Overwhelmed, not healed - and charges for it. The note is what the GM sees;
+// it clears on the next adjustment.
+export function applyVitalFloor(e, track, max, f) {
+  const key = 'current' + track;
+  if (track === 'Poise' && e[key] <= -max) {
+    e[key] = 0;
+    // The Sanity Level the floor costs is itself a Vital change, so it can
+    // push Sanity onto its own floor - hence the recursive call rather than
+    // a bare decrement.
+    e.currentSanity -= 1;
+    noteFloor(e, 'Poise floor: reset to 0, took 1 Sanity');
+    applyVitalFloor(e, 'Sanity', f.Sanity, f);
+    return;
+  }
+  if (track === 'Sanity' && e[key] <= -max) {
+    e[key] = 0;
+    noteFloor(e, 'Sanity floor: reset to 0, temporary mental health condition');
+  }
+}
+
+// A Poise floor can knock Sanity onto its own floor in the same stroke.
+// Both happened, so the GM is told about both.
+function noteFloor(e, text) {
+  e.floorNote = e.floorNote ? e.floorNote + ' + ' + text : text;
 }
 
 export function trackStatus(track, value, character) {
   if (track === 'Health') {
-    return healthStatus(value, (character.state.subStats && character.state.subStats.Health) || 0);
+    return healthStatus(value, computeFiguredCharacteristics(character.state)['Health Levels']);
   }
   if (track === 'Poise') return poiseStatus(value);
   if (track === 'Sanity') return sanityStatus(value);

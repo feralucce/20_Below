@@ -77,7 +77,7 @@ Full negation is still the honest baseline: an unboosted attack against a maxed 
 
 ### Ki Spend to Preserve a Level
 
-A player may spend **1 point from Ki** (the pool - distinct from [Fate Tokens](fate.md), the resource players earn/spend) to **cancel the loss of one Health, Poise or Sanity Level**, at a cost of 1 Ki per Level preserved. Multiple Ki can be spent to preserve multiple Levels, even across more than one track from the same attack. All three tracks work the same way here - a die that got through a wall costs a Level, and a point of Ki buys that Level back before it is lost.
+A player may spend **1 point from Ki** (the pool - distinct from [Fate Tokens](fate.md), the resource players earn/spend) to **cancel the loss of one Level from any of the [Vitals](#the-vitals---health-poise-sanity)** - Health, Poise or Sanity - at a cost of 1 Ki per Level preserved. Multiple Ki can be spent to preserve multiple Levels, even across more than one Vital from the same attack. All three work the same way here - a die that got through a wall costs a Level, and a point of Ki buys that Level back before it is lost.
 
 ## Attributes
 
@@ -138,7 +138,13 @@ Every attack, regardless of type, resolves in the same two steps. **First, a to-
 
 Presence (Fire) and Psyche (Air) both mirror **Soak exactly** - the identical per-die mechanic, just resisting a different attack type. All three sub-stats are **passive gives**, the same way Health is: a flat number a character simply has, doing its job automatically with no roll or spend required.
 
-For all three: each attack die is resolved individually against the relevant wall stat. Die ≤ wall stat is fully absorbed; die > wall stat connects. A wall stat of 10 guarantees 0% connect chance per die - true, complete negation - unless the attacker spends **Ki** (1 per die) to add their own matching Attack sub-stat to that specific die, per [Ki Infusion](#ki-infusion). A connecting Physical die costs a Health Level, a connecting Social die costs a Poise, a connecting Mental die costs a Sanity.
+For all three: each attack die is resolved individually against the relevant wall stat. Die ≤ wall stat is fully absorbed; die > wall stat connects. A wall stat of 10 guarantees 0% connect chance per die - true, complete negation - unless the attacker spends **Ki** (1 per die) to add their own matching Attack sub-stat to that specific die, per [Ki Infusion](#ki-infusion). A connecting Physical die costs a Health Level, a connecting Social die costs a Poise, a connecting Mental die costs a Sanity - the three together are your **Vitals**.
+
+### The Vitals - Health, Poise, Sanity
+
+The wall triad is what a die has to beat. The **Vitals** are what it costs when it does - the three things an attack can take from you, and the only three. Each is 5 plus a sub-stat, counted in Levels rather than points, and each runs the same distance below zero as it does above: see [Health Levels](#health-levels), [Poise](#poise) and [Sanity](#sanity) for what waits at each end of the row.
+
+Ki is not a Vital. The Vitals are taken from you; Ki is the pool you spend, including to [preserve a Level](#ki-spend-to-preserve-a-level) on any of them.
 
 ### Choosing the Attacking Element
 
@@ -179,7 +185,7 @@ While it still has Health Levels remaining, armor intercepts every die aimed at 
 
 **Once an armor item's Health Levels reach 0, it's broken.** It stops covering its Zone entirely - dice resolve straight against the wearer's own Soak, per the normal per-die rule above - until repaired (a downtime/GM-adjudicated task, not modeled further here).
 
-**Ki Spend to Preserve** (see [above](#ki-spend-to-preserve-a-level)) only ever applies to the wearer's own Health, Poise or Sanity - it can't prevent or undo an armor Health Level loss.
+**Ki Spend to Preserve** (see [above](#ki-spend-to-preserve-a-level)) only ever applies to the wearer's own [Vitals](#the-vitals---health-poise-sanity) - it can't prevent or undo an armor Health Level loss.
 
 - **Armor doesn't stack within a Zone.** If a character owns more than one item covering the same Zone, only one can be worn there at a time - their choice which.
 - **A normal attack always resolves against Body-Zone armor.** Head-Zone armor does nothing against it.
@@ -249,6 +255,7 @@ Sanity mirrors Health Levels too, tracking a character's grip on their own mind 
 
 - **`PC Sanity = 5 + Psyche`.** NPCs default to a flat 5. Each Level is a binary hit-box.
 - **Crossing zero** works identically to Health Levels.
+- **The negative range mirrors the positive one**, exactly as [Health Levels](#health-levels) and [Poise](#poise) do: a character with 9 Sanity is Overwhelmed at 0 and Shattered from −1 down to −8. **Reaching −(full Sanity) is the floor.** The character picks up a temporary mental health condition - the same mechanic Overwhelmed's own trait uses, still to be defined - and Sanity resets to **0**: Overwhelmed again, not restored. The permanent mental scar from having gone below 0 stands regardless.
 - **General recovery** matches Health/Poise: Short Rest heals `Psyche ÷ 2` (round up, minimum 1); Full Night's Rest heals fully.
 
 **At 0 Sanity, a character is Overwhelmed**: they gain a temporary negative mental trait (a Flaw - exact mechanic to be defined later) and are at Disadvantage on rolls. They can still act on their own. Overwhelmed clears when the character is removed from the stimulus that caused it and given a chance to rest, or by spending 1 Ki, which also refills Sanity to full.
@@ -311,7 +318,7 @@ Every character starts with **5 Health Levels**, flat, before anything else is a
 - **`PC Health Levels = 5 + Health (sub-stat)`** - the flat baseline, plus whatever a PC invests in Water's Health sub-stat.
 - **NPCs will most often just be the flat 5**, with no Health sub-stat added - minor/"weenie" NPCs go down in a single connecting hit, while PCs are built tougher by default.
 
-At **0 Health Levels**, a character falls unconscious and can't act. Health Levels can still be tracked into negative territory from further damage, and **the negative range mirrors the positive one** - a character with 7 Health Levels is unconscious at 0 and dead at −7. Whatever it took to put them down, it takes that much again to finish them. Ordinarily that range plays out off-screen, since an unconscious character can't act or be aware of it; [Unstoppable](boons.md#boon-list) is the exception that lets a character stay conscious and act throughout it instead of blacking out at 0.
+At **0 Health Levels**, a character falls unconscious and can't act. **Below 0 they are Dying**: still unconscious, still losing ground, and out of the fight until something stops it. Health Levels can still be tracked into negative territory from further damage, and **the negative range mirrors the positive one** - a character with 7 Health Levels is unconscious at 0, Dying from −1, and dead at −7. Whatever it took to put them down, it takes that much again to finish them. Ordinarily that range plays out off-screen, since an unconscious character can't act or be aware of it; [Unstoppable](boons.md#boon-list) is the exception that lets a character stay conscious and act throughout it instead of blacking out at 0.
 
 Falling unconscious at 0 is unconditional - it happens on the way down no matter how tough a character is. **The symmetry below zero is the point.** Everyone gets the same second chance their own toughness already earned them, rather than a separate allowance bolted on beside it. A character who put nothing into Health still has five Levels and five more below zero: quick to drop, but never one unlucky round from a funeral because of a choice made at creation. Every point of Health is still worth two hits - one before they drop, one after.
 

@@ -310,6 +310,15 @@
   .track button:hover { color: var(--text); }
   .track.hurt .tv { color: var(--gold); }
   .track.down .tv { color: var(--danger); }
+  .floor-note {
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+    padding: 0.08rem 0.28rem;
+  }
   .status-chip {
     font-size: 0.58rem;
     text-transform: uppercase;
@@ -875,7 +884,10 @@
           + `<button class="btn token-btn" data-link="${r.id}" title="Select a token already on the scene, then click">Link</button>`
       : "";
 
-    return `<div class="ri-combat">${initCell}${brackets}${tracks}${token}</div>`;
+    const floorNote = combat.started && e.floorNote
+      ? `<span class="floor-note">${e.floorNote}</span>`
+      : "";
+    return `<div class="ri-combat">${initCell}${brackets}${tracks}${floorNote}${token}</div>`;
   }
 
   // The list stays in the order characters were added right through setup

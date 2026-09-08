@@ -69,6 +69,16 @@ function counterTracker(label, current, max, onChange, interactive) {
   ]);
 }
 
+
+// The Vitals are rows an attack takes off you; Ki and Fate Tokens are pools
+// you choose to spend. Five boxes in one flat row said they were all the
+// same kind of thing, so each set gets its own caption.
+function trackerGroup(label, items) {
+  return el('div', { class: 'tracker-group' }, [
+    el('span', { class: 'tracker-group-label' }, label),
+    el('div', { class: 'tracker-group-items' }, items),
+  ]);
+}
 function buildBoonEntries(state, data) {
   return state.boons.map((b) => {
     const boonData = data.boons.find((d) => d.name === b.name);
@@ -360,7 +370,7 @@ const TABS = [
 // print copy, which only ever needs to be captured, never clicked).
 function buildHeader(state, data, figured, { interactive = false, refresh = () => {} } = {}) {
   const natureLabel = state.nature.picked ?? state.nature.custom?.label ?? '';
-  const healthSubStat = state.subStats.Health;
+  const healthLevels = figured['Health Levels'];
 
   const setHealth = (v) => {
     state.currentHealth = Math.min(figured['Health Levels'], v);
@@ -404,19 +414,23 @@ function buildHeader(state, data, figured, { interactive = false, refresh = () =
     ]),
 
     el('div', { class: 'sheet-trackers-row' }, [
-      damageTracker(
-        'Health Levels',
-        state.currentHealth,
-        figured['Health Levels'],
-        'var(--ok)',
-        (c) => healthStatus(c, healthSubStat),
-        setHealth,
-        interactive,
-      ),
-      damageTracker('Poise', state.currentPoise, figured.Poise, 'var(--gold)', poiseStatus, setPoise, interactive),
-      damageTracker('Sanity', state.currentSanity, figured.Sanity, 'var(--air)', sanityStatus, setSanity, interactive),
-      counterTracker('Ki', state.currentKi, figured.Ki, setKi, interactive),
-      counterTracker('Fate Tokens', state.currentFateTokens, fateTokenCap(state, data), setFate, interactive),
+      trackerGroup('Vitals', [
+        damageTracker(
+          'Health Levels',
+          state.currentHealth,
+          figured['Health Levels'],
+          'var(--ok)',
+          (c) => healthStatus(c, healthLevels),
+          setHealth,
+          interactive,
+        ),
+        damageTracker('Poise', state.currentPoise, figured.Poise, 'var(--gold)', poiseStatus, setPoise, interactive),
+        damageTracker('Sanity', state.currentSanity, figured.Sanity, 'var(--air)', sanityStatus, setSanity, interactive),
+      ]),
+      trackerGroup('Pools', [
+        counterTracker('Ki', state.currentKi, figured.Ki, setKi, interactive),
+        counterTracker('Fate Tokens', state.currentFateTokens, fateTokenCap(state, data), setFate, interactive),
+      ]),
     ]),
 
     el('div', { class: 'sheet-mini-row' }, [

@@ -808,14 +808,16 @@ export function initPlayState(state, data) {
   if (state.currentFateTokens == null) state.currentFateTokens = startingFateTokens(state, data);
 }
 
-export function healthStatus(current, healthSubStat) {
+// Takes FULL Health Levels (5 + Health), not the Health sub-stat. The rule
+// mirrors the whole row - "a character with 7 Health Levels is unconscious
+// at 0, Dying from -1, and dead at -7" - and passing the sub-stat here
+// dropped the flat 5, killing everyone five Levels early.
+export function healthStatus(current, healthLevels) {
   if (current > 0) return null;
-  // "At 0 Health Levels, a character falls unconscious" is unconditional -
-  // death requires actually going negative, not just reaching the death
-  // formula's threshold. Without the `current < 0` check, a character with
-  // Health sub-stat 0 (death threshold ≤ -0, i.e. ≤ 0) would show Dead the
-  // instant they hit 0, skipping Unconscious entirely.
-  return current < 0 && current <= -healthSubStat ? 'Dead' : 'Unconscious';
+  // "At 0 Health Levels, a character falls unconscious" is unconditional,
+  // so 0 is Unconscious no matter what the death threshold works out to.
+  if (current === 0) return 'Unconscious';
+  return current <= -healthLevels ? 'Dead' : 'Dying';
 }
 
 export function poiseStatus(current) {
