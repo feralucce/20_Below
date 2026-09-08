@@ -455,7 +455,7 @@ A character whose [Poise](#poise) drops below 0 becomes **Humiliated** - a step 
 Humiliated clears once Poise is restored back to 0 (see [Poise recovery](#poise) - Ki, a Short Rest or a Full Night's Rest each only restore it to 1 while still below 0, never to full).
 #### Exhausted
 
-The only Condition that **stacks**, in levels **1-5**. Taken from pushing an effort past what [Stamina](#poise) covers, or from [cold or heat](#common-hazards). Effects are cumulative:
+The only Condition that **stacks**, in levels **1-5**. Taken from pushing an effort past what [Stamina](fate.md#staminas-job) covers, or from [cold or heat](#common-hazards). Effects are cumulative:
 
 | Level | Effect |
 |---|---|
