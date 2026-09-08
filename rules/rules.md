@@ -71,13 +71,13 @@ Covers **all three attack types** - Physical, Social, and Mental - with the same
 
 Spending after the roll means no Ki is ever wasted - not on a die that already got through, and not on one too far under the wall for the sub-stat to save. It buys the same damage as committing blind would have, for roughly half the Ki.
 
-This is a **direct Ki spend**, the same category as [spending Ki to preserve a Health Level or Sanity Level](#ki-spend-to-preserve-a-health-level-or-sanity-level) and [Bump Action Bracket](fate.md#ki-the-pool-formerly-risk-pool) - **not** a Fate Token spend, so it does **not** count against [Stamina's per-Scene spend cap](fate.md#staminas-job).
+This is a **direct Ki spend**, the same category as [spending Ki to preserve a Level](#ki-spend-to-preserve-a-level) and [Bump Action Bracket](fate.md#ki-the-pool-formerly-risk-pool) - **not** a Fate Token spend, so it does **not** count against [Stamina's per-Scene spend cap](fate.md#staminas-job).
 
 Full negation is still the honest baseline: an unboosted attack against a maxed wall can never get through, but a player willing to spend Ki can crack even a Soak/Presence/Psyche of 10 - a boosted die with a matching sub-stat of 10 is a guaranteed connect, while a rating of 2 only gives a 20% chance per boosted die.
 
-### Ki Spend to Preserve a Health Level or Sanity Level
+### Ki Spend to Preserve a Level
 
-A player may spend **1 point from Ki** (the pool - distinct from [Fate Tokens](fate.md), the resource players earn/spend) to **cancel the loss of one Health Level or Sanity Level**, at a cost of 1 Ki per Level preserved. Multiple Ki can be spent to preserve multiple Levels, even across both tracks from the same attack. **Poise works differently and isn't covered by this rule** - Ki can't prevent a Poise loss; see [Poise](#poise) for its own Ki-refill rule instead.
+A player may spend **1 point from Ki** (the pool - distinct from [Fate Tokens](fate.md), the resource players earn/spend) to **cancel the loss of one Health, Poise or Sanity Level**, at a cost of 1 Ki per Level preserved. Multiple Ki can be spent to preserve multiple Levels, even across more than one track from the same attack. All three tracks work the same way here - a die that got through a wall costs a Level, and a point of Ki buys that Level back before it is lost.
 
 ## Attributes
 
@@ -179,7 +179,7 @@ While it still has Health Levels remaining, armor intercepts every die aimed at 
 
 **Once an armor item's Health Levels reach 0, it's broken.** It stops covering its Zone entirely - dice resolve straight against the wearer's own Soak, per the normal per-die rule above - until repaired (a downtime/GM-adjudicated task, not modeled further here).
 
-**Ki Spend to Preserve** (see [above](#ki-spend-to-preserve-a-health-level-or-sanity-level)) only ever applies to the wearer's own Health or Sanity (or, for Poise, its own separate refill-after-0 rule) - it can't prevent or undo an armor Health Level loss.
+**Ki Spend to Preserve** (see [above](#ki-spend-to-preserve-a-level)) only ever applies to the wearer's own Health, Poise or Sanity - it can't prevent or undo an armor Health Level loss.
 
 - **Armor doesn't stack within a Zone.** If a character owns more than one item covering the same Zone, only one can be worn there at a time - their choice which.
 - **A normal attack always resolves against Body-Zone armor.** Head-Zone armor does nothing against it.
@@ -291,12 +291,14 @@ Poise mirrors [Health Levels](#health-levels), tracking composure under Social a
 - **At 0 Poise**, a character becomes [Flustered](#flustered).
 - **Crossing zero** works identically to Health Levels: a single attack can never carry a character straight past 0 into negative territory - excess connecting dice are discarded, landing exactly at 0. Once already at 0, any further attack can only remove 1 Poise, total, regardless of how many dice connect.
 - **Below 0 Poise**, a character becomes [Humiliated](#humiliated). **There is no death threshold for Poise** - social trauma can leave lasting damage, but never kills on its own.
+- **The negative range mirrors the positive one**, exactly as [Health Levels](#health-levels) do: a character with 8 Poise is Flustered at 0 and Humiliated from −1 down to −7. **Reaching −(full Poise) is the floor.** Poise resets to **0** - Flustered again, not restored - and the character takes **1 [Sanity](#sanity) Level**.
+- That Sanity Level **bypasses the Psyche wall entirely**; no die is rolled against it. This is not an attack on the mind, it is standing collapsing into it, and the armour for one is not the armour for the other. It can still be prevented by [Ki Spend to Preserve a Level](#ki-spend-to-preserve-a-level), the same as any other Level. **A wall of 10 is not immunity** - [Ki Infusion](#ki-infusion) cracks it like any other, it simply costs the attacker more than the point is worth.
 
 **Recovery**: Short Rest heals `Presence ÷ 2` (round up, minimum 1); Full Night's Rest heals fully. **Reduced below 0 Poise**: instead of the rates above, recover 1 Poise per Short Rest or Full Night's Rest, until back to 0.
 
-**Ki cannot prevent a Poise loss.** At exactly 0 Poise (Flustered, not yet Humiliated), spending **1 Ki refills it back to full** - reflecting how quickly ordinary social standing can turn around in the moment. **Once below 0 (Humiliated), that same Ki spend - or a Short Rest or Full Night's Rest - only restores Poise to 1, not full**, same shape Sanity's Shattered recovery uses; normal recovery resumes from there.
+**There is no full refill.** Ki buys a Poise Level back as it is lost, the same as Health or Sanity - see [Ki Spend to Preserve a Level](#ki-spend-to-preserve-a-level). **At or below 0, spending 1 Ki - or taking a Short Rest or Full Night's Rest - restores Poise to 1, not to full**, exactly the shape [Sanity](#sanity)'s Shattered recovery uses; normal recovery resumes from there.
 
-**Poise scars**: dropping to 0 leaves a purely cosmetic social tell (a nervous habit, a reputation quirk), no mechanical effect. No Gift currently grants immunity to this - intentional. **Dropping below 0 can instead impose a genuine [Flaw](flaws.md)**, lasting until Poise is healed back to 0 the slow way - GM's call, in consultation with the player, on which Flaw fits (Notoriety, Pariah, Secret, Speech Impediment, Short Fuse, and the purpose-built [Shaken Confidence](flaws.md#shaken-confidence) are natural fits).
+**Poise scars**: dropping to 0 leaves a purely cosmetic social tell (a nervous habit, a reputation quirk), no mechanical effect. No Gift currently grants immunity to this - intentional. **Dropping below 0 - and certainly reaching the floor - can instead impose a genuine [Flaw](flaws.md)**, lasting until Poise is healed back to 0 the slow way - GM's call, in consultation with the player, on which Flaw fits (Notoriety, Pariah, Secret, Speech Impediment, Short Fuse, and the purpose-built [Shaken Confidence](flaws.md#shaken-confidence) are natural fits).
 
 ### Water
 
@@ -450,7 +452,7 @@ A character whose [Poise](#poise) drops below 0 becomes **Humiliated** - a step 
 
 **A Humiliated character can't take the lead, negotiate, or be trusted to speak for the group** - socially deferring and complying rather than asserting themselves. Unlike Shattered (see [Sanity](#sanity)), a Humiliated character still acts fully on their own; this is social paralysis, not physical.
 
-Humiliated clears once Poise is restored back to 0 (see [Poise recovery](#poise) - Ki, a Short Rest, or a Full Night's Rest only restores it to 1 while still below 0, not a full refill).
+Humiliated clears once Poise is restored back to 0 (see [Poise recovery](#poise) - Ki, a Short Rest or a Full Night's Rest each only restore it to 1 while still below 0, never to full).
 #### Exhausted
 
 The only Condition that **stacks**, in levels **1-5**. Taken from pushing an effort past what [Stamina](#poise) covers, or from [cold or heat](#common-hazards). Effects are cumulative:

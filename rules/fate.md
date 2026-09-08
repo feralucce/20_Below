@@ -92,7 +92,7 @@ Characters with [Iron Will](boons.md) may also spend 1 Fate Token to **Assert Yo
 
 Ki has three jobs, all of them direct spends - no roll, no check, and none of them interact with [Stamina's per-Scene Fate Token cap](#staminas-job):
 
-1. 1 point from Ki preserves one [Health Level or Sanity Level](rules.md#ki-spend-to-preserve-a-health-level-or-sanity-level) that would otherwise be lost to an unsoaked hit. Poise works differently - see [Poise](rules.md#poise).
+1. 1 point from Ki preserves one [Health, Poise or Sanity Level](rules.md#ki-spend-to-preserve-a-level) that would otherwise be lost to a die that got through the wall.
 2. 1 Ki per step to move up one [Action Bracket](rules.md#action-brackets) (Slow → Normal, or Normal → Fast; 2 Ki moves two steps at once).
 3. 1 Ki per die to boost an attack die - see [Ki Infusion](rules.md#ki-infusion), covering all three attack types (Physical/Ferocity, Social/Presence, Mental/Psyche).
 

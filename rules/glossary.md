@@ -116,7 +116,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **PC** — The one character at the table that’s yours - short for player character.
 
-**Poise** — Your composure when someone comes at you socially, tracked as boxes like Health. You have 5 plus your Presence. Hit 0 and you’re Flustered; drop below and you’re Humiliated. Poise can’t kill you - there’s no bottom that ends the character.
+**Poise** — Your composure when someone comes at you socially, tracked as boxes like Health. You have 5 plus your Presence. Hit 0 and you’re Flustered; drop below and you’re Humiliated. The row runs the same distance again below zero, and the far end of it costs you a point of Sanity and puts your Poise back to 0. Poise can’t kill you - there’s no bottom that ends the character.
 
 **Potence** — One of Earth’s two sub-stats, stone poured into muscle. Straight strength - what you can carry, what you can break, who wins when two people push against each other. Sample descriptors: Brawny, Mighty, Herculean, Hulking, Iron-Armed, and so on.
 
