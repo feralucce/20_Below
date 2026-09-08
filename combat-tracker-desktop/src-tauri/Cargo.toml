@@ -1,6 +1,6 @@
 [package]
 name = "combat-tracker"
-version = "0.2.4"
+version = "0.2.5"
 description = "20 Below Combat Tracker desktop app"
 authors = ["Feralucce Savage"]
 license = "UNLICENSED"
