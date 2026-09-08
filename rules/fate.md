@@ -98,6 +98,8 @@ Ki has three jobs, all of them direct spends - no roll, no check, and none of th
 
 Most [Gifts](gifts.md) also cost Ki to use, called out per Gift and per Level, and some of them additionally call for a [Gift Check](gifts.md#resolution) rolled against current Ki.
 
+**Raising it**: XP can buy Ki directly, a point at a time, each costing **whatever the pool stands at when you buy it** - so the tenth point costs more than the first, and a character who already channels a lot pays more to channel more. **The ceiling is twice your figured Ki**, the value your strongest Element gives you before any XP. Raising that Element lifts both the pool and the ceiling together. See [costs.md](costs.md#advancement-xp-rates) for the rate.
+
 **Refill**: a Short Rest restores **Klotho** Ki (minimum 1); a Full Night's Rest restores Ki fully. These are the big damn heroes, after all - Ki isn't meant to be a slow trickle back.
 
 ### Stamina's Job
@@ -172,6 +174,15 @@ Permanent is the free default - a spoken truth just sticks, no extra cost. Payin
 | Intermittent | +2 tokens | Comes and goes, unpredictable - the lights flicker whenever it matters, not on any schedule |
 | Cyclic | +2 tokens | Repeats on a dependable pattern - the gate opens every night at midnight, reliably |
 
+## Thin Places
+
+Reality is not equally solid everywhere. A stretch of consensus that has been overwritten enough times stops holding its shape - and corrupted things are easy to change.
+
+**Kotodama costs less in a thin place.** How much less is the GM's call, with no table behind it: how worn a place is isn't a number, it's a fact about the story. A player who thinks they are standing somewhere the world has already been argued with should say so and find out what it is worth.
+
+Two things hold whenever one is used. **A thin place is cheap for everyone**, not just the party - whatever else leans on that spot finds it easy too. And **it got thin because somebody did this before**: somewhere cheap to rewrite is somewhere that has already been rewritten.
+
+The GM's [Hardening](#the-gms-own-pool) is the opposite number to this.
 ## The GM's Own Pool
 
 Rather than Fate Tokens just draining from players into nothing, **when a player spends a Fate Token, the GM gains one** in a separate GM-side pool - spending isn't just depletion, it's a transfer of leverage from the players' side of the table to the GM's.

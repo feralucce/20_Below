@@ -12,13 +12,13 @@ Every Gift has exactly **5 levels**, rated 1-5.
 
 ## Points
 
-At character creation, each Gift Level costs a flat **3 points** from the [Gifts pool](character-creation.md#gifts-pool) - a Gift bought to Level 3 costs 9 points, to Level 5, 15 points.
+At character creation, each Gift Level costs a flat **3 points** from the [Gifts pool](character-creation.md#10-gifts) - a Gift bought to Level 3 costs 9 points, to Level 5, 15 points.
 
 **Adders** come in two tiers, **Lesser (3 points)** and **Greater (6 points)**, paid once to unlock the option permanently; the Ki cost of actually using it each time is separate and paid per the Gift's own text. Every Gift should offer at least 3 Adders.
 
 **Limiters** are a permanent, creation-time restriction chosen for one specific Gift. Each Limiter taken drops the cost of every Level of that Gift by 1 point. Stack as many different Limiters on one Gift as you like, but no combination ever drops a Level below 1 point.
 
-Limiters make Levels cost different amounts on different Gifts, so the 21-point pool won't always come out even. Whatever you can't spend converts to [Discretionary points](character-creation.md#discretionary-points) at 2:1. Nothing is lost for failing to divide neatly.
+Limiters make Levels cost different amounts on different Gifts, so the 21-point pool won't always come out even. Whatever you can't spend converts to [Discretionary points](character-creation.md#12-discretionary-points) at 2:1. Nothing is lost for failing to divide neatly.
 
 ## Resolution
 
@@ -57,7 +57,7 @@ The alternate form is built once, at creation, spending a points pool (below) on
 | Sub-stat boost | 1 pt | +2 to one physical sub-stat (Soak, Ferocity, Stamina, Potence, or Initiative) while transformed. |
 | Attribute boost | 2 pts/point | +1 to one Attribute (Earth, Air, Fire, Water, or Moira) while transformed, up to your own normal maximum. |
 | Environmental adaptation | 1 pt | Breathe underwater, see in total darkness, ignore extreme temperatures, or similar. |
-| Borrow a Gift Level | 3 pts/Level | Gain one Level of an existing Gift you don't otherwise hold while transformed, GM-approved for fit - same per-Level price as the [Gifts pool](character-creation.md#gifts-pool). |
+| Borrow a Gift Level | 3 pts/Level | Gain one Level of an existing Gift you don't otherwise hold while transformed, GM-approved for fit - same per-Level price as the [Gifts pool](character-creation.md#10-gifts). |
 | Borrow a Boon | 1/3/5/7 pts | Gain a Boon you don't otherwise hold while transformed, at that Boon's own Trivial/Lesser/Greater/Legendary price. |
 
 **Adders**:
