@@ -98,6 +98,8 @@ Spend **1 Ki per step** to bump the Bracket you declared - Slow to Normal, or No
 | **Presence** | Social attacks |
 | **Psyche** | Mental attacks |
 
+**A critical hit** sends half your dice through with no roll and no wall to beat, rounded up. The rest roll, and each adds your **Klotho**.
+
 **Ki Infusion** - roll the damage dice first, then spend **1 Ki per die** to add your matching sub-stat to that die. Ferocity for Physical, Presence for Social, Psyche for Mental.
 
 ## Ki
@@ -112,23 +114,24 @@ Spend **1 Ki per step** to bump the Bracket you declared - Slow to Normal, or No
 
 Defense differs by attack: **10-Atropos** physical, **10-Psyche** social, **10-Presence** mental.
 
+**Moira never carries a Physical attack**, but it carries a Social or a Mental one.
+
 Same two steps as any attack. Element vs their **Social Defense** (10-Psyche) to land it, then dice one at a time vs their **Presence**, rolling high. Each connecting die costs a **Poise**. Ki Infusion adds your Presence.
 
-**The dice are what you brought.**
+**The dice are your training** in whatever Skill you are using.
 
-| | |
-|---|---|
-| **1** | Nerve alone - a flat insult, a raised voice |
-| **2** | A real hit - a burn that lands, a point they can't wave off |
-| **3** | Something true that stings - a weakness named, a room already laughing |
-| **4** | Something they can't afford said - evidence, a secret, rank, an audience |
-| **5** | A reckoning - all of it, in front of everyone, no exit |
+| | | |
+|---|---|---|
+| **0** | Untrained | 1 die |
+| **1** | Novice | 2 |
+| **2** | Trained | 3 |
+| **3** | Adept | 4 |
+| **4** | Expert | 5 |
+| **5** | Master | 6 |
 
-**Earn the ceiling** - opening cold you have a 1, however good the line is. Every exchange that lands raises what you can reach by one, to a **maximum of 3**. Past 3 takes real material, not momentum.
+**The Skill picks the Element too.** Fire carries Ridicule, Intimidation, Persuasion, Public Speaking, Performance and Leadership. Water carries Deception. Moira carries Insight.
 
-**Repeats decay** - the same jab twice is -1 die, a third time nothing.
-
-**Somebody has to be watching** - **-1** unwitnessed, **+1** in front of people whose regard they need. Both floor at 1.
+**Charm and Seduction are not attacks** - they win someone over rather than take them apart.
 
 **Mental attacks need a Gift.** There's no unarmed version - that's the rule, not a gap.
 
@@ -136,6 +139,7 @@ Same two steps as any attack. Element vs their **Social Defense** (10-Psyche) to
 
 | | |
 |---|---|
+| **Dying** | Health below 0. Unconscious and losing ground |
 | **Off Balance** | Everything at Disadvantage until the end of your next turn. Doesn't stack |
 | **Distracted** | Atropos + Difficulty to hold a Slow action together |
 | **Surprised** | Everything at Disadvantage for the round |
@@ -177,11 +181,25 @@ Same two steps as any attack. Element vs their **Social Defense** (10-Psyche) to
 
 **Kotodama** - assert a fact into the world. Cost is Magnitude + Range beyond yourself + Plausibility (Whisper 0, Murmur +1, Shout +3), and permanent is free.
 
-## At Zero
+## At Zero and Below
 
-| | |
-|---|---|
-| **Health** | Unconscious, and dying below it |
-| **Poise** | Flustered, then Humiliated below 0 |
-| **Sanity** | Overwhelmed, then Shattered below 0 |
-| **An unnamed NPC** | Dead |
+Every Vital runs as far below zero as it runs above it.
+
+| | At 0 | Below 0 | At the bottom |
+|---|---|---|---|
+| **Health** | Unconscious | Dying | Dead |
+| **Poise** | Flustered | Humiliated | Resets to 0, costs a Sanity |
+| **Sanity** | Overwhelmed | Shattered | Resets to 0, temporary condition |
+
+An unnamed NPC is simply dead at 0.
+
+## Resting
+
+| | Short Rest | Full Night |
+|---|---|---|
+| **Health** | half your Health, round up | full |
+| **Poise** | half your Presence, round up | full |
+| **Sanity** | half your Psyche, round up | full |
+| **Ki** | your Klotho | full |
+
+**Below 0** the rates stop. Health gets **nothing** from a Short Rest and exactly **one Level** from a full night. Poise and Sanity go back to **1** on either rest, or for **1 Ki**.
