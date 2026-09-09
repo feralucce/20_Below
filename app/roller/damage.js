@@ -9,17 +9,29 @@ import { rollD10 } from './core.js';
 // and this one knows nothing about Ki. Die > wall connects; a wall of 10
 // guarantees 0% connect on an unboosted die, true full negation.
 //
-// `critical` doubles the dice: a critical success on the to-hit roll
-// doubles the damage dice rolled (rules.md#critical-hits). The extra dice
-// are ordinary dice facing the same wall.
-export function rollDamagePool({ diceCount, wall, critical = false }) {
-  const count = critical ? diceCount * 2 : diceCount;
+// A critical decides dice rather than adding them (rules.md#critical-hits):
+// half the pool, rounded up, connects with no roll and no wall to beat, and
+// the rest each add Klotho. That second part is amplification, not an attack -
+// the to-hit was already made with an Element - so Moira's rule against
+// attacking is untouched, the same way Ki Infusion's Ferocity doesn't make
+// Fire the attacker.
+//
+// The fated dice are still rolled so there is a face to show, but `fated`
+// decides whether they connect, not the number on them.
+export function rollDamagePool({ diceCount, wall, critical = false, klotho = 0 }) {
+  const free = critical ? Math.ceil(diceCount / 2) : 0;
+  const bonus = critical ? klotho : 0;
   const dice = [];
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < diceCount; i++) {
     const raw = rollD10();
-    dice.push({ raw, boosted: false, result: raw, connects: raw > wall });
+    const fated = i < free;
+    const result = fated ? raw : raw + bonus;
+    dice.push({ raw, fated, boosted: false, result, connects: fated || result > wall });
   }
-  return { dice, wall, critical, diceRolled: count, connectCount: dice.filter((d) => d.connects).length };
+  return {
+    dice, wall, critical, klotho: bonus, freeDice: free, diceRolled: diceCount,
+    connectCount: dice.filter((d) => d.connects).length,
+  };
 }
 
 // Apply Ki Infusion to an already-rolled pool. `boostedDice` holds the
@@ -31,8 +43,9 @@ export function applyBoosts(pool, boostedDice, boostAmount) {
   const boosted = new Set(boostedDice);
   const dice = pool.dice.map((d, i) => {
     const isBoosted = boosted.has(i);
-    const result = isBoosted ? d.raw + boostAmount : d.raw;
-    return { ...d, boosted: isBoosted, result, connects: result > pool.wall };
+    // d.result already carries the critical's Klotho, if there was one.
+    const result = isBoosted ? d.result + boostAmount : d.result;
+    return { ...d, boosted: isBoosted, result, connects: d.fated || result > pool.wall };
   });
   return { ...pool, dice, connectCount: dice.filter((d) => d.connects).length, kiSpent: boosted.size };
 }
@@ -43,7 +56,7 @@ export function applyBoosts(pool, boostedDice, boostAmount) {
 export function worthBoosting(pool, boostAmount) {
   return pool.dice
     .map((d, i) => ({ d, i }))
-    .filter(({ d }) => !d.connects && d.raw + boostAmount > pool.wall)
+    .filter(({ d }) => !d.connects && d.result + boostAmount > pool.wall)
     .map(({ i }) => i);
 }
 
