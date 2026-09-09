@@ -238,7 +238,7 @@ How many hits you can take, as a row of boxes rather than a pool of points. You 
 <div class="gloss" markdown="1">
 <span class="gloss-term">Humiliated</span>
 
-One step past Flustered, where you go if Poise drops below 0. You can’t take the lead, negotiate, or speak for the group - you defer and go along. You’re still acting under your own power; it’s your standing that’s broken, not your body. It clears when Poise climbs back to 0.
+One step past Flustered, where you go if Poise drops below 0. You can’t take the lead, negotiate, or speak for the group - you defer and go along. You’re still acting under your own power; it’s your standing that’s broken, not your body. It clears when Poise climbs back to 0 - or, if you reach the bottom of the track, when Poise resets there and costs you a point of Sanity.
 </div>
 
 <div class="gloss" markdown="1">
@@ -340,7 +340,7 @@ The one character at the table that’s yours - short for player character.
 <div class="gloss" markdown="1">
 <span class="gloss-term">Poise</span>
 
-Your composure when someone comes at you socially, tracked as boxes like Health. You have 5 plus your Presence. Hit 0 and you’re Flustered; drop below and you’re Humiliated. Poise can’t kill you - there’s no bottom that ends the character.
+Your composure when someone comes at you socially, tracked as boxes like Health. You have 5 plus your Presence. Hit 0 and you’re Flustered; drop below and you’re Humiliated. The row runs the same distance again below zero, and the far end of it costs you a point of Sanity and puts your Poise back to 0. Poise can’t kill you - there’s no bottom that ends the character.
 </div>
 
 <div class="gloss" markdown="1">
