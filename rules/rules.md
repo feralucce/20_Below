@@ -57,7 +57,7 @@ This is intentional: under the 2d10 curve, an untrained character faces poor odd
 
 ### Time Bands
 
-A standard ladder of duration used wherever a rule needs to name "how long": **Round → Minute (≈10 rounds) → Scene → Day → Month → Year**. The **Round** is the base unit - any duration described elsewhere in the rules is stated in Rounds unless a longer band is explicitly named.
+A standard ladder of duration used wherever a rule needs to name "how long": **Round → Minute → Scene → Day → Month → Year**. A **Round** is about **6 seconds**, so a Minute is exactly 10 of them. The **Round** is the base unit - any duration described elsewhere in the rules is stated in Rounds unless a longer band is explicitly named.
 
 ### Rests
 
@@ -148,14 +148,15 @@ Ki is not a Vital. The Vitals are taken from you; Ki is the pool you spend, incl
 
 ### Choosing the Attacking Element
 
-Which of Earth/Air/Fire/Water applies to a to-hit roll is set by **how the character is attempting the attack**, not by their weapon or a Skill - there are no weapon-specific attack skills. The same weapon can be used with any of the four elements depending on the approach described:
+Which Element applies to a to-hit roll is set by **how the character is attempting the attack**, not by their weapon or a Skill - there are no weapon-specific attack skills. The same weapon can be used with any of the four elements depending on the approach described:
 
 - **Earth - Force.** Overpowering the target through raw physical strength - *"I put my entire weight behind the blow and smash through his guard."*
 - **Air - Precision.** Succeeding through speed, timing, or exploiting an opening - *"I wait for him to move his guard, then thrust through the opening."*
 - **Fire - Intensity.** Overwhelming through aggression and ferocity - *"I charge him screaming and attack relentlessly, trying to force him back."*
 - **Water - Adaptation.** Responding to the opponent and turning their action back on them - *"I let his attack pass, redirect his momentum, and strike when he overextends."*
+- **Moira - Fate.** The opening that was always going to be there, taken - *"I say the thing he has been afraid somebody would notice."* **Social and Mental attacks only.**
 
-All four examples above use the same sword - the weapon never determines the element. **Moira is never an attacking element**; Atropos only ever sets Defense.
+The first four examples all use the same sword - the weapon never determines the element. **Moira never governs a Physical attack**: fate does not swing a blade, and no amount of luck makes a bat hit harder. It carries a Social or Mental attack readily, because finding the one word that lands is exactly what fate is for. Atropos only ever sets Defense, whatever the attack.
 
 The player describes the attempt **before** rolling, and the GM confirms which element fits - not chosen retroactively to fish for a better number. This choice only sets which Attribute feeds the to-hit roll; it's not a second roll, doesn't change the attack's category (Physical/Social/Mental), and doesn't change what damage the weapon deals.
 
@@ -240,9 +241,9 @@ Potence (Earth's other sub-stat: raw physical power/strength - carrying capacity
 
 #### Mental Attacks - Gift-Sourced Only
 
-A Mental attack resolves exactly like a [Physical](#physical-attacks---weapon-damage--per-die-resolution) or [Social](#social-attacks---leverage--per-die-resolution) one: [to-hit](#the-passive-wall-triad---soak-presence-psyche) with the fitting **[Mental Defense](#defense-derived-stat)** (`10 − Presence`) using the fitting [Element](#choosing-the-attacking-element), then dice resolved **individually** against their **Psyche**, a connecting die costing **one [Sanity](#sanity)**. [Ki Infusion](#ki-infusion) adds the attacker's own Psyche, 1 Ki per die.
+A Mental attack resolves exactly like a [Physical](#physical-attacks---weapon-damage--per-die-resolution) or [Social](#social-attacks---training--per-die-resolution) one: [to-hit](#the-passive-wall-triad---soak-presence-psyche) with the fitting **[Mental Defense](#defense-derived-stat)** (`10 − Presence`) using the fitting [Element](#choosing-the-attacking-element), then dice resolved **individually** against their **Psyche**, a connecting die costing **one [Sanity](#sanity)**. [Ki Infusion](#ki-infusion) adds the attacker's own Psyche, 1 Ki per die.
 
-**There is no baseline dice source, and this is deliberate.** A weapon gives Physical dice and [leverage](#social-attacks---leverage--per-die-resolution) gives Social dice; nothing gives an ordinary character Mental dice. The pool has to come from one of:
+**There is no baseline dice source, and this is deliberate.** A weapon gives Physical dice and a [Training Tier](#social-attacks---training--per-die-resolution) gives Social dice; nothing gives an ordinary character Mental dice. The pool has to come from one of:
 
 - a **[Gift](gifts.md)** that states one - including a [Signature Move](gifts.md#signature-move) built to resolve against Psyche, since a Signature Move is a Gift;
 - a **creature's own stated pool** - see the adversary stat blocks, where a Nightmare's Cry is dice pool 6 and needs no to-hit roll at all.
@@ -266,30 +267,30 @@ Sanity mirrors Health Levels too, tracking a character's grip on their own mind 
 
 ### Fire
 
-#### Social Attacks - Leverage & Per-Die Resolution
+#### Social Attacks - Training & Per-Die Resolution
 
-A social attack resolves exactly like a [Physical one](#physical-attacks---weapon-damage--per-die-resolution): [to-hit](#the-passive-wall-triad---soak-presence-psyche) with the [Element](#choosing-the-attacking-element) that fits the approach against the target's **[Social Defense](#defense-derived-stat)** (`10 − Psyche`), then damage dice resolved **individually** against their **Presence**, a connecting die costing **one [Poise](#poise)**.
+A social attack resolves exactly like a [Physical one](#physical-attacks---weapon-damage--per-die-resolution): [to-hit](#the-passive-wall-triad---soak-presence-psyche) against the target's **[Social Defense](#defense-derived-stat)** (`10 − Psyche`), then damage dice resolved **individually** against their **Presence**, a connecting die costing **one [Poise](#poise)**.
 
-**The dice come from leverage** - what the attacker brought to the exchange, not what they are. It is the direct analogue of the weapon setting Physical dice: the one part of an attack sourced from outside the character. The GM rates it when the attack is declared.
+**The dice come from the attacker's Training Tier** in whichever [Skill](skills.md#training-tiers) they are using. A weapon sets Physical dice because anyone can pick one up; nothing on a character sheet says how hard a sentence hits, so the number is what they have practised.
 
-| Dice | What you brought | Sounds like |
+| Tier | | Dice |
 |---|---|---|
-| **1** | Nerve, and nothing else | A flat insult, a raised voice, a threat they know can't be backed |
-| **2** | A real hit | A burn that lands, a joke at their expense that works, a fair point that can't be waved off |
-| **3** | Something true, and it stings | A weakness named aloud, a failure dragged back up, a room already laughing |
-| **4** | Something they can't afford to have said | Evidence, a secret, a witness, rank they must answer to, an audience whose opinion they need |
-| **5** | A reckoning | All of it at once, in front of everyone who counts, with no exit |
+| 0 | Untrained | **1** |
+| 1 | Novice | **2** |
+| 2 | Trained | **3** |
+| 3 | Adept | **4** |
+| 4 | Expert | **5** |
+| 5 | Master | **6** |
 
-Three constraints keep the ladder from collapsing upward:
+Untrained rolls 1 for the same reason bare fists do. Master reaches 6, one past the heaviest weapon in [weapons.md](weapons.md), and that is deliberate: Poise has no death threshold, so nothing on this ladder can kill.
 
-- **Earn the ceiling.** A cold open is capped at **1**, however good the material. Each exchange that lands raises the ceiling by **1**, to a **maximum of 3** - past 3 requires actual leverage (evidence, a secret, rank), not accumulated momentum.
-- **Repeats decay.** The same line a second time is worth **-1 die**; a third time, nothing. New material or a smaller rating.
-- **Audience matters.** Social damage is public. **-1 die** with no witnesses; **+1** in front of people whose regard the target actually needs. Both floor at 1.
+**The Skill also sets the Element.** Every Skill has a home Element ([skills.md](skills.md#skills-default-to-an-element)), so naming what you are doing settles the dice and the to-hit Attribute together. **Fire** carries Ridicule, Intimidation, Persuasion, Public Speaking, Performance and Leadership; **Water** carries Deception; **Moira** carries Insight. A Descriptor can still argue for a different Element, as with any Skill roll.
+
+**Charm and Seduction are not attacks.** They win a target over rather than take them apart, and cost no Poise. Etiquette is the GM's call: in a room where protocol matters, naming the one somebody just broke is a weapon.
 
 [Ki Infusion](#ki-infusion) applies as it does to any attack - 1 Ki per die, adding the attacker's own **Presence** to that die.
 
-**The dozens** is this rule run in alternation: each attack must top the last or the exchange stops escalating, so ratings climb through the exchange rather than starting high. First participant to 0 Poise is [Flustered](#flustered); below 0, [Humiliated](#humiliated).
-
+**The dozens** is this rule run in alternation: two people trade attacks in front of a crowd nobody can walk out of, and it grinds. First participant to 0 Poise is [Flustered](#flustered); below 0, [Humiliated](#humiliated).
 #### Poise
 
 Poise mirrors [Health Levels](#health-levels), tracking composure under Social attack instead of Physical.
@@ -301,7 +302,7 @@ Poise mirrors [Health Levels](#health-levels), tracking composure under Social a
 - **The negative range mirrors the positive one**, exactly as [Health Levels](#health-levels) do: a character with 8 Poise is Flustered at 0 and Humiliated from −1 down to −7. **Reaching −(full Poise) is the floor.** Poise resets to **0** - Flustered again, not restored - and the character takes **1 [Sanity](#sanity) Level**.
 - That Sanity Level **bypasses the Psyche wall entirely**; no die is rolled against it. This is not an attack on the mind, it is standing collapsing into it, and the armour for one is not the armour for the other. It can still be prevented by [Ki Spend to Preserve a Level](#ki-spend-to-preserve-a-level), the same as any other Level. **A wall of 10 is not immunity** - [Ki Infusion](#ki-infusion) cracks it like any other, it simply costs the attacker more than the point is worth.
 
-**Recovery**: Short Rest heals `Presence ÷ 2` (round up, minimum 1); Full Night's Rest heals fully. **Reduced below 0 Poise**: instead of the rates above, recover 1 Poise per Short Rest or Full Night's Rest, until back to 0.
+**Recovery**: Short Rest heals `Presence ÷ 2` (round up, minimum 1); Full Night's Rest heals fully. **At or below 0**, see the refill rule below: either rest, or 1 Ki, brings Poise back to **1**.
 
 **There is no full refill.** Ki buys a Poise Level back as it is lost, the same as Health or Sanity - see [Ki Spend to Preserve a Level](#ki-spend-to-preserve-a-level). **At or below 0, spending 1 Ki - or taking a Short Rest or Full Night's Rest - restores Poise to 1, not to full**, exactly the shape [Sanity](#sanity)'s Shattered recovery uses; normal recovery resumes from there.
 
@@ -328,7 +329,7 @@ Falling unconscious at 0 is unconditional - it happens on the way down no matter
 
 - **Short Rest**: heal Health Levels equal to your Health sub-stat divided by 2, round up, minimum 1.
 - **Full Night's Rest**: heal all lost Health Levels, back to full.
-- **Reduced below 0 Health Levels**: instead of the rates above, recover 1 Health Level per Short Rest or Full Night's Rest, until back to 0.
+- **Reduced below 0 Health Levels**: the rates above stop applying. A Short Rest recovers **nothing**. A Full Night's Rest recovers **1 Health Level**, and only one, until back to 0.
 
 #### Battle Scars
 
