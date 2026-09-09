@@ -827,11 +827,11 @@ Years of discipline turned your body itself into the weapon. Where anyone else n
 
 | Level | Effect |
 |---|---|
-| 1 | Your unarmed strikes deal **3** Damage (up from the baseline 1), resolved with the same per-die-vs-Soak mechanic as a weapon. No Ki, no Gift Check. You also gain **Guard**: as your action, forgo attacking to brace instead, gaining Soak equal to half your Unarmed Damage (round up - **+2** at this Level) until the start of your next turn. |
-| 2 | Unarmed Damage rises to **5**, matching a Knife or Handgun. Guard's bonus rises to **+3**. |
-| 3 | Unarmed Damage rises to **7**, matching a Sword or Rifle. Guard's bonus rises to **+4**. Spend **1 Ki** on a successful unarmed hit to stagger the target, imposing Disadvantage on their next roll before the end of their next turn. |
+| 1 | Your unarmed strikes deal **2** Damage (up from the baseline 1), resolved with the same per-die-vs-Soak mechanic as a weapon. No Ki, no Gift Check. You also gain **Guard**: as your action, forgo attacking to brace instead, gaining **+2** Soak until the start of your next turn. |
+| 2 | Unarmed Damage rises to **3**, matching a Knife or Handgun. Guard's bonus rises to **+3**. |
+| 3 | Unarmed Damage rises to **4**, matching a Sword or Rifle. Guard's bonus rises to **+4**. Spend **1 Ki** on a successful unarmed hit to stagger the target, imposing Disadvantage on their next roll before the end of their next turn. |
 | 4 | Guard can now be held as a **Fast action**, usable reactively - even outside your own turn, once per round - instead of only on your own turn. |
-| 5 | Unarmed Damage rises to **10**, matching a Two-handed sword or Heavy weapon - your bare hands hit as hard as anything on the weapon table. Guard's bonus rises to **+5**. The stagger effect (Level 3) no longer costs Ki. |
+| 5 | Unarmed Damage rises to **5**, matching a Two-handed sword or Heavy weapon - your bare hands hit as hard as anything on the weapon table. Guard's bonus rises to **+5**. The stagger effect (Level 3) no longer costs Ki. |
 
 **Adders**:
 
@@ -897,6 +897,37 @@ Chosen once, at creation, purely cosmetic: the form your raised dead take (bone 
 - **One at a Time**: Necrotic Touch and commanding thralls can't be used in the same round - using one locks out the other until your next turn.
 - **Grave-Bound**: your thralls can never move more than Close range from you - stray past that and they collapse instantly.
 - **No Whispers**: Necrotic Touch's healing never applies - it still deals damage, but grants you nothing back.
+
+### Onslaught
+
+You have one way of hurting people at arm's length. A blade that slides out of the forearm, a fist, a dagger you've carried since you were fourteen. Pick it when you build the character and describe it however you like. The rules don't read the description.
+
+**You are choosing a picture, not a mechanic.** The description is yours and it changes nothing. A forearm blade, a fist and a dagger all roll the same dice against the same wall. Pick whichever one you would rather say out loud when it lands.
+
+**What the rules read is always the same.** A Physical attack at Melee range. The to-hit is a straight Attribute-vs-Defense roll using whichever [Element](rules.md#choosing-the-attacking-element) fits how you are going about it, the same as swinging a bat. The dice resolve one at a time against **Soak**, and a connecting die costs a **Health Level**. Every swing costs **1 Ki**, and there is never a Gift Check. What the Levels buy is dice, [Level plus half your Ferocity](#attack-dice), and that is the whole Gift.
+
+**This is not a [Signature Move](#signature-move).** A Move is built: you pick an attack source and a wall and they don't have to match, which is how a scream ends up breaking composure. Onslaught picks nothing. It is the plain version, for a character whose answer to a problem at arm's length is to hit it until it stops. If you want the strange version, build a Move.
+
+| Level | Effect |
+|---|---|
+| 1 | Spend **1 Ki** to attack anything in **Melee** range for **1 + half your Ferocity** dice, resolved per-die against Soak like any weapon. No Gift Check, at this or any Level. |
+| 2 | **2 + half your Ferocity** dice. |
+| 3 | **3 + half your Ferocity** dice. |
+| 4 | **4 + half your Ferocity** dice. |
+| 5 | **5 + half your Ferocity** dice. |
+
+**Adders**:
+
+- **Follow Through** (Lesser, 3 pts): when an attack drops a target to 0, attack a second target in Melee range immediately, no action cost.
+- **Off the Wrong Foot** (Lesser, 3 pts): one extra die against a target who hasn't acted yet this combat.
+- **Nothing Held Back** (Greater, 6 pts): spend 1 Ki to add your Potence to every die of a single attack, not just the ones Ki Infusion buys.
+- **Sweep** (Greater, 6 pts): spend **1 Ki** on top of the attack's own cost to swing at **every** target in Melee range with the full pool, each resolved against their own Soak.
+
+**Limiters**:
+
+- **Wind-Up**: attacking with it is always a Normal action, never a Fast one, whatever else would otherwise allow it.
+- **Takes a Toll**: once you are below half your Health Levels, each use costs 1 unsoakable Health Level.
+- **Only in Anger**: unusable in any round you haven't already been attacked in, or in a fight you started.
 
 ### Peripheral
 
@@ -1077,6 +1108,37 @@ Additionally, given a full **Month** of rest, you can heal away a below-zero Fla
 - **Feed the Fire**: passive recovery requires actually eating a substantial meal during the rest period. It doesn't work on an empty stomach.
 - **No Instant Fix**: the Ki-gated combat heal (Level 3+) never applies. Passive recovery rates are the only way this Gift heals, at any Level.
 - **Fragile Restoration**: a Health Level recovered by the combat heal (Level 3+) can be lost again by any single hit, even one that would normally deal no damage past Soak.
+
+### Salvo
+
+Distance stopped being an argument you have to win. Something crosses the gap, a shard of ice, a look held half a second too long, a sound pitched under hearing, and what it lands on comes apart. You decide what crosses. The rules only care that it gets there.
+
+**You are choosing a picture, not a mechanic.** What you throw, fire, project or simply will across the room is yours to describe and changes nothing. It is the same dice against the same wall either way.
+
+**What the rules read is always the same.** One target, a Physical attack out to **Far** range, at every Level. The to-hit is a straight Attribute-vs-Defense roll with whichever [Element](rules.md#choosing-the-attacking-element) fits the approach. The dice resolve one at a time against **Soak** and a connecting die costs a **Health Level**. Every shot costs **1 Ki**, and there is never a Gift Check. What the Levels buy is dice, [Level plus half your Ferocity](#attack-dice), and that is the whole Gift.
+
+**This is not a [Signature Move](#signature-move).** A Move is built to be strange. Salvo is the one you take when you want to shoot something.
+
+| Level | Effect |
+|---|---|
+| 1 | Spend **1 Ki** to attack one target out to **Far** range for **1 + half your Ferocity** dice, resolved per-die against Soak like any weapon. No Gift Check, at this or any Level. |
+| 2 | **2 + half your Ferocity** dice. |
+| 3 | **3 + half your Ferocity** dice. |
+| 4 | **4 + half your Ferocity** dice. |
+| 5 | **5 + half your Ferocity** dice. |
+
+**Adders**:
+
+- **Through and Through** (Lesser, 3 pts): on a hit, one connecting die also connects against a second target directly behind the first.
+- **Scatter** (Greater, 6 pts): spend **1 Ki** on top of the attack's own cost to split its dice between any two targets in range, each resolved against their own Soak. The pool is divided, not doubled.
+- **No Warning** (Lesser, 3 pts): whatever crosses the gap can't be perceived until it lands. A target who hasn't already spotted you can't tell where the attack came from.
+- **Held Breath** (Greater, 6 pts): spend 1 Ki to loose it as a **Fast action** without giving up the rest of your Normal action.
+
+**Limiters**:
+
+- **Line of Sight Only**: nothing through smoke, darkness, or anything else that breaks a clear view, whatever your other senses would allow.
+- **Tell-Tale**: every use leaves an obvious trace pointing back at you. Anyone looking knows who did it.
+- **Winds Down**: after the third use in a Scene, every further use costs 1 Ki.
 
 ### Shapeshift
 
