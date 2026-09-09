@@ -43,7 +43,7 @@ Passes for human right up until it doesn't need to anymore. The skin runs a shad
 
 **Soak** 2 · **Attack** 7 · **Defense** 7 · **Health Levels** 6 · **Movement Rate** 10m
 
-**Bite / Claws**: 4, Melee. **Blood Drain**: against a target it has Grappled, a successful bite heals it 1 Health Level at the start of each of its turns for the rest of the Scene.
+**Bite / Claws**: 2, Melee. **Blood Drain**: against a target it has Grappled, a successful bite heals it 1 Health Level at the start of each of its turns for the rest of the Scene.
 
 **Notable Skills**: Persuasion 9, Stealth 8
 
@@ -59,7 +59,7 @@ Whatever it was before doesn't matter once the shape has finished changing. The 
 
 **Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 12m
 
-**Claws / Bite**: 6, Melee
+**Claws / Bite**: 3, Melee
 
 **Notable Skills**: Athletics 9, Perception 8
 
@@ -75,7 +75,7 @@ Lives off what the cemetery and the morgue don't miss, and what its bite leaves 
 
 **Soak** 2 · **Attack** 5 · **Defense** 5 · **Health Levels** 5 · **Movement Rate** 8m
 
-**Claws / Bite**: 4, Melee. **Fouled Wound**: a target hit and left untreated takes Disadvantage on Physical rolls until the wound is properly cleaned.
+**Claws / Bite**: 2, Melee. **Fouled Wound**: a target hit and left untreated takes Disadvantage on Physical rolls until the wound is properly cleaned.
 
 **Notable Skills**: Stealth 8
 
@@ -91,7 +91,7 @@ Something is still using the body. The body itself stopped being the important p
 
 **Soak** 3 · **Attack** 6 · **Defense** 4 · **Health Levels** 6 · **Movement Rate** 7m
 
-**Whatever It's Carrying**: 4, Melee
+**Whatever It's Carrying**: 2, Melee
 
 **Traits**: **Tethered, Not Alive** - immune to Fear and Intimidation, doesn't need to breathe, and taking it past 0 Health Levels only disperses it for the Scene; it re-forms at the corpse's resting place unless the remains themselves are destroyed or the tether is broken by other means (GM's call). **Cold Presence** - anyone within Close range takes Disadvantage on Perception rolls.
 
@@ -105,7 +105,7 @@ Doesn't need to win the fight if it can talk someone else into losing it for the
 
 **Soak** 2 · **Attack** 6 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 10m (short flight)
 
-**Claws / Horns**: 4, Melee
+**Claws / Horns**: 2, Melee
 
 **Notable Skills**: Persuasion 9, Deception 8
 
@@ -153,7 +153,7 @@ A full night of watching is all it needs before it can wear someone else's face 
 
 **Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 9m
 
-**Claws**: 3, Melee
+**Claws**: 2, Melee
 
 **Notable Skills**: Deception 10, Stealth 8
 
@@ -169,7 +169,7 @@ Rats and roaches don't usually hunt in formation. This mass does, flowing as a s
 
 **Soak** 0 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 7m
 
-**Bites / Stings**: 3, Melee
+**Bites / Stings**: 2, Melee
 
 **Traits**: **Swarm** (as Rat Swarm). **Unnatural Hunger** - actively pursues rather than scatters, and anything else drawn to a fresh kill gets Advantage on Perception rolls to track a target it has already fed on this Scene.
 
@@ -183,7 +183,7 @@ Stone, clay, or scrap, animated and given exactly one job. It moves in slow, del
 
 **Soak** 6 · **Attack** 6 · **Defense** 3 · **Health Levels** 8 · **Movement Rate** 6m
 
-**Slam**: 6, Melee
+**Slam**: 3, Melee
 
 **Traits**: **Unliving** - immune to Fear, poison, and disease. **One Weak Point** - a Called Shot against its anchor (a rune, seam, or core, set by the GM on introduction) bypasses its Soak entirely.
 
@@ -197,7 +197,7 @@ Almost never lays a hand on anyone. It doesn't need to. Something closer to a gh
 
 **Soak** 1 · **Attack** 2 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 8m (drifts)
 
-**Cry** (once per Scene, Mental attack, dice pool 6, Far range, no to-hit roll required - triggered by hearing it): dice resolve per-die against Psyche as normal, a connecting die costing a Sanity Level same as any other Mental attack, and can push a target to Overwhelmed on repeated failures in the same Scene.
+**Cry** (once per Scene, Mental attack, dice pool 3, Far range, no to-hit roll required - triggered by hearing it): dice resolve per-die against Psyche as normal, a connecting die costing a Sanity Level same as any other Mental attack, and can push a target to Overwhelmed on repeated failures in the same Scene.
 
 **Notable Skills**: Perception 9
 
@@ -213,7 +213,7 @@ Bound to one room, one object, one unfinished business - and everything not nail
 
 **Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 0m (cannot leave the bound location)
 
-**Thrown Objects**: 4, Close to Far
+**Thrown Objects**: 2, Close to Far
 
 **Traits**: **Bound to a Place** - immune to anything that doesn't target its anchor object directly (set by the GM on introduction); attacks against anything else pass through with no effect. **Escalates** - its Attack rises by 1, to a maximum of 8, for every full round that passes without anyone leaving the bound location.
 
@@ -227,7 +227,7 @@ Runs a scent down for miles and doesn't lose interest once it's found what it wa
 
 **Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 14m
 
-**Bite**: 6, Melee. 1 point of damage from a successful bite is unsoakable (the wound smolders).
+**Bite**: 3, Melee. 1 point of damage from a successful bite is unsoakable (the wound smolders).
 
 **Notable Skills**: Perception 9, Athletics 9
 
@@ -243,7 +243,7 @@ Furniture, cargo, a parked car, anything still enough to be overlooked - until s
 
 **Soak** 2 · **Attack** 6 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 3m (until it strikes)
 
-**Bite / Engulf**: 5, Melee. Advantage on its first attack against a target that approached believing it was ordinary terrain or an object.
+**Bite / Engulf**: 3, Melee. Advantage on its first attack against a target that approached believing it was ordinary terrain or an object.
 
 **Notable Skills**: Stealth 10
 
@@ -259,7 +259,7 @@ Shows up wherever something is already going wrong and makes sure it keeps going
 
 **Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 8m
 
-**Cane / Blade**: 3, Melee. **Contagion**: on a successful hit, the target must resist or take Disadvantage on Physical rolls until treated, worsening rather than healing without care.
+**Cane / Blade**: 2, Melee. **Contagion**: on a successful hit, the target must resist or take Disadvantage on Physical rolls until treated, worsening rather than healing without care.
 
 **Notable Skills**: Intimidation 7, Perception 8
 
