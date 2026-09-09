@@ -137,10 +137,10 @@ Pain doesn't slow you down, it feeds you. The worse it gets, the less anything b
 
 | Level | Effect |
 |---|---|
-| 1 | **Rising Fury**: while you have at least 1 Health Level missing, add bonus dice to your Physical attacks equal to half your missing Health Levels (round down), capped at **2**. While any Fury bonus is active, you're at Disadvantage on Social and Mental rolls - nothing gets through but the fight in front of you. |
-| 2 | Fury's cap rises to **3**. |
-| 3 | Fury's cap rises to **4**, and its bonus also applies to your Soak - the same fury that sharpens your strikes also numbs what would otherwise put you down. |
-| 4 | Fury's cap rises to **5**. The Level 1 Disadvantage no longer applies to Social rolls - a raging fury reads as pure menace, not incoherence - just Mental rolls now. |
+| 1 | **Rising Fury**: while you have at least 1 Health Level missing, add bonus dice to your Physical attacks equal to half your missing Health Levels (round down), capped at **1**. While any Fury bonus is active, you're at Disadvantage on Social and Mental rolls - nothing gets through but the fight in front of you. |
+| 2 | Fury's cap rises to **2**. |
+| 3 | Fury's bonus now also applies to your Soak - the same fury that sharpens your strikes also numbs what would otherwise put you down. |
+| 4 | Fury's cap rises to **3**. The Level 1 Disadvantage no longer applies to Social rolls - a raging fury reads as pure menace, not incoherence - just Mental rolls now. |
 | 5 | Fury's cap rises to **6**. Once per Scene, as a free action, trigger **Last Stand**: your Fury bonus locks at its maximum for the rest of the Scene, regardless of your actual missing Health Levels. |
 
 **Adders**:
@@ -216,9 +216,9 @@ Chosen once, at creation: your **signature weapon**, any single item from [weapo
 |---|---|
 | 1 | Summon your signature weapon into your hand as a **Fast action**, no Ki cost. It deals its normal listed Damage and range. Dismissing it is free and instant. It never runs dry - ammo, if any, is never actually a concern, though you're free to roleplay reloading. |
 | 2 | You may now conjure **any** weapon from the full catalog, not just your signature - reselect freely each time you summon. |
-| 3 | The conjured weapon's Damage rises **+2** above its normal listed rating, capped at the system's usual **10**. |
+| 3 | The conjured weapon's Damage rises **+1** above its normal listed rating, capped at the weapon table's ceiling of **5**. |
 | 4 | Summoning becomes a **free action** - no action cost at all, folding seamlessly into any attack. You're never caught without a weapon in hand. |
-| 5 | The Damage bonus (Level 3) rises to **+4** above the weapon's normal rating, still capped at 10. Once per Scene, spend **1 Ki** to conjure a weapon so precise it ignores **3** points of the target's Soak for that single attack. |
+| 5 | The Damage bonus (Level 3) rises to **+2** above the weapon's normal rating, still capped at 5. Once per Scene, spend **1 Ki** to conjure a weapon so precise it ignores **3** points of the target's Soak for that single attack. |
 
 **Adders**:
 
@@ -381,7 +381,7 @@ You carry more allies than you can hold in your hands - a rack of interchangeabl
 
 **Drone Types** (chosen per drone, reconfigurable per the Level 1 rule):
 
-1. **Combat**: mounted weapon. Attack (Output Rating d10), resolved per-die vs. the target's Soak, Presence, or Psyche as fits the attack.
+1. **Combat**: mounted weapon. Attack dice equal to its Output Rating, capped at **5** so a drone never outguns the heaviest thing a person can carry, resolved per-die vs. the target's Soak, Presence, or Psyche as fits the attack.
 2. **Healing**: as its action, touch a willing target within Melee range and restore Health Levels equal to half its Output Rating, round up.
 3. **Shielding**: as its action, project a barrier over one ally within Melee range, granting them Soak equal to its Output Rating until the start of your next turn (stacks with their own Soak).
 4. **Remote Operation**: as its action, route one roll through the drone instead of acting in person - make a Skill check or device interaction as if you were standing where it is, using your own stats.
