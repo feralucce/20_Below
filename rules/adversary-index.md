@@ -258,7 +258,7 @@ A stray or pack-abandoned dog, unpredictable more than dangerous - but a hungry 
 
 **Soak** 1 · **Attack** 3 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 9m
 
-**Bite**: 2, Melee
+**Bite**: 1, Melee
 
 **Notable Skills**: Perception 8, Athletics 8
 
@@ -274,7 +274,7 @@ Bred or trained to hold a line, not just to threaten one. It's well-fed, muscled
 
 **Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 9m
 
-**Bite**: 3, Melee
+**Bite**: 2, Melee
 
 **Notable Skills**: Intimidation 8, Perception 9
 
@@ -290,7 +290,7 @@ Something in the litter came out wrong - bigger jaw, bigger frame, none of the u
 
 **Soak** 2 · **Attack** 4 · **Defense** 7 · **Health Levels** 6 · **Movement Rate** 11m
 
-**Bite**: 4, Melee
+**Bite**: 2, Melee
 
 **Notable Skills**: Perception 8, Athletics 8
 
@@ -306,7 +306,7 @@ Whoever trained it either didn't know when to stop or wanted exactly this. It's 
 
 **Soak** 2 · **Attack** 5 · **Defense** 7 · **Health Levels** 7 · **Movement Rate** 11m
 
-**Bite**: 5, Melee
+**Bite**: 3, Melee
 
 **Notable Skills**: Intimidation 8, Perception 9
 
@@ -322,7 +322,7 @@ Animal control gets a call about a "bear" and finds this instead, chained to a f
 
 **Soak** 3 · **Attack** 4 · **Defense** 8 · **Health Levels** 9 · **Movement Rate** 12m
 
-**Bite**: 7, Melee
+**Bite**: 4, Melee
 
 **Notable Skills**: Perception 8, Athletics 8
 
@@ -338,7 +338,7 @@ A property line marked by a chain-link fence and a shape on the other side that 
 
 **Soak** 3 · **Attack** 5 · **Defense** 8 · **Health Levels** 10 · **Movement Rate** 12m
 
-**Bite**: 8, Melee
+**Bite**: 4, Melee
 
 **Notable Skills**: Intimidation 8, Perception 9
 
@@ -354,7 +354,7 @@ Every scar on it has already closed by the time you notice it was there. Its coa
 
 **Soak** 2 · **Attack** 4 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 9m
 
-**Bite**: 2, Melee
+**Bite**: 1, Melee
 
 **Notable Skills**: Perception 8, Athletics 8
 
@@ -370,7 +370,7 @@ It stopped needing rest between shifts a while ago, and nobody who feeds it has 
 
 **Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 9m
 
-**Bite**: 3, Melee
+**Bite**: 2, Melee
 
 **Notable Skills**: Intimidation 8, Perception 9
 
@@ -406,7 +406,7 @@ Still fast, still small for its kind, but the claws now leave a wound worth stit
 
 **Soak** 1 · **Attack** 3 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 10m
 
-**Claws**: 3, Melee
+**Claws**: 2, Melee
 
 **Notable Skills**: Stealth 10, Athletics 9
 
@@ -422,7 +422,7 @@ House-cat proportions on something the size of a dog, which is somehow worse tha
 
 **Soak** 2 · **Attack** 3 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 11m
 
-**Claws**: 6, Melee
+**Claws**: 3, Melee
 
 **Notable Skills**: Stealth 10, Athletics 9
 
@@ -474,7 +474,7 @@ Twice the usual weight and none of the usual hesitation about approaching a lit 
 
 **Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 5 · **Movement Rate** 8m
 
-**Bite / Claws**: 3, Melee
+**Bite / Claws**: 2, Melee
 
 **Notable Skills**: Stealth 8, Perception 7
 
@@ -490,7 +490,7 @@ Tips over a dumpster instead of digging through it, and doesn't run when the lid
 
 **Soak** 3 · **Attack** 4 · **Defense** 9 · **Health Levels** 8 · **Movement Rate** 9m
 
-**Bite / Claws**: 6, Melee
+**Bite / Claws**: 3, Melee
 
 **Notable Skills**: Stealth 8, Perception 7
 
@@ -542,7 +542,7 @@ Bigger bodies than a rat swarm should have, moving with the same coordination as
 
 **Soak** 1 · **Attack** 4 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 8m
 
-**Bite**: 3, Melee
+**Bite**: 2, Melee
 
 **Notable Skills**: Stealth 8
 
@@ -558,7 +558,7 @@ What used to be a hundred small bodies is now a few dozen large ones, and the so
 
 **Soak** 2 · **Attack** 4 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 9m
 
-**Bite**: 6, Melee
+**Bite**: 3, Melee
 
 **Notable Skills**: Stealth 8
 
@@ -682,7 +682,7 @@ Same territorial streak, considerably more weight behind the wing that hits you.
 
 **Soak** 1 · **Attack** 3 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 8m
 
-**Bite / Wing Buffet**: 3, Melee
+**Bite / Wing Buffet**: 2, Melee
 
 **Notable Skills**: Intimidation 7
 
@@ -698,7 +698,7 @@ Nobody believes the story until they see the pond it now considers its property.
 
 **Soak** 2 · **Attack** 3 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 9m
 
-**Bite / Wing Buffet**: 6, Melee
+**Bite / Wing Buffet**: 3, Melee
 
 **Notable Skills**: Intimidation 7
 
@@ -734,7 +734,7 @@ Placid until it isn't - and a full charge is genuinely lethal. It grazes with it
 
 **Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 10m
 
-**Gore**: 5, Melee
+**Gore**: 3, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -750,7 +750,7 @@ The fence it broke through wasn't the first, and the farmer stopped repairing th
 
 **Soak** 4 · **Attack** 7 · **Defense** 6 · **Health Levels** 9 · **Movement Rate** 12m
 
-**Gore**: 7, Melee
+**Gore**: 4, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -766,7 +766,7 @@ A silhouette in the field that people mistake for a shed until it moves. It's ge
 
 **Soak** 5 · **Attack** 7 · **Defense** 7 · **Health Levels** 12 · **Movement Rate** 13m
 
-**Gore**: 10, Melee
+**Gore**: 5, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -782,7 +782,7 @@ Fence posts snap clean against its shoulder and it barely slows down. Its hide h
 
 **Soak** 4 · **Attack** 7 · **Defense** 5 · **Health Levels** 8 · **Movement Rate** 10m
 
-**Gore**: 5, Melee
+**Gore**: 3, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -802,7 +802,7 @@ Territorial and stubborn, more nuisance than threat on its own. It plants its fe
 
 **Soak** 1 · **Attack** 3 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 8m
 
-**Headbutt**: 2, Melee
+**Headbutt**: 1, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -818,7 +818,7 @@ Bigger horns, bigger frame, same willingness to plant its feet and not back down
 
 **Soak** 2 · **Attack** 4 · **Defense** 7 · **Health Levels** 6 · **Movement Rate** 10m
 
-**Headbutt**: 4, Melee
+**Headbutt**: 2, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -834,7 +834,7 @@ It stands on a rock outcrop that most animals its size couldn't reach, let alone
 
 **Soak** 3 · **Attack** 4 · **Defense** 8 · **Health Levels** 9 · **Movement Rate** 11m
 
-**Headbutt**: 7, Melee
+**Headbutt**: 4, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -850,7 +850,7 @@ Its hide has taken on a texture closer to bark than fur, and a knife doesn't do 
 
 **Soak** 2 · **Attack** 4 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 8m
 
-**Headbutt**: 2, Melee
+**Headbutt**: 1, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -872,7 +872,7 @@ Not a predator - a large, panicked animal is dangerous mostly by accident. Somet
 
 **Soak** 1 · **Attack** 4 · **Defense** 5 · **Health Levels** 5 · **Movement Rate** 14m
 
-**Kick / Trample**: 4, Melee
+**Kick / Trample**: 2, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -888,7 +888,7 @@ A panicked animal that's outgrown its own stable and still hasn't calmed down. I
 
 **Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 8 · **Movement Rate** 16m
 
-**Kick / Trample**: 6, Melee
+**Kick / Trample**: 3, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -904,7 +904,7 @@ What starts as a runaway plow horse story usually ends with someone describing s
 
 **Soak** 3 · **Attack** 5 · **Defense** 7 · **Health Levels** 11 · **Movement Rate** 17m
 
-**Kick / Trample**: 9, Melee
+**Kick / Trample**: 5, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -920,7 +920,7 @@ It bolts at sounds nothing else in the field even registers, and it hears you co
 
 **Soak** 2 · **Attack** 5 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 14m
 
-**Kick / Trample**: 4, Melee
+**Kick / Trample**: 2, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -940,7 +940,7 @@ Low, fast, and willing to press an attack that a smarter animal would break off.
 
 **Soak** 2 · **Attack** 5 · **Defense** 5 · **Health Levels** 4 · **Movement Rate** 8m
 
-**Tusks**: 3, Melee
+**Tusks**: 2, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -956,7 +956,7 @@ It's put on enough weight to stop caring what's in its way, tusks included. Its 
 
 **Soak** 3 · **Attack** 6 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 10m
 
-**Tusks**: 5, Melee
+**Tusks**: 3, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -972,7 +972,7 @@ Hunters who've seen it describe something closer to a small truck than a hog. It
 
 **Soak** 4 · **Attack** 6 · **Defense** 7 · **Health Levels** 10 · **Movement Rate** 11m
 
-**Tusks**: 8, Melee
+**Tusks**: 4, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -988,7 +988,7 @@ A tusk wound only makes it push harder into whatever caused it. Physically it do
 
 **Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 8m
 
-**Tusks**: 3, Melee
+**Tusks**: 2, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -1010,7 +1010,7 @@ Cautious and opportunistic - rarely presses a fight it isn't sure it can win. It
 
 **Soak** 1 · **Attack** 3 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m
 
-**Bite**: 2, Melee
+**Bite**: 1, Melee
 
 **Notable Skills**: Stealth 8, Perception 8
 
@@ -1026,7 +1026,7 @@ A genuine apex predator in its own territory, especially in numbers. It moves in
 
 **Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 11m
 
-**Bite**: 4, Melee
+**Bite**: 2, Melee
 
 **Notable Skills**: Perception 8, Athletics 8
 
@@ -1042,7 +1042,7 @@ Bolder than a coyote has any right to be, and considerably harder to discourage.
 
 **Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m
 
-**Bite**: 4, Melee
+**Bite**: 2, Melee
 
 **Notable Skills**: Stealth 8, Perception 8
 
@@ -1058,7 +1058,7 @@ Old bones turn up in the region that are too large for any wolf on record, and t
 
 **Soak** 3 · **Attack** 6 · **Defense** 7 · **Health Levels** 7 · **Movement Rate** 13m
 
-**Bite**: 6, Melee
+**Bite**: 3, Melee
 
 **Notable Skills**: Perception 8, Athletics 8
 
@@ -1074,7 +1074,7 @@ Ranchers who lose stock to it stop calling it a coyote at all. It's built close 
 
 **Soak** 3 · **Attack** 4 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m
 
-**Bite**: 7, Melee
+**Bite**: 4, Melee
 
 **Notable Skills**: Stealth 8, Perception 8
 
@@ -1090,7 +1090,7 @@ A pack led by something the size of a horse doesn't behave like a normal pack an
 
 **Soak** 4 · **Attack** 6 · **Defense** 8 · **Health Levels** 10 · **Movement Rate** 14m
 
-**Bite**: 9, Melee
+**Bite**: 5, Melee
 
 **Notable Skills**: Perception 8, Athletics 8
 
@@ -1106,7 +1106,7 @@ It crosses open ground in full moonlight and somehow still isn't the thing you n
 
 **Soak** 2 · **Attack** 4 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 10m
 
-**Bite**: 2, Melee
+**Bite**: 1, Melee
 
 **Notable Skills**: Stealth 8, Perception 8
 
@@ -1122,7 +1122,7 @@ A second, smaller jaw has grown along its flank, and it uses both without missin
 
 **Soak** 3 · **Attack** 6 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 11m
 
-**Bite**: 4, Melee
+**Bite**: 2, Melee
 
 **Notable Skills**: Perception 8, Athletics 8
 
@@ -1142,7 +1142,7 @@ Small for what it's willing to fight, and it doesn't quit. Barely the size of a 
 
 **Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 5 · **Movement Rate** 8m
 
-**Bite / Claws**: 4, Melee
+**Bite / Claws**: 2, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -1158,7 +1158,7 @@ It was already willing to fight anything - now it's willing to fight anything an
 
 **Soak** 4 · **Attack** 7 · **Defense** 6 · **Health Levels** 8 · **Movement Rate** 10m
 
-**Bite / Claws**: 6, Melee
+**Bite / Claws**: 3, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -1174,7 +1174,7 @@ Small for a bear and large for a wolverine, which puts it somewhere no one wants
 
 **Soak** 5 · **Attack** 7 · **Defense** 7 · **Health Levels** 11 · **Movement Rate** 11m
 
-**Bite / Claws**: 9, Melee
+**Bite / Claws**: 5, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -1190,7 +1190,7 @@ Every wound just seems to make it angrier, and it was already the wrong animal t
 
 **Soak** 4 · **Attack** 7 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 8m
 
-**Bite / Claws**: 4, Melee
+**Bite / Claws**: 2, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -1214,7 +1214,7 @@ Smaller and warier than a mountain lion, same basic approach. It relies on brush
 
 **Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m
 
-**Claws**: 3, Melee
+**Claws**: 2, Melee
 
 **Notable Skills**: Stealth 9
 
@@ -1230,7 +1230,7 @@ Built for cold terrain, hunts the same way a bobcat does. Wide, padded paws let 
 
 **Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m
 
-**Claws**: 3, Melee
+**Claws**: 2, Melee
 
 **Notable Skills**: Stealth 8, Perception 8
 
@@ -1246,7 +1246,7 @@ Rarely seen before it attacks - that's the point. It stalks in complete silence,
 
 **Soak** 2 · **Attack** 6 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 12m
 
-**Claws / Bite**: 5, Melee
+**Claws / Bite**: 3, Melee
 
 **Notable Skills**: Stealth 10, Athletics 10
 
@@ -1262,7 +1262,7 @@ Twice the size of a normal bobcat and no less willing to launch from a branch ov
 
 **Soak** 2 · **Attack** 5 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m
 
-**Claws**: 5, Melee
+**Claws**: 3, Melee
 
 **Notable Skills**: Stealth 9
 
@@ -1278,7 +1278,7 @@ The wide paws that keep a lynx on top of snow now carry considerably more weight
 
 **Soak** 2 · **Attack** 5 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m
 
-**Claws**: 5, Melee
+**Claws**: 3, Melee
 
 **Notable Skills**: Stealth 8, Perception 8
 
@@ -1294,7 +1294,7 @@ Bigger paws leave bigger prints, and the deer it's been taking down lately are e
 
 **Soak** 3 · **Attack** 7 · **Defense** 7 · **Health Levels** 8 · **Movement Rate** 14m
 
-**Claws / Bite**: 7, Melee
+**Claws / Bite**: 4, Melee
 
 **Notable Skills**: Stealth 10, Athletics 10
 
@@ -1310,7 +1310,7 @@ Drags a whole deer carcass up a tree with the ease of a normal bobcat carrying a
 
 **Soak** 3 · **Attack** 5 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m
 
-**Claws**: 8, Melee
+**Claws**: 4, Melee
 
 **Notable Skills**: Stealth 9
 
@@ -1326,7 +1326,7 @@ Tracks in fresh snow that look right in every way except the size. It's built at
 
 **Soak** 3 · **Attack** 5 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m
 
-**Claws**: 8, Melee
+**Claws**: 4, Melee
 
 **Notable Skills**: Stealth 8, Perception 8
 
@@ -1342,7 +1342,7 @@ The kind of animal state wildlife agencies quietly stop confirming exists once t
 
 **Soak** 4 · **Attack** 7 · **Defense** 8 · **Health Levels** 11 · **Movement Rate** 15m
 
-**Claws / Bite**: 10, Melee
+**Claws / Bite**: 5, Melee
 
 **Notable Skills**: Stealth 10, Athletics 10
 
@@ -1358,7 +1358,7 @@ It goes flat against a rock face and simply isn't there anymore, even to a train
 
 **Soak** 2 · **Attack** 5 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 10m
 
-**Claws**: 3, Melee
+**Claws**: 2, Melee
 
 **Notable Skills**: Stealth 9
 
@@ -1374,7 +1374,7 @@ It hunts just as well against a bright snowfield as it does in the dark of a pin
 
 **Soak** 2 · **Attack** 5 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 10m
 
-**Claws**: 3, Melee
+**Claws**: 2, Melee
 
 **Notable Skills**: Stealth 8, Perception 8
 
@@ -1392,7 +1392,7 @@ It hears a held breath from across a clearing, which is the only warning anyone 
 
 **Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 12m
 
-**Claws / Bite**: 5, Melee
+**Claws / Bite**: 3, Melee
 
 **Notable Skills**: Stealth 10, Athletics 10
 
@@ -1414,7 +1414,7 @@ Strong enough to be dangerous, but genuinely avoidant by nature. It's more likel
 
 **Soak** 3 · **Attack** 5 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 9m
 
-**Claws**: 5, Melee
+**Claws**: 3, Melee
 
 **Notable Skills**: Athletics 8, Perception 7
 
@@ -1430,7 +1430,7 @@ Nothing about it is avoidant once it's decided to engage. It's bigger through th
 
 **Soak** 4 · **Attack** 8 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 10m
 
-**Claws**: 7, Melee
+**Claws**: 4, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -1446,7 +1446,7 @@ The largest land predator that actually hunts people as prey. It's built for col
 
 **Soak** 4 · **Attack** 8 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 9m (no penalty in water)
 
-**Claws / Bite**: 7, Melee
+**Claws / Bite**: 4, Melee
 
 **Notable Skills**: Athletics 9, Perception 8 (scent)
 
@@ -1462,7 +1462,7 @@ Stands taller than a grizzly should and still keeps the black bear's habit of av
 
 **Soak** 4 · **Attack** 6 · **Defense** 6 · **Health Levels** 10 · **Movement Rate** 11m
 
-**Claws**: 7, Melee
+**Claws**: 4, Melee
 
 **Notable Skills**: Athletics 8, Perception 7
 
@@ -1478,7 +1478,7 @@ Already the animal you don't want to surprise - this one just has more mass behi
 
 **Soak** 5 · **Attack** 9 · **Defense** 6 · **Health Levels** 12 · **Movement Rate** 12m
 
-**Claws**: 9, Melee
+**Claws**: 5, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -1494,7 +1494,7 @@ Already the largest thing that hunts people as food - this one just makes the ma
 
 **Soak** 5 · **Attack** 9 · **Defense** 6 · **Health Levels** 12 · **Movement Rate** 11m (no penalty in water)
 
-**Claws / Bite**: 9, Melee
+**Claws / Bite**: 5, Melee
 
 **Notable Skills**: Athletics 9, Perception 8 (scent)
 
@@ -1510,7 +1510,7 @@ Even avoidant, something this size can knock a car onto its side just by leaning
 
 **Soak** 5 · **Attack** 6 · **Defense** 7 · **Health Levels** 13 · **Movement Rate** 12m
 
-**Claws**: 10, Melee
+**Claws**: 5, Melee
 
 **Notable Skills**: Athletics 8, Perception 7
 
@@ -1526,7 +1526,7 @@ The kind of thing that leaves claw marks on a tree at a height that makes hikers
 
 **Soak** 6 · **Attack** 9 · **Defense** 7 · **Health Levels** 15 · **Movement Rate** 13m
 
-**Claws**: 10, Melee
+**Claws**: 5, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -1542,7 +1542,7 @@ Ice researchers who've filmed it from a distance still argue about the scale in 
 
 **Soak** 6 · **Attack** 9 · **Defense** 7 · **Health Levels** 15 · **Movement Rate** 12m (no penalty in water)
 
-**Claws / Bite**: 10, Melee
+**Claws / Bite**: 5, Melee
 
 **Notable Skills**: Athletics 9, Perception 8 (scent)
 
@@ -1558,7 +1558,7 @@ A gash that should have laid it up for a season closes over in a matter of hours
 
 **Soak** 4 · **Attack** 6 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 9m
 
-**Claws**: 5, Melee
+**Claws**: 3, Melee
 
 **Notable Skills**: Athletics 8, Perception 7
 
@@ -1574,7 +1574,7 @@ Standing near it too long leaves a low ache that won't go away until you've put 
 
 **Soak** 5 · **Attack** 9 · **Defense** 5 · **Health Levels** 11 · **Movement Rate** 10m
 
-**Claws**: 7, Melee
+**Claws**: 4, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -1590,7 +1590,7 @@ Anyone who manages to land a hit on it comes away burned as much as bitten. Phys
 
 **Soak** 5 · **Attack** 9 · **Defense** 5 · **Health Levels** 11 · **Movement Rate** 9m (no penalty in water)
 
-**Claws / Bite**: 7, Melee
+**Claws / Bite**: 4, Melee
 
 **Notable Skills**: Athletics 9, Perception 8 (scent)
 
@@ -1614,7 +1614,7 @@ Nearly invisible at the waterline until it isn't. Floating with just eyes and no
 
 **Soak** 3 · **Attack** 6 · **Defense** 4 · **Health Levels** 6 · **Movement Rate** 6m (12m in water)
 
-**Bite**: 6, Melee
+**Bite**: 3, Melee
 
 **Notable Skills**: Stealth 9 (lying in wait)
 
@@ -1630,7 +1630,7 @@ The waterline hides more of it than usual, simply because there's more to hide. 
 
 **Soak** 4 · **Attack** 7 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 8m (14m in water)
 
-**Bite**: 8, Melee
+**Bite**: 4, Melee
 
 **Notable Skills**: Stealth 9 (lying in wait)
 
@@ -1646,7 +1646,7 @@ Old-timers around the bayou have a name for this one and a firm rule about which
 
 **Soak** 5 · **Attack** 7 · **Defense** 6 · **Health Levels** 12 · **Movement Rate** 9m (15m in water)
 
-**Bite**: 10, Melee
+**Bite**: 5, Melee
 
 **Notable Skills**: Stealth 9 (lying in wait)
 
@@ -1662,7 +1662,7 @@ Its hide has gone from tough to genuinely impenetrable in places, thick plates w
 
 **Soak** 4 · **Attack** 7 · **Defense** 4 · **Health Levels** 8 · **Movement Rate** 6m (12m in water)
 
-**Bite**: 6, Melee
+**Bite**: 3, Melee
 
 **Notable Skills**: Stealth 9 (lying in wait)
 
@@ -1682,7 +1682,7 @@ Slow-moving, but its bite doesn't easily let go. Thick-bodied and patterned in b
 
 **Soak** 1 · **Attack** 3 · **Defense** 5 · **Health Levels** 2 · **Movement Rate** 3m
 
-**Bite**: 2, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
+**Bite**: 1, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
 
 **Notable Skills**: Stealth 6
 
@@ -1696,7 +1696,7 @@ It moves no faster than before, but once it clamps down the grip is considerably
 
 **Soak** 2 · **Attack** 4 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 3m
 
-**Bite**: 4, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
+**Bite**: 2, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
 
 **Notable Skills**: Stealth 6
 
@@ -1710,7 +1710,7 @@ Its coloring is unmistakable even at a distance, which does nothing to help once
 
 **Soak** 3 · **Attack** 4 · **Defense** 7 · **Health Levels** 8 · **Movement Rate** 3m
 
-**Bite**: 7, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
+**Bite**: 4, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
 
 **Notable Skills**: Stealth 6
 
@@ -1724,7 +1724,7 @@ The venom now carries an extra sting that lingers well past the bite itself. It 
 
 **Soak** 2 · **Attack** 4 · **Defense** 5 · **Health Levels** 4 · **Movement Rate** 3m
 
-**Bite**: 2, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
+**Bite**: 1, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
 
 **Notable Skills**: Stealth 6
 
@@ -1790,7 +1790,7 @@ Its camouflage pattern has stretched with the extra length, and it's harder than
 
 **Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m
 
-**Bite**: 3, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Bite**: 2, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
 **Notable Skills**: Stealth 10
 
@@ -1804,7 +1804,7 @@ It holds its ground in shallow water even against threats that would send an ord
 
 **Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m (8m in water)
 
-**Bite**: 3, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Bite**: 2, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
 **Notable Skills**: Stealth 9
 
@@ -1818,7 +1818,7 @@ Longer than any rattler has a right to be, and the rattle itself sounds wrong - 
 
 **Soak** 1 · **Attack** 6 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m
 
-**Bite**: 3, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
+**Bite**: 2, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
 
 **Notable Skills**: Stealth 9
 
@@ -1834,7 +1834,7 @@ Big enough now to take small game whole, which changes how it hunts more than ho
 
 **Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m
 
-**Bite**: 6, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Bite**: 3, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
 **Notable Skills**: Stealth 10
 
@@ -1848,7 +1848,7 @@ Fishermen who've hooked something in the shallows and reeled up a snake instead 
 
 **Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m (9m in water)
 
-**Bite**: 6, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Bite**: 3, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
 **Notable Skills**: Stealth 9
 
@@ -1862,7 +1862,7 @@ A rockslide of coiled muscle that people mistake for a fallen log until the log 
 
 **Soak** 2 · **Attack** 6 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m
 
-**Bite**: 6, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
+**Bite**: 3, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
 
 **Notable Skills**: Stealth 9
 
@@ -1930,7 +1930,7 @@ Slow, low, and armored - the shell does most of the work. On land it moves at an
 
 **Soak** 4 · **Attack** 4 · **Defense** 3 · **Health Levels** 4 · **Movement Rate** 3m
 
-**Bite**: 3, Melee
+**Bite**: 2, Melee
 
 **Traits**: **Withdraw** - as a Fast action, pulls into its shell, raising Soak to 7 until its next action.
 
@@ -1944,7 +1944,7 @@ The shell alone is the size of a manhole cover, and the bite behind it hasn't go
 
 **Soak** 5 · **Attack** 5 · **Defense** 4 · **Health Levels** 7 · **Movement Rate** 3m
 
-**Bite**: 5, Melee
+**Bite**: 3, Melee
 
 **Traits**: **Withdraw** - as a Fast action, pulls into its shell, raising Soak to 8 until its next action.
 
@@ -1958,7 +1958,7 @@ Kayakers give the deep bend in the river a wide berth after word gets around abo
 
 **Soak** 6 · **Attack** 5 · **Defense** 5 · **Health Levels** 10 · **Movement Rate** 3m
 
-**Bite**: 8, Melee
+**Bite**: 4, Melee
 
 **Traits**: **Withdraw** - as a Fast action, pulls into its shell, raising Soak to 9 until its next action.
 
@@ -1972,7 +1972,7 @@ A cracked shell is back to full thickness within days, no scar to show for it. N
 
 **Soak** 5 · **Attack** 5 · **Defense** 3 · **Health Levels** 6 · **Movement Rate** 3m
 
-**Bite**: 3, Melee
+**Bite**: 2, Melee
 
 **Traits**: **Withdraw** - as a Fast action, pulls into its shell, raising Soak to 7 until its next action. **Regenerating** - heals 1 Health Level at the start of each of its turns.
 
@@ -1992,7 +1992,7 @@ More aggressive and far more persistent than an ordinary hive. It doesn't take m
 
 **Soak** 0 · **Attack** 4 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 6m (flight)
 
-**Stings**: 3, Melee
+**Stings**: 2, Melee
 
 **Traits**: **Swarm** (as Rat Swarm). **Relentless** - once provoked, pursues a target across several Range Bands rather than breaking off at the hive's edge.
 
@@ -2006,7 +2006,7 @@ Individually harmless, collectively a real threat if provoked. A single wasp is 
 
 **Soak** 0 · **Attack** 4 · **Defense** 7 · **Health Levels** 2 · **Movement Rate** 6m (flight)
 
-**Stings**: 2, Melee
+**Stings**: 1, Melee
 
 **Traits**: **Swarm** (as Rat Swarm).
 
@@ -2020,7 +2020,7 @@ Already more aggressive than a normal hive, and now large enough to blot out a d
 
 **Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 8m (flight)
 
-**Stings**: 5, Melee
+**Stings**: 3, Melee
 
 **Traits**: **Swarm** (as Rat Swarm). **Relentless** - once provoked, pursues a target across several Range Bands rather than breaking off at the hive's edge.
 
@@ -2034,7 +2034,7 @@ Individual wasps the size of a thumb, still moving and stinging as one body. The
 
 **Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 5 · **Movement Rate** 8m (flight)
 
-**Stings**: 4, Melee
+**Stings**: 2, Melee
 
 **Traits**: **Swarm** (as Rat Swarm).
 
@@ -2048,7 +2048,7 @@ The hum alone is audible from a full block away, and it doesn't stop at property
 
 **Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 9m (flight)
 
-**Stings**: 8, Melee
+**Stings**: 4, Melee
 
 **Traits**: **Swarm** (as Rat Swarm). **Relentless** - once provoked, pursues a target across several Range Bands rather than breaking off at the hive's edge.
 
@@ -2062,7 +2062,7 @@ The nest that produced it is the size of a car, and nobody's gone back to check 
 
 **Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 8 · **Movement Rate** 9m (flight)
 
-**Stings**: 7, Melee
+**Stings**: 4, Melee
 
 **Traits**: **Swarm** (as Rat Swarm).
 
@@ -2076,7 +2076,7 @@ It carries a payload beyond the sting now, one it can loose all at once against 
 
 **Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 6m (flight)
 
-**Stings**: 3, Melee
+**Stings**: 2, Melee
 
 **Traits**: **Swarm** (as Rat Swarm). **Relentless** - once provoked, pursues a target across several Range Bands rather than breaking off at the hive's edge. **Toxic Cloud** - once per encounter, releases a cloud at Close range - anyone inside without protection is at Disadvantage on all rolls for the rest of the Scene (same shape as the Skunk's own Spray ability).
 
@@ -2090,7 +2090,7 @@ Every wasp in the mass carries two stingers instead of one, and both find their 
 
 **Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 6m (flight)
 
-**Stings**: 2, Melee
+**Stings**: 1, Melee
 
 **Traits**: **Swarm** (as Rat Swarm). **Extra Limb(s)** - makes two separate Sting attacks per round instead of one, each its own to-hit roll.
 
@@ -2122,7 +2122,7 @@ Big enough now that the tail arcing overhead is the first thing anyone notices a
 
 **Soak** 2 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 4m
 
-**Sting**: 3, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Sting**: 2, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
 **Notable Skills**: Stealth 8
 
@@ -2136,7 +2136,7 @@ It doesn't hide under a rock anymore - there isn't a rock big enough. What passe
 
 **Soak** 3 · **Attack** 4 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 4m
 
-**Sting**: 6, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Sting**: 3, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
 
 **Notable Skills**: Stealth 8
 
@@ -2200,7 +2200,7 @@ The hourglass marking is now visible from across a room, on a body that shouldn'
 
 **Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 2m
 
-**Bite**: 3, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
+**Bite**: 2, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
 
 **Notable Skills**: Stealth 10
 
@@ -2214,7 +2214,7 @@ The bite is the same shape as always, just delivered by something considerably h
 
 **Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 2m
 
-**Bite**: 3, Melee, **Venom**: no immediate Health Level loss, but the wound worsens without treatment over the following days - severity is the GM's call.
+**Bite**: 2, Melee, **Venom**: no immediate Health Level loss, but the wound worsens without treatment over the following days - severity is the GM's call.
 
 **Notable Skills**: Stealth 10
 
@@ -2228,7 +2228,7 @@ Its web spans a doorway rather than a corner, strong enough to catch more than i
 
 **Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 2m
 
-**Bite**: 6, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
+**Bite**: 3, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
 
 **Notable Skills**: Stealth 10
 
@@ -2242,7 +2242,7 @@ Found under boards in an old shed, in a size that makes the whole shed worth avo
 
 **Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 2m
 
-**Bite**: 6, Melee, **Venom**: no immediate Health Level loss, but the wound worsens without treatment over the following days - severity is the GM's call.
+**Bite**: 3, Melee, **Venom**: no immediate Health Level loss, but the wound worsens without treatment over the following days - severity is the GM's call.
 
 **Notable Skills**: Stealth 10
 
@@ -2294,7 +2294,7 @@ Silent wings make it one of the few genuinely hard-to-detect predators in the sk
 
 **Soak** 0 · **Attack** 5 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 14m (flight)
 
-**Talons**: 2, Melee
+**Talons**: 1, Melee
 
 **Notable Skills**: Stealth 9, Perception 9
 
@@ -2310,7 +2310,7 @@ Still silent on the wing, which is somehow more unsettling given how much bigger
 
 **Soak** 1 · **Attack** 6 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 16m (flight)
 
-**Talons**: 4, Melee
+**Talons**: 2, Melee
 
 **Notable Skills**: Stealth 9, Perception 9
 
@@ -2326,7 +2326,7 @@ A shape passes overhead at dusk large enough to blot out the last of the light. 
 
 **Soak** 2 · **Attack** 6 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 17m (flight)
 
-**Talons**: 7, Melee
+**Talons**: 4, Melee
 
 **Notable Skills**: Stealth 9, Perception 9
 
@@ -2342,7 +2342,7 @@ Daylight seems to throw off its aim in a way darkness never does. It's smaller t
 
 **Soak** 1 · **Attack** 6 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 14m (flight)
 
-**Talons**: 2, Melee
+**Talons**: 1, Melee
 
 **Notable Skills**: Stealth 9, Perception 9
 
@@ -2362,7 +2362,7 @@ Exceptional eyesight, and a dive that closes distance faster than it looks. It c
 
 **Soak** 0 · **Attack** 5 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 15m (flight)
 
-**Talons**: 2, Melee
+**Talons**: 1, Melee
 
 **Notable Skills**: Perception 10
 
@@ -2378,7 +2378,7 @@ Wingspan closer to a small aircraft, and the dive it drops into hits with a lot 
 
 **Soak** 1 · **Attack** 6 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 17m (flight)
 
-**Talons**: 4, Melee
+**Talons**: 2, Melee
 
 **Notable Skills**: Perception 10
 
@@ -2394,7 +2394,7 @@ Farmers report livestock disappearing from open pasture in broad daylight, no dr
 
 **Soak** 2 · **Attack** 6 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 18m (flight)
 
-**Talons**: 7, Melee
+**Talons**: 4, Melee
 
 **Notable Skills**: Perception 10
 
@@ -2410,7 +2410,7 @@ It picks out movement through fog and brush that would hide it from any normal s
 
 **Soak** 1 · **Attack** 6 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 15m (flight)
 
-**Talons**: 2, Melee
+**Talons**: 1, Melee
 
 **Notable Skills**: Perception 10
 
@@ -2446,7 +2446,7 @@ Circles higher and stays longer than a normal vulture would, patient in a way th
 
 **Soak** 1 · **Attack** 2 · **Defense** 8 · **Health Levels** 5 · **Movement Rate** 14m (flight)
 
-**Beak**: 3, Melee
+**Beak**: 2, Melee
 
 **Notable Skills**: Perception 9 (smell)
 
@@ -2462,7 +2462,7 @@ A wingspan wide enough to cast a shadow you notice before you notice the bird. I
 
 **Soak** 2 · **Attack** 2 · **Defense** 9 · **Health Levels** 8 · **Movement Rate** 15m (flight)
 
-**Beak**: 6, Melee
+**Beak**: 3, Melee
 
 **Notable Skills**: Perception 9 (smell)
 
@@ -2566,7 +2566,7 @@ Intelligent, coordinated, and the only predator on this list that hunts great wh
 
 **Soak** 4 · **Attack** 9 · **Defense** 5 · **Health Levels** 10 · **Movement Rate** 16m (water only)
 
-**Bite / Ram**: 9, Melee
+**Bite / Ram**: 5, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -2582,7 +2582,7 @@ Even among orcas this one stands out, and the pod defers to it without hesitatio
 
 **Soak** 5 · **Attack** 10 · **Defense** 6 · **Health Levels** 13 · **Movement Rate** 18m (water only)
 
-**Bite / Ram**: 10, Melee
+**Bite / Ram**: 5, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -2598,7 +2598,7 @@ The only predator that hunts great white sharks, now scaled up to a size that ma
 
 **Soak** 6 · **Attack** 10 · **Defense** 7 · **Health Levels** 16 · **Movement Rate** 19m (water only)
 
-**Bite / Ram**: 10, Melee
+**Bite / Ram**: 5, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -2614,7 +2614,7 @@ It tracks a boat's engine noise from a distance no sonar operator expects, and r
 
 **Soak** 5 · **Attack** 10 · **Defense** 5 · **Health Levels** 12 · **Movement Rate** 16m (water only)
 
-**Bite / Ram**: 9, Melee
+**Bite / Ram**: 5, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -2634,7 +2634,7 @@ Not a single fish worth worrying about - the school is the threat. Dozens of sma
 
 **Soak** 0 · **Attack** 4 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m (water only)
 
-**Bite**: 3, Melee
+**Bite**: 2, Melee
 
 **Traits**: **Swarm** (as Rat Swarm, water-only). **Frenzy** - once any Health Level damage lands on a target in the water, the school's Bite rises to 5 for the rest of the encounter.
 
@@ -2648,7 +2648,7 @@ The individual fish have grown past what any aquarium description would call a p
 
 **Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m (water only)
 
-**Bite**: 5, Melee
+**Bite**: 3, Melee
 
 **Traits**: **Swarm** (as Rat Swarm, water-only). **Frenzy** - once any Health Level damage lands on a target in the water, the school's Bite rises to 7 for the rest of the encounter.
 
@@ -2662,7 +2662,7 @@ A stretch of river that strips a carcass to bone in under a minute, no matter th
 
 **Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m (water only)
 
-**Bite**: 8, Melee
+**Bite**: 4, Melee
 
 **Traits**: **Swarm** (as Rat Swarm, water-only). **Frenzy** - once any Health Level damage lands on a target in the water, the school's Bite rises to 10 for the rest of the encounter.
 
@@ -2676,7 +2676,7 @@ Bites that should have killed half the school instead seem to close over within 
 
 **Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 10m (water only)
 
-**Bite**: 3, Melee
+**Bite**: 2, Melee
 
 **Traits**: **Swarm** (as Rat Swarm, water-only). **Frenzy** - once any Health Level damage lands on a target in the water, the school's Bite rises to 5 for the rest of the encounter. **Regenerating** - heals 1 Health Level at the start of each of its turns.
 
@@ -2694,7 +2694,7 @@ Tolerates brackish and shallow water better than most sharks - which means it tu
 
 **Soak** 2 · **Attack** 6 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 12m (water only, including shallows)
 
-**Bite**: 6, Melee
+**Bite**: 3, Melee
 
 **Notable Skills**: Perception 7
 
@@ -2710,7 +2710,7 @@ The apex predator of open water, full stop. It's often close before it's noticed
 
 **Soak** 3 · **Attack** 7 · **Defense** 5 · **Health Levels** 8 · **Movement Rate** 14m (water only)
 
-**Bite**: 8, Melee
+**Bite**: 4, Melee
 
 **Notable Skills**: Perception 8
 
@@ -2726,7 +2726,7 @@ Comfortable in the same shallow water it always was, just a great deal harder to
 
 **Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 9 · **Movement Rate** 14m (water only, including shallows)
 
-**Bite**: 8, Melee
+**Bite**: 4, Melee
 
 **Notable Skills**: Perception 7
 
@@ -2742,7 +2742,7 @@ Boat captains who've clocked its length on sonar stop taking clients out past th
 
 **Soak** 4 · **Attack** 8 · **Defense** 6 · **Health Levels** 11 · **Movement Rate** 16m (water only)
 
-**Bite**: 10, Melee
+**Bite**: 5, Melee
 
 **Notable Skills**: Perception 8
 
@@ -2758,7 +2758,7 @@ Turns up in a river channel miles from the coast, in water that shouldn't hold a
 
 **Soak** 4 · **Attack** 7 · **Defense** 7 · **Health Levels** 12 · **Movement Rate** 15m (water only, including shallows)
 
-**Bite**: 10, Melee
+**Bite**: 5, Melee
 
 **Notable Skills**: Perception 7
 
@@ -2774,7 +2774,7 @@ The apex predator of open water just got a size class nothing else in that water
 
 **Soak** 5 · **Attack** 8 · **Defense** 7 · **Health Levels** 14 · **Movement Rate** 17m (water only)
 
-**Bite**: 10, Melee
+**Bite**: 5, Melee
 
 **Notable Skills**: Perception 8
 
@@ -2790,7 +2790,7 @@ A second row of fins has grown along its underside, letting it turn and strike i
 
 **Soak** 3 · **Attack** 7 · **Defense** 5 · **Health Levels** 8 · **Movement Rate** 12m (water only, including shallows)
 
-**Bite**: 6, Melee
+**Bite**: 3, Melee
 
 **Notable Skills**: Perception 7
 
@@ -2806,7 +2806,7 @@ The first taste of blood in the water only sharpens whatever comes next. It's sm
 
 **Soak** 4 · **Attack** 8 · **Defense** 5 · **Health Levels** 10 · **Movement Rate** 14m (water only)
 
-**Bite**: 8, Melee
+**Bite**: 4, Melee
 
 **Notable Skills**: Perception 8
 
@@ -2828,7 +2828,7 @@ Placid in a herd, catastrophic when charging. A full-grown bison looks slow and 
 
 **Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 11m
 
-**Gore / Trample**: 5, Melee
+**Gore / Trample**: 3, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -2844,7 +2844,7 @@ A herd animal that's outgrown the herd, and it doesn't wait for the rest to catc
 
 **Soak** 4 · **Attack** 7 · **Defense** 6 · **Health Levels** 10 · **Movement Rate** 13m
 
-**Gore / Trample**: 7, Melee
+**Gore / Trample**: 4, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -2860,7 +2860,7 @@ The ground shakes before it's even visible over the ridge line. At this size a s
 
 **Soak** 5 · **Attack** 7 · **Defense** 7 · **Health Levels** 13 · **Movement Rate** 14m
 
-**Gore / Trample**: 10, Melee
+**Gore / Trample**: 5, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -2876,7 +2876,7 @@ Dropping it doesn't end the danger - what happens next is best watched from well
 
 **Soak** 4 · **Attack** 7 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 11m
 
-**Gore / Trample**: 5, Melee
+**Gore / Trample**: 3, Melee
 
 **Notable Skills**: Athletics 9
 
@@ -2896,7 +2896,7 @@ Smaller and less consistently aggressive than a moose, same basic shape. It trav
 
 **Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 12m
 
-**Antlers / Hooves**: 4, Melee
+**Antlers / Hooves**: 2, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -2912,7 +2912,7 @@ The largest deer species, and surprisingly willing to fight when provoked. It st
 
 **Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 11m
 
-**Antlers / Hooves**: 5, Melee
+**Antlers / Hooves**: 3, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -2928,7 +2928,7 @@ Bigger, louder during rut, and considerably less likely to back off from a road 
 
 **Soak** 3 · **Attack** 6 · **Defense** 7 · **Health Levels** 8 · **Movement Rate** 14m
 
-**Antlers / Hooves**: 6, Melee
+**Antlers / Hooves**: 3, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -2944,7 +2944,7 @@ The rack alone is wider than most doorframes, and it's just as willing to fight 
 
 **Soak** 4 · **Attack** 7 · **Defense** 6 · **Health Levels** 10 · **Movement Rate** 13m
 
-**Antlers / Hooves**: 7, Melee
+**Antlers / Hooves**: 4, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -2960,7 +2960,7 @@ A rack that would need its own trailer, on an animal that's stopped being camera
 
 **Soak** 4 · **Attack** 6 · **Defense** 8 · **Health Levels** 11 · **Movement Rate** 15m
 
-**Antlers / Hooves**: 9, Melee
+**Antlers / Hooves**: 5, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -2976,7 +2976,7 @@ Drivers who've hit a normal moose describe the damage as bad. Nobody's walked aw
 
 **Soak** 5 · **Attack** 7 · **Defense** 7 · **Health Levels** 13 · **Movement Rate** 14m
 
-**Antlers / Hooves**: 10, Melee
+**Antlers / Hooves**: 5, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -2992,7 +2992,7 @@ It stands motionless at the treeline for so long that most people walk right pas
 
 **Soak** 3 · **Attack** 6 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 12m
 
-**Antlers / Hooves**: 4, Melee
+**Antlers / Hooves**: 2, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -3010,7 +3010,7 @@ The hide over its chest and flanks has hardened into something closer to bark th
 
 **Soak** 4 · **Attack** 7 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 11m
 
-**Antlers / Hooves**: 5, Melee
+**Antlers / Hooves**: 3, Melee
 
 **Notable Skills**: Athletics 8
 
@@ -3048,7 +3048,7 @@ Bigger than the terrain usually allows, though the coat and the caution are exac
 
 **Soak** 1 · **Attack** 3 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 12m
 
-**Bite**: 3, Melee
+**Bite**: 2, Melee
 
 **Notable Skills**: Stealth 9, Perception 8
 
@@ -3064,7 +3064,7 @@ Tracks in fresh snow the size of a wolf's, from an animal that's never been mist
 
 **Soak** 2 · **Attack** 3 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 13m
 
-**Bite**: 6, Melee
+**Bite**: 3, Melee
 
 **Notable Skills**: Stealth 9, Perception 8
 
@@ -3100,7 +3100,7 @@ Unlike most owls, hunts by day as often as by night. Nearly pure white with a ro
 
 **Soak** 0 · **Attack** 4 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 14m (flight)
 
-**Talons**: 2, Melee
+**Talons**: 1, Melee
 
 **Notable Skills**: Perception 9
 
@@ -3116,7 +3116,7 @@ The wingspan alone casts a shadow across the snow that most prey mistake for a c
 
 **Soak** 1 · **Attack** 5 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 16m (flight)
 
-**Talons**: 4, Melee
+**Talons**: 2, Melee
 
 **Notable Skills**: Perception 9
 
@@ -3132,7 +3132,7 @@ Research stations that track it by transponder alone still don't believe the win
 
 **Soak** 2 · **Attack** 5 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 17m (flight)
 
-**Talons**: 7, Melee
+**Talons**: 4, Melee
 
 **Notable Skills**: Perception 9
 
@@ -3148,7 +3148,7 @@ It hunts equally well against the glare of open snow at noon or in the dead dark
 
 **Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 14m (flight)
 
-**Talons**: 2, Melee
+**Talons**: 1, Melee
 
 **Notable Skills**: Perception 9
 

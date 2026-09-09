@@ -30,6 +30,14 @@ Gifts don't add a stat. Using one reaches for tools the game already has.
 
 None of the three is automatic. Each Gift, and each level of it, says which it uses, if any.
 
+### Attack Dice
+
+A Gift that attacks rolls **its Level plus half the sub-stat that powers it**, rounded down. The sub-stat is the one [Ki Infusion](rules.md#ki-infusion) already uses, so there is never a second question about which stat a Gift runs on: **Ferocity** for dice against Soak, **Presence** against Presence, **Psyche** against Psyche.
+
+This is why a Gift is worth its points. A weapon rolls what it rolls forever - the heaviest thing in the book is 5 dice and always will be. A Gift at Level 1 with a middling sub-stat rolls fewer dice than something you could buy, and a Gift you have actually invested in leaves every weapon behind. The points buy the curve, not the number.
+
+Dice built by a device or rolled by something you raised - a [Gadgeteer](#gadgeteer) gadget, a [Necromancy](#necromancy) thrall - are the exception, and stay on the ordinary scale. Those dice come from the thing, not from you.
+
 ## Gift List
 
 ### Alternate Form
@@ -180,11 +188,11 @@ Chosen once, at creation: **Always There** (visible and permanent - can't be hid
 
 | Level | Effect |
 |---|---|
-| 1 | Your claws or fangs deal **2d10**, resolved with the same per-die-vs-Soak mechanic as any weapon. Always available in Melee range - no action spent drawing or readying it. Always There costs nothing to use; Stowable triggers the Gift Check on each deployment. |
-| 2 | Damage rises to **3d10**. |
-| 3 | Damage rises to **4d10**. Additionally, you may spend **1 Ki** on a successful hit to add a minor rending effect - the wound bleeds, imposing Disadvantage on the target's next roll before it's tended to or the scene ends. |
-| 4 | Damage rises to **5d10**. The rending effect intensifies - Disadvantage now persists on all of the target's rolls until the wound is treated or the scene ends, not just their next one. |
-| 5 | Damage rises to **6d10**. The rending effect still costs 1 Ki per use. If Stowable was chosen, deploying your claws/fangs no longer triggers the Gift Check. |
+| 1 | Your claws or fangs deal **1 + half your Ferocity**, resolved with the same per-die-vs-Soak mechanic as any weapon. Always available in Melee range - no action spent drawing or readying it. Always There costs nothing to use; Stowable triggers the Gift Check on each deployment. |
+| 2 | Damage rises to **2 + half your Ferocity**. |
+| 3 | Damage rises to **3 + half your Ferocity**. Additionally, you may spend **1 Ki** on a successful hit to add a minor rending effect - the wound bleeds, imposing Disadvantage on the target's next roll before it's tended to or the scene ends. |
+| 4 | Damage rises to **4 + half your Ferocity**. The rending effect intensifies - Disadvantage now persists on all of the target's rolls until the wound is treated or the scene ends, not just their next one. |
+| 5 | Damage rises to **5 + half your Ferocity**. The rending effect still costs 1 Ki per use. If Stowable was chosen, deploying your claws/fangs no longer triggers the Gift Check. |
 
 **Adders**:
 
@@ -196,7 +204,7 @@ Chosen once, at creation: **Always There** (visible and permanent - can't be hid
 
 - **Feral Grip**: can't hold, use, or manipulate manufactured weapons or fine tools while your claws/fangs are deployed.
 - **One-Way Weapon**: the Stowable option is unavailable - your claws/fangs are always Always There, visible and permanent, no choice at creation.
-- **Fragile Edge**: your natural weapon's damage die drops by one step (6d10 caps at 5d10, etc.) against anything with Soak equal to or greater than your Potence.
+- **Fragile Edge**: your natural weapon rolls **one die fewer** against anything with Soak equal to or greater than your Potence.
 
 ### Conjured Armory
 
@@ -337,11 +345,11 @@ Your will can simply overwrite someone else's, at least for a moment. Look them 
 
 | Level | Effect |
 |---|---|
-| 1 | Requires eye contact. Spend **1 Ki** and roll **2d10** per-die against the target's Psyche wall - a connecting die lets you issue a single-word command ("stop," "sleep," "drop it") that they obey for one action or moment. Commands resulting in self-harm or serious injury automatically fail. |
-| 2 | Dice rise to **3d10**. Commands can now be full sentences rather than a single word, and can be complex - multi-step instructions, conditional logic, or nuanced requests - not just simple directives. |
-| 3 | Dice rise to **4d10**. You may implant a delayed/triggered command - it stays dormant until a specific condition you set occurs, then executes automatically. |
-| 4 | Dice rise to **5d10**. Repeated exposure builds suggestibility: each successful use of this Gift on the same person grants **Advantage** on your next attempt against them, cumulative and lasting until they're free of your influence for an extended stretch (GM's call). |
-| 5 | Dice rise to **6d10**. The self-harm/serious-injury safeguard no longer applies - commands can now be harmful, even lethal. |
+| 1 | Requires eye contact. Spend **1 Ki** and roll **1 + half your Psyche** dice per-die against the target's Psyche wall - a connecting die lets you issue a single-word command ("stop," "sleep," "drop it") that they obey for one action or moment. Commands resulting in self-harm or serious injury automatically fail. |
+| 2 | Dice rise to **2 + half your Psyche**. Commands can now be full sentences rather than a single word, and can be complex - multi-step instructions, conditional logic, or nuanced requests - not just simple directives. |
+| 3 | Dice rise to **3 + half your Psyche**. You may implant a delayed/triggered command - it stays dormant until a specific condition you set occurs, then executes automatically. |
+| 4 | Dice rise to **4 + half your Psyche**. Repeated exposure builds suggestibility: each successful use of this Gift on the same person grants **Advantage** on your next attempt against them, cumulative and lasting until they're free of your influence for an extended stretch (GM's call). |
+| 5 | Dice rise to **5 + half your Psyche**. The self-harm/serious-injury safeguard no longer applies - commands can now be harmful, even lethal. |
 
 As with any Mental attack, additional [Ki Infusion](rules.md#ki-infusion) (1 Ki per die) can push individual dice further by adding your own Psyche, per the usual rule.
 
@@ -432,11 +440,11 @@ Activating the aura is a Slow action. **Maintaining it requires a [Gift Check](#
 
 | Level | Effect |
 |---|---|
-| 1 | Before an incoming attack of your chosen element resolves, remove one quarter of its dice (rounded down), then resolve the rest normally against your Soak. Anyone who touches you takes 1d10 vs their Soak. |
-| 2 | Remove half of an incoming elemental attack's dice (rounded down) before it resolves. Contact damage rises to 2d10. |
-| 3 | Remove three quarters of an incoming elemental attack's dice (rounded down). The trigger widens from requiring actual touch to anyone striking you at Melee range - damage rises to 3d10. |
-| 4 | Full immunity - all dice from an incoming attack of your chosen element are removed before it resolves; nothing gets through. Contact/Melee damage rises to 4d10. The aura's presence extends to Close range: anyone nearby (not just attacking you) suffers a minor environmental effect fitting the element, GM-adjudicated to theme. |
-| 5 | Immunity persists. Damage rises to 5d10. The aura can be projected as an attack: spend **1 Ki** to strike a target at Near range without contact, same per-die-vs-Soak resolution - doing so on a turn skips that turn's maintenance Gift Check. |
+| 1 | Before an incoming attack of your chosen element resolves, remove one quarter of its dice (rounded down), then resolve the rest normally against your Soak. Anyone who touches you takes **1 + half your Ferocity** vs their Soak. |
+| 2 | Remove half of an incoming elemental attack's dice (rounded down) before it resolves. Contact damage rises to **2 + half your Ferocity**. |
+| 3 | Remove three quarters of an incoming elemental attack's dice (rounded down). The trigger widens from requiring actual touch to anyone striking you at Melee range - damage rises to **3 + half your Ferocity**. |
+| 4 | Full immunity - all dice from an incoming attack of your chosen element are removed before it resolves; nothing gets through. Contact/Melee damage rises to **4 + half your Ferocity**. The aura's presence extends to Close range: anyone nearby (not just attacking you) suffers a minor environmental effect fitting the element, GM-adjudicated to theme. |
+| 5 | Immunity persists. Damage rises to **5 + half your Ferocity**. The aura can be projected as an attack: spend **1 Ki** to strike a target at Near range without contact, same per-die-vs-Soak resolution - doing so on a turn skips that turn's maintenance Gift Check. |
 
 **Adders**:
 
@@ -510,11 +518,11 @@ You don't need to say a word to command a room's attention - it simply happens, 
 
 | Level | Effect |
 |---|---|
-| 1 | Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their [Social Defense](rules.md#defense-derived-stat)). On success, roll **2d10** per-die against their Presence wall - a connecting die locks their attention onto you for the scene: awe, dread, or fascination, your choice. No specific action compelled, just overwhelming presence. |
-| 2 | Dice rise to **3d10**. Effect now reaches everyone perceiving you within Close range - each target gets their own to-hit roll and, on success, their own dice vs. their Presence wall. |
-| 3 | Dice rise to **4d10**. You may split the effect's flavor by target in the same use - dread for hostiles, awe or magnetism for allies/bystanders. |
-| 4 | **No to-hit roll required anymore** - your presence is overwhelming enough that it simply rolls **5d10** per-die against the target's Presence wall directly. Repeated exposure builds a hold: each successful use on the same person grants **Advantage** on your next attempt against them, cumulative, lasting until they're away from you for an extended stretch (GM's call). |
-| 5 | Dice rise to **6d10**, still no to-hit roll needed. Range extends to everyone perceiving you within Near, and a natural 10 on any die (not just a connect) causes the target to freeze or flee outright for a Round, unable to act against you at all. |
+| 1 | Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their [Social Defense](rules.md#defense-derived-stat)). On success, roll **1 + half your Presence** dice per-die against their Presence wall - a connecting die locks their attention onto you for the scene: awe, dread, or fascination, your choice. No specific action compelled, just overwhelming presence. |
+| 2 | Dice rise to **2 + half your Presence**. Effect now reaches everyone perceiving you within Close range - each target gets their own to-hit roll and, on success, their own dice vs. their Presence wall. |
+| 3 | Dice rise to **3 + half your Presence**. You may split the effect's flavor by target in the same use - dread for hostiles, awe or magnetism for allies/bystanders. |
+| 4 | **No to-hit roll required anymore** - your presence is overwhelming enough that it simply rolls **4 + half your Presence** dice per-die against the target's Presence wall directly. Repeated exposure builds a hold: each successful use on the same person grants **Advantage** on your next attempt against them, cumulative, lasting until they're away from you for an extended stretch (GM's call). |
+| 5 | Dice rise to **5 + half your Presence**, still no to-hit roll needed. Range extends to everyone perceiving you within Near, and a natural 10 on any die (not just a connect) causes the target to freeze or flee outright for a Round, unable to act against you at all. |
 
 As with any Social attack, additional [Ki Infusion](rules.md#ki-infusion) (1 Ki per die) can push individual dice further by adding your own Presence, per the usual rule.
 
@@ -594,11 +602,11 @@ Given enough scrap, a workbench, and a spare few minutes, you can build almost a
 
 | Level | Effect |
 |---|---|
-| 1 | Given scrap and roughly an hour of focused work, roll **Air + Difficulty** (GM sets Difficulty by how complex the gadget is) to build one simple, single-function gadget - a lockpick set, a basic signal jammer, a simple sensor, a makeshift flashlight upgrade. It works reliably until broken or its narrow purpose is exhausted. No Ki cost. |
-| 2 | Build time drops to just a few minutes regardless of complexity. Gadgets can now have **two** functions instead of one, and may include a minor combat-relevant effect (a taser dealing 1d10, a personal shield granting +1 Soak, etc.) - combat-capable gadgets cost **1 Ki** to build; pure-utility gadgets stay free. |
+| 1 | Given scrap and roughly an hour of focused work, roll **Air + Difficulty** (GM sets Difficulty by how complex the gadget is) to build one simple, single-function gadget - a lockpick set, a basic signal jammer, a simple sensor, a makeshift flashlight upgrade. It works reliably until broken or its narrow purpose is exhausted. A gadget may carry a minor combat function (a taser dealing **1d10**, a shim granting **+1** Soak); those cost **1 Ki** to build, pure-utility ones are free. |
+| 2 | Build time drops to just a few minutes regardless of complexity. Gadgets can now have **two** functions instead of one, and a combat function rises to **3d10** damage or **+3** to a defensive stat. |
 | 3 | You can now build a gadget on the fly, mid-combat, as a single Fast or Normal action, improvising from whatever's on hand. Gadgets can have up to **three** functions. Combat-relevant gadgets scale up - **2d10** damage, or **+2** to a defensive stat. Ki cost for combat-capable gadgets rises to **2**. |
-| 4 | Building a gadget is now only a **Fast** action. Gadgets can have up to **four** functions. Combat-relevant gadgets scale to **3d10** damage or **+3** to a defensive stat. Ki cost for combat-capable gadgets rises to **3**. |
-| 5 | Combat-relevant gadgets scale to **4d10** damage or **+4** to a defensive stat. Gadgets can have up to **five** functions. Ki cost drops back to **2** for combat-capable gadgets. Additionally, once per session, you can build one extraordinary one-off device capable of a dramatic, GM-approved effect beyond the normal function cap - a signature invention. |
+| 4 | Building a gadget is now only a **Fast** action. Gadgets can have up to **four** functions. Combat-relevant gadgets scale to **4d10** damage or **+4** to a defensive stat. Ki cost for combat-capable gadgets rises to **3**. |
+| 5 | Combat-relevant gadgets scale to **5d10** damage or **+5** to a defensive stat. Gadgets can have up to **five** functions. Ki cost drops back to **2** for combat-capable gadgets. Additionally, once per session, you can build one extraordinary one-off device capable of a dramatic, GM-approved effect beyond the normal function cap - a signature invention. |
 
 **Adders**:
 
@@ -843,11 +851,11 @@ A memory is just a story your mind keeps telling itself. You've learned to walk 
 
 | Level | Effect |
 |---|---|
-| 1 | Requires touch. Spend **1 Ki**; make the standard to-hit roll (**Air** vs. their [Mental Defense](rules.md#defense-derived-stat)). On success, roll **2d10** per-die against their Psyche wall - a connecting die erases one specific, recent memory (something from the last few minutes: a name overheard, a face seen, this exact encounter). |
-| 2 | Dice rise to **3d10**. You may implant a simple false memory in place of the erased one, instead of leaving a blank. |
-| 3 | Dice rise to **4d10**. Range extends to **Close**, touch no longer required. You can now target older, more significant memories, not just recent ones. |
-| 4 | **No to-hit roll required anymore** - it simply rolls **5d10** per-die against the target's Psyche wall directly. |
-| 5 | Dice rise to **6d10**, still no to-hit roll. Once per Scene, an edit also scrubs any physical evidence of your involvement from the target's immediate perception - footage glitches, notes stop making sense to them, whatever would otherwise contradict the new memory. |
+| 1 | Requires touch. Spend **1 Ki**; make the standard to-hit roll (**Air** vs. their [Mental Defense](rules.md#defense-derived-stat)). On success, roll **1 + half your Psyche** dice per-die against their Psyche wall - a connecting die erases one specific, recent memory (something from the last few minutes: a name overheard, a face seen, this exact encounter). |
+| 2 | Dice rise to **2 + half your Psyche**. You may implant a simple false memory in place of the erased one, instead of leaving a blank. |
+| 3 | Dice rise to **3 + half your Psyche**. Range extends to **Close**, touch no longer required. You can now target older, more significant memories, not just recent ones. |
+| 4 | **No to-hit roll required anymore** - it simply rolls **4 + half your Psyche** dice per-die against the target's Psyche wall directly. |
+| 5 | Dice rise to **5 + half your Psyche**, still no to-hit roll. Once per Scene, an edit also scrubs any physical evidence of your involvement from the target's immediate perception - footage glitches, notes stop making sense to them, whatever would otherwise contradict the new memory. |
 
 **Adders**:
 
@@ -869,11 +877,11 @@ Chosen once, at creation, purely cosmetic: the form your raised dead take (bone 
 
 | Level | Effect |
 |---|---|
-| 1 | **Raise the Dead**: spend 1 Ki as a Slow action to raise up to **2** skeletal thralls from nearby remains. Each has Soak 1, Defense 5, Health Levels 2, your own Movement Rate, and a natural-weapon Attack of 1d10 (resolved per-die vs. Soak, same mechanic as any weapon). They act immediately after you in the turn order, taking a Fast or Normal action each round (never Slow), and have no Skills or Gifts of their own. They last until destroyed or dismissed. **Necrotic Touch**: as a Normal action, make a Physical attack (Attribute vs. Defense, as usual) dealing **2d10** vs. Soak - each connecting die heals you 1 Health Level (never past your maximum), drawing their vitality straight into your own. |
-| 2 | Raise up to **3** thralls at once. Necrotic Touch's dice rise to **3d10**. |
-| 3 | Raise up to **4** thralls at once, and each one's Attack rises to **2d10**. Necrotic Touch's dice rise to **4d10**. |
-| 4 | Raise up to **5** thralls at once. **Wither**: spend 1 Ki on a successful Necrotic Touch hit to also impose Disadvantage on the target's next roll, their strength visibly sapped. |
-| 5 | Necrotic Touch's dice rise to **6d10**. Once per Scene, spend **2 Ki** to unleash **Legion's Toll**: every thrall you currently command instantly unravels into a burst of necrotic force, each one making one last Attack roll against everyone within Melee range of it, then all are destroyed. |
+| 1 | **Raise the Dead**: spend 1 Ki as a Slow action to raise up to **2** skeletal thralls from nearby remains. Each has Soak 1, Defense 5, Health Levels 2, your own Movement Rate, and a natural-weapon Attack of 1d10 (resolved per-die vs. Soak, same mechanic as any weapon). They act immediately after you in the turn order, taking a Fast or Normal action each round (never Slow), and have no Skills or Gifts of their own. They last until destroyed or dismissed. **Necrotic Touch**: as a Normal action, make a Physical attack (Attribute vs. Defense, as usual) dealing **1 + half your Ferocity** vs. Soak - each connecting die heals you 1 Health Level (never past your maximum), drawing their vitality straight into your own. |
+| 2 | Raise up to **3** thralls at once. Necrotic Touch's dice rise to **2 + half your Ferocity**. |
+| 3 | Raise up to **4** thralls at once, and each one's Attack rises to **2d10**. Necrotic Touch's dice rise to **3 + half your Ferocity**. |
+| 4 | Raise up to **5** thralls at once. Necrotic Touch's dice rise to **4 + half your Ferocity**. **Wither**: spend 1 Ki on a successful Necrotic Touch hit to also impose Disadvantage on the target's next roll, their strength visibly sapped. |
+| 5 | Necrotic Touch's dice rise to **5 + half your Ferocity**. Once per Scene, spend **2 Ki** to unleash **Legion's Toll**: every thrall you currently command instantly unravels into a burst of necrotic force, each one making one last Attack roll against everyone within Melee range of it, then all are destroyed. |
 
 **Adders**:
 
@@ -922,11 +930,11 @@ Beyond command, beyond obedience - you can push your own consciousness into some
 
 | Level | Effect |
 |---|---|
-| 1 | Requires touch. Spend **1 Ki** and roll **2d10** per-die against the target's Psyche wall - a connecting die lets you possess their body for the rest of the scene. Your own body goes limp and undefended while you're away. |
-| 2 | Dice rise to **3d10**. Touch is no longer required - possession can be attempted at **Close range**. |
-| 3 | Dice rise to **4d10**. Range extends to **Near**. Possession duration becomes indefinite - lasting until you choose to return or are forcibly expelled, not capped at a scene. |
-| 4 | Dice rise to **5d10**. Range extends to **Far**. While possessing, you gain full access to the host's Skills, Boons, and other Gifts, using their body's full capability as your own. |
-| 5 | Dice rise to **6d10**. You may possess a new target instantly, snapping from one host directly into another without returning to your own body first, so long as you can make eye contact with the new target. |
+| 1 | Requires touch. Spend **1 Ki** and roll **1 + half your Psyche** dice per-die against the target's Psyche wall - a connecting die lets you possess their body for the rest of the scene. Your own body goes limp and undefended while you're away. |
+| 2 | Dice rise to **2 + half your Psyche**. Touch is no longer required - possession can be attempted at **Close range**. |
+| 3 | Dice rise to **3 + half your Psyche**. Range extends to **Near**. Possession duration becomes indefinite - lasting until you choose to return or are forcibly expelled, not capped at a scene. |
+| 4 | Dice rise to **4 + half your Psyche**. Range extends to **Far**. While possessing, you gain full access to the host's Skills, Boons, and other Gifts, using their body's full capability as your own. |
+| 5 | Dice rise to **5 + half your Psyche**. You may possess a new target instantly, snapping from one host directly into another without returning to your own body first, so long as you can make eye contact with the new target. |
 
 As with any Mental attack, additional [Ki Infusion](rules.md#ki-infusion) (1 Ki per die) can push individual dice further by adding your own Psyche, per the usual rule.
 
@@ -972,11 +980,11 @@ You don't issue one-off commands - that's Domination's territory. You set the ru
 
 | Level | Effect |
 |---|---|
-| 1 | Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their [Social Defense](rules.md#defense-derived-stat)). On success, roll **2d10** per-die against their Presence wall - a connecting die binds them to one simple rule of conduct you declare ("don't raise your voice," "don't lie to me," "don't draw a weapon") for the rest of the Scene. Breaking the rule costs them **Disadvantage** on the roll that breaks it. |
-| 2 | Dice rise to **3d10**. You may declare up to two rules at once on the same target. |
-| 3 | Dice rise to **4d10**. You may bind up to **two targets** at once, each resolved individually against their own Presence wall and their own rule set. |
-| 4 | **No to-hit roll required anymore** - it simply rolls **5d10** per-die against each target's Presence wall directly. Up to **three targets** at once, each able to hold up to **three rules**. |
-| 5 | Dice rise to **6d10**, still no to-hit roll needed. Up to **five targets** at once. Duration extends to a full Day instead of just the Scene. |
+| 1 | Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their [Social Defense](rules.md#defense-derived-stat)). On success, roll **1 + half your Presence** dice per-die against their Presence wall - a connecting die binds them to one simple rule of conduct you declare ("don't raise your voice," "don't lie to me," "don't draw a weapon") for the rest of the Scene. Breaking the rule costs them **Disadvantage** on the roll that breaks it. |
+| 2 | Dice rise to **2 + half your Presence**. You may declare up to two rules at once on the same target. |
+| 3 | Dice rise to **3 + half your Presence**. You may bind up to **two targets** at once, each resolved individually against their own Presence wall and their own rule set. |
+| 4 | **No to-hit roll required anymore** - it simply rolls **4 + half your Presence** dice per-die against each target's Presence wall directly. Up to **three targets** at once, each able to hold up to **three rules**. |
+| 5 | Dice rise to **5 + half your Presence**, still no to-hit roll needed. Up to **five targets** at once. Duration extends to a full Day instead of just the Scene. |
 
 Ki Infusion still applies on top, same as any Social attack.
 
@@ -1114,11 +1122,11 @@ The wall you pick also picks your to-hit target, because there are three Defense
 
 | Level | Effect |
 |---|---|
-| 1 | If an attack: deals **1d10** vs the target's chosen wall. If non-damaging: produces one small, clearly-bounded effect (GM approval on scope). Using it is a Fast action. No Ki cost, no Gift Check. |
-| 2 | Damage rises to **2d10** (if an attack); the non-damaging effect's scope widens (still GM-approved, but a real step up from Level 1). Using the Move now costs **1 Ki**, in addition to the Fast action - that Ki spend is what bakes in one minor secondary effect layered onto the base Move (a small knockback, a brief off-balance status, a minor debuff). |
-| 3 | Damage rises to **3d10**. Range extends from Melee to **Close** (Levels 1-2 were Melee-only). The secondary effect from Level 2 upgrades to a moderate tier (a real knockdown, a genuine debuff, a short status lock, rather than just "brief"). Still 1 Ki per use. |
-| 4 | Damage rises to **4d10**. Range extends to **Near**. The secondary effect upgrades to a major tier (a real status condition, a significant forced reposition, a debuff with teeth). Ki cost rises to **2** per use. |
-| 5 | Damage rises to **5d10**. Range extends to **Far**. The secondary effect reaches its full, signature-defining scope (GM-approved - a finishing blow, a reality-bending flourish, whatever fits the Move you built). Ki cost rises to **3** per use. |
+| 1 | If an attack: deals **1 + half your attack sub-stat** vs the target's chosen wall. If non-damaging: produces one small, clearly-bounded effect (GM approval on scope). Using it is a Fast action. No Ki cost, no Gift Check. |
+| 2 | Damage rises to **2 + half your attack sub-stat** (if an attack); the non-damaging effect's scope widens (still GM-approved, but a real step up from Level 1). Using the Move now costs **1 Ki**, in addition to the Fast action - that Ki spend is what bakes in one minor secondary effect layered onto the base Move (a small knockback, a brief off-balance status, a minor debuff). |
+| 3 | Damage rises to **3 + half your attack sub-stat**. Range extends from Melee to **Close** (Levels 1-2 were Melee-only). The secondary effect from Level 2 upgrades to a moderate tier (a real knockdown, a genuine debuff, a short status lock, rather than just "brief"). Still 1 Ki per use. |
+| 4 | Damage rises to **4 + half your attack sub-stat**. Range extends to **Near**. The secondary effect upgrades to a major tier (a real status condition, a significant forced reposition, a debuff with teeth). Ki cost rises to **2** per use. |
+| 5 | Damage rises to **5 + half your attack sub-stat**. Range extends to **Far**. The secondary effect reaches its full, signature-defining scope (GM-approved - a finishing blow, a reality-bending flourish, whatever fits the Move you built). Ki cost rises to **3** per use. |
 
 **Adders**:
 
@@ -1236,11 +1244,11 @@ Minds are not as private as people think - not to you. You can brush against ano
 
 | Level | Effect |
 |---|---|
-| 1 | Roll **Air + Difficulty** to read someone's general emotional state - fear, anger, deception, attraction, whatever's closest to the surface - requires them to be within Close range and perceivable to you. Success reveals the surface emotion; no specific thoughts, just the feeling underneath. No Ki, no Gift Check. |
-| 2 | Range extends to **Near**. You can now read surface, unguarded thoughts as well as emotions - still resolved as Air + Difficulty; a target actively resisting simply raises the Difficulty (GM's call), not yet a contested roll. |
-| 3 | Range extends to **Far**. Against a target actively resisting, you may now spend **1 Ki** to force the read as a genuine **Mental attack** - roll **4d10** per-die against their Psyche wall, breaching through to their surface thoughts and emotions on a connecting die. |
-| 4 | The forced read strengthens to **5d10**. You can now project your own thoughts into a target's mind as well as read theirs - a genuine two-way telepathic link. For a willing or aware participant, this works at **Line of Sight** (as far as you can see them, not bound by the normal Range Bands). Forcing a read on an unwilling target (the Level 3 Mental attack) is capped at **Near**. Forced reads can now dig into deeper memories and guarded secrets, not just surface thoughts. Ki cost for forced reads stays **1**. |
-| 5 | Forced-read range extends back out to **Far**. Additionally, once you've established a genuine two-way link with someone (even briefly), you retain a limited telepathic connection to them indefinitely afterward - no range limit at all, a permanent bond once formed. Ki cost for forced reads drops to **0**. |
+| 1 | Against a target actively resisting, spend **1 Ki** to force the read as a genuine **Mental attack** - **1 + half your Psyche** dice per-die against their Psyche wall, breaching to their surface thoughts on a connecting die. Otherwise, roll **Air + Difficulty** to read someone's general emotional state - fear, anger, deception, attraction, whatever's closest to the surface - requires them to be within Close range and perceivable to you. Success reveals the surface emotion; no specific thoughts, just the feeling underneath. No Ki, no Gift Check. |
+| 2 | Range extends to **Near**. The forced read rises to **2 + half your Psyche** dice. You can now read surface, unguarded thoughts as well as emotions - still resolved as Air + Difficulty; a target actively resisting simply raises the Difficulty (GM's call), not yet a contested roll. |
+| 3 | Range extends to **Far**. The forced read rises to **3 + half your Psyche** dice. |
+| 4 | The forced read strengthens to **4 + half your Psyche**. You can now project your own thoughts into a target's mind as well as read theirs - a genuine two-way telepathic link. For a willing or aware participant, this works at **Line of Sight** (as far as you can see them, not bound by the normal Range Bands). Forcing a read on an unwilling target (the Level 3 Mental attack) is capped at **Near**. Forced reads can now dig into deeper memories and guarded secrets, not just surface thoughts. Ki cost for forced reads stays **1**. |
+| 5 | The forced read rises to **5 + half your Psyche** dice, and its range extends back out to **Far**. Additionally, once you've established a genuine two-way link with someone (even briefly), you retain a limited telepathic connection to them indefinitely afterward - no range limit at all, a permanent bond once formed. Ki cost for forced reads drops to **0**. |
 
 **Adders**:
 

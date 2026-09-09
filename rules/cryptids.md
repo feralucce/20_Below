@@ -46,7 +46,7 @@ Big enough that most encounters end with it walking away rather than fighting - 
 
 **Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 10m
 
-**Fists / Thrown Debris**: 5, Melee or Close
+**Fists / Thrown Debris**: 3, Melee or Close
 
 **Notable Skills**: Stealth 9, Athletics 9
 
@@ -62,7 +62,7 @@ Ranchers lose livestock to it long before anyone gets a clear look. It's low-slu
 
 **Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 9m
 
-**Bite / Talons**: 3, Melee
+**Bite / Talons**: 2, Melee
 
 **Notable Skills**: Stealth 9, Perception 7
 
@@ -78,7 +78,7 @@ Shows up before something goes wrong, or that's how the stories always get told 
 
 **Soak** 1 · **Attack** 4 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 16m (flight)
 
-**Claws**: 2, Melee (rarely used)
+**Claws**: 1, Melee (rarely used)
 
 **Notable Skills**: Stealth 8, Perception 10
 
@@ -94,7 +94,7 @@ Hooved, winged, and loud about it - the scream carries farther than the sighting
 
 **Soak** 2 · **Attack** 5 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 14m (flight)
 
-**Claws / Bite**: 4, Melee
+**Claws / Bite**: 2, Melee
 
 **Notable Skills**: Stealth 8, Intimidation 8
 
@@ -110,7 +110,7 @@ Every deep, cold lake seems to have one story like it. This is the generic write
 
 **Soak** 4 · **Attack** 6 · **Defense** 4 · **Health Levels** 8 · **Movement Rate** 10m (water only)
 
-**Bite / Crush**: 6, Melee
+**Bite / Crush**: 3, Melee
 
 **Traits**: **Ambush from Depth** - Advantage on its first attack if it was submerged and undetected beforehand. Cannot leave the water.
 
@@ -124,7 +124,7 @@ Wingspan alone is enough to convince most witnesses they saw something that shou
 
 **Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 18m (flight)
 
-**Talons**: 6, Melee
+**Talons**: 3, Melee
 
 **Notable Skills**: Perception 9
 
@@ -140,7 +140,7 @@ Upright when it wants distance covered fast, on all fours when it wants to close
 
 **Soak** 2 · **Attack** 6 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 12m
 
-**Claws / Bite**: 5, Melee
+**Claws / Bite**: 3, Melee
 
 **Notable Skills**: Athletics 9, Stealth 8
 
@@ -156,7 +156,7 @@ Squat, spined, and stubborn about its territory - the Wisconsin logging camps th
 
 **Soak** 3 · **Attack** 4 · **Defense** 4 · **Health Levels** 5 · **Movement Rate** 5m
 
-**Spines / Bite**: 4, Melee
+**Spines / Bite**: 2, Melee
 
 **Traits**: **Den Ambush** - Advantage on the first attack against anything that enters Close range of its den.
 
@@ -200,7 +200,7 @@ Roadside sightings, always at night, always gone by the time headlights swing ba
 
 **Soak** 2 · **Attack** 6 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 12m
 
-**Claws / Bite**: 4, Melee
+**Claws / Bite**: 2, Melee
 
 **Notable Skills**: Perception 8, Athletics 8
 
@@ -216,7 +216,7 @@ Reeds and riverbanks hide it well enough that most reports are just a shape and 
 
 **Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 8m (12m in water)
 
-**Claws**: 3, Melee
+**Claws**: 2, Melee
 
 **Notable Skills**: Stealth 8, Athletics 8
 
@@ -246,7 +246,7 @@ Small, pale, all-limbs humanoids that come out at night in numbers and don't sca
 
 **Soak** 0 · **Attack** 3 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 6m
 
-**Claws / Small Blades**: 2, Melee
+**Claws / Small Blades**: 1, Melee
 
 **Notable Skills**: Stealth 9
 
@@ -262,7 +262,7 @@ The joke wears off the first time one actually charges. It looks exactly like th
 
 **Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 3 · **Movement Rate** 14m
 
-**Antlers**: 4, Melee
+**Antlers**: 2, Melee
 
 **Notable Skills**: Athletics 10
 
@@ -278,7 +278,7 @@ Lives on and under a rail trestle, and the voice it throws is the only reason an
 
 **Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 10m
 
-**Claws / Hooves**: 4, Melee
+**Claws / Hooves**: 2, Melee
 
 **Notable Skills**: Stealth 8
 
@@ -294,7 +294,7 @@ North Carolina livestock turn up dead with barely a mark on them and no tracks w
 
 **Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 10m
 
-**Bite**: 5, Melee
+**Bite**: 3, Melee
 
 **Notable Skills**: Stealth 9
 
@@ -310,7 +310,7 @@ The howl reaches farther than the animal ever does, which is exactly why nobody 
 
 **Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 11m
 
-**Bite / Claws**: 4, Melee
+**Bite / Claws**: 2, Melee
 
 **Notable Skills**: Intimidation 8, Stealth 7
 
