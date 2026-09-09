@@ -1,5 +1,6 @@
 import { el, renderMarkdown, renderMarkdownInline as inline } from '../ui.js';
 import {
+  applyVitalFloor,
   computeFiguredCharacteristics,
   skillTierName,
   initPlayState,
@@ -378,10 +379,12 @@ function buildHeader(state, data, figured, { interactive = false, refresh = () =
   };
   const setPoise = (v) => {
     state.currentPoise = Math.min(figured.Poise, v);
+    applyVitalFloor(state, 'Poise', figured.Poise, figured);
     refresh();
   };
   const setSanity = (v) => {
     state.currentSanity = Math.min(figured.Sanity, v);
+    applyVitalFloor(state, 'Sanity', figured.Sanity, figured);
     refresh();
   };
   const setKi = (v) => {

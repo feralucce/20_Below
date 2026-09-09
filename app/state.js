@@ -830,19 +830,53 @@ export function sanityStatus(current) {
   return current === 0 ? 'Overwhelmed' : null;
 }
 
-// Short Rest and Full Night's Rest recovery (see rules.md#health-level-recovery,
-// #sanity, #ki). Health, Sanity, and Poise share the same below-0 exception,
-// confirmed 2026-08-14 (Health/Sanity) and extended to Poise 2026-08-20: any
-// rest, Short or Full, only recovers 1 Level and caps at 0 - never the normal
-// partial rate, never a full heal, while already below 0.
+// Poise and Sanity have a bottom; Health's bottom is death and needs no
+// bookkeeping (rules.md#poise, #sanity). Reaching -(full) resets the Vital to
+// 0 - back to Flustered or Overwhelmed, not healed - and charges for it.
 //
-// A Short Rest always recovers at least 1, even at 0 in the governing
-// sub-stat (Math.ceil(0 / 2) would otherwise be 0, healing nothing) -
-// confirmed 2026-08-24, applies above 0 only; the below-0 case already
-// always recovers exactly 1.
-function restLevel(current, max, subStatValue, isFullRest) {
-  if (current < 0) {
-    return Math.min(0, current + 1);
+// This lives here rather than beside the combat tracker so the creator and
+// the tracker cannot disagree about when a floor fires.
+export function applyVitalFloor(target, track, max, figured) {
+  const key = 'current' + track;
+  if (track === 'Poise' && target[key] <= -max) {
+    target[key] = 0;
+    // The Sanity Level the floor costs is itself a Vital change, so it can
+    // push Sanity onto its own floor - hence the recursive call rather than
+    // a bare decrement.
+    target.currentSanity -= 1;
+    noteFloor(target, 'Poise floor: reset to 0, took 1 Sanity');
+    applyVitalFloor(target, 'Sanity', figured.Sanity, figured);
+    return;
+  }
+  if (track === 'Sanity' && target[key] <= -max) {
+    target[key] = 0;
+    noteFloor(target, 'Sanity floor: reset to 0, temporary mental health condition');
+  }
+}
+
+// A Poise floor can knock Sanity onto its own floor in the same stroke.
+// Both happened, so both are reported.
+function noteFloor(target, text) {
+  target.floorNote = target.floorNote ? target.floorNote + ' + ' + text : text;
+}
+
+// Short Rest and Full Night's Rest recovery (rules.md#health-level-recovery,
+// #poise, #sanity, fate.md#ki-the-pool).
+//
+// Above 0 all three Vitals behave the same: half the governing sub-stat
+// rounded up on a Short Rest, minimum 1 (Math.ceil(0 / 2) would otherwise
+// heal nothing at sub-stat 0), and back to full on a Full Night's Rest.
+//
+// Below 0 they part company, and this is where the old single rule was wrong.
+// A body does not knit in an hour: Health recovers NOTHING from a Short Rest
+// and exactly one Level from a full night. A reputation and a mind turn a
+// corner faster, so either rest puts Poise or Sanity back to 1 - not to full,
+// and normal rates resume from there.
+function restLevel(track, current, max, subStatValue, isFullRest) {
+  if (track === 'Health') {
+    if (current < 0) return isFullRest ? Math.min(0, current + 1) : current;
+  } else if (current < 0) {
+    return 1;
   }
   if (isFullRest) return max;
   return Math.min(max, current + Math.max(1, Math.ceil(subStatValue / 2)));
@@ -851,9 +885,9 @@ function restLevel(current, max, subStatValue, isFullRest) {
 export function applyRest(state, isFullRest) {
   const figured = computeFiguredCharacteristics(state);
   const s = state.subStats;
-  state.currentHealth = restLevel(state.currentHealth, figured['Health Levels'], s.Health, isFullRest);
-  state.currentSanity = restLevel(state.currentSanity, figured.Sanity, s.Psyche, isFullRest);
-  state.currentPoise = restLevel(state.currentPoise, figured.Poise, s.Presence, isFullRest);
+  state.currentHealth = restLevel('Health', state.currentHealth, figured['Health Levels'], s.Health, isFullRest);
+  state.currentSanity = restLevel('Sanity', state.currentSanity, figured.Sanity, s.Psyche, isFullRest);
+  state.currentPoise = restLevel('Poise', state.currentPoise, figured.Poise, s.Presence, isFullRest);
   state.currentKi = isFullRest
     ? figured.Ki
     : Math.min(figured.Ki, state.currentKi + Math.max(1, s.Klotho));

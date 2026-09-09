@@ -10,6 +10,7 @@
 // Rules math is imported rather than reimplemented, so this can't drift
 // from the character creator on what Dead or Shattered actually mean.
 import {
+  applyVitalFloor,
   computeFiguredCharacteristics,
   healthStatus,
   poiseStatus,
@@ -17,7 +18,7 @@ import {
 } from '../state.js';
 import { rollD10 } from '../roller/core.js';
 
-export { computeFiguredCharacteristics };
+export { computeFiguredCharacteristics, applyVitalFloor };
 
 export const ROLES = ['PC', 'Ally', 'NPC'];
 export const BRACKETS = ['Slow', 'Normal', 'Fast'];
@@ -218,34 +219,6 @@ export function adjustTrack(combat, character, track, delta) {
   e.floorNote = null;
   applyVitalFloor(e, track, max, f);
   return e[key];
-}
-
-// Poise and Sanity have a bottom; Health's bottom is death and needs no
-// bookkeeping. Reaching -(full) resets the Vital to 0 - back to Flustered or
-// Overwhelmed, not healed - and charges for it. The note is what the GM sees;
-// it clears on the next adjustment.
-export function applyVitalFloor(e, track, max, f) {
-  const key = 'current' + track;
-  if (track === 'Poise' && e[key] <= -max) {
-    e[key] = 0;
-    // The Sanity Level the floor costs is itself a Vital change, so it can
-    // push Sanity onto its own floor - hence the recursive call rather than
-    // a bare decrement.
-    e.currentSanity -= 1;
-    noteFloor(e, 'Poise floor: reset to 0, took 1 Sanity');
-    applyVitalFloor(e, 'Sanity', f.Sanity, f);
-    return;
-  }
-  if (track === 'Sanity' && e[key] <= -max) {
-    e[key] = 0;
-    noteFloor(e, 'Sanity floor: reset to 0, temporary mental health condition');
-  }
-}
-
-// A Poise floor can knock Sanity onto its own floor in the same stroke.
-// Both happened, so the GM is told about both.
-function noteFloor(e, text) {
-  e.floorNote = e.floorNote ? e.floorNote + ' + ' + text : text;
 }
 
 export function trackStatus(track, value, character) {
