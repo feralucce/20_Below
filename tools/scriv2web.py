@@ -330,7 +330,7 @@ def relist(body, lists):
                    and body[i].strip("*: ").strip() not in LABELS
                    and not LEVEL_LINE.match(body[i])):
                 i += 1
-        elif label == "Pool by Level":
+        elif label == "Pool by Level":  # noqa: E501 - branch continues below
             while i < len(body) and POOL_ROW.match(body[i]):
                 i += 1
         elif label == "Build menu":
@@ -340,6 +340,11 @@ def relist(body, lists):
                     and "\n" not in body[i] and not POOL_ROW.match(body[i]))
             ):
                 i += 1
+    # A Gift written into the manuscript as prose only, with no ladder under
+    # it, still gets its ladder: the rules file is where Levels live, so a new
+    # entry needs its flavour and its Adders written here and nothing else.
+    if lists.get("Levels") and not any(LEVEL_LINE.match(c) for c in body):
+        out.append(lists["Levels"])
     return out
 
 
