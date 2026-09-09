@@ -77,6 +77,7 @@ A starting Skill list scoped to a **modern-world base campaign**. Per [skills.md
 | Public Speaking | Fire | Commanding a room and structuring a spoken argument, distinct from theatrical Performance. |
 | Religion | Moira | Theology, doctrine, and religious practice. |
 | Research | Air | Finding information through records, libraries, databases, and open sources - distinct from scene-based Investigation. |
+| Ridicule | Fire | Mockery, insult, and the cutting remark - roasting, trash talk, and the dozens. Distinct from Intimidation, which threatens, and from Performance, which plays to a room rather than at somebody in it. |
 | Ritual Craft | Moira | Conducting rites, wards, and ceremonies meant to bind, invoke, or appease the supernatural - the hands-on practice of doing the working, distinct from Occult's theory of what it means. |
 | Science | Air | Broad scientific knowledge, covering any discipline (chemistry, biology, astrophysics, and so on) under one Skill. |
 | Seduction | Fire | Winning someone over through romantic or physical appeal. |
