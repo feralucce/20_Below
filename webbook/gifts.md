@@ -1050,6 +1050,36 @@ Chosen once, at creation, purely cosmetic: the form your raised dead take (bone 
 
 <div class="entry entry-headed" markdown="1">
 
+## Onslaught
+
+<p class="entry-flavour">You have one way of hurting people at arm’s length and you are very good at it. A blade that slides out of the forearm, a fist, a dagger carried since you were fourteen. What it is, is yours to say. Nobody who has been on the wrong end of it has ever thought the description was the important part.</p>
+
+**Adders**
+
+- **Follow Through** (Lesser, 3 pts): when an attack drops a target to 0, attack a second target in Melee range immediately, no action cost.
+- **Off the Wrong Foot** (Lesser, 3 pts): one extra die against a target who hasn't acted yet this combat.
+- **Nothing Held Back** (Greater, 6 pts): spend 1 Ki to add your Potence to every die of a single attack, not just the ones Ki Infusion buys.
+- **Sweep** (Greater, 6 pts): spend **1 Ki** on top of the attack's own cost to swing at **every** target in Melee range with the full pool, each resolved against their own Soak.
+
+**Limiters**
+
+- **Wind-Up**: attacking with it is always a Normal action, never a Fast one, whatever else would otherwise allow it.
+- **Takes a Toll**: once you are below half your Health Levels, each use costs 1 unsoakable Health Level.
+- **Only in Anger**: unusable in any round you haven't already been attacked in, or in a fight you started.
+
+**1** - Spend **1 Ki** to attack anything in **Melee** range for **1 + half your Ferocity** dice, resolved per-die against Soak like any weapon. No Gift Check, at this or any Level.
+
+**2** - **2 + half your Ferocity** dice.
+
+**3** - **3 + half your Ferocity** dice.
+
+**4** - **4 + half your Ferocity** dice.
+
+**5** - **5 + half your Ferocity** dice.
+</div>
+
+<div class="entry entry-headed" markdown="1">
+
 ## Peripheral
 
 <p class="entry-flavour">You fade out of notice and out of memory. Not invisibility - people can see you perfectly well if they look - but nothing about you holds attention or survives the walk to the car afterward. Witnesses describe somebody. They never manage to describe you.</p>
@@ -1261,6 +1291,36 @@ Additionally, given a full **Month** of rest, you can heal away a below-zero Fla
 **4** - Passive recovery improves further to 1 Health Level per **Round** of dedicated rest (near-instant between exchanges). The Ki-spend combat heal from Level 3 can now be used twice per Round.
 
 **5** - Given a full **Day** of rest, you can recover from even normally-permanent harm - a lost limb, lasting disfigurement. Ki cost for the combat heal drops to **0**.
+</div>
+
+<div class="entry entry-headed" markdown="1">
+
+## Salvo
+
+<p class="entry-flavour">Distance stopped being an argument you have to win. Something crosses the gap - a shard of ice, a look held half a second too long, a sound pitched under hearing - and what it lands on comes apart. People who have only heard about you assume there must be a weapon. There is always a weapon. It is just not the kind anyone thinks to look for.</p>
+
+**Adders**
+
+- **Through and Through** (Lesser, 3 pts): on a hit, one connecting die also connects against a second target directly behind the first.
+- **Scatter** (Greater, 6 pts): spend **1 Ki** on top of the attack's own cost to split its dice between any two targets in range, each resolved against their own Soak. The pool is divided, not doubled.
+- **No Warning** (Lesser, 3 pts): whatever crosses the gap can't be perceived until it lands. A target who hasn't already spotted you can't tell where the attack came from.
+- **Held Breath** (Greater, 6 pts): spend 1 Ki to loose it as a **Fast action** without giving up the rest of your Normal action.
+
+**Limiters**
+
+- **Line of Sight Only**: nothing through smoke, darkness, or anything else that breaks a clear view, whatever your other senses would allow.
+- **Tell-Tale**: every use leaves an obvious trace pointing back at you. Anyone looking knows who did it.
+- **Winds Down**: after the third use in a Scene, every further use costs 1 Ki.
+
+**1** - Spend **1 Ki** to attack one target out to **Far** range for **1 + half your Ferocity** dice, resolved per-die against Soak like any weapon. No Gift Check, at this or any Level.
+
+**2** - **2 + half your Ferocity** dice.
+
+**3** - **3 + half your Ferocity** dice.
+
+**4** - **4 + half your Ferocity** dice.
+
+**5** - **5 + half your Ferocity** dice.
 </div>
 
 <div class="entry entry-headed" markdown="1">
