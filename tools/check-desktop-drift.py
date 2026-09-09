@@ -94,8 +94,18 @@ def newest_tag(pattern):
 def changed(tag, paths, not_ours=()):
     if not paths:
         return []
-    out = git("diff", "--name-only", "%s..HEAD" % tag, "--", *paths)
-    return [f for f in out.split("\n")
+    # One ref, not a range: compares the tag against the WORKING TREE, so a
+    # change still sitting uncommitted counts. Comparing tag..HEAD instead
+    # answers only for committed work, which is never the question being
+    # asked - you run this to decide whether what you have needs a release.
+    out = git("diff", "--name-only", tag, "--", *paths)
+    # diff never reports untracked files; a brand-new app file is code too.
+    untracked = git("ls-files", "--others", "--exclude-standard", "--", *paths)
+    if untracked:
+        out = out + chr(10) + untracked if out else untracked
+    # A file can arrive from both the diff and the untracked list.
+    seen = dict.fromkeys(out.split("\n"))
+    return [f for f in seen
             if f and f not in DEV_ONLY
             and not any(f.startswith(prefix) for prefix in not_ours)]
 
