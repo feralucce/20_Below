@@ -60,7 +60,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Fast Action** — The Fast bracket. You go before everyone in Normal or Slow, but you only get the one action - a move, an attack, or a single Skill use. You’re trading how much you do for going first.
 
-**Fate Token** — The currency you earn and spend. You pick them up from your Nature, from taking Disadvantage on purpose, from your Flaws, from a daily top-up, from story Milestones, or whenever the GM hands one over. You spend them on Kotodama or the Fate Triggers. You can hold three times your Stamina and no more — anything earned at that cap is lost rather than banked.
+**Fate Token** — The currency you earn and spend. You pick them up from your Nature, from taking Disadvantage on purpose, from your Flaws, from a daily top-up, from story Milestones, or whenever the GM hands one over. You spend them on Kotodama or the Fate Triggers. You can hold three times your Stamina and no more - anything earned at that cap is lost rather than banked.
 
 **Fate Triggers** — The things a Fate Token buys: a Kotodama, shrugging off one of your Flaws for a Scene, an automatic success, Advantage on a roll, shrugging off a condition, or a full Ki refill. Spending the Token is the whole cost - nothing else is rolled.
 
@@ -88,7 +88,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Initiative** — One of Air’s two sub-stats, the flick of readiness that decides who moves first. You roll it once at the start of a fight - 1d10 plus your Initiative - and that order holds for the whole thing. Sample descriptors: Alert, Reflexive, Vigilant, Sharp-Eyed, Quick, and so on.
 
-**Ki** — The pool that powers everything supernatural. It’s your strongest Element plus 8, so every character has one worth spending - 13 at the least, 18 at the most. You spend it to save a Health or Sanity Level, to put more behind an attack, to move up an Action Bracket, and to use most Gifts. A Short Rest brings back Klotho points of it; a full night brings it all back.
+**Ki** — The pool that powers everything supernatural. It’s your strongest Element plus 8, so every character has one worth spending - 13 at the least, 18 at the most. You spend it to save a Health, Poise or Sanity Level, to put more behind an attack, to move up an Action Bracket, and to use most Gifts. Below 0 it brings Poise or Sanity back to 1 without waiting for a rest. A Short Rest brings back Klotho points of it; a full night brings it all back.
 
 **Ki Infusion** — Paying 1 Ki per die to add a sub-stat - Ferocity, Presence, or Psyche, whichever matches the attack - to that die. You roll the damage dice first and then choose which to boost, so nothing is spent on a die that already got through. It’s how you push a hit through a wall that would otherwise stop it cold.
 
@@ -130,7 +130,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Resource Check** — A roll to lean on a Resource harder than its Level covers for free. Roll 2d10 against the Resource’s Level plus Difficulty, under to pass. Pass and it costs nothing. Fail and you still get what you were after, but the Resource drops a Level (never below 1) until a Month goes by.
 
-**Rests** — Two ways to recover. A Short Rest is about an hour of real downtime, and you only get the benefit of one between full nights. A Full Night’s Rest is a proper night’s sleep. Health, Sanity, Poise, and Ki all come back on both, each at its own pace.
+**Rests** — Two ways to recover. A Short Rest is about an hour of real downtime, and you only get the benefit of one between full nights. A Full Night’s Rest is a proper night’s sleep. Above 0 a Short Rest gives back half the governing sub-stat, rounded up, and a full night gives everything back. Below 0 the rates stop: Health gets nothing from a Short Rest and exactly one Level from a full night, while Poise and Sanity come back to 1 on either, or for 1 Ki.
 
 **Sanity** — Your grip on your own mind under a Mental attack, tracked as boxes like Health. You have 5 plus your Psyche. At 0 you’re Overwhelmed; below 0, Shattered. The row runs the same distance again below zero, and the far end of it saddles you with a temporary mental health condition and puts your Sanity back to 0.
 
@@ -140,7 +140,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Skill** — Something you’ve learned and practiced. Every Skill has a home Element it normally rolls off, but you can argue for a different one in the moment - as long as you can point to a Descriptor that backs the pairing and sell it to the GM.
 
-**Skill Training Tier** — How good you are at a Skill, on a six-step ladder: Untrained, Novice, Trained, Adept, Expert, Master. Each step changes how you build the roll - from no Attribute at all, up to rolling with Advantage and a wider critical range.
+**Skill Training Tier** — How good you are at a Skill, on a six-step ladder: Untrained, Novice, Trained, Adept, Expert, Master. Each step changes how you build the roll - from no Attribute at all, up to rolling with Advantage and a wider critical range. It also sets your damage dice on a Social attack: one at Untrained, rising to six at Master.
 
 **Slow Action** — The Slow bracket. One action, and you go last - but it’s a better action. It can be a called shot and it rolls with Advantage. You’re trading speed for one concentrated, harder-hitting move. (All spellcasting is Slow.)
 
@@ -154,7 +154,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Target Number** — The number a core roll has to hit or come under: your Attribute plus the Difficulty. See Core Roll.
 
-**Time Bands** — The standard ladder the rules use whenever something needs a duration: Round, Minute (about ten rounds), Scene, Day, Month, Year. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
+**Time Bands** — The standard ladder the rules use whenever something needs a duration: Round, Minute, Scene, Day, Month, Year. A Round is about 6 seconds, so a Minute is exactly ten of them. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
 
 **Untrained Roll** — A roll for something you have no Skill in. Your Attribute doesn’t help here - the target number is just the Difficulty.
 
