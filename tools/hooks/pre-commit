@@ -1,0 +1,58 @@
+#!/bin/sh
+# Stop a rules change going out with a stale book.
+#
+# The webbook is generated from the Scrivener manuscript with tables merged
+# out of rules/*.md. Nothing watches either one, so a rules commit can ship
+# while webbook/ still says the old thing - which is exactly what happened
+# on 2026-09-09: the Gifts chapter taught fixed damage dice for a day after
+# the rules changed, and every build in between reported normal counts.
+#
+# Fires only when a commit touches something the book is built from. Runs
+# the build, and refuses the commit if that produces webbook/ changes you
+# have not staged. The rebuild is left in the working tree, so the fix is
+# always "git add webbook/ and commit again".
+#
+# Install:  git config core.hooksPath tools/hooks
+# Skip once: git commit --no-verify
+
+staged=$(git diff --cached --name-only)
+
+echo "$staged" | grep -qE '^(rules/.*\.md|tools/scriv2(web|brew)\.py)$' || exit 0
+
+echo "pre-commit: rules or builder changed, rebuilding the webbook..."
+
+if ! out=$(python tools/scriv2web.py 2>&1); then
+  echo "$out"
+  echo
+  echo "pre-commit: the build FAILED, so the book cannot be checked."
+  echo "  If Scrivener is open it may be holding the project file."
+  echo "  Close it and commit again, or use --no-verify if you know better."
+  exit 1
+fi
+
+# HOLLOW lines are the build's own report of a transform that ran and boxed
+# nothing. They do not fail the build, which is the point of surfacing them.
+if echo "$out" | grep -q HOLLOW; then
+  echo
+  echo "$out" | grep HOLLOW
+  echo
+  echo "pre-commit: the build reported HOLLOW findings. Read them before"
+  echo "  committing - each one is content that silently did not make it."
+  exit 1
+fi
+
+drifted=$(git diff --name-only -- webbook/)
+if [ -n "$drifted" ]; then
+  echo
+  echo "pre-commit: the rebuild changed the book, and those changes are not"
+  echo "  staged. Committing now would publish a stale webbook."
+  echo
+  echo "$drifted" | sed 's/^/    /'
+  echo
+  echo "  The rebuild is already in your working tree. To go ahead:"
+  echo "      git add webbook/ && git commit"
+  exit 1
+fi
+
+echo "pre-commit: book is current."
+exit 0
