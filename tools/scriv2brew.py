@@ -20,7 +20,18 @@ import io, os, re, json, sys, xml.etree.ElementTree as ET
 SCRIV = r"C:\Users\feral\OneDrive\Documents\20 Below Manuscript\20 Below Mansuscript.scriv"
 DATA = os.path.join(SCRIV, "Files", "Data")
 
-RUN = re.compile(r"\{\\f(\d+)\\fs(\d+)\\b(\d)\\i(\d) ?(.*?)\}", re.S)
+# Scrivener does not always write a full run header. Text pasted into the
+# editor arrives as {\f0\fs24\b1 ...} with no \i at all, and its continuation
+# as a bare { ...} carrying no codes. Demanding \b and \i meant runs like that
+# were skipped in silence - the build reported its usual chunk and word counts
+# and the words were simply missing from the webbook. Every group is optional
+# now; a missing one reads as None, which the callers already treat as "not
+# bold" and "not a heading".
+# \listtext groups are the bullet glyph and its tab. They were invisible while
+# the pattern demanded a font header and would otherwise start rendering as
+# literal bullets inside the list items the builder already marks up.
+RUN = re.compile(
+    r"\{(?!\\listtext)(?:\\f(\d+)\\fs(\d+))?(?:\\b(\d))?(?:\\i(\d))?(.*?)\}", re.S)
 
 
 # The book these tools compile. The Draft folder holds more than one now,
@@ -106,6 +117,12 @@ def paragraphs(rtf):
     for chunk in re.split(r"\\par\b", body):
         head, rest = [], []
         for f, fs, b, i, txt in RUN.findall(chunk):
+            # RTF puts one space after a control word to end it, and that space
+            # is not content. A run with no control words at all has no such
+            # space to give up, and eating it welds the text onto the bold run
+            # before it: "**Short Rest.**An hour".
+            if (f or fs or b or i) and txt.startswith(" "):
+                txt = txt[1:]
             if not txt.strip() and "\t" not in decode(txt):
                 continue
             run = (b == "1", i == "1" or f == "2", decode(txt))
