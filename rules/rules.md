@@ -367,11 +367,23 @@ Defense becomes the attacker's Difficulty (see the [Difficulty Chart](#difficult
 
 ### Critical Hits
 
-A **critical success on the to-hit roll doubles the number of damage dice** the attack rolls. A weapon that normally throws 5d10 throws 10d10; one that throws 3d10 throws 6d10.
+A critical doesn't add dice. It decides them.
 
-The extra dice are ordinary dice. They face the same wall, and [Ki Infusion](#ki-infusion) works on them exactly as it does on the rest - so realising a critical against a high wall costs Ki like anything else, and a character with an empty pool gets a smaller critical than one with a full pool.
+**Half the attack's dice, rounded up, connect automatically** - no roll, no wall, nothing to beat. A weapon throwing 5 dice lands 3 before anything hits the table, and a wall of 10 stops them exactly as well as a wall of 1 does, which is to say not at all.
 
-Doubling cannot kill on its own. The [crossing-zero](#health-levels) rule still applies: however many dice connect, a single attack can only ever bring a target to **0**, never past it. Against a player character or anyone else who survives being dropped, a critical is what takes them out of the fight rather than what ends their life. Against most opponents, 0 is the end of it.
+**The rest roll, and each adds your Klotho.** This is amplification, not an attack - the to-hit was made with an Element like any other and has already landed; Klotho only decides how much of it gets through, the same way [Ki Infusion](#ki-infusion) adds Ferocity to a die without Fire having thrown the punch. **Moira still never attacks.** What it does here is what it always does: bend the outcome of something already in motion. Ki Infusion still works on those rolled dice on top of Klotho, 1 Ki per die, adding the matching sub-stat as usual.
+
+A creature has no Klotho. Its critical is the automatic half, and the rest roll unaided.
+
+| Weapon dice | Connect free | Then roll, +Klotho each |
+|---|---|---|
+| 1 | 1 | - |
+| 2 | 1 | 1 |
+| 3 | 2 | 1 |
+| 4 | 2 | 2 |
+| 5 | 3 | 2 |
+
+A critical still cannot kill on its own. The [crossing-zero](#health-levels) rule applies to the free dice and the rolled ones alike: however many connect, a single attack can only ever bring a target to **0**, never past it. Against a player character, or anyone else who survives being dropped, a critical is what takes them out of the fight rather than what ends their life.
 
 Note that the [Skill Training Tiers](skills.md#training-tiers) that widen the critical range do **not** apply here: an attack is a straight Attribute-vs-Defense roll with no Skill involved, so a critical hit lands on a natural 2 for everyone. What does move the odds is **Advantage** - which a [Slow action](#action-brackets) grants, taking a critical from a 1% chance to roughly 2.8%.
 

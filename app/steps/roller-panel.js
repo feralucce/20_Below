@@ -636,8 +636,10 @@ export function buildDamageRollSection(state, data, refreshHeader, heading = 'Da
     const info = ATTACK_TYPES[attackType];
     const track = info.track === 'health' ? 'Health Level' : info.track === 'poise' ? 'Poise' : 'Sanity Level';
     summaryEl.textContent =
-      `${attackType}: ${critical ? diceCount * 2 : diceCount} dice vs the target's ${info.wallStat}` +
-      `${critical ? ' (doubled for a critical hit)' : ''}. Each connecting die costs the target a ${track}.`;
+      `${attackType}: ${diceCount} dice vs the target's ${info.wallStat}` +
+      `${critical
+        ? ` - critical hit, so ${Math.ceil(diceCount / 2)} connect free and the rest add ${state.subStats.Klotho} Klotho`
+        : ''}. Each connecting die costs the target a ${track}.`;
   }
 
   const resultEl = el('div', { class: 'roller-result' });
@@ -697,7 +699,9 @@ export function buildDamageRollSection(state, data, refreshHeader, heading = 'Da
       ...[
         el('p', {}, [
           el('strong', {}, `${applied.dice.length} dice vs wall ${pool.wall}`),
-          pool.critical ? ' - critical hit, doubled' : '',
+          pool.critical
+            ? ` - critical hit: ${pool.freeDice} through free, ${pool.klotho} Klotho on the rest`
+            : '',
         ]),
         dieRow,
         el('p', {}, `Tick a die to spend 1 Ki and add ${boostAmount} ${info.boostStat} to it. ${state.currentKi} Ki left.`),
@@ -722,7 +726,7 @@ export function buildDamageRollSection(state, data, refreshHeader, heading = 'Da
       // crossing-zero throttle is not applied here: it depends on the
       // target's own current track, which this app cannot see for an NPC.
       // The connect count is the damage dealt, for whoever holds that sheet.
-      pool = rollDamagePool({ diceCount, wall, critical });
+      pool = rollDamagePool({ diceCount, wall, critical, klotho: state.subStats.Klotho });
       pool.chosen = new Set();
       pool.paid = 0;
       renderPool();

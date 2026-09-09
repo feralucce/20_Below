@@ -34,9 +34,9 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Core Roll** — The basic move of the whole system. Roll 2d10, add them up, and check the total against your target number (your Attribute plus the Difficulty). Land on or under it and you succeed; go over and you don’t.
 
-**Critical Hit** — A critical success on a to-hit roll: the attack rolls double its usual damage dice. They are ordinary dice facing the same wall, so Ki still buys them through one. Crossing zero still applies, so a critical can drop a target to 0 but never past it.
+**Critical Hit** — A critical success on a to-hit roll. Half the attack's dice, rounded up, connect automatically - no roll, no wall. The rest roll and each adds your Klotho, with Ki Infusion still available on top. It is amplification rather than an attack, which is why Moira can touch it at all. Crossing zero still applies, so a critical can drop a target to 0 but never past it.
 
-**Critical Success / Catastrophic Failure** — Roll a 2 - both dice showing 1 - and it’s a critical success, the best possible result. Roll a 20 - both showing 10 - and it’s a catastrophic failure. A few Skill tiers widen the good end or cushion the bad one. On an attack, a critical success doubles the damage dice - see Critical Hit.
+**Critical Success / Catastrophic Failure** — Roll a 2 - both dice showing 1 - and it’s a critical success, the best possible result. Roll a 20 - both showing 10 - and it’s a catastrophic failure. A few Skill tiers widen the good end or cushion the bad one. On an attack, a critical success sends half the damage dice through untouched and puts Klotho behind the rest - see Critical Hit.
 
 **Defense** — How hard you are to touch: 10 minus your Atropos. Fate doesn’t distinguish the shape of the blow, so the same number answers a blade, a word meant to wound, and a mind reaching where it isn’t welcome. When someone attacks you, your Defense is the number they have to beat.
 
