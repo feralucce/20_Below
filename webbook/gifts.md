@@ -76,7 +76,7 @@ The alternate form is built once, at creation, spending a points pool (below) on
 | Sub-stat boost | 1 pt | +2 to one physical sub-stat (Soak, Ferocity, Stamina, Potence, or Initiative) while transformed. |
 | Attribute boost | 2 pts/point | +1 to one Attribute (Earth, Air, Fire, Water, or Moira) while transformed, up to your own normal maximum. |
 | Environmental adaptation | 1 pt | Breathe underwater, see in total darkness, ignore extreme temperatures, or similar. |
-| Borrow a Gift Level | 3 pts/Level | Gain one Level of an existing Gift you don't otherwise hold while transformed, GM-approved for fit - same per-Level price as the [Gifts pool](character-creation.md#gifts-pool). |
+| Borrow a Gift Level | 3 pts/Level | Gain one Level of an existing Gift you don't otherwise hold while transformed, GM-approved for fit - same per-Level price as the [Gifts pool](character-creation.md#10-gifts). |
 | Borrow a Boon | 1/3/5/7 pts | Gain a Boon you don't otherwise hold while transformed, at that Boon's own Trivial/Lesser/Greater/Legendary price. |
 
 **Adders**
@@ -230,7 +230,7 @@ Chosen once, at creation: **Always There** (visible and permanent - can’t be h
 
 - **Feral Grip**: can't hold, use, or manipulate manufactured weapons or fine tools while your claws/fangs are deployed.
 - **One-Way Weapon**: the Stowable option is unavailable - your claws/fangs are always Always There, visible and permanent, no choice at creation.
-- **Fragile Edge**: your natural weapon's damage die drops by one step (6d10 caps at 5d10, etc.) against anything with Soak equal to or greater than your Potence.
+- **Fragile Edge**: your natural weapon rolls **one die fewer** against anything with Soak equal to or greater than your Potence.
 
 **1** - Your claws or fangs deal **2d10**, resolved with the same per-die-vs-Soak mechanic as any weapon. Always available in Melee range - no action spent drawing or readying it. Always There costs nothing to use; Stowable triggers the Gift Check on each deployment.
 

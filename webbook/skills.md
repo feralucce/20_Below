@@ -559,6 +559,13 @@ Finding information through records, libraries, databases, and open sources. Thi
 </div>
 
 <div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Ridicule</span><span class="entry-tag">Fire</span></p>
+<p class="entry-flavour">Anybody can be cruel. Making it stick is the part you practice.</p>
+
+Mockery, insult, and the cutting remark. Roasting, trash talk, and the dozens. Distinct from Intimidation, which threatens, and from Performance, which plays to a room rather than at somebody standing in it.
+</div>
+
+<div class="entry" markdown="1">
 <p class="entry-head"><span class="entry-name">Ritual Craft</span><span class="entry-tag">Moira</span></p>
 <p class="entry-flavour">The words matter. The order matters. Whether you believe them matters rather less than you’d hope.</p>
 

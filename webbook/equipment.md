@@ -35,65 +35,65 @@ Attacking a target within a weapon’s **Normal** range carries no penalty. Atta
 
 | Weapon | Category | Damage | Range (Normal / Long) | Ammo | Reload | Wealth |
 |---|---|---|---|---|---|---|
-| Anti-materiel rifle | Heavy | 10 | 300m / 800m | 5 rounds | 1 action | 5 |
-| Baseball bat | Improvised | 5 | Melee | - | - | 1 |
-| Battle spear | Polearm / two-handed | 10 | Melee | - | - | 2 |
-| Bayonet | Knife | 5 | Melee | - | - | 1 |
-| Black powder pistol | Handgun | 5 | 10m / 25m | 1 round | Slow action | 1 |
+| Anti-materiel rifle | Heavy | 5 | 300m / 800m | 5 rounds | 1 action | 5 |
+| Baseball bat | Improvised | 3 | Melee | - | - | 1 |
+| Battle spear | Polearm / two-handed | 5 | Melee | - | - | 2 |
+| Bayonet | Knife | 3 | Melee | - | - | 1 |
+| Black powder pistol | Handgun | 3 | 10m / 25m | 1 round | Slow action | 1 |
 | Blowgun | Exotic | 1 | 8m / 15m | 1 per shot | - | 1 |
-| Boomerang | Thrown | 3 | 10m / 20m | 1 per throw (returns) | - | 1 |
-| Chain whip | Exotic | 5 | Melee | - | - | 2 |
-| Combat knife | Knife | 5 | Melee | - | - | 1 |
-| Compact pistol | Handgun | 5 | 15m / 40m | 15 rounds | 1 action | 2 |
-| Compact SMG | Submachine gun | 6 | 25m / 60m | 30 rounds | 1 action | 3 |
-| Compound bow | Bow | 7 | 25m / 60m | 12 (quiver) | Free | 3 |
-| Crossbow | Bow | 7 | 20m / 50m | 12 (quiver) | 1 action | 2 |
-| Derringer | Handgun | 4 | 5m / 10m | 2 rounds | 1 action | 1 |
-| English longbow | Bow | 10 | 30m / 70m | 12 (quiver) | Free | 4 |
+| Boomerang | Thrown | 2 | 10m / 20m | 1 per throw (returns) | - | 1 |
+| Chain whip | Exotic | 3 | Melee | - | - | 2 |
+| Combat knife | Knife | 3 | Melee | - | - | 1 |
+| Compact pistol | Handgun | 3 | 15m / 40m | 15 rounds | 1 action | 2 |
+| Compact SMG | Submachine gun | 3 | 25m / 60m | 30 rounds | 1 action | 3 |
+| Compound bow | Bow | 4 | 25m / 60m | 12 (quiver) | Free | 3 |
+| Crossbow | Bow | 4 | 20m / 50m | 12 (quiver) | 1 action | 2 |
+| Derringer | Handgun | 2 | 5m / 10m | 2 rounds | 1 action | 1 |
+| English longbow | Bow | 5 | 30m / 70m | 12 (quiver) | Free | 4 |
 | Fists, feet | Unarmed | 1 | Melee | - | - | - |
-| Flail | One-handed blunt | 7 | Melee | - | - | 2 |
-| Flare gun | Exotic | 3 | 15m / 40m | 1 round | 1 action | 1 |
-| Garrote | Improvised | 4 | Melee | - | - | 1 |
-| Glaive | Polearm / two-handed | 10 | Melee | - | - | 2 |
-| Grenade launcher | Heavy | 10 | 30m / 80m | 1 round | 1 action | 4 |
-| Halberd | Polearm / two-handed | 10 | Melee | - | - | 2 |
-| Hand axe | Thrown | 2 | 5m / 15m | 1 per throw | - | 1 |
-| Hand crossbow | Bow | 4 | 10m / 25m | 5 (quick-load) | 1 action | 2 |
-| Harpoon gun | Heavy | 6 | 15m / 30m | 1 (line-retrievable) | Slow action | 3 |
-| Hatchet | One-handed blade | 7 | Melee | - | - | 1 |
-| Heavy revolver | Handgun | 5 | 15m / 40m | 6 rounds | 1 action | 2 |
-| Hunting rifle | Rifle | 7 | 100m / 250m | 5 rounds | 1 action | 2 |
-| Javelin | Thrown | 5 | 10m / 25m | 1 per throw | - | 1 |
-| Kama | One-handed blade | 5 | Melee | - | - | 1 |
-| Katana | One-handed blade | 7 | Melee | - | - | 2 |
-| Kukri | Large blade | 7 | Melee | - | - | 1 |
-| Mace | One-handed blunt | 7 | Melee | - | - | 2 |
-| Machete | Large blade | 7 | Melee | - | - | 1 |
-| Metal pipe | Improvised | 5 | Melee | - | - | 1 |
-| Muzzleloader rifle | Rifle | 8 | 80m / 200m | 1 round | Slow action | 2 |
-| Net launcher | Exotic | 2 | 10m / 20m | 1 net | 1 action | 2 |
-| Nunchaku | Exotic | 5 | Melee | - | - | 1 |
-| Pump shotgun | Shotgun | 8 | 5m / 15m | 6 shells | Slow action | 2 |
-| Rapier | One-handed blade | 7 | Melee | - | - | 2 |
-| Recurve bow | Bow | 5 | 20m / 50m | 12 (quiver) | Free | 2 |
-| Revolver rifle | Rifle | 7 | 60m / 150m | 9 rounds | 1 action | 3 |
-| Sai | One-handed blade | 5 | Melee | - | - | 1 |
-| Sap | Improvised | 5 | Melee | - | - | 1 |
-| Sawed-off shotgun | Shotgun | 8 | 5m / 15m | 2 shells | Slow action | 2 |
-| Short sword | One-handed blade | 7 | Melee | - | - | 2 |
-| Sledgehammer | Two-handed | 10 | Melee | - | - | 1 |
-| Sling | Thrown | 3 | 15m / 30m | 1 per throw | - | 1 |
-| Squad automatic weapon | Heavy | 10 | 300m / 800m | 100 rounds | 1 action | 4 |
-| Switchblade | Knife | 5 | Melee | - | - | 1 |
-| Tactical carbine | Rifle | 7 | 100m / 250m | 20 rounds | 1 action | 3 |
-| Throwing knife | Thrown | 2 | 5m / 15m | 1 per throw | - | 1 |
-| Tonfa | One-handed blunt | 5 | Melee | - | - | 1 |
-| Trench knife | Knife | 5 | Melee | - | - | 1 |
-| Two-handed sword | Polearm / two-handed | 10 | Melee | - | - | 2 |
-| War axe | One-handed blade | 7 | Melee | - | - | 1 |
-| War fan | Exotic | 4 | Melee | - | - | 1 |
-| Warhammer | Two-handed blunt | 10 | Melee | - | - | 2 |
-| Whip | Exotic | 3 | 3m / 6m | - | - | 1 |
+| Flail | One-handed blunt | 4 | Melee | - | - | 2 |
+| Flare gun | Exotic | 2 | 15m / 40m | 1 round | 1 action | 1 |
+| Garrote | Improvised | 2 | Melee | - | - | 1 |
+| Glaive | Polearm / two-handed | 5 | Melee | - | - | 2 |
+| Grenade launcher | Heavy | 5 | 30m / 80m | 1 round | 1 action | 4 |
+| Halberd | Polearm / two-handed | 5 | Melee | - | - | 2 |
+| Hand axe | Thrown | 1 | 5m / 15m | 1 per throw | - | 1 |
+| Hand crossbow | Bow | 2 | 10m / 25m | 5 (quick-load) | 1 action | 2 |
+| Harpoon gun | Heavy | 3 | 15m / 30m | 1 (line-retrievable) | Slow action | 3 |
+| Hatchet | One-handed blade | 4 | Melee | - | - | 1 |
+| Heavy revolver | Handgun | 3 | 15m / 40m | 6 rounds | 1 action | 2 |
+| Hunting rifle | Rifle | 4 | 100m / 250m | 5 rounds | 1 action | 2 |
+| Javelin | Thrown | 3 | 10m / 25m | 1 per throw | - | 1 |
+| Kama | One-handed blade | 3 | Melee | - | - | 1 |
+| Katana | One-handed blade | 4 | Melee | - | - | 2 |
+| Kukri | Large blade | 4 | Melee | - | - | 1 |
+| Mace | One-handed blunt | 4 | Melee | - | - | 2 |
+| Machete | Large blade | 4 | Melee | - | - | 1 |
+| Metal pipe | Improvised | 3 | Melee | - | - | 1 |
+| Muzzleloader rifle | Rifle | 4 | 80m / 200m | 1 round | Slow action | 2 |
+| Net launcher | Exotic | 1 | 10m / 20m | 1 net | 1 action | 2 |
+| Nunchaku | Exotic | 3 | Melee | - | - | 1 |
+| Pump shotgun | Shotgun | 4 | 5m / 15m | 6 shells | Slow action | 2 |
+| Rapier | One-handed blade | 4 | Melee | - | - | 2 |
+| Recurve bow | Bow | 3 | 20m / 50m | 12 (quiver) | Free | 2 |
+| Revolver rifle | Rifle | 4 | 60m / 150m | 9 rounds | 1 action | 3 |
+| Sai | One-handed blade | 3 | Melee | - | - | 1 |
+| Sap | Improvised | 3 | Melee | - | - | 1 |
+| Sawed-off shotgun | Shotgun | 4 | 5m / 15m | 2 shells | Slow action | 2 |
+| Short sword | One-handed blade | 4 | Melee | - | - | 2 |
+| Sledgehammer | Two-handed | 5 | Melee | - | - | 1 |
+| Sling | Thrown | 2 | 15m / 30m | 1 per throw | - | 1 |
+| Squad automatic weapon | Heavy | 5 | 300m / 800m | 100 rounds | 1 action | 4 |
+| Switchblade | Knife | 3 | Melee | - | - | 1 |
+| Tactical carbine | Rifle | 4 | 100m / 250m | 20 rounds | 1 action | 3 |
+| Throwing knife | Thrown | 1 | 5m / 15m | 1 per throw | - | 1 |
+| Tonfa | One-handed blunt | 3 | Melee | - | - | 1 |
+| Trench knife | Knife | 3 | Melee | - | - | 1 |
+| Two-handed sword | Polearm / two-handed | 5 | Melee | - | - | 2 |
+| War axe | One-handed blade | 4 | Melee | - | - | 1 |
+| War fan | Exotic | 2 | Melee | - | - | 1 |
+| Warhammer | Two-handed blunt | 5 | Melee | - | - | 2 |
+| Whip | Exotic | 2 | 3m / 6m | - | - | 1 |
 
 ## Armor
 
@@ -295,19 +295,19 @@ Same Damage/per-die-vs-Soak resolution as Basic Weapons above, just built around
 |---|---|---|---|---|---|---|
 | Bear spray | 1 | 4m / 6m | 1 (canister) | - | Same as Mace, but a Close-range cone hitting everyone in it | 1 |
 | Blinding strobe | 0 | Close radius | - | - | Blinded for 1 round, no roll needed to trigger | 1 |
-| Bola | 2 | 8m / 15m | 1 per throw | - | Target's Movement Rate is halved until they break free | 1 |
-| Collapsible baton | 4 | Melee | - | - | | 1 |
-| Flashbang | 2 | 10m throw | 1 (thrown) | - | Everyone in a Close radius is Blinded and at Disadvantage for 1 round | 2 |
+| Bola | 1 | 8m / 15m | 1 per throw | - | Target's Movement Rate is halved until they break free | 1 |
+| Collapsible baton | 2 | Melee | - | - || 1 |
+| Flashbang | 1 | 10m throw | 1 (thrown) | - | Everyone in a Close radius is Blinded and at Disadvantage for 1 round | 2 |
 | Grappling snare | 1 | Melee (trap) | - | - | Restrains whoever triggers it | 1 |
-| Less-lethal shotgun (beanbag) | 5 | 5m / 15m | 6 shells | Slow action | No Health Level loss from this weapon alone; Prone and Disadvantage next turn | 2 |
+| Less-lethal shotgun (beanbag) | 3 | 5m / 15m | 6 shells | Slow action | No Health Level loss from this weapon alone; Prone and Disadvantage next turn | 2 |
 | Mace (pepper spray) | 1 | 3m / 5m | 1 (canister) | - | Blinded and Disadvantage on all rolls for 1 round | 1 |
 | Net gun | 1 | 8m / 15m | 1 net | 1 action | Target is Restrained until they break free (Potence check) | 2 |
 | Pepper spray gel | 1 | 6m / 9m | 1 (canister) | - | Same Blinded effect as Mace, less blowback risk | 1 |
-| Rubber bullet launcher | 4 | 15m / 40m | 6 rounds | 1 action | Same as the beanbag shotgun above | 2 |
+| Rubber bullet launcher | 2 | 15m / 40m | 6 rounds | 1 action | Same as the beanbag shotgun above | 2 |
 | Smoke grenade | 0 | 10m throw | 1 (thrown) | - | Fills a Close radius with concealment; Advantage on Stealth to break contact | 1 |
 | Sonic deterrent device | 1 | Close-Near cone | - | - | Disadvantage on all rolls while in the cone | 2 |
-| Stun gun | 2 | Melee | - | - | Disadvantage on the target's next roll | 1 |
-| Taser | 3 | 5m / 8m | 1 cartridge | 1 action | Prone, can't act until the start of their next turn | 2 |
+| Stun gun | 1 | Melee | - | - | Disadvantage on the target's next roll | 1 |
+| Taser | 2 | 5m / 8m | 1 cartridge | 1 action | Prone, can't act until the start of their next turn | 2 |
 | Tear gas grenade | 1 | 10m throw | 1 (thrown) | - | Everyone in a Close radius is Blinded and at Disadvantage until they leave the area | 2 |
 
 ## Everyman Gear Packages

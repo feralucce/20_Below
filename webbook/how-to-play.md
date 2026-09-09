@@ -39,141 +39,147 @@ Two results ignore your target number entirely.
 
 Neither one cares what your target number was. A critical success on a hopeless task still lands. A catastrophic failure on a walk in the park still hurts. Some Skill tiers widen the good end or take some of the sting out of the bad one, which is covered in Skills.
 
-**Player**: Ronan wants to climb the fire escape.
+**Player**: Ronan is going to scale the fire escape. 
+**GM**: There’s a ladder that you have to pull down to start it. But the weather is good and it’s not raining, so this is pretty easy. Let’s call it a 7 difficulty. 
+**Player**: Cool. Ronan’s Earth is an 8, so that’s a Target Number of 15. 
+**GM:** Roll it.
+**Player:** Nine.
+**GM**: Ronan makes it up the fire escape without issue and you are pretty sure no one hear him out there.
 
-**GM**: There’s a ladder and it’s not raining, so that’s Easy. Difficulty 7. Athletics is Earth, and your Earth is 8. Roll 15 or under.
-
-**Player**: Nine.
-
-**GM**: You’re up.
-
-Every Skill has a default Element attached to it, and that default is what the roll uses - unless you argue for a different one. That argument is what your Descriptors are for, and it’s covered back in Creating a Character.
+Each skill has an Element attached to it. This Element is the default number you will use to perform that skill. That is, unless you argue to use a different element for the roll. That argument is what you use Descriptors for.
 
 ## Setting the Difficulty
 
-The GM sets the Difficulty for every roll. This is the ladder they’re working from.
+The GM decides the Difficulty of any task. The Difficulty tiers are below
 
 **0 - Nearly Impossible**: Catch an arrow out of the air mid-flight.
-
 **1 - Extremely Hard**: Pick a masterwork lock with no tools, blindfolded.
-
 **2 - Very Hard**: Scale a sheer, rain-slicked cliff face.
-
 **3 - Hard**: Convince a hostile guard captain to stand down.
-
 **4 - Challenging**: Track a careful quarry through a rainstorm.
-
 **5 - Moderate**: A tense but ordinary check under pressure.
-
 **6 - Fairly Easy**: Pick a simple lock with the right tools.
-
 **7 - Easy**: Climb a sturdy rope with knots tied in it.
-
 **8 - Very Easy**: Recall a well-known fact in your field.
-
 **9 - Nearly Trivial**: Walk a straight line on level ground.
-
 **10 - Trivial**: Tie your own shoes.
 
-GMs, don’t agonize over this. Pick the row that sounds like what the character is attempting and move on. The chart isn’t here to make you precise - it’s here so you’re choosing between labels instead of pulling a bare number out of the air. Nobody at the table is going to audit you.
+NOTE TO THE GM: Don’t agonize over assigning a difficulty. Pick the number that describes what the character is doing and move on. This isn’t about precision - it’s here to give a concrete feel to what is happening so you don’t have to pull a number out of thin air… or your ass. There isn’t going to be a performance review and no one is going to audit it. Go with your gut and move on with the game.
 
 ## Advantage and Disadvantage
 
-Sometimes the situation is tilted, and there’s a single mechanic for that in both directions.
+Most of the time, there is a level playing field. However, sometimes the balance of events leans to one sire or another. 20 Below uses a single mechanic for that in all situations - Advantage and Disadvantage.
 
-**Advantage**: roll 3d10 and keep the lowest two. **Disadvantage**: roll 3d10 and keep the highest two. You’re rolling under, so low is good - Advantage gives you a third chance to find a small number, and Disadvantage gives the dice a third chance to hand you a big one.
+Where most TTRPG systems simulate advantageous or detrimental circumstances by adding or subtracting from your difficulty or your roll, 20 Below simplifies this with Advantage and Disadvantage. When an event, gift, ally, environmental effect, etc. would benefit you, you roll at Advantage. If anything would impede you, you roll at Disadvantage.
 
-Both are binary. Three sources of Advantage is exactly as good as one. There is no super-Advantage.
+Advantage and Disadvantage are binary. That is to say: You either have it or you don’t - they don’t stack. They also cancel each other out on a one for one basis.
 
-If a roll has sources of both, they cancel one for one, and whatever’s left over is what you get - still just plain Advantage or plain Disadvantage. If they cancel out evenly, you roll normally.
+-
 
-One that comes up constantly: doing something fiddly with your **off-hand** - attacking, fine manipulation, anything needing real dexterity - is at Disadvantage. The Ambidextrous Boon removes that.
+**EXAMPLE**: The group is looking for a ritual to reinforce the wall between dimensions, a task that is solidly within the bounds of the Research skill. Ronan is (shockingly) Adept at Research. This gives him advantage. However, the library where the book is kept is abandoned and without power, a situation that makes researching the information harder. This imposes disadvantage. The advantage and disadvantage in this instance cancel each other out because there is one source of each.
 
-Both of these belong to the core roll and only the core roll. When you get to damage dice later in this chapter, Advantage and Disadvantage have nothing to say about them.
+Marcus (Ronan’s player), argues that Ronan knows *exactly* what he is looking for and can guide the party so they can help him find it. The GM agrees that this is enough to give Ronan advantage, so he rolls at advantage.
 
-## Rolling Untrained
+To simplify it: if there are multiple sources that would grant Advantage or Disadvantage, treat each instance of Advantage as “+1” and disadvantage as “-1.” Add them up. If the result is 1 or more, roll at Advantage. If it is 0, roll normally. If it is less than 0, roll at Disadvantage.
 
-If you have no applicable Skill, you still get to roll. You just don’t get your Attribute.
+But what does all of this mean? I am glad you asked. 
+**Advantage**: When you roll at Advantage, you roll 3d10 and keep the lowest two.  **Disadvantage**: When you roll at Disadvantage, you roll 3d10 and keep the highest two.
 
-Your target number is the Difficulty alone.
+C:\\\&D Formatter/docs/assets/diagrams/roll-curve-comparison.svg
 
-That’s a hard floor, and it’s meant to be. Under the 2d10 curve an untrained character is in real trouble at anything past Difficulty 5, and Difficulty 0 is flatly impossible untrained - a target of 0 is below the lowest roll two dice can produce. Having the Skill isn’t a bonus. Having the Skill is what lets your Attribute count at all.
+Yes. Lower is better. Advantage gives you a third chance to get a smaller number. Disadvantage does the opposite.
+
+## Untrained Skill Usage
+
+Sometimes you want to do something that you just aren’t prepared for. In game terms, this means you don’t have a skill that applies in the specific situation. When this happens, you still get to roll - you just don’t get to add your Element to the Target Number.
+
+That’s right - your target number for an Untrained Skill is the Difficulty of the task alone.
+
+You might have noticed that this means you could have a Target Number that is impossible to roll - 0 or 1. Don’t despair. Make the roll anyway. There is always a chance - a critical success will always succeed.
 
 ## Ki
 
-Ki is the tank you draw on when being ordinarily competent isn’t going to cut it. It gets a full treatment later, alongside Fate Tokens. Here’s what you need to run a fight.
+More than Gifts or Boons, Ki is what sets your character aside from the rest of the world. It is the fuel tank you pull from when the ordinary just isn’t going to cut it. Ki is what takes you from ordinary to extraordinary.
 
-**Your Ki is your strongest Element, plus 8.** Whatever you are most is what channels it. Nothing else about your build matters here - the frail specialist and the walking wall draw on the same deep tank, and every character in the game lands somewhere between 13 and 18.
+**Ki Pool**: The thing that defines you - your strongest element - is also what defines your Ki Pool. At the start of play, your **Ki Pool is your strongest element+8**. This was an intentional design choice. Nothing else about your build effects your Ki Pool. The Nerdy Hacker and the Brick draw from the same font of power and every character in the game starts with a Ki Pool somewhere between 13 and 18.
 
-That is deliberate. Ki is the one thing in 20 Below that everyone has plenty of.
+This is deliberate. Everyone in 20 Below is supposed to have plenty of Ki to draw upon.
 
-You spend it on three things, and they all show up in this chapter.
+Why is Ki so important? Ki is used in the following ways:
 
-**Preserve a Level**: 1 Ki cancels the loss of one Health Level or one Sanity Level. Spend as much as you like, across both tracks, from the same attack. Poise doesn’t work this way.
+**Gift usage.** Most gifts cost Ki points to use
 
-**Bump your Action Bracket**: 1 Ki per step, to act sooner than you declared.
+**Gift Check.** When gift calls for a Gift Check, you roll 2d10 and your current Ki is your target number. There is no Advantage or Disadvantage on this roll. Yes, with experience points, it is possible to have a Ki over 20. Remember - a roll of 20 is a catastrophic failure and will fail even if your target number is 25.
 
-**Boost an attack die**: 1 Ki per die. This is the one that lets you through a wall that would otherwise stop you cold.
+**Preventing Damage**. When you would take damage to one of your vitals (Health, Poise, or Sanity) - you can prevent that damage at the cost of 1 Ki per level of damage.
 
-None of the three costs you anything but the Ki. No roll, no check, no cap.
+**Recovering from Vitals Loss**. When one of your Vitals is at zero or below, you may spend 1 Ki point to recover from Dying, Humiliated or Shattered state and gain 1 point of that Vital.
 
-Most Gifts cost Ki to use as well, and some of them ask for a **Gift Check** on top - 2d10 rolled under your **current** Ki, the same roll-under shape as everything else, where a failure costs you a point of Ki. Note that it reads what you have left, not what you started with. Your Gifts are dependable while you’re fresh and get unreliable once you’ve spent the day, which is the whole idea.
+**Boosting Damage**. After you land an attack with a successful 2d10 roll, you can Boost your Damage Dice. To do so, spend 1 Ki point per boosted die and add Ferocity (Physical), Psyche (Mental), or Poise (Social) to the number rolled on the die.
 
-You get it back by resting. A **Short Rest** restores Klotho Ki, minimum 1. A **Full Night’s Rest** fills you back up completely. These are supposed to be the big damn heroes - Ki isn’t meant to be a slow trickle back.
+**Bump your Action Bracket**. You can spend Ki points to move quicker. You can bump yourself from a Slow Action to a Normal Action for 1 Ki point and from a Normal Action to a Fast Action for 1 Ki point. This means you can take a Slow Action in the Fast Action Band for 2 Ki points.
+
+**Recovering Ki**: Recover Ki by resting. A Short Rest restores a number of Ki points equal to your Klotho rating, minimum of 1. A Full Night’s Rest recovers all of your Ki. You are playing the big damn heroes of this universe. Ki fuels you. It isn’t a limited resource that you horde.
 
 ## The Three Walls
 
-Here’s the second mechanic. It has nothing in common with the first one except the dice, so slow down for this bit.
+There are three types of damage in 20 Below: Physical, Social, and Mental. When someone lands an attack, the next step is to determine how much (if any) damage gets through. They roll their damage dice for the attack and compare the results of each die to the appropriate wall: **Soak vs. Physical** attacks, **Presence vs Social** attacks, and **Psyche vs Mental** attacks.
 
-Three sub-stats do nothing but stand there and stop things.
+All three of these walls are similar to a levee - it stops damage from getting through. Anything that goes over the top deals damage. When an attacker rolls for damage, he throws a fistful of dice. Each die is compared to the wall. If the number on the die is higher than the wall, it deals damage.
 
-**Soak** stops Physical damage.
+A high Soak, Presence or Psyche makes you extremely resilient and difficult to harm. Any of these sub-stats at 10 means that a rolled die effectively can’t harm you sine you can’t roll higher than a 10 on a d10. This means that someone who dumps 10 points into earth and dedicates those 10 sub-stat points into Soak is going to be relatively indestructible. This is intentional. Anime is stuffed with characters like this.
 
-**Presence** stops Social attacks.
+## Spending Ki on the Dice
 
-**Psyche** stops Mental attacks.
+While anime is rife with characters that are *Nigh Indestructible™,* it’s also crammed full of characters that can over come it. You’ve seen it - “This isn’t my true power!”
 
-They work identically. Each is a flat number you simply have, doing its job with no roll and no spend, the same way your Health Levels just sit there being your Health Levels.
+That is why you can boost your damage with Ki. It allows you to roll numbers that are higher than that 10. Roll the damage dice first. With them on the table, you pick which ones to boost, at **1 Ki each**. A boosted die adds your matching sub-stat to its own result - Ferocity for Physical, Presence for Social, Psyche for Mental.
 
-Here’s how they stop things. An attack throws a fistful of dice, and **each die is checked against the wall on its own.** You don’t add them up. There’s no target number. A die equal to or under the wall is absorbed and nothing happens. A die over the wall connects.
+This is how damage gets over the levees. A boosted die from a character with a 10 in Ferocity will deal damage 100% of the time, and a 2 in Ferocity has a 20% chance of topping that wall. The second one isn’t good odds, but it is immeasurably better than the 0% chance you had a second ago.
 
-Now look at which way that runs. On a core roll you want to roll *low*. Here, the attacker wants to roll *high*. Same dice, opposite direction.
+## Defense and How it is Calculated
 
-That’s not me being difficult. The two mechanics are asking different questions. A core roll asks whether you managed the thing at all, and it answers yes or no. These dice have already gotten past that - the hit landed - and what they’re measuring is how much of it got through you. One question has an answer. The other has an amount.
+Defense is one of the most important numbers to consider in combat. Combat is the one time where the GM isn’t determining the difficulty part of the Target Number equation. When you make an attack, your Target Number is calculated as the Your Element+Target’s Defense.
 
-Which means a wall of 10 stops everything. Not most things - everything. A d10 can’t roll higher than 10, so there is no die you can throw at a wall of 10 that gets through. The only way past it is Ki, which is exactly what that spend is there for.
+**Physical Defense**: Physical Defense=10-your Atropos score. Your Fate decides when it is your time and it’s not your time… yet.
 
-A connecting Physical die costs a Health Level. A connecting Social die costs a Poise. A connecting Mental die costs a Sanity.
+**Social Defense**: Social Defense=10-your Psyche score. Insight into human behavior helps a character recognize motives, read intentions, and see through social deception.
 
-**Defense** is the fourth number in this family, and there are three of them. Defense is how hard you are to touch at all - and what makes you hard to touch depends on what is coming.
-
-**Physical Defense is 10 minus your Atropos.** Fate. The blade goes where the thread says it goes, and yours hasn’t been cut yet.
-
-**Social Defense is 10 minus your Psyche.** Composure. A remark meant to wound only lands if it can get a rise out of you, and you are hard to rattle.
-
-**Mental Defense is 10 minus your Presence.** Self. A mind reaching into yours finds the room already occupied.
-
-Now look at which stat does which job, because it isn’t an accident. Soak stops Physical dice, Presence stops Social ones, Psyche stops Mental ones - and not one of those is the stat that kept the attack from landing in the first place. Presence walls a social attack but deflects a mental one. Psyche walls a mental attack but deflects a social one. Every kind of attack is answered by two different numbers out of two different Elements.
-
-That’s deliberate, and it’s the whole reason the table looks like that. If one stat both kept attacks from landing and soaked them when they did, it would be the only stat anybody bought, and every character sheet in the game would start to look the same. Split apart, being hard to insult and being unbothered once an insult lands are two different purchases. You get to be one, or the other, or spend twice and be both.
+**Mental Defense**: Mental Defense=10-your Presence score. A strong sense of self and personal identity provides an anchor against manipulation, intimidation, and psychological intrusion.
 
 ## Making an Attack
 
-This is where the two mechanics meet. Every attack, of every kind, resolves in two steps - one of each.
+The two mechanics in 20 Below meet here. Each attack has 2 steps
 
-**Step one is the to-hit roll**, and it’s a core roll like any other. Your Attribute against the target’s Defense, used as the Difficulty. No Skill is involved - there are no weapon skills in this game. Just Attribute plus Defense, roll under, the same as picking a lock.
+Attack Roll
 
-I know that’s unusual. Stick with me - the section after next is why.
+Damage Roll
 
-Miss and you’re done. Nothing else happens. Only a hit gets you to step two.
+**Make an Attack Roll (To-Hit Roll)**: An Attack Roll is a Core Roll like any other. The Target number for this roll is your attribute+the target’s Defense.
 
-**Step two is the damage dice**, and that’s the wall mechanic - a fistful of dice, one at a time, against Soak or Presence or Psyche, rolling high this time. Step one decided whether you connected. Step two decides what it cost them.
+If you roll at or below this Target Number, your hit lands. If you roll higher than your Target Number, nothing else happens.
 
-**A critical hit doubles your damage dice.** Roll a 2 on the to-hit and a weapon that normally throws five dice throws ten.
+**A Fistful of Dice**: This is where the wall mechanic is used. The number of dice you roll for damage is determined by a few possibilities:
 
-They are ordinary dice. They face the same wall, and Ki buys them through it the same way, so a critical against heavy armour still costs you something to cash in. What a critical cannot do is kill on its own - crossing zero still applies, so however many dice connect, one attack only ever brings a target to 0.
+The weapon you are using
 
-Worth knowing: the Skill tiers that widen the critical range do nothing here, because an attack uses no Skill. A critical hit lands on a natural 2 whether you have held a sword before or not. The one thing that moves the odds is Advantage - and a Slow action grants it, which takes a critical from one roll in a hundred to nearly three.
+The gift you are using
+
+The social attack leverage you have accrued in the encounter.
+
+Roll those dice. All of them at once. Then compare each one to the appropriate wall (Soak for Physical, Psyche for Social, and Presence for Mental). Any die that rolls higher than the wall, does a level of damage to the appropriate Vital Statistic (Health for Physical, Poise for Social and Sanity for Mental).
+
+**Critical Success in Combat.** Most TTRPGs handle critical hits by doubling the damage dice rolled or something similar. The effectiveness of the Damage Walls would make doubling the dice pretty ineffective. Instead, when you roll a total of 2 on your To-hit Roll, and you are guaranteed to deal some damage.
+
+When you score a Critical Hit, half of the Damage Dice (rounded up) you would roll are considered to have succeeded. You roll the rest of the remaining dice. Since these dice have been chosen by Fate - add your Klotho score to them. Additionally, you can still use Ki to infuse the dice you roll on a Critical Hit.
+
+NOTE: A Critical Hit can’t kill on its own. No matter how devastating it is, a single attack can only reduce a character to zero health (Unconscious).
+
+**Example**: Ronan has been verbally sparring with an enemy. Ronan isn’t very smart or witty, so it isn’t going well. He decides to punch him instead. After all, Ronan is the “God Puncher.” Ronan decides to attack his opponent with his Gift, Onslaught. He rolls a 2 - a critical hit. Ronan has Onslaught at level 5 and a Ferocity of 4, so he would normally roll 7 dice for damage.
+
+7 dice, divided by 2 is 3.5. Round it up and you have 4. His opponent takes 4 health levels of damage. Ronan also gets to roll those last 3 dice boosted by his Klotho score. His Klotho is 4. He rolls 2, 1, and 6. His opponent’s soak is 7, so only one of the extra dice does damage.
+
+C:\\\20 below\\hit-example.svg
 
 ## Which Element Are You Attacking With
 
@@ -187,71 +193,81 @@ Your weapon doesn’t decide. Your approach does.
 
 **Water - Adaptation.***I let the swing go past, redirect it, and hit him when he overextends.*
 
-Same sword in all four. Describe what you’re doing before you roll, and the GM confirms which Element fits. You don’t get to pick it afterward, once you’ve seen how the numbers landed.
+**Moira - Fate.***I say the thing he has been afraid somebody would notice.* Social and Mental attacks only.
 
-Moira is never an attacking Element. Atropos only ever sets your Physical Defense.
+Same sword in the first four. Describe what you’re doing before you roll, and the GM confirms which Element fits. You don’t get to pick it afterward, once you’ve seen how the numbers landed.
 
-One thing the Element never does is decide which wall you’re attacking. That’s set by what you’re attacking *with*. A weapon throws Physical dice at Soak however you swung it - charging in screaming is still Fire, and it’s still Soak that stops you. A Gift throws whatever its own entry says. And a Signature Move is the one that lets you choose: you pick the sub-stat that powers it and the wall it resolves against, separately, so a Move can run on your Presence and still land on somebody’s Soak.
-
-So yes - you can build an attack that is pure force of personality and still knocks people down. It just isn’t a Social attack, because Social means it went at their Poise. The flavor is yours. The wall is what the rules read.
+NOTE: Moira never governs a Physical attack. Fate doesn’t swing a bat. It carries a Social or a Mental one readily, because finding the one word that lands is exactly what fate is for.
 
 ## Social Attacks
 
-A weapon tells you how many dice a punch throws. Nothing hangs off your belt for this, so the dice come from somewhere else: what you brought to the conversation. The GM rates it when you say what you’re doing.
+A social attack goes after somebody’s standing. Ridicule, intimidation, manipulation, public pressure, whatever undermines their ability to deal with the people around them.
 
-**One die.** Nerve, and nothing else. A flat insult, a raised voice, a threat everyone in the room knows you can’t back.
+A weapon has a Damage Rating. Nothing on your belt tells you how hard you can hit someone with a sentence, so that number has to come from somewhere else. It comes from you.
 
-**Two.** A real hit. A burn that lands, a joke at their expense that works, a fair point they can’t just wave off.
+## Your Dice Are Your Training
 
-**Three.** Something true, and it stings. A weakness named out loud, a failure dragged back up, a room that has already started laughing at them.
+Whatever Skill you’re using, its Training Tier is how many dice you roll.
 
-**Four.** Something they can’t afford to have said. Evidence. A secret. A witness. Rank they have to answer to. An audience whose opinion they actually need.
+**Untrained.** One die
 
-**Five.** A reckoning. All of it at once, in front of everyone who counts, and no door out.
+**Novice.** Two dice.
 
-Everything after that runs exactly like a punch. Element against their Social Defense to land it, then that many dice, one at a time, against their Presence, rolling high. Every die that gets through costs them a Poise. Ki buys a die through the same way it always does, adding your Presence instead of your Ferocity.
+**Trained.** Three.
 
-Three things keep that ladder honest.
+**Adept.** Four.
 
-**You have to earn the ceiling.** Opening cold you have a 1, however good the line is - nobody in the room has any investment in you yet. Every exchange that lands raises what you can reach by one, to a maximum of 3. Getting past 3 takes actual material - evidence, a secret, rank - not momentum.
+**Expert.** Five.
 
-**Repeats lose their edge.** The same jab twice is worth less, and by the third time it’s worth nothing. Say something new or drop a die.
+**Master.** Six.
 
-**Somebody has to be watching.** Social damage is public damage. The identical burn is worth a die less with nobody there to hear it, and a die more in front of the people whose opinion they actually need. That is why the room is worth fighting over.
+Untrained gets one die for the same reason bare fists do. Anyone can say something cruel. Most of it bounces.
 
-## The Dozens
+That’s the whole calculation. Nobody at the table has to rate how good your line was, and you don’t have to be quick on your feet in real life to play somebody who is. Your sheet already said how good they are at this.
 
-Which gives you the dozens for free. Two people trade attacks, back and forth, and each one has to top the last or the exchange doesn’t escalate. So the ratings climb - a 1 to open, a 2 once you find the angle, a 3 when the crowd has warmed up and the material is getting close to the bone.
+## Which Skill, and Which Element
 
-Every connecting die costs a Poise, so it grinds. Whoever reaches 0 first is Flustered, and in a dozens circle that is the whole game - Disadvantage on everything social for the rest of the scene, in front of everyone. Go below 0 and you’re Humiliated, and you defer to that room from then on.
+Say what you’re doing and you’ve named the Skill. Name the Skill and you’ve settled the Element too, because every Skill already rolls off a home Element.
+
+**Fire.** Ridicule, Intimidation, Persuasion, Public Speaking, Performance, Leadership.
+
+**Water.** Deception.
+
+**Moira.** Insight.
+
+As with any Skill, you can argue for a different Element in the moment if you’ve got a Descriptor that backs it.
+
+After that it runs like a punch. Your Element against their Social Defense to land it, then your dice one at a time against their Presence, rolling high. Every die that gets through costs them a Poise.
+
+## Example
+
+Aiden is Adept at Intimidation, so four dice, rolled off Fire. Vance has Psyche 3, so his Social Defense is 7. Aiden’s Fire is 6, which makes his target number 13, and he rolls a 9. It lands.
+
+Vance has Presence 4, so that is what each die has to beat. Aiden rolls 3, 7, 5 and 9. The 3 is absorbed. The other three get through, and Vance loses 3 Poise.
 
 ## Mental Attacks
 
 **A Gift is the only way you will ever make one.** That’s the whole rule, and the rest of this section is what it means.
 
-It is the one place the three attack types stop being symmetrical, and it’s deliberate. Anyone can throw a punch and anyone can throw an insult - a fist and a bad word are both standard human equipment. Reaching into somebody’s head is not, and no amount of nerve or leverage substitutes for the thing you either have or don’t.
+It is the one place the three attack types stop being symmetrical, and it’s deliberate. Anyone can throw a punch and anyone can throw an insult - a fist and a bad word are both standard human equipment. Reaching into somebody’s head is not, and no amount of nerve or gear substitutes for the thing you either have or don’t.
 
-If your character has a Gift that does it, the Gift says how many dice it throws, and everything after that runs like any other attack: Element against their Mental Defense, then those dice one at a time against their Psyche, and every one that gets through costs them a Sanity. Ki buys a die through by adding your own Psyche. A Signature Move built to resolve against Psyche counts, because a Signature Move is a Gift.
+If your character has a Gift that does it, the Gift says how many dice it throws, and everything after that runs like any other attack: Element against their Mental Defense, then those dice one at a time against their Psyche, and every one that gets through costs them a level of Sanity. Ki boosts a die through by adding your own Psyche. A Signature Move built to resolve against Psyche counts, because a Signature Move is a Gift.
 
-If your character doesn’t have one, Psyche is a wall you have no way to push on. That is the answer, not a gap in the rules.
+If your character doesn’t have one, Psyche is a wall you have no way to push on. This is a decision and not a gap in the rules.
 
 Plenty of things out there are better equipped than you. A nightmare’s cry doesn’t bother with a to-hit roll and throws more dice than any person could bring to bear. Psyche is the wall you will spend the most time hiding behind and the least time attacking.
 
-## Spending Ki on the Dice
+## Depleting Vital Statistics
 
-Roll the damage dice first. With them on the table, you pick which ones to boost, at **1 Ki each**. A boosted die adds your matching sub-stat to its own result - Ferocity for Physical, Presence for Social, Psyche for Mental.
+The three health statistics are collectively called the Vital Statistics. Each level you have in Health, Sanity and Poise represent one level of damage. As mentioned above, each Damage Die that makes it over a wall deals knocks out one level of damage. It’s pretty straightforward.
 
-Because you choose after the roll, nothing is ever wasted. You never pay for a die that already got through, and you never pay for one sitting so far under the wall that your sub-stat could not drag it over anyway. The question in front of you is a real one: which of these dice is worth a point?
+What we haven’t covered is what happens at 0 and below.
 
-This is what cracks a maxed wall. A boosted die from a character with a 10 in the matching sub-stat gets through anything, every time. A 2 in that sub-stat buys you a 20 percent chance on that die. That second one isn’t good odds, I know. It’s still infinitely better than the zero you had a moment ago.
+**Health**. When your Health reaches 0, you are unconscious. You can take more damage after you are rendered unconscious. These levels of damage represent real, devastating, life-threatening injuries. Each health level you possess gives you one negative health level. If you have 8 health levels, you can take 8 levels of damage below zero. Take one more, and you are dead.
 
-## Going Down
+**Poise**. When your Poise reaches 0, you are Flustered. Every Social roll, and anything else that needs you steady, is at Disadvantage until the Scene ends. You can take more damage after you are Flustered. These levels represent your standing coming apart in front of the people whose opinion you needed, and it does not quietly repair itself. Below 0 you are Humiliated. You cannot take the lead, negotiate, or speak for the group, and you defer until your Poise climbs back to 0. Each Poise level you possess gives you one negative Poise level. If you have 9 Poise, you can take 9 levels of damage below zero. Take one more and your Poise resets to 0 and it costs you a Sanity Level. This level of Sanity damage can’t be soaked, but can be prevented by spending a point of Ki. Poise damage cannot kill you.
 
-Health Levels are boxes, not a pool. Each solid hit crosses one off. When the last one goes you’re at 0 and you’re unconscious - not dying, not rolling to hang on, just out of the fight and out of the scene.
-
-The row keeps going below zero, the same distance again. Eight Levels means you’re out at 0 and dead at minus eight. Whatever it took to put you down, it takes that much again to finish you.
-
-Two rules protect that space, and between them they’re why a fight so rarely kills anyone by accident.
+**Sanity**. When your Sanity reaches 0, you are Overwhelmed. You pick up a temporary negative mental trait and every roll is at Disadvantage, though you are still acting under your own power. You can take more damage after you are Overwhelmed. These levels represent your grip on your own mind giving way, and going below 0 always leaves a permanent mental scar no matter how you recover afterward. Below 0 you are Shattered. You are panicky and babbling and cannot act on your own, so somebody else has to lead you or drag you. Each Sanity level you possess gives you one negative Sanity level. If you have 9 Sanity, you can take 9 levels of damage below zero. Take one more and you pick up a temporary mental health condition and your Sanity resets to 0. Sanity damage cannot kill you either.
 
 **One attack can never carry you past 0.** However many dice connect, you land exactly at zero. A bear that rolls ten dice at someone with three Levels left doesn’t tear them apart. It drops them.
 
@@ -259,15 +275,41 @@ Two rules protect that space, and between them they’re why a fight so rarely k
 
 So dying here is a thing somebody decides to do to you. Something has to want you dead and be given the time to manage it.
 
-## How Long Things Take
+## Recovery
 
-There’s one ladder of durations, used everywhere in this book: **Round, Minute, Scene, Day, Month, Year.** A Minute is about ten Rounds. The Round is the base unit, and anything measured in this game is measured in Rounds unless a longer band is named.
+Recovery takes time. The rules outline three different time frames for recovery.
 
-Two recovery windows come up constantly.
+**Short Rest**. An hour of genuine downtime, and you only get one of them between full nights.
 
-A **Short Rest** is about an hour of genuine downtime. You only get one Short Rest’s worth of recovery between full nights - sitting down for a second hour doesn’t heal you twice.
+**Full Night's Rest**. A full, largely uninterrupted night's sleep.
 
-A **Full Night’s Rest** is a full, largely uninterrupted night’s sleep.
+**A Month.** The time it takes for Wealth to recover from failed wealth rolls.
+
+**Vital Statistic Above Zero
+Short Rest**. You heal Health Levels equal to half your Health, rounded up, minimum 1. Poise comes back at half your Presence and Sanity at half your Psyche, both rounded up, minimum 1. Ki comes back equal to your Klotho, minimum 1. One level of Exhausted lifts, unless you are still standing in whatever caused it.
+
+**Full Night’s Rest**. Health, Poise and Sanity all go back to full, and Ki refills completely. Every level of Exhausted clears, with the same exception: a level you took from the cold does not clear while you are still in the cold. Fate Tokens are not part of any of this. You gain one at sunrise whether you slept or not.
+
+**Vital Statistic Below Zero**
+**Short Rest.** An hour does not put a body back together. Below 0 Health Levels a Short Rest gives you nothing at all, and you stay Dying until you get a real night. Poise and Sanity work differently, because a reputation and a mind can turn a corner faster than a wound can close. A Short Rest brings either of them back to 1, not to full, and the normal rates start again from there on the next rest. A point of Ki does the same for either one immediately, without waiting for a rest at all.
+
+**Full Night's Rest.** A full night gets you one Health Level, and only one, however tough you are. At −6 that is six nights before you are back to 0, and only then do the normal rates start again. Poise and Sanity come back to 1, the same as they would on a Short Rest. Nothing down here speeds up with a better night's sleep. Climbing out is meant to cost you time you would rather have spent on something else.
+
+## How Time Works
+
+Time is divided into discreet segments. In order of length, they are a Round, Minute, Scene, Day, Month, and year.
+
+**Round.** About six seconds, and the base unit everything else is measured against: one pass through the turn order, long enough for everyone present to do one thing.
+
+**Minute.** Ten Rounds, which is exactly sixty seconds and also the span of a fight that goes badly rather than quickly.
+
+**Scene.** However long the thing you are currently doing takes, from the moment it starts mattering to the moment it stops, and the GM calls the edges.
+
+**Day.** A full cycle including a night's sleep, which is the shortest band that lets you recover properly and the longest one you can plan inside.
+
+**Month.** Long enough for wounds to close, for people to hear things, and for a reputation to settle into whatever shape it is going to keep.
+
+**Year.** The length of time for things that change a character rather than a situation: training that takes, debts that come due, the world moving on without asking you.
 
 ## Combat
 
@@ -289,7 +331,7 @@ Then it **resolves band by band.** Everyone in Fast goes, then everyone in Norma
 
 **Normal** gets two actions. The balanced middle. A move and an attack, usually.
 
-**Slow** gets one concentrated action. You go last, but the action is stronger - called shots are allowed, and you attack at Advantage.
+**Slow** gets one concentrated action. You go last, but the action is stronger - called shots are allowed, or you attack at Advantage.
 
 Fast trades what you can do for when you do it. Slow trades the other direction - you go last, but the one thing you do, you do properly. Normal doesn’t trade anything away, which is why most people spend most of their rounds there.
 
@@ -317,7 +359,10 @@ Beyond attacking or moving, these are what you can spend an action on. Anything 
 
 There’s no grid and no measuring tape. Distance is four bands - **Melee, Close, Near and Far** - and each one covers a real span of meters. The GM says which band a target is in, and these are what those words mean.
 
-**Melee** is contact, out to about two meters - arm’s reach. **Close** is two to ten: the same room, across a bar, the width of an alley. **Near** is ten to fifty - across a street, the length of a corridor, the far side of a car park. **Far** is anything past fifty meters, rooftop to rooftop.
+**Melee** is contact, out to about two meters - arm’s reach. 
+**Close** is two to ten: the same room, across a bar, the width of an alley. 
+**Near** is ten to fifty - across a street, the length of a corridor, the far side of a car park. 
+**Far** is anything past fifty meters, rooftop to rooftop.
 
 Your **Movement Rate** is 5 plus your Air, in meters. You can move that far as your Fast action, or as the move half of a Normal one - and a Normal action can spend both of its halves moving, which covers twice your Movement Rate. You move in meters and the band follows from where you end up. One move carries you out of Melee into Close; a double move reaches into Near.
 
@@ -337,7 +382,9 @@ Other things can make you Distracted too - a Gift, a collapsing building, an exp
 
 **Flustered.** Your Poise hit 0. You roll all Social rolls at Disadvantage, and anything else where keeping your composure matters, for the rest of the Scene. You can spend an action on a Presence plus Difficulty roll to pull yourself together early.
 
-**Humiliated.** Your Poise went below 0, and this is the one that doesn’t just cost you dice. You can’t take the lead, you can’t negotiate, and nobody is going to let you speak for the group - you defer and you comply. Your body works fine. You’ll swing a sword all day. This is social paralysis, not physical. It clears when your Poise gets back to 0.
+**Humiliated.** Your Poise went below 0, and this is the one that doesn’t just cost you dice. You can’t take the lead, you can’t negotiate, and nobody is going to let you speak for the group - you defer and you comply. Your body works fine. You’ll swing a sword all day. This is social paralysis, not physical. It clears when your Poise climbs back to 0.
+
+Your Poise track runs as far below zero as it does above it - eight Poise means Humiliated all the way down to minus seven. **Hit the bottom of it and something gives.** Your Poise resets to 0, which puts you back to Flustered rather than back on your feet, and you take **a point of Sanity**. No roll, no wall - your Psyche does not defend against this, because this is not something being done to your mind. It is your standing in the room finally coming apart, and taking a piece of you with it. A point of Ki still stops it, the same as it stops anything else.
 
 **Overwhelmed.** Your Sanity hit 0. You pick up a temporary mental Flaw - you and the GM agree what it is - and you roll everything at Disadvantage. You can still act, and you’re still yourself. It clears when you’re out of whatever did it to you and get a chance to rest, or for 1 Ki, which refills your Sanity on the way out.
 
