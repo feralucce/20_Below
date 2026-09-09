@@ -115,11 +115,11 @@ The alternate form is built once, at creation, spending a points pool (below) on
 
 **2** - Range extends to **Near**. You may now direct the animal to perform one simple task within its natural capabilities (lead you somewhere, retrieve a small object, stand guard, fetch help) in addition to calming or understanding it. Still a Normal action, no Ki. Additionally, you gain a lasting **Animal Companion**, free with this Level - no Ki or point cost - an ordinary creature of your choice, chosen at creation, that stays by your side simply because it likes you. Not summoned or magically bound; it can leave if truly mistreated or endangered, but under normal circumstances it travels and fights alongside you.
 
-**3** - Range extends to **Far**. You may now affect a small group of animals simultaneously (a pack, a flock, a swarm) rather than just one - calming, understanding, or directing all of them at once costs **1 Ki**. Your Animal Companion’s bond deepens automatically, free with this Level: it gains **+2** to one relevant sub-stat of your choice (Soak, Ferocity, Stamina, Potence, or Initiative).
+**3** - Range extends to **Far**. You may now affect a small group of animals simultaneously (a pack, a flock, a swarm) rather than just one - calming, understanding, or directing all of them at once costs **1 Ki**. Your Animal Companion's bond deepens automatically, free with this Level: it gains **+2** to one relevant sub-stat of your choice (Soak, Ferocity, Stamina, Potence, or Initiative).
 
-**4** - The affected group scales up to a full herd, swarm, or pack of any size. Your influence now extends to dangerous or exotic wildlife, not just ordinary animals - even apex predators respond to you. Group-effect Ki cost rises to **2**. Your Animal Companion gains a second **+2** to a different sub-stat, automatically, free with this Level (stacking with Level 3’s bonus).
+**4** - The affected group scales up to a full herd, swarm, or pack of any size. Your influence now extends to dangerous or exotic wildlife, not just ordinary animals - even apex predators respond to you. Group-effect Ki cost rises to **2**. Your Animal Companion gains a second **+2** to a different sub-stat, automatically, free with this Level (stacking with Level 3's bonus).
 
-**5** - Your connection extends even to legendary or mythic beasts - dragons, cryptids, spirits wearing animal shape, whatever the setting allows (GM’s call on fit). Group-effect Ki cost drops back to **1**. Your Animal Companion gains a third **+2** to a sub-stat of your choice, plus one minor Boon-equivalent trait fitting the bond (GM-approved) - both automatic, free with this Level.
+**5** - Your connection extends even to legendary or mythic beasts - dragons, cryptids, spirits wearing animal shape, whatever the setting allows (GM's call on fit). Group-effect Ki cost drops back to **1**. Your Animal Companion gains a third **+2** to a sub-stat of your choice, plus one minor Boon-equivalent trait fitting the bond (GM-approved) - both automatic, free with this Level.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -130,15 +130,15 @@ The alternate form is built once, at creation, spending a points pool (below) on
 
 Reading an opponent costs **1 Ki**, declared on your turn - it takes no action. You hold **one read at a time**, and naming somebody new drops the one you had.
 
-**1** - Spend **1 Ki** and name one opponent you can see. Every attack you make against them is at **Advantage** for the rest of the round.
+**1** - Spend **1 Ki** and name one opponent you can see. Every attack you make against them is at **[Advantage](rules.md#advantage--disadvantage)** for the rest of the round.
 
-**2** - The read now lasts **the rest of the fight** rather than the round. Same 1 Ki, same one at a time.
+**2** - The read now lasts **the rest of the fight** rather than the round. Same 1 Ki, same one-at-a-time limit.
 
-**3** - Against a read opponent, your **critical hits land on a 2 or a 3** - the same shape as Expert, for the roll no Training Tier reaches.
+**3** - Against a read opponent, your **critical hits land on a 2 or a 3** - the same shape as [Expert](skills.md#training-tiers), for the roll no Training Tier reaches.
 
 **4** - A read opponent **cannot gain Advantage against you**, from any source. You are already where they were going.
 
-**5** - Once per fight, take **one extra Fast action**, at any point you choose. It is Fast and it stays Fast: Ki cannot bump it to Normal or Slow, and it cannot buy a Slow action’s called shot.
+**5** - Once per fight, take **one extra Fast action**, at any point you choose. It is Fast and it stays Fast - Ki cannot bump it to Normal or Slow, and it cannot be spent on a Slow action's called shot.
 
 **Adders**
 
@@ -172,15 +172,15 @@ Reading an opponent costs **1 Ki**, declared on your turn - it takes no action. 
 - **Reckless Momentum**: while any Fury bonus is active, you can't voluntarily retreat or disengage from a fight you're already in.
 - **Crash**: when your Fury bonus drops back to 0 (healed past the missing-HL threshold, or the Scene ends), you're at Disadvantage on all rolls until your next Short Rest.
 
-**1** - **Rising Fury**: while you have at least 1 Health Level missing, add bonus dice to your Physical attacks equal to half your missing Health Levels (round down), capped at **2**. While any Fury bonus is active, you’re at Disadvantage on Social and Mental rolls - nothing gets through but the fight in front of you.
+**1** - **Rising Fury**: while you have at least 1 Health Level missing, add bonus dice to your Physical attacks equal to half your missing Health Levels (round down), capped at **1**. While any Fury bonus is active, you're at Disadvantage on Social and Mental rolls - nothing gets through but the fight in front of you.
 
-**2** - Fury’s cap rises to **3**.
+**2** - Fury's cap rises to **2**.
 
-**3** - Fury’s cap rises to **4**, and its bonus also applies to your Soak - the same fury that sharpens your strikes also numbs what would otherwise put you down.
+**3** - Fury's bonus now also applies to your Soak - the same fury that sharpens your strikes also numbs what would otherwise put you down.
 
-**4** - Fury’s cap rises to **5**. The Level 1 Disadvantage no longer applies to Social rolls - a raging fury reads as pure menace, not incoherence - just Mental rolls now.
+**4** - Fury's cap rises to **3**. The Level 1 Disadvantage no longer applies to Social rolls - a raging fury reads as pure menace, not incoherence - just Mental rolls now.
 
-**5** - Fury’s cap rises to **6**. Once per Scene, as a free action, trigger **Last Stand**: your Fury bonus locks at its maximum for the rest of the Scene, regardless of your actual missing Health Levels.
+**5** - Fury's cap rises to **6**. Once per Scene, as a free action, trigger **Last Stand**: your Fury bonus locks at its maximum for the rest of the Scene, regardless of your actual missing Health Levels.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -201,15 +201,15 @@ Reading an opponent costs **1 Ki**, declared on your turn - it takes no action. 
 - **Tethered Sight**: the Gift only works on a fixed set of pre-tuned static locations - one slot per Level held in this Gift. Retargeting an existing slot to a new location requires spending a full evening or rest period retuning your sight to it. Level 4-5's follow-a-person and unknown-location capabilities never apply, since every use has to land on one of your tuned slots.
 - **One-Way Mirror**: anyone at the destination with a supernatural sense for it can always tell they're being watched, no roll required.
 
-**1** - Roll **Moira + Difficulty** (harder the less familiar the place) to project your sight to somewhere you’ve personally been before. Is a Slow action, sight only - no sound - lasting a few minutes or until broken.
+**1** - Roll **Moira + Difficulty** (harder the less familiar the place) to project your sight to somewhere you've personally been before. Is a Slow action, sight only - no sound - lasting a few minutes or until broken.
 
-**2** - The vision now includes sound as well as sight. You can also target a place you’ve only seen in detail (a photo, a vivid description) rather than having to have physically been there yourself.
+**2** - The vision now includes sound as well as sight. You can also target a place you've only seen in detail (a photo, a vivid description) rather than having to have physically been there yourself.
 
-**3** - Spend **1 Ki** to extend the vision’s duration significantly, or to target a place you’ve never seen or visited at all, so long as you’re actively searching for it with a clear intent (“show me where the stolen car went”).
+**3** - Spend **1 Ki** to extend the vision's duration significantly, or to target a place you've never seen or visited at all, so long as you're actively searching for it with a clear intent ("show me where the stolen car went").
 
-**4** - Your sight can now follow a specific person you’ve met, tracking their general location even if you don’t know exactly where they are - the vision moves with them rather than staying fixed to one place.
+**4** - Your sight can now follow a specific person you've met, tracking their general location even if you don't know exactly where they are - the vision moves with them rather than staying fixed to one place.
 
-**5** - You can project into a completely unknown, undescribed location by intent alone - answering an unknown (“where is the artifact hidden?”) rather than needing any prior anchor. Ki cost from Level 3 drops to **0**.
+**5** - You can project into a completely unknown, undescribed location by intent alone - answering an unknown ("where is the artifact hidden?") rather than needing any prior anchor. Ki cost from Level 3 drops to **0**.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -232,15 +232,15 @@ Chosen once, at creation: **Always There** (visible and permanent - can’t be h
 - **One-Way Weapon**: the Stowable option is unavailable - your claws/fangs are always Always There, visible and permanent, no choice at creation.
 - **Fragile Edge**: your natural weapon rolls **one die fewer** against anything with Soak equal to or greater than your Potence.
 
-**1** - Your claws or fangs deal **2d10**, resolved with the same per-die-vs-Soak mechanic as any weapon. Always available in Melee range - no action spent drawing or readying it. Always There costs nothing to use; Stowable triggers the Gift Check on each deployment.
+**1** - Your claws or fangs deal **1 + half your Ferocity**, resolved with the same per-die-vs-Soak mechanic as any weapon. Always available in Melee range - no action spent drawing or readying it. Always There costs nothing to use; Stowable triggers the Gift Check on each deployment.
 
-**2** - Damage rises to **3d10**.
+**2** - Damage rises to **2 + half your Ferocity**.
 
-**3** - Damage rises to **4d10**. Additionally, you may spend **1 Ki** on a successful hit to add a minor rending effect - the wound bleeds, imposing Disadvantage on the target’s next roll before it’s tended to or the scene ends.
+**3** - Damage rises to **3 + half your Ferocity**. Additionally, you may spend **1 Ki** on a successful hit to add a minor rending effect - the wound bleeds, imposing Disadvantage on the target's next roll before it's tended to or the scene ends.
 
-**4** - Damage rises to **5d10**. The rending effect intensifies - Disadvantage now persists on all of the target’s rolls until the wound is treated or the scene ends, not just their next one.
+**4** - Damage rises to **4 + half your Ferocity**. The rending effect intensifies - Disadvantage now persists on all of the target's rolls until the wound is treated or the scene ends, not just their next one.
 
-**5** - Damage rises to **6d10**. The rending effect still costs 1 Ki per use. If Stowable was chosen, deploying your claws/fangs no longer triggers the Gift Check.
+**5** - Damage rises to **5 + half your Ferocity**. The rending effect still costs 1 Ki per use. If Stowable was chosen, deploying your claws/fangs no longer triggers the Gift Check.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -263,15 +263,15 @@ Chosen once, at creation: your **signature weapon**, any single item from the ca
 - **Borrowed, Not Owned**: a conjured weapon vanishes if it ever leaves your grip involuntarily (disarmed, knocked away) - you must re-summon rather than immediately recall it.
 - **Visible Conjuring**: summoning is never subtle - it's always an obvious flash or effect visible to everyone nearby, no way to conceal that you're using a Gift.
 
-**1** - Summon your signature weapon into your hand as a **Fast action**, no Ki cost. It deals its normal listed Damage and range. Dismissing it is free and instant. It never runs dry - ammo, if any, is never actually a concern, though you’re free to roleplay reloading.
+**1** - Summon your signature weapon into your hand as a **Fast action**, no Ki cost. It deals its normal listed Damage and range. Dismissing it is free and instant. It never runs dry - ammo, if any, is never actually a concern, though you're free to roleplay reloading.
 
 **2** - You may now conjure **any** weapon from the full catalog, not just your signature - reselect freely each time you summon.
 
-**3** - The conjured weapon’s Damage rises **+2** above its normal listed rating, capped at the system’s usual **10**.
+**3** - The conjured weapon's Damage rises **+1** above its normal listed rating, capped at the weapon table's ceiling of **5**.
 
-**4** - Summoning becomes a **free action** - no action cost at all, folding seamlessly into any attack. You’re never caught without a weapon in hand.
+**4** - Summoning becomes a **free action** - no action cost at all, folding seamlessly into any attack. You're never caught without a weapon in hand.
 
-**5** - The Damage bonus (Level 3) rises to **+4** above the weapon’s normal rating, still capped at 10. Once per Scene, spend **1 Ki** to conjure a weapon so precise it ignores **3** points of the target’s Soak for that single attack.
+**5** - The Damage bonus (Level 3) rises to **+2** above the weapon's normal rating, still capped at 5. Once per Scene, spend **1 Ki** to conjure a weapon so precise it ignores **3** points of the target's Soak for that single attack.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -296,7 +296,7 @@ Chosen once, at creation: your **signature weapon**, any single item from the ca
 
 **1** - Watch a target use a Skill, then spend **1 Ki** and roll **Moira + Difficulty** to borrow it: for the rest of the scene, use that Skill yourself, treated as Trained even with no training of your own (or your own tier, if already higher).
 
-**2** - You can also mimic a Boon after watching its effect happen once, gaining that Boon’s benefit for the rest of the scene. Same cost.
+**2** - You can also mimic a Boon after watching its effect happen once, gaining that Boon's benefit for the rest of the scene. Same cost.
 
 **3** - You can mimic a Gift after watching it used, copying its Level 1 capability for the rest of the scene. Ki cost rises to **2**.
 
@@ -383,15 +383,15 @@ The build is set once at creation, spending a points pool (below) on the build m
 - **Warning Shimmer**: the air visibly distorts around you whenever this Gift is active at any Level - it can never be used covertly.
 - **Costs You Too**: every Ki spend for this Gift is doubled, rounded up (so Level 1's single-target tax costs 2 Ki instead of 1), at every Level, with no exceptions.
 
-**1** - Touch or **Close** range, single target. Spend **1 Ki**, no roll: for the rest of the scene, that target’s Gift uses cost double Ki, rounded up (a normally-free use instead costs 1 Ki).
+**1** - Touch or **Close** range, single target. Spend **1 Ki**, no roll: for the rest of the scene, that target's Gift uses cost double Ki, rounded up (a normally-free use instead costs 1 Ki).
 
 **2** - Range extends to **Near**. You may instead spend 1 Ki to directly prevent a Gift from activating in the first place, or shut down one specific active supernatural effect already in place, no roll, either way ending it outright.
 
 **3** - Range extends to **Far**. You can affect a second target at the same time, for a second 1 Ki spend.
 
-**4** - Spend **2 Ki** and roll **Moira + Difficulty** to instead raise a true field around yourself out to **Close** range, affecting everyone inside rather than picking individual targets, lasting the rest of the scene. Failure still spends the Ki; the field doesn’t form.
+**4** - Spend **2 Ki** and roll **Moira + Difficulty** to instead raise a true field around yourself out to **Close** range, affecting everyone inside rather than picking individual targets, lasting the rest of the scene. Failure still spends the Ki; the field doesn't form.
 
-**5** - The field radius extends to **Near**, and upgrades from a tax to an outright block: Gifts simply can’t be used inside it. Ki cost for the single-target effects (Levels 1-3) drops to **0**.
+**5** - The field radius extends to **Near**, and upgrades from a tax to an outright block: Gifts simply can't be used inside it. Ki cost for the single-target effects (Levels 1-3) drops to **0**.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -414,15 +414,15 @@ As with any Mental attack, additional Ki Infusion (1 Ki per die) can push indivi
 - **Fragile Hold**: any command that would cause the target visible distress or conflict with their core values ends immediately and can't be reattempted against them for a full Day.
 - **Marked Predator**: anyone who succeeds a Psyche roll against you afterward instinctively recognizes you as a Domination user on sight, permanently, whether or not they were ever a target.
 
-**1** - Requires eye contact. Spend **1 Ki** and roll **2d10** per-die against the target’s Psyche wall - a connecting die lets you issue a single-word command (“stop,” “sleep,” “drop it”) that they obey for one action or moment. Commands resulting in self-harm or serious injury automatically fail.
+**1** - Requires eye contact. Spend **1 Ki** and roll **1 + half your Psyche** dice per-die against the target's Psyche wall - a connecting die lets you issue a single-word command ("stop," "sleep," "drop it") that they obey for one action or moment. Commands resulting in self-harm or serious injury automatically fail.
 
-**2** - Dice rise to **3d10**. Commands can now be full sentences rather than a single word, and can be complex - multi-step instructions, conditional logic, or nuanced requests - not just simple directives.
+**2** - Dice rise to **2 + half your Psyche**. Commands can now be full sentences rather than a single word, and can be complex - multi-step instructions, conditional logic, or nuanced requests - not just simple directives.
 
-**3** - Dice rise to **4d10**. You may implant a delayed/triggered command - it stays dormant until a specific condition you set occurs, then executes automatically.
+**3** - Dice rise to **3 + half your Psyche**. You may implant a delayed/triggered command - it stays dormant until a specific condition you set occurs, then executes automatically.
 
-**4** - Dice rise to **5d10**. Repeated exposure builds suggestibility: each successful use of this Gift on the same person grants **Advantage** on your next attempt against them, cumulative and lasting until they’re free of your influence for an extended stretch (GM’s call).
+**4** - Dice rise to **4 + half your Psyche**. Repeated exposure builds suggestibility: each successful use of this Gift on the same person grants **Advantage** on your next attempt against them, cumulative and lasting until they're free of your influence for an extended stretch (GM's call).
 
-**5** - Dice rise to **6d10**. The self-harm/serious-injury safeguard no longer applies - commands can now be harmful, even lethal.
+**5** - Dice rise to **5 + half your Psyche**. The self-harm/serious-injury safeguard no longer applies - commands can now be harmful, even lethal.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -451,7 +451,7 @@ As with any Mental attack, additional Ki Infusion (1 Ki per die) can push indivi
 - **Fragile Fleet**: drones' Health Levels are permanently 1 lower at every Level, minimum 1.
 - **Exposed While Jacked**: Level 5's "still take Fast actions" benefit never applies - your body stays fully defenseless the whole time, at every Level.
 
-**1** - **Deploy Drones**: spend 1 Ki as a Slow action to deploy up to **2** drones from your gear, each built as one of nine types (below), chosen when constructed. Reconfiguring a drone into a different type takes **2 hours** of dedicated work outside of combat - the drone count never changes, just what each one is. Drones last until destroyed or recalled. **Jack In**: as a Normal action, sync fully with one deployed drone, adding **+2** to its Output Rating for as long as you stay jacked in - but your own body goes still and undefended (no actions, can’t notice threats) until you disengage (a Fast action) or the drone is destroyed.
+**1** - **Deploy Drones**: spend 1 Ki as a Slow action to deploy up to **2** drones from your gear, each built as one of nine types (below), chosen when constructed. Reconfiguring a drone into a different type takes **2 hours** of dedicated work outside of combat - the drone count never changes, just what each one is. Drones last until destroyed or recalled. **Jack In**: as a Normal action, sync fully with one deployed drone, adding **+2** to its Output Rating for as long as you stay jacked in - but your own body goes still and undefended (no actions, can't notice threats) until you disengage (a Fast action) or the drone is destroyed.
 
 **2** - Deploy up to **3** drones. Output Rating rises to **3**.
 
@@ -489,7 +489,7 @@ As with any Mental attack, additional Ki Infusion (1 Ki per die) can push indivi
 
 **3** - You can maintain **2** clones at once, for a second **1 Ki**. Clones can use your Boons and Skills fully, as if they were you.
 
-**4** - You can maintain **3** clones at once, and they’re no longer bound by line of sight, so long as you know roughly where they are. Clones can spend your Ki to use your Gifts too, drawing from the same pool you have.
+**4** - You can maintain **3** clones at once, and they're no longer bound by line of sight, so long as you know roughly where they are. Clones can spend your Ki to use your Gifts too, drawing from the same pool you have.
 
 **5** - You can maintain **5** clones at once, with no range limit at all.
 </div>
@@ -514,15 +514,15 @@ Activating the aura is a Slow action. **Maintaining it requires a Gift Check eve
 - **Visible Aura**: the aura is always visibly active whenever raised - it can never be raised discreetly or concealed.
 - **Exhausting Maintenance**: the Gift Check's failure cost rises to 2 Ki instead of 1, at every Level.
 
-**1** - Before an incoming attack of your chosen element resolves, remove one quarter of its dice (rounded down), then resolve the rest normally against your Soak. Anyone who touches you takes 1d10 vs their Soak.
+**1** - Before an incoming attack of your chosen element resolves, remove one quarter of its dice (rounded down), then resolve the rest normally against your Soak. Anyone who touches you takes **1 + half your Ferocity** vs their Soak.
 
-**2** - Remove half of an incoming elemental attack’s dice (rounded down) before it resolves. Contact damage rises to 2d10.
+**2** - Remove half of an incoming elemental attack's dice (rounded down) before it resolves. Contact damage rises to **2 + half your Ferocity**.
 
-**3** - Remove three quarters of an incoming elemental attack’s dice (rounded down). The trigger widens from requiring actual touch to anyone striking you at Melee range - damage rises to 3d10.
+**3** - Remove three quarters of an incoming elemental attack's dice (rounded down). The trigger widens from requiring actual touch to anyone striking you at Melee range - damage rises to **3 + half your Ferocity**.
 
-**4** - Full immunity - all dice from an incoming attack of your chosen element are removed before it resolves; nothing gets through. Contact/Melee damage rises to 4d10. The aura’s presence extends to Close range: anyone nearby (not just attacking you) suffers a minor environmental effect fitting the element, GM-adjudicated to theme.
+**4** - Full immunity - all dice from an incoming attack of your chosen element are removed before it resolves; nothing gets through. Contact/Melee damage rises to **4 + half your Ferocity**. The aura's presence extends to Close range: anyone nearby (not just attacking you) suffers a minor environmental effect fitting the element, GM-adjudicated to theme.
 
-**5** - Immunity persists. Damage rises to 5d10. The aura can be projected as an attack: spend **1 Ki** to strike a target at Near range without contact, same per-die-vs-Soak resolution - doing so on a turn skips that turn’s maintenance Gift Check.
+**5** - Immunity persists. Damage rises to **5 + half your Ferocity**. The aura can be projected as an attack: spend **1 Ki** to strike a target at Near range without contact, same per-die-vs-Soak resolution - doing so on a turn skips that turn's maintenance Gift Check.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -545,15 +545,15 @@ This Gift never deals direct damage, at any Level.
 - **Elemental Purity**: you can only manipulate a literal instance of your element already present in the scene (no darkness in broad daylight, no fire without an existing spark) - GM's call on availability.
 - **Costly Merge**: the Level 5 merge always costs 1 Ki to trigger, never free.
 
-**1** - Roll **Moira + Difficulty** to shape an effect within your domain that touches a full sensory picture (not just one sense) or physically moves/reshapes something person-sized (a body’s worth of matter, a room’s worth of shadow, a sound that isn’t really there, the temperature of a room). No Range Band limit, works anywhere you can perceive or clearly reach with it. Is a Normal action. No Ki, no Gift Check.
+**1** - Roll **Moira + Difficulty** to shape an effect within your domain that touches a full sensory picture (not just one sense) or physically moves/reshapes something person-sized (a body's worth of matter, a room's worth of shadow, a sound that isn't really there, the temperature of a room). No Range Band limit, works anywhere you can perceive or clearly reach with it. Is a Normal action. No Ki, no Gift Check.
 
 **2** - You can now blanket an area instead of a single target or point. Spend **1 Ki** to create a zone (spreading true darkness, a field of magnetic interference, a sudden downpour, a shared false vision everyone inside perceives the same way) that imposes Disadvantage on anyone inside acting against you, lasting up to a Scene.
 
-**3** - The area effect scales to something building-sized or block-sized (a full weather shift over a neighborhood, a false skyline that fools anyone looking). Ki cost rises to **2**. You can also physically move or reshape something correspondingly large within your domain with no roll, so long as it’s plausible for the element.
+**3** - The area effect scales to something building-sized or block-sized (a full weather shift over a neighborhood, a false skyline that fools anyone looking). Ki cost rises to **2**. You can also physically move or reshape something correspondingly large within your domain with no roll, so long as it's plausible for the element.
 
 **4** - Any effect you create (the area zone, a moved or reshaped object, a false sensory scene) can be made **permanent** instead of temporary, for an extra **1 Ki** spent when you create it.
 
-**5** - Once per Scene, you can briefly merge with your own domain (a body of living shadow, a drifting cloud of embers, a knot of pure magnetism) for a Round, immune to Physical damage while merged, though you still can’t deal damage yourself. Ki cost for the Level 2 area effect drops to **0**.
+**5** - Once per Scene, you can briefly merge with your own domain (a body of living shadow, a drifting cloud of embers, a knot of pure magnetism) for a Round, immune to Physical damage while merged, though you still can't deal damage yourself. Ki cost for the Level 2 area effect drops to **0**.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -580,13 +580,13 @@ This Gift never deals direct damage, at any Level.
 
 **1** - At the beginning of combat, you may take one Fast or Normal action before anyone else acts - before even the Fast Action Bracket resolves. If more than one character has this Gift, they act among themselves in Initiative order, but all still act before the normal turn order begins.
 
-**2** - Once per round, you may spend **1 Ki** to take an additional Fast action, resolved immediately after your normal action for that round - it doesn’t change your Action Bracket or Initiative position, just adds a second action on top. For the rest of that turn after spending the Ki, your Movement Rate is **x1.5**.
+**2** - Once per round, you may spend **1 Ki** to take an additional Fast action, resolved immediately after your normal action for that round - it doesn't change your Action Bracket or Initiative position, just adds a second action on top. For the rest of that turn after spending the Ki, your [Movement Rate](rules.md#movement--range) is **×1.5**.
 
-**3** - The extra action from Level 2 can now be a Fast **or Normal** action, still 1 Ki, still once per round. Roll Initiative as 2d10 and keep the higher die. The post-Ki-spend Movement Rate multiplier rises to **x2** for the rest of that turn.
+**3** - The extra action from Level 2 can now be a Fast **or Normal** action, still 1 Ki, still once per round. Roll Initiative as 2d10 and keep the higher die. The post-Ki-spend Movement Rate multiplier rises to **×2** for the rest of that turn.
 
-**4** - The extra-action spend can now be used **up to twice per round** (still 1 Ki per use). On any turn where you’ve spent Ki this way, attacks made against you that turn are at **Disadvantage** - you’re moving too fast to track cleanly. The post-Ki-spend Movement Rate multiplier rises to **x3** for the rest of that turn.
+**4** - The extra-action spend can now be used **up to twice per round** (still 1 Ki per use). On any turn where you've spent Ki this way, attacks made against you that turn are at **Disadvantage** - you're moving too fast to track cleanly. The post-Ki-spend Movement Rate multiplier rises to **×3** for the rest of that turn.
 
-**5** - The extra-action spend can now be used **up to three times per round** (still 1 Ki per use, still Fast or Normal only). Attacks made against you are at Disadvantage on any turn you spend Ki this way. The post-Ki-spend Movement Rate multiplier rises to **x5** for the rest of that turn.
+**5** - The extra-action spend can now be used **up to three times per round** (still 1 Ki per use, still Fast or Normal only). Attacks made against you are at Disadvantage on any turn you spend Ki this way. The post-Ki-spend Movement Rate multiplier rises to **×5** for the rest of that turn.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -609,15 +609,15 @@ As with any Social attack, additional Ki Infusion (1 Ki per die) can push indivi
 - **Single Target Only**: the Level 2+ multi-target/crowd expansion never applies, regardless of Level bought - always resolves against one target.
 - **Fades Fast**: the lock still lasts the full Scene, but only while you actively concentrate on maintaining it - losing focus (Distracted, taking an unrelated Slow action, or similar) ends it immediately instead of it lingering passively.
 
-**1** - Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their Social Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die locks their attention onto you for the scene: awe, dread, or fascination, your choice. No specific action compelled, just overwhelming presence.
+**1** - Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their [Social Defense](rules.md#defense-derived-stat)). On success, roll **1 + half your Presence** dice per-die against their Presence wall - a connecting die locks their attention onto you for the scene: awe, dread, or fascination, your choice. No specific action compelled, just overwhelming presence.
 
-**2** - Dice rise to **3d10**. Effect now reaches everyone perceiving you within Close range - each target gets their own to-hit roll and, on success, their own dice vs. their Presence wall.
+**2** - Dice rise to **2 + half your Presence**. Effect now reaches everyone perceiving you within Close range - each target gets their own to-hit roll and, on success, their own dice vs. their Presence wall.
 
-**3** - Dice rise to **4d10**. You may split the effect’s flavor by target in the same use - dread for hostiles, awe or magnetism for allies/bystanders.
+**3** - Dice rise to **3 + half your Presence**. You may split the effect's flavor by target in the same use - dread for hostiles, awe or magnetism for allies/bystanders.
 
-**4** - **No to-hit roll required anymore** - your presence is overwhelming enough that it simply rolls **5d10** per-die against the target’s Presence wall directly. Repeated exposure builds a hold: each successful use on the same person grants **Advantage** on your next attempt against them, cumulative, lasting until they’re away from you for an extended stretch (GM’s call).
+**4** - **No to-hit roll required anymore** - your presence is overwhelming enough that it simply rolls **4 + half your Presence** dice per-die against the target's Presence wall directly. Repeated exposure builds a hold: each successful use on the same person grants **Advantage** on your next attempt against them, cumulative, lasting until they're away from you for an extended stretch (GM's call).
 
-**5** - Dice rise to **6d10**, still no to-hit roll needed. Range extends to everyone perceiving you within Near, and a natural 10 on any die (not just a connect) causes the target to freeze or flee outright for a Round, unable to act against you at all.
+**5** - Dice rise to **5 + half your Presence**, still no to-hit roll needed. Range extends to everyone perceiving you within Near, and a natural 10 on any die (not just a connect) causes the target to freeze or flee outright for a Round, unable to act against you at all.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -640,7 +640,7 @@ As with any Social attack, additional Ki Infusion (1 Ki per die) can push indivi
 
 **1** - You can hover in place or fly at your normal ground Movement Rate. Taking off or landing is a Fast action; staying aloft is free once airborne. No Ki, no Gift Check.
 
-**2** - Movement Rate while flying doubles. You can hover just out of Melee range of anything that can’t also fly or reach that high, forcing grounded attackers to close the distance some other way.
+**2** - Movement Rate while flying doubles. You can hover just out of Melee range of anything that can't also fly or reach that high, forcing grounded attackers to close the distance some other way.
 
 **3** - Movement Rate while flying triples. Spend **1 Ki**, when an attack targets you in the air, to juke through open air for **Advantage** on your defense.
 
@@ -675,13 +675,13 @@ The barrier occupies the same Zone(s) as any worn armor and follows the normal r
 - **Visible Shimmer**: the barrier is always visibly active whenever raised, a faint shimmer anyone can notice - no way to conceal that it's up.
 - **Exhausting Maintenance**: the Gift Check's failure cost rises to 2 Ki instead of 1, at every Level.
 
-**1** - As a **Normal action**, no Ki cost, raise the barrier: **Hardness 3**, **Health Levels 2** (before your Form’s modifier), resolved with the exact same two-stage mechanic as worn armor - it covers **both** Body and Head Zones at once. Lasts until depleted or dismissed (a Fast action to drop early).
+**1** - As a **Normal action**, no Ki cost, raise the barrier: **Hardness 3**, **Health Levels 2** (before your Form's modifier), resolved with the exact same two-stage mechanic as [worn armor](rules.md#armor--called-shots) - it covers **both** Body and Head Zones at once. Lasts until depleted or dismissed (a Fast action to drop early).
 
 **2** - Hardness rises to **4**, Health Levels rise to **3**.
 
-**3** - Hardness rises to **5**, Health Levels rise to **4**. Personal Barrier may now be raised over one ally within Melee range instead of yourself; Bubble Barrier’s radius extends to Close.
+**3** - Hardness rises to **5**, Health Levels rise to **4**. Personal Barrier may now be raised over one ally within Melee range instead of yourself; Bubble Barrier's radius extends to Close.
 
-**4** - Hardness rises to **6**, Health Levels rise to **5**. Personal Barrier’s ally range extends to Close; Bubble Barrier’s radius extends to Near.
+**4** - Hardness rises to **6**, Health Levels rise to **5**. Personal Barrier's ally range extends to Close; Bubble Barrier's radius extends to Near.
 
 **5** - Hardness rises to **7**, Health Levels rise to **6**. Once per Scene, spend **1 Ki** to instantly restore a depleted barrier to full Health Levels, re-raising it as a Fast action.
 </div>
@@ -704,15 +704,15 @@ The barrier occupies the same Zone(s) as any worn armor and follows the normal r
 - **One and Done**: only one Gadgeteer-built device can be functional at a time - building a new one instantly disables the previous one.
 - **Loud Construction**: building a gadget, at any Level, is never quiet - always audible or visibly obvious, no stealthy use.
 
-**1** - Given scrap and roughly an hour of focused work, roll **Air + Difficulty** (GM sets Difficulty by how complex the gadget is) to build one simple, single-function gadget - a lockpick set, a basic signal jammer, a simple sensor, a makeshift flashlight upgrade. It works reliably until broken or its narrow purpose is exhausted. No Ki cost.
+**1** - Given scrap and roughly an hour of focused work, roll **Air + Difficulty** (GM sets Difficulty by how complex the gadget is) to build one simple, single-function gadget - a lockpick set, a basic signal jammer, a simple sensor, a makeshift flashlight upgrade. It works reliably until broken or its narrow purpose is exhausted. A gadget may carry a minor combat function (a taser dealing **1d10**, a shim granting **+1** Soak); those cost **1 Ki** to build, pure-utility ones are free.
 
-**2** - Build time drops to just a few minutes regardless of complexity. Gadgets can now have **two** functions instead of one, and may include a minor combat-relevant effect (a taser dealing 1d10, a personal shield granting +1 Soak, etc.) - combat-capable gadgets cost **1 Ki** to build; pure-utility gadgets stay free.
+**2** - Build time drops to just a few minutes regardless of complexity. Gadgets can now have **two** functions instead of one, and a combat function rises to **3d10** damage or **+3** to a defensive stat.
 
-**3** - You can now build a gadget on the fly, mid-combat, as a single Fast or Normal action, improvising from whatever’s on hand. Gadgets can have up to **three** functions. Combat-relevant gadgets scale up - **2d10** damage, or **+2** to a defensive stat. Ki cost for combat-capable gadgets rises to **2**.
+**3** - You can now build a gadget on the fly, mid-combat, as a single Fast or Normal action, improvising from whatever's on hand. Gadgets can have up to **three** functions. Combat-relevant gadgets scale up - **2d10** damage, or **+2** to a defensive stat. Ki cost for combat-capable gadgets rises to **2**.
 
-**4** - Building a gadget is now only a **Fast** action. Gadgets can have up to **four** functions. Combat-relevant gadgets scale to **3d10** damage or **+3** to a defensive stat. Ki cost for combat-capable gadgets rises to **3**.
+**4** - Building a gadget is now only a **Fast** action. Gadgets can have up to **four** functions. Combat-relevant gadgets scale to **4d10** damage or **+4** to a defensive stat. Ki cost for combat-capable gadgets rises to **3**.
 
-**5** - Combat-relevant gadgets scale to **4d10** damage or **+4** to a defensive stat. Gadgets can have up to **five** functions. Ki cost drops back to **2** for combat-capable gadgets. Additionally, once per session, you can build one extraordinary one-off device capable of a dramatic, GM-approved effect beyond the normal function cap - a signature invention.
+**5** - Combat-relevant gadgets scale to **5d10** damage or **+5** to a defensive stat. Gadgets can have up to **five** functions. Ki cost drops back to **2** for combat-capable gadgets. Additionally, once per session, you can build one extraordinary one-off device capable of a dramatic, GM-approved effect beyond the normal function cap - a signature invention.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -737,7 +737,7 @@ The barrier occupies the same Zone(s) as any worn armor and follows the normal r
 
 **1** - Spend **1 Ki** to delay a minor consequence already in motion by **1 Round**, just long enough to react. No roll.
 
-**2** - Delay a real, meaningful consequence (an injury’s onset, a trap already sprung) for up to a **Minute**. Ki cost rises to **2**.
+**2** - Delay a real, meaningful consequence (an injury's onset, a trap already sprung) for up to a **Minute**. Ki cost rises to **2**.
 
 **3** - Delay something looming over the whole scene (a curse taking hold, a countdown to disaster) for the rest of the **Scene**. Ki cost rises to **3**.
 
@@ -770,7 +770,7 @@ Additionally, given a full **Month** of thorough, repeated application (regular 
 
 **1** - Touch a willing or unconscious target and spend **1 Ki** to instantly restore 1 Health Level. Usable once per Round. No Gift Check.
 
-**2** - The same touch and Ki spend can instead cure a mundane poison, disease, or negative physical condition, so long as it isn’t already permanent.
+**2** - The same touch and Ki spend can instead cure a mundane poison, disease, or negative physical condition, so long as it isn't already permanent.
 
 **3** - Restores **2 Health Levels** per use instead of 1. Touch is no longer required, range extends to **Close**.
 
@@ -803,9 +803,9 @@ Additionally, given a full **Month** of thorough, repeated application (regular 
 
 **3** - Your sense gains microscopic-level detail at no extra cost - spot a single fingerprint across a room, hear a heartbeat, notice trace chemical residue by scent. Additionally, spend **1 Ki** to pierce an obstacle that would normally block your sense entirely - see through fog or a thin wall, hear through a door, etc.
 
-**4** - The obstacle-piercing from Level 3 no longer costs Ki, and now works through thicker, more substantial barriers - solid walls, multiple rooms away. Additionally, you’re immune to being Surprised by any threat your enhanced sense would have detected.
+**4** - The obstacle-piercing from Level 3 no longer costs Ki, and now works through thicker, more substantial barriers - solid walls, multiple rooms away. Additionally, you're immune to being [Surprised](rules.md#surprise) by any threat your enhanced sense would have detected.
 
-**5** - Your chosen sense becomes constant, passive awareness within **Far** range - you don’t need to actively look or listen; relevant details and threats simply register automatically. Additionally, it can pierce even magical concealment or supernatural stealth, not just mundane obstacles (GM’s call on edge cases specifically countering your exact sense).
+**5** - Your chosen sense becomes constant, passive awareness within **Far** range - you don't need to actively look or listen; relevant details and threats simply register automatically. Additionally, it can pierce even magical concealment or supernatural stealth, not just mundane obstacles (GM's call on edge cases specifically countering your exact sense).
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -828,7 +828,7 @@ Additionally, given a full **Month** of thorough, repeated application (regular 
 
 **1** - Gain **Advantage** on any roll to resist being pushed, tripped, knocked back, or thrown - including a Potence-based forcing attempt against you. No Ki, no Gift Check.
 
-**2** - Full immunity against ordinary human-strength attempts to move you - anyone trying must clearly exceed normal human capability (GM’s call) to have any chance at all.
+**2** - Full immunity against ordinary human-strength attempts to move you - anyone trying must clearly exceed normal human capability (GM's call) to have any chance at all.
 
 **3** - Spend **1 Ki**, when targeted by a supernatural or exceptional force effect (a boosted Potence attempt, a Gift, etc.), to gain **Advantage** on resisting it too.
 
@@ -857,15 +857,15 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 - **Residual Static**: while phased, you're still visible as a faint shimmer or outline. You're never undetectable.
 - **No Passengers**: Level 5's extend-to-another-person clause never applies.
 
-**1** - Spend **1 Ki** and a Fast action to phase for **1 Round** - pass through a thin barrier (a door, a thin wall). You can’t attack or be attacked while phased, and it ends automatically once you’re through.
+**1** - Spend **1 Ki** and a Fast action to phase for **1 Round** - pass through a thin barrier (a door, a thin wall). You can't attack or be attacked while phased, and it ends automatically once you're through.
 
-**2** - Phasing now lasts up to **1 Minute** (≈10 Rounds), letting you move through multiple thin obstacles in sequence. Still can’t attack while phased.
+**2** - Phasing now lasts up to **1 Minute** (≈10 Rounds), letting you move through multiple thin obstacles in sequence. Still can't attack while phased.
 
 **3** - You can now phase through thicker, more substantial barriers - solid stone, concrete - and phase only part of your body instead of the whole thing. While phased, the phased part is immune to Physical damage - attacks pass through it the same way you pass through walls.
 
-**4** - Phasing can be maintained for a full **Scene** (toggled on/off at will) instead of just a Minute. You may now attack while phased, though only as a Mental or Social attack - your body still can’t physically connect with anything solid.
+**4** - Phasing can be maintained for a full **Scene** (toggled on/off at will) instead of just a Minute. You may now attack while phased, though only as a Mental or Social attack - your body still can't physically connect with anything solid.
 
-**5** - You may extend the effect to one other person you’re touching, phasing them along with you. You can also phase instantly as a reaction to dodge an incoming attack. Ki cost drops to **0**.
+**5** - You may extend the effect to one other person you're touching, phasing them along with you. You can also phase instantly as a reaction to dodge an incoming attack. Ki cost drops to **0**.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -895,7 +895,7 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 
 **4** - You may now take a hostile action without breaking the invisibility. Additionally, spend **1 Ki** to also fool technological detection for that action.
 
-**5** - You can activate this Gift even under direct, active observation - someone already looking right at you doesn’t stop it from taking hold, though doing so costs an additional **1 Ki** on top of the base cost (2 Ki total when used this way).
+**5** - You can activate this Gift even under direct, active observation - someone already looking right at you doesn't stop it from taking hold, though doing so costs an additional **1 Ki** on top of the base cost (2 Ki total when used this way).
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -918,7 +918,7 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 
 **1** - From a standing start, jump forward up to **2x** your Movement Rate, or straight up up to **1x** your Movement Rate. Is a Fast action. No fall damage from a landing height within what you could jump. No Ki, no Gift Check.
 
-**2** - Forward jumps extend to **3x** Movement Rate, vertical to **1.5x**. You can adjust your trajectory once, mid-air, changing direction after the jump’s already started.
+**2** - Forward jumps extend to **3x** Movement Rate, vertical to **1.5x**. You can adjust your trajectory once, mid-air, changing direction after the jump's already started.
 
 **3** - Forward jumps extend to **4x** Movement Rate, vertical to **2x**. Spend **1 Ki** to chain a second jump immediately on landing, covering that much distance again in the same move.
 
@@ -949,11 +949,11 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 
 **2** - Gain **Advantage** on any roll made directly against your marked target: an attack, a contested Skill use, anything aimed at them specifically.
 
-**3** - Your marked target’s attempts to hide, disguise themselves, or evade you specifically are at **Disadvantage**. You also gain Advantage to avoid being Surprised by them.
+**3** - Your marked target's attempts to hide, disguise themselves, or evade you specifically are at **Disadvantage**. You also gain Advantage to avoid being Surprised by them.
 
 **4** - The mark no longer needs renewing: it holds until the target is dealt with or you choose to release it, not just for a Scene.
 
-**5** - Spend **1 Ki** to pinpoint your marked target’s exact location right now, regardless of concealment, Stealth, Invisibility, or other means of hiding (short of a Gift specifically built to counter this, GM’s call).
+**5** - Spend **1 Ki** to pinpoint your marked target's exact location right now, regardless of concealment, Stealth, Invisibility, or other means of hiding (short of a Gift specifically built to counter this, GM's call).
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -974,15 +974,15 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 - **All In**: while Guard is active, you can't take any action besides moving up to half your Movement Rate - no partial commitment.
 - **Telegraphed**: an opponent who's seen you fight before gets Advantage on their first attack roll against you each combat, recognizing your stance on sight.
 
-**1** - Your unarmed strikes deal **3** Damage (up from the baseline 1), resolved with the same per-die-vs-Soak mechanic as a weapon. No Ki, no Gift Check. You also gain **Guard**: as your action, forgo attacking to brace instead, gaining Soak equal to half your Unarmed Damage (round up - **+2** at this Level) until the start of your next turn.
+**1** - Your unarmed strikes deal **2** Damage (up from the baseline 1), resolved with the same per-die-vs-Soak mechanic as a weapon. No Ki, no Gift Check. You also gain **Guard**: as your action, forgo attacking to brace instead, gaining **+2** Soak until the start of your next turn.
 
-**2** - Unarmed Damage rises to **5**, matching a Knife or Handgun. Guard’s bonus rises to **+3**.
+**2** - Unarmed Damage rises to **3**, matching a Knife or Handgun. Guard's bonus rises to **+3**.
 
-**3** - Unarmed Damage rises to **7**, matching a Sword or Rifle. Guard’s bonus rises to **+4**. Spend **1 Ki** on a successful unarmed hit to stagger the target, imposing Disadvantage on their next roll before the end of their next turn.
+**3** - Unarmed Damage rises to **4**, matching a Sword or Rifle. Guard's bonus rises to **+4**. Spend **1 Ki** on a successful unarmed hit to stagger the target, imposing Disadvantage on their next roll before the end of their next turn.
 
 **4** - Guard can now be held as a **Fast action**, usable reactively - even outside your own turn, once per round - instead of only on your own turn.
 
-**5** - Unarmed Damage rises to **10**, matching a Two-handed sword or Heavy weapon - your bare hands hit as hard as anything on the weapon table. Guard’s bonus rises to **+5**. The stagger effect (Level 3) no longer costs Ki.
+**5** - Unarmed Damage rises to **5**, matching a Two-handed sword or Heavy weapon - your bare hands hit as hard as anything on the weapon table. Guard's bonus rises to **+5**. The stagger effect (Level 3) no longer costs Ki.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -1003,15 +1003,15 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 - **Leaves a Seam**: an edited memory always has a small, detectable inconsistency a thorough investigation (or another telepath) can find.
 - **One Edit, Once**: you can never target the same person's memory twice - the first edit is permanent and final.
 
-**1** - Requires touch. Spend **1 Ki**; make the standard to-hit roll (**Air** vs. their Mental Defense). On success, roll **2d10** per-die against their Psyche wall - a connecting die erases one specific, recent memory (something from the last few minutes: a name overheard, a face seen, this exact encounter).
+**1** - Requires touch. Spend **1 Ki**; make the standard to-hit roll (**Air** vs. their [Mental Defense](rules.md#defense-derived-stat)). On success, roll **1 + half your Psyche** dice per-die against their Psyche wall - a connecting die erases one specific, recent memory (something from the last few minutes: a name overheard, a face seen, this exact encounter).
 
-**2** - Dice rise to **3d10**. You may implant a simple false memory in place of the erased one, instead of leaving a blank.
+**2** - Dice rise to **2 + half your Psyche**. You may implant a simple false memory in place of the erased one, instead of leaving a blank.
 
-**3** - Dice rise to **4d10**. Range extends to **Close**, touch no longer required. You can now target older, more significant memories, not just recent ones.
+**3** - Dice rise to **3 + half your Psyche**. Range extends to **Close**, touch no longer required. You can now target older, more significant memories, not just recent ones.
 
-**4** - **No to-hit roll required anymore** - it simply rolls **5d10** per-die against the target’s Psyche wall directly.
+**4** - **No to-hit roll required anymore** - it simply rolls **4 + half your Psyche** dice per-die against the target's Psyche wall directly.
 
-**5** - Dice rise to **6d10**, still no to-hit roll. Once per Scene, an edit also scrubs any physical evidence of your involvement from the target’s immediate perception - footage glitches, notes stop making sense to them, whatever would otherwise contradict the new memory.
+**5** - Dice rise to **5 + half your Psyche**, still no to-hit roll. Once per Scene, an edit also scrubs any physical evidence of your involvement from the target's immediate perception - footage glitches, notes stop making sense to them, whatever would otherwise contradict the new memory.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -1037,15 +1037,15 @@ Chosen once, at creation, purely cosmetic: the form your raised dead take (bone 
 - **Grave-Bound**: your thralls can never move more than Close range from you - stray past that and they collapse instantly.
 - **No Whispers**: Necrotic Touch's healing never applies - it still deals damage, but grants you nothing back.
 
-**1** - **Raise the Dead**: spend 1 Ki as a Slow action to raise up to **2** skeletal thralls from nearby remains. Each has Soak 1, Defense 5, Health Levels 2, your own Movement Rate, and a natural-weapon Attack of 1d10 (resolved per-die vs. Soak, same mechanic as any weapon). They act immediately after you in the turn order, taking a Fast or Normal action each round (never Slow), and have no Skills or Gifts of their own. They last until destroyed or dismissed. **Necrotic Touch**: as a Normal action, make a Physical attack (Attribute vs. Defense, as usual) dealing **2d10** vs. Soak - each connecting die heals you 1 Health Level (never past your maximum), drawing their vitality straight into your own.
+**1** - **Raise the Dead**: spend 1 Ki as a Slow action to raise up to **2** skeletal thralls from nearby remains. Each has Soak 1, Defense 5, Health Levels 2, your own Movement Rate, and a natural-weapon Attack of 1d10 (resolved per-die vs. Soak, same mechanic as any weapon). They act immediately after you in the turn order, taking a Fast or Normal action each round (never Slow), and have no Skills or Gifts of their own. They last until destroyed or dismissed. **Necrotic Touch**: as a Normal action, make a Physical attack (Attribute vs. Defense, as usual) dealing **1 + half your Ferocity** vs. Soak - each connecting die heals you 1 Health Level (never past your maximum), drawing their vitality straight into your own.
 
-**2** - Raise up to **3** thralls at once. Necrotic Touch’s dice rise to **3d10**.
+**2** - Raise up to **3** thralls at once. Necrotic Touch's dice rise to **2 + half your Ferocity**.
 
-**3** - Raise up to **4** thralls at once, and each one’s Attack rises to **2d10**. Necrotic Touch’s dice rise to **4d10**.
+**3** - Raise up to **4** thralls at once, and each one's Attack rises to **2d10**. Necrotic Touch's dice rise to **3 + half your Ferocity**.
 
-**4** - Raise up to **5** thralls at once. **Wither**: spend 1 Ki on a successful Necrotic Touch hit to also impose Disadvantage on the target’s next roll, their strength visibly sapped.
+**4** - Raise up to **5** thralls at once. Necrotic Touch's dice rise to **4 + half your Ferocity**. **Wither**: spend 1 Ki on a successful Necrotic Touch hit to also impose Disadvantage on the target's next roll, their strength visibly sapped.
 
-**5** - Necrotic Touch’s dice rise to **6d10**. Once per Scene, spend **2 Ki** to unleash **Legion’s Toll**: every thrall you currently command instantly unravels into a burst of necrotic force, each one making one last Attack roll against everyone within Melee range of it, then all are destroyed.
+**5** - Necrotic Touch's dice rise to **5 + half your Ferocity**. Once per Scene, spend **2 Ki** to unleash **Legion's Toll**: every thrall you currently command instantly unravels into a burst of necrotic force, each one making one last Attack roll against everyone within Melee range of it, then all are destroyed.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -1066,15 +1066,15 @@ Chosen once, at creation, purely cosmetic: the form your raised dead take (bone 
 - **No Recordings**: the effect doesn't fool cameras, recordings, or other non-living observation - only living memory and attention.
 - **Loud Undoes It**: raising your voice, running, or otherwise drawing deliberate attention immediately breaks the effect.
 
-**1** - Activating is a Fast action and triggers a **Gift Check** - success free, failure costs 1 Ki, the effect happens either way. For the rest of the Scene, anyone not already actively focused on you must beat a **Perception + Difficulty** roll to notice what you’re doing, and even on a success, they’re at **Disadvantage** recalling details about you afterward.
+**1** - Activating is a Fast action and triggers a **Gift Check** - success free, failure costs 1 Ki, the effect happens either way. For the rest of the Scene, anyone not already actively focused on you must beat a **Perception + Difficulty** roll to notice what you're doing, and even on a success, they're at **Disadvantage** recalling details about you afterward.
 
 **2** - Anyone who briefly loses sight of you (you leave a room, turn a corner, get lost in a crowd) forgets they saw you at all within a few minutes, unless something jogs their memory.
 
 **3** - The effect now holds even mid-conversation - if you go quiet or step back, people naturally lose their conversational thread about you and move on, without it feeling unnatural to them.
 
-**4** - You may extend the effect to one other person you’re touching, bringing them into your own obscurity for as long as contact holds.
+**4** - You may extend the effect to one other person you're touching, bringing them into your own obscurity for as long as contact holds.
 
-**5** - Once per Scene, spend **1 Ki** to retroactively erase yourself from the last few minutes of everyone present’s memory - as far as they can recall, you were never part of what just happened.
+**5** - Once per Scene, spend **1 Ki** to retroactively erase yourself from the last few minutes of everyone present's memory - as far as they can recall, you were never part of what just happened.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -1099,15 +1099,15 @@ As with any Mental attack, additional Ki Infusion (1 Ki per die) can push indivi
 - **Echo Sickness**: after returning from a possession lasting longer than a Scene, you're at Disadvantage on all rolls for the rest of that day.
 - **One-Way Door**: returning to your own body isn't automatic. You must win another Psyche roll against the host to leave, same as entering.
 
-**1** - Requires touch. Spend **1 Ki** and roll **2d10** per-die against the target’s Psyche wall - a connecting die lets you possess their body for the rest of the scene. Your own body goes limp and undefended while you’re away.
+**1** - Requires touch. Spend **1 Ki** and roll **1 + half your Psyche** dice per-die against the target's Psyche wall - a connecting die lets you possess their body for the rest of the scene. Your own body goes limp and undefended while you're away.
 
-**2** - Dice rise to **3d10**. Touch is no longer required - possession can be attempted at **Close range**.
+**2** - Dice rise to **2 + half your Psyche**. Touch is no longer required - possession can be attempted at **Close range**.
 
-**3** - Dice rise to **4d10**. Range extends to **Near**. Possession duration becomes indefinite - lasting until you choose to return or are forcibly expelled, not capped at a scene.
+**3** - Dice rise to **3 + half your Psyche**. Range extends to **Near**. Possession duration becomes indefinite - lasting until you choose to return or are forcibly expelled, not capped at a scene.
 
-**4** - Dice rise to **5d10**. Range extends to **Far**. While possessing, you gain full access to the host’s Skills, Boons, and other Gifts, using their body’s full capability as your own.
+**4** - Dice rise to **4 + half your Psyche**. Range extends to **Far**. While possessing, you gain full access to the host's Skills, Boons, and other Gifts, using their body's full capability as your own.
 
-**5** - Dice rise to **6d10**. You may possess a new target instantly, snapping from one host directly into another without returning to your own body first, so long as you can make eye contact with the new target.
+**5** - Dice rise to **5 + half your Psyche**. You may possess a new target instantly, snapping from one host directly into another without returning to your own body first, so long as you can make eye contact with the new target.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -1128,15 +1128,15 @@ As with any Mental attack, additional Ki Infusion (1 Ki per die) can push indivi
 - **Draining Sight**: after any active use (Level 2+), you're at Disadvantage on your next roll.
 - **Fewer Flashes**: Level 5's always-on passive upgrade never applies. Passive flashes stay GM's-call only regardless of Level bought.
 
-**1** - Passive and involuntary - at a dramatically appropriate moment (GM’s call), you receive a brief precognitive flash: a warning, a fragment of the near future. No roll, no action, purely a narrative tool the GM wields on your behalf.
+**1** - Passive and involuntary - at a dramatically appropriate moment (GM's call), you receive a brief precognitive flash: a warning, a fragment of the near future. No roll, no action, purely a narrative tool the GM wields on your behalf.
 
-**2** - Once per scene, you may actively reach for a flash: roll **Moira + Difficulty** to get a vague impression of the likely outcome of a specific decision or action you’re considering.
+**2** - Once per scene, you may actively reach for a flash: roll **Moira + Difficulty** to get a vague impression of the likely outcome of a specific decision or action you're considering.
 
-**3** - Spend **1 Ki**, when you’ve foreseen an attack coming, to gain **Advantage** on your defense against it - foreknowledge translated into a real combat edge.
+**3** - Spend **1 Ki**, when you've foreseen an attack coming, to gain **Advantage** on your defense against it - foreknowledge translated into a real combat edge.
 
 **4** - Active foresight (Level 2) sharpens from a vague impression into a clearer vision, and can now reach further out - not just the immediate next moment, but a meaningful stretch of near future.
 
-**5** - Passive flashes (Level 1) can now surface any time danger is coming, not just when the GM chooses to grant one - you’re rarely blindsided anymore. Ki cost from Level 3 drops to **0**.
+**5** - Passive flashes (Level 1) can now surface any time danger is coming, not just when the GM chooses to grant one - you're rarely blindsided anymore. Ki cost from Level 3 drops to **0**.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -1160,15 +1160,15 @@ Ki Infusion still applies on top, same as any Social attack.
 - **Reciprocal Bond**: while any binding is active, you're also bound by the same rule yourself - you set the standard, you have to live by it too.
 - **Undermined by Contradiction**: if you personally break a rule you've currently imposed on someone else, every active binding you're holding shatters at once.
 
-**1** - Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their Social Defense). On success, roll **2d10** per-die against their Presence wall - a connecting die binds them to one simple rule of conduct you declare (“don’t raise your voice,” “don’t lie to me,” “don’t draw a weapon”) for the rest of the Scene. Breaking the rule costs them **Disadvantage** on the roll that breaks it.
+**1** - Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their [Social Defense](rules.md#defense-derived-stat)). On success, roll **1 + half your Presence** dice per-die against their Presence wall - a connecting die binds them to one simple rule of conduct you declare ("don't raise your voice," "don't lie to me," "don't draw a weapon") for the rest of the Scene. Breaking the rule costs them **Disadvantage** on the roll that breaks it.
 
-**2** - Dice rise to **3d10**. You may declare up to two rules at once on the same target.
+**2** - Dice rise to **2 + half your Presence**. You may declare up to two rules at once on the same target.
 
-**3** - Dice rise to **4d10**. You may bind up to **two targets** at once, each resolved individually against their own Presence wall and their own rule set.
+**3** - Dice rise to **3 + half your Presence**. You may bind up to **two targets** at once, each resolved individually against their own Presence wall and their own rule set.
 
-**4** - **No to-hit roll required anymore** - it simply rolls **5d10** per-die against each target’s Presence wall directly. Up to **three targets** at once, each able to hold up to **three rules**.
+**4** - **No to-hit roll required anymore** - it simply rolls **4 + half your Presence** dice per-die against each target's Presence wall directly. Up to **three targets** at once, each able to hold up to **three rules**.
 
-**5** - Dice rise to **6d10**, still no to-hit roll needed. Up to **five targets** at once. Duration extends to a full Day instead of just the Scene.
+**5** - Dice rise to **5 + half your Presence**, still no to-hit roll needed. Up to **five targets** at once. Duration extends to a full Day instead of just the Scene.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -1193,9 +1193,9 @@ Ki Infusion still applies on top, same as any Social attack.
 
 **2** - Range extends to **Near**. You can also perform simple fine manipulation at range (turn a key, flip a switch, thread a needle) with no roll.
 
-**3** - Range extends to **Far**. You can hurl an object you’re gripping at a target as an attack: roll your Potence dice per-die vs. the target’s Soak, same shape as a thrown weapon. Ki cost stays **1**.
+**3** - Range extends to **Far**. You can hurl an object you're gripping at a target as an attack: roll your Potence dice per-die vs. the target's Soak, same shape as a thrown weapon. Ki cost stays **1**.
 
-**4** - You can grip and move several objects at once (up to a handful), or grip a person directly to restrain or reposition them (contested against their Potence or Soak, GM’s call). Ki cost rises to **2**.
+**4** - You can grip and move several objects at once (up to a handful), or grip a person directly to restrain or reposition them (contested against their Potence or Soak, GM's call). Ki cost rises to **2**.
 
 **5** - Maintaining a telekinetic grip no longer requires concentration once per Scene, and the mass you can grip doubles beyond your normal Potence carrying capacity. Ki cost from Level 1 drops to **0**.
 </div>
@@ -1222,13 +1222,13 @@ Ki Infusion still applies on top, same as any Social attack.
 
 **1** - Touch an object and roll **Moira + Difficulty**. Ask **1** question about its most significant recent history - the answer comes as a vague impression, a flash of emotion or sense-memory. No Ki, no Gift Check.
 
-**2** - Ask up to **2** questions. Answers now come as a clearer scene rather than a flash, and can reach further back into the object’s history, not just its most recent moments.
+**2** - Ask up to **2** questions. Answers now come as a clearer scene rather than a flash, and can reach further back into the object's history, not just its most recent moments.
 
 **3** - Ask up to **3** questions. Spend **1 Ki** per question to push that answer into a detailed, near-immersive vision instead of a scene - faces, words, real specifics.
 
 **4** - Ask up to **4** questions. Detailed visions (Level 3) can now identify specific people and approximate dates, and reach centuries back if the object is old enough to hold it.
 
-**5** - Ask up to **5** questions. A touch can now reconstruct a brief sequence of the object’s major moments rather than one isolated scene. Ki cost for a detailed vision drops to **0**.
+**5** - Ask up to **5** questions. A touch can now reconstruct a brief sequence of the object's major moments rather than one isolated scene. Ki cost for a detailed vision drops to **0**.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -1281,11 +1281,11 @@ Additionally, given a full **Month** of rest, you can heal away a below-zero Fla
 - **Slow Return**: reverting to your true form always takes the same Slow action and Gift Check as transforming, at every Level.
 - **Betraying Detail**: one small, GM-chosen detail of your true self always persists through the disguise (a birthmark, a habit, a scent), a fixed tell you don't get to choose.
 
-**1** - Is a Slow action and triggers a Gift Check - success free, failure costs 1 Ki, the transformation happens either way. Transform into a generic member of a broad category you’ve seen examples of (a dog, a police officer, a teenage boy) - not a specific individual. Appearance only, no voice. Undetectable unless an observer has specific reason to doubt it, in which case they may roll Insight + Difficulty to see through it.
+**1** - Is a Slow action and triggers a [Gift Check](#resolution) - success free, failure costs 1 Ki, the transformation happens either way. Transform into a generic member of a broad category you've seen examples of (a dog, a police officer, a teenage boy) - not a specific individual. Appearance only, no voice. Undetectable unless an observer has specific reason to doubt it, in which case they may roll Insight + Difficulty to see through it.
 
 **2** - Mimicry now includes voice as well as appearance.
 
-**3** - You may now mimic a specific individual - a particular person or animal you’ve seen in real detail - or a specific inanimate object, instead of just a generic category.
+**3** - You may now mimic a specific individual - a particular person or animal you've seen in real detail - or a specific inanimate object, instead of just a generic category.
 
 **4** - You no longer need to have seen the specific target in person - a detailed photo or description is enough. You also pick up minor functional traits where it makes sense - their exact fingerprint or biometric signature (fooling biometric scanners).
 
@@ -1324,15 +1324,15 @@ The wall you pick also picks your to-hit target, because there are three Defense
 - **One and Done**: the Move can only be used once per Scene, regardless of Level.
 - **Costly Signature**: the Move's Ki cost is always 1 higher than its Level would normally require, at every Level, including Level 1 (which costs 1 Ki instead of 0).
 
-**1** - If an attack: deals **1d10** vs the target’s chosen wall. If non-damaging: produces one small, clearly-bounded effect (GM approval on scope). Using it is a Fast action. No Ki cost, no Gift Check.
+**1** - If an attack: deals **1 + half your attack sub-stat** vs the target's chosen wall. If non-damaging: produces one small, clearly-bounded effect (GM approval on scope). Using it is a Fast action. No Ki cost, no Gift Check.
 
-**2** - Damage rises to **2d10** (if an attack); the non-damaging effect’s scope widens (still GM-approved, but a real step up from Level 1). Using the Move now costs **1 Ki**, in addition to the Fast action - that Ki spend is what bakes in one minor secondary effect layered onto the base Move (a small knockback, a brief off-balance status, a minor debuff).
+**2** - Damage rises to **2 + half your attack sub-stat** (if an attack); the non-damaging effect's scope widens (still GM-approved, but a real step up from Level 1). Using the Move now costs **1 Ki**, in addition to the Fast action - that Ki spend is what bakes in one minor secondary effect layered onto the base Move (a small knockback, a brief off-balance status, a minor debuff).
 
-**3** - Damage rises to **3d10**. Range extends from Melee to **Close** (Levels 1-2 were Melee-only). The secondary effect from Level 2 upgrades to a moderate tier (a real knockdown, a genuine debuff, a short status lock, rather than just “brief”). Still 1 Ki per use.
+**3** - Damage rises to **3 + half your attack sub-stat**. Range extends from Melee to **Close** (Levels 1-2 were Melee-only). The secondary effect from Level 2 upgrades to a moderate tier (a real knockdown, a genuine debuff, a short status lock, rather than just "brief"). Still 1 Ki per use.
 
-**4** - Damage rises to **4d10**. Range extends to **Near**. The secondary effect upgrades to a major tier (a real status condition, a significant forced reposition, a debuff with teeth). Ki cost rises to **2** per use.
+**4** - Damage rises to **4 + half your attack sub-stat**. Range extends to **Near**. The secondary effect upgrades to a major tier (a real status condition, a significant forced reposition, a debuff with teeth). Ki cost rises to **2** per use.
 
-**5** - Damage rises to **5d10**. Range extends to **Far**. The secondary effect reaches its full, signature-defining scope (GM-approved - a finishing blow, a reality-bending flourish, whatever fits the Move you built). Ki cost rises to **3** per use.
+**5** - Damage rises to **5 + half your attack sub-stat**. Range extends to **Far**. The secondary effect reaches its full, signature-defining scope (GM-approved - a finishing blow, a reality-bending flourish, whatever fits the Move you built). Ki cost rises to **3** per use.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -1357,7 +1357,7 @@ The wall you pick also picks your to-hit target, because there are three Defense
 
 **2** - The size swing doubles - grow or shrink up to double your normal height in either direction, or stretch your reach out to Near range. Still just a Fast action, no Ki, no Gift Check.
 
-**3** - The size swing triples, or reach extends to Far. Activating now costs **1 Ki**. While enlarged, gain **+2 Soak**; while shrunk, attacks made against you are at **Disadvantage** - you’re a much harder target to land a hit on.
+**3** - The size swing triples, or reach extends to Far. Activating now costs **1 Ki**. While enlarged, gain **+2 Soak**; while shrunk, attacks made against you are at **Disadvantage** - you're a much harder target to land a hit on.
 
 **4** - While enlarged, Soak rises to **+4** and you gain **+2 Ferocity** - sheer mass hits harder. While shrunk, attacks against you remain at Disadvantage, and you gain **Advantage** on Stealth-related rolls - small enough to go unnoticed in the right circumstances. Ki cost rises to **2**.
 
@@ -1386,7 +1386,7 @@ The wall you pick also picks your to-hit target, because there are three Defense
 
 **2** - The bonus also applies to the contested dice pool - roll as if your Potence were 2 higher when forcing, breaking, or moving something actively resisting.
 
-**3** - Spend **1 Ki** on a successful Physical attack to add your Potence to that attack die, on top of Ferocity - the boosted die becomes **d10 + Ferocity + Potence** vs. Soak, for the same 1 Ki spend Ki Infusion already costs.
+**3** - Spend **1 Ki** on a successful Physical attack to add your Potence to that attack die, on top of Ferocity - the boosted die becomes `d10 + Ferocity + Potence` vs. Soak, for the same 1 Ki spend Ki Infusion already costs.
 
 **4** - The Potence bonus from Levels 1-2 rises to **4**. The boosted attack (Level 3) can also send the target flying, a forced reposition one Range Band, on top of the damage.
 
@@ -1450,7 +1450,7 @@ The wall you pick also picks your to-hit target, because there are three Defense
 
 **4** - Range extends to **Near**. A complex networked system stops being a wall of code and becomes a space you can navigate and rewrite in real time. Ki cost rises to **2**.
 
-**5** - Range extends to **Far**. An entire building’s systems, a fleet of devices, a whole network: scale stops being a limit, all of it yours to command at once. Ki cost from Level 3 drops to **0**.
+**5** - Range extends to **Far**. An entire building's systems, a fleet of devices, a whole network: scale stops being a limit, all of it yours to command at once. Ki cost from Level 3 drops to **0**.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -1471,15 +1471,15 @@ The wall you pick also picks your to-hit target, because there are three Defense
 - **Echoes Linger**: a faint psychic echo lingers after any read or link. Other telepaths or psychics can detect that you were there.
 - **Vulnerable Link**: while actively linked (Level 4+), you're at Disadvantage against any Mental attack targeting you. The open channel cuts both ways.
 
-**1** - Roll **Air + Difficulty** to read someone’s general emotional state - fear, anger, deception, attraction, whatever’s closest to the surface - requires them to be within Close range and perceivable to you. Success reveals the surface emotion; no specific thoughts, just the feeling underneath. No Ki, no Gift Check.
+**1** - Against a target actively resisting, spend **1 Ki** to force the read as a genuine **Mental attack** - **1 + half your Psyche** dice per-die against their Psyche wall, breaching to their surface thoughts on a connecting die. Otherwise, roll **Air + Difficulty** to read someone's general emotional state - fear, anger, deception, attraction, whatever's closest to the surface - requires them to be within Close range and perceivable to you. Success reveals the surface emotion; no specific thoughts, just the feeling underneath. No Ki, no Gift Check.
 
-**2** - Range extends to **Near**. You can now read surface, unguarded thoughts as well as emotions - still resolved as Air + Difficulty; a target actively resisting simply raises the Difficulty (GM’s call), not yet a contested roll.
+**2** - Range extends to **Near**. The forced read rises to **2 + half your Psyche** dice. You can now read surface, unguarded thoughts as well as emotions - still resolved as Air + Difficulty; a target actively resisting simply raises the Difficulty (GM's call), not yet a contested roll.
 
-**3** - Range extends to **Far**. Against a target actively resisting, you may now spend **1 Ki** to force the read as a genuine **Mental attack** - roll **4d10** per-die against their Psyche wall, breaching through to their surface thoughts and emotions on a connecting die.
+**3** - Range extends to **Far**. The forced read rises to **3 + half your Psyche** dice.
 
-**4** - The forced read strengthens to **5d10**. You can now project your own thoughts into a target’s mind as well as read theirs - a genuine two-way telepathic link. For a willing or aware participant, this works at **Line of Sight** (as far as you can see them, not bound by the normal Range Bands). Forcing a read on an unwilling target (the Level 3 Mental attack) is capped at **Near**. Forced reads can now dig into deeper memories and guarded secrets, not just surface thoughts. Ki cost for forced reads stays **1**.
+**4** - The forced read strengthens to **4 + half your Psyche**. You can now project your own thoughts into a target's mind as well as read theirs - a genuine two-way telepathic link. For a willing or aware participant, this works at **Line of Sight** (as far as you can see them, not bound by the normal Range Bands). Forcing a read on an unwilling target (the Level 3 Mental attack) is capped at **Near**. Forced reads can now dig into deeper memories and guarded secrets, not just surface thoughts. Ki cost for forced reads stays **1**.
 
-**5** - Forced-read range extends back out to **Far**. Additionally, once you’ve established a genuine two-way link with someone (even briefly), you retain a limited telepathic connection to them indefinitely afterward - no range limit at all, a permanent bond once formed. Ki cost for forced reads drops to **0**.
+**5** - The forced read rises to **5 + half your Psyche** dice, and its range extends back out to **Far**. Additionally, once you've established a genuine two-way link with someone (even briefly), you retain a limited telepathic connection to them indefinitely afterward - no range limit at all, a permanent bond once formed. Ki cost for forced reads drops to **0**.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -1502,13 +1502,13 @@ The wall you pick also picks your to-hit target, because there are three Defense
 
 **1** - Blink instantly to anywhere within line of sight, no matter the distance. Is a Fast action, and costs **1 Ki**. No Gift Check.
 
-**2** - You can also blink to a place you’ve personally visited before, even without current line of sight, so long as you can clearly picture it.
+**2** - You can also blink to a place you've personally visited before, even without current line of sight, so long as you can clearly picture it.
 
-**3** - Blinking now works for a place you’ve only seen in vivid detail (a photo, a thorough description) rather than requiring you to have been there yourself. Doing so requires a Gift Check: failure still moves you, but you land somewhere within sight of the intended spot instead of precisely on it.
+**3** - Blinking now works for a place you've only seen in vivid detail (a photo, a thorough description) rather than requiring you to have been there yourself. Doing so requires a [Gift Check](#resolution): failure still moves you, but you land somewhere within sight of the intended spot instead of precisely on it.
 
-**4** - You can bring one other person along, if you’re touching them, at no extra cost. Instead of blinking, you may tear a portal: a stable rift lasting up to a Minute, letting others step through it in both directions. Opening a portal is a Slow action and triggers a Gift Check.
+**4** - You can bring one other person along, if you're touching them, at no extra cost. Instead of blinking, you may tear a portal: a stable rift lasting up to a Minute, letting others step through it in both directions. Opening a portal is a Slow action and triggers a Gift Check.
 
-**5** - The portal can connect to a different plane of existence entirely, not just another point in your own world, so long as you have some way of pointing it there: an object, a description, a name, GM’s call on fit. Ki cost for the Level 3 detail-only blink drops to **0**.
+**5** - The portal can connect to a different plane of existence entirely, not just another point in your own world, so long as you have some way of pointing it there: an object, a description, a name, GM's call on fit. Ki cost for the Level 3 detail-only blink drops to **0**.
 </div>
 
 <div class="entry entry-headed" markdown="1">
@@ -1531,9 +1531,9 @@ The wall you pick also picks your to-hit target, because there are three Defense
 
 **1** - Stash or retrieve a handful of small objects (anything that fits in two hands) in a hidden fold in space only you can reach. Doing so is a Fast action. No Ki, no Gift Check.
 
-**2** - The fold grows to a closet’s worth of space. You can store considerably more, and duck inside yourself briefly as a hiding spot.
+**2** - The fold grows to a closet's worth of space. You can store considerably more, and duck inside yourself briefly as a hiding spot.
 
-**3** - The fold becomes a genuine room behind its own door, big enough to live in and furnish however you like. Opening the door for the first time triggers a Gift Check: success costs nothing, failure costs 1 Ki, either way the door opens.
+**3** - The fold becomes a genuine room behind its own door, big enough to live in and furnish however you like. Opening the door for the first time triggers a [Gift Check](#resolution): success costs nothing, failure costs 1 Ki, either way the door opens.
 
 **4** - The room expands into a full dwelling of your own design, as many rooms as you want, furnished and stocked however you like. You can bring others through the door with you as guests.
 
@@ -1566,7 +1566,7 @@ Chosen once, at creation: how you perform the ritual that triggers this Gift, tr
 
 **2** - The output can now be meaningfully more complex than the input (raw ore into a working blade, rubble into a fitted brick wall), still equivalent mass. The ritual is now only a Normal action. Ki cost rises to **2**.
 
-**3** - You can change a material’s basic composition, not just its shape (wood into iron, sand into glass). Affected mass roughly doubles. Ki cost rises to **3**. A Gift Check applies on especially large or precise jobs, GM’s call.
+**3** - You can change a material's basic composition, not just its shape (wood into iron, sand into glass). Affected mass roughly doubles. Ki cost rises to **3**. A [Gift Check](#resolution) applies on especially large or precise jobs, GM's call.
 
 **4** - The ritual is now only a Fast action. Affected mass roughly doubles again. Ki cost rises to **4**.
 
@@ -1630,5 +1630,5 @@ Chosen once, at creation: how you perform the ritual that triggers this Gift, tr
 
 **4** - You stop aging entirely, natural or accelerated. Immunity to poison and disease upgrades from Advantage to outright, even against exotic toxins and genuine plagues.
 
-**5** - Full immunity to poison, disease, and aging of any origin, natural or supernatural. You can still be killed, violence, injury, and the like still work, you simply can’t be worn down or aged to death.
+**5** - Full immunity to poison, disease, and aging of any origin, natural or supernatural. You can still be killed, violence, injury, and the like still work, you simply can't be worn down or aged to death.
 </div>

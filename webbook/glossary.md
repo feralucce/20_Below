@@ -88,7 +88,7 @@ How much you can lift, carry, or drag without straining: your Potence squared, t
 <div class="gloss" markdown="1">
 <span class="gloss-term">Condition</span>
 
-The catch-all for a temporary bad state you can be put into - Distracted, Surprised, Flustered, Exhausted, Overwhelmed, and the rest. Each has its own trigger and its own way out, under its own entry. A Fate Token can shrug any of them off for a moment.
+The catch-all for a temporary bad state you can be put into - Distracted, Surprised, Flustered, Exhausted, Overwhelmed, Dying, and the rest. Each has its own trigger and its own way out, under its own entry. A Fate Token can shrug any of them off for a moment.
 </div>
 
 <div class="gloss" markdown="1">
@@ -98,9 +98,15 @@ The basic move of the whole system. Roll 2d10, add them up, and check the total 
 </div>
 
 <div class="gloss" markdown="1">
+<span class="gloss-term">Critical Hit</span>
+
+A critical success on a to-hit roll. Half the attack's dice, rounded up, connect automatically - no roll, no wall. The rest roll and each adds your Klotho, with Ki Infusion still available on top. It is amplification rather than an attack, which is why Moira can touch it at all. Crossing zero still applies, so a critical can drop a target to 0 but never past it.
+</div>
+
+<div class="gloss" markdown="1">
 <span class="gloss-term">Critical Success / Catastrophic Failure</span>
 
-Roll a 2 - both dice showing 1 - and it’s a critical success, the best possible result. Roll a 20 - both showing 10 - and it’s a catastrophic failure: the attempt fails and something else goes wrong with it, and in combat you are left Off Balance as well. A few Skill tiers widen the good end or cushion the bad one.
+Roll a 2 - both dice showing 1 - and it’s a critical success, the best possible result. Roll a 20 - both showing 10 - and it’s a catastrophic failure. A few Skill tiers widen the good end or cushion the bad one. On an attack, a critical success sends half the damage dice through untouched and puts Klotho behind the rest - see Critical Hit.
 </div>
 
 <div class="gloss" markdown="1">
@@ -140,6 +146,12 @@ What happens when you take a hit, or catch a Kotodama effect, part-way through a
 </div>
 
 <div class="gloss" markdown="1">
+<span class="gloss-term">Dying</span>
+
+Where you are below 0 Health Levels: unconscious, still losing ground, and out of the fight until somebody stops it. The row runs the same distance below zero as above, so a character with 7 Health Levels is Dying from −1 and dead at −7 - whatever it took to put them down, it takes that much again to finish them.
+</div>
+
+<div class="gloss" markdown="1">
 <span class="gloss-term">Earth</span>
 
 One of the five Elements that defines the essence of a character - flesh and stone, the solid ground under everything else. Earth is the Attribute that covers raw physical force, endurance and mass, how strong you are, how hard you hit, and how much you can take before you stop being able to take it. It is further divided into Soak and Potence.
@@ -166,7 +178,7 @@ The Fast bracket. You go before everyone in Normal or Slow, but you only get the
 <div class="gloss" markdown="1">
 <span class="gloss-term">Fate Token</span>
 
-The currency you earn and spend. You pick them up from your Nature, from taking Disadvantage on purpose, from your Flaws, from a daily top-up, from story Milestones, or whenever the GM hands one over. You spend them on Kotodama or the Fate Triggers. You can hold three times your Stamina and no more — anything earned at that cap is lost rather than banked.
+The currency you earn and spend. You pick them up from your Nature, from taking Disadvantage on purpose, from your Flaws, from a daily top-up, from story Milestones, or whenever the GM hands one over. You spend them on Kotodama or the Fate Triggers. You can hold three times your Stamina and no more - anything earned at that cap is lost rather than banked.
 </div>
 
 <div class="gloss" markdown="1">
@@ -226,19 +238,19 @@ The risk some Gifts carry when you use them. Roll 2d10 against your current Ki, 
 <div class="gloss" markdown="1">
 <span class="gloss-term">Health</span>
 
-One of Water’s two sub-stats, the depth of the well you draw endurance from. It sets your Health Levels - 5 plus your Health - which is how many hits you can take before you drop. Sample descriptors: Hale, Resilient, Stalwart, Unbreakable, Hard-to-Kill, and so on.
+One of Water’s two sub-stats, the depth of the well you draw endurance from. It sets your Health Levels - 5 plus your Health - which is how many hits you can take before you drop. How far past 0 you can be carried before you die mirrors that same number, so a character with 8 Levels is out at 0 and dead at −8. Sample descriptors: Hale, Resilient, Stalwart, Unbreakable, Hard-to-Kill, and so on.
 </div>
 
 <div class="gloss" markdown="1">
 <span class="gloss-term">Health Levels</span>
 
-How many hits you can take, as a row of boxes rather than a pool of points. You have 5 plus your Health. Each solid hit checks one off; at zero, you’re out.
+How many hits you can take, as a row of boxes rather than a pool of points. You have 5 plus your Health. Each solid hit checks one off; at zero, you’re out, and below zero you’re Dying. The row runs the same distance again below zero, and the far end of it is where you die.
 </div>
 
 <div class="gloss" markdown="1">
 <span class="gloss-term">Humiliated</span>
 
-One step past Flustered, where you go if Poise drops below 0. You can’t take the lead, negotiate, or speak for the group - you defer and go along. You’re still acting under your own power; it’s your standing that’s broken, not your body. It clears when Poise climbs back to 0 - or, if you reach the bottom of the track, when Poise resets there and costs you a point of Sanity.
+One step past Flustered, where you go if Poise drops below 0. You can’t take the lead, negotiate, or speak for the group - you defer and go along. You’re still acting under your own power; it’s your standing that’s broken, not your body. It clears when Poise climbs back to 0.
 </div>
 
 <div class="gloss" markdown="1">
@@ -250,13 +262,13 @@ One of Air’s two sub-stats, the flick of readiness that decides who moves firs
 <div class="gloss" markdown="1">
 <span class="gloss-term">Ki</span>
 
-The pool that powers everything supernatural. It’s your strongest Element plus 8, so every character has one worth spending - 13 at the least, 18 at the most. You spend it to save a Health or Sanity Level, to put more behind an attack, to move up an Action Bracket, and to use most Gifts. A Short Rest brings back Klotho points of it; a full night brings it all back.
+The pool that powers everything supernatural. It’s your strongest Element plus 8, so every character has one worth spending - 13 at the least, 18 at the most. You spend it to save a Health, Poise or Sanity Level, to put more behind an attack, to move up an Action Bracket, and to use most Gifts. Below 0 it brings Poise or Sanity back to 1 without waiting for a rest. A Short Rest brings back Klotho points of it; a full night brings it all back.
 </div>
 
 <div class="gloss" markdown="1">
 <span class="gloss-term">Ki Infusion</span>
 
-Paying 1 Ki per die to add a sub-stat - Ferocity, Presence, or Psyche, whichever matches the attack - to that die before you roll. It’s how you push a hit through a wall that would otherwise stop it cold.
+Paying 1 Ki per die to add a sub-stat - Ferocity, Presence, or Psyche, whichever matches the attack - to that die. You roll the damage dice first and then choose which to boost, so nothing is spent on a die that already got through. It’s how you push a hit through a wall that would otherwise stop it cold.
 </div>
 
 <div class="gloss" markdown="1">
@@ -274,7 +286,7 @@ One of Moira’s two sub-stats, the thread still being spun. It sets how much Ki
 <div class="gloss" markdown="1">
 <span class="gloss-term">Level</span>
 
-A step on a ladder. Several different things in the game use them, and they don’t otherwise have much to do with each other. Gifts have five Levels, each stacking on the last. Resources run 1 to 5. Health, Poise, and Sanity are counted in Levels - boxes you check off as you take hits. Exhausted stacks in levels of its own, 1 through 5. When a rule just says “Level,” the thing it’s attached to tells you which ladder it means.
+A step on a ladder. Several different things in the game use them, and they don’t otherwise have much to do with each other. Gifts have five Levels, each stacking on the last. Resources run 1 to 5. Your Vitals - Health, Poise, and Sanity - are counted in Levels, boxes you check off as you take hits. Exhausted stacks in levels of its own, 1 through 5. When a rule just says “Level,” the thing it’s attached to tells you which ladder it means.
 </div>
 
 <div class="gloss" markdown="1">
@@ -376,13 +388,13 @@ A roll to lean on a Resource harder than its Level covers for free. Roll 2d10 ag
 <div class="gloss" markdown="1">
 <span class="gloss-term">Rests</span>
 
-Two ways to recover. A Short Rest is about an hour of real downtime, and you only get the benefit of one between full nights. A Full Night’s Rest is a proper night’s sleep. Health, Sanity, Poise, and Ki all come back on both, each at its own pace.
+Two ways to recover. A Short Rest is about an hour of real downtime, and you only get the benefit of one between full nights. A Full Night’s Rest is a proper night’s sleep. Above 0 a Short Rest gives back half the governing sub-stat, rounded up, and a full night gives everything back. Below 0 the rates stop: Health gets nothing from a Short Rest and exactly one Level from a full night, while Poise and Sanity come back to 1 on either, or for 1 Ki.
 </div>
 
 <div class="gloss" markdown="1">
 <span class="gloss-term">Sanity</span>
 
-Your grip on your own mind under a Mental attack, tracked as boxes like Health. You have 5 plus your Psyche. At 0 you’re Overwhelmed; below 0, Shattered.
+Your grip on your own mind under a Mental attack, tracked as boxes like Health. You have 5 plus your Psyche. At 0 you’re Overwhelmed; below 0, Shattered. The row runs the same distance again below zero, and the far end of it saddles you with a temporary mental health condition and puts your Sanity back to 0.
 </div>
 
 <div class="gloss" markdown="1">
@@ -406,7 +418,7 @@ Something you’ve learned and practiced. Every Skill has a home Element it norm
 <div class="gloss" markdown="1">
 <span class="gloss-term">Skill Training Tier</span>
 
-How good you are at a Skill, on a six-step ladder: Untrained, Novice, Trained, Adept, Expert, Master. Each step changes how you build the roll - from no Attribute at all, up to rolling with Advantage and a wider critical range.
+How good you are at a Skill, on a six-step ladder: Untrained, Novice, Trained, Adept, Expert, Master. Each step changes how you build the roll - from no Attribute at all, up to rolling with Advantage and a wider critical range. It also sets your damage dice on a Social attack: one at Untrained, rising to six at Master.
 </div>
 
 <div class="gloss" markdown="1">
@@ -448,13 +460,19 @@ The number a core roll has to hit or come under: your Attribute plus the Difficu
 <div class="gloss" markdown="1">
 <span class="gloss-term">Time Bands</span>
 
-The standard ladder the rules use whenever something needs a duration: Round, Minute (about ten rounds), Scene, Day, Month, Year. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
+The standard ladder the rules use whenever something needs a duration: Round, Minute, Scene, Day, Month, Year. A Round is about 6 seconds, so a Minute is exactly ten of them. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
 </div>
 
 <div class="gloss" markdown="1">
 <span class="gloss-term">Untrained Roll</span>
 
 A roll for something you have no Skill in. Your Attribute doesn’t help here - the target number is just the Difficulty.
+</div>
+
+<div class="gloss" markdown="1">
+<span class="gloss-term">Vitals</span>
+
+Health, Poise and Sanity: the three things an attack can take from you. Each is 5 plus a sub-stat, counted in Levels rather than points, and each runs the same distance below zero as it does above. A connecting Physical die costs Health, a Social die costs Poise, a Mental die costs Sanity, and a point of Ki preserves a Level on any of them. Ki itself is not a Vital - it’s the pool you spend, not a row you lose. See Wall for the other side of the same exchange.
 </div>
 
 <div class="gloss" markdown="1">

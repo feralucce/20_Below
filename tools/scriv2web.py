@@ -258,6 +258,18 @@ def gift_lists(path):
         # which is why the general table restorer will not touch it - every
         # numbered table in the project shares those keys. Here the Gift is
         # known by name, so its own table is unambiguous.
+        # The Level ladder, taken from the Gift's own "| Level | Effect |"
+        # table. The manuscript keeps a second copy of every ladder as
+        # "**2** - Damage rises to..." paragraphs, and because those are not
+        # tables the general restorer never touched them: the whole Attack
+        # Dice rewrite sat in this file for a day without reaching a reader.
+        # Levels are mechanics and belong to rules/gifts.md; the flavour,
+        # Adders and Limiters prose stays the manuscript's.
+        rows = re.findall(r"^\| ([1-5]) \| (.+?) \|\s*$", section, re.M)
+        if rows:
+            lists["Levels"] = "\n\n".join(
+                "**%s** - %s" % (n, body.strip()) for n, body in rows)
+
         for label in ("Adders", "Limiters", "Pool by Level", "Build menu"):
             m = re.search(r"^\*\*%s\*\*:?\s*$" % re.escape(label), section, re.M)
             if not m:
@@ -294,6 +306,14 @@ def relist(body, lists):
     while i < len(body):
         chunk = body[i]
         label = chunk.strip("*: ").strip()
+        # The Level ladder has no label above it - it just starts. So it is
+        # recognised by shape, and the whole run of numbered lines is handed
+        # over to the rules file's version in one go.
+        if LEVEL_LINE.match(chunk) and lists.get("Levels"):
+            out.append(lists["Levels"])
+            while i < len(body) and LEVEL_LINE.match(body[i]):
+                i += 1
+            continue
         if not (chunk.startswith("**") and label in LABELS and lists.get(label)):
             out.append(chunk); i += 1
             continue
@@ -434,9 +454,19 @@ def main():
                     "glossary: gloss_cards wrapped nothing - has the "
                     "**Term**: definition shape changed?")
         if slug == "gifts":
-            chunks = wrap_headed_entries(
-                chunks, "## The Gift List",
-                gift_lists(os.path.join(ROOT, "rules", "gifts.md")))
+            by_name = gift_lists(os.path.join(ROOT, "rules", "gifts.md"))
+            # A Gift added to rules/gifts.md and never written into the
+            # manuscript is simply absent from the book, silently. Onslaught
+            # and Salvo shipped that way. Levels now come from the rules
+            # file, but a whole entry still needs its prose written here.
+            in_book = {c[3:].strip() for c in chunks if c.startswith("## ")}
+            absent = sorted(n for n in by_name if n not in in_book
+                            and n != "Attack Dice")
+            if absent:
+                hollow.append(
+                    "gifts: in rules/gifts.md but not in the manuscript, so "
+                    "not in the book - " + ", ".join(absent))
+            chunks = wrap_headed_entries(chunks, "## The Gift List", by_name)
             # wrap_headed_entries swallows a missing heading and hands back
             # the chapter untouched, so the miss is caught here instead.
             if not count_cards(chunks, "entry entry-headed"):
