@@ -1,6 +1,6 @@
 [package]
 name = "prep"
-version = "0.2.3"
+version = "0.2.4"
 description = "20 Below Encounter Difficulty Calculator desktop app"
 authors = ["Feralucce Savage"]
 license = "UNLICENSED"
