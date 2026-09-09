@@ -1,0 +1,61 @@
+<svg width="680" height="540" viewBox="0 0 680 540" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>How a critical hit resolves</title>
+<desc>A worked example. Ronan attacks with Onslaught at Level 5 with a Ferocity of 4, giving a pool of 7 dice, and rolls a critical on the to-hit. Half the pool rounded up, 4 dice, connects with no roll and no wall to beat. The remaining 3 are rolled and each adds his Klotho of 4, then compared against the target's Soak of 7: 2 and 1 become 6 and 5 and are absorbed, while 6 becomes 10 and connects. Five Health Levels in total.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#5c7d92"/>
+</marker>
+</defs>
+
+<rect x="240" y="16" width="200" height="56" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="340" y="38" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Onslaught 5 + half Ferocity 4</text>
+<text x="340" y="58" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="13" fill="#8fadbe">a pool of 7 dice</text>
+
+<line x1="340" y1="72" x2="340" y2="98" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="240" y="98" width="200" height="52" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="340" y="118" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Critical hit</text>
+<text x="340" y="137" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">the to-hit rolled a 2</text>
+
+<path d="M340,150 L340,172 L170,172 L170,196" fill="none" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M340,150 L340,172 L510,172 L510,196" fill="none" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="52" y="196" width="236" height="52" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="170" y="216" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Half, rounded up</text>
+<text x="170" y="235" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">4 dice, straight through</text>
+
+<rect x="392" y="196" width="236" height="52" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="510" y="216" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">The other 3</text>
+<text x="510" y="235" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">rolled, each adding Klotho 4</text>
+
+<rect x="66" y="272" width="44" height="40" rx="6" fill="#16281c" stroke="#3f6b4c" stroke-width="1"/>
+<rect x="120" y="272" width="44" height="40" rx="6" fill="#16281c" stroke="#3f6b4c" stroke-width="1"/>
+<rect x="174" y="272" width="44" height="40" rx="6" fill="#16281c" stroke="#3f6b4c" stroke-width="1"/>
+<rect x="228" y="272" width="44" height="40" rx="6" fill="#16281c" stroke="#3f6b4c" stroke-width="1"/>
+<text x="88" y="292" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="13" fill="#8fd4a0">hit</text>
+<text x="142" y="292" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="13" fill="#8fd4a0">hit</text>
+<text x="196" y="292" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="13" fill="#8fd4a0">hit</text>
+<text x="250" y="292" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="13" fill="#8fd4a0">hit</text>
+<text x="170" y="332" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">no roll, no wall to beat</text>
+
+<rect x="396" y="272" width="68" height="40" rx="6" fill="#2e1a17" stroke="#6b4038" stroke-width="1"/>
+<rect x="476" y="272" width="68" height="40" rx="6" fill="#2e1a17" stroke="#6b4038" stroke-width="1"/>
+<rect x="556" y="272" width="68" height="40" rx="6" fill="#16281c" stroke="#3f6b4c" stroke-width="1"/>
+<text x="430" y="292" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="13" fill="#f0a89c">2+4 = 6</text>
+<text x="510" y="292" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="13" fill="#f0a89c">1+4 = 5</text>
+<text x="590" y="292" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="13" fill="#8fd4a0">6+4 = 10</text>
+<text x="510" y="332" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">against the target's Soak 7</text>
+
+<rect x="52" y="356" width="236" height="46" rx="8" fill="#16281c" stroke="#3f6b4c" stroke-width="1"/>
+<text x="170" y="379" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="15" font-weight="500" fill="#8fd4a0">4 Health Levels</text>
+
+<rect x="392" y="356" width="236" height="46" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="510" y="371" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="15" font-weight="500" fill="#8fd4a0">1 Health Level</text>
+<text x="510" y="390" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#f0a89c">two absorbed</text>
+
+<path d="M170,402 L170,434 L340,434 L340,458" fill="none" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M510,402 L510,434 L340,434" fill="none" stroke="#5c7d92" stroke-width="1.5"/>
+
+<rect x="240" y="458" width="200" height="52" rx="8" fill="#16281c" stroke="#3f6b4c" stroke-width="1.5"/>
+<text x="340" y="484" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="17" font-weight="600" fill="#8fd4a0">5 Health Levels</text>
+</svg>

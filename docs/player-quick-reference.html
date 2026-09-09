@@ -195,6 +195,7 @@ Generated from the same source the printed sheet uses.</p>
 <tr><td><strong>Presence</strong></td><td>Social attacks</td></tr>
 <tr><td><strong>Psyche</strong></td><td>Mental attacks</td></tr>
 </tbody></table>
+<p><strong>A critical hit</strong> sends half your dice through with no roll and no wall to beat, rounded up. The rest roll, and each adds your <strong>Klotho</strong>.</p>
 <p><strong>Ki Infusion</strong> - roll the damage dice first, then spend <strong>1 Ki per die</strong> to add your matching sub-stat to that die. Ferocity for Physical, Presence for Social, Psyche for Mental.</p>
 <h2>Ki</h2>
 <div class="block roll">
@@ -205,23 +206,25 @@ Generated from the same source the printed sheet uses.</p>
 <div class="cols">
 <h1>Social Attacks</h1>
 <p>Defense differs by attack: <strong>10-Atropos</strong> physical, <strong>10-Psyche</strong> social, <strong>10-Presence</strong> mental.</p>
+<p><strong>Moira never carries a Physical attack</strong>, but it carries a Social or a Mental one.</p>
 <p>Same two steps as any attack. Element vs their <strong>Social Defense</strong> (10-Psyche) to land it, then dice one at a time vs their <strong>Presence</strong>, rolling high. Each connecting die costs a <strong>Poise</strong>. Ki Infusion adds your Presence.</p>
-<p><strong>The dice are what you brought.</strong></p>
+<p><strong>The dice are your training</strong> in whatever Skill you are using.</p>
 <table>
 <tbody>
-<tr><td><strong>1</strong></td><td>Nerve alone - a flat insult, a raised voice</td></tr>
-<tr><td><strong>2</strong></td><td>A real hit - a burn that lands, a point they can't wave off</td></tr>
-<tr><td><strong>3</strong></td><td>Something true that stings - a weakness named, a room already laughing</td></tr>
-<tr><td><strong>4</strong></td><td>Something they can't afford said - evidence, a secret, rank, an audience</td></tr>
-<tr><td><strong>5</strong></td><td>A reckoning - all of it, in front of everyone, no exit</td></tr>
+<tr><td><strong>0</strong></td><td>Untrained</td><td>1 die</td></tr>
+<tr><td><strong>1</strong></td><td>Novice</td><td>2</td></tr>
+<tr><td><strong>2</strong></td><td>Trained</td><td>3</td></tr>
+<tr><td><strong>3</strong></td><td>Adept</td><td>4</td></tr>
+<tr><td><strong>4</strong></td><td>Expert</td><td>5</td></tr>
+<tr><td><strong>5</strong></td><td>Master</td><td>6</td></tr>
 </tbody></table>
-<p><strong>Earn the ceiling</strong> - opening cold you have a 1, however good the line is. Every exchange that lands raises what you can reach by one, to a <strong>maximum of 3</strong>. Past 3 takes real material, not momentum.</p>
-<p><strong>Repeats decay</strong> - the same jab twice is -1 die, a third time nothing.</p>
-<p><strong>Somebody has to be watching</strong> - <strong>-1</strong> unwitnessed, <strong>+1</strong> in front of people whose regard they need. Both floor at 1.</p>
+<p><strong>The Skill picks the Element too.</strong> Fire carries Ridicule, Intimidation, Persuasion, Public Speaking, Performance and Leadership. Water carries Deception. Moira carries Insight.</p>
+<p><strong>Charm and Seduction are not attacks</strong> - they win someone over rather than take them apart.</p>
 <p><strong>Mental attacks need a Gift.</strong> There's no unarmed version - that's the rule, not a gap.</p>
 <h2>Conditions</h2>
 <table>
 <tbody>
+<tr><td><strong>Dying</strong></td><td>Health below 0. Unconscious and losing ground</td></tr>
 <tr><td><strong>Off Balance</strong></td><td>Everything at Disadvantage until the end of your next turn. Doesn't stack</td></tr>
 <tr><td><strong>Distracted</strong></td><td>Atropos + Difficulty to hold a Slow action together</td></tr>
 <tr><td><strong>Surprised</strong></td><td>Everything at Disadvantage for the round</td></tr>
@@ -260,14 +263,26 @@ Generated from the same source the printed sheet uses.</p>
 </tbody></table>
 <p><strong>Hold at most Stamina x 3. Spend at most Stamina per Scene.</strong> A Token earned at the cap is lost.</p>
 <p><strong>Kotodama</strong> - assert a fact into the world. Cost is Magnitude + Range beyond yourself + Plausibility (Whisper 0, Murmur +1, Shout +3), and permanent is free.</p>
-<h2>At Zero</h2>
+<h2>At Zero and Below</h2>
+<p>Every Vital runs as far below zero as it runs above it.</p>
 <table>
+<thead><tr><th></th><th>At 0</th><th>Below 0</th><th>At the bottom</th></tr></thead>
 <tbody>
-<tr><td><strong>Health</strong></td><td>Unconscious, and dying below it</td></tr>
-<tr><td><strong>Poise</strong></td><td>Flustered, then Humiliated below 0</td></tr>
-<tr><td><strong>Sanity</strong></td><td>Overwhelmed, then Shattered below 0</td></tr>
-<tr><td><strong>An unnamed NPC</strong></td><td>Dead</td></tr>
-</tbody></table></div></main>
+<tr><td><strong>Health</strong></td><td>Unconscious</td><td>Dying</td><td>Dead</td></tr>
+<tr><td><strong>Poise</strong></td><td>Flustered</td><td>Humiliated</td><td>Resets to 0, costs a Sanity</td></tr>
+<tr><td><strong>Sanity</strong></td><td>Overwhelmed</td><td>Shattered</td><td>Resets to 0, temporary condition</td></tr>
+</tbody></table>
+<p>An unnamed NPC is simply dead at 0.</p>
+<h2>Resting</h2>
+<table>
+<thead><tr><th></th><th>Short Rest</th><th>Full Night</th></tr></thead>
+<tbody>
+<tr><td><strong>Health</strong></td><td>half your Health, round up</td><td>full</td></tr>
+<tr><td><strong>Poise</strong></td><td>half your Presence, round up</td><td>full</td></tr>
+<tr><td><strong>Sanity</strong></td><td>half your Psyche, round up</td><td>full</td></tr>
+<tr><td><strong>Ki</strong></td><td>your Klotho</td><td>full</td></tr>
+</tbody></table>
+<p><strong>Below 0</strong> the rates stop. Health gets <strong>nothing</strong> from a Short Rest and exactly <strong>one Level</strong> from a full night. Poise and Sanity go back to <strong>1</strong> on either rest, or for <strong>1 Ki</strong>.</p></div></main>
 <script src="/docs/assets/js/site-nav.js"></script>
 </body>
 </html>
