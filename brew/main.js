@@ -3,7 +3,7 @@
 const V = new URL(import.meta.url).search;
 const { render } = await import('./render.js' + V);
 const { autoPaginate, stripAutoBreaks } = await import('./autopage.js' + V);
-const { guide, starter, themeDemo } = await import('./sample.js' + V);
+const { guide, starter } = await import('./sample.js' + V);
 const files = await import('./files.js' + V);
 
 const editor   = document.getElementById('editor');
@@ -243,16 +243,16 @@ document.getElementById('btn-print').onclick = () => window.print();
    reload and a restored draft. */
 function editorHoldsOurs() {
   const text = editor.value;
-  if (!text.trim()) return true;
-  if (text === guide() || text === starter()) return true;
-  return Object.keys(THEMES).some((t) => text === themeDemo(t));
+  return !text.trim() || text === guide() || text === starter();
 }
 
 document.getElementById('sel-theme').onchange = (e) => {
   const swap = editorHoldsOurs();
   prefs.theme = e.target.value;
   applyPrefs();
-  if (swap) editor.value = themeDemo(prefs.theme);
+  // The reference is what a theme is judged on, so it comes back under
+  // the new one rather than leaving the old theme's page on screen.
+  if (swap) editor.value = guide();
   // A theme changes typography, so it changes how tall a page's text runs.
   draw();
 };
@@ -295,7 +295,8 @@ document.getElementById('btn-new').onclick = () => {
 /* The reference opens in its own window so it can sit beside the
    document being written rather than replacing it. */
 document.getElementById('btn-reference').onclick = () => {
-  window.open('reference.html', '20below-brew-reference',
+  window.open('reference.html?theme=' + encodeURIComponent(prefs.theme),
+    '20below-brew-reference',
     'width=1100,height=900,menubar=no,toolbar=no');
 };
 
