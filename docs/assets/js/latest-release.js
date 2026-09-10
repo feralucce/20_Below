@@ -45,27 +45,35 @@
            ' ' + p(h) + ':' + p(d.getMinutes()) + ' ' + ampm;
   }
 
-  /* Releases come back newest first, so the first tag that matches is the
-     one we want. A draft or prerelease is skipped rather than offered. */
+  /* The feed is NOT ordered newest-first, whatever the API docs imply.
+     Asked for the Brewery on 2026-09-09 it returned 0.3.9 ahead of
+     0.3.10, which is tag order, not release order - so taking the first
+     match served a version older than the one that existed. Every
+     candidate is compared instead. A draft or prerelease is skipped
+     rather than offered. */
   function pick(releases, spec) {
+    var best = null;
     for (var i = 0; i < releases.length; i++) {
       var r = releases[i];
       if (r.draft || r.prerelease) continue;
       if (!spec.tag.test(r.tag_name || '')) continue;
       for (var j = 0; j < (r.assets || []).length; j++) {
         if (spec.asset.test(r.assets[j].name)) {
-          return {
+          var found = {
             version: spec.tag.exec(r.tag_name)[1],
             url: r.assets[j].browser_download_url,
             published: r.published_at,
           };
+          if (!best || older(best.version, found.version)) best = found;
+          break;
         }
       }
     }
-    return null;
+    return best;
   }
 
-  /* "0.9.5" is older than "0.10.1" - string comparison gets that wrong, so
+  /* "0.9.5" is older than "0.10.1", and "0.3.9" is older than "0.3.10" -
+     string comparison gets both wrong, so
      compare the numbers. */
   function older(a, b) {
     var x = a.split('.');
