@@ -10,6 +10,8 @@
  *   \page bg=hexdrift cols=1
  *   \page bg=https://your-host/cover.jpg tint=0.6
  *   \page nofolio
+ *   \page folio=i          restart the count here, in roman
+ *   \page folio=1          restart it here, in arabic
  *
  * Options apply to the page the marker STARTS. Unknown keys are
  * ignored, so adding new ones later cannot break old documents.
@@ -133,12 +135,64 @@ export function paginate(src) {
   return out;
 }
 
-/** How the document numbers its pages: { on, where, start }. */
+/* Roman numerals, for the front matter of a book.
+ *
+ * Which numbering a page uses is taken from how its number is written
+ * rather than from a separate switch: folio=i is roman and folio=1 is
+ * arabic. That is one idea instead of two, and it puts the answer in the
+ * place you are already looking. */
+const ROMAN = [[1000, 'm'], [900, 'cm'], [500, 'd'], [400, 'cd'], [100, 'c'],
+  [90, 'xc'], [50, 'l'], [40, 'xl'], [10, 'x'], [9, 'ix'], [5, 'v'],
+  [4, 'iv'], [1, 'i']];
+const ROMAN_DIGIT = { i: 1, v: 5, x: 10, l: 50, c: 100, d: 500, m: 1000 };
+
+function toRoman(n, upper) {
+  // Only ever used for front matter, which never runs past a few dozen
+  // pages. Anything a roman numeral cannot say is shown as itself.
+  if (!Number.isFinite(n) || n < 1 || n > 3999) return String(n);
+  let left = n;
+  let out = '';
+  for (const [value, sign] of ROMAN) {
+    while (left >= value) { out += sign; left -= value; }
+  }
+  return upper ? out.toUpperCase() : out;
+}
+
+function fromRoman(text) {
+  const t = text.toLowerCase();
+  let n = 0;
+  for (let i = 0; i < t.length; i++) {
+    const here = ROMAN_DIGIT[t[i]];
+    const next = ROMAN_DIGIT[t[i + 1]];
+    n += next && here < next ? -here : here;
+  }
+  return n;
+}
+
+/** Read a written page number: 12, -7, i, XIV. Null if it is neither. */
+function folioValue(text) {
+  const written = String(text === undefined ? '' : text).trim();
+  if (!written) return null;
+  if (/^-?\d+$/.test(written)) {
+    return { n: parseInt(written, 10), roman: false, upper: false };
+  }
+  if (/^[ivxlcdm]+$/i.test(written)) {
+    const n = fromRoman(written);
+    // Round-tripped, so xyz or iiii is rejected rather than quietly
+    // renumbering the book from something it does not mean.
+    if (n > 0 && toRoman(n, false) === written.toLowerCase()) {
+      return { n, roman: true, upper: written === written.toUpperCase() };
+    }
+  }
+  return null;
+}
+
+/** How the document numbers its pages: { on, where, from }. */
 function folioSettings(doc) {
   const on = !!doc.on && !doc.off;
   const where = doc.center ? 'center' : 'outside';
-  const start = parseInt(doc.start, 10);
-  return { on, where, start: Number.isFinite(start) ? start : 1 };
+  const from = folioValue(doc.start) || { n: 1, roman: false, upper: false };
+  return { on, where, from };
 }
 
 /* Grounds drawn for this document, kept between renders.
@@ -212,6 +266,10 @@ export function render(src, container, defaults = {}) {
   // attribute text saying the same handful of things.
   const rules = new Map();
 
+  // Runs through the whole document, so an unnumbered page still advances
+  // it and a page that restarts the count carries every page after it.
+  let count = folio.from;
+
   container.innerHTML = pages
     .map(({ options, body }, i) => {
       // Two columns unless the page asks for one. Not a tool setting:
@@ -254,9 +312,17 @@ export function render(src, container, defaults = {}) {
       let number = '';
       if (folio.on) {
         attrs.push(`data-folio="${folio.where}"`);
+        // A page can restart the count, which is how a book gets its
+        // roman front matter and then an arabic chapter one. Writing
+        // folio=i or folio=1 says both where the count resumes and which
+        // numbering it resumes in.
+        const restart = folioValue(options.folio);
+        if (restart) count = restart;
         if (!options.nofolio) {
-          number = `<div class="folio">${folio.start + i}</div>`;
+          const shown = count.roman ? toRoman(count.n, count.upper) : String(count.n);
+          number = `<div class="folio">${shown}</div>`;
         }
+        count = { n: count.n + 1, roman: count.roman, upper: count.upper };
       }
 
       if (styles.length) attrs.push(`style="${styles.join(';')}"`);

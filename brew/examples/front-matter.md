@@ -1,4 +1,4 @@
-\folio start=-7
+\folio start=i
 \seed 20241
 
 \page cols=1 bg=swarm nofolio
@@ -10,18 +10,17 @@
   numbers, the imprint. Everything else is either real (the licence
   terms, the site) or a shape you can keep.
 
-  Two things about the numbering, because they are not obvious.
+  About the numbering, because it is the part that catches people out.
 
-  Front matter is unnumbered here: every page carries nofolio. But an
-  unnumbered page still takes its place in the count, the way an
-  unnumbered plate does in a printed book, so without help the first
-  page of Chapter One would be page 9 rather than page 1. That is what
-  \folio start=-7 is doing at the top: it slides the count back by the
-  eight front-matter pages, so the body opens at 1. Add or remove a
-  front-matter page and that number moves with it.
+  Front matter runs in roman and the body starts again at 1, which is
+  how a printed book does it. \folio start=i opens the count in roman,
+  and \page folio=1 on the first page of Chapter One restarts it in
+  arabic. Which numbering you get is taken from how you write the
+  number: i is roman, 1 is arabic.
 
-  Traditionally front matter is numbered in roman numerals instead. The
-  Brewery cannot do that yet.
+  The pages that show no number at all carry nofolio. They still take
+  their place in the count, the way an unnumbered plate does in a
+  printed book, so nothing after them shifts.
 -->
 
 # 20 BELOW
@@ -105,7 +104,7 @@ wording is the wording.]
 
 *For [dedication].*
 
-\page nofolio
+\page
 
 # What this game is
 
@@ -140,7 +139,7 @@ reading a PDF, they are links.
 [Your version of it. Say plainly who decides, and when.]
 :::
 
-\page nofolio
+\page
 
 # Contents
 
@@ -175,11 +174,11 @@ reading a PDF, they are links.
 | | ORC License | 000 |
 :::
 
-\page
+\page folio=1
 
 # 1. What You Roll
 
-This is page one. Everything above it was front matter, unnumbered but
-counted, which is why the numbering here starts where it should.
+This is page one. Everything above it was front matter, numbered in
+roman, and `folio=1` on this page starts the count again in arabic.
 
 [Chapter one begins.]

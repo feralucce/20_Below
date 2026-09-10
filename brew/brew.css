@@ -384,7 +384,9 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
   z-index:2;
   font-family:var(--font-mono);
   font-size:8.5pt;
-  letter-spacing:.12em;
+  /* Loose enough to look set rather than typed, tight enough that a
+     roman numeral still reads as one word: viii, not v i i i. */
+  letter-spacing:.05em;
   color:var(--page-dim);
   print-color-adjust:exact; -webkit-print-color-adjust:exact;
 }
