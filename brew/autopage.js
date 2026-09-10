@@ -82,8 +82,13 @@ export function stripAutoBreaks(src) {
     .replace(/\n{3,}/g, '\n\n');
 }
 
+/* Write a page's options back out in the shape they were typed in.
+   Flags - nofolio, and anything else written as a bare word - came in
+   without a value and have to go out without one, or a re-break would
+   quietly turn "nofolio" into "nofolio=true". */
 function serialiseOptions(options) {
-  const parts = Object.entries(options || {}).map(([k, v]) => `${k}=${v}`);
+  const parts = Object.entries(options || {})
+    .map(([k, v]) => (v === true ? k : `${k}=${v}`));
   return parts.length ? ' ' + parts.join(' ') : '';
 }
 
@@ -91,7 +96,13 @@ function assemble(sheets, startsWithMarker) {
   return sheets
     .filter((s, i) => s.chunks.length || i > 0)
     .map((s, i) => {
-      const marker = (i === 0 && !startsWithMarker)
+      // The first sheet normally needs no marker, having started the file.
+      // It does need one if it carries options: a document can open with a
+      // \page that sets a background or one column, and writing that sheet
+      // back out bare would delete what it asked for.
+      const opening = i === 0 && !startsWithMarker
+        && !Object.keys(s.options || {}).length;
+      const marker = opening
         ? ''
         : '\\page' + serialiseOptions(s.options) + '\n\n';
       return marker + s.chunks.join('\n\n');

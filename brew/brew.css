@@ -298,15 +298,103 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 }
 @media print{ .page.overflowing{outline:none} .page.overflowing::after{display:none} }
 
-/* Custom page backgrounds. A page directive sets data-bg="name";
-   define a rule per name and it layers under the content. The art
-   itself is dropped into brew/backgrounds/ later. */
-.page[data-bg]{background-repeat:no-repeat; background-position:center; background-size:cover}
-.page[data-bg="none"]{background-image:none}
-/* example, enable when art exists:
-.page[data-bg="parchment"]{background-image:url("backgrounds/parchment.jpg")}
-.page[data-bg="stone"]{background-image:url("backgrounds/stone.jpg")}
-*/
+/* =============================================================
+   Page backgrounds
+   =============================================================
+   A page asks for one with: \page bg=hex
+
+   The art is a layer of its own rather than the page's background,
+   which is what lets it be tinted and greyscaled without touching the
+   text sitting on it. It covers the bleed as well, because a printer
+   trims into it.
+
+   Two kinds. The built-in textures in backgrounds/ are used as MASKS:
+   the drawing carries only alpha and the ink comes from --accent, so a
+   texture follows the theme and goes grey with the greyscale proof
+   instead of staying one fixed colour while the page changes around it.
+   Anything else is treated as a URL and drawn as an ordinary image.
+
+   Strength is set per page with tint=, a 0-to-1 value. The defaults are
+   low: these are grounds, and body copy has to stay readable over them. */
+.page::before{
+  content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
+  print-color-adjust:exact; -webkit-print-color-adjust:exact;
+}
+.page:not([data-bg])::before,
+.page[data-bg="none"]::before{display:none}
+
+.page[data-bg="hex"]::before,
+.page[data-bg="hexdrift"]::before,
+.page[data-bg="swarm"]::before{
+  background-color:var(--accent);
+  -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+  -webkit-mask-position:center;  mask-position:center;
+  -webkit-mask-size:cover;       mask-size:cover;
+  opacity:var(--bg-tint, .30);
+}
+/* Each name falls back to the drawing that ships with the tool. A
+   document that names a seed has its grounds drawn in the browser
+   instead, and render.js sets --page-mask on the page to the result -
+   through a custom property rather than a competing rule, so there is no
+   specificity race to lose. */
+.page[data-bg="hex"]::before{
+  -webkit-mask-image:var(--page-mask, url("backgrounds/hex.svg"));
+  mask-image:var(--page-mask, url("backgrounds/hex.svg"));
+}
+.page[data-bg="hexdrift"]::before{
+  -webkit-mask-image:var(--page-mask, url("backgrounds/hexdrift.svg"));
+  mask-image:var(--page-mask, url("backgrounds/hexdrift.svg"));
+}
+/* Heavier than the other two by design - a chapter opener or a title
+   page, not a page carrying two columns of body copy. */
+.page[data-bg="swarm"]::before{
+  -webkit-mask-image:var(--page-mask, url("backgrounds/swarm.svg"));
+  mask-image:var(--page-mask, url("backgrounds/swarm.svg"));
+  opacity:var(--bg-tint, .16);
+}
+
+/* An image of your own. The URL arrives as an inline custom property
+   from render.js, because a stylesheet cannot know it in advance. */
+.page[data-bg="image"]::before{
+  background-image:var(--page-art);
+  background-repeat:no-repeat; background-position:center; background-size:cover;
+  opacity:var(--bg-tint, 1);
+}
+/* The greyscale proof is a proof of what will be printed, so art has to
+   go grey too - otherwise it is the one thing on the page still lying. */
+#preview[data-palette="grey"] .page[data-bg="image"]::before{filter:grayscale(1)}
+
+/* =============================================================
+   Folios
+   =============================================================
+   A document asks for page numbers with a \folio line; without one it
+   has none, because a saved setting must never silently restyle
+   something you wrote.
+
+   The number sits in the bottom margin, measured from the TRIM edge
+   rather than the sheet edge - the bleed is cut off, so measuring from
+   there would walk the folio up the page every time the output profile
+   changed.
+
+   "Outside" alternates on the same parity the gutter runs on, so a
+   number can never end up buried in the spine. */
+.page > .folio{
+  position:absolute;
+  bottom:calc(var(--bleed-out) + (var(--margin) + var(--safe)) * 0.38);
+  z-index:2;
+  font-family:var(--font-mono);
+  font-size:8.5pt;
+  letter-spacing:.12em;
+  color:var(--page-dim);
+  print-color-adjust:exact; -webkit-print-color-adjust:exact;
+}
+.page[data-folio="outside"]:nth-child(odd) > .folio{     /* recto */
+  right:calc(var(--margin) + var(--bleed-out) + var(--safe));
+}
+.page[data-folio="outside"]:nth-child(even) > .folio{    /* verso */
+  left:calc(var(--margin) + var(--bleed-out) + var(--safe));
+}
+.page[data-folio="center"] > .folio{left:0; right:0; text-align:center}
 
 .page > .flow{position:relative; z-index:1; height:100%; column-count:2; column-gap:0.38in}
 /* Two columns is the default. A page opts out with: \page cols=1 */
