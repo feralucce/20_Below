@@ -165,7 +165,7 @@ The weapon you are using
 
 The gift you are using
 
-The social attack leverage you have accrued in the encounter.
+Your Training Tier in the Skill you are using, for a social attack.
 
 Roll those dice. All of them at once. Then compare each one to the appropriate wall (Soak for Physical, Psyche for Social, and Presence for Mental). Any die that rolls higher than the wall, does a level of damage to the appropriate Vital Statistic (Health for Physical, Poise for Social and Sanity for Mental).
 
