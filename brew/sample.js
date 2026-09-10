@@ -94,6 +94,122 @@ export function themeSample() {
   ].join('\n');
 }
 
+/* One demo per theme, swapped in when the theme picker changes.
+ *
+ * A theme is a look, and a look cannot be judged against a document
+ * written for a different one - Core's condensed sans and Backwater's
+ * swamp-gothic serif want different material in front of them. Each
+ * demo therefore uses the same blocks and says different things with
+ * them, so switching themes shows the theme rather than the text.
+ *
+ * Keyed by the ids in main.js THEMES. A theme with no demo falls back
+ * to the guide, so adding a theme cannot break the picker.
+ */
+export function themeDemo(theme) {
+  return (DEMOS[theme] || guide)();
+}
+
+function coreDemo() {
+  return [
+    '# The Passive Wall Triad',
+    '',
+    'Every attack resolves in the same two steps, whatever it is made of.',
+    'First a to-hit roll against the Defense that answers that kind of',
+    'attack. Only a success reaches step two.',
+    '',
+    '::: roll',
+    'Attribute + Difficulty, roll 2d10. Low is good.',
+    ':::',
+    '',
+    '## Then the dice, one at a time',
+    '',
+    'The dice are resolved individually against the wall, never added',
+    'together. A die over the wall gets through and costs a Level. A die at',
+    'or under it is absorbed completely.',
+    '',
+    '| The wall | Stops | A connecting die costs |',
+    '|---|---|---|',
+    '| **Soak** | Physical | a Health Level |',
+    '| **Presence** | Social | a Poise |',
+    '| **Psyche** | Mental | a Sanity |',
+    '',
+    '::: box Where the dice come from',
+    'Never from the attacker. A weapon sets Physical dice, a Gift entry',
+    'sets its own, and a Social attack reads the Training Tier of whatever',
+    'Skill you named. Ki Infusion is the one thing you add yourself.',
+    ':::',
+    '',
+    '::: aside',
+    'A wall of 10 cannot be beaten by an ordinary die at all. That is not',
+    'a rounding artefact, it is the rule: the only way through is Ki.',
+    ':::',
+    '',
+    '::: stat Dire Wolf',
+    'Soak 2 | Attack 5 | Defense 5 | Health Levels 6 | Movement 12m',
+    '**Bite**: 3, Melee. **Pack Tactics** - once it has engaged a target,',
+    'every other wolf presses that same target instead of spreading thin.',
+    ':::',
+    '',
+    '::: roll.danger',
+    'A critical sends half your dice through untouched. The rest add Klotho.',
+    ':::',
+    '',
+  ].join('\n');
+}
+
+function backwaterDemo() {
+  return [
+    '# The Drowned Exchange',
+    '',
+    'Nobody has switched it on since the water came up, and it has not',
+    'stopped transmitting. The building leans. The signal does not.',
+    '',
+    '::: roll',
+    'Moira + Difficulty to hear what it is actually saying.',
+    ':::',
+    '',
+    '## What the operators know',
+    '',
+    'They will tell you the exchange is derelict, and they are not lying.',
+    'They will not tell you who still files the maintenance reports, or',
+    'why the reports are legible and current and signed in a hand nobody',
+    'at the utility recognises.',
+    '',
+    '| Heard on the line | Reported since |',
+    '|---|---|',
+    '| A dial tone under the static | the flood |',
+    '| Names, read slowly, in order | last spring |',
+    '| One side of a conversation | three weeks |',
+    '',
+    '::: box If a character answers it',
+    'Ask what they were hoping to hear. Whatever they say, that is what',
+    'answers, and it is very convincing, and it is not that person.',
+    ':::',
+    '',
+    '::: aside',
+    'The swamp keeps what it takes, but it does not keep it quiet. That',
+    'is the whole setting in one line, and every table works it out for',
+    'themselves about an hour in.',
+    ':::',
+    '',
+    '::: stat The Operator',
+    'Soak 1 | Attack 6 | Defense 7 | Health Levels 4 | Movement 5m',
+    '**Wrong Number** (Mental attack, no to-hit roll): anyone who hears it',
+    'speak their own name resolves 4 dice against Psyche.',
+    ':::',
+    '',
+    '::: roll.npc',
+    'It knows your name before you give it. It always has.',
+    ':::',
+    '',
+  ].join('\n');
+}
+
+const DEMOS = {
+  core: coreDemo,
+  backwater: backwaterDemo,
+};
+
 export function starter() {
   return [
     '# Title',
