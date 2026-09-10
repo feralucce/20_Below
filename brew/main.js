@@ -3,7 +3,7 @@
 const V = new URL(import.meta.url).search;
 const { render } = await import('./render.js' + V);
 const { autoPaginate, stripAutoBreaks } = await import('./autopage.js' + V);
-const { guide, starter } = await import('./sample.js' + V);
+const { guide, starter, themeDemo } = await import('./sample.js' + V);
 const files = await import('./files.js' + V);
 
 const editor   = document.getElementById('editor');
@@ -236,9 +236,23 @@ reBreakBtn.onclick = () => repaginate(reBreakBtn, { fromScratch: true });
 
 document.getElementById('btn-print').onclick = () => window.print();
 
+/* Is what is in the editor ours to replace? Anything the tool put there
+   itself - the guide, the starter, a theme demo - is. A document somebody
+   wrote is not, and no amount of theme-switching should cost them it.
+   Compared by value rather than tracked with a flag, so it survives a
+   reload and a restored draft. */
+function editorHoldsOurs() {
+  const text = editor.value;
+  if (!text.trim()) return true;
+  if (text === guide() || text === starter()) return true;
+  return Object.keys(THEMES).some((t) => text === themeDemo(t));
+}
+
 document.getElementById('sel-theme').onchange = (e) => {
+  const swap = editorHoldsOurs();
   prefs.theme = e.target.value;
   applyPrefs();
+  if (swap) editor.value = themeDemo(prefs.theme);
   // A theme changes typography, so it changes how tall a page's text runs.
   draw();
 };
