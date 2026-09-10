@@ -277,12 +277,19 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 
 /* Gutter: the inside edge is wider, and which edge is "inside"
    alternates. Driven off page parity rather than @page :left/:right,
-   which browsers support poorly. */
+   which browsers support poorly.
+
+   Parity comes from data-side, which render.js works out from the page's
+   NUMBER rather than its place in the file. A chapter exported on its own
+   and opening at page 12 is a verso, and has to be laid out as one. Using
+   the element's position instead would mirror every page in that file and
+   put the binding margin on the outside edge, which no proof shows you
+   until it is printed and bound. */
 /* The spine edge carries the gutter and no bleed - nothing is trimmed there. */
-#preview:not([data-layout="digital"]) .page:nth-child(odd){   /* recto */
+#preview:not([data-layout="digital"]) .page[data-side="recto"]{
   padding-left:calc(var(--margin) + var(--safe) + var(--gutter));
 }
-#preview:not([data-layout="digital"]) .page:nth-child(even){  /* verso */
+#preview:not([data-layout="digital"]) .page[data-side="verso"]{
   padding-right:calc(var(--margin) + var(--safe) + var(--gutter));
 }
 
@@ -390,10 +397,10 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
   color:var(--page-dim);
   print-color-adjust:exact; -webkit-print-color-adjust:exact;
 }
-.page[data-folio="outside"]:nth-child(odd) > .folio{     /* recto */
+.page[data-folio="outside"][data-side="recto"] > .folio{
   right:calc(var(--margin) + var(--bleed-out) + var(--safe));
 }
-.page[data-folio="outside"]:nth-child(even) > .folio{    /* verso */
+.page[data-folio="outside"][data-side="verso"] > .folio{
   left:calc(var(--margin) + var(--bleed-out) + var(--safe));
 }
 .page[data-folio="center"] > .folio{left:0; right:0; text-align:center}
