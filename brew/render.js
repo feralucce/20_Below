@@ -307,23 +307,39 @@ export function render(src, container, defaults = {}) {
         }
       }
 
+      // A page can restart the count, which is how a book gets its roman
+      // front matter and then an arabic chapter one. Writing folio=i or
+      // folio=1 says both where the count resumes and which numbering it
+      // resumes in.
+      const restart = folioValue(options.folio);
+      if (restart) count = restart;
+
+      // Which side of the spine this page falls on, from its number
+      // rather than from its place in the file.
+      //
+      // That distinction is the whole reason a book can be split across
+      // several documents. A chapter that opens on page 12 is a verso: it
+      // wants its gutter on the right and its folio on the left, and the
+      // page after it wants the opposite. Counting from the top of the
+      // file instead would mirror every page in that chapter and put the
+      // binding margin on the outside edge, which is not something a
+      // proof reveals until it is printed and bound.
+      //
+      // A document that never sets a number starts at 1, so nothing that
+      // already existed moves.
+      attrs.push(`data-side="${count.n % 2 ? 'recto' : 'verso'}"`);
+
       // An unnumbered page still counts - a plate or a title page takes
       // its place in the sequence, it just does not say so.
       let number = '';
       if (folio.on) {
         attrs.push(`data-folio="${folio.where}"`);
-        // A page can restart the count, which is how a book gets its
-        // roman front matter and then an arabic chapter one. Writing
-        // folio=i or folio=1 says both where the count resumes and which
-        // numbering it resumes in.
-        const restart = folioValue(options.folio);
-        if (restart) count = restart;
         if (!options.nofolio) {
           const shown = count.roman ? toRoman(count.n, count.upper) : String(count.n);
           number = `<div class="folio">${shown}</div>`;
         }
-        count = { n: count.n + 1, roman: count.roman, upper: count.upper };
       }
+      count = { n: count.n + 1, roman: count.roman, upper: count.upper };
 
       if (styles.length) attrs.push(`style="${styles.join(';')}"`);
       const html = window.marked.parse(applyBlocks(body));
