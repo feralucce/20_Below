@@ -31,7 +31,7 @@
 </div>
 
 <div id="split">
-  <div id="preview" data-palette="colour" data-layout="digital"></div>
+  <div id="preview" data-theme="core" data-palette="colour" data-layout="digital"></div>
 </div>
 
 <script type="module">
@@ -42,6 +42,10 @@ const { render } = await import(`./render.js${q}`);
 const { guide } = await import(`./sample.js${q}`);
 
 const preview = document.getElementById('preview');
+/* Opened from the Brewery carrying the theme that was showing, so the
+   reference reads in the look you are actually working in. Falls
+   back to core when opened on its own. */
+preview.dataset.theme = new URLSearchParams(location.search).get('theme') || 'core';
 
 function fit() {
   const sel = document.getElementById('sel-zoom').value;
