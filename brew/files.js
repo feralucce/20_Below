@@ -24,6 +24,17 @@ export function currentName() {
   return name;
 }
 
+/** Rename the document without giving it a handle.
+ *
+ *  An example loaded from the toolbar did not come off the user's disk,
+ *  so Save has to ask where to put it rather than writing back over the
+ *  copy that ships with the tool. Dropping the handle is what makes Save
+ *  behave like Save as for it. */
+export function adopt(newName) {
+  handle = null;
+  name = newName;
+}
+
 export function supportsSaveInPlace() {
   return CAN_FS;
 }

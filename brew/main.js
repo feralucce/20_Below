@@ -270,6 +270,38 @@ document.getElementById('btn-open').onclick = async () => {
   draw();
 };
 
+/* The example documents that ship in brew/examples/.
+ *
+ * Fetched by a path relative to this page, which is the same path in both
+ * builds: the desktop app serves brew/ exactly as the site does.
+ *
+ * An example is somebody's work the moment it is loaded, so it is
+ * adopted under its own name with no file handle - Save will ask where
+ * to put it rather than writing back over the copy that shipped. */
+document.getElementById('sel-example').onchange = async (e) => {
+  const file = e.target.value;
+  e.target.selectedIndex = 0;
+  if (!file) return;
+  if (!editorHoldsOurs()
+      && !confirm('Load this example? What is in the editor will be replaced.')) {
+    return;
+  }
+  try {
+    // Asked for by hand and read once, so caching it buys nothing and
+    // costs the thing that bit this project before: an edited file
+    // sitting on disk, served correctly, and never appearing.
+    const res = await fetch('examples/' + file + '?v=' + Date.now());
+    if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+    editor.value = await res.text();
+    files.adopt(file);
+    draw();
+    showGround();
+  } catch (err) {
+    status.textContent = `could not load ${file} - ${err.message}`;
+    status.classList.add('warn');
+  }
+};
+
 document.getElementById('btn-save').onclick = async () => {
   const saved = await files.save(editor.value);
   if (saved) status.textContent = `saved ${saved}`;
