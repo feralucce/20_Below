@@ -13,6 +13,7 @@ const fixPagesBtn = document.getElementById('btn-fixpages');
 const reBreakBtn  = document.getElementById('btn-rebreak');
 const fileIn   = document.getElementById('file');
 const pageRule = document.getElementById('page-rule');
+const groundSel = document.getElementById('sel-ground');
 
 const DRAFT = '20below-brew-draft';
 const PREFS = '20below-brew-prefs-v2';
@@ -166,6 +167,100 @@ editor.addEventListener('input', () => {
   clearTimeout(timer);
   timer = setTimeout(draw, 120);
 });
+
+/* ---------- the Ground picker ----------------------------------------
+ *
+ * The only toolbar control that edits the document. A ground is part of
+ * what a page looks like, so it belongs in the file rather than in a
+ * saved preference - the picker is a convenience for writing bg= into
+ * the right \page line, not a setting of its own. Everything it does is
+ * visible in the editor and undoes like anything else you typed.
+ */
+
+const BG_OPTION = /\bbg[ \t]*=[ \t]*("[^"]*"|\S+)/;
+
+/* One walk of the source, tracking code fences so a \page written inside
+ * a fenced example is not mistaken for a real one - which is exactly what
+ * the reference document is full of. Reports the marker the caret sits
+ * under, and whether the document sets a default ground. */
+function pageContext() {
+  const text = editor.value;
+  const caret = editor.selectionStart;
+  const lines = text.split('\n');
+
+  let at = 0;
+  let caretLine = lines.length - 1;
+  for (let i = 0; i < lines.length; i++) {
+    const start = at;
+    at += lines[i].length + 1;
+    if (caret >= start && caret < at) { caretLine = i; break; }
+  }
+
+  let fence = null;
+  let marker = -1;
+  let ground = '';
+  for (let i = 0; i < lines.length; i++) {
+    const f = lines[i].match(/^\s*(```+|~~~+)/);
+    if (f) {
+      if (!fence) { fence = f[1][0]; continue; }
+      if (f[1][0] === fence) { fence = null; continue; }
+    }
+    if (fence) continue;
+    const g = lines[i].match(/^\\ground[ \t]+(\S+)/);
+    if (g) ground = g[1];
+    if (i <= caretLine && /^\\page\b/.test(lines[i])) marker = i;
+  }
+  return { lines, marker, ground };
+}
+
+/** Show what the page the caret is in actually has on it. */
+function showGround() {
+  const { lines, marker, ground } = pageContext();
+  const own = marker < 0 ? null : lines[marker].match(BG_OPTION);
+  const value = own ? own[1].replace(/^"|"$/g, '') : ground;
+  // A ground the picker does not list - a URL, or a name from a later
+  // version - must not be silently rewritten to None by the next click.
+  groundSel.value = [...groundSel.options].some((o) => o.value === value)
+    ? (value === 'none' ? '' : value)
+    : '';
+}
+
+groundSel.onchange = () => {
+  const { lines, marker, ground } = pageContext();
+  const caret = editor.selectionStart;
+  const before = editor.value.length;
+
+  // "None" against a document that sets a default has to say so out loud,
+  // or the page would just inherit the default straight back.
+  const write = groundSel.value || (ground ? 'none' : '');
+
+  if (marker < 0) {
+    // The caret is on an opening page with no marker of its own. One is
+    // added rather than refused: an opening page carrying options is a
+    // shape the renderer understands.
+    if (!write) return;
+    lines.unshift('\\page bg=' + write, '');
+  } else if (!write) {
+    lines[marker] = lines[marker].replace(BG_OPTION, '')
+      .replace(/[ \t]{2,}/g, ' ').trimEnd();
+  } else if (BG_OPTION.test(lines[marker])) {
+    lines[marker] = lines[marker].replace(BG_OPTION, 'bg=' + write);
+  } else {
+    lines[marker] = lines[marker].trimEnd() + ' bg=' + write;
+  }
+
+  editor.value = lines.join('\n');
+  // Everything edited sits at or above the caret, so the whole shift is
+  // the change in length. Without this the caret jumps to the top of the
+  // document every time the picker is touched.
+  const moved = Math.max(0, caret + (editor.value.length - before));
+  editor.setSelectionRange(moved, moved);
+  draw();
+};
+
+for (const event of ['click', 'keyup', 'input', 'focus']) {
+  editor.addEventListener(event, showGround);
+}
 
 /* ---------- toolbar ---------- */
 document.getElementById('btn-open').onclick = async () => {
@@ -327,3 +422,4 @@ document.getElementById('drag').addEventListener('mousedown', (e) => {
 editor.value = load(DRAFT) || guide();
 applyPrefs();
 draw();
+showGround();

@@ -22,6 +22,8 @@
  *   \folio off             the default, worth writing to say so
  *
  *   \seed 4815             draw this file's own grounds from that number
+ *   \ground hex            every page gets this one unless it says otherwise
+ *   \ground hex tint=0.4   and at this strength
  */
 
 const V = new URL(import.meta.url).search;
@@ -31,10 +33,11 @@ const { maskUrl } = await import('./hexart.js' + V);
 const PAGE_MARKER = /^\\page[ \t]*(.*)$/;
 const FOLIO_MARKER = /^\\folio[ \t]*(.*)$/;
 const SEED_MARKER = /^\\seed[ \t]*(.*)$/;
+const GROUND_MARKER = /^\\ground[ \t]*(.*)$/;
 
 /* The textures that ship with the tool. Anything else in bg= is taken
    for a URL - see pageArt(). */
-const BUILT_IN_BG = ['none', 'hex', 'hexdrift', 'swarm'];
+export const BUILT_IN_BG = ['none', 'hex', 'hexdrift', 'swarm'];
 
 const PAIR = /([a-zA-Z][\w-]*)\s*=\s*("[^"]*"|\S+)/g;
 
@@ -94,9 +97,17 @@ export function paginate(src) {
     cur.lines.push(line);
     const folio = !fence && line.match(FOLIO_MARKER);
     const seed = !fence && line.match(SEED_MARKER);
+    const ground = !fence && line.match(GROUND_MARKER);
     if (folio) Object.assign(doc, parseOptions(folio[1]), { on: true });
     else if (seed) doc.seed = parseInt(seed[1], 10);
-    else cur.body.push(line);
+    else if (ground) {
+      // \ground hex tint=0.4 - the name first, then ordinary options.
+      const rest = String(ground[1] || '').trim();
+      const name = rest.split(/[ \t]+/)[0] || '';
+      doc.ground = name;
+      const opts = parseOptions(rest.slice(name.length));
+      if (opts.tint !== undefined) doc.groundTint = opts.tint;
+    } else cur.body.push(line);
   }
   // A marker on the first line leaves an empty page in front of it. That is
   // never what anyone meant - it is how a document says its opening page
@@ -153,12 +164,20 @@ function ground(name, seed, drift) {
  * using that same ground, so a set progresses across the book instead of
  * merely differing page to page. A pinned page does not drift: it was
  * asked for exactly. */
+/* Which ground a page ends up with. The page's own bg= wins, then the
+   document's \ground line, then whatever the caller passed in. Written
+   once and used by both grounds() and render(): the two disagreeing
+   would draw one picture and label the page with another. */
+export function pageBg(options, doc, defaults) {
+  return String(options.bg || (doc && doc.ground) || defaults.bg || '');
+}
+
 function grounds(pages, defaults) {
   const docSeed = Number.isFinite(pages.doc && pages.doc.seed) ? pages.doc.seed : null;
   const runs = {};
 
   const wanted = pages.map(({ options }) => {
-    const bg = String(options.bg || defaults.bg || '');
+    const bg = pageBg(options, pages.doc, defaults);
     if (!bg || !BUILT_IN_BG.includes(bg) || bg === 'none') return null;
     const pinned = parseInt(options.seed, 10);
     if (Number.isFinite(pinned)) return { bg, seed: pinned, drift: 0 };
@@ -198,7 +217,7 @@ export function render(src, container, defaults = {}) {
       // Two columns unless the page asks for one. Not a tool setting:
       // a saved preference must never silently restyle a document.
       const cols = options.cols || defaults.cols || '2';
-      const bg = String(options.bg || defaults.bg || '');
+      const bg = pageBg(options, pages.doc, defaults);
       const attrs = [`data-cols="${cols}"`];
       const styles = [];
 
@@ -220,7 +239,11 @@ export function render(src, container, defaults = {}) {
             styles.push(`--page-art:url('${url}')`);
           }
         }
-        const tint = parseFloat(options.tint);
+        // A page's own tint, else the one the \ground line set for the
+        // whole document.
+        const tint = parseFloat(
+          options.tint !== undefined ? options.tint
+            : (pages.doc || {}).groundTint);
         if (Number.isFinite(tint)) {
           styles.push(`--bg-tint:${Math.min(1, Math.max(0, tint))}`);
         }
