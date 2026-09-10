@@ -34,6 +34,18 @@
       <option value="digest">Digest 5.5 &times; 8.5</option>
     </select>
   </label>
+  <!-- Unlike the controls beside it, this one edits the document rather
+       than the tool: it writes bg= into the page marker the cursor sits
+       in. A ground is part of what a document looks like, so it has to
+       live in the file. -->
+  <label>Ground
+    <select id="sel-ground" title="The background on the page the cursor is in. Written into that page's marker.">
+      <option value="">None</option>
+      <option value="hex">Hex mesh</option>
+      <option value="hexdrift">Hex drift</option>
+      <option value="swarm">Swarm</option>
+    </select>
+  </label>
   <button id="btn-palette" aria-pressed="false">Full colour</button>
   <label>Output
     <select id="sel-layout">
