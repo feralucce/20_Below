@@ -241,6 +241,160 @@ def gloss_cards(chunks):
         ]))
     return out
 
+
+# ---- chapter 3's cards --------------------------------------------------
+#
+# The print edition sets three runs of Creating a Character as cards rather
+# than as bold-lead paragraphs: the twenty-six Natures, the five Elements,
+# and the ten Sub-Stats. The manuscript holds none of that. It is prose,
+# and it stays prose - the same arrangement as the glossary, whose 75
+# definitions are written as paragraphs and set as cards by gloss_cards.
+#
+# Each run is found by the heading it sits under, not by its shape alone.
+# Step 5 and step 6 both write "**Soak** (Earth): ..." - one a rule, the
+# other a word list - and only the first is a card in print.
+
+ELEMENTS = ("Earth", "Air", "Fire", "Water", "Moira")
+
+NATURE_LEAD = re.compile(r"^\*\*([^*]+)\*\*:\s*(.+)$", re.S)
+ELEMENT_LEAD = re.compile(r"^\*\*(%s)\*\*:\s*(.+)$" % "|".join(ELEMENTS), re.S)
+SUBSTAT_LEAD = re.compile(
+    r"^\*\*([^*]+)\*\*\s*\((%s)\):\s*(.+)$" % "|".join(ELEMENTS), re.S)
+SPLITS = re.compile(r"Splits into (\w+) and (\w+)")
+EXCHANGE = re.compile(r"^\*\*(?:Player|GM)\*\*:")
+TEST_LEAD = "**Is this a good Descriptor?**"
+
+
+def upper_first(text):
+    """The manuscript runs on from the bold name, so these start lowercase.
+    Lifted out of that sentence they become one, and need the capital."""
+    return text[:1].upper() + text[1:]
+
+
+def lede(text):
+    """An Element's flavour line, and the rule underneath it.
+
+    The manuscript runs the two together after the bold name, divided by a
+    colon where there is one - "Raw physical force: how strong you are" -
+    and by the end of the opening sentence where there is not. Print sets
+    the first part as the block's flavour and the rest as its body, so the
+    same cut is made here. The colon is only trusted near the front: all
+    five of these carry a second colon further in, inside the rule itself.
+    """
+    cut = text.find(": ")
+    if cut < 0 or cut > 90:
+        cut = text.find(". ")
+    if cut < 0:
+        return text, ""
+    flavour = text[:cut]
+    # The cut at a colon takes the stop with it, and a flavour line set on
+    # its own is a sentence and wants one back.
+    return flavour + ("" if flavour.endswith(".") else "."), text[cut + 2:]
+
+
+def title_span(title, pill):
+    """A block's name, as a paragraph rather than a bare span.
+
+    A span on a line of its own gets wrapped in a paragraph by the markdown
+    renderer, which puts a element between the card and its title and costs
+    the title its colour - the rules that tint it are keyed on the card. It
+    also lands a paragraph's bottom margin under every title. Emitting the
+    paragraph here means there is nothing left to wrap.
+    """
+    out = '<p class="block-title">%s' % esc_html(title)
+    if pill:
+        out += '<span class="block-pill">%s</span>' % esc_html(pill)
+    return out + "</p>"
+
+
+def aside_card(variant, title, pill, body):
+    cls = "aside" + (" aside--" + variant if variant else "")
+    return NL.join(['<div class="%s" markdown="1">' % cls,
+                    title_span(title, pill), "", body, "</div>"])
+
+
+def skill_card(variant, title, pill, flavour, body):
+    return NL.join(['<div class="skill skill--%s" markdown="1">' % variant,
+                    title_span(title, pill),
+                    '<p class="skill-flavour">%s</p>' % esc_html(flavour),
+                    "", body, "</div>"])
+
+
+def descriptor_test(chunks, i):
+    """The "Ronan is _______" test, set the way print sets it: one aside
+    holding the question, with the working and the non-working lists nested
+    inside it in the PC green and the danger red."""
+    parts = ['<div class="aside" markdown="1">',
+             title_span("Is this a good Descriptor?", ""), "",
+             chunks[i].strip()[len(TEST_LEAD):].strip(), ""]
+    i += 1
+    for variant, prefix in (("pc", "**Functional descriptors**:"),
+                            ("danger", "**Non-functional descriptors**:")):
+        if i < len(chunks) and chunks[i].strip().startswith(prefix):
+            parts += [aside_card(variant, prefix.strip("*:"), "",
+                                 chunks[i].strip()[len(prefix):].strip()), ""]
+            i += 1
+    parts.append("</div>")
+    return NL.join(parts), i
+
+
+def creation_cards(chunks):
+    """Chapter 3's Natures, Elements, Sub-Stats and descriptor examples."""
+    out = []
+    section = ""
+    i = 0
+    while i < len(chunks):
+        chunk = chunks[i].strip()
+
+        if chunk.startswith("#"):
+            section = chunk.lstrip("#").strip()
+            out.append(chunks[i]); i += 1; continue
+
+        if section == "Premade Natures":
+            m = NATURE_LEAD.match(chunk)
+            if m:
+                out.append(aside_card("", m.group(1).strip(), "",
+                                      m.group(2).strip()))
+                i += 1; continue
+
+        if section == "4. Attributes":
+            m = ELEMENT_LEAD.match(chunk)
+            if m:
+                rest = m.group(2).strip()
+                flavour, body = lede(rest)
+                pair = SPLITS.search(rest)
+                out.append(skill_card(
+                    m.group(1).lower(), m.group(1),
+                    "%s / %s" % pair.groups() if pair else "",
+                    upper_first(flavour), upper_first(body)))
+                i += 1; continue
+
+        if section == "5. Sub-Stat Division":
+            m = SUBSTAT_LEAD.match(chunk)
+            if m:
+                out.append(aside_card(m.group(2).lower(), m.group(1).strip(),
+                                      m.group(2),
+                                      upper_first(m.group(3).strip())))
+                i += 1; continue
+
+        if section == "6. Descriptors":
+            if chunk.startswith(TEST_LEAD):
+                card, i = descriptor_test(chunks, i)
+                out.append(card); continue
+            if EXCHANGE.match(chunk):
+                # One chunk in the manuscript, four speeches on the page.
+                # Kramdown wants two trailing spaces to make a line break
+                # and the manuscript has one, so these are set as separate
+                # paragraphs rather than trusting invisible whitespace.
+                lines = [l.strip() for l in chunk.split(NL) if l.strip()]
+                out.append(NL.join(['<div class="box box--text" markdown="1">',
+                                    "", (NL + NL).join(lines), "</div>"]))
+                i += 1; continue
+
+        out.append(chunks[i]); i += 1
+    return out
+
+
 def gift_lists(path):
     """Per Gift, its Adders and Limiters as the rules file bullets them.
 
@@ -481,6 +635,24 @@ def main():
                 hollow.append(
                     "glossary: gloss_cards wrapped nothing - has the "
                     "**Term**: definition shape changed?")
+        if slug == "creating-a-character":
+            chunks = creation_cards(chunks)
+            # Counted, not assumed. Every one of these runs is recognised by
+            # its shape, and a shape that moves does not fail - it quietly
+            # hands back plain paragraphs, which is exactly what the chapter
+            # looked like before and so reads as success.
+            for needle, want, what in (
+                    ("skill skill--", 5,  "the five Elements"),
+                    ("aside aside--", 12, "the ten Sub-Stats and the two "
+                                          "descriptor lists"),
+                    ('aside" markdown', 27, "the Natures and the descriptor "
+                                            "test")):
+                got = count_cards(chunks, needle)
+                if got != want:
+                    hollow.append(
+                        "creating-a-character: %d cards for %s, expected %d - "
+                        "has the manuscript's wording changed?"
+                        % (got, what, want))
         if slug == "gifts":
             by_name = gift_lists(os.path.join(ROOT, "rules", "gifts.md"))
             # A Gift added to rules/gifts.md and never written into the
