@@ -1,6 +1,6 @@
 [package]
 name = "brewer"
-version = "0.3.16"
+version = "0.3.17"
 description = "The Brewery desktop app"
 authors = ["Feralucce Savage"]
 license = "UNLICENSED"

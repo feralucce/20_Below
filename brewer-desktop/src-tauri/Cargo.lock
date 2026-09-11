@@ -161,7 +161,7 @@ dependencies = [
 
 [[package]]
 name = "brewer"
-version = "0.3.16"
+version = "0.3.17"
 dependencies = [
  "log",
  "serde",
