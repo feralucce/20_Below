@@ -41,33 +41,107 @@
     min-height: 100vh;
   }
   main {
+    position: relative;
+    z-index: 1;
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem 1.5rem 4rem;
     line-height: 1.6;
+  }
+
+  /* ---- the ground ----
+   *
+   * The same hex fields the printed chapter stands on, from the same
+   * files in brew/backgrounds/. The chapter names its own in \ground, and
+   * that name rides through the build into front matter, so a chapter
+   * that changes its ground changes it in both editions at once.
+   *
+   * The SVGs carry alpha only - no colour of their own - so they are used
+   * as masks over the accent, exactly as brew.css uses them. That is what
+   * lets one file serve a light page and a dark one.
+   *
+   * Fixed rather than scrolling: in print the ground is per sheet, and a
+   * web page has no sheets. Anchoring it to the viewport makes it read as
+   * one continuous ground the text moves across, instead of a texture
+   * that slides out from under the reader. Much fainter than print, too -
+   * paper diffuses ink, a backlit screen does not.
+   */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-color: var(--accent);
+    -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+    -webkit-mask-position: center;  mask-position: center;
+    -webkit-mask-size: cover;       mask-size: cover;
+    opacity: 0;
+  }
+  body[data-ground="hex"]::before {
+    -webkit-mask-image: url("/brew/backgrounds/hex.svg");
+    mask-image: url("/brew/backgrounds/hex.svg");
+    opacity: 0.11;
+  }
+  body[data-ground="hexdrift"]::before {
+    -webkit-mask-image: url("/brew/backgrounds/hexdrift.svg");
+    mask-image: url("/brew/backgrounds/hexdrift.svg");
+    opacity: 0.13;
+  }
+  /* Heavier artwork than the other two, so it is dialled back further. */
+  body[data-ground="swarm"]::before {
+    -webkit-mask-image: url("/brew/backgrounds/swarm.svg");
+    mask-image: url("/brew/backgrounds/swarm.svg");
+    opacity: 0.07;
+  }
+  /* A ground pinned to the viewport slides under the text as the page
+     scrolls, which is relative motion whether or not anything is
+     animated. It also carries no meaning the words do not already carry,
+     so for anyone who has asked for less movement it simply goes. */
+  @media (prefers-reduced-motion: reduce) {
+    body::before { opacity: 0 !important; }
   }
   .back-link {
     color: var(--accent);
     text-decoration: none;
     font-size: 0.9rem;
   }
+  /* Headings in the book's display face.
+   *
+   * The print edition's Core theme sets every heading in Bebas Neue, and
+   * this page was setting them in the body face - so the same chapter had
+   * a different voice depending on which one you were holding. The face
+   * was already loaded and already in use here for block titles, glossary
+   * terms and the contents cards; the headings were the last thing still
+   * disagreeing with them.
+   *
+   * Bebas has no bold, hence weight 400: asking for 700 gets a browser's
+   * synthetic smear of the regular weight.
+   */
   h1, h2, h3, h4 {
-    letter-spacing: 0.02em;
+    font-family: "Bebas Neue", "Segoe UI", system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    line-height: 1.15;
   }
   h1 {
     margin: 1rem 0 0.5rem;
+    font-size: 2.6rem;
   }
   h2 {
     border-bottom: 1px solid var(--panel-border);
     padding-bottom: 0.4rem;
     margin-top: 2.5rem;
+    font-size: 1.9rem;
   }
   h3 {
     margin-top: 2rem;
+    font-size: 1.5rem;
     color: var(--accent);
   }
   h4 {
     margin-top: 1.5rem;
+    font-size: 1.25rem;
   }
   p, li {
     color: var(--text);
@@ -455,7 +529,7 @@
 </style>
 <link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
-<body>
+<body{% if page.ground %} data-ground="{{ page.ground }}"{% endif %}>
 {% include site-nav.html %}
 <main id="main">
   {% if page.chapter %}<a class="back-link" href="/webbook/">&larr; Contents</a>
