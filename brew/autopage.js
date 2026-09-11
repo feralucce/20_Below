@@ -133,6 +133,30 @@ export function restoreNotes(src) {
   return { markdown: out.join('\n'), restored };
 }
 
+/* What a page's options mean for the sheets it spills onto.
+ *
+ * Almost nothing. A page that is too tall is one page in the author's
+ * head, so the sheets after the first are the packer's doing, not a
+ * decision anybody made, and they are written as bare breaks.
+ *
+ * Copying the options forward instead is what this used to do, and it was
+ * wrong in three ways at once. \page folio=1 on a chapter opener that
+ * split made every sheet of that chapter page 1. nofolio left the whole
+ * chapter unnumbered. bg= stamped a ground the author had chosen for one
+ * page across every page after it - which then made every break an
+ * option-carrying break, so Remove breaks had to keep all of them and the
+ * document could never be packed again.
+ *
+ * cols is the exception and has to carry: the content was measured in one
+ * column, and letting the continuation fall back to two would lay it out
+ * differently from the way it was fitted.
+ *
+ * A ground on every page is what \ground is for - one line, rather than
+ * an option repeated on every break in the file. */
+function spillOptions(options) {
+  return (options && options.cols) ? { cols: options.cols } : {};
+}
+
 /* Write a page's options back out in the shape they were typed in.
    Flags - nofolio, and anything else written as a bare word - came in
    without a value and have to go out without one, or a re-break would
@@ -202,16 +226,22 @@ export async function autoPaginate(src, container, render) {
     // the two-column default, so measuring bare text would overfill it.
     const marker = '\\page' + serialiseOptions(page.options) + '\n\n';
     let cur = [];
+    let first = true;
+    const open = () => {
+      const options = first ? page.options : spillOptions(page.options);
+      first = false;
+      return options;
+    };
     chunks.forEach((chunk) => {
       if (!cur.length) { cur.push(chunk); return; }
       render(marker + cur.concat([chunk]).join('\n\n'), container);
       if (!overhanging(container).length) { cur.push(chunk); return; }
       const carried = [];
       while (cur.length && HEADING.test(cur[cur.length - 1])) carried.unshift(cur.pop());
-      if (cur.length) sheets.push({ options: page.options, chunks: cur });
+      if (cur.length) sheets.push({ options: open(), chunks: cur });
       cur = carried.concat([chunk]);
     });
-    sheets.push({ options: page.options, chunks: cur });
+    sheets.push({ options: open(), chunks: cur });
   });
 
   // --- verify against the whole document, and move what still overhangs ---
@@ -236,7 +266,7 @@ export async function autoPaginate(src, container, render) {
       if (next && JSON.stringify(next.options) === JSON.stringify(sheet.options)) {
         next.chunks = spill.concat(next.chunks);
       } else {
-        sheets.splice(i + 1, 0, { options: sheet.options, chunks: spill });
+        sheets.splice(i + 1, 0, { options: spillOptions(sheet.options), chunks: spill });
       }
       moved = true;
     });

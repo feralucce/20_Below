@@ -399,6 +399,28 @@ def yaml_quote(text):
     return '"' + text.replace('\\', '\\\\').replace('"', '\\"') + '"'
 
 
+# A link to another rules file, which is what the merged tables are full
+# of. [Advantage](rules.md#advantage--disadvantage) is a good link inside
+# rules/ and a dead one here: the webbook serves .html pages, so there is
+# no rules.md at the other end and the reader gets a 404.
+SOURCE_LINK = re.compile(r'\[([^\]]+)\]\([a-z0-9_-]+\.md(?:#[^)]*)?\)')
+
+
+def unlink_sources(page):
+    """Turn links to rules/ source files into plain bold text.
+
+    Not rewritten to the webbook page that holds the same rule, tempting
+    as that is: the webbook's headings come from the manuscript and the
+    anchors come from rules/, so only some of them line up. Half of these
+    would land somewhere useful and half would land on a 404, which is
+    worse than none of them doing anything - a link that works sometimes
+    teaches a reader to trust it.
+
+    Bold is what the book's own introduction says marks a defined term, so
+    the words keep meaning what they meant."""
+    return SOURCE_LINK.subn(r'**\1**', page)[0], len(SOURCE_LINK.findall(page))
+
+
 def body_of(chunks):
     """Everything but the chapter title - the layout renders that from the
     front matter, so leaving it in would print the heading twice."""
@@ -441,6 +463,7 @@ def main():
                 acc.extend(rules_tables(path))
         tables_for[slug] = acc
     written = []
+    unlinked = 0
     # Transforms that ran and produced nothing. None of them raise, so
     # without this the build reads as entirely successful.
     hollow = []
@@ -496,7 +519,9 @@ def main():
             front.append("next_title: " + yaml_quote(CHAPTERS[i + 1][3]))
         front.append("---")
 
-        page = "\n".join(front) + "\n" + BANNER + "\n" + body_of(chunks)
+        page, dead = unlink_sources(
+            "\n".join(front) + "\n" + BANNER + "\n" + body_of(chunks))
+        unlinked += dead
         path = os.path.join(OUT, slug + ".md")
         io.open(path, "w", encoding="utf-8", newline="\n").write(page)
         written.append((binder_title, slug, len(chunks), sum(len(c.split()) for c in chunks)))
@@ -551,6 +576,9 @@ def main():
         print("  %-34s %-22s %5d chunks %6d words" % (t, slug + ".md", n, w))
     print("  %-57s %6d words total" % ("", total))
     print("  index.md")
+    if unlinked:
+        print("  %d link(s) to rules/ source files turned into bold text - see"
+              " unlink_sources()" % unlinked)
 
 
 if __name__ == "__main__":

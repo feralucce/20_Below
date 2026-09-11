@@ -57,6 +57,29 @@ def headings(path):
     return out
 
 
+def webbook_escapees():
+    """Links to a rules/ source file that reached the published webbook.
+
+    These are correct where they are written - rules.md sits beside
+    gifts.md and the anchor resolves - and dead where they end up. The
+    webbook serves .html pages, so there is no rules.md at the other end
+    and a reader who clicks one gets a 404.
+
+    Ten shipped that way, live, and every check this project had reported
+    success throughout - including this one, which only ever looked inside
+    rules/, where the links are fine. The lesson is the usual one: a check
+    that passes may be measuring somewhere the problem cannot occur.
+
+    scriv2web.py strips them now. This is here so that if it ever stops,
+    something says so."""
+    out = []
+    for path in sorted(glob.glob(os.path.join(ROOT, "webbook", "*.md"))):
+        text = io.open(path, encoding="utf-8").read()
+        for m in re.finditer(r"\[([^\]]+)\]\(([a-z0-9_-]+\.md(?:#[^)]*)?)\)", text):
+            out.append((os.path.basename(path), m.group(1), m.group(2)))
+    return out
+
+
 def main():
     files = {os.path.basename(p): p for p in glob.glob(os.path.join(RULES, "*.md"))}
     heads = {name: headings(path) for name, path in files.items()}
@@ -105,7 +128,15 @@ def main():
     for m in mislead:
         print("  " + m)
 
-    return 1 if broken else 0
+    escaped = webbook_escapees()
+    print()
+    print("ESCAPED %d - a link to a rules/ source file that reached the webbook,"
+          % len(escaped))
+    print("          where there is no .md at the other end and it is a 404")
+    for where, label, target in escaped:
+        print("  webbook/%s: [%s](%s)" % (where, label, target))
+
+    return 1 if (broken or escaped) else 0
 
 
 if __name__ == "__main__":
