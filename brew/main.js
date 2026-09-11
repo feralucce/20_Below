@@ -353,7 +353,7 @@ async function repaginate(button) {
     }
     parts.push(added ? `Added ${added} page break${added === 1 ? '' : 's'}.` : 'Nothing to break.');
     if (split) {
-      parts.push(`${split} block${split === 1 ? '' : 's'} stood taller than a sheet and ${split === 1 ? 'was' : 'were'} continued onto the next page.`);
+      parts.push(`${split} entr${split === 1 ? 'y was' : 'ies were'} split across a page, so the page before did not end early.`);
     }
     if (stubborn.length) {
       parts.push(`${stubborn.length === 1 ? '1 block is' : stubborn.length + ' blocks are'} taller than a page alone, which no break can fix: ${stubborn.join('; ')}`);

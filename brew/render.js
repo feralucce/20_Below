@@ -40,6 +40,22 @@ const PAGE_MARKER = /^\\page[ \t]*(.*)$/;
 const FOLIO_MARKER = /^\\folio[ \t]*(.*)$/;
 const SEED_MARKER = /^\\seed[ \t]*(.*)$/;
 const GROUND_MARKER = /^\\ground[ \t]*(.*)$/;
+/* Columns for the whole document.
+ *
+ * A page can already ask for one column with \page cols=1, and for a
+ * document that wants one throughout that was the only way to say it -
+ * which broke the thing it was trying to do. cols is the one option the
+ * packer has to copy onto every sheet it spills, because content measured
+ * in one column cannot be allowed to fall back to two. So every break in
+ * the document ended up carrying an option, and a break carrying an
+ * option is one Remove breaks must keep as a note rather than delete.
+ * The document could never be laid out again from nothing: each pass
+ * inherited the last pass's boundaries as fixed points and fragmented
+ * further. Pressing Add page breaks twice made the book worse.
+ *
+ * Said once, at the top, none of that happens: the breaks stay bare, they
+ * all come out, and the packer starts from the whole text every time. */
+const COLS_MARKER = /^\\cols[ \t]+(\d+)[ \t]*$/;
 const COLUMN_MARKER = /^\\column[ \t]*$/;
 
 /* The textures that ship with the tool. Anything else in bg= is taken
@@ -130,8 +146,10 @@ export function paginate(src) {
     const folio = !fence && line.match(FOLIO_MARKER);
     const seed = !fence && line.match(SEED_MARKER);
     const ground = !fence && line.match(GROUND_MARKER);
+    const cols = !fence && line.match(COLS_MARKER);
     if (folio) Object.assign(doc, parseOptions(folio[1]), { on: true });
     else if (seed) doc.seed = parseInt(seed[1], 10);
+    else if (cols) doc.cols = cols[1];
     else if (ground) {
       // \ground hex tint=0.4 - the name first, then ordinary options.
       const rest = String(ground[1] || '').trim();
@@ -377,7 +395,9 @@ export function render(src, container, defaults = {}) {
     .map(({ options, body }, i) => {
       // Two columns unless the page asks for one. Not a tool setting:
       // a saved preference must never silently restyle a document.
-      const cols = options.cols || defaults.cols || '2';
+      // A page may still override the document, which is how a single
+      // spread opens full width in an otherwise two-column book.
+      const cols = options.cols || (pages.doc || {}).cols || defaults.cols || '2';
       const bg = pageBg(options, pages.doc, defaults);
       const attrs = [`data-cols="${cols}"`];
       const styles = [];

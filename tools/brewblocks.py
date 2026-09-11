@@ -54,7 +54,7 @@ HOLD_B = u""
 
 # Print-only. Everything the Brewery needs to lay a chapter out on paper
 # and the web edition has no use for.
-MARKER = re.compile(r"^\\(?:page|column|folio|seed|ground)\b[^\n]*$", re.M)
+MARKER = re.compile(r"^\\(?:page|column|folio|seed|ground|cols)\b[^\n]*$", re.M)
 
 TITLED = re.compile(r"^(.*?)\s*\(([^)]+)\)\s*$")
 LEVEL = re.compile(r"^\*\*(\d+)\*\*\s*(.*)$", re.S)
