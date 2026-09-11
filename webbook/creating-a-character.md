@@ -55,57 +55,161 @@ If none of the premade Natures quite do the trick, you can write your own. The f
 
 ## Premade Natures
 
-**Analyst**: Nothing gets acted on until you understand how it actually works. *Trigger:* Pausing the plan to dig into the mechanism, the pattern or the real cause before moving.
+<div class="aside" markdown="1">
+<p class="block-title">Analyst</p>
 
-**Avenger**: A wrong doesn’t stay unanswered. *Trigger:* Pursuing payback or justice even when it isn’t the smart move.
+Nothing gets acted on until you understand how it actually works. *Trigger:* Pausing the plan to dig into the mechanism, the pattern or the real cause before moving.
+</div>
 
-**Caregiver**: Other people’s wounds are yours to tend. *Trigger:* Stopping to help, heal or comfort someone at your own expense.
+<div class="aside" markdown="1">
+<p class="block-title">Avenger</p>
 
-**Charmer**: People are won over, not overpowered. *Trigger:* Turning a hostile or closed-off person into an ally through charm alone.
+A wrong doesn’t stay unanswered. *Trigger:* Pursuing payback or justice even when it isn’t the smart move.
+</div>
 
-**Competitor**: Everything is a contest you intend to win. *Trigger:* Turning a task into a competition and pushing past what was needed.
+<div class="aside" markdown="1">
+<p class="block-title">Caregiver</p>
 
-**Daredevil**: The safe option is the boring option. *Trigger:* Taking the reckless, high-stakes move when a safer one was sitting right there.
+Other people’s wounds are yours to tend. *Trigger:* Stopping to help, heal or comfort someone at your own expense.
+</div>
 
-**Diplomat**: Every conflict has a deal hiding inside it. *Trigger:* Talking two sides down from a fight instead of picking one.
+<div class="aside" markdown="1">
+<p class="block-title">Charmer</p>
 
-**Enforcer**: A deal is a deal, and someone has to make sure it holds. *Trigger:* Making someone answer for a broken promise or an unpaid debt.
+People are won over, not overpowered. *Trigger:* Turning a hostile or closed-off person into an ally through charm alone.
+</div>
 
-**Fixer**: Every problem has a working solution if you’re clever enough. *Trigger:* Solving a mess through leverage, favors or a clever angle instead of force.
+<div class="aside" markdown="1">
+<p class="block-title">Competitor</p>
 
-**Ghost**: The less anyone knows about you, the safer everyone is. *Trigger:* Choosing to disappear, stay unseen or erase your trail instead of being known.
+Everything is a contest you intend to win. *Trigger:* Turning a task into a competition and pushing past what was needed.
+</div>
 
-**Guardian**: Some things are yours to watch over. *Trigger:* Standing your ground to protect a place, group or thing you’ve claimed.
+<div class="aside" markdown="1">
+<p class="block-title">Daredevil</p>
 
-**Idealist**: The world can be better, and you’re proof it’s worth trying. *Trigger:* Pushing for the principled option when the cynical one is easier.
+The safe option is the boring option. *Trigger:* Taking the reckless, high-stakes move when a safer one was sitting right there.
+</div>
 
-**Judge**: Right and wrong get named out loud. *Trigger:* Calling out someone’s conduct plainly, even when it’s socially costly.
+<div class="aside" markdown="1">
+<p class="block-title">Diplomat</p>
 
-**Leader**: Someone has to call the shot, so it’s you. *Trigger:* Making the hard call for the group and owning the outcome.
+Every conflict has a deal hiding inside it. *Trigger:* Talking two sides down from a fight instead of picking one.
+</div>
 
-**Loner**: You handle it yourself. *Trigger:* Refusing help, or cutting yourself off from the group, to solve something alone.
+<div class="aside" markdown="1">
+<p class="block-title">Enforcer</p>
 
-**Mentor**: Someone else’s growth matters more than your own credit. *Trigger:* Stepping back so someone else can learn, lead or take the win.
+A deal is a deal, and someone has to make sure it holds. *Trigger:* Making someone answer for a broken promise or an unpaid debt.
+</div>
 
-**Opportunist**: Chaos is just an opening nobody has grabbed yet. *Trigger:* Turning someone else’s disaster into your own advantage.
+<div class="aside" markdown="1">
+<p class="block-title">Fixer</p>
 
-**Perfectionist**: Good enough isn’t. *Trigger:* Redoing it, refusing to ship it, or pushing back on a “good enough” result.
+Every problem has a working solution if you’re clever enough. *Trigger:* Solving a mess through leverage, favors or a clever angle instead of force.
+</div>
 
-**Protector**: Someone else’s safety comes before yours. *Trigger:* Taking a hit, a risk or a loss meant for someone who can’t fend for themselves.
+<div class="aside" markdown="1">
+<p class="block-title">Ghost</p>
 
-**Rebel**: Authority is something to test, not obey. *Trigger:* Breaking a rule or defying an order specifically because it was given.
+The less anyone knows about you, the safer everyone is. *Trigger:* Choosing to disappear, stay unseen or erase your trail instead of being known.
+</div>
 
-**Showman**: The room should be watching you. *Trigger:* Turning a moment into a performance, at some cost to subtlety or safety.
+<div class="aside" markdown="1">
+<p class="block-title">Guardian</p>
 
-**Skeptic**: The comfortable answer is usually the wrong one. *Trigger:* Refusing an easy explanation until you’ve checked it yourself.
+Some things are yours to watch over. *Trigger:* Standing your ground to protect a place, group or thing you’ve claimed.
+</div>
 
-**Survivor**: Getting through today matters more than looking good doing it. *Trigger:* Choosing the ugly, practical option over the proud one to come out ahead.
+<div class="aside" markdown="1">
+<p class="block-title">Idealist</p>
 
-**Trickster**: The straight path is boring. *Trigger:* Solving a problem through misdirection, a lie or a bit instead of the obvious approach.
+The world can be better, and you’re proof it’s worth trying. *Trigger:* Pushing for the principled option when the cynical one is easier.
+</div>
 
-**True Believer**: A cause or a code outranks your own comfort. *Trigger:* Sticking to your code when the easy move would break it.
+<div class="aside" markdown="1">
+<p class="block-title">Judge</p>
 
-**Wanderer**: Roots are just something to outrun. *Trigger:* Walking away from a place, group or claim rather than settling into it.
+Right and wrong get named out loud. *Trigger:* Calling out someone’s conduct plainly, even when it’s socially costly.
+</div>
+
+<div class="aside" markdown="1">
+<p class="block-title">Leader</p>
+
+Someone has to call the shot, so it’s you. *Trigger:* Making the hard call for the group and owning the outcome.
+</div>
+
+<div class="aside" markdown="1">
+<p class="block-title">Loner</p>
+
+You handle it yourself. *Trigger:* Refusing help, or cutting yourself off from the group, to solve something alone.
+</div>
+
+<div class="aside" markdown="1">
+<p class="block-title">Mentor</p>
+
+Someone else’s growth matters more than your own credit. *Trigger:* Stepping back so someone else can learn, lead or take the win.
+</div>
+
+<div class="aside" markdown="1">
+<p class="block-title">Opportunist</p>
+
+Chaos is just an opening nobody has grabbed yet. *Trigger:* Turning someone else’s disaster into your own advantage.
+</div>
+
+<div class="aside" markdown="1">
+<p class="block-title">Perfectionist</p>
+
+Good enough isn’t. *Trigger:* Redoing it, refusing to ship it, or pushing back on a “good enough” result.
+</div>
+
+<div class="aside" markdown="1">
+<p class="block-title">Protector</p>
+
+Someone else’s safety comes before yours. *Trigger:* Taking a hit, a risk or a loss meant for someone who can’t fend for themselves.
+</div>
+
+<div class="aside" markdown="1">
+<p class="block-title">Rebel</p>
+
+Authority is something to test, not obey. *Trigger:* Breaking a rule or defying an order specifically because it was given.
+</div>
+
+<div class="aside" markdown="1">
+<p class="block-title">Showman</p>
+
+The room should be watching you. *Trigger:* Turning a moment into a performance, at some cost to subtlety or safety.
+</div>
+
+<div class="aside" markdown="1">
+<p class="block-title">Skeptic</p>
+
+The comfortable answer is usually the wrong one. *Trigger:* Refusing an easy explanation until you’ve checked it yourself.
+</div>
+
+<div class="aside" markdown="1">
+<p class="block-title">Survivor</p>
+
+Getting through today matters more than looking good doing it. *Trigger:* Choosing the ugly, practical option over the proud one to come out ahead.
+</div>
+
+<div class="aside" markdown="1">
+<p class="block-title">Trickster</p>
+
+The straight path is boring. *Trigger:* Solving a problem through misdirection, a lie or a bit instead of the obvious approach.
+</div>
+
+<div class="aside" markdown="1">
+<p class="block-title">True Believer</p>
+
+A cause or a code outranks your own comfort. *Trigger:* Sticking to your code when the easy move would break it.
+</div>
+
+<div class="aside" markdown="1">
+<p class="block-title">Wanderer</p>
+
+Roots are just something to outrun. *Trigger:* Walking away from a place, group or claim rather than settling into it.
+</div>
 
 ## 4. Attributes
 
@@ -117,15 +221,40 @@ Each of your Attributes starts at 1 for free. You have 20 points to spend across
 
 The next step gives you more points for every point you spend here.
 
-**Earth**: flesh and stone. Raw physical force: how strong you are, how hard you hit, how much punishment you can take. Splits into Soak and Potence.
+<div class="skill skill--earth" markdown="1">
+<p class="block-title">Earth<span class="block-pill">Soak / Potence</span></p>
+<p class="skill-flavour">Flesh and stone. Raw physical force.</p>
 
-**Air**: breath and weather. Agility, adaptability and sharpness of mind: how fast you react, how well you keep pace when things change, how clearly you think under pressure. Splits into Initiative and Psyche.
+How strong you are, how hard you hit, how much punishment you can take. Splits into Soak and Potence.
+</div>
 
-**Fire**: drive and hunger. How hard you push, and how much of yourself you put into a confrontation, whether that’s a shouting match or a knife fight. Splits into Ferocity and Presence.
+<div class="skill skill--air" markdown="1">
+<p class="block-title">Air<span class="block-pill">Initiative / Psyche</span></p>
+<p class="skill-flavour">Breath and weather. Agility, adaptability and sharpness of mind.</p>
 
-**Water**: tide and undertow. Perception and empathy: how tuned in you are to the world and the people in it, and how much you can weather before it wears you down. Splits into Stamina and Health.
+How fast you react, how well you keep pace when things change, how clearly you think under pressure. Splits into Initiative and Psyche.
+</div>
 
-**Moira**: fate, and the threads nobody living gets to see. Luck, destiny, combat instinct, and whatever is otherworldly about you. Splits into Atropos and Klotho.
+<div class="skill skill--fire" markdown="1">
+<p class="block-title">Fire<span class="block-pill">Ferocity / Presence</span></p>
+<p class="skill-flavour">Drive and hunger.</p>
+
+How hard you push, and how much of yourself you put into a confrontation, whether that’s a shouting match or a knife fight. Splits into Ferocity and Presence.
+</div>
+
+<div class="skill skill--water" markdown="1">
+<p class="block-title">Water<span class="block-pill">Stamina / Health</span></p>
+<p class="skill-flavour">Tide and undertow. Perception and empathy.</p>
+
+How tuned in you are to the world and the people in it, and how much you can weather before it wears you down. Splits into Stamina and Health.
+</div>
+
+<div class="skill skill--moira" markdown="1">
+<p class="block-title">Moira<span class="block-pill">Atropos / Klotho</span></p>
+<p class="skill-flavour">Fate, and the threads nobody living gets to see.</p>
+
+Luck, destiny, combat instinct, and whatever is otherworldly about you. Splits into Atropos and Klotho.
+</div>
 
 ## 5. Sub-Stat Division
 
@@ -137,25 +266,65 @@ There is nothing preventing you from putting all of your points into one Sub-Sta
 
 Spend wisely.
 
-**Soak** (Earth): your wall against Physical damage: the number an attacker’s dice have to beat to hurt you.
+<div class="aside aside--earth" markdown="1">
+<p class="block-title">Soak<span class="block-pill">Earth</span></p>
 
-**Potence** (Earth): raw strength. What you can carry, what you can break, who wins when two people push.
+Your wall against Physical damage: the number an attacker’s dice have to beat to hurt you.
+</div>
 
-**Initiative** (Air): turn order in a fight.
+<div class="aside aside--earth" markdown="1">
+<p class="block-title">Potence<span class="block-pill">Earth</span></p>
 
-**Psyche** (Air): your wall against Mental attacks, and what a boosted die adds when you make one.
+Raw strength. What you can carry, what you can break, who wins when two people push.
+</div>
 
-**Ferocity** (Fire): what you add to a Physical strike when you spend Ki to put more behind it.
+<div class="aside aside--air" markdown="1">
+<p class="block-title">Initiative<span class="block-pill">Air</span></p>
 
-**Presence** (Fire): your wall against Social attacks, and what a boosted die adds when you make one.
+Turn order in a fight.
+</div>
 
-**Stamina** (Water): caps how many Fate Tokens you can hold (three times your Stamina) and how many you can spend in a Scene, and carries you against exhaustion outside a fight.
+<div class="aside aside--air" markdown="1">
+<p class="block-title">Psyche<span class="block-pill">Air</span></p>
 
-**Health** (Water): feeds your Health Levels, which is how many hits you can take.
+Your wall against Mental attacks, and what a boosted die adds when you make one.
+</div>
 
-**Atropos** (Moira): feeds Defense, which is how hard you are to touch at all, whether by a blade, a word, or a mind.
+<div class="aside aside--fire" markdown="1">
+<p class="block-title">Ferocity<span class="block-pill">Fire</span></p>
 
-**Klotho** (Moira): how much Ki a Short Rest brings back, and your Lucky Number.
+What you add to a Physical strike when you spend Ki to put more behind it.
+</div>
+
+<div class="aside aside--fire" markdown="1">
+<p class="block-title">Presence<span class="block-pill">Fire</span></p>
+
+Your wall against Social attacks, and what a boosted die adds when you make one.
+</div>
+
+<div class="aside aside--water" markdown="1">
+<p class="block-title">Stamina<span class="block-pill">Water</span></p>
+
+Caps how many Fate Tokens you can hold (three times your Stamina) and how many you can spend in a Scene, and carries you against exhaustion outside a fight.
+</div>
+
+<div class="aside aside--water" markdown="1">
+<p class="block-title">Health<span class="block-pill">Water</span></p>
+
+Feeds your Health Levels, which is how many hits you can take.
+</div>
+
+<div class="aside aside--moira" markdown="1">
+<p class="block-title">Atropos<span class="block-pill">Moira</span></p>
+
+Feeds Defense, which is how hard you are to touch at all, whether by a blade, a word, or a mind.
+</div>
+
+<div class="aside aside--moira" markdown="1">
+<p class="block-title">Klotho<span class="block-pill">Moira</span></p>
+
+How much Ki a Short Rest brings back, and your Lucky Number.
+</div>
 
 ## 6. Descriptors
 
@@ -165,16 +334,35 @@ If you put three points in Soak, you get three descriptors for Soak. They should
 
 These descriptors aren’t just decorative and descriptive - they are load bearing and one of the core ways that your Target Number is determined. Every skill defaults to a specific Element. When you want to use a different Element to roll, and you will, your Descriptors are how you do it.
 
-**Is this a good Descriptor?** The easiest way to tell if a descriptor will work for your character is to try it by saying “Ronan is _______.”
+<div class="aside" markdown="1">
+<p class="block-title">Is this a good Descriptor?</p>
 
-**Functional descriptors**: brawny, sinuous, unstoppable, rico suave.
+The easiest way to tell if a descriptor will work for your character is to try it by saying “Ronan is _______.”
 
-**Non-functional descriptors**: Corwin of Amber, government intelligence, sexual favors, Kia Niro EV.
+<div class="aside aside--pc" markdown="1">
+<p class="block-title">Functional descriptors</p>
 
-**Player**: I want Ronan to jump up to the top of the building. 
-**GM**: That’s acrobatics, so it’s air. That’s a long way, so the difficulty is going to be a difficulty of four. Your air is 1. You have to roll a 5 or less. 
-**Player**: Well, Ronan is Mighty. I think he’s strong enough to make that jump. 
+brawny, sinuous, unstoppable, rico suave.
+</div>
+
+<div class="aside aside--danger" markdown="1">
+<p class="block-title">Non-functional descriptors</p>
+
+Corwin of Amber, government intelligence, sexual favors, Kia Niro EV.
+</div>
+
+</div>
+
+<div class="box box--text" markdown="1">
+
+**Player**: I want Ronan to jump up to the top of the building.
+
+**GM**: That’s acrobatics, so it’s air. That’s a long way, so the difficulty is going to be a difficulty of four. Your air is 1. You have to roll a 5 or less.
+
+**Player**: Well, Ronan is Mighty. I think he’s strong enough to make that jump.
+
 **GM**: Yeah. I’ll allow that. Your Earth is 8, so you are aiming for a 12.
+</div>
 
 Your descriptors are what you point to to justify using an element other than the default. The exchange above is one example of how it works. Intimidation relies on your Presence, so it defaults to fire. However, you can be Intimidating in many ways. For instance:
 

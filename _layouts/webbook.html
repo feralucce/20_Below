@@ -19,7 +19,17 @@
     --text-dim: #8fadbe;
     --accent: #3d84c4;
     --accent-dim: #1c3548;
+    /* The Elements, and the two card colours chapter 3 leans on, taken
+       from brew/brew.css so print and web are literally the same values
+       rather than two hand-matched approximations. */
+    --v-earth: #8a6d4e;
+    --v-air:   #a8c9e0;
+    --v-fire:  #e0663f;
     --v-water: #078f9b;   /* style guide, Elements palette */
+    --v-moira: #a06fd1;
+    --v-pc:     #5ecb6b;
+    --v-danger: #e0685c;
+    --v-text:   #eaf5fb;
     --radius: 8px;
     font-family: "Segoe UI", system-ui, sans-serif;
   }
@@ -147,6 +157,117 @@
     padding: 1rem 1.25rem;
     margin: 1.25rem 0;
   }
+  /* ---- book blocks ----
+   *
+   * The Brewery's aside, box and skill, carried over so a chapter reads
+   * here the way it reads on the printed page. Same rule throughout: the
+   * colour touches the left edge and the title and never the fill, so the
+   * body keeps full contrast against the panel. Geometry is in rem rather
+   * than the print file's points - a screen is read at arm's length and a
+   * page is not - but the proportions and the palette are the same.
+   *
+   * .toc-card and .gloss below are older members of the same family and
+   * set their own geometry; they come after these rules on purpose, so
+   * their overrides still win.
+   */
+  .block-title {
+    display: block;
+    margin: 0 0 0.3rem;
+    color: var(--accent);
+    font-family: "Bebas Neue", "Segoe UI", system-ui, sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+  }
+  /* The parenthetical the print edition sets beside a block's name - an
+     Element's two Sub-Stats, or a Sub-Stat's Element. Quiet on purpose:
+     it is a label, not part of the title. */
+  .block-pill {
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.05rem 0.5rem;
+    border: 1px solid var(--panel-border);
+    border-radius: 999px;
+    color: var(--text-dim);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    vertical-align: 0.2em;
+  }
+  .aside {
+    background: var(--panel);
+    border-left: 4px solid var(--accent);
+    padding: 0.8rem 1rem;
+    margin: 0 0 0.8rem;
+  }
+  .box {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 0.9rem 1.1rem;
+    margin: 1rem 0;
+  }
+  .skill {
+    background: var(--panel);
+    border-left: 3px solid var(--accent);
+    border-radius: 3px;
+    padding: 0.8rem 1rem;
+    margin: 0 0 0.7rem;
+  }
+  .aside > :first-child,
+  .box > :first-child,
+  .skill > :first-child { margin-top: 0; }
+  .aside > :last-child,
+  .box > :last-child,
+  .skill > :last-child { margin-bottom: 0; }
+  /* The voice, above the rule it introduces. Keeping the two visually
+     apart is the whole point of the block. */
+  .skill-flavour {
+    color: var(--accent);
+    font-style: italic;
+    margin: 0.2rem 0 0.5rem;
+  }
+  /* A nested card sits inside its parent's padding, so it needs air above
+     it and none of the parent's last-child collapse. */
+  .aside .aside { margin: 0.8rem 0 0; }
+
+  .aside--earth  { border-left-color: var(--v-earth); }
+  .aside--air    { border-left-color: var(--v-air); }
+  .aside--fire   { border-left-color: var(--v-fire); }
+  .aside--water  { border-left-color: var(--v-water); }
+  .aside--moira  { border-left-color: var(--v-moira); }
+  .aside--pc     { border-left-color: var(--v-pc); }
+  .aside--danger { border-left-color: var(--v-danger); }
+  .aside--text   { border-left-color: var(--v-text); }
+
+  .aside--earth .block-title { color: var(--v-earth); }
+  .aside--air   .block-title { color: var(--v-air); }
+  .aside--fire  .block-title { color: var(--v-fire); }
+  .aside--water .block-title { color: var(--v-water); }
+  .aside--moira .block-title { color: var(--v-moira); }
+  .aside--pc    .block-title { color: var(--v-pc); }
+  .aside--danger .block-title { color: var(--v-danger); }
+  .aside--text  .block-title { color: var(--v-text); }
+
+  .skill--earth { border-left-color: var(--v-earth); }
+  .skill--air   { border-left-color: var(--v-air); }
+  .skill--fire  { border-left-color: var(--v-fire); }
+  .skill--water { border-left-color: var(--v-water); }
+  .skill--moira { border-left-color: var(--v-moira); }
+
+  .skill--earth .block-title, .skill--earth .skill-flavour { color: var(--v-earth); }
+  .skill--air  .block-title, .skill--air   .skill-flavour { color: var(--v-air); }
+  .skill--fire .block-title, .skill--fire  .skill-flavour { color: var(--v-fire); }
+  .skill--water .block-title, .skill--water .skill-flavour { color: var(--v-water); }
+  .skill--moira .block-title, .skill--moira .skill-flavour { color: var(--v-moira); }
+
+  .box--text { border-color: var(--panel-border); }
+  /* The Player and GM exchange. Speeches, not paragraphs, so they are set
+     tighter than body prose and the speaker's name carries the accent. */
+  .box--text p { margin: 0 0 0.5rem; }
+  .box--text p > strong:first-child { color: var(--accent); }
+
   /* ---- cover hero ----
    *
    * The contents page is the book's front door, so it opens on the cover
