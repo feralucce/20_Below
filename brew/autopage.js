@@ -67,19 +67,70 @@ export function chunkPage(markdown) {
   return chunks;
 }
 
-/* Drop the breaks that carry no options, keeping any that do.
+/* Walk the lines, saying for each whether it is inside a fenced code
+   block. A document that documents this tool is full of \page written as
+   an example, and deleting those would be the tool eating its own
+   reference. Everything here that touches markers goes through it. */
+function walk(src, visit) {
+  let fence = null;
+  return src.split('\n').map((line) => {
+    const f = line.match(/^\s*(```+|~~~+)/);
+    const opening = f && !fence;
+    if (f) {
+      if (!fence) fence = f[1][0];
+      else if (f[1][0] === fence) fence = null;
+    }
+    return visit(line, !!fence || !!opening);
+  });
+}
+
+/* What a removed break leaves behind. An HTML comment draws nothing, so
+   the document reads as though the break was simply deleted, and the
+   options it was carrying are still sitting at the spot they applied to.
+   The prefix is there so this is told apart from a comment somebody
+   wrote. */
+const NOTE = /^<!--[ \t]*brew:page[ \t]*(.*?)[ \t]*-->$/;
+
+/** Take every page break out, remembering the ones that said something.
  *
- * A bare \page is the shape this tool writes, so re-running after a layout
- * change would otherwise pile new breaks on top of stale ones and leave a
- * trail of half-empty pages. A break carrying options - cols=1, bg=parchment -
- * was typed by a person for a reason, and is never touched. */
-export function stripAutoBreaks(src) {
-  const PLAIN = /^\\page[ \t]*$/;
-  return src
-    .split('\n')
-    .filter((line) => !PLAIN.test(line))
-    .join('\n')
-    .replace(/\n{3,}/g, '\n\n');
+ *  A bare break carried no decision, so it just goes. A break carrying
+ *  options did carry one - this page opens on a background, that one is a
+ *  single column - and deleting it would throw that away with no way back.
+ *  Those leave a note where they stood, which renders as nothing and is
+ *  turned back into the break it came from when breaks are added again.
+ *
+ *  Returns { markdown, removed, noted }. */
+export function removeBreaks(src) {
+  let removed = 0;
+  let noted = 0;
+  const out = walk(src, (line, fenced) => {
+    if (fenced) return line;
+    const m = line.match(PAGE_MARKER);
+    if (!m) return line;
+    removed += 1;
+    const options = m[1].trim();
+    if (!options) return null;
+    noted += 1;
+    return `<!-- brew:page ${options} -->`;
+  }).filter((line) => line !== null);
+  return {
+    markdown: out.join('\n').replace(/\n{3,}/g, '\n\n').trim() + '\n',
+    removed,
+    noted,
+  };
+}
+
+/** Turn the notes left by removeBreaks back into the breaks they were. */
+export function restoreNotes(src) {
+  let restored = 0;
+  const out = walk(src, (line, fenced) => {
+    if (fenced) return line;
+    const m = line.match(NOTE);
+    if (!m) return line;
+    restored += 1;
+    return '\\page' + (m[1] ? ' ' + m[1] : '');
+  });
+  return { markdown: out.join('\n'), restored };
 }
 
 /* Write a page's options back out in the shape they were typed in.
