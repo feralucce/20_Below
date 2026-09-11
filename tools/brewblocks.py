@@ -147,9 +147,13 @@ def render_ladder(base, name_class, level_class, n_class):
         for p in paras(rest):
             m = LEVEL.match(p.strip())
             if m:
+                # The level's own number as a class, so the strip's rule can
+                # climb with it - see the ladder rules in brew.css.
                 parts.append(
-                    '<div class="%s" markdown="1">\n\n<span class="%s">%s</span>%s\n\n</div>'
-                    % (level_class, n_class, esc(m.group(1)), m.group(2)))
+                    '<div class="%s %s--%s" markdown="1">\n\n'
+                    '<span class="%s">%s</span>%s\n\n</div>'
+                    % (level_class, level_class, esc(m.group(1)),
+                       n_class, esc(m.group(1)), m.group(2)))
             else:
                 parts.append(p)
         return wrap(cls(base, variant), "\n\n".join(parts))
@@ -175,9 +179,9 @@ def render_gift(title, body, variant):
         lvl = LEVEL.match(t)
         if lvl:
             section = ""
-            parts.append('<div class="gift-level" markdown="1">\n\n'
-                         '<span class="gift-n">%s</span>%s\n\n</div>'
-                         % (esc(lvl.group(1)), lvl.group(2)))
+            parts.append('<div class="gift-level gift-level--%s" markdown="1">'
+                         '\n\n<span class="gift-n">%s</span>%s\n\n</div>'
+                         % (esc(lvl.group(1)), esc(lvl.group(1)), lvl.group(2)))
             continue
         parts.append('<div class="gift-opt gift-opt--%s" markdown="1">\n\n%s\n\n</div>'
                      % (section, t) if section else p)
