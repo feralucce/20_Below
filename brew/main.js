@@ -2,7 +2,8 @@
    graph busts together. See the note in index.html. */
 const V = new URL(import.meta.url).search;
 const { render, spills } = await import('./render.js' + V);
-const { autoPaginate, removeBreaks, restoreNotes } = await import('./autopage.js' + V);
+const { autoPaginate, removeBreaks, restoreNotes, mergeContinuations } =
+  await import('./autopage.js' + V);
 const { guide, starter } = await import('./sample.js' + V);
 const files = await import('./files.js' + V);
 
@@ -337,7 +338,12 @@ async function repaginate(button) {
   button.textContent = 'Working...';
   try {
     const back = restoreNotes(editor.value);
-    const { markdown, added, stubborn } = await autoPaginate(back.markdown, preview, render);
+    // Whole blocks first. A block cut on an earlier run would otherwise
+    // arrive as two blocks and be cut again, and the document would grow a
+    // fresh "(continued)" every time this button was pressed.
+    const joined = mergeContinuations(back.markdown);
+    const { markdown, added, stubborn, split } =
+      await autoPaginate(joined.markdown, preview, render);
     editor.value = markdown;
     draw();
 
@@ -346,6 +352,9 @@ async function repaginate(button) {
       parts.push(`Put back ${back.restored} break${back.restored === 1 ? '' : 's'} you had removed.`);
     }
     parts.push(added ? `Added ${added} page break${added === 1 ? '' : 's'}.` : 'Nothing to break.');
+    if (split) {
+      parts.push(`${split} block${split === 1 ? '' : 's'} stood taller than a sheet and ${split === 1 ? 'was' : 'were'} continued onto the next page.`);
+    }
     if (stubborn.length) {
       parts.push(`${stubborn.length === 1 ? '1 block is' : stubborn.length + ' blocks are'} taller than a page alone, which no break can fix: ${stubborn.join('; ')}`);
     }
@@ -365,8 +374,12 @@ reBreakBtn.onclick = () => repaginate(reBreakBtn);
  * note rather than vanishing - that page wanted a background or a single
  * column, and that decision is not the packer's to lose. */
 removeBreaksBtn.onclick = () => {
-  const { markdown, removed, noted } = removeBreaks(editor.value);
-  if (!removed) {
+  // Taking the breaks out has to put split blocks back together too, or
+  // the document is left holding halves of entries with no page turn
+  // between them to explain why.
+  const joined = mergeContinuations(editor.value);
+  const { markdown, removed, noted } = removeBreaks(joined.markdown);
+  if (!removed && !joined.merged) {
     status.textContent = 'No page breaks to remove.';
     status.classList.remove('warn');
     return;
@@ -376,7 +389,10 @@ removeBreaksBtn.onclick = () => {
   status.textContent = `Removed ${removed} page break${removed === 1 ? '' : 's'}`
     + (noted
       ? `. ${noted} carried options and left a note, so Add page breaks will put ${noted === 1 ? 'it' : 'them'} back.`
-      : '.');
+      : '.')
+    + (joined.merged
+      ? ` Rejoined ${joined.merged} block${joined.merged === 1 ? '' : 's'} that had been continued across a page.`
+      : '');
   status.classList.remove('warn');
 };
 

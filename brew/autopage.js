@@ -32,6 +32,29 @@ const PAGE_MARKER = /^\\page[ \t]*(.*)$/;
 const HEADING = /^#{1,6} /;
 const MAX_PASSES = 6;
 
+/* The opening line of a ::: block, and the mark a split one carries.
+ *
+ * A block is never cut across a page by the packer's ordinary rules -
+ * chunkPage refuses to split inside one, because half a block does not
+ * render. That is right for every block small enough to fit and wrong
+ * for the ones that are not: the biggest Gift entries run half again
+ * over a two-column page, and a block that cannot be broken and cannot
+ * fit gets clipped by the page's own overflow:hidden instead. Silently,
+ * in print - the preview's warning banner is hidden there.
+ *
+ * So an oversize block is cut at a paragraph boundary and reopened on
+ * the next sheet, the way a long entry continues in any printed book.
+ * The mark is in the title because that is where a reader needs it. */
+const BLOCK_OPEN = /^:::[ \t]*([a-zA-Z][\w-]*(?:\.[a-zA-Z][\w-]*)?)[ \t]*(.*)$/;
+const BLOCK_CLOSE = /^:::[ \t]*$/;
+const CONTINUED = ' (continued)';
+const MAX_PIECES = 40;
+
+function isContinuation(chunk) {
+  const first = chunk.split('\n', 1)[0];
+  return BLOCK_OPEN.test(first) && first.trim().endsWith(CONTINUED.trim());
+}
+
 /* Top-level chunks of one page's markdown, splitting on blank lines but never
    inside a ::: block or a fenced code sample - splitting there would cut a
    block in half and the halves would not render. */
@@ -120,6 +143,54 @@ export function removeBreaks(src) {
   };
 }
 
+/** Join a block that was split across pages back into one.
+ *
+ *  The inverse of the cut fitBlock makes, and it has to exist: without it
+ *  a second Add page breaks would treat each piece as a whole block, cut
+ *  the pieces again, and the document would grow a new "(continued)"
+ *  every time anyone pressed the button.
+ *
+ *  Fence-aware, because the reference guide writes ::: inside code
+ *  samples to document itself, and a tool that eats its own manual is a
+ *  tool nobody trusts twice.
+ */
+export function mergeContinuations(src) {
+  const lines = src.split('\n');
+  const out = [];
+  let fence = null;
+  let merged = 0;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const f = line.match(/^\s*(```+|~~~+)/);
+    if (f) {
+      if (!fence) fence = f[1][0];
+      else if (f[1][0] === fence) fence = null;
+      out.push(line);
+      continue;
+    }
+    if (!fence && BLOCK_CLOSE.test(line)) {
+      // A close, then blank lines, then at most one page break, then
+      // blank lines again - and if what follows that is a continuation
+      // of the block just closed, the seam goes and the bodies join.
+      let j = i + 1;
+      while (j < lines.length && !lines[j].trim()) j++;
+      if (j < lines.length && PAGE_MARKER.test(lines[j])) {
+        j++;
+        while (j < lines.length && !lines[j].trim()) j++;
+      }
+      if (j < lines.length && isContinuation(lines[j])) {
+        out.push('');
+        i = j;
+        merged += 1;
+        continue;
+      }
+    }
+    out.push(line);
+  }
+  return { markdown: out.join('\n').replace(/\n{3,}/g, '\n\n'), merged };
+}
+
 /** Turn the notes left by removeBreaks back into the breaks they were. */
 export function restoreNotes(src) {
   let restored = 0;
@@ -187,6 +258,52 @@ function assemble(sheets, startsWithMarker) {
     .trim() + '\n';
 }
 
+/** One block, cut into pieces that each fit a sheet.
+ *
+ *  Returns the chunk untouched when it fits, is not a block, or holds a
+ *  single paragraph - a paragraph is the smallest thing there is to move,
+ *  so one that overflows on its own is genuinely unfixable and is left to
+ *  be reported as stubborn rather than quietly mangled.
+ *
+ *  Measured against the real renderer at the page's own options, the same
+ *  way everything else here is measured: a cols=1 page holds far less than
+ *  the two-column default, and guessing at the difference is how you get a
+ *  piece that fits in theory and clips on paper.
+ */
+function fitBlock(chunk, marker, container, render) {
+  const lines = chunk.split('\n');
+  const open = lines[0].match(BLOCK_OPEN);
+  if (!open || !BLOCK_CLOSE.test(lines[lines.length - 1])) return [chunk];
+
+  render(marker + chunk, container);
+  if (!overhanging(container).length) return [chunk];
+
+  const paras = lines.slice(1, -1).join('\n').split(/\n\s*\n/).filter((p) => p.trim());
+  if (paras.length < 2) return [chunk];
+
+  const name = open[1];
+  const title = open[2].trim().replace(/ \(continued\)$/, '');
+  const piece = (label, body) =>
+    [`::: ${name}${label ? ' ' + label : ''}`, body, ':::'].join('\n');
+
+  const pieces = [];
+  let rest = paras;
+  while (rest.length && pieces.length < MAX_PIECES) {
+    const label = pieces.length ? title + CONTINUED : title;
+    // Grow the piece a paragraph at a time and stop at the last one that
+    // still fits. Always keep one, so this cannot fail to make progress.
+    let take = 1;
+    while (take < rest.length) {
+      render(marker + piece(label, rest.slice(0, take + 1).join('\n\n')), container);
+      if (overhanging(container).length) break;
+      take += 1;
+    }
+    pieces.push(piece(label, rest.slice(0, take).join('\n\n')));
+    rest = rest.slice(take);
+  }
+  return rest.length ? [chunk] : pieces;
+}
+
 /** Indices of the pages standing taller than their sheet, as rendered. */
 function overhanging(container) {
   const out = [];
@@ -212,11 +329,20 @@ export async function autoPaginate(src, container, render) {
 
   const original = paginate(src);
   const before = original.length;
+  let split = 0;
 
   // --- first guess: fill each authored page until it spills ---
   const sheets = [];
   original.forEach((page) => {
-    const chunks = chunkPage(page.markdown);
+    const marker0 = '\\page' + serialiseOptions(page.options) + '\n\n';
+    // Cut anything taller than a sheet before packing, so every chunk the
+    // packer sees is one it can actually place.
+    const chunks = [];
+    chunkPage(page.markdown).forEach((c) => {
+      const parts = fitBlock(c, marker0, container, render);
+      if (parts.length > 1) split += 1;
+      parts.forEach((p) => chunks.push(p));
+    });
     if (!chunks.length) {
       sheets.push({ options: page.options, chunks: [] });
       return;
@@ -233,6 +359,15 @@ export async function autoPaginate(src, container, render) {
     };
     chunks.forEach((chunk) => {
       if (!cur.length) { cur.push(chunk); return; }
+      // The other half of a block that was cut always opens a sheet. It
+      // would often fit alongside what came before, and a card headed
+      // "(continued)" sitting under the card it continues reads as a
+      // mistake rather than as a page turn.
+      if (isContinuation(chunk)) {
+        sheets.push({ options: open(), chunks: cur });
+        cur = [chunk];
+        return;
+      }
       render(marker + cur.concat([chunk]).join('\n\n'), container);
       if (!overhanging(container).length) { cur.push(chunk); return; }
       const carried = [];
@@ -262,7 +397,11 @@ export async function autoPaginate(src, container, render) {
         spill.unshift(sheet.chunks.pop());
       }
       const next = sheets[i + 1];
-      if (next && JSON.stringify(next.options) === JSON.stringify(sheet.options)) {
+      // Never above a continuation: that sheet belongs to the block it
+      // continues, and pushing other content in front of it separates the
+      // two halves with something unrelated.
+      if (next && !isContinuation(next.chunks[0] || '')
+          && JSON.stringify(next.options) === JSON.stringify(sheet.options)) {
         next.chunks = spill.concat(next.chunks);
       } else {
         sheets.splice(i + 1, 0, { options: spillOptions(sheet.options), chunks: spill });
@@ -282,5 +421,10 @@ export async function autoPaginate(src, container, render) {
   });
 
   if (zoom) container.style.setProperty('--zoom', zoom);
-  return { markdown, added: Math.max(0, sheets.filter((s) => s.chunks.length).length - before), stubborn };
+  return {
+    markdown,
+    added: Math.max(0, sheets.filter((s) => s.chunks.length).length - before),
+    stubborn,
+    split,
+  };
 }

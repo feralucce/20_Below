@@ -577,6 +577,29 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
   font-size:13pt; letter-spacing:.02em; text-transform:var(--font-head-case);
 }
 
+/* The second half of an entry too tall to fit on one sheet.
+ *
+ * The name repeats, because a reader landing here needs to know whose
+ * entry they are inside, and it carries a mark so they do not read it as
+ * a second entry wearing the same name. The mark is set here rather than
+ * left in the title: one rule instead of seven renderers, and the two
+ * blocks that parse a parenthetical out of a title - a Boon's cost, a
+ * Skill's Element - never see it and cannot print it as one.
+ *
+ * Nothing else changes. Same rule, same tint, same geometry: it is the
+ * same object, continued. */
+.page .is-continued .block-title::after,
+.page .is-continued .gift-name::after,
+.page .is-continued .flaw-name::after,
+.page .is-continued .res-name::after,
+.page .is-continued .boon-name::after,
+.page .is-continued .skill-name::after{
+  content:' (continued)';
+  font-family:var(--font-mono); font-size:7.5pt; font-weight:400;
+  letter-spacing:.08em; text-transform:uppercase;
+  color:var(--page-dim); vertical-align:.18em; margin-left:.45em;
+}
+
 .page .aside{
   background:var(--panel); border-left:4px solid var(--accent);
   padding:.7em .9em; margin:0 0 .8em; font-size:9.5pt; break-inside:avoid;
