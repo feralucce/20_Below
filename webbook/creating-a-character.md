@@ -165,6 +165,12 @@ If you put three points in Soak, you get three descriptors for Soak. They should
 
 These descriptors aren’t just decorative and descriptive - they are load bearing and one of the core ways that your Target Number is determined. Every skill defaults to a specific Element. When you want to use a different Element to roll, and you will, your Descriptors are how you do it.
 
+**Is this a good Descriptor?** The easiest way to tell if a descriptor will work for your character is to try it by saying “Ronan is _______.”
+
+**Functional descriptors**: brawny, sinuous, unstoppable, rico suave.
+
+**Non-functional descriptors**: Corwin of Amber, government intelligence, sexual favors, Kia Niro EV.
+
 **Player**: I want Ronan to jump up to the top of the building. 
 **GM**: That’s acrobatics, so it’s air. That’s a long way, so the difficulty is going to be a difficulty of four. Your air is 1. You have to roll a 5 or less. 
 **Player**: Well, Ronan is Mighty. I think he’s strong enough to make that jump. 
