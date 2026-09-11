@@ -302,9 +302,65 @@ function grounds(pages, defaults) {
   });
 }
 
+/* A block the author chose to break across a page.
+ *
+ * Writing \page inside a ::: block is how you say "cut this entry here" -
+ * how you put the start of the next one at the foot of a page instead of
+ * leaving half a sheet white. paginate() splits at the marker wherever it
+ * falls, so without this the first page ends with the block still open
+ * and the second begins with its body loose and a stray close. Neither
+ * renders: an unmatched ::: is deliberately left visible, so the page
+ * fills with colons instead of with an entry.
+ *
+ * Open blocks are closed at the foot of the page and reopened at the head
+ * of the next, marked (continued) - the same mark the packer puts on the
+ * ones it has to cut itself, because to a reader they are the same thing.
+ *
+ * Done here rather than in paginate() deliberately. This is how the page
+ * is drawn, not what the document says, and Add page breaks reads the
+ * document back out through paginate() to rebuild it. Rewriting it there
+ * would turn the author's single marker into two blocks in their own file
+ * the first time they pressed that button - and the press after that
+ * would see a (continued) block, take it for one of the packer's, and
+ * merge it away.
+ */
+const BLOCK_HEAD = /^(:::[ \t]*[a-zA-Z][\w-]*(?:\.[a-zA-Z][\w-]*)?)[ \t]*(.*)$/;
+const BLOCK_TAIL = /^:::[ \t]*$/;
+
+function continuedHead(openLine) {
+  const m = openLine.match(BLOCK_HEAD);
+  if (!m) return openLine;
+  const title = m[2].trim().replace(/\s*\(continued\)$/, '');
+  return m[1] + ' ' + (title ? title + ' (continued)' : '(continued)');
+}
+
+function carryBlocks(pages) {
+  let stack = [];                    // opens still unclosed, outermost first
+  for (const page of pages) {
+    const reopen = stack.slice();
+    let fence = null;
+    for (const line of page.body.split('\n')) {
+      const f = line.match(/^\s*(```+|~~~+)/);
+      if (f) {
+        if (!fence) fence = f[1][0];
+        else if (f[1][0] === fence) fence = null;
+        continue;
+      }
+      if (fence) continue;
+      if (BLOCK_TAIL.test(line)) { if (stack.length) stack.pop(); continue; }
+      if (BLOCK_HEAD.test(line)) stack.push(line);
+    }
+    if (!reopen.length && !stack.length) continue;
+    const head = reopen.map((l) => continuedHead(l) + '\n\n').join('');
+    const tail = stack.map(() => '\n\n:::').join('');
+    page.body = head + page.body + tail;
+  }
+}
+
 /** Render source into the container as a series of .page elements. */
 export function render(src, container, defaults = {}) {
   const pages = paginate(src);
+  carryBlocks(pages);
   const folio = folioSettings(pages.doc || {});
   const art = grounds(pages, defaults);
 

@@ -104,7 +104,7 @@ export const BLOCKS = {
         const lvl = t.match(/^\*\*(\d+)\*\*\s*(.*)$/s);
         if (lvl) {
           section = '';
-          return `<div class="gift-level">\n\n<span class="gift-n">${esc(lvl[1])}</span>${lvl[2]}\n\n</div>`;
+          return `<div class="gift-level gift-level--${esc(lvl[1])}">\n\n<span class="gift-n">${esc(lvl[1])}</span>${lvl[2]}\n\n</div>`;
         }
         return section
           ? `<div class="gift-opt gift-opt--${section}">\n\n${t}\n\n</div>`
@@ -131,7 +131,7 @@ export const BLOCKS = {
       const rest = paras.map((p) => {
         const m = p.trim().match(/^\*\*(\d+)\*\*\s*(.*)$/s);
         return m
-          ? `<div class="flaw-level">\n\n<span class="flaw-n">${esc(m[1])}</span>${m[2]}\n\n</div>`
+          ? `<div class="flaw-level flaw-level--${esc(m[1])}">\n\n<span class="flaw-n">${esc(m[1])}</span>${m[2]}\n\n</div>`
           : p;
       }).join('\n\n');
       return `<div class="${cls('flaw', variant)}">\n\n${head}\n\n${fl}${rest}\n\n</div>`;
@@ -154,7 +154,7 @@ export const BLOCKS = {
       const rest = paras.map((p) => {
         const m = p.trim().match(/^\*\*(\d+)\*\*\s*(.*)$/s);
         return m
-          ? `<div class="res-level">\n\n<span class="res-n">${esc(m[1])}</span>${m[2]}\n\n</div>`
+          ? `<div class="res-level res-level--${esc(m[1])}">\n\n<span class="res-n">${esc(m[1])}</span>${m[2]}\n\n</div>`
           : p;
       }).join('\n\n');
       return `<div class="${cls('resource', variant)}">\n\n${head}\n\n${fl}${rest}\n\n</div>`;

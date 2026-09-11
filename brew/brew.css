@@ -641,9 +641,54 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
   color:var(--v-moira); font-style:italic; margin:.25em 0 .45em;
 }
 .page .gift-flavour > p{margin:0}
-.page .gift-level{
-  display:flex; gap:.5em; align-items:baseline; margin:.2em 0;
+/* A level on the ladder.
+ *
+ * Five of these run together down a column, each a paragraph opening with
+ * a small number, and at reading size they read as one grey mass - a
+ * player looking for what Level 3 does has to find the digit and then
+ * work out where that entry stops. So each gets a strip of its own: a
+ * panel ground to separate it from the prose around it, and a rule down
+ * the left whose strength climbs with the Level.
+ *
+ * Strength rather than five hues, for two reasons. The Elements already
+ * own the colour vocabulary here, and a sixth palette competing with them
+ * would say something the ladder does not mean. And the greyscale
+ * palette collapses every variant to one grey, so anything keyed on hue
+ * alone would arrive at the printer as five identical bands.
+ *
+ * The rule is drawn as a pseudo-element at a set opacity rather than
+ * mixed into a colour, so it inherits whatever the theme's accent is and
+ * survives a palette with no colour in it at all. */
+.page .gift-level,
+.page .flaw-level,
+.page .res-level{
+  position:relative;
+  display:flex; gap:.5em; align-items:baseline;
+  margin:.15em 0; padding:.25em .5em .25em .7em;
+  background:var(--panel-2); border-radius:0 3px 3px 0;
+  break-inside:avoid;
 }
+.page .gift-level::before,
+.page .flaw-level::before,
+.page .res-level::before{
+  content:''; position:absolute; left:0; top:0; bottom:0; width:3px;
+  background:var(--accent); opacity:.35;
+  print-color-adjust:exact; -webkit-print-color-adjust:exact;
+}
+.page .flaw-level::before{background:var(--v-danger)}
+/* Level 1 keeps the .35 above; 2 to 5 climb from it. */
+.page .gift-level--2::before,
+.page .flaw-level--2::before,
+.page .res-level--2::before{opacity:.5}
+.page .gift-level--3::before,
+.page .flaw-level--3::before,
+.page .res-level--3::before{opacity:.65}
+.page .gift-level--4::before,
+.page .flaw-level--4::before,
+.page .res-level--4::before{opacity:.82}
+.page .gift-level--5::before,
+.page .flaw-level--5::before,
+.page .res-level--5::before{opacity:1}
 .page .gift-level > p{margin:0}
 .page .gift-n{
   flex:0 0 auto; min-width:1.15em; text-align:center;
