@@ -258,50 +258,91 @@ function assemble(sheets, startsWithMarker) {
     .trim() + '\n';
 }
 
-/** One block, cut into pieces that each fit a sheet.
+/* The least a split is worth doing for.
  *
- *  Returns the chunk untouched when it fits, is not a block, or holds a
- *  single paragraph - a paragraph is the smallest thing there is to move,
- *  so one that overflows on its own is genuinely unfixable and is left to
- *  be reported as stubborn rather than quietly mangled.
+ * A block only gets cut to fill a page if there is a real page to fill. A
+ * short aside moved whole to the next sheet costs a few lines of white; a
+ * short aside cut in half costs a reader the thread and puts a
+ * "(continued)" card on the page for the sake of three lines. So the
+ * block has to have somewhere to be cut, and each side has to be worth
+ * carrying: at least two paragraphs stay behind and at least one goes on.
+ * Entries - Gifts, Flaws, Resources, Boons - clear this easily. Callouts
+ * almost never do, which is the intent. */
+const SPLIT_MIN_PARAS = 4;
+const SPLIT_MIN_HEAD = 2;
+
+/** Split `chunk` so its first part finishes the sheet `cur` is filling.
  *
- *  Measured against the real renderer at the page's own options, the same
- *  way everything else here is measured: a cols=1 page holds far less than
- *  the two-column default, and guessing at the difference is how you get a
- *  piece that fits in theory and clips on paper.
+ *  Returns { head, tail } or null when there is no cut worth making. The
+ *  packer's other split, fitBlock, answers "this cannot fit anywhere";
+ *  this one answers "this does not fit HERE, and the rest of the page
+ *  should not go white because of it" - which is how a printed reference
+ *  has always been set.
  */
-function fitBlock(chunk, marker, container, render) {
+function fillSheet(cur, chunk, preamble, marker, container, render) {
   const lines = chunk.split('\n');
   const open = lines[0].match(BLOCK_OPEN);
-  if (!open || !BLOCK_CLOSE.test(lines[lines.length - 1])) return [chunk];
+  if (!open || !BLOCK_CLOSE.test(lines[lines.length - 1])) return null;
 
-  render(marker + chunk, container);
-  if (!overhanging(container).length) return [chunk];
+  // Nothing on the sheet yet means this is not a page being filled - it is
+  // a block that will not fit a sheet at all, and any cut beats losing the
+  // end of it off the edge. So the thresholds only apply when there is
+  // something to fill behind.
+  const filling = cur.length > 0;
+  const minParas = filling ? SPLIT_MIN_PARAS : 2;
+  const minHead = filling ? SPLIT_MIN_HEAD : 1;
 
   const paras = lines.slice(1, -1).join('\n').split(/\n\s*\n/).filter((p) => p.trim());
-  if (paras.length < 2) return [chunk];
+  if (paras.length < minParas) return null;
 
   const name = open[1];
-  const title = open[2].trim().replace(/ \(continued\)$/, '');
+  const raw = open[2].trim();
+  const wasCont = raw.endsWith(CONTINUED.trim());
+  const title = raw.replace(/ \(continued\)$/, '');
   const piece = (label, body) =>
     [`::: ${name}${label ? ' ' + label : ''}`, body, ':::'].join('\n');
+  const headLabel = wasCont ? title + CONTINUED : title;
 
-  const pieces = [];
-  let rest = paras;
-  while (rest.length && pieces.length < MAX_PIECES) {
-    const label = pieces.length ? title + CONTINUED : title;
-    // Grow the piece a paragraph at a time and stop at the last one that
-    // still fits. Always keep one, so this cannot fail to make progress.
-    let take = 1;
-    while (take < rest.length) {
-      render(marker + piece(label, rest.slice(0, take + 1).join('\n\n')), container);
-      if (overhanging(container).length) break;
-      take += 1;
-    }
-    pieces.push(piece(label, rest.slice(0, take).join('\n\n')));
-    rest = rest.slice(take);
+  // The most of this block that still fits behind what is already on the
+  // sheet. Measured, not estimated - the sheet's own options are in the
+  // marker, and a one-column page holds nothing like a two-column one.
+  let take = 0;
+  for (let n = minHead; n < paras.length; n++) {
+    const trial = cur.concat([piece(headLabel, paras.slice(0, n).join('\n\n'))]);
+    render(preamble + marker + trial.join('\n\n'), container);
+    if (overhanging(container).length) break;
+    take = n;
   }
-  return rest.length ? [chunk] : pieces;
+  if (!take) return null;
+
+  return {
+    head: piece(headLabel, paras.slice(0, take).join('\n\n')),
+    tail: piece(title + CONTINUED, paras.slice(take).join('\n\n')),
+  };
+}
+
+/* A block taken apart, and put back together.
+ *
+ * The verify pass needs these. A piece that measured as fitting on its own
+ * can still overhang once the document is assembled - POD alternates its
+ * gutter by page parity and column rounding follows it - and when the
+ * sheet holds nothing but that one block there is no whole chunk left to
+ * move. The only thing to do is hand a paragraph back to the page after
+ * it, which means opening the block up rather than treating it as opaque.
+ */
+function blockParts(chunk) {
+  const lines = String(chunk).split('\n');
+  const open = lines[0].match(BLOCK_OPEN);
+  if (!open || !BLOCK_CLOSE.test(lines[lines.length - 1])) return null;
+  return {
+    name: open[1],
+    label: open[2].trim(),
+    paras: lines.slice(1, -1).join('\n').split(/\n\s*\n/).filter((p) => p.trim()),
+  };
+}
+
+function blockFrom(name, label, paras) {
+  return [`::: ${name}${label ? ' ' + label : ''}`, paras.join('\n\n'), ':::'].join('\n');
 }
 
 /** Indices of the pages standing taller than their sheet, as rendered. */
@@ -320,8 +361,26 @@ function overhanging(container) {
  * Returns { markdown, added, stubborn }. `stubborn` names any page that is
  * still too tall while holding a single block, which no break can fix.
  */
+/* The document's own settings, as lines.
+ *
+ * Every trial here is rendered as a fragment - a page marker and some
+ * content - and a fragment does not carry the settings written at the top
+ * of the file. That was harmless while those settings only chose a
+ * background, and decisive the moment \cols existed: a one-column
+ * document was being measured two columns wide, so twice as much appeared
+ * to fit as really did, and the pages came out short. They ride along
+ * with every measurement now. */
+const DOC_MARKER = /^\\(?:folio|seed|ground|cols)\b/;
+
+function preambleOf(src) {
+  const lines = walk(src, (line, fenced) => (!fenced && DOC_MARKER.test(line) ? line : null))
+    .filter((l) => l !== null);
+  return lines.length ? lines.join('\n') + '\n\n' : '';
+}
+
 export async function autoPaginate(src, container, render) {
   await document.fonts.ready;
+  const preamble = preambleOf(src);
 
   const startsWithMarker = PAGE_MARKER.test(src.split('\n').find((l) => l.trim()) || '');
   const zoom = container.style.getPropertyValue('--zoom');
@@ -338,11 +397,7 @@ export async function autoPaginate(src, container, render) {
     // Cut anything taller than a sheet before packing, so every chunk the
     // packer sees is one it can actually place.
     const chunks = [];
-    chunkPage(page.markdown).forEach((c) => {
-      const parts = fitBlock(c, marker0, container, render);
-      if (parts.length > 1) split += 1;
-      parts.forEach((p) => chunks.push(p));
-    });
+    chunkPage(page.markdown).forEach((c) => chunks.push(c));
     if (!chunks.length) {
       sheets.push({ options: page.options, chunks: [] });
       return;
@@ -358,22 +413,35 @@ export async function autoPaginate(src, container, render) {
       return options;
     };
     chunks.forEach((chunk) => {
-      if (!cur.length) { cur.push(chunk); return; }
-      // The other half of a block that was cut always opens a sheet. It
-      // would often fit alongside what came before, and a card headed
-      // "(continued)" sitting under the card it continues reads as a
-      // mistake rather than as a page turn.
-      if (isContinuation(chunk)) {
-        sheets.push({ options: open(), chunks: cur });
-        cur = [chunk];
-        return;
-      }
-      render(marker + cur.concat([chunk]).join('\n\n'), container);
+      // Does it fit behind what is already on the sheet - or, on an empty
+      // sheet, does it fit at all? Asked first, always. Going straight to
+      // the splitter cuts blocks that had no need to be cut.
+      render(preamble + marker + cur.concat([chunk]).join('\n\n'), container);
       if (!overhanging(container).length) { cur.push(chunk); return; }
-      const carried = [];
-      while (cur.length && HEADING.test(cur[cur.length - 1])) carried.unshift(cur.pop());
-      if (cur.length) sheets.push({ options: open(), chunks: cur });
-      cur = carried.concat([chunk]);
+      // It will not fit behind what is already here. Rather than send the
+      // whole block on and leave the rest of this sheet white, cut it so
+      // its start finishes the page - and keep cutting while what is left
+      // is still taller than a sheet of its own.
+      let rest = chunk;
+      for (let guard = 0; guard < MAX_PIECES; guard++) {
+        const filled = fillSheet(cur, rest, preamble, marker, container, render);
+        if (!filled) break;
+        split += 1;
+        sheets.push({ options: open(), chunks: cur.concat([filled.head]) });
+        cur = [];
+        rest = filled.tail;
+        render(preamble + marker + rest, container);
+        if (!overhanging(container).length) break;
+      }
+      if (cur.length) {
+        // Nothing was cut. A heading stranded at the foot belongs with the
+        // text it introduces, so it travels with it.
+        const carried = [];
+        while (cur.length && HEADING.test(cur[cur.length - 1])) carried.unshift(cur.pop());
+        if (cur.length) sheets.push({ options: open(), chunks: cur });
+        cur = carried;
+      }
+      cur.push(rest);
     });
     sheets.push({ options: open(), chunks: cur });
   });
@@ -391,7 +459,30 @@ export async function autoPaginate(src, container, render) {
     let moved = false;
     bad.reverse().forEach((i) => {
       const sheet = sheets[i];
-      if (!sheet || sheet.chunks.length < 2) return;   // nothing left to move
+      if (!sheet) return;
+      if (sheet.chunks.length < 2) {
+        // One block, still too tall now that it is measured in place. Give
+        // its last paragraph to the page after it - joining the
+        // continuation already there rather than starting a second one, or
+        // the entry would arrive in three pieces to gain two lines.
+        const parts = blockParts(sheet.chunks[0]);
+        if (!parts || parts.paras.length < 2) return;
+        const last = parts.paras.pop();
+        sheet.chunks = [blockFrom(parts.name, parts.label, parts.paras)];
+        const cont = parts.label.replace(/ \(continued\)$/, '') + CONTINUED;
+        const next = sheets[i + 1];
+        const after = next ? blockParts(next.chunks[0] || '') : null;
+        if (after && after.name === parts.name && after.label === cont.trim()) {
+          next.chunks[0] = blockFrom(parts.name, after.label, [last].concat(after.paras));
+        } else {
+          sheets.splice(i + 1, 0, {
+            options: spillOptions(sheet.options),
+            chunks: [blockFrom(parts.name, cont.trim(), [last])],
+          });
+        }
+        moved = true;
+        return;
+      }
       const spill = [sheet.chunks.pop()];
       while (sheet.chunks.length && HEADING.test(sheet.chunks[sheet.chunks.length - 1])) {
         spill.unshift(sheet.chunks.pop());
