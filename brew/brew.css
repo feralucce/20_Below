@@ -405,7 +405,31 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 }
 .page[data-folio="center"] > .folio{left:0; right:0; text-align:center}
 
-.page > .flow{position:relative; z-index:1; height:100%; column-count:2; column-gap:0.38in}
+/* Two columns, filled rather than balanced.
+ *
+ * column-fill defaults to balance, which makes both columns the same
+ * height. On a page that does not quite fill, the leftover then shows up
+ * at the foot of BOTH columns as one band of white across the page,
+ * instead of the first column running to the bottom the way a book sets.
+ *
+ * column-fill:auto only takes effect against a definite height, and
+ * height:100% is not one: .page is min-height, so the percentage is
+ * indeterminate and resolves to auto. Hence the same arithmetic the page
+ * uses, written out - the sheet, less the padding on both sides of it.
+ *
+ * The catch, and the reason overflow is measured the way it is below:
+ * with a definite height, content that does not fit no longer makes the
+ * page taller. It spills into a third column, sideways, where the page's
+ * own overflow:hidden clips it. Nothing grows and nothing is visible, so
+ * "is the page taller than the sheet" stops being able to detect
+ * anything. See overflowing() in autopage.js and flagOverflow() in
+ * main.js: both ask scrollWidth instead. */
+.page > .flow{
+  position:relative; z-index:1;
+  height:calc(var(--trim-h) + (var(--bleed-out) * 2)
+              - (var(--margin) + var(--bleed-out) + var(--safe)) * 2);
+  column-count:2; column-gap:0.38in; column-fill:auto;
+}
 /* Two columns is the default. A page opts out with: \page cols=1 */
 .page[data-cols="1"] > .flow{column-count:1}
 

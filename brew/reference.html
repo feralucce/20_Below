@@ -37,6 +37,9 @@
 <script type="module">
 /* Same cache-busting as index.html - see the note there. */
 const v = Date.now();
+/* Same pairing as index.html: the measuring code and the layout it
+   measures ship together, so the stylesheet is busted with them. */
+document.querySelector('link[rel="stylesheet"]').href = `brew.css?v=${v}`;
 const q = `?v=${v}`;
 const { render } = await import(`./render.js${q}`);
 const { guide } = await import(`./sample.js${q}`);

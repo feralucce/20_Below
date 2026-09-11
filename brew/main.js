@@ -1,7 +1,7 @@
 /* Carry this module's version query down to its imports, so the whole
    graph busts together. See the note in index.html. */
 const V = new URL(import.meta.url).search;
-const { render } = await import('./render.js' + V);
+const { render, spills } = await import('./render.js' + V);
 const { autoPaginate, removeBreaks, restoreNotes } = await import('./autopage.js' + V);
 const { guide, starter } = await import('./sample.js' + V);
 const files = await import('./files.js' + V);
@@ -139,10 +139,9 @@ function flagOverflow() {
   preview.style.setProperty('--zoom', '1');
   let over = 0;
   for (const page of preview.querySelectorAll('.page')) {
-    const sheet = parseFloat(getComputedStyle(page).minHeight) || 0;
-    const spills = sheet > 0 && page.offsetHeight > sheet + 4;
-    page.classList.toggle('overflowing', spills);
-    if (spills) over += 1;
+    const over_ = spills(page);
+    page.classList.toggle('overflowing', over_);
+    if (over_) over += 1;
   }
   if (shown) preview.style.setProperty('--zoom', shown);
   return over;

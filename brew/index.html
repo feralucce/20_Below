@@ -101,10 +101,20 @@
  * The entry module gets a version query, and every module passes its
  * own query down to whatever it imports (see main.js), so the whole
  * graph busts together. The value is the current time, so a reload
- * always runs what is on disk - the JS is about 30 KB in total, and
- * the fonts and CSS still cache normally.
+ * always runs what is on disk. The JS is about 30 KB in total and the
+ * stylesheet about the same; the fonts still cache normally.
  */
 const v = Date.now();
+/* The stylesheet gets the same treatment as the modules, and for a
+   sharper reason than tidiness. The layout and the code that measures it
+   are one design: brew.css gives the text block a definite height so the
+   columns fill instead of balancing, and because of that a page that is
+   too full no longer grows - render.js looks at scrollWidth instead.
+   Serve new JS against a cached stylesheet and that check runs against
+   the old layout, where it can never fire, so an overfull page is
+   reported as fine and its text is quietly clipped. They have to arrive
+   together. */
+document.querySelector('link[rel="stylesheet"]').href = `brew.css?v=${v}`;
 import(`./main.js?v=${v}`);
 </script>
 </body>

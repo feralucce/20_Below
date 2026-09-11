@@ -187,6 +187,23 @@ function folioValue(text) {
   return null;
 }
 
+/** Is there more on this page than the sheet can hold?
+ *
+ *  Asked of the width, which looks wrong and is not. The text block has a
+ *  definite height and column-fill:auto (see brew.css), so a page that is
+ *  given too much does not get taller - it opens another column to the
+ *  side, and the page's overflow:hidden cuts it off. Nothing grows, and
+ *  nothing shows. Height stopped being able to answer this question the
+ *  moment the columns were told to fill rather than balance.
+ *
+ *  One definition, used by the preview's warning and by the packer, so
+ *  the two can never disagree about what fits. */
+export function spills(page) {
+  const flow = page.querySelector('.flow');
+  if (!flow) return false;
+  return flow.scrollWidth > flow.clientWidth + 4;
+}
+
 /** How the document numbers its pages: { on, where, from }. */
 function folioSettings(doc) {
   const on = !!doc.on && !doc.off;
