@@ -18,10 +18,13 @@
   'use strict';
 
   var API = 'https://api.github.com/repos/feralucce/20_Below/releases';
-  /* Bumped to -v2 to drop every cache written before the downgrade guard
-     below existed: those entries are what put v0.10.0 back on a page whose
-     markup already said v0.10.1. */
-  var CACHE = '20below-releases-v2';
+  /* Bumped when the guard below changes, because sessionStorage outlives
+     a reload - a hard one included - so a reader mid-session would keep
+     being served the cached feed the old guard failed to protect them
+     from. -v2 dropped everything written before the guard existed; -v3
+     drops everything written while it could only read the Character
+     Creator's version out of the markup. */
+  var CACHE = '20below-releases-v3';
   var CACHE_TTL = 15 * 60 * 1000;
 
   var PRODUCTS = {
@@ -100,8 +103,19 @@
          open before a release got that release's own answer overwritten by
          the pre-release one, and saw v0.10.0 on markup that said v0.10.1.
          The rule the file already claimed to follow, now enforced: this can
-         only ever move a link forward. */
-      var inMarkup = (el.getAttribute('href') || '').match(/\/download\/v?(\d+\.\d+\.\d+)\//);
+         only ever move a link forward.
+
+         And it only half worked. The tag sits between /download/ and the
+         asset, and three products out of four prefix it with their own
+         name - brewery-v0.3.20, combat-tracker-v0.2.7, prep-v0.2.4.
+         Allowing only an optional "v" ahead of the digits read the
+         version for the Character Creator, whose tag is a bare v0.10.14,
+         and for none of the others: the guard could not fire on the three
+         links most likely to need it, and a stale cache went on
+         downgrading them. The page served v0.3.19 on the day v0.3.20
+         shipped, from markup that already said v0.3.20. */
+      var inMarkup = (el.getAttribute('href') || '')
+        .match(/\/download\/[^/]*?v?(\d+\.\d+\.\d+)\//);
       if (inMarkup && older(hit.version, inMarkup[1])) continue;
 
       el.href = hit.url;
