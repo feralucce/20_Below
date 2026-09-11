@@ -176,6 +176,8 @@ export function guide() {
     'Neither one touches a ' + T + B + 'page' + T + ' written inside a code fence, so a',
     'document explaining this tool does not eat its own examples.',
     '',
+    B + 'page',
+    '',
     '## When a block is taller than the page',
     '',
     'A block is never cut in half by the packer. Half a block does not',
