@@ -253,6 +253,18 @@
     line-height: 1.15;
     letter-spacing: 0.02em;
   }
+  /* A title written with emphasis in it - the Sub-Stat asides are titled
+     "**Soak** (Earth)" - now that the markdown in a title is actually
+     rendered. Left alone, the page's own strong rule repaints it in the
+     text colour and the element colour is lost on the one word that most
+     wants it. Weight inherits too: Bebas has no bold, so asking for one
+     gets a synthetic smear of the regular. */
+  .block-title strong,
+  .block-title em {
+    color: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+  }
   /* The parenthetical the print edition sets beside a block's name - an
      Element's two Sub-Stats, or a Sub-Stat's Element. Quiet on purpose:
      it is a label, not part of the title. */

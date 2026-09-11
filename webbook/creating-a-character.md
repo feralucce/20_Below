@@ -59,7 +59,7 @@ If none of the premade Natures quite do the trick, you can write your own. The f
 ## Premade Natures
 <div class="aside" markdown="1">
 
-<p class="block-title">Analyst</p>
+<p class="block-title" markdown="span">Analyst</p>
 
 Nothing gets acted on until you understand how it actually works. *Trigger:* Pausing the plan to dig into the mechanism, the pattern or the real cause before moving.
 
@@ -67,7 +67,7 @@ Nothing gets acted on until you understand how it actually works. *Trigger:* Pau
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Avenger</p>
+<p class="block-title" markdown="span">Avenger</p>
 
 A wrong doesn’t stay unanswered. *Trigger:* Pursuing payback or justice even when it isn’t the smart move.
 
@@ -75,7 +75,7 @@ A wrong doesn’t stay unanswered. *Trigger:* Pursuing payback or justice even w
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Caregiver</p>
+<p class="block-title" markdown="span">Caregiver</p>
 
 Other people’s wounds are yours to tend. *Trigger:* Stopping to help, heal or comfort someone at your own expense.
 
@@ -83,7 +83,7 @@ Other people’s wounds are yours to tend. *Trigger:* Stopping to help, heal or 
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Charmer</p>
+<p class="block-title" markdown="span">Charmer</p>
 
 People are won over, not overpowered. *Trigger:* Turning a hostile or closed-off person into an ally through charm alone.
 
@@ -91,7 +91,7 @@ People are won over, not overpowered. *Trigger:* Turning a hostile or closed-off
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Competitor</p>
+<p class="block-title" markdown="span">Competitor</p>
 
 Everything is a contest you intend to win. *Trigger:* Turning a task into a competition and pushing past what was needed.
 
@@ -99,7 +99,7 @@ Everything is a contest you intend to win. *Trigger:* Turning a task into a comp
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Daredevil</p>
+<p class="block-title" markdown="span">Daredevil</p>
 
 The safe option is the boring option. *Trigger:* Taking the reckless, high-stakes move when a safer one was sitting right there.
 
@@ -107,7 +107,7 @@ The safe option is the boring option. *Trigger:* Taking the reckless, high-stake
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Diplomat</p>
+<p class="block-title" markdown="span">Diplomat</p>
 
 Every conflict has a deal hiding inside it. *Trigger:* Talking two sides down from a fight instead of picking one.
 
@@ -115,7 +115,7 @@ Every conflict has a deal hiding inside it. *Trigger:* Talking two sides down fr
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Enforcer</p>
+<p class="block-title" markdown="span">Enforcer</p>
 
 A deal is a deal, and someone has to make sure it holds. *Trigger:* Making someone answer for a broken promise or an unpaid debt.
 
@@ -123,7 +123,7 @@ A deal is a deal, and someone has to make sure it holds. *Trigger:* Making someo
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Fixer</p>
+<p class="block-title" markdown="span">Fixer</p>
 
 Every problem has a working solution if you’re clever enough. *Trigger:* Solving a mess through leverage, favors or a clever angle instead of force.
 
@@ -131,7 +131,7 @@ Every problem has a working solution if you’re clever enough. *Trigger:* Solvi
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Ghost</p>
+<p class="block-title" markdown="span">Ghost</p>
 
 The less anyone knows about you, the safer everyone is. *Trigger:* Choosing to disappear, stay unseen or erase your trail instead of being known.
 
@@ -139,7 +139,7 @@ The less anyone knows about you, the safer everyone is. *Trigger:* Choosing to d
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Guardian</p>
+<p class="block-title" markdown="span">Guardian</p>
 
 Some things are yours to watch over. *Trigger:* Standing your ground to protect a place, group or thing you’ve claimed.
 
@@ -147,7 +147,7 @@ Some things are yours to watch over. *Trigger:* Standing your ground to protect 
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Idealist</p>
+<p class="block-title" markdown="span">Idealist</p>
 
 The world can be better, and you’re proof it’s worth trying. *Trigger:* Pushing for the principled option when the cynical one is easier.
 
@@ -155,7 +155,7 @@ The world can be better, and you’re proof it’s worth trying. *Trigger:* Push
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Judge</p>
+<p class="block-title" markdown="span">Judge</p>
 
 Right and wrong get named out loud. *Trigger:* Calling out someone’s conduct plainly, even when it’s socially costly.
 
@@ -163,7 +163,7 @@ Right and wrong get named out loud. *Trigger:* Calling out someone’s conduct p
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Leader</p>
+<p class="block-title" markdown="span">Leader</p>
 
 Someone has to call the shot, so it’s you. *Trigger:* Making the hard call for the group and owning the outcome.
 
@@ -171,7 +171,7 @@ Someone has to call the shot, so it’s you. *Trigger:* Making the hard call for
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Loner</p>
+<p class="block-title" markdown="span">Loner</p>
 
 You handle it yourself. *Trigger:* Refusing help, or cutting yourself off from the group, to solve something alone.
 
@@ -179,7 +179,7 @@ You handle it yourself. *Trigger:* Refusing help, or cutting yourself off from t
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Mentor</p>
+<p class="block-title" markdown="span">Mentor</p>
 
 Someone else’s growth matters more than your own credit. *Trigger:* Stepping back so someone else can learn, lead or take the win.
 
@@ -187,7 +187,7 @@ Someone else’s growth matters more than your own credit. *Trigger:* Stepping b
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Opportunist</p>
+<p class="block-title" markdown="span">Opportunist</p>
 
 Chaos is just an opening nobody has grabbed yet. *Trigger:* Turning someone else’s disaster into your own advantage.
 
@@ -195,7 +195,7 @@ Chaos is just an opening nobody has grabbed yet. *Trigger:* Turning someone else
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Perfectionist</p>
+<p class="block-title" markdown="span">Perfectionist</p>
 
 Good enough isn’t. *Trigger:* Redoing it, refusing to ship it, or pushing back on a “good enough” result.
 
@@ -203,7 +203,7 @@ Good enough isn’t. *Trigger:* Redoing it, refusing to ship it, or pushing back
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Protector</p>
+<p class="block-title" markdown="span">Protector</p>
 
 Someone else’s safety comes before yours. *Trigger:* Taking a hit, a risk or a loss meant for someone who can’t fend for themselves.
 
@@ -211,7 +211,7 @@ Someone else’s safety comes before yours. *Trigger:* Taking a hit, a risk or a
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Rebel</p>
+<p class="block-title" markdown="span">Rebel</p>
 
 Authority is something to test, not obey. *Trigger:* Breaking a rule or defying an order specifically because it was given.
 
@@ -219,7 +219,7 @@ Authority is something to test, not obey. *Trigger:* Breaking a rule or defying 
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Showman</p>
+<p class="block-title" markdown="span">Showman</p>
 
 The room should be watching you. *Trigger:* Turning a moment into a performance, at some cost to subtlety or safety.
 
@@ -227,7 +227,7 @@ The room should be watching you. *Trigger:* Turning a moment into a performance,
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Skeptic</p>
+<p class="block-title" markdown="span">Skeptic</p>
 
 The comfortable answer is usually the wrong one. *Trigger:* Refusing an easy explanation until you’ve checked it yourself.
 
@@ -235,7 +235,7 @@ The comfortable answer is usually the wrong one. *Trigger:* Refusing an easy exp
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Survivor</p>
+<p class="block-title" markdown="span">Survivor</p>
 
 Getting through today matters more than looking good doing it. *Trigger:* Choosing the ugly, practical option over the proud one to come out ahead.
 
@@ -243,7 +243,7 @@ Getting through today matters more than looking good doing it. *Trigger:* Choosi
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Trickster</p>
+<p class="block-title" markdown="span">Trickster</p>
 
 The straight path is boring. *Trigger:* Solving a problem through misdirection, a lie or a bit instead of the obvious approach.
 
@@ -251,7 +251,7 @@ The straight path is boring. *Trigger:* Solving a problem through misdirection, 
 
 <div class="aside" markdown="1">
 
-<p class="block-title">True Believer</p>
+<p class="block-title" markdown="span">True Believer</p>
 
 A cause or a code outranks your own comfort. *Trigger:* Sticking to your code when the easy move would break it.
 
@@ -259,7 +259,7 @@ A cause or a code outranks your own comfort. *Trigger:* Sticking to your code wh
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Wanderer</p>
+<p class="block-title" markdown="span">Wanderer</p>
 
 Roots are just something to outrun. *Trigger:* Walking away from a place, group or claim rather than settling into it.
 
@@ -276,7 +276,7 @@ Each of your Attributes starts at 1 for free. You have **20 points** to spend ac
 The next step gives you more points for every point you spend here.
 <div class="skill skill--earth" markdown="1">
 
-<p class="block-title">Earth<span class="block-pill">Soak / Potence</span></p>
+<p class="block-title" markdown="span">Earth<span class="block-pill">Soak / Potence</span></p>
 
 <div class="skill-flavour" markdown="1">
 
@@ -290,7 +290,7 @@ How strong you are, how hard you hit, how much punishment you can take. Splits i
 
 <div class="skill skill--air" markdown="1">
 
-<p class="block-title">Air<span class="block-pill">Initiative / Psyche</span></p>
+<p class="block-title" markdown="span">Air<span class="block-pill">Initiative / Psyche</span></p>
 
 <div class="skill-flavour" markdown="1">
 
@@ -304,7 +304,7 @@ How fast you react, how well you keep pace when things change, how clearly you t
 
 <div class="skill skill--fire" markdown="1">
 
-<p class="block-title">Fire<span class="block-pill">Ferocity / Presence</span></p>
+<p class="block-title" markdown="span">Fire<span class="block-pill">Ferocity / Presence</span></p>
 
 <div class="skill-flavour" markdown="1">
 
@@ -318,7 +318,7 @@ How hard you push, and how much of yourself you put into a confrontation, whethe
 
 <div class="skill skill--water" markdown="1">
 
-<p class="block-title">Water<span class="block-pill">Stamina / Health</span></p>
+<p class="block-title" markdown="span">Water<span class="block-pill">Stamina / Health</span></p>
 
 <div class="skill-flavour" markdown="1">
 
@@ -332,7 +332,7 @@ How tuned in you are to the world and the people in it, and how much you can wea
 
 <div class="skill skill--moira" markdown="1">
 
-<p class="block-title">Moira<span class="block-pill">Atropos / Klotho</span></p>
+<p class="block-title" markdown="span">Moira<span class="block-pill">Atropos / Klotho</span></p>
 
 <div class="skill-flavour" markdown="1">
 
@@ -356,7 +356,7 @@ Spend wisely.
 
 <div class="aside aside--earth" markdown="1">
 
-<p class="block-title">**Soak** (Earth)</p>
+<p class="block-title" markdown="span">**Soak** (Earth)</p>
 
 Your wall against Physical damage: the number an attacker’s dice have to beat to hurt you.
 
@@ -364,7 +364,7 @@ Your wall against Physical damage: the number an attacker’s dice have to beat 
 
 <div class="aside aside--earth" markdown="1">
 
-<p class="block-title">**Potence** (Earth)</p>
+<p class="block-title" markdown="span">**Potence** (Earth)</p>
 
 Raw strength. What you can carry, what you can break, who wins when two people push.
 
@@ -372,7 +372,7 @@ Raw strength. What you can carry, what you can break, who wins when two people p
 
 <div class="aside aside--air" markdown="1">
 
-<p class="block-title">**Initiative** (Air)</p>
+<p class="block-title" markdown="span">**Initiative** (Air)</p>
 
 Turn order in a fight.
 
@@ -380,7 +380,7 @@ Turn order in a fight.
 
 <div class="aside aside--air" markdown="1">
 
-<p class="block-title">**Psyche** (Air)</p>
+<p class="block-title" markdown="span">**Psyche** (Air)</p>
 
 Your wall against Mental attacks, and what a boosted die adds when you make one.
 
@@ -388,7 +388,7 @@ Your wall against Mental attacks, and what a boosted die adds when you make one.
 
 <div class="aside aside--fire" markdown="1">
 
-<p class="block-title">**Ferocity** (Fire)</p>
+<p class="block-title" markdown="span">**Ferocity** (Fire)</p>
 
 What you add to a Physical strike when you spend Ki to put more behind it.
 
@@ -396,7 +396,7 @@ What you add to a Physical strike when you spend Ki to put more behind it.
 
 <div class="aside aside--fire" markdown="1">
 
-<p class="block-title">**Presence** (Fire)</p>
+<p class="block-title" markdown="span">**Presence** (Fire)</p>
 
 Your wall against Social attacks, and what a boosted die adds when you make one.
 
@@ -404,7 +404,7 @@ Your wall against Social attacks, and what a boosted die adds when you make one.
 
 <div class="aside aside--water" markdown="1">
 
-<p class="block-title">**Stamina** (Water)</p>
+<p class="block-title" markdown="span">**Stamina** (Water)</p>
 
 Caps how many Fate Tokens you can hold (three times your Stamina) and how many you can spend in a Scene, and carries you against exhaustion outside a fight.
 
@@ -412,7 +412,7 @@ Caps how many Fate Tokens you can hold (three times your Stamina) and how many y
 
 <div class="aside aside--water" markdown="1">
 
-<p class="block-title">**Health** (Water)</p>
+<p class="block-title" markdown="span">**Health** (Water)</p>
 
 Feeds your Health Levels, which is how many hits you can take.
 
@@ -420,7 +420,7 @@ Feeds your Health Levels, which is how many hits you can take.
 
 <div class="aside aside--moira" markdown="1">
 
-<p class="block-title">**Atropos** (Moira)</p>
+<p class="block-title" markdown="span">**Atropos** (Moira)</p>
 
 Feeds Defense, which is how hard you are to touch at all, whether by a blade, a word, or a mind.
 
@@ -428,7 +428,7 @@ Feeds Defense, which is how hard you are to touch at all, whether by a blade, a 
 
 <div class="aside aside--moira" markdown="1">
 
-<p class="block-title">**Klotho** (Moira)</p>
+<p class="block-title" markdown="span">**Klotho** (Moira)</p>
 
 How much Ki a Short Rest brings back, and your Lucky Number.
 
@@ -444,13 +444,13 @@ These descriptors aren’t just decorative and descriptive - they are load beari
 
 <div class="aside" markdown="1">
 
-<p class="block-title">Is this a good Descriptor?</p>
+<p class="block-title" markdown="span">Is this a good Descriptor?</p>
 
 The easiest way to tell if a descriptor will work for your character is to try it by saying "Ronan is _______." 
 
 <div class="aside aside--pc" markdown="1">
 
-<p class="block-title">Functional descriptors</p>
+<p class="block-title" markdown="span">Functional descriptors</p>
 
 - brawny
 - sinuous
@@ -461,7 +461,7 @@ The easiest way to tell if a descriptor will work for your character is to try i
 
 <div class="aside aside--danger" markdown="1">
 
-<p class="block-title">Non-functional Descriptors</p>
+<p class="block-title" markdown="span">Non-functional Descriptors</p>
 
 - Corwin of Amber
 - government intelligence

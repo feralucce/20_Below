@@ -76,7 +76,17 @@ def wrap(class_name, body, tag="div"):
 
 
 def title_line(text, class_name="block-title"):
-    return '<p class="%s">%s</p>' % (class_name, esc(text.strip()))
+    """A block's name.
+
+    markdown="span" because a title is written in markdown like anything
+    else - the Sub-Stat asides are titled "**Soak** (Earth)" - and a
+    paragraph is a block element, whose insides kramdown leaves alone
+    unless told otherwise. Without it the asterisks reach the reader.
+    "span" rather than "1": a title is a line, not a passage, and asking
+    for block-level parsing inside a paragraph invites a nested one.
+    """
+    return '<p class="%s" markdown="span">%s</p>' % (
+        class_name, esc(text.strip()))
 
 
 def paras(body):
