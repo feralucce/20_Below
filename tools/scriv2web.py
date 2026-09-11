@@ -550,7 +550,7 @@ def main():
             path = os.path.join(BREW_DIR, FORMATTED[slug])
             raw = io.open(path, encoding="utf-8").read()
             ground = read_ground(raw)
-            stripped, markers = strip_markers(raw)
+            stripped, markers, rejoined = strip_markers(raw)
             # The chapter's own H1. The layout prints the title from front
             # matter, so leaving it would set the heading twice.
             stripped = re.sub(r"\A#[ \t][^\n]*\n+", "", stripped)
@@ -570,7 +570,7 @@ def main():
                 hollow.append(
                     "%s: no page markers found in %s - is it really the "
                     "formatted copy?" % (slug, FORMATTED[slug]))
-            formatted.append((slug, markers, body.count('<div class=')))
+            formatted.append((slug, markers, body.count('<div class='), rejoined))
             body = body.strip() + "\n"
             written.append((binder_title, slug, len(chunks),
                             sum(len(c.split()) for c in chunks)))
@@ -663,9 +663,10 @@ def main():
         print("  %-34s %-22s %5d chunks %6d words" % (t, slug + ".md", n, w))
     print("  %-57s %6d words total" % ("", total))
     print("  index.md")
-    for slug, markers, blocks in formatted:
-        print("  %-34s %d blocks, %d print markers dropped"
-              % (FORMATTED[slug], blocks, markers))
+    for slug, markers, blocks, rejoined in formatted:
+        print("  %-34s %d blocks, %d print markers dropped%s"
+              % (FORMATTED[slug], blocks, markers,
+                 ", %d rejoined across a page break" % rejoined if rejoined else ""))
     if counts["unlinked"]:
         print("  %d link(s) to rules/ source files turned into bold text - see"
               " unlink_sources()" % counts["unlinked"])

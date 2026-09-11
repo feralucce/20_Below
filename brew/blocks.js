@@ -25,6 +25,31 @@ const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, 
    and the colour is a thin override on top of it. */
 const cls = (base, variant) => (variant ? `${base} ${base}--${variant}` : base);
 
+/* The second half of a block the paginator had to cut, because the whole
+ * of it stood taller than a sheet. Two things follow from a block being a
+ * continuation rather than a new entry:
+ *
+ *   Its opening paragraph is not a flavour line. The entry blocks set
+ *   their first paragraph as the voice, in italic accent. On a
+ *   continuation that paragraph is simply the next thing being said, and
+ *   italicising it would invent an emphasis the author never wrote.
+ *
+ *   It is marked, so a reader meeting the card partway down a page knows
+ *   they are looking at a page turn and not at a second entry wearing the
+ *   same name.
+ *
+ * Handled once, in applyBlocks, rather than in each of the seven
+ * renderers: the mark is stripped off the title before a renderer ever
+ * sees it, and the class is added to what comes back. Two of them parse a
+ * parenthetical out of the title - a Boon's cost, a Skill's Element - and
+ * would otherwise read "(continued)" as one and print it in the pill.
+ */
+const CONTINUED = /\s*\(continued\)\s*$/;
+
+/* The opening paragraph, where a block has one to spare and is not a
+   continuation. Shared by every entry block, so the rule is written once. */
+const flavourOf = (paras, cont) => (paras.length > 1 && !cont ? paras.shift() : '');
+
 /* Renders <div class="base"> with an optional title span. */
 const div = (base) => (title, body, variant) => {
   const head = title.trim() ? `<span class="block-title">${esc(title.trim())}</span>\n\n` : '';
@@ -61,9 +86,9 @@ export const BLOCKS = {
      * Limiters. Levels get the numbered ladder the other entries use;
      * Adders and Limiters are labelled runs rather than numbered, so they
      * are picked out by their heading instead. */
-    render: (title, body, variant) => {
+    render: (title, body, variant, cont) => {
       const paras = body.trim().split(/\n\s*\n/);
-      const flavour = paras.length > 1 ? paras.shift() : '';
+      const flavour = flavourOf(paras, cont);
       const head = `<span class="gift-name">${esc(title.trim())}</span>`;
       const fl = flavour
         ? `<div class="gift-flavour">\n\n${flavour}\n\n</div>\n\n`
@@ -96,9 +121,9 @@ export const BLOCKS = {
      * the danger tint rather than the accent. Worth the separate block
      * for that alone: a reader flicking through should never mistake a
      * Flaw for something they are buying. */
-    render: (title, body, variant) => {
+    render: (title, body, variant, cont) => {
       const paras = body.trim().split(/\n\s*\n/);
-      const flavour = paras.length > 1 ? paras.shift() : '';
+      const flavour = flavourOf(paras, cont);
       const head = `<span class="flaw-name">${esc(title.trim())}</span>`;
       const fl = flavour
         ? `<div class="flaw-flavour">\n\n${flavour}\n\n</div>\n\n`
@@ -119,9 +144,9 @@ export const BLOCKS = {
      * entry, so a level line gets its rating in a badge and its text on
      * one row. A paragraph that does not open with **N** is left as
      * ordinary prose, which is what the summary line above them is. */
-    render: (title, body, variant) => {
+    render: (title, body, variant, cont) => {
       const paras = body.trim().split(/\n\s*\n/);
-      const flavour = paras.length > 1 ? paras.shift() : '';
+      const flavour = flavourOf(paras, cont);
       const head = `<span class="res-name">${esc(title.trim())}</span>`;
       const fl = flavour
         ? `<div class="res-flavour">\n\n${flavour}\n\n</div>\n\n`
@@ -143,12 +168,12 @@ export const BLOCKS = {
      * tiers. A line beginning "Tier N (...)" is lifted onto its own
      * strip so a reader can see at a glance which ones have that
      * structure without reading the paragraph first. */
-    render: (title, body, variant) => {
+    render: (title, body, variant, cont) => {
       const m = title.trim().match(/^(.*?)\s*\(([^)]+)\)\s*$/);
       const name = (m ? m[1] : title).trim();
       const cost = m ? m[2].trim() : '';
       const paras = body.trim().split(/\n\s*\n/);
-      const flavour = paras.length > 1 ? paras.shift() : '';
+      const flavour = flavourOf(paras, cont);
       const pill = cost ? `<span class="boon-cost">${esc(cost)}</span>` : '';
       const head = `<span class="boon-name">${esc(name)}</span>${pill}`;
       const fl = flavour
@@ -170,13 +195,13 @@ export const BLOCKS = {
      * beside it. The first paragraph of the body is the flavour line;
      * everything after it is the technical description. A block with a
      * single paragraph is all description and no flavour, which is fine. */
-    render: (title, body, variant) => {
+    render: (title, body, variant, cont) => {
       const m = title.trim().match(/^(.*?)\s*\(([^)]+)\)\s*$/);
       const name = (m ? m[1] : title).trim();
       const elem = m ? m[2].trim() : '';
       const key = elem.toLowerCase();
       const paras = body.trim().split(/\n\s*\n/);
-      const flavour = paras.length > 1 ? paras.shift() : '';
+      const flavour = flavourOf(paras, cont);
       const rest = paras.join('\n\n');
       const pill = elem ? `<span class="skill-elem">${esc(elem)}</span>` : '';
       const head = `<span class="skill-name">${esc(name)}</span>${pill}`;
@@ -194,7 +219,7 @@ export const BLOCKS = {
      * and given its own strip. It is recognised by the middot the
      * Adversary Index already uses to separate the figures, which means
      * an existing block pastes in with nothing to rewrite. */
-    render: (title, body, variant) => {
+    render: (title, body, variant, cont) => {
       const head = title.trim()
         ? `<span class="block-title">${esc(title.trim())}</span>\n\n`
         : '';
@@ -209,7 +234,7 @@ export const BLOCKS = {
   figure: {
     help: 'an image with a caption - the title is the caption',
     takesTitle: true,
-    render: (title, body, variant) => {
+    render: (title, body, variant, cont) => {
       const cap = title.trim() ? `\n\n<span class="caption">${esc(title.trim())}</span>` : '';
       return `<figure class="${cls('figure', variant)}">\n\n${body.trim()}${cap}\n\n</figure>`;
     },
@@ -262,7 +287,14 @@ export function applyBlocks(md) {
       const v = lower && (VARIANTS.includes(lower) || LAYOUT_VARIANTS.includes(lower))
         ? lower : '';
       changed = true;
-      return block.render(block.takesTitle ? title : '', body, v);
+      const cont = CONTINUED.test(title || '');
+      const shown = cont ? title.replace(CONTINUED, '') : title;
+      const html = block.render(block.takesTitle ? shown : '', body, v, cont);
+      // The mark goes on as a class rather than staying in the title, so
+      // the wording lives in one CSS rule instead of in seven renderers -
+      // and so the two blocks that read a parenthetical out of their title
+      // never mistake it for a cost or an Element.
+      return cont ? html.replace('class="', 'class="is-continued ') : html;
     });
     if (!changed) break;
   }

@@ -277,6 +277,64 @@ def apply_blocks(md):
                   lambda m: held[int(m.group(1))], md)
 
 
+BLOCK_CLOSE = re.compile(r"^:::[ \t]*$")
+BLOCK_OPEN_LINE = re.compile(r"^:::[ \t]*[a-zA-Z][\w-]*(?:\.[a-zA-Z][\w-]*)?[ \t]*(.*)$")
+FENCE_LINE = re.compile(r"^\s*(`{3,}|~{3,})")
+
+
+def merge_continuations(md):
+    """Rejoin a block the print pagination had to cut in two.
+
+    A block too tall for a sheet is split by The Brewery and reopened on
+    the next page with "(continued)" after its name. That is the right
+    answer on paper and a wrong one here: a web page does not end, so the
+    reader would meet a card that stops for no visible reason and a second
+    card announcing it continues something they never left.
+
+    Print splits; the web puts it back. Both read the same file.
+
+    Fence-aware, because a document may write ::: inside a code sample to
+    document the syntax, and rewriting the example is not this tool's
+    business.
+    """
+    lines = md.split("\n")
+    out = []
+    fence = None
+    merged = 0
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        f = FENCE_LINE.match(line)
+        if f:
+            if not fence:
+                fence = f.group(1)[0]
+            elif f.group(1)[0] == fence:
+                fence = None
+            out.append(line)
+            i += 1
+            continue
+        if not fence and BLOCK_CLOSE.match(line):
+            # A close, then blank lines, then at most one page marker, then
+            # blank lines - and if a continuation of that block follows, the
+            # seam goes and the two bodies become one.
+            j = i + 1
+            while j < len(lines) and not lines[j].strip():
+                j += 1
+            if j < len(lines) and MARKER.match(lines[j]):
+                j += 1
+                while j < len(lines) and not lines[j].strip():
+                    j += 1
+            m = BLOCK_OPEN_LINE.match(lines[j]) if j < len(lines) else None
+            if m and m.group(1).strip().endswith("(continued)"):
+                out.append("")
+                merged += 1
+                i = j + 1
+                continue
+        out.append(line)
+        i += 1
+    return re.sub(r"\n{3,}", "\n\n", "\n".join(out)), merged
+
+
 GROUND = re.compile(r"^\\ground[ \t]+([a-zA-Z][\w-]*)", re.M)
 
 
@@ -294,9 +352,13 @@ def read_ground(md):
 
 
 def strip_markers(md):
-    """Drop the print-only markers. Returns (markdown, how many)."""
+    """Drop the print-only markers, and rejoin anything print had to cut.
+
+    Returns (markdown, how many markers went, how many blocks rejoined).
+    """
+    md, merged = merge_continuations(md)
     out, n = MARKER.subn("", md)
-    return re.sub(r"\n{3,}", "\n\n", out).strip() + "\n", n
+    return re.sub(r"\n{3,}", "\n\n", out).strip() + "\n", n, merged
 
 
 def classes_used(html):
