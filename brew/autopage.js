@@ -269,7 +269,80 @@ function assemble(sheets, startsWithMarker) {
  * Entries - Gifts, Flaws, Resources, Boons - clear this easily. Callouts
  * almost never do, which is the intent. */
 const SPLIT_MIN_PARAS = 4;
-const SPLIT_MIN_HEAD = 2;
+/* One piece is enough to start an entry at the foot of a page - its name
+   and its opening line, with the rest overleaf. That is how a printed
+   reference sets a long list of entries, and demanding two meant a page
+   with room for one took none of them and went white instead. The label
+   rule below stops that one piece being a heading on its own. */
+const SPLIT_MIN_HEAD = 1;
+
+/* A label with nothing under it - "Adders", "Limiters". Ending a page on
+   one strands it from the list it introduces, so the cut moves back above
+   it. A reader turning the page should not have to carry a heading over
+   with them. */
+const LABEL_ONLY = /^\*\*[^*\n]+\*\*:?\s*$/;
+
+/* The pieces a block can be cut between.
+ *
+ * Paragraphs, except that a bullet list is one paragraph and these
+ * entries are mostly bullet lists - a whole Adders list is a single
+ * indivisible thing, so a page with room for three of its five items took
+ * none of them and went white. Each top-level item is its own piece here,
+ * with any wrapped lines still attached to it.
+ *
+ * Rejoined with a single newline where both sides are list items, so the
+ * list stays tight. Blank lines between them would make markdown set a
+ * loose list, which is a different thing on the page. */
+function cutPoints(paras) {
+  const out = [];
+  for (const p of paras) {
+    const lines = p.split('\n');
+    if (!/^\s*[-*+] /.test(lines[0])) {
+      out.push({ text: p, opens: false, closes: false });
+      continue;
+    }
+    let cur = [];
+    for (const line of lines) {
+      if (/^\s*[-*+] /.test(line) && cur.length) {
+        out.push({ text: cur.join('\n'), opens: true, closes: true });
+        cur = [];
+      }
+      cur.push(line);
+    }
+    if (cur.length) out.push({ text: cur.join('\n'), opens: true, closes: true });
+  }
+  // A label belongs to what it introduces, so the two are one piece and
+  // the cut can never fall between them. Bonding beats cutting there and
+  // then stepping back: stepping back gives up the space the label's list
+  // would have filled, which on a page ending at "Pool by Level" left two
+  // fifths of the sheet white.
+  const bonded = [];
+  for (let i = 0; i < out.length; i++) {
+    if (LABEL_ONLY.test(out[i].text.trim()) && out[i + 1]) {
+      // Opens with the label, closes with whatever it introduced. The two
+      // ends are tracked separately because they differ here, and running
+      // them together as one "is a list item" flag glued the label onto
+      // the item above it and ate the blank line - which only showed on a
+      // second Add page breaks, as a document that would not settle.
+      bonded.push({
+        text: out[i].text + '\n\n' + out[i + 1].text,
+        opens: false,
+        closes: out[i + 1].closes,
+      });
+      i += 1;
+      continue;
+    }
+    bonded.push(out[i]);
+  }
+  return bonded;
+}
+
+function joinCuts(parts) {
+  return parts.reduce((acc, u, i) => (
+    i === 0 ? u.text
+            : acc + (parts[i - 1].closes && u.opens ? '\n' : '\n\n') + u.text
+  ), '');
+}
 
 /** Split `chunk` so its first part finishes the sheet `cur` is filling.
  *
@@ -294,6 +367,7 @@ function fillSheet(cur, chunk, preamble, marker, container, render) {
 
   const paras = lines.slice(1, -1).join('\n').split(/\n\s*\n/).filter((p) => p.trim());
   if (paras.length < minParas) return null;
+  const parts = cutPoints(paras);
 
   const name = open[1];
   const raw = open[2].trim();
@@ -307,17 +381,19 @@ function fillSheet(cur, chunk, preamble, marker, container, render) {
   // sheet. Measured, not estimated - the sheet's own options are in the
   // marker, and a one-column page holds nothing like a two-column one.
   let take = 0;
-  for (let n = minHead; n < paras.length; n++) {
-    const trial = cur.concat([piece(headLabel, paras.slice(0, n).join('\n\n'))]);
+  for (let n = minHead; n < parts.length; n++) {
+    const trial = cur.concat([piece(headLabel, joinCuts(parts.slice(0, n)))]);
     render(preamble + marker + trial.join('\n\n'), container);
     if (overhanging(container).length) break;
     take = n;
   }
-  if (!take) return null;
+  // Never leave a label behind on its own.
+  while (take > 0 && LABEL_ONLY.test(parts[take - 1].text.trim())) take -= 1;
+  if (take < minHead) return null;
 
   return {
-    head: piece(headLabel, paras.slice(0, take).join('\n\n')),
-    tail: piece(title + CONTINUED, paras.slice(take).join('\n\n')),
+    head: piece(headLabel, joinCuts(parts.slice(0, take))),
+    tail: piece(title + CONTINUED, joinCuts(parts.slice(take))),
   };
 }
 
