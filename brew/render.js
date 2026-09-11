@@ -13,6 +13,10 @@
  *   \page folio=i          restart the count here, in roman
  *   \page folio=1          restart it here, in arabic
  *
+ * And one marker that is not a page break at all:
+ *
+ *   \column                start the next column here
+ *
  * Options apply to the page the marker STARTS. Unknown keys are
  * ignored, so adding new ones later cannot break old documents.
  *
@@ -36,6 +40,7 @@ const PAGE_MARKER = /^\\page[ \t]*(.*)$/;
 const FOLIO_MARKER = /^\\folio[ \t]*(.*)$/;
 const SEED_MARKER = /^\\seed[ \t]*(.*)$/;
 const GROUND_MARKER = /^\\ground[ \t]*(.*)$/;
+const COLUMN_MARKER = /^\\column[ \t]*$/;
 
 /* The textures that ship with the tool. Anything else in bg= is taken
    for a URL - see pageArt(). */
@@ -68,6 +73,31 @@ function pageArt(value) {
   if (/^(https?:\/\/|data:image\/)/i.test(url)) return url;
   if (/^[a-zA-Z][\w+.-]*:/.test(url)) return null;      // any other scheme
   return url;                                            // a relative path
+}
+
+/* \column - start the next column here.
+ *
+ * Content rather than a directive, so it stays in the page's body and in
+ * the markdown a re-break assembles from. Both of those matter: it is a
+ * decision about where a column ends, and neither Remove breaks nor Add
+ * page breaks has any business moving it.
+ *
+ * Substituted before the markdown is parsed, because a bare \column line
+ * would otherwise come out as a paragraph reading "column". Fenced code
+ * is left alone so the reference can document this without breaking its
+ * own columns. */
+function columnBreaks(body) {
+  let fence = null;
+  return body.split('\n').map((line) => {
+    const f = line.match(/^\s*(```+|~~~+)/);
+    const opening = f && !fence;
+    if (f) {
+      if (!fence) fence = f[1][0];
+      else if (f[1][0] === fence) fence = null;
+    }
+    if (fence || opening) return line;
+    return COLUMN_MARKER.test(line) ? '<div class="column-break"></div>' : line;
+  }).join('\n');
 }
 
 /** Split source into [{ options, markdown, body }] - one entry per printed
@@ -359,7 +389,7 @@ export function render(src, container, defaults = {}) {
       count = { n: count.n + 1, roman: count.roman, upper: count.upper };
 
       if (styles.length) attrs.push(`style="${styles.join(';')}"`);
-      const html = window.marked.parse(applyBlocks(body));
+      const html = window.marked.parse(applyBlocks(columnBreaks(body)));
       return `<div class="page" ${attrs.join(' ')}>`
         + `<div class="flow">${html}</div>${number}</div>`;
     })

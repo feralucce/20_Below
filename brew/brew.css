@@ -433,6 +433,16 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 /* Two columns is the default. A page opts out with: \page cols=1 */
 .page[data-cols="1"] > .flow{column-count:1}
 
+/* \column in the source. Nothing is drawn - it exists to carry the
+   break, which is why it has no height and no margin of its own. Now
+   that the columns fill rather than balance, where the first one ends is
+   a decision worth being able to make by hand. */
+.page .column-break{break-before:column; height:0; margin:0}
+/* Whatever follows starts the column, so it opens at the top of it. A
+   heading carries a top margin to set it off from the text above, and at
+   a column start there is no text above. */
+.page .column-break + *{margin-top:0}
+
 /* A page title spans the spread rather than sitting in one column.
    Lower headings stay in-column so sections can start mid-column. */
 .page > .flow > h1{column-span:all}
