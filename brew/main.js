@@ -2,7 +2,7 @@
    graph busts together. See the note in index.html. */
 const V = new URL(import.meta.url).search;
 const { render } = await import('./render.js' + V);
-const { autoPaginate, stripAutoBreaks } = await import('./autopage.js' + V);
+const { autoPaginate, removeBreaks, restoreNotes } = await import('./autopage.js' + V);
 const { guide, starter } = await import('./sample.js' + V);
 const files = await import('./files.js' + V);
 
@@ -11,6 +11,7 @@ const preview  = document.getElementById('preview');
 const status   = document.getElementById('status');
 const fixPagesBtn = document.getElementById('btn-fixpages');
 const reBreakBtn  = document.getElementById('btn-rebreak');
+const removeBreaksBtn = document.getElementById('btn-removebreaks');
 const fileIn   = document.getElementById('file');
 const pageRule = document.getElementById('page-rule');
 const groundSel = document.getElementById('sel-ground');
@@ -318,33 +319,32 @@ document.getElementById('btn-saveas').onclick = async () => {
    like anything else you typed. */
 /* Insert the breaks the document is missing.
  *
- * Fix pages only ever ADDS: a \page you wrote yourself keeps its place and
- * its options, so nothing you decided deliberately can be moved.
+ * Only ever ADDS. A \page you wrote yourself keeps its place and its
+ * options, so nothing you decided deliberately gets moved by a button
+ * labelled "Add page breaks" - if you want the existing ones gone, Remove
+ * breaks says so out loud and tells you what it took.
  *
- * Re-break first strips the plain \page markers - the shape this tool writes -
- * and lays the document out again. That matters after a layout change: POD has
- * about 12% less room than digital, so breaks packed for one leave half-empty
- * pages in the other, and adding to them only makes more. Breaks carrying
- * options (cols=1, bg=parchment) are kept either way; a person typed those.
+ * Any note left by Remove breaks is turned back into the break it came
+ * from first, which is the other half of that pair: the background on
+ * page one comes back on page one, not wherever the packer would have put
+ * a break.
  *
- * Either way the result goes into the editor rather than anywhere hidden, so
- * it can be read, saved and undone like anything else you typed.
+ * The result goes into the editor rather than anywhere hidden, so it can
+ * be read, saved and undone like anything else you typed.
  */
-async function repaginate(button, { fromScratch }) {
-  const original = editor.value;
+async function repaginate(button) {
   const label = button.textContent;
   button.disabled = true;
   button.textContent = 'Working...';
   try {
-    const src = fromScratch ? stripAutoBreaks(original) : original;
-    const { markdown, added, stubborn } = await autoPaginate(src, preview, render);
+    const back = restoreNotes(editor.value);
+    const { markdown, added, stubborn } = await autoPaginate(back.markdown, preview, render);
     editor.value = markdown;
     draw();
 
     const parts = [];
-    if (fromScratch) {
-      const dropped = (original.match(/^\\page[ \t]*$/gm) || []).length;
-      parts.push(`Re-broken from scratch${dropped ? `, dropping ${dropped} old break${dropped === 1 ? '' : 's'}` : ''}.`);
+    if (back.restored) {
+      parts.push(`Put back ${back.restored} break${back.restored === 1 ? '' : 's'} you had removed.`);
     }
     parts.push(added ? `Added ${added} page break${added === 1 ? '' : 's'}.` : 'Nothing to break.');
     if (stubborn.length) {
@@ -358,8 +358,28 @@ async function repaginate(button, { fromScratch }) {
   }
 }
 
-fixPagesBtn.onclick = () => repaginate(fixPagesBtn, { fromScratch: false });
-reBreakBtn.onclick = () => repaginate(reBreakBtn, { fromScratch: true });
+fixPagesBtn.onclick = () => repaginate(fixPagesBtn);
+reBreakBtn.onclick = () => repaginate(reBreakBtn);
+
+/* Take the breaks out, so the document can be laid out again from
+ * nothing after a trim or theme change. The ones carrying options leave a
+ * note rather than vanishing - that page wanted a background or a single
+ * column, and that decision is not the packer's to lose. */
+removeBreaksBtn.onclick = () => {
+  const { markdown, removed, noted } = removeBreaks(editor.value);
+  if (!removed) {
+    status.textContent = 'No page breaks to remove.';
+    status.classList.remove('warn');
+    return;
+  }
+  editor.value = markdown;
+  draw();
+  status.textContent = `Removed ${removed} page break${removed === 1 ? '' : 's'}`
+    + (noted
+      ? `. ${noted} carried options and left a note, so Add page breaks will put ${noted === 1 ? 'it' : 'them'} back.`
+      : '.');
+  status.classList.remove('warn');
+};
 
 document.getElementById('btn-print').onclick = () => window.print();
 
