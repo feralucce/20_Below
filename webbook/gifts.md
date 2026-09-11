@@ -76,7 +76,7 @@ The alternate form is built once, at creation, spending a points pool (below) on
 | Sub-stat boost | 1 pt | +2 to one physical sub-stat (Soak, Ferocity, Stamina, Potence, or Initiative) while transformed. |
 | Attribute boost | 2 pts/point | +1 to one Attribute (Earth, Air, Fire, Water, or Moira) while transformed, up to your own normal maximum. |
 | Environmental adaptation | 1 pt | Breathe underwater, see in total darkness, ignore extreme temperatures, or similar. |
-| Borrow a Gift Level | 3 pts/Level | Gain one Level of an existing Gift you don't otherwise hold while transformed, GM-approved for fit - same per-Level price as the [Gifts pool](character-creation.md#10-gifts). |
+| Borrow a Gift Level | 3 pts/Level | Gain one Level of an existing Gift you don't otherwise hold while transformed, GM-approved for fit - same per-Level price as the **Gifts pool**. |
 | Borrow a Boon | 1/3/5/7 pts | Gain a Boon you don't otherwise hold while transformed, at that Boon's own Trivial/Lesser/Greater/Legendary price. |
 
 **Adders**
@@ -130,11 +130,11 @@ The alternate form is built once, at creation, spending a points pool (below) on
 
 Reading an opponent costs **1 Ki**, declared on your turn - it takes no action. You hold **one read at a time**, and naming somebody new drops the one you had.
 
-**1** - Spend **1 Ki** and name one opponent you can see. Every attack you make against them is at **[Advantage](rules.md#advantage--disadvantage)** for the rest of the round.
+**1** - Spend **1 Ki** and name one opponent you can see. Every attack you make against them is at ****Advantage**** for the rest of the round.
 
 **2** - The read now lasts **the rest of the fight** rather than the round. Same 1 Ki, same one-at-a-time limit.
 
-**3** - Against a read opponent, your **critical hits land on a 2 or a 3** - the same shape as [Expert](skills.md#training-tiers), for the roll no Training Tier reaches.
+**3** - Against a read opponent, your **critical hits land on a 2 or a 3** - the same shape as **Expert**, for the roll no Training Tier reaches.
 
 **4** - A read opponent **cannot gain Advantage against you**, from any source. You are already where they were going.
 
@@ -149,7 +149,7 @@ Reading an opponent costs **1 Ki**, declared on your turn - it takes no action. 
 **Limiters**
 
 - **Eyes Only**: you must be able to see them clearly. Darkness, smoke or heavy cover drops the read until you can see them again.
-- **Rattled**: losing a [Health Level](rules.md#health-levels) drops your current read. Re-establishing it costs Ki again.
+- **Rattled**: losing a **Health Level** drops your current read. Re-establishing it costs Ki again.
 - **Costly Sense**: every Ki cost of this Gift is 1 higher, at every Level.
 </div>
 
@@ -580,7 +580,7 @@ This Gift never deals direct damage, at any Level.
 
 **1** - At the beginning of combat, you may take one Fast or Normal action before anyone else acts - before even the Fast Action Bracket resolves. If more than one character has this Gift, they act among themselves in Initiative order, but all still act before the normal turn order begins.
 
-**2** - Once per round, you may spend **1 Ki** to take an additional Fast action, resolved immediately after your normal action for that round - it doesn't change your Action Bracket or Initiative position, just adds a second action on top. For the rest of that turn after spending the Ki, your [Movement Rate](rules.md#movement--range) is **×1.5**.
+**2** - Once per round, you may spend **1 Ki** to take an additional Fast action, resolved immediately after your normal action for that round - it doesn't change your Action Bracket or Initiative position, just adds a second action on top. For the rest of that turn after spending the Ki, your **Movement Rate** is **×1.5**.
 
 **3** - The extra action from Level 2 can now be a Fast **or Normal** action, still 1 Ki, still once per round. Roll Initiative as 2d10 and keep the higher die. The post-Ki-spend Movement Rate multiplier rises to **×2** for the rest of that turn.
 
@@ -609,7 +609,7 @@ As with any Social attack, additional Ki Infusion (1 Ki per die) can push indivi
 - **Single Target Only**: the Level 2+ multi-target/crowd expansion never applies, regardless of Level bought - always resolves against one target.
 - **Fades Fast**: the lock still lasts the full Scene, but only while you actively concentrate on maintaining it - losing focus (Distracted, taking an unrelated Slow action, or similar) ends it immediately instead of it lingering passively.
 
-**1** - Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their [Social Defense](rules.md#defense-derived-stat)). On success, roll **1 + half your Presence** dice per-die against their Presence wall - a connecting die locks their attention onto you for the scene: awe, dread, or fascination, your choice. No specific action compelled, just overwhelming presence.
+**1** - Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their **Social Defense**). On success, roll **1 + half your Presence** dice per-die against their Presence wall - a connecting die locks their attention onto you for the scene: awe, dread, or fascination, your choice. No specific action compelled, just overwhelming presence.
 
 **2** - Dice rise to **2 + half your Presence**. Effect now reaches everyone perceiving you within Close range - each target gets their own to-hit roll and, on success, their own dice vs. their Presence wall.
 
@@ -675,7 +675,7 @@ The barrier occupies the same Zone(s) as any worn armor and follows the normal r
 - **Visible Shimmer**: the barrier is always visibly active whenever raised, a faint shimmer anyone can notice - no way to conceal that it's up.
 - **Exhausting Maintenance**: the Gift Check's failure cost rises to 2 Ki instead of 1, at every Level.
 
-**1** - As a **Normal action**, no Ki cost, raise the barrier: **Hardness 3**, **Health Levels 2** (before your Form's modifier), resolved with the exact same two-stage mechanic as [worn armor](rules.md#armor--called-shots) - it covers **both** Body and Head Zones at once. Lasts until depleted or dismissed (a Fast action to drop early).
+**1** - As a **Normal action**, no Ki cost, raise the barrier: **Hardness 3**, **Health Levels 2** (before your Form's modifier), resolved with the exact same two-stage mechanic as **worn armor** - it covers **both** Body and Head Zones at once. Lasts until depleted or dismissed (a Fast action to drop early).
 
 **2** - Hardness rises to **4**, Health Levels rise to **3**.
 
@@ -803,7 +803,7 @@ Additionally, given a full **Month** of thorough, repeated application (regular 
 
 **3** - Your sense gains microscopic-level detail at no extra cost - spot a single fingerprint across a room, hear a heartbeat, notice trace chemical residue by scent. Additionally, spend **1 Ki** to pierce an obstacle that would normally block your sense entirely - see through fog or a thin wall, hear through a door, etc.
 
-**4** - The obstacle-piercing from Level 3 no longer costs Ki, and now works through thicker, more substantial barriers - solid walls, multiple rooms away. Additionally, you're immune to being [Surprised](rules.md#surprise) by any threat your enhanced sense would have detected.
+**4** - The obstacle-piercing from Level 3 no longer costs Ki, and now works through thicker, more substantial barriers - solid walls, multiple rooms away. Additionally, you're immune to being **Surprised** by any threat your enhanced sense would have detected.
 
 **5** - Your chosen sense becomes constant, passive awareness within **Far** range - you don't need to actively look or listen; relevant details and threats simply register automatically. Additionally, it can pierce even magical concealment or supernatural stealth, not just mundane obstacles (GM's call on edge cases specifically countering your exact sense).
 </div>
@@ -1003,7 +1003,7 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 - **Leaves a Seam**: an edited memory always has a small, detectable inconsistency a thorough investigation (or another telepath) can find.
 - **One Edit, Once**: you can never target the same person's memory twice - the first edit is permanent and final.
 
-**1** - Requires touch. Spend **1 Ki**; make the standard to-hit roll (**Air** vs. their [Mental Defense](rules.md#defense-derived-stat)). On success, roll **1 + half your Psyche** dice per-die against their Psyche wall - a connecting die erases one specific, recent memory (something from the last few minutes: a name overheard, a face seen, this exact encounter).
+**1** - Requires touch. Spend **1 Ki**; make the standard to-hit roll (**Air** vs. their **Mental Defense**). On success, roll **1 + half your Psyche** dice per-die against their Psyche wall - a connecting die erases one specific, recent memory (something from the last few minutes: a name overheard, a face seen, this exact encounter).
 
 **2** - Dice rise to **2 + half your Psyche**. You may implant a simple false memory in place of the erased one, instead of leaving a blank.
 
@@ -1190,7 +1190,7 @@ Ki Infusion still applies on top, same as any Social attack.
 - **Reciprocal Bond**: while any binding is active, you're also bound by the same rule yourself - you set the standard, you have to live by it too.
 - **Undermined by Contradiction**: if you personally break a rule you've currently imposed on someone else, every active binding you're holding shatters at once.
 
-**1** - Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their [Social Defense](rules.md#defense-derived-stat)). On success, roll **1 + half your Presence** dice per-die against their Presence wall - a connecting die binds them to one simple rule of conduct you declare ("don't raise your voice," "don't lie to me," "don't draw a weapon") for the rest of the Scene. Breaking the rule costs them **Disadvantage** on the roll that breaks it.
+**1** - Requires the target to perceive you. Spend **1 Ki**; make the standard to-hit roll (**Fire** vs. their **Social Defense**). On success, roll **1 + half your Presence** dice per-die against their Presence wall - a connecting die binds them to one simple rule of conduct you declare ("don't raise your voice," "don't lie to me," "don't draw a weapon") for the rest of the Scene. Breaking the rule costs them **Disadvantage** on the roll that breaks it.
 
 **2** - Dice rise to **2 + half your Presence**. You may declare up to two rules at once on the same target.
 
