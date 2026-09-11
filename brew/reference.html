@@ -41,7 +41,7 @@ const v = Date.now();
    measures ship together, so the stylesheet is busted with them. */
 document.querySelector('link[rel="stylesheet"]').href = `brew.css?v=${v}`;
 const q = `?v=${v}`;
-const { render } = await import(`./render.js${q}`);
+const { render, spills } = await import(`./render.js${q}`);
 const { guide } = await import(`./sample.js${q}`);
 
 const preview = document.getElementById('preview');
@@ -62,6 +62,41 @@ function fit() {
 
 render(guide(), preview);
 fit();
+
+/* The guide is hand-paginated, so a section added to it can push its page
+   past the sheet - and a page that overflows does not grow, it opens a
+   further column sideways where the page's own overflow:hidden clips it.
+   Nothing looks wrong; text is simply gone.
+ *
+ * This page had no check at all. The editor flags an overflowing page in
+ * red and the reference did not, so the one document guaranteed to be
+ * edited by whoever changes the layout engine was the one document that
+ * could lose text without saying so. It measures itself now, unzoomed,
+ * the way the editor does - print always renders at zoom 1, so that is
+ * the only measurement that answers the question. */
+(async function flagOverflow() {
+  /* After the webfonts, always. They load lazily and change how tall
+     everything is, so measuring before they arrive lays the text out in
+     fallback metrics and more appears to fit than really does - this
+     check reported a clean guide the first time it was written, on a
+     page that was already clipping. The same rule autopage.js follows. */
+  await document.fonts.ready;
+  const shown = preview.style.getPropertyValue('--zoom');
+  preview.style.setProperty('--zoom', '1');
+  let over = 0;
+  for (const page of preview.querySelectorAll('.page')) {
+    const bad = spills(page);
+    page.classList.toggle('overflowing', bad);
+    if (bad) over += 1;
+  }
+  if (shown) preview.style.setProperty('--zoom', shown);
+  if (over) {
+    console.warn(
+      over + ' page' + (over === 1 ? '' : 's') +
+      ' of the reference overflow the sheet - text is being clipped. ' +
+      'Add a \page in sample.js.');
+  }
+})();
 
 window.addEventListener('resize', fit);
 document.getElementById('sel-zoom').onchange = fit;
