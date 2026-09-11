@@ -26,7 +26,7 @@
  */
 
 const V = new URL(import.meta.url).search;
-const { paginate } = await import('./render.js' + V);
+const { paginate, spills } = await import('./render.js' + V);
 
 const PAGE_MARKER = /^\\page[ \t]*(.*)$/;
 const HEADING = /^#{1,6} /;
@@ -191,8 +191,7 @@ function assemble(sheets, startsWithMarker) {
 function overhanging(container) {
   const out = [];
   [...container.querySelectorAll('.page')].forEach((page, i) => {
-    const sheet = parseFloat(getComputedStyle(page).minHeight) || 0;
-    if (sheet > 0 && page.offsetHeight > sheet + 4) out.push(i);
+    if (spills(page)) out.push(i);
   });
   return out;
 }
