@@ -1,6 +1,6 @@
 [package]
 name = "brewer"
-version = "0.3.29"
+version = "0.4.0"
 description = "The Brewery desktop app"
 authors = ["Feralucce Savage"]
 license = "UNLICENSED"
@@ -23,3 +23,15 @@ serde = { version = "1.0", features = ["derive"] }
 log = "0.4"
 tauri = { version = "2.11.3", features = [] }
 tauri-plugin-log = "2"
+tauri-plugin-dialog = "2"
+
+# Printing a PDF straight out of the webview, rather than handing the job
+# to a print dialog. Versions pinned to the ones Tauri already resolves,
+# so there is one copy of each in the tree rather than two that cannot
+# talk to each other.
+[target.'cfg(windows)'.dependencies]
+webview2-com = "0.38"
+windows = { version = "0.61", features = [
+  "Win32_Foundation",
+  "Win32_System_Com",
+] }
