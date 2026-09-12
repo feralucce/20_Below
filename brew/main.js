@@ -396,7 +396,68 @@ removeBreaksBtn.onclick = () => {
   status.classList.remove('warn');
 };
 
-document.getElementById('btn-print').onclick = () => window.print();
+/* Print, or - in the desktop app - write the PDF directly.
+ *
+ * In a browser, Print opens a dialog with a "Save as PDF" destination and
+ * that is the right answer: vector text, embedded fonts, searchable.
+ *
+ * The desktop app has no such destination. Its print dialog is the Windows
+ * one, which lists printers, and "Microsoft Print to PDF" is a printer:
+ * it rasterises. A 53-page chapter came out of it as 25 MB of JPEG with no
+ * text layer at all. So there, the button skips the dialog and asks the
+ * webview to write the file itself, which is the same thing a browser's
+ * own Save as PDF does.
+ *
+ * The page size has to be passed through, because the sheet is set by
+ * @page in the stylesheet and the exporter has no way to read it. Bleed is
+ * on three edges - see LAYOUTS - so the width gains one and the height
+ * two. Getting that wrong is how a file comes back rejected by a printer
+ * or silently scaled. */
+const IN = { in: 1, mm: 1 / 25.4 };
+function inches(value) {
+  const m = String(value).match(/^([\d.]+)(in|mm)$/);
+  return m ? parseFloat(m[1]) * IN[m[2]] : 0;
+}
+
+function sheetSize() {
+  const t = TRIMS[prefs.trim] || TRIMS.letter;
+  const bleed = inches((LAYOUTS[prefs.layout] || LAYOUTS.digital).bleed);
+  return { width: inches(t.w) + bleed, height: inches(t.h) + bleed * 2 };
+}
+
+const desktop = typeof window !== 'undefined' && !!window.__TAURI__;
+
+document.getElementById('btn-print').onclick = async () => {
+  if (!desktop) { window.print(); return; }
+
+  const btn = document.getElementById('btn-print');
+  const label = btn.textContent;
+  const { save } = window.__TAURI__.dialog;
+  const suggested = files.currentName().replace(/\.(md|markdown|txt)$/i, '') || 'untitled';
+  const path = await save({
+    defaultPath: `${suggested}.pdf`,
+    filters: [{ name: 'PDF', extensions: ['pdf'] }],
+  });
+  if (!path) return;
+
+  const { width, height } = sheetSize();
+  btn.disabled = true;
+  btn.textContent = 'Saving...';
+  status.textContent = 'Writing the PDF. A long chapter takes a moment.';
+  status.classList.remove('warn');
+  try {
+    await window.__TAURI__.core.invoke('save_pdf', {
+      path, widthIn: width, heightIn: height,
+    });
+    status.textContent = `Saved ${path}`;
+  } catch (e) {
+    status.textContent = `Could not save the PDF: ${e}`;
+    status.classList.add('warn');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = label;
+  }
+};
 
 /* Is what is in the editor ours to replace? Anything the tool put there
    itself - the guide, the starter, a theme demo - is. A document somebody
