@@ -49,6 +49,12 @@ FORMATTED = {
     "creating-a-character": "03-creating-a-character.md",
     "skills":               "05-skills.md",
     "advancement":          "12-advancement.md",
+    "boons":                "06-boons.md",
+    "resources":            "07-resources.md",
+    "gifts":                "08-gifts.md",
+    "flaws":                "09-flaws.md",
+    "fate":                 "10-fate.md",
+    "equipment":            "11-equipment.md",
 }
 
 # (binder fragment, url slug, nav section, page title)
