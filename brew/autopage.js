@@ -282,6 +282,11 @@ const SPLIT_MIN_HEAD = 1;
    with them. */
 const LABEL_ONLY = /^\*\*[^*\n]+\*\*:?\s*$/;
 
+/* The rule under a table's header row - the line of dashes and colons
+   that tells markdown the row above it was a header. Its presence is how
+   a run of pipes is told apart from prose that happens to use them. */
+const TABLE_RULE = /^\s*\|?[\s:|-]*-[\s:|-]*$/;
+
 /* The pieces a block can be cut between.
  *
  * Paragraphs, except that a bullet list is one paragraph and these
@@ -295,8 +300,35 @@ const LABEL_ONLY = /^\*\*[^*\n]+\*\*:?\s*$/;
  * loose list, which is a different thing on the page. */
 function cutPoints(paras) {
   const out = [];
+  let tableId = 0;
   for (const p of paras) {
     const lines = p.split('\n');
+
+    // A table: its rows are cut points too, and a cut one has to carry its
+    // header over or the second half arrives as unlabelled columns. The
+    // header rides along with every row rather than being baked into the
+    // first, so a piece that begins partway down the table still gets one.
+    //
+    // Often the table is wrapped - ::: wide round it, so it spans the
+    // columns - and then the wrapper has to be reopened and reclosed on
+    // each piece as well, or one half is a block with no end and the other
+    // a close with no beginning. That is the footer.
+    const open = lines[0].match(BLOCK_OPEN);
+    const wrapped = open && BLOCK_CLOSE.test(lines[lines.length - 1]);
+    const body = wrapped ? lines.slice(1, -1) : lines;
+    if (/^\s*\|/.test(body[0] || '') && body[1] && TABLE_RULE.test(body[1])) {
+      tableId += 1;
+      const id = tableId;
+      const header = (wrapped ? lines[0] + '\n' : '') + body.slice(0, 2).join('\n');
+      const footer = wrapped ? ':::' : '';
+      body.slice(2).forEach((row) => {
+        if (row.trim()) {
+          out.push({ text: row, header, footer, table: id, opens: true, closes: true });
+        }
+      });
+      continue;
+    }
+
     if (!/^\s*[-*+] /.test(lines[0])) {
       out.push({ text: p, opens: false, closes: false });
       continue;
@@ -324,10 +356,16 @@ function cutPoints(paras) {
       // them together as one "is a list item" flag glued the label onto
       // the item above it and ate the blank line - which only showed on a
       // second Add page breaks, as a document that would not settle.
+      const next = out[i + 1];
       bonded.push({
-        text: out[i].text + '\n\n' + out[i + 1].text,
+        // A label bonded to a table takes the header with it, so the
+        // bonded piece is a whole table rather than a heading over
+        // stray rows.
+        text: out[i].text + '\n\n' + (next.header ? next.header + '\n' : '') + next.text,
         opens: false,
-        closes: out[i + 1].closes,
+        closes: next.closes,
+        table: next.table,
+        footer: next.footer,
       });
       i += 1;
       continue;
@@ -337,11 +375,27 @@ function cutPoints(paras) {
   return bonded;
 }
 
+/* Two pieces run together with a single newline only when they are the
+   same run - consecutive items of one list, consecutive rows of one
+   table. Two tables that happen to sit next to each other must not be
+   welded into one, and `table` being undefined on both sides is what
+   keeps list items joining as they did. */
+const sameRun = (a, b) => a.closes && b.opens && a.table === b.table;
+
 function joinCuts(parts) {
-  return parts.reduce((acc, u, i) => (
-    i === 0 ? u.text
-            : acc + (parts[i - 1].closes && u.opens ? '\n' : '\n\n') + u.text
-  ), '');
+  let out = '';
+  parts.forEach((u, i) => {
+    const prev = parts[i - 1];
+    const next = parts[i + 1];
+    // The header goes in wherever a table starts - at the head of the
+    // piece, or after something that is not part of the same table - and
+    // the wrapper is closed again wherever it ends.
+    let text = u.text;
+    if (u.header && (!prev || prev.table !== u.table)) text = u.header + '\n' + text;
+    if (u.footer && (!next || next.table !== u.table)) text = text + '\n' + u.footer;
+    out = i === 0 ? text : out + (sameRun(prev, u) ? '\n' : '\n\n') + text;
+  });
+  return out;
 }
 
 /** Split `chunk` so its first part finishes the sheet `cur` is filling.
