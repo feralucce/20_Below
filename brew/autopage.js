@@ -602,14 +602,51 @@ export async function autoPaginate(src, container, render) {
         const cont = parts.label.replace(/ \(continued\)$/, '') + CONTINUED;
         const next = sheets[i + 1];
         const after = next ? blockParts(next.chunks[0] || '') : null;
+        const carried = blockFrom(parts.name, cont.trim(), [last]);
         if (after && after.name === parts.name && after.label === cont.trim()) {
           next.chunks[0] = blockFrom(parts.name, after.label, [last].concat(after.paras));
+        } else if (next && JSON.stringify(next.options)
+                        === JSON.stringify(spillOptions(sheet.options))) {
+          // At the head of the page that already follows, not on a page of
+          // its own. Splicing a fresh sheet for it is what left a page
+          // carrying a single closing level line and three quarters of an
+          // inch of white: the entry after it had nowhere to move up to,
+          // because there was now a sheet in between holding one
+          // paragraph. If this makes that page too tall in turn, the next
+          // pass sees it and cuts there.
+          next.chunks = [carried].concat(next.chunks);
         } else {
           sheets.splice(i + 1, 0, {
             options: spillOptions(sheet.options),
-            chunks: [blockFrom(parts.name, cont.trim(), [last])],
+            chunks: [carried],
           });
         }
+        moved = true;
+        return;
+      }
+      // Before evicting the last entry wholesale, see whether cutting it
+      // would let its start stay. Moving the whole thing is what left a
+      // page holding one closing level line and nothing else: the packing
+      // pass had fitted the entry here and could have cut it, and this
+      // pass - which measures the assembled document, so it is the one
+      // that finds the page a few pixels over - could only take all of it
+      // away again.
+      const sheetMarker = '\\page' + serialiseOptions(sheet.options) + '\n\n';
+      const cut = fillSheet(sheet.chunks.slice(0, -1), sheet.chunks[sheet.chunks.length - 1],
+                            preamble, sheetMarker, container, render);
+      if (cut) {
+        sheet.chunks = sheet.chunks.slice(0, -1).concat([cut.head]);
+        const after = sheets[i + 1];
+        if (after && !isContinuation(after.chunks[0] || '')
+            && JSON.stringify(after.options) === JSON.stringify(sheet.options)) {
+          after.chunks = [cut.tail].concat(after.chunks);
+        } else {
+          sheets.splice(i + 1, 0, {
+            options: spillOptions(sheet.options),
+            chunks: [cut.tail],
+          });
+        }
+        split += 1;
         moved = true;
         return;
       }
