@@ -282,11 +282,6 @@ const SPLIT_MIN_HEAD = 1;
    with them. */
 const LABEL_ONLY = /^\*\*[^*\n]+\*\*:?\s*$/;
 
-/* The rule under a table's header row - the line of dashes and colons
-   that tells markdown the row above it was a header. Its presence is how
-   a run of pipes is told apart from prose that happens to use them. */
-const TABLE_RULE = /^\s*\|?[\s:|-]*-[\s:|-]*$/;
-
 /* The pieces a block can be cut between.
  *
  * Paragraphs, except that a bullet list is one paragraph and these
@@ -300,35 +295,8 @@ const TABLE_RULE = /^\s*\|?[\s:|-]*-[\s:|-]*$/;
  * loose list, which is a different thing on the page. */
 function cutPoints(paras) {
   const out = [];
-  let tableId = 0;
   for (const p of paras) {
     const lines = p.split('\n');
-
-    // A table: its rows are cut points too, and a cut one has to carry its
-    // header over or the second half arrives as unlabelled columns. The
-    // header rides along with every row rather than being baked into the
-    // first, so a piece that begins partway down the table still gets one.
-    //
-    // Often the table is wrapped - ::: wide round it, so it spans the
-    // columns - and then the wrapper has to be reopened and reclosed on
-    // each piece as well, or one half is a block with no end and the other
-    // a close with no beginning. That is the footer.
-    const open = lines[0].match(BLOCK_OPEN);
-    const wrapped = open && BLOCK_CLOSE.test(lines[lines.length - 1]);
-    const body = wrapped ? lines.slice(1, -1) : lines;
-    if (/^\s*\|/.test(body[0] || '') && body[1] && TABLE_RULE.test(body[1])) {
-      tableId += 1;
-      const id = tableId;
-      const header = (wrapped ? lines[0] + '\n' : '') + body.slice(0, 2).join('\n');
-      const footer = wrapped ? ':::' : '';
-      body.slice(2).forEach((row) => {
-        if (row.trim()) {
-          out.push({ text: row, header, footer, table: id, opens: true, closes: true });
-        }
-      });
-      continue;
-    }
-
     if (!/^\s*[-*+] /.test(lines[0])) {
       out.push({ text: p, opens: false, closes: false });
       continue;
@@ -356,16 +324,10 @@ function cutPoints(paras) {
       // them together as one "is a list item" flag glued the label onto
       // the item above it and ate the blank line - which only showed on a
       // second Add page breaks, as a document that would not settle.
-      const next = out[i + 1];
       bonded.push({
-        // A label bonded to a table takes the header with it, so the
-        // bonded piece is a whole table rather than a heading over
-        // stray rows.
-        text: out[i].text + '\n\n' + (next.header ? next.header + '\n' : '') + next.text,
+        text: out[i].text + '\n\n' + out[i + 1].text,
         opens: false,
-        closes: next.closes,
-        table: next.table,
-        footer: next.footer,
+        closes: out[i + 1].closes,
       });
       i += 1;
       continue;
@@ -375,27 +337,11 @@ function cutPoints(paras) {
   return bonded;
 }
 
-/* Two pieces run together with a single newline only when they are the
-   same run - consecutive items of one list, consecutive rows of one
-   table. Two tables that happen to sit next to each other must not be
-   welded into one, and `table` being undefined on both sides is what
-   keeps list items joining as they did. */
-const sameRun = (a, b) => a.closes && b.opens && a.table === b.table;
-
 function joinCuts(parts) {
-  let out = '';
-  parts.forEach((u, i) => {
-    const prev = parts[i - 1];
-    const next = parts[i + 1];
-    // The header goes in wherever a table starts - at the head of the
-    // piece, or after something that is not part of the same table - and
-    // the wrapper is closed again wherever it ends.
-    let text = u.text;
-    if (u.header && (!prev || prev.table !== u.table)) text = u.header + '\n' + text;
-    if (u.footer && (!next || next.table !== u.table)) text = text + '\n' + u.footer;
-    out = i === 0 ? text : out + (sameRun(prev, u) ? '\n' : '\n\n') + text;
-  });
-  return out;
+  return parts.reduce((acc, u, i) => (
+    i === 0 ? u.text
+            : acc + (parts[i - 1].closes && u.opens ? '\n' : '\n\n') + u.text
+  ), '');
 }
 
 /** Split `chunk` so its first part finishes the sheet `cur` is filling.
@@ -602,51 +548,14 @@ export async function autoPaginate(src, container, render) {
         const cont = parts.label.replace(/ \(continued\)$/, '') + CONTINUED;
         const next = sheets[i + 1];
         const after = next ? blockParts(next.chunks[0] || '') : null;
-        const carried = blockFrom(parts.name, cont.trim(), [last]);
         if (after && after.name === parts.name && after.label === cont.trim()) {
           next.chunks[0] = blockFrom(parts.name, after.label, [last].concat(after.paras));
-        } else if (next && JSON.stringify(next.options)
-                        === JSON.stringify(spillOptions(sheet.options))) {
-          // At the head of the page that already follows, not on a page of
-          // its own. Splicing a fresh sheet for it is what left a page
-          // carrying a single closing level line and three quarters of an
-          // inch of white: the entry after it had nowhere to move up to,
-          // because there was now a sheet in between holding one
-          // paragraph. If this makes that page too tall in turn, the next
-          // pass sees it and cuts there.
-          next.chunks = [carried].concat(next.chunks);
         } else {
           sheets.splice(i + 1, 0, {
             options: spillOptions(sheet.options),
-            chunks: [carried],
+            chunks: [blockFrom(parts.name, cont.trim(), [last])],
           });
         }
-        moved = true;
-        return;
-      }
-      // Before evicting the last entry wholesale, see whether cutting it
-      // would let its start stay. Moving the whole thing is what left a
-      // page holding one closing level line and nothing else: the packing
-      // pass had fitted the entry here and could have cut it, and this
-      // pass - which measures the assembled document, so it is the one
-      // that finds the page a few pixels over - could only take all of it
-      // away again.
-      const sheetMarker = '\\page' + serialiseOptions(sheet.options) + '\n\n';
-      const cut = fillSheet(sheet.chunks.slice(0, -1), sheet.chunks[sheet.chunks.length - 1],
-                            preamble, sheetMarker, container, render);
-      if (cut) {
-        sheet.chunks = sheet.chunks.slice(0, -1).concat([cut.head]);
-        const after = sheets[i + 1];
-        if (after && !isContinuation(after.chunks[0] || '')
-            && JSON.stringify(after.options) === JSON.stringify(sheet.options)) {
-          after.chunks = [cut.tail].concat(after.chunks);
-        } else {
-          sheets.splice(i + 1, 0, {
-            options: spillOptions(sheet.options),
-            chunks: [cut.tail],
-          });
-        }
-        split += 1;
         moved = true;
         return;
       }
