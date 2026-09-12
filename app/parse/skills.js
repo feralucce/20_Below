@@ -9,8 +9,13 @@ export function parseSkillTiers(skillsMd) {
   }));
 }
 
-export function parseSkillCatalog(premadeMd) {
-  const table = extractTableAfter(premadeMd, '## Skills');
+// The catalog and the tiers now live in one file. The anchor is
+// '## The Skill List' rather than '## Skills' because extractTableAfter
+// locates a section with indexOf, and '## Skills' matches
+// '## Skills Default to an Element' first - which would hand back the
+// Training Tiers table, correctly shaped and completely wrong.
+export function parseSkillCatalog(skillsMd) {
+  const table = extractTableAfter(skillsMd, '## The Skill List');
   return table.rows.map((row) => ({
     name: row.Skill,
     defaultElement: row['Default Element'],
