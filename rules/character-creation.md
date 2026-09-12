@@ -72,7 +72,7 @@ Every Skill defaults to an Attribute/Element (see step 7). Descriptors matter be
 
 Every character gets the GM's **Everyman Skills** for free, at **Trained** - the baseline competence any functional adult in the setting would have just from living in it. This is a suggested list for a modern-world base campaign; the GM sets it per campaign and can trim or extend it.
 
-Every Skill you take, Everyman or otherwise, comes with a **default Attribute/Element** - see the *Default Element* column in the [Premade Skills](premade-skills.md#skills) list, or set one when you write a custom Skill. A roll uses that default unless you challenge it with a Descriptor from step 6.
+Every Skill you take, Everyman or otherwise, comes with a **default Attribute/Element** - see the *Default Element* column in the [Skill List](skills.md#the-skill-list), or set one when you write a custom Skill. A roll uses that default unless you challenge it with a Descriptor from step 6.
 
 | Skill | Why it's baseline |
 |---|---|

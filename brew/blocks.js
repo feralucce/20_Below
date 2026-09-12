@@ -59,9 +59,14 @@ const div = (base) => (title, body, variant) => {
 export const BLOCKS = {
   wide: {
     help: 'spans both columns, for big tables and art',
-    takesTitle: false,
-    render: (_title, body, variant) =>
-      `<div class="${cls('wide', variant)}">\n\n${body.trim()}\n\n</div>`,
+    /* Worth a title even with no frame to hang it on. A wide table is
+     * usually the tail of an entry that ended on the page before - a
+     * build menu, a price list - and untitled it meets the reader as a
+     * bare header row with nothing saying whose it is. Titling it also
+     * picks up the (continued) mark, so a menu split across sheets says
+     * so instead of looking like a second, different table. */
+    takesTitle: true,
+    render: div('wide'),
   },
   aside: {
     help: 'a sidebar, set apart from the main text',

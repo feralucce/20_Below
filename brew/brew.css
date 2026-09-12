@@ -451,6 +451,10 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
    flow, so content after it resumes in fresh columns below it. */
 .page .wide{column-span:all; margin:0 0 .8em}
 .page .wide > :last-child{margin-bottom:0}
+/* A wide block has no frame, so its title sits straight on the page and
+   has to be kept with the table it names - a heading stranded at the foot
+   of a sheet is worse than no heading. */
+.page .wide .block-title{break-after:avoid; page-break-after:avoid}
 
 /* The Difficulty ladder, hardest to easiest. The tint is decoration:
    the name column says which rung it is, so the chart still reads
