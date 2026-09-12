@@ -477,7 +477,7 @@ def main():
         "fate":      ["fate.md"],
         "flaws":     ["flaws.md"],
         "boons":     ["boons.md"],
-        "skills":    ["skills.md", "premade-skills.md"],
+        "skills":    ["skills.md"],
         "resources": ["resources.md"],
         "how-to-play":          ["rules.md"],
         "creating-a-character": ["character-creation.md"],
