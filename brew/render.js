@@ -459,7 +459,31 @@ function hoistWide(body) {
     if (BLOCK_TAIL.test(line)) { stack.pop(); out.push(line); continue; }
     out.push(line);
   }
-  return out.join('\n');
+  return dropEmpty(out).join('\n');
+}
+
+/* A card reopened under a hoisted table with nothing left to put in it.
+ *
+ * The table is usually followed by the rest of the entry, and the card
+ * has to come back for it. Where the table is the last thing in the
+ * entry - or the last thing on the page - the card comes back holding
+ * nothing, and an empty card still draws: a bare tinted bar under the
+ * table, which reads as a mistake because it is one. */
+function dropEmpty(lines) {
+  const out = [];
+  for (let i = 0; i < lines.length; i++) {
+    if (BLOCK_ANY_OPEN.test(lines[i])) {
+      let j = i + 1;
+      while (j < lines.length && !lines[j].trim()) j++;
+      if (j < lines.length && BLOCK_TAIL.test(lines[j])) {
+        while (out.length && !out[out.length - 1].trim()) out.pop();
+        i = j;
+        continue;
+      }
+    }
+    out.push(lines[i]);
+  }
+  return out;
 }
 
 /** Render source into the container as a series of .page elements. */
