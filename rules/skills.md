@@ -71,7 +71,7 @@ A starting Skill list scoped to a **modern-world base campaign**. **This list is
 | Acrobatics | Air | Balance, tumbling, and controlled falls. |
 | Animal Handling | Water | Training, calming, and directing animals. |
 | Appraisal | Air | Judging the value and authenticity of goods. |
-| Archery | Air | Which bows you are trained on, by Category: hand crossbow, then crossbow, recurve, compound, and the warbow at Master. Not rolled - see [skills.md](skills.md#weapon-skills-are-not-attack-skills). |
+| Archery | Air | Which bows you are trained on, by Category: hand crossbow, then crossbow, recurve, compound, and the warbow at Master. Not rolled - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
 | Athletics | Earth | Running, jumping, climbing, and lifting under exertion. |
 | Barter | Fire | Striking favorable trades and deals. |
 | Bribery | Air | Knowing how much, how, and who to pay to get what you want. |
@@ -96,7 +96,7 @@ A starting Skill list scoped to a **modern-world base campaign**. **This list is
 | Etiquette | Fire | Navigating social and professional protocol correctly. |
 | Farming | Earth | Cultivating crops and managing livestock. |
 | Finance | Air | Economics, markets, and accounting. |
-| Firearms | Air | Which firearms you are trained on, by Category: handgun, then shotgun, submachine gun, rifle, and the heavy weapons at Master. Not rolled - see [skills.md](skills.md#weapon-skills-are-not-attack-skills). |
+| Firearms | Air | Which firearms you are trained on, by Category: handgun, then shotgun, submachine gun, rifle, and the heavy weapons at Master. Not rolled - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
 | First Aid | Water | Immediate, field-level treatment - stabilizing, bandaging, CPR. |
 | Fishing | Water | Catching fish by line, net, or spear. |
 | Forgery | Air | Producing convincing fake documents, signatures, IDs, and digital records. |
@@ -116,7 +116,7 @@ A starting Skill list scoped to a **modern-world base campaign**. **This list is
 | Linguistics | Air | Learning, translating, and analyzing languages. |
 | Literacy | Air | Reading and writing in a specific language, distinct from speaking it. |
 | Mechanics | Earth | Repair and maintenance of vehicles and machinery. |
-| Melee Weapons | Earth | Which melee weapons you are trained on, by Category: improvised and knives, then one-handed blunt and large blades, one-handed blades, polearms and two-handers, and the exotic ones at Master. Not rolled - see [skills.md](skills.md#weapon-skills-are-not-attack-skills). |
+| Melee Weapons | Earth | Which melee weapons you are trained on, by Category: improvised and knives, then one-handed blunt and large blades, one-handed blades, polearms and two-handers, and the exotic ones at Master. Not rolled - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
 | Medicine | Water | Surgery, diagnosis, and long-term clinical treatment. |
 | Natural World | Water | Knowledge of flora, fauna, ecosystems, and the environment. |
 | Navigation | Moira | Plotting a course and avoiding getting lost, on foot, by vehicle, or otherwise - an uncanny knack for finding the way, not just dead reckoning. |
@@ -151,7 +151,7 @@ A starting Skill list scoped to a **modern-world base campaign**. **This list is
 | Swimming | Earth | Moving efficiently and enduring in open water. |
 | Systems Operation | Air | Operating and interpreting complex consoles, sensors, and industrial or vehicle control systems. |
 | Tactics | Air | Planning and directing group action, especially in conflict, without doing the fighting yourself. |
-| Thrown Weapons | Air | Which thrown weapons you are trained on, by Category: balanced blade, then thrown axe, shafted, returning, and the sling at Master. Not rolled - see [skills.md](skills.md#weapon-skills-are-not-attack-skills). |
+| Thrown Weapons | Air | Which thrown weapons you are trained on, by Category: balanced blade, then thrown axe, shafted, returning, and the sling at Master. Not rolled - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
 | Tracking | Moira | Following physical trails - a nose for which way the trail actually goes, not pure spoor-reading. |
 | Tradecraft | Water | Spy fieldcraft - dead drops, signals, cover identities, evasion, counter-surveillance. |
 | Veterinary Medicine | Water | Diagnosing and treating animals. |

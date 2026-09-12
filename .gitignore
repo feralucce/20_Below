@@ -24,3 +24,6 @@ build/
 
 # Python bytecode from tools/
 __pycache__/
+
+# Local-only build output from tools/preview-site.py
+_preview/

@@ -166,6 +166,18 @@
     margin: 1rem 0 1.5rem;
     font-size: 0.95rem;
   }
+  /* ::: wide - in print this breaks out of the two columns. A web page
+     has one column already, so there is nothing to break out of and the
+     block is just a titled group. What it does need is somewhere for a
+     table built for a 6in page to go: the weapon-Skill ladder is five
+     columns, and on a narrow screen it has to scroll inside itself
+     rather than shove the whole page sideways. */
+  .wide {
+    margin: 1rem 0 1.5rem;
+    overflow-x: auto;
+  }
+  .wide > :last-child { margin-bottom: 0; }
+  .wide > .block-title { font-size: 1.15rem; }
   th, td {
     border: 1px solid var(--panel-border);
     padding: 0.5rem 0.7rem;
