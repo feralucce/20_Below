@@ -237,19 +237,30 @@ function folioValue(text) {
 
 /** Is there more on this page than the sheet can hold?
  *
- *  Asked of the width, which looks wrong and is not. The text block has a
- *  definite height and column-fill:auto (see brew.css), so a page that is
- *  given too much does not get taller - it opens another column to the
- *  side, and the page's overflow:hidden cuts it off. Nothing grows, and
- *  nothing shows. Height stopped being able to answer this question the
- *  moment the columns were told to fill rather than balance.
+ *  Asked of the width first, which looks wrong and is not. The text block
+ *  has a definite height and column-fill:auto (see brew.css), so a page
+ *  given too much ordinary text does not get taller - it opens another
+ *  column to the side, and the page's overflow:hidden cuts it off.
+ *  Nothing grows, and nothing shows.
+ *
+ *  And of the height, which is the case that got away. Opening another
+ *  column is what BREAKABLE content does. A single element that cannot be
+ *  broken - a card marked break-inside:avoid, a table taller than the
+ *  sheet - has nowhere to break to, so it simply runs off the bottom
+ *  instead, and the width never moves. A 21-row table did exactly that:
+ *  1283 pixels past the foot of the page, twelve of its rows gone from
+ *  the printed book, and this function said the page was fine.
+ *
+ *  Both, then. Either one alone is a check that passes while the reader
+ *  loses text.
  *
  *  One definition, used by the preview's warning and by the packer, so
  *  the two can never disagree about what fits. */
 export function spills(page) {
   const flow = page.querySelector('.flow');
   if (!flow) return false;
-  return flow.scrollWidth > flow.clientWidth + 4;
+  return flow.scrollWidth > flow.clientWidth + 4
+      || flow.scrollHeight > flow.clientHeight + 4;
 }
 
 /** How the document numbers its pages: { on, where, from }. */
