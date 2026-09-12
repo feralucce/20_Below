@@ -188,6 +188,53 @@
   .block.roll { text-align: center; font-size: 1.05rem; }
   .block.roll p { margin: .25rem 0; }
 
+  /* A card's own title. Set in the heading face like every other
+     heading, but it is not a document heading - it names the thing
+     it sits inside, so it takes no rule and no section spacing. */
+  .block-title {
+    display: block; margin: 0 0 .3em;
+    color: var(--text);
+    font-family: var(--font-head); font-size: 1.15rem; letter-spacing: .02em;
+  }
+
+  /* ---- skill cards ----
+     The same card the printed book and the web book set, so a Skill
+     looks like a Skill wherever it is met. The left edge and the name
+     carry the Element; the flavour is the voice and the line under it
+     is the rule, which is the whole reason the two are set apart.
+     Values are brew.css's, by way of _layouts/webbook.html. */
+  .skill {
+    background: var(--panel);
+    border-left: 3px solid var(--accent);
+    border-radius: 3px;
+    padding: .8rem 1rem;
+    margin: 0 0 .7rem;
+  }
+  .skill > :first-child { margin-top: 0; }
+  .skill > :last-child { margin-bottom: 0; }
+
+  .skill-flavour { color: var(--accent); font-style: italic; margin: .2rem 0 .5rem; }
+
+  /* The Element, said once, beside the name. */
+  .skill-elem {
+    display: inline-block; margin-left: .45em; padding: .05em .4em;
+    border: 1px solid var(--panel-border); border-radius: 3px;
+    font-size: .7rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--text-dim); vertical-align: .15em;
+  }
+
+  .skill--earth { border-left-color: var(--element-earth); }
+  .skill--air   { border-left-color: var(--element-air); }
+  .skill--fire  { border-left-color: var(--element-fire); }
+  .skill--water { border-left-color: var(--element-water); }
+  .skill--moira { border-left-color: var(--element-moira); }
+
+  .skill--earth .block-title, .skill--earth .skill-flavour { color: var(--element-earth); }
+  .skill--air   .block-title, .skill--air   .skill-flavour { color: var(--element-air); }
+  .skill--fire  .block-title, .skill--fire  .skill-flavour { color: var(--element-fire); }
+  .skill--water .block-title, .skill--water .skill-flavour { color: var(--element-water); }
+  .skill--moira .block-title, .skill--moira .skill-flavour { color: var(--element-moira); }
+
   /* ---- the reference-sheet layout ----
      Two columns on anything wide enough, and that includes paper.
      The old rule was screen-only, so a sheet whose whole job was

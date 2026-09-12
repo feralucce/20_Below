@@ -47,6 +47,7 @@ BREW_DIR = r"C:\Users\feral\OneDrive\Documents\20 Below Production documents\PDF
 FORMATTED = {
     "introduction":         "01-introduction.md",
     "creating-a-character": "03-creating-a-character.md",
+    "skills":               "05-skills.md",
 }
 
 # (binder fragment, url slug, nav section, page title)
