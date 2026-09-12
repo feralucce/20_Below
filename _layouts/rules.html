@@ -4,32 +4,19 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{{ page.name | remove: ".md" | replace: "-", " " | capitalize }} | 20 Below</title>
-<link rel="icon" type="image/x-icon" href="../docs/assets/brand/favicon.ico" />
-<link rel="icon" type="image/png" sizes="32x32" href="../docs/assets/brand/favicon-32.png" />
-<link rel="apple-touch-icon" href="../docs/assets/brand/favicon-128.png" />
+{% include brand-head.html %}
 <style>
-  :root {
-    --bg: #0a1720;
-    --panel: #12232e;
-    --panel-border: #24404f;
-    --text: #eaf5fb;
-    --text-dim: #8fadbe;
-    --accent: #3d84c4;
-    --accent-dim: #1c3548;
-    --radius: 8px;
-    font-family: "Segoe UI", system-ui, sans-serif;
-  }
-  * { box-sizing: border-box; }
+  /* Colour, type and the shared components live in
+     docs/assets/css/20below.css. What is left here is
+     this page's own. */
+  /* This page's own measure - how wide its text column
+     runs is a decision about this page, not the brand. */
+  :root { --measure: 900px; }
+
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
     min-height: 100vh;
   }
   main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 4rem;
     line-height: 1.6;
   }
   .back-link {
@@ -40,25 +27,12 @@
   h1, h2, h3, h4 {
     letter-spacing: 0.02em;
   }
-  h1 {
-    margin: 1rem 0 0.5rem;
-  }
-  h2 {
-    border-bottom: 1px solid var(--panel-border);
-    padding-bottom: 0.4rem;
-    margin-top: 2.5rem;
-  }
-  h3 {
-    margin-top: 2rem;
-    color: var(--accent);
-  }
   h4 {
     margin-top: 1.5rem;
   }
   p, li {
     color: var(--text);
   }
-  a { color: var(--accent); }
   strong { color: var(--text); }
   hr {
     border: none;
@@ -69,13 +43,10 @@
     background: var(--panel);
     border: 1px solid var(--panel-border);
     border-radius: 4px;
-    padding: 0.1rem 0.35rem;
     font-size: 0.9em;
+    padding: 0.1rem 0.35rem;
   }
   table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0 1.5rem;
     font-size: 0.95rem;
   }
   th, td {
@@ -127,7 +98,6 @@
     color: var(--accent);
   }
 </style>
-<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
 <body>
 {% include site-nav.html %}
