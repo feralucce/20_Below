@@ -42,7 +42,7 @@
     title.textContent = name;
     if (element) {
       var pill = document.createElement('span');
-      pill.className = 'skill-elem';
+      pill.className = 'block-pill';
       pill.textContent = element;
       title.appendChild(pill);
     }

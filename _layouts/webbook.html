@@ -488,6 +488,56 @@
   .boon-tier > p { margin: 0 0 0.25rem; }
   .boon-tier > :last-child { margin-bottom: 0; }
 
+  /* ---- blocks no chapter uses yet ----
+     ::: roll, ::: stat and ::: figure are part of the Brewery's syntax
+     and styled in brew.css, and nothing in the book reaches for them
+     today. The coverage check only fires on a class a chapter actually
+     emits, so without these the first chapter to use one would render
+     it as plain paragraphs and the check would say so only after the
+     fact. Cheaper to have them waiting. */
+  .roll-box {
+    background: var(--accent-dim);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 0.6rem 0.9rem;
+    margin: 1rem 0;
+    text-align: center;
+    font-family: "Bebas Neue", "Segoe UI", system-ui, sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+  }
+  .roll-box > :last-child { margin-bottom: 0; }
+
+  .stat {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 0.7rem 0.9rem;
+    margin: 0 0 0.9rem;
+  }
+  .stat > :last-child { margin-bottom: 0; }
+  /* The stat line is picked out by the middot the Adversary Index
+     already uses, so an existing block pastes in with nothing to
+     rewrite. */
+  .stat-line {
+    margin: 0.3rem 0;
+    padding: 0.3rem 0.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 2px;
+    font-size: 0.92rem;
+  }
+  .stat-line > p { margin: 0; }
+
+  .figure { margin: 0 0 0.9rem; }
+  .figure img { max-width: 100%; height: auto; display: block; }
+  .caption {
+    margin: 0.4rem 0 0;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
   .box--text { border-color: var(--panel-border); }
   /* The Player and GM exchange. Speeches, not paragraphs, so they are set
      tighter than body prose and the speaker's name carries the accent. */

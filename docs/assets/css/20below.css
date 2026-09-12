@@ -215,12 +215,21 @@
 
   .skill-flavour { color: var(--accent); font-style: italic; margin: .2rem 0 .5rem; }
 
-  /* The Element, said once, beside the name. */
-  .skill-elem {
-    display: inline-block; margin-left: .45em; padding: .05em .4em;
-    border: 1px solid var(--panel-border); border-radius: 3px;
-    font-size: .7rem; letter-spacing: .08em; text-transform: uppercase;
-    color: var(--text-dim); vertical-align: .15em;
+  /* The Element, said once, beside the name. Called block-pill and
+     shaped like one because that is what the web book calls it - two
+     names for the same pill is how they ended up different shapes,
+     square here and fully rounded there. */
+  .block-pill {
+    display: inline-block;
+    margin-left: .5rem;
+    padding: .05rem .5rem;
+    border: 1px solid var(--panel-border);
+    border-radius: 999px;
+    color: var(--text-dim);
+    font-size: .72rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    vertical-align: .2em;
   }
 
   .skill--earth { border-left-color: var(--element-earth); }
