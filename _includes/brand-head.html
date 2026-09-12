@@ -1,0 +1,29 @@
+{%- comment -%}
+  Everything every page's <head> was repeating: the favicons, the
+  typeface, and the stylesheet that makes a page look like 20 Below.
+
+  Put it immediately before </head>:
+
+      {% include brand-head.html %}
+
+  One font request for the whole site, and it asks for one family.
+  It was four different requests before, between them pulling Anton,
+  Montserrat, Fraunces, Space Mono, Oswald and Barlow Condensed -
+  most of them on pages that render every word in Segoe UI. Per the
+  style guide, Bebas Neue is the only web font the ordinary pages
+  use. A page that genuinely needs another (index.html and home.html
+  for the hero system, the Backwater Static pages for their own
+  faces) adds it after this line.
+
+  A page needing its own rules still adds a <style> after this -
+  20below.css puts its rules in @layer, so an unlayered page rule
+  wins without anybody counting selectors.
+{%- endcomment -%}
+<link rel="icon" type="image/x-icon" href="/docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="/docs/assets/brand/favicon-128.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/docs/assets/css/20below.css" />
+<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
