@@ -49,6 +49,8 @@ SHEET = os.path.join(ROOT, "docs", "assets", "css", "20below.css")
 # same way. Deliberately absent, each for its own reason:
 #
 #   docs/style-guide.html     is where these tokens come from
+#   docs/advancement-reference.html  is a redirect into the book
+#                             chapter now, not a page
 #   docs/character-sheet.html carries its own Element palette, which is
 #   app/style.css             a decision rather than a duplication
 #   index.html, home.html     the front-page hero system
@@ -61,7 +63,6 @@ PAGES = [
     "combat-equipment.html",
     "gm-references.html",
     "license.html",
-    "docs/advancement-reference.html",
     "docs/changelog.html",
     "docs/combat-flow-reference.html",
     "docs/creation-wealth-reference.html",
