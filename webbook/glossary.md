@@ -3,6 +3,7 @@ layout: webbook
 title: "Glossary"
 chapter: 2
 nav_section: start
+ground: hexdrift
 prev_url: /webbook/introduction.html
 prev_title: "Introduction"
 next_url: /webbook/creating-a-character.html
