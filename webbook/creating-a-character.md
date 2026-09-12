@@ -493,35 +493,85 @@ Your descriptors are what you point to to justify using an element other than th
 
 Descriptors aren’t decorative. Or, rather, they aren’t *just* decorative - they are load bearing decorations. Below, you will find some sample descriptors. You can pick from the lists, but are not restricted to them. In fact, players are encouraged to make their own.
 
-## Soak (Earth)
+<div class="aside aside--earth" markdown="1">
+
+<p class="block-title" markdown="span">**Soak** (Earth)</p>
+
 Hardy, Rugged, Stoic, Weathered, Unyielding, Sturdy, Grizzled, Armored, Callused, Thick-Skinned, Leathery, Battle-Worn, Steeled, Resistant, Flinty
 
-## Potence (Earth)
+</div>
+
+<div class="aside aside--earth" markdown="1">
+
+<p class="block-title" markdown="span">**Potence** (Earth)</p>
+
 Brawny, Herculean, Mighty, Strapping, Muscular, Titanic, Forceful, Robust, Hulking, Sinewy, Vigorous, Burly, Formidable, Stout, Iron-Armed
 
-## Initiative (Air)
+</div>
+
+<div class="aside aside--air" markdown="1">
+
+<p class="block-title" markdown="span">**Initiative** (Air)</p>
+
 Alert, Reflexive, Twitchy, Vigilant, Quickened, Sharp-Eyed, Instinctive, Keen, Fleet, Snappy, Watchful, Attentive, Sharp, Nimble-Minded, Anticipatory
 
-## Psyche (Air)
+</div>
+
+<div class="aside aside--air" markdown="1">
+
+<p class="block-title" markdown="span">**Psyche** (Air)</p>
+
 Steadfast, Composed, Disciplined, Unshaken, Focused, Resolute, Headstrong, Serene, Level-Headed, Calm, Iron-Willed, Grounded, Unflappable, Determined, Clear-Headed
 
-## Ferocity (Fire)
+</div>
+
+<div class="aside aside--fire" markdown="1">
+
+<p class="block-title" markdown="span">**Ferocity** (Fire)</p>
+
 Brutal, Savage, Relentless, Feral, Merciless, Ruthless, Vicious, Predatory, Fierce, Aggressive, Bloodthirsty, Wrathful, Untamed, Cutthroat, Rabid
 
-## Presence (Fire)
+</div>
+
+<div class="aside aside--fire" markdown="1">
+
+<p class="block-title" markdown="span">**Presence** (Fire)</p>
+
 Magnetic, Commanding, Charismatic, Radiant, Imposing, Captivating, Dominant, Alluring, Striking, Charming, Bold, Regal, Magnificent, Unforgettable, Larger-Than-Life
 
-## Stamina (Water)
+</div>
+
+<div class="aside aside--water" markdown="1">
+
+<p class="block-title" markdown="span">**Stamina** (Water)</p>
+
 Indefatigable, Tireless, Enduring, Hardened, Persistent, Unflagging, Dogged, Steady, Untiring, Unwavering, Gritty, Marathon-Bodied, Long-Winded, Driven, Unrelenting
 
-## Health (Water)
+</div>
+
+<div class="aside aside--water" markdown="1">
+
+<p class="block-title" markdown="span">**Health** (Water)</p>
+
 Hale, Vital, Resilient, Stalwart, Ironclad, Unbreakable, Durable, Tenacious, Hearty, Sound, Thriving, Hard-to-Kill, Long-Lived, Wholesome, Sturdy-Framed
 
-## Atropos (Moira)
+</div>
+
+<div class="aside aside--moira" markdown="1">
+
+<p class="block-title" markdown="span">**Atropos** (Moira)</p>
+
 Fated, Untouchable, Uncanny, Ghostly, Warded, Veiled, Overlooked, Passed-Over, Unmarked, Inviolate, Unsevered, Thread-Bound, Unreachable, Spared, Unbroken
 
-## Klotho (Moira)
+</div>
+
+<div class="aside aside--moira" markdown="1">
+
+<p class="block-title" markdown="span">**Klotho** (Moira)</p>
+
 Lucky, Charmed, Serendipitous, Auspicious, Star-Touched, Timely, Quickening, Renewing, Replenishing, Rekindling, Brimming, Deep-Welled, Spring-Fed, Ever-Spinning, Unspent
+
+</div>
 
 ## 7. Skills
 
