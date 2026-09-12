@@ -87,7 +87,7 @@ export function createInitialState(data) {
     discretionaryPurchases: { Attributes: {}, Skills: {}, Resources: {}, Gifts: {}, GiftAdders: {} },
     finishingNotes: '',
 
-    // ---- Advancement (post-creation XP spend, see docs/advancement-reference.html) ----
+    // ---- Advancement (post-creation XP spend, see rules/costs.md) ----
     xpEarned: 0,
     // Same shape/role as discretionaryPurchases - tracks how much of each
     // scalar target's current value was funded via Advancement XP rather
@@ -893,7 +893,7 @@ export function applyRest(state, isFullRest) {
     : Math.min(figured.Ki, state.currentKi + Math.max(1, s.Klotho));
 }
 
-// ---- Advancement (post-creation XP spend, see docs/advancement-reference.html) ----
+// ---- Advancement (post-creation XP spend, see rules/costs.md) ----
 // Unlike Discretionary's flat per-unit rates, most Advancement costs scale
 // with the current value being raised (current tier/rating/level × a
 // multiplier) - so, same convention already used by giftsDiscretionaryContribution,

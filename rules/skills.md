@@ -27,7 +27,7 @@ Each tier is strictly better than the last. Master's reroll only ever *removes t
 
 **Advantage/Disadvantage** are the [standalone core mechanic](rules.md#advantage--disadvantage): roll 3d10, keep the lowest two (Advantage) or highest two (Disadvantage).
 
-**Advancement**: a character climbs the ladder one tier at a time via **direct XP expenditure** - no classes/levels, no fixed track. See the [Advancement Reference](../docs/advancement-reference.html) for the exact XP cost per tier.
+**Advancement**: a character climbs the ladder one tier at a time via **direct XP expenditure** - no classes/levels, no fixed track. See the [Advancement chapter](../webbook/advancement.html) for the exact XP cost per tier.
 
 ## Weapon Skills Are Not Attack Skills
 
@@ -55,7 +55,7 @@ These are the one place a tier buys access rather than a better roll, which is w
 
 A short list of ordinary, baseline skills that every character starts with at no cost, reflecting the basic competence any functional adult in the setting would have. 20 Below doesn't fix this list in the core rules - **the GM decides the Everyman Skills list for their own campaign/setting**, since "what any ordinary person can do" depends heavily on genre and setting. Every Everyman Skill is granted at **Tier 2 (Trained)** - full Attribute + Difficulty, no flat bonus or Advantage, reflecting genuine baseline competence rather than a bare exposure.
 
-Everything else about Skills (whether there's a fixed list beyond Everyman Skills, breadth) is still open. XP costs per tier are tracked in the [Advancement Reference](../docs/advancement-reference.html), not here.
+Everything else about Skills (whether there's a fixed list beyond Everyman Skills, breadth) is still open. XP costs per tier are tracked in the [Advancement chapter](../webbook/advancement.html), not here.
 
 ## The Skill List
 
