@@ -68,6 +68,10 @@ PAGES = [
     "docs/louis-reference-chart.html",
     "docs/scars.html",
     "docs/status-effects.html",
+    # One layout, sixteen pages: every rules/*.md is rendered
+    # through it, and it was the last thing on the site still
+    # setting its headings in the body face.
+    "_layouts/rules.html",
 ]
 
 INCLUDE = "{% include brand-head.html %}"
@@ -151,21 +155,59 @@ def shared_rules():
 SHARED = shared_rules()
 
 
-def is_duplicate(block, is_hub):
-    """True when the shared sheet covers this block, so the page need
-    not carry it.
+def reduce_block(block, is_hub):
+    """What of this block the page still needs to carry.
+
+    None  - the shared sheet says all of it, drop it
+    block - keep it as it stands
+    text  - keep only the declarations the shared sheet has no opinion
+            about
+
+    That third case is the one that matters. A page's `h1` colour and
+    face are the brand and should change; its `main { line-height: 1.6 }`
+    is a decision about a long page of rules that the shared sheet does
+    not speak to, and dropping it along with the rest silently reflows
+    every rules page. Only properties the sheet actually defines for
+    that selector are considered covered.
 
     Anything that is not a plain rule - a media query, a keyframes
-    block - is never dropped: it is not something this sheet claims."""
+    block - is left alone: this sheet claims none of it."""
     r = split_rule(block)
     if not r or not r[1]:
-        return False
-    sel = r[0]
-    if BRAND.match(sel):
-        return True
-    if is_hub and HUB_PARTS.match(sel):
-        return True
-    return False
+        return block
+    sel, decls = r
+    claimed = BRAND.match(sel) or (is_hub and HUB_PARTS.match(sel))
+    if not claimed:
+        return block
+
+    # Where the shared sheet says it. The hub components live behind
+    # .hub, and the three headings share one font rule.
+    covered = dict(SHARED.get(sel, {}))
+    covered.update(SHARED.get(".hub " + sel, {}))
+    if sel in ("h1", "h2", "h3"):
+        covered.update(SHARED.get("h1, h2, h3", {}))
+
+    def is_covered(prop):
+        """A page's `margin-top` is covered by a shared `margin`, and a
+        `border-left-color` by a `border-left` or a `border`. Comparing
+        property names alone leaves every longhand looking like
+        something the sheet had no opinion about."""
+        if prop in covered:
+            return True
+        parts = prop.split("-")
+        return any("-".join(parts[:i]) in covered for i in range(1, len(parts)))
+
+    leftover = {k: v for k, v in decls.items()
+                if not is_covered(k)
+                # The measure moves to a token of its own, and a page's
+                # :root font-family is what the sheet sets on body.
+                and not (sel == "main" and k == "max-width")
+                and not (sel == ":root" and k == "font-family")
+                and not k.startswith("--")}
+    if not leftover:
+        return None
+    return "  %s {\n%s\n  }" % (
+        sel, "\n".join("    %s: %s;" % kv for kv in sorted(leftover.items())))
 
 
 def convert(rel, apply, verbose):
@@ -189,11 +231,12 @@ def convert(rel, apply, verbose):
             w = re.search(r"max-width:\s*([\d.]+(?:px|rem|em|ch|vw))", b)
             if w:
                 measure = w.group(1)
-        if is_duplicate(b, is_hub):
+        reduced = reduce_block(b, is_hub)
+        if reduced is None:
             continue
-        kept.append(b)
+        kept.append(reduced)
         if r:
-            kept_names.append(r[0])
+            kept_names.append(r[0] + ("" if reduced is b else " (reduced)"))
 
     css = "\n".join(b.strip("\n") for b in kept)
     if measure:
