@@ -553,11 +553,30 @@ def main():
                                                  "webbook.html"),
                                     encoding="utf-8").read()))
 
+    # The ground a chapter stands on, for every chapter - not only the
+    # ones reading from their formatted copy. It belongs to the chapter
+    # rather than to whichever source the words came from, and reading
+    # it on the formatted path alone meant the three chapters still
+    # coming from the manuscript were the three with no background at
+    # all: glossary, how-to-play and running-the-game.
+    #
+    # Production files are named NN-slug.md and that slug is the web
+    # book's. A chapter with no formatted copy simply has no ground.
+    grounds = {}
+    for name in sorted(os.listdir(BREW_DIR)):
+        m = re.match(r"\d+-(.+)\.md$", name)
+        if not m:
+            continue
+        found = read_ground(io.open(os.path.join(BREW_DIR, name),
+                                    encoding="utf-8").read())
+        if found:
+            grounds[m.group(1)] = found
+
     for i, (frag, slug, section, title, _blurb) in enumerate(CHAPTERS):
         if slug in FORMATTED:
             path = os.path.join(BREW_DIR, FORMATTED[slug])
             raw = io.open(path, encoding="utf-8").read()
-            ground = read_ground(raw)
+            ground = grounds.get(slug, read_ground(raw))
             stripped, markers, rejoined = strip_markers(raw)
             # The chapter's own H1. The layout prints the title from front
             # matter, so leaving it would set the heading twice.
@@ -618,7 +637,8 @@ def main():
                 hollow.append(
                     "gifts: wrap_headed_entries boxed nothing - is the "
                     "heading still \"## The Gift List\"?")
-        emit(i, slug, section, title, body_of(chunks))
+        emit(i, slug, section, title, body_of(chunks),
+             ground=grounds.get(slug, ""))
         written.append((binder_title, slug, len(chunks), sum(len(c.split()) for c in chunks)))
 
     # The contents page.
@@ -631,6 +651,11 @@ def main():
         "layout: webbook",
         'title: "The Player\'s Guide"',
         "nav_section: start",
+        # The contents page is the book's front door and stands on the
+        # same ground as every chapter behind it. Whichever ground the
+        # chapters use, rather than the word, so this cannot be the one
+        # page left behind when it changes.
+        "ground: " + (grounds.get("introduction") or "hexdrift"),
         "cover: true",
         "lede: >-",
         "  The whole book, chapter by chapter. The same text as the print",

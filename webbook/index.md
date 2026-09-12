@@ -2,6 +2,7 @@
 layout: webbook
 title: "The Player's Guide"
 nav_section: start
+ground: hexdrift
 cover: true
 lede: >-
   The whole book, chapter by chapter. The same text as the print

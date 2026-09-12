@@ -3,6 +3,7 @@ layout: webbook
 title: "How to Play"
 chapter: 4
 nav_section: start
+ground: hexdrift
 prev_url: /webbook/creating-a-character.html
 prev_title: "Creating a Character"
 next_url: /webbook/skills.html
