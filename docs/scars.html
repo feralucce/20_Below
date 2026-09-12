@@ -7,50 +7,25 @@ nav_section: combat
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Scars - 20 Below</title>
-<link rel="icon" type="image/x-icon" href="assets/brand/favicon.ico" />
-<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
-<link rel="apple-touch-icon" href="assets/brand/favicon-128.png" />
+{% include brand-head.html %}
 <style>
-  :root {
-    --bg: #0a1720;
-    --panel: #12232e;
-    --panel-border: #24404f;
-    --text: #eaf5fb;
-    --text-dim: #8fadbe;
-    --accent: #3d84c4;
-    --accent-dim: #1c3548;
-    --danger: #e0685c;
-    --radius: 8px;
-    font-family: "Segoe UI", system-ui, sans-serif;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-  }
-  main {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 4rem;
-  }
+  /* Colour, type and the shared components live in
+     docs/assets/css/20below.css. What is left here is
+     this page's own. */
+  /* This page's own measure - how wide its text column
+     runs is a decision about this page, not the brand. */
+  :root { --measure: 850px; }
+
   .back-link {
     color: var(--accent);
     text-decoration: none;
     font-size: 0.9rem;
-  }
-  h1 {
-    margin: 1rem 0 0.5rem;
-    letter-spacing: 0.02em;
   }
   .note {
     color: var(--text-dim);
     line-height: 1.5;
     margin-bottom: 2rem;
   }
-  a { color: var(--accent); }
-
   .toc {
     background: var(--panel);
     border: 1px solid var(--panel-border);
@@ -72,7 +47,6 @@ nav_section: combat
   }
   .toc a { text-decoration: none; }
   .toc a:hover { text-decoration: underline; }
-
   .scar-section {
     background: var(--panel);
     border: 1px solid var(--panel-border);
@@ -104,7 +78,6 @@ nav_section: combat
   .scar-section > p:last-child {
     margin-bottom: 0;
   }
-
   .roll-box {
     background: var(--bg);
     border: 1px solid var(--accent-dim);
@@ -119,7 +92,6 @@ nav_section: combat
     font-size: 0.85rem;
     color: var(--text-dim);
   }
-
   .scar-list {
     columns: 1;
     margin: 0.5rem 0 1rem;
@@ -132,7 +104,6 @@ nav_section: combat
   .scar-list li {
     break-inside: avoid;
   }
-
   .flaw-tags {
     display: flex;
     flex-wrap: wrap;
@@ -147,7 +118,6 @@ nav_section: combat
     font-size: 0.85rem;
   }
 </style>
-<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
 <body>
 {% include site-nav.html %}
