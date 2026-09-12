@@ -28,36 +28,38 @@ own <main id="main">. It is invisible until focused.
     <li class="has-dropdown">
       <a href="/rules-hub.html"{% if page.nav_section == "start" %} aria-current="page"{% endif %}>Start Here</a>
       <ul class="dropdown">
-        <li><a href="/docs/player-quick-reference.html">20 Below at a Glance</a></li>
-        <li><a href="/docs/combat-flow-reference.html">How Do I&hellip;?</a></li>
-        <li><a href="/webbook/">The Player's Guide</a></li>
+        <li><a href="/webbook/">The Player&rsquo;s Guide</a></li>
         <li><a href="/webbook/introduction.html">Introduction</a></li>
         <li><a href="/webbook/creating-a-character.html">Creating a Character</a></li>
-        <li><a href="/app/index.html" target="_blank" rel="noopener">Character Creator</a></li>
+        <li><a href="/webbook/how-to-play.html">How to Play</a></li>
+        <li><a href="/app/index.html">Character Creator</a></li>
+      </ul>
+    </li>
+    <li class="has-dropdown">
+      <a href="/at-the-table.html"{% if page.nav_section == "table" %} aria-current="page"{% endif %}>At the Table</a>
+      <ul class="dropdown">
+        <li><a href="/docs/player-quick-reference.html">20 Below at a Glance</a></li>
+        <li><a href="/docs/combat-flow-reference.html">How Do I&hellip;?</a></li>
         <li><a href="/docs/louis-reference-chart.html">Difficulty Chart</a></li>
         <li><a href="/webbook/glossary.html">Glossary</a></li>
-        <li><a href="/webbook/how-to-play.html">How to Play</a></li>
-        <li><a href="/docs/changelog.html">Changelog</a></li>
       </ul>
     </li>
     <li class="has-dropdown">
       <a href="/character-options.html"{% if page.nav_section == "options" %} aria-current="page"{% endif %}>Character Options</a>
       <ul class="dropdown">
         <li><a href="/webbook/skills.html">Skills</a></li>
-        <li><a href="/rules/premade-skills.html">Premade Skills</a></li>
         <li><a href="/webbook/boons.html">Boons</a></li>
         <li><a href="/webbook/resources.html">Resources</a></li>
         <li><a href="/webbook/gifts.html">Gifts</a></li>
         <li><a href="/webbook/flaws.html">Flaws</a></li>
+        <li><a href="/webbook/fate.html">Fate</a></li>
         <li><a href="/webbook/advancement.html">Advancement</a></li>
-        <li><a href="/docs/advancement-reference.html">Advancement Reference</a></li>
         <li><a href="/rules/costs.html">Costs Table</a></li>
       </ul>
     </li>
     <li class="has-dropdown">
       <a href="/combat-equipment.html"{% if page.nav_section == "combat" %} aria-current="page"{% endif %}>Combat &amp; Equipment</a>
       <ul class="dropdown">
-        <li><a href="/webbook/fate.html">Fate</a></li>
         <li><a href="/webbook/equipment.html">Equipment</a></li>
         <li><a href="/docs/creation-wealth-reference.html">Creation-Wealth Reference</a></li>
         <li><a href="/docs/status-effects.html">Status Effects</a></li>
@@ -71,16 +73,22 @@ own <main id="main">. It is invisible until focused.
         <li><a href="/rules/adversary-index.html">Adversary Index</a></li>
         <li><a href="/rules/cryptids.html">Cryptids</a></li>
         <li><a href="/rules/nightmare-creatures.html">Nightmare Creatures</a></li>
-        <li><a href="/docs/louis-reference-chart.html">Difficulty Chart</a></li>
-        <li><a href="/tracker/index.html" target="_blank" rel="noopener">20 Below Battle Tracker</a></li>
-        <li><a href="/prep/index.html" target="_blank" rel="noopener">Encounter Difficulty Calculator</a></li>
-        <li><a href="/brew/index.html" target="_blank" rel="noopener">The Brewery</a></li>
-        <li><a href="/docs/style-guide.html">Style Guide</a></li>
+        <li><a href="/rules/encounters.html">Encounters</a></li>
+        <li><a href="/tracker/index.html">20 Below Battle Tracker</a></li>
+        <li><a href="/prep/index.html">Encounter Difficulty Calculator</a></li>
+        <li><a href="/brew/index.html">The Brewery</a></li>
       </ul>
     </li>
     <li><a href="/downloads.html"{% if page.nav_section == "downloads" %} aria-current="page"{% endif %}>Downloads</a></li>
     <li><a href="https://feralucce.github.io/Backwater_Static/" target="_blank" rel="noopener">Backwater Static</a></li>
-    <li><a href="/license.html"{% if page.nav_section == "license" %} aria-current="page"{% endif %}>License</a></li>
+    <li class="has-dropdown">
+      <a href="/license.html"{% if page.nav_section == "license" %} aria-current="page"{% endif %}>Project</a>
+      <ul class="dropdown">
+        <li><a href="/license.html">License</a></li>
+        <li><a href="/docs/changelog.html">Changelog</a></li>
+        <li><a href="/docs/style-guide.html">Style Guide</a></li>
+      </ul>
+    </li>
     <li><span class="soon">Store <span class="pill">Soon</span></span></li>
     <li><a href="https://github.com/feralucce/20_Below" target="_blank" rel="noopener">GitHub</a></li>
   </ul>

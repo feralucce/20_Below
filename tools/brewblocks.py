@@ -230,7 +230,9 @@ def render_figure(title, body, variant):
 
 # name -> (renderer, takes a title)
 BLOCKS = {
-    "wide":     (plain("wide", takes_title=False), False),
+    # A wide table is usually the tail of an entry that ended on the page
+    # before, so it takes a title like anything else - see blocks.js.
+    "wide":     (plain("wide"), True),
     "aside":    (plain("aside"), True),
     "box":      (plain("box"), True),
     "roll":     (plain("roll-box", takes_title=False), False),

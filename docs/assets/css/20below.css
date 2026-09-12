@@ -1,0 +1,391 @@
+/* =============================================================
+   20 Below - the shared look.
+
+   Two sources, and they divide cleanly:
+
+     docs/style-guide.html  owns the tokens. Every colour and its
+       name comes from there, spelled the way that page spells it.
+       Nothing is invented here.
+
+     docs/player-quick-reference.html  owns the components. Its
+       tables, panels, roll boxes and two-column sheet layout are
+       the pattern the rest of the site follows.
+
+   Before this file, the guide could only describe the brand and
+   every page re-typed it: 3,096 lines of <style> across 20 pages,
+   four different font requests, three different Element palettes.
+   Copies drift. This is the copy.
+
+   Load it with the include, which also brings the typeface:
+
+     {% include brand-head.html %}
+
+   Layers keep a page's own rules winning over these without
+   anybody counting selectors, so a page can be converted by
+   deleting what it duplicates and leaving the rest alone.
+   ============================================================= */
+
+@layer tokens, base, components, utilities;
+
+/* -------------------------------------------------------------
+   TOKENS - docs/style-guide.html
+
+   Names and values both. If a colour needs to change, it changes
+   in the guide first and then here, so the guide never becomes
+   the out-of-date description of something else.
+   ------------------------------------------------------------- */
+@layer tokens {
+  :root {
+    /* Core palette */
+    --bg: #0a1720;            /* page background */
+    --panel: #12232e;         /* cards, dropdowns, raised surfaces */
+    --panel-border: #24404f;  /* dividers, card borders */
+    --text: #eaf5fb;          /* primary text */
+    --text-dim: #8fadbe;      /* secondary text, captions, labels */
+    --accent: #3d84c4;        /* links, active states, brand blue */
+    --accent-dim: #1c3548;    /* hover backgrounds, CTA fill */
+
+    /* Semantic roles (Battle Tracker) */
+    --pc: #5ecb6b;
+    --ally: #c39a5a;
+    --npc: #e0685c;
+    --danger: #e0685c;
+
+    /* Elements. Load-bearing: a player learns these as the game's
+       vocabulary, so they have to be the same five colours in the
+       book, on the site, and in the app. */
+    --element-earth: #8a6d4e;
+    --element-air:   #a8c9e0;
+    --element-fire:  #e0663f;
+    --element-water: #078f9b;
+    --element-moira: #a06fd1;
+
+    /* Type. Bebas Neue for headings, as the reference sheets set
+       them. Body stays on the system face: the guide is explicit
+       that Anton and Montserrat belong to the front-page hero
+       system and nothing else. */
+    --font-head: "Bebas Neue", "Segoe UI", system-ui, sans-serif;
+    --font-body: "Segoe UI", system-ui, sans-serif;
+
+    --radius: 10px;
+    --gap: 2.5rem;
+
+    /* How wide the text column runs. A page of prose wants less
+       than a page of tables, so this is the one geometry token a
+       page is expected to set for itself. */
+    --measure: 1100px;
+  }
+}
+
+/* -------------------------------------------------------------
+   BASE
+   ------------------------------------------------------------- */
+@layer base {
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.5;
+  }
+
+  main {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 4rem;
+  }
+
+  h1, h2, h3 { font-family: var(--font-head); letter-spacing: .02em; }
+
+  h1 {
+    font-size: 2.6rem;
+    /* A page title outranks the section heads beneath it, so it
+       gets more air and a heavier rule. The per-page copies had
+       this the other way round: h2 carried a rule and h1 did not,
+       which set the sections louder than the page. */
+    margin: 2.5rem 0 .75rem;
+    padding-bottom: .25rem;
+    border-bottom: 2px solid var(--panel-border);
+  }
+  h1:first-child { margin-top: .5rem; }
+
+  h2 {
+    font-size: 1.7rem;
+    color: var(--element-water);
+    margin: 1.75rem 0 .5rem;
+    padding-bottom: .2rem;
+    border-bottom: 1px solid var(--panel-border);
+  }
+
+  h3 { font-size: 1.25rem; color: var(--element-water); margin: 0 0 .4rem; }
+
+  p { margin: .6rem 0; }
+  a { color: var(--accent); }
+}
+
+/* -------------------------------------------------------------
+   COMPONENTS - docs/player-quick-reference.html
+   ------------------------------------------------------------- */
+@layer components {
+
+  /* ---- tables ----
+     A reference table is read one row at a time mid-game rather
+     than left to right, so the rows are tight and the first
+     column is the one the eye lands on. */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: .6rem 0 1rem;
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  th, td {
+    text-align: left;
+    padding: .4rem .7rem;
+    border-bottom: 1px solid var(--panel-border);
+    vertical-align: top;
+  }
+  thead th {
+    background: var(--accent-dim);
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td:first-child { white-space: nowrap; }
+
+  /* Two-column tables otherwise split wherever the longest cell in
+     column one lands, leaving a gutter wide enough to drive
+     through. Name the label column and the rest goes to the text. */
+  table.labelled td:first-child,
+  table.labelled th:first-child { width: 12rem; }
+
+  /* ---- blocks ----
+     A panel with the accent on its leading edge. The colour says
+     what kind of thing it is; the shape never changes. */
+  .block {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-left: 4px solid var(--element-water);
+    border-radius: var(--radius);
+    padding: .8rem 1rem;
+    margin: 1rem 0;
+  }
+  .block--earth  { border-left-color: var(--element-earth); }
+  .block--air    { border-left-color: var(--element-air); }
+  .block--fire   { border-left-color: var(--element-fire); }
+  .block--water  { border-left-color: var(--element-water); }
+  .block--moira  { border-left-color: var(--element-moira); }
+  .block--danger { border-left-color: var(--danger); }
+
+  /* The loudest thing on a page, and rare on purpose: a rule the
+     whole game rests on, set apart so the eye finds it without
+     reading. Spending it on a derived stat spends it. */
+  .block.roll { text-align: center; font-size: 1.05rem; }
+  .block.roll p { margin: .25rem 0; }
+
+  /* A card's own title. Set in the heading face like every other
+     heading, but it is not a document heading - it names the thing
+     it sits inside, so it takes no rule and no section spacing. */
+  .block-title {
+    display: block; margin: 0 0 .3em;
+    color: var(--text);
+    font-family: var(--font-head); font-size: 1.15rem; letter-spacing: .02em;
+  }
+
+  /* ---- skill cards ----
+     The same card the printed book and the web book set, so a Skill
+     looks like a Skill wherever it is met. The left edge and the name
+     carry the Element; the flavour is the voice and the line under it
+     is the rule, which is the whole reason the two are set apart.
+     Values are brew.css's, by way of _layouts/webbook.html. */
+  .skill {
+    background: var(--panel);
+    border-left: 3px solid var(--accent);
+    border-radius: 3px;
+    padding: .8rem 1rem;
+    margin: 0 0 .7rem;
+  }
+  .skill > :first-child { margin-top: 0; }
+  .skill > :last-child { margin-bottom: 0; }
+
+  .skill-flavour { color: var(--accent); font-style: italic; margin: .2rem 0 .5rem; }
+
+  /* The Element, said once, beside the name. Called block-pill and
+     shaped like one because that is what the web book calls it - two
+     names for the same pill is how they ended up different shapes,
+     square here and fully rounded there. */
+  .block-pill {
+    display: inline-block;
+    margin-left: .5rem;
+    padding: .05rem .5rem;
+    border: 1px solid var(--panel-border);
+    border-radius: 999px;
+    color: var(--text-dim);
+    font-size: .72rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    vertical-align: .2em;
+  }
+
+  .skill--earth { border-left-color: var(--element-earth); }
+  .skill--air   { border-left-color: var(--element-air); }
+  .skill--fire  { border-left-color: var(--element-fire); }
+  .skill--water { border-left-color: var(--element-water); }
+  .skill--moira { border-left-color: var(--element-moira); }
+
+  .skill--earth .block-title, .skill--earth .skill-flavour { color: var(--element-earth); }
+  .skill--air   .block-title, .skill--air   .skill-flavour { color: var(--element-air); }
+  .skill--fire  .block-title, .skill--fire  .skill-flavour { color: var(--element-fire); }
+  .skill--water .block-title, .skill--water .skill-flavour { color: var(--element-water); }
+  .skill--moira .block-title, .skill--moira .skill-flavour { color: var(--element-moira); }
+
+  /* ---- the reference-sheet layout ----
+     Two columns on anything wide enough, and that includes paper.
+     The old rule was screen-only, so a sheet whose whole job was
+     to be printed went to the printer in one column. Letter is
+     about 740px inside its margins, which is why the print half of
+     this query carries no width test at all. */
+  @media screen and (min-width: 900px), print {
+    .cols { column-count: 2; column-gap: var(--gap); }
+
+    /* A page title belongs to the page, not to the left-hand
+       column. Without this the right column opens on a fragment
+       with no heading over it. */
+    .cols > h1 { column-span: all; }
+
+    .cols > h2, .cols > h3 { break-after: avoid; }
+    .cols > table, .cols > .block, .cols > p, .cols table { break-inside: avoid; }
+  }
+
+  /* ---- hub pages ----
+     Everything here is scoped to <body class="hub">. The class
+     names are not unique to these pages - license.html has an
+     .intro that is left-aligned body copy, the reference sheets
+     have a .note that is a subtitle rather than a footer - so an
+     unscoped rule would reach pages that mean something else by
+     the same word.
+
+     Five pages - rules-hub, downloads, character-options,
+     combat-equipment, gm-references - are the same page with
+     different links in it, and each carried its own copy of these
+     rules. The copies had already drifted: rules-hub's wordmark
+     was capped at min(220px, 60%) where the other four read
+     min(420px, 90%), so one page had been wearing a logo half the
+     size of its siblings for as long as nobody compared them. */
+  .hub main > header { text-align: center; padding: 1rem 0; }
+
+  /* A hub's title sits under a wordmark in a centred header, so it
+     drops the rule a reference sheet's title carries - a rule
+     across a centred block reads as a divider, not a heading. */
+  .hub main > header h1 {
+    font-size: 2rem; margin: 0;
+    padding-bottom: 0; border-bottom: none;
+  }
+
+  .hub .wordmark{ max-width: min(420px, 90%); height: auto; display: block; margin: 0 auto; }
+
+  .hub .eyebrow{
+    font-size: .78rem; text-transform: uppercase; letter-spacing: .14em;
+    color: var(--text-dim); margin: 0 0 .75rem;
+  }
+  .hub .subtitle{ color: var(--text-dim); margin: .5rem 0 0; }
+  .hub .intro{
+    color: var(--text-dim); text-align: center;
+    max-width: 640px; margin: 1rem auto 2rem;
+  }
+
+  /* One call to action per page, so it is a single button rather
+     than a row of them competing. */
+  .hub .cta{ display: flex; flex-direction: column; align-items: center; margin-bottom: 2.5rem; }
+  .hub .cta a{
+    background: var(--accent-dim); color: var(--text); text-decoration: none;
+    border: 1px solid var(--accent); border-radius: var(--radius);
+    padding: .9rem 1.75rem; font-size: 1.1rem; font-weight: 600;
+  }
+  .hub .cta a:hover{ background: var(--accent); color: var(--bg); }
+  .hub .cta-meta{ color: var(--text-dim); font-size: .85rem; margin-top: .5rem; }
+
+  .hub .doc-list{ display: flex; flex-direction: column; gap: .5rem; }
+  .hub .doc-card{
+    display: block; background: var(--panel);
+    border: 1px solid var(--panel-border); border-radius: var(--radius);
+    padding: .75rem 1rem; text-decoration: none; color: var(--text);
+  }
+  .hub .doc-card:hover{ border-color: var(--accent); }
+  .hub .doc-card .name{ font-weight: 600; }
+  .hub .doc-card .desc{ color: var(--text-dim); font-size: .9rem; margin-top: .15rem; }
+
+  /* Something that is linked but not ready yet. */
+  .hub .doc-card.soon{ opacity: .6; cursor: default; }
+  .hub .doc-card.soon:hover{ border-color: var(--panel-border); }
+
+  .hub .note{
+    color: var(--text-dim); font-size: .9rem;
+    margin-top: 2.5rem; padding-top: 1rem;
+    border-top: 1px solid var(--panel-border);
+  }
+
+  /* One sheet ends and the next begins: a seam on screen, a page
+     break on paper. */
+  .page-split {
+    border: none;
+    border-top: 2px dashed var(--panel-border);
+    margin: 2.5rem 0 0;
+  }
+}
+
+/* -------------------------------------------------------------
+   UTILITIES
+   ------------------------------------------------------------- */
+@layer utilities {
+  .sheet-note { color: var(--text-dim); font-size: .9rem; }
+}
+
+/* -------------------------------------------------------------
+   PRINT
+
+   The printed book is a designed object and prints dark, which is
+   brew.css's business. A web page prints on somebody's own paper
+   and their own toner, for something they will write on, so it
+   inverts. Same brand, different job.
+   ------------------------------------------------------------- */
+@media print {
+  :root {
+    --bg: #fff;
+    --panel: #fff;
+    --panel-border: #999;
+    --accent-dim: #eee;
+    --text: #000;
+    --text-dim: #444;
+  }
+
+  body { background: #fff; color: #000; }
+  main { max-width: none; padding: 0; }
+
+  /* Headings keep their face and their rules and lose their tint -
+     a teal heading off a mono printer is a grey one, weaker than
+     black. */
+  h1, h2, h3 { color: #000; }
+
+  /* Browsers drop backgrounds by default, so nothing may depend on
+     one: a block still has to read as a block from its border. */
+  .block { border-left-color: #000; }
+
+  .page-split { break-after: page; border: none; margin: 0; }
+  .no-print { display: none !important; }
+
+  /* Site furniture is for navigating the site. On paper it is a
+     dark bar and a hamburger button across the top of page one,
+     which is what every reference sheet has been printing. */
+  .site-nav, .skip-link { display: none !important; }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* Nothing is worth one line on its own at a page turn. */
+  p, li { orphans: 2; widows: 2; }
+}

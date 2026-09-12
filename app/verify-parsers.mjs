@@ -72,7 +72,7 @@ const checks = [
   ['parseNatures              (fate.md)', () => parseNatures(md('fate.md'))],
   ['parseResources            (resources.md)', () => parseResources(md('resources.md'))],
   ['parseSkillTiers           (skills.md)', () => parseSkillTiers(md('skills.md'))],
-  ['parseSkillCatalog         (premade-skills.md)', () => parseSkillCatalog(md('premade-skills.md'))],
+  ['parseSkillCatalog         (skills.md)', () => parseSkillCatalog(md('skills.md'))],
   ['parseEquipment            (weapons.md)', () => parseEquipment(weaponsMd)],
   ['parseEverymanGearPackages (weapons.md)', () => parseEverymanGearPackages(weaponsMd)],
 ];
@@ -153,7 +153,7 @@ try {
   parseEverymanGearPackages(weaponsMd).forEach((l) =>
     chk(l.packages.length, `Everyman gear Level ${l.level}: no packages`));
 
-  parseSkillCatalog(md('premade-skills.md')).forEach((s) =>
+  parseSkillCatalog(md('skills.md')).forEach((s) =>
     chk(s.name && s.defaultElement && s.definition,
       `Skill "${s.name}": missing Element or definition`));
   parseSkillTiers(md('skills.md')).forEach((t) =>

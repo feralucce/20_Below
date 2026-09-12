@@ -7,158 +7,49 @@ nav_section: combat
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>20 Below - Combat &amp; Equipment</title>
-<meta name="description" content="Fate, weapons and gear, Status Effects, Scars, and the Difficulty Chart - everything you need at the table once a scene turns physical." />
-<link rel="icon" type="image/x-icon" href="docs/assets/brand/favicon.ico" />
-<link rel="icon" type="image/png" sizes="32x32" href="docs/assets/brand/favicon-32.png" />
-<link rel="apple-touch-icon" href="docs/assets/brand/favicon-128.png" />
+<meta name="description" content="Weapons and gear, what they cost at creation, and what happens to a character when a fight goes badly." />
+{% include brand-head.html %}
 <style>
-  :root {
-    --bg: #0a1720;
-    --panel: #12232e;
-    --panel-border: #24404f;
-    --text: #eaf5fb;
-    --text-dim: #8fadbe;
-    --accent: #3d84c4;
-    --accent-dim: #1c3548;
-    --radius: 8px;
-    font-family: "Segoe UI", system-ui, sans-serif;
-  }
-  * { box-sizing: border-box; }
+  /* Colour, type and the shared components live in
+     docs/assets/css/20below.css. What is left here is
+     this page's own. */
+  /* This page's own measure - how wide its text column
+     runs is a decision about this page, not the brand. */
+  :root { --measure: 900px; }
+
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
     min-height: 100vh;
   }
-
-
-  main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 4rem;
-  }
   header {
-    text-align: center;
     padding: 1rem 0 1rem;
-  }
-  h1 {
-    margin: 0;
-    letter-spacing: 0.02em;
-    font-size: 2rem;
-  }
-  .eyebrow {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--text-dim);
-    margin: 0 0 0.75rem;
-  }
-  .subtitle {
-    color: var(--text-dim);
-    margin: 0.5rem 0 0;
+    text-align: center;
   }
   .intro {
-    color: var(--text-dim);
-    text-align: center;
-    max-width: 640px;
-    margin: 1rem auto 2rem;
     line-height: 1.5;
-  }
-  .wordmark {
-    max-width: min(420px, 90%);
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  .cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2.5rem;
-  }
-  .cta a {
-    background: var(--accent-dim);
-    color: var(--text);
-    text-decoration: none;
-    border: 1px solid var(--accent);
-    border-radius: var(--radius);
-    padding: 0.9rem 1.75rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-  .cta a:hover {
-    background: var(--accent);
-    color: var(--bg);
-  }
-  .cta-meta {
-    color: var(--text-dim);
-    font-size: 0.85rem;
-    margin-top: 0.5rem;
-  }
-  h2 {
-    border-bottom: 1px solid var(--panel-border);
-    padding-bottom: 0.4rem;
-    margin-top: 2.5rem;
-  }
-  .doc-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .doc-card {
-    display: block;
-    background: var(--panel);
-    border: 1px solid var(--panel-border);
-    border-radius: var(--radius);
-    padding: 0.75rem 1rem;
-    text-decoration: none;
-    color: var(--text);
-  }
-  .doc-card:hover {
-    border-color: var(--accent);
-  }
-  .doc-card .name {
-    font-weight: 600;
-  }
-  .doc-card .desc {
-    color: var(--text-dim);
-    font-size: 0.9rem;
-    margin-top: 0.15rem;
   }
   .note {
-    color: var(--text-dim);
-    font-size: 0.9rem;
     line-height: 1.5;
-    margin-top: 2.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--panel-border);
   }
-  a { color: var(--accent); }
 </style>
-<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
-<body>
+<body class="hub">
 {% include site-nav.html %}
 <main id="main">
   <header>
     <p class="eyebrow">At the Table</p>
     <h1>Combat &amp; Equipment</h1>
-    <p class="subtitle">Fate, gear, and what happens when a fight goes badly - the reference material for actual play.</p>
+    <p class="subtitle">Gear, and what happens when a fight goes badly.</p>
   </header>
 
-  <h2>Fate &amp; Equipment</h2>
+  <h2>Gear</h2>
   <div class="doc-list">
-    <a class="doc-card" href="rules/fate.html">
-      <div class="name">Fate</div>
-      <div class="desc">Nature, Fate Tokens, Kotodama, and Ki's fatigue economy.</div>
-    </a>
-    <a class="doc-card" href="rules/weapons.html">
+    <a class="doc-card" href="webbook/equipment.html">
       <div class="name">Equipment</div>
-      <div class="desc">Weapon dice, range, and ammo, plus armor and general gear.</div>
+      <div class="desc">Weapons, armor and gear, with the full catalog and what each Wealth rating buys.</div>
     </a>
     <a class="doc-card" href="docs/creation-wealth-reference.html">
       <div class="name">Creation-Wealth Reference</div>
-      <div class="desc">How gear shopping actually works at character creation, spelled out step by step.</div>
+      <div class="desc">The shopping procedure at character creation, which runs on its own rules rather than the general Resource one.</div>
     </a>
   </div>
 

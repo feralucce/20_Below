@@ -8,47 +8,24 @@ nav_section: license
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>20 Below - ORC License</title>
 <meta name="description" content="20 Below is released under the ORC License so anyone can build for it - write adventures, design settings, publish and sell your own supplements, free of the mechanics themselves." />
-<link rel="icon" type="image/x-icon" href="docs/assets/brand/favicon.ico" />
-<link rel="icon" type="image/png" sizes="32x32" href="docs/assets/brand/favicon-32.png" />
-<link rel="apple-touch-icon" href="docs/assets/brand/favicon-128.png" />
+{% include brand-head.html %}
 <style>
-  :root {
-    --bg: #0a1720;
-    --panel: #12232e;
-    --panel-border: #24404f;
-    --text: #eaf5fb;
-    --text-dim: #8fadbe;
-    --accent: #3d84c4;
-    --accent-dim: #1c3548;
-    --radius: 8px;
-    font-family: "Segoe UI", system-ui, sans-serif;
-  }
-  * { box-sizing: border-box; }
+  /* Colour, type and the shared components live in
+     docs/assets/css/20below.css. What is left here is
+     this page's own. */
+  /* This page's own measure - how wide its text column
+     runs is a decision about this page, not the brand. */
+  :root { --measure: 780px; }
+
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
     min-height: 100vh;
   }
-
-
-
-  main {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 4rem;
-  }
-  a { color: var(--accent); }
   .eyebrow {
     font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.14em;
     color: var(--text-dim);
     margin: 1.5rem 0 0.5rem;
-  }
-  h1 {
-    margin: 0 0 0.75rem;
-    letter-spacing: 0.02em;
   }
   .intro {
     color: var(--text-dim);
@@ -63,11 +40,6 @@ nav_section: license
     padding: 1.1rem 1.4rem;
     margin-bottom: 2.5rem;
     line-height: 1.6;
-  }
-  h2 {
-    border-bottom: 1px solid var(--panel-border);
-    padding-bottom: 0.4rem;
-    margin-top: 2.5rem;
   }
   .breakdown {
     display: flex;
@@ -129,7 +101,6 @@ nav_section: license
     border-top: 1px solid var(--panel-border);
   }
 </style>
-<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
 <body>
 {% include site-nav.html %}

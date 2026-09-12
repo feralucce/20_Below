@@ -166,6 +166,18 @@
     margin: 1rem 0 1.5rem;
     font-size: 0.95rem;
   }
+  /* ::: wide - in print this breaks out of the two columns. A web page
+     has one column already, so there is nothing to break out of and the
+     block is just a titled group. What it does need is somewhere for a
+     table built for a 6in page to go: the weapon-Skill ladder is five
+     columns, and on a narrow screen it has to scroll inside itself
+     rather than shove the whole page sideways. */
+  .wide {
+    margin: 1rem 0 1.5rem;
+    overflow-x: auto;
+  }
+  .wide > :last-child { margin-bottom: 0; }
+  .wide > .block-title { font-size: 1.15rem; }
   th, td {
     border: 1px solid var(--panel-border);
     padding: 0.5rem 0.7rem;
@@ -347,6 +359,184 @@
   .skill--fire .block-title, .skill--fire  .skill-flavour { color: var(--v-fire); }
   .skill--water .block-title, .skill--water .skill-flavour { color: var(--v-water); }
   .skill--moira .block-title, .skill--moira .skill-flavour { color: var(--v-moira); }
+
+  /* ---- entry cards: Gifts, Boons, Resources, Flaws ----
+     Values are brew.css's, converted from points to rem. Four chapters
+     of the book are almost entirely these, and until they were wired in
+     the web edition had none of them - nine hundred cards' worth of
+     structure rendering as unbroken prose.
+
+     The shape is the same throughout: a panel with a coloured leading
+     edge, the name in the heading face, the flavour line in the card's
+     own colour above the rule it introduces. What changes is the hue -
+     a Gift is Moira, a Flaw is danger, a Boon and a Resource take the
+     accent - so a reader can tell what kind of thing they are looking
+     at before reading a word of it. */
+  .gift, .flaw, .boon, .resource {
+    background: var(--panel);
+    border-left: 3px solid var(--accent);
+    border-radius: 3px;
+    padding: 0.7rem 0.9rem;
+    margin: 0 0 0.7rem;
+  }
+  .gift { border-left-color: var(--v-moira); }
+  .flaw { border-left-color: var(--v-danger); }
+  .gift > :last-child, .flaw > :last-child,
+  .boon > :last-child, .resource > :last-child { margin-bottom: 0; }
+
+  .gift-name, .flaw-name, .boon-name, .resource-name {
+    display: block;
+    font-family: "Bebas Neue", "Segoe UI", system-ui, sans-serif;
+    font-size: 1.35rem;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    color: var(--text);
+  }
+
+  .gift-flavour, .flaw-flavour, .boon-flavour, .resource-flavour {
+    font-style: italic;
+    margin: 0.25rem 0 0.5rem;
+    color: var(--accent);
+  }
+  .gift-flavour { color: var(--v-moira); }
+  .flaw-flavour { color: var(--v-danger); }
+  .gift-flavour > p, .flaw-flavour > p,
+  .boon-flavour > p, .resource-flavour > p { margin: 0; }
+
+  /* The five levels. The leading edge deepens as the level climbs, so
+     the ladder is visible before it is read. */
+  /* Not a flex row, unlike the printed version. The renderer marks the
+     block markdown="1", so the level's content comes back wrapped in a
+     <p> and the number is inline inside it - a flex container here has
+     exactly one child and never reaches the number at all. The number
+     is a pill in its own right instead. */
+  .gift-level, .flaw-level, .resource-level {
+    position: relative;
+    margin: 0.2rem 0;
+    padding: 0.3rem 0.5rem 0.3rem 0.7rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 2px;
+  }
+  .gift-level::before, .flaw-level::before, .resource-level::before {
+    content: "";
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--accent);
+    opacity: 0.35;
+  }
+  .gift-level::before { background: var(--v-moira); }
+  .flaw-level::before { background: var(--v-danger); }
+  .gift-level--1::before, .flaw-level--1::before, .resource-level--1::before { opacity: 0.35; }
+  .gift-level--2::before, .flaw-level--2::before, .resource-level--2::before { opacity: 0.5; }
+  .gift-level--3::before, .flaw-level--3::before, .resource-level--3::before { opacity: 0.65; }
+  .gift-level--4::before, .flaw-level--4::before, .resource-level--4::before { opacity: 0.82; }
+  .gift-level--5::before, .flaw-level--5::before, .resource-level--5::before { opacity: 1; }
+  .gift-level > p, .flaw-level > p, .resource-level > p { margin: 0; }
+
+  .gift-n, .flaw-n, .resource-n {
+    display: inline-block;
+    min-width: 1.4em;
+    margin-right: 0.5em;
+    padding: 0 0.25em;
+    text-align: center;
+    background: var(--accent-dim);
+    border-radius: 2px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--v-moira);
+  }
+  .flaw-n { color: var(--v-danger); }
+  .resource-n { color: var(--accent); }
+
+  /* Adders and Limiters are labelled runs rather than numbered ones, so
+     they are picked out by their heading and their edge colour. */
+  .gift-section {
+    display: block;
+    margin: 0.6rem 0 0.25rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .gift-opt {
+    border-left: 2px solid var(--panel-border);
+    padding-left: 0.6rem;
+    margin: 0.2rem 0 0.2rem 0.2rem;
+  }
+  .gift-opt > p { margin: 0; }
+  .gift-opt--adder { border-left-color: var(--v-pc); }
+  .gift-opt--limiter { border-left-color: var(--v-danger); }
+
+  /* A Boon's price, said once, beside its name. */
+  .boon-cost {
+    display: inline-block;
+    margin-left: 0.45em;
+    padding: 0.05em 0.4em;
+    border: 1px solid var(--panel-border);
+    border-radius: 3px;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    vertical-align: 0.15em;
+  }
+  .boon-tier {
+    border-left: 2px solid var(--panel-border);
+    padding-left: 0.6rem;
+    margin: 0.35rem 0 0.35rem 0.2rem;
+  }
+  .boon-tier > p { margin: 0 0 0.25rem; }
+  .boon-tier > :last-child { margin-bottom: 0; }
+
+  /* ---- blocks no chapter uses yet ----
+     ::: roll, ::: stat and ::: figure are part of the Brewery's syntax
+     and styled in brew.css, and nothing in the book reaches for them
+     today. The coverage check only fires on a class a chapter actually
+     emits, so without these the first chapter to use one would render
+     it as plain paragraphs and the check would say so only after the
+     fact. Cheaper to have them waiting. */
+  .roll-box {
+    background: var(--accent-dim);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 0.6rem 0.9rem;
+    margin: 1rem 0;
+    text-align: center;
+    font-family: "Bebas Neue", "Segoe UI", system-ui, sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+  }
+  .roll-box > :last-child { margin-bottom: 0; }
+
+  .stat {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 0.7rem 0.9rem;
+    margin: 0 0 0.9rem;
+  }
+  .stat > :last-child { margin-bottom: 0; }
+  /* The stat line is picked out by the middot the Adversary Index
+     already uses, so an existing block pastes in with nothing to
+     rewrite. */
+  .stat-line {
+    margin: 0.3rem 0;
+    padding: 0.3rem 0.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 2px;
+    font-size: 0.92rem;
+  }
+  .stat-line > p { margin: 0; }
+
+  .figure { margin: 0 0 0.9rem; }
+  .figure img { max-width: 100%; height: auto; display: block; }
+  .caption {
+    margin: 0.4rem 0 0;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    text-align: center;
+  }
 
   .box--text { border-color: var(--panel-border); }
   /* The Player and GM exchange. Speeches, not paragraphs, so they are set

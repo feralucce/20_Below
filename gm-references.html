@@ -8,136 +8,31 @@ nav_section: gm
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>20 Below - GM References</title>
 <meta name="description" content="Ready-to-run stat blocks for GMs - mundane animals, American folklore cryptids, and original urban-fantasy Nightmare Creatures." />
-<link rel="icon" type="image/x-icon" href="docs/assets/brand/favicon.ico" />
-<link rel="icon" type="image/png" sizes="32x32" href="docs/assets/brand/favicon-32.png" />
-<link rel="apple-touch-icon" href="docs/assets/brand/favicon-128.png" />
+{% include brand-head.html %}
 <style>
-  :root {
-    --bg: #0a1720;
-    --panel: #12232e;
-    --panel-border: #24404f;
-    --text: #eaf5fb;
-    --text-dim: #8fadbe;
-    --accent: #3d84c4;
-    --accent-dim: #1c3548;
-    --radius: 8px;
-    font-family: "Segoe UI", system-ui, sans-serif;
-  }
-  * { box-sizing: border-box; }
+  /* Colour, type and the shared components live in
+     docs/assets/css/20below.css. What is left here is
+     this page's own. */
+  /* This page's own measure - how wide its text column
+     runs is a decision about this page, not the brand. */
+  :root { --measure: 900px; }
+
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
     min-height: 100vh;
   }
-
-
-  main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 4rem;
-  }
   header {
-    text-align: center;
     padding: 1rem 0 1rem;
-  }
-  h1 {
-    margin: 0;
-    letter-spacing: 0.02em;
-    font-size: 2rem;
-  }
-  .eyebrow {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--text-dim);
-    margin: 0 0 0.75rem;
-  }
-  .subtitle {
-    color: var(--text-dim);
-    margin: 0.5rem 0 0;
+    text-align: center;
   }
   .intro {
-    color: var(--text-dim);
-    text-align: center;
-    max-width: 640px;
-    margin: 1rem auto 2rem;
     line-height: 1.5;
-  }
-  .wordmark {
-    max-width: min(420px, 90%);
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  .cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2.5rem;
-  }
-  .cta a {
-    background: var(--accent-dim);
-    color: var(--text);
-    text-decoration: none;
-    border: 1px solid var(--accent);
-    border-radius: var(--radius);
-    padding: 0.9rem 1.75rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-  .cta a:hover {
-    background: var(--accent);
-    color: var(--bg);
-  }
-  .cta-meta {
-    color: var(--text-dim);
-    font-size: 0.85rem;
-    margin-top: 0.5rem;
-  }
-  h2 {
-    border-bottom: 1px solid var(--panel-border);
-    padding-bottom: 0.4rem;
-    margin-top: 2.5rem;
-  }
-  .doc-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .doc-card {
-    display: block;
-    background: var(--panel);
-    border: 1px solid var(--panel-border);
-    border-radius: var(--radius);
-    padding: 0.75rem 1rem;
-    text-decoration: none;
-    color: var(--text);
-  }
-  .doc-card:hover {
-    border-color: var(--accent);
-  }
-  .doc-card .name {
-    font-weight: 600;
-  }
-  .doc-card .desc {
-    color: var(--text-dim);
-    font-size: 0.9rem;
-    margin-top: 0.15rem;
   }
   .note {
-    color: var(--text-dim);
-    font-size: 0.9rem;
     line-height: 1.5;
-    margin-top: 2.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--panel-border);
   }
-  a { color: var(--accent); }
 </style>
-<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
-<body>
+<body class="hub">
 {% include site-nav.html %}
 <main id="main">
   <header>
@@ -158,25 +53,22 @@ nav_section: gm
   <div class="doc-list">
     <a class="doc-card" href="rules/adversary-index.html">
       <div class="name">Adversary Index</div>
-      <div class="desc">Ready-to-run stat blocks: mundane animals, plus a reusable Dire/Giant/Mutated variant template.</div>
+      <div class="desc">Every threat a party might face, with everything needed to run it at the table.</div>
     </a>
     <a class="doc-card" href="rules/cryptids.html">
       <div class="name">Cryptids</div>
-      <div class="desc">American folklore creatures, treated as real but rare in a modern setting.</div>
+      <div class="desc">Folkloric creatures, statted and ready for a modern setting.</div>
     </a>
     <a class="doc-card" href="rules/nightmare-creatures.html">
       <div class="name">Nightmare Creatures</div>
-      <div class="desc">Original urban-fantasy and horror archetypes, built entirely on the system's own mechanics.</div>
+      <div class="desc">Original urban-fantasy horrors, built to unsettle rather than to be recognised.</div>
+    </a>
+    <a class="doc-card" href="rules/encounters.html">
+      <div class="name">Encounters</div>
+      <div class="desc">The arithmetic for weighing a fight and building your own adversaries.</div>
     </a>
   </div>
 
-  <h2>Quick Reference</h2>
-  <div class="doc-list">
-    <a class="doc-card" href="docs/louis-reference-chart.html">
-      <div class="name">Difficulty Chart</div>
-      <div class="desc">Quick-reference copy of the color-coded Difficulty Chart.</div>
-    </a>
-  </div>
 
   <h2>Tools</h2>
   <div class="doc-list">
@@ -184,13 +76,13 @@ nav_section: gm
       <div class="name">20 Below Battle Tracker</div>
       <div class="desc">Import PCs and NPCs, roll Initiative, declare Action Brackets with Ki bumps, and track Health, Poise, Sanity and Ki through the turn order. The same tracker runs as an Owlbear Rodeo extension and as a desktop app.</div>
     </a>
+    <a class="doc-card" href="prep/index.html" target="_blank" rel="noopener">
+      <div class="name">Encounter Difficulty Calculator</div>
+      <div class="desc">Load the party once, then build a fight and see what it costs before anyone sits down. Runs in a browser and as a desktop app.</div>
+    </a>
     <a class="doc-card" href="brew/index.html" target="_blank" rel="noopener">
       <div class="name">The Brewery</div>
       <div class="desc">Write in plain markdown and it lays the page out in the system's own typefaces and colours, then prints to PDF - two columns, sidebars, callout boxes, roll stamps, and a print mode with the gutters and bleed a print-on-demand service expects. The same tool the core book is made with, and it also runs as a desktop app.</div>
-    </a>
-    <a class="doc-card" href="docs/style-guide.html">
-      <div class="name">Style Guide</div>
-      <div class="desc">The colours and typefaces the books are built from, with hex codes you can paste straight into your layout. Handy if you are making something for 20 Below and want it to sit on the shelf next to the core book without looking like a stranger.</div>
     </a>
   </div>
 

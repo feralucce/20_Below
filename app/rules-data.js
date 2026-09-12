@@ -15,13 +15,12 @@ import { parseEquipment, parseEverymanGearPackages } from './parse/weapons.js';
 // Import) - both need the same parsed rules shape to build createInitialState
 // against, so this lives on its own rather than duplicated in each entry point.
 export async function loadRulesData() {
-  const [creationMd, fateMd, skillsMd, premadeMd, boonsMd, resourcesMd, giftsMd, flawsMd, rulesMd, costsMd, weaponsMd] =
+  const [creationMd, fateMd, skillsMd, boonsMd, resourcesMd, giftsMd, flawsMd, rulesMd, costsMd, weaponsMd] =
     await Promise.all(
       [
         '../rules/character-creation.md',
         '../rules/fate.md',
         '../rules/skills.md',
-        '../rules/premade-skills.md',
         '../rules/boons.md',
         '../rules/resources.md',
         '../rules/gifts.md',
@@ -45,7 +44,7 @@ export async function loadRulesData() {
     everymanSkills: parseEverymanSkills(creationMd),
     natures: parseNatures(fateMd),
     skillTiers: parseSkillTiers(skillsMd),
-    skillCatalog: parseSkillCatalog(premadeMd),
+    skillCatalog: parseSkillCatalog(skillsMd),
     boons: parseBoons(boonsMd),
     resources: parseResources(resourcesMd),
     gifts: parseGifts(giftsMd, costs.giftAdderCost),

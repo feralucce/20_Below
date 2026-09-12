@@ -1,6 +1,6 @@
 # Web Book
 
-The web edition of the 20 Below Player's Guide — the same content as the print
+The web edition of the 20 Below Player's Guide - the same content as the print
 manuscript, with web affordances in place of page references. Generated from the
 manuscript.
 
@@ -9,7 +9,7 @@ in the manuscript.
 
 Not to be confused with `rules/`, which is the machine-readable contract the character
 creator parses and is authored separately. Changing a heading or table there breaks the
-app silently — see `srd-compilation.md` in the private notes.
+app silently - see `srd-compilation.md` in the private notes.
 
 ## Building it
 
@@ -22,7 +22,7 @@ with Jekyll front matter so the site renders it through `_layouts/webbook.html`.
 
 Chapters are listed explicitly at the top of that script rather than discovered, because
 publishing is a decision rather than a side effect of a chapter existing. **Chapter 13,
-Running the Game, is deliberately absent** — it is a 400-word stub. Add it to the list when
+Running the Game, is deliberately absent** - it is a 400-word stub. Add it to the list when
 it is written; nothing else needs changing.
 
 ## Prose from the book, tables from the rules
