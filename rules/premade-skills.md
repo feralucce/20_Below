@@ -14,7 +14,7 @@ A starting Skill list scoped to a **modern-world base campaign**. Per [skills.md
 | Acrobatics | Air | Balance, tumbling, and controlled falls. |
 | Animal Handling | Water | Training, calming, and directing animals. |
 | Appraisal | Air | Judging the value and authenticity of goods. |
-| Archery | Air | Bows and crossbows - drawing, aiming, and loosing a mechanically stored-energy ranged weapon. Kept as a distinct niche Skill in a modern setting rather than merged into Firearms, since almost nobody trains it as a byproduct of anything else. |
+| Archery | Air | Which bows you are trained on, by Category: hand crossbow, then crossbow, recurve, compound, and the warbow at Master. Not rolled - see [skills.md](skills.md#weapon-skills-are-not-attack-skills). |
 | Athletics | Earth | Running, jumping, climbing, and lifting under exertion. |
 | Barter | Fire | Striking favorable trades and deals. |
 | Bribery | Air | Knowing how much, how, and who to pay to get what you want. |
@@ -39,7 +39,7 @@ A starting Skill list scoped to a **modern-world base campaign**. Per [skills.md
 | Etiquette | Fire | Navigating social and professional protocol correctly. |
 | Farming | Earth | Cultivating crops and managing livestock. |
 | Finance | Air | Economics, markets, and accounting. |
-| Firearms | Air | Handguns, long guns, and other modern ranged weapons, covered broadly under one Skill. |
+| Firearms | Air | Which firearms you are trained on, by Category: handgun, then shotgun, submachine gun, rifle, and the heavy weapons at Master. Not rolled - see [skills.md](skills.md#weapon-skills-are-not-attack-skills). |
 | First Aid | Water | Immediate, field-level treatment - stabilizing, bandaging, CPR. |
 | Fishing | Water | Catching fish by line, net, or spear. |
 | Forgery | Air | Producing convincing fake documents, signatures, IDs, and digital records. |
@@ -48,7 +48,6 @@ A starting Skill list scoped to a **modern-world base campaign**. Per [skills.md
 | Holistic Medicine | Water | Herbal remedies, folk medicine, and non-clinical healing traditions. |
 | Housekeeping | Earth | Running and maintaining a household efficiently. |
 | Hunting | Moira | Tracking, catching, and field-dressing game - the hunter's instinct for where the quarry will be, not just the physical stalk. |
-| Improvised Weapons | Water | Fighting effectively with whatever's at hand - a chair, a bottle, a tire iron - instead of a purpose-built weapon. |
 | Insight | Moira | Reading people, sensing motive and deception - an uncanny read that goes past ordinary empathy, closer to a hunch that turns out right. |
 | Interrogation | Fire | Extracting information from an unwilling subject. |
 | Intimidation | Fire | Coercing others through implied or explicit threat. |
@@ -60,8 +59,8 @@ A starting Skill list scoped to a **modern-world base campaign**. Per [skills.md
 | Linguistics | Air | Learning, translating, and analyzing languages. |
 | Literacy | Air | Reading and writing in a specific language, distinct from speaking it. |
 | Mechanics | Earth | Repair and maintenance of vehicles and machinery. |
+| Melee Weapons | Earth | Which melee weapons you are trained on, by Category: improvised and knives, then one-handed blunt and large blades, one-handed blades, polearms and two-handers, and the exotic ones at Master. Not rolled - see [skills.md](skills.md#weapon-skills-are-not-attack-skills). |
 | Medicine | Water | Surgery, diagnosis, and long-term clinical treatment. |
-| Melee Combat | Earth | Bladed, blunt, or improvised weapons at arm's reach. |
 | Natural World | Water | Knowledge of flora, fauna, ecosystems, and the environment. |
 | Navigation | Moira | Plotting a course and avoiding getting lost, on foot, by vehicle, or otherwise - an uncanny knack for finding the way, not just dead reckoning. |
 | Networking | Fire | Building and leveraging connections in professional, corporate, or elite circles. |
@@ -86,7 +85,7 @@ A starting Skill list scoped to a **modern-world base campaign**. Per [skills.md
 | Signal & Cipher | Air | Radio codes, hand signs, and other non-verbal communication systems. |
 | Sleight of Hand | Air | Pickpocketing, palming, and planting objects unnoticed. |
 | Smuggling | Water | Concealing and moving contraband past scrutiny - including modern screening and customs. |
-| Special Weapons | Context-dependent | An exception to the broad-skill norm: a single specific exotic or restricted-access weapon system (a particular explosive device, a military-grade platform, a supernatural armament). Defined per character as it comes up, not a default anyone starts with - including its Default Element. |
+| Special Weapons | Context-dependent | An exception to the broad-Skill norm: one specific exotic or restricted-access weapon system - a particular explosive, a military platform, a supernatural armament - defined per character rather than started with. Covers the exotic ranged weapons too: blowgun, net launcher, flare gun. Not rolled. |
 | Stealth | Air | Moving unseen and unheard. |
 | Stewardship | Air | Managing a budget, staff, property, or organization's resources. |
 | Streetwise | Moira | Navigating criminal culture, gangs, and underworld contacts - a knack for being in the right place, reading the city's undercurrents by instinct as much as legwork. |
@@ -95,10 +94,9 @@ A starting Skill list scoped to a **modern-world base campaign**. Per [skills.md
 | Swimming | Earth | Moving efficiently and enduring in open water. |
 | Systems Operation | Air | Operating and interpreting complex consoles, sensors, and industrial or vehicle control systems. |
 | Tactics | Air | Planning and directing group action, especially in conflict, without doing the fighting yourself. |
-| Thrown Weapons | Air | Knives, javelins, axes, and other bladed or weighted weapons thrown by hand - a different body mechanic and skillset from Archery's draw-and-release. |
+| Thrown Weapons | Air | Which thrown weapons you are trained on, by Category: balanced blade, then thrown axe, shafted, returning, and the sling at Master. Not rolled - see [skills.md](skills.md#weapon-skills-are-not-attack-skills). |
 | Tracking | Moira | Following physical trails - a nose for which way the trail actually goes, not pure spoor-reading. |
 | Tradecraft | Water | Spy fieldcraft - dead drops, signals, cover identities, evasion, counter-surveillance. |
-| Unarmed Combat | Earth | Brawling, martial arts, and grappling. Also the attacker's Skill for the Grapple maneuver once [rules.md](rules.md) defines one. |
 | Veterinary Medicine | Water | Diagnosing and treating animals. |
 
 ## Everyman Skills

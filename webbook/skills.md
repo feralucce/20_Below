@@ -121,7 +121,7 @@ Judging the value and authenticity of goods.
 <p class="entry-head"><span class="entry-name">Archery</span><span class="entry-tag">Air</span></p>
 <p class="entry-flavour">Draw, settle, breathe out, let go. The same four things they’ve always been, and the string still won’t forgive a flinch.</p>
 
-Bows and crossbows. This Skill is distinct from Firearms. The two share some instincts about wind and distance, but the training doesn’t transfer in either direction.
+Which bows you are trained to draw, by Category: a hand crossbow first, then a crossbow, a recurve, a compound, and the warbow last. You do not roll it to shoot - a to-hit is your Element against their Defense, the same for everyone. What this says is which of them you can pick up and use.
 </div>
 
 <div class="entry" markdown="1">
@@ -296,7 +296,7 @@ Economics, markets, and accounting.
 <p class="entry-head"><span class="entry-name">Firearms</span><span class="entry-tag">Air</span></p>
 <p class="entry-flavour">It’s a machine for putting a small thing exactly where you’re looking. Everything hard about it lives in the word exactly.</p>
 
-Handguns, long guns, and other modern ranged weapons, under one Skill.
+Which firearms you are trained on, by Category: a handgun first, then a shotgun, a submachine gun, a rifle, and the heavy weapons last. You do not roll it to shoot. What it says is which of them you can pick up and use.
 </div>
 
 <div class="entry" markdown="1">
@@ -353,13 +353,6 @@ Running and maintaining a household efficiently.
 <p class="entry-flavour">You’re not looking for the animal. You’re looking for where the animal has to be, and getting there first.</p>
 
 Tracking, catching, and field-dressing game.
-</div>
-
-<div class="entry" markdown="1">
-<p class="entry-head"><span class="entry-name">Improvised Weapons</span><span class="entry-tag">Water</span></p>
-<p class="entry-flavour">There’s no weapon in the room. There is a chair, a bottle, and a tire iron, and you’ve stopped seeing the difference.</p>
-
-Fighting effectively with whatever’s at hand instead of a purpose-built weapon.
 </div>
 
 <div class="entry" markdown="1">
@@ -440,17 +433,17 @@ Repair and maintenance of vehicles and machinery.
 </div>
 
 <div class="entry" markdown="1">
+<p class="entry-head"><span class="entry-name">Melee Weapons</span><span class="entry-tag">Earth</span></p>
+<p class="entry-flavour">Everything here is a lever or an edge, and both want looking after. The one you neglected is the one that turns in your hand.</p>
+
+Which melee weapons you are trained on, by Category: improvised things and knives first, then one-handed blunt weapons and large blades, then one-handed blades, then polearms and two-handers, and the exotic ones last. You do not roll it to swing. A to-hit is your Element against their Defense and it is the same roll whether you have held a sword before or not. What this says is which ones you can pick up.
+</div>
+
+<div class="entry" markdown="1">
 <p class="entry-head"><span class="entry-name">Medicine</span><span class="entry-tag">Water</span></p>
 <p class="entry-flavour">Diagnosis is mostly ruling things out. What’s left is either the answer or the thing you missed.</p>
 
 Surgery, diagnosis, and long-term clinical treatment.
-</div>
-
-<div class="entry" markdown="1">
-<p class="entry-head"><span class="entry-name">Melee Combat</span><span class="entry-tag">Earth</span></p>
-<p class="entry-flavour">Reach, timing, and the willingness to close. Most fights are decided by the third one.</p>
-
-Bladed, blunt, or improvised weapons at arm’s reach.
 </div>
 
 <div class="entry" markdown="1">
@@ -688,7 +681,7 @@ Planning and directing group action, especially in conflict, without doing the f
 <p class="entry-head"><span class="entry-name">Thrown Weapons</span><span class="entry-tag">Air</span></p>
 <p class="entry-flavour">Distance, spin, and one moment to let go.</p>
 
-Knives, javelins, axes, and other weapons thrown by hand. The instincts are their own; a good archer is not automatically a good thrower.
+Which thrown weapons you are trained on, by Category: a balanced blade first, then a thrown axe, a shafted weapon, a returning one, and the sling last, because the sling takes years. You do not roll it to throw.
 </div>
 
 <div class="entry" markdown="1">
@@ -703,13 +696,6 @@ Following physical trails.
 <p class="entry-flavour">Dead drops, signals, cover, and the discipline to be forgettable on purpose.</p>
 
 Spy fieldcraft - dead drops, signals, cover identities, evasion, counter-surveillance.
-</div>
-
-<div class="entry" markdown="1">
-<p class="entry-head"><span class="entry-name">Unarmed Combat</span><span class="entry-tag">Earth</span></p>
-<p class="entry-flavour">No reach, no edge, nothing between you and them.</p>
-
-Brawling, martial arts, and grappling. Also the attacker’s Skill when taking hold of someone who doesn’t want to be held.
 </div>
 
 <div class="entry" markdown="1">

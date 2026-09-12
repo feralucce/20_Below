@@ -40,30 +40,30 @@ Attacking a target within a weapon’s **Normal** range carries no penalty. Atta
 | Battle spear | Polearm / two-handed | 5 | Melee | - | - | 2 |
 | Bayonet | Knife | 3 | Melee | - | - | 1 |
 | Black powder pistol | Handgun | 3 | 10m / 25m | 1 round | Slow action | 1 |
-| Blowgun | Exotic | 1 | 8m / 15m | 1 per shot | - | 1 |
-| Boomerang | Thrown | 2 | 10m / 20m | 1 per throw (returns) | - | 1 |
-| Chain whip | Exotic | 3 | Melee | - | - | 2 |
+| Blowgun | Exotic (ranged) | 1 | 8m / 15m | 1 per shot | - | 1 |
+| Boomerang | Returning | 2 | 10m / 20m | 1 per throw (returns) | - | 1 |
+| Chain whip | Exotic (melee) | 3 | Melee | - | - | 2 |
 | Combat knife | Knife | 3 | Melee | - | - | 1 |
 | Compact pistol | Handgun | 3 | 15m / 40m | 15 rounds | 1 action | 2 |
 | Compact SMG | Submachine gun | 3 | 25m / 60m | 30 rounds | 1 action | 3 |
-| Compound bow | Bow | 4 | 25m / 60m | 12 (quiver) | Free | 3 |
-| Crossbow | Bow | 4 | 20m / 50m | 12 (quiver) | 1 action | 2 |
+| Compound bow | Compound bow | 4 | 25m / 60m | 12 (quiver) | Free | 3 |
+| Crossbow | Crossbow | 4 | 20m / 50m | 12 (quiver) | 1 action | 2 |
 | Derringer | Handgun | 2 | 5m / 10m | 2 rounds | 1 action | 1 |
-| English longbow | Bow | 5 | 30m / 70m | 12 (quiver) | Free | 4 |
+| English longbow | Warbow | 5 | 30m / 70m | 12 (quiver) | Free | 4 |
 | Fists, feet | Unarmed | 1 | Melee | - | - | - |
 | Flail | One-handed blunt | 4 | Melee | - | - | 2 |
-| Flare gun | Exotic | 2 | 15m / 40m | 1 round | 1 action | 1 |
+| Flare gun | Exotic (ranged) | 2 | 15m / 40m | 1 round | 1 action | 1 |
 | Garrote | Improvised | 2 | Melee | - | - | 1 |
 | Glaive | Polearm / two-handed | 5 | Melee | - | - | 2 |
 | Grenade launcher | Heavy | 5 | 30m / 80m | 1 round | 1 action | 4 |
 | Halberd | Polearm / two-handed | 5 | Melee | - | - | 2 |
-| Hand axe | Thrown | 1 | 5m / 15m | 1 per throw | - | 1 |
-| Hand crossbow | Bow | 2 | 10m / 25m | 5 (quick-load) | 1 action | 2 |
+| Hand axe | Thrown axe | 1 | 5m / 15m | 1 per throw | - | 1 |
+| Hand crossbow | Hand crossbow | 2 | 10m / 25m | 5 (quick-load) | 1 action | 2 |
 | Harpoon gun | Heavy | 3 | 15m / 30m | 1 (line-retrievable) | Slow action | 3 |
 | Hatchet | One-handed blade | 4 | Melee | - | - | 1 |
 | Heavy revolver | Handgun | 3 | 15m / 40m | 6 rounds | 1 action | 2 |
 | Hunting rifle | Rifle | 4 | 100m / 250m | 5 rounds | 1 action | 2 |
-| Javelin | Thrown | 3 | 10m / 25m | 1 per throw | - | 1 |
+| Javelin | Shafted | 3 | 10m / 25m | 1 per throw | - | 1 |
 | Kama | One-handed blade | 3 | Melee | - | - | 1 |
 | Katana | One-handed blade | 4 | Melee | - | - | 2 |
 | Kukri | Large blade | 4 | Melee | - | - | 1 |
@@ -71,29 +71,29 @@ Attacking a target within a weapon’s **Normal** range carries no penalty. Atta
 | Machete | Large blade | 4 | Melee | - | - | 1 |
 | Metal pipe | Improvised | 3 | Melee | - | - | 1 |
 | Muzzleloader rifle | Rifle | 4 | 80m / 200m | 1 round | Slow action | 2 |
-| Net launcher | Exotic | 1 | 10m / 20m | 1 net | 1 action | 2 |
-| Nunchaku | Exotic | 3 | Melee | - | - | 1 |
+| Net launcher | Exotic (ranged) | 1 | 10m / 20m | 1 net | 1 action | 2 |
+| Nunchaku | Exotic (melee) | 3 | Melee | - | - | 1 |
 | Pump shotgun | Shotgun | 4 | 5m / 15m | 6 shells | Slow action | 2 |
 | Rapier | One-handed blade | 4 | Melee | - | - | 2 |
-| Recurve bow | Bow | 3 | 20m / 50m | 12 (quiver) | Free | 2 |
+| Recurve bow | Recurve bow | 3 | 20m / 50m | 12 (quiver) | Free | 2 |
 | Revolver rifle | Rifle | 4 | 60m / 150m | 9 rounds | 1 action | 3 |
 | Sai | One-handed blade | 3 | Melee | - | - | 1 |
 | Sap | Improvised | 3 | Melee | - | - | 1 |
 | Sawed-off shotgun | Shotgun | 4 | 5m / 15m | 2 shells | Slow action | 2 |
 | Short sword | One-handed blade | 4 | Melee | - | - | 2 |
 | Sledgehammer | Two-handed | 5 | Melee | - | - | 1 |
-| Sling | Thrown | 2 | 15m / 30m | 1 per throw | - | 1 |
+| Sling | Sling | 2 | 15m / 30m | 1 per throw | - | 1 |
 | Squad automatic weapon | Heavy | 5 | 300m / 800m | 100 rounds | 1 action | 4 |
 | Switchblade | Knife | 3 | Melee | - | - | 1 |
 | Tactical carbine | Rifle | 4 | 100m / 250m | 20 rounds | 1 action | 3 |
-| Throwing knife | Thrown | 1 | 5m / 15m | 1 per throw | - | 1 |
+| Throwing knife | Balanced blade | 1 | 5m / 15m | 1 per throw | - | 1 |
 | Tonfa | One-handed blunt | 3 | Melee | - | - | 1 |
 | Trench knife | Knife | 3 | Melee | - | - | 1 |
 | Two-handed sword | Polearm / two-handed | 5 | Melee | - | - | 2 |
 | War axe | One-handed blade | 4 | Melee | - | - | 1 |
-| War fan | Exotic | 2 | Melee | - | - | 1 |
+| War fan | Exotic (melee) | 2 | Melee | - | - | 1 |
 | Warhammer | Two-handed blunt | 5 | Melee | - | - | 2 |
-| Whip | Exotic | 2 | 3m / 6m | - | - | 1 |
+| Whip | Exotic (melee) | 2 | 3m / 6m | - | - | 1 |
 
 ## Armor
 
