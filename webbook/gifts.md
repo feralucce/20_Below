@@ -2112,6 +2112,8 @@ You have one way of hurting people at arm’s length and you are very good at it
 
 </div>
 
+Unarmed fighting lives here. None of the weapon Skills covers fists and feet - there is no Category for them, and nothing to be trained on - so a character who fights with their hands is describing Onslaught, whatever else it could have been.
+
 <p class="gift-section">Adders</p>
 
 <div class="gift-opt gift-opt--adder" markdown="1">

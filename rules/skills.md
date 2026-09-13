@@ -45,9 +45,9 @@ Each tier adds to the ones below it.
 | 4 Expert | Polearm / two-handed, Two-handed, Two-handed blunt | Rifle | Compound bow | Returning |
 | 5 Master | Exotic (melee) | Heavy | Warbow | Sling |
 
-**Unarmed is not on the list.** Fists and feet need no permission from anyone, and there is nothing there to be trained on.
+**Unarmed is not on the list.** Fists and feet need no permission from anyone, and there is nothing there to be trained on. Fighting that way is [Onslaught](gifts.md), which is a Gift rather than a Skill.
 
-**Special Weapons** does not ladder. It is one named weapon system, defined per character, and it covers the exotic ranged weapons - blowgun, net launcher, flare gun - along with whatever else the GM allows into it.
+**Special Weapons is not a Skill.** It is one named weapon system rather than a Category you train through, so it is a [Boon](boons.md) - and that is where the exotic ranged weapons live too: blowgun, net launcher, flare gun.
 
 These are the one place a tier buys access rather than a better roll, which is why a katana sits at Adept and a whip at Master. The cost is real, and it is the point: what a character can pick up says as much about them as what they can do with it.
 
@@ -142,7 +142,6 @@ A starting Skill list scoped to a **modern-world base campaign**. **This list is
 | Signal & Cipher | Air | Radio codes, hand signs, and other non-verbal communication systems. |
 | Sleight of Hand | Air | Pickpocketing, palming, and planting objects unnoticed. |
 | Smuggling | Water | Concealing and moving contraband past scrutiny - including modern screening and customs. |
-| Special Weapons | Context-dependent | An exception to the broad-Skill norm: one specific exotic or restricted-access weapon system - a particular explosive, a military platform, a supernatural armament - defined per character rather than started with. Covers the exotic ranged weapons too: blowgun, net launcher, flare gun. Not rolled. |
 | Stealth | Air | Moving unseen and unheard. |
 | Stewardship | Air | Managing a budget, staff, property, or organization's resources. |
 | Streetwise | Moira | Navigating criminal culture, gangs, and underworld contacts - a knack for being in the right place, reading the city's undercurrents by instinct as much as legwork. |

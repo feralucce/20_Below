@@ -820,6 +820,38 @@ Choose a specific, narrow locomotion trick that shouldn’t work but does: **Wat
 
 <div class="boon" markdown="1">
 
+<p class="boon-name" markdown="span">Special Weapons<span class="boon-cost">3, 5, or 7</span></p>
+
+<div class="boon-flavour" markdown="1">
+
+One specific thing that shouldn’t be in civilian hands, and you happen to know how it works.
+
+</div>
+
+Access to a single named weapon system, chosen when you take this and defined with the GM - including which Element rolls it, if anything about it is rolled at all. Bought as one of three tiers (each includes every lower tier’s benefit - no need to buy more than one).
+
+<div class="boon-tier" markdown="1">
+
+**Tier 1 (3, Lesser)**: an exotic weapon that is unusual rather than restricted - a blowgun, a net launcher, a flare gun. Nobody is going to arrest you for carrying it. Nobody else at the table knows how to use it either.
+
+</div>
+
+<div class="boon-tier" markdown="1">
+
+**Tier 2 (5, Greater)**: a restricted military or police platform - a grenade launcher, a breaching charge, a crew-served weapon. Owning it is a crime most places you will carry it, and that is part of what you are paying for.
+
+</div>
+
+<div class="boon-tier" markdown="1">
+
+**Tier 3 (7, Legendary)**: something that should not exist - a prototype, a supernatural armament. What it is and what it does is settled with the GM.
+
+</div>
+
+</div>
+
+<div class="boon" markdown="1">
+
 <p class="boon-name" markdown="span">Speed Reading<span class="boon-cost">1, Trivial</span></p>
 
 <div class="boon-flavour" markdown="1">

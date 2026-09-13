@@ -104,9 +104,9 @@ Each tier adds to the ones under it.
 
 </div>
 
-**Unarmed isn’t on the list.** Fists and feet need nobody’s permission, and there’s nothing there to be trained on.
+**Unarmed isn’t on the list.** Fists and feet need nobody’s permission, and there’s nothing there to be trained on. Fighting that way is **Onslaught**, in the Gifts chapter.
 
-**Special Weapons doesn’t ladder.** It’s one named system, defined per character, and it covers the exotic ranged weapons - blowgun, net launcher, flare gun - along with whatever else I let into it.
+**Special Weapons isn’t a Skill.** It’s one named system rather than a Category you train through, so it’s a Boon - and that’s where the exotic ranged weapons live too: blowgun, net launcher, flare gun.
 
 These four are the one place a tier buys access instead of a better roll, which is why a katana sits at Adept and a whip at Master. The cost is real, and it’s the point: what a character can pick up says as much about them as what they can do with it.
 
@@ -117,8 +117,6 @@ What follows is a starting list for a modern-world campaign. It isn’t exhausti
 Add to it. Split an entry, merge two, or rename one so it sounds like your setting. I put this list together to save you time at character creation, not to fence in what a person can plausibly know how to do. If your character should have a Skill that isn’t here, they have it - pick an Element and write it down.
 
 The entries are **broad on purpose**. A point spent on Crafting should feel like it bought something, not like it bought one narrow task. Where a real distinction lives inside a broad Skill - a particular science, a particular trade, a specific instrument - that’s flavor you describe, not a reason to split the Skill in half.
-
-One entry breaks that rule on purpose. **Special Weapons** is a single specific exotic or restricted system: a particular explosive, a military platform, something that shouldn’t exist. It’s defined per character as it comes up, including its Element, and nobody starts with it.
 
 Every entry lists its default Element in brackets.
 
@@ -1169,20 +1167,6 @@ The goods were never the problem. The paperwork, the timing, and one bored perso
 </div>
 
 Concealing and moving contraband past scrutiny, including modern screening and customs.
-
-</div>
-
-<div class="skill" markdown="1">
-
-<p class="block-title" markdown="span">Special Weapons</p>
-
-<div class="skill-flavour" markdown="1">
-
-One specific thing that shouldn’t be in civilian hands, and you happen to know how it works.
-
-</div>
-
-A single exotic or restricted-access weapon system, defined per character when it comes up - including its Element. Nobody starts with it.
 
 </div>
 
