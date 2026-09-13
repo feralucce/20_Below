@@ -508,6 +508,24 @@
   }
   .roll-box > :last-child { margin-bottom: 0; }
 
+  /* The roll box set for reading - same frame, body face, ranged left. */
+  .note-box {
+    background: var(--panel);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 0.7rem 1rem;
+    margin: 1rem 0;
+  }
+  .note-box > :last-child { margin-bottom: 0; }
+  .note-box--pc { border-color: var(--pc); }
+  .note-box--ally { border-color: var(--ally); }
+  .note-box--npc, .note-box--danger { border-color: var(--npc); }
+  .note-box--earth { border-color: var(--element-earth); }
+  .note-box--air { border-color: var(--element-air); }
+  .note-box--fire { border-color: var(--element-fire); }
+  .note-box--water { border-color: var(--element-water); }
+  .note-box--moira { border-color: var(--element-moira); }
+
   .stat {
     background: var(--panel);
     border: 1px solid var(--panel-border);

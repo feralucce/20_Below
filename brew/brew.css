@@ -624,6 +624,17 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 }
 .page .roll-box > p{margin:0}
 
+/* The roll box, set for reading: the same frame in the body face at
+   body size, for a rule stated in words rather than in numbers. Ranged
+   left, unlike the roll box - centring is right for a formula on a
+   plaque and wrong for a sentence, which needs a left edge to come
+   back to. */
+.page .note-box{
+  background:var(--panel-2); border:1px solid var(--accent); color:var(--page-fg);
+  padding:.55em .9em; margin:0 0 .8em; border-radius:4px; break-inside:avoid;
+}
+.page .note-box > :last-child{margin-bottom:0}
+
 /* A gift entry. The biggest thing in the book - five levels plus Adders
    and Limiters - so it gets a little more room than the other entry
    blocks and does not try to be compact. Adders and Limiters are runs of
@@ -955,6 +966,19 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 .page .roll-box--moira{border-color:var(--v-moira); color:var(--v-moira)}
 .page .roll-box--text{border-color:var(--v-text); color:var(--v-text)}
 .page .roll-box--accent{border-color:var(--v-accent); color:var(--v-accent)}
+
+/* A note box tints its frame, not its text: the text is body copy and
+   has to stay readable, which is the whole point of the block. */
+.page .note-box--pc{border-color:var(--v-pc)}
+.page .note-box--ally{border-color:var(--v-ally)}
+.page .note-box--npc,.page .note-box--danger{border-color:var(--v-npc)}
+.page .note-box--earth{border-color:var(--v-earth)}
+.page .note-box--air{border-color:var(--v-air)}
+.page .note-box--fire{border-color:var(--v-fire)}
+.page .note-box--water{border-color:var(--v-water)}
+.page .note-box--moira{border-color:var(--v-moira)}
+.page .note-box--text{border-color:var(--v-text)}
+.page .note-box--accent{border-color:var(--v-accent)}
 
 .page .figure .caption{
   display:block; margin-top:.35em; color:var(--page-dim);

@@ -236,6 +236,7 @@ BLOCKS = {
     "aside":    (plain("aside"), True),
     "box":      (plain("box"), True),
     "roll":     (plain("roll-box", takes_title=False), False),
+    "note":     (plain("note-box", takes_title=False), False),
     "gift":     (render_gift, True),
     "flaw":     (render_ladder("flaw", "flaw-name", "flaw-level", "flaw-n"), True),
     "resource": (render_ladder("resource", "resource-name",
