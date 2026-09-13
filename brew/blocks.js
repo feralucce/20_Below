@@ -58,7 +58,7 @@ const div = (base) => (title, body, variant) => {
 
 export const BLOCKS = {
   wide: {
-    help: 'spans both columns, for big tables and art',
+    help: 'spans both columns',
     /* Worth a title even with no frame to hang it on. A wide table is
      * usually the tail of an entry that ended on the page before - a
      * build menu, a price list - and untitled it meets the reader as a
@@ -69,23 +69,34 @@ export const BLOCKS = {
     render: div('wide'),
   },
   aside: {
-    help: 'a sidebar, set apart from the main text',
+    help: 'a sidebar, apart from the text',
     takesTitle: true,
     render: div('aside'),
   },
   box: {
-    help: 'a callout box for a rule, an example, or anything worth boxing',
+    help: 'a callout for a rule or example',
     takesTitle: true,
     render: div('box'),
   },
   roll: {
-    help: 'a centred roll or formula, for things the reader will look up mid-game',
+    help: 'a centred roll or formula',
     takesTitle: false,
     render: (_title, body, variant) =>
       `<div class="${cls('roll-box', variant)}">\n\n${body.trim()}\n\n</div>`,
   },
+  note: {
+    help: 'a framed note, no title',
+    /* The roll box holds a formula, so it is set in the heading face,
+     * letter spaced and centred, the way a plaque is. A sentence set
+     * that way arrives as a sign rather than as something to read.
+     * Same frame, body face, ranged left - for a rule stated in
+     * words. */
+    takesTitle: false,
+    render: (_title, body, variant) =>
+      `<div class="${cls('note-box', variant)}">\n\n${body.trim()}\n\n</div>`,
+  },
   gift: {
-    help: 'a gift entry - flavour, five levels, then Adders and Limiters',
+    help: 'five levels, Adders and Limiters',
     takesTitle: true,
     /* The largest entries in the book: five levels each, plus Adders and
      * Limiters. Levels get the numbered ladder the other entries use;
@@ -119,7 +130,7 @@ export const BLOCKS = {
     },
   },
   flaw: {
-    help: 'a flaw entry - flavour, summary, then five levels',
+    help: 'summary, then five levels',
     takesTitle: true,
     /* Structurally a Resource - every Flaw is rated 1-5 and the ladder is
      * the substance - but it reads as the opposite thing, so it carries
@@ -143,7 +154,7 @@ export const BLOCKS = {
     },
   },
   resource: {
-    help: 'a resource entry - flavour, summary, then five levels',
+    help: 'summary, then five levels',
     takesTitle: true,
     /* Every Resource is rated 1-5 and the ladder is the substance of the
      * entry, so a level line gets its rating in a badge and its text on
@@ -166,7 +177,7 @@ export const BLOCKS = {
     },
   },
   boon: {
-    help: 'a boon entry - title it "Name (cost)", flavour, then the rule',
+    help: 'title it "Name (cost)"',
     takesTitle: true,
     /* Same shape as a skill entry, with one addition: most Boons are a
      * flat cost, but sixteen are bought as one of two, three or four
@@ -193,7 +204,7 @@ export const BLOCKS = {
     },
   },
   skill: {
-    help: 'a skill entry - title it "Name (Element)", flavour, then rules',
+    help: 'title it "Name (Element)"',
     takesTitle: true,
     /* The element is read out of the title rather than typed a second
      * time as a variant, so the colour can never disagree with the text
@@ -218,7 +229,7 @@ export const BLOCKS = {
     },
   },
   stat: {
-    help: 'a stat block, pasted straight out of the Adversary Index',
+    help: 'a stat block',
     takesTitle: true,
     /* The stat line is the anchor of a stat block, so it is picked out
      * and given its own strip. It is recognised by the middot the
@@ -237,7 +248,7 @@ export const BLOCKS = {
     },
   },
   figure: {
-    help: 'an image with a caption - the title is the caption',
+    help: 'an image; the title captions it',
     takesTitle: true,
     render: (title, body, variant, cont) => {
       const cap = title.trim() ? `\n\n<span class="caption">${esc(title.trim())}</span>` : '';

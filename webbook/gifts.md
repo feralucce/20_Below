@@ -259,6 +259,11 @@ Pain doesn’t slow you down, it feeds you. The worse it gets, the less anything
 
 - **Feeds on Pain** (Lesser, 3 pts): Fury's bonus dice also apply to Melee grapples and contested Potence rolls, not just attacks.
 - **Undying Focus** (Lesser, 3 pts): Level 4's Social exemption extends to Mental rolls too - Fury no longer imposes Disadvantage on anything.
+
+</div>
+
+<div class="gift-opt gift-opt--adder" markdown="1">
+
 - **Contagious Rage** (Greater, 6 pts): once per Scene, spend 1 Ki to grant one ally within Close range half your current Fury bonus (round down) as bonus dice on their own next Physical attack.
 - **Overflowing** (Greater, 6 pts): Last Stand can be triggered a second time per Scene, though the second use costs 1 Ki.
 
@@ -459,6 +464,11 @@ Chosen once, at creation: your **signature weapon**, any single item from the ca
 <div class="gift-opt gift-opt--limiter" markdown="1">
 
 - **Slow Return**: dismissing a weapon isn't instant - it takes a full Fast action to banish it.
+
+</div>
+
+<div class="gift-opt gift-opt--limiter" markdown="1">
+
 - **Borrowed, Not Owned**: a conjured weapon vanishes if it ever leaves your grip involuntarily (disarmed, knocked away) - you must re-summon rather than immediately recall it.
 - **Visible Conjuring**: summoning is never subtle - it's always an obvious flash or effect visible to everyone nearby, no way to conceal that you're using a Gift.
 
@@ -738,6 +748,11 @@ As with any Mental attack, additional Ki Infusion (1 Ki per die) can push indivi
 <div class="gift-opt gift-opt--adder" markdown="1">
 
 - **Blind Command** (Lesser, 3 pts): issue a command over a phone call, recording, or any medium carrying your voice and intent, not just direct eye contact.
+
+</div>
+
+<div class="gift-opt gift-opt--adder" markdown="1">
+
 - **False Memory of Consent** (Lesser, 3 pts): the target has no memory of being commanded - the compliance feels, to them, like it was their own idea.
 - **Standing Order** (Greater, 6 pts): a delayed/triggered command (Level 3+) can be reset and reused against the same target without needing to re-establish eye contact and pay the Ki cost again, so long as the original condition hasn't yet fired.
 
@@ -1579,6 +1594,11 @@ Your stance is a fact about the world rather than an opinion about it. Push, tri
 <div class="gift-opt gift-opt--adder" markdown="1">
 
 - **Rooted Strike** (Lesser, 3 pts): when a forcing attempt against you fails, spend 1 Ki to counter-shove the attacker by half your Movement Rate.
+
+</div>
+
+<div class="gift-opt gift-opt--adder" markdown="1">
+
 - **Grounding Field** (Lesser, 3 pts): as a Fast action, spend 1 Ki to extend your current Level's resistance to one touched ally for the rest of the Round.
 - **Unbreakable Line** (Greater, 6 pts): once per Scene, when an ally within Melee range would be forcibly moved, spend 1 Ki to intercept the effect. It targets you instead, resolved against your own resistance.
 
@@ -1653,6 +1673,11 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 <div class="gift-opt gift-opt--limiter" markdown="1">
 
 - **Slow Fade**: phasing takes a full Round to take effect instead of a Fast action, at every Level except Level 5's reactive dodge.
+
+</div>
+
+<div class="gift-opt gift-opt--limiter" markdown="1">
+
 - **Residual Static**: while phased, you're still visible as a faint shimmer or outline. You're never undetectable.
 - **No Passengers**: Level 5's extend-to-another-person clause never applies.
 
@@ -2018,6 +2043,11 @@ Chosen once, at creation, purely cosmetic: the form your raised dead take (bone 
 <div class="gift-opt gift-opt--adder" markdown="1">
 
 - **Grave Whisper** (Lesser, 3 pts): touch a corpse and roll Moira + Difficulty to ask it one question about its own death, answered as a faint, disjointed impression, not real testimony.
+
+</div>
+
+<div class="gift-opt gift-opt--adder" markdown="1">
+
 - **Reinforced Bones** (Lesser, 3 pts): your thralls' Health Levels rise by 1 each, at every Level.
 - **Smart Thralls** (Lesser, 3 pts): your thralls understand commands at roughly the level a well-trained dog does - a short sequence, a simple condition, one target picked out of a group. They still have no judgement and no initiative, and do nothing you did not tell them to do.
 - **Bone Armory** (Greater, 6 pts): your thralls rise already armed, bone drawn out into blades, spurs or hooked talons. Each thrall's Attack rises by **1 die** at every Level.
@@ -2343,6 +2373,11 @@ Ki Infusion still applies on top, same as any Social attack.
 
 - **Silent Imposition** (Lesser, 3 pts): the target has no memory of being bound - the rule feels like their own personal code, not something imposed on them.
 - **Lasting Decree** (Greater, 6 pts): a rule set persists indefinitely once imposed, not capped at Scene/Day - it holds until you release it or the target manages to break free (GM's call on the threshold).
+
+</div>
+
+<div class="gift-opt gift-opt--adder" markdown="1">
+
 - **Zealous Enforcement** (Greater, 6 pts): bound targets don't just want the rule followed - they actively intervene, verbally or physically, to stop anyone else from breaking it.
 
 </div>
@@ -2415,6 +2450,11 @@ You do not need hands. A thought lifts, throws, pins or crushes anything inside 
 <div class="gift-opt gift-opt--limiter" markdown="1">
 
 - **Line of Sight Only**: you must maintain unbroken line of sight to whatever you're gripping. The effect ends instantly if that's blocked.
+
+</div>
+
+<div class="gift-opt gift-opt--limiter" markdown="1">
+
 - **One at a Time**: Level 4's multi-object grip never applies. You're limited to one object or person at a time, regardless of Level.
 - **Backlash**: if a contested Potence attempt against a person fails, you're at Disadvantage on all rolls for your next turn.
 
@@ -2659,6 +2699,11 @@ Your body ripples and reforms like water finding a new shape - skin, bone and vo
 <div class="gift-opt gift-opt--adder" markdown="1">
 
 - **Instant Revert** (Lesser, 3 pts): once per Scene, revert to your true form as a Fast action instead of a Slow one, with no Gift Check.
+
+</div>
+
+<div class="gift-opt gift-opt--adder" markdown="1">
+
 - **Full Spectrum Mimicry** (Lesser, 3 pts): mimicry (Level 2+) extends to scent and body heat too, fooling animal senses and thermal imaging, not just sight and sound.
 - **Living Disguise** (Greater, 6 pts): while mimicking a specific person, you also gain a working instinctive sense of how they'd act or react, enough to improvise their mannerisms convincingly under pressure.
 
@@ -3048,6 +3093,11 @@ Minds are not as private as people believe - not around you. You brush against w
 
 - **Emotional Broadcast** (Lesser, 3 pts): once per Scene, project a simple emotion (fear, calm, doubt) into a target's mind as a Mental attack, even before Level 4's two-way link exists.
 - **Group Mind** (Lesser, 3 pts): once a two-way link is established with someone (Level 4+), bridge one additional willing party into the same shared link.
+
+</div>
+
+<div class="gift-opt gift-opt--adder" markdown="1">
+
 - **Memory Lockpick** (Greater, 6 pts): spend an extra 1 Ki on a forced read (Level 3+) to target one specific memory or fact instead of a general surface impression, yielding a precise answer instead of a vague sensation.
 
 </div>
@@ -3110,6 +3160,11 @@ You do not walk between places. You delete the distance. However it looks - a pl
 
 - **Extended Portal** (Lesser, 3 pts): the portal (Level 4+) lasts a full Scene instead of a Minute.
 - **Blind Jump Recovery** (Lesser, 3 pts): once per Scene, if a blink would land you somewhere dangerous, you may instantly abort and land back at your starting point instead, no Ki cost.
+
+</div>
+
+<div class="gift-opt gift-opt--adder" markdown="1">
+
 - **Extra Passenger** (Greater, 6 pts): bring up to three touched people along instead of just one, at Level 4+.
 
 </div>
@@ -3181,6 +3236,11 @@ Reach into a fold in space only you can find and pull out exactly what you left 
 <div class="gift-opt gift-opt--limiter" markdown="1">
 
 - **Slow Threading**: opening the fold or door always takes a full Round instead of a Fast action, at every Level.
+
+</div>
+
+<div class="gift-opt gift-opt--limiter" markdown="1">
+
 - **Guided Guests**: guests (Level 4+) can never navigate the Threadspace unassisted. They must be led by you at all times or risk getting lost.
 - **Fragile Weave**: if the Threadspace is ever breached by an outside supernatural force (GM's call, rare), everything currently stored inside is at risk of being lost or expelled.
 
@@ -3248,6 +3308,11 @@ Chosen once, at creation: how you perform the ritual that triggers this Gift, tr
 
 - **Irreversible Exchange**: once transmuted, an object can never be reverted to its original form, by this Gift or any other means. Equivalent exchange only runs one way.
 - **Loud Working**: the ritual is never silent or discreet, always visibly or audibly obvious, at every Level.
+
+</div>
+
+<div class="gift-opt gift-opt--limiter" markdown="1">
+
 - **Fixed Ritual Component**: your chosen ritual flavor requires a specific physical condition (a clear space to draw a circle, the ability to speak a chant, genuine silence to focus). The Gift simply fails if that condition is denied.
 
 </div>

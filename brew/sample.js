@@ -25,6 +25,14 @@ function demo(...lines) {
   return [F, ...lines, F, '', ...lines].join('\n');
 }
 
+/* demo, for an entry so large that the source and the result will not
+ * share a sheet at the smallest trim. The break sits between the two
+ * copies rather than inside the example, so a reader does not read it
+ * as part of the syntax being shown. */
+function demoSplit(...lines) {
+  return [F, ...lines, F, '', B + 'page', '', ...lines].join('\n');
+}
+
 /* One row per block, generated from blocks.js, so a block added there
  * is listed here without a second place to update. The worked entries
  * further down are written by hand - the table says what exists, the
@@ -137,6 +145,9 @@ export function guide() {
     ':::',
     F,
     '',
+    '',
+    B + 'page',
+    '',
     'The first starts a new page, as one column or with a background if',
     'you say so - and written inside a block it cuts the block there,',
     'which is how you split a long entry across two pages. The next four',
@@ -216,6 +227,9 @@ export function guide() {
     'make. Those are named in the status line rather than quietly clipped:',
     'shorten the paragraph, or give the page ' + T + 'cols=1' + T + '.',
     '',
+    '',
+    B + 'page',
+    '',
     '## Splitting a block yourself',
     '',
     'The packer only ever cuts a block that cannot fit, which leaves the',
@@ -241,6 +255,9 @@ export function guide() {
     'leave it alone, and neither writes a second block into your file: the',
     'closing and reopening happen as the page is drawn, not in the',
     'document. The marker you wrote stays the only one there.',
+    '',
+    '',
+    B + 'page',
     '',
     '## Breaking a column',
     '',
@@ -294,6 +311,9 @@ export function guide() {
     F,
     B + 'page bg=hexdrift tint=0.5',
     F,
+    '',
+    '',
+    B + 'page',
     '',
     'One line gives the whole document a ground, and any page can still',
     'say otherwise. A page that wants none says so out loud.',
@@ -373,6 +393,9 @@ export function guide() {
     B + 'page folio=1',
     F,
     '',
+    '',
+    B + 'page',
+    '',
     'The first opens the document in roman. The second, on the first',
     'page of chapter one, starts again at 1 and stays arabic from there.',
     'Uppercase works the same way, so ' + T + 'folio=I' + T + ' numbers an appendix',
@@ -451,6 +474,9 @@ export function guide() {
     '',
     demo('---'),
     '',
+    '',
+    B + 'page',
+    '',
     '## Tables',
     '',
     demo(
@@ -484,6 +510,9 @@ export function guide() {
     'Every name the tool knows is below. The pages after it write each',
     'one out in full, as source and then as result.',
     '',
+    '',
+    B + 'page',
+    '',
     '::: wide',
     blockIndex(),
     ':::',
@@ -516,6 +545,21 @@ export function guide() {
       ':::',
     ),
     '',
+    '',
+    B + 'page',
+    '',
+    '## Note',
+    '',
+    'The roll box set for reading. Same frame, body face, ranged left,',
+    'for a rule stated in words rather than in numbers.',
+    '',
+    demo(
+      '::: note',
+      '**Full Night' + APOS + 's Rest**. A full, largely uninterrupted ' +
+      'night' + APOS + 's sleep.',
+      ':::',
+    ),
+    '',
     '## Roll',
     '',
     'Takes no title. Keep it to the line a player looks up in the middle',
@@ -534,6 +578,9 @@ export function guide() {
     'Spans both columns. Spanning splits the flow, so text after a wide',
     'block starts again below it rather than carrying on down the',
     'column.',
+    '',
+    '',
+    B + 'page',
     '',
     demo(
       '::: wide',
@@ -565,6 +612,9 @@ export function guide() {
     '',
     'Five blocks set the five kinds of entry a character is built from -',
     'Skills, Boons, Resources, Flaws and Gifts. They share one shape.',
+    '',
+    '',
+    B + 'page',
     '',
     '::: box What every entry block does',
     '**The title** names the entry, and carries a second piece of',
@@ -602,6 +652,9 @@ export function guide() {
       ':::',
     ),
     '',
+    '',
+    B + 'page',
+    '',
     '## Boon',
     '',
     'Title it ' + T + 'Name (cost)' + T + '. Most Boons are a flat cost, written',
@@ -609,7 +662,7 @@ export function guide() {
     'several tiers instead, and those lines are lifted onto their own',
     'strips so a reader can see the structure without reading for it.',
     '',
-    demo(
+    demoSplit(
       '::: boon Innate Compass (1 or 3)',
       'You have never once had to ask which way you were facing.',
       '',
@@ -630,6 +683,9 @@ export function guide() {
     '',
     'Every Resource is rated 1 to 5, and the ladder is the substance of',
     'the entry. The summary line above the levels is ordinary prose.',
+    '',
+    '',
+    B + 'page',
     '',
     demo(
       '::: resource Contacts',
@@ -660,7 +716,10 @@ export function guide() {
     'Somebody flicking through should never mistake a Flaw for something',
     'they are buying.',
     '',
-    demo(
+    '',
+    B + 'page',
+    '',
+    demoSplit(
       '::: flaw Directionless',
       'You have been turned around in your own neighborhood, sober, in',
       'daylight. It stopped being funny some time ago.',
@@ -719,6 +778,8 @@ export function guide() {
     ':::',
     F,
     '',
+    B + 'page',
+    '',
     'Written out in full, that produces this.',
     '',
     '::: gift Jumping',
@@ -736,6 +797,11 @@ export function guide() {
     '**1 Ki** to chain a second jump on landing, covering that distance',
     'again in the same move.',
     '',
+    // Cut here on purpose, and the guide says why overleaf: this entry is
+    // taller than a page, and the marker inside the block is what the
+    // section above describes. The guide uses what it documents.
+    B + 'page',
+    '',
     '**4** Forward jumps extend to **6x**, vertical to **3x**. A landing',
     'can be an attack: spend **1 Ki**, and everyone within Close range of',
     'where you come down takes your Potence dice against their Soak.',
@@ -743,11 +809,6 @@ export function guide() {
     '',
     '**5** Forward jumps extend to **10x**, vertical to **5x**. The',
     'landing attack costs no Ki.',
-    '',
-    // Cut here on purpose, and the guide says why overleaf: this entry is
-    // taller than a page, and the marker inside the block is what the
-    // section above describes. The guide uses what it documents.
-    B + 'page',
     '',
     '**Adders**',
     '',
@@ -779,6 +840,9 @@ export function guide() {
     'A stat block pastes in from the Adversary Index unchanged. The line',
     'of figures is picked out on its own - it is recognised by the middot',
     'separators the index already uses, so there is nothing to rewrite.',
+    '',
+    '',
+    B + 'page',
     '',
     demo(
       '::: stat.danger Rougarou',
@@ -822,6 +886,9 @@ export function guide() {
     '',
     colourDemos(),
     '',
+    '',
+    B + 'page',
+    '',
     '::: aside In greyscale',
     'Every colour collapses to one grey. A black and white print cannot',
     'carry nine hues, so say in words what the colour would have said.',
@@ -847,6 +914,9 @@ export function guide() {
     '**Reserved Material.** List anything in your own product you are',
     'reserving - your setting, characters, art and branding.',
     ':::',
+    '',
+    '',
+    B + 'page',
     '',
     '::: aside.danger What is not licensed',
     'The ORC licenses game mechanics, not branding. The name **20 Below**,',
