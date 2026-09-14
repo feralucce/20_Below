@@ -284,7 +284,7 @@ A social attack resolves exactly like a [Physical one](#physical-attacks---weapo
 
 Untrained rolls 1 for the same reason bare fists do. Master reaches 6, one past the heaviest weapon in [weapons.md](weapons.md), and that is deliberate: Poise has no death threshold, so nothing on this ladder can kill.
 
-**The Skill also sets the Element.** Every Skill has a home Element ([skills.md](skills.md#skills-default-to-an-element)), so naming what you are doing settles the dice and the to-hit Attribute together. **Fire** carries Ridicule, Intimidation, Persuasion, Public Speaking, Performance and Leadership; **Water** carries Deception; **Moira** carries Insight. A Descriptor can still argue for a different Element, as with any Skill roll.
+**The Skill also sets the Element.** Every Skill has a home Element ([skills.md](skills.md#skills-default-to-an-element)), so naming what you are doing settles the dice and the to-hit Attribute together. **Fire** carries Ridicule, Intimidation, Persuasion, Public Speaking, Performance, Leadership and Deception; **Moira** carries Insight. A Descriptor can still argue for a different Element, as with any Skill roll.
 
 **Charm and Seduction are not attacks.** They win a target over rather than take them apart, and cost no Poise. Etiquette is the GM's call: in a room where protocol matters, naming the one somebody just broke is a weapon.
 

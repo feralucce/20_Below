@@ -83,7 +83,6 @@ Every Skill you take, Everyman or otherwise, comes with a **default Attribute/El
 | Driving | Most adults can operate a car. |
 | Etiquette | Enough grasp of ordinary social norms to function in public and at work. |
 | First Aid | Widely taught - bandaging a cut, basic CPR awareness. |
-| Literacy | Reading and writing in your native language. |
 | Persuasion | Everyday give-and-take - asking a favor, making a case, haggling a little. |
 | Streetwise | A working sense of your own neighborhood/city - what's safe, who's who, where not to go. |
 
