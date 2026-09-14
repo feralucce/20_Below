@@ -230,9 +230,7 @@ That’s the whole calculation. Nobody at the table has to rate how good your li
 
 Say what you’re doing and you’ve named the Skill. Name the Skill and you’ve settled the Element too, because every Skill already rolls off a home Element.
 
-**Fire.** Ridicule, Intimidation, Persuasion, Public Speaking, Performance, Leadership.
-
-**Water.** Deception.
+**Fire.** Ridicule, Intimidation, Persuasion, Public Speaking, Performance, Leadership, Deception.
 
 **Moira.** Insight.
 

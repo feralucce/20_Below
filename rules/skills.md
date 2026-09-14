@@ -33,7 +33,7 @@ Each tier is strictly better than the last. Master's reroll only ever *removes t
 
 No Skill swings a weapon. A to-hit roll is your Attribute against the target's Defense, and nothing else goes into it. Which Element carries it is the approach you describe rather than the thing in your hand, so [the same sword](rules.md#choosing-the-attacking-element) swings on Earth, Air, Fire or Water depending on how you say you are swinging it. An untrained character attacks on exactly the same roll as a veteran.
 
-**A weapon Skill is not rolled at all.** It is a list of what you are trained to pick up. Its tier says which **Category** from [weapons.md](weapons.md) you can use in a fight, and a weapon outside your tier is one you have no business holding - what that costs is the GM's call, the same as anything else no roll covers.
+**A weapon Skill is never rolled for an attack.** It is a list of what you are trained to pick up. Its tier says which **Category** from [weapons.md](weapons.md) you can use in a fight, and a weapon outside your tier is one you have no business holding - what that costs is the GM's call, the same as anything else no roll covers.
 
 Each tier adds to the ones below it.
 
@@ -70,90 +70,80 @@ A starting Skill list scoped to a **modern-world base campaign**. **This list is
 | Academics | Air | General scholarship, history, and literature. |
 | Acrobatics | Air | Balance, tumbling, and controlled falls. |
 | Animal Handling | Water | Training, calming, and directing animals. |
-| Appraisal | Air | Judging the value and authenticity of goods. |
-| Archery | Air | Which bows you are trained on, by Category: hand crossbow, then crossbow, recurve, compound, and the warbow at Master. Not rolled - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
+| Appraisal | Moira | Judging the value and authenticity of goods. |
+| Archery | Earth | Which bows you are trained on, by Category: hand crossbow, then crossbow, recurve, compound, and the warbow at Master. Never rolled for an attack - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
 | Athletics | Earth | Running, jumping, climbing, and lifting under exertion. |
 | Barter | Fire | Striking favorable trades and deals. |
-| Bribery | Air | Knowing how much, how, and who to pay to get what you want. |
-| Bureaucracy | Air | Navigating institutions, paperwork, permits, and red tape to get things done. |
+| Bribery | Fire | Knowing how much, how, and who to pay to get what you want. |
+| Bureaucracy | Water | Navigating institutions, paperwork, permits, and red tape to get things done. |
 | Charm | Fire | Ingratiation and drawing people in. |
-| Combat Driving/Piloting | Air | Operating a vehicle under fire or in a chase, distinct from ordinary Driving/Piloting. |
-| Composition | Water | Writing music, poetry, or stories with real craft. |
-| Computer Use | Air | General computing, software, and programming - distinct from Hacking's adversarial focus. |
-| Concealment | Water | Hiding objects, caches, or hideouts from a determined search. |
-| Contortion | Air | Fitting through tight spaces and slipping restraints through flexibility. |
-| Cooking | Water | Preparing food, from the everyday to the exceptional. |
-| Crafting | Earth | Building and repairing goods in a chosen trade - covers any material or trade broadly (woodworking, metalworking, and so on) under one roll. |
+| Combat Driving/Piloting | Air | Operating a vehicle under fire or in a chase. This is a separate Skill from ordinary Driving or Piloting; competence in traffic says nothing about competence under fire. |
+| Composition | Fire | Writing music, poetry, or stories with real craft. |
+| Computer Use | Air | General computing, software, and programming. This Skill is distinct from Hacking - the same machine, but one of you is asking it politely. |
+| Concealment | Moira | Hiding objects, caches, or hideouts from a determined search. |
+| Contortion | Earth | Fitting through tight spaces and slipping restraints through flexibility. |
+| Cooking | Earth | Preparing food, from the everyday to the exceptional. |
+| Covert Signals | Air | Prearranged signals that carry meaning without words - hand signs, chalk marks, whistles, and brevity over the air. |
+| Crafting | Earth | Building and repairing goods in a chosen trade. One Skill covers any material or trade - woodworking, metalworking, whatever you practice - because the habits of hand and eye carry across all of them. |
 | Cryptography | Air | Creating and breaking codes, ciphers, and encryption. |
-| Deception | Water | Lying, bluffing, and fast talk. |
+| Deception | Fire | Lying, bluffing, and fast talk. |
 | Demolitions | Earth | Safely handling, placing, and detonating explosives. |
-| Disguise | Water | Altering appearance to convincingly pass as someone else. |
-| Divination | Moira | Reading omens, portents, and the shape of what's coming - cards, bones, dreams, and other traditional methods of putting a direct question to fate. |
-| Driving | Air | Operating ground vehicles in ordinary traffic and terrain. |
-| Electronics | Air | Building, repairing, and modifying electronic devices and circuitry. |
+| Disguise | Water | Altering appearance and behaviors to convincingly pass as someone else. |
+| Divination | Moira | Reading omens, portents, and the shape of what’s coming. |
+| Driving | Earth | Operating ground vehicles in ordinary traffic and terrain. |
+| Electronics | Earth | Building, repairing, and modifying electronic devices and circuitry. |
 | Engineering | Air | Theoretical and design knowledge of structures and systems. |
 | Escapology | Water | Breaking free of restraints and confined spaces under pressure. |
 | Etiquette | Fire | Navigating social and professional protocol correctly. |
 | Farming | Earth | Cultivating crops and managing livestock. |
 | Finance | Air | Economics, markets, and accounting. |
-| Firearms | Air | Which firearms you are trained on, by Category: handgun, then shotgun, submachine gun, rifle, and the heavy weapons at Master. Not rolled - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
+| Firearms | Air | Which firearms you are trained on, by Category: handgun, then shotgun, submachine gun, rifle, and the heavy weapons at Master. Never rolled for an attack - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
 | First Aid | Water | Immediate, field-level treatment - stabilizing, bandaging, CPR. |
-| Fishing | Water | Catching fish by line, net, or spear. |
-| Forgery | Air | Producing convincing fake documents, signatures, IDs, and digital records. |
+| Fishing | Moira | Catching fish by line, net, or spear. |
+| Forgery | Earth | Producing convincing fake documents, signatures, IDs, and digital records. |
 | Gaming | Moira | Skill at games of strategy, chance, and wagering - tabletop, esports, or otherwise. |
 | Hacking | Air | Bypassing digital security - accounts, networks, cameras, and devices. |
 | Holistic Medicine | Water | Herbal remedies, folk medicine, and non-clinical healing traditions. |
-| Housekeeping | Earth | Running and maintaining a household efficiently. |
-| Hunting | Moira | Tracking, catching, and field-dressing game - the hunter's instinct for where the quarry will be, not just the physical stalk. |
-| Insight | Moira | Reading people, sensing motive and deception - an uncanny read that goes past ordinary empathy, closer to a hunch that turns out right. |
+| Hunting | Moira | Tracking, catching, and field-dressing game. |
+| Insight | Moira | Reading people, sensing motive and deception - a read that goes past ordinary attention. |
 | Interrogation | Fire | Extracting information from an unwilling subject. |
 | Intimidation | Fire | Coercing others through implied or explicit threat. |
-| Intrigue | Air | Scheming, maneuvering, and reading the undercurrents of institutional or political conflict. |
+| Intrigue | Moira | Scheming, maneuvering, and reading the undercurrents of institutional or political conflict. |
 | Invention | Air | Designing and building original devices, not just following existing plans. |
-| Investigation | Moira | Following clues at a scene and drawing sound conclusions - the intuitive leap that makes the threads line up, not just methodical logic. |
+| Investigation | Moira | Following clues at a scene and drawing sound conclusions. |
 | Law | Air | Legal codes, procedure, and precedent. |
 | Leadership | Fire | Commanding respect and rallying others to act. |
-| Linguistics | Air | Learning, translating, and analyzing languages. |
-| Literacy | Air | Reading and writing in a specific language, distinct from speaking it. |
+| Linguistics | Water | Learning, translating, and analyzing languages. |
 | Mechanics | Earth | Repair and maintenance of vehicles and machinery. |
-| Melee Weapons | Earth | Which melee weapons you are trained on, by Category: improvised and knives, then one-handed blunt and large blades, one-handed blades, polearms and two-handers, and the exotic ones at Master. Not rolled - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
 | Medicine | Water | Surgery, diagnosis, and long-term clinical treatment. |
-| Natural World | Water | Knowledge of flora, fauna, ecosystems, and the environment. |
-| Navigation | Moira | Plotting a course and avoiding getting lost, on foot, by vehicle, or otherwise - an uncanny knack for finding the way, not just dead reckoning. |
+| Melee Weapons | Earth | Which melee weapons you are trained on, by Category: improvised and knives, then one-handed blunt and large blades, one-handed blades, polearms and two-handers, and the exotic ones at Master. Never rolled for an attack - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
+| Navigation | Moira | Plotting a course and avoiding getting lost, on foot, by vehicle, or otherwise. |
 | Networking | Fire | Building and leveraging connections in professional, corporate, or elite circles. |
-| Occult | Moira | Esoteric lore, ritual, and the world's hidden supernatural undercurrent - grounds a character's understanding of things like Moira, fate, and what a connecting Social/Mental die is actually reaching into. Included by default rather than genre-flagged, since the setting's fated-heroes premise makes it broadly relevant rather than an opt-in module. |
+| Occult | Moira | Esoteric lore, ritual, and the world’s hidden supernatural undercurrent. |
 | Perception | Water | Noticing details and spotting hidden things. |
-| Performance | Fire | Acting, music, dance, or oratory before an audience, covered broadly under one Skill regardless of discipline. |
+| Performance | Fire | Acting, music, dance, or oratory before an audience, under one Skill whatever the medium. |
 | Persuasion | Fire | Honest argument and diplomacy. |
-| Piloting | Air | Operating aircraft or watercraft, covered broadly under one Skill regardless of vehicle type. |
-| Politics | Air | The workings of governments, agencies, and factions. |
-| Precognition | Moira | A trained, practiced sensitivity to warnings from the threads of fate itself - a step beyond an ordinary hunch, though never a guarantee. |
-| Psychoanalysis | Water | Therapy and treating mental trauma. |
-| Psychology | Water | Understanding minds, motivations, and behavior. |
-| Public Speaking | Fire | Commanding a room and structuring a spoken argument, distinct from theatrical Performance. |
+| Piloting | Air | Operating aircraft or watercraft, under one Skill whatever the vehicle. |
+| Politics | Fire | The workings of governments, agencies, and factions. |
+| Psychology | Water | Understanding minds, motivations and behavior, including therapy and the long-term treatment of mental trauma. |
+| Public Speaking | Fire | Commanding a room and structuring a spoken argument. This is a separate Skill from Performance - one is argument, the other is spectacle, and being good at one promises nothing about the other. |
 | Religion | Moira | Theology, doctrine, and religious practice. |
-| Research | Air | Finding information through records, libraries, databases, and open sources - distinct from scene-based Investigation. |
-| Ridicule | Fire | Mockery, insult, and the cutting remark - roasting, trash talk, and the dozens. Distinct from Intimidation, which threatens, and from Performance, which plays to a room rather than at somebody in it. |
-| Ritual Craft | Moira | Conducting rites, wards, and ceremonies meant to bind, invoke, or appease the supernatural - the hands-on practice of doing the working, distinct from Occult's theory of what it means. |
-| Science | Air | Broad scientific knowledge, covering any discipline (chemistry, biology, astrophysics, and so on) under one Skill. |
+| Research | Water | Finding information through records, libraries, databases, and open sources. This is a separate Skill from Investigation: Investigation reads a scene, Research reads the record. |
+| Ridicule | Fire | Mockery, insult, and the cutting remark. Roasting, trash talk, and the dozens. Distinct from Intimidation, which threatens, and from Performance, which plays to a room rather than at somebody standing in it. |
+| Science | Air | Broad scientific knowledge. One Skill covers every discipline - chemistry, biology, astrophysics - because a point spent here should buy you a scientist, not a specialist in one footnote. |
+| Security | Earth | Bypassing physical locks, safes, and alarm systems. |
 | Seduction | Fire | Winning someone over through romantic or physical appeal. |
-| Security | Air | Bypassing physical locks, safes, and alarm systems. |
-| Shadowing | Water | Following someone without being noticed. |
-| Signal & Cipher | Air | Radio codes, hand signs, and other non-verbal communication systems. |
+| Shadowing | Moira | Following someone without being noticed. |
 | Sleight of Hand | Air | Pickpocketing, palming, and planting objects unnoticed. |
-| Smuggling | Water | Concealing and moving contraband past scrutiny - including modern screening and customs. |
-| Stealth | Air | Moving unseen and unheard. |
-| Stewardship | Air | Managing a budget, staff, property, or organization's resources. |
-| Streetwise | Moira | Navigating criminal culture, gangs, and underworld contacts - a knack for being in the right place, reading the city's undercurrents by instinct as much as legwork. |
-| Surveillance | Water | Observing a target or location without being detected - physical stakeouts and technical surveillance (wiretaps, tracking, cameras) alike. |
-| Survival | Earth | Foraging, shelter, and enduring the wilderness. |
+| Smuggling | Water | Concealing and moving contraband past scrutiny, including modern screening and customs. |
+| Stealth | Water | Moving unseen and unheard. |
+| Streetwise | Moira | Navigating criminal culture, gangs, and underworld contacts. |
+| Surveillance | Water | Observing a target or location without being detected, and spotting when somebody is doing it to you - physical stakeouts and technical monitoring both. |
+| Survival | Earth | Foraging, shelter, water, and enduring somewhere that offers no help. |
 | Swimming | Earth | Moving efficiently and enduring in open water. |
-| Systems Operation | Air | Operating and interpreting complex consoles, sensors, and industrial or vehicle control systems. |
-| Tactics | Air | Planning and directing group action, especially in conflict, without doing the fighting yourself. |
-| Thrown Weapons | Air | Which thrown weapons you are trained on, by Category: balanced blade, then thrown axe, shafted, returning, and the sling at Master. Not rolled - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
-| Tracking | Moira | Following physical trails - a nose for which way the trail actually goes, not pure spoor-reading. |
-| Tradecraft | Water | Spy fieldcraft - dead drops, signals, cover identities, evasion, counter-surveillance. |
-| Veterinary Medicine | Water | Diagnosing and treating animals. |
+| Systems Operation | Water | Operating and interpreting complex consoles, sensors, and industrial or vehicle control systems. |
+| Thrown Weapons | Earth | Which thrown weapons you are trained on, by Category: balanced blade, then thrown axe, shafted, returning, and the sling at Master. Never rolled for an attack - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
+| Tracking | Moira | Following physical trails. |
 
 ## A Modern Campaign's Everyman Skills
 
@@ -169,7 +159,6 @@ Per [the Everyman Skills rule above](#everyman-skills), the GM sets this list pe
 | Driving | Most adults in a modern setting can operate a car. |
 | Etiquette | Enough grasp of ordinary social norms to function in public and at work. |
 | First Aid | Widely taught (school, work, licensing) - bandaging a cut, basic CPR awareness. |
-| Literacy | Reading and writing in one's native language. |
 | Persuasion | Everyday give-and-take - asking for a favor, making a case, haggling a little. |
 | Streetwise | A working sense of one's own neighborhood/city - what's safe, who's who, where not to go. |
 

@@ -579,7 +579,7 @@ Skills come in two categories: Everyman Skills and Purchased Skills.
 
 The GM presents everyone with a list of **Everyman Skills.** These are skills that any functional adult in the setting can do because they live there. They are free. You have your Everyman Skills at Trained.
 
-A modern day campaign may have Athletics, Bureaucracy, Computer Use, Cooking, Driving, Etiquette, First Aid, Literacy, Persuasion, and Streetwise as its Everyman Skills, but it is up to your GM to decide.
+A modern day campaign may have Athletics, Bureaucracy, Computer Use, Cooking, Driving, Etiquette, First Aid, Persuasion, and Streetwise as its Everyman Skills, but it is up to your GM to decide.
 
 You have **15-points** to spend on **Purchased Skills.** Each tier costs 1 point and you climb through them in order, so reaching Trained costs 2 points total, Adept costs 3, Expert 4, and Master 5. Those 15 points won’t go as far as you would like. As with everything else in 20 Below, this is intentional. You can have one skill at Master tier and a couple at Trained, or 5 at Adept, or a wide spread of moderate skill. What you can’t have is everything and choosing makes it interesting.
 

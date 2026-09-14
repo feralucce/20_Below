@@ -14,109 +14,69 @@ next_title: "Boons"
      belong in the Scrivener manuscript; layout edits belong in that
      file, in The Brewery. Do not hand-edit this: it is overwritten. -->
 
-Your Elements are what you’re made of. Your Skills are what you’ve actually done with it.
+Earth, Air, Fire, Water and Moira - your Elemental Attributes - are what you are made of. They are the raw materials you have to work with. Your Skills are what you’ve made with them.
 
-Earth, Air, Fire, Water and Moira are huge. They’re the raw material of everything, which is exactly what makes them useless for answering an actual question. Nobody has ever picked a lock with Air. They picked it with Larceny, and Air is what they brought to the job.
-
-A Skill is the narrow, practiced thing - the training, the hours, and the scar tissue you picked up getting them. It’s the difference between a character who can set a broken arm and one who can only look at it and go a bit green. Every roll in the last chapter quietly assumed you had one of these. This is where they come from.
+The elements are huge, unknowable forces and concepts, your skills are narrow, practiced things. A skill is the difference between an EMT setting a broken arm with ease and a bystander watching and turning green. Every roll described in the previous chapter assumed you had one of these skills.
 
 ## Every Skill Has an Element
 
-Every Skill comes with a **default Element** - the Attribute a roll uses unless somebody makes a case otherwise. You’ll find it listed beside every entry at the end of this chapter, and you pick one yourself when you invent a Skill that isn’t there.
+Every skill naturally stems from one of the Elements interacting with the world through your hands. As such, every skill is inherently linked to a specific element. In game terms, the skill defaults to the associated Element and that Element is used to determine the target number of the roll.
 
-That default isn’t a claim about what the Skill fundamentally is. It’s the assumption the roll starts from - the most ordinary way that thing gets done. Stealth defaults to Air because most sneaking is quiet feet and good timing. Athletics defaults to Earth because most exertion is just your body arguing with the world.
-
-Roll the default and nobody has to say anything about it. That’s why it’s there - so most rolls don’t turn into a conversation.
+The default element doesn’t define what a Skill fundamentally is - it’s where the roll starts from. It is the way a skill is normally handled. Stealth defaults to Water because staying unseen is slow, patient work rather than a burst of speed… Most of the time.
 
 ## Challenging the Default
 
-Sometimes the ordinary way isn’t your way.
+Sometimes you want to take a path less traveled - the ordinary way just isn’t the way you want to go.
 
-You can ask to pair a Skill with a different Element, and if the GM buys it, that’s the roll you make. There’s one condition, and it matters - **the argument has to come from one of your own Sub-Stat Descriptors**. A specific adjective you already wrote down. Not a clever sentence you came up with thirty seconds ago.
+It is possible to connect a skill with an Element different from the Default. If the GM buys your argument, that’s the roll you make. This is where your Descriptors come into play. These adjectives give you leverage to use a different Element to calculate the Target Number  when using a skill.
 
-I know what you’re thinking, because I thought it too. Doesn’t that just mean everybody argues their way onto their best Element every single time? It would, without that condition. That’s what the condition is for. With it, a challenge has to be something your character already demonstrably is, and you only ever get as many of those as you wrote down.
+What’s that? Won’t everyone just argue their way into using their best Element every single time? They would, if it weren’t for your Descriptors. They are chosen once (at creation and each time you add a new point to one of your sub-stats. These challenges are anchored in who your character is - not an improvised argument invented at the table 10-seconds ago.
 
 **Player**: Ronan wants to lean on the bouncer. Intimidation defaults to Fire, and my Fire is terrible.
 
-**GM**: It is. Go on.
+**GM**: Yes. It is. Go on.
 
-**Player**: My Potence Descriptor is *Immovable*. I’m not shouting at him. I’m standing in the doorway, not moving, and he has to decide whether tonight is the night he finds out what that costs.
+**Player**: One of my Potence Descriptors is *Immovable*. I’m not shouting at him. I’m standing in the doorway, not moving, and he has to decide whether tonight is the night he finds out what that costs.
 
-**GM**: That’ll do. Roll it on Earth.
+**GM**: Makes sense. That’ll do it. Roll it on Earth.
 
-Two things about that. The GM has final say, and no is a complete answer. And the challenge was *re-argued*, not banked - that same Descriptor does nothing for Ronan an hour later when he’s trying to intimidate somebody over the phone. It was the situation that earned him that roll, not the fact that he got away with it once.
+Two things about that. The GM has final say, and no is a complete answer.
 
-The default on the page never changes. You just won an argument about one roll.
+After that roll is made, the skill “resets” to its default. The next time you use that skill, if you want to use an Element different from the default, you have to argue for it again. Ronan’s Immovable descriptor won’t help him when he is trying to intimidate someone over the phone.
 
-## Training Tiers
+## Skill Tiers
 
-How much you know changes *how the roll gets built* - not by handing you a bonus, but by changing the shape of the dice.
+Your mastery of a skill is reflected in Skill Tiers. Skill Tiers are a crunchy, nuts-and-bolts way to quantify the time and training it takes to become proficient in a Skill.  Every skill falls into one of the Tiers outlined below. With the exception of Everyman Skills, all skills start at Untrained.
 
-**0 - Untrained**: Difficulty only. No Element at all. You’re working from the situation and nothing else, and the situation is rarely generous.
+**0 - Untrained**: You have no training in this skill. If you aren’t trained in a skill, you don’t get to add your Element to the Target Number - you roll Difficulty only.
 
-**1 - Novice**: Element plus Difficulty, at Disadvantage. You know enough to try. You don’t know enough to be trusted.
+**1 - Novice**: You’ve played around enough that you can perform some of the most basic tasks associated with the skill. You roll your Element+Difficulty. The Novice Tier rolls at Disadvantage. You know enough to try. You don’t know enough to be trusted.
 
-**2 - Trained**: Element plus Difficulty. The clean roll. This is competence - the person you’d actually hire.
+**2 - Trained**: You are competent with this skill. You are the person people hire to get a job done. You roll your Element+Difficulty.
 
-**3 - Adept**: Element plus Difficulty, at Advantage. You’re good, and it shows on the bad days as much as the good ones.
+**3 - Adept**: You are good at what you do and it shows. You roll your Element+Difficulty, at Advantage.
 
-**4 - Expert**: Everything Adept gets, plus your critical success widens - a 2 *or* a 3. You’re now roughly twice as likely to do something people tell stories about.
+**4 - Expert**: You are the guy that the adepts come to for answers. You aren’t just good -  you are *damn* good. You roll your Element+Difficulty, at Advantage. Additionally, while using this skill, you score a Critical Success when you roll a 2 or a 3.
 
-**5 - Master**: Everything Expert gets, plus catastrophic failure loosens its grip. Roll a 20 and you roll again. If the second one succeeds, it was an ordinary failure after all.
-
-Read that last one carefully, because it’s narrower than it looks. The reroll only ever strips the *severity* off a failure. It never turns a 20 into a success, and if the second roll fails too, the catastrophic failure stands exactly as it was. So mastery won’t stop you having a bad day. It just keeps the worst version of it off the table.
-
-Every tier is strictly better than the one under it. There’s no rung where you trade something away, and no class or level track telling you when you’re allowed to climb. You buy tiers one at a time with XP, in whatever order you like. The Advancement chapter has the prices.
+**5 - Master**: You have truly mastered this skill. You have spent thousands of hours honing your craft. You might have invented the skill. You roll with all the benefits of an Expert. Additionally, if you roll a Catastrophic Falure (20 on the dice), you can avoid the negative consequences. Immediately roll the dice again. If your second roll succeeds, the Catastrophic Failure is canceled and you simply fail the roll.
 
 ## Everyman Skills
 
-There are things any functioning adult can do, and I’m not charging you points for them. That’s a tax on being a person.
+In every setting, there are things that any functional adult can do. These are represented by Everyman Skills. Your GM sets a list of skills that everyone in the campaign has access to automatically.
 
-So every character starts with a short list of Skills free, at **Tier 2, Trained**. The clean roll, not a token nod - baseline competence, because that’s what it’s meant to represent.
+Every character starts with this short list of Skills ad Tier 2 (Trained), for free.
 
-20 Below doesn’t fix that list, and it can’t. What counts as ordinary depends entirely on where and when your game is set. Driving is unremarkable now and unthinkable in 1840. Literacy is assumed in one setting and rare in another. **The GM sets the Everyman list for their own campaign**, in the same conversation as tone and subject matter.
-
-For a present-day game, this list works: Athletics, Bureaucracy, Computer Use, Cooking, Driving, Etiquette, First Aid, Literacy, Persuasion and Streetwise. Trim it or extend it to fit your game. I’m not going to pretend I know what counts as ordinary at your table.
-
-Notice what isn’t on it. Firearms, Medicine and Hacking aren’t there, and that’s deliberate. Those are real training that most people don’t pick up just by existing in the modern world, and they stay things a character has to actually invest in.
-
-## Weapon Skills Are Not Attack Skills
-
-Four of the entries below break the pattern, and it’s worth saying why before you meet them.
-
-No Skill swings a weapon. A to-hit roll is your Element against their Defense and nothing else goes into it, so an untrained character attacks on exactly the same roll as a veteran. Which Element carries it is the approach you describe rather than the thing in your hand - the same sword swings on Earth, Air, Fire or Water depending on how you tell me you’re swinging it.
-
-So **Melee Weapons**, **Firearms**, **Archery** and **Thrown Weapons** are never rolled. Each is a list of what you’re trained to pick up, and its tier says which Category of weapon you can use in a fight. Anything past your tier is a weapon you have no business holding; what that costs you is my call, the same as anything else no roll covers.
-
-Each tier adds to the ones under it.
-
-<div class="wide" markdown="1">
-
-<p class="block-title" markdown="span">Weapon Skills - what each tier unlocks</p>
-
-| Tier | Melee Weapons | Firearms | Archery | Thrown Weapons |
-|---|---|---|---|---|
-| 1 Novice | Improvised, Knife | Handgun | Hand crossbow | Balanced blade |
-| 2 Trained | One-handed blunt, Large blade | Shotgun | Crossbow | Thrown axe |
-| 3 Adept | One-handed blade | Submachine gun | Recurve bow | Shafted |
-| 4 Expert | Polearm / two-handed, Two-handed, Two-handed blunt | Rifle | Compound bow | Returning |
-| 5 Master | Exotic (melee) | Heavy | Warbow | Sling |
-
-</div>
-
-**Unarmed isn’t on the list.** Fists and feet need nobody’s permission, and there’s nothing there to be trained on. Fighting that way is **Onslaught**, in the Gifts chapter.
-
-**Special Weapons isn’t a Skill.** It’s one named system rather than a Category you train through, so it’s a Boon - and that’s where the exotic ranged weapons live too: blowgun, net launcher, flare gun.
-
-These four are the one place a tier buys access instead of a better roll, which is why a katana sits at Adept and a whip at Master. The cost is real, and it’s the point: what a character can pick up says as much about them as what they can do with it.
+For a present-day game, a list of Everyman Skills might be: Athletics, Bureaucracy, Computer Use, Cooking, Driving, Etiquette, First Aid, Persuasion and Streetwise. Your GM may have a different idea of what should be on this list. This list also won’t work for a medieval high fantasy setting.
 
 ## The Skill List
 
-What follows is a starting list for a modern-world campaign. It isn’t exhaustive, and it isn’t trying to be.
+The following list is a starting point for a modern campaign. It isn’t exhaustive and isn’t trying to be.
 
-Add to it. Split an entry, merge two, or rename one so it sounds like your setting. I put this list together to save you time at character creation, not to fence in what a person can plausibly know how to do. If your character should have a Skill that isn’t here, they have it - pick an Element and write it down.
+If you see a skill that needs to be in the campaign - add it. If a skill seems to broad - split it into two. If you want a skill for your character that isn’t on the list, make it. I put the list together to help speed up character creation.
 
-The entries are **broad on purpose**. A point spent on Crafting should feel like it bought something, not like it bought one narrow task. Where a real distinction lives inside a broad Skill - a particular science, a particular trade, a specific instrument - that’s flavor you describe, not a reason to split the Skill in half.
+The skills are relatively broad on purpose. Crafting is composed of a wide pool of knowledge and individual sub-skills. The skill should reflect this.
+
+There are 4 skills on this list that are different. They do not change the way you roll - they dictate what you can access. The weapons skills - Melee Weapons, Firearms, Archery, and Thrown Weapons - do not work the same as other skills. Each Tier in these skills grants proficiency with the weapon types listed. The skill is only rolled for maintenance, repair and building weapons.
 
 Every entry lists its default Element in brackets.
 
@@ -126,7 +86,7 @@ Every entry lists its default Element in brackets.
 
 <div class="skill-flavour" markdown="1">
 
-The library shut at ten and you were still there at ten. Somebody had to know this, and it turned out to be you.
+The library closes at 10 p.m. and you were still there as they were locking up. Someone needs to know this stuff. In most cases, that is going to be you.
 
 </div>
 
@@ -140,7 +100,7 @@ General scholarship, history, and literature.
 
 <div class="skill-flavour" markdown="1">
 
-Falling is easy. Falling on purpose, and getting up afterward, is the part that takes years.
+Falling is easy. Falling safely is hard. Falling with style is damn near impossible. Yet, you pull it off.
 
 </div>
 
@@ -154,7 +114,7 @@ Balance, tumbling, and controlled falls.
 
 <div class="skill-flavour" markdown="1">
 
-Animals don’t care what you say. They care how you stand, how you breathe, and whether your hands are quiet.
+Animals don’t speak your native language, but they seem to understand what you want from them.
 
 </div>
 
@@ -162,13 +122,13 @@ Training, calming, and directing animals.
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--moira" markdown="1">
 
-<p class="block-title" markdown="span">Appraisal<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Appraisal<span class="block-pill">Moira</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-It’s the weight that gives it away. That, and the way the seller won’t quite look at it.
+The seller twitches when you pick it up. It feels slightly too light and the patina is the weight that gives it away. That, and the way the seller won’t quite look at it.
 
 </div>
 
@@ -176,17 +136,31 @@ Judging the value and authenticity of goods.
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--earth" markdown="1">
 
-<p class="block-title" markdown="span">Archery<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Archery<span class="block-pill">Earth</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Draw, settle, breathe out, let go. The same four things they’ve always been, and the string still won’t forgive a flinch.
+Setup… lift… settle… follow-through. The same four steps over and over again until it is reflex. After all, the bowstring does not forgive a flinch.
 
 </div>
 
-Which bows you are trained to draw, by Category: a hand crossbow first, then a crossbow, a recurve, a compound, and the warbow last. You don’t roll it to shoot - see **Weapon Skills Are Not Attack Skills** above. What it says is which of them you can pick up.
+Which bows you are trained to draw, by Category: a hand crossbow first, then a crossbow, a recurve, a compound, and the warbow last. You do not roll it to shoot - a to-hit is your Element against their Defense, the same for everyone. What this says is which of them you can pick up and use.
+
+Each tier adds to the ones under it.
+
+**1 - Novice**: Hand crossbow.
+
+**2 - Trained**: Crossbow.
+
+**3 - Adept**: Recurve bow.
+
+**4 - Expert**: Compound bow.
+
+**5 - Master**: Warbow. An English longbow, and anything else that asks that much of a back.
+
+**Care, repair and building.** Waxing a string, fletching your own arrows, tuning a rest or a nock point: no roll. Repair is a roll of this Skill - a delaminated limb, a cracked riser, the prod of a crossbow, a string served badly by somebody else. From **Expert** you can build a bow from a prepared stave and fittings; at **Master**, from a stave you cut and cured yourself.
 
 </div>
 
@@ -196,7 +170,7 @@ Which bows you are trained to draw, by Category: a hand crossbow first, then a c
 
 <div class="skill-flavour" markdown="1">
 
-Your body will do more than you think and less than you hoped. The gap between those is where this lives.
+Humans are capable of amazing feats. Your body will do more than you expected and far less than you hoped for.
 
 </div>
 
@@ -210,7 +184,7 @@ Running, jumping, climbing, and lifting under exertion.
 
 <div class="skill-flavour" markdown="1">
 
-Never want it visibly. The moment they know you want it, the price stops being yours.
+Bartering is a game of give and take. Never let them see that you want it. The moment you do, the price stops being negotiable.
 
 </div>
 
@@ -218,13 +192,13 @@ Striking favorable trades and deals.
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--fire" markdown="1">
 
-<p class="block-title" markdown="span">Bribery<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Bribery<span class="block-pill">Fire</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-The trick isn’t the money. It’s knowing who takes it, how, and what they need to be able to tell themselves afterward.
+Bribery isn’t about the money… At least not just about the money. It’s about knowing who will take it, how to give it to them and plausible deniability.
 
 </div>
 
@@ -232,13 +206,13 @@ Knowing how much, how, and who to pay to get what you want.
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--water" markdown="1">
 
-<p class="block-title" markdown="span">Bureaucracy<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Bureaucracy<span class="block-pill">Water</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Somewhere in this building is one person who can sign this. Everyone else is a corridor.
+The red tape that is an obstacle to most people is just a finish line for you. Someone, somewhere in this building there is one person who can sign this - you know how to find them and how to get them to sign it.
 
 </div>
 
@@ -252,7 +226,7 @@ Navigating institutions, paperwork, permits, and red tape to get things done.
 
 <div class="skill-flavour" markdown="1">
 
-You didn’t do anything. You were just easy to be around, and by the end of it they’d decided you were on their side.
+You don’t really do anything - you don’t have to. You are just that charming. You are easy to be around and by the end of the day, most people like you.
 
 </div>
 
@@ -266,7 +240,7 @@ Ingratiation and drawing people in.
 
 <div class="skill-flavour" markdown="1">
 
-Everybody can drive. Almost nobody can drive while the back window is coming apart.
+Driving is easy. Everyone can do it. Almost no one can drive while being showered with glass shards. Driving while being shot at, avoiding impact and using your vehicle as a weapon is hard - but you can do it.
 
 </div>
 
@@ -274,13 +248,13 @@ Operating a vehicle under fire or in a chase. This is a separate Skill from ordi
 
 </div>
 
-<div class="skill skill--water" markdown="1">
+<div class="skill skill--fire" markdown="1">
 
-<p class="block-title" markdown="span">Composition<span class="block-pill">Water</span></p>
+<p class="block-title" markdown="span">Composition<span class="block-pill">Fire</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Anyone can put the words down. Getting them to land in the right order, on the right beat, is a different job.
+Anyone can write words down. Choosing the right ones, crafting compelling stories, songs or poetry is a different task altogether.
 
 </div>
 
@@ -294,7 +268,7 @@ Writing music, poetry, or stories with real craft.
 
 <div class="skill-flavour" markdown="1">
 
-You know the setting exists. You know it’s three menus deep and named something stupid. You find it anyway.
+Everyone has a computer in their pocket these days, but very few people know how to really use them with any proficiency. You know how to explore a system, find the setting and how to make the machines work the way they are supposed to.
 
 </div>
 
@@ -302,13 +276,13 @@ General computing, software, and programming. This Skill is distinct from Hackin
 
 </div>
 
-<div class="skill skill--water" markdown="1">
+<div class="skill skill--moira" markdown="1">
 
-<p class="block-title" markdown="span">Concealment<span class="block-pill">Water</span></p>
+<p class="block-title" markdown="span">Concealment<span class="block-pill">Moira</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-The best hiding place is somewhere so boring a searching eye slides off it without stopping.
+You know the best places to stash things, how to disguise an entrance and make a vehicle almost invisible.
 
 </div>
 
@@ -316,13 +290,13 @@ Hiding objects, caches, or hideouts from a determined search.
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--earth" markdown="1">
 
-<p class="block-title" markdown="span">Contortion<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Contortion<span class="block-pill">Earth</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-The gap is smaller than you are. That’s a negotiation, not a verdict.
+Your body is far more flexible than people give you credit for. The ways your can bend your body and twist your joints are downright unnerving to many people.
 
 </div>
 
@@ -330,17 +304,31 @@ Fitting through tight spaces and slipping restraints through flexibility.
 
 </div>
 
-<div class="skill skill--water" markdown="1">
+<div class="skill skill--earth" markdown="1">
 
-<p class="block-title" markdown="span">Cooking<span class="block-pill">Water</span></p>
+<p class="block-title" markdown="span">Cooking<span class="block-pill">Earth</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Anyone can follow a recipe. The trick is the moment you stop needing one and start tasting instead.
+Anyone can follow a recipe - you stopped needing one years ago.
 
 </div>
 
 Preparing food, from the everyday to the exceptional.
+
+</div>
+
+<div class="skill skill--air" markdown="1">
+
+<p class="block-title" markdown="span">Covert Signals<span class="block-pill">Air</span></p>
+
+<div class="skill-flavour" markdown="1">
+
+Two fingers held low against your thigh and everybody behind you stops walking. Nobody said a word, and nobody is going to - that's the whole point. A whole conversation, in a room full of people, and not one of them hears a syllable of it.
+
+</div>
+
+Prearranged signals that carry meaning without words - hand signs, chalk marks, whistles, and brevity over the air.
 
 </div>
 
@@ -350,7 +338,7 @@ Preparing food, from the everyday to the exceptional.
 
 <div class="skill-flavour" markdown="1">
 
-Measure it, cut it, discover you were wrong, do it again. That’s the whole trade, and it never stops being the whole trade.
+Measure twice, cut once. You are good at making things.
 
 </div>
 
@@ -364,7 +352,7 @@ Building and repairing goods in a chosen trade. One Skill covers any material or
 
 <div class="skill-flavour" markdown="1">
 
-Every code is a promise that only the right people can read this. You work one side of that promise or the other.
+There are two sides to this and you work both. One is making something that stays unreadable to everyone except the person you meant it for. The other is being the uninvited reader on somebody else's message, with nothing to go on but volume, repetition, and time you don't really have.
 
 </div>
 
@@ -372,13 +360,13 @@ Creating and breaking codes, ciphers, and encryption.
 
 </div>
 
-<div class="skill skill--water" markdown="1">
+<div class="skill skill--fire" markdown="1">
 
-<p class="block-title" markdown="span">Deception<span class="block-pill">Water</span></p>
+<p class="block-title" markdown="span">Deception<span class="block-pill">Fire</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-The best lie is ninety percent true, delivered by someone already bored of the subject.
+Everybody lies. Most people are dreadful at it, because the moment they're nervous they start adding detail - the dog's name, the make of the car, what the weather was doing that afternoon. You go the other way. Small story, mostly true, delivered like you'd honestly rather be discussing something else.
 
 </div>
 
@@ -392,7 +380,7 @@ Lying, bluffing, and fast talk.
 
 <div class="skill-flavour" markdown="1">
 
-Anyone can make a bang. The skill is the bang being exactly this big, exactly there, exactly now.
+Anyone can make something explode. Making something explode with the exact force, placement and form to get the job done is a different thing entirely.
 
 </div>
 
@@ -406,11 +394,11 @@ Safely handling, placing, and detonating explosives.
 
 <div class="skill-flavour" markdown="1">
 
-Nobody looks at faces. They look at posture, clothes, and whether you belong - and all three of those are choices.
+You can make your face somebody else's - hair, skin, the line of a jaw, and the clothes worn the exact way that particular person wears them. Copying the voice and the mannerisms is the easy half. The hard half is being looked at directly by somebody who knows them, and not being seen.
 
 </div>
 
-Altering appearance to convincingly pass as someone else.
+Altering appearance and behaviors to convincingly pass as someone else.
 
 </div>
 
@@ -420,7 +408,7 @@ Altering appearance to convincingly pass as someone else.
 
 <div class="skill-flavour" markdown="1">
 
-Cards, bones, tea leaves, the dream you can’t shake off. Fate will answer a direct question. It just won’t answer kindly, or on time.
+Cards, bones, tea leaves, the dream that won't leave you alone. The method doesn't much matter. What matters is asking a question Fate finds interesting enough to bother answering.
 
 </div>
 
@@ -428,13 +416,13 @@ Reading omens, portents, and the shape of what’s coming.
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--earth" markdown="1">
 
-<p class="block-title" markdown="span">Driving<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Driving<span class="block-pill">Earth</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Point it, feed it fuel, don’t hit anything. Most days that’s genuinely all it takes.
+Cars, trucks, a van with a dying clutch, something with tracks on it. If it has wheels and a road underneath, you'll get it where it's going without anybody needing to file a report about it.
 
 </div>
 
@@ -442,13 +430,13 @@ Operating ground vehicles in ordinary traffic and terrain.
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--earth" markdown="1">
 
-<p class="block-title" markdown="span">Electronics<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Electronics<span class="block-pill">Earth</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Somewhere on this board is one component that’s given up. Everything else is fine. Finding out which is the job.
+Building it is the easy part. Building it so the next person to open the case doesn't curse you by name takes rather more practice. A schematic, a soldering iron, and a great deal of squinting. None of it is fast and none of it is glamorous, and you'd rather be doing it than almost anything else.
 
 </div>
 
@@ -462,7 +450,7 @@ Building, repairing, and modifying electronic devices and circuitry.
 
 <div class="skill-flavour" markdown="1">
 
-Everything still standing is an argument with gravity that somebody won on paper first.
+Everything still standing is an argument with gravity that somebody won on paper first. You're one of the people who does the arguing.
 
 </div>
 
@@ -476,7 +464,7 @@ Theoretical and design knowledge of structures and systems.
 
 <div class="skill-flavour" markdown="1">
 
-Restraints are built for the shape of an average person who isn’t trying very hard. You’re neither.
+Rope, zip ties, cuffs or the trunk of a car. None of it is a trick and none of it is dignified. Four minutes, some skin off your knuckles, and dislocating something on purpose in the dark while you listen for footsteps.
 
 </div>
 
@@ -490,7 +478,7 @@ Breaking free of restraints and confined spaces under pressure.
 
 <div class="skill-flavour" markdown="1">
 
-There is a correct fork, and the point was never the fork. The point is that you knew, and they saw you know.
+Every room has rules nobody will say out loud, because saying them out loud would be a breach of the rules. Manners are a password. Get it right and doors open quietly. Get it wrong and nobody tells you which part you got wrong, only that you're no longer being invited.
 
 </div>
 
@@ -504,7 +492,7 @@ Navigating social and professional protocol correctly.
 
 <div class="skill-flavour" markdown="1">
 
-The work doesn’t care that you’re tired, and the season doesn’t care that you’re behind.
+Food doesn’t come from a shop. It comes from about nine months of somebody paying attention. You know when to plant, when to leave it alone, what’s wrong with an animal that’s gone off its feed, and how much of the year is spent waiting.
 
 </div>
 
@@ -518,7 +506,7 @@ Cultivating crops and managing livestock.
 
 <div class="skill-flavour" markdown="1">
 
-Money doesn’t move mysteriously. It moves for reasons, and the reasons are written down somewhere.
+Money doesn't move mysteriously. It moves for reasons, and somebody wrote the reasons down, and you know where they filed them. You can look at a set of accounts and tell which month something went wrong in that building. Usually you can tell who.
 
 </div>
 
@@ -532,11 +520,25 @@ Economics, markets, and accounting.
 
 <div class="skill-flavour" markdown="1">
 
-It’s a machine for putting a small thing exactly where you’re looking. Everything hard about it lives in the word exactly.
+You learned on one, then another, and every new shape cost you months. They are not interchangeable, whatever the man behind the counter says.
 
 </div>
 
-Which firearms you are trained on, by Category: a handgun first, then a shotgun, a submachine gun, a rifle, and the heavy weapons last. You don’t roll it to shoot. What it says is which of them you can pick up.
+Which firearms you are trained on, by Category: a handgun first, then a shotgun, a submachine gun, a rifle, and the heavy weapons last. You do not roll it to shoot. What it says is which of them you can pick up and use.
+
+Each tier adds to the ones under it.
+
+**1 - Novice**: Handgun. A compact pistol, a heavy revolver, a derringer, a black powder pistol.
+
+**2 - Trained**: Shotgun. A pump shotgun, a sawed-off.
+
+**3 - Adept**: Submachine gun. A compact SMG.
+
+**4 - Expert**: Rifle. A hunting rifle, a tactical carbine, a revolver rifle, a muzzleloader.
+
+**5 - Master**: Heavy. A squad automatic weapon, a grenade launcher, an anti-materiel rifle, a harpoon gun.
+
+**Care, repair and building.** Cleaning it, clearing a jam, swapping a spring or a firing pin: no roll, that is just owning the thing. A real repair is a roll of this Skill - a cracked frame, a shot-out barrel, a receiver somebody dropped off a roof - at a Difficulty the GM sets from the damage. From **Expert** you can assemble one from parts; at **Master** you can machine what you cannot buy, which is how a weapon with no serial number comes to exist.
 
 </div>
 
@@ -546,7 +548,7 @@ Which firearms you are trained on, by Category: a handgun first, then a shotgun,
 
 <div class="skill-flavour" markdown="1">
 
-You’re not fixing them. You’re keeping them alive long enough to reach somebody who can.
+Everybody else in the room is waiting for someone to start. Being trained mostly means being the one who starts. Pressure, airway, warmth, and getting them to the people with the equipment. Four things, done fast, in that order, while somebody screams at you.
 
 </div>
 
@@ -554,13 +556,13 @@ Immediate, field-level treatment - stabilizing, bandaging, CPR.
 
 </div>
 
-<div class="skill skill--water" markdown="1">
+<div class="skill skill--moira" markdown="1">
 
-<p class="block-title" markdown="span">Fishing<span class="block-pill">Water</span></p>
+<p class="block-title" markdown="span">Fishing<span class="block-pill">Moira</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Most of it is waiting. The waiting is not a flaw in the activity, whatever your companions say.
+You tie your own flies, you know which hook suits which mouth, and you can gut and bone one on a flat rock in about ninety seconds.
 
 </div>
 
@@ -568,13 +570,13 @@ Catching fish by line, net, or spear.
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--earth" markdown="1">
 
-<p class="block-title" markdown="span">Forgery<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Forgery<span class="block-pill">Earth</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-It doesn’t have to be perfect. It has to survive a tired person’s eight-second glance.
+Right paper weight, right laminate, and a stamp worn down a little, because a stamp that's been used four thousand times is worn down a little. Nobody checks the seal. Everybody notices crisp. It doesn't have to survive a laboratory. It has to survive eight seconds and a tired man holding it at arm's length under a fluorescent tube.
 
 </div>
 
@@ -588,7 +590,7 @@ Producing convincing fake documents, signatures, IDs, and digital records.
 
 <div class="skill-flavour" markdown="1">
 
-The cards don’t remember. The people across the table do, and that’s the game you’re actually playing.
+You know the odds cold, down in the bone, from years of it. The man opposite read them off a website last Tuesday and is quietly certain that's the same thing. It's going to be an expensive evening for him.
 
 </div>
 
@@ -602,7 +604,7 @@ Skill at games of strategy, chance, and wagering - tabletop, esports, or otherwi
 
 <div class="skill-flavour" markdown="1">
 
-Systems get built by people under deadline. You’re looking for the shortcut somebody took at two in the morning, two years ago.
+Systems get built by tired people under deadline. Somewhere in this one is the shortcut a man took at two in the morning two years ago, promising himself he'd come back and fix it properly, and he never did. The camera is running firmware from 2013 and the password is still four ones. It took ninety seconds, and not one second of it was clever, and you're a little disappointed about that.
 
 </div>
 
@@ -616,25 +618,11 @@ Bypassing digital security - accounts, networks, cameras, and devices.
 
 <div class="skill-flavour" markdown="1">
 
-Older than the hospital and, in a few specific things, still better. Knowing which few is the skill.
+A shelf of brown bottles with handwritten labels, half of them in your grandmother's writing and one of them in a language you don't read. Willow bark is aspirin, honey on a burn genuinely works, and comfrey will do more for a bad sprain than the tube the pharmacy sold you. Three things out of a hundred. Knowing which three is what the years of training went into.
 
 </div>
 
 Herbal remedies, folk medicine, and non-clinical healing traditions.
-
-</div>
-
-<div class="skill skill--earth" markdown="1">
-
-<p class="block-title" markdown="span">Housekeeping<span class="block-pill">Earth</span></p>
-
-<div class="skill-flavour" markdown="1">
-
-A house left alone doesn’t stay still. It quietly comes apart, and somebody has to be quietly stopping it.
-
-</div>
-
-Running and maintaining a household efficiently.
 
 </div>
 
@@ -644,7 +632,7 @@ Running and maintaining a household efficiently.
 
 <div class="skill-flavour" markdown="1">
 
-You’re not looking for the animal. You’re looking for where the animal has to be, and getting there first.
+Anyone can pull a trigger. Hunting is knowing which slope it beds on, being there before dawn without it knowing, and getting it dressed in the cold before the meat turns.
 
 </div>
 
@@ -658,7 +646,7 @@ Tracking, catching, and field-dressing game.
 
 <div class="skill-flavour" markdown="1">
 
-They said the words. You heard the pause before them, and the pause was the honest part.
+Working out what somebody actually wants and whether what they just told you is true, from four minutes across a table and nothing else.
 
 </div>
 
@@ -672,7 +660,7 @@ Reading people, sensing motive and deception - a read that goes past ordinary at
 
 <div class="skill-flavour" markdown="1">
 
-Everyone gives you something. Most of it’s a lie, and the lie is where you start.
+He told you a story at ten in the morning and a slightly different one at three. You didn't mention it. You wrote it down and asked him about something else entirely. You aren't trying to make him talk. He'll talk, they always talk. You're working out which of the three hours of talking was true.
 
 </div>
 
@@ -686,7 +674,7 @@ Extracting information from an unwilling subject.
 
 <div class="skill-flavour" markdown="1">
 
-You don’t have to say what happens next. You only have to be visibly willing to find out.
+You never have to say the thing out loud to make someone do what you want. They do it because of what they think you'll do if they don't. You stand there looking entirely willing to say it, and let them finish the sentence on their own.
 
 </div>
 
@@ -694,13 +682,13 @@ Coercing others through implied or explicit threat.
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--moira" markdown="1">
 
-<p class="block-title" markdown="span">Intrigue<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Intrigue<span class="block-pill">Moira</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Nobody in the room is saying what they want. That’s fine - what they want is legible anyway, if you watch who they’re watching.
+Three things are true in every organization ever assembled. One, everybody wants something. Two, nobody says what they want. Three, the person who looks least interested in the conversation is almost always the one it's about.
 
 </div>
 
@@ -714,7 +702,7 @@ Scheming, maneuvering, and reading the undercurrents of institutional or politic
 
 <div class="skill-flavour" markdown="1">
 
-Plans are for things that already exist. This is the other thing.
+A drawer of parts salvaged from things that used to be other things, a notebook nobody else can read, and an idea you've been turning over since Tuesday that you're now fairly sure is going to work. Two in the morning, third attempt, and it does precisely what you said it would do. You're going to be insufferable about this for a week, and you will have earned every minute of it.
 
 </div>
 
@@ -728,7 +716,7 @@ Designing and building original devices, not just following existing plans.
 
 <div class="skill-flavour" markdown="1">
 
-It’s all there and it doesn’t add up, and then it does, and you couldn’t tell anyone when it changed.
+Perception notices the thing. Research finds the paperwork about the thing. You stand in the room with all of it and work out what actually happened here.
 
 </div>
 
@@ -742,7 +730,7 @@ Following clues at a scene and drawing sound conclusions.
 
 <div class="skill-flavour" markdown="1">
 
-The law is enormous, slow, and written by people. All three of those are usable.
+Somebody had this precise argument in 1987 and lost it in a way that turns out to be enormously helpful to you.
 
 </div>
 
@@ -756,7 +744,7 @@ Legal codes, procedure, and precedent.
 
 <div class="skill-flavour" markdown="1">
 
-People will follow somebody who seems to know where they’re going. It helps enormously if you do.
+Eleven people were standing in a corridor not deciding anything. You said three sentences and now they're all doing something, and two of them will later claim it was their idea. People will follow somebody who seems to know where they're going. It helps enormously if you actually do.
 
 </div>
 
@@ -764,45 +752,17 @@ Commanding respect and rallying others to act.
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--water" markdown="1">
 
-<p class="block-title" markdown="span">Linguistics<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Linguistics<span class="block-pill">Water</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Languages aren’t lists of words. They’re a shape, and once you’ve seen a few shapes the next one arrives faster.
+Languages aren't lists of words, no matter what the app on your phone has to say on the subject. Each one is a system that agrees with itself, and once you've taken four or five of them apart you already know most of the questions to ask the next one.
 
 </div>
 
 Learning, translating, and analyzing languages.
-
-</div>
-
-<div class="skill skill--air" markdown="1">
-
-<p class="block-title" markdown="span">Literacy<span class="block-pill">Air</span></p>
-
-<div class="skill-flavour" markdown="1">
-
-Somebody wrote this down meaning to be understood, and you’re holding up your end.
-
-</div>
-
-Reading and writing a specific language. This is a separate thing from speaking it; plenty of fluent speakers can’t read a word.
-
-</div>
-
-<div class="skill skill--earth" markdown="1">
-
-<p class="block-title" markdown="span">Melee Weapons<span class="block-pill">Earth</span></p>
-
-<div class="skill-flavour" markdown="1">
-
-Everything here is a lever or an edge, and both want looking after. The one you neglected is the one that turns in your hand.
-
-</div>
-
-Which melee weapons you are trained on, by Category: improvised things and knives first, then one-handed blunt weapons and large blades, then one-handed blades, then polearms and two-handers, and the exotic ones last. You don’t roll it to swing. What it says is which ones you can pick up.
 
 </div>
 
@@ -812,7 +772,7 @@ Which melee weapons you are trained on, by Category: improvised things and knive
 
 <div class="skill-flavour" markdown="1">
 
-It made a noise it doesn’t usually make. That noise is the whole diagnosis, if you’ve heard enough of them.
+It made a noise it doesn't usually make. If you've heard enough of them, that noise has already told you which part, how long you've got, and roughly what it's going to cost.
 
 </div>
 
@@ -826,7 +786,7 @@ Repair and maintenance of vehicles and machinery.
 
 <div class="skill-flavour" markdown="1">
 
-Diagnosis is mostly ruling things out. What’s left is either the answer or the thing you missed.
+First Aid keeps them alive long enough to reach somebody. You're the somebody. It's a considerably longer appointment.
 
 </div>
 
@@ -834,17 +794,31 @@ Surgery, diagnosis, and long-term clinical treatment.
 
 </div>
 
-<div class="skill skill--water" markdown="1">
+<div class="skill skill--earth" markdown="1">
 
-<p class="block-title" markdown="span">Natural World<span class="block-pill">Water</span></p>
+<p class="block-title" markdown="span">Melee Weapons<span class="block-pill">Earth</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Everything out here is eating, avoiding being eaten, or waiting. Knowing which tells you what happens next.
+A crowbar, a machete, a fire axe, a sword somebody's grandfather brought home. This says which of them you can pick up without being a menace. It says nothing at all about whether you connect.
 
 </div>
 
-Knowledge of flora, fauna, ecosystems, and the environment.
+Which melee weapons you are trained on, by Category: improvised things and knives first, then one-handed blunt weapons and large blades, then one-handed blades, then polearms and two-handers, and the exotic ones last. You do not roll it to swing. A to-hit is your Element against their Defense and it is the same roll whether you have held a sword before or not. What this says is which ones you can pick up.
+
+Each tier adds to the ones under it.
+
+**1 - Novice**: Improvised, Knife. A baseball bat, a metal pipe, a sap, a garrote; a combat knife, a switchblade, a trench knife, a bayonet.
+
+**2 - Trained**: One-handed blunt, Large blade. A mace, a flail, a tonfa; a machete, a kukri.
+
+**3 - Adept**: One-handed blade. A short sword, a rapier, a katana, a war axe, a hatchet, a kama, a sai.
+
+**4 - Expert**: Polearm / two-handed, Two-handed, Two-handed blunt. A battle spear, a glaive, a halberd, a two-handed sword; a sledgehammer; a warhammer.
+
+**5 - Master**: Exotic (melee). A whip, a chain whip, a nunchaku, a war fan.
+
+**Care, repair and building.** Keeping your own weapons in working order takes no roll. If you are trained on it you sharpen it, oil it, re-wrap a grip and re-seat a head without being told to. Fixing something actually broken is a roll of this Skill, at a Difficulty the GM sets from the damage - a sprung rivet is not a cracked tang - and your tier already says how that goes. From **Expert** you can build one from prepared stock and fittings; at **Master**, from raw material and the time it takes.
 
 </div>
 
@@ -854,7 +828,7 @@ Knowledge of flora, fauna, ecosystems, and the environment.
 
 <div class="skill-flavour" markdown="1">
 
-You couldn’t say how you know which way is back. You just haven’t been wrong about it yet.
+You couldn't say how you know which way is back. You just haven't been wrong about it yet, and the one time you doubted it you turned out to be right anyway.
 
 </div>
 
@@ -868,7 +842,7 @@ Plotting a course and avoiding getting lost, on foot, by vehicle, or otherwise.
 
 <div class="skill-flavour" markdown="1">
 
-You don’t need to know the answer. You need to know who does, and to have been pleasant to them once.
+You don't need to know the answer. You need to know who does, and to have been pleasant to them once, eleven months ago, at something extremely dull. Three hundred people would take your call. Forty would do you a favour. Nine would do you a large one, and you know exactly which nine.
 
 </div>
 
@@ -882,7 +856,7 @@ Building and leveraging connections in professional, corporate, or elite circles
 
 <div class="skill-flavour" markdown="1">
 
-Most of it is nonsense. A specific, dangerous fraction of it isn’t, and telling those apart is the entire discipline.
+Most of it is nonsense. Nine tenths was copied badly by somebody who never once tried it, and then copied again by somebody who couldn't read the first man's handwriting. You've read all of it anyway, because the other tenth is in there somewhere, it is specific, it is dangerous, and telling the two apart is what you're for.
 
 </div>
 
@@ -896,7 +870,7 @@ Esoteric lore, ritual, and the world’s hidden supernatural undercurrent.
 
 <div class="skill-flavour" markdown="1">
 
-Everyone looked at the room. You looked at the room and noticed the thing that had been moved.
+Something in here is wrong. You'll have it in about nine seconds - it's the chair, it's four inches off, and somebody was sitting in it recently enough that you can still smell them. Everybody else looked at the room. You looked at the room and saw the one thing in it that had been moved.
 
 </div>
 
@@ -910,7 +884,7 @@ Noticing details and spotting hidden things.
 
 <div class="skill-flavour" markdown="1">
 
-The audience will forgive a mistake. They won’t forgive you visibly noticing it.
+Acting, a violin, a stage, or a bar with twelve people in it. Same Skill. The instrument changes and the work doesn't - hold them, and don't let them notice you're doing it. Three seconds before you go on you're certain this was a mistake and you'd like to go home. Then it's fine. It's been fine every time for eleven years, and it makes no difference at all to the three longest seconds of your life. Then, you do it again.
 
 </div>
 
@@ -924,7 +898,7 @@ Acting, music, dance, or oratory before an audience, under one Skill whatever th
 
 <div class="skill-flavour" markdown="1">
 
-No trick and no pressure. Just the argument, made well, to somebody willing to hear it.
+You aren't lying to him and you aren't leaning on him. You're doing the considerably harder thing, which is finding the version of the truth he can afford to agree with. No trick and no pressure - just the argument, made well, to somebody willing to hear it.
 
 </div>
 
@@ -938,7 +912,7 @@ Honest argument and diplomacy.
 
 <div class="skill-flavour" markdown="1">
 
-The ground is a long way down and it is extremely patient.
+A four-seat aircraft or a forty-foot boat, same Skill either way. Both are you, a machine with a countable number of moving parts, and a lot of something that holds no opinion at all about whether you get home. And always remember - gravity is a harsh mistress.
 
 </div>
 
@@ -946,45 +920,17 @@ Operating aircraft or watercraft, under one Skill whatever the vehicle.
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--fire" markdown="1">
 
-<p class="block-title" markdown="span">Politics<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Politics<span class="block-pill">Fire</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Every institution is people with jobs they’d like to keep. Everything else follows from that.
+Nothing gets done because it's right. Things get done because somebody needed a win before the review, and you know whose review falls when. Every agency wants the same three things - a larger budget next year, no headlines this year, and the agency across the road looking worse than they do. Once you know that, very little of what they do stays mysterious.
 
 </div>
 
 The workings of governments, agencies, and factions.
-
-</div>
-
-<div class="skill skill--moira" markdown="1">
-
-<p class="block-title" markdown="span">Precognition<span class="block-pill">Moira</span></p>
-
-<div class="skill-flavour" markdown="1">
-
-Not a vision. A wrongness, a few seconds early, and the discipline to move on it before you know why.
-
-</div>
-
-A trained sensitivity to warnings from the threads of fate.
-
-</div>
-
-<div class="skill skill--water" markdown="1">
-
-<p class="block-title" markdown="span">Psychoanalysis<span class="block-pill">Water</span></p>
-
-<div class="skill-flavour" markdown="1">
-
-The thing they’re describing isn’t the thing. Getting to the thing takes a long time and can’t be hurried.
-
-</div>
-
-Therapy and treating mental trauma.
 
 </div>
 
@@ -994,11 +940,11 @@ Therapy and treating mental trauma.
 
 <div class="skill-flavour" markdown="1">
 
-People are consistent. Just never in the way they think they are.
+People are consistent - reliably, mechanically consistent, in ways they'd spot instantly in anybody else and will argue about for an hour when it's them. So the thing they're describing is never the thing, and getting to the thing takes a long time and cannot be hurried. Every attempt to hurry it has cost somebody a year.
 
 </div>
 
-Understanding minds, motivations, and behavior.
+Understanding minds, motivations and behavior, including therapy and the long-term treatment of mental trauma.
 
 </div>
 
@@ -1008,7 +954,7 @@ Understanding minds, motivations, and behavior.
 
 <div class="skill-flavour" markdown="1">
 
-A room is one animal with one mood, and you’re either changing it or being changed by it.
+Two hundred people and one of you. They aren't hostile. They're tired, they've been in those chairs since one o'clock, and a good third of them are quietly thinking about the parking lot and whether they'll beat the traffic out. You get ninety seconds, give or take, before you lose them for the evening, and none of those ninety seconds can be spent clearing your throat.
 
 </div>
 
@@ -1022,7 +968,7 @@ Commanding a room and structuring a spoken argument. This is a separate Skill fr
 
 <div class="skill-flavour" markdown="1">
 
-Doctrine, history, practice, and what people actually do, which is never quite the same thing.
+You can tell roughly what a congregation believes from where they put the door, what hangs behind the altar, and what came down forty years ago and was never replaced. You know the calendar, the fasts, who may enter which room, and which of the four holy days actually matters to these people - and that last one isn't written down anywhere, because doctrine and what the pews actually do have never once been quite the same thing.
 
 </div>
 
@@ -1030,13 +976,13 @@ Theology, doctrine, and religious practice.
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--water" markdown="1">
 
-<p class="block-title" markdown="span">Research<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Research<span class="block-pill">Water</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-The answer is already written down. Somebody just filed it badly.
+Eleven hours of microfiche and a headache behind one eye, and then a single line in a county record that changes what the entire afternoon was about. The answer was already written down. Somebody just filed it badly, in 1987, under a heading that made complete sense to them at the time.
 
 </div>
 
@@ -1050,25 +996,11 @@ Finding information through records, libraries, databases, and open sources. Thi
 
 <div class="skill-flavour" markdown="1">
 
-Anybody can be cruel. Making it stick is the part you practice.
+The dozens, trash talk, or a wedding toast that goes eight percent too far. Same craft, different room, same timing. Anybody can be cruel - cruelty is free. Making it land in eleven words, in front of people, and making it the thing he still gets called six months later, is the part you practiced.
 
 </div>
 
 Mockery, insult, and the cutting remark. Roasting, trash talk, and the dozens. Distinct from Intimidation, which threatens, and from Performance, which plays to a room rather than at somebody standing in it.
-
-</div>
-
-<div class="skill skill--moira" markdown="1">
-
-<p class="block-title" markdown="span">Ritual Craft<span class="block-pill">Moira</span></p>
-
-<div class="skill-flavour" markdown="1">
-
-The words matter. The order matters. Whether you believe them matters rather less than you’d hope.
-
-</div>
-
-Conducting rites, wards, and ceremonies meant to bind, invoke, or appease the supernatural. This is the hands-on practice rather than the scholarship behind it, which is Occult.
 
 </div>
 
@@ -1078,7 +1010,7 @@ Conducting rites, wards, and ceremonies meant to bind, invoke, or appease the su
 
 <div class="skill-flavour" markdown="1">
 
-The universe wrote its rules down somewhere. You’ve read enough of them to make a decent guess at the rest.
+The universe wrote its rules down somewhere, and you've read enough of them to make a decent guess at the rest. Chemistry, biology, astrophysics - it hardly matters which, because the useful part was never the field. It's knowing what a control group is for, and being unable to stop noticing when there wasn't one.
 
 </div>
 
@@ -1086,13 +1018,13 @@ Broad scientific knowledge. One Skill covers every discipline - chemistry, biolo
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--earth" markdown="1">
 
-<p class="block-title" markdown="span">Security<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Security<span class="block-pill">Earth</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-A lock is a delay sold as a decision. You’re the one who knows how long the delay actually is.
+A tension wrench, a rake, and a light held in your teeth. A lock is a nothing more than a delay and you know exactly how much time this one buys them - four minutes if it's any good, forty seconds if it went in back in 1994 and nobody has looked at it since.
 
 </div>
 
@@ -1106,7 +1038,7 @@ Bypassing physical locks, safes, and alarm systems.
 
 <div class="skill-flavour" markdown="1">
 
-Attention is the whole currency. Giving it, withholding it, and knowing which one this moment wants.
+Everybody's body keeps announcing things without permission. A flush that starts at the collarbone. A laugh that arrives half a second late. A hand that keeps going back to the same glass. You read all of it, and then - this is the part that matters - you answer it. You slow down when she slows down, you let the pause run a beat past comfortable, and you let your own tell show, because nobody has ever fallen for somebody who gave away nothing.
 
 </div>
 
@@ -1114,13 +1046,13 @@ Winning someone over through romantic or physical appeal.
 
 </div>
 
-<div class="skill skill--water" markdown="1">
+<div class="skill skill--moira" markdown="1">
 
-<p class="block-title" markdown="span">Shadowing<span class="block-pill">Water</span></p>
+<p class="block-title" markdown="span">Shadowing<span class="block-pill">Moira</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Far enough back to be nobody, close enough to still be there when they turn.
+You changed your coat in a doorway on the second block and you've been on the far side of the street ever since. He's looked back twice. Both times you were buying something. Far enough back to be nobody, close enough to still be there when he turns around.
 
 </div>
 
@@ -1130,25 +1062,11 @@ Following someone without being noticed.
 
 <div class="skill skill--air" markdown="1">
 
-<p class="block-title" markdown="span">Signal &amp; Cipher<span class="block-pill">Air</span></p>
-
-<div class="skill-flavour" markdown="1">
-
-Two people in a room full of people, having a conversation nobody else can hear.
-
-</div>
-
-Radio codes, hand signs, and other non-verbal communication systems.
-
-</div>
-
-<div class="skill skill--air" markdown="1">
-
 <p class="block-title" markdown="span">Sleight of Hand<span class="block-pill">Air</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Hands are fast. Attention is slow. That gap is the entire trade.
+The hand is not faster than the eye. The eye is lazy and goes where it’s told. Hands are fast, attention is slow, and the gap between them is a good deal wider than anybody wants to be told. This is what precision looks like when it's somebody else's pocket, or your own sleeve.
 
 </div>
 
@@ -1162,7 +1080,7 @@ Pickpocketing, palming, and planting objects unnoticed.
 
 <div class="skill-flavour" markdown="1">
 
-The goods were never the problem. The paperwork, the timing, and one bored person at a checkpoint are the problem.
+You don't beat the scanner. You give it something dull to look at, you arrive at the shift change, and you make sure the manifest agrees with the weight to the kilogram. The goods were never the problem. The paperwork, the timing, and one bored man at a checkpoint are the problem.
 
 </div>
 
@@ -1170,31 +1088,17 @@ Concealing and moving contraband past scrutiny, including modern screening and c
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--water" markdown="1">
 
-<p class="block-title" markdown="span">Stealth<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Stealth<span class="block-pill">Water</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Slow is quiet. Everybody learns that the hard way, usually once.
+You've been in this room four minutes. Two people have walked through it in that time and neither of them thought to look up. It took you eleven minutes to get where you're sitting, which sounds ridiculous right up until you've heard what a man in a hurry sounds like from the other side of a dark room. Slow is quiet. Everybody learns that the hard way, and usually only once.
 
 </div>
 
 Moving unseen and unheard.
-
-</div>
-
-<div class="skill skill--air" markdown="1">
-
-<p class="block-title" markdown="span">Stewardship<span class="block-pill">Air</span></p>
-
-<div class="skill-flavour" markdown="1">
-
-Somebody has to know what’s actually in the accounts, and it’s remarkable how often nobody does.
-
-</div>
-
-Managing a budget, staff, property, or an organization’s resources.
 
 </div>
 
@@ -1204,7 +1108,7 @@ Managing a budget, staff, property, or an organization’s resources.
 
 <div class="skill-flavour" markdown="1">
 
-You can tell which corner is fine and which one isn’t from half a block away, and you couldn’t explain how.
+The rules here are real. They're specific. And nobody is ever going to tell you a single one of them. But, break one and everybody simply stops talking to you. You can tell which corner is fine and which one isn't from half a block away, and you couldn't explain how if somebody paid you to. Nobody says anything useful to a stranger, and not being a stranger took eight months of buying coffee from the same place and never once asking a question.
 
 </div>
 
@@ -1218,11 +1122,11 @@ Navigating criminal culture, gangs, and underworld contacts.
 
 <div class="skill-flavour" markdown="1">
 
-Long, dull, and unforgiving. The one hour you stopped watching is the hour it happened.
+You log all of it. The times, the plates, the man who comes on Tuesdays. None of it means anything until one entry doesn't fit, and then every bit of it means something. And the camera goes where nobody looks, which is never where the view is best - you take the worse angle every time, because a good angle that gets found is no angle at all.
 
 </div>
 
-Observing a target or location without being detected - physical stakeouts and technical monitoring both.
+Observing a target or location without being detected, and spotting when somebody is doing it to you - physical stakeouts and technical monitoring both.
 
 </div>
 
@@ -1232,7 +1136,7 @@ Observing a target or location without being detected - physical stakeouts and t
 
 <div class="skill-flavour" markdown="1">
 
-The wilderness isn’t trying to kill you. It simply doesn’t care, which turns out to be worse.
+It was never going to be the bear. It's wet socks, a turned ankle, and one night colder than you planned for. Shelter first, then water, then fire, and food a long way behind all of them - everybody gets that order wrong, and they all get it wrong in the same direction, off looking for something to eat on the first afternoon. The wilderness isn't trying to kill you. It simply doesn't care, and that turns out to be considerably worse.
 
 </div>
 
@@ -1246,7 +1150,7 @@ Foraging, shelter, water, and enduring somewhere that offers no help.
 
 <div class="skill-flavour" markdown="1">
 
-Water is fine until it’s cold, or deep, or moving. Then it’s a fight, and a patient one.
+Swimming down is a separate discipline from swimming across. You know how deep you can go, how long you have at the bottom, and exactly how slowly you have to come back up. Across the top of it, down into it, or straight at a current that would rather you didn't - same water, three different arguments, and you're at home in all three.
 
 </div>
 
@@ -1254,13 +1158,13 @@ Moving efficiently and enduring in open water.
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--water" markdown="1">
 
-<p class="block-title" markdown="span">Systems Operation<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Systems Operation<span class="block-pill">Water</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-A wall of readouts that means nothing to anybody else and something very specific to you.
+Sonar, reactor telemetry, a plant control room, the sensor suite on something flying. Same discipline every time - somebody built an instrument to describe a thing nobody can see, and you can hear what it's saying. A wall of readouts that means nothing at all to anybody else, and something very specific to you.
 
 </div>
 
@@ -1268,31 +1172,31 @@ Operating and interpreting complex consoles, sensors, and industrial or vehicle 
 
 </div>
 
-<div class="skill skill--air" markdown="1">
+<div class="skill skill--earth" markdown="1">
 
-<p class="block-title" markdown="span">Tactics<span class="block-pill">Air</span></p>
-
-<div class="skill-flavour" markdown="1">
-
-Fights are won by whoever decided where they’d happen. That’s the job.
-
-</div>
-
-Planning and directing group action, especially in conflict, without doing the fighting yourself.
-
-</div>
-
-<div class="skill skill--air" markdown="1">
-
-<p class="block-title" markdown="span">Thrown Weapons<span class="block-pill">Air</span></p>
+<p class="block-title" markdown="span">Thrown Weapons<span class="block-pill">Earth</span></p>
 
 <div class="skill-flavour" markdown="1">
 
-Distance, spin, and one moment to let go.
+A knife leaves your hand turning and it goes on turning whether that suits you or not. Training is knowing how many turns it's made by the time it gets there, which means knowing your distances cold, which means having thrown the same blade a few thousand times. Distance, spin, and one moment to let go. Get any of the three wrong and you've thrown away a perfectly good knife and armed somebody who didn't have one.
 
 </div>
 
-Which thrown weapons you are trained on, by Category: a balanced blade first, then a thrown axe, a shafted weapon, a returning one, and the sling last, because the sling takes years. You don’t roll it to throw.
+Which thrown weapons you are trained on, by Category: a balanced blade first, then a thrown axe, a shafted weapon, a returning one, and the sling last, because the sling takes years. You do not roll it to throw.
+
+Each tier adds to the ones under it.
+
+**1 - Novice**: Balanced blade. A throwing knife.
+
+**2 - Trained**: Thrown axe. A hand axe.
+
+**3 - Adept**: Shafted. A javelin.
+
+**4 - Expert**: Returning. A boomerang.
+
+**5 - Master**: Sling.
+
+**Care, repair and building.** Keeping an edge, checking a haft, re-weighting a knife that has started to fly wrong: no roll. Repair is a roll of this Skill - a split haft, a bent blade, a sling gone brittle. From **Expert** you can make them from prepared stock; at **Master**, from raw material, matched to your own hand and the way you actually throw.
 
 </div>
 
@@ -1302,38 +1206,10 @@ Which thrown weapons you are trained on, by Category: a balanced blade first, th
 
 <div class="skill-flavour" markdown="1">
 
-The trail goes cold and you keep walking, and you’re right, and you couldn’t say why.
+The ground keeps a record of everything that crosses it, for a while, and you can read most of it before the weather takes it back. A deer, a man, or a vehicle that left the road two days ago - it reads the same either way. Weight, direction, and how recently. Four of them came through here, one carrying something heavy, and they stopped longer than they meant to. All of it is in the dirt if you slow down enough to look.
 
 </div>
 
 Following physical trails.
-
-</div>
-
-<div class="skill skill--water" markdown="1">
-
-<p class="block-title" markdown="span">Tradecraft<span class="block-pill">Water</span></p>
-
-<div class="skill-flavour" markdown="1">
-
-Dead drops, signals, cover, and the discipline to be forgettable on purpose.
-
-</div>
-
-Spy fieldcraft - dead drops, signals, cover identities, evasion, counter-surveillance.
-
-</div>
-
-<div class="skill skill--water" markdown="1">
-
-<p class="block-title" markdown="span">Veterinary Medicine<span class="block-pill">Water</span></p>
-
-<div class="skill-flavour" markdown="1">
-
-The patient can’t tell you where it hurts, and will bite you for finding out.
-
-</div>
-
-Diagnosing and treating animals.
 
 </div>
