@@ -66,6 +66,7 @@ export const GIFT_DESCRIBE = {
   'Cybernetics': { prompt: 'What is installed, and where?', count: one },
   'Drone Swarm': { prompt: 'What are the drones?', count: one },
   'Elemental Aura': { prompt: 'Which element, and what does it look like?', count: one },
+  'Elemental Manipulation': { prompt: 'Which domain do you command?', count: one },
   'Forcefield': { prompt: 'What does it look like when it comes up?', count: one },
   'Heightened Senses': { prompt: 'Which sense?', count: one },
   'Necromancy': { prompt: 'What do your raised dead look like?', count: one },
