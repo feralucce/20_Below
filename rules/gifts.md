@@ -500,6 +500,8 @@ Activating the aura is a Slow action. **Maintaining it requires a [Gift Check](#
 
 Some Gifts are one move, sharpened over time. This isn't that. Pick a single domain, fire, darkness, gravity, time, the weather, the temperature of a room, even what people perceive as real, once, and every time you reach for it, you improvise something new: a barrier this time, a false sound the next, a small impossible convenience nobody else could manage. It won't put anyone down directly. It changes the world around them instead.
 
+Your domain - fire, darkness, gravity, time, the weather, the temperature of a room, even what people perceive as real - is chosen once, at creation.
+
 | Level | Effect |
 |---|---|
 | 1 | Roll **Moira + Difficulty** to shape an effect within your domain that touches a full sensory picture (not just one sense) or physically moves/reshapes something person-sized (a body's worth of matter, a room's worth of shadow, a sound that isn't really there, the temperature of a room). No Range Band limit, works anywhere you can perceive or clearly reach with it. Is a Normal action. No Ki, no Gift Check. |
