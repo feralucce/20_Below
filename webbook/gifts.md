@@ -58,7 +58,7 @@ Every entry defines all five levels up front. A Gift’s Level is its magnitude 
 
 <div class="gift-flavour" markdown="1">
 
-The body is not a fixed thing, not for you. Everyone else is stuck with the shape they were issued. You treat yours as a first draft. At will you shed your ordinary form for another - a specific creature both mundane and impossible, a drift of mist, a living shadow - and it grants you things your own body was never going to manage. The first time is the worst. After that it is simply a thing you do, and the strangeness belongs to whoever is watching.
+Your body was the first draft. You decided to design a second one. Bones slide over one another. Muscle and skin ripple with a mind of their own. Shifting between the two takes a moment. The first time was awful - itchy, painful… and the sound. Now, you can do it while holding a conversation.
 
 </div>
 
@@ -122,9 +122,11 @@ The alternate form is built once, at creation, spending a points pool (below) on
 
 <div class="gift-flavour" markdown="1">
 
-Animals sense something in you that overrides their instincts. A spooked horse settles. The dog that bites everyone does not bite you, and its owner spends the rest of the conversation looking at you sideways. Wild or domesticated, predator or prey, it holds the same - an inborn trust that lets you calm a beast, understand what it is trying to say, or ask it to act on your behalf, with no leash and no training.
+Animals sense you are a kindred spirit. Your presence doesn’t trigger their instincts. A panicky horse is soothed by your touch. The angry canine sitting behind the "Beware of Dog" sign wags his tail happily when you approach. Prey, predator, wild, or domesticated - they all trust you. They understand you and what you are trying to say to them and will often act on your behalf when you ask.
 
 </div>
+
+2 - Range extends to Near. You may now direct the animal to perform one simple task within its natural capabilities (lead you somewhere, retrieve a small object, stand guard, fetch help) in addition to calming or understanding it. Still a Normal action, no Ki. Additionally, you gain a lasting Animal Companion, free with this Level - no Ki or point cost - an ordinary creature of your choice, chosen at creation, that stays by your side simply because it likes you. Not summoned or magically bound; it can leave if truly mistreated or endangered, but under normal circumstances it travels and fights alongside you.
 
 <p class="gift-section">Adders</p>
 
@@ -185,7 +187,7 @@ Animals sense something in you that overrides their instincts. A spooked horse s
 
 <div class="gift-flavour" markdown="1">
 
-You get the half-second before it happens. Not visions, and nothing useful for picking horses - just the shoulder that hasn’t dropped yet, the weight already shifting onto the back foot. Everyone else in the room is reacting. You have simply been there a moment longer than they have.
+Everyone telegraphs every move. Most people just don’t know Morse code. You are able to read the subtle tells that reveal what your opponent will do - a sharp intake of breath, a subtle shift in stance, an involuntary glance where they will strike. It’s not precognition and it’s no use outside of a fight, but you see it coming before they know they are going to do it.
 
 </div>
 
@@ -249,7 +251,7 @@ Reading an opponent costs **1 Ki**, declared on your turn - it takes no action. 
 
 <div class="gift-flavour" markdown="1">
 
-Pain doesn’t slow you down, it feeds you. The worse it gets, the less anything but the fight in front of you matters - the noise drops away, the arithmetic stops, and what is left is very simple and very focused. People who have watched it happen do not describe it as brave. They describe it as something they would rather not see twice.
+Some people go quiet when they are hurt. You go loud. Pain doesn’t register as a warning - it registers as permission. The more of you is broken, the more dangerous you become, right up until there’s nothing left to break.
 
 </div>
 
@@ -317,7 +319,7 @@ Pain doesn’t slow you down, it feeds you. The worse it gets, the less anything
 
 <div class="gift-flavour" markdown="1">
 
-Distance means nothing to your sight. Close your eyes and your awareness slips free of your body, drifting to a place you know or can picture - a room down the hall, a city across the world - and you see and hear it as though you were standing in it. The catch is that your body is still where you left it, breathing, unattended, and completely uninterested in what is happening around it.
+You can perceive distant places, objects or people without being physically present. You focus your senses beyond the bounds of your body - observing what lies elsewhere as though you were standing there. Your body stays behind, unoccupied while your animating force goes sightseeing.
 
 </div>
 
@@ -375,77 +377,15 @@ Distance means nothing to your sight. Close your eyes and your awareness slips f
 
 <div class="gift" markdown="1">
 
-<p class="gift-name" markdown="span">Claws / Fangs</p>
-
-<div class="gift-flavour" markdown="1">
-
-Your body carries its own weapon, grown in rather than picked up - retractable claws, elongated fangs, a natural blade of bone or chitin, whatever fits. Always to hand, never disarmed, no permit and no receipt. It does mean that at some point you are going to be searched, found carrying nothing, and be the most dangerous thing in the room anyway.
-
-</div>
-
-Chosen once, at creation: **Always There** (visible and permanent - can’t be hidden, but free to use) or **Stowable** (concealed until deployed, passes for ordinary at a glance - but each time you deploy and attack with them, it triggers a Gift Check, failure costing 1 Ki).
-
-<p class="gift-section">Adders</p>
-
-<div class="gift-opt gift-opt--adder" markdown="1">
-
-- **Honed Technique** (Lesser, 3 pts): practiced timing and footwork let you close the last few feet as part of the strike itself - your claws/fangs threaten Close range as well as Melee, no literal reach involved.
-- **Venomous** (Lesser, 3 pts): add a poison to a successful hit: 1 Ki, target takes Disadvantage on physical rolls until treated, separate from and stacking with the rending effect.
-- **Sunder** (Greater, 6 pts): on a successful hit, spend 1 Ki to also deal damage to a weapon or piece of equipment the target is holding/wearing, treating it as a second, simultaneous attack.
-
-</div>
-
-<p class="gift-section">Limiters</p>
-
-<div class="gift-opt gift-opt--limiter" markdown="1">
-
-- **Feral Grip**: can't hold, use, or manipulate manufactured weapons or fine tools while your claws/fangs are deployed.
-- **One-Way Weapon**: the Stowable option is unavailable - your claws/fangs are always Always There, visible and permanent, no choice at creation.
-- **Fragile Edge**: your natural weapon rolls **one die fewer** against anything with Soak equal to or greater than your Potence.
-
-</div>
-
-<div class="gift-level gift-level--1" markdown="1">
-
-<span class="gift-n">1</span>- Your claws or fangs deal **1 + half your Ferocity**, resolved with the same per-die-vs-Soak mechanic as any weapon. Always available in Melee range - no action spent drawing or readying it. Always There costs nothing to use; Stowable triggers the Gift Check on each deployment.
-
-</div>
-
-<div class="gift-level gift-level--2" markdown="1">
-
-<span class="gift-n">2</span>- Damage rises to **2 + half your Ferocity**.
-
-</div>
-
-<div class="gift-level gift-level--3" markdown="1">
-
-<span class="gift-n">3</span>- Damage rises to **3 + half your Ferocity**. Additionally, you may spend **1 Ki** on a successful hit to add a minor rending effect - the wound bleeds, imposing Disadvantage on the target's next roll before it's tended to or the scene ends.
-
-</div>
-
-<div class="gift-level gift-level--4" markdown="1">
-
-<span class="gift-n">4</span>- Damage rises to **4 + half your Ferocity**. The rending effect intensifies - Disadvantage now persists on all of the target's rolls until the wound is treated or the scene ends, not just their next one.
-
-</div>
-
-<div class="gift-level gift-level--5" markdown="1">
-
-<span class="gift-n">5</span>- Damage rises to **5 + half your Ferocity**. The rending effect still costs 1 Ki per use. If Stowable was chosen, deploying your claws/fangs no longer triggers the Gift Check.
-
-</div>
-
-</div>
-
-<div class="gift" markdown="1">
-
 <p class="gift-name" markdown="span">Conjured Armory</p>
 
 <div class="gift-flavour" markdown="1">
 
-Your weapon was never really in your hand. It was always somewhere else, waiting, and a thought and a flicker of will is all it takes to bring it across. You will never leave it behind, never have it taken, and never once have to explain to anyone why you are carrying it.
+Somewhere, just the other side of the world, your weapon waits for the moment you call it forth. With a flicker of thought, it slips through the gaps in reality and into your grasp, ready for battle. You don’t own the weapon so much as call a mystical DoorDash to deliver one.
 
 </div>
+
+Chosen once, at creation: your signature weapon, any single item from the catalog in Weapons & Equipment.
 
 Chosen once, at creation: your **signature weapon**, any single item from the catalog in Weapons & Equipment.
 
@@ -512,7 +452,7 @@ Chosen once, at creation: your **signature weapon**, any single item from the ca
 
 <div class="gift-flavour" markdown="1">
 
-Watch someone closely enough and what makes them exceptional becomes yours to borrow, for a while. Not their body - whatever it is that actually makes the trick work. It is an unnerving thing to be on the other end of. They spend years on something, you watch them do it twice, and then you do it back at them.
+If you watch someone closely enough, you can hold the thread of what makes them exceptional. A skill, a talent, even the odd power behind their superhuman feats are no mystery to you. You don’t become them, you just lean on their abilities - carrying their echo with you for a time.
 
 </div>
 
@@ -576,7 +516,7 @@ Watch someone closely enough and what makes them exceptional becomes yours to bo
 
 <div class="gift-flavour" markdown="1">
 
-Flesh gave way to hardware, by choice or by necessity - a limb swapped for something stronger, a spine threaded with fiber-optic reflexes, an eye that sees past normal color. This is not magic and it is not muscle. It is engineering, built into you and permanently online, which means it can be serviced, and it means somebody built it.
+The line between flesh and hardware is blurred. Steel strengthens bones, nerves are replaced by fiber-optic cables, nano-circuitry extends the senses beyond what biology can perceive. You are augmented. These augmentations are not powers you call upon but machines integrated into you - engineered to function as if you were born with them.
 
 </div>
 
@@ -625,6 +565,8 @@ The build is set once at creation, spending a points pool (below) on the build m
 
 <p class="block-title" markdown="span">Cybernetics - Build menu</p>
 
+A few options are bigger versions of a cheaper one - Myomer Fiber and Linear Frame, Subdermal Plating and Armored Plating, Sensory Suite and Multi-Optic Cluster, Chemical and Molecular Analyzer. Take one or the other; the larger replaces the smaller rather than stacking with it.
+
 | Option | Cost | Effect |
 |---|---|---|
 | Subdermal Plating | 1 pt | +2 Soak, always on. |
@@ -634,22 +576,18 @@ The build is set once at creation, spending a points pool (below) on the build m
 | Integrated Storage Compartment | 1 pt | A concealed cavity in a limb or torso, holding a handful of small items - invisible to a pat-down or metal detector. |
 | Video/Audio Recorder | 1 pt | Continuously record everything you see and hear, and replay it later - clean, reliable evidence. |
 | Comms Array | 1 pt | Short-range encrypted radio link to other augmented allies or compatible tech, immune to ordinary jamming. |
-
-</div>
-
-<div class="wide" markdown="1">
-
-<p class="block-title" markdown="span">Cybernetics - Build menu, continued</p>
-
-| Option | Cost | Effect |
-|---|---|---|
 | Navigation Suite | 1 pt | Perfect sense of direction and position, plus a stored map of anywhere you've personally been. |
 | Biometric Lock | 1 pt | Your augmentations (and anything in an Integrated Storage Compartment) only function for you - stolen or severed parts are inert junk to anyone else. |
 | Universal Interface Port | 1 pt | A hardline jack that connects to any standard port or socket, no compatible cable or adapter needed. |
 | Climbing Servos | 1 pt | Retractable claws or grip pads in hands and feet - climb sheer surfaces at your normal Movement Rate, no roll for an ordinary climb. |
 | Silent Movement Dampeners | 1 pt | Your augmented limbs make no mechanical noise - no Stealth penalty from servo whine or joint clicks. |
 | Thermal Regulation | 1 pt | Ignore extreme heat or cold - no Disadvantage from environmental temperature. |
-| Reinforced Chassis | 2 pts | +1 to Carrying Capacity and Break Threshold, stacking with Potence's own. |
+| Vehicle Link | 1 pt | Pilot or drive by direct neural link - Advantage on any roll to control a compatible vehicle. |
+| Signal Scanner | 1 pt | Spot active transmitters, bugs, taps, and cameras nearby - the room tells you who's listening. |
+| Voice Stress Analyzer | 1 pt | Advantage on any roll to tell whether someone is lying to your face. |
+| Chemical Analyzer | 1 pt | Taste or smell a sample and know what it is - drugs, poisons, accelerants, blood. |
+| Sealed Respirator | 1 pt | Filtered lungs and a sealed airway - immune to gas and airborne agents, and you can go without air for several minutes. |
+| Toxin Binders | 1 pt | Advantage against poison, disease, and drugs, including the ones you'd rather enjoy. |
 
 </div>
 
@@ -659,13 +597,53 @@ The build is set once at creation, spending a points pool (below) on the build m
 
 | Option | Cost | Effect |
 |---|---|---|
+| Enhanced Antibodies | 1 pt | You heal one step faster than normal on any rest. |
+| Artificial Gills | 1 pt | Breathe water indefinitely. |
+| Radiation Shielding | 1 pt | Immune to radiation, and Advantage against any environmental hazard that works on flesh rather than force. |
+| Bio-Comp Monitor | 1 pt | Constant readout of your own condition - you know exactly how hurt, poisoned, or drugged you are, and a Comms Array broadcasts it if you go down. |
+| Laser Rangefinder | 1 pt | Exact distance to anything you can see. Advantage on attacks at Far range and on any indirect or thrown shot. |
+| Fiber-Optic Probe | 1 pt | A camera on a flexible lead that deploys from a fingertip - see under doors, around corners, into locks. |
+| Synthskin Overlay | 1 pt | Your hardware reads as flesh to the eye, the hand, and a casual scan. Cancels the **Visible Hardware** Limiter if both are taken. |
+| Voice Modulator | 1 pt | Reproduce any voice you've recorded, pitch yourself unrecognizable, or speak subvocally into a Comms Array. |
+| Loudspeaker | 1 pt | Drive your voice to a painful volume. Advantage to command, warn, or scatter a crowd at Near range or further. |
+| Language Translator | 1 pt | Real-time translation of any language you've heard enough of to sample - understood, and spoken back. |
+| Fashionware Suite | 1 pt | Light tattoos, fiber hair, a subdermal watch - change your look on demand. Advantage to be remembered, or to be forgotten. |
+| Chem Injector | 1 pt | An internal reservoir holding one dose of a drug of your choosing. Administered by thought, and nothing to find in a search. |
+| Garrote Wire | 1 pt | A spool of monofilament from a fingertip. A weapon, a cutting tool, and a tripline, depending on the evening. |
+| Reinforced Chassis | 2 pts | +1 to Carrying Capacity and Break Threshold, stacking with Potence's own. |
 | Subroutine Uplink | 2 pts | Passive short-range wireless link to nearby active electronics - grants Technokinesis Level 1's passive awareness, without needing that Gift. |
 | Data Vault | 2 pts | Onboard encrypted memory - perfect recall of anything you've scanned or recorded, immune to remote hacking without direct physical access. |
 | Onboard Computer | 2 pts | Instant calculation, translation, and lookup - treat any Knowledge-Skill roll needing reference material as if you had a research library on hand. |
 | Holographic Projector | 2 pts | Project a small hologram at Close range - a decoy, a visual aid, a disguise overlay. |
 | Grapple Line | 2 pts | A retractable cable launcher built into an arm - anchor and pull yourself to a point within Near range, or yank a target or object toward you. |
+
+</div>
+
+<div class="wide" markdown="1">
+
+<p class="block-title" markdown="span">Cybernetics - Build menu, continued</p>
+
+| Option | Cost | Effect |
+|---|---|---|
 | Nanite Medkit | 2 pts | A self-contained injector loaded with one dose of field-medicine nanites - once per Scene, stabilize yourself or an adjacent ally from dying, no roll. |
+| Smartlink | 2 pts | A weapon interface - add **one bonus die** to attacks with any firearm wired to you. Someone else firing it gets nothing. |
+| Pain Editor | 2 pts | Wound Disadvantage from missing Health Levels doesn't apply to you, and torture, agony effects, and pain-based intimidation simply don't land. |
+| Motion Sensor | 2 pts | Detect anything moving within Near range, through darkness, smoke, or a single wall. |
+| Multi-Optic Cluster | 2 pts | Every Sensory Suite upgrade at once, in one eye - darkness, magnification, filtering, and thermal. Replaces Sensory Suite. |
+| Molecular Analyzer | 2 pts | Forensic-grade analysis - material composition, residues, age, what a thing was before it was this. Replaces Chemical Analyzer. |
+| Cyber-Disguise | 2 pts | Reshape your face and build over a few minutes to pass as a specific other person you've studied. Not an illusion - it's machinery moving bone. |
+| Jump Servos | 2 pts | Leap to anywhere within Near range from standing, and take no damage from a fall you chose. |
+| Nano-Repair System | 2 pts | An internal repair swarm - recover **1 Health Level** once per Scene, no roll and no action. |
+| Quick-Change Mount | 2 pts | Swap a hand for another limb-mounted option costing 2 points or less in seconds rather than an hour. |
 | Integrated Weapon | 3 pts | A retractable blade, dart launcher, or similar built into a limb - counts as a Light weapon that can never be disarmed or left behind. |
+| Reflex Booster | 3 pts | Spend **1 Ki** to take one extra Fast action. Once per round, no limit per Scene. |
+| Chipware Socket | 3 pts | A skill-chip slot. With a chip on hand, treat any one Skill as **Trained** for the Scene - swap chips freely between Scenes. |
+| Linear Frame | 3 pts | An internal load frame - **+4** to one physical sub-stat rather than Myomer Fiber's +2, but the bulk is not concealable. Replaces Myomer Fiber. |
+| Armored Plating | 3 pts | **+4** Soak rather than Subdermal Plating's +2, but it is plainly armor and cannot be concealed. Replaces Subdermal Plating. |
+| Chameleon Skin | 3 pts | Hold still and your skin matches what's behind you - Advantage on Stealth while stationary, lost the moment you move. |
+| Cybersnake | 3 pts | A segmented limb that deploys from your torso - reaches Close range, grapples, and gets into places a hand won't. |
+| Internal Power Plant | 3 pts | A sealed generator instead of cells. Your augmentations never run down and never need servicing, cancelling the **Maintenance Dependent** Limiter if both are taken. |
+| Integrated Heavy Weapon | 4 pts | A forearm-mounted ranged weapon - counts as a Medium weapon, never disarmed, and impossible to explain at a checkpoint. |
 
 </div>
 
@@ -675,7 +653,7 @@ The build is set once at creation, spending a points pool (below) on the build m
 
 <div class="gift-flavour" markdown="1">
 
-Some people burn bright with what they can do. Around you, that light gutters. Step close enough and the impossible starts running dry - Gifts stutter, spells fail, whatever was fueling someone else’s edge simply stops answering. Nobody thanks you for it. Half the time they cannot work out why the room went wrong, only that it did, and that you were in it.
+Some people radiate power. Around you, that aura dims and flickers. The closer you are to them, the harder it is to fuel their abilities. Gifts fizzle, supernatural forces fray and the impossible remains stubbornly out of reach.
 
 </div>
 
@@ -737,7 +715,7 @@ Some people burn bright with what they can do. Around you, that light gutters. S
 
 <div class="gift-flavour" markdown="1">
 
-Your will can simply overwrite someone else’s, at least for a moment. Look them in the eye, speak with intent, and watch the resistance come apart - a word becomes a command, a command becomes obedience, so long as what you ask is not more than they can bear. They remember it afterward. That is the part people forget to think about.
+You don’t persuade people - you decide for them. Everyone has a voice in their head that tells them what to do - you can just make it yours. Meet their eyes, speak with intent, flex your will and a suggestion becomes a command.
 
 </div>
 
@@ -806,7 +784,7 @@ As with any Mental attack, additional Ki Infusion (1 Ki per die) can push indivi
 
 <div class="gift-flavour" markdown="1">
 
-You carry more allies than you can hold in your hands - a rack of interchangeable drones you deploy, direct, and occasionally ride shotgun inside, seeing through their sensors as though they were your own eyes. They are cheap, they are replaceable, and after a while you stop flinching when one of them stops transmitting.
+Even when there is no one around, you are not alone. You have a swarm of small machines that follow your every command. Each one is built for a different purpose - combat, defense, healing, transport and more. They move with just a thought. They are your hands, guns, eyes and anything else you can imagine.
 
 </div>
 
@@ -876,7 +854,7 @@ You carry more allies than you can hold in your hands - a rack of interchangeabl
 
 <div class="gift-flavour" markdown="1">
 
-One of you was never going to be enough. Split off a copy, then another, each one fully you - same memories, same opinions, same bad habits - at least for a little while. Every one of them is certain it is the original. Statistically, most of them are wrong.
+One of you is just a start. You can split yourself into copies. The copies have your face, your skills, and your memories up to the moment of the split. They are all you. It gets weird, but at least you all have the same taste in movies, right?
 
 </div>
 
@@ -941,9 +919,11 @@ One of you was never going to be enough. Split off a copy, then another, each on
 
 <div class="gift-flavour" markdown="1">
 
-You raise a battle aura of your chosen element around your body and wear it like weather. Element is a broad word here - fire, ice, lightning, steam, darkness, radiation, cosmic energy, void, magnetism, whatever you actually are. It is chosen once, and after that everyone in the room knows exactly what you are, from across it.
+You can surround yourself with a mantle of power. It wraps you in a cloak of energy, protecting you and lashing out at any threat that dares touch you. You choose whether it burns, freezes, distorts, radiates, crackles or defies description - within its reach, the world itself begins to obey the nature of your power.
 
 </div>
+
+"Element" is a broad catch-all, not limited to the four classical elements - fire, ice, lightning, steam, darkness, radiation, cosmic energy, void, magnetism, or whatever else fits what you actually are. Chosen once, at creation.
 
 Activating the aura is a Slow action. **Maintaining it requires a Gift Check every turn it stays active - failure costs 1 Ki, at any Level.** At Level 5, a turn spent lashing out with the aura (below) skips the maintenance check entirely, since spending Ki to attack already covers the cost.
 
@@ -1005,9 +985,11 @@ Activating the aura is a Slow action. **Maintaining it requires a Gift Check eve
 
 <div class="gift-flavour" markdown="1">
 
-Some Gifts are one move, sharpened over a lifetime. This is not that. You pick a single domain - fire, darkness, gravity, time, the weather, the temperature of a room, even what people take to be real - and every time you reach for it you improvise something new. A barrier this time. A false sound the next. The domain is fixed. Nothing else about it is.
+The elements answer your call - fire dances, gravity warps, shadows writhe, electricity crackles - all obeying your will. You don’t command an element in a single, practiced way. You are an improvisational artist, finding new ways to alter the world with your will when the need arises.
 
 </div>
+
+Your domain - fire, darkness, gravity, time, the weather, the temperature of a room, even what people perceive as real - is chosen once, at creation.
 
 This Gift never deals direct damage, at any Level.
 
@@ -1069,7 +1051,7 @@ This Gift never deals direct damage, at any Level.
 
 <div class="gift-flavour" markdown="1">
 
-Your body crossed a threshold ordinary flesh should not be able to cross. Nerve, muscle and reflex all fire faster than a human frame has any right to - fast enough that a whole second of your thinking and moving fits inside somebody else’s blink. The world does not slow down for you. You have simply stopped waiting for it.
+You move faster than most people can comprehend. Nerves fire faster and muscle moves you more rapidly than a human frame should be capable of. Thought and action compress into fractions of a second. The world seems to pause when you decide to act.
 
 </div>
 
@@ -1135,7 +1117,7 @@ Your body crossed a threshold ordinary flesh should not be able to cross. Nerve,
 
 <div class="gift-flavour" markdown="1">
 
-You do not have to say a word to take a room. It simply happens, the way a candle takes every eye in a dark space. Awe, dread, magnetism, whatever the moment calls for - and you never ask anyone to do anything. They just cannot look away, and afterward most of them could not tell you why.
+When you enter a room, everyone feels it - eyes fall on you, attention settles and it becomes difficult to care about anything else. You might inspire fascination, awe or dread. You don’t command anyone to do anything, you are simply the most compelling person in the room.
 
 </div>
 
@@ -1199,7 +1181,7 @@ As with any Social attack, additional Ki Infusion (1 Ki per die) can push indivi
 
 <div class="gift-flavour" markdown="1">
 
-Gravity is a suggestion you have learned to decline. Feathered wings, a contrail of raw thrust, or something stranger - you lift off the ground and stay there, starting with a controlled hover and ending somewhere in the neighborhood of outrunning a jet. The ground is still down there. It has simply stopped being an argument you need to have.
+Gravity is a mere suggestion for you. You can fly somehow. Whether you manipulate gravity, grow wings, or ride the currents of the aetheric wind, you are no longer tethered to the ground.
 
 </div>
 
@@ -1261,9 +1243,11 @@ Gravity is a suggestion you have learned to decline. Feathered wings, a contrail
 
 <div class="gift-flavour" markdown="1">
 
-Not armor, not really. A barrier of pure will held taut around a body, or several. It does not care what is coming at it, only that whatever it is will not be getting through. Holding it is the whole job, and holding it is not free.
+You can focus your will into a barrier that stands as a bulwark between you and the world. It may manifest as a shimmering bubble, an invisible wall of force or a solid shield. Whatever form it takes, it exists for one purpose - to stop whatever the world throws at it.
 
 </div>
+
+Chosen once, at creation: your Forcefield’s Form.
 
 Chosen once, at creation: your Forcefield’s **Form**.
 
@@ -1331,7 +1315,7 @@ The barrier occupies the same Zone(s) as any worn armor and follows the normal r
 
 <div class="gift-flavour" markdown="1">
 
-Given scrap, a bench and a few spare minutes, you build almost anything - a device that has no business working with the parts on hand, working exactly as intended the moment it is finished. This is not slow, careful engineering. It is a burst of inspired nonsense that happens to be correct, and nobody is more surprised than the people who watched you do it.
+Tinfoil, bubble gum, baling wire, a pile of junk and a workbench are all you need to make something useful. Parts that should never be in the same space work together flawlessly in your hands. Circuits are built without schematics and impossible configurations emerge from the chaos in your backpack. It may look like the innards of a VCR taped to a tennis racket, but that ionizing radiation detector works exactly as intended.
 
 </div>
 
@@ -1393,7 +1377,7 @@ Given scrap, a bench and a few spare minutes, you build almost anything - a devi
 
 <div class="gift-flavour" markdown="1">
 
-Consequences are not as firmly nailed to their moment as they look. You have a limited but entirely real ability to make something bad wait its turn. It does still arrive. You have only ever been negotiating the timing.
+You cannot run away from the consequences of your actions, but you can make them wait in line. You can make the universe hold back for a brief while - taking a moment to take a deep breath before the tidal wave of action and reaction crashes over you. You still hurt. The trap still goes off. The disaster still arrives… you just get to decide when.
 
 </div>
 
@@ -1457,7 +1441,7 @@ Consequences are not as firmly nailed to their moment as they look. You have a l
 
 <div class="gift-flavour" markdown="1">
 
-Where you press your hands, the wound remembers what it looked like before. Poison thins, fevers break, and the body gets on with fixing itself under your touch - faster and further than it could ever manage alone. People start finding you when things go wrong. That never stops.
+With a touch, you remind the body of what it is. Sickness fades and wounds close under your hands. Even fatal illnesses and afflictions that should linger are healed by your attention.
 
 </div>
 
@@ -1523,9 +1507,11 @@ Additionally, given a full **Month** of thorough, repeated application (regular 
 
 <div class="gift-flavour" markdown="1">
 
-Your senses reach further and cut sharper than anyone else’s - a conversation across a building, shapes in total darkness, detail too small or too far for ordinary eyes to resolve. Which sense sharpens, and how, is settled once. What nobody warns you about is that it does not have an off switch, and most rooms are louder than people realize.
+Eyes like a hawk. Nose like a bloodhound. Ears like a bat. Your senses are more finely tuned than most. You hear distant sounds clearly. Darkness no longer hides things from you. The world is full of information that most people cannot perceive and you take it all in.
 
 </div>
+
+Which sense (or senses) sharpen, and how, is chosen once, at creation - enhanced hearing, night vision, telescopic sight, microscopic focus, or something else that fits the concept.
 
 <p class="gift-section">Adders</p>
 
@@ -1585,7 +1571,7 @@ Your senses reach further and cut sharper than anyone else’s - a conversation 
 
 <div class="gift-flavour" markdown="1">
 
-Your stance is a fact about the world rather than an opinion about it. Push, trip, knock back, throw - none of it moves you unless you decide to be moved, your feet finding purchase no ordinary force should allow. People try anyway. They generally only try once.
+What happens when an irresistible force meets an immovable object? When you finally meet an irresistible force, you will let the rest of the world know. You stand against impossible forces. Attempts to move you aside feel like trying to shoulder a mountain aside. Once you plant your feet - it becomes a matter of overcoming your will.
 
 </div>
 
@@ -1652,7 +1638,7 @@ Your stance is a fact about the world rather than an opinion about it. Push, tri
 
 <div class="gift-flavour" markdown="1">
 
-Your body loses its grip on being solid. Flesh and bone thin out to something the world can no longer get hold of, and you step through a wall, a locked door, or an incoming blow as though none of it were ever really there. The walls are still real. You have simply stopped agreeing with them.
+Solid matter isn’t really that solid, is it? It’s mostly empty space. You can slip out of phase with the material world and pass through solid matter. Walls, doors and other barriers are no obstacle to you. While you are out of phase, the world passes through you just as easily.
 
 </div>
 
@@ -1721,7 +1707,7 @@ While phased, you’re also undetectable by ordinary senses, sight, sound, and t
 
 <div class="gift-flavour" markdown="1">
 
-You drop out of ordinary perception altogether. Not hidden, not blended in - simply not there to be seen, heard, or noticed by anything short of real effort or something supernatural. You are still solid, still breathing, and still entirely capable of walking into furniture.
+Hide and seek world champion five years running. Only, you weren’t really hiding. Light passes around or through you. Eventually you can hide scent and sound. There is simply nothing to find unless someone knows exactly where and how to look.
 
 </div>
 
@@ -1784,7 +1770,7 @@ You drop out of ordinary perception altogether. Not hidden, not blended in - sim
 
 <div class="gift-flavour" markdown="1">
 
-You do not run to the edge and jump. You jump. One push clears rooftops, ravines, whatever happens to be in the way. Going up has never been the problem. Landing is a skill you acquired separately, and probably the hard way.
+You don’t run to the edge and jump. You just jump. A single push can clear rooftops, ravines, and anything else standing between you and where you want to be. With enough power, the landing itself becomes a weapon, turning the force of your descent into a devastating impact.
 
 </div>
 
@@ -1846,7 +1832,7 @@ You do not run to the edge and jump. You jump. One push clears rooftops, ravines
 
 <div class="gift-flavour" markdown="1">
 
-Once you have marked someone, the hunt runs itself. Part of your attention stays fixed on them no matter what else you are doing - a thread you cannot put down, running quietly in the background of every other thought you have. They do not know. That is rather the point.
+After you mark your target, the hunt runs itself. A part of your consciousness and awareness stays fixated on them no matter where they go. Hiding becomes more difficult. Escape is no longer a certainty. Every encounter with your quarry is a step towards the inevitable end.
 
 </div>
 
@@ -1908,7 +1894,7 @@ Once you have marked someone, the hunt runs itself. Part of your attention stays
 
 <div class="gift-flavour" markdown="1">
 
-Years of discipline turned the body itself into the weapon. Where anyone else needs a blade in hand to be dangerous, your open hand carries the same weight - and the same training reads an incoming blow and turns your whole stance into the answer. Nothing about you looks armed. That is usually the last thing people work out.
+The cliche is that your hands are deadly weapons. Sometimes, cliches are true. Years of training and study have turned every punch and kick into deadly blows. Training has taught you to read your opponent and anticipate their attack before it lands. You know when to strike, when to yield and when to obstruct for maximum effectiveness.
 
 </div>
 
@@ -1970,7 +1956,7 @@ Years of discipline turned the body itself into the weapon. Where anyone else ne
 
 <div class="gift-flavour" markdown="1">
 
-A memory is only a story the mind keeps telling itself. You have learned to walk in and rewrite a page. The mind carries on telling the story afterward exactly as before, with no idea anything has changed, which is either the most useful thing about this Gift or the worst, depending on the week.
+Memories are stories that your mind whispers to itself. You’ve learned how to step in and rewrite the script. You can edit what is remembered - removing things remembered and adding events that never happened. These altered memories feel as real as the original.
 
 </div>
 
@@ -2032,7 +2018,7 @@ A memory is only a story the mind keeps telling itself. You have learned to walk
 
 <div class="gift-flavour" markdown="1">
 
-Death is not the end of the story here. It is a resource. You reach past the thread Atropos already cut, pull the threadbare echo back across, bind it, and draw on the vitality it left behind. What answers is not the person. It is close enough to be useful and close enough to be unpleasant.
+Death isn’t the end of the story. In your hands, it is the beginning for some. You have learned to reach across the veil and bring the dead back to do your bidding. The dead rise as things of bone, spirit or rotting flesh. They are obedient, but utterly removed from who they once were.
 
 </div>
 
@@ -2108,9 +2094,11 @@ Chosen once, at creation, purely cosmetic: the form your raised dead take (bone 
 
 <div class="gift-flavour" markdown="1">
 
-You have one way of hurting people at arm’s length and you are very good at it. A blade that slides out of the forearm, a fist, a dagger carried since you were fourteen. What it is, is yours to say. Nobody who has been on the wrong end of it has ever thought the description was the important part.
+You have one answer in every situation - hit it. Whether that means attacking with a fist, a blade, a claw or something stranger is up to you. The shape of the attack is irrelevant. What matters is the force behind it and delivering it over and over again until whatever stands in your way stops standing.
 
 </div>
+
+Your one way of hurting people at arm’s length is chosen at creation, and described however you like. The rules don’t read the description.
 
 Unarmed fighting lives here. None of the weapon Skills covers fists and feet - there is no Category for them, and nothing to be trained on - so a character who fights with their hands is describing Onslaught, whatever else it could have been.
 
@@ -2173,7 +2161,7 @@ Unarmed fighting lives here. None of the weapon Skills covers fists and feet - t
 
 <div class="gift-flavour" markdown="1">
 
-You fade out of notice and out of memory. Not invisibility - people can see you perfectly well if they look - but nothing about you holds attention or survives the walk to the car afterward. Witnesses describe somebody. They never manage to describe you.
+You don’t disappear. You don’t need to. People just overlook you. Eyes pass over you and attention just drifts away. Time spent with you quickly becomes clouded and difficult to remember, as if you were nothing more than a dream.
 
 </div>
 
@@ -2235,7 +2223,7 @@ You fade out of notice and out of memory. Not invisibility - people can see you 
 
 <div class="gift-flavour" markdown="1">
 
-Past command, past obedience. You push your own consciousness into someone else’s body and put them in the passenger seat while you take the wheel. This is not persuasion. It is occupation, and everything their body does while you are in it goes on their record, not yours.
+Why keep your mind anchored in your meat suit when you can wear someone else’s? You can force your way into another person’s mind. When you do, it pushes their mind aside and you take the pilot seat. Their body is yours for the duration while your body lies empty, waiting for you to return.
 
 </div>
 
@@ -2301,7 +2289,7 @@ As with any Mental attack, additional Ki Infusion (1 Ki per die) can push indivi
 
 <div class="gift-flavour" markdown="1">
 
-The future leaks through, uninvited and badly formatted - a flash of what is about to happen, half a second of warning before the blow lands, a dream that turns out to have been a memo. You do not control when it comes. You only control how well you have learned to listen when it does.
+The future doesn’t arrive at the same time for everyone. For you - it leaks through in flashes and snippets, sudden clarity and a moment you haven’t experienced yet. You can see what is coming and read the warnings of what is yet to happen.
 
 </div>
 
@@ -2363,7 +2351,7 @@ The future leaks through, uninvited and badly formatted - a flash of what is abo
 
 <div class="gift-flavour" markdown="1">
 
-You do not issue one-off commands - that is Domination’s line of work. You set the rules everyone around you has to live inside, for as long as your authority holds. Someone bound by it does not merely comply. They want the rule kept, and they bristle when somebody else breaks it.
+You didn’t write the social contract, but you can enforce it. You establish the rules and those around you follow them. Those under your sway follow the rules because breaking them just feels wrong. They may even come to resent those who refuse to follow them.
 
 </div>
 
@@ -2433,7 +2421,7 @@ Ki Infusion still applies on top, same as any Social attack.
 
 <div class="gift-flavour" markdown="1">
 
-You do not need hands. A thought lifts, throws, pins or crushes anything inside the reach of your will. The reach is the only real limit, and it is the one thing everyone forgets to ask about before starting something.
+You don’t need your hands to lift, throw, pin or crush anything within reach of your will. Things move because you will them to. With enough force, even another person can be moved simply because you want them to.
 
 </div>
 
@@ -2500,7 +2488,7 @@ You do not need hands. A thought lifts, throws, pins or crushes anything inside 
 
 <div class="gift-flavour" markdown="1">
 
-Objects remember. A blade recalls the hand that swung it, a ring the years it sat on a finger, a knife the moment it drew blood. Touch something with intent and its history opens - who held it, what happened around it, what it was doing when things went wrong. You do not get to choose which parts.
+Objects have a memory. A sword remembers who used it. A ring recalls the years it spent on the C.E.O.’s finger. Touch something and fragments of its history rush into your mind. Faces, emotions, places, and events are all imprinted within mundane items. You do not get to choose which parts.
 
 </div>
 
@@ -2564,7 +2552,7 @@ Objects remember. A blade recalls the hand that swung it, a ring the years it sa
 
 <div class="gift-flavour" markdown="1">
 
-Your body refuses to stay broken. Wounds that would put anyone else out for weeks close in minutes, and even something genuinely terrible is a delay rather than a bill. It still hurts exactly as much as it would have. You just do not get to keep the excuse.
+You get knocked down, but you get up again. And again. And again. Your body refuses to be broken. Wounds close while you watch and injuries that should leave you permanently broken are only temporary setbacks. Given enough time - damage that should be irreversible will heal.
 
 </div>
 
@@ -2629,9 +2617,11 @@ Additionally, given a full **Month** of rest, you can heal away a below-zero Fla
 
 <div class="gift-flavour" markdown="1">
 
-Distance stopped being an argument you have to win. Something crosses the gap - a shard of ice, a look held half a second too long, a sound pitched under hearing - and what it lands on comes apart. People who have only heard about you assume there must be a weapon. There is always a weapon. It is just not the kind anyone thinks to look for.
+When you absolutely, positively have to deal damage at range, this is how you do it. You send something across the intervening space - a bullet, a shard of ice, an energy blast or something that has no physical presence at all - and it hurts. A lot. You decide what the attack is, how it looks and how it reaches its target.
 
 </div>
+
+What crosses the gap is chosen at creation, and described however you like. The rules don’t read the description.
 
 <p class="gift-section">Adders</p>
 
@@ -2692,7 +2682,7 @@ Distance stopped being an argument you have to win. Something crosses the gap - 
 
 <div class="gift-flavour" markdown="1">
 
-Your body ripples and reforms like water finding a new shape - skin, bone and voice moving until you are convincingly a specific person you have seen, or a specific inanimate object. Not one fixed alternate form. Whatever the situation needs, assuming you have looked at it closely enough beforehand.
+Your body is not fixed in form. Your skin, bone, muscle, and voice ripple and flow into new configurations. You can become almost anything you can imagine. You can wear another person’s face, slip into the form of an animal like changing your clothes, or even become an inanimate object.
 
 </div>
 
@@ -2835,9 +2825,11 @@ The wall you pick also picks your to-hit target, because there are three Defense
 
 <div class="gift-flavour" markdown="1">
 
-Your body ignores the ordinary rules of scale. Shrink until a crack in the wall is a doorway, swell until you are looking down at the roofline, or send one arm clear across a room without moving your feet. The mass has to go somewhere, and the physics of that is a conversation nobody has ever won with you.
+Humans tend to exist on a specific scale. For you - that scale is just a recommendation. You can grow to enormous size, shrink to minuscule proportions, or stretch parts of yourself beyond normal limits. Size is just a tool for you.
 
 </div>
+
+Fixed Direction: chosen once at creation, you can only ever grow or only ever shrink, never both.
 
 <p class="gift-section">Adders</p>
 
@@ -2897,7 +2889,7 @@ Your body ignores the ordinary rules of scale. Shrink until a crack in the wall 
 
 <div class="gift-flavour" markdown="1">
 
-Your body was never bound by the ordinary limits of muscle and leverage. What you can lift, throw or break keeps quietly redefining what was supposed to be possible. The hard part is not the lifting. It is everything you touch that was never built for someone like you - door handles, railings, other people’s hands.
+You can produce force far beyond what your muscles should be able to produce. You can punch, lift and throw with improbable strength, harnessing raw physical power to ignore the normal limits of flesh, bone and leverage.
 
 </div>
 
@@ -2959,9 +2951,11 @@ Your body was never bound by the ordinary limits of muscle and leverage. What yo
 
 <div class="gift-flavour" markdown="1">
 
-Nothing says you have to stay in one piece. A cloud of insects, a flock of bats, a swirl of micro-drones - take your pick, and let a thousand small things do what one body never could. Slip through a crack. Fill a room. Be in every corner of it at once. Coming back together is a habit you have to keep deliberately.
+You cease to be a single entity, scattering into a living cloud of many constituent living things. Each of them is bound to the others - moving with a single mind. Cracks become doorways and barriers become nothing more than inconvenience.
 
 </div>
+
+What you come apart into - a cloud of insects, a flock of bats, a swirl of micro-drones, something else - is chosen at creation.
 
 **The double-damage vulnerability to area attacks while swarmed never goes away, at any Level.**
 
@@ -3023,7 +3017,7 @@ Nothing says you have to stay in one piece. A cloud of insects, a flock of bats,
 
 <div class="gift-flavour" markdown="1">
 
-Circuits and code were never a closed system to you. Machines have a pulse if you know how to listen for it, and once you are listening, you can talk back. They answer. They are not always polite about it, and older ones have opinions.
+Machines speak their own language, and you are fluent in it. Electronics respond to you like you are one of their own - acting as an extension of your own hands. You can sense, access, alter and eventually command technology in ways that defy understanding.
 
 </div>
 
@@ -3085,7 +3079,7 @@ Circuits and code were never a closed system to you. Machines have a pulse if yo
 
 <div class="gift-flavour" markdown="1">
 
-Minds are not as private as people believe - not around you. You brush against what someone feels and catch the shape of it through a practiced mask, or reach further and hear the words behind their eyes. Knowing what everybody in the room actually thinks of you is not the gift people imagine it is.
+Other people’s minds are an open book to you. You can hear thoughts they haven’t spoken, read the emotions below their expressions, and eventually establish a direct connection between minds. Intuition eventually becomes access to another person’s inner world.
 
 </div>
 
@@ -3152,7 +3146,7 @@ Minds are not as private as people believe - not around you. You brush against w
 
 <div class="gift-flavour" markdown="1">
 
-You do not walk between places. You delete the distance. However it looks - a plain vanish and reappear, a burst of smoke, a rift torn open in the air - it is the same trick underneath: the gap between here and there stops being a fact you have to respect.
+The distance between spaces doesn’t matter to you. You simply stop being at point A and start existing at point B. Walls, distance and even the boundaries between worlds become irrelevant as you flicker across space or rip open a gate through it.
 
 </div>
 
@@ -3219,7 +3213,7 @@ You do not walk between places. You delete the distance. However it looks - a pl
 
 <div class="gift-flavour" markdown="1">
 
-Reach into a fold in space only you can find and pull out exactly what you left there. It starts as somewhere to stash a few things. With practice it becomes a room, then a home, then somewhere other people can visit - which raises the question of what else might already have found it.
+Just outside ordinary space - there is a place that belongs to you and you alone. It starts as a tiny pocket that you can stow a couple things into. Eventually it grows to be a private refuge that is shaped and outfitted how you choose.
 
 </div>
 
@@ -3286,7 +3280,7 @@ Reach into a fold in space only you can find and pull out exactly what you left 
 
 <div class="gift-flavour" markdown="1">
 
-Information cannot be created or destroyed. It can, however, be rearranged. Break something down to what it is actually made of and build something else out of the same mass - a wall from dirt, a blade from scrap iron, a bridge from loose stone. The mass is the honest part of the deal, and it does not negotiate.
+Matter is just an arrangement of atoms. You can break it apart and build it into something else. Shaping stone into walls, scrap into weapons or raw materials into something functional are all child’s play. You can’t create mass from nothing - nothing is created or destroyed - just rearranged according to your will.
 
 </div>
 
@@ -3357,7 +3351,7 @@ Chosen once, at creation: how you perform the ritual that triggers this Gift, tr
 
 <div class="gift-flavour" markdown="1">
 
-The body has needs. You have stopped listening to most of them. Breath, hunger, thirst, sleep, pain, cold, heat - background noise you learned to tune out. It is enormously useful and slightly worrying, and the people around you notice the second one before you do.
+You know what your body is supposed to need, but you decided to tell it no. Heat, cold, thirst, hunger, exhaustion, pain and even the need to breathe are just signals that you can turn off. You can keep going long after an ordinary person would have collapsed. Survival limits are now little more than an inconvenience.
 
 </div>
 
@@ -3419,7 +3413,7 @@ The body has needs. You have stopped listening to most of them. Breath, hunger, 
 
 <div class="gift-flavour" markdown="1">
 
-Age was always going to catch you eventually, or so everyone assumes. Poison, plague, the slow grind of decades - none of it actually arrives. You can still be killed. You simply cannot be worn down, which turns out to be a different kind of long problem.
+Poison, disease, the passing of time… Your body refuses to succumb to these things. You can be killed. You can be broken, bleed and die - but you won’t die from natural causes. Sickness, age and decay will not be what ends you.
 
 </div>
 
