@@ -13,7 +13,7 @@ function getOrCreateFlawState(state, name) {
 export default {
   id: 'flaws',
   title: 'Flaws',
-  render(container, { state, data, rerenderStep, rerenderPools }) {
+  render(container, { state, data, rerenderStep, rerenderPools, persist }) {
     container.append(
       el('h2', {}, 'Flaws'),
       el(
@@ -61,7 +61,10 @@ export default {
       // book, and a field on each of those is noise.
       const flawState = getOrCreateFlawState(state, flaw.name);
       if (flawState.level > 0) {
-        card.append(describeBox(flawState.note, (value) => setFlawNote(state, flaw.name, value)));
+        card.append(describeBox(flawState.note, (value) => {
+          setFlawNote(state, flaw.name, value);
+          persist?.();
+        }));
       }
       if (flaw.name === 'Destitute' && !canTakeDestitute(state)) {
         card.append(
