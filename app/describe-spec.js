@@ -61,7 +61,6 @@ export const GIFT_DESCRIBE = {
     // Second Companion buys another, and each one is its own animal.
     count: (gift) => (gift?.adders?.includes('Second Companion') ? 2 : 1),
   },
-  'Claws / Fangs': { prompt: 'What are they?', count: one },
   'Conjured Armory': { prompt: 'What do you call, and what does it look like?', count: one },
   'Cybernetics': { prompt: 'What is installed, and where?', count: one },
   'Drone Swarm': { prompt: 'What are the drones?', count: one },
