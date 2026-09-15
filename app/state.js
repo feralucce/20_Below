@@ -606,7 +606,7 @@ export function giftsDiscretionarySpent(state, data) {
 }
 
 export function addBoon(state, name, cost, source) {
-  state.boons.push({ name, points: cost.points, tier: cost.tier, source, note: '' });
+  state.boons.push({ name, points: cost.points, tier: cost.tier, source, notes: [] });
   if (source === 'discretionary') {
     state.discretionaryExtra.Boons += cost.points;
   }
@@ -628,27 +628,47 @@ export function removeBoon(state, index) {
  * and written on a napkin, and the character file did not carry it, so
  * it was gone by the next session.
  *
- * Every selection gets the field rather than a chosen few: deciding
- * which entries "need" one means keeping a list in step with the rules
- * text, and the list loses. It is empty until somebody types in it, and
- * it only appears on things actually taken.
+ * Only the entries that genuinely ask - app/describe-spec.js holds that
+ * list, derived from the rules text by tools/derive-describe-spec.py.
+ * Berserker and Battle Sense define nothing, and a field on those asks
+ * the player to describe an absence.
  *
- * The same shape as updateGiftMenuPurchaseNote, which already did this
- * for build-menu purchases.
+ * Notes are an array because some entries carry more than one answer: a
+ * second Animal Companion is its own animal with its own name, and
+ * Features buys up to four of them.
  */
-export function setBoonNote(state, index, note) {
-  const boon = state.boons[index];
-  if (boon) boon.note = note;
+function noteList(holder) {
+  if (!holder) return null;
+  // Migration: the first version of this stored one string.
+  if (typeof holder.note === 'string') {
+    holder.notes = holder.note ? [holder.note] : [];
+    delete holder.note;
+  }
+  if (!Array.isArray(holder.notes)) holder.notes = [];
+  return holder.notes;
 }
 
-export function setFlawNote(state, name, note) {
-  const flaw = state.flaws.find((f) => f.name === name);
-  if (flaw) flaw.note = note;
+function setNote(holder, index, value) {
+  const notes = noteList(holder);
+  if (!notes) return;
+  while (notes.length <= index) notes.push('');
+  notes[index] = value;
 }
 
-export function setGiftNote(state, name, note) {
-  const gift = state.gifts.find((g) => g.name === name);
-  if (gift) gift.note = note;
+export function boonNotes(boon) { return noteList(boon) ?? []; }
+export function flawNotes(flaw) { return noteList(flaw) ?? []; }
+export function giftNotes(gift) { return noteList(gift) ?? []; }
+
+export function setBoonNote(state, index, slot, value) {
+  setNote(state.boons[index], slot, value);
+}
+
+export function setFlawNote(state, name, slot, value) {
+  setNote(state.flaws.find((f) => f.name === name), slot, value);
+}
+
+export function setGiftNote(state, name, slot, value) {
+  setNote(state.gifts.find((g) => g.name === name), slot, value);
 }
 
 // Every Flaw in flaws.md is Leveled; points granted equal the level taken.

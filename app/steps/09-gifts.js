@@ -1,6 +1,8 @@
-import { el, counterRow, renderMarkdown, renderSelectedAvailable, describeBox } from '../ui.js';
+import { el, counterRow, renderMarkdown, renderSelectedAvailable, describeBoxes } from '../ui.js';
+import { describeFields, describePrompt } from '../describe-spec.js';
 import {
   setGiftNote,
+  giftNotes,
   giftsPoolRemaining,
   giftLevelCost,
   giftPointsSpent,
@@ -216,12 +218,20 @@ export default {
     function renderCard(gift) {
       const card = el('div', { class: 'pick-card' });
       card.append(counterRow({ ...counterCfg(gift), key: `gift:${gift.name}`, detail: detailFor(gift) }));
-      // Only once a Level is taken - the same guard the Flaws step uses.
+      // Only once a Level is taken, and only for the Gifts that actually
+      // ask for something - see app/describe-spec.js.
       const giftState = getOrCreateGiftState(state, gift.name);
-      if (giftState.level > 0) {
-        card.append(describeBox(giftState.note, (value) => {
-          setGiftNote(state, gift.name, value);
-          persist?.();
+      const fields = giftState.level > 0
+        ? describeFields('gift', gift.name, giftState) : 0;
+      if (fields) {
+        card.append(describeBoxes({
+          count: fields,
+          prompt: describePrompt('gift', gift.name),
+          notes: giftNotes(giftState),
+          onChange: (slot, value) => {
+            setGiftNote(state, gift.name, slot, value);
+            persist?.();
+          },
         }));
       }
       return card;

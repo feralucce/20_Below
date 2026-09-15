@@ -1,5 +1,8 @@
 import { el, renderMarkdown, renderMarkdownInline as inline } from '../ui.js';
 import {
+  boonNotes,
+  giftNotes,
+  flawNotes,
   applyVitalFloor,
   computeFiguredCharacteristics,
   skillTierName,
@@ -89,7 +92,9 @@ function buildBoonEntries(state, data) {
     // half, and the effect is the reference underneath it.
     return el('li', {}, [
       el('strong', {}, label + ': '),
-      b.note ? el('em', {}, b.note + ' - ') : null,
+      boonNotes(b).filter(Boolean).length
+        ? el('em', {}, boonNotes(b).filter(Boolean).join('; ') + ' - ')
+        : null,
       boonData ? el('span', { html: inline(boonData.effect) }) : null,
     ]);
   });
@@ -153,10 +158,12 @@ function buildGiftEntries(state, data) {
         ? el('div', {}, moves.filter((mv) => mv.description)
             .map((mv) => el('p', { class: 'detail' }, mv.description)))
         : null;
+      const named = giftNotes(g).filter(Boolean);
       return el('li', {}, [
         el('strong', {}, moves.length
           ? `${g.name} (${moves.length} Move${moves.length === 1 ? '' : 's'})`
           : `${g.name} (Level ${g.level})`),
+        named.length ? el('em', {}, ' - ' + named.join('; ')) : null,
         sigLine,
         sigText,
         moves.length ? null : levelRows,
@@ -187,7 +194,12 @@ function buildFlawEntries(state, data) {
         : flawData
           ? el('span', { class: 'detail' }, "(no standard Level table for this Flaw - see flaws.md for its full effect)")
           : null;
-      return el('li', {}, [el('strong', {}, `${f.name} (Level ${f.level}): `), effect]);
+      const said = flawNotes(f).filter(Boolean);
+      return el('li', {}, [
+        el('strong', {}, `${f.name} (Level ${f.level}): `),
+        said.length ? el('em', {}, said.join('; ') + ' - ') : null,
+        effect,
+      ]);
     });
 }
 

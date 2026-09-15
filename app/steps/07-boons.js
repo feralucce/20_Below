@@ -1,5 +1,6 @@
-import { el, renderMarkdown, makeTwirl, describeBox } from '../ui.js';
-import { boonsPoolRemaining, addBoon, removeBoon, setBoonNote } from '../state.js';
+import { el, renderMarkdown, makeTwirl, describeBoxes } from '../ui.js';
+import { describeFields, describePrompt } from '../describe-spec.js';
+import { boonsPoolRemaining, addBoon, removeBoon, setBoonNote, boonNotes } from '../state.js';
 
 // Shared by the Boons step (spend the Boons pool) and the Discretionary Points step (spend Discretionary
 // points on a Boon at the converted rate) - `source` tags each purchase so
@@ -38,11 +39,20 @@ export function renderBoonPicker(container, ctx, allBoons, { source, getRemainin
       // Outside the twirl: what the player named is part of the character,
       // not part of the rules text, so it stays visible when the detail is
       // folded away.
-      const noteEl = describeBox(b.note, (value) => {
-        setBoonNote(state, i, value);
-        persist?.();
-      });
-      selectedEl.appendChild(el('div', { class: 'pick-card' }, [headerRow, noteEl, detailEl]));
+      const fields = describeFields('boon', b.name, b);
+      const noteEl = fields
+        ? describeBoxes({
+          count: fields,
+          prompt: describePrompt('boon', b.name),
+          notes: boonNotes(b),
+          onChange: (slot, value) => {
+            setBoonNote(state, i, slot, value);
+            persist?.();
+          },
+        })
+        : null;
+      selectedEl.appendChild(el('div', { class: 'pick-card' },
+        noteEl ? [headerRow, noteEl, detailEl] : [headerRow, detailEl]));
     });
   }
 
