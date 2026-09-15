@@ -67,7 +67,7 @@ export const GIFT_DESCRIBE = {
   'Drone Swarm': { prompt: 'What are the drones?', count: one },
   'Elemental Aura': { prompt: 'Which element, and what does it look like?', count: one },
   'Elemental Manipulation': { prompt: 'Which domain do you command?', count: one },
-  'Forcefield': { prompt: 'What does it look like when it comes up?', count: one },
+  'Forcefield': { prompt: 'Which Form, and what does it look like?', count: one },
   'Heightened Senses': { prompt: 'Which sense?', count: one },
   'Necromancy': { prompt: 'What do your raised dead look like?', count: one },
   'Transmutation': { prompt: 'What do you change, and into what?', count: one },
