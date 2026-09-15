@@ -1302,6 +1302,8 @@ Your body was never bound by the ordinary limits of muscle and leverage. What yo
 
 Nothing says you have to stay in one piece. A cloud of bugs, a flock of bats, a swirl of micro-drones, take your pick, and let a thousand small pieces do what one body never could: slip through a crack, cover a room from every angle, or vanish into noise.
 
+What you come apart into - a cloud of insects, a flock of bats, a swirl of micro-drones, something else - is chosen at creation.
+
 **The double-damage vulnerability to area attacks while swarmed never goes away, at any Level.**
 
 | Level | Effect |
