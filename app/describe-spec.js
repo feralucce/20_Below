@@ -69,7 +69,9 @@ export const GIFT_DESCRIBE = {
   'Elemental Manipulation': { prompt: 'Which domain do you command?', count: one },
   'Forcefield': { prompt: 'Which Form, and what does it look like?', count: one },
   'Heightened Senses': { prompt: 'Which sense?', count: one },
+  'Onslaught': { prompt: 'What do you hit them with?', count: one },
   'Necromancy': { prompt: 'What do your raised dead look like?', count: one },
+  'Salvo': { prompt: 'What crosses the gap?', count: one },
   'Transmutation': { prompt: 'What do you change, and into what?', count: one },
 };
 
