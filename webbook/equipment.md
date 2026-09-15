@@ -53,10 +53,13 @@ Attacking a target within a weapon’s **Normal** range carries no penalty. Atta
 | Compact SMG | Submachine gun | 3 | 25m / 60m | 30 rounds | 1 action | 3 |
 | Compound bow | Compound bow | 4 | 25m / 60m | 12 (quiver) | Free | 3 |
 | Crossbow | Crossbow | 4 | 20m / 50m | 12 (quiver) | 1 action | 2 |
+| Dart pistol | Exotic (ranged) | 1 | 10m / 20m | 5 darts | 1 action | 2 |
 | Derringer | Handgun | 2 | 5m / 10m | 2 rounds | 1 action | 1 |
+| Directed-energy rifle | Prototype | 4 | 50m / 150m | 20 shots | 1 action | 5 |
 | English longbow | Warbow | 5 | 30m / 70m | 12 (quiver) | Free | 4 |
 | Fists, feet | Unarmed | 1 | Melee | - | - | - |
 | Flail | One-handed blunt | 4 | Melee | - | - | 2 |
+| Flamethrower | Ordnance | 4 | 10m / 20m | 8 bursts | Slow action | 4 |
 | Flare gun | Exotic (ranged) | 2 | 15m / 40m | 1 round | 1 action | 1 |
 | Garrote | Improvised | 2 | Melee | - | - | 1 |
 | Glaive | Polearm / two-handed | 5 | Melee | - | - | 2 |
@@ -75,9 +78,11 @@ Attacking a target within a weapon’s **Normal** range carries no penalty. Atta
 | Mace | One-handed blunt | 4 | Melee | - | - | 2 |
 | Machete | Large blade | 4 | Melee | - | - | 1 |
 | Metal pipe | Improvised | 3 | Melee | - | - | 1 |
+| Mortar | Ordnance | 5 | 100m / 400m | 1 shell | 1 action | 5 |
 | Muzzleloader rifle | Rifle | 4 | 80m / 200m | 1 round | Slow action | 2 |
 | Net launcher | Exotic (ranged) | 1 | 10m / 20m | 1 net | 1 action | 2 |
 | Nunchaku | Exotic (melee) | 3 | Melee | - | - | 1 |
+| Prototype railgun | Prototype | 5 | 300m / 800m | 5 slugs | Slow action | 5 |
 | Pump shotgun | Shotgun | 4 | 5m / 15m | 6 shells | Slow action | 2 |
 | Rapier | One-handed blade | 4 | Melee | - | - | 2 |
 | Recurve bow | Recurve bow | 3 | 20m / 50m | 12 (quiver) | Free | 2 |
@@ -86,8 +91,10 @@ Attacking a target within a weapon’s **Normal** range carries no penalty. Atta
 | Sap | Improvised | 3 | Melee | - | - | 1 |
 | Sawed-off shotgun | Shotgun | 4 | 5m / 15m | 2 shells | Slow action | 2 |
 | Short sword | One-handed blade | 4 | Melee | - | - | 2 |
+| Shoulder-launched rocket | Ordnance | 5 | 80m / 250m | 1 rocket | Slow action | 5 |
 | Sledgehammer | Two-handed | 5 | Melee | - | - | 1 |
 | Sling | Sling | 2 | 15m / 30m | 1 per throw | - | 1 |
+| Speargun | Exotic (ranged) | 3 | 10m / 25m | 1 spear | Slow action | 2 |
 | Squad automatic weapon | Heavy | 5 | 300m / 800m | 100 rounds | 1 action | 4 |
 | Switchblade | Knife | 3 | Melee | - | - | 1 |
 | Tactical carbine | Rifle | 4 | 100m / 250m | 20 rounds | 1 action | 3 |
@@ -95,6 +102,7 @@ Attacking a target within a weapon’s **Normal** range carries no penalty. Atta
 | Tonfa | One-handed blunt | 3 | Melee | - | - | 1 |
 | Trench knife | Knife | 3 | Melee | - | - | 1 |
 | Two-handed sword | Polearm / two-handed | 5 | Melee | - | - | 2 |
+| Vehicle-mounted minigun | Ordnance | 5 | 150m / 400m | 500 rounds | Slow action | 5 |
 | War axe | One-handed blade | 4 | Melee | - | - | 1 |
 | War fan | Exotic (melee) | 2 | Melee | - | - | 1 |
 | Warhammer | Two-handed blunt | 5 | Melee | - | - | 2 |
@@ -340,6 +348,7 @@ Same Damage/per-die-vs-Soak resolution as Basic Weapons above, just built around
 | Mace (pepper spray) | 1 | 3m / 5m | 1 (canister) | - | Blinded and Disadvantage on all rolls for 1 round | 1 |
 | Net gun | 1 | 8m / 15m | 1 net | 1 action | Target is Restrained until they break free (Potence check) | 2 |
 | Pepper spray gel | 1 | 6m / 9m | 1 (canister) | - | Same Blinded effect as Mace, less blowback risk | 1 |
+| Riot water cannon | 1 | 15m / 30m | vehicle tank | - | Everyone in a Close cone is knocked Prone and pushed back a band | 4 |
 | Rubber bullet launcher | 2 | 15m / 40m | 6 rounds | 1 action | Same as the beanbag shotgun above | 2 |
 | Smoke grenade | 0 | 10m throw | 1 (thrown) | - | Fills a Close radius with concealment; Advantage on Stealth to break contact | 1 |
 | Sonic deterrent device | 1 | Close-Near cone | - | - | Disadvantage on all rolls while in the cone | 2 |
