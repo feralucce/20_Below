@@ -27,7 +27,7 @@ function getOrCreateGiftState(state, name) {
 export default {
   id: 'gifts',
   title: 'Gifts',
-  render(container, { state, data, rerenderStep, rerenderPools }) {
+  render(container, { state, data, rerenderStep, rerenderPools, persist }) {
     const remaining = giftsPoolRemaining(state, data);
     container.append(
       el('h2', {}, 'Gifts'),
@@ -219,7 +219,10 @@ export default {
       // Only once a Level is taken - the same guard the Flaws step uses.
       const giftState = getOrCreateGiftState(state, gift.name);
       if (giftState.level > 0) {
-        card.append(describeBox(giftState.note, (value) => setGiftNote(state, gift.name, value)));
+        card.append(describeBox(giftState.note, (value) => {
+          setGiftNote(state, gift.name, value);
+          persist?.();
+        }));
       }
       return card;
     }

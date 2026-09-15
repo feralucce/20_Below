@@ -6,7 +6,7 @@ import { boonsPoolRemaining, addBoon, removeBoon, setBoonNote } from '../state.j
 // removing it later refunds the right currency, `getRemaining`/`toCurrency`
 // let the caller price it in whichever pool applies.
 export function renderBoonPicker(container, ctx, allBoons, { source, getRemaining, toCurrency, currencyLabel }) {
-  const { state, rerenderStep, rerenderPools } = ctx;
+  const { state, rerenderStep, rerenderPools, persist } = ctx;
   const selectedEl = el('div', { class: 'pick-list' });
   const listEl = el('div', { class: 'pick-list' });
 
@@ -38,7 +38,10 @@ export function renderBoonPicker(container, ctx, allBoons, { source, getRemainin
       // Outside the twirl: what the player named is part of the character,
       // not part of the rules text, so it stays visible when the detail is
       // folded away.
-      const noteEl = describeBox(b.note, (value) => setBoonNote(state, i, value));
+      const noteEl = describeBox(b.note, (value) => {
+        setBoonNote(state, i, value);
+        persist?.();
+      });
       selectedEl.appendChild(el('div', { class: 'pick-card' }, [headerRow, noteEl, detailEl]));
     });
   }

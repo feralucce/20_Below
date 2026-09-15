@@ -256,7 +256,11 @@ async function main() {
   function rerenderStep() {
     clampFateTokenPurchases(state, data);
     panel.innerHTML = '';
-    const ctx = { state, data, rerenderStep, rerenderPools };
+    // Writing the draft without redrawing. Everything else persists as a
+    // side effect of rerenderPools, which is fine when the control that
+    // changed is a button. A text field cannot rerender on input without
+    // throwing away the caret, so it needs to save on its own.
+    const ctx = { state, data, rerenderStep, rerenderPools, persist: () => saveState(state) };
     STEPS[currentStep].render(panel, ctx);
     renderNav();
     btnBack.disabled = currentStep === 0;
