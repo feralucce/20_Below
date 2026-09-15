@@ -464,6 +464,30 @@ body {
   background: var(--panel);
 }
 
+/* The field for whatever the rules asked the player to invent. Full
+   width and quiet until it has something in it - it sits under the name
+   of every Boon, Flaw and Gift actually taken, so it has to read as a
+   place to write rather than as another control. */
+.describe-box {
+  display: block;
+  width: 100%;
+  margin: 0.4rem 0 0;
+  padding: 0.35rem 0.5rem;
+  border: 1px dashed var(--panel-border);
+  border-radius: var(--radius);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.95em;
+}
+.describe-box:focus {
+  border-style: solid;
+  outline: none;
+}
+.describe-box:not(:placeholder-shown) {
+  border-style: solid;
+}
+
 .hint {
   color: var(--text-dim);
   font-size: 0.85rem;

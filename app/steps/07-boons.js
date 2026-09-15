@@ -1,5 +1,5 @@
-import { el, renderMarkdown, makeTwirl } from '../ui.js';
-import { boonsPoolRemaining, addBoon, removeBoon } from '../state.js';
+import { el, renderMarkdown, makeTwirl, describeBox } from '../ui.js';
+import { boonsPoolRemaining, addBoon, removeBoon, setBoonNote } from '../state.js';
 
 // Shared by the Boons step (spend the Boons pool) and the Discretionary Points step (spend Discretionary
 // points on a Boon at the converted rate) - `source` tags each purchase so
@@ -35,7 +35,11 @@ export function renderBoonPicker(container, ctx, allBoons, { source, getRemainin
       // Keyed by slot as well as name: a repeatable Boon can be held twice,
       // and both copies are in this list.
       makeTwirl(nameEl, detailEl, { key: `boon-sel:${source}:${i}:${b.name}` });
-      selectedEl.appendChild(el('div', { class: 'pick-card' }, [headerRow, detailEl]));
+      // Outside the twirl: what the player named is part of the character,
+      // not part of the rules text, so it stays visible when the detail is
+      // folded away.
+      const noteEl = describeBox(b.note, (value) => setBoonNote(state, i, value));
+      selectedEl.appendChild(el('div', { class: 'pick-card' }, [headerRow, noteEl, detailEl]));
     });
   }
 

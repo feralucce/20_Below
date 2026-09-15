@@ -84,8 +84,12 @@ function buildBoonEntries(state, data) {
   return state.boons.map((b) => {
     const boonData = data.boons.find((d) => d.name === b.name);
     const label = b.tier ? `${b.name} (${b.tier})` : `${b.name} (${b.points} pts)`;
+    // What the player named goes before the rules text, not after it: on
+    // a sheet, "Familiar - Bartholomew, a talking barometer" is the useful
+    // half, and the effect is the reference underneath it.
     return el('li', {}, [
       el('strong', {}, label + ': '),
+      b.note ? el('em', {}, b.note + ' - ') : null,
       boonData ? el('span', { html: inline(boonData.effect) }) : null,
     ]);
   });

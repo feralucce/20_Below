@@ -1,5 +1,6 @@
-import { el, counterRow, renderMarkdown, renderSelectedAvailable } from '../ui.js';
+import { el, counterRow, renderMarkdown, renderSelectedAvailable, describeBox } from '../ui.js';
 import {
+  setGiftNote,
   giftsPoolRemaining,
   giftLevelCost,
   giftPointsSpent,
@@ -215,6 +216,11 @@ export default {
     function renderCard(gift) {
       const card = el('div', { class: 'pick-card' });
       card.append(counterRow({ ...counterCfg(gift), key: `gift:${gift.name}`, detail: detailFor(gift) }));
+      // Only once a Level is taken - the same guard the Flaws step uses.
+      const giftState = getOrCreateGiftState(state, gift.name);
+      if (giftState.level > 0) {
+        card.append(describeBox(giftState.note, (value) => setGiftNote(state, gift.name, value)));
+      }
       return card;
     }
 

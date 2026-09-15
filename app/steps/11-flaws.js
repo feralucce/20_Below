@@ -1,5 +1,5 @@
-import { el, counterRow, renderMarkdown, renderMarkdownInline, renderSelectedAvailable } from '../ui.js';
-import { flawsPointsGranted, canTakeDestitute } from '../state.js';
+import { el, counterRow, renderMarkdown, renderMarkdownInline, renderSelectedAvailable, describeBox } from '../ui.js';
+import { flawsPointsGranted, canTakeDestitute, setFlawNote } from '../state.js';
 
 function getOrCreateFlawState(state, name) {
   let f = state.flaws.find((x) => x.name === name);
@@ -57,6 +57,12 @@ export default {
     function renderCard(flaw) {
       const card = el('div', { class: 'pick-card' });
       card.append(counterRow({ ...counterCfg(flaw), key: `flaw:${flaw.name}`, detail: descriptionFor(flaw) }));
+      // Only once a Level is taken. The Available list is every Flaw in the
+      // book, and a field on each of those is noise.
+      const flawState = getOrCreateFlawState(state, flaw.name);
+      if (flawState.level > 0) {
+        card.append(describeBox(flawState.note, (value) => setFlawNote(state, flaw.name, value)));
+      }
       if (flaw.name === 'Destitute' && !canTakeDestitute(state)) {
         card.append(
           el('p', { class: 'hint' },
