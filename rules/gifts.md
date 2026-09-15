@@ -950,6 +950,8 @@ You have one way of hurting people at arm's length. A blade that slides out of t
 
 **What the rules read is always the same.** A Physical attack at Melee range. The to-hit is a straight Attribute-vs-Defense roll using whichever [Element](rules.md#choosing-the-attacking-element) fits how you are going about it, the same as swinging a bat. The dice resolve one at a time against **Soak**, and a connecting die costs a **Health Level**. Every swing costs **1 Ki**, and there is never a Gift Check. What the Levels buy is dice, [Level plus half your Ferocity](#attack-dice), and that is the whole Gift.
 
+Your one way of hurting people at arm's length is chosen at creation, and described however you like. The rules don't read the description.
+
 **This is not a [Signature Move](#signature-move).** A Move is built: you pick an attack source and a wall and they don't have to match, which is how a scream ends up breaking composure. Onslaught picks nothing. It is the plain version, for a character whose answer to a problem at arm's length is to hit it until it stops. If you want the strange version, build a Move.
 
 | Level | Effect |
@@ -1158,6 +1160,8 @@ Additionally, given a full **Month** of rest, you can heal away a below-zero Fla
 Distance stopped being an argument you have to win. Something crosses the gap, a shard of ice, a look held half a second too long, a sound pitched under hearing, and what it lands on comes apart. You decide what crosses. The rules only care that it gets there.
 
 **You are choosing a picture, not a mechanic.** What you throw, fire, project or simply will across the room is yours to describe and changes nothing. It is the same dice against the same wall either way.
+
+What crosses the gap is chosen at creation, and described however you like. The rules don't read the description.
 
 **What the rules read is always the same.** One target, a Physical attack out to **Far** range, at every Level. The to-hit is a straight Attribute-vs-Defense roll with whichever [Element](rules.md#choosing-the-attacking-element) fits the approach. The dice resolve one at a time against **Soak** and a connecting die costs a **Health Level**. Every shot costs **1 Ki**, and there is never a Gift Check. What the Levels buy is dice, [Level plus half your Ferocity](#attack-dice), and that is the whole Gift.
 
