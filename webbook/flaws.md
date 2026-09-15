@@ -846,7 +846,9 @@ There’s a category people put you in on sight, and no amount of being reasonab
 
 </div>
 
-People hold a specific prejudice against you - your species, your background, where you came from.
+People hold a specific prejudice against you. Name it with your GM.
+
+What I have in mind is the kind this setting invented: visibly not human, known to carry a Gift, marked by something that happened and never explained. The ordinary human bigotries exist in this world too, because it is our world - but they are not what this Flaw is for.
 
 <div class="flaw-level flaw-level--1" markdown="1">
 

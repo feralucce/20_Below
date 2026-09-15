@@ -234,7 +234,7 @@ An attack is a straight Attribute-against-Defense roll with no Skill in it, whic
 
 <div class="boon-tier" markdown="1">
 
-**Tier 1 (3, Lesser)**: name one weapon category, unarmed included. Attack rolls made with it are at Advantage - the same shape as Adept.
+**Tier 1 (3, Lesser)**: name one weapon Category from the weapon Skills - Knife, Handgun, Large blade, whatever you actually carry. Attack rolls made with it are at Advantage - the same shape as Adept.
 
 </div>
 
@@ -246,7 +246,7 @@ An attack is a straight Attribute-against-Defense roll with no Skill in it, whic
 
 <div class="boon-tier" markdown="1">
 
-**Tier 3 (7, Legendary)**: name a second weapon category, which gains both. Held alongside Never Off Balance, which is the Master tier for the same roll, that completes the ladder.
+**Tier 3 (7, Legendary)**: name a second Category, which gains both. Held alongside Never Off Balance, which is the Master tier for the same roll, that completes the ladder.
 
 </div>
 
@@ -382,29 +382,39 @@ Something followed you home and never left, and it is smarter than it has any bu
 
 </div>
 
-Bought as one of four tiers (each includes every lower tier’s benefit - no need to buy more than one). You have a dedicated companion of your own: a bound spirit, an animated servant, a talking object, an unusually capable person, whatever fits the concept. Not necessarily magical, not necessarily built by you, just yours.
+Bought as one of four tiers (each includes every lower tier’s benefit - no need to buy more than one). Not necessarily magical, not necessarily built by you, just yours.
+
+Choose what it is. What it is decides which Skills it can take:
+
+**Bound spirit** - something that was never quite alive, tied to you by an arrangement neither of you brings up. It goes where you can’t and notices what you wouldn’t. *Divination, Insight, Occult, Perception, Religion, Shadowing, Surveillance.*
+
+**Animated servant** - a made thing that runs on something and keeps running whether or not anybody is watching. Tireless, literal, and stronger than it looks. *Athletics, Crafting, Electronics, Mechanics, Security, Systems Operation.*
+
+**Talking object** - a book, a ring, a radio that picks up more than it should. It doesn’t move on its own, so it gets carried, and it is usually the best-read thing in the room. *Academics, Appraisal, Cryptography, Law, Linguistics, Occult, Research, Science.*
+
+**Capable person** - somebody who works for you, follows you, or has decided you need looking after. *Any Skill a person could learn.*
 
 <div class="boon-tier" markdown="1">
 
-**Tier 1 (1, Trivial)**: a capable helper with a real specialty, Trained in one relevant Skill of your choice, reliably useful for everyday tasks fitting its nature. Mostly narrative utility, not built for danger.
+**Tier 1 (1, Trivial)**: Trained in one Skill from its list. Reliably useful for everyday work, not built for danger.
 
 </div>
 
 <div class="boon-tier" markdown="1">
 
-**Tier 2 (3, Lesser)**: its competence deepens - Expert in its specialty Skill, plus Trained in two more Skills fitting its nature. Can act on your behalf, unsupervised, for simple tasks.
+**Tier 2 (3, Lesser)**: Expert in that Skill, plus Trained in two more from its list. Can act for you unsupervised on simple tasks.
 
 </div>
 
 <div class="boon-tier" markdown="1">
 
-**Tier 3 (5, Greater)**: it becomes a genuine asset in a crisis, not just a convenience - Master in its specialty Skill, and capable of holding its own if things turn dangerous (a butler who’s also a bodyguard, luggage that can flatten an attacker, a spirit with real teeth), GM’s call on the exact shape, fitting its nature.
+**Tier 3 (5, Greater)**: Master in its specialty, and able to hold its own when things turn dangerous - a butler who is also a bodyguard, luggage that can flatten an attacker, a spirit with real teeth.
 
 </div>
 
 <div class="boon-tier" markdown="1">
 
-**Tier 4 (7, Legendary)**: it’s a legend in its own right, recognized (or feared) independent of you. Effectively unkillable in any permanent sense - destroyed, it eventually finds its way back to you, rebuilt, reformed, or returned, one way or another.
+**Tier 4 (7, Legendary)**: a legend in its own right, recognised or feared independently of you. Effectively unkillable in any permanent sense - destroyed, it finds its way back, rebuilt, reformed or returned.
 
 </div>
 
@@ -420,29 +430,31 @@ You are visibly not built the way most people are built, and you stopped apologi
 
 </div>
 
-Bought as one of four tiers (each includes every lower tier’s benefit - no need to buy more than one). Small, genuine biological quirks set you apart from an ordinary person - a functional tail with real balance and grip, gills that actually work, a natural pouch, thick fur, or coloration nobody could mistake for human. Cosmetic on their own, but each one does something real.
+Bought as one of four tiers (each includes every lower tier’s benefit - no need to buy more than one). Small, genuine biological quirks that set you apart from an ordinary person. Cosmetic to look at, but each one does something real.
+
+Choose a feature: **Tail** (real balance and grip - another hand for holding on, not for fine work), **Gills** (breathe water indefinitely, and air as normal), **Fur** (ignore cold that has everybody else reaching for a coat), **Pouch** (a few small items carried hands-free and out of sight), or **Coloration** (markings nobody would mistake for human, and blending into one matching environment you name). Anything else that size works too, if you and the GM can agree what it does.
 
 <div class="boon-tier" markdown="1">
 
-**Tier 1 (1, Trivial)**: choose 1 minor feature (functional tail, gills, fur, pouch, distinct coloration, or similar) - each grants a small, fitting benefit: a tail aids balance, gills allow underwater breathing, fur grants minor cold resistance, a pouch holds a few small items hands-free, distinct coloration/camouflage blends into a matching environment.
+**Tier 1 (1, Trivial)**: one feature.
 
 </div>
 
 <div class="boon-tier" markdown="1">
 
-**Tier 2 (3, Lesser)**: choose a 2nd feature.
+**Tier 2 (3, Lesser)**: a second.
 
 </div>
 
 <div class="boon-tier" markdown="1">
 
-**Tier 3 (5, Greater)**: choose a 3rd feature.
+**Tier 3 (5, Greater)**: a third.
 
 </div>
 
 <div class="boon-tier" markdown="1">
 
-**Tier 4 (7, Legendary)**: choose a 4th feature.
+**Tier 4 (7, Legendary)**: a fourth.
 
 </div>
 
@@ -830,21 +842,23 @@ One specific thing that shouldn’t be in civilian hands, and you happen to know
 
 Access to a single named weapon system, chosen when you take this and defined with the GM - including which Element rolls it, if anything about it is rolled at all. Bought as one of three tiers (each includes every lower tier’s benefit - no need to buy more than one).
 
+The lists below are examples, not a menu to choose from. If the thing you want is not on them, that is rather the point of the Boon - bring it to the GM and settle between you what it does.
+
 <div class="boon-tier" markdown="1">
 
-**Tier 1 (3, Lesser)**: an exotic weapon that is unusual rather than restricted - a blowgun, a net launcher, a flare gun. Nobody is going to arrest you for carrying it. Nobody else at the table knows how to use it either.
+**Tier 1 (3, Lesser)**: unusual rather than restricted, and the only route to the Exotic (ranged) Category - no weapon Skill reaches it. A blowgun, a flare gun or a net launcher, all three already statted in Equipment; a speargun or a dart pistol would sit here too. Nobody is going to arrest you for carrying one, and nobody else at the table knows how to use it either.
 
 </div>
 
 <div class="boon-tier" markdown="1">
 
-**Tier 2 (5, Greater)**: a restricted military or police platform - a grenade launcher, a breaching charge, a crew-served weapon. Owning it is a crime most places you will carry it, and that is part of what you are paying for.
+**Tier 2 (5, Greater)**: hardware that exists and is illegal for you to be holding. A flamethrower, a shoulder-launched rocket, a mortar, a vehicle-mounted minigun, a riot water cannon. Owning it is a crime most places you will carry it, and that is part of what you are paying for.
 
 </div>
 
 <div class="boon-tier" markdown="1">
 
-**Tier 3 (7, Legendary)**: something that should not exist - a prototype, a supernatural armament. What it is and what it does is settled with the GM.
+**Tier 3 (7, Legendary)**: something that should not exist at all. A prototype railgun, a directed-energy rifle, a blade that remembers everyone it has killed, a rifle built for one specific target and inert against anybody else. What it is and what it does is settled with the GM.
 
 </div>
 

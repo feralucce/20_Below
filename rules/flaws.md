@@ -30,7 +30,7 @@ Flaws are the mirror image of [Boons](boons.md) - disadvantages, quirks, or comp
 | Notable Appearance | = Level | Something about how you look draws stares and reactions - see [Notable Appearance](#notable-appearance) below for the 5-level breakdown. |
 | Notoriety | = Level | How widely, and how badly, you're known - see [Notoriety](#notoriety) below for the 5-level breakdown. |
 | Overconfident | = Level | You underestimate danger, or overestimate yourself, and you do it consistently - see [Overconfident](#overconfident) below for the 5-level breakdown. |
-| Pariah | = Level | People hold a specific prejudice against you - your species, your background, where you came from - see [Pariah](#pariah) below for the 5-level breakdown. |
+| Pariah | = Level | People hold a specific prejudice against you. Name it with your GM.<br>What I have in mind is the kind this setting invented: visibly not human, known to carry a Gift, marked by something that happened and never explained. The ordinary human bigotries exist in this world too, because it is our world - but they are not what this Flaw is for. |
 | Reliance | = Level | Something you need - a compulsion, a substance, or a condition that has to be managed - see [Reliance](#reliance) below for the 5-level breakdown. |
 | Ritual Required | = Level | A Gift doesn't answer the instant it's reached for - it has to be called, coaxed, or earned each time - see [Ritual Required](#ritual-required) below for the 5-level breakdown. |
 | Secret | = Level | Something you badly don't want getting out - see [Secret](#secret) below for the 5-level breakdown. |
