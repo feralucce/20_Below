@@ -1,5 +1,6 @@
-import { el, counterRow, renderMarkdown, renderMarkdownInline, renderSelectedAvailable, describeBox } from '../ui.js';
-import { flawsPointsGranted, canTakeDestitute, setFlawNote } from '../state.js';
+import { el, counterRow, renderMarkdown, renderMarkdownInline, renderSelectedAvailable, describeBoxes } from '../ui.js';
+import { describeFields, describePrompt } from '../describe-spec.js';
+import { flawsPointsGranted, canTakeDestitute, setFlawNote, flawNotes } from '../state.js';
 
 function getOrCreateFlawState(state, name) {
   let f = state.flaws.find((x) => x.name === name);
@@ -60,10 +61,17 @@ export default {
       // Only once a Level is taken. The Available list is every Flaw in the
       // book, and a field on each of those is noise.
       const flawState = getOrCreateFlawState(state, flaw.name);
-      if (flawState.level > 0) {
-        card.append(describeBox(flawState.note, (value) => {
-          setFlawNote(state, flaw.name, value);
-          persist?.();
+      const fields = flawState.level > 0
+        ? describeFields('flaw', flaw.name, flawState) : 0;
+      if (fields) {
+        card.append(describeBoxes({
+          count: fields,
+          prompt: describePrompt('flaw', flaw.name),
+          notes: flawNotes(flawState),
+          onChange: (slot, value) => {
+            setFlawNote(state, flaw.name, slot, value);
+            persist?.();
+          },
         }));
       }
       if (flaw.name === 'Destitute' && !canTakeDestitute(state)) {

@@ -204,10 +204,27 @@ export function describeBox(value, onChange, placeholder) {
   return el('input', {
     type: 'text',
     class: 'describe-box',
-    placeholder: placeholder ?? 'Describe it - what it is, what you call it',
+    placeholder: placeholder ?? 'Describe it',
     value: value ?? '',
     onInput: (e) => onChange(e.target.value),
   });
+}
+
+/* Every field one entry asks for, in order.
+ *
+ * `count` fields, all carrying the same prompt, because when there are
+ * two they are two of the same kind of thing - a second Animal
+ * Companion is another animal with another name, not a different
+ * question. Numbered only when there is more than one, so the ordinary
+ * case stays a single unadorned line.
+ */
+export function describeBoxes({ count, prompt, notes, onChange }) {
+  const wrap = el('div', { class: 'describe-list' });
+  for (let i = 0; i < count; i += 1) {
+    const label = count > 1 ? `${prompt} (${i + 1})` : prompt;
+    wrap.appendChild(describeBox(notes[i] ?? '', (v) => onChange(i, v), label));
+  }
+  return wrap;
 }
 
 export function poolBadge(label, remaining) {

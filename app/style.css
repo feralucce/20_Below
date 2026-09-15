@@ -488,6 +488,12 @@ body {
   border-style: solid;
 }
 
+/* More than one field on the same entry - a second Animal Companion, a
+   fourth Feature - stacked with a little air between them. */
+.describe-list > .describe-box + .describe-box {
+  margin-top: 0.3rem;
+}
+
 .hint {
   color: var(--text-dim);
   font-size: 0.85rem;
