@@ -72,6 +72,7 @@ export const GIFT_DESCRIBE = {
   'Onslaught': { prompt: 'What do you hit them with?', count: one },
   'Necromancy': { prompt: 'What do your raised dead look like?', count: one },
   'Salvo': { prompt: 'What crosses the gap?', count: one },
+  'Swarm': { prompt: 'What do you come apart into?', count: one },
   'Transmutation': { prompt: 'What do you change, and into what?', count: one },
 };
 
