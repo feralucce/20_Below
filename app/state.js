@@ -606,7 +606,7 @@ export function giftsDiscretionarySpent(state, data) {
 }
 
 export function addBoon(state, name, cost, source) {
-  state.boons.push({ name, points: cost.points, tier: cost.tier, source });
+  state.boons.push({ name, points: cost.points, tier: cost.tier, source, note: '' });
   if (source === 'discretionary') {
     state.discretionaryExtra.Boons += cost.points;
   }
@@ -617,6 +617,38 @@ export function removeBoon(state, index) {
   if (removed?.source === 'discretionary') {
     state.discretionaryExtra.Boons -= removed.points;
   }
+}
+
+/* What the player had to invent.
+ *
+ * A Boon, Flaw or Gift routinely asks for something the rules cannot
+ * supply - what the Familiar actually is, which weapon system Special
+ * Weapons bought, the phrase Incantations needs said out loud, the
+ * category Pariah puts you in. Before this it was agreed at the table
+ * and written on a napkin, and the character file did not carry it, so
+ * it was gone by the next session.
+ *
+ * Every selection gets the field rather than a chosen few: deciding
+ * which entries "need" one means keeping a list in step with the rules
+ * text, and the list loses. It is empty until somebody types in it, and
+ * it only appears on things actually taken.
+ *
+ * The same shape as updateGiftMenuPurchaseNote, which already did this
+ * for build-menu purchases.
+ */
+export function setBoonNote(state, index, note) {
+  const boon = state.boons[index];
+  if (boon) boon.note = note;
+}
+
+export function setFlawNote(state, name, note) {
+  const flaw = state.flaws.find((f) => f.name === name);
+  if (flaw) flaw.note = note;
+}
+
+export function setGiftNote(state, name, note) {
+  const gift = state.gifts.find((g) => g.name === name);
+  if (gift) gift.note = note;
 }
 
 // Every Flaw in flaws.md is Leveled; points granted equal the level taken.

@@ -192,6 +192,24 @@ export function renderMarkdownInline(md) {
   return md;
 }
 
+/* The field for whatever the rules asked the player to invent - what the
+ * Familiar is, which weapon system was bought, the phrase that has to be
+ * said out loud. One helper so a Boon, a Flaw and a Gift all present it
+ * the same way, and so the placeholder is worded in one place.
+ *
+ * No rerender on input: redrawing the step on every keystroke would take
+ * the focus out of the field being typed in.
+ */
+export function describeBox(value, onChange, placeholder) {
+  return el('input', {
+    type: 'text',
+    class: 'describe-box',
+    placeholder: placeholder ?? 'Describe it - what it is, what you call it',
+    value: value ?? '',
+    onInput: (e) => onChange(e.target.value),
+  });
+}
+
 export function poolBadge(label, remaining) {
   const cls = remaining < 0 ? 'pool negative' : 'pool';
   return el('span', { class: cls }, `${label}: ${remaining}`);
