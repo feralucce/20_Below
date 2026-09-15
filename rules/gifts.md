@@ -278,6 +278,8 @@ The build is set once at creation, spending a points pool (below) on the build m
 
 **Build menu**:
 
+A few options are bigger versions of a cheaper one - Myomer Fiber and Linear Frame, Subdermal Plating and Armored Plating, Sensory Suite and Multi-Optic Cluster, Chemical and Molecular Analyzer. Take one or the other; the larger replaces the smaller rather than stacking with it.
+
 | Option | Cost | Effect |
 |---|---|---|
 | Subdermal Plating | 1 pt | +2 Soak, always on. |
@@ -293,6 +295,25 @@ The build is set once at creation, spending a points pool (below) on the build m
 | Climbing Servos | 1 pt | Retractable claws or grip pads in hands and feet - climb sheer surfaces at your normal Movement Rate, no roll for an ordinary climb. |
 | Silent Movement Dampeners | 1 pt | Your augmented limbs make no mechanical noise - no Stealth penalty from servo whine or joint clicks. |
 | Thermal Regulation | 1 pt | Ignore extreme heat or cold - no Disadvantage from environmental temperature. |
+| Vehicle Link | 1 pt | Pilot or drive by direct neural link - Advantage on any roll to control a compatible vehicle. |
+| Signal Scanner | 1 pt | Spot active transmitters, bugs, taps, and cameras nearby - the room tells you who's listening. |
+| Voice Stress Analyzer | 1 pt | Advantage on any roll to tell whether someone is lying to your face. |
+| Chemical Analyzer | 1 pt | Taste or smell a sample and know what it is - drugs, poisons, accelerants, blood. |
+| Sealed Respirator | 1 pt | Filtered lungs and a sealed airway - immune to gas and airborne agents, and you can go without air for several minutes. |
+| Toxin Binders | 1 pt | Advantage against poison, disease, and drugs, including the ones you'd rather enjoy. |
+| Enhanced Antibodies | 1 pt | You heal one step faster than normal on any rest. |
+| Artificial Gills | 1 pt | Breathe water indefinitely. |
+| Radiation Shielding | 1 pt | Immune to radiation, and Advantage against any environmental hazard that works on flesh rather than force. |
+| Bio-Comp Monitor | 1 pt | Constant readout of your own condition - you know exactly how hurt, poisoned, or drugged you are, and a Comms Array broadcasts it if you go down. |
+| Laser Rangefinder | 1 pt | Exact distance to anything you can see. Advantage on attacks at Far range and on any indirect or thrown shot. |
+| Fiber-Optic Probe | 1 pt | A camera on a flexible lead that deploys from a fingertip - see under doors, around corners, into locks. |
+| Synthskin Overlay | 1 pt | Your hardware reads as flesh to the eye, the hand, and a casual scan. Cancels the **Visible Hardware** Limiter if both are taken. |
+| Voice Modulator | 1 pt | Reproduce any voice you've recorded, pitch yourself unrecognizable, or speak subvocally into a Comms Array. |
+| Loudspeaker | 1 pt | Drive your voice to a painful volume. Advantage to command, warn, or scatter a crowd at Near range or further. |
+| Language Translator | 1 pt | Real-time translation of any language you've heard enough of to sample - understood, and spoken back. |
+| Fashionware Suite | 1 pt | Light tattoos, fiber hair, a subdermal watch - change your look on demand. Advantage to be remembered, or to be forgotten. |
+| Chem Injector | 1 pt | An internal reservoir holding one dose of a drug of your choosing. Administered by thought, and nothing to find in a search. |
+| Garrote Wire | 1 pt | A spool of monofilament from a fingertip. A weapon, a cutting tool, and a tripline, depending on the evening. |
 | Reinforced Chassis | 2 pts | +1 to Carrying Capacity and Break Threshold, stacking with Potence's own. |
 | Subroutine Uplink | 2 pts | Passive short-range wireless link to nearby active electronics - grants Technokinesis Level 1's passive awareness, without needing that Gift. |
 | Data Vault | 2 pts | Onboard encrypted memory - perfect recall of anything you've scanned or recorded, immune to remote hacking without direct physical access. |
@@ -300,7 +321,24 @@ The build is set once at creation, spending a points pool (below) on the build m
 | Holographic Projector | 2 pts | Project a small hologram at Close range - a decoy, a visual aid, a disguise overlay. |
 | Grapple Line | 2 pts | A retractable cable launcher built into an arm - anchor and pull yourself to a point within Near range, or yank a target or object toward you. |
 | Nanite Medkit | 2 pts | A self-contained injector loaded with one dose of field-medicine nanites - once per Scene, stabilize yourself or an adjacent ally from dying, no roll. |
+| Smartlink | 2 pts | A weapon interface - add **one bonus die** to attacks with any firearm wired to you. Someone else firing it gets nothing. |
+| Pain Editor | 2 pts | Wound Disadvantage from missing Health Levels doesn't apply to you, and torture, agony effects, and pain-based intimidation simply don't land. |
+| Motion Sensor | 2 pts | Detect anything moving within Near range, through darkness, smoke, or a single wall. |
+| Multi-Optic Cluster | 2 pts | Every Sensory Suite upgrade at once, in one eye - darkness, magnification, filtering, and thermal. Replaces Sensory Suite. |
+| Molecular Analyzer | 2 pts | Forensic-grade analysis - material composition, residues, age, what a thing was before it was this. Replaces Chemical Analyzer. |
+| Cyber-Disguise | 2 pts | Reshape your face and build over a few minutes to pass as a specific other person you've studied. Not an illusion - it's machinery moving bone. |
+| Jump Servos | 2 pts | Leap to anywhere within Near range from standing, and take no damage from a fall you chose. |
+| Nano-Repair System | 2 pts | An internal repair swarm - recover **1 Health Level** once per Scene, no roll and no action. |
+| Quick-Change Mount | 2 pts | Swap a hand for another limb-mounted option costing 2 points or less in seconds rather than an hour. |
 | Integrated Weapon | 3 pts | A retractable blade, dart launcher, or similar built into a limb - counts as a Light weapon that can never be disarmed or left behind. |
+| Reflex Booster | 3 pts | Spend **1 Ki** to take one extra Fast action. Once per round, no limit per Scene. |
+| Chipware Socket | 3 pts | A skill-chip slot. With a chip on hand, treat any one Skill as **Trained** for the Scene - swap chips freely between Scenes. |
+| Linear Frame | 3 pts | An internal load frame - **+4** to one physical sub-stat rather than Myomer Fiber's +2, but the bulk is not concealable. Replaces Myomer Fiber. |
+| Armored Plating | 3 pts | **+4** Soak rather than Subdermal Plating's +2, but it is plainly armor and cannot be concealed. Replaces Subdermal Plating. |
+| Chameleon Skin | 3 pts | Hold still and your skin matches what's behind you - Advantage on Stealth while stationary, lost the moment you move. |
+| Cybersnake | 3 pts | A segmented limb that deploys from your torso - reaches Close range, grapples, and gets into places a hand won't. |
+| Internal Power Plant | 3 pts | A sealed generator instead of cells. Your augmentations never run down and never need servicing, cancelling the **Maintenance Dependent** Limiter if both are taken. |
+| Integrated Heavy Weapon | 4 pts | A forearm-mounted ranged weapon - counts as a Medium weapon, never disarmed, and impossible to explain at a checkpoint. |
 
 **Adders**:
 
