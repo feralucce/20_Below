@@ -102,7 +102,7 @@ Creation-Wealth carries across every purchase made during this shopping pass - o
 
 <div class="resource-flavour" markdown="1">
 
-Somewhere that is yours, with a door you control and nobody’s name on the lease but the one you chose.
+Somewhere that is yours. A door you control, a lock you picked out, and nobody's name on the lease that you didn't want there. It might be a room over a garage or a whole floor nobody else visits. Either way, you can shut the door and breathe.
 
 </div>
 
@@ -146,7 +146,7 @@ How developed, defended, or well-equipped the headquarters/safehouse is.
 
 <div class="resource-flavour" markdown="1">
 
-There is a version of every shop that doesn’t ask, doesn’t record, and doesn’t remember. You know where those are.
+There is a version of every store that doesn't ask, doesn't record and doesn't remember you came in. A guy with a van. A back room behind a laundromat. A number you text one word to. You know where those are.
 
 </div>
 
@@ -190,7 +190,7 @@ How deep into illegal or off-the-books trade the connections reach.
 
 <div class="resource-flavour" markdown="1">
 
-You don’t know the answer. You know four people, and one of them will.
+You don't know the answer. You know four people, and one of them does. A cop who owes you. A nurse who works nights. Somebody's cousin at the airport. It isn't what you know - it's who picks up when you call.
 
 </div>
 
@@ -234,7 +234,7 @@ How large, capable, or well-placed the network is.
 
 <div class="resource-flavour" markdown="1">
 
-Something enormous and legitimate has decided you’re useful, and enormous legitimate things move very slowly and very hard.
+Something enormous and entirely legal has decided you are useful. It moves slowly, it moves in writing, and once it moves it is very hard to stop. There is a budget code with your name on it and a lawyer who already knows who you are.
 
 </div>
 
@@ -278,7 +278,7 @@ How much a legitimate business entity can move, fund, or cover.
 
 <div class="resource-flavour" markdown="1">
 
-People owe you. Not favors exactly - the other kind, the kind they can’t get out of by being busy.
+People owe you. Not favors, exactly - the other kind. The kind nobody gets out of by saying they're busy. You don't bring it up often. You have never needed to. They remember.
 
 </div>
 
@@ -322,7 +322,7 @@ How much real leverage is owed, in favors people can’t easily refuse.
 
 <div class="resource-flavour" markdown="1">
 
-Rooms change when you enter them. Not always in the direction you’d like.
+People know your face. The room changes when you walk into it, and not always in the direction you would like. Strangers are friendly, or they aren't, and either way they decided something about you before you opened your mouth.
 
 </div>
 
@@ -366,7 +366,7 @@ How widely recognized the character is, and how strongly people react to it.
 
 <div class="resource-flavour" markdown="1">
 
-People who will actually go, when you say go.
+You have people who will actually go when you say go. Not fans. Not friends who would think about it and get back to you. People who turn up with a van at four in the morning and ask what it's for later.
 
 </div>
 
@@ -410,7 +410,7 @@ How many, how skilled, or how loyal the group is.
 
 <div class="resource-flavour" markdown="1">
 
-A card, a title, or a piece of paper that opens a door most people don’t know is a door.
+A card, a title, a laminated badge, a line on a form. Most people don't know that door is a door. You have the thing that opens it, and nobody at the desk is going to argue with you about it.
 
 </div>
 
@@ -454,7 +454,7 @@ The reach/exclusivity of the license, membership, clearance, or legal right.
 
 <div class="resource-flavour" markdown="1">
 
-Within one trade, your name means something specific, and it means it without you being present.
+Inside one trade, your name means something specific. You don't have to be in the room for it to mean it. People who have never met you know where you rank and behave accordingly.
 
 </div>
 
@@ -498,7 +498,7 @@ How much rank and pull the character holds within a specific trade or profession
 
 <div class="resource-flavour" markdown="1">
 
-A lot of people who see a lot of small things, and the habit of telling you about them.
+A lot of people see a lot of small things. Doormen, dishwashers, the guy running the newsstand, the kid who is always outside. Not one of them knows anything important. All of them tell you what they saw.
 
 </div>
 
@@ -542,7 +542,7 @@ How wide and reliable the web of low-level eyes and ears is.
 
 <div class="resource-flavour" markdown="1">
 
-Somebody whose entire job is standing between you and the consequences, and who is good at it.
+Somebody whose entire job is standing between you and the consequences, and who is very good at it. They answer at two in the morning. They don't ask what you did. They ask what you said, and to whom.
 
 </div>
 
@@ -586,7 +586,7 @@ How capable and well-connected the lawyer or legal team is.
 
 <div class="resource-flavour" markdown="1">
 
-A story runs, or it doesn’t. Somebody decides that, and you know them.
+A story runs, or it doesn't. Somebody decides which, and you know them well enough to call. What ends up in the paper is not the same thing as what happened, and you have a hand in the difference.
 
 </div>
 
@@ -630,7 +630,7 @@ How much a story can be shaped, planted, or killed before it runs.
 
 <div class="resource-flavour" markdown="1">
 
-Care that happens quietly, competently, and without a form asking how this occurred.
+Care that happens quietly and competently, with nobody filling out the form asking how this occurred. A clinic that keeps odd hours. A surgeon who owes somebody. You get stitched up and you go home.
 
 </div>
 
@@ -674,7 +674,7 @@ How much discreet, high-quality medical care can be called on.
 
 <div class="resource-flavour" markdown="1">
 
-Shelves of things most people would find dull and a few people would burn the building to reach.
+Shelves of things most people would find unbearably dull and a few people would burn the building down to reach. Some of it is photocopied. Some of it should never have been photocopied. You know where every piece of it is.
 
 </div>
 
@@ -718,7 +718,7 @@ How comprehensive, rare, or dangerous the collection of esoteric material is.
 
 <div class="resource-flavour" markdown="1">
 
-Somewhere to go that isn’t home, in more than one direction, already stocked.
+Somewhere to go that isn't home, in more than one direction, already stocked. Cash, a change of clothes, a phone nobody has the number for. You have never needed all of them at once. You keep them all anyway.
 
 </div>
 
@@ -762,7 +762,7 @@ How many scattered bolt-holes are maintained, and how well-stocked each is.
 
 <div class="resource-flavour" markdown="1">
 
-One patch of ground where you’re protected, and everyone on it knows it.
+There is one patch of ground where nothing touches you, and everybody standing on it knows why. Get through that door and whatever is chasing you has to stop and think it over.
 
 </div>
 
@@ -806,7 +806,7 @@ How protected the character is within one specific safe territory.
 
 <div class="resource-flavour" markdown="1">
 
-One object. Yours specifically, known to be yours, and worth something to somebody.
+One object. Yours specifically, known to be yours, and worth something to somebody other than you. A car, a watch, an instrument, a gun with a history. People recognize it before they recognize you.
 
 </div>
 
@@ -850,7 +850,7 @@ How significant the one prized item owned actually is.
 
 <div class="resource-flavour" markdown="1">
 
-Within one faith, your word carries weight that has nothing to do with what you can prove.
+Within one faith, your word carries weight that has nothing to do with what you can prove. People listen because of where you stand, not because of the argument you made. That cuts both ways and you know it.
 
 </div>
 
@@ -894,7 +894,7 @@ How much weight the character’s name carries within a specific religious or sp
 
 <div class="resource-flavour" markdown="1">
 
-Doors that aren’t doors, opened with credentials that are genuinely yours.
+Doors that aren't doors, opened with credentials that are genuinely yours. You aren't breaking in. You are logging in, and the log says you were supposed to be there.
 
 </div>
 
@@ -938,7 +938,7 @@ How deep and wide the character’s reach into digital systems and networks alre
 
 <div class="resource-flavour" markdown="1">
 
-Actual ground that answers to you. Not owned - that’s different, and easier.
+Actual ground that answers to you. Not owned - owned is a different thing, and much easier. Nobody deals on this block, drinks in this bar or parks on this street without it getting back to you.
 
 </div>
 
@@ -982,7 +982,7 @@ How much real ground answers to the character specifically.
 
 <div class="resource-flavour" markdown="1">
 
-In the parts of town with no signage, people have heard of you, and they’ve heard something specific.
+In the parts of town with no signage, people have heard of you, and they have heard something specific. You never have to introduce yourself. You do occasionally have to correct the story.
 
 </div>
 
@@ -1026,7 +1026,7 @@ How known, trusted, or feared the character is within criminal and hidden-world 
 
 <div class="resource-flavour" markdown="1">
 
-It gets you there, and people notice which one it is.
+It gets you there, and people notice which one it is. That's the trade. Everybody remembers the car, which is wonderful right up until somebody is describing it to a police sketch artist.
 
 </div>
 
@@ -1070,7 +1070,7 @@ How distinctive, capable, or valuable the vehicle is.
 
 <div class="resource-flavour" markdown="1">
 
-Money you can actually reach, which is a different thing from money you technically have.
+Money you can actually reach, which is a different thing from money you technically have. Net worth is a number on paper. This is what's in the account on a Tuesday, and it's the only one that matters when you need something today.
 
 </div>
 
