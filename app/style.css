@@ -270,6 +270,31 @@ body {
   color: var(--text-dim);
 }
 
+/* Shown once, when a loaded character carried a Boon that has since been
+ * renamed, merged into another, or moved out of the chapter. */
+.migration-notice {
+  border: 1px solid var(--gold);
+  border-left-width: 4px;
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 0.85rem 1rem;
+  margin: 0 0 1rem;
+}
+
+.migration-notice p {
+  margin: 0 0 0.5rem;
+}
+
+.migration-notice ul {
+  margin: 0 0 0.75rem;
+  padding-left: 1.2rem;
+  color: var(--text-dim);
+}
+
+.migration-notice li {
+  margin-bottom: 0.3rem;
+}
+
 .file-page {
   flex: 1;
   max-width: 700px;

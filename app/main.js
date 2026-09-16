@@ -242,6 +242,25 @@ async function main() {
   const state = loadSavedState(data);
   let currentStep = 0;
 
+  // A save can carry Boons that have since been renamed, folded into
+  // another Boon, or moved out of the chapter entirely. mergeCharacterState
+  // fixes the character up; this is where the player finds out it did.
+  // Shown once - the notices are cleared as soon as they are drawn, so
+  // reloading does not nag about a migration already explained.
+  if (Array.isArray(state.migrationNotices) && state.migrationNotices.length) {
+    const banner = el('div', { class: 'migration-notice' }, [
+      el('p', { html: '<strong>Some Boons on this character have changed.</strong>' }),
+      el('ul', {}, state.migrationNotices.map((text) => el('li', { text }))),
+      el('button', {
+        type: 'button',
+        text: 'Got it',
+        onclick: () => banner.remove(),
+      }),
+    ]);
+    panel.parentNode.insertBefore(banner, panel);
+    state.migrationNotices = [];
+  }
+
   // The Fate Token cap moves with Stamina, which is reallocable, so any
   // change can strand Tokens above the new cap - lowering it has to refund
   // them. Re-applied at the top of both render entry points: the step panel
