@@ -668,7 +668,7 @@ Bought as one of three tiers (each includes every lower tier’s benefit - no ne
 
 <div class="boon-flavour" markdown="1">
 
-You woke up before the sound finished.
+You have never slept through anything in your life. Most nights, it's a curse. You wake up before the sound is gone. You are awake and ready to go.
 
 </div>
 
