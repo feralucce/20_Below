@@ -766,7 +766,7 @@ On a catastrophic failure on an attack roll, roll again. If the second roll succ
 
 <div class="boon-flavour" markdown="1">
 
-Show you once. That’s usually enough, which people find unsettling.
+One quick read through is usually all it takes. People don't like it when you pick something up over an afternoon that they spent the last five years mastering.
 
 </div>
 
