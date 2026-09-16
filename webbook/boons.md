@@ -874,7 +874,7 @@ Bought as one of three tiers (each includes every lower tier’s benefit - no ne
 
 <div class="boon-flavour" markdown="1">
 
-Somebody who was genuinely the best taught you, and it shows in the small things.
+Somebody who was genuinely the best taught you, and they didn't waste time on the flashy parts. They taught you what to do when it goes wrong. Years later, at the moment it goes wrong, you hear their voice and your hands are already doing it.
 
 </div>
 
