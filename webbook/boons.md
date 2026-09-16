@@ -752,7 +752,7 @@ Bought as one of four tiers (each includes every lower tier’s benefit - no nee
 
 <div class="boon-flavour" markdown="1">
 
-You’ve fallen enough times to have opinions about it, and none of them involve staying down.
+You've fallen (or been knocked down) enough times to have an opinion about it. You lose your footing and you are already recovering.
 
 </div>
 
