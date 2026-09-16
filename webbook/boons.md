@@ -56,7 +56,7 @@ Immune to being Surprised while conscious, unless under a mind-altering effect t
 
 <div class="boon-flavour" markdown="1">
 
-There is a second you. He has a dentist, a lease, and a library card, and none of it leads back here.
+You have a second life. There's an address that receives your mail. There are neighbors who could describe you to a sketch artist without a second thought. It all stands up to scrutiny because it is all real. It's a lot of work, but worth it for the benefits it grants.
 
 </div>
 
