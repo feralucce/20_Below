@@ -940,7 +940,7 @@ Being reduced to 0 Health Levels doesn’t render you unconscious - you keep goi
 
 <div class="boon-flavour" markdown="1">
 
-The weather is happening to everyone. You’ve simply declined to make it a topic.
+You never understood why people are constantly worried about the weather. You simply don't make it an issue. Heat that melts the dog, cold that drives people inside, hurricane force winds - none of it stops you. The cold never bothered you, anyway
 
 </div>
 
