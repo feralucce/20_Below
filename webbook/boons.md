@@ -636,7 +636,7 @@ Bought as one of two tiers (the higher includes the lower’s benefit - no need 
 
 <div class="boon-flavour" markdown="1">
 
-It’s not the words. It’s the half-beat before them, every single time.
+It's never the words. Anyone can rehearse a story until it reads as true. It's the half-second hesitation, the glance away, the detail that is a little too on the nose. Everybody tells you when they are lying - you just know how to listen to what they are really saying.
 
 </div>
 
