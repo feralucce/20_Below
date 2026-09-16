@@ -368,7 +368,7 @@ Bought as one of four tiers (each includes every lower tier’s benefit - no nee
 
 <div class="boon-flavour" markdown="1">
 
-You don’t aim better than anyone else. You just notice the half-second where it stops mattering how good they are.
+You don't hit harder than anyone else. You don't have to. You see the opportunity - when their guard dips, they are shifting their weight and are vulnerable or when their attention flickers to something behind you - and you seize that moment.
 
 </div>
 
