@@ -578,7 +578,7 @@ Eat or drink almost anything without illness.
 
 <div class="boon-flavour" markdown="1">
 
-They pushed, and found out that pushing was all they had.
+Your mind is your own, and the door only opens from the inside. People who try to read you come away with nothing - no tells, no tics, no flicker behind the eyes to work with. People who try to push you find out that pushing was the only thing they brought.
 
 </div>
 
@@ -592,13 +592,13 @@ Bought as one of three tiers (each includes every lower tier’s benefit - no ne
 
 <div class="boon-tier" markdown="1">
 
-**Tier 2 (5, Greater)**: additionally, any attempt to read you - by Skill, Gift or anything else - is made at Disadvantage, and unlocks **Assert Your Will** as a Fate Trigger - spend 1 Fate Token to flatly negate an attempt to intimidate or dominate you, no roll.
+**Tier 2 (5, Greater)**: additionally, any attempt to read or rewrite your mind - by Skill, Gift or anything else - is made at Disadvantage, and unlocks **Assert Your Will** as a Fate Trigger - spend 1 Fate Token to flatly negate an attempt to intimidate or dominate you, no roll.
 
 </div>
 
 <div class="boon-tier" markdown="1">
 
-**Tier 3 (7, Legendary)**: additionally, full passive immunity to domination, possession, mind control, and any attempt to read you whatsoever - no roll, no cost, automatic. You can still be deceived, but never puppeted or read.
+**Tier 3 (7, Legendary)**: additionally, full passive immunity to domination, possession, mind control, memory alteration, and any attempt to read you whatsoever - no roll, no cost, automatic. You can still be deceived, but never puppeted, rewritten or read.
 
 </div>
 
