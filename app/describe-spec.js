@@ -36,7 +36,7 @@ export const BOON_DESCRIBE = {
   },
   'Enchanting Voice': { prompt: 'Which Skill?', count: one },
   'Familiar': { prompt: 'What is it? What do you call it?', count: one },
-  'Features': {
+  'Distinctive Features': {
     prompt: 'Which feature?',
     // One per tier bought, up to four.
     count: tierIndex,

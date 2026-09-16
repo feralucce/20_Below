@@ -635,7 +635,7 @@ export function removeBoon(state, index) {
  *
  * Notes are an array because some entries carry more than one answer: a
  * second Animal Companion is its own animal with its own name, and
- * Features buys up to four of them.
+ * Distinctive Features buys up to four of them.
  */
 function noteList(holder) {
   if (!holder) return null;
