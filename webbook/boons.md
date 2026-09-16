@@ -382,7 +382,7 @@ Your critical range on attack rolls widens - a roll of **2 or 3** is a critical 
 
 <div class="boon-flavour" markdown="1">
 
-Everyone else saw a room. You saw a room that was wrong, and you can point at which part.
+No one noticed, but when you walk into the room, you feel it. Something isn't natural and you can spot it - the shadows are too deep, there is a cold spot following a conversation. You can sense the supernatural.
 
 </div>
 
