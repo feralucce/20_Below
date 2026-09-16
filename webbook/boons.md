@@ -70,7 +70,7 @@ A fully realized second identity - name, history, and papers that hold up under 
 
 <div class="boon-flavour" markdown="1">
 
-Everyone else is holding their phone up at the window. You’ve already sent it.
+You are the one who never says, "I don't have any bars!" There is always a signal and you are connected to it. While the rest of them are wandering around with their phones in the air, you've already sent the file.
 
 </div>
 
