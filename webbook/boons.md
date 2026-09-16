@@ -592,7 +592,7 @@ Bought as one of three tiers (each includes every lower tier’s benefit - no ne
 
 <div class="boon-tier" markdown="1">
 
-**Tier 2 (5, Greater)**: additionally, Advantage to resist any other attempt to read you (including future supernatural effects), and unlocks **Assert Your Will** as a Fate Trigger - spend 1 Fate Token to flatly negate an attempt to intimidate or dominate you, no roll.
+**Tier 2 (5, Greater)**: additionally, any attempt to read you - by Skill, Gift or anything else - is made at Disadvantage, and unlocks **Assert Your Will** as a Fate Trigger - spend 1 Fate Token to flatly negate an attempt to intimidate or dominate you, no roll.
 
 </div>
 
