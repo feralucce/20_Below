@@ -550,7 +550,7 @@ Bought as one of two tiers (the higher includes the lower’s benefit - no need 
 
 <div class="boon-flavour" markdown="1">
 
-Whatever’s in your hand stays in your hand. They can try.
+Your hand is a vise. If you have a grip on it - it stays in your hand.
 
 </div>
 
