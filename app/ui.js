@@ -192,6 +192,23 @@ export function renderMarkdownInline(md) {
   return md;
 }
 
+/* An entry's description, for the top of its opened card.
+ *
+ * Boons, Flaws and Resources get theirs from rules/flavour.json (see
+ * rules-data.js); Gifts already carry theirs in the rules text itself and
+ * don't come through here. Returns '' when there is none, so a caller can
+ * concatenate it in front of the rules unconditionally.
+ *
+ * Rendered inline rather than as a block: these are one paragraph, and
+ * some of them carry emphasis - Alertness has "never *not* paying
+ * attention" - which would be lost by dropping the text in as-is.
+ */
+export function flavourHtml(entry) {
+  const text = entry?.flavour;
+  if (!text) return '';
+  return `<p class="entry-flavour">${renderMarkdownInline(text)}</p>`;
+}
+
 /* The field for whatever the rules asked the player to invent - what the
  * Familiar is, which weapon system was bought, the phrase that has to be
  * said out loud. One helper so a Boon, a Flaw and a Gift all present it

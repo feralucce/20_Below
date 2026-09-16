@@ -17,7 +17,19 @@
 
 staged=$(git diff --cached --name-only)
 
-echo "$staged" | grep -qE '^(rules/.*\.md|tools/scriv2(web|brew)\.py)$' || exit 0
+echo "$staged" | grep -qE '^(rules/.*\.(md|json)|tools/(scriv2(web|brew)|extract-flavour)\.py)$' || exit 0
+
+# rules/flavour.json is generated from the print chapters, so a prose edit
+# there reaches the app only if it has been regenerated. Checked before the
+# webbook build because it is quick and its failure is easier to read.
+if ! out=$(python tools/extract-flavour.py --check 2>&1); then
+  echo "$out"
+  echo
+  echo "pre-commit: rules/flavour.json is stale or disagrees with the"
+  echo "  rules tables. Committing now would ship the app descriptions"
+  echo "  that no longer match the book."
+  exit 1
+fi
 
 echo "pre-commit: rules or builder changed, rebuilding the webbook..."
 

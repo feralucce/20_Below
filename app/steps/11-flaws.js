@@ -1,4 +1,4 @@
-import { el, counterRow, renderMarkdown, renderMarkdownInline, renderSelectedAvailable, describeBoxes } from '../ui.js';
+import { counterRow, describeBoxes, el, flavourHtml, renderMarkdown, renderMarkdownInline, renderSelectedAvailable } from '../ui.js';
 import { describeFields, describePrompt } from '../describe-spec.js';
 import { flawsPointsGranted, canTakeDestitute, setFlawNote, flawNotes } from '../state.js';
 
@@ -50,7 +50,7 @@ export default {
             .map((l) => `<tr><td>${l.level}</td><td>${renderMarkdownInline(l.effect)}</td></tr>`)
             .join('')}</table>`
         : renderMarkdown(flaw.blurb);
-      return el('div', { class: 'detail', html: levelRows });
+      return el('div', { class: 'detail', html: flavourHtml(flaw) + levelRows });
     }
 
     // Name + counter, click the name to twirl the levels/blurb out - same

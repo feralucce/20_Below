@@ -270,6 +270,21 @@ body {
   color: var(--text-dim);
 }
 
+/* An entry's description, at the top of its opened card. Set the way the
+ * Brewery sets the same text in the book: italic, in the accent colour,
+ * so it reads as the flavour it is and not as another rule. */
+.entry-flavour {
+  margin: 0 0 0.6rem;
+  font-style: italic;
+  color: var(--air);
+}
+
+/* Emphasis inside an italic line flips to roman - italicising italic
+ * text says nothing. Matches brew.css. */
+.entry-flavour em {
+  font-style: normal;
+}
+
 /* Shown once, when a loaded character carried a Boon that has since been
  * renamed, merged into another, or moved out of the chapter. */
 .migration-notice {

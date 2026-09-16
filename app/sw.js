@@ -12,7 +12,7 @@
 // updates every copy without a release, and a cache-first worker would
 // quietly undo that. Offline, the last-seen copy is served instead.
 
-const VERSION = "v1";
+const VERSION = "v2";
 const SHELL = `20below-shell-${VERSION}`;
 const ASSETS = `20below-assets-${VERSION}`;
 const RULES = `20below-rules-${VERSION}`;
@@ -83,7 +83,12 @@ self.addEventListener("fetch", (event) => {
   // request or a real failure.
   if (url.origin !== self.location.origin) return;
 
-  if (url.pathname.endsWith(".md")) {
+  // Anything under rules/ is live source, not an asset: the .md files
+  // the app is built from and rules/flavour.json, the descriptions
+  // generated from the book. Matching on ".md" alone sent the JSON
+  // through stale-while-revalidate, so a prose edit would have shown
+  // up one launch late - the exact thing network-first is here to stop.
+  if (url.pathname.includes("/rules/")) {
     event.respondWith(networkFirst(request, RULES));
     return;
   }

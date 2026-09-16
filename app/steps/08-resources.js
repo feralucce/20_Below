@@ -1,4 +1,4 @@
-import { el, counterRow, renderMarkdown, renderSelectedAvailable } from '../ui.js';
+import { counterRow, el, flavourHtml, renderMarkdown, renderSelectedAvailable } from '../ui.js';
 import { resourcesPoolRemaining, canBuyWealthAtCreation } from '../state.js';
 
 export default {
@@ -37,7 +37,10 @@ export default {
     }
 
     function levelTableFor(r) {
+      const flavour = flavourHtml(r);
       return el('div', { class: 'detail' }, [
+        // el() drops a null child, so no description means no empty node.
+        flavour ? el('div', { html: flavour }) : null,
         el('table', { class: 'menu-table' }, [
           el('tr', {}, [el('th', {}, 'Level'), el('th', {}, r.scales)]),
           ...[1, 2, 3, 4, 5].map((lvl) =>
