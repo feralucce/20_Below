@@ -484,7 +484,7 @@ Choose what it is. What it is decides which Skills it can take:
 
 <div class="boon-flavour" markdown="1">
 
-You can stop, entirely, on purpose. Getting started again is the part that takes nerve.
+Your body is a biological machine and you have learned to shut the whole machine down... temporarily. You appear dead in every way that matters.
 
 </div>
 
