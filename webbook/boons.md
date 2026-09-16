@@ -28,7 +28,7 @@ A Boon is a grab bag item. Skills are the things you practiced and Gifts are the
 
 **You either have a Boon or you don’t.** There’s no 1-10 scale, no dots, no ranks. If you want something that climbs by level, what you actually want is a Resource, and those get their own chapter.
 
-Sixteen entries bend that rule, and I’d rather flag each one where it sits in the list than make you memorize them here. Most offer two, three or four tiers, and buying a higher tier already includes everything the lower ones gave you - so buy the one you want, not all of them. Special Movement is the odd one out. It isn’t tiered at all, but you can buy it more than once, once for each way of moving.
+Nineteen entries bend that rule, and I’d rather flag each one where it sits in the list than make you memorize them here. Most offer two, three or four tiers, and buying a higher tier already includes everything the lower ones gave you - so buy the one you want, not all of them. Special Movement is the odd one out. It isn’t tiered at all, but you can buy it more than once, once for each way of moving.
 
 **A Boon almost never hands you a bonus on a roll.** It’s usually a rule exception, an option you didn’t have before, or a standing fact about your body or your reputation. If you came here looking for +2 to something, you’re in the wrong chapter.
 
@@ -98,15 +98,33 @@ Bought as one of three tiers (each includes every lower tier’s benefit - no ne
 
 <div class="boon" markdown="1">
 
-<p class="boon-name" markdown="span">Ambidextrous<span class="boon-cost">1, Trivial</span></p>
+<p class="boon-name" markdown="span">Ambidextrous<span class="boon-cost">3, 5, or 7</span></p>
 
 <div class="boon-flavour" markdown="1">
 
-Whichever hand is free is the good hand.
+Most people have a dominant hand. For you, whichever hand is free is the dominant one.
 
 </div>
 
-Ignore the Disadvantage normally imposed for performing a task with your off-hand.
+Bought as one of three tiers (each includes every lower tier's benefit - no need to buy more than one).
+
+<div class="boon-tier" markdown="1">
+
+**Tier 1 (3, Lesser)**: ignore the Disadvantage normally imposed for performing a task with your off-hand.
+
+</div>
+
+<div class="boon-tier" markdown="1">
+
+**Tier 2 (5, Greater)**: your hands work independently - perform one task with each hand in the same round, instead of one task overall.
+
+</div>
+
+<div class="boon-tier" markdown="1">
+
+**Tier 3 (7, Legendary)**: once per turn, spend **1 Ki** to make one additional attack with your off-hand, at no penalty.
+
+</div>
 
 </div>
 
