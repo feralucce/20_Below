@@ -714,7 +714,7 @@ Instant, effortless mental processing of complex calculations - arithmetic, odds
 
 <div class="boon-flavour" markdown="1">
 
-Languages come apart in your hands like something already labeled.
+Some people have a knack for mathematics. Others have an ear for music. You have an innate understanding of languages. Within a few minutes of exposure to a language, you begin to understand it - where the verbs belong, which sounds are doing the heavy lifting, the patterns unique to the language. Give it a day, and you can survive.
 
 </div>
 
