@@ -610,7 +610,7 @@ Bought as one of three tiers (each includes every lower tier’s benefit - no ne
 
 <div class="boon-flavour" markdown="1">
 
-You’ve done a bit of everything, badly, which turns out to be an enormous head start.
+And a master of none. Being a jack of all trades is often better than mastery of a couple skills. You've picked up things here and there. None of it is remarkable, but you know how to do a little of everything and that matters more often.
 
 </div>
 
