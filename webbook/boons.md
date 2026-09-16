@@ -926,7 +926,7 @@ Always have a plausible, verifiable-sounding cover story ready on short notice -
 
 <div class="boon-flavour" markdown="1">
 
-Zero is not a number that means anything to you yet.
+What should leave you unconscious and bleeding on the floor, simply doesn't. You can still die, you are just conscious for it.
 
 </div>
 
