@@ -38,7 +38,7 @@ Flaws are Boons in a mirror - the complications, quirks and bad hands you pick o
 
 <div class="flaw-flavour" markdown="1">
 
-There’s a shape in your history where something used to be. You’ve stopped poking at it, mostly.
+There is a hole where a piece of your life used to be. You know it's there the way you know a tooth is gone - you keep checking. Sometimes something surfaces. A smell, a name, a room you have never been in. Then it's gone again.
 
 </div>
 
@@ -82,7 +82,7 @@ Part of your past is missing.
 
 <div class="flaw-flavour" markdown="1">
 
-Somebody out there is thinking about you right now, and not fondly.
+Somebody out there is thinking about you right now, and they are not wishing you well. They know your name. They know where you eat lunch. You made an impression on exactly the wrong person, and they are patient.
 
 </div>
 
@@ -126,7 +126,7 @@ Someone or something is set against you - a rival, an enemy, a hunter who doesn�
 
 <div class="flaw-flavour" markdown="1">
 
-The threat assessment never switches off. Most of what it reports is wrong, and knowing that has never once helped.
+Your brain runs a threat assessment every waking second and it never files a clean report. The stove. The email. The look somebody gave you four years ago. You know most of it isn't real. Knowing has never once made it stop.
 
 </div>
 
@@ -170,7 +170,7 @@ Anxiety that doesn’t need a reason and doesn’t switch off.
 
 <div class="flaw-flavour" markdown="1">
 
-There’s a point past which you stop making decisions and start just continuing.
+There is a switch, and you are not the one who flips it. Once it's thrown you are a passenger - swinging until there is nothing standing and nobody left to swing at. Afterward, other people tell you what you did.
 
 </div>
 
@@ -216,7 +216,7 @@ Each level’s effect is cumulative - it keeps every lower level’s restriction
 
 <div class="flaw-flavour" markdown="1">
 
-There’s a line, and you’ve never crossed it. That has cost you, and it will again.
+You have a line. You drew it yourself, nobody else is obligated to respect it, and that is exactly why it counts. It has cost you money, opportunities and at least one friendship. You would draw it again tomorrow.
 
 </div>
 
@@ -260,7 +260,7 @@ A rule you set yourself and won’t break, even when breaking it would help.
 
 <div class="flaw-flavour" markdown="1">
 
-Somebody’s safety is stitched to yours. They didn’t ask to be, and neither did you.
+Somebody needs you. A kid, a sibling, an old friend who never got their feet under them - whoever it is, they can't do this without you, and they don't get a vote in what you've gotten yourself into. Every plan has to include them.
 
 </div>
 
@@ -304,7 +304,7 @@ Someone relies on you, and has to be protected or provided for.
 
 <div class="flaw-flavour" markdown="1">
 
-Money is a thing that happens to other people. You’ve gotten very good at the arithmetic of not having it.
+Money is something that happens to other people. You know which places let you sit for hours over one coffee, which shelter has the fewest rules, and exactly how far what's in your pocket will stretch. You are very good at arithmetic you never wanted to learn.
 
 </div>
 
@@ -350,7 +350,7 @@ Each level’s effect is cumulative - it keeps every lower level’s complicatio
 
 <div class="flaw-flavour" markdown="1">
 
-Everyone else seems to keep a map running somewhere behind their eyes. You never got issued one.
+North is a rumor. Everyone else seems to have a map running somewhere behind their eyes and you never got issued one. You have been lost inside a building you work in. "It's two blocks that way" means nothing to you.
 
 </div>
 
@@ -394,7 +394,7 @@ You get lost. Reliably.
 
 <div class="flaw-flavour" markdown="1">
 
-Your body keeps a longer memory of damage than other people’s do.
+Other people get a bruise. You get a hairline fracture. Whatever everybody else's body does to absorb a hit, yours never learned. You break easily, you heal slowly, and you have built your whole life around knowing both.
 
 </div>
 
@@ -438,7 +438,7 @@ The body works against you.
 
 <div class="flaw-flavour" markdown="1">
 
-It starts, and there’s a gap between when you should move and when you do.
+The moment it kicks off, there is a gap. Everyone else is already moving and you are still catching up to the fact that this is happening. It isn't cowardice - you get there. You just get there late, and late is expensive.
 
 </div>
 
@@ -484,7 +484,7 @@ Each level’s effect is cumulative - it keeps every lower level’s penalty and
 
 <div class="flaw-flavour" markdown="1">
 
-The letters are right there and they don’t resolve. You’ve built a whole life around not needing them to.
+The letters are right there and they don't come together. You have built an entire life around not needing them to - you memorize, you ask, you get somebody else to check the form. It works right up until someone hands you something and waits.
 
 </div>
 
@@ -528,7 +528,7 @@ You can’t read, to one degree or another.
 
 <div class="flaw-flavour" markdown="1">
 
-One of the channels is down, and you’ve rerouted around it well enough that people forget - right up until it matters.
+One channel is down. You have rerouted around it well enough that people forget, and you let them. It stays forgotten until somebody speaks up from your bad side, or the thing you needed to notice was over there.
 
 </div>
 
@@ -574,7 +574,7 @@ One of your senses is dulled, or gone.
 
 <div class="flaw-flavour" markdown="1">
 
-It doesn’t work if you can’t say it. Something out there is listening for the words specifically.
+It doesn't work if you can't say it. Something out there is listening for the specific words and it is not interested in what you meant. A hand over your mouth is enough to stop you. So is a room where being heard would be a disaster.
 
 </div>
 
@@ -620,7 +620,7 @@ A Gift only answers to a spoken word - distinct from a Gift’s own Limiters lik
 
 <div class="flaw-flavour" markdown="1">
 
-The thing you can do isn’t entirely in you. Some of it is in an object, and objects can be taken.
+What you can do isn't entirely in you. Some of it lives in an object - a ring, a coat, a beat-up guitar case - and objects get lost, stolen, confiscated and left in somebody else's car.
 
 </div>
 
@@ -666,7 +666,7 @@ Your capability isn’t fully your own - it lives, at least in part, in somethin
 
 <div class="flaw-flavour" markdown="1">
 
-The distance is the same as it always was. It just costs more now.
+The distance hasn't changed. What it costs you has. Stairs are a decision. "It's not far" is something other people say. You get where you are going - you just get there later, and you pay for it that night.
 
 </div>
 
@@ -710,7 +710,7 @@ An old injury or condition took some of your mobility and kept it.
 
 <div class="flaw-flavour" markdown="1">
 
-People remember you. Every single time, whether that’s useful or not.
+People remember you. Every time, whether that's useful or not. The witness description is never vague and the bartender never has to ask twice. You have never once been "some guy" and you never will be.
 
 </div>
 
@@ -754,7 +754,7 @@ Something about how you look draws stares and reactions.
 
 <div class="flaw-flavour" markdown="1">
 
-Your name arrives in the room before you do, and it’s already said something you’d rather it hadn’t.
+Your name gets to the room before you do, and it has already said something you would rather it hadn't. Some of what they heard is true. The rest has been improved in the retelling, and nobody is interested in your correction.
 
 </div>
 
@@ -798,7 +798,7 @@ How widely, and how badly, you’re known.
 
 <div class="flaw-flavour" markdown="1">
 
-You’ve been right often enough to stop checking, which is a habit with a shelf life.
+You have been right enough times to stop checking. That worked out beautifully, right up until the day it didn't, and you are not convinced that day counts. You will take the odds. You always take the odds.
 
 </div>
 
@@ -842,7 +842,7 @@ You underestimate danger, or overestimate yourself, and you do it consistently.
 
 <div class="flaw-flavour" markdown="1">
 
-There’s a category people put you in on sight, and no amount of being reasonable gets you out of it.
+There is a category people drop you into on sight and nothing you do gets you out of it. Being polite doesn't. Being useful doesn't. Being right definitely doesn't. You stopped waiting for the room to come around a long time ago.
 
 </div>
 
@@ -888,7 +888,7 @@ What I have in mind is the kind this setting invented: visibly not human, known 
 
 <div class="flaw-flavour" markdown="1">
 
-There’s a thing you need, and the needing has its own schedule.
+There is something you need, and the needing keeps its own schedule. It doesn't care what else is happening. It doesn't negotiate, it doesn't wait for a good moment, and it always collects.
 
 </div>
 
@@ -932,7 +932,7 @@ Something you need - a compulsion, a substance, or a condition that has to be ma
 
 <div class="flaw-flavour" markdown="1">
 
-It answers, but not immediately. There’s a procedure, and the procedure takes as long as it takes.
+It answers. It just doesn't answer immediately. There is a procedure - words, motions, something burned, something owed - and it takes as long as it takes. Nobody has ever kicked in a door at a convenient moment.
 
 </div>
 
@@ -978,7 +978,7 @@ Your power doesn’t answer the instant you reach for it - it has to be called, 
 
 <div class="flaw-flavour" markdown="1">
 
-One fact, and a life built carefully around it not coming out.
+One fact. That is all it is. One fact, and an entire life built carefully around it staying where it is. You have gotten good at steering a conversation. You have gotten better at leaving the room.
 
 </div>
 
@@ -1022,7 +1022,7 @@ Something you badly don’t want getting out.
 
 <div class="flaw-flavour" markdown="1">
 
-Something happened once, in front of people, and some part of you never quite got up from it.
+It happened once, in front of people who mattered, and some part of you never quite stood back up. Everyone else forgot about it years ago. You did not. You feel it in the room every time something similar starts.
 
 </div>
 
@@ -1068,7 +1068,7 @@ One specific, defining humiliation left a real mark - not on the body, on the ne
 
 <div class="flaw-flavour" markdown="1">
 
-There’s a shorter distance than most people have between the provocation and the response.
+The distance between the provocation and your response is a lot shorter than most people's. You are not proud of it. You have apologized for it. And the next time somebody says the wrong thing, you will be halfway through the response before you notice you started.
 
 </div>
 
@@ -1112,7 +1112,7 @@ You anger fast, and everybody can tell.
 
 <div class="flaw-flavour" markdown="1">
 
-You know what the tactical answer is. You’ve simply never been able to make yourself give it.
+You know what the smart move is. Everybody does. You have simply never been able to make yourself do it - not to somebody already down, already scared, already smaller than you. It has cost you, and you would do it the same way again.
 
 </div>
 
@@ -1156,7 +1156,7 @@ You struggle to act against the vulnerable, even when it costs you.
 
 <div class="flaw-flavour" markdown="1">
 
-The thought is clear and fast. Getting it out is the part that isn’t.
+The thought is clear. It is fast, it is complete, and it is exactly right. Getting it out of your mouth is the part that isn't. You have watched people decide what you were going to say and then answer that instead.
 
 </div>
 
