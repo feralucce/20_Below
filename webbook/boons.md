@@ -190,7 +190,7 @@ Immune to being Distracted, regardless of source (damage, Kotodama, Gifts, envir
 
 <div class="boon-flavour" markdown="1">
 
-Something is wrong in this room and you knew it before you could have said what.
+It's quiet... Too quiet. Something is wrong. You don't know what it is, you just know. Something warns you when you are in danger.
 
 </div>
 
