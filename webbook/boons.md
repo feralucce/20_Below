@@ -808,7 +808,7 @@ Choose a specific, narrow locomotion trick that shouldn’t work but does: **Wat
 
 <div class="boon-flavour" markdown="1">
 
-One specific thing that shouldn’t be in civilian hands, and you happen to know how it works.
+You have one specific piece of hardware that nobody should be walking around with, and you know exactly how it works. Where it came from is your business. Whether the paperwork exists is nobody's business. It is yours, it is the only one you get, and it does something a normal weapon cannot.
 
 </div>
 
