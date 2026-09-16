@@ -842,7 +842,7 @@ The lists below are examples, not a menu to choose from. If the thing you want i
 
 <div class="boon-flavour" markdown="1">
 
-The room settles when you’re in it, and it settles more the worse things get.
+Fear doesn't seem to be able to get a grip on you. You don't hide it well - you just don't really get scared and people can tell. When things go wrong, everyone in the room turns to you. Your stoicism in the face of adversity steadies those around you.
 
 </div>
 
