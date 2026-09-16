@@ -134,7 +134,7 @@ Bought as one of three tiers (each includes every lower tier's benefit - no need
 
 <div class="boon-flavour" markdown="1">
 
-Dogs cross the street toward you. Nobody has ever explained why, least of all you.
+Dogs cross the street to greet you. The cat that no one gets to pet sits in your lap. Your friends describe you as a "Disney Princess," and they aren't wrong. You can't communicate with them and you can't tell them what to do. Animals just trust you on sight.
 
 </div>
 
