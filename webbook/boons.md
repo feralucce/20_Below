@@ -276,7 +276,7 @@ An attack is a straight Attribute-against-Defense roll with no Skill in it, whic
 
 <div class="boon-flavour" markdown="1">
 
-You don’t remember it. You’re still looking at it.
+Everyone else's memories fade and slowly rearrange themselves as time passes. Yours do not. You don't remember things, you access the files. The page is there in front of you. The license plate is on the car at the stoplight in your mind.
 
 </div>
 
