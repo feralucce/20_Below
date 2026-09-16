@@ -510,7 +510,7 @@ Bought as one of two tiers (the higher includes the lower’s benefit - no need 
 
 <div class="boon-flavour" markdown="1">
 
-Something isn’t finished with you yet. You’d rather not think too hard about what.
+You have been chosen for a specific purpose. By what? You don't know. It might be fate, a debt, an elder god. Whatever it is - it has a vested interest in seeing that your story ends after you achieve this goal. When you go, it will mean something.
 
 </div>
 
