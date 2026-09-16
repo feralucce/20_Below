@@ -148,7 +148,7 @@ Animals read you as safe and trustworthy on sight, calmer and friendlier around 
 
 <div class="boon-flavour" markdown="1">
 
-Some quiet part of you says “don’t” a half-second before the rest of you was going to.
+Most people don't realize they did something stupid until it's too late. The little voice in the back of your head says, "I wouldn't do that. It's a bad idea." And you listen. Most of the time. When you do something stupid, you can't say nobody warned you.
 
 </div>
 
