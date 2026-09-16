@@ -524,7 +524,7 @@ Once per major story arc, you cannot be permanently killed or written out of the
 
 <div class="boon-flavour" markdown="1">
 
-You have never been lost. Turned around, occasionally. Never lost.
+You don't get lost. Ever. North is that way. It's just a fact you have access to, the same way you know which way is up. You always know roughly where you are, even without a map. That doesn't stop people from handing you the map, though.
 
 </div>
 
