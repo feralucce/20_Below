@@ -244,7 +244,7 @@ For Escapology rolls, treat your Skill Training Tier as one tier higher than you
 
 <div class="boon-flavour" markdown="1">
 
-You have done this more times than the person in front of you, and it shows in the first half-second.
+You picked a weapon and learned everything about it. It is no longer a tool - it is a part of you. The guy across from you has trained. You have specialized.
 
 </div>
 
