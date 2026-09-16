@@ -564,7 +564,7 @@ Immune to being disarmed against your will - a weapon or item stays in your hand
 
 <div class="boon-flavour" markdown="1">
 
-You’ve eaten worse. Considerably worse, and on purpose.
+Gas station sushi. The leftovers with no clear date on them. Water out of something that isn't a tap. Whatever it is, you imbibe it, and then you are fine. Anyone who shared it with you - not so much.
 
 </div>
 
