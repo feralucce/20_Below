@@ -656,6 +656,9 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
   color:var(--v-moira); font-style:italic; margin:.25em 0 .45em;
 }
 .page .gift-flavour > p{margin:0}
+/* Emphasis inside an italic line flips to roman - italicising
+ * italic text says nothing. */
+.page .gift-flavour em{font-style:normal}
 /* A level on the ladder.
  *
  * Five of these run together down a column, each a paragraph opening with
@@ -811,6 +814,9 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
   color:var(--accent); font-style:italic; margin:.25em 0 .4em;
 }
 .page .boon-flavour > p{margin:0}
+/* Emphasis inside an italic line flips to roman - italicising
+ * italic text says nothing. */
+.page .boon-flavour em{font-style:normal}
 .page .boon-tier{
   border-left:2px solid var(--rule); padding-left:.6em;
   margin:.3em 0 .3em .2em;
