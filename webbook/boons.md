@@ -28,7 +28,7 @@ A Boon is a grab bag item. Skills are the things you practiced and Gifts are the
 
 **You either have a Boon or you don’t.** There’s no 1-10 scale, no dots, no ranks. If you want something that climbs by level, what you actually want is a Resource, and those get their own chapter.
 
-Nineteen entries bend that rule, and I’d rather flag each one where it sits in the list than make you memorize them here. Most offer two, three or four tiers, and buying a higher tier already includes everything the lower ones gave you - so buy the one you want, not all of them. Special Movement is the odd one out. It isn’t tiered at all, but you can buy it more than once, once for each way of moving.
+Eighteen entries bend that rule, and I’d rather flag each one where it sits in the list than make you memorize them here. Most offer two, three or four tiers, and buying a higher tier already includes everything the lower ones gave you - so buy the one you want, not all of them. Special Movement is the odd one out. It isn’t tiered at all, but you can buy it more than once, once for each way of moving.
 
 **A Boon almost never hands you a bonus on a roll.** It’s usually a rule exception, an option you didn’t have before, or a standing fact about your body or your reputation. If you came here looking for +2 to something, you’re in the wrong chapter.
 
@@ -757,38 +757,6 @@ You've fallen (or been knocked down) enough times to have an opinion about it. Y
 </div>
 
 On a catastrophic failure on an attack roll, roll again. If the second roll succeeds, the catastrophic failure is downgraded to an ordinary miss - it never becomes a hit, and if the second roll also fails the catastrophic failure stands. The same shape as Master, for the one roll no Training Tier reaches.
-
-</div>
-
-<div class="boon" markdown="1">
-
-<p class="boon-name" markdown="span">Oathbound<span class="boon-cost">3, 5, or 7</span></p>
-
-<div class="boon-flavour" markdown="1">
-
-You gave your word, and it turns out your word is load-bearing.
-
-</div>
-
-Bought as one of three tiers (each includes every lower tier’s benefit - no need to buy more than one). A promise made to you is never as easy to walk away from as an ordinary promise. It sticks in the mind, hard to shake, and something in the exchange takes on real, felt weight.
-
-<div class="boon-tier" markdown="1">
-
-**Tier 1 (3, Lesser)**: anyone who breaks a promise made to you suffers Disadvantage on their next roll afterward, shaken by having done it.
-
-</div>
-
-<div class="boon-tier" markdown="1">
-
-**Tier 2 (5, Greater)**: a significant oath sworn to you genuinely resists being broken - in the moment someone tries, the GM may call for a Atropos + Difficulty roll from them to go through with it anyway; failure means they can’t bring themselves to act against it for the rest of the scene.
-
-</div>
-
-<div class="boon-tier" markdown="1">
-
-**Tier 3 (7, Legendary)**: an oath sworn to you is, for all practical purposes, unbreakable - any attempt to act against it automatically fails, no roll needed.
-
-</div>
 
 </div>
 
