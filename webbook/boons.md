@@ -770,7 +770,7 @@ One quick read through is usually all it takes. People don't like it when you pi
 
 </div>
 
-Pick up new information or a demonstrated technique unusually fast - GM’s call on how much time it actually saves.
+Pick up new information or a demonstrated technique unusually fast, and read or skim at exceptional speed - GM’s call on how much time it actually saves.
 
 </div>
 
@@ -833,20 +833,6 @@ The lists below are examples, not a menu to choose from. If the thing you want i
 **Tier 3 (7, Legendary)**: something that should not exist at all. A prototype railgun, a directed-energy rifle, a blade that remembers everyone it has killed, a rifle built for one specific target and inert against anybody else. What it is and what it does is settled with the GM.
 
 </div>
-
-</div>
-
-<div class="boon" markdown="1">
-
-<p class="boon-name" markdown="span">Speed Reading<span class="boon-cost">1, Trivial</span></p>
-
-<div class="boon-flavour" markdown="1">
-
-You’ve finished the page while they’re still on the first paragraph.
-
-</div>
-
-Read or skim at exceptional speed.
 
 </div>
 
