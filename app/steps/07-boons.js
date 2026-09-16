@@ -1,4 +1,4 @@
-import { el, renderMarkdown, makeTwirl, describeBoxes } from '../ui.js';
+import { describeBoxes, el, flavourHtml, makeTwirl, renderMarkdown } from '../ui.js';
 import { describeFields, describePrompt } from '../describe-spec.js';
 import { boonsPoolRemaining, addBoon, removeBoon, setBoonNote, boonNotes } from '../state.js';
 
@@ -32,7 +32,10 @@ export function renderBoonPicker(container, ctx, allBoons, { source, getRemainin
         }),
       ]);
       const boonData = allBoons.find((boon) => boon.name === b.name);
-      const detailEl = el('div', { class: 'detail', html: boonData ? renderMarkdown(boonData.effect) : '' });
+      const detailEl = el('div', {
+        class: 'detail',
+        html: boonData ? flavourHtml(boonData) + renderMarkdown(boonData.effect) : '',
+      });
       // Keyed by slot as well as name: a repeatable Boon can be held twice,
       // and both copies are in this list.
       makeTwirl(nameEl, detailEl, { key: `boon-sel:${source}:${i}:${b.name}` });
@@ -84,7 +87,10 @@ export function renderBoonPicker(container, ctx, allBoons, { source, getRemainin
         );
       });
       headerRow.appendChild(btnRow);
-      const detailEl = el('div', { class: 'detail', html: renderMarkdown(boon.effect) });
+      const detailEl = el('div', {
+        class: 'detail',
+        html: flavourHtml(boon) + renderMarkdown(boon.effect),
+      });
       makeTwirl(nameEl, detailEl, { key: `boon-avail:${source}:${boon.name}` });
       card.append(headerRow, detailEl);
       listEl.appendChild(card);
