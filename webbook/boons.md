@@ -230,7 +230,7 @@ Bought as one of two tiers (the higher includes the lower’s benefit - no need 
 
 <div class="boon-flavour" markdown="1">
 
-Your joints hold a position the human body has opinions about.
+You saw a man fold himself into an acrylic box on The Gong Show and decided you wanted to do the same thing. Now, if you can get your head through it, the rest of you will follow.
 
 </div>
 
