@@ -762,20 +762,6 @@ On a catastrophic failure on an attack roll, roll again. If the second roll succ
 
 <div class="boon" markdown="1">
 
-<p class="boon-name" markdown="span">Never Winded<span class="boon-cost">3, Lesser</span></p>
-
-<div class="boon-flavour" markdown="1">
-
-You are still going. You’ll explain later how.
-
-</div>
-
-Hold your breath far longer than an ordinary person, and shrug off exhaustion from cold, heat, or thin air that would slow anyone else.
-
-</div>
-
-<div class="boon" markdown="1">
-
 <p class="boon-name" markdown="span">Oathbound<span class="boon-cost">3, 5, or 7</span></p>
 
 <div class="boon-flavour" markdown="1">
@@ -1004,6 +990,6 @@ The weather is happening to everyone. You’ve simply declined to make it a topi
 
 </div>
 
-Shrug off extreme heat, cold, and harsh weather that would meaningfully slow or endanger an ordinary person.
+Shrug off extreme heat, cold, thin air, and harsh weather that would meaningfully slow or endanger an ordinary person, and hold your breath far longer than an ordinary person can.
 
 </div>
