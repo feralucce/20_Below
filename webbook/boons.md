@@ -302,7 +302,7 @@ Bought as one of two tiers (the higher includes the lower’s benefit - no need 
 
 <div class="boon-flavour" markdown="1">
 
-You said good morning and they decided you were fine. That’s the whole trick and you can’t switch it off.
+You could read the phone book and people would lean in to listen. The velvet tones of your voice rival the Sirens or Orpheus. Something in your voice makes people decide you are worth listening to. You can't switch it off.
 
 </div>
 
