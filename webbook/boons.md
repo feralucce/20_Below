@@ -780,7 +780,7 @@ Pick up new information or a demonstrated technique unusually fast - GM’s call
 
 <div class="boon-flavour" markdown="1">
 
-Three hours and you’re new. Nobody who has watched you do it thinks it looks restful.
+Three hours of meditation and you feel like a million bucks. You don't dream, toss and turn, or drift off to sleep - you turn your brain off and flip it back on just as easily. No one who sees it thinks it looks restful, but they don't know what they are missing.
 
 </div>
 
