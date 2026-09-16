@@ -794,7 +794,7 @@ A Full Night’s Rest only requires **3 hours** of actual sleep to grant its ful
 
 <div class="boon-flavour" markdown="1">
 
-You move in a way that shouldn’t work. It works. Don’t ask.
+You move in a way most people can't - crawling up a wall, walking over snow without a trace, swinging on grappling hooks. Whatever the method, physics filed an objection and no one listened.
 
 </div>
 
