@@ -330,7 +330,7 @@ When you want to know something relevant about a topic - history, science, esote
 
 <div class="boon-flavour" markdown="1">
 
-More arms than the furniture expects.
+Most humans have two arms and two legs. Some have less, which brings the average down. You are trying to bring the average back up. You have more limbs than a "normal" human. Whether it is more arms, legs, tentacles, they are yours. They work and your body has never been confused about their function. Complex tasks are easier, but finding a suit that fits is hard.
 
 </div>
 
