@@ -316,7 +316,7 @@ Anyone who hears you speak has their initial reaction/disposition nudged a step 
 
 <div class="boon-flavour" markdown="1">
 
-You read something about this once. You always did.
+You read something about this once. It was in a psychology journal. "Why did I read it? It seemed interesting." You devour information and it sticks with you. It doesn't matter where the information came from, you are almost always right.
 
 </div>
 
