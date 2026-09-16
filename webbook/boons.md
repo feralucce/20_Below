@@ -912,7 +912,7 @@ Bought as one of four tiers (each includes every lower tier’s benefit - no nee
 
 <div class="boon-flavour" markdown="1">
 
-There is always a story, it always holds, and you’ve never once had to invent it under pressure.
+You always have a story - a time, a place, a reason and enough inane details that nobody wants to hear them. It's not a lie - you were really there.
 
 </div>
 
