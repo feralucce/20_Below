@@ -162,7 +162,7 @@ The GM will give you a heads-up before you commit to an obviously terrible decis
 
 <div class="boon-flavour" markdown="1">
 
-You’ve never once had to turn sideways and hope. You just went through.
+When other people have to squeeze into a tight space, you just walk on through. Vents, the space behind the cabinet, the crowd other people have to muscle their way through are non-issues for you. It works the other way, too - you can easily disappear in a crowd.
 
 </div>
 
