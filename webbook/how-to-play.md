@@ -90,6 +90,8 @@ C:\\\&D Formatter/docs/assets/diagrams/roll-curve-comparison.svg
 
 Yes. Lower is better. Advantage gives you a third chance to get a smaller number. Disadvantage does the opposite.
 
+**Off-hand.** Doing something that needs manual dexterity or precision with your off-hand - attacking, picking a lock, anything where which hand is doing it actually matters - is at Disadvantage. The Ambidextrous Boon removes that penalty.
+
 ## Untrained Skill Usage
 
 Sometimes you want to do something that you just aren’t prepared for. In game terms, this means you don’t have a skill that applies in the specific situation. When this happens, you still get to roll - you just don’t get to add your Element to the Target Number.
