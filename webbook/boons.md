@@ -396,7 +396,7 @@ When something supernatural is happening around you, roll **Moira + Difficulty**
 
 <div class="boon-flavour" markdown="1">
 
-Something followed you home and never left, and it is smarter than it has any business being.
+You have someone... or something that has chosen you. A black cat followed you home. A book started talking to you one day. A spirit attached itself to you and never explained why. Whatever it is, it is competent, loyal and willing to go places you can't.
 
 </div>
 
