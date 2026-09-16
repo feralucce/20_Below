@@ -204,7 +204,7 @@ May ask the GM at any reasonable moment whether there’s danger nearby; the GM 
 
 <div class="boon-flavour" markdown="1">
 
-Sound arrives at you slightly out of order, and once you stopped fighting that, it started being useful.
+Mockingbirds, magpies and you. You hear a car alarm, a chainsaw, a snippet of a song and can imitate it perfectly. It's not an impression, but you mimic the sound precisely.
 
 </div>
 
