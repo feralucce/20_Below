@@ -42,7 +42,7 @@ Flaws are the mirror image of all this - built the same way, no levels, mostly n
 
 <div class="boon-flavour" markdown="1">
 
-You’ve never once been the person who says “wait, what was that?” You were already turning.
+You are never *not* paying attention. While everyone else is asking, "What was that?" You are already turning to face the threat. You pay attention to everything... to the point of being called "paranoid" more than once.
 
 </div>
 
