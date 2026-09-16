@@ -2090,6 +2090,68 @@ Chosen once, at creation, purely cosmetic: the form your raised dead take (bone 
 
 <div class="gift" markdown="1">
 
+<p class="gift-name" markdown="span">Oathbinder</p>
+
+<div class="gift-flavour" markdown="1">
+
+A deal is a deal. Your word is as good as a bond. In fact - it is a bond. Something in the exchange gives the oath serious weight. People break their word constantly, but they find that they can't really do that with you.
+
+</div>
+
+<p class="gift-section">Adders</p>
+
+<div class="gift-opt gift-opt--adder" markdown="1">
+
+- **Written Word** (Lesser, 3 pts): an oath signed binds as well as one spoken - a contract, a ledger entry, a name on a line.
+- **Witness** (Lesser, 3 pts): bind an oath sworn between two other people, with you as the witness rather than a party to it.
+- **Blood Price** (Greater, 6 pts): breaking a bound oath costs the oathbreaker **1 Sanity level**, on top of everything else.
+
+</div>
+
+<p class="gift-section">Limiters</p>
+
+<div class="gift-opt gift-opt--limiter" markdown="1">
+
+- **Freely Given**: an oath only binds if the person swearing genuinely means it at the time. Coerced or tricked oaths don't take.
+- **Named Terms**: the terms have to be specific and spoken aloud. A vague promise binds nothing.
+- **Cuts Both Ways**: any oath you swear binds you exactly as hard as it binds them.
+
+</div>
+
+<div class="gift-level gift-level--1" markdown="1">
+
+<span class="gift-n">1</span>- A promise made to you in earnest sticks. Anyone who breaks one is at **Disadvantage on their next roll**, shaken by having done it. No Ki, no Gift Check - it simply happens.
+
+</div>
+
+<div class="gift-level gift-level--2" markdown="1">
+
+<span class="gift-n">2</span>- You can bind an oath deliberately. The terms are stated aloud, both parties agree, and you spend **1 Ki**. When the sworn party tries to act against it, they roll **Atropos + Difficulty** to go through with it; failure means they cannot bring themselves to act against it for the rest of the Scene.
+
+</div>
+
+<div class="gift-level gift-level--3" markdown="1">
+
+<span class="gift-n">3</span>- You know the moment a bound oath is broken, and roughly where the oathbreaker is. Their roll to act against a bound oath is now made at **Disadvantage**.
+
+</div>
+
+<div class="gift-level gift-level--4" markdown="1">
+
+<span class="gift-n">4</span>- A single oath can bind more than one person - everyone who assents to the terms is bound by them. The swearing no longer has to happen face to face; a voice down a phone line binds as well as one across a table.
+
+</div>
+
+<div class="gift-level gift-level--5" markdown="1">
+
+<span class="gift-n">5</span>- A bound oath is, for all practical purposes, unbreakable. Any attempt to act against it **automatically fails**, no roll needed.
+
+</div>
+
+</div>
+
+<div class="gift" markdown="1">
+
 <p class="gift-name" markdown="span">Onslaught</p>
 
 <div class="gift-flavour" markdown="1">
