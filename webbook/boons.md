@@ -700,7 +700,7 @@ Bought as one of three tiers (each includes the lower tier’s benefit - no need
 
 <div class="boon-flavour" markdown="1">
 
-The number is just there. You didn’t work it out; it arrived.
+You don't do the math. You don't have to - you just know the answer. The odds, how much fuel remains, the required angle to land the shot - the numbers are there. You are moving while everyone else is reaching for the calculator app on their phone.
 
 </div>
 
