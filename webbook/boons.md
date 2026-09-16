@@ -176,7 +176,7 @@ Fit through spaces, gaps, and crowds an ordinary body couldn’t, and blend into
 
 <div class="boon-flavour" markdown="1">
 
-The building can come down around you. You’ll finish the sentence.
+Once you start something, you will finish it. You studied for finals in a bar during a GWAR concert and aced them. Gunfire, explosions, a demolition crew tearing the building down around you - none of it is a distraction.
 
 </div>
 
