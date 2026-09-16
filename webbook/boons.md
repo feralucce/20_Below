@@ -226,6 +226,46 @@ Bought as one of two tiers (the higher includes the lower’s benefit - no need 
 
 <div class="boon" markdown="1">
 
+<p class="boon-name" markdown="span">Distinctive Features<span class="boon-cost">1, 3, 5, or 7</span></p>
+
+<div class="boon-flavour" markdown="1">
+
+There is something about you that is visibly different. You might have something non-human in the family tree or you might have Bette Davis eyes. Or a tail that helps you balance, gills, fur, markings that can't be mistaken for a birthmark. They are unusual, but useful.
+
+</div>
+
+Bought as one of four tiers (each includes every lower tier’s benefit - no need to buy more than one). Small, genuine biological quirks that set you apart from an ordinary person. Cosmetic to look at, but each one does something real.
+
+Choose a feature: **Tail** (real balance and grip - another hand for holding on, not for fine work), **Gills** (breathe water indefinitely, and air as normal), **Fur** (ignore cold that has everybody else reaching for a coat), **Pouch** (a few small items carried hands-free and out of sight), or **Coloration** (markings nobody would mistake for human, and blending into one matching environment you name). Anything else that size works too, if you and the GM can agree what it does.
+
+<div class="boon-tier" markdown="1">
+
+**Tier 1 (1, Trivial)**: one feature.
+
+</div>
+
+<div class="boon-tier" markdown="1">
+
+**Tier 2 (3, Lesser)**: a second.
+
+</div>
+
+<div class="boon-tier" markdown="1">
+
+**Tier 3 (5, Greater)**: a third.
+
+</div>
+
+<div class="boon-tier" markdown="1">
+
+**Tier 4 (7, Legendary)**: a fourth.
+
+</div>
+
+</div>
+
+<div class="boon" markdown="1">
+
 <p class="boon-name" markdown="span">Double-Jointed<span class="boon-cost">3, Lesser</span></p>
 
 <div class="boon-flavour" markdown="1">
@@ -433,46 +473,6 @@ Choose what it is. What it is decides which Skills it can take:
 <div class="boon-tier" markdown="1">
 
 **Tier 4 (7, Legendary)**: a legend in its own right, recognised or feared independently of you. Effectively unkillable in any permanent sense - destroyed, it finds its way back, rebuilt, reformed or returned.
-
-</div>
-
-</div>
-
-<div class="boon" markdown="1">
-
-<p class="boon-name" markdown="span">Features<span class="boon-cost">1, 3, 5, or 7</span></p>
-
-<div class="boon-flavour" markdown="1">
-
-You are visibly not built the way most people are built, and you stopped apologizing for it a long time ago.
-
-</div>
-
-Bought as one of four tiers (each includes every lower tier’s benefit - no need to buy more than one). Small, genuine biological quirks that set you apart from an ordinary person. Cosmetic to look at, but each one does something real.
-
-Choose a feature: **Tail** (real balance and grip - another hand for holding on, not for fine work), **Gills** (breathe water indefinitely, and air as normal), **Fur** (ignore cold that has everybody else reaching for a coat), **Pouch** (a few small items carried hands-free and out of sight), or **Coloration** (markings nobody would mistake for human, and blending into one matching environment you name). Anything else that size works too, if you and the GM can agree what it does.
-
-<div class="boon-tier" markdown="1">
-
-**Tier 1 (1, Trivial)**: one feature.
-
-</div>
-
-<div class="boon-tier" markdown="1">
-
-**Tier 2 (3, Lesser)**: a second.
-
-</div>
-
-<div class="boon-tier" markdown="1">
-
-**Tier 3 (5, Greater)**: a third.
-
-</div>
-
-<div class="boon-tier" markdown="1">
-
-**Tier 4 (7, Legendary)**: a fourth.
 
 </div>
 
