@@ -124,12 +124,81 @@ const CATALOG_DICT_FIELDS = [
   'resourceZeroed',
 ];
 
+/* Boons that no longer exist under the name a save recorded.
+ *
+ * Nothing crashes without this - the Boons step renders
+ * `boonData ? ... : ''`, so a name with no catalog entry behind it just
+ * shows with an empty rules detail, and its points stay spent because
+ * the pool sums the saved `points`, not the catalog's. That is the
+ * problem: the character goes on paying for a Boon the book no longer
+ * describes, and nothing says so.
+ *
+ * `to` renames it. `to: null` means it is gone and the points go back.
+ * Either way the player is told - this returns a list for the loader to
+ * surface, because a save that quietly rewrites itself is worse than
+ * one that explains what it did.
+ */
+const RETIRED_BOONS = {
+  // Renamed outright. Same costs, so the purchase carries over whole.
+  Features: { to: 'Distinctive Features' },
+  // Folded into another Boon at the same price.
+  'Speed Reading': { to: 'Quick Study', mergedInto: true },
+  'Never Winded': { to: 'Weathered', mergedInto: true },
+  // Left the chapter entirely: it is the Oathbinder Gift now, a
+  // different pool and a different purchase. Refund and let them decide.
+  Oathbound: { to: null, becameGift: 'Oathbinder' },
+};
+
+export function migrateBoons(state) {
+  const notices = [];
+  if (!Array.isArray(state.boons)) return notices;
+  const kept = [];
+  state.boons.forEach((boon) => {
+    const rule = RETIRED_BOONS[boon?.name];
+    if (!rule) {
+      kept.push(boon);
+      return;
+    }
+    // removeBoon's discretionary bookkeeping, by hand - this rebuilds
+    // the list rather than splicing it.
+    const refund = () => {
+      if (boon.source === 'discretionary') {
+        state.discretionaryExtra.Boons -= boon.points;
+      }
+    };
+    if (rule.to === null) {
+      refund();
+      notices.push(`${boon.name} is no longer a Boon - it is now the `
+        + `${rule.becameGift} Gift. Its ${boon.points} points have gone back `
+        + 'to your Boons pool.');
+      return;
+    }
+    // They may hold both halves of what is now a single Boon, in either
+    // order, so check what has already been kept and what is still to come.
+    if (kept.some((b) => b.name === rule.to)
+        || state.boons.some((b) => b !== boon && b?.name === rule.to)) {
+      refund();
+      notices.push(`${boon.name} has been folded into ${rule.to}, which you `
+        + `already have. Its ${boon.points} points have gone back to your `
+        + 'Boons pool.');
+      return;
+    }
+    kept.push({ ...boon, name: rule.to });
+    notices.push(rule.mergedInto
+      ? `${boon.name} has been folded into ${rule.to}, which now covers both.`
+      : `${boon.name} has been renamed to ${rule.to}.`);
+  });
+  state.boons = kept;
+  return notices;
+}
+
 export function mergeCharacterState(data, loaded) {
   const fresh = createInitialState(data);
   const merged = { ...fresh, ...loaded };
   CATALOG_DICT_FIELDS.forEach((field) => {
     merged[field] = { ...fresh[field], ...(loaded[field] || {}) };
   });
+  merged.migrationNotices = migrateBoons(merged);
   // Exports saved before the holding cap existed can carry more Fate Tokens
   // than the character is now allowed to hold, in the build and in play both.
   clampFateTokenPurchases(merged, data);
