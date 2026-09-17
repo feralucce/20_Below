@@ -48,51 +48,44 @@ That’s the whole model, and it applies to every Resource, not only money. The 
 
 ## Wealth at Character Creation
 
-Buying gear at creation (the catalog is over in Weapons & Equipment) runs on its own procedure, not the Pushing a Resource rule above. I split it off because shopping at creation happens all at once, against a pool that drains as you go, and the general rule assumes a single ask with a month to recover from it.
+Buying gear (see **Weapons & Equipment**) at character creation uses a dedicated procedure, not the general **Pushing a Resource** rule above.
 
-A character’s **creation-Wealth** starts at **2**, unless they spent Resources Pool points on Wealth, in which case their purchased Level is used instead. Every gear item carries its own **Wealth rating**. **Every purchase during character creation requires a roll - there is no automatic free item, even one at or under current creation-Wealth.**
+A character's **creation-Wealth** starts at **2**, unless they spent Resources Pool points on Wealth, in which case their purchased Level is used instead. The **Destitute** Flaw overrides both: a Destitute character's creation-Wealth is **0**, and they cannot spend points on Wealth at all during character creation - the Flaw has to be bought off first. This applies only to creation; XP raises Wealth normally once play begins.
 
-1. Find the **gap** - the item’s Wealth rating minus your current creation-Wealth. It can be zero or negative for something at or under what you have.
+Every item carries a **Wealth rating**. Shopping happens in three steps, in this order.
 
-2. If the gap is **more than your current creation-Wealth**, you can’t afford it at all. No roll.
+### 1. Take your packages
 
-3. Otherwise, roll a **Wealth Check** - 2d10 against creation-Wealth + Difficulty **6**, roll-under, with the standard critical results.
+One **Everyman Gear Package** from every Level up to and including your creation-Wealth - one from each Level, not several from the top. Free, no roll.
 
-**Success**: the item is free.
+### 2. Take your free items
 
-**Failure**: you still get the item. Your creation-Wealth drops by the gap, and it never drops by less than **1** - even something cheap with no real gap costs you a Level on a failed roll. A **catastrophic failure** doubles that drop.
+Money stops being a decision long before it stops mattering. What a character can simply have depends on how far the item sits below them:
 
-Creation-Wealth carries across every purchase made during this shopping pass - once no remaining item is affordable (via a viable roll), gear shopping is over for this character creation. **This pool is temporary bookkeeping only**: it has no effect on your actual Wealth Resource once play begins, which stays at whatever Level you actually bought. Once creation ends, this procedure stops applying entirely - every purchase from then on uses the general Pushing a Resource rule above, unaffected by anything that happened during creation shopping.
+- **Two or more Levels below your creation-Wealth**: free, and as many as you can reasonably carry and justify. A Wealth 5 character does not count flashlights.
+- **At your creation-Wealth, or one Level below it**: free, up to a number of items equal to your creation-Wealth. A Wealth 3 character takes three of them.
 
-<div class="wide" markdown="1">
+A Wealth 3 character therefore walks away with everything they want at Wealth 1, any three items at Wealth 2 or 3, and a decision to make about anything above that. A Wealth 0 character gets a Level 0 package and nothing else free.
 
-| Resource | What Scales by Level |
-|---|---|
-| Base | How developed, defended, or well-equipped the headquarters/safehouse is |
-| Black Market Access | How deep into illegal or off-the-books trade the connections reach |
-| Contacts | How large, capable, or well-placed the network is |
-| Corporate Backing | How much a legitimate business entity can move, fund, or cover |
-| Debts Owed | How much real leverage is owed, in favors people can't easily refuse |
-| Fame | How widely recognized the character is, and how strongly people react to it |
-| Followers | How many, how skilled, or how loyal the group is |
-| Fringe Benefit | The reach/exclusivity of the license, membership, clearance, or legal right |
-| Guild Standing | How much rank and pull the character holds within a specific trade or professional body |
-| Informant Network | How wide and reliable the web of low-level eyes and ears is |
-| Legal Counsel | How capable and well-connected the lawyer or legal team is |
-| Media Contact | How much a story can be shaped, planted, or killed before it runs |
-| Medical Access | How much discreet, high-quality medical care can be called on |
-| Occult Library | How comprehensive, rare, or dangerous the collection of esoteric material is |
-| Safehouse Network | How many scattered bolt-holes are maintained, and how well-stocked each is |
-| Sanctuary Standing | How protected the character is within one specific safe territory |
-| Signature Possession | How significant the one prized item owned actually is |
-| Spiritual Standing | How much weight the character's name carries within a specific religious or spiritual community |
-| System Access | How deep and wide the character's reach into digital systems and networks already is |
-| Territory | How much real ground answers to the character specifically |
-| Underworld Reputation | How known, trusted, or feared the character is within criminal and hidden-world circles |
-| Vehicle | How distinctive, capable, or valuable the vehicle is |
-| Wealth | How much disposable financial resource is available to draw on |
+### 3. Roll for the rest
 
-</div>
+Anything left - an item above your creation-Wealth, or one more from the band you have already spent your free picks on - is a **Wealth Check**.
+
+1. Find the **gap**: the item's Wealth rating minus your current creation-Wealth, treated as **0** if that is negative.
+2. If the gap is **more than your current creation-Wealth**, it is out of reach entirely - no roll.
+3. Otherwise roll **2d10** against **creation-Wealth + (10 − gap)**, roll-under, standard critical results apply.
+   - **Success**: the item is free.
+   - **Failure**: you still get the item. Your creation-Wealth drops by the gap, **at least 1** even when the gap is zero. A **catastrophic failure** doubles that loss.
+
+The ask always goes through. What a failure costs you is your ability to make the next one.
+
+### The Black Market is not part of this
+
+Nothing on **The Black Market** is ever free. The steps above do not apply to it: every purchase there is a transaction whatever it costs, and it is gated by **Black Market Access** as well as by Wealth. Nobody hands you a jammer because you are rich.
+
+### Afterwards
+
+Creation-Wealth carries across every purchase in this shopping pass, and gear shopping ends once nothing remaining is within reach. **This pool is temporary bookkeeping only**: it has no effect on the character's actual Wealth Resource once play begins, which stays at whatever Level was actually purchased. Once creation ends this procedure stops applying entirely - every purchase from then on uses the general **Pushing a Resource** rule above, unaffected by anything that happened while shopping.
 
 ## The Resources
 

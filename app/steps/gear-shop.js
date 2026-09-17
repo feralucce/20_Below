@@ -11,7 +11,7 @@ import {
   removeGearPurchase,
   resetGearPurchases,
 } from '../state.js';
-import { performWealthCheck } from '../roller/wealthCheck.js';
+import { performWealthCheck, freeBand } from '../roller/wealthCheck.js';
 
 function outcomeLabel(outcome) {
   return {
@@ -91,6 +91,49 @@ export default function buildGearShop(state, data) {
     });
   }
 
+  // How many free picks have gone on the "at your Level or one below"
+  // band. The wider band beneath it is unlimited and never counted.
+  function limitedTaken() {
+    const cw = currentCreationWealth(state);
+    return state.gearPurchases.filter(
+      (g) => g.free && g.wealth >= cw - 1 && g.wealth <= cw,
+    ).length;
+  }
+
+  function bandFor(item) {
+    const cw = currentCreationWealth(state);
+    const band = freeBand({
+      creationWealth: cw,
+      itemWealth: item.wealth,
+      blackMarket: item.blackMarket,
+    });
+    if (band === 'limited' && limitedTaken() >= cw) return 'roll';
+    return band;
+  }
+
+  // Black market goods need a contact as well as the money. The rules let
+  // an ally supply either half, which is a conversation at the table - the
+  // app only reports what this character can reach on their own.
+  function blocked(item) {
+    const cw = currentCreationWealth(state);
+    if (item.blackMarket && (state.resources['Black Market Access'] ?? 0) < item.blackMarket) {
+      return `Needs Black Market Access ${item.blackMarket}`;
+    }
+    if (item.wealth - cw > cw) return 'Out of reach';
+    return null;
+  }
+
+  function takeFree(category, item) {
+    addGearPurchase(state, {
+      category, name: item.name, wealth: item.wealth, loss: 0, free: true,
+    });
+    resultEl.innerHTML = '';
+    resultEl.append(el('p', {}, `${item.name} acquired free - no roll needed.`));
+    renderSummary();
+    renderPurchased();
+    renderCategories();
+  }
+
   function attemptPurchase(category, item) {
     const cw = currentCreationWealth(state);
     const gap = item.wealth - cw;
@@ -129,10 +172,17 @@ export default function buildGearShop(state, data) {
           cat.items.map((item) => {
             const buyable = item.wealth != null;
             const gap = item.wealth - cw;
-            const affordable = buyable && gap <= cw;
+            const band = buyable ? bandFor(item) : 'roll';
+            const stop = buyable ? blocked(item) : 'not purchasable';
+            const affordable = buyable && !stop;
             const label = !buyable
               ? '-'
-              : `Buy (Wealth Check, risks ${Math.max(1, gap)} on failure)`;
+              : stop
+                || (band === 'unlimited'
+                  ? 'Take (free)'
+                  : band === 'limited'
+                    ? `Take (free, ${Math.max(0, cw - limitedTaken())} left)`
+                    : `Buy (Wealth Check, risks ${Math.max(1, Math.max(0, gap))} on failure)`);
             return el('tr', {}, [
               el('td', {}, item.name ?? ''),
               ...otherHeaders.map((h) => el('td', {}, item[h] ?? '')),
@@ -145,7 +195,9 @@ export default function buildGearShop(state, data) {
                       type: 'button',
                       text: label,
                       disabled: affordable ? undefined : '',
-                      onClick: () => attemptPurchase(cat.category, item),
+                      onClick: () => (band === 'roll'
+                        ? attemptPurchase(cat.category, item)
+                        : takeFree(cat.category, item)),
                     })
                   : null,
               ),
@@ -175,7 +227,7 @@ export default function buildGearShop(state, data) {
     el(
       'p',
       { class: 'detail' },
-      'Every item needs a Wealth Check - there\'s no more automatic free purchase, even for something at or under your current creation-Wealth. A gap bigger than your current creation-Wealth means it can\'t be afforded at all. This pool is temporary bookkeeping for character creation only - it never touches your purchased Wealth Resource Level, and once creation ends every purchase uses the normal Pushing a Resource rule instead.',
+      'Anything two or more Levels below your creation-Wealth is free and unlimited. Anything at your Level or one below is free up to your creation-Wealth in number. Everything past that takes a Wealth Check, and the further beyond your means you reach the harder it gets. Black market goods are never free and need Black Market Access as well as money. This pool is temporary bookkeeping for character creation only - it never touches your purchased Wealth Resource Level, and once creation ends every purchase uses the normal Pushing a Resource rule instead.',
     ),
     summaryEl,
     categoriesWrap,
