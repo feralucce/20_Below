@@ -234,7 +234,7 @@ There is something about you that is visibly different. You might have something
 
 </div>
 
-Bought as one of four tiers (each includes every lower tier’s benefit - no need to buy more than one). Small, genuine biological quirks that set you apart from an ordinary person. Cosmetic to look at, but each one does something real.
+Bought as one of four tiers (each includes every lower tier’s benefit - no need to buy more than one). None are purely cosmetic - they have real effects.
 
 Choose a feature: **Tail** (real balance and grip - another hand for holding on, not for fine work), **Gills** (breathe water indefinitely, and air as normal), **Fur** (ignore cold that has everybody else reaching for a coat), **Pouch** (a few small items carried hands-free and out of sight), or **Coloration** (markings nobody would mistake for human, and blending into one matching environment you name). Anything else that size works too, if you and the GM can agree what it does.
 
