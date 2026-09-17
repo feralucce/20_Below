@@ -337,7 +337,12 @@ function buildFlavorItemEntries(state) {
 }
 
 function buildEverymanGearEntry(state) {
-  const pkg = state.everymanGearPackage;
+  const pkgs = Object.values(state.everymanGearPackages || {})
+    .sort((a, b) => a.level - b.level);
+  const pkg = pkgs.length
+    ? { name: pkgs.map((x) => x.name).join(', '),
+        contents: pkgs.map((x) => x.contents).join('; ') }
+    : null;
   if (!pkg) return [];
   return [
     el('h3', {}, 'Everyman Gear Package'),

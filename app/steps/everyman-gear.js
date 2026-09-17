@@ -1,7 +1,7 @@
 // Everyman Gear Packages (weapons.md#everyman-gear-packages) - a free,
-// no-roll alternative to Wealth Check shopping in gear-shop.js. Exactly one
-// pick, from every package at or under the character's creation-Wealth
-// Level, cumulative downward. Split out the same way gear-shop.js was split
+// no-roll alternative to Wealth Check shopping in gear-shop.js. One pick
+// from every Level up to and including the character's creation-Wealth -
+// one from each, not several from the top. Split out the same way gear-shop.js was split
 // from 08-resources.js - a self-contained interactive block.
 
 import { el, keyedDetails } from '../ui.js';
@@ -18,7 +18,7 @@ export default function buildEverymanGear(state, data) {
   function render() {
     listWrap.innerHTML = '';
     const eligibleBase = creationWealthBase(state);
-    const current = state.everymanGearPackage;
+    const current = state.everymanGearPackages || {};
 
     // Level 0 is exclusive to a genuine creation-Wealth of 0 (Destitute) -
     // everyone else gets cumulative access from Level 1 up through their own
@@ -31,7 +31,7 @@ export default function buildEverymanGear(state, data) {
         const cards = el('div', { class: 'everyman-gear-cards' });
         lvl.packages.forEach((pkg) => {
           const isSelected =
-            current && current.level === lvl.level && current.name === pkg.name;
+            current[lvl.level] && current[lvl.level].name === pkg.name;
           // A twirl-down card like every other pick in the app - there are
           // thirteen per level now, and a wall of open ones is unreadable.
           // The summary carries the pick marker so the chosen package is

@@ -60,9 +60,10 @@ export function createInitialState(data) {
     gearPurchases: [],
     creationWealthLoss: 0,
     // Everyman Gear Packages (weapons.md#everyman-gear-packages) - a free,
-    // no-roll alternative to Wealth Check shopping. Exactly one pick, or
-    // null if the player shopped normally instead. { level, name, contents }.
-    everymanGearPackage: null,
+    // no-roll alternative to Wealth Check shopping. Level -> { level, name,
+    // contents }: one package from every Level up to creation-Wealth, so a
+    // Wealth 3 character holds three of them and a Wealth 1 character one.
+    everymanGearPackages: {},
     // Gear the catalog will never list - a cardboard box, a dead man's watch.
     // Free, unlimited, no Wealth Level and no mechanical effect, so it needs
     // no bookkeeping beyond existing on the sheet. Plain strings.
@@ -199,6 +200,14 @@ export function mergeCharacterState(data, loaded) {
     merged[field] = { ...fresh[field], ...(loaded[field] || {}) };
   });
   merged.migrationNotices = migrateBoons(merged);
+  // Packages used to be a single pick for the whole character. Move an old
+  // save's one package into the Level slot it was taken from.
+  if (merged.everymanGearPackage && !Object.keys(merged.everymanGearPackages || {}).length) {
+    const old = merged.everymanGearPackage;
+    merged.everymanGearPackages = { [old.level]: old };
+    delete merged.everymanGearPackage;
+  }
+  if (!merged.everymanGearPackages) merged.everymanGearPackages = {};
   // Exports saved before the holding cap existed can carry more Fate Tokens
   // than the character is now allowed to hold, in the build and in play both.
   clampFateTokenPurchases(merged, data);
@@ -373,16 +382,28 @@ export function currentCreationWealth(state) {
 }
 
 export function setEverymanGearPackage(state, pkg) {
-  state.everymanGearPackage = pkg;
+  if (!state.everymanGearPackages) state.everymanGearPackages = {};
+  if (pkg == null) return;
+  const held = state.everymanGearPackages[pkg.level];
+  if (held && held.name === pkg.name) {
+    // Clicking the held package again clears that Level's pick.
+    delete state.everymanGearPackages[pkg.level];
+    return;
+  }
+  state.everymanGearPackages[pkg.level] = pkg;
 }
 
 function nextGearPurchaseId(state) {
   return state.gearPurchases.reduce((max, p) => Math.max(max, p.id), 0) + 1;
 }
 
-export function addGearPurchase(state, { category, name, wealth, loss = 0 }) {
+// `free` records that this came out of a creation free band rather than a
+// Wealth Check. The shop counts the limited band's picks off it, so it has
+// to survive a save and reload - a character who reopened the creator would
+// otherwise get their free picks back.
+export function addGearPurchase(state, { category, name, wealth, loss = 0, free = false }) {
   const id = nextGearPurchaseId(state);
-  state.gearPurchases.push({ id, category, name, wealth, loss });
+  state.gearPurchases.push({ id, category, name, wealth, loss, free });
   state.creationWealthLoss += loss;
 }
 
