@@ -298,7 +298,12 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
 export function buildResourceCheckSection(state, data) {
   const section = el('div', { class: 'roller-gift-check' });
 
-  const ownedResources = data.resources.filter((r) => state.resources[r.name] > 0);
+  // Only the Resources the rules say can be pushed. The rest are a
+  // standing fact - their Level table says what you have, and there
+  // is nothing to roll about it.
+  const ownedResources = data.resources.filter(
+    (r) => state.resources[r.name] > 0 && r.pushable,
+  );
   let selectedResource = ownedResources[0]?.name ?? null;
   let selectedResourceIndex = 3;
 
@@ -328,7 +333,16 @@ export function buildResourceCheckSection(state, data) {
       selectedResourceIndex = Number(e.target.value);
     },
   });
+  // What the Index is called depends on what is being pushed. Every item
+  // now carries a Wealth rating, so a Wealth push does not need the GM to
+  // invent a number - the rating is the number. Nothing else has items,
+  // so a Contacts or Fame push keeps the general term.
+  const indexLabelEl = el('label', {}, 'Resource Index');
+
   function renderResourceIndexOptions() {
+    indexLabelEl.textContent = selectedResource === 'Wealth'
+      ? 'Item Wealth Rating'
+      : 'Resource Index';
     const effective = selectedResource ? effectiveResourceLevel(state, selectedResource) : 0;
     resourceIndexSelect.innerHTML = '';
     for (let ri = 1; ri <= 6; ri++) {
@@ -368,8 +382,8 @@ export function buildResourceCheckSection(state, data) {
     const effective = effectiveResourceLevel(state, selectedResource);
     const zeroed = state.resourceZeroed[selectedResource];
     const penalty = state.resourcePenalties[selectedResource] ?? 0;
-    summaryEl.textContent = zeroed
-      ? `Effective Level 0 (zeroed out by reaching beyond your means).`
+    summaryEl.textContent = effective <= 0
+      ? `Effective Level 0 - spent until the next Month. Nothing left to push.`
       : penalty
         ? `Effective Level ${effective} (reduced from ${state.resources[selectedResource]} by a prior failure).`
         : `Current Level ${effective}.`;
@@ -386,11 +400,20 @@ export function buildResourceCheckSection(state, data) {
     disabled: selectedResource ? undefined : '',
     onClick: () => {
       const resourceLevel = effectiveResourceLevel(state, selectedResource);
+      // A Resource already at 0 for the Month has nothing left to draw on.
+      // Rolling anyway treated every Index as reaching beyond its means and
+      // zeroed it again, so a spent Resource could be pushed indefinitely.
+      if (resourceLevel <= 0) {
+        resultEl.innerHTML = '';
+        resultEl.append(el('p', { class: 'detail' },
+          `${selectedResource} is spent until the next Month - there is nothing to push.`));
+        return;
+      }
       const result = performResourceCheck({ resourceLevel, resourceIndex: selectedResourceIndex });
       if (result.resourceZeroed) {
         applyResourceCheckZeroOut(state, selectedResource);
       } else if (result.resourceReduced) {
-        applyResourceCheckFailure(state, selectedResource);
+        applyResourceCheckFailure(state, selectedResource, result.levelsLost);
       }
       renderSummary();
       renderResourceIndexOptions();
@@ -398,7 +421,13 @@ export function buildResourceCheckSection(state, data) {
       const costLine = result.resourceZeroed
         ? `${selectedResource} drops to 0 until a Month passes - reaching that far beyond your means always costs everything${result.outcome === 'critical-success' ? ' (Resource Index 6 isn\'t saved by a critical success)' : ''}.`
         : result.resourceReduced
-          ? `${selectedResource} drops to Level ${effectiveResourceLevel(state, selectedResource)} until a Month passes.`
+          ? (() => {
+            const now = effectiveResourceLevel(state, selectedResource);
+            const cost = result.levelsLost === 2 ? 'two Levels' : 'a Level';
+            return now <= 0
+              ? `${selectedResource} costs ${cost} and is spent - nothing more can be drawn on it until a Month passes.`
+              : `${selectedResource} costs ${cost} and drops to Level ${now} until a Month passes.`;
+          })()
           : result.beyondMeans
             ? `Critical success - ${selectedResource} is unaffected even reaching this far beyond your means.`
             : `${selectedResource} is unaffected - you got what you were after.`;
@@ -413,7 +442,7 @@ export function buildResourceCheckSection(state, data) {
   section.append(
     el('h4', {}, 'Resource Check'),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Resource'), resourceSelect]),
-    el('div', { class: 'roller-row' }, [el('label', {}, 'Resource Index'), resourceIndexSelect]),
+    el('div', { class: 'roller-row' }, [indexLabelEl, resourceIndexSelect]),
     summaryEl,
     el('div', { style: 'display:flex;gap:0.5rem;' }, [rollBtn, clearBtn]),
     resultEl,

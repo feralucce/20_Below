@@ -3,7 +3,7 @@
 // 08-resources.js since it's a self-contained interactive block, same
 // pattern as roller-panel.js being split out of 14-roller.js.
 
-import { el, keyedDetails } from '../ui.js';
+import { el, keyedDetails, purchasedPill } from '../ui.js';
 import {
   currentCreationWealth,
   creationWealthBase,
@@ -44,26 +44,18 @@ export default function buildGearShop(state, data) {
     // roll), gear shopping is over for this character creation". Said out
     // loud - every Buy button disabling itself with no explanation reads as
     // a broken page rather than the end of the shopping pass.
-    if (!affordableCount()) {
+    if (cw <= 0) {
       summaryEl.append(
         el('p', { class: 'hint' }, [
-          el('strong', {}, 'Gear shopping is over for this character. '),
-          'Nothing left in the catalog is affordable on a viable roll. Remove a purchase above to '
-          + 'get creation-Wealth back, or take an Everyman Gear Package instead - that one is free '
-          + 'and needs no roll. This pool is creation bookkeeping only; it never touches the Wealth '
-          + 'Resource Level the character actually plays with.',
+          el('strong', {}, 'Creation-Wealth is spent. '),
+          'No more Wealth Checks and nothing further above your Level - but your free items are '
+          + 'measured against the Wealth you bought, not what is left of this pool, so anything '
+          + 'two or more Levels below it is still yours for the taking. Remove a purchase above to '
+          + 'get creation-Wealth back. This pool is creation bookkeeping only; it never touches '
+          + 'the Wealth Resource Level the character actually plays with.',
         ]),
       );
     }
-  }
-
-  // How many catalog items are still buyable at the current creation-Wealth.
-  function affordableCount() {
-    const cw = currentCreationWealth(state);
-    return data.equipment.reduce(
-      (n, cat) => n + cat.items.filter((i) => i.wealth != null && i.wealth - cw <= cw).length,
-      0,
-    );
   }
 
   function renderPurchased() {
@@ -93,21 +85,24 @@ export default function buildGearShop(state, data) {
 
   // How many free picks have gone on the "at your Level or one below"
   // band. The wider band beneath it is unlimited and never counted.
+  // Both free bands sit against the Level actually bought. Spending the
+  // pool down closes the rolling, not the shelves the character can
+  // already reach without one.
   function limitedTaken() {
-    const cw = currentCreationWealth(state);
+    const base = creationWealthBase(state);
     return state.gearPurchases.filter(
-      (g) => g.free && g.wealth >= cw - 1 && g.wealth <= cw,
+      (g) => g.free && g.wealth >= base - 1 && g.wealth <= base,
     ).length;
   }
 
   function bandFor(item) {
-    const cw = currentCreationWealth(state);
+    const base = creationWealthBase(state);
     const band = freeBand({
-      creationWealth: cw,
+      creationWealth: base,
       itemWealth: item.wealth,
       blackMarket: item.blackMarket,
     });
-    if (band === 'limited' && limitedTaken() >= cw) return 'roll';
+    if (band === 'limited' && limitedTaken() >= base) return 'roll';
     return band;
   }
 
@@ -119,7 +114,11 @@ export default function buildGearShop(state, data) {
     if (item.blackMarket && (state.resources['Black Market Access'] ?? 0) < item.blackMarket) {
       return `Needs Black Market Access ${item.blackMarket}`;
     }
-    if (item.wealth - cw > cw) return 'Out of reach';
+    // Rolling and splurging both need something left in the pool. The
+    // free bands do not, and are deliberately not checked here.
+    if (cw <= 0 && bandFor(item) !== 'unlimited' && bandFor(item) !== 'limited') {
+      return 'Wealth spent';
+    }
     return null;
   }
 
@@ -134,10 +133,24 @@ export default function buildGearShop(state, data) {
     renderCategories();
   }
 
+  // An item above the character's Level. No roll - they can have it, and
+  // having it is the last thing the pool pays for.
+  function takeSplurge(category, item) {
+    const cw = currentCreationWealth(state);
+    addGearPurchase(state, {
+      category, name: item.name, wealth: item.wealth, loss: cw,
+    });
+    resultEl.innerHTML = '';
+    resultEl.append(el('p', {}, `${item.name} acquired - creation-Wealth drops straight to 0. `
+      + 'Your Starting Packages and free items are still yours; nothing else can be bought or rolled for.'));
+    renderSummary();
+    renderPurchased();
+    renderCategories();
+  }
+
   function attemptPurchase(category, item) {
     const cw = currentCreationWealth(state);
-    const gap = item.wealth - cw;
-    const result = performWealthCheck({ creationWealth: cw, gap });
+    const result = performWealthCheck({ creationWealth: cw });
     addGearPurchase(state, { category, name: item.name, wealth: item.wealth, loss: result.loss });
     resultEl.innerHTML = '';
     resultEl.append(
@@ -160,7 +173,6 @@ export default function buildGearShop(state, data) {
 
   function renderCategories() {
     categoriesWrap.innerHTML = '';
-    const cw = currentCreationWealth(state);
     data.equipment.forEach((cat) => {
       const nameHeader = cat.headers[0];
       const otherHeaders = cat.headers.filter((h) => h !== cat.headers[0] && h !== 'Wealth');
@@ -171,7 +183,6 @@ export default function buildGearShop(state, data) {
           {},
           cat.items.map((item) => {
             const buyable = item.wealth != null;
-            const gap = item.wealth - cw;
             const band = buyable ? bandFor(item) : 'roll';
             const stop = buyable ? blocked(item) : 'not purchasable';
             const affordable = buyable && !stop;
@@ -181,10 +192,19 @@ export default function buildGearShop(state, data) {
                 || (band === 'unlimited'
                   ? 'Take (free)'
                   : band === 'limited'
-                    ? `Take (free, ${Math.max(0, cw - limitedTaken())} left)`
-                    : `Buy (Wealth Check, risks ${Math.max(1, Math.max(0, gap))} on failure)`);
-            return el('tr', {}, [
-              el('td', {}, item.name ?? ''),
+                    ? `Take (free, ${Math.max(0, creationWealthBase(state) - limitedTaken())} left)`
+                    : band === 'splurge'
+                      ? 'Take (drops creation-Wealth to 0)'
+                      : 'Buy (Wealth Check, risks 1 on failure, 2 on a critical)');
+            // An item already bought, so the shop shows what you have as
+            // well as what you could have. Counted rather than flagged:
+            // nothing stops a character owning three flashlights.
+            const owned = state.gearPurchases.filter((g) => g.name === item.name).length;
+            return el('tr', { class: owned ? 'purchased' : undefined }, [
+              el('td', {}, [
+                item.name ?? '',
+                owned ? purchasedPill(owned) : null,
+              ]),
               ...otherHeaders.map((h) => el('td', {}, item[h] ?? '')),
               el('td', {}, buyable ? String(item.wealth) : '-'),
               el(
@@ -197,7 +217,9 @@ export default function buildGearShop(state, data) {
                       disabled: affordable ? undefined : '',
                       onClick: () => (band === 'roll'
                         ? attemptPurchase(cat.category, item)
-                        : takeFree(cat.category, item)),
+                        : band === 'splurge'
+                          ? takeSplurge(cat.category, item)
+                          : takeFree(cat.category, item)),
                     })
                   : null,
               ),
@@ -249,8 +271,16 @@ export default function buildGearShop(state, data) {
     el(
       'p',
       { class: 'detail' },
-      'Anything two or more Levels below your creation-Wealth is free and unlimited. Anything at your Level or one below is free up to your creation-Wealth in number. Everything past that takes a Wealth Check, and the further beyond your means you reach the harder it gets. Black market goods are never free and need Black Market Access as well as money. This pool is temporary bookkeeping for character creation only - it never touches your purchased Wealth Resource Level, and once creation ends every purchase uses the normal Pushing a Resource rule instead.',
+      'Your Level in the Wealth Resource dictates what you can buy.',
     ),
+    el('ul', { class: 'gear-bands' }, [
+      el('li', {}, 'Items with a Wealth Rating two or more Levels below your Wealth are free, and unlimited.'),
+      el('li', {}, 'Items at your Wealth Level or one below are free up to your Wealth Level in number - Wealth 5 gives you five free items of this tier, Wealth 3 only three.'),
+      el('li', {}, 'Items at your Wealth Level or one below take a Wealth Check once those free items are gone.'),
+      el('li', {}, 'Items with a Wealth Rating higher than your Wealth are attainable, but instantly reduce your Wealth to zero. Take one at creation and you get your Starting Packages, your free items, and that one item.'),
+      el('li', {}, 'Black market goods are never free and need Black Market Access as well as money.'),
+      el('li', {}, 'This pool is temporary bookkeeping for character creation only: once creation ends every purchase uses the normal Pushing a Resource rule instead.'),
+    ]),
     summaryEl,
     resultEl,
     // What you already have, before the catalogue of what you don't. It

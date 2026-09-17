@@ -376,26 +376,94 @@ function buildBiographyTab(state) {
           nature.trigger ? el('p', { class: 'detail' }, nature.trigger) : null,
         ]
       : null,
+    el('h3', {}, 'Backstory'),
+    textField('Backstory', state.backstory, (v) => { state.backstory = v; },
+      { interactive: true, multiline: true }),
     el('h3', {}, 'Notes'),
-    el('p', {}, state.finishingNotes || '(none written)'),
+    textField('Notes', state.finishingNotes, (v) => { state.finishingNotes = v; },
+      { interactive: true, multiline: true }),
+  ].flat();
+}
+
+// The trackers are live, so this tab redraws itself rather than a header
+// that no longer exists.
+function buildVitalsTab(state, data, refresh) {
+  return [
+    // Concept, the descriptive fields, the trackers, then the derived
+    // numbers - buildVitals ends on the mini row of Defenses.
+    ...buildVitals(state, data, computeFiguredCharacteristics(state), {
+      interactive: true,
+      refresh,
+    }),
+    // The Attributes those Defenses are derived from, so the number and
+    // what produces it are on one page.
+    el('h3', {}, 'Attributes'),
+    ...buildAttributesTab(state, data),
+    // Scars are damage that stuck, which is what this tab is about.
+    buildScarsTab(state, data, refresh),
   ].flat();
 }
 
 const TABS = [
-  { id: 'attributes', label: 'Attributes', build: buildAttributesTab },
+  { id: 'vitals', label: 'Vitals', build: buildVitalsTab, interactive: true },
   { id: 'skills', label: 'Skills', build: buildSkillsTab, interactive: true },
   { id: 'gifts', label: 'Gifts', build: buildGiftsTab, interactive: true },
   { id: 'traits', label: 'Boons/Flaws', build: buildBoonsFlawsTab },
   { id: 'resources', label: 'Resources', build: buildResourcesTab },
   { id: 'gear', label: 'Equipment', build: buildEquipmentTab },
-  { id: 'scars', label: 'Scars', build: buildScarsTab, interactive: true },
   { id: 'biography', label: 'Biography', build: buildBiographyTab },
-  { id: 'advancement', label: 'Advancement', build: buildAdvancementTab, interactive: true },
+  { id: 'advancement', label: 'XP', build: buildAdvancementTab, interactive: true },
 ];
 
 // interactive=false renders a plain read-only snapshot (used by the hidden
 // print copy, which only ever needs to be captured, never clicked).
-function buildHeader(state, data, figured, { interactive = false, refresh = () => {} } = {}) {
+// The one thing that never moves. Everything else about a character is
+// behind a tab; their name is not.
+// Saving the draft after a keystroke. main.js hands every step a persist
+// callback; the sheet never took it, so the Finishing Touches textarea has
+// always relied on some later pool re-render happening to flush it. The
+// new Age/Height/Appearance/Backstory fields would have inherited that.
+let persistSheet = () => {};
+
+// A labelled free-text field on the sheet. Read-only when the sheet is
+// being exported rather than played.
+function textField(label, value, onChange, { interactive = false, multiline = false } = {}) {
+  if (!interactive) {
+    return el('div', { class: 'field-box' }, [
+      el('span', { class: 'field-label' }, label),
+      el('div', { class: 'field-value' }, value || '\u2014'),
+    ]);
+  }
+  const input = el(multiline ? 'textarea' : 'input', {
+    class: 'sheet-text',
+    rows: multiline ? 4 : undefined,
+    type: multiline ? undefined : 'text',
+    value: multiline ? undefined : (value ?? ''),
+    onInput: (e) => {
+      onChange(e.target.value);
+      persistSheet();
+    },
+  });
+  if (multiline) input.value = value ?? '';
+  return el('div', { class: 'field-box' }, [
+    el('span', { class: 'field-label' }, label),
+    input,
+  ]);
+}
+
+function buildNameBar(state) {
+  return el('div', { class: 'sheet-topbar' }, [
+    el('div', { class: 'sheet-logo' }, '20'),
+    el('div', { class: 'field-box' }, [
+      el('span', { class: 'field-label' }, 'Name'),
+      el('div', { class: 'field-value' }, state.name || 'Unnamed Character'),
+    ]),
+  ]);
+}
+
+// Everything the old header held except the name: the fields, the
+// trackers and the derived numbers. It is a tab now.
+function buildVitals(state, data, figured, { interactive = false, refresh = () => {} } = {}) {
   const natureLabel = state.nature.picked ?? state.nature.custom?.label ?? '';
   const healthLevels = figured['Health Levels'];
 
@@ -423,14 +491,6 @@ function buildHeader(state, data, figured, { interactive = false, refresh = () =
   };
 
   return [
-    el('div', { class: 'sheet-topbar' }, [
-      el('div', { class: 'sheet-logo' }, '20'),
-      el('div', { class: 'field-box' }, [
-        el('span', { class: 'field-label' }, 'Name'),
-        el('div', { class: 'field-value' }, state.name || 'Unnamed Character'),
-      ]),
-    ]),
-
     el('div', { class: 'sheet-fields-row' }, [
       el('div', { class: 'field-box' }, [
         el('span', { class: 'field-label' }, 'Concept'),
@@ -440,6 +500,16 @@ function buildHeader(state, data, figured, { interactive = false, refresh = () =
         el('span', { class: 'field-label' }, 'Nature'),
         el('div', { class: 'field-value' }, natureLabel || '—'),
       ]),
+    ]),
+
+    el('div', { class: 'sheet-fields-row' }, [
+      textField('Age', state.age, (v) => { state.age = v; }, { interactive }),
+      textField('Height', state.height, (v) => { state.height = v; }, { interactive }),
+    ]),
+
+    el('div', { class: 'sheet-fields-row' }, [
+      textField('Appearance', state.appearance, (v) => { state.appearance = v; },
+        { interactive, multiline: true }),
     ]),
 
     el('div', { class: 'sheet-trackers-row' }, [
@@ -512,7 +582,8 @@ function buildHeader(state, data, figured, { interactive = false, refresh = () =
 export default {
   id: 'sheet',
   title: 'Character Sheet & Export',
-  render(container, { state, data }) {
+  render(container, { state, data, persist }) {
+    persistSheet = persist ?? (() => {});
     initPlayState(state, data);
     const figured = computeFiguredCharacteristics(state);
 
@@ -528,7 +599,11 @@ export default {
 
     function renderHeader() {
       headerEl.innerHTML = '';
-      headerEl.append(...buildHeader(state, data, figured, { interactive: true, refresh: renderHeader }));
+      headerEl.append(buildNameBar(state));
+      // The trackers live in the Vitals tab now, so anything that used to
+      // refresh the header to update them has to refresh the tab instead -
+      // but only when that is what is on screen.
+      if (activeTab === 'vitals') renderTabContent();
     }
 
     // The damage roller's Ki Infusion checkboxes need to reflect the
@@ -587,18 +662,10 @@ export default {
     renderHeader();
     renderCombatRoller();
 
-    const sheet = el('div', { class: 'sheet', id: 'character-sheet' }, [headerEl, combatRollerEl, tabNav, tabContent]);
-
-    const notesField = el('div', { class: 'field' }, [
-      el('label', {}, 'Finishing Touches notes (equipment, appearance, anything else)'),
-      el('textarea', {
-        rows: 4,
-        text: state.finishingNotes,
-        onInput: (e) => {
-          state.finishingNotes = e.target.value;
-        },
-      }),
-    ]);
+    // Name, tabs, then whatever the tab holds. The Combat Roller drops
+    // below the content rather than wedging between the name and the
+    // tabs it belongs beside.
+    const sheet = el('div', { class: 'sheet', id: 'character-sheet' }, [headerEl, tabNav, tabContent, combatRollerEl]);
 
     const exportRow = el('div', { style: 'display:flex;gap:0.75rem;margin-top:1rem;' }, [
       el('button', {
@@ -608,6 +675,6 @@ export default {
       }),
     ]);
 
-    container.append(el('h2', {}, 'Character Sheet & Export'), sheet, notesField, exportRow);
+    container.append(el('h2', {}, 'Character Sheet & Export'), sheet, exportRow);
   },
 };

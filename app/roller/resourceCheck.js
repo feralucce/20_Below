@@ -4,7 +4,9 @@
 // easier, a higher one harder, RI 6 adding only 4 - the minimum). Unlike
 // the Gift Check, this uses the ordinary critical success/failure rule (no
 // Skill Tier involved, so never widened) - a character always gets what
-// they were after either way; the roll only decides the cost.
+// they were after either way; the roll only decides the cost: nothing on
+// a success, one Level on a failure, two on a critical failure. Those
+// drops stack, and a Resource walked down to 0 is spent for the Month.
 //
 // "Reaching beyond your means": an RI up to 2 higher than the Resource's
 // current effective Level can be attempted (anything further is simply
@@ -29,6 +31,7 @@ export function performResourceCheck({ resourceLevel, resourceIndex }) {
 
   let resourceReduced = false;
   let resourceZeroed = false;
+  let levelsLost = 0;
 
   if (beyondMeans) {
     if (resourceIndex === 6) {
@@ -36,9 +39,16 @@ export function performResourceCheck({ resourceLevel, resourceIndex }) {
     } else if (!critSuccess) {
       resourceZeroed = true;
     }
-  } else {
-    resourceReduced = outcome === 'failure' || outcome === 'catastrophic-failure';
+  } else if (outcome === 'catastrophic-failure') {
+    levelsLost = 2;
+    resourceReduced = true;
+  } else if (outcome === 'failure') {
+    levelsLost = 1;
+    resourceReduced = true;
   }
 
-  return { target, roll, outcome, resourceReduced, resourceZeroed, beyondMeans, gap };
+  return {
+    target, roll, outcome, resourceReduced, resourceZeroed, levelsLost,
+    beyondMeans, gap,
+  };
 }

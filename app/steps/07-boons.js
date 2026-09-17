@@ -1,4 +1,4 @@
-import { describeBoxes, el, flavourHtml, makeTwirl, renderMarkdown } from '../ui.js';
+import { describeBoxes, el, flavourHtml, makeTwirl, purchasedPill, renderMarkdown } from '../ui.js';
 import { describeFields, describePrompt } from '../describe-spec.js';
 import { boonsPoolRemaining, addBoon, removeBoon, setBoonNote, boonNotes } from '../state.js';
 
@@ -65,8 +65,13 @@ export function renderBoonPicker(container, ctx, allBoons, { source, getRemainin
     allBoons.forEach((boon) => {
       const alreadyTaken = state.boons.some((b) => b.name === boon.name);
       const disable = alreadyTaken && !boon.repeatable;
-      const card = el('div', { class: 'pick-card' });
-      const nameEl = el('span', {}, boon.name + (disable ? ' (taken)' : ''));
+      const card = el('div', {
+        class: alreadyTaken ? 'pick-card purchased' : 'pick-card',
+      });
+      const nameEl = el('span', {}, [
+        boon.name,
+        alreadyTaken ? purchasedPill() : null,
+      ]);
       const headerRow = el('div', { style: 'display:flex;justify-content:space-between;align-items:center;gap:0.5rem;flex-wrap:wrap;' }, [
         nameEl,
       ]);
