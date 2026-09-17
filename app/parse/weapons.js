@@ -42,13 +42,13 @@ export function parseEquipment(weaponsMd) {
   return out;
 }
 
-// Everyman Gear Packages (weapons.md#everyman-gear-packages) is a "###"
+// Starting Packages (weapons.md#starting-packages) is a "###"
 // subsection deliberately kept out of parseEquipment's "##"-per-category
 // loop above (it has no single flat item table, so it would crash that
 // parser). Free-form instead: "**Level N** (description)" headers, each
 // followed by a "- **Name** - contents" bullet list.
 export function parseEverymanGearPackages(weaponsMd) {
-  const marker = '### Everyman Gear Packages';
+  const marker = '### Starting Packages';
   const idx = weaponsMd.indexOf(marker);
   if (idx === -1) return [];
   const section = weaponsMd.slice(idx + marker.length);

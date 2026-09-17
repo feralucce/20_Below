@@ -213,17 +213,25 @@ export default function buildGearShop(state, data) {
         if (details.open) openCategories.add(cat.category);
         else openCategories.delete(cat.category);
       });
-      // The book opens this block by telling the reader to ask first.
+      // Two sections need somebody's permission rather than only money:
+      // the GM for one, a contact for the other. Keyed off the parent
+      // heading, so a new sub-table inherits the label.
       const needsGM = cat.parent === 'Beyond the Ordinary';
+      const needsContact = cat.parent === 'The Black Market';
       details.append(
         el('summary', {}, [
           cat.category,
           needsGM ? el('span', { class: 'gm-pill' }, 'Needs GM approval') : null,
+          needsContact ? el('span', { class: 'bm-pill' }, 'Requires Black Market Access') : null,
         ]),
         el('div', { class: 'detail' }, [
           needsGM
             ? el('p', { class: 'gm-note' },
               'Not assumed to exist in every game. Check with your GM before taking any of it.')
+            : null,
+          needsContact
+            ? el('p', { class: 'gm-note' },
+              'Gated twice - you need the Wealth to pay and Black Market Access to find it. Nothing here is ever free.')
             : null,
           table,
         ]),
@@ -244,9 +252,12 @@ export default function buildGearShop(state, data) {
       'Anything two or more Levels below your creation-Wealth is free and unlimited. Anything at your Level or one below is free up to your creation-Wealth in number. Everything past that takes a Wealth Check, and the further beyond your means you reach the harder it gets. Black market goods are never free and need Black Market Access as well as money. This pool is temporary bookkeeping for character creation only - it never touches your purchased Wealth Resource Level, and once creation ends every purchase uses the normal Pushing a Resource rule instead.',
     ),
     summaryEl,
-    categoriesWrap,
     resultEl,
+    // What you already have, before the catalogue of what you don't. It
+    // used to sit under eighteen collapsed categories, so checking your
+    // own loadout meant scrolling past the whole shop.
     el('h4', {}, 'Purchased Gear'),
+    purchasedList,
     el('button', {
       type: 'button',
       text: 'Reset All Purchases',
@@ -260,7 +271,7 @@ export default function buildGearShop(state, data) {
         renderCategories();
       },
     }),
-    purchasedList,
+    categoriesWrap,
   );
   return wrap;
 }

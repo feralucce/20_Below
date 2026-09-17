@@ -30,7 +30,7 @@ Flaws are the mirror image of [Boons](boons.md) - disadvantages, quirks, or comp
 | Notable Appearance | = Level | Something about how you look draws stares and reactions - see [Notable Appearance](#notable-appearance) below for the 5-level breakdown. |
 | Notoriety | = Level | How widely, and how badly, you're known - see [Notoriety](#notoriety) below for the 5-level breakdown. |
 | Overconfident | = Level | You underestimate danger, or overestimate yourself, and you do it consistently - see [Overconfident](#overconfident) below for the 5-level breakdown. |
-| Pariah | = Level | People hold a specific prejudice against you. Name it with your GM.<br>What I have in mind is the kind this setting invented: visibly not human, known to carry a Gift, marked by something that happened and never explained. The ordinary human bigotries exist in this world too, because it is our world - but they are not what this Flaw is for. |
+| Pariah | = Level | People hold a specific prejudice against you - your species, your background, where you came from - see [Pariah](#pariah) below for the 5-level breakdown. |
 | Reliance | = Level | Something you need - a compulsion, a substance, or a condition that has to be managed - see [Reliance](#reliance) below for the 5-level breakdown. |
 | Ritual Required | = Level | A Gift doesn't answer the instant it's reached for - it has to be called, coaxed, or earned each time - see [Ritual Required](#ritual-required) below for the 5-level breakdown. |
 | Secret | = Level | Something you badly don't want getting out - see [Secret](#secret) below for the 5-level breakdown. |
@@ -117,7 +117,7 @@ Each level's effect is cumulative - it keeps every lower level's complication an
 
 | Level | Effect |
 |---|---|
-| 1 | A rough patch. [Creation-Wealth](resources.md#wealth-at-character-creation) is **0** instead of the default 2 for gear shopping at creation, and no Resources Pool or Discretionary points may be spent on Wealth while this Flaw is held - buy it off first - see [Starting Packages](weapons.md#everyman-gear-packages) for what's still available at Level 0. Doesn't follow you past creation; whatever put you here (a lost job, a bad breakup, a bad month) is already turning around. |
+| 1 | A rough patch. [Creation-Wealth](resources.md#wealth-at-character-creation) is **0** instead of the default 2 for gear shopping at creation, and no Resources Pool or Discretionary points may be spent on Wealth while this Flaw is held - buy it off first - see [Everyman Gear Packages](weapons.md#everyman-gear-packages) for what's still available at Level 0. Doesn't follow you past creation; whatever put you here (a lost job, a bad breakup, a bad month) is already turning around. |
 | 2 | Chronically tight. As Level 1, and it doesn't go away - living paycheck to paycheck, or with no paycheck at all, is an ongoing fact of your life, however your Resources ended up built. |
 | 3 | Real precarity. As Level 2, and something concrete is currently unstable - unreliable housing, an unreliable income source, or a debt actively being chased. |
 | 4 | Genuinely impoverished. As Level 3, and it's visible enough that people react to it on sight - shapes first impressions the same way Notable Appearance or Notoriety do, just for money instead of looks or reputation. |

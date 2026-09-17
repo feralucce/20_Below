@@ -1,8 +1,9 @@
-// Everyman Gear Packages (weapons.md#everyman-gear-packages) - a free,
-// no-roll alternative to Wealth Check shopping in gear-shop.js. One pick
-// from every Level up to and including the character's creation-Wealth -
-// one from each, not several from the top. Split out the same way gear-shop.js was split
-// from 08-resources.js - a self-contained interactive block.
+// Starting Packages (weapons.md#starting-packages) - step one of creation
+// shopping, not an alternative to it. Every character takes one package
+// from every Level up to and including their creation-Wealth: one from
+// each, not several from the top. The free items and the Wealth Checks in
+// gear-shop.js come afterwards. Split out the same way gear-shop.js was
+// split from 08-resources.js - a self-contained interactive block.
 
 import { el, keyedDetails } from '../ui.js';
 import { creationWealthBase, setEverymanGearPackage } from '../state.js';
@@ -26,8 +27,19 @@ export default function buildEverymanGear(state, data) {
     data.everymanGearPackages
       .filter((lvl) => (eligibleBase === 0 ? lvl.level === 0 : lvl.level >= 1 && lvl.level <= eligibleBase))
       .forEach((lvl) => {
-        const levelWrap = el('div', { class: 'everyman-gear-level' });
-        levelWrap.append(el('h4', {}, `Level ${lvl.level}`));
+        // A <details> per Level, so a Level can be shut once its pick is
+        // made - thirteen cards each, and a creation-Wealth 5 character
+        // has five Levels of them open at once otherwise. keyedDetails
+        // remembers the open state across the re-render a pick triggers.
+        const picked = current[lvl.level];
+        const levelWrap = keyedDetails(`starting-pkg:${lvl.level}`, {
+          class: 'everyman-gear-level pick-card',
+          open: picked ? undefined : '',
+        });
+        levelWrap.append(el('summary', {}, [
+          `Level ${lvl.level}`,
+          picked ? el('span', { class: 'level-picked' }, picked.name) : null,
+        ]));
         const cards = el('div', { class: 'everyman-gear-cards' });
         lvl.packages.forEach((pkg) => {
           const isSelected =
@@ -78,7 +90,7 @@ export default function buildEverymanGear(state, data) {
   });
 
   wrap.append(
-    el('h3', {}, 'Everyman Gear Packages'),
+    el('h3', {}, 'Starting Packages'),
     el(
       'p',
       { class: 'detail' },
