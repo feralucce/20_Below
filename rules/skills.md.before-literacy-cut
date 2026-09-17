@@ -1,0 +1,166 @@
+# Skills
+
+Every Skill has a default Attribute/Element. A player can challenge that default with a Descriptor.
+
+## Skills Default to an Element
+
+Every Skill is pre-assigned a **default Attribute/Element** - see the *Default Element* column in [The Skill List](#the-skill-list) below, or set one when a custom Skill is created. Rolling a Skill normally uses its default: no argument needed, that's just how the character does that thing.
+
+**A player can challenge the default** and pair the Skill with a different Attribute instead, provided they can argue the pairing to the GM's satisfaction. The GM has final say on whether a proposed pairing fits the situation. That argument is grounded in one of the character's own [Sub-Stat Descriptors](rules.md#sub-stat-descriptors) - a specific chosen adjective the character already has - rather than an improvised justification from scratch. No Descriptor that fits, no challenge - the roll uses the default.
+
+**Challenges are re-argued every time, not banked as precedent** - a challenge that worked once may not hold up in a different situation, since the justification is about the specific circumstance, not a permanent reclassification of the Skill. The default itself never changes; only the single roll in front of you does.
+
+## Training Tiers
+
+A Skill's **training tier** changes *how* the [core roll](rules.md#core-mechanic) is built:
+
+| Tier | Name | Roll |
+|---|---|---|
+| 0 | Untrained | Difficulty only (no Attribute - see [Untrained Rolls](rules.md#untrained-rolls)) |
+| 1 | Novice | Attribute + Difficulty, with **Disadvantage** |
+| 2 | Trained | Attribute + Difficulty |
+| 3 | Adept | Attribute + Difficulty, with **Advantage** |
+| 4 | Expert | Attribute + Difficulty, with Advantage, and **critical success widens to a roll of 2 or 3** |
+| 5 | Master | Same as Expert, plus: **on a catastrophic failure, roll again** - if the second roll succeeds, it's treated as a normal failure, not a catastrophic failure |
+
+Each tier is strictly better than the last. Master's reroll only ever *removes the "critical" severity* from a failure (downgrading it to an ordinary failure on a second success) - it never turns a catastrophic failure into any kind of success, and if the reroll also fails, the catastrophic failure stands.
+
+**Advantage/Disadvantage** are the [standalone core mechanic](rules.md#advantage--disadvantage): roll 3d10, keep the lowest two (Advantage) or highest two (Disadvantage).
+
+**Advancement**: a character climbs the ladder one tier at a time via **direct XP expenditure** - no classes/levels, no fixed track. See the [Advancement chapter](../webbook/advancement.html) for the exact XP cost per tier.
+
+## Weapon Skills Are Not Attack Skills
+
+No Skill swings a weapon. A to-hit roll is your Attribute against the target's Defense, and nothing else goes into it. Which Element carries it is the approach you describe rather than the thing in your hand, so [the same sword](rules.md#choosing-the-attacking-element) swings on Earth, Air, Fire or Water depending on how you say you are swinging it. An untrained character attacks on exactly the same roll as a veteran.
+
+**A weapon Skill is never rolled for an attack.** It is a list of what you are trained to pick up. Its tier says which **Category** from [weapons.md](weapons.md) you can use in a fight, and a weapon outside your tier is one you have no business holding - what that costs is the GM's call, the same as anything else no roll covers.
+
+Each tier adds to the ones below it.
+
+| Tier | Melee Weapons | Firearms | Archery | Thrown Weapons |
+|---|---|---|---|---|
+| 1 Novice | Improvised, Knife | Handgun | Hand crossbow | Balanced blade |
+| 2 Trained | One-handed blunt, Large blade | Shotgun | Crossbow | Thrown axe |
+| 3 Adept | One-handed blade | Submachine gun | Recurve bow | Shafted |
+| 4 Expert | Polearm / two-handed, Two-handed, Two-handed blunt | Rifle | Compound bow | Returning |
+| 5 Master | Exotic (melee) | Heavy | Warbow | Sling |
+
+**Unarmed is not on the list.** Fists and feet need no permission from anyone, and there is nothing there to be trained on. Fighting that way is [Onslaught](gifts.md), which is a Gift rather than a Skill.
+
+**Special Weapons is not a Skill.** It is one named weapon system rather than a Category you train through, so it is a [Boon](boons.md) - and that is where the exotic ranged weapons live too: blowgun, net launcher, flare gun.
+
+These are the one place a tier buys access rather than a better roll, which is why a katana sits at Adept and a whip at Master. The cost is real, and it is the point: what a character can pick up says as much about them as what they can do with it.
+
+## Everyman Skills
+
+A short list of ordinary, baseline skills that every character starts with at no cost, reflecting the basic competence any functional adult in the setting would have. 20 Below doesn't fix this list in the core rules - **the GM decides the Everyman Skills list for their own campaign/setting**, since "what any ordinary person can do" depends heavily on genre and setting. Every Everyman Skill is granted at **Tier 2 (Trained)** - full Attribute + Difficulty, no flat bonus or Advantage, reflecting genuine baseline competence rather than a bare exposure.
+
+Everything else about Skills (whether there's a fixed list beyond Everyman Skills, breadth) is still open. XP costs per tier are tracked in the [Advancement chapter](../webbook/advancement.html), not here.
+
+## The Skill List
+
+A starting Skill list scoped to a **modern-world base campaign**. **This list is not exhaustive** - players and GMs should freely add, split, merge, or rename entries to fit a specific character or campaign. It exists to save table time at character creation, not to fence in what a character can plausibly do.
+
+**Broad by design, not narrow**: entries here stay wide on purpose - a single point spent training *Mechanics* should feel like it was worth the character point and the XP that pushed it up a tier, not like it only covers one narrow task. Where a real distinction exists within a broad Skill (a specific science, a specific trade, a specific vehicle class, a specific instrument), that's flavor a player describes, not a reason to split the Skill itself.
+
+**Every Skill below has a Default Element** - the Attribute a roll uses unless the player [challenges it with a Descriptor](#skills-default-to-an-element). The default reflects the most natural, common way that Skill gets used; it isn't a hard rule about what the Skill *is*, just the assumption a roll starts from.
+
+| Skill | Default Element | Definition |
+|---|---|---|
+| Academics | Air | General scholarship, history, and literature. |
+| Acrobatics | Air | Balance, tumbling, and controlled falls. |
+| Animal Handling | Water | Training, calming, and directing animals. |
+| Appraisal | Air | Judging the value and authenticity of goods. |
+| Archery | Air | Which bows you are trained on, by Category: hand crossbow, then crossbow, recurve, compound, and the warbow at Master. Never rolled for an attack - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
+| Athletics | Earth | Running, jumping, climbing, and lifting under exertion. |
+| Barter | Fire | Striking favorable trades and deals. |
+| Bribery | Air | Knowing how much, how, and who to pay to get what you want. |
+| Bureaucracy | Air | Navigating institutions, paperwork, permits, and red tape to get things done. |
+| Charm | Fire | Ingratiation and drawing people in. |
+| Combat Driving/Piloting | Air | Operating a vehicle under fire or in a chase. This is a separate Skill from ordinary Driving or Piloting; competence in traffic says nothing about competence under fire. |
+| Composition | Water | Writing music, poetry, or stories with real craft. |
+| Computer Use | Air | General computing, software, and programming. This Skill is distinct from Hacking - the same machine, but one of you is asking it politely. |
+| Concealment | Water | Hiding objects, caches, or hideouts from a determined search. |
+| Contortion | Air | Fitting through tight spaces and slipping restraints through flexibility. |
+| Cooking | Water | Preparing food, from the everyday to the exceptional. |
+| Covert Signals | Air | Prearranged signals that carry meaning without words - hand signs, chalk marks, whistles, and brevity over the air. |
+| Crafting | Earth | Building and repairing goods in a chosen trade. One Skill covers any material or trade - woodworking, metalworking, whatever you practice - because the habits of hand and eye carry across all of them. |
+| Cryptography | Air | Creating and breaking codes, ciphers, and encryption. |
+| Deception | Water | Lying, bluffing, and fast talk. |
+| Demolitions | Earth | Safely handling, placing, and detonating explosives. |
+| Disguise | Water | Altering appearance and behaviors to convincingly pass as someone else. |
+| Divination | Moira | Reading omens, portents, and the shape of what’s coming. |
+| Driving | Air | Operating ground vehicles in ordinary traffic and terrain. |
+| Electronics | Air | Building, repairing, and modifying electronic devices and circuitry. |
+| Engineering | Air | Theoretical and design knowledge of structures and systems. |
+| Escapology | Water | Breaking free of restraints and confined spaces under pressure. |
+| Etiquette | Fire | Navigating social and professional protocol correctly. |
+| Farming | Earth | Cultivating crops and managing livestock. |
+| Finance | Air | Economics, markets, and accounting. |
+| Firearms | Air | Which firearms you are trained on, by Category: handgun, then shotgun, submachine gun, rifle, and the heavy weapons at Master. Never rolled for an attack - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
+| First Aid | Water | Immediate, field-level treatment - stabilizing, bandaging, CPR. |
+| Fishing | Water | Catching fish by line, net, or spear. |
+| Forgery | Air | Producing convincing fake documents, signatures, IDs, and digital records. |
+| Gaming | Moira | Skill at games of strategy, chance, and wagering - tabletop, esports, or otherwise. |
+| Hacking | Air | Bypassing digital security - accounts, networks, cameras, and devices. |
+| Holistic Medicine | Water | Herbal remedies, folk medicine, and non-clinical healing traditions. |
+| Hunting | Moira | Tracking, catching, and field-dressing game. |
+| Insight | Moira | Reading people, sensing motive and deception - a read that goes past ordinary attention. |
+| Interrogation | Fire | Extracting information from an unwilling subject. |
+| Intimidation | Fire | Coercing others through implied or explicit threat. |
+| Intrigue | Air | Scheming, maneuvering, and reading the undercurrents of institutional or political conflict. |
+| Invention | Air | Designing and building original devices, not just following existing plans. |
+| Investigation | Moira | Following clues at a scene and drawing sound conclusions. |
+| Law | Air | Legal codes, procedure, and precedent. |
+| Leadership | Fire | Commanding respect and rallying others to act. |
+| Linguistics | Air | Learning, translating, and analyzing languages. |
+| Mechanics | Earth | Repair and maintenance of vehicles and machinery. |
+| Medicine | Water | Surgery, diagnosis, and long-term clinical treatment. |
+| Melee Weapons | Earth | Which melee weapons you are trained on, by Category: improvised and knives, then one-handed blunt and large blades, one-handed blades, polearms and two-handers, and the exotic ones at Master. Never rolled for an attack - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
+| Navigation | Moira | Plotting a course and avoiding getting lost, on foot, by vehicle, or otherwise. |
+| Networking | Fire | Building and leveraging connections in professional, corporate, or elite circles. |
+| Occult | Moira | Esoteric lore, ritual, and the world’s hidden supernatural undercurrent. |
+| Perception | Water | Noticing details and spotting hidden things. |
+| Performance | Fire | Acting, music, dance, or oratory before an audience, under one Skill whatever the medium. |
+| Persuasion | Fire | Honest argument and diplomacy. |
+| Piloting | Air | Operating aircraft or watercraft, under one Skill whatever the vehicle. |
+| Politics | Air | The workings of governments, agencies, and factions. |
+| Psychology | Water | Understanding minds, motivations and behavior, including therapy and the long-term treatment of mental trauma. |
+| Public Speaking | Fire | Commanding a room and structuring a spoken argument. This is a separate Skill from Performance - one is argument, the other is spectacle, and being good at one promises nothing about the other. |
+| Religion | Moira | Theology, doctrine, and religious practice. |
+| Research | Air | Finding information through records, libraries, databases, and open sources. This is a separate Skill from Investigation: Investigation reads a scene, Research reads the record. |
+| Ridicule | Fire | Mockery, insult, and the cutting remark. Roasting, trash talk, and the dozens. Distinct from Intimidation, which threatens, and from Performance, which plays to a room rather than at somebody standing in it. |
+| Science | Air | Broad scientific knowledge. One Skill covers every discipline - chemistry, biology, astrophysics - because a point spent here should buy you a scientist, not a specialist in one footnote. |
+| Security | Air | Bypassing physical locks, safes, and alarm systems. |
+| Seduction | Fire | Winning someone over through romantic or physical appeal. |
+| Shadowing | Water | Following someone without being noticed. |
+| Sleight of Hand | Air | Pickpocketing, palming, and planting objects unnoticed. |
+| Smuggling | Water | Concealing and moving contraband past scrutiny, including modern screening and customs. |
+| Stealth | Air | Moving unseen and unheard. |
+| Streetwise | Moira | Navigating criminal culture, gangs, and underworld contacts. |
+| Surveillance | Water | Observing a target or location without being detected, and spotting when somebody is doing it to you - physical stakeouts and technical monitoring both. |
+| Survival | Earth | Foraging, shelter, water, and enduring somewhere that offers no help. |
+| Swimming | Earth | Moving efficiently and enduring in open water. |
+| Systems Operation | Air | Operating and interpreting complex consoles, sensors, and industrial or vehicle control systems. |
+| Thrown Weapons | Air | Which thrown weapons you are trained on, by Category: balanced blade, then thrown axe, shafted, returning, and the sling at Master. Never rolled for an attack - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
+| Tracking | Moira | Following physical trails. |
+
+## A Modern Campaign's Everyman Skills
+
+
+Per [the Everyman Skills rule above](#everyman-skills), the GM sets this list per campaign - the system doesn't fix it. This is a **suggested starting list for a modern-world base campaign**: baseline competence a functional adult in the present day would plausibly have just from living in it, granted free at **Tier 2 (Trained)**. Meant to be trimmed or extended per campaign, not adopted wholesale without a look.
+
+| Skill | Why it's baseline in a modern setting |
+|---|---|
+| Athletics | Baseline physical capability - walking, running, carrying, climbing a fence. |
+| Bureaucracy | Everyone in the modern world has filled out a form, called customer service, or dealt with an institution. |
+| Computer Use | Basic literacy with phones, computers, and everyday software is close to universal. |
+| Cooking | Basic ability to feed oneself beyond a microwave. |
+| Driving | Most adults in a modern setting can operate a car. |
+| Etiquette | Enough grasp of ordinary social norms to function in public and at work. |
+| First Aid | Widely taught (school, work, licensing) - bandaging a cut, basic CPR awareness. |
+| Literacy | Reading and writing in one's native language. |
+| Persuasion | Everyday give-and-take - asking for a favor, making a case, haggling a little. |
+| Streetwise | A working sense of one's own neighborhood/city - what's safe, who's who, where not to go. |
+
+Deliberately **not** included by default: Firearms, Medicine, Hacking, and other Skills that represent real specialized training most people don't get just by living in modern society - those stay Skills characters actually invest in, not baseline gives.

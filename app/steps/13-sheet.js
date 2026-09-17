@@ -320,10 +320,13 @@ function buildGearPurchaseEntries(state) {
   return [
     el(
       'ul',
-      {},
-      state.gearPurchases.map((p) =>
-        el('li', {}, `${p.name} (${p.category}, Wealth ${p.wealth})${p.loss ? ` - cost ${p.loss} creation-Wealth` : ''}`),
-      ),
+      { class: 'gear-list' },
+      state.gearPurchases.map((p) => el('li', {}, [
+        el('strong', {}, p.name),
+        ` - ${p.category}, Wealth ${p.wealth}`,
+        p.free ? ' (free)' : '',
+        p.loss ? ` - cost ${p.loss} creation-Wealth` : '',
+      ])),
     ),
   ];
 }
@@ -332,21 +335,23 @@ function buildFlavorItemEntries(state) {
   if (!state.flavorItems?.length) return [];
   return [
     el('h3', {}, 'Odds and Ends'),
-    el('ul', {}, state.flavorItems.map((t) => el('li', {}, t))),
+    el('ul', { class: 'gear-list' }, state.flavorItems.map((t) => el('li', {}, t))),
   ];
 }
 
 function buildEverymanGearEntry(state) {
+  // One package per Wealth Level, so this is a list. Flattening them into
+  // a single line printed "(Level undefined)", since the merged object had
+  // no Level of its own - each package carries its own and always did.
   const pkgs = Object.values(state.everymanGearPackages || {})
     .sort((a, b) => a.level - b.level);
-  const pkg = pkgs.length
-    ? { name: pkgs.map((x) => x.name).join(', '),
-        contents: pkgs.map((x) => x.contents).join('; ') }
-    : null;
-  if (!pkg) return [];
+  if (!pkgs.length) return [];
   return [
-    el('h3', {}, 'Everyman Gear Package'),
-    el('p', {}, [el('strong', {}, `${pkg.name} `), `(Level ${pkg.level}) - ${pkg.contents}`]),
+    el('h3', {}, pkgs.length > 1 ? 'Starting Packages' : 'Starting Package'),
+    el('ul', { class: 'gear-list' }, pkgs.map((p) => el('li', {}, [
+      el('strong', {}, `Level ${p.level} - ${p.name}`),
+      `: ${p.contents}`,
+    ]))),
   ];
 }
 

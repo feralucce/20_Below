@@ -35,7 +35,7 @@ Every item carries a **Wealth rating**. Shopping happens in three steps, in this
 
 ### 1. Take your packages
 
-One [Everyman Gear Package](weapons.md#everyman-gear-packages) from every Level up to and including your creation-Wealth - one from each Level, not several from the top. Free, no roll.
+One [Starting Package](weapons.md#starting-packages) from every Level up to and including your creation-Wealth - one from each Level, not several from the top. Free, no roll.
 
 ### 2. Take your free items
 

@@ -348,6 +348,21 @@ Same Damage/per-die-vs-Soak resolution as Basic Weapons above, just built around
 
 </div>
 
+## Property
+
+Somewhere to be, and somewhere to keep things. A property is bought like any other item - it is the one purchase a character makes that has an address.
+
+A **Base** Resource is a different thing and worth having as well: the Resource is what the place is equipped and defended with, the item here is the deed.
+
+<div class="wide" markdown="1">
+
+| Item | Notes | Wealth |
+|---|---|---|
+| Estate | Grounds, staff, and enough distance that nobody hears anything. | 6 |
+| Safe house (urban) | An address in nobody's name that nobody visits. | 4 |
+
+</div>
+
 ## The Black Market
 
 Some things have no counter to walk up to. The price is the easy half - the hard half is knowing who to ask.
@@ -465,21 +480,6 @@ Some things have no counter to walk up to. The price is the easy half - the hard
 
 </div>
 
-## Property
-
-Somewhere to be, and somewhere to keep things. A property is bought like any other item - it is the one purchase a character makes that has an address.
-
-A **Base** Resource is a different thing and worth having as well: the Resource is what the place is equipped and defended with, the item here is the deed.
-
-<div class="wide" markdown="1">
-
-| Item | Notes | Wealth |
-|---|---|---|
-| Estate | Grounds, staff, and enough distance that nobody hears anything. | 6 |
-| Safe house (urban) | An address in nobody's name that nobody visits. | 4 |
-
-</div>
-
 ## Beyond the Ordinary
 
 **Check with your GM before taking anything on this page.** Everything else in this chapter exists, or is a plausible custom job. What follows is not assumed to exist in every 20 Below game, and a table running a modern story about people with Gifts may reasonably decide none of it is real.
@@ -524,9 +524,9 @@ Where a GM does allow it, it is bought like anything else - and where a Black Ma
 
 </div>
 
-## Everyman Gear Packages
+## Starting Packages
 
-A free alternative to **Wealth Check** shopping, not a replacement for it - you can still shop normally with your creation-Wealth on top of the packages below. At character creation you take **one package from every Level up to and including your creation-Wealth**, free and with no roll. A creation-Wealth 3 character takes one Level 1 package, one Level 2 package and one Level 3 package - one from each, not three from the top. A creation-Wealth 1 character takes a single Level 1 package. Level 0 is reachable only at creation-Wealth 0, which today means the **Destitute** Flaw, and a Destitute character takes one of those whatever else they bought.
+Every character starts with these. At character creation you take **one package from every Level up to and including your creation-Wealth**, free and with no roll - one from each Level, not several from the top. A creation-Wealth 3 character takes a Level 1 package, a Level 2 package and a Level 3 package. A creation-Wealth 1 character takes a single Level 1 package. Level 0 is reachable only at creation-Wealth 0, which today means the **Destitute** Flaw, and a Destitute character takes one of those whatever else they bought. Everything in **Wealth at Character Creation** happens after this.
 
 **Level 0** (creation-Wealth 0 - Destitute)
 

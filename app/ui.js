@@ -124,7 +124,18 @@ export function counterRow({ name, hint, get, set, min = 0, max = 99, format, on
 // Gifts twirl adders/limiters there instead of the description). Returns a
 // `render()` you can call again after state changes (e.g. a filter box) or
 // wire up to call itself via each card's onChange.
-export function renderSelectedAvailable(container, { label, getItems, isSelected, renderCard, renderSelectedCard }) {
+export function renderSelectedAvailable(container, {
+  label, getItems, isSelected, renderCard, renderSelectedCard,
+  // A selected entry used to leave the Available list. For anything with
+  // Levels that made raising one almost impossible to do deliberately:
+  // the list closed up behind your click, so the next click landed on
+  // whatever moved into that position. Taking Wealth to 5 bought five
+  // different Resources at 1, and the screen never said so.
+  //
+  // Selected entries now stay put and are marked. Pass false for a list
+  // where picking something really does remove it from play.
+  keepSelected = true,
+}) {
   const selectedEl = el('div', { class: 'pick-list' });
   const availableEl = el('div', { class: 'pick-list' });
   container.append(
@@ -140,13 +151,20 @@ export function renderSelectedAvailable(container, { label, getItems, isSelected
     availableEl.innerHTML = '';
     const items = getItems();
     const selected = items.filter(isSelected);
-    const available = items.filter((item) => !isSelected(item));
+    const available = keepSelected ? items : items.filter((item) => !isSelected(item));
     if (selected.length === 0) {
       selectedEl.appendChild(el('p', { class: 'detail' }, `No ${label} selected yet.`));
     } else {
       selected.forEach((item) => selectedEl.appendChild(selectedRenderer(item)));
     }
-    available.forEach((item) => availableEl.appendChild(renderCard(item)));
+    available.forEach((item) => {
+      const card = renderCard(item);
+      // Marked, not disabled. The Boons step disables a taken Boon because
+      // it cannot be bought twice; a taken Resource has to stay live,
+      // since raising it is what the player came here to do.
+      if (isSelected(item)) card.classList.add('taken');
+      availableEl.appendChild(card);
+    });
   }
 
   render();
