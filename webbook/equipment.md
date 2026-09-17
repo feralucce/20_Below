@@ -356,7 +356,7 @@ Some things have no counter to walk up to. The price is the easy half - the hard
 
 **The free items a character starts with don't apply here.** Every purchase on these pages is a transaction, however cheap the thing is. Nobody hands you a jammer because you're rich.
 
-**You can bring a friend.** If another character has the half you're missing and is willing to spend it, the purchase goes through on their rating instead. One of you knows a guy. The other one pays. Both of you are in it now, which is generally how this turns into a problem later.
+**In play, you can bring a friend.** If another character has the half you are missing and is willing to spend it, the purchase goes through on their rating instead. One of you knows a guy. The other one pays. Both of you are in it now, which is generally how this turns into a problem later. This is a rule for the table once the game has started - at character creation everyone builds on their own ratings.
 
 **A Black Market rating is not a price.** A jammer is cheap and everywhere; an anti-materiel rifle is barely more expensive and takes a supplier with something real to lose. The two numbers move independently on purpose.
 
@@ -467,6 +467,10 @@ Some things have no counter to walk up to. The price is the easy half - the hard
 
 ## Property
 
+Somewhere to be, and somewhere to keep things. A property is bought like any other item - it is the one purchase a character makes that has an address.
+
+A **Base** Resource is a different thing and worth having as well: the Resource is what the place is equipped and defended with, the item here is the deed.
+
 <div class="wide" markdown="1">
 
 | Item | Notes | Wealth |
@@ -478,19 +482,43 @@ Some things have no counter to walk up to. The price is the easy half - the hard
 
 ## Beyond the Ordinary
 
+**Check with your GM before taking anything on this page.** Everything else in this chapter exists, or is a plausible custom job. What follows is not assumed to exist in every 20 Below game, and a table running a modern story about people with Gifts may reasonably decide none of it is real.
+
+Where a GM does allow it, it is bought like anything else - and where a Black Market rating is given, it is bought the hard way, by both gates.
+
+### Beyond the Ordinary - Armor
+
+<div class="wide" markdown="1">
+
+| Item | Zone | Hardness | Health Levels | Notes | Wealth | Black Market |
+|---|---|---|---|---|---|---|
+| Ablative shield harness | Body | 7 | 4 | A projected barrier on a worn rig; spent for the Scene once its Health Levels are gone | 5 | 5 |
+| Powered combat armor | Body + Head | 8 | 6 | Single item, sets both Zones; sealed with its own air; Disadvantage on Stealth rolls; Movement Rate -1. Nobody mistakes you for a person | 5 | 5 |
+
+</div>
+
+### Beyond the Ordinary - Weapons
+
+<div class="wide" markdown="1">
+
+| Weapon | Category | Damage | Range (Normal / Long) | Ammo | Reload | Wealth | Black Market |
+|---|---|---|---|---|---|---|---|
+| Energy rifle | Heavy | 6 | 150m / 400m | 20 shots | 1 action | 4 | 5 |
+
+</div>
+
+### Beyond the Ordinary - Gear
+
 <div class="wide" markdown="1">
 
 | Item | Notes | Wealth | Black Market |
 |---|---|---|---|
-| Ablative shield harness | A projected barrier on a worn rig. Hardness 7, Health Levels 4, and it degrades as it absorbs. | 5 | 5 |
 | Aerodyne (flying car) | Vertical takeoff, four seats, and a landing fee everywhere worth landing. | 6 |  |
 | Bio-regeneration tank | You go in ruined and come out months of healing later, in days. | 6 |  |
 | Braindance recorder | Records an experience whole - sight, sound, and what it felt like to be there. | 3 |  |
-| Energy rifle | Directed energy in a shoulder weapon. Damage 6, 150m / 400m, 20 shots, 1 action to swap a cell. No brass, no ballistics, no denying it. | 4 | 5 |
 | Jet pack | Minutes of flight, deafening, and it lands harder than it takes off. | 5 |  |
 | Nanite repair kit | Injected machines that close what surgery would have to open you for. | 5 |  |
 | Optical camouflage cloak | Bends light around the wearer. Works until you move quickly. | 5 | 5 |
-| Powered combat armor | Sealed powered armour built to be shot at. Body + Head, Hardness 8, Health Levels 6. Nobody mistakes you for a person. | 5 | 5 |
 | Surgical pod | A room-sized autodoc. Handles what the field case cannot. | 5 |  |
 | Underground facility | Excavated, powered, and on no plan ever filed with the city. | 6 | 5 |
 
