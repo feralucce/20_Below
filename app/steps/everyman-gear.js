@@ -5,7 +5,7 @@
 // gear-shop.js come afterwards. Split out the same way gear-shop.js was
 // split from 08-resources.js - a self-contained interactive block.
 
-import { el, keyedDetails } from '../ui.js';
+import { el, keyedDetails, setOpenState } from '../ui.js';
 import { creationWealthBase, setEverymanGearPackage } from '../state.js';
 
 export default function buildEverymanGear(state, data) {
@@ -67,6 +67,11 @@ export default function buildEverymanGear(state, data) {
               disabled: isSelected ? '' : undefined,
               onClick: () => {
                 setEverymanGearPackage(state, { level: lvl.level, name: pkg.name, contents: pkg.contents });
+                // Shut the Level once it has its pick. Re-picking the same
+                // package clears it, and then the Level opens again so
+                // there is somewhere to choose from.
+                const stillPicked = !!state.everymanGearPackages[lvl.level];
+                setOpenState(`starting-pkg:${lvl.level}`, !stillPicked);
                 render();
               },
             }),
@@ -82,9 +87,15 @@ export default function buildEverymanGear(state, data) {
 
   const clearBtn = el('button', {
     type: 'button',
-    text: 'Clear Pick',
+    text: 'Clear All Picks',
     onClick: () => {
       setEverymanGearPackage(state, null);
+      // Every Level shut itself when it got its pick. Clearing them all
+      // without reopening leaves a column of closed twirls and nothing
+      // to choose from.
+      data.everymanGearPackages.forEach((lvl) => {
+        setOpenState(`starting-pkg:${lvl.level}`, true);
+      });
       render();
     },
   });
@@ -94,7 +105,7 @@ export default function buildEverymanGear(state, data) {
     el(
       'p',
       { class: 'detail' },
-      'A free alternative to Wealth Check shopping below - not instead of it, a character can still shop normally on top of taking a package here. Pick exactly one package from every level at or under your creation-Wealth Level (cumulative downward). Picking a new one replaces any earlier pick.',
+      'Every character starts with these, on top of everything the Wealth Check buys below. Take one package from every Level up to and including your creation-Wealth - one from each Level, not several from the top. Picking a new package at a Level replaces the earlier pick at that Level.',
     ),
     listWrap,
     clearBtn,

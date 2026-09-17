@@ -59,8 +59,8 @@ export function createInitialState(data) {
     // or successfully-checked item.
     gearPurchases: [],
     creationWealthLoss: 0,
-    // Everyman Gear Packages (weapons.md#everyman-gear-packages) - a free,
-    // no-roll alternative to Wealth Check shopping. Level -> { level, name,
+    // Starting Packages (weapons.md#starting-packages) - step one of
+    // creation shopping, not an alternative to it. Level -> { level, name,
     // contents }: one package from every Level up to creation-Wealth, so a
     // Wealth 3 character holds three of them and a Wealth 1 character one.
     everymanGearPackages: {},
@@ -87,6 +87,12 @@ export function createInitialState(data) {
     // while still letting the item's own step show/adjust the same value.
     discretionaryPurchases: { Attributes: {}, Skills: {}, Resources: {}, Gifts: {}, GiftAdders: {} },
     finishingNotes: '',
+    // Free text for the sheet. Nothing computes from any of it - it is
+    // there because a player needs it at the table.
+    age: '',
+    height: '',
+    appearance: '',
+    backstory: '',
 
     // ---- Advancement (post-creation XP spend, see rules/costs.md) ----
     xpEarned: 0,
@@ -292,27 +298,31 @@ export function resourcesPoolRemaining(state, data) {
 }
 
 // ---- Resource Checks (see resources.md#pushing-a-resource) ----
-// A failed check drops a Resource's *effective* Level by 1 (floored at 1)
-// until the app's user manually clears it once a Month has passed in
-// fiction - there's no in-game calendar here to auto-expire it against.
-// "Reaching beyond your means" is a separate, harsher penalty - it zeroes
-// the Resource out entirely (not floored at 1), tracked in its own
-// resourceZeroed map so the normal floor-at-1 logic below doesn't blunt
-// it. Both penalties are tracked separately from the purchased Level
-// itself so point-cost accounting (resourcesPointsSpent above) is never
-// affected.
+// A failed check drops a Resource's *effective* Level by 1, a critical
+// failure by 2, and the drops stack all the way down to 0 - at which
+// point the Resource is spent and can't be drawn on at all. It stays
+// spent until the app's user clears it once a Month has passed in
+// fiction; there's no in-game calendar here to auto-expire it against.
+// "Reaching beyond your means" skips the walk down and zeroes the
+// Resource outright, tracked in its own resourceZeroed map so clearing a
+// penalty and clearing a zero-out are the same gesture. Both are tracked
+// separately from the purchased Level itself so point-cost accounting
+// (resourcesPointsSpent above) is never affected.
 
 export function effectiveResourceLevel(state, resourceName) {
   if (state.resourceZeroed[resourceName]) return 0;
   const level = state.resources[resourceName] ?? 0;
   const penalty = state.resourcePenalties[resourceName] ?? 0;
-  return Math.max(Math.min(level, 1), level - penalty);
+  // No floor at 1. A Resource failed down to 0 is spent for the Month.
+  return Math.max(0, level - penalty);
 }
 
-export function applyResourceCheckFailure(state, resourceName) {
+export function applyResourceCheckFailure(state, resourceName, levels = 1) {
   const level = state.resources[resourceName] ?? 0;
   const current = state.resourcePenalties[resourceName] ?? 0;
-  state.resourcePenalties[resourceName] = Math.min(Math.max(level - 1, 0), current + 1);
+  // Cumulative, and it can reach the purchased Level - a Resource at 0 is
+  // spent, not merely reduced.
+  state.resourcePenalties[resourceName] = Math.min(level, current + levels);
 }
 
 export function applyResourceCheckZeroOut(state, resourceName) {
@@ -383,7 +393,13 @@ export function currentCreationWealth(state) {
 
 export function setEverymanGearPackage(state, pkg) {
   if (!state.everymanGearPackages) state.everymanGearPackages = {};
-  if (pkg == null) return;
+  // null clears every Level. It used to clear the character's single pick;
+  // when packages became one per Level this returned early instead, which
+  // turned the Clear Pick button into a button that did nothing at all.
+  if (pkg == null) {
+    state.everymanGearPackages = {};
+    return;
+  }
   const held = state.everymanGearPackages[pkg.level];
   if (held && held.name === pkg.name) {
     // Clicking the held package again clears that Level's pick.

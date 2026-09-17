@@ -28,13 +28,19 @@ Levels cost a flat **1 point** each out of the Resources pool at creation, so a 
 
 ## Pushing a Resource
 
+**Only six Resources can be pushed**: **Contacts**, **Debts Owed**, **Media Contact**, **Occult Library**, **System Access**, **Wealth**. Those six have a reach that can be stretched - somebody can be asked for more than they owe, a library can be searched harder, money can be found. Every other Resource is a standing fact. A Safehouse Network is stocked or it isn't, and there is nothing to roll about it: its Level table says what you have and that is what you have.
+
 Each Resource’s Level table below defines what’s available for free, no roll required. When you want to draw on a Resource for something past that free scope, roll a **Resource Check**: **2d10** against **Resource Level + (10 − Resource Index)**, roll-under. Critical results apply as normal (a roll of 2 is always a success, a roll of 20 is always a failure, regardless of the target number). No Skill is involved - a flat roll against the Resource itself, the same shape as the Gift Check.
 
 **Resource Index** is a flat **1-6** rating for how far beyond a Resource’s ordinary reach the request goes - its own scale, not the general Difficulty Chart. It inverts the same way Defense does: a *lower* Resource Index is easier (Resource Index 1 adds **9** to the target), a *higher* one is harder (Resource Index 6 adds only **4**, the minimum any Resource Check can add).
 
 **Success**: you get what you were after, at no further cost.
 
-**Failure**: you still get what you were after - the ask goes through either way - but the Resource’s Level drops by **1** (to a minimum of 1) until the start of the next **Month**, representing it stretched thin: savings drained, favors called in, goodwill spent. A Resource at a reduced Level uses that lower Level for everything, including further Resource Checks made while it’s still reduced.
+**Failure**: you still get what you were after - the ask goes through either way - but the Resource’s Level drops by **1**, representing it stretched thin: savings drained, favors called in, goodwill spent.
+
+**Critical failure**: the same, except the Level drops by **2**.
+
+The drops are cumulative. A reduced Resource uses its lower Level for everything, including any further Resource Check made while it’s still reduced. At **Level 0** it is spent - nothing can be drawn on it at all, free scope or roll - until the start of the next **Month**, when every Resource returns to its full Level.
 
 **Why it works like this.** The roll isn’t asking whether you’re rich. It’s asking what you can put your hands on right now. Wealth is liquid assets, not net worth - the money actually available this week, rather than the sum of everything you own.
 
@@ -64,20 +70,25 @@ Money stops being a decision long before it stops mattering. What a character ca
 
 - **Two or more Levels below your creation-Wealth**: free, and as many as you can reasonably carry and justify. A Wealth 5 character does not count flashlights.
 - **At your creation-Wealth, or one Level below it**: free, up to a number of items equal to your creation-Wealth. A Wealth 3 character takes three of them.
+- **Above your creation-Wealth**: never free. It is not a roll either - see step 3. Taking one empties the pool.
 
 A Wealth 3 character therefore walks away with everything they want at Wealth 1, any three items at Wealth 2 or 3, and a decision to make about anything above that. A Wealth 0 character gets a Level 0 package and nothing else free.
 
 ### 3. Roll for the rest
 
-Anything left - an item above your creation-Wealth, or one more from the band you have already spent your free picks on - is a **Wealth Check**.
+Two things are left: another item from the band you have already spent your free picks on, and anything sitting above your creation-Wealth. They are not the same purchase.
 
-1. Find the **gap**: the item's Wealth rating minus your current creation-Wealth, treated as **0** if that is negative.
-2. If the gap is **more than your current creation-Wealth**, it is out of reach entirely - no roll.
-3. Otherwise roll **2d10** against **creation-Wealth + (10 − gap)**, roll-under, standard critical results apply.
-   - **Success**: the item is free.
-   - **Failure**: you still get the item. Your creation-Wealth drops by the gap, **at least 1** even when the gap is zero. A **catastrophic failure** doubles that loss.
+**At creation-Wealth or one Level below, past the free allowance** - a **Wealth Check**. Roll **2d10** against **creation-Wealth + 10**, roll-under, standard critical results apply.
 
-The ask always goes through. What a failure costs you is your ability to make the next one.
+- **Success**: the item is free.
+- **Failure**: you still get the item, and creation-Wealth drops by **1**.
+- **Critical failure**: the same, except creation-Wealth drops by **2**.
+
+**Above your creation-Wealth** - no roll. The item can be had, and having it costs everything: creation-Wealth drops straight to **0**. Reach that far and you walk away with your Starting Packages, your free items, and that one thing.
+
+The ask always goes through. What it costs is the ability to make the next one.
+
+**At creation-Wealth 0 the rolling stops, but the free items don’t.** Both free bands are measured against the Level you actually bought, not against whatever is left of the pool - so spending yourself down to nothing still leaves you anything two or more Levels below your Wealth, as many as you can carry and justify, along with any of your free allowance you hadn’t used yet.
 
 ### The Black Market is not part of this
 
@@ -85,7 +96,7 @@ Nothing on **The Black Market** is ever free. The steps above do not apply to it
 
 ### Afterwards
 
-Creation-Wealth carries across every purchase in this shopping pass, and gear shopping ends once nothing remaining is within reach. **This pool is temporary bookkeeping only**: it has no effect on the character's actual Wealth Resource once play begins, which stays at whatever Level was actually purchased. Once creation ends this procedure stops applying entirely - every purchase from then on uses the general **Pushing a Resource** rule above, unaffected by anything that happened while shopping.
+Creation-Wealth carries across every purchase in this shopping pass. **This pool is temporary bookkeeping only**: it has no effect on the character's actual Wealth Resource once play begins, which stays at whatever Level was actually purchased. Once creation ends this procedure stops applying entirely - every purchase from then on uses the general **Pushing a Resource** rule above, unaffected by anything that happened while shopping.
 
 ## The Resources
 

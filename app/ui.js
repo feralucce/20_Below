@@ -68,6 +68,17 @@ export function keyedDetails(key, attrs = {}) {
   return node;
 }
 
+/* Force a keyed twirl's remembered state.
+ *
+ * keyedDetails restores whatever the reader last left, which is right for
+ * browsing and wrong the moment a choice closes a section: picking a
+ * Starting Package should shut that Level, but the remembered "open" won
+ * every re-render and it stayed open.
+ */
+export function setOpenState(key, open) {
+  openState.set(key, open);
+}
+
 // A labeled +/- counter row. `get`/`set` read and write the current numeric
 // value; `min`/`max` may be numbers or functions of no args (re-evaluated on
 // every render so they can depend on pool remaining elsewhere in the app).
@@ -111,6 +122,17 @@ export function counterRow({ name, hint, get, set, min = 0, max = 99, format, on
   // open state we are trying to keep.
   makeTwirl(nameEl, detail, { key: key ?? name });
   return el('div', {}, [row, detail]);
+}
+
+/* The one way the app says "you already have this".
+ *
+ * Boons appended "(taken)" to the name, the shared list drew a bare
+ * border, Equipment had its own pill and Skills said nothing. A player
+ * scanning four different steps had to learn four different signals.
+ */
+export function purchasedPill(count = 1) {
+  return el('span', { class: 'purchased-pill' },
+    count > 1 ? `Purchased x${count}` : 'Purchased');
 }
 
 // Splits a catalog into two headed groups - anything currently "selected"
@@ -162,7 +184,10 @@ export function renderSelectedAvailable(container, {
       // Marked, not disabled. The Boons step disables a taken Boon because
       // it cannot be bought twice; a taken Resource has to stay live,
       // since raising it is what the player came here to do.
-      if (isSelected(item)) card.classList.add('taken');
+      if (isSelected(item)) {
+        card.classList.add('purchased');
+        card.prepend(purchasedPill());
+      }
       availableEl.appendChild(card);
     });
   }

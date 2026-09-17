@@ -6,6 +6,16 @@ Each weapon's **Damage** rating is how many d10 it rolls on a hit, resolved per-
 
 **Money is not always the hard part.** Plenty of what follows is perfectly legal to own and still not simple to buy. A handgun means a background check and a dealer who writes your name down. Body armor is restricted in some states and off the table entirely for anyone with a record. A prescription is a conversation with a doctor who keeps records, and a pilot's licence is two years and a medical. None of that is a roll - it is a detail for you and your GM about what it cost you in time, in paperwork, and in who knows your name now. The things with no lawful route at all are gathered under [The Black Market](#the-black-market), which has its own rating and its own rules.
 
+## What You Can Carry
+
+**Owning it is not carrying it.** A character walks out of creation with more than fits in a coat, and keeps accumulating after. Most of it stays where they left it.
+
+Say what you have on you when a scene starts, and that is what you have - a weapon or two, a bag, whatever is in your pockets. Everything else is at home, in the car, in a locker, in the safehouse: genuinely yours, and genuinely an hour away. Nothing here is tracked by weight and nothing is counted in slots. The only question is whether a person could be walking around with all of it at once, and **Potence** ([Sub-Stat Division](character-creation.md#5-sub-stat-division)) settles the rare case where the answer turns on how strong you are.
+
+Some of it is never carried at all. Everything under [Property](#property) has an address, and most of [Transport](#transport) is parked somewhere. A workshop, a safe, a server rack, a boat - those are places you go, not things you bring, and reaching one in a hurry is a scene of its own rather than a line on a sheet.
+
+It cuts both ways. A character who said they were travelling light doesn't get to produce the breaching charge. A character who said they brought the duffel is carrying a duffel, and everybody can see it.
+
 ## Basic Weapons
 
 Range is given as **Normal / Long**, in meters - the same unit as [Movement Rate and the Range Bands](rules.md#movement--range). A weapon's Normal range tells you the band it is built for: a shotgun's 5m is Close, a handgun's 15m is Near, a hunting rifle's 100m is Far.

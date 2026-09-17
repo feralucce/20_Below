@@ -15,6 +15,9 @@
   --fire: #e0685c;
   --water: #5cc9b0;
   --moira: #a37ae0;
+  /* The Battle Tracker's own values, kept in step with brew.css. */
+  --pc: #5ecb6b;
+  --npc: #e0685c;
   --radius: 8px;
   font-family: "Segoe UI", system-ui, sans-serif;
 }
@@ -270,25 +273,6 @@ body {
   color: var(--text-dim);
 }
 
-/* An entry that is already on the sheet but still listed, so it can be
-   raised from where it sits. Marked rather than disabled - see
-   renderSelectedAvailable in ui.js. */
-.pick-card.taken {
-  border-left: 3px solid var(--accent);
-}
-
-.pick-card.taken::before {
-  content: 'taken';
-  float: right;
-  margin-left: 0.6rem;
-  padding: 0.05rem 0.45rem;
-  border: 0.5px solid var(--accent);
-  border-radius: var(--radius);
-  color: var(--accent);
-  font-size: 11px;
-  letter-spacing: 0.04em;
-}
-
 /* The gear lists on the character sheet. A long loadout is a wall of
    text without something between the lines, and gear is the one part of
    the sheet a player reads mid-scene looking for one item. */
@@ -307,12 +291,44 @@ body {
   border-bottom: none;
 }
 
+/* One Level per twirl, with room between them - stacked flush they read
+   as one long list rather than five separate choices. */
+.everyman-gear-level {
+  margin-bottom: 0.9rem;
+}
+
+.everyman-gear-level > summary {
+  padding: 0.35rem 0;
+  font-weight: 600;
+}
+
 /* The package a Level has taken, shown on its summary so a shut
    Level still says what is inside it. */
 .level-picked {
   margin-left: 0.6rem;
-  color: var(--ok);
+  color: var(--pc);
   font-size: 0.85rem;
+}
+
+/* Already on the sheet - a Boon, Gift, Flaw, Resource, Skill or piece of
+   equipment the character has. One marker everywhere: PC green, so it
+   reads as yours, against the gold and red pills that mark obstacles. */
+.pick-card.purchased {
+  border-left: 3px solid var(--pc);
+}
+
+tr.purchased td {
+  background: color-mix(in srgb, var(--pc) 12%, transparent);
+}
+
+.purchased-pill {
+  margin-left: 0.5rem;
+  padding: 0.05rem 0.45rem;
+  border: 0.5px solid var(--pc);
+  border-radius: var(--radius);
+  color: var(--pc);
+  font-size: 11px;
+  white-space: nowrap;
 }
 
 /* Marks the gear a GM has to switch on before anybody buys it. */
@@ -331,9 +347,9 @@ body {
 .bm-pill {
   margin-left: 0.6rem;
   padding: 0.1rem 0.5rem;
-  border: 0.5px solid var(--moira);
+  border: 0.5px solid var(--npc);
   border-radius: var(--radius);
-  color: var(--moira);
+  color: var(--npc);
   font-size: 12px;
   vertical-align: 0.1em;
 }
@@ -856,31 +872,82 @@ body {
   font-weight: 700;
 }
 
+/* The four bands of what creation-Wealth buys, above the catalogue.
+   A list, because they are read as a lookup rather than as prose. */
+.gear-bands {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.gear-bands li {
+  margin-bottom: 0.3rem;
+}
+
+/* Free-text fields on the sheet - age, height, appearance, backstory,
+   notes. Sized to the panel rather than to their content, so a one-word
+   Age and a paragraph of Appearance line up. */
+.sheet-text {
+  width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 0.4rem 0.6rem;
+  font: inherit;
+  resize: vertical;
+}
+
+.sheet-text:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* Browser-style tabs: the strip sits on the content panel's top edge and
+   the active tab joins it, so the panel reads as that tab's body rather
+   than as a box underneath some buttons. */
 .tab-nav {
   display: flex;
-  gap: 0.35rem;
-  padding: 0.75rem 1.5rem;
+  gap: 2px;
+  padding: 0.5rem 1.5rem 0;
   flex-wrap: wrap;
-  border-bottom: 1px solid var(--panel-border);
+  align-items: flex-end;
+  border-bottom: 1px solid var(--accent);
 }
 
 .tab-btn {
+  position: relative;
+  bottom: -1px;
   background: var(--panel);
   border: 1px solid var(--panel-border);
+  border-bottom: 1px solid var(--accent);
+  border-radius: 8px 8px 0 0;
   color: var(--text-dim);
-  border-radius: 999px;
-  padding: 0.3rem 0.75rem;
-  font-size: 0.8rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.82rem;
   cursor: pointer;
 }
 
-.tab-btn.active {
-  border-color: var(--accent);
+.tab-btn:hover {
   color: var(--text);
+  background: var(--accent-dim);
+}
+
+/* The active tab owns the panel below it, so it loses its bottom border
+   and sits a pixel lower to close the seam. */
+.tab-btn.active {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  border-bottom-color: var(--accent-dim);
+  color: var(--text);
+  padding-bottom: 0.55rem;
 }
 
 .tab-content {
   padding: 1.25rem 1.5rem 1.5rem;
+  background: var(--accent-dim);
+  border-radius: 0 0 8px 8px;
 }
 
 .sheet-combat-roller {
