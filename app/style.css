@@ -270,6 +270,23 @@ body {
   color: var(--text-dim);
 }
 
+/* Marks the gear a GM has to switch on before anybody buys it. */
+.gm-pill {
+  margin-left: 0.6rem;
+  padding: 0.1rem 0.5rem;
+  border: 0.5px solid var(--gold);
+  border-radius: var(--radius);
+  color: var(--gold);
+  font-size: 12px;
+  vertical-align: 0.1em;
+}
+
+.gm-note {
+  margin: 0 0 0.75rem;
+  color: var(--text-dim);
+  font-size: 14px;
+}
+
 /* An entry's description, at the top of its opened card. Set the way the
  * Brewery sets the same text in the book: italic, in the accent colour,
  * so it reads as the flavour it is and not as another rule. */

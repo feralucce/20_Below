@@ -213,7 +213,21 @@ export default function buildGearShop(state, data) {
         if (details.open) openCategories.add(cat.category);
         else openCategories.delete(cat.category);
       });
-      details.append(el('summary', {}, cat.category), el('div', { class: 'detail' }, table));
+      // The book opens this block by telling the reader to ask first.
+      const needsGM = cat.parent === 'Beyond the Ordinary';
+      details.append(
+        el('summary', {}, [
+          cat.category,
+          needsGM ? el('span', { class: 'gm-pill' }, 'Needs GM approval') : null,
+        ]),
+        el('div', { class: 'detail' }, [
+          needsGM
+            ? el('p', { class: 'gm-note' },
+              'Not assumed to exist in every game. Check with your GM before taking any of it.')
+            : null,
+          table,
+        ]),
+      );
       categoriesWrap.appendChild(details);
     });
   }
