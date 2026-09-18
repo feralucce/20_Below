@@ -32,7 +32,9 @@ Attacking a target within a weapon's **Normal** range carries no penalty. Attack
 | Black powder pistol | Handgun | 3 | 10m / 25m | 1 round | Slow action | 1 |
 | Blowgun | Exotic (ranged) | 1 | 8m / 15m | 1 per shot | - | 1 |
 | Boomerang | Returning | 2 | 10m / 20m | 1 per throw (returns) | - | 1 |
+| Brass knuckles | Improvised | 2 | Melee | - | - | 1 |
 | Chain whip | Exotic (melee) | 3 | Melee | - | - | 1 |
+| Chainsaw | Two-handed | 5 | Melee | - | - | 1 |
 | Combat knife | Knife | 3 | Melee | - | - | 1 |
 | Compact pistol | Handgun | 3 | 15m / 40m | 15 rounds | 1 action | 2 |
 | Compound bow | Compound bow | 4 | 25m / 60m | 12 (quiver) | Free | 2 |
@@ -60,6 +62,7 @@ Attacking a target within a weapon's **Normal** range carries no penalty. Attack
 | Machete | Large blade | 4 | Melee | - | - | 1 |
 | Metal pipe | Improvised | 3 | Melee | - | - | 1 |
 | Muzzleloader rifle | Rifle | 4 | 80m / 200m | 1 round | Slow action | 2 |
+| Nail gun | Exotic (ranged) | 2 | 5m / 10m | 30 nails | 1 action | 1 |
 | Net launcher | Exotic (ranged) | 1 | 10m / 20m | 1 net | 1 action | 2 |
 | Nunchaku | Exotic (melee) | 3 | Melee | - | - | 1 |
 | Pump shotgun | Shotgun | 4 | 5m / 15m | 6 shells | Slow action | 2 |
@@ -69,14 +72,17 @@ Attacking a target within a weapon's **Normal** range carries no penalty. Attack
 | Sai | One-handed blade | 3 | Melee | - | - | 1 |
 | Sap | Improvised | 3 | Melee | - | - | 1 |
 | Sawed-off shotgun | Shotgun | 4 | 5m / 15m | 2 shells | Slow action | 2 |
+| Service pistol | Handgun | 3 | 20m / 50m | 15 rounds | 1 action | 2 |
 | Short sword | One-handed blade | 4 | Melee | - | - | 1 |
 | Sledgehammer | Two-handed | 5 | Melee | - | - | 1 |
 | Sling | Sling | 2 | 15m / 30m | 1 per throw | - | 1 |
+| Snub-nose revolver | Handgun | 2 | 10m / 20m | 5 rounds | Slow action | 1 |
 | Speargun | Exotic (ranged) | 3 | 10m / 25m | 1 spear | Slow action | 1 |
 | Switchblade | Knife | 3 | Melee | - | - | 1 |
 | Tactical carbine | Rifle | 4 | 100m / 250m | 20 rounds | 1 action | 2 |
 | Throwing knife | Balanced blade | 1 | 5m / 15m | 1 per throw | - | 1 |
 | Tonfa | One-handed blunt | 3 | Melee | - | - | 1 |
+| Tranquilizer rifle | Exotic (ranged) | 1 | 40m / 80m | 1 dart | Slow action | 2 |
 | Trench knife | Knife | 3 | Melee | - | - | 1 |
 | Two-handed sword | Polearm / two-handed | 5 | Melee | - | - | 2 |
 | War axe | One-handed blade | 4 | Melee | - | - | 1 |
@@ -126,7 +132,9 @@ Purpose-built protective gear only - ordinary clothing, even sturdy clothing, do
 | Covert GPS tracker | Real-time location on a person/vehicle until found and removed | 1 |
 | Drone control rig | A worn harness for flying several drones at once. Not an implant - it comes off. | 3 |
 | Encrypted comms set | Silent team communication at Near-Far range, no roll | 2 |
+| Faraday sleeve | Nothing inside it transmits, receives, or can be tracked | 1 |
 | Hacking multitool | Required tool for a field Hacking roll away from a full rig; without one, at Disadvantage | 2 |
+| Handheld thermal camera | Advantage on Perception rolls to find living things through smoke, darkness, or a wall | 2 |
 | Laptop / hacking rig | Required tool for Hacking Skill checks; without one, Hacking rolls are at Disadvantage | 2 |
 | Laser rangefinder | Advantage on the first ranged attack roll against a stationary target | 2 |
 | Motion sensor | Alerts when triggered within its zone; Advantage on Perception to notice an intrusion it caught | 1 |
@@ -158,11 +166,14 @@ Purpose-built protective gear only - ordinary clothing, even sturdy clothing, do
 | Bolt cutters | Required tool for cutting chains/padlocks; without one, at Disadvantage | 1 |
 | Compass | Never lost navigating with a map, no roll | 1 |
 | Crowbar | Advantage on forced-entry rolls against doors/windows specifically (not a full Breaching kit) | 1 |
+| Duct tape | No roll for trivial improvised repairs, restraint, or holding a dressing on | 1 |
 | Field rations & water purifier | Keeps you fed and watered in the field, no roll, for an extended stretch | 1 |
 | Fire axe | Advantage on forced-entry rolls against doors specifically - a low-tech cousin of the Breaching kit | 1 |
 | Fire starter kit | Reliable fire in any weather, no roll | 1 |
 | First aid kit | Consumed on use: Advantage on a roll to treat Health Levels | 1 |
 | Gas mask / respirator | Negates Disadvantage from smoke, gas, or airborne toxins | 1 |
+| Glow sticks | Twelve hours of light that needs no battery and cannot be switched off | 1 |
+| Go-bag | Packed and by the door. Leaving in under a minute costs no roll and nothing is forgotten | 1 |
 | Grappling hook | Advantage on Climbing rolls to scale a ledge or wall within range | 1 |
 | Hand saw | No roll for trivial wood-cutting tasks | 1 |
 | Ice axe | Required tool for climbing on ice or snow; Advantage on Climbing rolls in those conditions | 1 |
@@ -173,6 +184,7 @@ Purpose-built protective gear only - ordinary clothing, even sturdy clothing, do
 | Paracord (100ft) | Advantage on improvised rigging or binding rolls | 1 |
 | Pickaxe | Advantage on rolls to break through rock or hard earth | 1 |
 | Portable camp stove | Hot food and water in the field without an open fire | 1 |
+| Road flares | Burn in rain and wind. Advantage on rolls to signal, warn off, or start something | 1 |
 | Rope & climbing kit | Advantage on Climbing-related rolls | 1 |
 | Sewing / repair kit | No roll for trivial gear or clothing repairs | 1 |
 | Snake bite kit | Consumed on use: Advantage resisting a venom effect | 1 |
@@ -214,8 +226,10 @@ Purpose-built protective gear only - ordinary clothing, even sturdy clothing, do
 | Item | Effect | Wealth |
 |---|---|---|
 | Bump key set | Advantage on Lockpicking rolls against standard pin-tumbler locks | 1 |
+| Burn bag | Destroys everything inside it in under a minute, unrecoverably | 1 |
 | Collapsible rifle case | A rifle that comes apart into something that reads as an instrument case. | 2 |
 | Colored contact lenses | Defeats a description or ID check based on eye color, no roll | 1 |
+| Dead drop cache | A prepared spot nobody watches. Hand something over without meeting anybody | 1 |
 | Disguise kit | Advantage on Deception rolls involving a physical disguise | 1 |
 | Encrypted burner phone | Untraceable, disposable comms; discard after use to leave no trail | 1 |
 | Environment-matched camo | Advantage on Stealth rolls in matching terrain | 1 |
@@ -287,7 +301,9 @@ Same Damage/per-die-vs-Soak resolution as [Basic Weapons](#basic-weapons) above,
 | Bola | 1 | 8m / 15m | 1 per throw | - | Target's Movement Rate is halved until they break free | 1 |
 | Collapsible baton | 2 | Melee | - | - |  | 1 |
 | Flashbang | 1 | 10m throw | 1 (thrown) | - | Everyone in a Close radius is Blinded and at Disadvantage for 1 round | 1 |
+| Flex cuffs | 0 | Melee | - | - | Restrains a compliant or already-subdued target; cut, not unlocked | 1 |
 | Grappling snare | 1 | Melee (trap) | - | - | Restrains whoever triggers it | 1 |
+| Handcuffs | 0 | Melee | - | - | Restrains a compliant or already-subdued target until unlocked | 1 |
 | Less-lethal shotgun (beanbag) | 3 | 5m / 15m | 6 shells | Slow action | No Health Level loss from this weapon alone; Prone and Disadvantage next turn | 2 |
 | Net gun | 1 | 8m / 15m | 1 net | 1 action | Target is Restrained until they break free (Potence check) | 2 |
 | Pepper spray | 1 | 3m / 5m | 1 (canister) | - | Blinded and Disadvantage on all rolls for 1 round | 1 |
@@ -299,6 +315,77 @@ Same Damage/per-die-vs-Soak resolution as [Basic Weapons](#basic-weapons) above,
 | Sonic deterrent device | 1 | Close-Near cone | - | - | Disadvantage on all rolls while in the cone | 2 |
 | Stun gun | 1 | Melee | - | - | Disadvantage on the target's next roll | 1 |
 | Tear gas grenade | 1 | 10m throw | 1 (thrown) | - | Everyone in a Close radius is Blinded and at Disadvantage until they leave the area | 1 |
+
+## Occult & Warding
+
+**Money is not the hard part here either.** Everything on these tables is cheap. Salt is salt, rosemary is rosemary, a horseshoe is eight dollars at a flea market, and a stone with a hole in it is free if you know which beach to walk. The Wealth rating buys the material. Material on its own does nothing whatsoever.
+
+Every item in this section has to be **prepared** before it works. Preparation is an [Occult](skills.md#the-skill-list) roll against **Moira + Difficulty**, and it takes about an hour per item, or per batch of a consumable. The GM sets the Difficulty: a salt line is Easy, something that has to hold against one specific named thing is not.
+
+On a failure the materials are spent and you have a jar of dirt. On a success it stays prepared until it is used, broken, or the ward it was holding gives way.
+
+An unprepared ward is exactly what it looks like. Salt on a floor. A stone with a hole in it. Somebody's grandmother's horseshoe over a door.
+
+**You can buy them ready-made.** Somebody prepares these for a living, and finding that somebody is a [Contacts](resources.md#the-resource-list) question rather than a money one. A prepared item costs **one Wealth rating higher** than the raw material below.
+
+**Electronics are exempt.** Nothing in the Detection table needs preparing. A thermometer is a thermometer.
+
+### Occult & Warding - Consumables
+
+| Item | Effect | Wealth |
+|---|---|---|
+| Blessed water | A vial. Burns what should not be touching a person, and marks a line nothing crosses unnoticed | 1 |
+| Cleansing bundle | Rosemary, lavender, juniper or mugwort, dried and bound. The smoke clears a room of what has been lingering in it | 1 |
+| Consecrated oil | Anoints a person, a door or a blade. Lasts the night | 1 |
+| Graveyard dirt | A jar. Taken with permission, which is the difficult part | 1 |
+| Incense and censer | Brass on a chain, and a box of cones. Reusable | 1 |
+| Iron filings | A pound. Mixed into paint, scattered on a sill, or thrown | 1 |
+| Ritual candles | A dozen. Burn for six hours and go out together whatever is left of them | 1 |
+| Ritual chalk | Draws on anything, and does not come off until you take it off | 1 |
+| Salt circle kit | Pre-measured salt, a cord and chalk in a tin. One complete circle | 1 |
+| Salt, canister | Enough for a circle around one room, or a line across four doorways | 1 |
+| Silver dust | A vial. Puts silver where silver would not otherwise reach | 2 |
+| Warding paint | Spray or brush. One room's worth of sigils | 1 |
+
+### Occult & Warding - Charms & Wards
+
+| Item | Effect | Wealth |
+|---|---|---|
+| Blank amulet | Silver, unmarked, waiting for a ritual to put something in it | 1 |
+| Charm bag | Cloth and a drawstring, filled to purpose. Carried, not hung | 1 |
+| Cold iron nail | Hand-forged rather than drawn. Driven into a threshold, or carried | 1 |
+| Consecrated iron fragment | A piece of a church bell. Rare, and nobody who has one sells it cheaply | 2 |
+| Evil eye charm | Blue glass or enamel. Worn where it can be seen, which is the point | 1 |
+| Hag stone | A pebble with a hole worn through it. Hung over a bed on red ribbon, nothing sits on the sleeper's chest | 1 |
+| Iron handcuffs | Cold iron, hand-forged. What they hold cannot simply stop being solid | 2 |
+| Iron horseshoe | Over a door, open end up. Everybody's grandmother had one | 1 |
+| Knotted cord | Nine knots tied in order. Untie them one at a time and one at a time only | 1 |
+| Rowan and red thread | A rowan cross bound in red. Over a door, or on a person | 1 |
+| Rue sachet | Dried rue in linen. Worn against the evil eye | 1 |
+| Threshold ward kit | Chalk, salt, iron and cord in a roll. One doorway, complete | 1 |
+| Witch bottle | Glass, sealed, full of pins and worse. Buried at a threshold, it takes what was meant for you | 1 |
+
+### Occult & Warding - Warded Ammunition
+
+| Item | Effect | Wealth |
+|---|---|---|
+| Blessed rounds | A box of twenty | 2 |
+| Cold iron rounds | A box of twenty | 2 |
+| Salt-loaded shells | Ten shells. Hurts enormously, kills nothing | 1 |
+| Silver buckshot | Ten shells | 2 |
+| Silver rounds | A box of twenty, cast rather than plated | 2 |
+
+### Occult & Warding - Detection
+
+| Item | Effect | Wealth |
+|---|---|---|
+| Audio sweep radio | Scans the band without stopping. People hear words in it | 1 |
+| Digital voice recorder | Records the room, and sometimes more of it than was there | 1 |
+| Dowsing rods | Two brass L-rods. They move. Nobody agrees why | 1 |
+| EMF meter | Reads electromagnetic fields. What that means is between you and your GM | 1 |
+| Full-spectrum camera | Stills and video, into ultraviolet and infrared | 2 |
+| Infrared thermometer | Surface temperature at a distance, to a tenth of a degree | 1 |
+| Residue sample kit | Swabs, vials, a UV lamp and evidence bags | 1 |
 
 ## Property
 
@@ -348,8 +435,10 @@ Some things have no counter to walk up to. The price is the easy half - the hard
 |---|---|---|---|---|---|---|---|
 | Anti-materiel rifle | Heavy | 5 | 300m / 800m | 5 rounds | 1 action | 3 | 4 |
 | Compact SMG | Submachine gun | 3 | 25m / 60m | 30 rounds | 1 action | 3 | 3 |
+| Concealed wrist blades | Exotic (melee) | 3 | Melee | - | - | 3 | 3 |
 | Grenade launcher | Heavy | 5 | 30m / 80m | 1 round | 1 action | 3 | 4 |
 | Gyrojet pistol | Exotic (ranged) | 4 | 25m / 60m | 6 rounds | 1 action | 3 | 4 |
+| Monofilament blade | Exotic (melee) | 5 | Melee | - | - | 4 | 4 |
 | Monofilament garrote | Exotic (melee) | 5 | Melee | - | - | 3 | 5 |
 | Squad automatic weapon | Heavy | 5 | 300m / 800m | 100 rounds | 1 action | 3 | 4 |
 

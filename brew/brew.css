@@ -854,6 +854,34 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
 }
 .page .skill-flavour > p{margin:0}
 
+/* Equipment cards. Same shape as a Skill entry: a name, a rating pill, a
+   line of what the thing is, then what it does. The rating is rendered
+   by blocks.js out of the title rather than typed twice. */
+.page .item{
+  background:var(--panel); border-left:3px solid var(--accent);
+  padding:.55em .75em; margin:0 0 .55em; border-radius:3px;
+  font-size:9.5pt; break-inside:avoid;
+}
+.page .item > :last-child{margin-bottom:0}
+.page .item-name{
+  font-family:var(--font-head); font-weight:var(--font-head-weight);
+  text-transform:var(--font-head-case);
+  font-size:12pt; color:var(--head); letter-spacing:.02em;
+}
+.page .item-wr{
+  display:inline-block; margin-left:.45em; padding:.05em .4em;
+  border:1px solid var(--rule); border-radius:3px;
+  font-family:var(--font-mono); font-size:7.5pt;
+  letter-spacing:.08em; text-transform:uppercase;
+  color:var(--page-dim); vertical-align:.15em;
+}
+/* What it is, against what it does. Same split the Skill card makes. */
+.page .item-flavour{
+  color:var(--accent); font-style:italic;
+  margin:.25em 0 .4em;
+}
+.page .item-flavour > p{margin:0}
+
 /* Element colours, matching the roll-box and stat variants. */
 .page .skill--earth{border-left-color:var(--v-earth)}
 .page .skill--earth .skill-flavour{color:var(--v-earth)}

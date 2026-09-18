@@ -40,338 +40,3963 @@ It cuts both ways. A character who said they were travelling light doesn’t get
 
 ## Basic Weapons
 
-Range is given as **Normal / Long**, in meters - the same unit as Movement Rate and the Range Bands. A weapon’s Normal range tells you the band it’s built for: a shotgun’s five meters is Close, a handgun’s fifteen is Near, a hunting rifle’s hundred is Far.
+<div class="item" markdown="1">
 
-Attacking a target within a weapon’s **Normal** range carries no penalty. Attacking at **Long** range imposes **Disadvantage** on the attack roll, stacking with any other Advantage/Disadvantage source per the usual binary rule. Beyond Long range, the target can’t be attacked with that weapon at all.
+<p class="item-name" markdown="span">Baseball bat<span class="item-wr">WR 1</span></p>
 
-**Reload** is the action cost to refill a weapon’s Ammo back to full once it runs dry - see Reload for what each tier means.
+<div class="item-flavour" markdown="1">
 
-**Ammo Recovery**: Bow-category arrows/bolts and Thrown weapons, unlike spent firearm cartridges, can be physically picked back up. If you control the battlefield once a fight ends, recover **half the ammo spent, rounded down** - GM’s call if the terrain makes that impractical (a river, a burning building, a fight that moved on before it could be searched).
+Ash or aluminium, thirty-odd inches. The aluminium ones ring when they connect.
 
-<div class="wide" markdown="1">
+</div>
 
-| Weapon | Category | Damage | Range (Normal / Long) | Ammo | Reload | Wealth |
-|---|---|---|---|---|---|---|
-| Baseball bat | Improvised | 3 | Melee | - | - | 1 |
-| Battle spear | Polearm / two-handed | 5 | Melee | - | - | 1 |
-| Bayonet | Knife | 3 | Melee | - | - | 1 |
-| Black powder pistol | Handgun | 3 | 10m / 25m | 1 round | Slow action | 1 |
-| Blowgun | Exotic (ranged) | 1 | 8m / 15m | 1 per shot | - | 1 |
-| Boomerang | Returning | 2 | 10m / 20m | 1 per throw (returns) | - | 1 |
-| Chain whip | Exotic (melee) | 3 | Melee | - | - | 1 |
-| Combat knife | Knife | 3 | Melee | - | - | 1 |
-| Compact pistol | Handgun | 3 | 15m / 40m | 15 rounds | 1 action | 2 |
-| Compound bow | Compound bow | 4 | 25m / 60m | 12 (quiver) | Free | 2 |
-| Crossbow | Crossbow | 4 | 20m / 50m | 12 (quiver) | 1 action | 2 |
-| Dart pistol | Exotic (ranged) | 1 | 10m / 20m | 5 darts | 1 action | 2 |
-| Derringer | Handgun | 2 | 5m / 10m | 2 rounds | 1 action | 1 |
-| English longbow | Warbow | 5 | 30m / 70m | 12 (quiver) | Free | 2 |
-| Fists, feet | Unarmed | 1 | Melee | - | - | - |
-| Flail | One-handed blunt | 4 | Melee | - | - | 1 |
-| Flare gun | Exotic (ranged) | 2 | 15m / 40m | 1 round | 1 action | 1 |
-| Garrote | Improvised | 2 | Melee | - | - | 1 |
-| Glaive | Polearm / two-handed | 5 | Melee | - | - | 1 |
-| Halberd | Polearm / two-handed | 5 | Melee | - | - | 1 |
-| Hand axe | Thrown axe | 1 | 5m / 15m | 1 per throw | - | 1 |
-| Hand crossbow | Hand crossbow | 2 | 10m / 25m | 5 (quick-load) | 1 action | 1 |
-| Harpoon gun | Heavy | 3 | 15m / 30m | 1 (line-retrievable) | Slow action | 2 |
-| Hatchet | One-handed blade | 4 | Melee | - | - | 1 |
-| Heavy revolver | Handgun | 3 | 15m / 40m | 6 rounds | 1 action | 2 |
-| Hunting rifle | Rifle | 4 | 100m / 250m | 5 rounds | 1 action | 2 |
-| Javelin | Shafted | 3 | 10m / 25m | 1 per throw | - | 1 |
-| Kama | One-handed blade | 3 | Melee | - | - | 1 |
-| Katana | One-handed blade | 4 | Melee | - | - | 2 |
-| Kukri | Large blade | 4 | Melee | - | - | 1 |
-| Mace | One-handed blunt | 4 | Melee | - | - | 1 |
-| Machete | Large blade | 4 | Melee | - | - | 1 |
-| Metal pipe | Improvised | 3 | Melee | - | - | 1 |
-| Muzzleloader rifle | Rifle | 4 | 80m / 200m | 1 round | Slow action | 2 |
-| Net launcher | Exotic (ranged) | 1 | 10m / 20m | 1 net | 1 action | 2 |
-| Nunchaku | Exotic (melee) | 3 | Melee | - | - | 1 |
-| Pump shotgun | Shotgun | 4 | 5m / 15m | 6 shells | Slow action | 2 |
-| Rapier | One-handed blade | 4 | Melee | - | - | 2 |
-| Recurve bow | Recurve bow | 3 | 20m / 50m | 12 (quiver) | Free | 2 |
-| Revolver rifle | Rifle | 4 | 60m / 150m | 9 rounds | 1 action | 2 |
-| Sai | One-handed blade | 3 | Melee | - | - | 1 |
-| Sap | Improvised | 3 | Melee | - | - | 1 |
-| Sawed-off shotgun | Shotgun | 4 | 5m / 15m | 2 shells | Slow action | 2 |
-| Short sword | One-handed blade | 4 | Melee | - | - | 1 |
-| Sledgehammer | Two-handed | 5 | Melee | - | - | 1 |
-| Sling | Sling | 2 | 15m / 30m | 1 per throw | - | 1 |
-| Speargun | Exotic (ranged) | 3 | 10m / 25m | 1 spear | Slow action | 1 |
-| Switchblade | Knife | 3 | Melee | - | - | 1 |
-| Tactical carbine | Rifle | 4 | 100m / 250m | 20 rounds | 1 action | 2 |
-| Throwing knife | Balanced blade | 1 | 5m / 15m | 1 per throw | - | 1 |
-| Tonfa | One-handed blunt | 3 | Melee | - | - | 1 |
-| Trench knife | Knife | 3 | Melee | - | - | 1 |
-| Two-handed sword | Polearm / two-handed | 5 | Melee | - | - | 2 |
-| War axe | One-handed blade | 4 | Melee | - | - | 1 |
-| War fan | Exotic (melee) | 2 | Melee | - | - | 1 |
-| Warhammer | Two-handed blunt | 5 | Melee | - | - | 1 |
-| Whip | Exotic (melee) | 2 | 3m / 6m | - | - | 1 |
+Improvised. Damage 3, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Battle spear<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A steel head on an ash shaft, taller than the person carrying it.
+
+</div>
+
+Polearm / two-handed. Damage 5, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Bayonet<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A blade built to clamp onto a rifle, used off it more often than on.
+
+</div>
+
+Knife. Damage 3, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Black powder pistol<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A single shot, loaded down the muzzle. Takes a minute and a steady hand.
+
+</div>
+
+Handgun. Damage 3, 10m / 25m. 1 round. Reload slow action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Blowgun<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A metre of hollow tube and a tin of darts.
+
+</div>
+
+Exotic (ranged). Damage 1, 8m / 15m. 1 per shot.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Boomerang<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Shaped hardwood, flat on one face. The kind that comes back is not the kind built for hunting.
+
+</div>
+
+Returning. Damage 2, 10m / 20m. 1 per throw (returns).
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Brass knuckles<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Four finger holes cast in one piece. Illegal in more places than people assume.
+
+</div>
+
+Improvised. Damage 2, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Chain whip<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Linked steel sections with a weight at the end, folded down to nothing in a pocket.
+
+</div>
+
+Exotic (melee). Damage 3, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Chainsaw<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Petrol, two-stroke, and loud enough that nothing in the building is unaware of you.
+
+</div>
+
+Two-handed. Damage 5, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Combat knife<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Seven inches, full tang, a blood groove nobody needs.
+
+</div>
+
+Knife. Damage 3, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Compact pistol<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Polymer frame, short barrel, built to sit under a jacket and be forgotten about.
+
+</div>
+
+Handgun. Damage 3, 15m / 40m. 15 rounds. Reload 1 action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Compound bow<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Cams and cables. Holds most of the draw weight for you once it is back.
+
+</div>
+
+Compound bow. Damage 4, 25m / 60m. 12 (quiver). Reload free.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Crossbow<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A bow lying on its side with a trigger. Slow to load and no harder to aim than a rifle.
+
+</div>
+
+Crossbow. Damage 4, 20m / 50m. 12 (quiver). Reload 1 action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Dart pistol<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Compressed gas and a magazine of darts. Quiet, and obviously not a firearm up close.
+
+</div>
+
+Exotic (ranged). Damage 1, 10m / 20m. 5 darts. Reload 1 action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Derringer<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Two barrels, palm-sized. Meant for a range where missing is not the problem.
+
+</div>
+
+Handgun. Damage 2, 5m / 10m. 2 rounds. Reload 1 action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">English longbow<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Six feet of yew. Pulling it properly deforms the bones of anyone who does it for years.
+
+</div>
+
+Warbow. Damage 5, 30m / 70m. 12 (quiver). Reload free.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Fists, feet</p>
+
+<div class="item-flavour" markdown="1">
+
+What everybody brings.
+
+</div>
+
+Unarmed. Damage 1, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Flail<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A head on a chain on a handle. Goes around a guard rather than through it.
+
+</div>
+
+One-handed blunt. Damage 4, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Flare gun<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Fat-barrelled, bright orange, loaded with something meant to be seen for miles.
+
+</div>
+
+Exotic (ranged). Damage 2, 15m / 40m. 1 round. Reload 1 action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Garrote<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Wire between two handles, carried coiled in a pocket.
+
+</div>
+
+Improvised. Damage 2, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Glaive<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A long single-edged blade on a shaft. Cuts at a distance most people misjudge.
+
+</div>
+
+Polearm / two-handed. Damage 5, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Halberd<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+An axe, a spike and a hook on one pole, for three different problems.
+
+</div>
+
+Polearm / two-handed. Damage 5, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Hand axe<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A hatchet balanced to be thrown as well as swung.
+
+</div>
+
+Thrown axe. Damage 1, 5m / 15m. 1 per throw.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Hand crossbow<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A crossbow cut down to one hand. The draw weight comes down with it.
+
+</div>
+
+Hand crossbow. Damage 2, 10m / 25m. 5 (quick-load). Reload 1 action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Harpoon gun<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A barbed head on a line, fired from a stock. Built for things in water.
+
+</div>
+
+Heavy. Damage 3, 15m / 30m. 1 (line-retrievable). Reload slow action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Hatchet<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A camp axe. Splits kindling and is always to hand.
+
+</div>
+
+One-handed blade. Damage 4, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Heavy revolver<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Six chambers, a barrel long enough to be a nuisance, and no jams.
+
+</div>
+
+Handgun. Damage 3, 15m / 40m. 6 rounds. Reload 1 action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Hunting rifle<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Bolt action, wooden stock, a scope somebody sighted in years ago.
+
+</div>
+
+Rifle. Damage 4, 100m / 250m. 5 rounds. Reload 1 action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Javelin<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A throwing spear, light, with the weight forward.
+
+</div>
+
+Shafted. Damage 3, 10m / 25m. 1 per throw.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Kama<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A short blade set at a right angle to the handle. It started as a rice knife.
+
+</div>
+
+One-handed blade. Damage 3, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Katana<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A curved single edge, folded steel, a grip for one hand or two.
+
+</div>
+
+One-handed blade. Damage 4, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Kukri<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A heavy forward-angled blade. Chops out of proportion to its size.
+
+</div>
+
+Large blade. Damage 4, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Mace<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A flanged steel head on a short haft. Does not care what the armour is made of.
+
+</div>
+
+One-handed blunt. Damage 4, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Machete<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Eighteen inches of soft steel. Cheap, everywhere, and sharpened on a stone.
+
+</div>
+
+Large blade. Damage 4, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Metal pipe<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A length of scaffold or plumbing, picked up on the way past.
+
+</div>
+
+Improvised. Damage 3, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Muzzleloader rifle<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Powder, ball and ramrod. One shot and then a long wait.
+
+</div>
+
+Rifle. Damage 4, 80m / 200m. 1 round. Reload slow action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Nail gun<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Pneumatic, framing weight, with the safety nose removed by somebody.
+
+</div>
+
+Exotic (ranged). Damage 2, 5m / 10m. 30 nails. Reload 1 action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Net launcher<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A weighted net in a compressed-gas launcher. Opens in the air.
+
+</div>
+
+Exotic (ranged). Damage 1, 10m / 20m. 1 net. Reload 1 action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Nunchaku<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Two hardwood batons on a short chain.
+
+</div>
+
+Exotic (melee). Damage 3, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Pump shotgun<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Twelve gauge, tube magazine, the sound of the action doing half the work.
+
+</div>
+
+Shotgun. Damage 4, 5m / 15m. 6 shells. Reload slow action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Rapier<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A long narrow blade with a cage over the hand. Built entirely around the point.
+
+</div>
+
+One-handed blade. Damage 4, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Recurve bow<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Limbs curving away at the tips. Takedown, so it travels in a bag.
+
+</div>
+
+Recurve bow. Damage 3, 20m / 50m. 12 (quiver). Reload free.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Revolver rifle<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A cylinder in a rifle stock. Rare, and it spits at the wrist that holds it.
+
+</div>
+
+Rifle. Damage 4, 60m / 150m. 9 rounds. Reload 1 action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Sai<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A blunt spike with two side prongs, carried in pairs. Built to trap a blade.
+
+</div>
+
+One-handed blade. Damage 3, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Sap<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Lead shot in a leather pouch, flat enough for a back pocket.
+
+</div>
+
+Improvised. Damage 3, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Sawed-off shotgun<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Both barrels cut back to nothing. Fits under a coat and spreads immediately.
+
+</div>
+
+Shotgun. Damage 4, 5m / 15m. 2 shells. Reload slow action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Service pistol<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Full-size automatic, fifteen rounds, what a duty holster is shaped for.
+
+</div>
+
+Handgun. Damage 3, 20m / 50m. 15 rounds. Reload 1 action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Short sword<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Two feet of straight double edge. Indoors it beats anything longer.
+
+</div>
+
+One-handed blade. Damage 4, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Sledgehammer<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Ten pounds on a hickory handle. Meant for masonry.
+
+</div>
+
+Two-handed. Damage 5, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Sling<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A leather cradle and two cords. Older than everything else on this page.
+
+</div>
+
+Sling. Damage 2, 15m / 30m. 1 per throw.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Snub-nose revolver<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Five rounds, two-inch barrel, no hammer spur to catch on a pocket.
+
+</div>
+
+Handgun. Damage 2, 10m / 20m. 5 rounds. Reload slow action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Speargun<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Rubber bands and a steel shaft. Works properly only underwater.
+
+</div>
+
+Exotic (ranged). Damage 3, 10m / 25m. 1 spear. Reload slow action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Switchblade<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Four inches, spring-loaded, opens with a thumb.
+
+</div>
+
+Knife. Damage 3, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Tactical carbine<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Short-barrelled semi-auto, adjustable stock, rails for whatever you bolt to it.
+
+</div>
+
+Rifle. Damage 4, 100m / 250m. 20 rounds. Reload 1 action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Throwing knife<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+No edge worth speaking of. All of it is balance.
+
+</div>
+
+Balanced blade. Damage 1, 5m / 15m. 1 per throw.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Tonfa<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A baton with a side handle. Guards the forearm as well as it strikes.
+
+</div>
+
+One-handed blunt. Damage 3, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Tranquilizer rifle<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A single dart on compressed gas. The dose is a guess and the wait is worse.
+
+</div>
+
+Exotic (ranged). Damage 1, 40m / 80m. 1 dart. Reload slow action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Trench knife<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A blade with knuckles built into the grip. Exactly as old as the name suggests.
+
+</div>
+
+Knife. Damage 3, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Two-handed sword<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Five feet of it, and a grip long enough to need both hands honestly.
+
+</div>
+
+Polearm / two-handed. Damage 5, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">War axe<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A bearded head on a two-foot haft. The beard is for pulling shields down.
+
+</div>
+
+One-handed blade. Damage 4, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">War fan<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Steel ribs in a folding fan. Closed it is a baton, open it is a guard.
+
+</div>
+
+Exotic (melee). Damage 2, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Warhammer<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A hammer face one side, a spike the other, on a long haft.
+
+</div>
+
+Two-handed blunt. Damage 5, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Whip<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Twelve feet of plaited leather. Everything it does is at the tip.
+
+</div>
+
+Exotic (melee). Damage 2, 3m / 6m.
 
 </div>
 
 ## Armor
 
-Purpose-built protective gear only - ordinary clothing, even sturdy clothing, doesn’t qualify. Every item covers one of two **Zones**, **Body** or **Head**, and carries its own **Hardness** and **Health Levels** - see Armor & Called Shots for the full two-stage per-die mechanic, why armor doesn’t stack within a Zone, and how a called shot targets Head-Zone armor specifically.
+<div class="item" markdown="1">
 
-<div class="wide" markdown="1">
+<p class="item-name" markdown="span">Armored coat<span class="item-wr">WR 2</span></p>
 
-| Item | Zone | Hardness | Health Levels | Notes | Wealth |
-|---|---|---|---|---|---|
-| Armored coat | Body | 3 | 2 | Reads as clothing; no penalty | 2 |
-| Armored suit lining | Body | 2 | 2 | Tailored into a suit; survives a glance, not a pat-down | 2 |
-| Ballistic helmet | Head | 4 | 2 |  | 2 |
-| Ballistic shield | Body | 6 | 4 | Front arc only, requires both hands | 3 |
-| Brigandine | Body | 4 | 3 |  | 2 |
-| Chainmail | Body | 4 | 3 | Disadvantage on Stealth rolls while worn | 2 |
-| Concealable vest | Body | 3 | 2 | Worn under clothing, no penalty | 2 |
-| Full tactical rig | Body + Head | 6 | 5 | Single item, sets both Zones; Disadvantage on Stealth rolls; Movement Rate -2 while worn | 2 |
-| Gambeson | Body | 2 | 2 | Worn under other armor without penalty | 1 |
-| Gauntlets | Body (arms) | 2 | 1 | Advantage resisting disarm attempts | 1 |
-| Greaves | Body (legs) | 2 | 1 |  | 1 |
-| Hazmat suit | Body + Head | 3 | 2 | Negates Disadvantage from toxic/biological hazards; Movement Rate -2 | 2 |
-| Leather cuirass | Body | 2 | 2 | No Stealth penalty | 1 |
-| Motorcycle armor jacket | Body | 3 | 2 | Worn openly, no Stealth penalty, doesn't look like armor | 2 |
-| Plate armor | Body | 6 | 4 | Movement Rate -2 while worn | 2 |
-| Riot exoskeleton | Body | 5 | 4 | Powered frame; Advantage on any roll of raw physical force; Disadvantage on Stealth rolls | 4 |
-| Riot helmet | Head | 4 | 2 | Full-face visor, Advantage resisting Blinded | 1 |
-| Riot shield | Body | 6 | 4 | Front arc only, requires both hands | 2 |
-| Sealed environment armor | Body + Head | 5 | 4 | Single item, sets both Zones; own air supply, immune to gas, smoke and contaminated water; Movement Rate -1 | 4 |
-| Stab vest | Body | 3 | 2 | Blade-only protection, no bonus vs. firearms | 2 |
-| Tactical vest | Body | 5 | 3 | Disadvantage on Stealth rolls while worn | 2 |
+<div class="item-flavour" markdown="1">
+
+A long wool coat with panels sewn between the lining and the shell. Heavier than it looks on the hanger.
+
+</div>
+
+Body. Hardness 3, 2 Health Levels. Reads as clothing; no penalty.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Armored suit lining<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Soft panels tailored into a two-piece. Somebody was paid well to make it hang right.
+
+</div>
+
+Body. Hardness 2, 2 Health Levels. Tailored into a suit; survives a glance, not a pat-down.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Ballistic helmet<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A high-cut composite shell with a four-point harness and rails nobody has used.
+
+</div>
+
+Head. Hardness 4, 2 Health Levels.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Ballistic shield<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A slab of laminate with a viewport and two handles, about the size of a door panel.
+
+</div>
+
+Body. Hardness 6, 4 Health Levels. Front arc only, requires both hands.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Brigandine<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Steel plates riveted between canvas and leather. The rivet heads show in rows.
+
+</div>
+
+Body. Hardness 4, 3 Health Levels.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Chainmail<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Riveted rings, twenty pounds of them, worn over padding because the alternative is bruising.
+
+</div>
+
+Body. Hardness 4, 3 Health Levels. Disadvantage on Stealth rolls while worn.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Concealable vest<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Soft panels in a carrier that goes under a shirt. Hot, and everybody who wears one says so.
+
+</div>
+
+Body. Hardness 3, 2 Health Levels. Worn under clothing, no penalty.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Full tactical rig<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Plate carrier, helmet, throat and groin protection. Everything, and it weighs everything.
+
+</div>
+
+Body + Head. Hardness 6, 5 Health Levels. Single item, sets both Zones; Disadvantage on Stealth rolls; Movement Rate -2 while worn.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Gambeson<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Quilted linen stuffed with tow. Worn alone it is a coat; worn under steel it is the reason the steel works.
+
+</div>
+
+Body. Hardness 2, 2 Health Levels. Worn under other armor without penalty.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Gauntlets<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Articulated plates over leather gloves, fingers and all.
+
+</div>
+
+Body (arms). Hardness 2, 1 Health Levels. Advantage resisting disarm attempts.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Greaves<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Shaped plates strapped over the shins.
+
+</div>
+
+Body (legs). Hardness 2, 1 Health Levels.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Hazmat suit<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Sealed coveralls, taped cuffs, a hood and a filter. Single use if it is ever actually needed.
+
+</div>
+
+Body + Head. Hardness 3, 2 Health Levels. Negates Disadvantage from toxic/biological hazards; Movement Rate -2.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Leather cuirass<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Hardened leather, front and back, laced at the sides.
+
+</div>
+
+Body. Hardness 2, 2 Health Levels. No Stealth penalty.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Motorcycle armor jacket<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Textile with CE armour in the shoulders, elbows and back. Reads as a jacket because it is one.
+
+</div>
+
+Body. Hardness 3, 2 Health Levels. Worn openly, no Stealth penalty, doesn’t look like armor.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Plate armor<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Articulated steel over the whole body. Distributes its weight properly and is still exhausting.
+
+</div>
+
+Body. Hardness 6, 4 Health Levels. Movement Rate -2 while worn.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Riot exoskeleton<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A powered frame worn outside the armour, motors at the joints, a battery on the back.
+
+</div>
+
+Body. Hardness 5, 4 Health Levels. Powered frame; Advantage on any roll of raw physical force; Disadvantage on Stealth rolls.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Riot helmet<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Full face, polycarbonate visor, neck guard hanging off the back.
+
+</div>
+
+Head. Hardness 4, 2 Health Levels. Full-face visor, Advantage resisting Blinded.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Riot shield<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Clear polycarbonate, body length, with a horizontal grip and a forearm cuff.
+
+</div>
+
+Body. Hardness 6, 4 Health Levels. Front arc only, requires both hands.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Sealed environment armor<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Hard shell, sealed seams, its own air on the back and a faceplate that fogs at the edges.
+
+</div>
+
+Body + Head. Hardness 5, 4 Health Levels. Single item, sets both Zones; own air supply, immune to gas, smoke and contaminated water; Movement Rate -1.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Stab vest<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Layered mail and laminate. Built for blades, and honest about it.
+
+</div>
+
+Body. Hardness 3, 2 Health Levels. Blade-only protection, no bonus vs. firearms.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Tactical vest<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A plate carrier with hard plates front and back and pouches across the front.
+
+</div>
+
+Body. Hardness 5, 3 Health Levels. Disadvantage on Stealth rolls while worn.
 
 </div>
 
 ## Tech & Electronics
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Item | Effect | Wealth |
-|---|---|---|
-| Action / body camera | Records hands-free footage; can serve as evidence or an Investigation aid later | 1 |
-| AI assistant earpiece | Real-time research/lookups hands-free, no roll for obvious queries | 2 |
-| AR contact lenses | The same display layer, invisible to anyone else. Nobody can tell you are reading. | 3 |
-| Biometric scanner lock | Required tool to bypass fingerprint/retina-locked systems; without one, at Disadvantage | 2 |
-| Comms relay beacon | Once placed, extends an Encrypted comms set's range from Near-Far to Far-and-beyond | 2 |
-| Covert GPS tracker | Real-time location on a person/vehicle until found and removed | 1 |
-| Drone control rig | A worn harness for flying several drones at once. Not an implant - it comes off. | 3 |
-| Encrypted comms set | Silent team communication at Near-Far range, no roll | 2 |
-| Hacking multitool | Required tool for a field Hacking roll away from a full rig; without one, at Disadvantage | 2 |
-| Laptop / hacking rig | Required tool for Hacking Skill checks; without one, Hacking rolls are at Disadvantage | 2 |
-| Laser rangefinder | Advantage on the first ranged attack roll against a stationary target | 2 |
-| Motion sensor | Alerts when triggered within its zone; Advantage on Perception to notice an intrusion it caught | 1 |
-| Night vision goggles | Negate Disadvantage from darkness on Perception rolls | 3 |
-| Night-vision drone | Remote Far-range low-light scouting, directed as a Fast action | 3 |
-| Police scanner | Advantage on rolls made to anticipate or track police response | 1 |
-| Portable charger / power bank | Keeps electronics running indefinitely in the field, no roll | 1 |
-| Recon drone | Remote Far-range visual/audio scouting, directed as a Fast action | 2 |
-| Satellite phone | Comms with no signal dependency, works anywhere | 2 |
-| Security drone (tracked) | Waist-high and armoured. Patrols a perimeter, reports, and escalates without being told to. | 3 |
-| Smart glasses | Overlays directions, faces and notes on what you are looking at. Everyone can see you are wearing them. | 2 |
-| Smartgun link kit | Fitted to one firearm. Puts the reticle where the muzzle actually points - ignore the Disadvantage from firing at Long range. | 2 |
-| Smartphone | Comms, maps, research at a glance - no roll for obvious lookups | 2 |
-| Solar charger | Keeps electronics running indefinitely with no power grid access | 1 |
-| Tablet / e-reader | Portable research and storage; no roll for obvious lookups, same as a Smartphone | 2 |
-| Technical scanner | Identifies an unfamiliar device, what it is doing, and where it is weakest. | 3 |
-| Thermal drone | Remote Far-range thermal scouting, directed as a Fast action | 3 |
-| Thermal imaging scope | Advantage on Perception through darkness, smoke, or light cover | 3 |
-| Two-way radio | Short-range team comms (Close-Near), no roll - cheaper unencrypted alternative to an Encrypted comms set | 1 |
+<p class="item-name" markdown="span">Action / body camera<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A matchbox with a lens, clipped to a chest strap or a lapel.
+
+</div>
+
+Records hands-free footage; can serve as evidence or an Investigation aid later.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">AI assistant earpiece<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A bud that sits deep enough not to show, always listening for its name.
+
+</div>
+
+Real-time research/lookups hands-free, no roll for obvious queries.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">AR contact lenses<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Soft lenses with the display printed into them. They need charging overnight in a case.
+
+</div>
+
+The same display layer, invisible to anyone else. Nobody can tell you are reading.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Biometric scanner lock<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A handheld reader with a gel pad, and a cable that goes somewhere it should not.
+
+</div>
+
+Required tool to bypass fingerprint/retina-locked systems; without one, at Disadvantage.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Comms relay beacon<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A weatherproof box the size of a brick, with a magnet on one face and a stub aerial.
+
+</div>
+
+Once placed, extends an Encrypted comms set’s range from Near-Far to Far-and-beyond.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Covert GPS tracker<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A puck with a magnet, a battery good for a fortnight, and no lights on it.
+
+</div>
+
+Real-time location on a person/vehicle until found and removed.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Drone control rig<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A harness with a folding screen and two thumbsticks, worn across the chest.
+
+</div>
+
+A worn harness for flying several drones at once. Not an implant - it comes off.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Encrypted comms set<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Earpiece, throat mic and a belt unit. Everything on the set is paired to everything else.
+
+</div>
+
+Silent team communication at Near-Far range, no roll.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Faraday sleeve<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A padded pouch lined with silver mesh, with a roll-top closure.
+
+</div>
+
+Nothing inside it transmits, receives, or can be tracked.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Hacking multitool<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A slab of ports and adaptors with a screen on it, small enough for a jacket pocket.
+
+</div>
+
+Required tool for a field Hacking roll away from a full rig; without one, at Disadvantage.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Handheld thermal camera<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A pistol-grip camera with a small screen showing everything warm in white.
+
+</div>
+
+Advantage on Perception rolls to find living things through smoke, darkness, or a wall.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Laptop / hacking rig<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A heavy laptop with too many ports and a battery that has been replaced twice.
+
+</div>
+
+Required tool for Hacking Skill checks; without one, Hacking rolls are at Disadvantage.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Laser rangefinder<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Monocular, rubber-armoured, reads out distance in the eyepiece.
+
+</div>
+
+Advantage on the first ranged attack roll against a stationary target.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Motion sensor<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A palm-sized sensor on a peel-and-stick pad, paired to a phone.
+
+</div>
+
+Alerts when triggered within its zone; Advantage on Perception to notice an intrusion it caught.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Night vision goggles<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A head harness and two tubes. Everything through them is green and flat.
+
+</div>
+
+Negate Disadvantage from darkness on Perception rolls.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Night-vision drone<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A quadcopter with a low-light camera under it, quiet enough to lose track of.
+
+</div>
+
+Remote Far-range low-light scouting, directed as a Fast action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Police scanner<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A handheld receiver with a rubber aerial, scanning preset ranges.
+
+</div>
+
+Advantage on rolls made to anticipate or track police response.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Portable charger / power bank<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A brick of cells that will charge a phone six times over.
+
+</div>
+
+Keeps electronics running indefinitely in the field, no roll.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Recon drone<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A folding quadcopter in a hard case, with a camera on a gimbal.
+
+</div>
+
+Remote Far-range visual/audio scouting, directed as a Fast action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Satellite phone<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A handset with a thick hinged aerial, and it needs open sky to be any use at all.
+
+</div>
+
+Comms with no signal dependency, works anywhere.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Security drone (tracked)<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Waist-high, tracked, armoured, with a sensor mast and a speaker.
+
+</div>
+
+Waist-high and armoured. Patrols a perimeter, reports, and escalates without being told to.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Smart glasses<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Ordinary frames with a projector in one arm and a camera in the other.
+
+</div>
+
+Overlays directions, faces and notes on what you are looking at. Everyone can see you are wearing them.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Smartgun link kit<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A rail sensor, a wire, and a reticle that goes wherever the muzzle is actually pointed.
+
+</div>
+
+Fitted to one firearm. Puts the reticle where the muzzle actually points - ignore the Disadvantage from firing at Long range.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Smartphone<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A phone. Everybody has one and everybody’s is slightly out of date.
+
+</div>
+
+Comms, maps, research at a glance - no roll for obvious lookups.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Solar charger<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A folding panel that straps to a pack, with a regulator and two ports.
+
+</div>
+
+Keeps electronics running indefinitely with no power grid access.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Tablet / e-reader<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A tablet in a knocked-about case, loaded with more than anybody could read.
+
+</div>
+
+Portable research and storage; no roll for obvious lookups, same as a Smartphone.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Technical scanner<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A handheld unit with a probe on a coiled lead and a screen that is mostly menus.
+
+</div>
+
+Identifies an unfamiliar device, what it is doing, and where it is weakest.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Thermal drone<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A quadcopter carrying a thermal camera instead of an ordinary one.
+
+</div>
+
+Remote Far-range thermal scouting, directed as a Fast action.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Thermal imaging scope<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A scope that clips ahead of an existing optic, showing heat rather than light.
+
+</div>
+
+Advantage on Perception through darkness, smoke, or light cover.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Two-way radio<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A pair of handhelds off a shelf. Anybody with the same set can hear you.
+
+</div>
+
+Short-range team comms (Close-Near), no roll - cheaper unencrypted alternative to an Encrypted comms set.
 
 </div>
 
 ## Survival & Tools
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Item | Effect | Wealth |
-|---|---|---|
-| Animal traps | Passive capture of small game over time, no roll to set | 1 |
-| Ascender / rappel kit | Required tool for safely rappelling down or ascending a fixed rope; without one, at Disadvantage | 2 |
-| Avalanche beacon | Real-time location if buried in snow, drastically speeds rescue | 2 |
-| Bear trap | Passive trap; Restrains and deals 3 damage to whoever triggers it | 1 |
-| Bolt cutters | Required tool for cutting chains/padlocks; without one, at Disadvantage | 1 |
-| Compass | Never lost navigating with a map, no roll | 1 |
-| Crowbar | Advantage on forced-entry rolls against doors/windows specifically (not a full Breaching kit) | 1 |
-| Field rations & water purifier | Keeps you fed and watered in the field, no roll, for an extended stretch | 1 |
-| Fire axe | Advantage on forced-entry rolls against doors specifically - a low-tech cousin of the Breaching kit | 1 |
-| Fire starter kit | Reliable fire in any weather, no roll | 1 |
-| First aid kit | Consumed on use: Advantage on a roll to treat Health Levels | 1 |
-| Gas mask / respirator | Negates Disadvantage from smoke, gas, or airborne toxins | 1 |
-| Grappling hook | Advantage on Climbing rolls to scale a ledge or wall within range | 1 |
-| Hand saw | No roll for trivial wood-cutting tasks | 1 |
-| Ice axe | Required tool for climbing on ice or snow; Advantage on Climbing rolls in those conditions | 1 |
-| Lockpick set | Required tool for lockpicking; without one, bypass rolls are at Disadvantage | 1 |
-| Multitool | No roll for trivial improvised repairs | 1 |
-| Nice backpack | +20kg Carrying Capacity while worn | 1 |
-| Oxygen tank | Sustains breathing in a low-oxygen or toxic environment for an extended stretch | 2 |
-| Paracord (100ft) | Advantage on improvised rigging or binding rolls | 1 |
-| Pickaxe | Advantage on rolls to break through rock or hard earth | 1 |
-| Portable camp stove | Hot food and water in the field without an open fire | 1 |
-| Rope & climbing kit | Advantage on Climbing-related rolls | 1 |
-| Sewing / repair kit | No roll for trivial gear or clothing repairs | 1 |
-| Snake bite kit | Consumed on use: Advantage resisting a venom effect | 1 |
-| Snowshoes | Negates Movement Rate penalties from deep snow | 1 |
-| Straw water filter | Makes any water source safe to drink, no roll | 1 |
-| Tactical flashlight | Negates darkness Disadvantage within Close range | 1 |
-| Tent | Field shelter for one to two; lighter and cheaper than the full Tent & sleeping gear kit | 1 |
-| Tent & sleeping gear | Field shelter; avoids Exhausted accrual from a rough night outdoors | 2 |
-| Thermite charge | Consumed on use: burns through a locked or reinforced barrier, no roll needed - GM's call on collateral | 2 |
-| Water desalinator | Makes seawater safe to drink, no roll | 2 |
-| Welding torch | Required tool for metal-cutting or joining tasks; without one, at Disadvantage | 2 |
+<p class="item-name" markdown="span">Animal traps<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Wire snares and a few small spring traps, rolled in canvas.
+
+</div>
+
+Passive capture of small game over time, no roll to set.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Ascender / rappel kit<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Two handled cams, a descender, slings and locking carabiners.
+
+</div>
+
+Required tool for safely rappelling down or ascending a fixed rope; without one, at Disadvantage.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Avalanche beacon<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A transceiver worn against the chest, transmitting until somebody switches it to search.
+
+</div>
+
+Real-time location if buried in snow, drastically speeds rescue.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Bear trap<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Forty pounds of sprung steel jaws on a chain and a stake.
+
+</div>
+
+Passive trap; Restrains and deals 3 damage to whoever triggers it.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Bolt cutters<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Thirty-six inch handles and hardened jaws. Nothing subtle about carrying them.
+
+</div>
+
+Required tool for cutting chains/padlocks; without one, at Disadvantage.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Compass<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Baseplate, liquid-damped needle, a lanyard. No battery to go flat.
+
+</div>
+
+Never lost navigating with a map, no roll.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Crowbar<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A yard of forged steel, flat one end, curved the other.
+
+</div>
+
+Advantage on forced-entry rolls against doors/windows specifically (not a full Breaching kit).
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Duct tape<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A roll of it. Everybody has an opinion about which brand.
+
+</div>
+
+No roll for trivial improvised repairs, restraint, or holding a dressing on.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Field rations &amp; water purifier<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Retort pouches, a pump filter and spare cartridges.
+
+</div>
+
+Keeps you fed and watered in the field, no roll, for an extended stretch.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Fire axe<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Red, with a pick on the back, off a wall somewhere.
+
+</div>
+
+Advantage on forced-entry rolls against doors specifically - a low-tech cousin of the Breaching kit.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Fire starter kit<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Ferro rod, striker, waxed tinder in a tin that seals.
+
+</div>
+
+Reliable fire in any weather, no roll.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">First aid kit<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A zip pouch of dressings, tape, gloves and scissors.
+
+</div>
+
+Consumed on use: Advantage on a roll to treat Health Levels.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Gas mask / respirator<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Full-face, twin filters, straps that take a minute to get right.
+
+</div>
+
+Negates Disadvantage from smoke, gas, or airborne toxins.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Glow sticks<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A dozen plastic tubes. Snap one and it cannot be switched off again.
+
+</div>
+
+Twelve hours of light that needs no battery and cannot be switched off.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Go-bag<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A packed holdall by the door. Clothes, cash, documents, a charger and a knife.
+
+</div>
+
+Packed and by the door. Leaving in under a minute costs no roll and nothing is forgotten.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Grappling hook<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Three folding flukes on a steel eye, with fifty feet of line.
+
+</div>
+
+Advantage on Climbing rolls to scale a ledge or wall within range.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Hand saw<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A bow saw with a spare blade taped to the frame.
+
+</div>
+
+No roll for trivial wood-cutting tasks.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Ice axe<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A steel head on a short shaft, pick one side, adze the other.
+
+</div>
+
+Required tool for climbing on ice or snow; Advantage on Climbing rolls in those conditions.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Lockpick set<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A leather wallet of rakes, hooks and tension wrenches.
+
+</div>
+
+Required tool for lockpicking; without one, bypass rolls are at Disadvantage.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Multitool<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Pliers, blades, drivers and a file, folded into a handle.
+
+</div>
+
+No roll for trivial improvised repairs.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Nice backpack<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Forty litres, a proper hip belt, and a lifetime guarantee somebody will honour.
+
+</div>
+
++20kg Carrying Capacity while worn.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Oxygen tank<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A small cylinder with a regulator and a mask, good for about twenty minutes.
+
+</div>
+
+Sustains breathing in a low-oxygen or toxic environment for an extended stretch.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Paracord (100ft)<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A hank of 550 cord. Seven inner strands, and people use those separately.
+
+</div>
+
+Advantage on improvised rigging or binding rolls.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Pickaxe<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A point one side, a chisel the other, on a hickory haft.
+
+</div>
+
+Advantage on rolls to break through rock or hard earth.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Portable camp stove<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A burner that screws onto a gas canister, and a wind shield that never quite works.
+
+</div>
+
+Hot food and water in the field without an open fire.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Road flares<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Fusees in a cardboard tube. Fifteen minutes each, and they burn in rain.
+
+</div>
+
+Burn in rain and wind. Advantage on rolls to signal, warn off, or start something.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Rope &amp; climbing kit<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Fifty metres of dynamic rope, a harness, belay device and a rack of gear.
+
+</div>
+
+Advantage on Climbing-related rolls.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Sewing / repair kit<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Needles, waxed thread, patches and a few buttons in a tobacco tin.
+
+</div>
+
+No roll for trivial gear or clothing repairs.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Snake bite kit<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A suction pump, bandages and instructions most people have not read.
+
+</div>
+
+Consumed on use: Advantage resisting a venom effect.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Snowshoes<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Aluminium frames with decking and a ratchet binding.
+
+</div>
+
+Negates Movement Rate penalties from deep snow.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Straw water filter<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A hollow-fibre tube you drink through directly.
+
+</div>
+
+Makes any water source safe to drink, no roll.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Tactical flashlight<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Anodised aluminium, a tail switch, and bright enough to be an argument.
+
+</div>
+
+Negates darkness Disadvantage within Close range.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Tent<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Two-person, three-season, and the poles are colour-coded for a reason.
+
+</div>
+
+Field shelter for one to two; lighter and cheaper than the full Tent & sleeping gear kit.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Tent &amp; sleeping gear<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+The tent, a bag rated lower than you need, and a mat that will deflate by morning.
+
+</div>
+
+Field shelter; avoids Exhausted accrual from a rough night outdoors.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Thermite charge<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A shaped canister with an igniter. Burns through what it is sat on.
+
+</div>
+
+Consumed on use: burns through a locked or reinforced barrier, no roll needed - GM’s call on collateral.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Water desalinator<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A hand-pumped reverse osmosis unit. Slow, and heavier than the brochure said.
+
+</div>
+
+Makes seawater safe to drink, no roll.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Welding torch<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Oxy-acetylene on a trolley, with a striker on a chain.
+
+</div>
+
+Required tool for metal-cutting or joining tasks; without one, at Disadvantage.
 
 </div>
 
 ## Medical & Chemical
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Item | Effect | Wealth |
-|---|---|---|
-| Adrenaline shot (epi-pen) | Consumed on use: clears one Exhausted level instantly and negates a severe allergic reaction, no roll | 1 |
-| Advanced trauma kit | Consumed on use: Advantage on treating Health Levels, usable even to stabilize someone at or below 0 | 2 |
-| Antitoxin | Consumed on use: Advantage resisting a specific known poison | 2 |
-| Burn gel / dressing | Consumed on use: Advantage on treating a burn injury specifically | 1 |
-| Chemical analysis kit | Required tool for identifying unknown substances; Advantage on related Research/Science rolls | 2 |
-| Defibrillator (AED) | Consumed on use: can revive a target from Unconscious at 0 Health Levels, no roll, if used within the same Scene they went down | 2 |
-| Field autodoc | A case that performs surgery. Better than a paramedic, worse than a surgeon, and it never panics. | 4 |
-| Field stimulant | Consumed on use: clear your current Exhausted levels, or grant Advantage on one Physical roll - GM's call on any crash afterward | 1 |
-| IV kit & fluids | Consumed on use: Advantage on treating Exhausted levels or blood loss | 1 |
-| Medical scanner | Handheld. Sees the break, the bleed and the poison without opening anything. | 3 |
-| Naloxone kit | Consumed on use: reverses an opioid overdose outright, no roll | 1 |
-| SAM splint | Required tool for field-splinting a broken limb; without one, at Disadvantage | 1 |
-| Sedative dart | Ranged; a target Overwhelmed by its Stamina-based dice falls Unconscious instead of just losing Health Levels (GM's call on framing) | 2 |
-| Stimulant patch | Buys you a night. You pay for it over the following week. | 2 |
-| Surgical kit | Required tool for treatment beyond field first aid; without one, at Disadvantage on major Health Level treatment | 2 |
-| Tourniquet | Consumed on use: Advantage on the next roll to treat Health Levels lost to a bleeding injury | 1 |
-| Trauma patch | Adhesive. Stops the bleeding and the panic for about an hour; buys time, not recovery. | 2 |
-| Trauma shears | No roll to quickly cut through clothing or restraints to treat an injury | 1 |
-| Water purification tablets | Makes questionable water safe to drink, no roll - lighter than a full purifier | 1 |
+<p class="item-name" markdown="span">Adrenaline shot (epi-pen)<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+An auto-injector in a plastic tube. Blue to the sky, orange to the thigh.
+
+</div>
+
+Consumed on use: clears one Exhausted level instantly and negates a severe allergic reaction, no roll.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Advanced trauma kit<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A vacuum-packed roll of tourniquets, chest seals, airways and packing gauze.
+
+</div>
+
+Consumed on use: Advantage on treating Health Levels, usable even to stabilize someone at or below 0.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Antitoxin<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A vial and a syringe in a cold pack, with the venom it answers written on the label.
+
+</div>
+
+Consumed on use: Advantage resisting a specific known poison.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Burn gel / dressing<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Sterile gel-soaked pads in foil, sized from a hand to a torso.
+
+</div>
+
+Consumed on use: Advantage on treating a burn injury specifically.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Chemical analysis kit<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Reagent bottles, a spot plate and a card of colour references.
+
+</div>
+
+Required tool for identifying unknown substances; Advantage on related Research/Science rolls.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Defibrillator (AED)<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A hard case with two pads and a voice that talks you through it.
+
+</div>
+
+Consumed on use: can revive a target from Unconscious at 0 Health Levels, no roll, if used within the same Scene they went down.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Field autodoc<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A case that opens into a frame over a patient, with arms that do the work themselves.
+
+</div>
+
+A case that performs surgery. Better than a paramedic, worse than a surgeon, and it never panics.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Field stimulant<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Ampoules in a foam block. Whatever is in them is not sold over a counter.
+
+</div>
+
+Consumed on use: clear your current Exhausted levels, or grant Advantage on one Physical roll - GM’s call on any crash afterward.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">IV kit &amp; fluids<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Bags of saline, giving sets, cannulas and a length of tape.
+
+</div>
+
+Consumed on use: Advantage on treating Exhausted levels or blood loss.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Medical scanner<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A handheld unit run over a patient, reading out more than a pulse.
+
+</div>
+
+Handheld. Sees the break, the bleed and the poison without opening anything.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Naloxone kit<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Two doses of nasal spray in a hard case, with the instructions printed on the lid.
+
+</div>
+
+Consumed on use: reverses an opioid overdose outright, no roll.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">SAM splint<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A rolled aluminium and foam strip, bent to shape around a limb.
+
+</div>
+
+Required tool for field-splinting a broken limb; without one, at Disadvantage.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Sedative dart<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A single dart with a pressurised chamber behind the needle.
+
+</div>
+
+Ranged; a target Overwhelmed by its Stamina-based dice falls Unconscious instead of just losing Health Levels (GM’s call on framing).
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Stimulant patch<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+An adhesive patch that goes on the neck and works through the skin.
+
+</div>
+
+Buys you a night. You pay for it over the following week.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Surgical kit<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A sterile roll of scalpels, forceps, clamps, needles and suture.
+
+</div>
+
+Required tool for treatment beyond field first aid; without one, at Disadvantage on major Health Level treatment.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Tourniquet<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A windlass on a webbing strap, one-handed by design.
+
+</div>
+
+Consumed on use: Advantage on the next roll to treat Health Levels lost to a bleeding injury.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Trauma patch<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A sealed dressing with a clotting agent already in the gauze.
+
+</div>
+
+Adhesive. Stops the bleeding and the panic for about an hour; buys time, not recovery.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Trauma shears<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Angled shears that cut a boot off without touching what is inside it.
+
+</div>
+
+No roll to quickly cut through clothing or restraints to treat an injury.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Water purification tablets<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A strip of foil-wrapped tablets. Thirty minutes and it tastes of a swimming pool.
+
+</div>
+
+Makes questionable water safe to drink, no roll - lighter than a full purifier.
 
 </div>
 
 ## Disguise & Infiltration
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Item | Effect | Wealth |
-|---|---|---|
-| Bump key set | Advantage on Lockpicking rolls against standard pin-tumbler locks | 1 |
-| Collapsible rifle case | A rifle that comes apart into something that reads as an instrument case. | 2 |
-| Colored contact lenses | Defeats a description or ID check based on eye color, no roll | 1 |
-| Disguise kit | Advantage on Deception rolls involving a physical disguise | 1 |
-| Encrypted burner phone | Untraceable, disposable comms; discard after use to leave no trail | 1 |
-| Environment-matched camo | Advantage on Stealth rolls in matching terrain | 1 |
-| Fingerprint gloves | Leaves no fingerprints; negates related forensic Investigation against the wearer | 1 |
-| Ghillie suit | Advantage on Stealth rolls in matching natural terrain (doesn't stack with Environment-matched camo) | 1 |
-| Grapple gloves | Advantage on Climbing rolls on sheer or smooth surfaces | 2 |
-| Prosthetic scars / tattoo kit | Advantage on Deception rolls impersonating a specific known individual | 1 |
-| Uniform disguise | Advantage on Deception rolls passing as a specific role or organization while worn | 1 |
-| UV flashlight | Advantage on Investigation rolls at a scene with UV-reactive evidence | 1 |
-| Voice changer | Advantage on Deception rolls made over a phone or radio specifically | 1 |
-| Wig & makeup kit | Advantage on Deception rolls for a full appearance change (doesn't stack with a Face-changing prosthetics kit) | 1 |
+<p class="item-name" markdown="span">Bump key set<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Filed-down blanks in the common profiles, and a plastic mallet to tap them.
+
+</div>
+
+Advantage on Lockpicking rolls against standard pin-tumbler locks.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Burn bag<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A lined sack with a pull igniter in the seam. Everything in it goes to ash.
+
+</div>
+
+Destroys everything inside it in under a minute, unrecoverably.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Collapsible rifle case<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A padded case that breaks down into something a tennis racket would fit in.
+
+</div>
+
+A rifle that comes apart into something that reads as an instrument case.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Colored contact lenses<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Tinted soft lenses in a case, in three shades nobody would remark on.
+
+</div>
+
+Defeats a description or ID check based on eye color, no roll.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Dead drop cache<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A weatherproof tube and a spot nobody watches. The spot is the expensive part.
+
+</div>
+
+A prepared spot nobody watches. Hand something over without meeting anybody.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Disguise kit<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Spirit gum, pigments, brushes, appliances and a mirror that folds flat.
+
+</div>
+
+Advantage on Deception rolls involving a physical disguise.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Encrypted burner phone<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A cheap handset with an encrypted messenger on it, bought for cash.
+
+</div>
+
+Untraceable, disposable comms; discard after use to leave no trail.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Environment-matched camo<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A pattern chosen for one specific place, not a general-purpose one.
+
+</div>
+
+Advantage on Stealth rolls in matching terrain.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Fingerprint gloves<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Thin nitrile with textured pads. Leaves marks that are nobody’s.
+
+</div>
+
+Leaves no fingerprints; negates related forensic Investigation against the wearer.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Ghillie suit<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A net oversuit hung with jute garnish, tied on in handfuls over weeks.
+
+</div>
+
+Advantage on Stealth rolls in matching natural terrain (doesn’t stack with Environment-matched camo).
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Grapple gloves<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Gloves with a launcher on the back of each wrist and a spool in the cuff.
+
+</div>
+
+Advantage on Climbing rolls on sheer or smooth surfaces.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Prosthetic scars / tattoo kit<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Silicone appliances, transfer inks and remover, in a flat tin.
+
+</div>
+
+Advantage on Deception rolls impersonating a specific known individual.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Uniform disguise<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Somebody’s actual work clothes, with the right boots and a laminated card.
+
+</div>
+
+Advantage on Deception rolls passing as a specific role or organization while worn.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">UV flashlight<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A torch throwing almost nothing visible. Things on a floor light up under it.
+
+</div>
+
+Advantage on Investigation rolls at a scene with UV-reactive evidence.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Voice changer<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+An inline unit between a handset and an earpiece, with a dial.
+
+</div>
+
+Advantage on Deception rolls made over a phone or radio specifically.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Wig &amp; makeup kit<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Two wigs on blocks, pins, and a case of everything to go with them.
+
+</div>
+
+Advantage on Deception rolls for a full appearance change (doesn’t stack with a Face-changing prosthetics kit).
 
 </div>
 
 ## Surveillance
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Item | Effect | Wealth |
-|---|---|---|
-| Binoculars | Advantage on Perception rolls at Far range | 1 |
-| Concealable microphone | Covert audio pickup, Close-Near broadcast range | 1 |
-| Directional microphone | Advantage on eavesdropping at Near-Far range | 2 |
-| Hidden camera | Covert visual feed, live or for later retrieval | 1 |
-| Hidden tracker dart | Ranged; attaches a Covert GPS tracker to a target or vehicle without them noticing (Stealth vs. Perception) | 2 |
-| Parabolic microphone | Advantage on eavesdropping at Far range specifically (line of sight required) | 2 |
-| RF / bug detector | Advantage on Perception rolls made specifically to find a hidden microphone or tracker | 2 |
-| Satellite uplink | Comms and data access with no signal dependency, works anywhere - a team-wide version of a Satellite phone | 3 |
-| Spy pen camera | Covert visual recording, easily overlooked as an everyday object | 1 |
-| Surveillance microdrone | Insect-sized. Flies in through the gap a window was left open and sends back what it sees. | 3 |
-| Trail camera | Unattended, motion-triggered; monitors a fixed location indefinitely | 1 |
+<p class="item-name" markdown="span">Binoculars<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Roof prism, ten by forty-two, rubber armoured.
+
+</div>
+
+Advantage on Perception rolls at Far range.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Concealable microphone<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A microphone the size of a shirt button on a hair-thin lead.
+
+</div>
+
+Covert audio pickup, Close-Near broadcast range.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Directional microphone<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A shotgun mic in a foam windshield, on a pistol grip.
+
+</div>
+
+Advantage on eavesdropping at Near-Far range.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Hidden camera<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A pinhole lens built into something ordinary, with a card slot in the back of it.
+
+</div>
+
+Covert visual feed, live or for later retrieval.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Hidden tracker dart<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A tracker in a dart body, fired from a gas launcher and sticky on impact.
+
+</div>
+
+Ranged; attaches a Covert GPS tracker to a target or vehicle without them noticing (Stealth vs. Perception).
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Parabolic microphone<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A clear plastic dish with a microphone at the focus and headphones on a lead.
+
+</div>
+
+Advantage on eavesdropping at Far range specifically (line of sight required).
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">RF / bug detector<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A wand with a meter on it, swept slowly along a wall.
+
+</div>
+
+Advantage on Perception rolls made specifically to find a hidden microphone or tracker.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Satellite uplink<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A folding dish in a hard case, with a terminal that takes ten minutes to find the sky.
+
+</div>
+
+Comms and data access with no signal dependency, works anywhere - a team-wide version of a Satellite phone.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Spy pen camera<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A pen that writes, with a lens above the clip.
+
+</div>
+
+Covert visual recording, easily overlooked as an everyday object.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Surveillance microdrone<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Insect-sized. Flies in through the gap a window was left open and sends back what it sees.
+
+</div>
+
+Insect-sized. Flies in through the gap a window was left open and sends back what it sees.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Trail camera<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A camouflaged box strapped to a tree, motion-triggered, with infrared for night.
+
+</div>
+
+Unattended, motion-triggered; monitors a fixed location indefinitely.
 
 </div>
 
 ## Transport
 
-Driving/Piloting Skill required to operate; combat or pursuit use falls under Combat Driving/Piloting instead.
+<div class="item" markdown="1">
 
-<div class="wide" markdown="1">
+<p class="item-name" markdown="span">Amphibious conversion vehicle<span class="item-wr">WR 5</span></p>
 
-| Item | Notes | Wealth |
-|---|---|---|
-| Amphibious conversion vehicle | Road to water without stopping. Neither half is best in class. | 5 |
-| ATV / dirt bike | Advantage on Chase rolls off-road; not street-legal | 3 |
-| Bicycle | Quiet, no fuel, no roll to operate | 2 |
-| Cargo van | Hauling capacity, inconspicuous | 4 |
-| Economy sedan | Ordinary car, 4-5 seats | 3 |
-| Gyro-stabilized superbike | Will not fall over. Will still throw you off. | 4 |
-| Hang glider / wingsuit | Unpowered gliding flight from height, requires Piloting | 3 |
-| Horse & tack | Ordinary mount, no fuel required | 3 |
-| Hot air balloon | Slow vertical/wind-drift flight, requires Piloting | 3 |
-| Kayak / canoe | Water only, human-powered | 2 |
-| Light helicopter | Full 3D movement, requires Piloting | 5 |
-| Mini-submarine | Full underwater movement, requires Piloting | 5 |
-| Motor yacht | A house that leaves, and a jurisdiction you choose. | 6 |
-| Motorcycle | Advantage on Chase rolls in dense urban/congested terrain | 3 |
-| Off-road SUV | Advantage on Chase rolls off-road or rough terrain | 4 |
-| Parachute | Safe descent from height or an aircraft; single-use per jump unless repacked | 2 |
-| Personal watercraft | Water only, Advantage on Chase rolls on open water | 3 |
-| Pickup truck | Real cargo/towing capacity | 4 |
-| Private jet | Range, privacy, and a crew who know your name. | 6 |
-| Skateboard / scooter | Quiet, no fuel, folds for easy carry | 1 |
-| Sled / dog sled | Snow or ice only, requires a team of sled dogs | 2 |
-| Small fixed-wing aircraft | Requires Piloting (Fixed-Wing) | 5 |
-| Speedboat | Water only | 4 |
-| Supercar | Fast, loud, and remembered by everyone who saw it. | 5 |
-| Utility trailer | Real cargo capacity, requires a towing vehicle | 2 |
+<div class="item-flavour" markdown="1">
+
+A four-wheel-drive with a sealed hull, a propeller and seams that need checking.
+
+</div>
+
+Road to water without stopping. Neither half is best in class.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">ATV / dirt bike<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Knobbly tyres, long travel suspension, and no interest in roads.
+
+</div>
+
+Advantage on Chase rolls off-road; not street-legal.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Bicycle<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A bike. Quiet, cheap, and it goes where cars cannot.
+
+</div>
+
+Quiet, no fuel, no roll to operate.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Cargo van<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+White, high roof, no windows in the back. Nobody looks at it twice.
+
+</div>
+
+Hauling capacity, inconspicuous.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Economy sedan<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Four doors, grey, ten years old. The most invisible object on this page.
+
+</div>
+
+Ordinary car, 4-5 seats.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Gyro-stabilized superbike<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A litre bike with active stabilisation. Stays upright doing things that should not.
+
+</div>
+
+Will not fall over. Will still throw you off.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Hang glider / wingsuit<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A wing in a bag, or a suit with webbing between the limbs. Both are one-way.
+
+</div>
+
+Unpowered gliding flight from height, requires Piloting.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Horse &amp; tack<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A horse, a saddle, a bridle and the knowledge of how to use all three.
+
+</div>
+
+Ordinary mount, no fuel required.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Hot air balloon<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+An envelope, a basket, burners and a truck to collect you afterwards.
+
+</div>
+
+Slow vertical/wind-drift flight, requires Piloting.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Kayak / canoe<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A hull, a paddle and a spray deck. Portable if two people are willing.
+
+</div>
+
+Water only, human-powered.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Light helicopter<span class="item-wr">WR 5</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A four-seat turbine. Needs somewhere flat and everybody knowing you have arrived.
+
+</div>
+
+Full 3D movement, requires Piloting.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Mini-submarine<span class="item-wr">WR 5</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A two-person hull with a battery bank, viewports and eight hours of air.
+
+</div>
+
+Full underwater movement, requires Piloting.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Motor yacht<span class="item-wr">WR 6</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Forty feet, twin diesels, berths for six and a tender on the back.
+
+</div>
+
+A house that leaves, and a jurisdiction you choose.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Motorcycle<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Six hundred cubic centimetres of it, and it fits through traffic.
+
+</div>
+
+Advantage on Chase rolls in dense urban/congested terrain.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Off-road SUV<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Body on frame, locking differentials, and tyres that hum on tarmac.
+
+</div>
+
+Advantage on Chase rolls off-road or rough terrain.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Parachute<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A ram-air canopy, harness, reserve and an automatic opener nobody argues with.
+
+</div>
+
+Safe descent from height or an aircraft; single-use per jump unless repacked.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Personal watercraft<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A jet-drive ski for two, fast in a straight line and no use in a swell.
+
+</div>
+
+Water only, Advantage on Chase rolls on open water.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Pickup truck<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A bed, a tow hitch, and a cab that seats three at a push.
+
+</div>
+
+Real cargo/towing capacity.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Private jet<span class="item-wr">WR 6</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Light twin, six seats, and a crew who have been told not to file a passenger list.
+
+</div>
+
+Range, privacy, and a crew who know your name.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Skateboard / scooter<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Board or kick scooter. Goes under an arm at the door.
+
+</div>
+
+Quiet, no fuel, folds for easy carry.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Sled / dog sled<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A basket sled, a gangline and a team who know the route better than you do.
+
+</div>
+
+Snow or ice only, requires a team of sled dogs.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Small fixed-wing aircraft<span class="item-wr">WR 5</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Four seats, one engine, and a strip short enough to be unofficial.
+
+</div>
+
+Requires Piloting (Fixed-Wing).
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Speedboat<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+An open hull with far too much outboard on the back of it.
+
+</div>
+
+Water only.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Supercar<span class="item-wr">WR 5</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Mid-engined, carbon, and every camera on the route will remember it.
+
+</div>
+
+Fast, loud, and remembered by everyone who saw it.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Utility trailer<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A flatbed on a tow ball, with a ramp and a tarpaulin.
+
+</div>
+
+Real cargo capacity, requires a towing vehicle.
 
 </div>
 
 ## Less-Lethal & Self-Defense
 
-Same Damage/per-die-vs-Soak resolution as Basic Weapons above, just built around lower Damage ratings and a secondary Effect rather than raw lethality - a called shot, Trait, or GM ruling can still make one of these genuinely dangerous, same as any other weapon.
+<div class="item" markdown="1">
 
-<div class="wide" markdown="1">
+<p class="item-name" markdown="span">Bear spray<span class="item-wr">WR 1</span></p>
 
-| Item | Damage | Range (Normal / Long) | Ammo | Reload | Effect | Wealth |
-|---|---|---|---|---|---|---|
-| Bear spray | 1 | 4m / 6m | 1 (canister) | - | Same as pepper spray, but a Close-range cone hitting everyone in it | 1 |
-| Blinding strobe | 0 | Close radius | - | - | Blinded for 1 round, no roll needed to trigger | 1 |
-| Bola | 1 | 8m / 15m | 1 per throw | - | Target's Movement Rate is halved until they break free | 1 |
-| Collapsible baton | 2 | Melee | - | - |  | 1 |
-| Flashbang | 1 | 10m throw | 1 (thrown) | - | Everyone in a Close radius is Blinded and at Disadvantage for 1 round | 1 |
-| Grappling snare | 1 | Melee (trap) | - | - | Restrains whoever triggers it | 1 |
-| Less-lethal shotgun (beanbag) | 3 | 5m / 15m | 6 shells | Slow action | No Health Level loss from this weapon alone; Prone and Disadvantage next turn | 2 |
-| Net gun | 1 | 8m / 15m | 1 net | 1 action | Target is Restrained until they break free (Potence check) | 2 |
-| Pepper spray | 1 | 3m / 5m | 1 (canister) | - | Blinded and Disadvantage on all rolls for 1 round | 1 |
-| Pepper spray gel | 1 | 6m / 9m | 1 (canister) | - | Same Blinded effect as pepper spray, less blowback risk | 1 |
-| Rubber bullet launcher | 2 | 15m / 40m | 6 rounds | 1 action | Same as the beanbag shotgun above | 2 |
-| Shock baton | 2 | Melee | - | - | Target is Stunned until the start of their next turn | 2 |
-| Shock dart gun | 2 | 5m / 8m | 1 cartridge | 1 action | Prone, can't act until the start of their next turn | 2 |
-| Smoke grenade | 0 | 10m throw | 1 (thrown) | - | Fills a Close radius with concealment; Advantage on Stealth to break contact | 1 |
-| Sonic deterrent device | 1 | Close-Near cone | - | - | Disadvantage on all rolls while in the cone | 2 |
-| Stun gun | 1 | Melee | - | - | Disadvantage on the target's next roll | 1 |
-| Tear gas grenade | 1 | 10m throw | 1 (thrown) | - | Everyone in a Close radius is Blinded and at Disadvantage until they leave the area | 1 |
+<div class="item-flavour" markdown="1">
+
+A fire-extinguisher-sized canister with a safety clip and a belt holster.
+
+</div>
+
+Damage 1, 4m / 6m. 1 (canister). Same as pepper spray, but a Close-range cone hitting everyone in it.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Blinding strobe<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A handheld lamp that pulses hard enough to be felt behind the eyes.
+
+</div>
+
+Damage 0, Close radius. Blinded for 1 round, no roll needed to trigger.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Bola<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Three weights on cords, spun and let go.
+
+</div>
+
+Damage 1, 8m / 15m. 1 per throw. Target’s Movement Rate is halved until they break free.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Collapsible baton<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Telescoping steel, twenty-one inches out, flicked open with a wrist.
+
+</div>
+
+Damage 2, Melee.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Flashbang<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A perforated steel body. Light and pressure, no fragments.
+
+</div>
+
+Damage 1, 10m throw. 1 (thrown). Everyone in a Close radius is Blinded and at Disadvantage for 1 round.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Flex cuffs<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Heavy zip ties, doubled, cut off rather than unlocked.
+
+</div>
+
+Damage 0, Melee. Restrains a compliant or already-subdued target; cut, not unlocked.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Grappling snare<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A spring-loaded loop on a ground plate, set and covered over.
+
+</div>
+
+Damage 1, Melee (trap). Restrains whoever triggers it.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Handcuffs<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Chain-linked steel, double locked with the tip of the key.
+
+</div>
+
+Damage 0, Melee. Restrains a compliant or already-subdued target until unlocked.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Less-lethal shotgun (beanbag)<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A shotgun with an orange stock, so nobody loads it wrong in a hurry.
+
+</div>
+
+Damage 3, 5m / 15m. 6 shells. Reload slow action. No Health Level loss from this weapon alone; Prone and Disadvantage next turn.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Net gun<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A weighted net folded into four barrels, fired by compressed gas.
+
+</div>
+
+Damage 1, 8m / 15m. 1 net. Reload 1 action. Target is Restrained until they break free (Potence check).
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Pepper spray<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A keyring canister with a flip cover, a stream rather than a mist.
+
+</div>
+
+Damage 1, 3m / 5m. 1 (canister). Blinded and Disadvantage on all rolls for 1 round.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Pepper spray gel<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A thicker formulation that goes where it is aimed and stays there.
+
+</div>
+
+Damage 1, 6m / 9m. 1 (canister). Same Blinded effect as pepper spray, less blowback risk.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Rubber bullet launcher<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A break-action launcher with a wide bore and a padded stock.
+
+</div>
+
+Damage 2, 15m / 40m. 6 rounds. Reload 1 action. Same as the beanbag shotgun above.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Shock baton<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A baton with contacts at the tip and a trigger under the thumb.
+
+</div>
+
+Damage 2, Melee. Target is Stunned until the start of their next turn.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Shock dart gun<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A blocky handgun firing two barbs on wires, with a cartridge in the nose.
+
+</div>
+
+Damage 2, 5m / 8m. 1 cartridge. Reload 1 action. Prone, can’t act until the start of their next turn.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Smoke grenade<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A canister that burns rather than bursts, throwing smoke for a minute.
+
+</div>
+
+Damage 0, 10m throw. 1 (thrown). Fills a Close radius with concealment; Advantage on Stealth to break contact.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Sonic deterrent device<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A dish on a handle, projecting a tone in a cone in front of it.
+
+</div>
+
+Damage 1, Close-Near cone. Disadvantage on all rolls while in the cone.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Stun gun<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Two contacts and a trigger. It has to be touching to do anything.
+
+</div>
+
+Damage 1, Melee. Disadvantage on the target’s next roll.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Tear gas grenade<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A burning canister, hot enough that picking it up to throw back costs something.
+
+</div>
+
+Damage 1, 10m throw. 1 (thrown). Everyone in a Close radius is Blinded and at Disadvantage until they leave the area.
+
+</div>
+
+## Occult & Warding
+
+**Money is not the hard part here either.** Everything in this section is cheap. Salt is salt, rosemary is rosemary, a horseshoe is eight dollars at a flea market, and a stone with a hole in it is free if you know which beach to walk. The Wealth rating buys the material. Material on its own does nothing whatsoever.
+
+Every item here has to be **prepared** before it works. Preparation is an **Occult** roll against **Moira + Difficulty**, and it takes about an hour per item, or per batch of a consumable. The GM sets the Difficulty: a salt line is Easy, something that has to hold against one specific named thing is not.
+
+On a failure the materials are spent and you have a jar of dirt. On a success it stays prepared until it is used, broken, or the ward it was holding gives way.
+
+An unprepared ward is exactly what it looks like. Salt on a floor. A stone with a hole in it. Somebody's grandmother's horseshoe over a door.
+
+**You can buy them ready-made.** Somebody prepares these for a living, and finding that somebody is a **Contacts** question rather than a money one. A prepared item costs **one Wealth rating higher** than the raw material below.
+
+**Electronics are exempt.** Nothing in the Detection table needs preparing. A thermometer is a thermometer.
+
+### Occult & Warding - Consumables
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Blessed water<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A vial of water out of a font, stoppered and sealed with wax. It looks like water.
+
+</div>
+
+Burns what should not be touching a person. Poured in a line, nothing crosses it unnoticed.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Cleansing bundle<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Rosemary, lavender, juniper or mugwort, dried and bound with cotton thread.
+
+</div>
+
+Lit and left to smoulder. The smoke clears a room of what has been lingering in it.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Consecrated oil<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Olive oil in a small glass bottle, blessed and left to stand a week.
+
+</div>
+
+Anoints a person, a door or a blade. Lasts the night.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Graveyard dirt<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A jam jar of soil taken off a grave.
+
+</div>
+
+Taken with permission, which is the difficult part.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Incense and censer<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A pierced brass bowl on three chains, and a box of cones.
+
+</div>
+
+Reusable. The cones are not.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Iron filings<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A pound of iron swarf in a tin. It rusts if the lid is left off.
+
+</div>
+
+Mixed into paint, scattered on a sill, or thrown.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Ritual candles<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A dozen plain candles, unscented, wicks already trimmed.
+
+</div>
+
+Burn for six hours and go out together, whatever is left of them.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Ritual chalk<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A box of soft white sticks. They mark anything, including things chalk should not mark.
+
+</div>
+
+Does not come off until you take it off.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Salt circle kit<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A tin holding measured salt, a length of cord and a stick of chalk.
+
+</div>
+
+One complete circle, once.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Salt, canister<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A cardboard canister of coarse salt. The cheap kind, off a supermarket shelf.
+
+</div>
+
+Enough for a circle around one room, or a line across four doorways.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Silver dust<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A vial of silver ground finer than flour.
+
+</div>
+
+Puts silver where silver would not otherwise reach.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Warding paint<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A rattle can, or a brush and a tin. Both work.
+
+</div>
+
+One room’s worth of sigils.
+
+</div>
+
+### Occult & Warding - Charms & Wards
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Blank amulet<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A flat silver disc on a cord, unmarked on both faces.
+
+</div>
+
+Waiting for a ritual to put something in it.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Charm bag<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A cloth bag the size of a plum, drawstring at the neck.
+
+</div>
+
+Filled to purpose. Carried, not hung.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Cold iron nail<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A hand-forged nail, black, square in section. Drawn wire will not do.
+
+</div>
+
+Driven into a threshold, or carried.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Consecrated iron fragment<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A shard off a church bell, thumb-sized and still curved.
+
+</div>
+
+Rare, and nobody who has one sells it cheaply.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Evil eye charm<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Blue glass with a white and black eye in the middle. Sold on every market stall on the Mediterranean.
+
+</div>
+
+Worn where it can be seen, which is the point.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Hag stone<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A beach pebble with a hole worn through it by water. The hole has to be natural.
+
+</div>
+
+Hung over a bed on red ribbon, or nailed to the bedpost. Nothing sits on the sleeper’s chest.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Iron handcuffs<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Hand-forged cuffs, heavier than police issue, with a key that fits nothing else.
+
+</div>
+
+What they hold cannot simply stop being solid.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Iron horseshoe<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A used shoe off a working horse, nail holes and all.
+
+</div>
+
+Over a door, open end up. Everybody’s grandmother had one.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Knotted cord<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A yard of cord with nine knots along it.
+
+</div>
+
+Untie them one at a time, and one at a time only.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Rowan and red thread<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Two rowan twigs bound into a cross with red wool.
+
+</div>
+
+Over a door, or on a person.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Rue sachet<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Dried rue in a linen bag, stitched shut.
+
+</div>
+
+Worn against the evil eye.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Threshold ward kit<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A canvas roll holding chalk, salt, iron filings and cord.
+
+</div>
+
+One doorway, complete.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Witch bottle<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A glass bottle of pins, nail clippings and worse, sealed with wax.
+
+</div>
+
+Buried at a threshold. It takes what was meant for you.
+
+</div>
+
+### Occult & Warding - Warded Ammunition
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Blessed rounds<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A box of twenty, each round blessed before it was loaded.
+
+</div>
+
+Ordinary ammunition otherwise.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Cold iron rounds<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A box of twenty, cast from wrought iron rather than lead. They foul a barrel.
+
+</div>
+
+Ordinary ammunition otherwise.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Salt-loaded shells<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Ten shotgun shells packed with rock salt in place of shot.
+
+</div>
+
+Hurts enormously. Kills nothing.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Silver buckshot<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Ten shells loaded with cast silver balls.
+
+</div>
+
+Ordinary ammunition otherwise.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Silver rounds<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A box of twenty, cast solid rather than plated.
+
+</div>
+
+Ordinary ammunition otherwise.
+
+</div>
+
+### Occult & Warding - Detection
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Audio sweep radio<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A radio modified to sweep the band without stopping.
+
+</div>
+
+People hear words in it.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Digital voice recorder<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A pocket recorder with a better microphone than it needs.
+
+</div>
+
+Records the room, and sometimes more of it than was there.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Dowsing rods<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Two brass rods bent into L shapes, held loose in the fists.
+
+</div>
+
+They move. Nobody agrees why.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">EMF meter<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A handheld meter with a needle and five LEDs above it.
+
+</div>
+
+Reads electromagnetic fields. What that means is between you and your GM.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Full-spectrum camera<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A camera with the infrared filter taken out of it.
+
+</div>
+
+Stills and video, into ultraviolet and infrared.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Infrared thermometer<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A pistol-grip thermometer with a laser dot on the front.
+
+</div>
+
+Surface temperature at a distance, to a tenth of a degree.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Residue sample kit<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Swabs, vials, a UV lamp and a box of evidence bags.
+
+</div>
+
+Everything you need to take something away and nothing to tell you what it is.
 
 </div>
 
 ## Property
 
-Somewhere to be, and somewhere to keep things. A property is bought like any other item - it is the one purchase a character makes that has an address.
+<div class="item" markdown="1">
 
-A **Base** Resource is a different thing and worth having as well: the Resource is what the place is equipped and defended with, the item here is the deed.
+<p class="item-name" markdown="span">Estate<span class="item-wr">WR 6</span></p>
 
-A **Safehouse Network** is different again: that Resource gives you sites with the basics in them and nothing more, while a property bought here comes properly outfitted.
+<div class="item-flavour" markdown="1">
 
-<div class="wide" markdown="1">
+A house with a name rather than a number, at the end of a drive nobody turns down by accident.
 
-| Item | Notes | Wealth |
-|---|---|---|
-| Estate | Grounds, staff, and enough distance that nobody hears anything. | 6 |
-| Safe house (urban) | An address in nobody’s name that nobody visits, kitted out and stocked for as long as you need to be there. | 4 |
+</div>
+
+Grounds, staff, and enough distance that nobody hears anything.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Safe house (urban)<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A flat on a middle floor, rented under a company, with the bills paid by standing order.
+
+</div>
+
+An address in nobody’s name that nobody visits, kitted out and stocked for as long as you need to be there.
 
 </div>
 
@@ -399,96 +4024,491 @@ Some things have no counter to walk up to. The price is the easy half - the hard
 
 ### The Black Market - Armor
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Item | Zone | Hardness | Health Levels | Notes | Wealth | Black Market |
-|---|---|---|---|---|---|---|
-| Bomb disposal suit | Body + Head | 8 | 6 | Movement Rate -4; Disadvantage on all Physical rolls except resisting damage | 3 | 2 |
+<p class="item-name" markdown="span">Bomb disposal suit<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Ninety pounds of layered aramid and plate, with a fan in the helmet and a wire to a controller.
+
+</div>
+
+Body + Head. Hardness 8, 6 Health Levels. Movement Rate -4; Disadvantage on all Physical rolls except resisting damage. Requires Black Market Access 2.
 
 </div>
 
 ### The Black Market - Basic Weapons
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Weapon | Category | Damage | Range (Normal / Long) | Ammo | Reload | Wealth | Black Market |
-|---|---|---|---|---|---|---|---|
-| Anti-materiel rifle | Heavy | 5 | 300m / 800m | 5 rounds | 1 action | 3 | 4 |
-| Compact SMG | Submachine gun | 3 | 25m / 60m | 30 rounds | 1 action | 3 | 3 |
-| Grenade launcher | Heavy | 5 | 30m / 80m | 1 round | 1 action | 3 | 4 |
-| Gyrojet pistol | Exotic (ranged) | 4 | 25m / 60m | 6 rounds | 1 action | 3 | 4 |
-| Monofilament garrote | Exotic (melee) | 5 | Melee | - | - | 3 | 5 |
-| Squad automatic weapon | Heavy | 5 | 300m / 800m | 100 rounds | 1 action | 3 | 4 |
+<p class="item-name" markdown="span">Anti-materiel rifle<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Fifty calibre, a bipod, and a muzzle brake that hurts everyone nearby more than the shooter.
+
+</div>
+
+Damage 5, 300m / 800m. 5 rounds. Reload 1 action. Requires Black Market Access 4.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Compact SMG<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A folding stock and a thirty-round magazine in a package the size of a laptop.
+
+</div>
+
+Damage 3, 25m / 60m. 30 rounds. Reload 1 action. Requires Black Market Access 3.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Concealed wrist blades<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Spring blades in forearm sheaths, released by turning the wrist against a catch.
+
+</div>
+
+Damage 3, Melee. Requires Black Market Access 3.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Grenade launcher<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Single shot, break action, a fat forty-millimetre bore and a ladder sight.
+
+</div>
+
+Damage 5, 30m / 80m. 1 round. Reload 1 action. Requires Black Market Access 4.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Gyrojet pistol<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Fires rocket rounds rather than bullets. Harmless up close and unpleasant at distance.
+
+</div>
+
+Damage 4, 25m / 60m. 6 rounds. Reload 1 action. Requires Black Market Access 4.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Monofilament blade<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A handle with nothing coming out of it until the light catches the line. It is all edge.
+
+</div>
+
+Damage 5, Melee. Requires Black Market Access 4.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Monofilament garrote<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+The same filament between two handles, on a spool in a cigarette packet.
+
+</div>
+
+Damage 5, Melee. Requires Black Market Access 5.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Squad automatic weapon<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Belt-fed, bipod, a spare barrel in a bag because you will need it.
+
+</div>
+
+Damage 5, 300m / 800m. 100 rounds. Reload 1 action. Requires Black Market Access 4.
 
 </div>
 
 ### The Black Market - Disguise & Infiltration
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Item | Effect | Wealth | Black Market |
-|---|---|---|---|
-| RFID cloner | Advantage on bypassing keycard/RFID-secured locks specifically | 2 | 1 |
-| DNA-scrubbing wipes | Consumed on use: removes DNA evidence from a scene, no roll | 1 | 2 |
-| Safecracking kit | Required tool for cracking a combination safe; without one, at Disadvantage | 3 | 2 |
-| Face-changing prosthetics kit | Advantage on Deception rolls sustained over a longer con (doesn't stack with a Wig & makeup kit) | 2 | 3 |
-| Forged badge / credentials | Passes routine authority checks with no roll; GM's call under real scrutiny | 2 | 3 |
-| Forged documents | Passes routine identity checks with no roll; GM's call under real scrutiny | 3 | 4 |
+<p class="item-name" markdown="span">RFID cloner<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A reader and a writer in one case, with a stack of blank fobs.
+
+</div>
+
+Advantage on bypassing keycard/RFID-secured locks specifically. Requires Black Market Access 1.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">DNA-scrubbing wipes<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Foil sachets of enzyme wipes that leave a surface less clean than empty.
+
+</div>
+
+Consumed on use: removes DNA evidence from a scene, no roll. Requires Black Market Access 2.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Safecracking kit<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+An autodialler, a borescope, a magnetic mount and a great deal of patience.
+
+</div>
+
+Required tool for cracking a combination safe; without one, at Disadvantage. Requires Black Market Access 2.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Face-changing prosthetics kit<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Cast silicone appliances, adhesive and pigments, keyed to one specific face.
+
+</div>
+
+Advantage on Deception rolls sustained over a longer con (doesn’t stack with a Wig & makeup kit). Requires Black Market Access 3.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Forged badge / credentials<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A badge and a card wallet, correct down to the holographic overlay.
+
+</div>
+
+Passes routine authority checks with no roll; GM’s call under real scrutiny. Requires Black Market Access 3.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Forged documents<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Passport, licence and supporting paper, made by somebody who checks their own work.
+
+</div>
+
+Passes routine identity checks with no roll; GM’s call under real scrutiny. Requires Black Market Access 4.
 
 </div>
 
 ### The Black Market - Surveillance
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Item | Effect | Wealth | Black Market |
-|---|---|---|---|
-| Long-range parabolic dish | Advantage on eavesdropping at Far range, wider coverage than a handheld Parabolic microphone | 3 | 2 |
-| Laser listening device | Reads conversation through a window via glass vibration, no physical entry needed | 3 | 3 |
-| Wiretap kit | Required tool for tapping a landline or network line; without one, at Disadvantage | 3 | 3 |
-| Facial recognition tablet | Advantage on Investigation rolls to identify a known individual from a photo or footage | 3 | 4 |
+<p class="item-name" markdown="span">Long-range parabolic dish<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A metre of dish on a tripod, with a preamp and a recorder in the case.
+
+</div>
+
+Advantage on eavesdropping at Far range, wider coverage than a handheld Parabolic microphone. Requires Black Market Access 2.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Laser listening device<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A laser and a receiver on a tripod, aimed at a windowpane from across the street.
+
+</div>
+
+Reads conversation through a window via glass vibration, no physical entry needed. Requires Black Market Access 3.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Wiretap kit<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Alligator clips, a recorder and a lineman’s handset in a battered bag.
+
+</div>
+
+Required tool for tapping a landline or network line; without one, at Disadvantage. Requires Black Market Access 3.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Facial recognition tablet<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A tablet with a camera and a database on it that nobody is supposed to have.
+
+</div>
+
+Advantage on Investigation rolls to identify a known individual from a photo or footage. Requires Black Market Access 4.
 
 </div>
 
 ### The Black Market - Survival & Tools
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Item | Effect | Wealth | Black Market |
-|---|---|---|---|
-| Breaching kit | Advantage on forced-entry rolls; treat your Potence as +2 for that Break Threshold check | 2 | 3 |
-| Wire ascent rig | Anchored lines and powered reels. Turns a city into handholds. | 4 | 5 |
+<p class="item-name" markdown="span">Breaching kit<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A hooligan bar, a hydraulic ram, cutting charges and hearing protection.
+
+</div>
+
+Advantage on forced-entry rolls; treat your Potence as +2 for that Break Threshold check. Requires Black Market Access 3.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Wire ascent rig<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A powered ascender that climbs a fixed line faster than a person can.
+
+</div>
+
+Anchored lines and powered reels. Turns a city into handholds. Requires Black Market Access 5.
 
 </div>
 
 ### The Black Market - Tech & Electronics
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Item | Effect | Wealth | Black Market |
-|---|---|---|---|
-| Camera jammer | Disables nearby camera feeds within Close range | 2 | 2 |
-| Combat drone (rotor) | Armed and airborne. Illegal in every jurisdiction that has noticed it exists. | 4 | 4 |
-| Data cloner | Required tool for certain rapid digital-copy Hacking tasks | 2 | 1 |
-| EMP device | One-time consumable; disables nearby unshielded electronics within Close range | 3 | 4 |
-| GPS jammer | Disables GPS tracking on anyone/anything within Close range | 2 | 2 |
-| Intrusion deck | A purpose-built machine for being somewhere you have no account. Advantage on Systems Operation against a defended system. | 3 | 3 |
-| Portable jammer array | Disables nearby wireless comms/cameras within Near range - wider coverage than a Signal jammer | 4 | 4 |
-| RFID skimmer | Advantage cloning or bypassing RFID-secured credentials | 1 | 1 |
-| Signal jammer | Disables nearby wireless comms/cameras within Close range | 2 | 2 |
-| Signal triangulator | Advantage locating the source of a specific radio or wireless signal | 3 | 3 |
+<p class="item-name" markdown="span">Camera jammer<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A box that fills a camera’s sensor with light nobody in the room can see.
+
+</div>
+
+Disables nearby camera feeds within Close range. Requires Black Market Access 2.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Combat drone (rotor)<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A quadcopter with a weapon mount under it and armour over the motors.
+
+</div>
+
+Armed and airborne. Illegal in every jurisdiction that has noticed it exists. Requires Black Market Access 4.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Data cloner<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A write-blocked duplicator that takes a drive image and leaves no timestamps behind.
+
+</div>
+
+Required tool for certain rapid digital-copy Hacking tasks. Requires Black Market Access 1.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">EMP device<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A capacitor bank and a coil in a flight case. One shot, and then it is scrap too.
+
+</div>
+
+One-time consumable; disables nearby unshielded electronics within Close range. Requires Black Market Access 4.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">GPS jammer<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A cigarette packet with an aerial, putting noise across the satellite band.
+
+</div>
+
+Disables GPS tracking on anyone/anything within Close range. Requires Black Market Access 2.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Intrusion deck<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A purpose-built machine with its own radios and an operating system nobody sells.
+
+</div>
+
+A purpose-built machine for being somewhere you have no account. Advantage on Systems Operation against a defended system. Requires Black Market Access 3.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Portable jammer array<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Four transmitters on stands, covering everything from a room to a street.
+
+</div>
+
+Disables nearby wireless comms/cameras within Near range - wider coverage than a Signal jammer. Requires Black Market Access 4.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">RFID skimmer<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A reader in a satchel, picking up cards through a coat at walking distance.
+
+</div>
+
+Advantage cloning or bypassing RFID-secured credentials. Requires Black Market Access 1.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Signal jammer<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A handheld unit with three stubby aerials and a bank of switches.
+
+</div>
+
+Disables nearby wireless comms/cameras within Close range. Requires Black Market Access 2.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Signal triangulator<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Three receivers and a tablet, drawing a shrinking circle around a transmitter.
+
+</div>
+
+Advantage locating the source of a specific radio or wireless signal. Requires Black Market Access 3.
 
 </div>
 
 ### The Black Market - Transport
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Item | Notes | Wealth | Black Market |
-|---|---|---|---|
-| Armored sedan | Soak 4, 3 Health Levels (executive-protection grade) | 4 | 2 |
-| Armored transport van | Soak 6, 4 Health Levels (per the object reference chart), several passengers ride behind that Soak | 4 | 2 |
-| Armored personnel carrier | Soak 7, 5 Health Levels (per the object reference chart), several passengers ride behind that Soak | 5 | 4 |
+<p class="item-name" markdown="span">Armored sedan<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A factory car with the doors, pillars and glass replaced. It sits low on its springs.
+
+</div>
+
+Soak 4, 3 Health Levels (executive-protection grade). Requires Black Market Access 2.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Armored transport van<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A cash-in-transit van with gun ports and a door nobody opens from outside.
+
+</div>
+
+Soak 6, 4 Health Levels (per the object reference chart), several passengers ride behind that Soak. Requires Black Market Access 2.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Armored personnel carrier<span class="item-wr">WR 5</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Eight wheels, a hull, and no explaining it to anybody who sees it.
+
+</div>
+
+Soak 7, 5 Health Levels (per the object reference chart), several passengers ride behind that Soak. Requires Black Market Access 4.
 
 </div>
 
@@ -500,39 +4520,161 @@ Where a GM does allow it, it is bought like anything else - and where a Black Ma
 
 ### Beyond the Ordinary - Armor
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Item | Zone | Hardness | Health Levels | Notes | Wealth | Black Market |
-|---|---|---|---|---|---|---|
-| Ablative shield harness | Body | 7 | 4 | A projected barrier on a worn rig; spent for the Scene once its Health Levels are gone | 5 | 5 |
-| Powered combat armor | Body + Head | 8 | 6 | Single item, sets both Zones; sealed with its own air; Disadvantage on Stealth rolls; Movement Rate -1. Nobody mistakes you for a person | 5 | 5 |
+<p class="item-name" markdown="span">Ablative shield harness<span class="item-wr">WR 5</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A harness of emitter pods that throws a shell which burns away as it is hit.
+
+</div>
+
+Body. Hardness 7, 4 Health Levels. A projected barrier on a worn rig; spent for the Scene once its Health Levels are gone. Requires Black Market Access 5.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Powered combat armor<span class="item-wr">WR 5</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A sealed powered suit, a foot taller than its wearer, with its own reactor and air.
+
+</div>
+
+Body + Head. Hardness 8, 6 Health Levels. Single item, sets both Zones; sealed with its own air; Disadvantage on Stealth rolls; Movement Rate -1. Nobody mistakes you for a person. Requires Black Market Access 5.
 
 </div>
 
 ### Beyond the Ordinary - Weapons
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Weapon | Category | Damage | Range (Normal / Long) | Ammo | Reload | Wealth | Black Market |
-|---|---|---|---|---|---|---|---|
-| Energy rifle | Heavy | 6 | 150m / 400m | 20 shots | 1 action | 4 | 5 |
+<p class="item-name" markdown="span">Energy rifle<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A rifle with no chamber and no brass, drawing from a cell in the stock.
+
+</div>
+
+Damage 6, 150m / 400m. 20 shots. Reload 1 action. Requires Black Market Access 5.
 
 </div>
 
 ### Beyond the Ordinary - Gear
 
-<div class="wide" markdown="1">
+<div class="item" markdown="1">
 
-| Item | Notes | Wealth | Black Market |
-|---|---|---|---|
-| Aerodyne (flying car) | Vertical takeoff, four seats, and a landing fee everywhere worth landing. | 6 |  |
-| Bio-regeneration tank | You go in ruined and come out months of healing later, in days. | 6 |  |
-| Braindance recorder | Records an experience whole - sight, sound, and what it felt like to be there. | 3 |  |
-| Jet pack | Minutes of flight, deafening, and it lands harder than it takes off. | 5 |  |
-| Nanite repair kit | Injected machines that close what surgery would have to open you for. | 5 |  |
-| Optical camouflage cloak | Bends light around the wearer. Works until you move quickly. | 5 | 5 |
-| Surgical pod | A room-sized autodoc. Handles what the field case cannot. | 5 |  |
-| Underground facility | Excavated, powered, and on no plan ever filed with the city. | 6 | 5 |
+<p class="item-name" markdown="span">Aerodyne (flying car)<span class="item-wr">WR 6</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A car-sized airframe on ducted fans, with doors and a boot like anything else.
+
+</div>
+
+Vertical takeoff, four seats, and a landing fee everywhere worth landing.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Bio-regeneration tank<span class="item-wr">WR 6</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A filled cylinder with a lid, a pump stack and a body suspended inside it.
+
+</div>
+
+You go in ruined and come out months of healing later, in days.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Braindance recorder<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A headset that records everything a person saw, heard and felt, for somebody else to wear.
+
+</div>
+
+Records an experience whole - sight, sound, and what it felt like to be there.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Jet pack<span class="item-wr">WR 5</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Two ducted fans on a frame, with a harness and about ninety seconds of fuel.
+
+</div>
+
+Minutes of flight, deafening, and it lands harder than it takes off.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Nanite repair kit<span class="item-wr">WR 5</span></p>
+
+<div class="item-flavour" markdown="1">
+
+An ampoule of grey fluid and an applicator. It works on the machine, not the pilot.
+
+</div>
+
+Injected machines that close what surgery would have to open you for.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Optical camouflage cloak<span class="item-wr">WR 5</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A weighted cloak that shows whatever is behind it, a half-second late.
+
+</div>
+
+Bends light around the wearer. Works until you move quickly. Requires Black Market Access 5.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Surgical pod<span class="item-wr">WR 5</span></p>
+
+<div class="item-flavour" markdown="1">
+
+An enclosed table with arms above it, which does not need anybody in the room.
+
+</div>
+
+A room-sized autodoc. Handles what the field case cannot.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Underground facility<span class="item-wr">WR 6</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Excavated, powered, and on no plan ever filed with the city.
+
+</div>
+
+Excavated, powered, and on no plan ever filed with the city. Requires Black Market Access 5.
 
 </div>
 
