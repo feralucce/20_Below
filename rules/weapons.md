@@ -399,7 +399,7 @@ A [Safehouse Network](resources.md#safehouse-network) is different again: that R
 
 | Item | Notes | Wealth |
 |---|---|---|
-| Estate | Grounds, staff, and enough distance that nobody hears anything. | 6 |
+| Estate | Grounds, staff, and enough distance that nobody hears anything. Name it as your repository and anything you own but are not carrying is in it. Somebody on the staff knows where, which is either convenient or a problem. | 6 |
 | Safe house (urban) | An address in nobody's name that nobody visits, kitted out and stocked for as long as you need to be there. Name it as your repository and anything you own but are not carrying is in it, rather than somewhere nobody has decided yet. | 4 |
 
 ## The Black Market
