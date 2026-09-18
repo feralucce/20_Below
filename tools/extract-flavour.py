@@ -100,6 +100,48 @@ def flavours(kind, fn):
     return out
 
 
+
+def equipment_names():
+    """Every item in rules/weapons.md, across all of its tables.
+
+    parseEquipment walks every table in the file and titles each by the
+    nearest heading, so this has to as well. Reading one table would
+    check 12 of 325 items and call it agreement.
+    """
+    src = io.open(os.path.join(ROOT, "rules", "weapons.md"),
+                  encoding="utf-8").read()
+    out = []
+    for line in src.split("\n"):
+        if not line.startswith("| ") or line.startswith("| -"):
+            continue
+        name = line.strip().strip("|").split("|")[0].strip()
+        if name and name not in ("Item", "Weapon", "Armor", "Vehicle", "Level"):
+            out.append(name)
+    return out
+
+
+def equipment_flavours():
+    """Card title -> its first body line.
+
+    An item title ends in a Wealth parenthetical, or in nothing at all
+    for the few things that cost nothing. Stripping at the FIRST " ("
+    would turn "Aerodyne (flying car)" into "Aerodyne", so only a
+    trailing "(WR n)" comes off.
+    """
+    src = io.open(os.path.join(PDF, "11-equipment.md"), encoding="utf-8").read()
+    out = {}
+    for m in re.finditer(r"^::: item (.+)$\n(.+)$", src, re.M):
+        title, first = m.group(1).strip(), m.group(2).strip()
+        name = re.sub(r"\s*\(WR [0-6]\)$", "", title).strip()
+        if first.startswith(("**", ":::", "|", "- ")):
+            raise SystemExit("REFUSING - %s's first line is not a description:"
+                             "\n  %s" % (name, first[:100]))
+        if name in out:
+            raise SystemExit("REFUSING - %r appears twice in the chapter" % name)
+        out[name] = first
+    return out
+
+
 check = "--check" in sys.argv
 data, problems = {}, []
 for kind, (print_fn, rules_fn, heading) in sorted(SOURCES.items()):
@@ -113,6 +155,18 @@ for kind, (print_fn, rules_fn, heading) in sorted(SOURCES.items()):
         problems.append("%s: described but not in the rules table: %s"
                         % (kind, extra))
     data[kind] = {n: found[n] for n in expected if n in found}
+
+# Equipment is not one table and its titles do not carry a cost, so it is
+# collected separately and then checked exactly like the rest.
+found = equipment_flavours()
+expected = equipment_names()
+missing = [n for n in expected if n not in found]
+extra = [n for n in found if n not in expected]
+if missing:
+    problems.append("item: no description for %s" % missing)
+if extra:
+    problems.append("item: described but not in the rules table: %s" % extra)
+data["item"] = {n: found[n] for n in expected if n in found}
 
 if problems:
     raise SystemExit("REFUSING - the chapters and the rules disagree:\n  "
