@@ -1341,7 +1341,7 @@ Tinfoil, bubble gum, baling wire, a pile of junk and a workbench are all you nee
 
 <div class="gift-level gift-level--1" markdown="1">
 
-<span class="gift-n">1</span>- Given scrap and roughly an hour of focused work, roll **Air + Difficulty** (GM sets Difficulty by how complex the gadget is) to build one simple, single-function gadget - a lockpick set, a basic signal jammer, a simple sensor, a makeshift flashlight upgrade. It works reliably until broken or its narrow purpose is exhausted. A gadget may carry a minor combat function (a taser dealing **1d10**, a shim granting **+1** Soak); those cost **1 Ki** to build, pure-utility ones are free.
+<span class="gift-n">1</span>- Given scrap and roughly an hour of focused work, roll **Air + Difficulty** (GM sets Difficulty by how complex the gadget is) to build one simple, single-function gadget - a lockpick set, a basic signal jammer, a simple sensor, a makeshift flashlight upgrade. It works reliably until broken or its narrow purpose is exhausted. A gadget may carry a minor combat function (a shock prod dealing **1d10**, a shim granting **+1** Soak); those cost **1 Ki** to build, pure-utility ones are free.
 
 </div>
 
