@@ -92,7 +92,7 @@ Creation-Wealth carries across every purchase in this shopping pass. **This pool
 | Media Contact | How much a story can be shaped, planted, or killed before it runs |
 | Medical Access | How much discreet, high-quality medical care can be called on |
 | Occult Library | How comprehensive, rare, or dangerous the collection of esoteric material is |
-| Safehouse Network | How many scattered bolt-holes are maintained, and how well-stocked each is |
+| Safehouse Network | How many scattered bolt-holes are maintained, and how well hidden each is |
 | Sanctuary Standing | How protected the character is within one specific safe territory |
 | Signature Possession | How significant the one prized item owned actually is |
 | Spiritual Standing | How much weight the character's name carries within a specific religious or spiritual community |
@@ -298,15 +298,17 @@ How comprehensive, rare, or dangerous the collection of esoteric material is
 
 ### Safehouse Network
 
-How many scattered bolt-holes are maintained, and how well-stocked each is
+How many scattered bolt-holes are maintained, and how well hidden each is
+
+Every site has power, running water, a way in and out, and basic supplies: food, bedding, a change of clothes, a first aid kit. None of them has anything beyond that. Whatever you need past keeping a person fed, dry and out of sight is whatever you carried in with you. A property that comes properly outfitted is an item, bought like any other.
 
 | Level | Safehouse Network |
 |---|---|
-| 1 | One additional modest bolt-hole beyond your main Base - a spare room, a lockup, somewhere to lay low for a night |
-| 2 | A small handful of bolt-holes across a city, each stocked with basic supplies and a change of clothes |
-| 3 | A network spanning a region, each site defensible and stocked for an extended stay |
-| 4 | A network reaching into neighboring regions, with a few sites hardened and hidden well enough to withstand real searching |
-| 5 | A network spanning the whole country (or equivalent scale), any site capable of disappearing you completely, indefinitely |
+| 1 | One bolt-hole beyond your Base. Somewhere to lie up for a night that nothing on paper connects to you |
+| 2 | A small handful across a city, none of them connected to each other or to you |
+| 3 | A network spanning a region, each site far enough off the road that nobody arrives by accident |
+| 4 | A network reaching into neighboring regions, a few of them hidden well enough to survive a real search |
+| 5 | A network at national scale, any site of which can disappear you completely, indefinitely |
 
 ### Sanctuary Standing
 

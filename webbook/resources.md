@@ -726,35 +726,37 @@ Somewhere to go that isn't home, in more than one direction, already stocked. Ca
 
 </div>
 
-How many scattered bolt-holes are maintained, and how well-stocked each is.
+How many scattered bolt-holes are maintained, and how well hidden each is.
+
+Every site has power, running water, a way in and out, and basic supplies: food, bedding, a change of clothes, a first aid kit. None of them has anything beyond that. Whatever you need past keeping a person fed, dry and out of sight is whatever you carried in with you. A property that comes properly outfitted is an item, bought like any other.
 
 <div class="resource-level resource-level--1" markdown="1">
 
-<span class="resource-n">1</span>One additional modest bolt-hole beyond your main Base - a spare room, a lockup, somewhere to lay low for a night
+<span class="resource-n">1</span>One bolt-hole beyond your Base. Somewhere to lie up for a night that nothing on paper connects to you
 
 </div>
 
 <div class="resource-level resource-level--2" markdown="1">
 
-<span class="resource-n">2</span>A small handful of bolt-holes across a city, each stocked with basic supplies and a change of clothes
+<span class="resource-n">2</span>A small handful across a city, none of them connected to each other or to you
 
 </div>
 
 <div class="resource-level resource-level--3" markdown="1">
 
-<span class="resource-n">3</span>A network spanning a region, each site defensible and stocked for an extended stay
+<span class="resource-n">3</span>A network spanning a region, each site far enough off the road that nobody arrives by accident
 
 </div>
 
 <div class="resource-level resource-level--4" markdown="1">
 
-<span class="resource-n">4</span>A network reaching into neighboring regions, with a few sites hardened and hidden well enough to withstand real searching
+<span class="resource-n">4</span>A network reaching into neighboring regions, a few of them hidden well enough to survive a real search
 
 </div>
 
 <div class="resource-level resource-level--5" markdown="1">
 
-<span class="resource-n">5</span>A network spanning the whole country (or equivalent scale), any site capable of disappearing you completely, indefinitely
+<span class="resource-n">5</span>A network at national scale, any site of which can disappear you completely, indefinitely
 
 </div>
 

@@ -306,10 +306,12 @@ Somewhere to be, and somewhere to keep things. A property is bought like any oth
 
 A [Base](resources.md#the-resource-list) Resource is a different thing and worth having as well: the Resource is what the place is equipped and defended with, the item here is the deed.
 
+A [Safehouse Network](resources.md#safehouse-network) is different again: that Resource gives you sites with the basics in them and nothing more, while a property bought here comes properly outfitted.
+
 | Item | Notes | Wealth |
 |---|---|---|
 | Estate | Grounds, staff, and enough distance that nobody hears anything. | 6 |
-| Safe house (urban) | An address in nobody's name that nobody visits. | 4 |
+| Safe house (urban) | An address in nobody's name that nobody visits, kitted out and stocked for as long as you need to be there. | 4 |
 
 ## The Black Market
 

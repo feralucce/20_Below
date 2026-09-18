@@ -792,7 +792,15 @@ Even when there is no one around, you are not alone. You have a swarm of small m
 
 **Drone Types** (chosen per drone, reconfigurable per the Level 1 rule):
 
-1. **Combat**: mounted weapon. Attack (Output Rating d10), resolved per-die vs. the target’s Soak, Presence, or Psyche as fits the attack. 2. **Healing**: as its action, touch a willing target within Melee range and restore Health Levels equal to half its Output Rating, round up. 3. **Shielding**: as its action, project a barrier over one ally within Melee range, granting them Soak equal to its Output Rating until the start of your next turn (stacks with their own Soak). 4. **Remote Operation**: as its action, route one roll through the drone instead of acting in person - make a Skill check or device interaction as if you were standing where it is, using your own stats. 5. **Surveillance**: while active, automatically know the number and rough position of hostile creatures within Near range, no roll - everyone on your side gains Advantage on Perception rolls to spot ambushes there. 6. **Jamming**: as its action, target one enemy within Near range; they suffer Disadvantage on their next roll involving a device, sensor, or remote link. 7. **Decoy**: as its action, the drone mimics your own signature closely enough that an attacker targeting you may target it instead, GM’s call on plausibility. 8. **Transport**: as its action, carry one willing Melee-range ally (or a load of gear) up to its own Movement Rate. 9. **Repair**: as its action, touch damaged equipment, armor, or a vehicle and restore its Health Levels equal to half its Output Rating, round up - objects only, not living creatures.
+1. **Combat**: mounted weapon. Attack dice equal to its Output Rating, capped at **5** so a drone never outguns the heaviest thing a person can carry, resolved per-die vs. the target’s Soak, Presence, or Psyche as fits the attack. The **Jack In** bonus ignores that cap - it is the only thing that does, and it costs you your body to use.
+2. **Healing**: as its action, touch a willing target within Melee range and restore Health Levels equal to half its Output Rating, round up.
+3. **Shielding**: as its action, project a barrier over one ally within Melee range, granting them Soak equal to its Output Rating until the start of your next turn (stacks with their own Soak).
+4. **Remote Operation**: as its action, route one roll through the drone instead of acting in person - make a Skill check or device interaction as if you were standing where it is, using your own stats.
+5. **Surveillance**: while active, automatically know the number and rough position of hostile creatures within Near range, no roll - everyone on your side gains Advantage on Perception rolls to spot ambushes there.
+6. **Jamming**: as its action, target one enemy within Near range; they suffer Disadvantage on their next roll involving a device, sensor, or remote link.
+7. **Decoy**: as its action, the drone mimics your own signature closely enough that an attacker targeting you may target it instead, GM’s call on plausibility.
+8. **Transport**: as its action, carry one willing Melee-range ally (or a load of gear) up to its own Movement Rate.
+9. **Repair**: as its action, touch damaged equipment, armor, or a vehicle and restore its Health Levels equal to half its Output Rating, round up - objects only, not living creatures.
 
 <p class="gift-section">Adders</p>
 
@@ -800,7 +808,8 @@ Even when there is no one around, you are not alone. You have a swarm of small m
 
 - **Redundant Systems** (Lesser, 3 pts): drones' Health Levels rise by 1 each, at every Level.
 - **Rapid Redeploy** (Lesser, 3 pts): when a drone is destroyed, spend 1 Ki to deploy a replacement immediately as a Fast action.
-- **Swarm Tactics** (Greater, 6 pts): while jacked into one drone, every other deployed drone's Output Rating also gains the +2 Jack-In bonus, coordinated off the same sync.
+- **Swarm Tactics** (Greater, 6 pts): while jacked into one drone, every other deployed drone’s Output Rating also gains the +2 Jack-In bonus, coordinated off the same sync. Those borrowed points are still subject to the Combat drone’s damage cap - only the drone you are actually jacked into ignores it.
+- **Internal Dock** (Greater, 6 pts): your drones house inside your body when not deployed. Nothing shows on a search, nothing comes off you when you are disarmed, and nobody can tell you have them until you use them. Deploying costs a **Fast** action instead of a Slow one, and a docked drone repairs **1 Health Level per hour**.
 - **Emergency Eject** (Greater, 6 pts): if your jacked-in drone is destroyed, spend 1 Ki to disengage cleanly instead of the normal disorientation (Disadvantage on your next roll).
 
 </div>
@@ -842,7 +851,7 @@ Even when there is no one around, you are not alone. You have a swarm of small m
 
 <div class="gift-level gift-level--5" markdown="1">
 
-<span class="gift-n">5</span>- Output Rating rises to **6**, and your body is no longer fully defenseless while jacked in - it can still take Fast actions (moving, ducking for cover), just not perceive normally. Once per Scene, spend **2 Ki** for **Full Barrage**: every Combat-type drone you command fires at once, all their dice pooled into a single attack against one target.
+<span class="gift-n">5</span>- Output Rating rises to **6**, and your body is no longer fully defenseless while jacked in - it can still take Fast actions (moving, ducking for cover), just not perceive normally. Once per Scene, spend **2 Ki per Combat-type drone firing** for **Full Barrage**: every Combat-type drone you command fires at once, all their dice pooled into a single attack against one target. Each drone’s dice are capped individually first, then pooled; the pool itself has no ceiling.
 
 </div>
 
@@ -1251,7 +1260,9 @@ Chosen once, at creation: your Forcefield’s Form.
 
 Chosen once, at creation: your Forcefield’s **Form**.
 
-1. **Wielded Shield** - held in one hand, front arc only, matching a real ballistic shield’s own limits. Hardness and Health Levels are always **+1** above the numbers below. Covers only yourself - never projects onto an ally, at any Level. 2. **Bubble Barrier** - no hands required. Instead of a single target, it covers **everyone** within its current range, including you - starting at Melee (Level 1), extending to Close (Level 3) and Near (Level 4), same range numbers as below just read as a radius. Hardness and Health Levels are always **-2** below the numbers listed. 3. **Personal Barrier** - exactly as below: full Hardness and Health Levels, covers both Zones, a single target (yourself, or one ally within range once Level 3+).
+1. **Wielded Shield** - held in one hand, front arc only, matching a real ballistic shield’s own limits. Hardness and Health Levels are always **+1** above the numbers below. Covers only yourself - never projects onto an ally, at any Level.
+2. **Bubble Barrier** - no hands required. Instead of a single target, it covers **everyone** within its current range, including you - starting at Melee (Level 1), extending to Close (Level 3) and Near (Level 4), same range numbers as below just read as a radius. Hardness and Health Levels are always **-2** below the numbers listed.
+3. **Personal Barrier** - exactly as below: full Hardness and Health Levels, covers both Zones, a single target (yourself, or one ally within range once Level 3+).
 
 The barrier occupies the same Zone(s) as any worn armor and follows the normal rule that **armor doesn’t stack within a Zone** - raising it over a Zone that’s already covered by real armor replaces that armor’s protection for as long as the barrier holds, it doesn’t add to it. **Maintaining the barrier requires a Gift Check every turn it stays up - failure costs 1 Ki, at any Level.**
 

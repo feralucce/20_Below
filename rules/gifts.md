@@ -393,11 +393,11 @@ Even when there is no one around, you are not alone. You have a swarm of small m
 | 2 | Deploy up to **3** drones. Output Rating rises to **3**. |
 | 3 | Deploy up to **4** drones. Output Rating rises to **4**. |
 | 4 | Deploy up to **5** drones. Output Rating rises to **5**. **Overwatch**: when a drone is destroyed, spend 1 Ki to have it use its type ability one last time, at its current Output Rating, before it goes down. |
-| 5 | Output Rating rises to **6**, and your body is no longer fully defenseless while jacked in - it can still take Fast actions (moving, ducking for cover), just not perceive normally. Once per Scene, spend **2 Ki** for **Full Barrage**: every Combat-type drone you command fires at once, all their dice pooled into a single attack against one target. |
+| 5 | Output Rating rises to **6**, and your body is no longer fully defenseless while jacked in - it can still take Fast actions (moving, ducking for cover), just not perceive normally. Once per Scene, spend **2 Ki per Combat-type drone firing** for **Full Barrage**: every Combat-type drone you command fires at once, all their dice pooled into a single attack against one target. Each drone's dice are capped individually first, then pooled; the pool itself has no ceiling. |
 
 **Drone Types** (chosen per drone, reconfigurable per the Level 1 rule):
 
-1. **Combat**: mounted weapon. Attack dice equal to its Output Rating, capped at **5** so a drone never outguns the heaviest thing a person can carry, resolved per-die vs. the target's Soak, Presence, or Psyche as fits the attack.
+1. **Combat**: mounted weapon. Attack dice equal to its Output Rating, capped at **5** so a drone never outguns the heaviest thing a person can carry, resolved per-die vs. the target's Soak, Presence, or Psyche as fits the attack. The **Jack In** bonus ignores that cap - it is the only thing that does, and it costs you your body to use.
 2. **Healing**: as its action, touch a willing target within Melee range and restore Health Levels equal to half its Output Rating, round up.
 3. **Shielding**: as its action, project a barrier over one ally within Melee range, granting them Soak equal to its Output Rating until the start of your next turn (stacks with their own Soak).
 4. **Remote Operation**: as its action, route one roll through the drone instead of acting in person - make a Skill check or device interaction as if you were standing where it is, using your own stats.
@@ -411,7 +411,8 @@ Even when there is no one around, you are not alone. You have a swarm of small m
 
 - **Redundant Systems** (Lesser, 3 pts): drones' Health Levels rise by 1 each, at every Level.
 - **Rapid Redeploy** (Lesser, 3 pts): when a drone is destroyed, spend 1 Ki to deploy a replacement immediately as a Fast action.
-- **Swarm Tactics** (Greater, 6 pts): while jacked into one drone, every other deployed drone's Output Rating also gains the +2 Jack-In bonus, coordinated off the same sync.
+- **Swarm Tactics** (Greater, 6 pts): while jacked into one drone, every other deployed drone's Output Rating also gains the +2 Jack-In bonus, coordinated off the same sync. Those borrowed points are still subject to the Combat drone's damage cap - only the drone you are actually jacked into ignores it.
+- **Internal Dock** (Greater, 6 pts): your drones house inside your body when not deployed. Nothing shows on a search, nothing comes off you when you are disarmed, and nobody can tell you have them until you use them. Deploying costs a **Fast** action instead of a Slow one, and a docked drone repairs **1 Health Level per hour**.
 - **Emergency Eject** (Greater, 6 pts): if your jacked-in drone is destroyed, spend 1 Ki to disengage cleanly instead of the normal disorientation (Disadvantage on your next roll).
 
 **Limiters**:
