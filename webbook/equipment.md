@@ -3443,6 +3443,8 @@ An unprepared ward is exactly what it looks like. Salt on a floor. A stone with 
 
 **You can buy them ready-made.** Somebody prepares these for a living, and finding that somebody is a **Contacts** question rather than a money one. A prepared item costs **one Wealth rating higher** than the raw material below.
 
+**Check with your GM before any of this goes on a sheet.** Whether a salt line holds, whether iron means anything, whether the thing in the house can be warded out at all - none of that is settled by the price of the salt. It is a question about the game you are playing, and it gets answered the same way **Beyond the Ordinary** does.
+
 **Electronics are exempt.** Nothing in the Detection table needs preparing. A thermometer is a thermometer.
 
 ### Occult - Consumables

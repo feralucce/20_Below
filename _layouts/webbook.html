@@ -891,7 +891,10 @@
       sum.appendChild(e);
     }
     if (/^The Black Market/.test(name)) pill('bm', 'Requires Black Market Access');
-    if (/^Beyond the Ordinary/.test(name)) pill('gm', 'Needs GM approval');
+    if (/^Beyond the Ordinary/.test(name)
+        || (/^Occult/.test(name) && !/Detection$/.test(name))) {
+      pill('gm', 'Needs GM approval');
+    }
 
     d.appendChild(sum);
     d.appendChild(body);
