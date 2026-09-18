@@ -2,7 +2,7 @@
 layout: webbook
 title: "Fate"
 chapter: 10
-nav_section: combat
+nav_section: options
 ground: hexdrift
 prev_url: /webbook/flaws.html
 prev_title: "Flaws"

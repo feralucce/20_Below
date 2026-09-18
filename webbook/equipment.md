@@ -2,7 +2,7 @@
 layout: webbook
 title: "Weapons & Equipment"
 chapter: 11
-nav_section: combat
+nav_section: options
 ground: hexdrift
 collapsible: true
 prev_url: /webbook/fate.html

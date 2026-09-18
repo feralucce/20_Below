@@ -60,7 +60,6 @@ PAGES = [
     "rules-hub.html",
     "downloads.html",
     "character-options.html",
-    "combat-equipment.html",
     "gm-references.html",
     "license.html",
     "docs/changelog.html",
@@ -81,7 +80,7 @@ INCLUDE = "{% include brand-head.html %}"
 # Only these carry <body class="hub">, and only on these are the hub
 # components duplicates rather than the page's own.
 HUBS = {"rules-hub.html", "downloads.html", "character-options.html",
-        "combat-equipment.html", "gm-references.html"}
+        "gm-references.html"}
 
 # The brand itself. A page's copy of these goes whether or not it has
 # drifted - the drift is the thing being removed.
