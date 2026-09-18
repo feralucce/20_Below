@@ -530,6 +530,10 @@ def main():
         # the page behind the words is the same one.
         if ground:
             front.append("ground: " + ground)
+        # The equipment chapter is 325 entries on one page. Its sections
+        # collapse, the way the character creator's do.
+        if slug == "equipment":
+            front.append("collapsible: true")
         if i:
             front.append("prev_url: /webbook/%s.html" % CHAPTERS[i - 1][1])
             front.append("prev_title: " + yaml_quote(CHAPTERS[i - 1][3]))

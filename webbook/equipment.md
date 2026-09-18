@@ -4,6 +4,7 @@ title: "Weapons & Equipment"
 chapter: 11
 nav_section: combat
 ground: hexdrift
+collapsible: true
 prev_url: /webbook/fate.html
 prev_title: "Fate"
 next_url: /webbook/advancement.html
@@ -3430,7 +3431,7 @@ Damage 1, 10m throw. 1 (thrown). Everyone in a Close radius is Blinded and at Di
 
 </div>
 
-## Occult & Warding
+## Occult
 
 **Money is not the hard part here either.** Everything in this section is cheap. Salt is salt, rosemary is rosemary, a horseshoe is eight dollars at a flea market, and a stone with a hole in it is free if you know which beach to walk. The Wealth rating buys the material. Material on its own does nothing whatsoever.
 
@@ -3444,7 +3445,7 @@ An unprepared ward is exactly what it looks like. Salt on a floor. A stone with 
 
 **Electronics are exempt.** Nothing in the Detection table needs preparing. A thermometer is a thermometer.
 
-### Occult & Warding - Consumables
+### Occult - Consumables
 
 <div class="item" markdown="1">
 
@@ -3614,7 +3615,7 @@ One room’s worth of sigils.
 
 </div>
 
-### Occult & Warding - Charms & Wards
+### Occult - Charms & Wards
 
 <div class="item" markdown="1">
 
@@ -3798,7 +3799,7 @@ Buried at a threshold. It takes what was meant for you.
 
 </div>
 
-### Occult & Warding - Warded Ammunition
+### Occult - Warded Ammunition
 
 <div class="item" markdown="1">
 
@@ -3870,7 +3871,7 @@ Ordinary ammunition otherwise.
 
 </div>
 
-### Occult & Warding - Detection
+### Occult - Detection
 
 <div class="item" markdown="1">
 

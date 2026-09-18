@@ -316,7 +316,7 @@ Same Damage/per-die-vs-Soak resolution as [Basic Weapons](#basic-weapons) above,
 | Stun gun | 1 | Melee | - | - | Disadvantage on the target's next roll | 1 |
 | Tear gas grenade | 1 | 10m throw | 1 (thrown) | - | Everyone in a Close radius is Blinded and at Disadvantage until they leave the area | 1 |
 
-## Occult & Warding
+## Occult
 
 **Money is not the hard part here either.** Everything on these tables is cheap. Salt is salt, rosemary is rosemary, a horseshoe is eight dollars at a flea market, and a stone with a hole in it is free if you know which beach to walk. The Wealth rating buys the material. Material on its own does nothing whatsoever.
 
@@ -330,7 +330,7 @@ An unprepared ward is exactly what it looks like. Salt on a floor. A stone with 
 
 **Electronics are exempt.** Nothing in the Detection table needs preparing. A thermometer is a thermometer.
 
-### Occult & Warding - Consumables
+### Occult - Consumables
 
 | Item | Effect | Wealth |
 |---|---|---|
@@ -347,7 +347,7 @@ An unprepared ward is exactly what it looks like. Salt on a floor. A stone with 
 | Silver dust | A vial. Puts silver where silver would not otherwise reach | 2 |
 | Warding paint | Spray or brush. One room's worth of sigils | 1 |
 
-### Occult & Warding - Charms & Wards
+### Occult - Charms & Wards
 
 | Item | Effect | Wealth |
 |---|---|---|
@@ -365,7 +365,7 @@ An unprepared ward is exactly what it looks like. Salt on a floor. A stone with 
 | Threshold ward kit | Chalk, salt, iron and cord in a roll. One doorway, complete | 1 |
 | Witch bottle | Glass, sealed, full of pins and worse. Buried at a threshold, it takes what was meant for you | 1 |
 
-### Occult & Warding - Warded Ammunition
+### Occult - Warded Ammunition
 
 | Item | Effect | Wealth |
 |---|---|---|
@@ -375,7 +375,7 @@ An unprepared ward is exactly what it looks like. Salt on a floor. A stone with 
 | Silver buckshot | Ten shells | 2 |
 | Silver rounds | A box of twenty, cast rather than plated | 2 |
 
-### Occult & Warding - Detection
+### Occult - Detection
 
 | Item | Effect | Wealth |
 |---|---|---|

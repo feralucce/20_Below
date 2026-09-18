@@ -663,6 +663,39 @@
     gap: 0.9rem;
     margin: 2rem 0 2.5rem;
   }
+
+  /* Collapsible chapter sections, for a page with too many entries to
+     scroll. Built from the headings after load, so without JavaScript
+     the page is simply the page. */
+  details.section {
+    border-top: 1px solid var(--rule, #2a3546);
+    margin: 0 0 0.25rem;
+  }
+  details.section > summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 0.6rem 0;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  details.section > summary::-webkit-details-marker { display: none; }
+  details.section > summary::before {
+    content: "\25B8";
+    display: inline-block;
+    transition: transform 0.15s ease;
+    opacity: 0.6;
+  }
+  details.section[open] > summary::before { transform: rotate(90deg); }
+  details.section > summary h2,
+  details.section > summary h3 { margin: 0; display: inline; }
+  details.section > summary .section-count {
+    margin-left: auto;
+    font-size: 0.8rem;
+    opacity: 0.55;
+  }
+  details.section > .section-body { padding: 0 0 0.75rem; }
+
   .toc-card {
     position: relative;
     background: var(--panel);
@@ -782,5 +815,73 @@
   {% endif %}
 </main>
 <script src="/docs/assets/js/site-nav.js"></script>
+
+{% if page.collapsible %}
+<script>
+/* Wrap each section heading and everything under it in a <details>, so a
+   very long chapter opens a section at a time. The markup is built here
+   rather than emitted by the generator, which keeps the page whole for
+   anything that does not run scripts. What is open is remembered per
+   chapter. */
+(function () {
+  var main = document.querySelector('main') || document.body;
+  var key = 'webbook-open:' + location.pathname;
+  var open = {};
+  try { open = JSON.parse(localStorage.getItem(key) || '{}'); } catch (e) { open = {}; }
+
+  /* Innermost first, so a sub-table is already wrapped by the time its
+     parent section swallows it and the two nest properly. */
+  var heads = [].slice.call(main.querySelectorAll('h3'))
+    .concat([].slice.call(main.querySelectorAll('h2')));
+  heads.forEach(function (h) {
+    if (h.closest('details.section')) return;
+    var level = h.tagName;
+    var body = document.createElement('div');
+    body.className = 'section-body';
+    var n = h.nextSibling;
+    while (n) {
+      var next = n.nextSibling;
+      if (n.nodeType === 1 && (n.tagName === 'H2' ||
+          (level === 'H3' && n.tagName === 'H3'))) break;
+      body.appendChild(n);
+      n = next;
+    }
+    var count = body.querySelectorAll('.item, .entry').length;
+    var d = document.createElement('details');
+    d.className = 'section';
+    var sum = document.createElement('summary');
+    h.parentNode.insertBefore(d, h);
+    sum.appendChild(h);
+    if (count) {
+      var c = document.createElement('span');
+      c.className = 'section-count';
+      c.textContent = count + (count === 1 ? ' item' : ' items');
+      sum.appendChild(c);
+    }
+    d.appendChild(sum);
+    d.appendChild(body);
+    var id = h.id || h.textContent.trim();
+    if (open[id]) d.open = true;
+    d.addEventListener('toggle', function () {
+      open[id] = d.open;
+      try { localStorage.setItem(key, JSON.stringify(open)); } catch (e) {}
+    });
+  });
+
+  /* A link to an anchor inside a closed section has to open it first. */
+  function reveal() {
+    if (!location.hash) return;
+    var t = document.getElementById(location.hash.slice(1));
+    while (t) {
+      if (t.tagName === 'DETAILS') t.open = true;
+      t = t.parentElement;
+    }
+  }
+  window.addEventListener('hashchange', reveal);
+  reveal();
+}());
+</script>
+{% endif %}
+
 </body>
 </html>
