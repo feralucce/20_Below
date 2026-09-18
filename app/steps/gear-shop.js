@@ -238,7 +238,12 @@ export default function buildGearShop(state, data) {
       // Two sections need somebody's permission rather than only money:
       // the GM for one, a contact for the other. Keyed off the parent
       // heading, so a new sub-table inherits the label.
-      const needsGM = cat.parent === 'Beyond the Ordinary';
+      // Occult goods ask the same question Beyond the Ordinary does:
+      // whether any of it works at all is the table's call, not the
+      // character's money. Detection is the exception - an EMF meter is
+      // consumer electronics and the section says so itself.
+      const needsGM = cat.parent === 'Beyond the Ordinary'
+        || (cat.parent === 'Occult' && cat.category !== 'Occult - Detection');
       const needsContact = cat.parent === 'The Black Market';
       details.append(
         el('summary', {}, [
