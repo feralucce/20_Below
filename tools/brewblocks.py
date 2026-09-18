@@ -207,6 +207,25 @@ def render_boon(title, body, variant):
     return wrap(cls("boon", variant), "\n\n".join(parts))
 
 
+def render_item(title, body, variant):
+    """An equipment entry. The Wealth rating rides in the title's
+    parenthetical, the same way a boon carries its cost."""
+    m = TITLED.match(title.strip())
+    name = (m.group(1) if m else title).strip()
+    wr = m.group(2).strip() if m else ""
+    flavour, rest = split_flavour(body)
+    head = title_line(name, "item-name")
+    if wr:
+        head = head[:-len("</p>")] + '<span class="item-wr">%s</span></p>' % esc(wr)
+    parts = [head]
+    if flavour:
+        parts.append('<div class="item-flavour" markdown="1">\n\n%s\n\n</div>'
+                     % flavour)
+    for p in paras(rest):
+        parts.append(p)
+    return wrap(cls("item", variant), "\n\n".join(parts))
+
+
 def render_stat(title, body, variant):
     """A stat block. The stat line is picked out by the middot the
     Adversary Index already uses, so an existing block pastes in with
@@ -243,6 +262,7 @@ BLOCKS = {
                                "resource-level", "resource-n"), True),
     "boon":     (render_boon, True),
     "skill":    (render_skill, True),
+    "item":     (render_item, True),
     "stat":     (render_stat, True),
     "figure":   (render_figure, True),
 }

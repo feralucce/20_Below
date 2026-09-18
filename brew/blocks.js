@@ -203,6 +203,30 @@ export const BLOCKS = {
       return `<div class="${cls('boon', variant)}">\n\n${head}\n\n${fl}${rest}\n\n</div>`;
     },
   },
+  item: {
+    help: 'title it "Name (WR 2)"',
+    takesTitle: true,
+    /* Gear is a card here and a table row in rules/weapons.md, which is
+     * what the character creator reads. The Wealth rating comes out of
+     * the title so the pill and the table can never drift apart. The
+     * first paragraph is what the thing physically is; everything after
+     * it is what it does. A block with one paragraph is all description,
+     * which is fine for something that does nothing but exist. */
+    render: (title, body, variant, cont) => {
+      const m = title.trim().match(/^(.*?)\s*\(\s*WR\s*([0-6])\s*\)\s*$/i);
+      const name = (m ? m[1] : title).trim();
+      const wr = m ? m[2] : '';
+      const paras = body.trim().split(/\n\s*\n/);
+      const flavour = flavourOf(paras, cont);
+      const rest = paras.join('\n\n');
+      const pill = wr ? `<span class="item-wr">WR ${esc(wr)}</span>` : '';
+      const head = `<span class="item-name">${esc(name)}</span>${pill}`;
+      const fl = flavour
+        ? `<div class="item-flavour">\n\n${flavour}\n\n</div>\n\n`
+        : '';
+      return `<div class="${cls('item', variant)}">\n\n${head}\n\n${fl}${rest}\n\n</div>`;
+    },
+  },
   skill: {
     help: 'title it "Name (Element)"',
     takesTitle: true,

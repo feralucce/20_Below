@@ -372,7 +372,7 @@
      a Gift is Moira, a Flaw is danger, a Boon and a Resource take the
      accent - so a reader can tell what kind of thing they are looking
      at before reading a word of it. */
-  .gift, .flaw, .boon, .resource {
+  .gift, .flaw, .boon, .resource, .item {
     background: var(--panel);
     border-left: 3px solid var(--accent);
     border-radius: 3px;
@@ -382,9 +382,9 @@
   .gift { border-left-color: var(--v-moira); }
   .flaw { border-left-color: var(--v-danger); }
   .gift > :last-child, .flaw > :last-child,
-  .boon > :last-child, .resource > :last-child { margin-bottom: 0; }
+  .boon > :last-child, .resource > :last-child, .item > :last-child { margin-bottom: 0; }
 
-  .gift-name, .flaw-name, .boon-name, .resource-name {
+  .gift-name, .flaw-name, .boon-name, .resource-name, .item-name {
     display: block;
     font-family: "Bebas Neue", "Segoe UI", system-ui, sans-serif;
     font-size: 1.35rem;
@@ -393,7 +393,7 @@
     color: var(--text);
   }
 
-  .gift-flavour, .flaw-flavour, .boon-flavour, .resource-flavour {
+  .gift-flavour, .flaw-flavour, .boon-flavour, .resource-flavour, .item-flavour {
     font-style: italic;
     margin: 0.25rem 0 0.5rem;
     color: var(--accent);
@@ -401,7 +401,7 @@
   .gift-flavour { color: var(--v-moira); }
   .flaw-flavour { color: var(--v-danger); }
   .gift-flavour > p, .flaw-flavour > p,
-  .boon-flavour > p, .resource-flavour > p { margin: 0; }
+  .boon-flavour > p, .resource-flavour > p, .item-flavour > p { margin: 0; }
 
   /* The five levels. The leading edge deepens as the level climbs, so
      the ladder is visible before it is read. */
@@ -468,7 +468,7 @@
   .gift-opt--limiter { border-left-color: var(--v-danger); }
 
   /* A Boon's price, said once, beside its name. */
-  .boon-cost {
+  .boon-cost, .item-wr {
     display: inline-block;
     margin-left: 0.45em;
     padding: 0.05em 0.4em;
