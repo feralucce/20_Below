@@ -202,8 +202,14 @@ export default function buildGearShop(state, data) {
             const owned = state.gearPurchases.filter((g) => g.name === item.name).length;
             return el('tr', { class: owned ? 'purchased' : undefined }, [
               el('td', {}, [
-                item.name ?? '',
-                owned ? purchasedPill(owned) : null,
+                el('div', { class: 'gear-name' }, [
+                  item.name ?? '',
+                  owned ? purchasedPill(owned) : null,
+                ]),
+                // What the thing physically is, straight out of the book.
+                item.flavour
+                  ? el('div', { class: 'gear-flavour' }, item.flavour)
+                  : null,
               ]),
               ...otherHeaders.map((h) => el('td', {}, item[h] ?? '')),
               el('td', {}, buyable ? String(item.wealth) : '-'),

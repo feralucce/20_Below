@@ -38,10 +38,11 @@ async function loadFlavour() {
       boon: parsed.boon || {},
       flaw: parsed.flaw || {},
       resource: parsed.resource || {},
+      item: parsed.item || {},
     };
   } catch (err) {
     console.warn('No descriptions loaded from rules/flavour.json', err);
-    return { boon: {}, flaw: {}, resource: {} };
+    return { boon: {}, flaw: {}, resource: {}, item: {} };
   }
 }
 
@@ -89,7 +90,12 @@ export async function loadRulesData() {
     flaws: withFlavour(parseFlaws(flawsMd), flavour.flaw),
     sampleDescriptors: parseSampleDescriptors(rulesMd),
     difficultyChart: parseDifficultyChart(rulesMd),
-    equipment: parseEquipment(weaponsMd),
+    // Equipment is categories of items rather than a flat list, so the
+    // descriptions attach a level down from where withFlavour works.
+    equipment: parseEquipment(weaponsMd).map((cat) => ({
+      ...cat,
+      items: cat.items.map((i) => ({ ...i, flavour: flavour.item[i.name] ?? null })),
+    })),
     everymanGearPackages: parseEverymanGearPackages(weaponsMd),
   };
 }

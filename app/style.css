@@ -885,6 +885,24 @@ tr.purchased td {
   margin-bottom: 0.3rem;
 }
 
+/* The shop lists a name, some numbers and a button. The line under the
+   name is what the thing actually is, so a player is choosing between
+   objects rather than between table rows. */
+.gear-name {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.gear-flavour {
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.35;
+  max-width: 44ch;
+}
+
 /* Free-text fields on the sheet - age, height, appearance, backstory,
    notes. Sized to the panel rather than to their content, so a one-word
    Age and a paragraph of Appearance line up. */
