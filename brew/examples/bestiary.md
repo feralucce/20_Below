@@ -2362,7 +2362,7 @@ Every deep, cold lake seems to have one story like it. This is the generic write
 
 \page
 
-::: stat Thunderbird
+::: stat Stormbird
 Wingspan alone is enough to convince most witnesses they saw something that shouldn't exist. It rides high on thermals and storm fronts, dark against dark clouds, and its wingbeats are audible before it's visible. It hunts from altitude, folding in and diving talons-first, and prefers to strike during or just ahead of bad weather when it's hardest to track against the sky. A clear-day sighting is rare enough that most reports come from people caught out in a storm who looked up at the wrong moment.
 
 **Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 18m (flight)

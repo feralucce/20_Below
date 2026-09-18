@@ -166,7 +166,6 @@ Purpose-built protective gear only - ordinary clothing, even sturdy clothing, do
 | Grappling hook | Advantage on Climbing rolls to scale a ledge or wall within range | 1 |
 | Hand saw | No roll for trivial wood-cutting tasks | 1 |
 | Ice axe | Required tool for climbing on ice or snow; Advantage on Climbing rolls in those conditions | 1 |
-| Life straw / portable water filter | Makes any water source safe to drink, no roll | 1 |
 | Lockpick set | Required tool for lockpicking; without one, bypass rolls are at Disadvantage | 1 |
 | Multitool | No roll for trivial improvised repairs | 1 |
 | Nice backpack | +20kg Carrying Capacity while worn | 1 |
@@ -178,6 +177,7 @@ Purpose-built protective gear only - ordinary clothing, even sturdy clothing, do
 | Sewing / repair kit | No roll for trivial gear or clothing repairs | 1 |
 | Snake bite kit | Consumed on use: Advantage resisting a venom effect | 1 |
 | Snowshoes | Negates Movement Rate penalties from deep snow | 1 |
+| Straw water filter | Makes any water source safe to drink, no roll | 1 |
 | Tactical flashlight | Negates darkness Disadvantage within Close range | 1 |
 | Tent | Field shelter for one to two; lighter and cheaper than the full Tent & sleeping gear kit | 1 |
 | Tent & sleeping gear | Field shelter; avoids Exhausted accrual from a rough night outdoors | 2 |
@@ -199,7 +199,7 @@ Purpose-built protective gear only - ordinary clothing, even sturdy clothing, do
 | Field stimulant | Consumed on use: clear your current Exhausted levels, or grant Advantage on one Physical roll - GM's call on any crash afterward | 1 |
 | IV kit & fluids | Consumed on use: Advantage on treating Exhausted levels or blood loss | 1 |
 | Medical scanner | Handheld. Sees the break, the bleed and the poison without opening anything. | 3 |
-| Naloxone (Narcan) kit | Consumed on use: reverses an opioid overdose outright, no roll | 1 |
+| Naloxone kit | Consumed on use: reverses an opioid overdose outright, no roll | 1 |
 | SAM splint | Required tool for field-splinting a broken limb; without one, at Disadvantage | 1 |
 | Sedative dart | Ranged; a target Overwhelmed by its Stamina-based dice falls Unconscious instead of just losing Health Levels (GM's call on framing) | 2 |
 | Stimulant patch | Buys you a night. You pay for it over the following week. | 2 |
@@ -259,7 +259,6 @@ Driving/Piloting Skill required to operate; combat or pursuit use falls under Co
 | Hang glider / wingsuit | Unpowered gliding flight from height, requires Piloting | 3 |
 | Horse & tack | Ordinary mount, no fuel required | 3 |
 | Hot air balloon | Slow vertical/wind-drift flight, requires Piloting | 3 |
-| Jetski | Water only, Advantage on Chase rolls on open water | 3 |
 | Kayak / canoe | Water only, human-powered | 2 |
 | Light helicopter | Full 3D movement, requires Piloting | 5 |
 | Mini-submarine | Full underwater movement, requires Piloting | 5 |
@@ -267,6 +266,7 @@ Driving/Piloting Skill required to operate; combat or pursuit use falls under Co
 | Motorcycle | Advantage on Chase rolls in dense urban/congested terrain | 3 |
 | Off-road SUV | Advantage on Chase rolls off-road or rough terrain | 4 |
 | Parachute | Safe descent from height or an aircraft; single-use per jump unless repacked | 2 |
+| Personal watercraft | Water only, Advantage on Chase rolls on open water | 3 |
 | Pickup truck | Real cargo/towing capacity | 4 |
 | Private jet | Range, privacy, and a crew who know your name. | 6 |
 | Skateboard / scooter | Quiet, no fuel, folds for easy carry | 1 |
@@ -282,22 +282,22 @@ Same Damage/per-die-vs-Soak resolution as [Basic Weapons](#basic-weapons) above,
 
 | Item | Damage | Range (Normal / Long) | Ammo | Reload | Effect | Wealth |
 |---|---|---|---|---|---|---|
-| Bear spray | 1 | 4m / 6m | 1 (canister) | - | Same as Mace, but a Close-range cone hitting everyone in it | 1 |
+| Bear spray | 1 | 4m / 6m | 1 (canister) | - | Same as pepper spray, but a Close-range cone hitting everyone in it | 1 |
 | Blinding strobe | 0 | Close radius | - | - | Blinded for 1 round, no roll needed to trigger | 1 |
 | Bola | 1 | 8m / 15m | 1 per throw | - | Target's Movement Rate is halved until they break free | 1 |
 | Collapsible baton | 2 | Melee | - | - |  | 1 |
 | Flashbang | 1 | 10m throw | 1 (thrown) | - | Everyone in a Close radius is Blinded and at Disadvantage for 1 round | 1 |
 | Grappling snare | 1 | Melee (trap) | - | - | Restrains whoever triggers it | 1 |
 | Less-lethal shotgun (beanbag) | 3 | 5m / 15m | 6 shells | Slow action | No Health Level loss from this weapon alone; Prone and Disadvantage next turn | 2 |
-| Mace (pepper spray) | 1 | 3m / 5m | 1 (canister) | - | Blinded and Disadvantage on all rolls for 1 round | 1 |
 | Net gun | 1 | 8m / 15m | 1 net | 1 action | Target is Restrained until they break free (Potence check) | 2 |
-| Pepper spray gel | 1 | 6m / 9m | 1 (canister) | - | Same Blinded effect as Mace, less blowback risk | 1 |
+| Pepper spray | 1 | 3m / 5m | 1 (canister) | - | Blinded and Disadvantage on all rolls for 1 round | 1 |
+| Pepper spray gel | 1 | 6m / 9m | 1 (canister) | - | Same Blinded effect as pepper spray, less blowback risk | 1 |
 | Rubber bullet launcher | 2 | 15m / 40m | 6 rounds | 1 action | Same as the beanbag shotgun above | 2 |
 | Shock baton | 2 | Melee | - | - | Target is Stunned until the start of their next turn | 2 |
+| Shock dart gun | 2 | 5m / 8m | 1 cartridge | 1 action | Prone, can't act until the start of their next turn | 2 |
 | Smoke grenade | 0 | 10m throw | 1 (thrown) | - | Fills a Close radius with concealment; Advantage on Stealth to break contact | 1 |
 | Sonic deterrent device | 1 | Close-Near cone | - | - | Disadvantage on all rolls while in the cone | 2 |
 | Stun gun | 1 | Melee | - | - | Disadvantage on the target's next roll | 1 |
-| Taser | 2 | 5m / 8m | 1 cartridge | 1 action | Prone, can't act until the start of their next turn | 2 |
 | Tear gas grenade | 1 | 10m throw | 1 (thrown) | - | Everyone in a Close radius is Blinded and at Disadvantage until they leave the area | 1 |
 
 ## Property
@@ -442,7 +442,7 @@ Every character starts with these. At character creation you take **one package 
 - **Whatever's Left** - the clothes on your back, a bedroll, a pocketknife (Switchblade), less than a day's food.
 - **One Bag, Ready to Move** - a packed duffel bag, a Multitool, a hand-me-down phone (Smartphone) barely holding a charge.
 - **Borrowed Roof** - a key to somewhere that isn't really yours, a Tactical flashlight, one good coat.
-- **Shelter Queue** - a sleeping bag, a Switchblade, a Life straw, and the schedule of which places still take you after nine.
+- **Shelter Queue** - a sleeping bag, a Switchblade, a Straw water filter, and the schedule of which places still take you after nine.
 - **Car That Runs, Mostly** - a car you sleep in more than you drive, a Multitool, a Portable charger, and a blanket that smells like the car.
 - **Day Labor** - steel-toed boots, a Hand saw, work gloves, and a phone number that sometimes calls back.
 - **Off the Grid** - a Tent, a Fire starter kit, Water purification tablets, and a Compass older than you are.
@@ -461,7 +461,7 @@ Every character starts with these. At character creation you take **one package 
 - **Night Class** - Tablet / e-reader, Portable charger / power bank, Compass, and a bus pass with your name worn off it.
 - **Line Cook** - Combat knife (a real knife roll), Trauma shears, Burn gel / dressing, and shoes that never come clean.
 - **The Handy One** - Multitool, Hand saw, Crowbar, and a garage full of other people's unfinished projects.
-- **Weekend Medic** - Tourniquet, SAM splint, Naloxone (Narcan) kit, and a volunteer badge with the training behind it.
+- **Weekend Medic** - Tourniquet, SAM splint, Naloxone kit, and a volunteer badge with the training behind it.
 - **Neighborhood Watch** - Binoculars, Two-way radio, Trail camera, Tactical flashlight.
 - **Angler** - Kayak / canoe, Field rations & water purifier, Paracord (100ft), and a spot you don't tell people about.
 - **Trailhead Regular** - Tent & sleeping gear, Fire starter kit, Snake bite kit, Ice axe.
@@ -482,8 +482,8 @@ Every character starts with these. At character creation you take **one package 
 - **Backcountry Guide** - ATV / dirt bike, Avalanche beacon, Oxygen tank, Ascender / rappel kit.
 - **Hobby Shooter** - Hunting rifle (licensed), Recurve bow, Laser rangefinder, and a range membership older than some of the staff.
 - **Home Studio** - Laptop / hacking rig, AI assistant earpiece, Encrypted comms set, and a spare room with foam on the walls.
-- **Small Boat, Big Water** - Jetski, Water desalinator, Life straw / portable water filter, Paracord (100ft).
-- **Fixer's Rolodex** - Encrypted burner phone, Forged documents, Uniform disguise, RFID cloner.
+- **Small Boat, Big Water** - Personal watercraft, Water desalinator, Straw water filter, Paracord (100ft).
+- **Fixer's Little Black Book** - Encrypted burner phone, Forged documents, Uniform disguise, RFID cloner.
 
 **Level 3** (Wealthy)
 
