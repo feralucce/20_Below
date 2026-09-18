@@ -3985,7 +3985,7 @@ A house with a name rather than a number, at the end of a drive nobody turns dow
 
 </div>
 
-Grounds, staff, and enough distance that nobody hears anything.
+Grounds, staff, and enough distance that nobody hears anything. Name it as your repository and anything you own but are not carrying is in it. Somebody on the staff knows where, which is either convenient or a problem.
 
 </div>
 
