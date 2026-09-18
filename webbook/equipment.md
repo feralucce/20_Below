@@ -3999,7 +3999,7 @@ A flat on a middle floor, rented under a company, with the bills paid by standin
 
 </div>
 
-An address in nobody’s name that nobody visits, kitted out and stocked for as long as you need to be there.
+An address in nobody’s name that nobody visits, kitted out and stocked for as long as you need to be there. Name it as your repository and anything you own but are not carrying is in it, rather than somewhere nobody has decided yet.
 
 </div>
 
