@@ -696,6 +696,25 @@
   }
   details.section > .section-body { padding: 0 0 0.75rem; }
 
+
+  /* The same two pills the character creator puts on these sections, so a
+     reader meets the gate before they open the drawer rather than after.
+     Colours match the creator's: gold for a GM call, NPC red for access. */
+  .section-pill {
+    margin-left: 0.6rem;
+    padding: 0.1rem 0.5rem;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    vertical-align: 0.15em;
+    opacity: 0.85;
+  }
+  .section-pill--gm { color: #d8b45c; }
+  .section-pill--bm { color: #e0685c; }
+
   .toc-card {
     position: relative;
     background: var(--panel);
@@ -858,6 +877,22 @@
       c.textContent = count + (count === 1 ? ' item' : ' items');
       sum.appendChild(c);
     }
+
+    /* Money is not the only gate on some of these. Say so on the closed
+       drawer, the way the character creator does. Keyed off the section
+       name because that is the same thing the creator keys off - deriving
+       it from the text instead put a Black Market pill on Beyond the
+       Ordinary, where only some items carry a rating. */
+    var name = h.textContent.trim();
+    function pill(cls, label) {
+      var e = document.createElement('span');
+      e.className = 'section-pill section-pill--' + cls;
+      e.textContent = label;
+      sum.appendChild(e);
+    }
+    if (/^The Black Market/.test(name)) pill('bm', 'Requires Black Market Access');
+    if (/^Beyond the Ordinary/.test(name)) pill('gm', 'Needs GM approval');
+
     d.appendChild(sum);
     d.appendChild(body);
     var id = h.id || h.textContent.trim();
