@@ -80,7 +80,7 @@ export default {
           }),
         ]),
         el('div', { class: 'field' }, [
-          el('label', {}, 'Playing to it looks like (a concrete, repeatable trigger)'),
+          el('label', {}, 'How you earn a Fate Token (start with: Take a Fate Token when you...)'),
           el('input', {
             type: 'text',
             value: custom.trigger,

@@ -5,6 +5,6 @@ export function parseNatures(creationMd) {
   return table.rows.map((row) => ({
     name: row.Nature,
     drive: row.Drive,
-    example: row['Playing to it looks like'],
+    example: row['Earning a Fate Token'],
   }));
 }
