@@ -22,13 +22,33 @@ failure it was written to catch - v0.10.2 shipped without the Off Balance
 condition because nothing said so out loud.
 
     python tools/check-desktop-drift.py
+    python tools/check-desktop-drift.py --versions   # just the version check
 
-Exits 1 only if code changed, so it can gate a release step. The paths
-below must match each app's scripts/stage-frontend.ps1.
+It also checks that each app agrees with itself about its own version.
+tauri.conf.json and Cargo.toml both carry one and nothing makes them
+match, so bumping only the config is easy and silent. Six releases went
+out that way - the Creator's v0.10.18 through v0.11.0 with a crate stuck
+at 0.10.17, and brewery-v0.4.3 - before anyone looked.
+
+Nothing user-facing was wrong in those, because tauri-codegen takes
+PackageInfo's version from the config when it is set and falls back to
+CARGO_PKG_VERSION only when it is absent, and tauri-build writes the
+Windows FILEVERSION from the config too. The crate version reaches the
+build log and nothing else. It is checked anyway: a number that is wrong
+and harmless today is a number nobody trusts tomorrow, and the drift only
+grows - the Creator's reached four versions behind before it was noticed.
+
+Exits 1 if code changed or a version disagrees, so it can gate a release
+step. The paths below must match each app's scripts/stage-frontend.ps1.
 """
+import io
+import os
 import re
 import subprocess
 import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
 
 # Files living under a code path that the app never loads - developer
 # tooling run from the command line, imported by nothing and referenced by
@@ -73,6 +93,82 @@ APPS = [
 ]
 
 
+# Each app's Tauri crate, for the version check. Not folded into APPS
+# above because that list is about what a release SHIPS and this is about
+# what a release CALLS ITSELF - two questions that happen to share a tool.
+TAURI_DIRS = {
+    "Character Creator": "desktop",
+    "The Brewery": "brewer-desktop",
+    "Encounter Difficulty Calculator": "prep-desktop",
+    "Battle Tracker": "combat-tracker-desktop",
+}
+
+CONF_VERSION = re.compile(r'"version"\s*:\s*"([^"]+)"')
+CARGO_NAME = re.compile(r'^name\s*=\s*"([^"]+)"', re.M)
+CARGO_VERSION = re.compile(r'^version\s*=\s*"([^"]+)"', re.M)
+
+
+def read(*parts):
+    path = os.path.join(ROOT, *parts)
+    if not os.path.exists(path):
+        return None
+    return io.open(path, encoding="utf-8").read()
+
+
+def lock_version(lock, crate):
+    """The version Cargo.lock records for the app's own crate.
+
+    Left stale it is only noise in a diff, but it is noise that shows up
+    in every unrelated commit until somebody bumps it.
+    """
+    if not lock:
+        return None
+    m = re.search(r'^name = "%s"\nversion = "([^"]+)"'
+                  % re.escape(crate), lock, re.M)
+    return m.group(1) if m else None
+
+
+def check_versions():
+    """Does each app agree with itself about which version it is?"""
+    bad = 0
+    for name, folder in sorted(TAURI_DIRS.items()):
+        conf = read(folder, "src-tauri", "tauri.conf.json")
+        cargo = read(folder, "src-tauri", "Cargo.toml")
+        if conf is None or cargo is None:
+            print("%-32s no Tauri crate at %s" % (name, folder))
+            continue
+
+        m_conf = CONF_VERSION.search(conf)
+        m_name = CARGO_NAME.search(cargo)
+        m_cargo = CARGO_VERSION.search(cargo)
+        if not (m_conf and m_name and m_cargo):
+            print("%-32s cannot read a version out of %s" % (name, folder))
+            bad += 1
+            continue
+
+        want = m_conf.group(1)
+        crate = m_name.group(1)
+        got = m_cargo.group(1)
+        locked = lock_version(read(folder, "src-tauri", "Cargo.lock"), crate)
+
+        wrong = [w for w in (("Cargo.toml", got),
+                             ("Cargo.lock", locked))
+                 if w[1] is not None and w[1] != want]
+        if wrong:
+            bad += 1
+            print("%-32s tauri.conf.json says %s, but:" % (name, want))
+            for where, value in wrong:
+                print("%-32s   %-14s says %s" % ("", where, value))
+        else:
+            print("%-32s %s" % (name, want))
+
+    if bad:
+        print("\n%d app(s) disagree with themselves about their own version."
+              % bad)
+        print("tauri.conf.json is the one that ships - bring the others to it.")
+    return bad
+
+
 def git(*args):
     return subprocess.run(["git"] + list(args), capture_output=True,
                           text=True, encoding="utf-8").stdout.strip()
@@ -111,6 +207,9 @@ def changed(tag, paths, not_ours=()):
 
 
 def main():
+    if "--versions" in sys.argv:
+        return 1 if check_versions() else 0
+
     needs_release = False
     for name, pattern, code_paths, live_paths in APPS:
         tag = newest_tag(pattern)
@@ -138,7 +237,10 @@ def main():
         print("\nCode changes only reach users through a new installer.")
     else:
         print("\nNothing needs a release.")
-    return 1 if needs_release else 0
+
+    print()
+    mismatched = check_versions()
+    return 1 if (needs_release or mismatched) else 0
 
 
 sys.exit(main())
