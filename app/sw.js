@@ -7,12 +7,25 @@
 // Instead the shell is cached on install and everything else is cached as
 // it's actually used - after one online visit the app is complete offline.
 //
-// Rules are the exception and go network-first. rules/*.md is the live
-// source the whole app is built around: editing a rules file and pushing
-// updates every copy without a release, and a cache-first worker would
-// quietly undo that. Offline, the last-seen copy is served instead.
+// Rules go network-first. rules/*.md is the live source the whole app is
+// built around: editing a rules file and pushing updates every copy
+// without a release, and a cache-first worker would quietly undo that.
+// Offline, the last-seen copy is served instead.
+//
+// So does the code, and for the same reason. A parser and the file it
+// parses are one thing in two places: app/parse/nature.js reads a heading
+// out of rules/character-creation.md and breaks if that heading moves.
+// Caching the rules fresh and the code a load behind guarantees a window
+// where new rules meet the old parser - which is exactly what happened
+// when the Natures table moved out of fate.md, and every visitor whose
+// worker had not updated yet got "Anchor text not found" instead of an
+// app. Bumping VERSION only clears it once the browser re-fetches this
+// file, which is too late to be a fix.
+//
+// Images and fonts stay stale-while-revalidate. They are heavy, they do
+// not parse anything, and a one-load-old icon breaks nothing.
 
-const VERSION = "v8";
+const VERSION = "v10";
 const SHELL = `20below-shell-${VERSION}`;
 const ASSETS = `20below-assets-${VERSION}`;
 const RULES = `20below-rules-${VERSION}`;
@@ -50,7 +63,14 @@ self.addEventListener("activate", (event) => {
 async function networkFirst(request, cacheName) {
   const cache = await caches.open(cacheName);
   try {
-    const fresh = await fetch(request);
+    // "no-store", not a bare fetch. A plain fetch() in here is still
+    // allowed to come out of the browser's own HTTP cache, so this asked
+    // the network for the rules and got handed a copy from disk that was
+    // two edits old - network-first in name only. It served a
+    // character-creation.md of 13,982 bytes while the real file was
+    // 22,122, which is how the Natures table went missing from an app
+    // whose worker cache held the correct file all along.
+    const fresh = await fetch(request, { cache: "no-store" });
     if (fresh && fresh.ok) cache.put(request, fresh.clone());
     return fresh;
   } catch (err) {
@@ -99,6 +119,14 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       fetch(request).catch(() => caches.match("./index.html", { ignoreSearch: true })),
     );
+    return;
+  }
+
+  // Code, and the stylesheet that lays it out. Network-first so it can
+  // never be older than the rules it reads; the cache is the offline
+  // copy, not the default answer.
+  if (/\.(?:m?js|css)$/.test(url.pathname)) {
+    event.respondWith(networkFirst(request, ASSETS));
     return;
   }
 
