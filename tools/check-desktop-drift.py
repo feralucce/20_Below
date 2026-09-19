@@ -38,6 +38,14 @@ build log and nothing else. It is checked anyway: a number that is wrong
 and harmless today is a number nobody trusts tomorrow, and the drift only
 grows - the Creator's reached four versions behind before it was noticed.
 
+A file an app stages from outside its own tree is judged by what the app
+imports out of it, not by whether it moved. app/state.js is staged into
+four installers and is almost entirely character creator: 181 lines of it
+changed between prep-v0.2.4 and today without touching one function the
+Encounter Difficulty Calculator or the Battle Tracker can run. Those are
+reported as carried rather than as a release. tools/jsreach.py does the
+walk, and anything it cannot follow counts as reachable.
+
 Exits 1 if code changed or a version disagrees, so it can gate a release
 step. The paths below must match each app's scripts/stage-frontend.ps1.
 """
@@ -46,6 +54,8 @@ import os
 import re
 import subprocess
 import sys
+
+import jsreach
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -66,6 +76,18 @@ DEV_ONLY = {
 # reinstall.
 NOT_OURS = {
     "Character Creator": ("app/combat/",),
+}
+
+# Each app's own tree. Anything it stages from outside this is a shared
+# module, and a shared module is judged by which of its exports the app
+# can actually reach rather than by whether the file moved - app/state.js
+# is 1300 lines of mostly character creator, and the Battle Tracker
+# imports five functions out of it. See tools/jsreach.py.
+OWN_PREFIXES = {
+    "Character Creator": ("app", "vendor"),
+    "The Brewery": ("brew", "vendor", "license.html"),
+    "Encounter Difficulty Calculator": ("prep",),
+    "Battle Tracker": ("tracker",),
 }
 
 # name, tag pattern, code paths (need a release), live paths (fetched at runtime)
@@ -206,6 +228,76 @@ def changed(tag, paths, not_ours=()):
             and not any(f.startswith(prefix) for prefix in not_ours)]
 
 
+def show(rev, path):
+    """A file's bytes at a revision, unstripped - or None if it wasn't there."""
+    r = subprocess.run(["git", "show", "%s:%s" % (rev, path)],
+                       capture_output=True, text=True, encoding="utf-8")
+    return r.stdout if r.returncode == 0 else None
+
+
+def on_disk(path):
+    full = os.path.join(ROOT, path)
+    if not os.path.isfile(full):
+        return None
+    return io.open(full, encoding="utf-8", errors="replace").read()
+
+
+def own_files(name):
+    """The app's own modules - the roots the import walk starts from."""
+    roots = []
+    for prefix in OWN_PREFIXES.get(name, ()):
+        full = os.path.join(ROOT, prefix)
+        if os.path.isfile(full):
+            roots.append(prefix)
+            continue
+        for dirpath, _, files in os.walk(full):
+            for f in files:
+                if f.endswith((".js", ".mjs", ".html")):
+                    rel = os.path.relpath(os.path.join(dirpath, f), ROOT)
+                    roots.append(rel.replace(os.sep, "/"))
+    return roots
+
+
+def split_by_reach(name, tag, files):
+    """Which changed files this app can actually run, and which it merely carries.
+
+    Anything uncertain lands in the first list. A check that stays quiet
+    because it could not follow an import is worse than one that asks for
+    a release it did not need.
+    """
+    prefixes = OWN_PREFIXES.get(name)
+    if not prefixes:
+        return files, []
+
+    def is_own(f):
+        return any(f == p or f.startswith(p.rstrip("/") + "/")
+                   for p in prefixes)
+
+    shared = [f for f in files if not is_own(f)]
+    if not shared:
+        return files, []
+
+    needs = [f for f in files if is_own(f) or not f.endswith(".js")]
+    reach = jsreach.reachable(own_files(name), on_disk)
+    if jsreach.UNRESOLVED in reach:
+        return files, []
+
+    carried = []
+    for f in [f for f in shared if f.endswith(".js")]:
+        names = reach.get(f)
+        old, new = show(tag, f), on_disk(f)
+        if names is None or old is None or new is None:
+            needs.append(f)
+            continue
+        hit = jsreach.changed_names(old, new) & (names | {""})
+        if hit:
+            needs.append("%s  (%s)" % (f, ", ".join(
+                sorted(n or "module-level code" for n in hit))))
+        else:
+            carried.append(f)
+    return needs, carried
+
+
 def main():
     if "--versions" in sys.argv:
         return 1 if check_versions() else 0
@@ -219,6 +311,7 @@ def main():
 
         code = changed(tag, code_paths, NOT_OURS.get(name, ()))
         live = changed(tag, live_paths)
+        code, carried = split_by_reach(name, tag, code)
 
         if code:
             needs_release = True
@@ -228,6 +321,12 @@ def main():
                 print("%-46s %s" % ("", f))
         else:
             print("%-20s %-24s current" % (name, tag))
+
+        if carried:
+            print("%-46s (%d shared file(s) changed in parts this app does"
+                  " not import)" % ("", len(carried)))
+            for f in carried:
+                print("%-48s %s" % ("", f))
 
         if live:
             print("%-46s (%d rules file(s) changed - fetched live, no release"
