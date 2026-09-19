@@ -12,7 +12,7 @@
 // updates every copy without a release, and a cache-first worker would
 // quietly undo that. Offline, the last-seen copy is served instead.
 
-const VERSION = "v7";
+const VERSION = "v8";
 const SHELL = `20below-shell-${VERSION}`;
 const ASSETS = `20below-assets-${VERSION}`;
 const RULES = `20below-rules-${VERSION}`;
