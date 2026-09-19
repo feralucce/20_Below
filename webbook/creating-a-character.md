@@ -61,7 +61,7 @@ If none of the premade Natures quite do the trick, you can write your own. The f
 
 <p class="block-title" markdown="span">Analyst</p>
 
-You have never once acted on something you did not understand, and you are not starting today. *Trigger:* Everyone else has already moved. You are still looking at how the thing actually works, and you are right to be.
+You read the manual. All of it. For the thing everybody else already plugged in and started using. *Trigger:* Everyone else has already moved. You are still looking at how the thing actually works, and you are right to be.
 
 </div>
 
@@ -69,7 +69,7 @@ You have never once acted on something you did not understand, and you are not s
 
 <p class="block-title" markdown="span">Avenger</p>
 
-Somebody did something, and nobody has answered for it yet. You keep the list. *Trigger:* Going after the person who earned it, at a moment when going after them costs you more than letting it go would.
+You remember the name. It has been years and you could still spell it. *Trigger:* Going after the person who earned it, at a moment when going after them costs you more than letting it go would.
 
 </div>
 
@@ -77,7 +77,7 @@ Somebody did something, and nobody has answered for it yet. You keep the list. *
 
 <p class="block-title" markdown="span">Caregiver</p>
 
-You cannot walk past somebody who is hurt. You have tried. It does not take. *Trigger:* Stopping to patch somebody up, talk somebody down, or sit with somebody, while the clock is running.
+You carry plasters. Actual plasters, in your actual bag, because somebody always needs one. *Trigger:* Stopping to patch somebody up, talk somebody down, or sit with somebody, while the clock is running.
 
 </div>
 
@@ -85,7 +85,7 @@ You cannot walk past somebody who is hurt. You have tried. It does not take. *Tr
 
 <p class="block-title" markdown="span">Charmer</p>
 
-Nobody has to be beaten. People come around, and you are very good at the coming around part. *Trigger:* Turning somebody who wanted you gone into somebody who is holding the door, on nothing but conversation.
+You have been let into places you had no business being, by people who could not explain afterwards why they opened the door. *Trigger:* Turning somebody who wanted you gone into somebody who is holding the door, on nothing but conversation.
 
 </div>
 
@@ -93,7 +93,7 @@ Nobody has to be beaten. People come around, and you are very good at the coming
 
 <p class="block-title" markdown="span">Competitor</p>
 
-Somebody is going to be best at this and there is no reason it should be anyone else. *Trigger:* Turning a job into a contest nobody else knew they had entered, and then overshooting what the job needed.
+You have turned a walk to the shop into a race. Against yourself. And won. *Trigger:* Turning a job into a contest nobody else knew they had entered, and then overshooting what the job needed.
 
 </div>
 
@@ -101,7 +101,7 @@ Somebody is going to be best at this and there is no reason it should be anyone 
 
 <p class="block-title" markdown="span">Daredevil</p>
 
-The careful way works. It is also the most boring hour of your life. *Trigger:* Taking the option with the drop, the speed or the odds, while the safe one sits there being safe.
+There is a video of you. Several people have asked you to take it down. *Trigger:* Taking the option with the drop, the speed or the odds, while the safe one sits there being safe.
 
 </div>
 
@@ -109,7 +109,7 @@ The careful way works. It is also the most boring hour of your life. *Trigger:* 
 
 <p class="block-title" markdown="span">Diplomat</p>
 
-Every fight is a deal that nobody has written down yet. *Trigger:* Talking two sides out of it when picking one would have been faster and considerably easier.
+Two people who cannot stand each other have both told you their side, and neither knows you spoke to the other one. *Trigger:* Talking two sides out of it when picking one would have been faster and considerably easier.
 
 </div>
 
@@ -117,7 +117,7 @@ Every fight is a deal that nobody has written down yet. *Trigger:* Talking two s
 
 <p class="block-title" markdown="span">Enforcer</p>
 
-A deal is a deal. Somebody has to be the reason that stays true, and you volunteered. *Trigger:* Making somebody answer for a broken word, a skipped payment or a debt they thought had been forgotten.
+You keep a note of what people owe. Not on your phone. On paper, somewhere. *Trigger:* Making somebody answer for a broken word, a skipped payment or a debt they thought had been forgotten.
 
 </div>
 
@@ -125,7 +125,7 @@ A deal is a deal. Somebody has to be the reason that stays true, and you volunte
 
 <p class="block-title" markdown="span">Fixer</p>
 
-There is a way through. There is always a way through, and it is rarely the obvious one. *Trigger:* Solving it with a favour, a name or an angle, in a room where everybody else had reached for something heavier.
+You know a guy. You knew a guy before anybody had finished saying what the problem was. *Trigger:* Solving it with a favour, a name or an angle, in a room where everybody else had reached for something heavier.
 
 </div>
 
@@ -133,7 +133,7 @@ There is a way through. There is always a way through, and it is rarely the obvi
 
 <p class="block-title" markdown="span">Ghost</p>
 
-The less anybody can say about you, the fewer people get hurt when it goes wrong. *Trigger:* Choosing to go unseen, unrecorded or unremembered, when being known would have got it done quicker.
+You have never been tagged in a photograph. You have checked. *Trigger:* Choosing to go unseen, unrecorded or unremembered, when being known would have got it done quicker.
 
 </div>
 
@@ -141,7 +141,7 @@ The less anybody can say about you, the fewer people get hurt when it goes wrong
 
 <p class="block-title" markdown="span">Guardian</p>
 
-Some things are yours to stand in front of. You did not pick them and you do not get to put them down. *Trigger:* Holding your ground over a place, a person or a thing you have claimed, when moving would have been sensible.
+You sit facing the door, and you found the exits before you sat down. *Trigger:* Holding your ground over a place, a person or a thing you have claimed, when moving would have been sensible.
 
 </div>
 
@@ -149,7 +149,7 @@ Some things are yours to stand in front of. You did not pick them and you do not
 
 <p class="block-title" markdown="span">Idealist</p>
 
-It could be better than this. You have decided to behave as though that is true. *Trigger:* Taking the principled option out loud, in front of people who were already reaching for the cynical one.
+You still sign the petitions. You know the numbers. You sign them anyway. *Trigger:* Taking the principled option out loud, in front of people who were already reaching for the cynical one.
 
 </div>
 
@@ -157,7 +157,7 @@ It could be better than this. You have decided to behave as though that is true.
 
 <p class="block-title" markdown="span">Judge</p>
 
-Somebody has to say it. Everybody in the room already knows and nobody wants to be the one. *Trigger:* Naming what somebody did, plainly, to their face, when saying nothing would have cost you nothing.
+You have ended a dinner party. You were right, which did not help. *Trigger:* Naming what somebody did, plainly, to their face, when saying nothing would have cost you nothing.
 
 </div>
 
@@ -165,7 +165,7 @@ Somebody has to say it. Everybody in the room already knows and nobody wants to 
 
 <p class="block-title" markdown="span">Leader</p>
 
-Somebody has to call it. You have noticed that when nobody does, people die. *Trigger:* Making the call the group did not want to make, and then standing in front of what it cost.
+When it goes quiet and everybody looks at each other, they end up looking at you. *Trigger:* Making the call the group did not want to make, and then standing in front of what it cost.
 
 </div>
 
@@ -173,7 +173,7 @@ Somebody has to call it. You have noticed that when nobody does, people die. *Tr
 
 <p class="block-title" markdown="span">Loner</p>
 
-You handle it. Bringing somebody in means they are now in it too. *Trigger:* Turning down help, or peeling off from the group, to take something on by yourself.
+You have moved a sofa up a flight of stairs by yourself. It took four hours and you did not call anybody. *Trigger:* Turning down help, or peeling off from the group, to take something on by yourself.
 
 </div>
 
@@ -181,7 +181,7 @@ You handle it. Bringing somebody in means they are now in it too. *Trigger:* Tur
 
 <p class="block-title" markdown="span">Mentor</p>
 
-Somebody taught you. The debt is not paid backwards. *Trigger:* Standing back so somebody else takes the lesson, the lead or the credit, on a job you could have done faster.
+Somebody still has your old notes. You copied them out neater before you handed them over. *Trigger:* Standing back so somebody else takes the lesson, the lead or the credit, on a job you could have done faster.
 
 </div>
 
@@ -189,7 +189,7 @@ Somebody taught you. The debt is not paid backwards. *Trigger:* Standing back so
 
 <p class="block-title" markdown="span">Opportunist</p>
 
-Everything going wrong for everybody else is a door opening. *Trigger:* Turning somebody’s very bad day into your own advantage, while it is still going on.
+You have made money out of a very bad week that was happening to somebody else. *Trigger:* Turning somebody’s very bad day into your own advantage, while it is still going on.
 
 </div>
 
@@ -197,7 +197,7 @@ Everything going wrong for everybody else is a door opening. *Trigger:* Turning 
 
 <p class="block-title" markdown="span">Perfectionist</p>
 
-Good enough is a thing people say when they have stopped caring. *Trigger:* Redoing it, refusing to hand it over, or saying no to a result everybody else had already accepted.
+You have rewritten a text message four times before sending it. It was three sentences long. *Trigger:* Redoing it, refusing to hand it over, or saying no to a result everybody else had already accepted.
 
 </div>
 
@@ -205,7 +205,7 @@ Good enough is a thing people say when they have stopped caring. *Trigger:* Redo
 
 <p class="block-title" markdown="span">Protector</p>
 
-You are between them and it. That is the arrangement and nobody needs to discuss it. *Trigger:* Taking the hit, the risk or the loss that was coming for somebody who could not have taken it.
+You walk on the traffic side. You do it without noticing and you do it for everybody. *Trigger:* Taking the hit, the risk or the loss that was coming for somebody who could not have taken it.
 
 </div>
 
@@ -213,7 +213,7 @@ You are between them and it. That is the arrangement and nobody needs to discuss
 
 <p class="block-title" markdown="span">Rebel</p>
 
-An order is a thing to be looked at. Most of them do not survive being looked at. *Trigger:* Breaking a rule specifically because somebody with authority said it, and you wanted to see what happened.
+You have read a sign, understood it completely, and done the other thing. *Trigger:* Breaking a rule specifically because somebody with authority said it, and you wanted to see what happened.
 
 </div>
 
@@ -221,7 +221,7 @@ An order is a thing to be looked at. Most of them do not survive being looked at
 
 <p class="block-title" markdown="span">Showman</p>
 
-A room full of people not looking at you is a room going to waste. *Trigger:* Making it a performance, at the cost of your cover, your subtlety, or a perfectly good plan.
+You have an entrance. You have practised it. *Trigger:* Making it a performance, at the cost of your cover, your subtlety, or a perfectly good plan.
 
 </div>
 
@@ -229,7 +229,7 @@ A room full of people not looking at you is a room going to waste. *Trigger:* Ma
 
 <p class="block-title" markdown="span">Skeptic</p>
 
-The answer that makes everybody comfortable is the one you check first. *Trigger:* Refusing the easy explanation and going to look, while everybody else is relieved and moving on.
+You have looked something up in front of the person who told you, and they did not enjoy it. *Trigger:* Refusing the easy explanation and going to look, while everybody else is relieved and moving on.
 
 </div>
 
@@ -237,7 +237,7 @@ The answer that makes everybody comfortable is the one you check first. *Trigger
 
 <p class="block-title" markdown="span">Survivor</p>
 
-Getting through it is the whole job. What it looked like is a conversation for later. *Trigger:* Taking the ugly, practical option in front of people who would rather you took the proud one.
+You have eaten worse and slept somewhere worse, and you would do both again tomorrow. *Trigger:* Taking the ugly, practical option in front of people who would rather you took the proud one.
 
 </div>
 
@@ -245,7 +245,7 @@ Getting through it is the whole job. What it looked like is a conversation for l
 
 <p class="block-title" markdown="span">Trickster</p>
 
-The front door is there for people with no imagination. *Trigger:* Getting it done with a lie, a misdirection or a bit, when walking in and asking would have worked.
+You have got into a building with a clipboard and a confident walk. *Trigger:* Getting it done with a lie, a misdirection or a bit, when walking in and asking would have worked.
 
 </div>
 
@@ -253,7 +253,7 @@ The front door is there for people with no imagination. *Trigger:* Getting it do
 
 <p class="block-title" markdown="span">True Believer</p>
 
-There is a thing you hold to. It has cost you before and it is going to cost you again. *Trigger:* Keeping to the code at the exact moment breaking it would have solved everything.
+There is one thing you will not do. Everybody who knows you knows what it is. *Trigger:* Keeping to the code at the exact moment breaking it would have solved everything.
 
 </div>
 
@@ -261,7 +261,7 @@ There is a thing you hold to. It has cost you before and it is going to cost you
 
 <p class="block-title" markdown="span">Wanderer</p>
 
-Staying is how people end up owing somewhere. You do not owe anywhere. *Trigger:* Walking away from a place, a group or a claim that had started to look permanent.
+Everything you own fits in the car. You have checked recently. *Trigger:* Walking away from a place, a group or a claim that had started to look permanent.
 
 </div>
 

@@ -20,32 +20,32 @@ Pick one of these, or write your own.
 
 | Nature | Drive | Playing to it looks like |
 |---|---|---|
-| Analyst | You have never once acted on something you did not understand, and you are not starting today | Everyone else has already moved. You are still looking at how the thing actually works, and you are right to be |
-| Avenger | Somebody did something, and nobody has answered for it yet. You keep the list | Going after the person who earned it, at a moment when going after them costs you more than letting it go would |
-| Caregiver | You cannot walk past somebody who is hurt. You have tried. It does not take | Stopping to patch somebody up, talk somebody down, or sit with somebody, while the clock is running |
-| Charmer | Nobody has to be beaten. People come around, and you are very good at the coming around part | Turning somebody who wanted you gone into somebody who is holding the door, on nothing but conversation |
-| Competitor | Somebody is going to be best at this and there is no reason it should be anyone else | Turning a job into a contest nobody else knew they had entered, and then overshooting what the job needed |
-| Daredevil | The careful way works. It is also the most boring hour of your life | Taking the option with the drop, the speed or the odds, while the safe one sits there being safe |
-| Diplomat | Every fight is a deal that nobody has written down yet | Talking two sides out of it when picking one would have been faster and considerably easier |
-| Enforcer | A deal is a deal. Somebody has to be the reason that stays true, and you volunteered | Making somebody answer for a broken word, a skipped payment or a debt they thought had been forgotten |
-| Fixer | There is a way through. There is always a way through, and it is rarely the obvious one | Solving it with a favour, a name or an angle, in a room where everybody else had reached for something heavier |
-| Ghost | The less anybody can say about you, the fewer people get hurt when it goes wrong | Choosing to go unseen, unrecorded or unremembered, when being known would have got it done quicker |
-| Guardian | Some things are yours to stand in front of. You did not pick them and you do not get to put them down | Holding your ground over a place, a person or a thing you have claimed, when moving would have been sensible |
-| Idealist | It could be better than this. You have decided to behave as though that is true | Taking the principled option out loud, in front of people who were already reaching for the cynical one |
-| Judge | Somebody has to say it. Everybody in the room already knows and nobody wants to be the one | Naming what somebody did, plainly, to their face, when saying nothing would have cost you nothing |
-| Leader | Somebody has to call it. You have noticed that when nobody does, people die | Making the call the group did not want to make, and then standing in front of what it cost |
-| Loner | You handle it. Bringing somebody in means they are now in it too | Turning down help, or peeling off from the group, to take something on by yourself |
-| Mentor | Somebody taught you. The debt is not paid backwards | Standing back so somebody else takes the lesson, the lead or the credit, on a job you could have done faster |
-| Opportunist | Everything going wrong for everybody else is a door opening | Turning somebody's very bad day into your own advantage, while it is still going on |
-| Perfectionist | Good enough is a thing people say when they have stopped caring | Redoing it, refusing to hand it over, or saying no to a result everybody else had already accepted |
-| Protector | You are between them and it. That is the arrangement and nobody needs to discuss it | Taking the hit, the risk or the loss that was coming for somebody who could not have taken it |
-| Rebel | An order is a thing to be looked at. Most of them do not survive being looked at | Breaking a rule specifically because somebody with authority said it, and you wanted to see what happened |
-| Showman | A room full of people not looking at you is a room going to waste | Making it a performance, at the cost of your cover, your subtlety, or a perfectly good plan |
-| Skeptic | The answer that makes everybody comfortable is the one you check first | Refusing the easy explanation and going to look, while everybody else is relieved and moving on |
-| Survivor | Getting through it is the whole job. What it looked like is a conversation for later | Taking the ugly, practical option in front of people who would rather you took the proud one |
-| Trickster | The front door is there for people with no imagination | Getting it done with a lie, a misdirection or a bit, when walking in and asking would have worked |
-| True Believer | There is a thing you hold to. It has cost you before and it is going to cost you again | Keeping to the code at the exact moment breaking it would have solved everything |
-| Wanderer | Staying is how people end up owing somewhere. You do not owe anywhere | Walking away from a place, a group or a claim that had started to look permanent |
+| Analyst | You read the manual. All of it. For the thing everybody else already plugged in and started using | Everyone else has already moved. You are still looking at how the thing actually works, and you are right to be |
+| Avenger | You remember the name. It has been years and you could still spell it | Going after the person who earned it, at a moment when going after them costs you more than letting it go would |
+| Caregiver | You carry plasters. Actual plasters, in your actual bag, because somebody always needs one | Stopping to patch somebody up, talk somebody down, or sit with somebody, while the clock is running |
+| Charmer | You have been let into places you had no business being, by people who could not explain afterwards why they opened the door | Turning somebody who wanted you gone into somebody who is holding the door, on nothing but conversation |
+| Competitor | You have turned a walk to the shop into a race. Against yourself. And won | Turning a job into a contest nobody else knew they had entered, and then overshooting what the job needed |
+| Daredevil | There is a video of you. Several people have asked you to take it down | Taking the option with the drop, the speed or the odds, while the safe one sits there being safe |
+| Diplomat | Two people who cannot stand each other have both told you their side, and neither knows you spoke to the other one | Talking two sides out of it when picking one would have been faster and considerably easier |
+| Enforcer | You keep a note of what people owe. Not on your phone. On paper, somewhere | Making somebody answer for a broken word, a skipped payment or a debt they thought had been forgotten |
+| Fixer | You know a guy. You knew a guy before anybody had finished saying what the problem was | Solving it with a favour, a name or an angle, in a room where everybody else had reached for something heavier |
+| Ghost | You have never been tagged in a photograph. You have checked | Choosing to go unseen, unrecorded or unremembered, when being known would have got it done quicker |
+| Guardian | You sit facing the door, and you found the exits before you sat down | Holding your ground over a place, a person or a thing you have claimed, when moving would have been sensible |
+| Idealist | You still sign the petitions. You know the numbers. You sign them anyway | Taking the principled option out loud, in front of people who were already reaching for the cynical one |
+| Judge | You have ended a dinner party. You were right, which did not help | Naming what somebody did, plainly, to their face, when saying nothing would have cost you nothing |
+| Leader | When it goes quiet and everybody looks at each other, they end up looking at you | Making the call the group did not want to make, and then standing in front of what it cost |
+| Loner | You have moved a sofa up a flight of stairs by yourself. It took four hours and you did not call anybody | Turning down help, or peeling off from the group, to take something on by yourself |
+| Mentor | Somebody still has your old notes. You copied them out neater before you handed them over | Standing back so somebody else takes the lesson, the lead or the credit, on a job you could have done faster |
+| Opportunist | You have made money out of a very bad week that was happening to somebody else | Turning somebody's very bad day into your own advantage, while it is still going on |
+| Perfectionist | You have rewritten a text message four times before sending it. It was three sentences long | Redoing it, refusing to hand it over, or saying no to a result everybody else had already accepted |
+| Protector | You walk on the traffic side. You do it without noticing and you do it for everybody | Taking the hit, the risk or the loss that was coming for somebody who could not have taken it |
+| Rebel | You have read a sign, understood it completely, and done the other thing | Breaking a rule specifically because somebody with authority said it, and you wanted to see what happened |
+| Showman | You have an entrance. You have practised it | Making it a performance, at the cost of your cover, your subtlety, or a perfectly good plan |
+| Skeptic | You have looked something up in front of the person who told you, and they did not enjoy it | Refusing the easy explanation and going to look, while everybody else is relieved and moving on |
+| Survivor | You have eaten worse and slept somewhere worse, and you would do both again tomorrow | Taking the ugly, practical option in front of people who would rather you took the proud one |
+| Trickster | You have got into a building with a clipboard and a confident walk | Getting it done with a lie, a misdirection or a bit, when walking in and asking would have worked |
+| True Believer | There is one thing you will not do. Everybody who knows you knows what it is | Keeping to the code at the exact moment breaking it would have solved everything |
+| Wanderer | Everything you own fits in the car. You have checked recently | Walking away from a place, a group or a claim that had started to look permanent |
 
 
 
