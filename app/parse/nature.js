@@ -1,7 +1,7 @@
 import { extractTableAfter } from './markdown.js';
 
-export function parseNatures(fateMd) {
-  const table = extractTableAfter(fateMd, '### Starter Natures');
+export function parseNatures(creationMd) {
+  const table = extractTableAfter(creationMd, '### Starter Natures');
   return table.rows.map((row) => ({
     name: row.Nature,
     drive: row.Drive,

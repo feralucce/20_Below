@@ -61,7 +61,7 @@ If none of the premade Natures quite do the trick, you can write your own. The f
 
 <p class="block-title" markdown="span">Analyst</p>
 
-Nothing gets acted on until you understand how it actually works. *Trigger:* Pausing the plan to dig into the mechanism, the pattern or the real cause before moving.
+You have never once acted on something you did not understand, and you are not starting today. *Trigger:* Everyone else has already moved. You are still looking at how the thing actually works, and you are right to be.
 
 </div>
 
@@ -69,7 +69,7 @@ Nothing gets acted on until you understand how it actually works. *Trigger:* Pau
 
 <p class="block-title" markdown="span">Avenger</p>
 
-A wrong doesn’t stay unanswered. *Trigger:* Pursuing payback or justice even when it isn’t the smart move.
+Somebody did something, and nobody has answered for it yet. You keep the list. *Trigger:* Going after the person who earned it, at a moment when going after them costs you more than letting it go would.
 
 </div>
 
@@ -77,7 +77,7 @@ A wrong doesn’t stay unanswered. *Trigger:* Pursuing payback or justice even w
 
 <p class="block-title" markdown="span">Caregiver</p>
 
-Other people’s wounds are yours to tend. *Trigger:* Stopping to help, heal or comfort someone at your own expense.
+You cannot walk past somebody who is hurt. You have tried. It does not take. *Trigger:* Stopping to patch somebody up, talk somebody down, or sit with somebody, while the clock is running.
 
 </div>
 
@@ -85,7 +85,7 @@ Other people’s wounds are yours to tend. *Trigger:* Stopping to help, heal or 
 
 <p class="block-title" markdown="span">Charmer</p>
 
-People are won over, not overpowered. *Trigger:* Turning a hostile or closed-off person into an ally through charm alone.
+Nobody has to be beaten. People come around, and you are very good at the coming around part. *Trigger:* Turning somebody who wanted you gone into somebody who is holding the door, on nothing but conversation.
 
 </div>
 
@@ -93,7 +93,7 @@ People are won over, not overpowered. *Trigger:* Turning a hostile or closed-off
 
 <p class="block-title" markdown="span">Competitor</p>
 
-Everything is a contest you intend to win. *Trigger:* Turning a task into a competition and pushing past what was needed.
+Somebody is going to be best at this and there is no reason it should be anyone else. *Trigger:* Turning a job into a contest nobody else knew they had entered, and then overshooting what the job needed.
 
 </div>
 
@@ -101,7 +101,7 @@ Everything is a contest you intend to win. *Trigger:* Turning a task into a comp
 
 <p class="block-title" markdown="span">Daredevil</p>
 
-The safe option is the boring option. *Trigger:* Taking the reckless, high-stakes move when a safer one was sitting right there.
+The careful way works. It is also the most boring hour of your life. *Trigger:* Taking the option with the drop, the speed or the odds, while the safe one sits there being safe.
 
 </div>
 
@@ -109,7 +109,7 @@ The safe option is the boring option. *Trigger:* Taking the reckless, high-stake
 
 <p class="block-title" markdown="span">Diplomat</p>
 
-Every conflict has a deal hiding inside it. *Trigger:* Talking two sides down from a fight instead of picking one.
+Every fight is a deal that nobody has written down yet. *Trigger:* Talking two sides out of it when picking one would have been faster and considerably easier.
 
 </div>
 
@@ -117,7 +117,7 @@ Every conflict has a deal hiding inside it. *Trigger:* Talking two sides down fr
 
 <p class="block-title" markdown="span">Enforcer</p>
 
-A deal is a deal, and someone has to make sure it holds. *Trigger:* Making someone answer for a broken promise or an unpaid debt.
+A deal is a deal. Somebody has to be the reason that stays true, and you volunteered. *Trigger:* Making somebody answer for a broken word, a skipped payment or a debt they thought had been forgotten.
 
 </div>
 
@@ -125,7 +125,7 @@ A deal is a deal, and someone has to make sure it holds. *Trigger:* Making someo
 
 <p class="block-title" markdown="span">Fixer</p>
 
-Every problem has a working solution if you’re clever enough. *Trigger:* Solving a mess through leverage, favors or a clever angle instead of force.
+There is a way through. There is always a way through, and it is rarely the obvious one. *Trigger:* Solving it with a favour, a name or an angle, in a room where everybody else had reached for something heavier.
 
 </div>
 
@@ -133,7 +133,7 @@ Every problem has a working solution if you’re clever enough. *Trigger:* Solvi
 
 <p class="block-title" markdown="span">Ghost</p>
 
-The less anyone knows about you, the safer everyone is. *Trigger:* Choosing to disappear, stay unseen or erase your trail instead of being known.
+The less anybody can say about you, the fewer people get hurt when it goes wrong. *Trigger:* Choosing to go unseen, unrecorded or unremembered, when being known would have got it done quicker.
 
 </div>
 
@@ -141,7 +141,7 @@ The less anyone knows about you, the safer everyone is. *Trigger:* Choosing to d
 
 <p class="block-title" markdown="span">Guardian</p>
 
-Some things are yours to watch over. *Trigger:* Standing your ground to protect a place, group or thing you’ve claimed.
+Some things are yours to stand in front of. You did not pick them and you do not get to put them down. *Trigger:* Holding your ground over a place, a person or a thing you have claimed, when moving would have been sensible.
 
 </div>
 
@@ -149,7 +149,7 @@ Some things are yours to watch over. *Trigger:* Standing your ground to protect 
 
 <p class="block-title" markdown="span">Idealist</p>
 
-The world can be better, and you’re proof it’s worth trying. *Trigger:* Pushing for the principled option when the cynical one is easier.
+It could be better than this. You have decided to behave as though that is true. *Trigger:* Taking the principled option out loud, in front of people who were already reaching for the cynical one.
 
 </div>
 
@@ -157,7 +157,7 @@ The world can be better, and you’re proof it’s worth trying. *Trigger:* Push
 
 <p class="block-title" markdown="span">Judge</p>
 
-Right and wrong get named out loud. *Trigger:* Calling out someone’s conduct plainly, even when it’s socially costly.
+Somebody has to say it. Everybody in the room already knows and nobody wants to be the one. *Trigger:* Naming what somebody did, plainly, to their face, when saying nothing would have cost you nothing.
 
 </div>
 
@@ -165,7 +165,7 @@ Right and wrong get named out loud. *Trigger:* Calling out someone’s conduct p
 
 <p class="block-title" markdown="span">Leader</p>
 
-Someone has to call the shot, so it’s you. *Trigger:* Making the hard call for the group and owning the outcome.
+Somebody has to call it. You have noticed that when nobody does, people die. *Trigger:* Making the call the group did not want to make, and then standing in front of what it cost.
 
 </div>
 
@@ -173,7 +173,7 @@ Someone has to call the shot, so it’s you. *Trigger:* Making the hard call for
 
 <p class="block-title" markdown="span">Loner</p>
 
-You handle it yourself. *Trigger:* Refusing help, or cutting yourself off from the group, to solve something alone.
+You handle it. Bringing somebody in means they are now in it too. *Trigger:* Turning down help, or peeling off from the group, to take something on by yourself.
 
 </div>
 
@@ -181,7 +181,7 @@ You handle it yourself. *Trigger:* Refusing help, or cutting yourself off from t
 
 <p class="block-title" markdown="span">Mentor</p>
 
-Someone else’s growth matters more than your own credit. *Trigger:* Stepping back so someone else can learn, lead or take the win.
+Somebody taught you. The debt is not paid backwards. *Trigger:* Standing back so somebody else takes the lesson, the lead or the credit, on a job you could have done faster.
 
 </div>
 
@@ -189,7 +189,7 @@ Someone else’s growth matters more than your own credit. *Trigger:* Stepping b
 
 <p class="block-title" markdown="span">Opportunist</p>
 
-Chaos is just an opening nobody has grabbed yet. *Trigger:* Turning someone else’s disaster into your own advantage.
+Everything going wrong for everybody else is a door opening. *Trigger:* Turning somebody’s very bad day into your own advantage, while it is still going on.
 
 </div>
 
@@ -197,7 +197,7 @@ Chaos is just an opening nobody has grabbed yet. *Trigger:* Turning someone else
 
 <p class="block-title" markdown="span">Perfectionist</p>
 
-Good enough isn’t. *Trigger:* Redoing it, refusing to ship it, or pushing back on a “good enough” result.
+Good enough is a thing people say when they have stopped caring. *Trigger:* Redoing it, refusing to hand it over, or saying no to a result everybody else had already accepted.
 
 </div>
 
@@ -205,7 +205,7 @@ Good enough isn’t. *Trigger:* Redoing it, refusing to ship it, or pushing back
 
 <p class="block-title" markdown="span">Protector</p>
 
-Someone else’s safety comes before yours. *Trigger:* Taking a hit, a risk or a loss meant for someone who can’t fend for themselves.
+You are between them and it. That is the arrangement and nobody needs to discuss it. *Trigger:* Taking the hit, the risk or the loss that was coming for somebody who could not have taken it.
 
 </div>
 
@@ -213,7 +213,7 @@ Someone else’s safety comes before yours. *Trigger:* Taking a hit, a risk or a
 
 <p class="block-title" markdown="span">Rebel</p>
 
-Authority is something to test, not obey. *Trigger:* Breaking a rule or defying an order specifically because it was given.
+An order is a thing to be looked at. Most of them do not survive being looked at. *Trigger:* Breaking a rule specifically because somebody with authority said it, and you wanted to see what happened.
 
 </div>
 
@@ -221,7 +221,7 @@ Authority is something to test, not obey. *Trigger:* Breaking a rule or defying 
 
 <p class="block-title" markdown="span">Showman</p>
 
-The room should be watching you. *Trigger:* Turning a moment into a performance, at some cost to subtlety or safety.
+A room full of people not looking at you is a room going to waste. *Trigger:* Making it a performance, at the cost of your cover, your subtlety, or a perfectly good plan.
 
 </div>
 
@@ -229,7 +229,7 @@ The room should be watching you. *Trigger:* Turning a moment into a performance,
 
 <p class="block-title" markdown="span">Skeptic</p>
 
-The comfortable answer is usually the wrong one. *Trigger:* Refusing an easy explanation until you’ve checked it yourself.
+The answer that makes everybody comfortable is the one you check first. *Trigger:* Refusing the easy explanation and going to look, while everybody else is relieved and moving on.
 
 </div>
 
@@ -237,7 +237,7 @@ The comfortable answer is usually the wrong one. *Trigger:* Refusing an easy exp
 
 <p class="block-title" markdown="span">Survivor</p>
 
-Getting through today matters more than looking good doing it. *Trigger:* Choosing the ugly, practical option over the proud one to come out ahead.
+Getting through it is the whole job. What it looked like is a conversation for later. *Trigger:* Taking the ugly, practical option in front of people who would rather you took the proud one.
 
 </div>
 
@@ -245,7 +245,7 @@ Getting through today matters more than looking good doing it. *Trigger:* Choosi
 
 <p class="block-title" markdown="span">Trickster</p>
 
-The straight path is boring. *Trigger:* Solving a problem through misdirection, a lie or a bit instead of the obvious approach.
+The front door is there for people with no imagination. *Trigger:* Getting it done with a lie, a misdirection or a bit, when walking in and asking would have worked.
 
 </div>
 
@@ -253,7 +253,7 @@ The straight path is boring. *Trigger:* Solving a problem through misdirection, 
 
 <p class="block-title" markdown="span">True Believer</p>
 
-A cause or a code outranks your own comfort. *Trigger:* Sticking to your code when the easy move would break it.
+There is a thing you hold to. It has cost you before and it is going to cost you again. *Trigger:* Keeping to the code at the exact moment breaking it would have solved everything.
 
 </div>
 
@@ -261,7 +261,7 @@ A cause or a code outranks your own comfort. *Trigger:* Sticking to your code wh
 
 <p class="block-title" markdown="span">Wanderer</p>
 
-Roots are just something to outrun. *Trigger:* Walking away from a place, group or claim rather than settling into it.
+Staying is how people end up owing somewhere. You do not owe anywhere. *Trigger:* Walking away from a place, a group or a claim that had started to look permanent.
 
 </div>
 

@@ -80,7 +80,7 @@ export async function loadRulesData() {
     ...parseAttributes(creationMd),
     ...costs,
     everymanSkills: parseEverymanSkills(creationMd),
-    natures: parseNatures(fateMd),
+    natures: parseNatures(creationMd),
     skillTiers: parseSkillTiers(skillsMd),
     skillCatalog: parseSkillCatalog(skillsMd),
     boons: withFlavour(parseBoons(boonsMd), flavour.boon),
