@@ -1,5 +1,6 @@
 #!/bin/sh
-# Stop a rules change going out with a stale book.
+# Stop a rules change going out with a stale book, and stop an app going
+# out disagreeing with itself about its own version.
 #
 # The webbook is generated from the Scrivener manuscript with tables merged
 # out of rules/*.md. Nothing watches either one, so a rules commit can ship
@@ -16,6 +17,23 @@
 # Skip once: git commit --no-verify
 
 staged=$(git diff --cached --name-only)
+
+# A version bump that lands only in tauri.conf.json leaves Cargo.toml
+# behind, and nothing downstream complains - the Creator's crate version
+# fell four releases behind that way before anyone looked. Checked at the
+# commit because that is where the two files part company; by release
+# time the bundle is already built.
+if echo "$staged" | grep -qE '/src-tauri/(tauri\.conf\.json|Cargo\.(toml|lock))$'; then
+  if ! out=$(python tools/check-desktop-drift.py --versions 2>&1); then
+    echo "$out"
+    echo
+    echo "pre-commit: an app disagrees with itself about its own version."
+    echo "  tauri.conf.json is what the installer and Windows report, so"
+    echo "  bring Cargo.toml and Cargo.lock up to it and commit again."
+    exit 1
+  fi
+  echo "pre-commit: app versions agree with themselves."
+fi
 
 echo "$staged" | grep -qE '^(rules/.*\.(md|json)|tools/(scriv2(web|brew)|extract-flavour)\.py)$' || exit 0
 
