@@ -61,7 +61,7 @@ If none of the premade Natures quite do the trick, you can write your own. The f
 
 <p class="block-title" markdown="span">Analyst</p>
 
-You read the manual. All of it. For the thing everybody else already plugged in and started using. *Trigger:* Everyone else has already moved. You are still looking at how the thing actually works, and you are right to be.
+You read the manual. All of it, including the safety pages, for the thing everybody else already plugged in and started using. You have been right about this often enough that it has stopped being funny. *Trigger:* Take a Fate Token when you stop everyone to work out how the thing actually works, and the delay costs you the opening you had.
 
 </div>
 
@@ -69,7 +69,7 @@ You read the manual. All of it. For the thing everybody else already plugged in 
 
 <p class="block-title" markdown="span">Avenger</p>
 
-You remember the name. It has been years and you could still spell it. *Trigger:* Going after the person who earned it, at a moment when going after them costs you more than letting it go would.
+You remember the name. It has been years and you could still spell it, still pick the face out of a crowd, still say exactly what was done and in what order. *Trigger:* Take a Fate Token when you go after the person who earned it instead of the thing that would have helped, and it makes everything harder.
 
 </div>
 
@@ -77,7 +77,7 @@ You remember the name. It has been years and you could still spell it. *Trigger:
 
 <p class="block-title" markdown="span">Caregiver</p>
 
-You carry plasters. Actual plasters, in your actual bag, because somebody always needs one. *Trigger:* Stopping to patch somebody up, talk somebody down, or sit with somebody, while the clock is running.
+You carry plasters. Actual plasters, in your actual bag, along with paracetamol and a spare charger and a bottle of water that is not for you. Somebody always needs one and you have stopped pretending to be surprised. *Trigger:* Take a Fate Token when you stop to look after somebody while the clock is running, and it costs you the window.
 
 </div>
 
@@ -85,7 +85,7 @@ You carry plasters. Actual plasters, in your actual bag, because somebody always
 
 <p class="block-title" markdown="span">Charmer</p>
 
-You have been let into places you had no business being, by people who could not explain afterwards why they opened the door. *Trigger:* Turning somebody who wanted you gone into somebody who is holding the door, on nothing but conversation.
+You have been let into places you had no business being, by people who could not explain afterwards why they opened the door. Nobody has ever described you as pushy. *Trigger:* Take a Fate Token when you turn somebody hostile into somebody helpful on nothing but conversation, somewhere force would have been quicker.
 
 </div>
 
@@ -93,7 +93,7 @@ You have been let into places you had no business being, by people who could not
 
 <p class="block-title" markdown="span">Competitor</p>
 
-You have turned a walk to the shop into a race. Against yourself. And won. *Trigger:* Turning a job into a contest nobody else knew they had entered, and then overshooting what the job needed.
+You have turned a walk to the shop into a race. Against yourself. And won, and felt good about it, and told nobody. *Trigger:* Take a Fate Token when you push past what the job actually needed because somebody was keeping score, or might have been.
 
 </div>
 
@@ -101,7 +101,7 @@ You have turned a walk to the shop into a race. Against yourself. And won. *Trig
 
 <p class="block-title" markdown="span">Daredevil</p>
 
-There is a video of you. Several people have asked you to take it down. *Trigger:* Taking the option with the drop, the speed or the odds, while the safe one sits there being safe.
+There is a video of you. Several people have asked you to take it down. You have watched it more times than any of them. *Trigger:* Take a Fate Token when you take the option with the drop, the speed or the odds, and the safe one was sitting right there.
 
 </div>
 
@@ -109,7 +109,7 @@ There is a video of you. Several people have asked you to take it down. *Trigger
 
 <p class="block-title" markdown="span">Diplomat</p>
 
-Two people who cannot stand each other have both told you their side, and neither knows you spoke to the other one. *Trigger:* Talking two sides out of it when picking one would have been faster and considerably easier.
+Two people who cannot stand each other have both told you their side. Neither of them knows you spoke to the other one. You are still holding both. *Trigger:* Take a Fate Token when you talk two sides down instead of picking one, and picking one would have been faster.
 
 </div>
 
@@ -117,7 +117,7 @@ Two people who cannot stand each other have both told you their side, and neithe
 
 <p class="block-title" markdown="span">Enforcer</p>
 
-You keep a note of what people owe. Not on your phone. On paper, somewhere. *Trigger:* Making somebody answer for a broken word, a skipped payment or a debt they thought had been forgotten.
+You keep a note of what people owe. Not on your phone. On paper, somewhere, in handwriting that is not quite your normal handwriting. *Trigger:* Take a Fate Token when you make somebody answer for a broken word, at a moment when letting it go would have cost you nothing.
 
 </div>
 
@@ -125,7 +125,7 @@ You keep a note of what people owe. Not on your phone. On paper, somewhere. *Tri
 
 <p class="block-title" markdown="span">Fixer</p>
 
-You know a guy. You knew a guy before anybody had finished saying what the problem was. *Trigger:* Solving it with a favour, a name or an angle, in a room where everybody else had reached for something heavier.
+You know a guy. You knew a guy before anybody had finished saying what the problem was. Your phone is mostly numbers with no names attached to them. *Trigger:* Take a Fate Token when you solve it with a favour, a name or an angle, in a room where everybody else had already reached for something heavier.
 
 </div>
 
@@ -133,7 +133,7 @@ You know a guy. You knew a guy before anybody had finished saying what the probl
 
 <p class="block-title" markdown="span">Ghost</p>
 
-You have never been tagged in a photograph. You have checked. *Trigger:* Choosing to go unseen, unrecorded or unremembered, when being known would have got it done quicker.
+You have never been tagged in a photograph. You have checked. You check about once a month and you do not think that is strange. *Trigger:* Take a Fate Token when you choose to go unseen or unrecorded, and being known would have got it done quicker.
 
 </div>
 
@@ -141,7 +141,7 @@ You have never been tagged in a photograph. You have checked. *Trigger:* Choosin
 
 <p class="block-title" markdown="span">Guardian</p>
 
-You sit facing the door, and you found the exits before you sat down. *Trigger:* Holding your ground over a place, a person or a thing you have claimed, when moving would have been sensible.
+You sit facing the door. You found the exits before you sat down, and you already know which of the people at this table would not make it to one. *Trigger:* Take a Fate Token when you hold your ground over something you have claimed, and moving would have been the sensible thing to do.
 
 </div>
 
@@ -149,7 +149,7 @@ You sit facing the door, and you found the exits before you sat down. *Trigger:*
 
 <p class="block-title" markdown="span">Idealist</p>
 
-You still sign the petitions. You know the numbers. You sign them anyway. *Trigger:* Taking the principled option out loud, in front of people who were already reaching for the cynical one.
+You still sign the petitions. You know the numbers. You have read the same article about how little it changes, twice, and you signed one this morning. *Trigger:* Take a Fate Token when you take the principled option out loud, in front of people who had already reached for the cynical one.
 
 </div>
 
@@ -157,7 +157,7 @@ You still sign the petitions. You know the numbers. You sign them anyway. *Trigg
 
 <p class="block-title" markdown="span">Judge</p>
 
-You have ended a dinner party. You were right, which did not help. *Trigger:* Naming what somebody did, plainly, to their face, when saying nothing would have cost you nothing.
+You have ended a dinner party. You were right, which did not help, and you would say it again, which is the part people find difficult. *Trigger:* Take a Fate Token when you name what somebody did, to their face, when saying nothing would have cost you nothing.
 
 </div>
 
@@ -165,7 +165,7 @@ You have ended a dinner party. You were right, which did not help. *Trigger:* Na
 
 <p class="block-title" markdown="span">Leader</p>
 
-When it goes quiet and everybody looks at each other, they end up looking at you. *Trigger:* Making the call the group did not want to make, and then standing in front of what it cost.
+When it goes quiet and everybody looks at each other, they end up looking at you. You have never worked out when that started. *Trigger:* Take a Fate Token when you make the call nobody wanted to make, and then stand in front of what it costs.
 
 </div>
 
@@ -173,7 +173,7 @@ When it goes quiet and everybody looks at each other, they end up looking at you
 
 <p class="block-title" markdown="span">Loner</p>
 
-You have moved a sofa up a flight of stairs by yourself. It took four hours and you did not call anybody. *Trigger:* Turning down help, or peeling off from the group, to take something on by yourself.
+You have moved a sofa up a flight of stairs by yourself. It took four hours. Three people would have come if you had called, and you did not call. *Trigger:* Take a Fate Token when you turn down help or peel off from the group, and doing it together would obviously have worked better.
 
 </div>
 
@@ -181,7 +181,7 @@ You have moved a sofa up a flight of stairs by yourself. It took four hours and 
 
 <p class="block-title" markdown="span">Mentor</p>
 
-Somebody still has your old notes. You copied them out neater before you handed them over. *Trigger:* Standing back so somebody else takes the lesson, the lead or the credit, on a job you could have done faster.
+Somebody still has your old notes. You copied them out neater before you handed them over, and you have never mentioned that to anyone. *Trigger:* Take a Fate Token when you stand back so somebody else takes the lesson, the lead or the credit, on a job you could have done faster yourself.
 
 </div>
 
@@ -189,7 +189,7 @@ Somebody still has your old notes. You copied them out neater before you handed 
 
 <p class="block-title" markdown="span">Opportunist</p>
 
-You have made money out of a very bad week that was happening to somebody else. *Trigger:* Turning somebody’s very bad day into your own advantage, while it is still going on.
+You have made money out of a very bad week that was happening to somebody else. You did not cause it. You would like that on the record. *Trigger:* Take a Fate Token when you turn somebody’s disaster into your own advantage while it is still going on.
 
 </div>
 
@@ -197,7 +197,7 @@ You have made money out of a very bad week that was happening to somebody else. 
 
 <p class="block-title" markdown="span">Perfectionist</p>
 
-You have rewritten a text message four times before sending it. It was three sentences long. *Trigger:* Redoing it, refusing to hand it over, or saying no to a result everybody else had already accepted.
+You have rewritten a text message four times before sending it. It was three sentences long. You are aware of how that sounds and it did not change anything. *Trigger:* Take a Fate Token when you refuse to hand over a result everybody else had already accepted, and the delay hurts.
 
 </div>
 
@@ -205,7 +205,7 @@ You have rewritten a text message four times before sending it. It was three sen
 
 <p class="block-title" markdown="span">Protector</p>
 
-You walk on the traffic side. You do it without noticing and you do it for everybody. *Trigger:* Taking the hit, the risk or the loss that was coming for somebody who could not have taken it.
+You walk on the traffic side. You do it without noticing, you do it for everybody, and you have done it for people you do not like. *Trigger:* Take a Fate Token when you take the hit, the risk or the loss that was coming for somebody who could not have taken it.
 
 </div>
 
@@ -213,7 +213,7 @@ You walk on the traffic side. You do it without noticing and you do it for every
 
 <p class="block-title" markdown="span">Rebel</p>
 
-You have read a sign, understood it completely, and done the other thing. *Trigger:* Breaking a rule specifically because somebody with authority said it, and you wanted to see what happened.
+You have read a sign, understood it completely, and done the other thing. Not for a reason. The sign was the reason. *Trigger:* Take a Fate Token when you break a rule specifically because somebody with authority gave it, and following it would have been easier.
 
 </div>
 
@@ -221,7 +221,7 @@ You have read a sign, understood it completely, and done the other thing. *Trigg
 
 <p class="block-title" markdown="span">Showman</p>
 
-You have an entrance. You have practised it. *Trigger:* Making it a performance, at the cost of your cover, your subtlety, or a perfectly good plan.
+You have an entrance. You have practised it. You have a second one for when the first would be too much, and you have used that one considerably less. *Trigger:* Take a Fate Token when you make it a performance, at the cost of your cover, your subtlety, or a perfectly good plan.
 
 </div>
 
@@ -229,7 +229,7 @@ You have an entrance. You have practised it. *Trigger:* Making it a performance,
 
 <p class="block-title" markdown="span">Skeptic</p>
 
-You have looked something up in front of the person who told you, and they did not enjoy it. *Trigger:* Refusing the easy explanation and going to look, while everybody else is relieved and moving on.
+You have looked something up in front of the person who told you. They did not enjoy it. You have done it again since, to somebody else. *Trigger:* Take a Fate Token when you refuse the easy explanation and go and look, while everybody else is relieved and moving on.
 
 </div>
 
@@ -237,7 +237,7 @@ You have looked something up in front of the person who told you, and they did n
 
 <p class="block-title" markdown="span">Survivor</p>
 
-You have eaten worse and slept somewhere worse, and you would do both again tomorrow. *Trigger:* Taking the ugly, practical option in front of people who would rather you took the proud one.
+You have eaten worse and slept somewhere worse, and you would do both again tomorrow without making a thing of it. *Trigger:* Take a Fate Token when you take the ugly, practical option in front of people who would much rather you took the proud one.
 
 </div>
 
@@ -245,7 +245,7 @@ You have eaten worse and slept somewhere worse, and you would do both again tomo
 
 <p class="block-title" markdown="span">Trickster</p>
 
-You have got into a building with a clipboard and a confident walk. *Trigger:* Getting it done with a lie, a misdirection or a bit, when walking in and asking would have worked.
+You have got into a building with a clipboard and a confident walk. Nobody stopped you. Somebody held a door. *Trigger:* Take a Fate Token when you get it done with a lie, a misdirection or a bit, when walking in and asking would have worked.
 
 </div>
 
@@ -253,7 +253,7 @@ You have got into a building with a clipboard and a confident walk. *Trigger:* G
 
 <p class="block-title" markdown="span">True Believer</p>
 
-There is one thing you will not do. Everybody who knows you knows what it is. *Trigger:* Keeping to the code at the exact moment breaking it would have solved everything.
+There is one thing you will not do. Everybody who knows you knows what it is, and two of them have tested it. *Trigger:* Take a Fate Token when you keep to the code at the exact moment breaking it would have solved everything.
 
 </div>
 
@@ -261,7 +261,7 @@ There is one thing you will not do. Everybody who knows you knows what it is. *T
 
 <p class="block-title" markdown="span">Wanderer</p>
 
-Everything you own fits in the car. You have checked recently. *Trigger:* Walking away from a place, a group or a claim that had started to look permanent.
+Everything you own fits in the car. You have checked recently, which probably tells you something about where your head is. *Trigger:* Take a Fate Token when you walk away from a place, a group or a claim that had started to look permanent.
 
 </div>
 
