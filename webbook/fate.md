@@ -26,46 +26,7 @@ A parallel resource layered on top of the core roll - playing into vulnerability
 
 Every character has a **Nature** - a short archetype capturing a core drive or way of engaging with the world, written on the character sheet. Playing to your Nature at a dramatically appropriate moment grants a Fate Token.
 
-## Starter Natures
-
-Pick one of these, or write your own.
-
-<div class="wide" markdown="1">
-
-| Nature | Drive | Playing to it looks like |
-|---|---|---|
-| Analyst | You have never once acted on something you did not understand, and you are not starting today | Everyone else has already moved. You are still looking at how the thing actually works, and you are right to be |
-| Avenger | Somebody did something, and nobody has answered for it yet. You keep the list | Going after the person who earned it, at a moment when going after them costs you more than letting it go would |
-| Caregiver | You cannot walk past somebody who is hurt. You have tried. It does not take | Stopping to patch somebody up, talk somebody down, or sit with somebody, while the clock is running |
-| Charmer | Nobody has to be beaten. People come around, and you are very good at the coming around part | Turning somebody who wanted you gone into somebody who is holding the door, on nothing but conversation |
-| Competitor | Somebody is going to be best at this and there is no reason it should be anyone else | Turning a job into a contest nobody else knew they had entered, and then overshooting what the job needed |
-| Daredevil | The careful way works. It is also the most boring hour of your life | Taking the option with the drop, the speed or the odds, while the safe one sits there being safe |
-| Diplomat | Every fight is a deal that nobody has written down yet | Talking two sides out of it when picking one would have been faster and considerably easier |
-| Enforcer | A deal is a deal. Somebody has to be the reason that stays true, and you volunteered | Making somebody answer for a broken word, a skipped payment or a debt they thought had been forgotten |
-| Fixer | There is a way through. There is always a way through, and it is rarely the obvious one | Solving it with a favour, a name or an angle, in a room where everybody else had reached for something heavier |
-| Ghost | The less anybody can say about you, the fewer people get hurt when it goes wrong | Choosing to go unseen, unrecorded or unremembered, when being known would have got it done quicker |
-| Guardian | Some things are yours to stand in front of. You did not pick them and you do not get to put them down | Holding your ground over a place, a person or a thing you have claimed, when moving would have been sensible |
-| Idealist | It could be better than this. You have decided to behave as though that is true | Taking the principled option out loud, in front of people who were already reaching for the cynical one |
-| Judge | Somebody has to say it. Everybody in the room already knows and nobody wants to be the one | Naming what somebody did, plainly, to their face, when saying nothing would have cost you nothing |
-| Leader | Somebody has to call it. You have noticed that when nobody does, people die | Making the call the group did not want to make, and then standing in front of what it cost |
-| Loner | You handle it. Bringing somebody in means they are now in it too | Turning down help, or peeling off from the group, to take something on by yourself |
-| Mentor | Somebody taught you. The debt is not paid backwards | Standing back so somebody else takes the lesson, the lead or the credit, on a job you could have done faster |
-| Opportunist | Everything going wrong for everybody else is a door opening | Turning somebody’s very bad day into your own advantage, while it is still going on |
-| Perfectionist | Good enough is a thing people say when they have stopped caring | Redoing it, refusing to hand it over, or saying no to a result everybody else had already accepted |
-| Protector | You are between them and it. That is the arrangement and nobody needs to discuss it | Taking the hit, the risk or the loss that was coming for somebody who could not have taken it |
-| Rebel | An order is a thing to be looked at. Most of them do not survive being looked at | Breaking a rule specifically because somebody with authority said it, and you wanted to see what happened |
-| Showman | A room full of people not looking at you is a room going to waste | Making it a performance, at the cost of your cover, your subtlety, or a perfectly good plan |
-| Skeptic | The answer that makes everybody comfortable is the one you check first | Refusing the easy explanation and going to look, while everybody else is relieved and moving on |
-| Survivor | Getting through it is the whole job. What it looked like is a conversation for later | Taking the ugly, practical option in front of people who would rather you took the proud one |
-| Trickster | The front door is there for people with no imagination | Getting it done with a lie, a misdirection or a bit, when walking in and asking would have worked |
-| True Believer | There is a thing you hold to. It has cost you before and it is going to cost you again | Keeping to the code at the exact moment breaking it would have solved everything |
-| Wanderer | Staying is how people end up owing somewhere. You do not owe anywhere | Walking away from a place, a group or a claim that had started to look permanent |
-
-</div>
-
-## Writing a Custom Nature
-
-**One or two words** - a label, not a paragraph. If it doesn’t fit on the character sheet in a glance, it’s too long. **Write the Drive as one sentence** - what you want or how you engage the world, not a backstory fact. “I lost my brother” is backstory; “I don’t let anyone else lose someone they can save” is a Nature. **Make the trigger concrete and repeatable.** If you’d have to ask the GM whether it applies, it’s too vague - a Nature should come up scene after scene, not once at the table. It doesn’t need to cost you anything the way a Flaw does, but the best ones occasionally do - a Showman blowing their cover for a dramatic entrance is playing to Nature *and* creating a problem, and that’s when it’s most fun.
+The list of starter Natures, and the guide to writing your own, are in **Creating a Character**, because that is where you pick one.
 
 ## Fate Gain
 
