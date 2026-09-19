@@ -29,7 +29,12 @@ export default {
         el('span', {}, [
           el('strong', {}, n.name),
           el('br'),
-          el('span', { class: 'detail' }, `${n.drive} - ${n.example}`),
+          // The drive is who you are, the trigger is what it looks like.
+          // Running them into one line made the card read as a sentence
+          // that changes subject halfway through.
+          el('span', { class: 'detail' }, n.drive),
+          el('br'),
+          el('span', { class: 'detail nature-trigger' }, n.example),
         ]),
       ]);
       list.appendChild(card);

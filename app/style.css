@@ -903,6 +903,15 @@ tr.purchased td {
   max-width: 44ch;
 }
 
+/* The trigger under a Nature: what playing to it looks like, set apart
+   from the drive above it so the card does not read as one sentence. */
+.nature-trigger {
+  display: inline-block;
+  margin-top: 0.2rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
 /* Free-text fields on the sheet - age, height, appearance, backstory,
    notes. Sized to the panel rather than to their content, so a one-word
    Age and a paragraph of Appearance line up. */
