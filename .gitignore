@@ -27,3 +27,12 @@ __pycache__/
 
 # Local-only build output from tools/preview-site.py
 _preview/
+
+# Pre-edit snapshots taken by hand before a risky pass (foo.md.before-thing,
+# foo.html.removed). Scratch by nature: the state they hold is either already
+# a commit or an intermediate that the finished commit supersedes. Ignored
+# because untracked they cluttered git status and made
+# tools/check-desktop-drift.py report eight of them as Brewery code needing
+# a release.
+*.before-*
+*.removed
