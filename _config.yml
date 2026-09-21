@@ -12,6 +12,12 @@ defaults:
       path: "foundation"
     values:
       layout: "rules"
+  # The register's README renders as foundation/index.html, and "Readme" is
+  # not what that page is called.
+  - scope:
+      path: "foundation/README.md"
+    values:
+      title: "The Foundation"
 
 # The keep list is working material and is a CC BY-SA derivative of the [source redacted]
 # wiki. The register it produced is original and ORC; the notes are not, and

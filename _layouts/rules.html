@@ -3,7 +3,22 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>{{ page.name | remove: ".md" | replace: "-", " " | capitalize }} | 20 Below</title>
+{%- comment -%}
+  A page's title is its front matter title where it has one, and otherwise
+  its filename with every word capitalised. Liquid's capitalize only lifts
+  the first word, which is why "anomalous-objects" used to read "Anomalous
+  objects"; the loop fixes each word in turn.
+{%- endcomment -%}
+{%- if page.title -%}
+  {%- assign page_title = page.title -%}
+{%- else -%}
+  {%- assign words = page.name | remove: ".md" | replace: "-", " " | split: " " -%}
+  {%- capture page_title -%}
+    {%- for word in words %}{{ word | capitalize }} {% endfor -%}
+  {%- endcapture -%}
+  {%- assign page_title = page_title | strip -%}
+{%- endif -%}
+<title>{{ page_title }} | 20 Below</title>
 {% include brand-head.html %}
 <style>
   /* Colour, type and the shared components live in
