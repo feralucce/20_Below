@@ -8,3 +8,25 @@ defaults:
       path: "webbook"
     values:
       layout: "webbook"
+  - scope:
+      path: "foundation"
+    values:
+      layout: "rules"
+
+# The keep list is working material and is a CC BY-SA derivative of the [source redacted]
+# wiki. The register it produced is original and ORC; the notes are not, and
+# they do not go on the site.
+# Jekyll replaces this list rather than adding to it, so its own defaults
+# have to be repeated here or vendor/ starts getting published.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby
+  - foundation/mining-notes.md
