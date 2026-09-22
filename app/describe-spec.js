@@ -34,8 +34,15 @@ export const BOON_DESCRIBE = {
     // Tier 3 names a second one.
     count: (boon) => (tierIndex(boon) >= 3 ? 2 : 1),
   },
+  'Alternate Identity': { prompt: 'Who are they? Name, history, papers.', count: one },
   'Enchanting Voice': { prompt: 'Which Skill?', count: one },
   'Familiar': { prompt: 'What is it? What do you call it?', count: one },
+  // Bought once per locomotion mode, so each purchase is its own entry
+  // with its own answer.
+  'Special Movement': {
+    prompt: 'Which mode - Water-Walking, Wall-Crawling, Tunneling or Untrackable?',
+    count: one,
+  },
   'Distinctive Features': {
     prompt: 'Which feature?',
     // One per tier bought, up to four.
@@ -70,6 +77,9 @@ export const GIFT_DESCRIBE = {
   'Conjured Armory': {
     prompts: ['Which weapon from the catalogue?',
               'What do you call it, and what does it look like?'],
+    // The first slot picks a real item, because the sheet reads its
+    // Damage, range and reload straight off the weapons table.
+    optionSlots: ['weapons', null],
     count: () => 2,
   },
   'Cybernetics': { prompt: 'What is installed, and where?', count: one },
@@ -108,6 +118,14 @@ export function describePrompt(kind, name) {
 
 /* One prompt per slot where an entry asks two different questions, and
  * nothing where it asks the same one twice. */
+/* Which catalogue, if any, each slot of an entry picks from. */
+export function describeOptionSlots(kind, name) {
+  const table = kind === 'boon' ? BOON_DESCRIBE
+    : kind === 'flaw' ? FLAW_DESCRIBE
+      : GIFT_DESCRIBE;
+  return table[name]?.optionSlots ?? null;
+}
+
 export function describePrompts(kind, name) {
   const table = kind === 'boon' ? BOON_DESCRIBE
     : kind === 'flaw' ? FLAW_DESCRIBE

@@ -260,14 +260,25 @@ export function flavourHtml(entry) {
  * No rerender on input: redrawing the step on every keystroke would take
  * the focus out of the field being typed in.
  */
-export function describeBox(value, onChange, placeholder) {
-  return el('input', {
+export function describeBox(value, onChange, placeholder, options) {
+  const input = el('input', {
     type: 'text',
     class: 'describe-box',
     placeholder: placeholder ?? 'Describe it',
     value: value ?? '',
     onInput: (e) => onChange(e.target.value),
   });
+  if (!options?.length) return input;
+
+  // A list, not a dropdown: Conjured Armory's weapon is an item from the
+  // catalogue and the sheet needs the real name to find its Damage - but
+  // Armory of Anything exists to conjure a chainsaw, so typing something
+  // the catalogue has never heard of has to stay possible.
+  const id = `dl-${Math.random().toString(36).slice(2, 9)}`;
+  input.setAttribute('list', id);
+  const list = el('datalist', { id });
+  options.forEach((o) => list.appendChild(el('option', { value: o })));
+  return el('div', { class: 'describe-field' }, [input, list]);
 }
 
 /* Every field one entry asks for, in order.
@@ -278,14 +289,15 @@ export function describeBox(value, onChange, placeholder) {
  * question. Numbered only when there is more than one, so the ordinary
  * case stays a single unadorned line.
  */
-export function describeBoxes({ count, prompt, prompts, notes, onChange }) {
+export function describeBoxes({ count, prompt, prompts, notes, onChange, optionsFor }) {
   const wrap = el('div', { class: 'describe-list' });
   for (let i = 0; i < count; i += 1) {
     // Numbering only makes sense when every slot asks the same question.
     // Two animals is "(1)" and "(2)"; a weapon and its name are not.
     const label = prompts ? (prompts[i] ?? prompt)
       : (count > 1 ? `${prompt} (${i + 1})` : prompt);
-    wrap.appendChild(describeBox(notes[i] ?? '', (v) => onChange(i, v), label));
+    wrap.appendChild(describeBox(notes[i] ?? '', (v) => onChange(i, v), label,
+      optionsFor ? optionsFor(i) : null));
   }
   return wrap;
 }

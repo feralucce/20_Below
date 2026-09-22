@@ -1,5 +1,7 @@
 import { el, counterRow, renderMarkdown, renderSelectedAvailable, describeBoxes } from '../ui.js';
-import { describeFields, describePrompt, describePrompts } from '../describe-spec.js';
+import {
+  describeFields, describePrompt, describePrompts, describeOptionSlots,
+} from '../describe-spec.js';
 import {
   setGiftNote,
   giftNotes,
@@ -24,6 +26,20 @@ function getOrCreateGiftState(state, name) {
     state.gifts.push(g);
   }
   return g;
+}
+
+// The lists a describe slot can pick from. Only weapons so far, and
+// only the entries that actually carry Damage - a first-aid kit is in
+// the equipment tables too and is not something anyone conjures.
+function catalogueFor(kind, data) {
+  if (kind !== 'weapons' || !data) return null;
+  const names = [];
+  (data.equipment || []).forEach((cat) => {
+    cat.items.forEach((item) => {
+      if (item.Damage && !names.includes(item.name)) names.push(item.name);
+    });
+  });
+  return names.sort();
 }
 
 export default {
@@ -229,6 +245,7 @@ export default {
           prompt: describePrompt('gift', gift.name),
           prompts: describePrompts('gift', gift.name),
           notes: giftNotes(giftState),
+          optionsFor: (slot) => catalogueFor(describeOptionSlots('gift', gift.name)?.[slot], data),
           onChange: (slot, value) => {
             setGiftNote(state, gift.name, slot, value);
             persist?.();

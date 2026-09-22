@@ -108,8 +108,25 @@ function takenGifts(state) {
 function conjuredWeapon(state, catalog) {
   const gift = (state.gifts || []).find((g) => g.name === 'Conjured Armory' && g.level > 0);
   if (!gift) return null;
+  // What the Gift adds, whatever weapon it turns out to be.
+  let bonus = 0;
+  if (gift.level >= 5) bonus = 2;
+  else if (gift.level >= 3) bonus = 1;
+  if (bonus && (gift.adders || []).includes('Bonded Blade')) bonus += 1;
+
   const notes = (gift.notes || []).filter(Boolean);
-  if (!notes.length) return null;
+  if (!notes.length) {
+    // No weapon named yet - which is a gap in the character, not a reason
+    // for the sheet to stay silent about the thing they attack with. Say
+    // what is known and what is missing.
+    return {
+      name: 'Conjured Armory - name your weapon',
+      damage: bonus ? `+${bonus}` : '',
+      range: '',
+      ammo: 'never dry',
+      reload: '',
+    };
+  }
 
   const wanted = notes[0].trim().toLowerCase();
   const item = [...catalog.values()].find((x) => x.name.toLowerCase() === wanted);
@@ -118,12 +135,20 @@ function conjuredWeapon(state, catalog) {
   // Armory of Anything adder exists precisely to allow that - it just
   // cannot carry numbers nobody wrote down.
   const label = called ? `${notes[0].trim()} - ${called}` : notes[0].trim();
-  if (!item) return { name: label, damage: '', range: '', ammo: 'conjured', reload: '-' };
+  if (!item) {
+    // Armory of Anything conjures things the catalogue never listed, and
+    // the rules hand their stats to the GM "using the closest catalog
+    // equivalent". So the base is not ours to invent - but what the Gift
+    // adds to it is known, and is the half a player would forget.
+    return {
+      name: label,
+      damage: bonus ? `+${bonus} over base` : '',
+      range: '',
+      ammo: 'never dry',
+      reload: '-',
+    };
+  }
 
-  let bonus = 0;
-  if (gift.level >= 5) bonus = 2;
-  else if (gift.level >= 3) bonus = 1;
-  if (bonus && (gift.adders || []).includes('Bonded Blade')) bonus += 1;
   const base = Number(item.Damage);
   const damage = Number.isFinite(base) && bonus
     ? String(Math.min(5, base + bonus))
