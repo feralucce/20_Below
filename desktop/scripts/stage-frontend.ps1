@@ -34,17 +34,41 @@ foreach ($folder in $folders) {
     Copy-Item -Path $source -Destination $dest -Recurse -Force
 }
 
-# The paged character sheet's dev harness and the character it loads are
-# not part of the app: the harness is a way to look at the sheet without
-# walking the creator, and the character in sample/ is a real one. Neither
-# belongs in an installer handed to a player.
+# Three things in app/ are not part of the app. sheet-preview.html is a
+# way to look at the sheet without walking the creator; sheet/sample is a
+# real character it loads; and rowen-storm.html is one player's own sheet,
+# served to him at a URL of his own. A real person's build has no business
+# riding along in a download handed to strangers, whatever else is true of
+# it - the page being public at its own address is not the same as it
+# sitting on the disk of everyone who installs the creator.
 $stagedApp = Join-Path $stagingDir "app"
-foreach ($devOnly in @("sheet\sample", "sheet-preview.html")) {
+foreach ($devOnly in @("sheet\sample", "sheet-preview.html", "rowen-storm.html")) {
     $path = Join-Path $stagedApp $devOnly
     if (Test-Path $path) {
         Remove-Item -Recurse -Force $path
         Write-Host "Excluded app/$devOnly from the staged frontend"
     }
+}
+
+# The list above is a list, and a list is only as good as whoever
+# remembers to add to it. rowen-storm.html shipped in three releases
+# because nobody did. So the rule is not the list: any staged page with a
+# filed character built into it is one somebody wrote for a person, and
+# it does not go in the installer.
+#
+# The signature is a character's own shape - the sub-stat block every
+# build carries, next to one of the written fields only a real character
+# has. The creator's own pages build a character at runtime and have
+# neither written into the file, so they are untouched.
+$stagedAppFull = (Resolve-Path $stagedApp).Path
+$carriers = Get-ChildItem -Path $stagedApp -Filter *.html -Recurse -File | Where-Object {
+    $text = Get-Content -Raw -LiteralPath $_.FullName
+    $text -match '"subStats"\s*:' -and $text -match '"(?:backstory|finishingNotes|appearance)"\s*:\s*"[^"]'
+}
+foreach ($page in $carriers) {
+    $rel = $page.FullName.Substring($stagedAppFull.Length).TrimStart('\')
+    Remove-Item -Force $page.FullName
+    Write-Host "Excluded app/$rel from the staged frontend - it carries a filed character"
 }
 
 # docs/ used to be staged whole, which put 6.7 MB of hero art and reference
