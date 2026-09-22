@@ -25,7 +25,7 @@
 // Images and fonts stay stale-while-revalidate. They are heavy, they do
 // not parse anything, and a one-load-old icon breaks nothing.
 
-const VERSION = "v12";
+const VERSION = "v13";
 const SHELL = `20below-shell-${VERSION}`;
 const ASSETS = `20below-assets-${VERSION}`;
 const RULES = `20below-rules-${VERSION}`;
@@ -122,10 +122,13 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Code, and the stylesheet that lays it out. Network-first so it can
-  // never be older than the rules it reads; the cache is the offline
-  // copy, not the default answer.
-  if (/\.(?:m?js|css)$/.test(url.pathname)) {
+  // Code, the stylesheet that lays it out, and the character sheet's
+  // field map. The map says where every control goes and the page art
+  // says where everything is drawn - serve a stale one against fresh art
+  // and every value on the sheet lands somewhere it does not belong, which
+  // reads as a broken sheet rather than an old file. Network-first, same
+  // as the code it belongs to.
+  if (/\.(?:m?js|css)$/.test(url.pathname) || url.pathname.endsWith("/sheet/fields.json")) {
     event.respondWith(networkFirst(request, ASSETS));
     return;
   }
