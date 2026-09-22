@@ -328,12 +328,15 @@ function editableFor(id, ctx) {
   return null;
 }
 
-function editControl(f, binding, persist) {
+function editControl(f, binding, persist, rebuild) {
   const multi = f.kind === 'para';
   const node = el(multi ? 'textarea' : 'input', {
     class: multi ? 'sf sf-para sf-edit' : 'sf sf-text sf-edit',
     type: multi ? undefined : (binding.numeric ? 'number' : 'text'),
     onInput: (e) => { binding.set(e.target.value); persist(); },
+    // Typing cannot redraw the sheet - that would take the caret with it -
+    // so anything the new text should bring with it lands on the way out.
+    onChange: rebuild ? () => rebuild() : null,
   });
   node.value = binding.get();
   if (multi) {
@@ -561,6 +564,10 @@ export function buildPagedSheet(state, data, opts = {}) {
 
     const below = id.match(/^scar\.(\w+)\.(\d+)\.below$/);
     if (below) {
+      // The box means one thing: this scar went below zero, so it carries
+      // a Flaw until it heals. It never creates a scar and never fills
+      // itself - write the scar in the row first, then tick it if that is
+      // what happened. Every crossing leaves a scar; only some go below.
       const entry = scarsOfKind(state, below[1])[Number(below[2])];
       if (!entry) return;
       host.appendChild(place(el('button', {
@@ -620,7 +627,12 @@ export function buildPagedSheet(state, data, opts = {}) {
       const id = shift(f.id, view);
       const value = readField(id, ctx);
       const editable = editableFor(id, ctx);
-      if (editable) overlay.appendChild(editControl(f, editable, persist));
+      if (editable) {
+        // A scar written into an empty row is a new scar, and its own
+        // tick box only exists once the sheet has been drawn again.
+        overlay.appendChild(editControl(f, editable, persist,
+          id.startsWith('scar.') ? refresh : null));
+      }
       else if (f.kind === 'text') overlay.appendChild(textControl(f, value));
       else if (f.kind === 'para') overlay.appendChild(paraControl(f, value));
       else if (f.kind === 'pips') overlay.appendChild(pipControl(f, Number(value) || 0));
