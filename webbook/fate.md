@@ -92,11 +92,11 @@ A Short Rest drops one level of Exhausted; a Full Night’s Rest clears it entir
 
 **2** - Disadvantage on all rolls.
 
-**3** - Movement Rate halved.
+**3** - Movement Rate halved, and no Fast actions.
 
-**4** - Can’t take Slow actions - too worn down for that kind of precision.
+**4** - Every Ki spend costs 1 more.
 
-**5** - Collapse: falls unconscious, can’t act until rested.
+**5** - Unconscious, until somebody gets you warm, cool, or rested.
 
 ## Kotodama
 
