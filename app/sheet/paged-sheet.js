@@ -98,6 +98,17 @@ function takenGifts(state) {
   return state.gifts.filter((g) => g.level > 0);
 }
 
+// The Gift card has room for what a conjured weapon looks like; a cell in
+// the Weapons table does not, and a description that runs past the column
+// is clipped mid-word. That answer asks for a name and a look together, so
+// take the name off the front of it: up to the first dash, sentence end or
+// comma, and never more than a cell's worth.
+function shortName(text) {
+  const first = text.split(/\s+[-–]\s+|(?<=[.!?])\s+|,\s+/)[0].trim();
+  const name = first || text.trim();
+  return name.length > 40 ? `${name.slice(0, 39).trimEnd()}…` : name;
+}
+
 // The gear the character bought, split the way the pages are: anything
 // from an Armor table goes to the Armour block, anything with a Damage
 // column goes to Weapons, everything else is just carried.
@@ -134,7 +145,7 @@ function conjuredWeapon(state, catalog) {
   // A name the catalogue does not know still belongs on the sheet - the
   // Armory of Anything adder exists precisely to allow that - it just
   // cannot carry numbers nobody wrote down.
-  const label = called ? `${notes[0].trim()} - ${called}` : notes[0].trim();
+  const label = called ? `${notes[0].trim()} - ${shortName(called)}` : notes[0].trim();
   if (!item) {
     // Armory of Anything conjures things the catalogue never listed, and
     // the rules hand their stats to the GM "using the closest catalog
@@ -529,7 +540,10 @@ function typeSize(units, floor = FLOOR) {
 }
 
 function textControl(f, value) {
-  const node = el('div', { class: 'sf sf-text' }, String(value ?? ''));
+  const text = String(value ?? '');
+  // The whole value stays reachable on hover even when the box cannot
+  // hold it - a name that ends in an ellipsis should still be readable.
+  const node = el('div', { class: 'sf sf-text', title: text }, el('span', { class: 'sf-clip' }, text));
   // A field can ask for its own size - an Element's rating is the whole
   // point of its panel and is set far larger than a row of text.
   const units = f.size ?? Math.min(f.h * 0.7, 42);
