@@ -537,7 +537,7 @@ Ends when the source can no longer be perceived, or at the end of the Scene, whi
 
 #### Envenomed
 
-Venom, toxin, or a drug in the blood. Venomous creatures in the [bestiary](adversary-index.md) impose it on a connecting bite or sting, and each entry says so.
+Venom, toxin, or a drug in the blood. Venomous creatures in the [bestiary](adversary-index.md) impose it on a successful hit, and each entry says so.
 
 **An Envenomed character rolls at Disadvantage on Physical rolls, and it does not clear on a rest.** The body cannot sleep this one off.
 

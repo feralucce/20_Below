@@ -1682,7 +1682,7 @@ Slow-moving, but its bite doesn't easily let go. Thick-bodied and patterned in b
 
 **Soak** 1 · **Attack** 3 · **Defense** 5 · **Health Levels** 2 · **Movement Rate** 3m
 
-**Bite**: 1, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
+**Bite**: 1, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
 
 **Notable Skills**: Stealth 6
 
@@ -1696,7 +1696,7 @@ It moves no faster than before, but once it clamps down the grip is considerably
 
 **Soak** 2 · **Attack** 4 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 3m
 
-**Bite**: 2, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
+**Bite**: 2, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
 
 **Notable Skills**: Stealth 6
 
@@ -1710,7 +1710,7 @@ Its coloring is unmistakable even at a distance, which does nothing to help once
 
 **Soak** 3 · **Attack** 4 · **Defense** 7 · **Health Levels** 8 · **Movement Rate** 3m
 
-**Bite**: 4, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
+**Bite**: 4, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
 
 **Notable Skills**: Stealth 6
 
@@ -1724,7 +1724,7 @@ The venom now carries an extra sting that lingers well past the bite itself. It 
 
 **Soak** 2 · **Attack** 4 · **Defense** 5 · **Health Levels** 4 · **Movement Rate** 3m
 
-**Bite**: 1, Melee, **Venom / Grip**: a target bitten is also grabbed - freeing them is a contested Potence check against the Gila Monster's own bite grip.
+**Bite**: 1, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
 
 **Notable Skills**: Stealth 6
 
@@ -1746,7 +1746,7 @@ Camouflages well enough that the warning display is easy to miss. Its banded col
 
 **Soak** 0 · **Attack** 4 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 3m
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 10
 
@@ -1760,7 +1760,7 @@ Aquatic, territorial, and willing to stand its ground rather than flee into deep
 
 **Soak** 0 · **Attack** 4 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 3m (6m in water)
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 9
 
@@ -1774,7 +1774,7 @@ Would rather warn than strike - the warning is the only mercy it offers. The rat
 
 **Soak** 0 · **Attack** 5 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 3m
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
+**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 9
 
@@ -1790,7 +1790,7 @@ Its camouflage pattern has stretched with the extra length, and it's harder than
 
 **Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m
 
-**Bite**: 2, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Bite**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 10
 
@@ -1804,7 +1804,7 @@ It holds its ground in shallow water even against threats that would send an ord
 
 **Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m (8m in water)
 
-**Bite**: 2, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Bite**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 9
 
@@ -1818,7 +1818,7 @@ Longer than any rattler has a right to be, and the rattle itself sounds wrong - 
 
 **Soak** 1 · **Attack** 6 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m
 
-**Bite**: 2, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
+**Bite**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 9
 
@@ -1834,7 +1834,7 @@ Big enough now to take small game whole, which changes how it hunts more than ho
 
 **Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m
 
-**Bite**: 3, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Bite**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 10
 
@@ -1848,7 +1848,7 @@ Fishermen who've hooked something in the shallows and reeled up a snake instead 
 
 **Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m (9m in water)
 
-**Bite**: 3, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Bite**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 9
 
@@ -1862,7 +1862,7 @@ A rockslide of coiled muscle that people mistake for a fallen log until the log 
 
 **Soak** 2 · **Attack** 6 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m
 
-**Bite**: 3, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
+**Bite**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 9
 
@@ -1878,7 +1878,7 @@ A second set of fangs has grown behind the first, doubling every strike it lands
 
 **Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 3m
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 10
 
@@ -1894,7 +1894,7 @@ It can flood a stretch of shallow water with something in the air alone, no bite
 
 **Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 3m (6m in water)
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 9
 
@@ -1910,7 +1910,7 @@ One bite carries two different kinds of trouble now, and the second doesn't come
 
 **Soak** 1 · **Attack** 6 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 3m
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
+**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 9
 
@@ -2108,7 +2108,7 @@ Small, easy to miss, and painful rather than lethal in most cases. It hides unde
 
 **Soak** 1 · **Attack** 3 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 4m
 
-**Sting**: 1, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Sting**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 8
 
@@ -2122,7 +2122,7 @@ Big enough now that the tail arcing overhead is the first thing anyone notices a
 
 **Soak** 2 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 4m
 
-**Sting**: 2, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Sting**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 8
 
@@ -2136,7 +2136,7 @@ It doesn't hide under a rock anymore - there isn't a rock big enough. What passe
 
 **Soak** 3 · **Attack** 4 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 4m
 
-**Sting**: 3, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Sting**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 8
 
@@ -2150,7 +2150,7 @@ The exoskeleton has thickened into something closer to armor plate, and a blade 
 
 **Soak** 2 · **Attack** 4 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 4m
 
-**Sting**: 1, Melee, **Venom**: on a successful hit, Disadvantage on the target's next roll.
+**Sting**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 8
 
@@ -2172,7 +2172,7 @@ Small enough to go unnoticed until the bite already happened. Glossy black with 
 
 **Soak** 0 · **Attack** 3 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 2m
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
+**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 10
 
@@ -2186,7 +2186,7 @@ Its bite rarely hurts in the moment - the real damage comes later. Dull brown wi
 
 **Soak** 0 · **Attack** 3 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 2m
 
-**Bite**: 1, Melee, **Venom**: no immediate Health Level loss, but the wound worsens without treatment over the following days - severity is the GM's call.
+**Bite**: 1, Melee, **Venom**: no immediate Health Level loss - the target is [Envenomed](rules.md#envenomed), and the wound worsens without treatment over the following days, severity the GM's call.
 
 **Notable Skills**: Stealth 10
 
@@ -2200,7 +2200,7 @@ The hourglass marking is now visible from across a room, on a body that shouldn'
 
 **Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 2m
 
-**Bite**: 2, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
+**Bite**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 10
 
@@ -2214,7 +2214,7 @@ The bite is the same shape as always, just delivered by something considerably h
 
 **Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 2m
 
-**Bite**: 2, Melee, **Venom**: no immediate Health Level loss, but the wound worsens without treatment over the following days - severity is the GM's call.
+**Bite**: 2, Melee, **Venom**: no immediate Health Level loss - the target is [Envenomed](rules.md#envenomed), and the wound worsens without treatment over the following days, severity the GM's call.
 
 **Notable Skills**: Stealth 10
 
@@ -2228,7 +2228,7 @@ Its web spans a doorway rather than a corner, strong enough to catch more than i
 
 **Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 2m
 
-**Bite**: 3, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
+**Bite**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 10
 
@@ -2242,7 +2242,7 @@ Found under boards in an old shed, in a size that makes the whole shed worth avo
 
 **Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 2m
 
-**Bite**: 3, Melee, **Venom**: no immediate Health Level loss, but the wound worsens without treatment over the following days - severity is the GM's call.
+**Bite**: 3, Melee, **Venom**: no immediate Health Level loss - the target is [Envenomed](rules.md#envenomed), and the wound worsens without treatment over the following days, severity the GM's call.
 
 **Notable Skills**: Stealth 10
 
@@ -2256,7 +2256,7 @@ Crushing it doesn't end the encounter cleanly - whatever's in its body finds its
 
 **Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 2m
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, the target must spend 1 Ki or take Disadvantage on Physical rolls until treated.
+**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 10
 
@@ -2272,7 +2272,7 @@ Whatever it carries in its bite now works faster and meaner than the necrosis it
 
 **Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 2m
 
-**Bite**: 1, Melee, **Venom**: no immediate Health Level loss, but the wound worsens without treatment over the following days - severity is the GM's call.
+**Bite**: 1, Melee, **Venom**: no immediate Health Level loss - the target is [Envenomed](rules.md#envenomed), and the wound worsens without treatment over the following days, severity the GM's call.
 
 **Notable Skills**: Stealth 10
 
