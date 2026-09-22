@@ -246,6 +246,21 @@ function giftWeapons(state, data) {
   return out.concat(signatureAttacks(state, subStats));
 }
 
+// A package's contents are written as prose: three or four catalogue
+// items separated by commas, and on fourteen of the seventy-eight a last
+// clause the book marks as flavour - "and a doctor who doesn't file
+// paperwork (flavor)". Equipment is a column of slots holding the name of
+// a thing, and that clause is not a thing; it is a standing advantage,
+// written as a sentence, and it cannot be made to fit one. It stays in
+// the package on the Creator's gear step, where there is room to read it,
+// and does not take an equipment slot it would run three times over.
+function packageItems(contents) {
+  return String(contents || '')
+    .split(',')
+    .map((part) => part.trim().replace(/^and\s+/i, '').replace(/\.$/, '').trim())
+    .filter((part) => part && !/\((?:flavor|flavour)\)$/i.test(part));
+}
+
 function splitGear(state, data) {
   const catalog = new Map();
   (data.equipment || []).forEach((cat) => {
@@ -258,28 +273,32 @@ function splitGear(state, data) {
   const armour = [];
   const gear = [];
 
-  (state.gearPurchases || []).forEach((p) => {
-    const item = catalog.get(p.name);
-    const parent = item?._cat?.parent || p.category || '';
+  // Where one named thing belongs: the Armour block if it is armour, the
+  // Weapons block if it has a Damage column, and carried otherwise.
+  function file(name, category) {
+    const item = catalog.get(name);
+    const parent = item?._cat?.parent || category || '';
     if (/armor|armour/i.test(parent)) {
       armour.push({
-        name: p.name,
+        name,
         zone: item?.Zone || '',
         hardness: item?.Hardness || '',
         health: Number(item?.['Health Levels']) || 0,
       });
     } else if (item && item.Damage) {
       weapons.push({
-        name: p.name,
+        name,
         damage: item.Damage || '',
         range: item['Range (Normal / Long)'] || item.Range || '',
         ammo: item.Ammo || '',
         reload: item.Reload || '',
       });
     } else {
-      gear.push(p.name);
+      gear.push(name);
     }
-  });
+  }
+
+  (state.gearPurchases || []).forEach((p) => file(p.name, p.category));
 
   // A conjured weapon is not gear a character bought, but it is a weapon
   // they fight with, so it goes where the weapons are - first, because
@@ -290,9 +309,16 @@ function splitGear(state, data) {
   // weapons - not buried three pages away on a card.
   weapons.push(...giftWeapons(state, data));
 
+  // A starting package is a list of things, not one thing. Printed as a
+  // single line it ran three slots past the edge of the box and was cut
+  // off mid-sentence, and the grenade launcher in it never reached the
+  // Weapons block. Each entry is filed as though it had been bought.
   Object.values(state.everymanGearPackages || {})
     .sort((a, b) => a.level - b.level)
-    .forEach((p) => gear.push(`${p.name}: ${p.contents}`));
+    .forEach((p) => {
+      gear.push(`${p.name} - Level ${p.level} package`);
+      packageItems(p.contents).forEach((name) => file(name, ''));
+    });
   (state.flavorItems || []).forEach((t) => gear.push(t));
 
   return { weapons, armour, gear };

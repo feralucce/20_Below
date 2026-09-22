@@ -69,7 +69,7 @@ const checks = [
   ['parseFlaws                (flaws.md)', () => parseFlaws(md('flaws.md'))],
   ['parseGifts                (gifts.md)', () => parseGifts(giftsMd, 3)],
   ['parseGiftCheckText        (gifts.md)', () => parseGiftCheckText(giftsMd)],
-  ['parseNatures              (fate.md)', () => parseNatures(md('fate.md'))],
+  ['parseNatures              (character-creation.md)', () => parseNatures(md('character-creation.md'))],
   ['parseResources            (resources.md)', () => parseResources(md('resources.md'))],
   ['parseSkillTiers           (skills.md)', () => parseSkillTiers(md('skills.md'))],
   ['parseSkillCatalog         (skills.md)', () => parseSkillCatalog(md('skills.md'))],
@@ -158,7 +158,7 @@ try {
       `Skill "${s.name}": missing Element or definition`));
   parseSkillTiers(md('skills.md')).forEach((t) =>
     chk(t.name && t.roll, `Skill tier ${t.tier}: missing name or roll`));
-  parseNatures(md('fate.md')).forEach((n) =>
+  parseNatures(md('character-creation.md')).forEach((n) =>
     chk(n.name && n.drive, `Nature "${n.name}": missing drive`));
   parseDifficultyChart(rulesMd).forEach((d) =>
     chk(d.label && Number.isFinite(d.difficulty), 'a Difficulty row lost its label or number'));
