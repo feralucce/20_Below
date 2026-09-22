@@ -964,6 +964,11 @@ export function initPlayState(state, data) {
   if (state.currentSanity == null) state.currentSanity = figured.Sanity;
   if (state.currentKi == null) state.currentKi = figured.Ki;
   if (state.currentFateTokens == null) state.currentFateTokens = startingFateTokens(state, data);
+  // Both are tracked on the sheet and nowhere else: Exhausted stacks 1-5
+  // (rules/fate.md) and Fate Tokens spent this Scene sits beside the held
+  // count because the cap is per Scene, not per session.
+  if (state.exhausted == null) state.exhausted = 0;
+  if (state.fateSpentThisScene == null) state.fateSpentThisScene = 0;
 }
 
 // Takes FULL Health Levels (5 + Health), not the Health sub-stat. The rule

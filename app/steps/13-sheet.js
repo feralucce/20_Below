@@ -19,7 +19,7 @@ import {
 import { downloadJson } from '../export/toJson.js';
 import { SIGNATURE_MOVE, signatureMoves } from '../state.js';
 import buildAdvancementTab from './tab-advancement.js';
-import buildScarsTab from './tab-scars.js';
+import { buildPagedSheet, loadFieldMap } from '../sheet/paged-sheet.js';
 import {
   buildAttackRollSection,
   buildDamageRollSection,
@@ -581,100 +581,128 @@ function buildVitals(state, data, figured, { interactive = false, refresh = () =
 
 export default {
   id: 'sheet',
-  title: 'Character Sheet & Export',
-  render(container, { state, data, persist }) {
+  title: 'Character Sheet',
+
+  // The sheet is the five printed pages now, filled in live from the
+  // character. Rolls fire from the pages themselves - a Skill row, a Gift
+  // card, a Resource row, a weapon - each opening the roller it needs over
+  // the sheet rather than sitting in a panel the player has to find.
+  //
+  // Advancement stays below the pages: spending XP is building a
+  // character, not playing one, and there is nowhere on a printed page to
+  // put it.
+  async render(container, { state, data, persist }) {
     persistSheet = persist ?? (() => {});
     initPlayState(state, data);
-    const figured = computeFiguredCharacteristics(state);
+    // A page wants the window, not the reading column the forms use.
+    container.classList.add('step-panel-sheet');
 
-    let activeTab = TABS[0].id;
-    const tabContent = el('div', { class: 'tab-content' });
-    const tabNav = el('div', { class: 'tab-nav' });
-    const headerEl = el('div', {});
-    // Built once, outside the header's own render cycle - a Combat Roller
-    // roll needs to update the Ki/Fate Token trackers (via renderHeader),
-    // but renderHeader() only ever tears down headerEl itself, so this
-    // sibling element (and whatever the roll just displayed) survives that.
-    const combatRollerEl = el('div', { class: 'sheet-combat-roller' });
+    const pagesHost = el('div', {});
+    const advancementHost = el('div', { class: 'sheet-advancement' });
+    const tabBar = el('div', { class: 'sheet-tabs' });
+    // Which tab is open has to outlive a redraw: every - and + rebuilds
+    // the sheet, and landing back on page 1 each time would be unusable.
+    let activeTab = 0;
+    let modal = null;
 
-    function renderHeader() {
-      headerEl.innerHTML = '';
-      headerEl.append(buildNameBar(state));
-      // The trackers live in the Vitals tab now, so anything that used to
-      // refresh the header to update them has to refresh the tab instead -
-      // but only when that is what is on screen.
-      if (activeTab === 'vitals') renderTabContent();
+    function closeRoller() {
+      modal?.remove();
+      modal = null;
+      draw();
     }
 
-    // The damage roller's Ki Infusion checkboxes need to reflect the
-    // character's *current* Ki, which can change from outside the Combat
-    // Roller entirely (a Gift Check failure, most directly, from the Gifts
-    // tab) - refreshKiDependents is handed to anything that spends Ki
-    // elsewhere so it can pull the boost row's available count back in sync.
-    let damageSectionRef = null;
-    function renderCombatRoller() {
-      combatRollerEl.innerHTML = '';
-      damageSectionRef = buildDamageRollSection(state, data, renderHeader);
-      combatRollerEl.append(
-        el('h3', {}, 'Combat Roller'),
-        // A critical to-hit doubles the damage dice, so the attack roller
-        // arms the damage panel rather than leaving the player to remember.
-        buildAttackRollSection(state, data, renderHeader, (crit) => {
-          damageSectionRef?.armCritical?.(crit);
-        }),
-        damageSectionRef,
-      );
-    }
-    function refreshKiDependents() {
-      renderHeader();
-      damageSectionRef?.refreshBoostRow();
-    }
-
-    function renderTabContent() {
-      tabContent.innerHTML = '';
-      const tab = TABS.find((t) => t.id === activeTab);
-      const nodes = tab.interactive
-        ? tab.build(state, data, renderTabContent, renderHeader, refreshKiDependents)
-        : tab.build(state, data);
-      tabContent.append(...nodes.filter((n) => n != null));
+    function rollerPanel(kind, label) {
+      switch (kind) {
+        case 'skill':
+          return [el('h3', {}, `Roll ${label}`),
+            buildSkillRollSection(state, data, draw, label)];
+        case 'gift':
+          return [el('h3', {}, `${label} - Gift Check`),
+            el('p', { class: 'attr-caption', html: inline(data.giftCheckText) }),
+            buildGiftCheckSection(state, data, draw)];
+        case 'resource':
+          return [el('h3', {}, `${label} - Resource Check`),
+            buildResourceCheckSection(state, data, label)];
+        case 'weapon': {
+          const damage = buildDamageRollSection(state, data, draw);
+          return [el('h3', {}, `Attack with ${label}`),
+            buildAttackRollSection(state, data, draw, (crit) => damage?.armCritical?.(crit)),
+            damage];
+        }
+        default:
+          return [];
+      }
     }
 
-    function renderTabNav() {
-      tabNav.innerHTML = '';
-      TABS.forEach((tab) => {
-        tabNav.appendChild(
-          el('button', {
-            type: 'button',
-            text: tab.label,
-            class: tab.id === activeTab ? 'tab-btn active' : 'tab-btn',
-            onClick: () => {
-              activeTab = tab.id;
-              renderTabNav();
-              renderTabContent();
-            },
-          }),
-        );
+    function openRoller(kind, label) {
+      modal?.remove();
+      const panel = el('div', { class: 'sheet-roller-panel' }, [
+        ...rollerPanel(kind, label),
+        el('button', { type: 'button', text: 'Close', onClick: closeRoller }),
+      ]);
+      modal = el('div', {
+        class: 'sheet-roller',
+        onClick: (e) => { if (e.target === modal) closeRoller(); },
+      }, [panel]);
+      document.body.appendChild(modal);
+    }
+
+    function draw() {
+      pagesHost.innerHTML = '';
+      const stack = buildPagedSheet(state, data, {
+        refresh: draw,
+        persist: persistSheet,
+        onRoll: openRoller,
       });
+      pagesHost.appendChild(stack);
+
+      advancementHost.innerHTML = '';
+      advancementHost.append(
+        el('h3', {}, 'Advancement'),
+        ...buildAdvancementTab(state, data, draw, draw).filter((n) => n != null),
+      );
+
+      // Five pages, then the one thing that is building a character
+      // rather than playing one.
+      const pages = [...stack.querySelectorAll('.sheet-page')];
+      const panes = [...pages, advancementHost];
+      const labels = [...pages.map((p, i) => `Page ${i + 1}`), 'Advancement'];
+      if (activeTab >= panes.length) activeTab = 0;
+
+      function show(i) {
+        activeTab = i;
+        panes.forEach((pane, n) => { pane.hidden = n !== i; });
+        [...tabBar.children].forEach((b, n) => {
+          b.className = n === i ? 'tab-btn active' : 'tab-btn';
+        });
+        // The page just revealed had no width while it was hidden.
+        stack.syncUnits?.();
+      }
+
+      tabBar.innerHTML = '';
+      labels.forEach((label, i) => {
+        tabBar.appendChild(el('button', {
+          type: 'button', text: label, class: 'tab-btn', onClick: () => show(i),
+        }));
+      });
+      show(activeTab);
     }
 
-    renderTabNav();
-    renderTabContent();
-    renderHeader();
-    renderCombatRoller();
+    await loadFieldMap();
+    draw();
 
-    // Name, tabs, then whatever the tab holds. The Combat Roller drops
-    // below the content rather than wedging between the name and the
-    // tabs it belongs beside.
-    const sheet = el('div', { class: 'sheet', id: 'character-sheet' }, [headerEl, tabNav, tabContent, combatRollerEl]);
+    container.append(
+      el('h2', {}, 'Character Sheet'),
+      el('p', { class: 'attr-caption' },
+        'Click a Skill, a Gift, a Resource or a weapon to roll it. The − and + '
+        + 'beside each Vital and pool move it by one.'),
+      tabBar,
+      pagesHost,
+      advancementHost,
+      el('div', { style: 'display:flex;gap:0.75rem;margin-top:1rem;' }, [
+        el('button', { type: 'button', text: 'Download JSON', onClick: () => downloadJson(state) }),
+      ]),
+    );
 
-    const exportRow = el('div', { style: 'display:flex;gap:0.75rem;margin-top:1rem;' }, [
-      el('button', {
-        type: 'button',
-        text: 'Download JSON',
-        onClick: () => downloadJson(state),
-      }),
-    ]);
-
-    container.append(el('h2', {}, 'Character Sheet & Export'), sheet, exportRow);
   },
 };

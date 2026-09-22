@@ -275,6 +275,9 @@ async function main() {
   function rerenderStep() {
     clampFateTokenPurchases(state, data);
     panel.innerHTML = '';
+    // Steps can widen the panel for themselves; none of them should
+    // inherit another step's width.
+    panel.className = 'step-panel';
     // Writing the draft without redrawing. Everything else persists as a
     // side effect of rerenderPools, which is fine when the control that
     // changed is a button. A text field cannot rerender on input without

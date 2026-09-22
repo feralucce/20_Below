@@ -1,0 +1,662 @@
+// The character sheet as the five printed pages, filled in live.
+//
+// The art and the field map are generated together from one set of
+// numbers (scratchpad/build.py emits both), so nothing here knows where
+// anything sits on the page - it reads fields.json and lays a control
+// over each named rectangle. Move a block in the generator and this
+// follows without being touched.
+//
+// Coordinates in the map are the page's own 2550 x 3300 space, and a
+// page is drawn at exactly that size - the stylesheet fixes --u, one
+// page unit, at one pixel, and the panel scrolls. Sizes below are
+// therefore written in page units throughout and need no conversion.
+
+import { el } from '../ui.js';
+import {
+  applyRest,
+  computeFiguredCharacteristics,
+  effectiveResourceLevel,
+  fateTokenCap,
+  skillTierName,
+  xpSpent,
+} from '../state.js';
+
+export const PAGE_W = 2550;
+export const PAGE_H = 3300;
+const PAGES = 5;
+
+let fieldMap = null;
+let repeats = [];
+
+export async function loadFieldMap() {
+  if (fieldMap) return fieldMap;
+  const res = await fetch(new URL('./fields.json', import.meta.url));
+  const doc = await res.json();
+  fieldMap = doc.fields;
+  // Pages that are templates rather than fixed pages, e.g. Gifts, which
+  // repeats when a character has more than one page of them.
+  repeats = doc.repeat || [];
+  return fieldMap;
+}
+
+// How many sheets to draw, and what each one is. A repeating page appears
+// as many times as the character needs it, at least once, and each copy
+// carries the slot offset its fields should read from.
+function pageSequence(counts) {
+  const views = [];
+  for (let page = 1; page <= PAGES; page += 1) {
+    const rule = repeats.find((r) => r.page === page);
+    if (!rule) {
+      views.push({ page, offset: 0 });
+      continue;
+    }
+    const held = counts[rule.group] ?? 0;
+    const copies = Math.max(1, Math.ceil(held / rule.slots));
+    for (let c = 0; c < copies; c += 1) {
+      views.push({ page, offset: c * rule.slots, group: rule.group, copy: c, copies });
+    }
+  }
+  return views;
+}
+
+// ---------------------------------------------------------------------------
+// reading the character
+//
+// Every block on the sheet is a fixed number of slots, and a character
+// has as many entries as they have. These collect the entries once, in
+// the order they should print, so slot N on the page is entry N here.
+// ---------------------------------------------------------------------------
+
+function takenSkills(state, data) {
+  return data.skillCatalog
+    .filter((s) => state.skills[s.name] > 0)
+    .map((s) => ({ name: s.name, tier: state.skills[s.name] }));
+}
+
+function takenResources(state, data) {
+  return data.resources
+    .filter((r) => state.resources[r.name] > 0)
+    .map((r) => ({
+      name: r.name,
+      level: state.resources[r.name],
+      now: effectiveResourceLevel(state, r.name),
+      zeroed: !!state.resourceZeroed[r.name],
+      // Only six Resources can be pushed; every other one is a standing
+      // fact with nothing to roll about (rules/resources.md).
+      pushable: !!r.pushable,
+    }));
+}
+
+function takenGifts(state) {
+  return state.gifts.filter((g) => g.level > 0);
+}
+
+// The gear the character bought, split the way the pages are: anything
+// from an Armor table goes to the Armour block, anything with a Damage
+// column goes to Weapons, everything else is just carried.
+function splitGear(state, data) {
+  const catalog = new Map();
+  (data.equipment || []).forEach((cat) => {
+    cat.items.forEach((item) => {
+      if (!catalog.has(item.name)) catalog.set(item.name, { ...item, _cat: cat });
+    });
+  });
+
+  const weapons = [];
+  const armour = [];
+  const gear = [];
+
+  (state.gearPurchases || []).forEach((p) => {
+    const item = catalog.get(p.name);
+    const parent = item?._cat?.parent || p.category || '';
+    if (/armor|armour/i.test(parent)) {
+      armour.push({
+        name: p.name,
+        zone: item?.Zone || '',
+        hardness: item?.Hardness || '',
+        health: Number(item?.['Health Levels']) || 0,
+      });
+    } else if (item && item.Damage) {
+      weapons.push({
+        name: p.name,
+        damage: item.Damage || '',
+        range: item['Range (Normal / Long)'] || item.Range || '',
+        ammo: item.Ammo || '',
+        reload: item.Reload || '',
+      });
+    } else {
+      gear.push(p.name);
+    }
+  });
+
+  Object.values(state.everymanGearPackages || {})
+    .sort((a, b) => a.level - b.level)
+    .forEach((p) => gear.push(`${p.name}: ${p.contents}`));
+  (state.flavorItems || []).forEach((t) => gear.push(t));
+
+  return { weapons, armour, gear };
+}
+
+// The scar log predates the sheet and only recorded physical or not.
+// Reading a `kind` when there is one and falling back to that flag keeps
+// every character already saved working, and new scars written from the
+// sheet carry the finer split.
+function scarsOfKind(state, kind) {
+  return (state.scars || []).filter(
+    (s) => (s.kind ?? (s.physical ? 'battle' : 'mental')) === kind,
+  );
+}
+
+// ---------------------------------------------------------------------------
+// what goes in each named rectangle
+// ---------------------------------------------------------------------------
+
+const FIGURED_KEYS = {
+  Defence: 'Defense',
+  SocialDef: 'Social Defense',
+  MentalDef: 'Mental Defense',
+  Movement: 'Movement Rate',
+  Carry: 'Carrying Capacity',
+};
+
+function readField(id, ctx) {
+  const { state, data, figured } = ctx;
+  const part = id.split('.');
+
+  switch (part[0]) {
+    case 'attribute':
+      return state.attributes[part[1]];
+    case 'substat':
+      return part[2] === 'value'
+        ? state.subStats[part[1]]
+        : (state.descriptors[part[1]] || []).filter(Boolean).join(', ');
+    case 'descriptors':
+      return (state.descriptors[part[1]] || []).filter(Boolean).join(', ');
+    case 'figured':
+      return figured[FIGURED_KEYS[part[1]]];
+    case 'nature': {
+      // A picked Nature keeps its Drive and its example trigger in the
+      // rules rather than on the character, so only a custom one carries
+      // its own. Reading just the custom half left both blank for every
+      // character who took one off the list.
+      const n = state.nature;
+      const picked = n.picked ? (data.natures || []).find((x) => x.name === n.picked) : null;
+      if (part[1] === 'nature') return n.picked ?? n.custom?.label ?? '';
+      if (part[1] === 'the_drive') return picked?.drive ?? n.custom?.drive ?? '';
+      // Every trigger in the book opens "Take a Fate Token when ..." -
+      // true, and a waste of the only line the sheet can spare for it.
+      // The block is already captioned with what it is.
+      return (picked?.example ?? n.custom?.trigger ?? '')
+        .replace(/^\s*take a fate token when\s*/i, '')
+        .replace(/^./, (c) => c.toUpperCase());
+    }
+    case 'vital': {
+      const map = {
+        health: ['currentHealth', 'Health Levels'],
+        poise: ['currentPoise', 'Poise'],
+        sanity: ['currentSanity', 'Sanity'],
+      }[part[1]];
+      if (part[2] === 'max') return figured[map[1]];
+      return state[map[0]];
+    }
+    case 'pool': {
+      if (part[1] === 'ki') {
+        return part[2] === 'max' ? figured.Ki : state.currentKi;
+      }
+      if (part[2] === 'spent') return state.fateSpentThisScene ?? 0;
+      return part[2] === 'max' ? fateTokenCap(state, data) : state.currentFateTokens;
+    }
+    case 'exhausted':
+      return state.exhausted ?? 0;
+    case 'skill': {
+      const s = ctx.skills[Number(part[1])];
+      if (!s) return part[2] === 'tier' ? 0 : '';
+      return part[2] === 'tier' ? s.tier : s.name;
+    }
+    case 'boon': {
+      const b = state.boons[Number(part[1])];
+      if (!b) return '';
+      return part[2] === 'points' ? b.points : b.name;
+    }
+    case 'flaw': {
+      const f = ctx.flaws[Number(part[1])];
+      if (!f) return part[2] === 'level' ? 0 : '';
+      return part[2] === 'level' ? f.level : f.name;
+    }
+    case 'resource': {
+      const r = ctx.resources[Number(part[1])];
+      if (!r) return part[2] === 'level' ? 0 : '';
+      if (part[2] === 'level') return r.level;
+      if (part[2] === 'now') return r.now;
+      if (part[2] === 'spent') return r.zeroed;
+      return r.name;
+    }
+    case 'gift': {
+      const g = ctx.gifts[Number(part[1])];
+      if (!g) return part[2] === 'level' ? 0 : '';
+      if (part[2] === 'level') return g.level;
+      if (part[2] === 'name') return g.name;
+      if (part[2] === 'ki') return ctx.giftKi(g);
+      if (part[2] === 'does') return ctx.giftText(g);
+      if (part[2] === 'adders') return (g.adders || []).join(', ');
+      return (g.limiters || []).join(', ');
+    }
+    case 'weapon': {
+      const w = ctx.weapons[Number(part[1])];
+      return w ? (w[part[2]] ?? '') : '';
+    }
+    case 'armour': {
+      const a = ctx.armour[Number(part[1])];
+      if (!a) return part[2] === 'health' ? 0 : '';
+      if (part[2] === 'health') return a.health;
+      if (part[2] === 'body') return /body/i.test(a.zone);
+      if (part[2] === 'head') return /head/i.test(a.zone);
+      if (part[2] === 'broken') return !!a.broken;
+      if (part[2] === 'hardness') return a.hardness;
+      return a.name;
+    }
+    case 'gear':
+      return ctx.gear[Number(part[1])] ?? '';
+    case 'scar': {
+      const s = scarsOfKind(state, part[1])[Number(part[2])];
+      if (!s) return part[3] === 'below' ? false : '';
+      return part[3] === 'below' ? !!s.belowZero : (s.title || s.description || '');
+    }
+    case 'name':
+      return state.name || '';
+    case 'concept':
+      return state.concept || '';
+    case 'backstory':
+      return state.backstory || '';
+    case 'notes':
+      return state.finishingNotes || '';
+    case 'xp':
+      if (part[1] === 'earned') return state.xpEarned;
+      if (part[1] === 'spent') return xpSpent(state, data);
+      return state.xpEarned - xpSpent(state, data);
+    default:
+      return '';
+  }
+}
+
+// ---------------------------------------------------------------------------
+// drawing a control over a rectangle
+// ---------------------------------------------------------------------------
+
+// The pages are the whole sheet now, so anything that used to be typed
+// into a tab has to be typeable here. These are the fields a player
+// writes rather than builds: the free text, and the scar log, which is
+// the one thing on the sheet that is only ever earned in play.
+function editableFor(id, ctx) {
+  const { state } = ctx;
+  if (id === 'backstory') {
+    return { get: () => state.backstory || '', set: (v) => { state.backstory = v; } };
+  }
+  if (id === 'notes') {
+    return { get: () => state.finishingNotes || '', set: (v) => { state.finishingNotes = v; } };
+  }
+  if (id === 'xp.earned') {
+    return {
+      get: () => String(state.xpEarned ?? 0),
+      set: (v) => { state.xpEarned = Math.max(0, Number(v) || 0); },
+      numeric: true,
+    };
+  }
+  const scar = id.match(/^scar\.(\w+)\.(\d+)\.text$/);
+  if (scar) {
+    const [, kind, idx] = scar;
+    const i = Number(idx);
+    return {
+      get: () => scarsOfKind(state, kind)[i]?.title || '',
+      set: (v) => {
+        const list = scarsOfKind(state, kind);
+        const existing = list[i];
+        if (existing) {
+          if (v.trim()) existing.title = v;
+          else state.scars = state.scars.filter((s2) => s2 !== existing);
+          return;
+        }
+        if (!v.trim()) return;
+        const nextId = (state.scars || []).reduce((m, s2) => Math.max(m, s2.id || 0), 0) + 1;
+        state.scars.push({
+          id: nextId, kind, physical: kind === 'battle', title: v, description: '',
+          belowZero: false,
+        });
+      },
+    };
+  }
+  return null;
+}
+
+function editControl(f, binding, persist) {
+  const multi = f.kind === 'para';
+  const node = el(multi ? 'textarea' : 'input', {
+    class: multi ? 'sf sf-para sf-edit' : 'sf sf-text sf-edit',
+    type: multi ? undefined : (binding.numeric ? 'number' : 'text'),
+    onInput: (e) => { binding.set(e.target.value); persist(); },
+  });
+  node.value = binding.get();
+  if (multi) {
+    const pitch = f.h / (f.lines || 1);
+    node.style.fontSize = typeSize(pitch * 0.52, 9);
+    node.style.lineHeight = typeSize(pitch, 11);
+  } else {
+    node.style.fontSize = typeSize(Math.min(f.h * 0.7, 42));
+  }
+  return place(node, f);
+}
+
+function place(node, f) {
+  node.style.left = `calc(var(--u) * ${f.x})`;
+  node.style.top = `calc(var(--u) * ${f.y})`;
+  node.style.width = `calc(var(--u) * ${f.w})`;
+  node.style.height = `calc(var(--u) * ${f.h})`;
+  return node;
+}
+
+// What a character actually is has to stay readable however small the
+// page is drawn, so every value carries a floor in real pixels. It is a
+// low one on purpose: raise it much past the height of the box the value
+// sits in and the text starts overrunning the art around it, which costs
+// more than the size gains.
+const FLOOR = 10;
+
+function typeSize(units, floor = FLOOR) {
+  return `max(${floor}px, calc(var(--u) * ${units}))`;
+}
+
+function textControl(f, value) {
+  const node = el('div', { class: 'sf sf-text' }, String(value ?? ''));
+  // A field can ask for its own size - an Element's rating is the whole
+  // point of its panel and is set far larger than a row of text.
+  const units = f.size ?? Math.min(f.h * 0.7, 42);
+  node.style.fontSize = typeSize(units);
+  if (f.align === 'end') node.classList.add('sf-right');
+  else if (f.centre || f.w <= 120) node.classList.add('sf-centre');
+  return place(node, f);
+}
+
+function paraControl(f, value) {
+  const node = el('div', { class: 'sf sf-para' }, String(value ?? ''));
+  const pitch = f.h / (f.lines || 1);
+  node.style.fontSize = typeSize(pitch * 0.52, 9);
+  node.style.lineHeight = typeSize(pitch, 11);
+  return place(node, f);
+}
+
+// Pips show where the character is; they do not set it. The - and +
+// beside each Vital do that, because a row of fifteen boxes is a poor
+// place to land a precise click and an easy place to lose a Health Level
+// by brushing the trackpad.
+function pipControl(f, filled) {
+  const wrap = el('div', { class: 'sf sf-pips' });
+  if (f.color) wrap.style.color = f.color;
+  for (let i = 0; i < f.n; i += 1) {
+    const pip = el('div', { class: i < filled ? 'sf-pip on' : 'sf-pip' });
+    pip.style.left = `calc(var(--u) * ${i * (f.size + f.gap)})`;
+    pip.style.width = `calc(var(--u) * ${f.size})`;
+    pip.style.height = `calc(var(--u) * ${f.size})`;
+    wrap.appendChild(pip);
+  }
+  return place(wrap, f);
+}
+
+// Tier boxes start at Trained, so a tier of 3 fills the first two.
+function tierControl(f, tier) {
+  const wrap = el('div', { class: 'sf sf-pips' });
+  if (f.color) wrap.style.color = f.color;
+  for (let i = 0; i < f.n; i += 1) {
+    const on = tier >= f.base + i;
+    const pip = el('div', { class: on ? 'sf-pip on' : 'sf-pip' });
+    pip.style.left = `calc(var(--u) * ${i * (f.size + f.gap)})`;
+    pip.style.width = `calc(var(--u) * ${f.size})`;
+    pip.style.height = `calc(var(--u) * ${f.size})`;
+    wrap.appendChild(pip);
+  }
+  return place(wrap, f);
+}
+
+function checkControl(f, on) {
+  const node = el('div', { class: on ? 'sf sf-check on' : 'sf sf-check' });
+  if (f.color) node.style.color = f.color;
+  return place(node, f);
+}
+
+// ---------------------------------------------------------------------------
+// the page stack
+// ---------------------------------------------------------------------------
+
+export function buildPagedSheet(state, data, opts = {}) {
+  const { refresh = () => {}, persist = () => {}, onRoll = () => {} } = opts;
+  if (!fieldMap) throw new Error('loadFieldMap() must resolve before building the sheet');
+
+  const figured = computeFiguredCharacteristics(state);
+  const { weapons, armour, gear } = splitGear(state, data);
+  const ctx = {
+    state,
+    data,
+    figured,
+    skills: takenSkills(state, data),
+    flaws: (state.flaws || []).filter((f) => f.level > 0),
+    resources: takenResources(state, data),
+    gifts: takenGifts(state),
+    weapons,
+    armour,
+    gear,
+    // A Gift's levels are rows of {level, effect}; what the character can
+    // do is the row they have reached. Gifts built from a menu instead
+    // carry no level table at all, so those fall back to their own text.
+    giftEffect: (g) => {
+      const entry = (data.gifts || []).find((d) => d.name === g.name);
+      if (!entry) return '';
+      const row = (entry.levels || []).find((l) => l.level === g.level);
+      // Gifts built from a menu have no Level table, so their text comes
+      // from the body - but the first line of a body is a heading, a rule
+      // or a table row as often as it is prose.
+      const prose = (line) => {
+        const t = line.trim();
+        return t && !t.startsWith('#') && !t.startsWith('|') && !t.startsWith('-');
+      };
+      const raw = row
+        ? (row.effect || '')
+        : ((entry.markdown || '').split(/\r?\n/).find(prose) || '');
+      // The rules are markdown; the sheet is a printed page. Emphasis
+      // markers and link brackets are noise once there is no renderer.
+      return raw
+        .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+        .replace(/\*\*([^*]+)\*\*/g, '$1')
+        .replace(/\*([^*]+)\*/g, '$1')
+        .replace(/`([^`]+)`/g, '$1')
+        .replace(/<br\s*\/?>/gi, ' ')
+        .trim();
+    },
+    // No Gift carries a Ki cost as a field - it is written into the level
+    // that charges it, so the number is read back out of that sentence.
+    // Nothing to find means nothing to show, not a zero.
+    giftKi: (g) => {
+      const text = ctx.giftEffect(g);
+      const m = /(\d+)\s*Ki\b/i.exec(text);
+      return m ? m[1] : '';
+    },
+    giftText: (g) => ctx.giftEffect(g),
+  };
+
+  const set = (fn) => { fn(); persist(); refresh(); };
+  const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+
+  // The art draws a - and a + beside every count that moves, and the
+  // generator registers each glyph as a button field, so the click lands
+  // exactly on what the player sees rather than near it.
+  const STEPPERS = {
+    'vital.health': {
+      get: () => state.currentHealth,
+      set: (v) => { state.currentHealth = v; },
+      lo: () => -figured['Health Levels'], hi: () => figured['Health Levels'],
+    },
+    // Poise has no below-zero range of its own to step into here; it
+    // floors at 0 and the Flaw-scar is what carries on from there.
+    'vital.poise': {
+      get: () => state.currentPoise,
+      set: (v) => { state.currentPoise = v; },
+      lo: () => 0, hi: () => figured.Poise,
+    },
+    'vital.sanity': {
+      get: () => state.currentSanity,
+      set: (v) => { state.currentSanity = v; },
+      lo: () => -figured.Sanity, hi: () => figured.Sanity,
+    },
+    'pool.ki': {
+      get: () => state.currentKi,
+      set: (v) => { state.currentKi = v; },
+      lo: () => 0, hi: () => figured.Ki,
+    },
+    // Spending a Fate Token is one move, not two: the held count goes
+    // down and the Scene's tally goes up together, and the + undoes both.
+    // The cap that matters is per Scene, so the tally has to be right
+    // without anyone remembering to keep it.
+    'pool.fate': {
+      get: () => state.currentFateTokens,
+      set: (v) => {
+        const spent = v < state.currentFateTokens ? 1 : -1;
+        state.currentFateTokens = v;
+        state.fateSpentThisScene = Math.max(0, (state.fateSpentThisScene ?? 0) + spent);
+      },
+      lo: () => 0, hi: () => fateTokenCap(state, data),
+    },
+    exhausted: {
+      get: () => state.exhausted ?? 0,
+      set: (v) => { state.exhausted = v; },
+      lo: () => 0, hi: () => 5,
+    },
+  };
+
+  function decorate(f, host) {
+    const id = f.id;
+
+    const step = id.match(/^(.*)\.(minus|plus)$/);
+    if (step && STEPPERS[step[1]]) {
+      const t = STEPPERS[step[1]];
+      const by = step[2] === 'plus' ? 1 : -1;
+      host.appendChild(place(el('button', {
+        type: 'button',
+        class: 'sf sf-step',
+        title: step[2] === 'plus' ? 'up one' : 'down one',
+        onClick: () => set(() => t.set(clamp(t.get() + by, t.lo(), t.hi()))),
+      }), f));
+      return;
+    }
+
+    // Resting is the one thing that moves several tracks at once, so it
+    // is a button on the sheet rather than a number to walk down by hand.
+    if (id === 'rest.short' || id === 'rest.long') {
+      const full = id === 'rest.long';
+      host.appendChild(place(el('button', {
+        type: 'button',
+        class: 'sf sf-roll',
+        title: full ? "A full night's rest" : 'A short rest',
+        onClick: () => set(() => applyRest(state, full)),
+      }), f));
+      return;
+    }
+
+    const below = id.match(/^scar\.(\w+)\.(\d+)\.below$/);
+    if (below) {
+      const entry = scarsOfKind(state, below[1])[Number(below[2])];
+      if (!entry) return;
+      host.appendChild(place(el('button', {
+        type: 'button',
+        class: 'sf sf-roll',
+        title: 'This scar went below 0 - it carries a Flaw until it heals',
+        onClick: () => set(() => { entry.belowZero = !entry.belowZero; }),
+      }), f));
+    }
+  }
+
+  // Whole-row hit targets that open a roller, laid over the row rather
+  // than over any one field in it.
+  function rollTarget(f, kind, label) {
+    const node = place(el('button', {
+      type: 'button',
+      class: 'sf sf-roll',
+      title: `Roll ${label}`,
+      onClick: () => onRoll(kind, label),
+    }), f);
+    return node;
+  }
+
+  const stack = el('div', { class: 'sheet-pages' });
+  const views = pageSequence({ gift: ctx.gifts.length });
+
+  // A repeated page shows the same slots again, reading further down the
+  // character's list. Rewriting the index here means every field, every
+  // roll target and every control follows without knowing repeats exist.
+  const shift = (id, view) => {
+    if (!view.group || !id.startsWith(`${view.group}.`)) return id;
+    const part = id.split('.');
+    part[1] = String(Number(part[1]) + view.offset);
+    return part.join('.');
+  };
+
+  views.forEach((view, index) => {
+    const { page } = view;
+    const pageEl = el('div', { class: 'sheet-page' });
+    pageEl.style.backgroundImage = `url(${new URL(`./bg${page}.jpg`, import.meta.url)})`;
+    pageEl.appendChild(el('img', {
+      class: 'sheet-art',
+      src: String(new URL(`./page${page}.svg`, import.meta.url)),
+      alt: `Character sheet page ${index + 1}`,
+    }));
+
+    const overlay = el('div', { class: 'sheet-overlay' });
+    const onPage = fieldMap.filter((f) => f.page === page);
+
+    onPage.forEach((f) => {
+      // The page number is the one thing that cannot be printed into the
+      // art, because how many pages there are depends on the character.
+      if (f.id === 'page.number') {
+        overlay.appendChild(textControl(f, `PAGE ${index + 1} OF ${views.length}`));
+        return;
+      }
+      const id = shift(f.id, view);
+      const value = readField(id, ctx);
+      const editable = editableFor(id, ctx);
+      if (editable) overlay.appendChild(editControl(f, editable, persist));
+      else if (f.kind === 'text') overlay.appendChild(textControl(f, value));
+      else if (f.kind === 'para') overlay.appendChild(paraControl(f, value));
+      else if (f.kind === 'pips') overlay.appendChild(pipControl(f, Number(value) || 0));
+      else if (f.kind === 'tiers') overlay.appendChild(tierControl(f, Number(value) || 0));
+      else if (f.kind === 'check') overlay.appendChild(checkControl(f, !!value));
+      decorate({ ...f, id }, overlay);
+    });
+
+    // Click a Skill, a Gift, a Resource or a weapon to roll it. The
+    // target covers the row's name field, which is the part a finger
+    // goes for.
+    onPage.forEach((f) => {
+      const [group, idx, leaf] = shift(f.id, view).split('.');
+      if (leaf !== 'name') return;
+      const i = Number(idx);
+      if (group === 'skill' && ctx.skills[i]) {
+        overlay.appendChild(rollTarget(f, 'skill', ctx.skills[i].name));
+      } else if (group === 'gift' && ctx.gifts[i]) {
+        overlay.appendChild(rollTarget(f, 'gift', ctx.gifts[i].name));
+      } else if (group === 'resource' && ctx.resources[i]?.pushable) {
+        overlay.appendChild(rollTarget(f, 'resource', ctx.resources[i].name));
+      } else if (group === 'weapon' && ctx.weapons[i]) {
+        overlay.appendChild(rollTarget(f, 'weapon', ctx.weapons[i].name));
+      }
+    });
+
+    pageEl.appendChild(overlay);
+    stack.appendChild(pageEl);
+  });
+
+  // Every size on the page is written in page units; this is what a unit
+  // is worth right now.
+  // Nothing to measure: a page is drawn at its own size and the
+  // stylesheet fixes one page unit at one pixel.
+
+  return stack;
+}
+
+export { readField, takenSkills, takenResources, splitGear, scarsOfKind };

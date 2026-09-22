@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paged sheet preview</title>
+<link rel="stylesheet" href="./style.css">
+<style>
+  body { margin: 0; padding: 1rem; }
+  /* style.css makes body a column flex container, and an auto side
+     margin on a flex item stops it stretching - so it needs a width. */
+  .wrap { max-width: 1700px; width: 100%; margin: 0 auto; box-sizing: border-box; }
+</style>
+</head>
+<body>
+<div class="wrap" id="root">Loading rules...</div>
+<script type="module">
+// A harness for looking at the paged sheet with a real character in it,
+// without walking the whole creator. Not linked from the app.
+import { loadRulesData } from './rules-data.js';
+import { createInitialState, mergeCharacterState } from './state.js';
+import sheetStep from './steps/13-sheet.js';
+
+const root = document.getElementById('root');
+const params = new URLSearchParams(location.search);
+const who = params.get('c') || 'Viktor Grave';
+
+const data = await loadRulesData();
+let state = createInitialState(data);
+try {
+  const res = await fetch(`./sheet/sample/${encodeURIComponent(who)}.json`);
+  if (res.ok) state = mergeCharacterState(data, await res.json());
+} catch (err) {
+  console.warn('no sample character, showing a blank sheet', err);
+}
+root.innerHTML = '';
+await sheetStep.render(root, { state, data, persist: () => {} });
+</script>
+</body>
+</html>

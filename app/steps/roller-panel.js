@@ -59,7 +59,7 @@ function diceSummary(rollResult) {
 // the top - a from-scratch roll against an unpurchased Skill is already
 // covered by that Untrained option, so listing every unpurchased Skill by
 // name too would just be a long wall of redundant Untrained entries.
-export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
+export function buildSkillRollSection(state, data, refreshHeader = () => {}, preselect = null) {
   const section = el('div', { class: 'roller-gift-check' });
   const resultEl = el('div', { class: 'roller-result' });
 
@@ -75,7 +75,9 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
     return el && el !== 'Context-dependent' ? el : data.attributes[0].name;
   }
 
-  let selectedSkill = UNTRAINED_VALUE;
+  // The paged sheet opens this panel by clicking a Skill row, so it can
+  // name the Skill it wants already chosen.
+  let selectedSkill = preselect && state.skills[preselect] > 0 ? preselect : UNTRAINED_VALUE;
   let selectedAttribute = defaultElementFor(selectedSkill);
   let selectedDifficulty = 5;
   let advantageOn = false;
@@ -102,7 +104,10 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
       el('option', { value: UNTRAINED_VALUE }, 'No Skill (Untrained)'),
       ...data.skillCatalog
         .filter((s) => state.skills[s.name] > 0)
-        .map((s) => el('option', { value: s.name }, `${s.name} - ${skillTierName(data, state.skills[s.name])}`)),
+        .map((s) => el('option', {
+          value: s.name,
+          selected: s.name === selectedSkill ? '' : undefined,
+        }, `${s.name} - ${skillTierName(data, state.skills[s.name])}`)),
     ],
   );
 
@@ -295,7 +300,7 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}) {
 // or Index 6 always) zeroes the Resource out instead (state.
 // resourceZeroed), unless the roll is a critical success - except Index 6
 // itself, which is never saved by a crit.
-export function buildResourceCheckSection(state, data) {
+export function buildResourceCheckSection(state, data, preselect = null) {
   const section = el('div', { class: 'roller-gift-check' });
 
   // Only the Resources the rules say can be pushed. The rest are a
@@ -304,7 +309,9 @@ export function buildResourceCheckSection(state, data) {
   const ownedResources = data.resources.filter(
     (r) => state.resources[r.name] > 0 && r.pushable,
   );
-  let selectedResource = ownedResources[0]?.name ?? null;
+  let selectedResource = ownedResources.some((r) => r.name === preselect)
+    ? preselect
+    : (ownedResources[0]?.name ?? null);
   let selectedResourceIndex = 3;
 
   const resourceSelect = el(
@@ -317,7 +324,10 @@ export function buildResourceCheckSection(state, data) {
       },
     },
     ownedResources.map((r) =>
-      el('option', { value: r.name }, `${r.name} (Level ${state.resources[r.name]})`),
+      el('option', {
+        value: r.name,
+        selected: r.name === selectedResource ? '' : undefined,
+      }, `${r.name} (Level ${state.resources[r.name]})`),
     ),
   );
 

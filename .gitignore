@@ -36,3 +36,8 @@ _preview/
 # a release.
 *.before-*
 *.removed
+
+# The paged sheet's dev harness loads a character from here. Those are
+# real characters, not sample data, and they are nobody else's business.
+app/sheet/sample/
+tools/character-sheet/__pycache__/

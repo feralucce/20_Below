@@ -264,6 +264,13 @@ body {
   width: 100%;
 }
 
+/* 900px is a reading column, which is right for every step that is a
+   form and wrong for the one that is a page. The sheet takes the window,
+   because how wide it can be is exactly how readable it is. */
+.step-panel.step-panel-sheet {
+  max-width: min(1700px, 100%);
+}
+
 .step-panel h2 {
   margin-top: 0;
 }
@@ -1242,4 +1249,196 @@ tr.purchased td {
 .boost-die-disabled {
   color: var(--text-dim);
   cursor: not-allowed;
+}
+
+/* ---- The paged character sheet -------------------------------------- */
+/* The five printed pages, filled in live. Everything inside a page is
+   sized in page units via --u, which paged-sheet.js keeps equal to one
+   2550ths of the page's rendered width, so the overlay tracks the art at
+   any size without a second set of numbers. */
+
+/* The page is drawn at a fixed fraction of its real size and the panel
+   scrolls to it. Fitting a whole 300dpi page into a side panel made
+   every number on it too small to read; drawing it at full size made it
+   far larger than any panel. The scale is the player's to set, and one
+   page unit follows it, so nothing here needs measuring. */
+.sheet-pages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 100%;
+  overflow: auto;
+  /* So a page can size itself against this element's own width. Measuring
+     it from JavaScript meant catching the right moment, and there were
+     several wrong ones. */
+  container-type: inline-size;
+}
+
+.sheet-page {
+  position: relative;
+  flex: 0 0 auto;
+  /* The page is exactly as wide as the panel, whatever the panel is
+     doing, and the page unit follows. No number is computed anywhere. */
+  width: 100cqw;
+  height: calc(100cqw * 3300 / 2550);
+  --u: calc(100cqw / 2550);
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+}
+
+.sheet-art,
+.sheet-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sheet-art {
+  pointer-events: none;
+  user-select: none;
+}
+
+.sf {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.sf-text,
+.sf-para {
+  display: flex;
+  align-items: center;
+  color: var(--text, #e8f0f6);
+  font-family: Montserrat, "Segoe UI", system-ui, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.1;
+}
+
+.sf-centre {
+  justify-content: center;
+}
+
+.sf-right {
+  justify-content: flex-end;
+}
+
+.sf-para {
+  display: block;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
+/* Pips and tier boxes sit exactly on the boxes drawn in the art, so they
+   only ever add the fill - the outline underneath is the printed one. */
+/* The fill colour comes from the field map, so a filled pip reads as the
+   block it belongs to - green Health, gold Poise, red Flaw Levels - rather
+   than as one flat accent everywhere. */
+.sf-pips {
+  pointer-events: none;
+  color: var(--accent, #3d84c4);
+}
+
+.sf-pip {
+  position: absolute;
+  top: 0;
+  border-radius: calc(var(--u) * 9);
+  background: transparent;
+}
+
+.sf-pip.on {
+  background: currentColor;
+  opacity: 0.85;
+}
+
+.sf-check {
+  border-radius: calc(var(--u) * 9);
+  color: var(--accent, #3d84c4);
+}
+
+.sf-check.on {
+  background: currentColor;
+  opacity: 0.85;
+}
+
+.sf-step {
+  position: absolute;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+.sf-step:hover,
+.sf-step:focus-visible {
+  background: rgba(61, 132, 196, 0.35);
+  color: var(--text, #e8f0f6);
+  outline: none;
+}
+
+/* A roll target covers a row's name field. Invisible until pointed at -
+   the sheet should look printed, not like a form. */
+.sf-roll {
+  border: none;
+  background: transparent;
+  border-radius: calc(var(--u) * 9);
+  cursor: pointer;
+  padding: 0;
+}
+
+.sf-roll:hover,
+.sf-roll:focus-visible {
+  background: rgba(61, 132, 196, 0.28);
+  outline: none;
+}
+
+.sheet-roller {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 12, 0.72);
+  z-index: 50;
+}
+
+.sheet-roller-panel {
+  background: var(--panel, #12232e);
+  border: 1px solid var(--accent, #3d84c4);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  max-width: min(46rem, 92vw);
+  max-height: 88vh;
+  overflow: auto;
+}
+
+/* One page at a time, with the pages and Advancement as tabs. */
+.sheet-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+/* Page tabs are a place marker, not a heading - they should not compete
+   with the sheet they sit above. */
+.sheet-tabs .tab-btn {
+  padding: 0.22rem 0.6rem;
+  font-size: 0.72rem;
+}
+
+.sheet-tabs .tab-btn.active {
+  padding-bottom: 0.3rem;
+}
+
+.sheet-page[hidden],
+.sheet-advancement[hidden] {
+  display: none;
 }
