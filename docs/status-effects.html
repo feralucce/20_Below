@@ -48,8 +48,25 @@ nav_section: table
     padding-left: 1.25rem;
     line-height: 1.9;
   }
+  .toc h3 {
+    margin: 1rem 0 0.25rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+  }
+  .toc h3:first-of-type { margin-top: 0; }
   .toc a { text-decoration: none; }
   .toc a:hover { text-decoration: underline; }
+  .group-head {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--panel-border);
+  }
   .status-section {
     background: var(--panel);
     border: 1px solid var(--panel-border);
@@ -134,17 +151,44 @@ nav_section: table
 
   <nav class="toc">
     <h2>Effects</h2>
+    <h3>From a roll</h3>
     <ol>
+      <li><a href="#off-balance">Off Balance</a></li>
       <li><a href="#distracted">Distracted</a></li>
       <li><a href="#surprised">Surprised</a></li>
+      <li><a href="#staggered">Staggered</a></li>
+    </ol>
+    <h3>From a Vital at zero</h3>
+    <ol>
       <li><a href="#flustered">Flustered</a></li>
+      <li><a href="#humiliated">Humiliated</a></li>
       <li><a href="#overwhelmed">Overwhelmed</a></li>
       <li><a href="#shattered">Shattered</a></li>
+      <li><a href="#unconscious-dying">Unconscious, then Dying</a></li>
+    </ol>
+    <h3>From the world</h3>
+    <ol>
       <li><a href="#exhausted">Exhausted</a></li>
+      <li><a href="#blinded">Blinded</a></li>
+      <li><a href="#deafened">Deafened</a></li>
+      <li><a href="#grabbed">Grabbed</a></li>
+      <li><a href="#prone">Prone</a></li>
+      <li><a href="#frightened">Frightened</a></li>
+      <li><a href="#envenomed">Envenomed</a></li>
+      <li><a href="#bleeding">Bleeding</a></li>
     </ol>
   </nav>
 
-  <section class="status-section" id="distracted">
+  <h2 class="group-head">From a roll</h2>
+
+  <section class="status-section" id="off-balance">
+    <h2>Off Balance</h2>
+    <p><strong>Trigger:</strong> rolling a catastrophic failure on any roll during combat.</p>
+    <p><strong>Effect:</strong> everything you roll is at Disadvantage. It does not stack - you are Off Balance or you are not, however many catastrophic failures you roll in a round.</p>
+    <p class="aside"><strong>Clears:</strong> on its own at the end of your next turn, with no action or roll needed. A Fate Token spent to Shrug Off an Effect clears it immediately, though that never undoes the separate consequence the catastrophic failure caused. Never Off Balance grants a reroll of the triggering failure itself.</p>
+  </section>
+
+<section class="status-section" id="distracted">
     <h2>Distracted</h2>
     <p><strong>Trigger:</strong> losing a Health Level, or being the target of a Kotodama effect, while resolving a Slow Action Bracket action. A Gift, an environmental hazard, or GM fiat can also impose it directly, whether or not a Slow action is involved.</p>
     <div class="roll-box">Atropos + Difficulty, roll 2d10, to hold focus</div>
@@ -155,7 +199,7 @@ nav_section: table
     <p class="aside"><strong>Clears:</strong> resolved immediately by the roll itself - success or failure, there's nothing lingering afterward. Concentration grants immunity to being Distracted, regardless of the source.</p>
   </section>
 
-  <section class="status-section" id="surprised">
+<section class="status-section" id="surprised">
     <h2>Surprised</h2>
     <p><strong>Trigger:</strong> not noticing a threat before combat begins - typically because an opposing Stealth roll beat your Perception, or the GM judges the fiction calls for it.</p>
     <p><strong>Effect:</strong> Disadvantage on everything - attacks, and any other roll where being ready matters - for the rest of the round you're caught in.</p>
@@ -165,7 +209,16 @@ nav_section: table
     <p class="aside"><strong>Clears:</strong> automatically, once that round ends - no roll needed. Alertness grants immunity to being Surprised while conscious.</p>
   </section>
 
-  <section class="status-section" id="flustered">
+  <section class="status-section" id="staggered">
+    <h2>Staggered</h2>
+    <p><strong>Trigger:</strong> named by whatever causes it - a blow that lands wrong, a shock, a moment of not knowing which way is up.</p>
+    <p><strong>Effect:</strong> your declared Action Bracket drops one step: Fast becomes Normal, Normal becomes Slow. Declared Slow, you still act, but lose the called shot and the Advantage that Slow normally grants.</p>
+    <p class="aside"><strong>Clears:</strong> 1 Ki per step buys it straight back, the same spend that bumps a band up in the first place. Otherwise it clears at the end of your next turn. Staggered does not stack.</p>
+  </section>
+
+  <h2 class="group-head">From a Vital at zero</h2>
+
+<section class="status-section" id="flustered">
     <h2>Flustered</h2>
     <p><strong>Trigger:</strong> your Poise reaching 0.</p>
     <div class="chart-frame">
@@ -176,7 +229,14 @@ nav_section: table
     <p class="aside"><strong>Clears:</strong> lasts the rest of the Scene by default, but you can spend an action to roll Presence against a Difficulty and end it immediately on success. No Gift currently grants immunity to Flustered - intentional.</p>
   </section>
 
-  <section class="status-section" id="overwhelmed">
+  <section class="status-section" id="humiliated">
+    <h2>Humiliated</h2>
+    <p><strong>Trigger:</strong> your Poise dropping below 0.</p>
+    <p><strong>Effect:</strong> you cannot take the lead, negotiate, or be trusted to speak for the group - socially deferring and complying rather than asserting yourself. Unlike Shattered, you still act fully on your own; this is social paralysis, not physical.</p>
+    <p class="aside"><strong>Clears:</strong> once Poise is restored to 0. While below 0, a rest or 1 Ki brings Poise back to 1 only, never to full.</p>
+  </section>
+
+<section class="status-section" id="overwhelmed">
     <h2>Overwhelmed</h2>
     <p><strong>Trigger:</strong> your Sanity reaching 0.</p>
     <div class="chart-frame">
@@ -186,7 +246,7 @@ nav_section: table
     <p class="aside"><strong>Clears:</strong> once you're removed from whatever caused it and get a chance to rest, or by spending 1 Ki - which also refills Sanity back to full.</p>
   </section>
 
-  <section class="status-section" id="shattered">
+<section class="status-section" id="shattered">
     <h2>Shattered</h2>
     <p><strong>Trigger:</strong> your Sanity dropping below 0.</p>
     <div class="chart-frame">
@@ -196,9 +256,18 @@ nav_section: table
     <p class="aside"><strong>Clears:</strong> the same two ways as Overwhelmed - removal-plus-rest, or 1 Ki - but either one only restores Sanity to 1, not fully; normal recovery resumes from there. Dropping below 0 always leaves a permanent mental scar, even if you recover with Ki.</p>
   </section>
 
-  <section class="status-section" id="exhausted">
+  <section class="status-section" id="unconscious-dying">
+    <h2>Unconscious, then Dying</h2>
+    <p><strong>Trigger:</strong> your Health Levels reaching 0, and then dropping below it.</p>
+    <p><strong>Effect:</strong> at 0 you fall unconscious and cannot act. Below 0 you are Dying: still unconscious, still losing ground. The negative range mirrors the positive one, so reaching minus your full Health Levels is death.</p>
+    <p class="aside"><strong>Clears:</strong> below 0, a Short Rest recovers nothing and a Full Night's Rest buys back 1 Health Level, and only one, until you are back to 0. Unstoppable lets a character stay conscious and act throughout instead of blacking out at 0.</p>
+  </section>
+
+  <h2 class="group-head">From the world</h2>
+
+<section class="status-section" id="exhausted">
     <h2>Exhausted</h2>
-    <p><strong>Trigger:</strong> pushing a sustained physical exertion (forced marching, hard labor, running flat-out) past its free baseline duration, set by your Stamina. Each additional unit of time beyond that baseline requires a roll.</p>
+    <p><strong>Trigger:</strong> pushing a sustained physical exertion (forced marching, hard labor, running flat-out) past its free baseline duration, set by your Stamina. Each additional unit of time beyond that baseline requires a roll. Cold and heat impose levels too, on a timed exposure rate rather than a roll.</p>
     <div class="roll-box">Water + Difficulty, roll 2d10 (Difficulty drops each successive check)</div>
     <p><strong>Effect:</strong> cumulative, stacking one level at a time on a failed check:</p>
     <div class="chart-frame">
@@ -208,11 +277,60 @@ nav_section: table
       <tr><th>Level</th><th>Effect</th></tr>
       <tr><td>1</td><td>Disadvantage on Physical rolls</td></tr>
       <tr><td>2</td><td>Disadvantage on all rolls</td></tr>
-      <tr><td>3</td><td>Movement Rate halved</td></tr>
-      <tr><td>4</td><td>Can't take Slow actions</td></tr>
-      <tr><td>5</td><td>Collapse - unconscious, can't act until rested</td></tr>
+      <tr><td>3</td><td>Movement Rate halved; no Fast actions</td></tr>
+      <tr><td>4</td><td>Every Ki spend costs +1</td></tr>
+      <tr><td>5</td><td>Unconscious, until warmed, cooled, or rested</td></tr>
     </table>
-    <p class="aside"><strong>Clears:</strong> a Short Rest drops one level; a Full Night's Rest clears it entirely - the same Short/Full split Health Level recovery uses.</p>
+    <p class="aside"><strong>Clears:</strong> a Short Rest drops one level; a Full Night's Rest clears it entirely - the same Short/Full split Health Level recovery uses. A level taken from an environment cannot be cleared while you are still in it: resting in the cold does not clear cold.</p>
+  </section>
+
+  <section class="status-section" id="blinded">
+    <h2>Blinded</h2>
+    <p><strong>Trigger:</strong> darkness you have no answer for, a flash, a faceful of something.</p>
+    <p><strong>Effect:</strong> Disadvantage on anything that needs sight. You neither use nor suffer any effect that requires seeing or being seen - no eye contact, no reading the room, no Gift that depends on the target looking at you.</p>
+    <p class="aside"><strong>Clears:</strong> with whatever caused it. Heightened Senses can sidestep it entirely.</p>
+  </section>
+
+  <section class="status-section" id="deafened">
+    <h2>Deafened</h2>
+    <p><strong>Trigger:</strong> an explosion, a pressure wave, water, a Gift.</p>
+    <p><strong>Effect:</strong> Disadvantage on anything that needs hearing. You neither use nor suffer any effect that has to be heard to work.</p>
+    <p class="aside"><strong>Clears:</strong> with whatever caused it. A Deafened character can still speak, so a Kotodama of their own is unaffected.</p>
+  </section>
+
+  <section class="status-section" id="grabbed">
+    <h2>Grabbed</h2>
+    <p><strong>Trigger:</strong> being held - a hand, a jaw, a coil, a will.</p>
+    <p><strong>Effect:</strong> your Movement Rate is 0, and you roll at Disadvantage on everything except escaping or attacking whatever holds you.</p>
+    <p class="aside"><strong>Clears:</strong> a contested roll against the grabber's Potence - or against its Soak where the grip is a thing rather than a person, GM's call - or when the grabber lets go.</p>
+  </section>
+
+  <section class="status-section" id="prone">
+    <h2>Prone</h2>
+    <p><strong>Trigger:</strong> being put on the ground, whether you dived, were knocked down, or fell.</p>
+    <p><strong>Effect:</strong> your own attacks are at Disadvantage, and Melee attacks against you gain Advantage. Attacks from further out are unaffected.</p>
+    <p class="aside"><strong>Clears:</strong> one action spent standing up, which is a Fast character's entire turn.</p>
+  </section>
+
+  <section class="status-section" id="frightened">
+    <h2>Frightened</h2>
+    <p><strong>Trigger:</strong> something too much to face. Frightened always has a source, and the condition is of that source rather than of the world in general.</p>
+    <p><strong>Effect:</strong> Disadvantage on rolls against the source, and you cannot willingly move closer to it. You can still fight it if it comes to you, still run, still act normally on everything else.</p>
+    <p class="aside"><strong>Clears:</strong> when the source can no longer be perceived, or at the end of the Scene, whichever comes first.</p>
+  </section>
+
+  <section class="status-section" id="envenomed">
+    <h2>Envenomed</h2>
+    <p><strong>Trigger:</strong> venom, toxin, or a drug in the blood. Venomous creatures impose it on a successful hit, and each bestiary entry says so.</p>
+    <p><strong>Effect:</strong> Disadvantage on Physical rolls. It does not clear on a rest - the body cannot sleep this one off.</p>
+    <p class="aside"><strong>Clears:</strong> with treatment - a Medicine roll against a Difficulty the GM sets by the venom - or with 1 Ki, spent to burn it out.</p>
+  </section>
+
+  <section class="status-section" id="bleeding">
+    <h2>Bleeding</h2>
+    <p><strong>Trigger:</strong> named by whatever opened the wound.</p>
+    <p><strong>Effect:</strong> 1 die against Soak at the end of each round, resolved per-die like any other attack, a connecting die costing a Health Level as usual.</p>
+    <p class="aside"><strong>Clears:</strong> a Normal action to stem it, spent by you or by somebody who reaches you, or any Gift that closes wounds. Being on fire is the same shape at 2 dice per round.</p>
   </section>
 
 </main>

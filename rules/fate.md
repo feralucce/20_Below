@@ -76,13 +76,13 @@ Action Brackets themselves (Fast/Normal/Slow) cost nothing to declare - that's j
 
 | Level | Effect |
 |---|---|
-| 1 | Disadvantage on Physical rolls. |
-| 2 | Disadvantage on all rolls. |
-| 3 | Movement Rate halved. |
-| 4 | Can't take Slow actions - too worn down for that kind of precision. |
-| 5 | Collapse: falls unconscious, can't act until rested. |
+| 1 | Disadvantage on Physical rolls |
+| 2 | Disadvantage on **all** rolls |
+| 3 | Movement Rate halved; **no Fast actions** |
+| 4 | Every Ki spend costs **+1** |
+| 5 | Unconscious, until warmed, cooled, or rested |
 
-A Short Rest drops one level of Exhausted; a Full Night's Rest clears it entirely, mirroring [Health Level Recovery](rules.md#health-level-recovery)'s own split.
+A Short Rest drops one level of Exhausted; a Full Night's Rest clears it entirely, mirroring [Health Level Recovery](rules.md#health-level-recovery)'s own split. Exertion is one source; [cold and heat](rules.md#common-hazards) are the other, and a level taken from an environment cannot be cleared while the character is still in it. [Exhausted](rules.md#exhausted) holds the full entry.
 
 ## Kotodama
 
