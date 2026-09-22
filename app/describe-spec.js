@@ -50,7 +50,9 @@ export const BOON_DESCRIBE = {
 
 export const FLAW_DESCRIBE = {
   'Incantations': { prompt: 'What do you have to say out loud?', count: one },
+  'Notable Appearance': { prompt: 'What do people notice?', count: one },
   'Pariah': { prompt: 'What category do people put you in?', count: one },
+  'Secret': { prompt: 'What are you hiding?', count: one },
   'Shaken Confidence': { prompt: 'What happened?', count: one },
 };
 

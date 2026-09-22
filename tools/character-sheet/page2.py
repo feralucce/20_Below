@@ -64,30 +64,37 @@ for ci in range(3):
 # --- boons and flaws ------------------------------------------------------
 bf = 1932
 BFH = 570
-half = (INNER - 48) / 2.0
-frame(MARGIN, bf, half, BFH, CYAN, "BOONS", "NO LEVELS")
+# Boons carry a name and a points box; Flaws carry a name, five Level
+# pips, and - for a Secret or a Notable Appearance - what it actually is.
+# So the width is split where the writing is, not down the middle.
+bw = (INNER - 48) * 0.42
+fw = (INNER - 48) - bw
+frame(MARGIN, bf, bw, BFH, CYAN, "BOONS", "NO LEVELS")
 label(MARGIN + 42, bf + 120, "TRAIT", 30, DIM, 3.6)
-label(MARGIN + half - 109, bf + 120, "POINTS", 30, DIM, 3.6, "middle")
-line(MARGIN + 42, bf + 138, half - 84, CYAN, 0.35)
+label(MARGIN + bw - 109, bf + 120, "POINTS", 30, DIM, 3.6, "middle")
+line(MARGIN + 42, bf + 138, bw - 84, CYAN, 0.35)
 for i in range(7):
     y = bf + 204 + i * 54
-    line(MARGIN + 48, y, half - 240)
-    field("boon.%d.name" % i, "text", MARGIN + 48, y - 42, half - 240, 48, slot=i)
-    box(MARGIN + half - 132, y - 33, 45, CYAN, 3.9, 9)
-    field("boon.%d.points" % i, "text", MARGIN + half - 132, y - 33, 45, 45,
+    line(MARGIN + 48, y, bw - 240)
+    field("boon.%d.name" % i, "text", MARGIN + 48, y - 42, bw - 240, 48, slot=i)
+    box(MARGIN + bw - 132, y - 33, 45, CYAN, 3.9, 9)
+    field("boon.%d.points" % i, "text", MARGIN + bw - 132, y - 33, 45, 45,
           slot=i, centre=True)
 
-fx = MARGIN + half + 48
-frame(fx, bf, half, BFH, RED, "FLAWS", "LEVEL 1 - 5")
+fx = MARGIN + bw + 48
+frame(fx, bf, fw, BFH, RED, "FLAWS", "LEVEL 1 - 5, AND WHAT IT IS")
 label(fx + 42, bf + 120, "TRAIT", 30, DIM, 3.6)
-label(fx + half - 42, bf + 120, "LEVEL", 30, DIM, 3.6, "end")
-line(fx + 42, bf + 138, half - 84, RED, 0.35)
+label(fx + fw - 42, bf + 120, "LEVEL", 30, DIM, 3.6, "end")
+line(fx + 42, bf + 138, fw - 84, RED, 0.35)
 for i in range(7):
     y = bf + 204 + i * 54
-    line(fx + 48, y, half - 378)
-    field("flaw.%d.name" % i, "text", fx + 48, y - 42, half - 378, 48, slot=i)
-    pips(fx + half - 330, y - 33, 5, 45, RED, 12)
-    field("flaw.%d.level" % i, "pips", fx + half - 330, y - 33, 5 * 57 - 12, 45,
+    line(fx + 48, y, fw - 378)
+    # The name carries what the Flaw is as well as its name, so it is set
+    # a size down: "Notable Appearance - burn scarring down his jaw" has
+    # to fit on the line it is written on.
+    field("flaw.%d.name" % i, "text", fx + 48, y - 42, fw - 378, 48, slot=i, size=29)
+    pips(fx + fw - 330, y - 33, 5, 45, RED, 12)
+    field("flaw.%d.level" % i, "pips", fx + fw - 330, y - 33, 5 * 57 - 12, 45,
           slot=i, n=5, size=45, gap=12, color=RED)
 
 # --- resources ------------------------------------------------------------

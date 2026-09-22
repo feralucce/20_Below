@@ -14,6 +14,9 @@
 import { el } from '../ui.js';
 import {
   applyRest,
+  boonNotes,
+  flawNotes,
+  giftNotes,
   computeFiguredCharacteristics,
   effectiveResourceLevel,
   fateTokenCap,
@@ -30,7 +33,11 @@ let repeats = [];
 
 export async function loadFieldMap() {
   if (fieldMap) return fieldMap;
-  const res = await fetch(new URL('./fields.json', import.meta.url));
+  // Always revalidate. The map says where every control goes and the
+  // page art says where everything is drawn; a cached map paired with
+  // fresh art puts every value in the wrong place, and it looks like a
+  // layout bug rather than a stale file.
+  const res = await fetch(new URL('./fields.json', import.meta.url), { cache: 'no-cache' });
   const doc = await res.json();
   fieldMap = doc.fields;
   // Pages that are templates rather than fixed pages, e.g. Gifts, which
@@ -151,6 +158,15 @@ function scarsOfKind(state, kind) {
 // what goes in each named rectangle
 // ---------------------------------------------------------------------------
 
+// A Secret is not "Secret", it is the thing you are hiding; a Notable
+// Appearance is what people notice. The creator asks, and the answer is
+// the useful half - so the sheet prints it beside the name rather than
+// leaving the player to remember which secret this was.
+function named(name, notes) {
+  const written = (notes || []).filter(Boolean).join('; ');
+  return written ? `${name} - ${written}` : name;
+}
+
 const FIGURED_KEYS = {
   Defence: 'Defense',
   SocialDef: 'Social Defense',
@@ -216,12 +232,13 @@ function readField(id, ctx) {
     case 'boon': {
       const b = state.boons[Number(part[1])];
       if (!b) return '';
-      return part[2] === 'points' ? b.points : b.name;
+      return part[2] === 'points' ? b.points : named(b.name, boonNotes(b));
     }
     case 'flaw': {
       const f = ctx.flaws[Number(part[1])];
       if (!f) return part[2] === 'level' ? 0 : '';
-      return part[2] === 'level' ? f.level : f.name;
+      if (part[2] === 'level') return f.level;
+      return named(f.name, flawNotes(f));
     }
     case 'resource': {
       const r = ctx.resources[Number(part[1])];
@@ -235,7 +252,7 @@ function readField(id, ctx) {
       const g = ctx.gifts[Number(part[1])];
       if (!g) return part[2] === 'level' ? 0 : '';
       if (part[2] === 'level') return g.level;
-      if (part[2] === 'name') return g.name;
+      if (part[2] === 'name') return named(g.name, giftNotes(g));
       if (part[2] === 'ki') return ctx.giftKi(g);
       if (part[2] === 'does') return ctx.giftText(g);
       if (part[2] === 'adders') return (g.adders || []).join(', ');

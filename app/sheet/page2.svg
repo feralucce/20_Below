@@ -257,71 +257,71 @@
   <rect x="2193" y="1842" width="36" height="36" rx="8" fill="#01050A" fill-opacity="0.55" stroke="#7BC47F" stroke-width="3.6" stroke-opacity="0.72"/>
   <rect x="2253" y="1842" width="36" height="36" rx="8" fill="#01050A" fill-opacity="0.55" stroke="#7BC47F" stroke-width="3.6" stroke-opacity="0.72"/>
   <rect x="2313" y="1842" width="36" height="36" rx="8" fill="#01050A" fill-opacity="0.55" stroke="#7BC47F" stroke-width="3.6" stroke-opacity="0.72"/>
-  <path d="M159 1932 H1209 A42 42 0 0 1 1251 1974 V2460 A42 42 0 0 1 1209 2502 H159 A42 42 0 0 1 117 2460 V1974 A42 42 0 0 1 159 1932 Z" fill="#01050A" fill-opacity="0.55"/>
-  <path d="M159 1932 H1209 A42 42 0 0 1 1251 1974 V2460 A42 42 0 0 1 1209 2502 H159 A42 42 0 0 1 117 2460 V1974 A42 42 0 0 1 159 1932 Z" fill="none" stroke="#3FD0E0" stroke-width="5"/>
+  <path d="M159 1932 H1027.56 A42 42 0 0 1 1069.56 1974 V2460 A42 42 0 0 1 1027.56 2502 H159 A42 42 0 0 1 117 2460 V1974 A42 42 0 0 1 159 1932 Z" fill="#01050A" fill-opacity="0.55"/>
+  <path d="M159 1932 H1027.56 A42 42 0 0 1 1069.56 1974 V2460 A42 42 0 0 1 1027.56 2502 H159 A42 42 0 0 1 117 2460 V1974 A42 42 0 0 1 159 1932 Z" fill="none" stroke="#3FD0E0" stroke-width="5"/>
   <text x="159" y="1998" font-family="'Segoe UI Semibold', 'Segoe UI', Montserrat, system-ui, sans-serif" font-size="45" font-weight="600" letter-spacing="1.8" fill="#FFFFFF" text-anchor="start">BOONS</text>
-  <text x="1209" y="1995" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="32" letter-spacing="4.8" fill="#79DEE9" text-anchor="end">NO LEVELS</text>
+  <text x="1027.56" y="1995" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="32" letter-spacing="4.8" fill="#79DEE9" text-anchor="end">NO LEVELS</text>
   <text x="159" y="2052" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="start">TRAIT</text>
-  <text x="1142" y="2052" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="middle">POINTS</text>
-  <rect x="159" y="2070" width="1050" height="3" fill="#3FD0E0" fill-opacity="0.35"/>
-  <rect x="165" y="2136" width="894" height="3" fill="#5C7488" fill-opacity="0.7"/>
-  <rect x="1119" y="2103" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="3.9" stroke-opacity="1"/>
-  <rect x="165" y="2190" width="894" height="3" fill="#5C7488" fill-opacity="0.7"/>
-  <rect x="1119" y="2157" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="3.9" stroke-opacity="1"/>
-  <rect x="165" y="2244" width="894" height="3" fill="#5C7488" fill-opacity="0.7"/>
-  <rect x="1119" y="2211" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="3.9" stroke-opacity="1"/>
-  <rect x="165" y="2298" width="894" height="3" fill="#5C7488" fill-opacity="0.7"/>
-  <rect x="1119" y="2265" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="3.9" stroke-opacity="1"/>
-  <rect x="165" y="2352" width="894" height="3" fill="#5C7488" fill-opacity="0.7"/>
-  <rect x="1119" y="2319" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="3.9" stroke-opacity="1"/>
-  <rect x="165" y="2406" width="894" height="3" fill="#5C7488" fill-opacity="0.7"/>
-  <rect x="1119" y="2373" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="3.9" stroke-opacity="1"/>
-  <rect x="165" y="2460" width="894" height="3" fill="#5C7488" fill-opacity="0.7"/>
-  <rect x="1119" y="2427" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="3.9" stroke-opacity="1"/>
-  <path d="M1341 1932 H2391 A42 42 0 0 1 2433 1974 V2460 A42 42 0 0 1 2391 2502 H1341 A42 42 0 0 1 1299 2460 V1974 A42 42 0 0 1 1341 1932 Z" fill="#01050A" fill-opacity="0.55"/>
-  <path d="M1341 1932 H2391 A42 42 0 0 1 2433 1974 V2460 A42 42 0 0 1 2391 2502 H1341 A42 42 0 0 1 1299 2460 V1974 A42 42 0 0 1 1341 1932 Z" fill="none" stroke="#D9574A" stroke-width="5"/>
-  <text x="1341" y="1998" font-family="'Segoe UI Semibold', 'Segoe UI', Montserrat, system-ui, sans-serif" font-size="45" font-weight="600" letter-spacing="1.8" fill="#FFFFFF" text-anchor="start">FLAWS</text>
-  <text x="2391" y="1995" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="32" letter-spacing="4.8" fill="#E48980" text-anchor="end">LEVEL 1 - 5</text>
-  <text x="1341" y="2052" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="start">TRAIT</text>
+  <text x="960.56" y="2052" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="middle">POINTS</text>
+  <rect x="159" y="2070" width="868.56" height="3" fill="#3FD0E0" fill-opacity="0.35"/>
+  <rect x="165" y="2136" width="712.56" height="3" fill="#5C7488" fill-opacity="0.7"/>
+  <rect x="937.56" y="2103" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="3.9" stroke-opacity="1"/>
+  <rect x="165" y="2190" width="712.56" height="3" fill="#5C7488" fill-opacity="0.7"/>
+  <rect x="937.56" y="2157" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="3.9" stroke-opacity="1"/>
+  <rect x="165" y="2244" width="712.56" height="3" fill="#5C7488" fill-opacity="0.7"/>
+  <rect x="937.56" y="2211" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="3.9" stroke-opacity="1"/>
+  <rect x="165" y="2298" width="712.56" height="3" fill="#5C7488" fill-opacity="0.7"/>
+  <rect x="937.56" y="2265" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="3.9" stroke-opacity="1"/>
+  <rect x="165" y="2352" width="712.56" height="3" fill="#5C7488" fill-opacity="0.7"/>
+  <rect x="937.56" y="2319" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="3.9" stroke-opacity="1"/>
+  <rect x="165" y="2406" width="712.56" height="3" fill="#5C7488" fill-opacity="0.7"/>
+  <rect x="937.56" y="2373" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="3.9" stroke-opacity="1"/>
+  <rect x="165" y="2460" width="712.56" height="3" fill="#5C7488" fill-opacity="0.7"/>
+  <rect x="937.56" y="2427" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="3.9" stroke-opacity="1"/>
+  <path d="M1159.56 1932 H2391 A42 42 0 0 1 2433 1974 V2460 A42 42 0 0 1 2391 2502 H1159.56 A42 42 0 0 1 1117.56 2460 V1974 A42 42 0 0 1 1159.56 1932 Z" fill="#01050A" fill-opacity="0.55"/>
+  <path d="M1159.56 1932 H2391 A42 42 0 0 1 2433 1974 V2460 A42 42 0 0 1 2391 2502 H1159.56 A42 42 0 0 1 1117.56 2460 V1974 A42 42 0 0 1 1159.56 1932 Z" fill="none" stroke="#D9574A" stroke-width="5"/>
+  <text x="1159.56" y="1998" font-family="'Segoe UI Semibold', 'Segoe UI', Montserrat, system-ui, sans-serif" font-size="45" font-weight="600" letter-spacing="1.8" fill="#FFFFFF" text-anchor="start">FLAWS</text>
+  <text x="2391" y="1995" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="32" letter-spacing="4.8" fill="#E48980" text-anchor="end">LEVEL 1 - 5, AND WHAT IT IS</text>
+  <text x="1159.56" y="2052" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="start">TRAIT</text>
   <text x="2391" y="2052" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="end">LEVEL</text>
-  <rect x="1341" y="2070" width="1050" height="3" fill="#D9574A" fill-opacity="0.35"/>
-  <rect x="1347" y="2136" width="756" height="3" fill="#5C7488" fill-opacity="0.7"/>
+  <rect x="1159.56" y="2070" width="1231.44" height="3" fill="#D9574A" fill-opacity="0.35"/>
+  <rect x="1165.56" y="2136" width="937.44" height="3" fill="#5C7488" fill-opacity="0.7"/>
   <rect x="2103" y="2103" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2160" y="2103" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2217" y="2103" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2274" y="2103" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2331" y="2103" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
-  <rect x="1347" y="2190" width="756" height="3" fill="#5C7488" fill-opacity="0.7"/>
+  <rect x="1165.56" y="2190" width="937.44" height="3" fill="#5C7488" fill-opacity="0.7"/>
   <rect x="2103" y="2157" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2160" y="2157" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2217" y="2157" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2274" y="2157" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2331" y="2157" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
-  <rect x="1347" y="2244" width="756" height="3" fill="#5C7488" fill-opacity="0.7"/>
+  <rect x="1165.56" y="2244" width="937.44" height="3" fill="#5C7488" fill-opacity="0.7"/>
   <rect x="2103" y="2211" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2160" y="2211" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2217" y="2211" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2274" y="2211" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2331" y="2211" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
-  <rect x="1347" y="2298" width="756" height="3" fill="#5C7488" fill-opacity="0.7"/>
+  <rect x="1165.56" y="2298" width="937.44" height="3" fill="#5C7488" fill-opacity="0.7"/>
   <rect x="2103" y="2265" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2160" y="2265" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2217" y="2265" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2274" y="2265" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2331" y="2265" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
-  <rect x="1347" y="2352" width="756" height="3" fill="#5C7488" fill-opacity="0.7"/>
+  <rect x="1165.56" y="2352" width="937.44" height="3" fill="#5C7488" fill-opacity="0.7"/>
   <rect x="2103" y="2319" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2160" y="2319" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2217" y="2319" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2274" y="2319" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2331" y="2319" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
-  <rect x="1347" y="2406" width="756" height="3" fill="#5C7488" fill-opacity="0.7"/>
+  <rect x="1165.56" y="2406" width="937.44" height="3" fill="#5C7488" fill-opacity="0.7"/>
   <rect x="2103" y="2373" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2160" y="2373" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2217" y="2373" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2274" y="2373" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2331" y="2373" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
-  <rect x="1347" y="2460" width="756" height="3" fill="#5C7488" fill-opacity="0.7"/>
+  <rect x="1165.56" y="2460" width="937.44" height="3" fill="#5C7488" fill-opacity="0.7"/>
   <rect x="2103" y="2427" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2160" y="2427" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="2217" y="2427" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
