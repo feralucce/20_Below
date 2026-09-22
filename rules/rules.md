@@ -433,7 +433,7 @@ What an action actually *lets you do*, beyond a plain Attack or Move - filling i
 
 **Sprint**: an all-out run, **5x Movement Rate**, is a **Slow action** and the only thing that character does that round - no attack, no second half, and they act last as Slow always does. A sprint crosses Near in a single turn and closes from Far in one or two.
 
-*The status effects defined so far - [Off Balance](#off-balance), [Distracted](#distracted), [Surprise](#surprise), [Flustered](#flustered), [Humiliated](#humiliated), [Exhausted](#exhausted), [Staggered](#staggered), [Blinded](#blinded), [Deafened](#deafened), [Grabbed](#grabbed), [Prone](#prone), [Frightened](#frightened), [Envenomed](#envenomed) and [Bleeding](#bleeding), plus [Overwhelmed and Shattered](#sanity), which Sanity defines. More are expected as combat rules develop further; this isn't the full list.*
+*The status effects defined so far - [Off Balance](#off-balance), [Distracted](#distracted), [Surprised](#surprised), [Flustered](#flustered), [Humiliated](#humiliated), [Exhausted](#exhausted), [Staggered](#staggered), [Blinded](#blinded), [Deafened](#deafened), [Grabbed](#grabbed), [Prone](#prone), [Frightened](#frightened), [Envenomed](#envenomed) and [Bleeding](#bleeding), plus [Overwhelmed and Shattered](#sanity), which Sanity defines. More are expected as combat rules develop further; this isn't the full list.*
 
 #### Off Balance
 
@@ -452,7 +452,7 @@ A character who loses a Health Level or is the target of a Kotodama effect while
 
 **Other sources can impose Distracted too** - a Gift, an environmental hazard (a collapsing building, a deafening explosion), or GM fiat, whether or not a Slow action is involved. The same **Atropos + Difficulty** roll applies; outside a Slow action, failure instead imposes **Disadvantage** on the triggering roll. [Concentration](boons.md) grants immunity to being Distracted regardless of source.
 
-#### Surprise
+#### Surprised
 
 A character who hasn't noticed a threat before combat begins is **Surprised** - typically because an opposing Stealth roll succeeded against their Perception, or the GM judges the fiction warrants it.
 
