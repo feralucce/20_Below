@@ -34,6 +34,19 @@ foreach ($folder in $folders) {
     Copy-Item -Path $source -Destination $dest -Recurse -Force
 }
 
+# The paged character sheet's dev harness and the character it loads are
+# not part of the app: the harness is a way to look at the sheet without
+# walking the creator, and the character in sample/ is a real one. Neither
+# belongs in an installer handed to a player.
+$stagedApp = Join-Path $stagingDir "app"
+foreach ($devOnly in @("sheet\sample", "sheet-preview.html")) {
+    $path = Join-Path $stagedApp $devOnly
+    if (Test-Path $path) {
+        Remove-Item -Recurse -Force $path
+        Write-Host "Excluded app/$devOnly from the staged frontend"
+    }
+}
+
 # docs/ used to be staged whole, which put 6.7 MB of hero art and reference
 # scans into the installer to serve three favicons - and dragged
 # style-guide.html along with it, the one file in the creator's payload that
