@@ -433,7 +433,7 @@ What an action actually *lets you do*, beyond a plain Attack or Move - filling i
 
 **Sprint**: an all-out run, **5x Movement Rate**, is a **Slow action** and the only thing that character does that round - no attack, no second half, and they act last as Slow always does. A sprint crosses Near in a single turn and closes from Far in one or two.
 
-*The following are the status effects defined so far - Off Balance, Distracted, Surprise, Flustered, Humiliated, [Exhausted](#exhausted), plus [Overwhelmed and Shattered](#sanity), which Sanity defines. More are expected as combat rules develop further; this isn't the full list.*
+*The status effects defined so far - [Off Balance](#off-balance), [Distracted](#distracted), [Surprise](#surprise), [Flustered](#flustered), [Humiliated](#humiliated), [Exhausted](#exhausted), [Staggered](#staggered), [Blinded](#blinded), [Deafened](#deafened), [Grabbed](#grabbed), [Prone](#prone), [Frightened](#frightened), [Envenomed](#envenomed) and [Bleeding](#bleeding), plus [Overwhelmed and Shattered](#sanity), which Sanity defines. More are expected as combat rules develop further; this isn't the full list.*
 
 #### Off Balance
 
@@ -486,6 +486,72 @@ The only Condition that **stacks**, in levels **1-5**. Taken from pushing an eff
 | **5** | Unconscious, until warmed, cooled, or rested |
 
 A **Short Rest** clears one level; a **Full Night's Rest** clears all of them. A level taken from an environment cannot be cleared while the character is still in it - resting in the cold does not clear cold.
+
+#### Staggered
+
+Something has knocked the rhythm out of a character: a blow that lands wrong, a shock, a moment of not knowing which way is up. Whatever causes it says so.
+
+**A Staggered character's declared [Action Bracket](#action-brackets) drops one step** - Fast becomes Normal, Normal becomes Slow. A character who declared Slow still acts, but loses the called shot and the Advantage that Slow normally grants.
+
+**Ki buys it straight back at the usual rate**: 1 Ki per step, the same spend that bumps a band up in the first place. Otherwise it clears at the end of that character's next turn. Staggered does not stack - a second source while already Staggered does nothing further.
+
+#### Blinded
+
+A character who cannot see: darkness they have no answer for, a flash, a faceful of something.
+
+**A Blinded character rolls at Disadvantage on anything that needs sight**, and neither uses nor suffers any effect that requires seeing or being seen - no eye contact, no reading the room, no Gift that depends on the target looking at them.
+
+Ends with whatever caused it. [Heightened Senses](gifts.md#heightened-senses) can sidestep it entirely.
+
+#### Deafened
+
+A character who cannot hear: an explosion, a pressure wave, water, a Gift.
+
+**A Deafened character rolls at Disadvantage on anything that needs hearing**, and neither uses nor suffers any effect that has to be heard to work.
+
+Ends with whatever caused it. A Deafened character can still speak, so a [Kotodama](fate.md#kotodama) of their own is unaffected.
+
+#### Grabbed
+
+Held: a hand, a jaw, a coil, a will.
+
+**A Grabbed character's Movement Rate is 0, and they roll at Disadvantage on everything except escaping or attacking whatever holds them.**
+
+Escaping is a contested roll against the grabber's **Potence** - or against its Soak where the grip is a thing rather than a person, GM's call - the same contest [Psychokinesis / Telekinesis](gifts.md#psychokinesis--telekinesis) already uses.
+
+#### Prone
+
+On the ground, whether they dived, were put there, or fell.
+
+**A Prone character's own attacks are at Disadvantage, and Melee attacks against them gain Advantage.** Attacks from further out are unaffected - being flat is a problem at arm's reach and an inconvenience everywhere else.
+
+Standing up costs one action, which is a Fast character's entire turn. [Diving for Cover](#combat-actions) already charges exactly this.
+
+#### Frightened
+
+Something is too much to face. Frightened always has a source, and the condition is of that source rather than of the world in general.
+
+**A Frightened character rolls at Disadvantage against the source, and cannot willingly move closer to it.** They can still fight it if it comes to them, still run, still act normally on everything else.
+
+Ends when the source can no longer be perceived, or at the end of the Scene, whichever comes first.
+
+#### Envenomed
+
+Venom, toxin, or a drug in the blood. Venomous creatures in the [bestiary](adversary-index.md) impose it on a connecting bite or sting, and each entry says so.
+
+**An Envenomed character rolls at Disadvantage on Physical rolls, and it does not clear on a rest.** The body cannot sleep this one off.
+
+Ends with treatment - a Medicine roll against a Difficulty the GM sets by the venom - or with **1 Ki**, spent to burn it out.
+
+A creature that envenomates and holds on imposes Envenomed and [Grabbed](#grabbed) together, rather than needing a rule of its own.
+
+#### Bleeding
+
+An open wound that keeps costing after the attack that opened it. The effect that causes it says so.
+
+**A Bleeding character takes 1 die against [Soak](#earth) at the end of each round**, resolved per-die like any other attack, a connecting die costing a Health Level as usual.
+
+Stopping it takes a Normal action, spent by the character or by somebody who reaches them, or any Gift that closes wounds. [On fire](#common-hazards) is the same shape at 2 dice per round.
 
 #### Common Hazards
 
