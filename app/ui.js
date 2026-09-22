@@ -278,10 +278,13 @@ export function describeBox(value, onChange, placeholder) {
  * question. Numbered only when there is more than one, so the ordinary
  * case stays a single unadorned line.
  */
-export function describeBoxes({ count, prompt, notes, onChange }) {
+export function describeBoxes({ count, prompt, prompts, notes, onChange }) {
   const wrap = el('div', { class: 'describe-list' });
   for (let i = 0; i < count; i += 1) {
-    const label = count > 1 ? `${prompt} (${i + 1})` : prompt;
+    // Numbering only makes sense when every slot asks the same question.
+    // Two animals is "(1)" and "(2)"; a weapon and its name are not.
+    const label = prompts ? (prompts[i] ?? prompt)
+      : (count > 1 ? `${prompt} (${i + 1})` : prompt);
     wrap.appendChild(describeBox(notes[i] ?? '', (v) => onChange(i, v), label));
   }
   return wrap;

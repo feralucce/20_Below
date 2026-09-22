@@ -1,5 +1,5 @@
 import { el, counterRow, renderMarkdown, renderSelectedAvailable, describeBoxes } from '../ui.js';
-import { describeFields, describePrompt } from '../describe-spec.js';
+import { describeFields, describePrompt, describePrompts } from '../describe-spec.js';
 import {
   setGiftNote,
   giftNotes,
@@ -227,6 +227,7 @@ export default {
         card.append(describeBoxes({
           count: fields,
           prompt: describePrompt('gift', gift.name),
+          prompts: describePrompts('gift', gift.name),
           notes: giftNotes(giftState),
           onChange: (slot, value) => {
             setGiftNote(state, gift.name, slot, value);

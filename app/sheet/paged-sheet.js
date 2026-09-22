@@ -101,6 +101,115 @@ function takenGifts(state) {
 // The gear the character bought, split the way the pages are: anything
 // from an Armor table goes to the Armour block, anything with a Damage
 // column goes to Weapons, everything else is just carried.
+// Conjured Armory's signature weapon is a real item from the catalogue,
+// and its Damage rises with the Gift: +1 from Level 3, +2 from Level 5,
+// capped at the weapon table's ceiling of 5. Bonded Blade adds another
+// +1 on top, for the signature weapon specifically.
+function conjuredWeapon(state, catalog) {
+  const gift = (state.gifts || []).find((g) => g.name === 'Conjured Armory' && g.level > 0);
+  if (!gift) return null;
+  const notes = (gift.notes || []).filter(Boolean);
+  if (!notes.length) return null;
+
+  const wanted = notes[0].trim().toLowerCase();
+  const item = [...catalog.values()].find((x) => x.name.toLowerCase() === wanted);
+  const called = notes[1] ? notes[1].trim() : '';
+  // A name the catalogue does not know still belongs on the sheet - the
+  // Armory of Anything adder exists precisely to allow that - it just
+  // cannot carry numbers nobody wrote down.
+  const label = called ? `${notes[0].trim()} - ${called}` : notes[0].trim();
+  if (!item) return { name: label, damage: '', range: '', ammo: 'conjured', reload: '-' };
+
+  let bonus = 0;
+  if (gift.level >= 5) bonus = 2;
+  else if (gift.level >= 3) bonus = 1;
+  if (bonus && (gift.adders || []).includes('Bonded Blade')) bonus += 1;
+  const base = Number(item.Damage);
+  const damage = Number.isFinite(base) && bonus
+    ? String(Math.min(5, base + bonus))
+    : (item.Damage || '');
+
+  return {
+    name: label,
+    damage,
+    range: item['Range (Normal / Long)'] || item.Range || '',
+    // Level 1 already says it never runs dry, whatever the weapon is.
+    ammo: 'never dry',
+    reload: item.Reload || '',
+  };
+}
+
+// Which sub-stat a Gift's dice come from, and which wall they land on.
+// Read out of the Gift's own rules text rather than listed here, so a
+// Gift added or reworded in the book arrives on the sheet without this
+// file being touched. The fallback pairing is the rule's own: Ferocity
+// against Soak, Presence against Presence, Psyche against Psyche.
+const WALL_FOR = { Ferocity: 'Soak', Presence: 'Presence', Psyche: 'Psyche' };
+
+// No Gift carries a Ki cost as a field - it is written into the level
+// that charges it, so the number is read back out of that sentence.
+// Nothing to find means nothing to show, not a zero.
+function giftKi(gift, data) {
+  const entry = (data.gifts || []).find((d) => d.name === gift.name);
+  const row = (entry?.levels || []).find((l) => l.level === gift.level);
+  // The cost is stated once, at the Level that introduces it - Onslaught
+  // says "spend 1 Ki" at Level 1 and never repeats itself - so a Level 3
+  // character reading only their own row finds nothing. Fall back to the
+  // Gift's whole text rather than leaving a blank where a cost belongs.
+  const find = (t) => /(\d+)\s*Ki\b/i.exec(t || '')?.[1];
+  return find(row?.effect) || find(entry?.markdown) || '';
+}
+
+function giftAttack(entry, gift, subStats) {
+  const text = entry?.markdown || '';
+  const source = /half (?:your |their )?(Ferocity|Presence|Psyche)/.exec(text)?.[1];
+  if (!source) return null;
+  const wall = /(?:vs\.?|against) \*\*(Soak|Presence|Psyche)\*\*/.exec(text)?.[1]
+    || WALL_FOR[source];
+  const range = /\*\*(Melee|Near|Far|Distant)\*\* range/.exec(text)?.[1] || '';
+  // Level plus half the sub-stat that powers it, rounded down.
+  const dice = gift.level + Math.floor((subStats[source] || 0) / 2);
+  return { dice, wall, range };
+}
+
+// A Signature Move is built rather than looked up: the player picks the
+// sub-stat the dice come from and the wall they land on, and the two do
+// not have to match - which is how a scream ends up breaking composure.
+function signatureAttacks(state, subStats) {
+  const gift = (state.gifts || []).find((g) => g.name === 'Signature Move' && g.level > 0);
+  if (!gift) return [];
+  const moves = Array.isArray(gift.moves) ? gift.moves : [];
+  return moves
+    .filter((m) => m.source && m.wall)
+    .map((m) => ({
+      name: m.name ? `${m.name} (Move)` : 'Signature Move',
+      damage: `${(m.level || gift.level) + Math.floor((subStats[m.source] || 0) / 2)} vs ${m.wall}`,
+      range: '',
+      ammo: '1 Ki',
+      reload: '-',
+    }));
+}
+
+function giftWeapons(state, data) {
+  const subStats = state.subStats || {};
+  const out = [];
+  (state.gifts || []).filter((g) => g.level > 0).forEach((g) => {
+    if (g.name === 'Conjured Armory' || g.name === 'Signature Move') return;
+    const entry = (data.gifts || []).find((d) => d.name === g.name);
+    const atk = giftAttack(entry, g, subStats);
+    if (!atk) return;
+    const told = (g.notes || []).filter(Boolean)[0];
+    out.push({
+      name: told ? `${g.name} - ${told}` : g.name,
+      damage: `${atk.dice} vs ${atk.wall}`,
+      range: atk.range,
+      ammo: giftKi(g, data) ? `${giftKi(g, data)} Ki` : '',
+      reload: '-',
+    });
+  });
+  return out.concat(signatureAttacks(state, subStats));
+}
+
 function splitGear(state, data) {
   const catalog = new Map();
   (data.equipment || []).forEach((cat) => {
@@ -135,6 +244,15 @@ function splitGear(state, data) {
       gear.push(p.name);
     }
   });
+
+  // A conjured weapon is not gear a character bought, but it is a weapon
+  // they fight with, so it goes where the weapons are - first, because
+  // it is the one they call rather than carry.
+  const conjured = conjuredWeapon(state, catalog);
+  if (conjured) weapons.unshift(conjured);
+  // A Gift that attacks is an attack, and attacks belong with the
+  // weapons - not buried three pages away on a card.
+  weapons.push(...giftWeapons(state, data));
 
   Object.values(state.everymanGearPackages || {})
     .sort((a, b) => a.level - b.level)
@@ -490,14 +608,7 @@ export function buildPagedSheet(state, data, opts = {}) {
         .replace(/<br\s*\/?>/gi, ' ')
         .trim();
     },
-    // No Gift carries a Ki cost as a field - it is written into the level
-    // that charges it, so the number is read back out of that sentence.
-    // Nothing to find means nothing to show, not a zero.
-    giftKi: (g) => {
-      const text = ctx.giftEffect(g);
-      const m = /(\d+)\s*Ki\b/i.exec(text);
-      return m ? m[1] : '';
-    },
+    giftKi: (g) => giftKi(g, data),
     giftText: (g) => ctx.giftEffect(g),
   };
 
@@ -662,7 +773,16 @@ export function buildPagedSheet(state, data, opts = {}) {
     // target covers the row's name field, which is the part a finger
     // goes for.
     onPage.forEach((f) => {
-      const [group, idx, leaf] = shift(f.id, view).split('.');
+      const part = shift(f.id, view).split('.');
+      // An attack's to-hit is the Element you describe swinging with, not
+      // a Skill and not the thing in your hand - so the Element panel is
+      // where an attack starts. Moira has no attack roll, so it is left
+      // alone rather than opening a roller it cannot fill.
+      if (part[0] === 'attribute' && part[1] !== 'Moira') {
+        overlay.appendChild(rollTarget(f, 'attack', part[1]));
+        return;
+      }
+      const [group, idx, leaf] = part;
       if (leaf !== 'name') return;
       const i = Number(idx);
       if (group === 'skill' && ctx.skills[i]) {

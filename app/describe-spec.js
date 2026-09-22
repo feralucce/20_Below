@@ -63,7 +63,15 @@ export const GIFT_DESCRIBE = {
     // Second Companion buys another, and each one is its own animal.
     count: (gift) => (gift?.adders?.includes('Second Companion') ? 2 : 1),
   },
-  'Conjured Armory': { prompt: 'What do you call, and what does it look like?', count: one },
+  // Two answers, not one: the signature weapon is a real item from the
+  // catalogue - it has Damage, a range and a reload - and what the
+  // character calls it is the other half. The sheet needs the first to
+  // put the weapon where weapons live.
+  'Conjured Armory': {
+    prompts: ['Which weapon from the catalogue?',
+              'What do you call it, and what does it look like?'],
+    count: () => 2,
+  },
   'Cybernetics': { prompt: 'What is installed, and where?', count: one },
   'Drone Swarm': { prompt: 'What are the drones?', count: one },
   'Elemental Aura': { prompt: 'Which element, and what does it look like?', count: one },
@@ -94,5 +102,15 @@ export function describePrompt(kind, name) {
   const table = kind === 'boon' ? BOON_DESCRIBE
     : kind === 'flaw' ? FLAW_DESCRIBE
       : GIFT_DESCRIBE;
-  return table[name]?.prompt ?? '';
+  const spec = table[name];
+  return spec?.prompt ?? spec?.prompts?.[0] ?? '';
+}
+
+/* One prompt per slot where an entry asks two different questions, and
+ * nothing where it asks the same one twice. */
+export function describePrompts(kind, name) {
+  const table = kind === 'boon' ? BOON_DESCRIBE
+    : kind === 'flaw' ? FLAW_DESCRIBE
+      : GIFT_DESCRIBE;
+  return table[name]?.prompts ?? null;
 }

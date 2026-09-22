@@ -629,6 +629,15 @@ export default {
             buildAttackRollSection(state, data, draw, (crit) => damage?.armCritical?.(crit)),
             damage];
         }
+        case 'attack': {
+          // Straight off the Element panel: no weapon named, because the
+          // Element is what the to-hit rolls on either way.
+          const damage = buildDamageRollSection(state, data, draw);
+          return [el('h3', {}, `Attack on ${label}`),
+            buildAttackRollSection(state, data, draw,
+              (crit) => damage?.armCritical?.(crit), label),
+            damage];
+        }
         default:
           return [];
       }

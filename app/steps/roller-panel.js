@@ -471,11 +471,17 @@ export function buildResourceCheckSection(state, data, preselect = null) {
 const ATTACK_ATTRIBUTES = ['Earth', 'Air', 'Fire', 'Water'];
 const PLAIN_ATTACK_TIER = 2;
 
-export function buildAttackRollSection(state, data, refreshHeader, onCritical = () => {}) {
+export function buildAttackRollSection(state, data, refreshHeader, onCritical = () => {},
+                                      preselect = null) {
   const section = el('div', { class: 'roller-gift-check' });
 
   const attackAttributes = data.attributes.filter((a) => ATTACK_ATTRIBUTES.includes(a.name));
-  let selectedAttribute = attackAttributes[0]?.name;
+  // The sheet opens this by clicking an Element, so it can say which one
+  // is swinging. Moira never attacks, so a click on it falls through to
+  // the default rather than selecting something that cannot roll.
+  let selectedAttribute = attackAttributes.some((a) => a.name === preselect)
+    ? preselect
+    : attackAttributes[0]?.name;
   let selectedDefense = 5;
   let advantageOn = false;
   let disadvantageOn = false;
