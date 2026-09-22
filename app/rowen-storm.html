@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rowen Storm - 20 Below</title>
+<link rel="icon" type="image/x-icon" href="../docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="../docs/assets/brand/favicon-32.png" />
+<meta name="theme-color" content="#0a1720" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="Rowen Storm" />
+<link rel="stylesheet" href="style.css" />
+<style>
+  /* style.css makes body a column flex container, and an auto side margin
+     on a flex item stops it stretching - so the wrapper needs a width. */
+  body { margin: 0; padding: 0 1rem 2rem; }
+  .wrap { max-width: 1700px; width: 100%; margin: 0 auto; box-sizing: border-box; }
+
+  .bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 1rem;
+    padding: 1rem 0 0.9rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .bar h1 { font-size: 1.35rem; margin: 0; }
+  .bar .who { opacity: 0.68; font-size: 0.88rem; }
+  .bar .spacer { flex: 1 1 auto; }
+  .bar a, .bar button {
+    font: inherit;
+    font-size: 0.85rem;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 4px;
+    padding: 0.25rem 0.7rem;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+  }
+  .bar a:hover, .bar button:hover { border-color: currentColor; }
+  .saved { font-size: 0.8rem; opacity: 0.6; min-height: 1.2em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="bar">
+    <h1>Rowen Storm</h1>
+    <span class="who">Guardian &middot; play sheet</span>
+    <span class="spacer"></span>
+    <span class="saved" id="saved"></span>
+    <button type="button" id="reset">Reset to the filed build</button>
+    <a href="../home.html">20 Below</a>
+  </div>
+  <div id="root">Loading the sheet...</div>
+</div>
+
+<script type="module">
+// Rowen's own page. The build is filed at sheet/sample/Rowen Storm.json and
+// that file is what the page loads - there is no picker and no import here,
+// because this page is only ever him.
+//
+// What he changes at the table (Health, Ki, Fate, scars, notes) is kept in
+// this browser under one key of his own, separate from the Character
+// Creator's working draft, so opening the Creator never overwrites his
+// sheet and editing his sheet never overwrites a draft he has in progress.
+// Reset throws the local copy away and reloads the filed build.
+import { loadRulesData } from './rules-data.js';
+import { createInitialState, mergeCharacterState } from './state.js';
+import sheetStep from './steps/13-sheet.js';
+
+const KEY = '20below-character-rowen-storm';
+const FILED = './sheet/sample/Rowen%20Storm.json';
+
+const root = document.getElementById('root');
+const savedNote = document.getElementById('saved');
+
+function readLocal() {
+  try {
+    const raw = localStorage.getItem(KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch (err) {
+    return null;
+  }
+}
+
+function writeLocal(state) {
+  try {
+    localStorage.setItem(KEY, JSON.stringify(state));
+    savedNote.textContent = 'Saved in this browser';
+  } catch (err) {
+    // Private window, blocked site data, full quota: the sheet still works
+    // for this sitting, it just will not survive a reload.
+    savedNote.textContent = 'Not saving - this browser is blocking storage';
+  }
+}
+
+async function main() {
+  let data;
+  try {
+    data = await loadRulesData();
+  } catch (err) {
+    console.error(err);
+    root.textContent = 'Could not load the rules data. Reload the page to try again.';
+    return;
+  }
+
+  let state = createInitialState(data);
+  const local = readLocal();
+  if (local) {
+    state = mergeCharacterState(data, local);
+    savedNote.textContent = 'Picking up where you left off';
+  } else {
+    try {
+      const res = await fetch(FILED);
+      if (!res.ok) throw new Error(`filed build returned ${res.status}`);
+      state = mergeCharacterState(data, await res.json());
+    } catch (err) {
+      console.error(err);
+      root.textContent = 'Could not load Rowen’s filed build. Reload the page to try again.';
+      return;
+    }
+  }
+
+  root.innerHTML = '';
+  await sheetStep.render(root, { state, data, persist: () => writeLocal(state) });
+}
+
+document.getElementById('reset').addEventListener('click', () => {
+  if (!confirm('Throw away the changes saved in this browser and reload Rowen’s filed build?')) return;
+  try {
+    localStorage.removeItem(KEY);
+  } catch (err) {
+    /* nothing kept, nothing to clear */
+  }
+  location.reload();
+});
+
+main();
+</script>
+</body>
+</html>
