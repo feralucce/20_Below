@@ -7,6 +7,19 @@ The screen sheet is transparent art that the app lays over its own
 background. The printed sheet has nobody to do that for it, so this does
 it once and writes finished pages.
 
+TWO HALVES, AND WHY THEY ARE SEPARATE
+
+build_svgs() and check_monochrome() are the guard. They run the two
+generators in paper mode and prove the result is the three neutrals and
+nothing else. They need Inkscape for nothing and the PSD for nothing, so
+build.py calls them on every screen build: add a coloured constant to
+sheetkit and the screen build fails, rather than the colour waiting
+quietly until somebody next makes a print sheet.
+
+main() is the composite, and it does need the PSD and psd_tools. That is
+why the import sits inside the function that uses it - so the guard costs
+the screen build no dependency it did not already have.
+
 WHERE EACH BACKGROUND COMES FROM
 
 Page 1's is hand work. The author inverted it and took the colour out by
@@ -18,31 +31,19 @@ file.
 Pages 2-5 have no hand-made print background, so theirs is derived by the
 same recipe the author used on page 1: invert the screen background, then
 flatten it to grey. A screen background is near-black by design - mean
-luminance around 7 of 255 - so inverting it is what turns it into paper.
-
-Page 5 has no background of its own and borrows page 2's, which is the
-arrangement the app already uses.
-
-WHY PAGE 1 IS NOT DERIVED THE SAME WAY
+luminance around 7 of 255 - so inverting is what turns it into paper.
+Page 5 has none of its own and borrows page 2's, as the app does.
 
 CS-BG-pg1.png has the centre pentagon composited into it by build.py, so
-deriving page 1's background from it would print the pentagon twice - once
-in the background and once from the paper art, which draws its own. The
-PSD's copy of that layer is skipped here for the same reason.
-
-EVERYTHING COMES OUT GREY
-
-The art already is: the generators write in three neutrals and nothing
-else. The backgrounds are flattened on the way through, and the build
-refuses to write a page with any colour left in it.
+deriving page 1's background the same way would print the pentagon twice,
+once from the background and once from the paper art, which draws its own.
+The PSD's copy of that layer is skipped here for the same reason.
 """
 import io
 import os
+import re
 import subprocess
 import sys
-
-from PIL import Image, ImageOps
-from psd_tools import PSDImage
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(HERE))
@@ -60,31 +61,76 @@ SKIP = ("character-sheet-page1",      # replaced by the current build
 SCREEN_BG = {2: "CS-BG-pg2.png", 3: "CS-BG-pg3.png",
              4: "CS-BG-pg4.png", 5: "CS-BG-pg2.png"}
 
+# Ink, captions, paper. Derived in papertheme from the brand colours; named
+# here so the check does not depend on importing a module that the page
+# generators have already run in the other mode.
+ALLOWED = ("#1F1F1F", "#646464", "#FFFFFF")
 
-def build_art():
-    """Run both generators in paper mode and rasterise all five pages."""
+
+def paper_svg(n):
+    return os.path.join(OUT, "character-sheet-page%d-paper.svg" % n)
+
+
+def build_svgs():
+    """Run both generators in paper mode. Returns the five SVG paths.
+
+    Page 1 has its own generator; pages 2-5 write themselves on import.
+    Both go through a subprocess because the caller has usually already
+    imported the page modules in screen mode, and a module writes its
+    page once, at import.
+    """
     subprocess.check_call([sys.executable, os.path.join(HERE, "sheet300.py"),
                            "--paper"], stdout=subprocess.DEVNULL)
     subprocess.check_call(
         [sys.executable, "-c",
          "import sys; sys.path.insert(0, %r); "
-         "import page2, page3, page4, page5" % HERE,
-         "--paper"], stdout=subprocess.DEVNULL)
+         "import page2, page3, page4, page5" % HERE, "--paper"],
+        stdout=subprocess.DEVNULL)
+    return [paper_svg(n) for n in range(1, 6)]
 
-    pages = {}
-    for n in range(1, 6):
-        svg = os.path.join(OUT, "character-sheet-page%d-paper.svg" % n)
-        png = os.path.join(OUT, "character-sheet-page%d-paper.png" % n)
-        subprocess.check_call(
-            [INKSCAPE, svg, "--export-type=png", "--export-filename=%s" % png,
-             "--export-width=%d" % W, "--export-background-opacity=0"],
-            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        pages[n] = Image.open(png).convert("RGBA")
-    return pages
+
+def check_monochrome(paths):
+    """Every colour in the paper art has to be one of the three neutrals.
+
+    The printed sheet is black and white, and the only thing keeping it
+    that way is that each palette name was switched. A constant added to
+    sheetkit later, or a colour written straight into a page module, would
+    print - and would look like a decision rather than an oversight.
+    """
+    allowed = set(c.upper() for c in ALLOWED)
+    bad = []
+    for p in paths:
+        found = set(m.upper()
+                    for m in re.findall(r"#[0-9A-Fa-f]{6}",
+                                        io.open(p, encoding="utf-8").read()))
+        for c in sorted(found - allowed):
+            bad.append("%s: %s" % (os.path.basename(p), c))
+    if bad:
+        raise SystemExit(
+            "the paper sheet is not black and white:\n  "
+            + "\n  ".join(bad)
+            + "\n\nEvery colour on a printed page has to be one of %s.\n"
+              "A palette name was probably added without going through the\n"
+              "PAPER switch in sheetkit.py or sheet300.py." % ", ".join(ALLOWED))
+    return len(paths)
+
+
+def rasterise(n):
+    png = os.path.join(OUT, "character-sheet-page%d-paper.png" % n)
+    subprocess.check_call(
+        [INKSCAPE, paper_svg(n), "--export-type=png",
+         "--export-filename=%s" % png, "--export-width=%d" % W,
+         "--export-background-opacity=0"],
+        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    from PIL import Image
+    return Image.open(png).convert("RGBA")
 
 
 def psd_background():
     """Page 1's, out of the print PSD, flattened to grey."""
+    from PIL import Image, ImageOps
+    from psd_tools import PSDImage
+
     psd = PSDImage.open(PSD)
     page = Image.new("RGBA", (W, H), (255, 255, 255, 255))
     for layer in psd:
@@ -110,24 +156,27 @@ def psd_background():
 
 def derived_background(name):
     """A screen background turned into paper: invert, then grey."""
+    from PIL import Image, ImageOps
     im = Image.open(os.path.join(OUT, name)).convert("RGB")
     return ImageOps.grayscale(ImageOps.invert(im))
 
 
 def main():
-    art = build_art()
+    paths = build_svgs()
+    check_monochrome(paths)
+    print("paper art: %d pages, %s only" % (len(paths), ", ".join(ALLOWED)))
     print()
+
     coloured_total = 0
     for n in range(1, 6):
         if n == 1:
-            bg = psd_background()
-            source = "the print PSD"
+            bg, source = psd_background(), "the print PSD"
         else:
             bg = derived_background(SCREEN_BG[n])
             source = "%s, inverted" % SCREEN_BG[n]
 
         page = bg.convert("RGBA")
-        page.alpha_composite(art[n])
+        page.alpha_composite(rasterise(n))
         page = page.convert("RGB")
 
         out = os.path.join(OUT, "character-sheet-page%d-print.png" % n)

@@ -113,6 +113,20 @@ try:
 except ImportError:
     print("Pillow missing - app backgrounds left as they were")
 
+# The same geometry prints in a second palette, and the only thing keeping
+# that one black and white is that every colour name was switched. A
+# palette name added below that switch and then drawn with would print -
+# and on the page it would look like a decision rather than an oversight -
+# so the paper art is built here too and checked, and the screen build
+# fails with it. A name nobody draws with is harmless and is not flagged.
+#
+# Only the art: the finished pages need the print PSD and psd_tools, and
+# the screen build should not depend on a design file to succeed. Run
+# paper.py for those.
+import paper                                              # noqa: E402
+paper.check_monochrome(paper.build_svgs())
+print("paper art: black and white, %s only" % ", ".join(paper.ALLOWED))
+
 kinds = {}
 for f in fields:
     kinds[f["kind"]] = kinds.get(f["kind"], 0) + 1
