@@ -526,7 +526,7 @@ Where a GM does allow it, it is bought like anything else - and where a Black Ma
 | Surgical pod | A room-sized autodoc. Handles what the field case cannot. | 5 |  |
 | Underground facility | Excavated, powered, and on no plan ever filed with the city. | 6 | 5 |
 
-### Starting Packages
+## Starting Packages
 
 Every character starts with these. At character creation you take **one package from every Level up to and including your creation-Wealth**, free and with no roll - one from each Level, not several from the top. A creation-Wealth 3 character takes a Level 1 package, a Level 2 package and a Level 3 package. A creation-Wealth 1 character takes a single Level 1 package. Level 0 is reachable only at creation-Wealth 0, which today means the [Destitute](flaws.md#destitute) Flaw, and a Destitute character takes one of those whatever else they bought. Everything in [Wealth at Character Creation](resources.md#wealth-at-character-creation) happens after this.
 
