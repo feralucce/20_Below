@@ -154,11 +154,46 @@ def psd_background():
     return ImageOps.grayscale(page.convert("RGB"))
 
 
-def derived_background(name):
-    """A screen background turned into paper: invert, then grey."""
+def dark_point(img, share=0.02):
+    """The level the darkest `share` of the image reaches.
+
+    A mean says where the page sits and hides how much is in it; this
+    says how dark the darkest real marks get, which is what decides
+    whether anything reads through a veil.
+    """
+    run, total = 0, img.width * img.height
+    for v, count in enumerate(img.histogram()):
+        run += count
+        if run > share * total:
+            return v
+    return 255
+
+
+def derived_background(name, like=None):
+    """A screen background turned into paper: invert, grey, then weigh.
+
+    Inverting is what turns a near-black screen background into paper.
+    What it also does is crush every mark into the top few levels: the
+    screen backgrounds come out at a standard deviation of 8 against page
+    1's 21, with their darkest 2% at 224 against page 1's 176. Behind a
+    veil that is nothing at all, which is why pages 2-5 printed blank
+    where page 1 printed textured.
+
+    So the inverted image is stretched away from white until its darkest
+    marks land where the reference's do. The factor is measured off page
+    1 rather than typed in, so if that background is ever reworked these
+    follow it instead of drifting away from it.
+    """
     from PIL import Image, ImageOps
-    im = Image.open(os.path.join(OUT, name)).convert("RGB")
-    return ImageOps.grayscale(ImageOps.invert(im))
+    im = ImageOps.grayscale(ImageOps.invert(
+        Image.open(os.path.join(OUT, name)).convert("RGB")))
+    if like is None:
+        return im
+    here, there = dark_point(im), dark_point(like)
+    if here >= 255 or there >= here:
+        return im
+    f = (255.0 - there) / (255.0 - here)
+    return im.point(lambda v: int(255 - min(255.0, (255 - v) * f)))
 
 
 def main():
@@ -170,9 +205,10 @@ def main():
     coloured_total = 0
     for n in range(1, 6):
         if n == 1:
-            bg, source = psd_background(), "the print PSD"
+            bg = reference = psd_background()
+            source = "the print PSD"
         else:
-            bg = derived_background(SCREEN_BG[n])
+            bg = derived_background(SCREEN_BG[n], reference)
             source = "%s, inverted" % SCREEN_BG[n]
 
         page = bg.convert("RGBA")

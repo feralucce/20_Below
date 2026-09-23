@@ -44,7 +44,10 @@ lx = MARGIN + 42
 label(lx, sy + 120, "TIER", 31, DIM, 3.6)
 for i, t in enumerate(("2 TRAINED", "3 ADEPT", "4 EXPERT", "5 MASTER")):
     box(lx + 126 + i * 300, sy + 90, sized(36, 48), GREEN, 4.2, 8)
-    label(lx + 177 + i * 300, sy + 120, t, 31, mix(GREEN, LIFT, 0.4), 3.0)
+    # The legend box grows on paper, so its caption moves with it -
+    # otherwise the two end up 3px apart and read as one smudge.
+    label(lx + sized(177, 189) + i * 300, sy + 120, t, 31,
+          mix(GREEN, LIFT, 0.4), 3.0)
 label(MARGIN + INNER - 42, sy + 120, "UNTRAINED AND NOVICE STAY BLANK", 30, DIM, 3.0, "end")
 line(MARGIN + 42, sy + 144, INNER - 84, GREEN, 0.35)
 
