@@ -1,0 +1,1312 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Divider System Specimen Sheet - 20 Below</title>
+<meta name="description" content="Every section-break rule in the 20 Below rulebook, shown as one system: 9 textures by 11 semantic colors." />
+<link rel="icon" type="image/x-icon" href="/docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="/docs/assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --radius: 10px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); min-height: 100vh; }
+  main { max-width: 1400px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+  header { text-align: center; margin: 1.5rem 0 2rem; }
+  .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin: 0 0 0.6rem; }
+  h1 { margin: 0; font-size: 2rem; letter-spacing: 0.02em; }
+  .subtitle { margin-top: 0.6rem; font-size: 0.95rem; color: var(--accent); }
+  .intro { max-width: 760px; margin: 1.25rem auto 0; color: var(--text-dim); font-size: 0.95rem; line-height: 1.55; }
+
+  .grid { display: flex; flex-direction: column; margin-top: 2rem; }
+  .col-headers { display: grid; grid-template-columns: 110px repeat(11, 1fr); gap: 0.5rem; padding-bottom: 0.6rem; position: sticky; top: 0; background: var(--bg); z-index: 2; }
+  .col-label { font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-dim); text-align: center; align-self: end; padding-bottom: 0.35rem; border-bottom: 1px solid var(--panel-border); }
+  .row { display: grid; grid-template-columns: 110px 1fr; gap: 0.5rem; align-items: center; padding: 0.7rem 0; border-bottom: 1px solid var(--panel-border); }
+  .row-label { font-weight: 600; font-size: 0.92rem; color: var(--text); }
+  .row-cells { display: grid; grid-template-columns: repeat(11, 1fr); gap: 0.5rem; align-items: center; }
+  .cell { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 3px; padding: 0.5rem 0.35rem; display: flex; align-items: center; justify-content: center; min-height: 40px; }
+  .cell svg { display: block; max-width: 100%; height: auto; }
+  .cell.missing { color: var(--text-dim); font-size: 0.8rem; }
+
+  @media (max-width: 1100px) {
+    main { overflow-x: auto; }
+    .col-headers, .row { min-width: 1250px; }
+  }
+
+  footer { text-align: center; padding: 2.5rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+</style>
+<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <a class="back-link" href="/rules-hub.html">&larr; 20 Below</a>
+
+  <header>
+    <p class="eyebrow">Visual System</p>
+    <h1>Divider System Specimen Sheet</h1>
+    <div class="subtitle">9 textures &times; 11 semantic colors &middot; 99 marks</div>
+    <p class="intro">Every section-break rule used across the 20 Below rulebook, generated procedurally from a single SVG filter recipe per texture and recolored per semantic role &mdash; the same accent, the five Elements, the three Battle Tracker roles, and the two text tones used everywhere else in the system.</p>
+  </header>
+
+  <div class="grid">
+    <div class="col-headers">
+      <div></div>
+      <div class="col-label">Accent</div><div class="col-label">Earth</div><div class="col-label">Air</div><div class="col-label">Fire</div><div class="col-label">Water</div><div class="col-label">Moira</div><div class="col-label">Ally</div><div class="col-label">PC</div><div class="col-label">NPC</div><div class="col-label">Text</div><div class="col-label">Text Dim</div>
+    </div>
+    
+    <div class="row">
+      <div class="row-label">Torn</div>
+      <div class="row-cells"><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.015 0.4" numOctaves="4" seed="11" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="36" width="600" height="7" fill="#3D84C4"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.015 0.4" numOctaves="4" seed="11" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="36" width="600" height="7" fill="#8A6D4E"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.015 0.4" numOctaves="4" seed="11" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="36" width="600" height="7" fill="#A8C9E0"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.015 0.4" numOctaves="4" seed="11" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="36" width="600" height="7" fill="#E0663F"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.015 0.4" numOctaves="4" seed="11" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="36" width="600" height="7" fill="#078F9B"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.015 0.4" numOctaves="4" seed="11" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="36" width="600" height="7" fill="#A06FD1"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.015 0.4" numOctaves="4" seed="11" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="36" width="600" height="7" fill="#C39A5A"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.015 0.4" numOctaves="4" seed="11" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="36" width="600" height="7" fill="#5ECB6B"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.015 0.4" numOctaves="4" seed="11" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="36" width="600" height="7" fill="#E0685C"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.015 0.4" numOctaves="4" seed="11" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="36" width="600" height="7" fill="#EAF5FB"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.015 0.4" numOctaves="4" seed="11" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="36" width="600" height="7" fill="#8FADBE"/></g>
+</svg>
+</div></div>
+    </div>
+    <div class="row">
+      <div class="row-label">Eroded</div>
+      <div class="row-cells"><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.3" numOctaves="4" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="19" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 0 0 0 -0.42" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="11" fill="#3D84C4"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.3" numOctaves="4" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="19" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 0 0 0 -0.42" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="11" fill="#8A6D4E"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.3" numOctaves="4" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="19" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 0 0 0 -0.42" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="11" fill="#A8C9E0"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.3" numOctaves="4" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="19" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 0 0 0 -0.42" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="11" fill="#E0663F"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.3" numOctaves="4" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="19" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 0 0 0 -0.42" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="11" fill="#078F9B"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.3" numOctaves="4" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="19" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 0 0 0 -0.42" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="11" fill="#A06FD1"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.3" numOctaves="4" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="19" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 0 0 0 -0.42" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="11" fill="#C39A5A"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.3" numOctaves="4" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="19" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 0 0 0 -0.42" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="11" fill="#5ECB6B"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.3" numOctaves="4" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="19" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 0 0 0 -0.42" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="11" fill="#E0685C"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.3" numOctaves="4" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="19" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 0 0 0 -0.42" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="11" fill="#EAF5FB"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.3" numOctaves="4" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" seed="19" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 0 0 0 -0.42" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="11" fill="#8FADBE"/></g>
+</svg>
+</div></div>
+    </div>
+    <div class="row">
+      <div class="row-label">Wash</div>
+      <div class="row-cells"><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="5" seed="27" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="2" seed="5" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 -0.3" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#3D84C4" stop-opacity="0"/><stop offset="0.22" stop-color="#3D84C4" stop-opacity="1"/><stop offset="0.78" stop-color="#3D84C4" stop-opacity="1"/><stop offset="1" stop-color="#3D84C4" stop-opacity="0"/></linearGradient><rect x="40" y="35" width="600" height="9" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="5" seed="27" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="2" seed="5" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 -0.3" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#8A6D4E" stop-opacity="0"/><stop offset="0.22" stop-color="#8A6D4E" stop-opacity="1"/><stop offset="0.78" stop-color="#8A6D4E" stop-opacity="1"/><stop offset="1" stop-color="#8A6D4E" stop-opacity="0"/></linearGradient><rect x="40" y="35" width="600" height="9" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="5" seed="27" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="2" seed="5" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 -0.3" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#A8C9E0" stop-opacity="0"/><stop offset="0.22" stop-color="#A8C9E0" stop-opacity="1"/><stop offset="0.78" stop-color="#A8C9E0" stop-opacity="1"/><stop offset="1" stop-color="#A8C9E0" stop-opacity="0"/></linearGradient><rect x="40" y="35" width="600" height="9" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="5" seed="27" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="2" seed="5" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 -0.3" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#E0663F" stop-opacity="0"/><stop offset="0.22" stop-color="#E0663F" stop-opacity="1"/><stop offset="0.78" stop-color="#E0663F" stop-opacity="1"/><stop offset="1" stop-color="#E0663F" stop-opacity="0"/></linearGradient><rect x="40" y="35" width="600" height="9" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="5" seed="27" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="2" seed="5" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 -0.3" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#078F9B" stop-opacity="0"/><stop offset="0.22" stop-color="#078F9B" stop-opacity="1"/><stop offset="0.78" stop-color="#078F9B" stop-opacity="1"/><stop offset="1" stop-color="#078F9B" stop-opacity="0"/></linearGradient><rect x="40" y="35" width="600" height="9" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="5" seed="27" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="2" seed="5" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 -0.3" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#A06FD1" stop-opacity="0"/><stop offset="0.22" stop-color="#A06FD1" stop-opacity="1"/><stop offset="0.78" stop-color="#A06FD1" stop-opacity="1"/><stop offset="1" stop-color="#A06FD1" stop-opacity="0"/></linearGradient><rect x="40" y="35" width="600" height="9" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="5" seed="27" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="2" seed="5" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 -0.3" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#C39A5A" stop-opacity="0"/><stop offset="0.22" stop-color="#C39A5A" stop-opacity="1"/><stop offset="0.78" stop-color="#C39A5A" stop-opacity="1"/><stop offset="1" stop-color="#C39A5A" stop-opacity="0"/></linearGradient><rect x="40" y="35" width="600" height="9" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="5" seed="27" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="2" seed="5" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 -0.3" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#5ECB6B" stop-opacity="0"/><stop offset="0.22" stop-color="#5ECB6B" stop-opacity="1"/><stop offset="0.78" stop-color="#5ECB6B" stop-opacity="1"/><stop offset="1" stop-color="#5ECB6B" stop-opacity="0"/></linearGradient><rect x="40" y="35" width="600" height="9" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="5" seed="27" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="2" seed="5" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 -0.3" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#E0685C" stop-opacity="0"/><stop offset="0.22" stop-color="#E0685C" stop-opacity="1"/><stop offset="0.78" stop-color="#E0685C" stop-opacity="1"/><stop offset="1" stop-color="#E0685C" stop-opacity="0"/></linearGradient><rect x="40" y="35" width="600" height="9" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="5" seed="27" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="2" seed="5" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 -0.3" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#EAF5FB" stop-opacity="0"/><stop offset="0.22" stop-color="#EAF5FB" stop-opacity="1"/><stop offset="0.78" stop-color="#EAF5FB" stop-opacity="1"/><stop offset="1" stop-color="#EAF5FB" stop-opacity="0"/></linearGradient><rect x="40" y="35" width="600" height="9" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="5" seed="27" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="2" seed="5" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 -0.3" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#8FADBE" stop-opacity="0"/><stop offset="0.22" stop-color="#8FADBE" stop-opacity="1"/><stop offset="0.78" stop-color="#8FADBE" stop-opacity="1"/><stop offset="1" stop-color="#8FADBE" stop-opacity="0"/></linearGradient><rect x="40" y="35" width="600" height="9" fill="url(#g)"/></g>
+</svg>
+</div></div>
+    </div>
+    <div class="row">
+      <div class="row-label">Hairline</div>
+      <div class="row-cells"><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.6" numOctaves="3" seed="8" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="2" fill="#3D84C4"/><rect x="40" y="43" width="600" height="2" fill="#3D84C4"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.6" numOctaves="3" seed="8" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="2" fill="#8A6D4E"/><rect x="40" y="43" width="600" height="2" fill="#8A6D4E"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.6" numOctaves="3" seed="8" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="2" fill="#A8C9E0"/><rect x="40" y="43" width="600" height="2" fill="#A8C9E0"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.6" numOctaves="3" seed="8" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="2" fill="#E0663F"/><rect x="40" y="43" width="600" height="2" fill="#E0663F"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.6" numOctaves="3" seed="8" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="2" fill="#078F9B"/><rect x="40" y="43" width="600" height="2" fill="#078F9B"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.6" numOctaves="3" seed="8" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="2" fill="#A06FD1"/><rect x="40" y="43" width="600" height="2" fill="#A06FD1"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.6" numOctaves="3" seed="8" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="2" fill="#C39A5A"/><rect x="40" y="43" width="600" height="2" fill="#C39A5A"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.6" numOctaves="3" seed="8" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="2" fill="#5ECB6B"/><rect x="40" y="43" width="600" height="2" fill="#5ECB6B"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.6" numOctaves="3" seed="8" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="2" fill="#E0685C"/><rect x="40" y="43" width="600" height="2" fill="#E0685C"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.6" numOctaves="3" seed="8" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="2" fill="#EAF5FB"/><rect x="40" y="43" width="600" height="2" fill="#EAF5FB"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.6" numOctaves="3" seed="8" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="34" width="600" height="2" fill="#8FADBE"/><rect x="40" y="43" width="600" height="2" fill="#8FADBE"/></g>
+</svg>
+</div></div>
+    </div>
+    <div class="row">
+      <div class="row-label">Drip</div>
+      <div class="row-cells"><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.35" numOctaves="4" seed="33" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><g fill="#3D84C4"><rect x="40" y="39" width="600" height="6"/><rect x="118" y="45" width="4" height="17" rx="2.0"/><rect x="246" y="45" width="3" height="11" rx="1.5"/><rect x="329" y="45" width="5" height="24" rx="2.5"/><rect x="451" y="45" width="3" height="14" rx="1.5"/><rect x="566" y="45" width="4" height="9" rx="2.0"/></g></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.35" numOctaves="4" seed="33" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><g fill="#8A6D4E"><rect x="40" y="39" width="600" height="6"/><rect x="118" y="45" width="4" height="17" rx="2.0"/><rect x="246" y="45" width="3" height="11" rx="1.5"/><rect x="329" y="45" width="5" height="24" rx="2.5"/><rect x="451" y="45" width="3" height="14" rx="1.5"/><rect x="566" y="45" width="4" height="9" rx="2.0"/></g></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.35" numOctaves="4" seed="33" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><g fill="#A8C9E0"><rect x="40" y="39" width="600" height="6"/><rect x="118" y="45" width="4" height="17" rx="2.0"/><rect x="246" y="45" width="3" height="11" rx="1.5"/><rect x="329" y="45" width="5" height="24" rx="2.5"/><rect x="451" y="45" width="3" height="14" rx="1.5"/><rect x="566" y="45" width="4" height="9" rx="2.0"/></g></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.35" numOctaves="4" seed="33" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><g fill="#E0663F"><rect x="40" y="39" width="600" height="6"/><rect x="118" y="45" width="4" height="17" rx="2.0"/><rect x="246" y="45" width="3" height="11" rx="1.5"/><rect x="329" y="45" width="5" height="24" rx="2.5"/><rect x="451" y="45" width="3" height="14" rx="1.5"/><rect x="566" y="45" width="4" height="9" rx="2.0"/></g></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.35" numOctaves="4" seed="33" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><g fill="#078F9B"><rect x="40" y="39" width="600" height="6"/><rect x="118" y="45" width="4" height="17" rx="2.0"/><rect x="246" y="45" width="3" height="11" rx="1.5"/><rect x="329" y="45" width="5" height="24" rx="2.5"/><rect x="451" y="45" width="3" height="14" rx="1.5"/><rect x="566" y="45" width="4" height="9" rx="2.0"/></g></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.35" numOctaves="4" seed="33" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><g fill="#A06FD1"><rect x="40" y="39" width="600" height="6"/><rect x="118" y="45" width="4" height="17" rx="2.0"/><rect x="246" y="45" width="3" height="11" rx="1.5"/><rect x="329" y="45" width="5" height="24" rx="2.5"/><rect x="451" y="45" width="3" height="14" rx="1.5"/><rect x="566" y="45" width="4" height="9" rx="2.0"/></g></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.35" numOctaves="4" seed="33" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><g fill="#C39A5A"><rect x="40" y="39" width="600" height="6"/><rect x="118" y="45" width="4" height="17" rx="2.0"/><rect x="246" y="45" width="3" height="11" rx="1.5"/><rect x="329" y="45" width="5" height="24" rx="2.5"/><rect x="451" y="45" width="3" height="14" rx="1.5"/><rect x="566" y="45" width="4" height="9" rx="2.0"/></g></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.35" numOctaves="4" seed="33" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><g fill="#5ECB6B"><rect x="40" y="39" width="600" height="6"/><rect x="118" y="45" width="4" height="17" rx="2.0"/><rect x="246" y="45" width="3" height="11" rx="1.5"/><rect x="329" y="45" width="5" height="24" rx="2.5"/><rect x="451" y="45" width="3" height="14" rx="1.5"/><rect x="566" y="45" width="4" height="9" rx="2.0"/></g></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.35" numOctaves="4" seed="33" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><g fill="#E0685C"><rect x="40" y="39" width="600" height="6"/><rect x="118" y="45" width="4" height="17" rx="2.0"/><rect x="246" y="45" width="3" height="11" rx="1.5"/><rect x="329" y="45" width="5" height="24" rx="2.5"/><rect x="451" y="45" width="3" height="14" rx="1.5"/><rect x="566" y="45" width="4" height="9" rx="2.0"/></g></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.35" numOctaves="4" seed="33" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><g fill="#EAF5FB"><rect x="40" y="39" width="600" height="6"/><rect x="118" y="45" width="4" height="17" rx="2.0"/><rect x="246" y="45" width="3" height="11" rx="1.5"/><rect x="329" y="45" width="5" height="24" rx="2.5"/><rect x="451" y="45" width="3" height="14" rx="1.5"/><rect x="566" y="45" width="4" height="9" rx="2.0"/></g></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.35" numOctaves="4" seed="33" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><g fill="#8FADBE"><rect x="40" y="39" width="600" height="6"/><rect x="118" y="45" width="4" height="17" rx="2.0"/><rect x="246" y="45" width="3" height="11" rx="1.5"/><rect x="329" y="45" width="5" height="24" rx="2.5"/><rect x="451" y="45" width="3" height="14" rx="1.5"/><rect x="566" y="45" width="4" height="9" rx="2.0"/></g></g>
+</svg>
+</div></div>
+    </div>
+    <div class="row">
+      <div class="row-label">Scrape</div>
+      <div class="row-cells"><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.55" numOctaves="5" seed="41" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="13" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.25 0.7" numOctaves="4" seed="2" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="32" width="600" height="16" fill="#3D84C4"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.55" numOctaves="5" seed="41" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="13" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.25 0.7" numOctaves="4" seed="2" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="32" width="600" height="16" fill="#8A6D4E"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.55" numOctaves="5" seed="41" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="13" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.25 0.7" numOctaves="4" seed="2" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="32" width="600" height="16" fill="#A8C9E0"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.55" numOctaves="5" seed="41" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="13" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.25 0.7" numOctaves="4" seed="2" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="32" width="600" height="16" fill="#E0663F"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.55" numOctaves="5" seed="41" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="13" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.25 0.7" numOctaves="4" seed="2" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="32" width="600" height="16" fill="#078F9B"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.55" numOctaves="5" seed="41" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="13" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.25 0.7" numOctaves="4" seed="2" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="32" width="600" height="16" fill="#A06FD1"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.55" numOctaves="5" seed="41" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="13" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.25 0.7" numOctaves="4" seed="2" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="32" width="600" height="16" fill="#C39A5A"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.55" numOctaves="5" seed="41" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="13" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.25 0.7" numOctaves="4" seed="2" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="32" width="600" height="16" fill="#5ECB6B"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.55" numOctaves="5" seed="41" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="13" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.25 0.7" numOctaves="4" seed="2" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="32" width="600" height="16" fill="#E0685C"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.55" numOctaves="5" seed="41" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="13" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.25 0.7" numOctaves="4" seed="2" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="32" width="600" height="16" fill="#EAF5FB"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.55" numOctaves="5" seed="41" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="13" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.25 0.7" numOctaves="4" seed="2" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out"/>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><rect x="40" y="32" width="600" height="16" fill="#8FADBE"/></g>
+</svg>
+</div></div>
+    </div>
+    <div class="row">
+      <div class="row-label">Beam</div>
+      <div class="row-cells"><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.6" numOctaves="4" seed="13" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="5" result="g1"/>
+    <feGaussianBlur in="r" stdDeviation="1.6" result="g2"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="g2"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#3D84C4" stop-opacity="0"/><stop offset="0.14" stop-color="#3D84C4" stop-opacity="0.75"/><stop offset="0.5" stop-color="#A8C8E4" stop-opacity="1"/><stop offset="0.86" stop-color="#3D84C4" stop-opacity="0.9"/><stop offset="1" stop-color="#3D84C4" stop-opacity="0"/></linearGradient><path d="M40 40 Q340 32 640 37 Q340 48 40 40 Z" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.6" numOctaves="4" seed="13" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="5" result="g1"/>
+    <feGaussianBlur in="r" stdDeviation="1.6" result="g2"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="g2"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#8A6D4E" stop-opacity="0"/><stop offset="0.14" stop-color="#8A6D4E" stop-opacity="0.75"/><stop offset="0.5" stop-color="#CABDAF" stop-opacity="1"/><stop offset="0.86" stop-color="#8A6D4E" stop-opacity="0.9"/><stop offset="1" stop-color="#8A6D4E" stop-opacity="0"/></linearGradient><path d="M40 40 Q340 32 640 37 Q340 48 40 40 Z" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.6" numOctaves="4" seed="13" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="5" result="g1"/>
+    <feGaussianBlur in="r" stdDeviation="1.6" result="g2"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="g2"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#A8C9E0" stop-opacity="0"/><stop offset="0.14" stop-color="#A8C9E0" stop-opacity="0.75"/><stop offset="0.5" stop-color="#D8E7F1" stop-opacity="1"/><stop offset="0.86" stop-color="#A8C9E0" stop-opacity="0.9"/><stop offset="1" stop-color="#A8C9E0" stop-opacity="0"/></linearGradient><path d="M40 40 Q340 32 640 37 Q340 48 40 40 Z" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.6" numOctaves="4" seed="13" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="5" result="g1"/>
+    <feGaussianBlur in="r" stdDeviation="1.6" result="g2"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="g2"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#E0663F" stop-opacity="0"/><stop offset="0.14" stop-color="#E0663F" stop-opacity="0.75"/><stop offset="0.5" stop-color="#F1BAA9" stop-opacity="1"/><stop offset="0.86" stop-color="#E0663F" stop-opacity="0.9"/><stop offset="1" stop-color="#E0663F" stop-opacity="0"/></linearGradient><path d="M40 40 Q340 32 640 37 Q340 48 40 40 Z" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.6" numOctaves="4" seed="13" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="5" result="g1"/>
+    <feGaussianBlur in="r" stdDeviation="1.6" result="g2"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="g2"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#078F9B" stop-opacity="0"/><stop offset="0.14" stop-color="#078F9B" stop-opacity="0.75"/><stop offset="0.5" stop-color="#8FCDD2" stop-opacity="1"/><stop offset="0.86" stop-color="#078F9B" stop-opacity="0.9"/><stop offset="1" stop-color="#078F9B" stop-opacity="0"/></linearGradient><path d="M40 40 Q340 32 640 37 Q340 48 40 40 Z" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.6" numOctaves="4" seed="13" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="5" result="g1"/>
+    <feGaussianBlur in="r" stdDeviation="1.6" result="g2"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="g2"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#A06FD1" stop-opacity="0"/><stop offset="0.14" stop-color="#A06FD1" stop-opacity="0.75"/><stop offset="0.5" stop-color="#D4BEEA" stop-opacity="1"/><stop offset="0.86" stop-color="#A06FD1" stop-opacity="0.9"/><stop offset="1" stop-color="#A06FD1" stop-opacity="0"/></linearGradient><path d="M40 40 Q340 32 640 37 Q340 48 40 40 Z" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.6" numOctaves="4" seed="13" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="5" result="g1"/>
+    <feGaussianBlur in="r" stdDeviation="1.6" result="g2"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="g2"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#C39A5A" stop-opacity="0"/><stop offset="0.14" stop-color="#C39A5A" stop-opacity="0.75"/><stop offset="0.5" stop-color="#E4D2B5" stop-opacity="1"/><stop offset="0.86" stop-color="#C39A5A" stop-opacity="0.9"/><stop offset="1" stop-color="#C39A5A" stop-opacity="0"/></linearGradient><path d="M40 40 Q340 32 640 37 Q340 48 40 40 Z" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.6" numOctaves="4" seed="13" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="5" result="g1"/>
+    <feGaussianBlur in="r" stdDeviation="1.6" result="g2"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="g2"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#5ECB6B" stop-opacity="0"/><stop offset="0.14" stop-color="#5ECB6B" stop-opacity="0.75"/><stop offset="0.5" stop-color="#B7E8BC" stop-opacity="1"/><stop offset="0.86" stop-color="#5ECB6B" stop-opacity="0.9"/><stop offset="1" stop-color="#5ECB6B" stop-opacity="0"/></linearGradient><path d="M40 40 Q340 32 640 37 Q340 48 40 40 Z" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.6" numOctaves="4" seed="13" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="5" result="g1"/>
+    <feGaussianBlur in="r" stdDeviation="1.6" result="g2"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="g2"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#E0685C" stop-opacity="0"/><stop offset="0.14" stop-color="#E0685C" stop-opacity="0.75"/><stop offset="0.5" stop-color="#F1BBB6" stop-opacity="1"/><stop offset="0.86" stop-color="#E0685C" stop-opacity="0.9"/><stop offset="1" stop-color="#E0685C" stop-opacity="0"/></linearGradient><path d="M40 40 Q340 32 640 37 Q340 48 40 40 Z" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.6" numOctaves="4" seed="13" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="5" result="g1"/>
+    <feGaussianBlur in="r" stdDeviation="1.6" result="g2"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="g2"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#EAF5FB" stop-opacity="0"/><stop offset="0.14" stop-color="#EAF5FB" stop-opacity="0.75"/><stop offset="0.5" stop-color="#F6FAFD" stop-opacity="1"/><stop offset="0.86" stop-color="#EAF5FB" stop-opacity="0.9"/><stop offset="1" stop-color="#EAF5FB" stop-opacity="0"/></linearGradient><path d="M40 40 Q340 32 640 37 Q340 48 40 40 Z" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.6" numOctaves="4" seed="13" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="5" result="g1"/>
+    <feGaussianBlur in="r" stdDeviation="1.6" result="g2"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="g2"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#8FADBE" stop-opacity="0"/><stop offset="0.14" stop-color="#8FADBE" stop-opacity="0.75"/><stop offset="0.5" stop-color="#CDDAE2" stop-opacity="1"/><stop offset="0.86" stop-color="#8FADBE" stop-opacity="0.9"/><stop offset="1" stop-color="#8FADBE" stop-opacity="0"/></linearGradient><path d="M40 40 Q340 32 640 37 Q340 48 40 40 Z" fill="url(#g)"/></g>
+</svg>
+</div></div>
+    </div>
+    <div class="row">
+      <div class="row-label">Diamond</div>
+      <div class="row-cells"><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.5" numOctaves="4" seed="23" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="2.4" result="g1"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="gl" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#3D84C4" stop-opacity="0"/><stop offset="1" stop-color="#3D84C4" stop-opacity="1"/></linearGradient><linearGradient id="gr" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#3D84C4" stop-opacity="1"/><stop offset="1" stop-color="#3D84C4" stop-opacity="0"/></linearGradient><rect x="40" y="39" width="252" height="2" fill="url(#gl)"/><rect x="388" y="39" width="252" height="2" fill="url(#gr)"/><path d="M340 27 L353 40 L340 53 L327 40 Z" fill="none" stroke="#3D84C4" stroke-width="2"/><path d="M340 34 L346 40 L340 46 L334 40 Z" fill="#A8C8E4"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.5" numOctaves="4" seed="23" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="2.4" result="g1"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="gl" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#8A6D4E" stop-opacity="0"/><stop offset="1" stop-color="#8A6D4E" stop-opacity="1"/></linearGradient><linearGradient id="gr" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#8A6D4E" stop-opacity="1"/><stop offset="1" stop-color="#8A6D4E" stop-opacity="0"/></linearGradient><rect x="40" y="39" width="252" height="2" fill="url(#gl)"/><rect x="388" y="39" width="252" height="2" fill="url(#gr)"/><path d="M340 27 L353 40 L340 53 L327 40 Z" fill="none" stroke="#8A6D4E" stroke-width="2"/><path d="M340 34 L346 40 L340 46 L334 40 Z" fill="#CABDAF"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.5" numOctaves="4" seed="23" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="2.4" result="g1"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="gl" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#A8C9E0" stop-opacity="0"/><stop offset="1" stop-color="#A8C9E0" stop-opacity="1"/></linearGradient><linearGradient id="gr" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#A8C9E0" stop-opacity="1"/><stop offset="1" stop-color="#A8C9E0" stop-opacity="0"/></linearGradient><rect x="40" y="39" width="252" height="2" fill="url(#gl)"/><rect x="388" y="39" width="252" height="2" fill="url(#gr)"/><path d="M340 27 L353 40 L340 53 L327 40 Z" fill="none" stroke="#A8C9E0" stroke-width="2"/><path d="M340 34 L346 40 L340 46 L334 40 Z" fill="#D8E7F1"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.5" numOctaves="4" seed="23" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="2.4" result="g1"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="gl" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#E0663F" stop-opacity="0"/><stop offset="1" stop-color="#E0663F" stop-opacity="1"/></linearGradient><linearGradient id="gr" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#E0663F" stop-opacity="1"/><stop offset="1" stop-color="#E0663F" stop-opacity="0"/></linearGradient><rect x="40" y="39" width="252" height="2" fill="url(#gl)"/><rect x="388" y="39" width="252" height="2" fill="url(#gr)"/><path d="M340 27 L353 40 L340 53 L327 40 Z" fill="none" stroke="#E0663F" stroke-width="2"/><path d="M340 34 L346 40 L340 46 L334 40 Z" fill="#F1BAA9"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.5" numOctaves="4" seed="23" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="2.4" result="g1"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="gl" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#078F9B" stop-opacity="0"/><stop offset="1" stop-color="#078F9B" stop-opacity="1"/></linearGradient><linearGradient id="gr" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#078F9B" stop-opacity="1"/><stop offset="1" stop-color="#078F9B" stop-opacity="0"/></linearGradient><rect x="40" y="39" width="252" height="2" fill="url(#gl)"/><rect x="388" y="39" width="252" height="2" fill="url(#gr)"/><path d="M340 27 L353 40 L340 53 L327 40 Z" fill="none" stroke="#078F9B" stroke-width="2"/><path d="M340 34 L346 40 L340 46 L334 40 Z" fill="#8FCDD2"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.5" numOctaves="4" seed="23" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="2.4" result="g1"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="gl" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#A06FD1" stop-opacity="0"/><stop offset="1" stop-color="#A06FD1" stop-opacity="1"/></linearGradient><linearGradient id="gr" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#A06FD1" stop-opacity="1"/><stop offset="1" stop-color="#A06FD1" stop-opacity="0"/></linearGradient><rect x="40" y="39" width="252" height="2" fill="url(#gl)"/><rect x="388" y="39" width="252" height="2" fill="url(#gr)"/><path d="M340 27 L353 40 L340 53 L327 40 Z" fill="none" stroke="#A06FD1" stroke-width="2"/><path d="M340 34 L346 40 L340 46 L334 40 Z" fill="#D4BEEA"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.5" numOctaves="4" seed="23" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="2.4" result="g1"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="gl" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#C39A5A" stop-opacity="0"/><stop offset="1" stop-color="#C39A5A" stop-opacity="1"/></linearGradient><linearGradient id="gr" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#C39A5A" stop-opacity="1"/><stop offset="1" stop-color="#C39A5A" stop-opacity="0"/></linearGradient><rect x="40" y="39" width="252" height="2" fill="url(#gl)"/><rect x="388" y="39" width="252" height="2" fill="url(#gr)"/><path d="M340 27 L353 40 L340 53 L327 40 Z" fill="none" stroke="#C39A5A" stroke-width="2"/><path d="M340 34 L346 40 L340 46 L334 40 Z" fill="#E4D2B5"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.5" numOctaves="4" seed="23" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="2.4" result="g1"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="gl" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#5ECB6B" stop-opacity="0"/><stop offset="1" stop-color="#5ECB6B" stop-opacity="1"/></linearGradient><linearGradient id="gr" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#5ECB6B" stop-opacity="1"/><stop offset="1" stop-color="#5ECB6B" stop-opacity="0"/></linearGradient><rect x="40" y="39" width="252" height="2" fill="url(#gl)"/><rect x="388" y="39" width="252" height="2" fill="url(#gr)"/><path d="M340 27 L353 40 L340 53 L327 40 Z" fill="none" stroke="#5ECB6B" stroke-width="2"/><path d="M340 34 L346 40 L340 46 L334 40 Z" fill="#B7E8BC"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.5" numOctaves="4" seed="23" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="2.4" result="g1"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="gl" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#E0685C" stop-opacity="0"/><stop offset="1" stop-color="#E0685C" stop-opacity="1"/></linearGradient><linearGradient id="gr" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#E0685C" stop-opacity="1"/><stop offset="1" stop-color="#E0685C" stop-opacity="0"/></linearGradient><rect x="40" y="39" width="252" height="2" fill="url(#gl)"/><rect x="388" y="39" width="252" height="2" fill="url(#gr)"/><path d="M340 27 L353 40 L340 53 L327 40 Z" fill="none" stroke="#E0685C" stroke-width="2"/><path d="M340 34 L346 40 L340 46 L334 40 Z" fill="#F1BBB6"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.5" numOctaves="4" seed="23" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="2.4" result="g1"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="gl" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#EAF5FB" stop-opacity="0"/><stop offset="1" stop-color="#EAF5FB" stop-opacity="1"/></linearGradient><linearGradient id="gr" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#EAF5FB" stop-opacity="1"/><stop offset="1" stop-color="#EAF5FB" stop-opacity="0"/></linearGradient><rect x="40" y="39" width="252" height="2" fill="url(#gl)"/><rect x="388" y="39" width="252" height="2" fill="url(#gr)"/><path d="M340 27 L353 40 L340 53 L327 40 Z" fill="none" stroke="#EAF5FB" stroke-width="2"/><path d="M340 34 L346 40 L340 46 L334 40 Z" fill="#F6FAFD"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 680 80">
+  
+  <defs>
+  <filter id="f" x="-12%" y="-900%" width="124%" height="1900%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03 0.5" numOctaves="4" seed="23" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="2.4" result="g1"/>
+    <feMerge><feMergeNode in="g1"/><feMergeNode in="g1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="gl" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#8FADBE" stop-opacity="0"/><stop offset="1" stop-color="#8FADBE" stop-opacity="1"/></linearGradient><linearGradient id="gr" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#8FADBE" stop-opacity="1"/><stop offset="1" stop-color="#8FADBE" stop-opacity="0"/></linearGradient><rect x="40" y="39" width="252" height="2" fill="url(#gl)"/><rect x="388" y="39" width="252" height="2" fill="url(#gr)"/><path d="M340 27 L353 40 L340 53 L327 40 Z" fill="none" stroke="#8FADBE" stroke-width="2"/><path d="M340 34 L346 40 L340 46 L334 40 Z" fill="#CDDAE2"/></g>
+</svg>
+</div></div>
+    </div>
+    <div class="row">
+      <div class="row-label">Vertical</div>
+      <div class="row-cells"><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 80 680">
+  
+  <defs>
+  <filter id="f" x="-500%" y="-6%" width="1100%" height="112%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.5 0.006" numOctaves="5" seed="31" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.7 0.1" numOctaves="4" seed="6" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="3.5" result="b1"/>
+    <feMerge><feMergeNode in="b1"/><feMergeNode in="b1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#3D84C4" stop-opacity="0"/><stop offset="0.1" stop-color="#94BBDF" stop-opacity="1"/><stop offset="0.62" stop-color="#3D84C4" stop-opacity="1"/><stop offset="1" stop-color="#3D84C4" stop-opacity="0"/></linearGradient><rect x="37" y="30" width="6" height="620" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 80 680">
+  
+  <defs>
+  <filter id="f" x="-500%" y="-6%" width="1100%" height="112%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.5 0.006" numOctaves="5" seed="31" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.7 0.1" numOctaves="4" seed="6" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="3.5" result="b1"/>
+    <feMerge><feMergeNode in="b1"/><feMergeNode in="b1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#8A6D4E" stop-opacity="0"/><stop offset="0.1" stop-color="#BFAF9E" stop-opacity="1"/><stop offset="0.62" stop-color="#8A6D4E" stop-opacity="1"/><stop offset="1" stop-color="#8A6D4E" stop-opacity="0"/></linearGradient><rect x="37" y="30" width="6" height="620" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 80 680">
+  
+  <defs>
+  <filter id="f" x="-500%" y="-6%" width="1100%" height="112%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.5 0.006" numOctaves="5" seed="31" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.7 0.1" numOctaves="4" seed="6" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="3.5" result="b1"/>
+    <feMerge><feMergeNode in="b1"/><feMergeNode in="b1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#A8C9E0" stop-opacity="0"/><stop offset="0.1" stop-color="#CFE1EE" stop-opacity="1"/><stop offset="0.62" stop-color="#A8C9E0" stop-opacity="1"/><stop offset="1" stop-color="#A8C9E0" stop-opacity="0"/></linearGradient><rect x="37" y="30" width="6" height="620" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 80 680">
+  
+  <defs>
+  <filter id="f" x="-500%" y="-6%" width="1100%" height="112%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.5 0.006" numOctaves="5" seed="31" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.7 0.1" numOctaves="4" seed="6" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="3.5" result="b1"/>
+    <feMerge><feMergeNode in="b1"/><feMergeNode in="b1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#E0663F" stop-opacity="0"/><stop offset="0.1" stop-color="#EEAB95" stop-opacity="1"/><stop offset="0.62" stop-color="#E0663F" stop-opacity="1"/><stop offset="1" stop-color="#E0663F" stop-opacity="0"/></linearGradient><rect x="37" y="30" width="6" height="620" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 80 680">
+  
+  <defs>
+  <filter id="f" x="-500%" y="-6%" width="1100%" height="112%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.5 0.006" numOctaves="5" seed="31" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.7 0.1" numOctaves="4" seed="6" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="3.5" result="b1"/>
+    <feMerge><feMergeNode in="b1"/><feMergeNode in="b1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#078F9B" stop-opacity="0"/><stop offset="0.1" stop-color="#77C1C8" stop-opacity="1"/><stop offset="0.62" stop-color="#078F9B" stop-opacity="1"/><stop offset="1" stop-color="#078F9B" stop-opacity="0"/></linearGradient><rect x="37" y="30" width="6" height="620" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 80 680">
+  
+  <defs>
+  <filter id="f" x="-500%" y="-6%" width="1100%" height="112%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.5 0.006" numOctaves="5" seed="31" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.7 0.1" numOctaves="4" seed="6" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="3.5" result="b1"/>
+    <feMerge><feMergeNode in="b1"/><feMergeNode in="b1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#A06FD1" stop-opacity="0"/><stop offset="0.1" stop-color="#CBB0E6" stop-opacity="1"/><stop offset="0.62" stop-color="#A06FD1" stop-opacity="1"/><stop offset="1" stop-color="#A06FD1" stop-opacity="0"/></linearGradient><rect x="37" y="30" width="6" height="620" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 80 680">
+  
+  <defs>
+  <filter id="f" x="-500%" y="-6%" width="1100%" height="112%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.5 0.006" numOctaves="5" seed="31" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.7 0.1" numOctaves="4" seed="6" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="3.5" result="b1"/>
+    <feMerge><feMergeNode in="b1"/><feMergeNode in="b1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#C39A5A" stop-opacity="0"/><stop offset="0.1" stop-color="#DEC7A4" stop-opacity="1"/><stop offset="0.62" stop-color="#C39A5A" stop-opacity="1"/><stop offset="1" stop-color="#C39A5A" stop-opacity="0"/></linearGradient><rect x="37" y="30" width="6" height="620" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 80 680">
+  
+  <defs>
+  <filter id="f" x="-500%" y="-6%" width="1100%" height="112%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.5 0.006" numOctaves="5" seed="31" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.7 0.1" numOctaves="4" seed="6" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="3.5" result="b1"/>
+    <feMerge><feMergeNode in="b1"/><feMergeNode in="b1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#5ECB6B" stop-opacity="0"/><stop offset="0.1" stop-color="#A6E2AE" stop-opacity="1"/><stop offset="0.62" stop-color="#5ECB6B" stop-opacity="1"/><stop offset="1" stop-color="#5ECB6B" stop-opacity="0"/></linearGradient><rect x="37" y="30" width="6" height="620" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 80 680">
+  
+  <defs>
+  <filter id="f" x="-500%" y="-6%" width="1100%" height="112%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.5 0.006" numOctaves="5" seed="31" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.7 0.1" numOctaves="4" seed="6" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="3.5" result="b1"/>
+    <feMerge><feMergeNode in="b1"/><feMergeNode in="b1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#E0685C" stop-opacity="0"/><stop offset="0.1" stop-color="#EEACA5" stop-opacity="1"/><stop offset="0.62" stop-color="#E0685C" stop-opacity="1"/><stop offset="1" stop-color="#E0685C" stop-opacity="0"/></linearGradient><rect x="37" y="30" width="6" height="620" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 80 680">
+  
+  <defs>
+  <filter id="f" x="-500%" y="-6%" width="1100%" height="112%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.5 0.006" numOctaves="5" seed="31" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.7 0.1" numOctaves="4" seed="6" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="3.5" result="b1"/>
+    <feMerge><feMergeNode in="b1"/><feMergeNode in="b1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#EAF5FB" stop-opacity="0"/><stop offset="0.1" stop-color="#F3FAFD" stop-opacity="1"/><stop offset="0.62" stop-color="#EAF5FB" stop-opacity="1"/><stop offset="1" stop-color="#EAF5FB" stop-opacity="0"/></linearGradient><rect x="37" y="30" width="6" height="620" fill="url(#g)"/></g>
+</svg>
+</div><div class="cell"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 80 680">
+  
+  <defs>
+  <filter id="f" x="-500%" y="-6%" width="1100%" height="112%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.5 0.006" numOctaves="5" seed="31" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.7 0.1" numOctaves="4" seed="6" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.5" result="m"/>
+    <feComposite in="d" in2="m" operator="out" result="r"/>
+    <feGaussianBlur in="r" stdDeviation="3.5" result="b1"/>
+    <feMerge><feMergeNode in="b1"/><feMergeNode in="b1"/><feMergeNode in="r"/></feMerge>
+  </filter>
+  </defs>
+  <g filter="url(#f)"><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#8FADBE" stop-opacity="0"/><stop offset="0.1" stop-color="#C1D2DB" stop-opacity="1"/><stop offset="0.62" stop-color="#8FADBE" stop-opacity="1"/><stop offset="1" stop-color="#8FADBE" stop-opacity="0"/></linearGradient><rect x="37" y="30" width="6" height="620" fill="url(#g)"/></g>
+</svg>
+</div></div>
+    </div>
+  </div>
+
+  <footer>20 Below &middot; github.com/feralucce/20_Below</footer>
+</main>
+<script src="/docs/assets/js/site-nav.js"></script>
+</body>
+</html>
