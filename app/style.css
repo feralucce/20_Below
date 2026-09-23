@@ -1769,3 +1769,34 @@ tr.purchased td {
   font-size: 0.8rem;
   color: var(--danger);
 }
+
+/* The GM's bonus, at the first step of creation. */
+.bonus-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1rem;
+  max-width: 26rem;
+}
+.bonus-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.bonus-row label {
+  flex: 0 0 7rem;
+  color: var(--text-dim);
+}
+.bonus-row input {
+  width: 5rem;
+  padding: 0.35rem 0.5rem;
+  background: var(--bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font: inherit;
+}
+.bonus-base {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}

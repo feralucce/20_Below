@@ -79,6 +79,17 @@ export function createInitialState(data) {
       Boons: 0,
       Attributes: 0,
     },
+    // Points the GM hands out before anything is spent, on top of every
+    // pool's book total. A table starting above the standard build sets
+    // these once at the first step and then builds normally - nothing
+    // downstream knows the difference, it just has more to spend.
+    bonusPoints: {
+      Attributes: 0,
+      Skills: 0,
+      Boons: 0,
+      Resources: 0,
+      Gifts: 0,
+    },
     discretionaryCap: null, // GM-set cap on Flaw-earned Discretionary points, null = uncapped
     // Tracks how many pool-points'-worth of each scalar target (Attributes/
     // Skills/Resources/Gifts) were funded specifically through the Discretionary Points step's
@@ -205,6 +216,8 @@ export function mergeCharacterState(data, loaded) {
   CATALOG_DICT_FIELDS.forEach((field) => {
     merged[field] = { ...fresh[field], ...(loaded[field] || {}) };
   });
+  // Saves made before the GM bonus step have no such object at all.
+  merged.bonusPoints = { ...fresh.bonusPoints, ...(loaded.bonusPoints || {}) };
   merged.migrationNotices = migrateBoons(merged);
   // Packages used to be a single pick for the whole character. Move an old
   // save's one package into the Level slot it was taken from.
@@ -233,8 +246,15 @@ export function attributePointsSpent(state, data) {
   return spent;
 }
 
+// Whatever the GM added to a pool at the first step. Absent on any save
+// written before that step existed, so it answers 0 rather than NaN.
+export function bonusFor(state, pool) {
+  return Number(state.bonusPoints?.[pool]) || 0;
+}
+
 export function attributePoolRemaining(state, data) {
-  const total = data.attributePoolTotal + state.discretionaryExtra.Attributes;
+  const total = data.attributePoolTotal + state.discretionaryExtra.Attributes
+    + bonusFor(state, 'Attributes');
   return total - attributePointsSpent(state, data);
 }
 
@@ -271,7 +291,8 @@ export function skillsPoolRemaining(state, data) {
   if (jackOfAllTrades && jackOfAllTrades.points === 5) {
     return 0 - skillsPointsSpent(state, data);
   }
-  const total = data.skillsPoolTotal + state.discretionaryExtra.Skills;
+  const total = data.skillsPoolTotal + state.discretionaryExtra.Skills
+    + bonusFor(state, 'Skills');
   return total - skillsPointsSpent(state, data);
 }
 
@@ -280,7 +301,8 @@ export function boonsPointsSpent(state) {
 }
 
 export function boonsPoolRemaining(state, data) {
-  const total = data.boonsPoolTotal + state.discretionaryExtra.Boons;
+  const total = data.boonsPoolTotal + state.discretionaryExtra.Boons
+    + bonusFor(state, 'Boons');
   return total - boonsPointsSpent(state);
 }
 
@@ -293,7 +315,8 @@ export function resourcesPointsSpent(state, data) {
 }
 
 export function resourcesPoolRemaining(state, data) {
-  const total = data.resourcesPoolTotal + state.discretionaryExtra.Resources;
+  const total = data.resourcesPoolTotal + state.discretionaryExtra.Resources
+    + bonusFor(state, 'Resources');
   return total - resourcesPointsSpent(state, data);
 }
 
@@ -470,7 +493,8 @@ export function giftsPointsSpent(state, data) {
 }
 
 export function giftsPoolRemaining(state, data) {
-  const total = data.giftsPoolTotal + giftsDiscretionaryContribution(state, data);
+  const total = data.giftsPoolTotal + giftsDiscretionaryContribution(state, data)
+    + bonusFor(state, 'Gifts');
   return total - giftsPointsSpent(state, data);
 }
 

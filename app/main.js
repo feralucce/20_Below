@@ -12,6 +12,7 @@ import {
   downloadJson,
 } from './file-actions.js';
 
+import stepBonus from './steps/00-bonus.js';
 import stepIdentity from './steps/01-identity.js';
 import stepNature from './steps/02-nature.js';
 import stepAttributes from './steps/03-attributes.js';
@@ -32,6 +33,7 @@ import stepSheet from './steps/13-sheet.js';
 // changed to move Boons/Flaws ahead of Skills so both point-granting steps
 // land before the pools they can feed.
 const STEPS = [
+  stepBonus,
   stepIdentity,
   stepNature,
   stepAttributes,
