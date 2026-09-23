@@ -45,8 +45,8 @@ for i in range(SLOTS):
     # what it does - six lines, because the rules text for a Level runs long
     label(cx + 36, cy + 120, "DOES", 30, DIM, 3.6)
     field("gift.%d.does" % i, "para", cx + 132, cy + 66, cw - 180, 288, slot=i, lines=6)
-    for j in range(6):
-        line(cx + 132, cy + 114 + j * 48, cw - 180)
+    for j in range(sized(6, 5)):
+        line(cx + 132, cy + 114 + j * sized(48, 60), cw - 180)
     # adders and limiters, a row each
     label(cx + 36, cy + 432, "ADDERS", 30, mix(GREEN, LIFT, 0.3), 3.6)
     line(cx + 204, cy + 414, cw - 252)

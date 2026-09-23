@@ -13,7 +13,7 @@ open_page(4, 5, "The weapons and armour a character carries, and everything else
 
 # --- weapons --------------------------------------------------------------
 wy = TOP
-WH = 720
+WH = sized(720, 689)
 frame(MARGIN, wy, INNER, WH, FIRE, "WEAPONS")
 # Kit picked up in play goes on where it goes on the sheet, not in a
 # toolbar at the bottom of the page.
@@ -21,8 +21,8 @@ action(MARGIN + INNER - 42 - 300, wy + 18, 300, 66, FIRE, "+ ADD WEAPON", "weapo
 heads(MARGIN, wy + 126, ((48, "WEAPON"), (1010, "DAMAGE"), (1260, "RANGE N / L"),
                          (1660, "AMMO"), (1960, "RELOAD")))
 line(MARGIN + 42, wy + 144, INNER - 84, FIRE, 0.35)
-for i in range(10):
-    y = wy + 204 + i * 54
+for i in range(sized(10, 8)):
+    y = wy + 204 + i * sized(54, 65)
     for off, wid, key in ((48, 920, "name"), (1010, 210, "damage"), (1260, 360, "range"),
                           (1660, 250, "ammo"), (1960, 260, "reload")):
         line(MARGIN + off, y, wid)
@@ -30,8 +30,8 @@ for i in range(10):
               slot=i, **({"rollColor": FIRE} if key == "name" else {}))
 
 # --- armour ---------------------------------------------------------------
-ay = 1044
-AH = 450
+ay = sized(1044, 1013)
+AH = sized(450, 494)
 frame(MARGIN, ay, INNER, AH, STEEL, "ARMOUR")
 action(MARGIN + INNER - 42 - 300, ay + 18, 300, 66, STEEL, "+ ADD ARMOUR",
        "armour.add")
@@ -39,7 +39,7 @@ heads(MARGIN, ay + 126, ((48, "ITEM"), (900, "BODY"), (1020, "HEAD"), (1140, "HA
                          (1350, "ARMOUR HEALTH LEVELS"), (1950, "BROKEN")))
 line(MARGIN + 42, ay + 144, INNER - 84, STEEL, 0.35)
 for i in range(5):
-    y = ay + 204 + i * 54
+    y = ay + 204 + i * sized(54, 65)
     line(MARGIN + 48, y, 800)
     field("armour.%d.name" % i, "text", MARGIN + 48, y - 42, 800, 48, slot=i)
     box(MARGIN + 912, y - 36, 45, STEEL, 4.2, 9)
@@ -59,17 +59,17 @@ for i in range(5):
           slot=i, color=RED)
 
 # --- equipment ------------------------------------------------------------
-qy = 1524
+qy = sized(1524, 1537)
 QH = BOTTOM - qy
 frame(MARGIN, qy, INNER, QH, GOLD, "EQUIPMENT")
 action(MARGIN + INNER - 42 - 330, qy + 18, 330, 66, GOLD, "+ ADD EQUIPMENT",
        "equipment.add")
 qcol = (INNER - 96) / 3.0
 for ci in range(3):
-    for ri in range(27):
-        gx, gy_ = MARGIN + 48 + ci * qcol, qy + 150 + ri * 54
+    for ri in range(sized(27, 22)):
+        gx, gy_ = MARGIN + 48 + ci * qcol, qy + 150 + ri * sized(54, 65)
         line(gx, gy_, qcol - 72)
-        field("gear.%d" % (ci * 27 + ri), "text", gx, gy_ - 42, qcol - 72, 48,
-              slot=ci * 27 + ri)
+        field("gear.%d" % (ci * sized(27, 22) + ri), "text", gx, gy_ - 42,
+              qcol - 72, 48, slot=ci * sized(27, 22) + ri)
 
 FIELDS_P4 = write("character-sheet-page4.svg", "blocks end %d" % (qy + QH))

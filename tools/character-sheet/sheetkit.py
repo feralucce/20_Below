@@ -107,6 +107,19 @@ def panel_path(x, y, w, h, r):
                x + w - r, y + h, x + r, r, r, x, y + h - r, y + r, r, r, x + r, y))
 
 
+def sized(screen, printed):
+    """Pick a number per build.
+
+    The screen sheet renders text into its rows; the printed one is
+    written on by hand and needs more room between them. The page height
+    does not move, so the printed sheet keeps fewer rows - and the screen
+    sheet keeps all of its slots, which is why this is a fork rather than
+    a single new number. It also means the field map does not change, so
+    nothing a character has saved is lost.
+    """
+    return printed if PAPER else screen
+
+
 def box(x, y, s, col, w=4.5, r=10, op=1.0):
     add('  <rect x="%g" y="%g" width="%g" height="%g" rx="%g" fill="%s" '
         'fill-opacity="%g" stroke="%s" stroke-width="%g" stroke-opacity="%g"/>'

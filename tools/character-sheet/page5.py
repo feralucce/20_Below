@@ -18,7 +18,7 @@ open_page(5, 5, "The scars a character has picked up in play, their backstory, r
 
 # --- scars ----------------------------------------------------------------
 sy = TOP
-SH = 558
+SH = sized(558, 624)
 frame(MARGIN, sy, INNER, SH, RED, "SCARS",
       "AT 0 IT IS COSMETIC - BELOW 0 IT IS A FLAW UNTIL IT HEALS")
 scol = (INNER - 96) / 3.0
@@ -28,7 +28,7 @@ for ci, (name, col) in enumerate(SCARS):
     label(x + scol - 132, sy + 126, "BELOW 0", 29, DIM, 3.0, "end")
     line(x, sy + 144, scol - 72, col, 0.35)
     for ri in range(7):
-        y = sy + 204 + ri * 54
+        y = sy + 204 + ri * sized(54, 65)
         key = name.split()[0].lower()
         line(x, y, scol - 168)
         field("scar.%s.%d.text" % (key, ri), "text", x, y - 42, scol - 168, 48,
@@ -38,23 +38,27 @@ for ci, (name, col) in enumerate(SCARS):
               kindOf=key, slot=ri, color=RED)
 
 # --- backstory ------------------------------------------------------------
-by = 882
-BH = 1100
+by = sized(882, 948)
+BH = sized(1100, 1040)
 frame(MARGIN, by, INNER, BH, GOLD, "BACKSTORY", "WHERE THEY CAME FROM")
-field("backstory", "para", MARGIN + 48, by + 90, INNER - 96, 16 * 60, lines=16)
-for i in range(16):
+BS_LINES = sized(16, 15)
+field("backstory", "para", MARGIN + 48, by + 90, INNER - 96,
+      BS_LINES * 60, lines=BS_LINES)
+for i in range(BS_LINES):
     line(MARGIN + 48, by + 132 + i * 60, INNER - 96, RULE, 0.55)
 
 # --- notes ----------------------------------------------------------------
-ny = 2012
-NH = 946
+ny = sized(2012, 2018)
+NH = sized(946, 886)
 frame(MARGIN, ny, INNER, NH, ACCENT, "NOTES", "EVERYTHING THE TABLE NEEDS WRITTEN DOWN")
-field("notes", "para", MARGIN + 48, ny + 90, INNER - 96, 13 * 60, lines=13)
-for i in range(13):
+N_LINES = sized(13, 12)
+field("notes", "para", MARGIN + 48, ny + 90, INNER - 96,
+      N_LINES * 60, lines=N_LINES)
+for i in range(N_LINES):
     line(MARGIN + 48, ny + 132 + i * 60, INNER - 96, RULE, 0.55)
 
 # --- experience -----------------------------------------------------------
-xy = 2988
+xy = sized(2988, 2934)
 XH = BOTTOM - xy
 frame(MARGIN, xy, INNER, XH, GREEN, "EXPERIENCE")
 for off, t in ((900, "EARNED"), (1350, "SPENT"), (1800, "AVAILABLE")):
