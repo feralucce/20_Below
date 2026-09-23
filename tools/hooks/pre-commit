@@ -72,6 +72,24 @@ if echo "$out" | grep -q HOLLOW; then
 fi
 
 drifted=$(git diff --name-only -- webbook/)
+# The rebuild only proves the book matches the files it is built from. For
+# a chapter laid out in The Brewery that is the formatted file - not the
+# manuscript and not rules/ - so a rules change can miss the chapter
+# entirely and still rebuild perfectly cleanly. Conjured Armory ran three
+# different ways at once that way: rules/, the printed chapter and the
+# manuscript each teaching a different damage rule, every check passing.
+if ! out=$(python tools/check-book.py 2>&1); then
+  echo "$out"
+  echo
+  echo "pre-commit: the book disagrees with rules/. The rebuild succeeded,"
+  echo "  so this is not a build problem - it is a chapter that never got"
+  echo "  a rules change. For a laid-out chapter the fix belongs in the"
+  echo "  formatted file and the Scrivener manuscript, not in webbook/."
+  exit 1
+fi
+
+echo "pre-commit: book agrees with rules/."
+
 if [ -n "$drifted" ]; then
   echo
   echo "pre-commit: the rebuild changed the book, and those changes are not"

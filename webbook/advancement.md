@@ -212,7 +212,7 @@ Three more things accumulate as you climb, each on its own step.
 
 </div>
 
-That last one is the sharpest, and it is the only thing in the game that widens a critical on an attack. Skill tiers can’t - an attack is a straight Attribute against Defense with no Skill in it - so a natural 2 is a critical for everybody, and a critical doubles the damage dice. A 1% chance becomes 6%. That is what a lifetime spent inside one Element looks like from the other end of it.
+That last one is the sharpest, and it is the only thing in the game that widens a critical on an attack. Skill tiers can’t - an attack is a straight Attribute against Defense with no Skill in it - so a natural 2 is a critical for everybody, and a critical sends half your damage dice through free. A 1% chance becomes 6%. That is what a lifetime spent inside one Element looks like from the other end of it.
 
 None of this is reachable quickly. Ten to eleven alone is 90 XP, and the full climb from ten to twenty is 1,305. Nobody finishes it. Somebody in a long campaign buys three points of it and becomes the reason the table is still alive.
 

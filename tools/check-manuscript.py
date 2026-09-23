@@ -59,8 +59,35 @@ CLAIMS = [
     # --- Chapter 08, gifts
     ("Chapter 08", "Onslaught and Salvo exist", [r"Onslaught", r"Salvo"], []),
 
+    # More of Chapter 08. These are the drifts the manuscript actually had:
+    # it was two revisions behind on Gift damage, teaching a scale the game
+    # had replaced twice, and none of the checks above could see it because
+    # none of them looked at a level row.
+    ("Chapter 08", "Conjured Armory throws and recalls",
+     [r"throw the conjured weapon"],
+     [r"capped at the system", r"capped at the weapon table",
+      r"Damage bonus \(Level 3"]),
+    ("Chapter 08", "the attack-dice rule is stated once",
+     [r"Level plus half the sub-stat"], []),
+    ("Chapter 08", "Martial Artist is on the weapon damage scale",
+     [], [r"[Uu]narmed Damage rises to .{0,14}\b(7|10)\b"]),
+    ("Chapter 08", "Elemental Aura scales with Ferocity",
+     [], [r"[Cc]ontact damage rises to .{0,8}\dd10"]),
+    ("Chapter 08", "Limiters are permanent",
+     [], [r"bought off later with XP"]),
+    ("Chapter 08", "Onslaught and Salvo carry their levels",
+     [r"attack anything in .{0,14}Melee", r"attack one target out to"], []),
+
+    # --- Chapter 12, advancement
+    ("Chapter 12", "criticals send half the dice through, not double",
+     [], [r"doubles? the damage dice", r"doubles? your damage dice"]),
+
     # --- Chapter 11, equipment
     ("Chapter 11", "weapons top out at 5 dice", [], [r"\b10d10\b", r"\b7d10\b"]),
+    ("Chapter 11", "the range bands are explained",
+     [r"[Ll]ong.{0,6} range imposes"], []),
+    ("Chapter 11", "Reload is explained",
+     [r"Reload.{0,6} is the action cost"], []),
 ]
 
 

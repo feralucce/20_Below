@@ -48,6 +48,14 @@ Gifts don’t add a stat. Using one reaches for tools the game already has.
 
 None of the three is automatic. Each Gift, and each level of it, says which it uses, if any.
 
+## Attack Dice
+
+A Gift that attacks rolls **its Level plus half the sub-stat that powers it**, rounded down. The sub-stat is the one Ki Infusion already uses, so there is never a second question about which stat a Gift runs on: **Ferocity** for dice against Soak, **Presence** against Presence, **Psyche** against Psyche.
+
+This is why a Gift is worth its points. A weapon rolls what it rolls forever - the heaviest thing in the book is 5 dice and always will be. A Gift at Level 1 with a middling sub-stat rolls fewer dice than something you could buy, and a Gift you have actually invested in leaves every weapon behind. The points buy the curve, not the number.
+
+Dice built by a device or rolled by something you raised - a Gadgeteer gadget, a Necromancy thrall - are the exception, and stay on the ordinary scale. Those dice come from the thing, not from you.
+
 ## The Gift List
 
 Every entry defines all five levels up front. A Gift’s Level is its magnitude - not a different power wearing the same name.
@@ -385,15 +393,15 @@ Somewhere, just the other side of the world, your weapon waits for the moment yo
 
 </div>
 
-Chosen once, at creation: your signature weapon, any single item from the catalog in Weapons & Equipment.
-
 Chosen once, at creation: your **signature weapon**, any single item from the catalog in Weapons & Equipment.
+
+A conjured weapon's Damage is its listed rating **plus this Gift's Level**, with no ceiling - the weapon table's cap of 5 binds what a smith can forge, not what you call out of the air. A Damage 4 hatchet conjured at Level 3 deals **7**.
 
 <p class="gift-section">Adders</p>
 
 <div class="gift-opt gift-opt--adder" markdown="1">
 
-- **Bonded Blade** (Lesser, 3 pts): your signature weapon carries a permanent edge no other conjured weapon does - its Damage bonus (Level 3+) is always **+1** higher than any other weapon you conjure, forged specifically for your hand.
+- **Bonded Blade** (Lesser, 3 pts): your signature weapon carries a permanent edge no other conjured weapon does - its Damage is always **+1** higher than any other weapon you conjure, from Level 3 on, forged specifically for your hand.
 - **Armory of Anything** (Lesser, 3 pts): your conjured weapons can include improvised or exotic options beyond the standard catalog (a chainsaw, a fire axe, a katana pulled from pure aesthetic) - GM's call on stats, using the closest catalog equivalent.
 - **Twin Draw** (Greater, 6 pts): once per Scene, conjure a second weapon alongside your first at no extra cost, usable for a second attack within the same Normal action bracket.
 
@@ -416,7 +424,7 @@ Chosen once, at creation: your **signature weapon**, any single item from the ca
 
 <div class="gift-level gift-level--1" markdown="1">
 
-<span class="gift-n">1</span>- Summon your signature weapon into your hand as a **Fast action**, no Ki cost. It deals its normal listed Damage and range. Dismissing it is free and instant. It never runs dry - ammo, if any, is never actually a concern, though you're free to roleplay reloading.
+<span class="gift-n">1</span>- Summon your signature weapon into your hand as a **Fast action**, no Ki cost. It arrives with its listed range. Dismissing it is free and instant. It never runs dry - ammo, if any, is never actually a concern, though you're free to roleplay reloading.
 
 </div>
 
@@ -428,7 +436,7 @@ Chosen once, at creation: your **signature weapon**, any single item from the ca
 
 <div class="gift-level gift-level--3" markdown="1">
 
-<span class="gift-n">3</span>- The conjured weapon's Damage rises **+1** above its normal listed rating, capped at the weapon table's ceiling of **5**.
+<span class="gift-n">3</span>- You can throw the conjured weapon. The throw is an attack like any other; calling it back to your hand afterwards is a **free action** on your turn, from any distance. A weapon you let go of on purpose does not vanish the way one knocked from your grip does.
 
 </div>
 
@@ -440,7 +448,7 @@ Chosen once, at creation: your **signature weapon**, any single item from the ca
 
 <div class="gift-level gift-level--5" markdown="1">
 
-<span class="gift-n">5</span>- The Damage bonus (Level 3) rises to **+2** above the weapon's normal rating, still capped at 5. Once per Scene, spend **1 Ki** to conjure a weapon so precise it ignores **3** points of the target's Soak for that single attack.
+<span class="gift-n">5</span>- Once per Scene, spend **1 Ki** to conjure a weapon so precise it ignores **3** points of the target's Soak for that single attack.
 
 </div>
 
@@ -1096,25 +1104,25 @@ You move faster than most people can comprehend. Nerves fire faster and muscle m
 
 <div class="gift-level gift-level--2" markdown="1">
 
-<span class="gift-n">2</span>- Once per round, you may spend **1 Ki** to take an additional Fast action, resolved immediately after your normal action for that round - it doesn't change your Action Bracket or Initiative position, just adds a second action on top. For the rest of that turn after spending the Ki, your **Movement Rate** is **×1.5**.
+<span class="gift-n">2</span>- Once per round, you may spend **1 Ki** to take an additional Fast action, resolved immediately after your normal action for that round - it doesn't change your Action Bracket or Initiative position, just adds a second action on top. For the rest of that turn after spending the Ki, your **Movement Rate** is **x1.5**.
 
 </div>
 
 <div class="gift-level gift-level--3" markdown="1">
 
-<span class="gift-n">3</span>- The extra action from Level 2 can now be a Fast **or Normal** action, still 1 Ki, still once per round. Roll Initiative as 2d10 and keep the higher die. The post-Ki-spend Movement Rate multiplier rises to **×2** for the rest of that turn.
+<span class="gift-n">3</span>- The extra action from Level 2 can now be a Fast **or Normal** action, still 1 Ki, still once per round. Roll Initiative as 2d10 and keep the higher die. The post-Ki-spend Movement Rate multiplier rises to **x2** for the rest of that turn.
 
 </div>
 
 <div class="gift-level gift-level--4" markdown="1">
 
-<span class="gift-n">4</span>- The extra-action spend can now be used **up to twice per round** (still 1 Ki per use). On any turn where you've spent Ki this way, attacks made against you that turn are at **Disadvantage** - you're moving too fast to track cleanly. The post-Ki-spend Movement Rate multiplier rises to **×3** for the rest of that turn.
+<span class="gift-n">4</span>- The extra-action spend can now be used **up to twice per round** (still 1 Ki per use). On any turn where you've spent Ki this way, attacks made against you that turn are at **Disadvantage** - you're moving too fast to track cleanly. The post-Ki-spend Movement Rate multiplier rises to **x3** for the rest of that turn.
 
 </div>
 
 <div class="gift-level gift-level--5" markdown="1">
 
-<span class="gift-n">5</span>- The extra-action spend can now be used **up to three times per round** (still 1 Ki per use, still Fast or Normal only). Attacks made against you are at Disadvantage on any turn you spend Ki this way. The post-Ki-spend Movement Rate multiplier rises to **×5** for the rest of that turn.
+<span class="gift-n">5</span>- The extra-action spend can now be used **up to three times per round** (still 1 Ki per use, still Fast or Normal only). Attacks made against you are at Disadvantage on any turn you spend Ki this way. The post-Ki-spend Movement Rate multiplier rises to **x5** for the rest of that turn.
 
 </div>
 
@@ -2173,6 +2181,12 @@ You have one answer in every situation - hit it. Whether that means attacking wi
 
 Your one way of hurting people at arm’s length is chosen at creation, and described however you like. The rules don’t read the description.
 
+**You are choosing a picture, not a mechanic.** The description is yours and it changes nothing. A forearm blade, a fist and a dagger all roll the same dice against the same wall. Pick whichever one you would rather say out loud when it lands.
+
+**What the rules read is always the same.** A Physical attack at Melee range. The to-hit is a straight Attribute-vs-Defense roll using whichever Element fits how you are going about it, the same as swinging a bat. The dice resolve one at a time against **Soak**, and a connecting die costs a **Health Level**. Every swing costs **1 Ki**, and there is never a Gift Check. What the Levels buy is dice, Level plus half your Ferocity, and that is the whole Gift.
+
+**This is not a Signature Move.** A Move is built: you pick an attack source and a wall and they don’t have to match, which is how a scream ends up breaking composure. Onslaught picks nothing. It is the plain version, for a character whose answer to a problem at arm’s length is to hit it until it stops. If you want the strange version, build a Move.
+
 Unarmed fighting lives here. None of the weapon Skills covers fists and feet - there is no Category for them, and nothing to be trained on - so a character who fights with their hands is describing Onslaught, whatever else it could have been.
 
 <p class="gift-section">Adders</p>
@@ -2695,6 +2709,12 @@ When you absolutely, positively have to deal damage at range, this is how you do
 </div>
 
 What crosses the gap is chosen at creation, and described however you like. The rules don’t read the description.
+
+**You are choosing a picture, not a mechanic.** What you throw, fire, project or simply will across the room is yours to describe and changes nothing. It is the same dice against the same wall either way.
+
+**What the rules read is always the same.** One target, a Physical attack out to **Far** range, at every Level. The to-hit is a straight Attribute-vs-Defense roll with whichever Element fits the approach. The dice resolve one at a time against **Soak** and a connecting die costs a **Health Level**. Every shot costs **1 Ki**, and there is never a Gift Check. What the Levels buy is dice, Level plus half your Ferocity, and that is the whole Gift.
+
+**This is not a Signature Move.** A Move is built to be strange. Salvo is the one you take when you want to shoot something.
 
 <p class="gift-section">Adders</p>
 

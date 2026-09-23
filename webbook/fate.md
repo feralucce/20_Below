@@ -86,7 +86,7 @@ Action Brackets themselves (Fast/Normal/Slow) cost nothing to declare - that’s
 
 **Exhausted** is cumulative, each level stacking on top of the last:
 
-A Short Rest drops one level of Exhausted; a Full Night’s Rest clears it entirely, mirroring Health Level Recovery’s own split.
+A Short Rest drops one level of Exhausted; a Full Night’s Rest clears it entirely, mirroring Health Level Recovery’s own split. Exertion is one source; cold and heat are the other, and a level taken from an environment cannot be cleared while the character is still in it.
 
 **1** - Disadvantage on Physical rolls.
 

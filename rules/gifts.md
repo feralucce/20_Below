@@ -516,10 +516,10 @@ You move faster than most people can comprehend. Nerves fire faster and muscle m
 | Level | Effect |
 |---|---|
 | 1 | At the beginning of combat, you may take one Fast or Normal action before anyone else acts - before even the Fast Action Bracket resolves. If more than one character has this Gift, they act among themselves in Initiative order, but all still act before the normal turn order begins. |
-| 2 | Once per round, you may spend **1 Ki** to take an additional Fast action, resolved immediately after your normal action for that round - it doesn't change your Action Bracket or Initiative position, just adds a second action on top. For the rest of that turn after spending the Ki, your [Movement Rate](rules.md#movement--range) is **×1.5**. |
-| 3 | The extra action from Level 2 can now be a Fast **or Normal** action, still 1 Ki, still once per round. Roll Initiative as 2d10 and keep the higher die. The post-Ki-spend Movement Rate multiplier rises to **×2** for the rest of that turn. |
-| 4 | The extra-action spend can now be used **up to twice per round** (still 1 Ki per use). On any turn where you've spent Ki this way, attacks made against you that turn are at **Disadvantage** - you're moving too fast to track cleanly. The post-Ki-spend Movement Rate multiplier rises to **×3** for the rest of that turn. |
-| 5 | The extra-action spend can now be used **up to three times per round** (still 1 Ki per use, still Fast or Normal only). Attacks made against you are at Disadvantage on any turn you spend Ki this way. The post-Ki-spend Movement Rate multiplier rises to **×5** for the rest of that turn. |
+| 2 | Once per round, you may spend **1 Ki** to take an additional Fast action, resolved immediately after your normal action for that round - it doesn't change your Action Bracket or Initiative position, just adds a second action on top. For the rest of that turn after spending the Ki, your [Movement Rate](rules.md#movement--range) is **x1.5**. |
+| 3 | The extra action from Level 2 can now be a Fast **or Normal** action, still 1 Ki, still once per round. Roll Initiative as 2d10 and keep the higher die. The post-Ki-spend Movement Rate multiplier rises to **x2** for the rest of that turn. |
+| 4 | The extra-action spend can now be used **up to twice per round** (still 1 Ki per use). On any turn where you've spent Ki this way, attacks made against you that turn are at **Disadvantage** - you're moving too fast to track cleanly. The post-Ki-spend Movement Rate multiplier rises to **x3** for the rest of that turn. |
+| 5 | The extra-action spend can now be used **up to three times per round** (still 1 Ki per use, still Fast or Normal only). Attacks made against you are at Disadvantage on any turn you spend Ki this way. The post-Ki-spend Movement Rate multiplier rises to **x5** for the rest of that turn. |
 
 **Adders**:
 
@@ -754,7 +754,7 @@ Solid matter isn't really that solid, is it? It's mostly empty space. You can sl
 | Level | Effect |
 |---|---|
 | 1 | Spend **1 Ki** and a Fast action to phase for **1 Round** - pass through a thin barrier (a door, a thin wall). You can't attack or be attacked while phased, and it ends automatically once you're through. |
-| 2 | Phasing now lasts up to **1 Minute** (≈10 Rounds), letting you move through multiple thin obstacles in sequence. Still can't attack while phased. |
+| 2 | Phasing now lasts up to **1 Minute** (about 10 Rounds), letting you move through multiple thin obstacles in sequence. Still can't attack while phased. |
 | 3 | You can now phase through thicker, more substantial barriers - solid stone, concrete - and phase only part of your body instead of the whole thing. While phased, the phased part is immune to Physical damage - attacks pass through it the same way you pass through walls. |
 | 4 | Phasing can be maintained for a full **Scene** (toggled on/off at will) instead of just a Minute. You may now attack while phased, though only as a Mental or Social attack - your body still can't physically connect with anything solid. |
 | 5 | You may extend the effect to one other person you're touching, phasing them along with you. You can also phase instantly as a reaction to dodge an incoming attack. Ki cost drops to **0**. |
@@ -960,8 +960,6 @@ Your one way of hurting people at arm's length is chosen at creation, and descri
 **You are choosing a picture, not a mechanic.** The description is yours and it changes nothing. A forearm blade, a fist and a dagger all roll the same dice against the same wall. Pick whichever one you would rather say out loud when it lands.
 
 **What the rules read is always the same.** A Physical attack at Melee range. The to-hit is a straight Attribute-vs-Defense roll using whichever [Element](rules.md#choosing-the-attacking-element) fits how you are going about it, the same as swinging a bat. The dice resolve one at a time against **Soak**, and a connecting die costs a **Health Level**. Every swing costs **1 Ki**, and there is never a Gift Check. What the Levels buy is dice, [Level plus half your Ferocity](#attack-dice), and that is the whole Gift.
-
-Your one way of hurting people at arm's length is chosen at creation, and described however you like. The rules don't read the description.
 
 **This is not a [Signature Move](#signature-move).** A Move is built: you pick an attack source and a wall and they don't have to match, which is how a scream ends up breaking composure. Onslaught picks nothing. It is the plain version, for a character whose answer to a problem at arm's length is to hit it until it stops. If you want the strange version, build a Move.
 
@@ -1173,8 +1171,6 @@ When you absolutely, positively have to deal damage at range, this is how you do
 What crosses the gap is chosen at creation, and described however you like. The rules don't read the description.
 
 **You are choosing a picture, not a mechanic.** What you throw, fire, project or simply will across the room is yours to describe and changes nothing. It is the same dice against the same wall either way.
-
-What crosses the gap is chosen at creation, and described however you like. The rules don't read the description.
 
 **What the rules read is always the same.** One target, a Physical attack out to **Far** range, at every Level. The to-hit is a straight Attribute-vs-Defense roll with whichever [Element](rules.md#choosing-the-attacking-element) fits the approach. The dice resolve one at a time against **Soak** and a connecting die costs a **Health Level**. Every shot costs **1 Ki**, and there is never a Gift Check. What the Levels buy is dice, [Level plus half your Ferocity](#attack-dice), and that is the whole Gift.
 

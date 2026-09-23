@@ -25,6 +25,10 @@ Buying gear at creation runs on creation-Wealth rather than the ordinary Push pr
 
 Each weapon’s **Damage** rating is how many d10 it rolls on a hit, resolved per-die against the defender’s Soak, as described in How to Play.
 
+**Range** is given as **Normal / Long**, in meters - the same unit as Movement Rate and the Range Bands. A weapon’s Normal range tells you the band it is built for: a shotgun’s 5m is Close, a handgun’s 15m is Near, a hunting rifle’s 100m is Far. Attacking a target within Normal range carries no penalty. Attacking at **Long** range imposes **Disadvantage** on the attack roll, stacking with any other source per the usual binary rule. Beyond Long range, the target can’t be attacked with that weapon at all.
+
+**Reload** is the action cost to refill a weapon’s Ammo back to full once it runs dry.
+
 **Wealth** is the **Wealth** Level an item sits at - how expensive it is, and nothing else. It applies the same way to every table on this page, not just weapons. What that Level gets you for free, what it costs you to reach past it, and how the whole purchase works is in **Wealth at Character Creation**.
 
 **Money is not always the hard part.** Plenty of what follows is perfectly legal to own and still not simple to buy. A handgun means a background check and a dealer who writes your name down. Body armor is restricted in some states and off the table entirely for anyone with a record. A prescription is a conversation with a doctor who keeps records, and a pilot's licence is two years and a medical. None of that is a roll - it is a detail for you and your GM about what it cost you in time, in paperwork, and in who knows your name now. The things with no lawful route at all are gathered under [The Black Market](#the-black-market), which has its own rating and its own rules.
@@ -3974,6 +3978,10 @@ Everything you need to take something away and nothing to tell you what it is.
 </div>
 
 ## Property
+
+Somewhere to be, and somewhere to keep things. A property is bought like any other item - it is the one purchase a character makes that has an address.
+
+A **Base** Resource is a different thing and worth having as well: the Resource is what the place is equipped and defended with, the item here is the deed. A **Safehouse Network** is different again - that Resource gives you sites with the basics in them and nothing more, while a property bought here comes properly outfitted.
 
 <div class="item" markdown="1">
 
