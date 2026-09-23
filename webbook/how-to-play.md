@@ -109,7 +109,7 @@ Marcus (Ronan’s player), argues that Ronan knows *exactly* what he is looking 
 To simplify it: if there are multiple sources that would grant Advantage or Disadvantage, treat each instance of Advantage as “+1” and disadvantage as “-1.” Add them up. If the result is 1 or more, roll at Advantage. If it is 0, roll normally. If it is less than 0, roll at Disadvantage.
 
 But what does all of this mean? I am glad you asked. 
-**Advantage**: When you roll at Advantage, you roll 3d10 and keep the lowest two. - **Disadvantage**: When you roll at Disadvantage, you roll 3d10 and keep the highest two.
+**Advantage**: When you roll at Advantage, you roll 3d10 and keep the lowest two. **Disadvantage**: When you roll at Disadvantage, you roll 3d10 and keep the highest two.
 
 <figure class="figure" markdown="1">
 
