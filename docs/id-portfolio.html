@@ -1,0 +1,78 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Instructional Design Portfolio - 20 Below</title>
+<meta name="description" content="Case studies in learning design, performance support, and facilitator training, drawn from real work on 20 Below." />
+<link rel="icon" type="image/x-icon" href="/docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="/docs/assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --radius: 10px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+  main { max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+  .back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+  header { margin: 1.5rem 0 2.5rem; }
+  .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin: 0 0 0.6rem; }
+  h1 { margin: 0; font-size: 2rem; letter-spacing: 0.01em; }
+  .intro { color: var(--text-dim); font-size: 0.98rem; margin-top: 1rem; }
+
+  .list { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+  .item {
+    display: block; background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius);
+    padding: 1.25rem 1.4rem; text-decoration: none; color: var(--text);
+  }
+  .item:hover { border-color: var(--accent); }
+  .item .name { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.4rem; }
+  .item .desc { font-size: 0.92rem; color: var(--text-dim); }
+  .item .tag { display: inline-block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); border: 1px solid var(--panel-border); border-radius: 999px; padding: 0.1rem 0.6rem; margin-top: 0.6rem; }
+
+  footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+</style>
+<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <a class="back-link" href="/rules-hub.html">&larr; 20 Below</a>
+
+  <header>
+    <p class="eyebrow">Portfolio</p>
+    <h1>Instructional Design Portfolio</h1>
+    <p class="intro">Case studies in learning design, performance support, and facilitator training &mdash; drawn from real, shipped work on 20 Below. Each one covers the problem, the analysis, the design decisions, and the outcome.</p>
+  </header>
+
+  <div class="list">
+    <a class="item" href="/docs/case-study-rulebook-reference.html">
+      <div class="name">A Rulebook You Read vs. a Rulebook You Reach For</div>
+      <div class="desc">Separating "learning" material from "in-the-moment lookup" material to cut task time under pressure.</div>
+    </a>
+    <a class="item" href="/docs/case-study-facilitator-guide.html">
+      <div class="name">What the Book Doesn't Tell the Person Running It</div>
+      <div class="desc">Designing decision-support content for facilitators running live sessions &mdash; a different job than the participant-facing material.</div>
+    </a>
+    <a class="item" href="/docs/case-study-visual-systems.html">
+      <div class="name">Making Two Invisible Systems Visible</div>
+      <div class="desc">Documenting an undocumented visual system and an undocumented tool architecture &mdash; and the real bug that surfaced along the way.</div>
+      <div class="tag">Visual &amp; Technical Systems</div>
+    </a>
+  </div>
+
+  <footer>20 Below &middot; github.com/feralucce/20_Below</footer>
+</main>
+<script src="/docs/assets/js/site-nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Case Study: What the Book Doesn't Tell the Person Running It - 20 Below</title>
+<meta name="description" content="Designing decision-support content for facilitators running live sessions of 20 Below - a different job than the participant-facing material." />
+<link rel="icon" type="image/x-icon" href="/docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="/docs/assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --radius: 10px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+  main { max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+  .back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+  header { margin: 1.5rem 0 2.5rem; }
+  .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin: 0 0 0.6rem; }
+  h1 { margin: 0; font-size: 1.9rem; letter-spacing: 0.01em; line-height: 1.3; }
+  h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border-bottom: 1px solid var(--panel-border); padding-bottom: 0.5rem; margin: 2.75rem 0 1.1rem; }
+  p { font-size: 1rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: 0.75rem; }
+  a { color: var(--accent); }
+  footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+</style>
+<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <a class="back-link" href="/docs/id-portfolio.html">&larr; Instructional Design Portfolio</a>
+
+  <header>
+    <p class="eyebrow">Case Study</p>
+    <h1>What the Book Doesn't Tell the Person Running It</h1>
+  </header>
+
+  <h2>The Problem</h2>
+  <p>A rulebook that only talks to players leaves the one person actually running the table with nothing.</p>
+  <p>Every set of instructional material I'd built up to that point assumed a single kind of reader: someone learning content to use themselves. Running a live session is a different job entirely &mdash; it's real-time judgment under conditions nobody can fully script in advance. I didn't have anything written for that reader at all.</p>
+
+  <h2>Analysis</h2>
+  <p>A facilitator doesn't need to be taught the content again in a different voice. They need decision support for the moments the content doesn't cover: how hard to make something on the fly, what to do when a player asks a question the book never anticipated, how to manage a shared resource the players are actively pulling on mid-scene. None of that is "restate the rules for a GM instead of a player." It's a genuinely different document, for a genuinely different job.</p>
+
+  <h2>Design Decisions</h2>
+  <ul>
+    <li>Built "Running the Game" as its own chapter, parallel to the player-facing material, instead of a GM's-notes appendix bolted onto the end of it.</li>
+    <li>Taught difficulty-setting as a heuristic, not a lookup table &mdash; live-session variation can't be pre-scripted, and a framework beats a table facilitators would outgrow in one session.</li>
+    <li>Wrote "ruling on the fly" into the material directly, as the expected, normal thing to do &mdash; instead of pretending the rules cover every case and leaving facilitators feeling like they're doing it wrong when they inevitably improvise.</li>
+    <li>Gave facilitators a repeatable method for building new content themselves, instead of a fixed list they'd eventually exhaust.</li>
+    <li>Addressed the one thing almost nobody writes down: how to manage a resource the players are actively spending against you, in real time, without stalling the table to do the math.</li>
+  </ul>
+
+  <h2>Outcome</h2>
+  <p>A facilitator guide that actually supports someone running a live session, instead of restating player content in a different tone. Same split as the performance-support piece, just aimed at the other side of the table: participant-facing material and facilitator-facing material are not the same document wearing different clothes.</p>
+
+  <p><a href="/webbook/running-the-game.html">See the live result: Running the Game &rarr;</a></p>
+
+  <footer>20 Below &middot; github.com/feralucce/20_Below</footer>
+</main>
+<script src="/docs/assets/js/site-nav.js"></script>
+</body>
+</html>
