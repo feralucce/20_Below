@@ -70,7 +70,7 @@ The ask always goes through. What it costs is the ability to make the next one.
 
 ### The Black Market is not part of this
 
-Nothing on [The Black Market](weapons.md#the-black-market) is ever free. The steps above do not apply to it: every purchase there is a transaction whatever it costs, and it is gated by [Black Market Access](#the-resource-list) as well as by Wealth. Nobody hands you a jammer because you are rich.
+Nothing on [The Black Market](weapons.md#the-black-market) is ever free. The steps above do not apply to it: every purchase there is a transaction whatever it costs, and it is gated by [Black Market Access](#black-market-access) as well as by Wealth. Nobody hands you a jammer because you are rich.
 
 ### Afterwards
 

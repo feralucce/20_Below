@@ -5,7 +5,7 @@ by something, or by an event that nobody has managed to explain since.
 They turn up in evidence lockers and estate sales and the back of a
 drawer in a house whose owner died badly. They are not bought. A
 character has one because a GM decided they do, or because they spent a
-[Signature Possession](resources.md#the-resource-list) on it.
+[Signature Possession](resources.md#signature-possession) on it.
 
 **Level 1 to 5**, the same ladder every Resource uses. The Level says how
 much the thing does and how much it costs to wake up.
@@ -214,7 +214,7 @@ for.
 Roll **2d10** every time you reach in.
 
 - **A roll of 2**: you get exactly what you were looking for.
-- **Your [Lucky Number](rules.md#lucky-number)**: you pull out something
+- **Your [Lucky Number](rules.md#klotho)**: you pull out something
   nobody put in there.
 - **Anything else**: something of yours, at random.
 

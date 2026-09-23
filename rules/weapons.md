@@ -326,7 +326,7 @@ On a failure the materials are spent and you have a jar of dirt. On a success it
 
 An unprepared ward is exactly what it looks like. Salt on a floor. A stone with a hole in it. Somebody's grandmother's horseshoe over a door.
 
-**You can buy them ready-made.** Somebody prepares these for a living, and finding that somebody is a [Contacts](resources.md#the-resource-list) question rather than a money one. A prepared item costs **one Wealth rating higher** than the raw material below.
+**You can buy them ready-made.** Somebody prepares these for a living, and finding that somebody is a [Contacts](resources.md#contacts) question rather than a money one. A prepared item costs **one Wealth rating higher** than the raw material below.
 
 **Check with your GM before any of this goes on a sheet.** Whether a salt line holds, whether iron means anything, whether the thing in the house can be warded out at all - none of that is settled by the price of the salt. It is a question about the game you are playing, and it gets answered the same way [Beyond the Ordinary](#beyond-the-ordinary) does.
 
@@ -393,7 +393,7 @@ An unprepared ward is exactly what it looks like. Salt on a floor. A stone with 
 
 Somewhere to be, and somewhere to keep things. A property is bought like any other item - it is the one purchase a character makes that has an address.
 
-A [Base](resources.md#the-resource-list) Resource is a different thing and worth having as well: the Resource is what the place is equipped and defended with, the item here is the deed.
+A [Base](resources.md#base) Resource is a different thing and worth having as well: the Resource is what the place is equipped and defended with, the item here is the deed.
 
 A [Safehouse Network](resources.md#safehouse-network) is different again: that Resource gives you sites with the basics in them and nothing more, while a property bought here comes properly outfitted.
 
@@ -406,7 +406,7 @@ A [Safehouse Network](resources.md#safehouse-network) is different again: that R
 
 Some things have no counter to walk up to. The price is the easy half - the hard half is knowing who to ask.
 
-**Buying here is gated twice.** You need the Wealth to pay for it and [Black Market Access](resources.md#the-resource-list) to find it, and you need both to reach the item: your Wealth must meet its **Wealth** rating and your Black Market Access must meet its **Black Market** rating. A Wealth 5 character who knows nobody buys nothing on these pages. Neither does a Wealth 1 character who knows everybody.
+**Buying here is gated twice.** You need the Wealth to pay for it and [Black Market Access](resources.md#black-market-access) to find it, and you need both to reach the item: your Wealth must meet its **Wealth** rating and your Black Market Access must meet its **Black Market** rating. A Wealth 5 character who knows nobody buys nothing on these pages. Neither does a Wealth 1 character who knows everybody.
 
 **The free items a character starts with don't apply here.** Every purchase on these pages is a transaction, however cheap the thing is. Nobody hands you a jammer because you're rich.
 
