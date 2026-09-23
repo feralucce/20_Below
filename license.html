@@ -41,30 +41,58 @@ nav_section: license
     margin-bottom: 2.5rem;
     line-height: 1.6;
   }
-  .breakdown {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+  #open-vs-reserved { scroll-margin-top: 5.5rem; }
+  .orc-map {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.6rem;
     margin: 1.5rem 0 2.5rem;
   }
-  .breakdown-card {
-    background: var(--panel);
-    border: 1px solid var(--panel-border);
-    border-radius: var(--radius);
-    padding: 0.9rem 1.1rem;
-  }
-  .breakdown-card.open { border-left: 3px solid var(--accent); }
-  .breakdown-card.reserved { border-left: 3px solid var(--text-dim); }
-  .breakdown-card .label {
+  .orc-map .col-head {
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.3rem;
+    letter-spacing: 0.06em;
+    padding: 0 0 0.5rem;
+    border-bottom: 3px solid;
   }
-  .breakdown-card.open .label { color: var(--accent); }
-  .breakdown-card.reserved .label { color: var(--text-dim); }
-  .breakdown-card p { margin: 0; color: var(--text-dim); font-size: 0.92rem; line-height: 1.55; }
+  .orc-map .col-head span { display: block; font-weight: 400; text-transform: none; letter-spacing: 0; font-size: 0.85rem; color: var(--text-dim); }
+  .orc-map .col-head.open { color: var(--accent); border-color: var(--accent); }
+  .orc-map .col-head.reserved { color: var(--text-dim); border-color: var(--panel-border); }
+  .orc-map .row-label {
+    grid-column: 1 / -1;
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    margin: 1.2rem 0 0.4rem;
+  }
+  .orc-map .cell {
+    border-radius: var(--radius);
+    padding: 0.7rem 0.9rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .orc-map .cell.open { background: var(--accent-dim); border: 1px solid var(--accent); }
+  .orc-map .cell.reserved { background: var(--panel); border: 1px solid var(--panel-border); color: var(--text-dim); }
+  .orc-map .cell.empty { border: 1px dashed var(--panel-border); }
+  .orc-map .cell small { display: block; color: var(--text-dim); font-size: 0.8rem; margin-top: 0.25rem; }
+  .orc-map .split-note {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-top: 0.35rem;
+  }
+  .orc-map .yours {
+    grid-column: 1 / -1;
+    margin-top: 1.4rem;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 0.8rem 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+  }
   .marks {
     display: flex;
     flex-wrap: wrap;
@@ -123,22 +151,33 @@ nav_section: license
     themselves - stays Reserved. Everything else is open.
   </div>
 
-  <h2>What's Open vs. Reserved</h2>
-  <div class="breakdown">
-    <div class="breakdown-card open">
-      <div class="label">Open - Licensed Material</div>
-      <p>The core mechanics: the 2d10 roll, Difficulty, Advantage/Disadvantage, the five Attributes and
-      their sub-stats, Ki, combat resolution, and the Gift/Boon/Flaw/Skill <em>systems</em> themselves -
-      their point costs, structure, and how they resolve. Build a genre book, a setting, a full
-      commercial product on top of this, freely.</p>
-    </div>
-    <div class="breakdown-card reserved">
-      <div class="label">Reserved - Not Licensed</div>
-      <p>The title "20 Below" and its branding; the specific names and flavor text of individual Gifts,
-      Boons, and Flaws already published; the 20 Below Character Creator and Desktop apps (source code,
-      design, implementation); and any genre or setting content - like Backwater Static - not expressly
-      released as Licensed Material.</p>
-    </div>
+  <h2 id="open-vs-reserved">What's Open vs. Reserved</h2>
+  <div class="orc-map">
+    <div class="col-head open">Open<span>Licensed Material - build on it freely</span></div>
+    <div class="col-head reserved">Reserved<span>Stays with 20 Below</span></div>
+
+    <div class="row-label">The core mechanics</div>
+    <div class="cell open">The 2d10 roll, Difficulty, Advantage/Disadvantage, the five Attributes and their sub-stats, Ki, combat resolution, and the Skill system</div>
+    <div class="cell empty" aria-label="Nothing reserved"></div>
+
+    <div class="row-label">Gifts, Boons &amp; Flaws - split down the middle</div>
+    <div class="cell open">The <em>systems</em>: point costs, structure, and how they resolve</div>
+    <div class="cell reserved">The names, flavor text and descriptions of each one already published</div>
+    <div class="split-note">Use the machinery. Write your own Gifts on it - just not ours, word for word.</div>
+
+    <div class="row-label">The name</div>
+    <div class="cell empty" aria-label="Nothing open"></div>
+    <div class="cell reserved">The title "20 Below", its logos and branding<small>The Powered by mark is yours to use - see below</small></div>
+
+    <div class="row-label">The apps</div>
+    <div class="cell empty" aria-label="Nothing open"></div>
+    <div class="cell reserved">The Character Creator and Desktop apps - source, design, implementation<small>Separate copyrighted works, not under ORC</small></div>
+
+    <div class="row-label">Settings</div>
+    <div class="cell empty" aria-label="Nothing open"></div>
+    <div class="cell reserved">Backwater Static and any other genre or setting content<small>Unless expressly released as Licensed Material</small></div>
+
+    <div class="yours">What you build on the open side is <strong>yours</strong> - a genre book, a setting, a full commercial product. No fee, no permission needed.</div>
   </div>
 
   <h2>Powered by 20 Below</h2>

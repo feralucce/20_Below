@@ -1,0 +1,149 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Visual Information Portfolio - 20 Below</title>
+<meta name="description" content="Infographics, diagrams, and visual systems built for 20 Below - rules made readable at a glance, and systems shown whole." />
+<link rel="icon" type="image/x-icon" href="/docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="/docs/assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --radius: 10px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+  main { max-width: 1000px; margin: 0 auto; padding: 2rem 1rem 5rem; }
+  .prose { max-width: 760px; }
+  .back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+  header { margin: 1.5rem 0 2rem; }
+  .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin: 0 0 0.6rem; }
+  h1 { margin: 0; font-size: 2rem; letter-spacing: 0.01em; }
+  .intro { color: var(--text-dim); font-size: 1rem; margin-top: 1rem; }
+  h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border-bottom: 1px solid var(--panel-border); padding-bottom: 0.5rem; margin: 3rem 0 1.1rem; }
+  a { color: var(--accent); }
+
+  .sheets { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .sheet { display: block; text-decoration: none; color: var(--text); background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius); overflow: hidden; }
+  .sheet:hover { border-color: var(--accent); }
+  .sheet img { display: block; width: 100%; height: auto; aspect-ratio: 560 / 725; object-fit: cover; object-position: top; }
+  .sheet .cap { padding: 0.6rem 0.75rem 0.75rem; }
+  .sheet .name { font-weight: 600; font-size: 0.92rem; }
+  .sheet .desc { font-size: 0.8rem; color: var(--text-dim); line-height: 1.45; margin-top: 0.2rem; }
+
+  .diagrams { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); gap: 1rem; margin-top: 1.5rem; align-items: start; }
+  figure { margin: 0; background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius); padding: 1rem; }
+  figure img { display: block; width: 100%; height: auto; }
+  figcaption { font-size: 0.82rem; color: var(--text-dim); margin-top: 0.7rem; line-height: 1.5; }
+  figcaption a { white-space: nowrap; }
+
+  .list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; max-width: 760px; }
+  .item { display: block; background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius); padding: 1.1rem 1.3rem; text-decoration: none; color: var(--text); }
+  .item:hover { border-color: var(--accent); }
+  .item .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.3rem; }
+  .item .name { font-weight: 600; font-size: 1.05rem; margin-bottom: 0.3rem; }
+  .item .desc { font-size: 0.9rem; color: var(--text-dim); }
+
+  footer { text-align: center; padding: 3rem 1rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+  footer a { color: var(--text-dim); }
+</style>
+<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <a class="back-link" href="/rules-hub.html">&larr; 20 Below</a>
+
+  <header class="prose">
+    <p class="eyebrow">Portfolio</p>
+    <h1>Visual Information Portfolio</h1>
+    <p class="intro">A rule you have to read twice is a rule that stops the table. Most of what I've designed for 20 Below, a tabletop RPG I've built over the past year, is an attempt to get a rule off the page and into someone's head in one look. That includes print-ready reference sheets, diagrams built into the rulebook, and maps of systems that were never drawn before.</p>
+  </header>
+
+  <h2>Reference Sheets</h2>
+  <div class="prose">
+    <p>Thirteen sheets, one topic each, all built on the same template: the same header lockup, numbered sections read top to bottom, and the five Element colors meaning the same thing on every page they appear. Once you've learned to read one sheet, you can read all of them. Each is letter-size and rendered at 600 dpi, so it works as a printed handout at the table and as a screen reference.</p>
+  </div>
+  <div class="sheets">
+    <a class="sheet" href="/docs/assets/portfolio/how-it-works.webp"><img src="/docs/assets/portfolio/how-it-works-thumb.webp" alt="How 20 Below Works infographic: seven numbered steps from the world presenting a problem to the story continuing" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">How 20 Below Works</div><div class="desc">The whole game in seven steps, for someone who has never played it.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/core-roll.webp"><img src="/docs/assets/portfolio/core-roll-thumb.webp" alt="Core Roll cheat sheet: target number, roll under, criticals, advantage and disadvantage, training tiers, Fate Tokens" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Core Roll</div><div class="desc">The one mechanic everything else hangs on, and every modifier to it.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/character-creation.webp"><img src="/docs/assets/portfolio/character-creation-thumb.webp" alt="Character Creation infographic: fifteen numbered steps grouped into stages" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Character Creation</div><div class="desc">Fifteen steps as one path, grouped so the stages are visible.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/difficulty-ladder.webp"><img src="/docs/assets/portfolio/difficulty-ladder-thumb.webp" alt="Difficulty Chart: an eleven-rung ladder from Nearly Impossible to Trivial, color graded, with three examples per rung" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Difficulty Chart</div><div class="desc">Eleven rungs, color graded, three concrete examples on each.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/elements-x-skills.webp"><img src="/docs/assets/portfolio/elements-x-skills-thumb.webp" alt="Elements by Skills matrix: the five Elements as rows against Skills as columns, with an example in each cell" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Elements &times; Skills</div><div class="desc">A matrix showing that the same Skill reads differently through each Element.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/fate-triangle.webp"><img src="/docs/assets/portfolio/fate-triangle-thumb.webp" alt="The Fate Triangle: Nature, Fate Tokens and Ki shown as three connected points" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">The Fate Triangle</div><div class="desc">How Nature, Fate Tokens and Ki connect to each other, on one page.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/ki.webp"><img src="/docs/assets/portfolio/ki-thumb.webp" alt="Ki cheat sheet: what Ki is, its three jobs, Gifts, getting it back, and raising the pool" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Ki</div><div class="desc">One pool with three jobs, and what each one costs.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/the-round.webp"><img src="/docs/assets/portfolio/the-round-thumb.webp" alt="The Round: initiative, declaring a Fast, Normal or Slow bracket, resolving in order, special actions" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">The Round</div><div class="desc">Combat turn order as a sequence you can follow with a finger.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/taking-damage.webp"><img src="/docs/assets/portfolio/taking-damage-thumb.webp" alt="Taking Damage: to hit, the three walls, every die resolved on its own, spending Ki, criticals" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Taking Damage</div><div class="desc">Hit, then every die on its own, with a worked example of the roll.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/the-vitals.webp"><img src="/docs/assets/portfolio/the-vitals-thumb.webp" alt="The Vitals: Health, Poise and Sanity tracks, what waits at each end, crossing zero, getting it back" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">The Vitals</div><div class="desc">Three tracks that work the same way, shown side by side so the pattern is visible.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/range-and-movement.webp"><img src="/docs/assets/portfolio/range-and-movement-thumb.webp" alt="Range and Movement: four range bands, movement rates, what slows you, weapons and bands, scale" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Range &amp; Movement</div><div class="desc">Four bands and three speeds, with the actual distances.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/resources-ladder.webp"><img src="/docs/assets/portfolio/resources-ladder-thumb.webp" alt="The Resources Ladder: five levels from one person in one place to national reach" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Resources Ladder</div><div class="desc">An abstract number made concrete: what each level actually gets you.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/status-effects.webp"><img src="/docs/assets/portfolio/status-effects-thumb.webp" alt="Status Effects reference: effects from a roll and effects from a vital at zero, each with its rule" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Status Effects</div><div class="desc">Every condition on one page, sorted by where it comes from.</div></div></a>
+  </div>
+
+  <h2>Diagrams in the Book</h2>
+  <div class="prose">
+    <p>The sheets are for the table. These are for the moment in the rulebook where the prose stops working. There are twenty-two of them in the book and its reference pages. Each one is a single SVG in the site's own colors, sized to sit inside a column of text, and each has written alt text so the rule survives for readers who can't see the picture.</p>
+  </div>
+  <div class="diagrams">
+    <figure>
+      <img src="/docs/assets/diagrams/roll-curve-comparison.svg" alt="Three overlapping curves. A normal 2d10 roll centres on 11; Advantage, keeping the lowest two of three dice, centres near 8.5; Disadvantage, keeping the highest two, centres near 13.5. The shape is the same in each case and only its position moves." loading="lazy" />
+      <figcaption>Advantage and Disadvantage as probability. You can explain in a sentence that one extra die shifts the odds, but it takes a picture to show how far. <a href="/webbook/how-to-play.html">In context &rarr;</a></figcaption>
+    </figure>
+    <figure>
+      <img src="/docs/assets/diagrams/combat-overview-flow.svg" alt="Combat overview flow chart: Initiative is rolled once and holds for the whole fight. Then each round: Declare Action Bracket, then Act in Bracket Order, then Roll to Hit. A miss ends the attack. A hit rolls damage dice, each resolved individually against the defender's wall - a die at or below the wall is absorbed, a die above it connects and costs the defender one Health, Poise, or Sanity Level." loading="lazy" />
+      <figcaption>All of combat as one decision tree, with red for where it stops and green for where it keeps going. <a href="/docs/combat-flow-reference.html">In context &rarr;</a></figcaption>
+    </figure>
+    <figure>
+      <img src="/docs/assets/diagrams/resource-index-curve.svg" alt="A lower Resource Index adds more to your target number, making the check easier. Resource Index 1 adds 9, Resource Index 6 adds only 4, the minimum any Resource Check can add." loading="lazy" />
+      <figcaption>An inverse relationship that trips people up in prose. As a bar chart it's obvious: the lower the index, the higher the bar. <a href="/docs/combat-flow-reference.html">In context &rarr;</a></figcaption>
+    </figure>
+    <figure>
+      <img src="/docs/assets/diagrams/skill-attribute-fan.svg" alt="Every Skill has a default Attribute/Element. A player can challenge that default and pair the Skill with a different Attribute instead, as long as the pairing is grounded in one of the character's own Descriptors." loading="lazy" />
+      <figcaption>A default and its alternatives. The solid arrow is the default pairing and the dashed ones are the pairings you have to argue for. <a href="/docs/combat-flow-reference.html">In context &rarr;</a></figcaption>
+    </figure>
+  </div>
+
+  <h2>Systems, Shown Whole</h2>
+  <div class="list">
+    <a class="item" href="/docs/style-guide.html">
+      <div class="label">Brand System</div>
+      <div class="name">20 Below Style Guide</div>
+      <div class="desc">Every color with its hex value and its job, the Element and role colors with the reasoning for each, and a typography section that says where each typeface is allowed to appear.</div>
+    </a>
+    <a class="item" href="/docs/divider-specimen-sheet.html">
+      <div class="label">Asset Library</div>
+      <div class="name">Divider Specimen Sheet</div>
+      <div class="desc">99 section dividers, 9 textures &times; 11 colors, shown as one grid so the library reads as a system.</div>
+    </a>
+    <a class="item" href="/docs/tool-ecosystem-diagram.html">
+      <div class="label">Technical Diagram</div>
+      <div class="name">The Tool Ecosystem</div>
+      <div class="desc">Every app and script in the project and what feeds each one, checked against the source code before it was drawn.</div>
+    </a>
+    <a class="item" href="/license.html#open-vs-reserved">
+      <div class="label">Legal, Made Legible</div>
+      <div class="name">ORC License: Open vs. Reserved</div>
+      <div class="desc">A license page that used to be a wall of legal text, redrawn as a two-column map. It shows the one confusing part plainly: Gifts, Boons and Flaws are split down the middle.</div>
+    </a>
+    <a class="item" href="/docs/case-study-visual-systems.html">
+      <div class="label">Case Study</div>
+      <div class="name">Making Two Invisible Systems Visible</div>
+      <div class="desc">How the specimen sheet and the ecosystem diagram got made, and the real bug that turned up along the way.</div>
+    </a>
+  </div>
+
+  <footer>20 Below &middot; github.com/feralucce/20_Below<br /><a href="/docs/id-portfolio.html">Instructional Design Portfolio</a> &middot; <a href="/docs/pm-portfolio.html">Project Management Portfolio</a></footer>
+</main>
+<script src="/docs/assets/js/site-nav.js"></script>
+</body>
+</html>

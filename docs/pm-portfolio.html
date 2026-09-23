@@ -1,0 +1,96 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Project Management Portfolio - 20 Below</title>
+<meta name="description" content="Project management with AI-assisted workflows, plus fourteen years of independent film and television production." />
+<link rel="icon" type="image/x-icon" href="/docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="/docs/assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --radius: 10px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+  main { max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+  .back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+  header { margin: 1.5rem 0 2.5rem; }
+  .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin: 0 0 0.6rem; }
+  h1 { margin: 0; font-size: 2rem; letter-spacing: 0.01em; }
+  .intro { color: var(--text-dim); font-size: 0.98rem; margin-top: 1rem; }
+  h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border-bottom: 1px solid var(--panel-border); padding-bottom: 0.5rem; margin: 2.75rem 0 1.1rem; }
+  a { color: var(--accent); }
+
+  .list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+  .item { display: block; background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius); padding: 1.25rem 1.4rem; text-decoration: none; color: var(--text); }
+  .item:hover { border-color: var(--accent); }
+  .item .name { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.4rem; }
+  .item .desc { font-size: 0.92rem; color: var(--text-dim); }
+  .item .tag { display: inline-block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); border: 1px solid var(--panel-border); border-radius: 999px; padding: 0.1rem 0.6rem; margin-top: 0.6rem; }
+
+  .credits { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.92rem; }
+  .credits th { text-align: left; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); font-weight: 600; padding: 0 0.5rem 0.5rem 0; border-bottom: 1px solid var(--panel-border); }
+  .credits td { padding: 0.65rem 0.5rem 0.65rem 0; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
+  .credits td.yr { white-space: nowrap; color: var(--text-dim); }
+  .credits .also { display: block; font-size: 0.8rem; color: var(--text-dim); }
+  .counts { font-size: 0.9rem; color: var(--text-dim); }
+
+  footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+  footer a { color: var(--text-dim); }
+</style>
+<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <a class="back-link" href="/rules-hub.html">&larr; 20 Below</a>
+
+  <header>
+    <p class="eyebrow">Portfolio</p>
+    <h1>Project Management Portfolio</h1>
+    <p class="intro">A film producer is a project manager, just a specialized one. You hold what the thing is supposed to be and what it's actually going to take at the same time, and you keep both honest. I did that for fourteen years in independent film and television. I've spent the last year doing it on 20 Below, with an AI assistant as my crew.</p>
+  </header>
+
+  <h2>Case Studies</h2>
+  <div class="list">
+    <a class="item" href="/docs/case-study-ai-workflow.html">
+      <div class="name">Running a Twelve-Part Project with AI as a Working Partner</div>
+      <div class="desc">A rulebook, four apps, three extensions and a campaign setting, kept in sync through a single source of truth, change control, versioned releases, and checking every piece of the AI's work against the code.</div>
+      <div class="tag">AI-Assisted Workflow</div>
+    </a>
+    <a class="item" href="/docs/case-study-visual-systems.html">
+      <div class="name">Making Two Invisible Systems Visible</div>
+      <div class="desc">Mapping every dependency between the project's tools from the source code, not from memory, and catching a live, published error along the way.</div>
+      <div class="tag">Dependency Mapping &amp; QA</div>
+    </a>
+  </div>
+
+  <h2>Production Credits</h2>
+  <p>On an independent crew, the creative producer (who decides what the show is) and the line producer (who makes it fit the schedule and the money) are usually the same person. On these productions that was me. Most of the time I was also writing, directing, shooting or cutting, so the schedule and the budget had nobody else to land on. IMDb just lists the credit as "producer."</p>
+  <table class="credits">
+    <thead><tr><th>Production</th><th>Credit</th><th>Years</th></tr></thead>
+    <tbody>
+      <tr><td>Project Z: History of the Zombie Apocalypse<span class="also">TV series &middot; 10 episodes</span></td><td>Producer, series producer<span class="also">Also creator, writer, casting director</span></td><td class="yr">2012&ndash;2013</td></tr>
+      <tr><td>The Quest: New Orleans<span class="also">TV series &middot; 6 episodes</span></td><td>Producer<span class="also">Also creator, writer, director</span></td><td class="yr">2011&ndash;2014</td></tr>
+      <tr><td>Extraordinary<span class="also">TV series</span></td><td>Producer, 5 episodes<span class="also">Also writer, director, cinematographer</span></td><td class="yr">2015&ndash;2016</td></tr>
+      <tr><td>Independent shorts and direct-to-video<span class="also">The Gabooza Brothers, Day 47, The Master, A Calendar of Tales, Story Hour, Nibble, and others</span></td><td>Producer</td><td class="yr">2011&ndash;2024</td></tr>
+    </tbody>
+  </table>
+  <p class="counts">17 producer credits, 22 as director, 25 as editor, 24 as cinematographer, 18 as writer. Full list on <a href="https://www.imdb.com/name/nm3223107/">IMDb</a>.</p>
+
+  <footer>20 Below &middot; github.com/feralucce/20_Below<br /><a href="/docs/id-portfolio.html">Instructional Design Portfolio</a> &middot; <a href="/docs/visual-portfolio.html">Visual Information Portfolio</a></footer>
+</main>
+<script src="/docs/assets/js/site-nav.js"></script>
+</body>
+</html>
