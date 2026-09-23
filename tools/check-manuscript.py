@@ -88,6 +88,23 @@ CLAIMS = [
      [r"[Ll]ong.{0,6} range imposes"], []),
     ("Chapter 11", "Reload is explained",
      [r"Reload.{0,6} is the action cost"], []),
+
+    # --- Chapters 04 and 13, improvised damage
+    # Both taught hazards off a 1-10 scale the weapon tables had left
+    # behind: a knife at 5, an anti-materiel rifle at 10, and a fall
+    # capable of twice the worst a gun could do. Neither chapter had
+    # anything checking it.
+    ("Chapter 04", "hazards are on the current damage scale",
+     [r"a knife is 3, an anti-materiel rifle is 5",
+      r"One die per four meters"],
+     [r"a knife is 5", r"anti-materiel rifle is 10",
+      r"One die per two meters", r"Five dice at city speed"]),
+    ("Chapter 13", "improvised damage is on the current scale",
+     [r"A knife or a handgun is 3"],
+     [r"A knife or a handgun is 5",
+      r"anti-materiel rifle is 10"]),
+    ("Chapter 04", "no bare file paths where a diagram goes",
+     [], [r"C:\\\\"]),
 ]
 
 

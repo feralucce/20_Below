@@ -56,6 +56,15 @@ RETIRED = [
      r"Repeats decay|earn the ceiling", ""),
     ("Moira described as never attacking at all",
      r"never used as an attacking attribute", ""),
+    # How to Play and Running the Game both taught improvised damage off a
+    # 1-10 scale the tables had already left: a knife at 5, an anti-materiel
+    # rifle at 10. Nothing had ever looked at either chapter.
+    ("the old 1-10 improvised damage scale",
+     r"a knife (?:or a handgun )?is \*{0,2}5|"
+     r"anti-materiel rifle is \*{0,2}10|"
+     r"One die per two meters", ""),
+    ("a bare Windows path left where a diagram goes",
+     r"C:\\\\", ""),
 ]
 
 # Rules the book prints numbers for and has to explain somewhere.
@@ -68,6 +77,12 @@ REQUIRED = [
      r"\*\*Reload\*\* is the action cost"),
     ("Conjured Armory's damage rule", "gifts.md",
      r"listed rating \*\*plus this Gift's Level\*\*"),
+    ("the improvised damage scale, on the current tables", "how-to-play.md",
+     r"a knife is 3, an anti-materiel rifle is 5"),
+    ("the roll-curve diagram", "how-to-play.md",
+     r"diagrams/roll-curve-comparison\.svg"),
+    ("the critical-hit diagram", "how-to-play.md",
+     r"diagrams/critical-hit-example\.svg"),
 ]
 
 

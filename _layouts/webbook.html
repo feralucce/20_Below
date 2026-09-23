@@ -178,6 +178,100 @@
   }
   .wide > :last-child { margin-bottom: 0; }
   .wide > .block-title { font-size: 1.15rem; }
+
+  /* ---- the Difficulty ladder ----
+     ::: wide.difficulty, in How to Play. The hues are brew.css's,
+     unchanged, so the ramp on the page and the ramp on the screen
+     are the same eleven steps: 356 at Nearly Impossible, round to
+     136 at Trivial. The first column carries the saturated end of
+     it and a rule down its edge; the row itself takes a wash. */
+  .wide--difficulty table { width: 100%; }
+  .wide--difficulty td,
+  .wide--difficulty th {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+  .wide--difficulty td:first-child,
+  .wide--difficulty th:first-child { width: 11%; }
+  .wide--difficulty td:nth-child(2),
+  .wide--difficulty th:nth-child(2) { width: 22%; }
+  .wide--difficulty tbody tr:nth-child(1) {
+    background: hsla(356, 72%, 48%, 0.13);
+  }
+  .wide--difficulty tbody tr:nth-child(1) td:first-child {
+    background: hsla(356, 72%, 48%, 0.42);
+    border-left: 4px solid hsla(356, 72%, 46%, 0.95);
+  }
+  .wide--difficulty tbody tr:nth-child(2) {
+    background: hsla(8, 72%, 48%, 0.13);
+  }
+  .wide--difficulty tbody tr:nth-child(2) td:first-child {
+    background: hsla(8, 72%, 48%, 0.42);
+    border-left: 4px solid hsla(8, 72%, 46%, 0.95);
+  }
+  .wide--difficulty tbody tr:nth-child(3) {
+    background: hsla(20, 72%, 48%, 0.13);
+  }
+  .wide--difficulty tbody tr:nth-child(3) td:first-child {
+    background: hsla(20, 72%, 48%, 0.42);
+    border-left: 4px solid hsla(20, 72%, 46%, 0.95);
+  }
+  .wide--difficulty tbody tr:nth-child(4) {
+    background: hsla(32, 72%, 48%, 0.13);
+  }
+  .wide--difficulty tbody tr:nth-child(4) td:first-child {
+    background: hsla(32, 72%, 48%, 0.42);
+    border-left: 4px solid hsla(32, 72%, 46%, 0.95);
+  }
+  .wide--difficulty tbody tr:nth-child(5) {
+    background: hsla(44, 72%, 48%, 0.13);
+  }
+  .wide--difficulty tbody tr:nth-child(5) td:first-child {
+    background: hsla(44, 72%, 48%, 0.42);
+    border-left: 4px solid hsla(44, 72%, 46%, 0.95);
+  }
+  .wide--difficulty tbody tr:nth-child(6) {
+    background: hsla(56, 72%, 48%, 0.13);
+  }
+  .wide--difficulty tbody tr:nth-child(6) td:first-child {
+    background: hsla(56, 72%, 48%, 0.42);
+    border-left: 4px solid hsla(56, 72%, 46%, 0.95);
+  }
+  .wide--difficulty tbody tr:nth-child(7) {
+    background: hsla(72, 72%, 48%, 0.13);
+  }
+  .wide--difficulty tbody tr:nth-child(7) td:first-child {
+    background: hsla(72, 72%, 48%, 0.42);
+    border-left: 4px solid hsla(72, 72%, 46%, 0.95);
+  }
+  .wide--difficulty tbody tr:nth-child(8) {
+    background: hsla(88, 72%, 48%, 0.13);
+  }
+  .wide--difficulty tbody tr:nth-child(8) td:first-child {
+    background: hsla(88, 72%, 48%, 0.42);
+    border-left: 4px solid hsla(88, 72%, 46%, 0.95);
+  }
+  .wide--difficulty tbody tr:nth-child(9) {
+    background: hsla(104, 72%, 48%, 0.13);
+  }
+  .wide--difficulty tbody tr:nth-child(9) td:first-child {
+    background: hsla(104, 72%, 48%, 0.42);
+    border-left: 4px solid hsla(104, 72%, 46%, 0.95);
+  }
+  .wide--difficulty tbody tr:nth-child(10) {
+    background: hsla(120, 72%, 48%, 0.13);
+  }
+  .wide--difficulty tbody tr:nth-child(10) td:first-child {
+    background: hsla(120, 72%, 48%, 0.42);
+    border-left: 4px solid hsla(120, 72%, 46%, 0.95);
+  }
+  .wide--difficulty tbody tr:nth-child(11) {
+    background: hsla(136, 72%, 48%, 0.13);
+  }
+  .wide--difficulty tbody tr:nth-child(11) td:first-child {
+    background: hsla(136, 72%, 48%, 0.42);
+    border-left: 4px solid hsla(136, 72%, 46%, 0.95);
+  }
   th, td {
     border: 1px solid var(--panel-border);
     padding: 0.5rem 0.7rem;
@@ -338,6 +432,15 @@
   .aside--pc     { border-left-color: var(--v-pc); }
   .aside--danger { border-left-color: var(--v-danger); }
   .aside--text   { border-left-color: var(--v-text); }
+
+  /* ::: aside.accent, in Running the Game. The default aside already
+     draws its rule and its title in the accent, so these restate the
+     default rather than change it - declared because the coverage
+     check fires on a class a chapter emits and no rule defines, and
+     because an aside that means accent should say so rather than rely
+     on the unmarked case happening to match. */
+  .aside--accent { border-left-color: var(--accent); }
+  .aside--accent .block-title { color: var(--accent); }
 
   .aside--earth .block-title { color: var(--v-earth); }
   .aside--air   .block-title { color: var(--v-air); }

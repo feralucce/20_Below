@@ -177,6 +177,29 @@ class Chapter(object):
         self.raw = self.raw[:brace] + runs(md, heading) + self.raw[e:]
         return self
 
+    def substitute(self, old, new, note=""):
+        """Swap a run of plain text in place, touching nothing around it.
+
+        replace() rebuilds a whole paragraph, which means rebuilding its
+        bold and italic runs from markdown - and anything the flattened
+        text lost on the way out is lost on the way back in. Changing
+        four numbers in a paragraph does not need that: this edits the
+        characters and leaves every run boundary, every curly quote and
+        every style exactly where it was.
+
+        Only for text that sits inside a single run. A phrase spanning a
+        bold boundary is not there to be found, and the uniqueness check
+        will say so rather than half-apply it.
+        """
+        enc_old, enc_new = encode(old), encode(new)
+        n = self.raw.count(enc_old)
+        if n != 1:
+            raise NotUnique("%r matches %d times in %s (spanning a bold run?)"
+                            % (old, n, self.fragment))
+        self.log.append(("substitute", (note or old)[:64]))
+        self.raw = self.raw.replace(enc_old, enc_new, 1)
+        return self
+
     def delete(self, needle):
         s, _, e = self._span(needle)
         self.log.append(("delete", self.text_of(needle)[:64]))

@@ -47,6 +47,7 @@ BREW_DIR = r"C:\Users\feral\OneDrive\Documents\20 Below Production documents\PDF
 FORMATTED = {
     "introduction":         "01-introduction.md",
     "creating-a-character": "03-creating-a-character.md",
+    "how-to-play":          "04-how-to-play.md",
     "skills":               "05-skills.md",
     "advancement":          "12-advancement.md",
     "boons":                "06-boons.md",
@@ -59,9 +60,11 @@ FORMATTED = {
 
 # (binder fragment, url slug, nav section, page title)
 #
-# Chapter 13 is deliberately absent. It is a 400-word stub, and the web
-# edition should not publish a chapter that is visibly unwritten. Add it here
-# when it is finished; nothing else needs changing.
+# Chapter 13 was held back here while it was a 400-word stub, on the grounds
+# that the web edition should not publish a chapter that is visibly unwritten.
+# It is 6,200 words now and has been listed since. The note outlived the
+# condition and stayed long enough to be believed, so: everything in this list
+# publishes, and a chapter not ready for that does not go in it.
 #
 # The fifth field is the contents-page blurb. It is written here rather than
 # lifted from the chapter's opening line, because an opening line is written
