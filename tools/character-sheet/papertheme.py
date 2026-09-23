@@ -57,6 +57,19 @@ ONPANEL = INK if PAPER else WHITE
 LIFT = INK if PAPER else WHITE
 
 
+def sized(screen, printed):
+    """Pick a number per build.
+
+    The screen sheet renders text into its rows; the printed one is
+    written on by hand and needs more room between them. The page height
+    does not move, so the printed sheet keeps fewer rows - and the screen
+    sheet keeps all of its slots, which is why this is a fork rather than
+    a single new number. It also means the field map does not change, so
+    nothing a character has saved is lost.
+    """
+    return printed if PAPER else screen
+
+
 def on_paper(col):
     """An accent becomes ink on paper, and is left alone on screen.
 

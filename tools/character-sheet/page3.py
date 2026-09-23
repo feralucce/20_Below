@@ -35,7 +35,7 @@ for i in range(SLOTS):
     field("gift.%d.name" % i, "text", cx + 132, cy + 6, 1020, 48, slot=i,
           rollColor=MOIRA)
     label(cx + 1230, cy + 66, "LEVEL", 30, DIM, 3.6)
-    pips(cx + 1374, cy + 24, 5, 45, MOIRA, 12)
+    pips(cx + 1374, cy + 24, 5, sized(45, 48), MOIRA, sized(12, 9))
     field("gift.%d.level" % i, "pips", cx + 1374, cy + 24, 5 * 57 - 12, 45,
           slot=i, n=5, size=45, gap=12, color=MOIRA)
     label(cx + 1782, cy + 66, "KI", 30, DIM, 3.6)

@@ -43,7 +43,7 @@ frame(MARGIN, sy, INNER, SH, GREEN, "SKILLS", "TICK TRAINED AND UP")
 lx = MARGIN + 42
 label(lx, sy + 120, "TIER", 31, DIM, 3.6)
 for i, t in enumerate(("2 TRAINED", "3 ADEPT", "4 EXPERT", "5 MASTER")):
-    box(lx + 126 + i * 300, sy + 90, 36, GREEN, 4.2, 8)
+    box(lx + 126 + i * 300, sy + 90, sized(36, 48), GREEN, 4.2, 8)
     label(lx + 177 + i * 300, sy + 120, t, 31, mix(GREEN, LIFT, 0.4), 3.0)
 label(MARGIN + INNER - 42, sy + 120, "UNTRAINED AND NOVICE STAY BLANK", 30, DIM, 3.0, "end")
 line(MARGIN + 42, sy + 144, INNER - 84, GREEN, 0.35)
@@ -58,9 +58,10 @@ for ci in range(3):
         field("skill.%d.name" % n, "text", x, y - 42, scol - 276, 48, slot=n,
               rollColor=GREEN)
         for j in range(4):
-            box(x + scol - 252 + j * 60, y - 30, 36, GREEN, 3.6, 8, 0.72)
-        field("skill.%d.tier" % n, "tiers", x + scol - 252, y - 30, 4 * 60 - 24, 36,
-              slot=n, n=4, base=2, size=36, gap=24, color=GREEN)
+            box(x + scol - 252 + j * 60, y - 30, sized(36, 48), GREEN, 3.6, 8, 0.72)
+        field("skill.%d.tier" % n, "tiers", x + scol - 252, y - 30, 4 * 60 - 24,
+              sized(36, 48), slot=n, n=4, base=2, size=sized(36, 48),
+              gap=sized(24, 12), color=GREEN)
 
 # --- boons and flaws ------------------------------------------------------
 bf = sized(1932, 1891)
@@ -78,8 +79,9 @@ for i in range(sized(7, 6)):
     y = bf + 204 + i * sized(54, 65)
     line(MARGIN + 48, y, bw - 240)
     field("boon.%d.name" % i, "text", MARGIN + 48, y - 42, bw - 240, 48, slot=i)
-    box(MARGIN + bw - 132, y - 33, 45, CYAN, 3.9, 9)
-    field("boon.%d.points" % i, "text", MARGIN + bw - 132, y - 33, 45, 45,
+    box(MARGIN + bw - 132, y - 33, sized(45, 48), CYAN, 3.9, 9)
+    field("boon.%d.points" % i, "text", MARGIN + bw - 132, y - 33,
+          sized(45, 48), sized(45, 48),
           slot=i, centre=True)
 
 fx = MARGIN + bw + 48
@@ -94,9 +96,10 @@ for i in range(sized(7, 6)):
     # a size down: "Notable Appearance - burn scarring down his jaw" has
     # to fit on the line it is written on.
     field("flaw.%d.name" % i, "text", fx + 48, y - 42, fw - 378, 48, slot=i, size=29)
-    pips(fx + fw - 330, y - 33, 5, 45, RED, 12)
-    field("flaw.%d.level" % i, "pips", fx + fw - 330, y - 33, 5 * 57 - 12, 45,
-          slot=i, n=5, size=45, gap=12, color=RED)
+    pips(fx + fw - 330, y - 33, 5, sized(45, 48), RED, sized(12, 9))
+    field("flaw.%d.level" % i, "pips", fx + fw - 330, y - 33, 5 * 57 - 12,
+          sized(45, 48), slot=i, n=5, size=sized(45, 48),
+          gap=sized(12, 9), color=RED)
 
 # --- resources ------------------------------------------------------------
 ry = sized(2532, 2492)
@@ -111,9 +114,10 @@ for i in range(sized(8, 7)):
     line(MARGIN + 48, y, 1140)
     field("resource.%d.name" % i, "text", MARGIN + 48, y - 42, 1140, 48, slot=i,
           rollColor=GOLD)
-    pips(MARGIN + 1236, y - 33, 5, 45, GOLD, 12)
-    field("resource.%d.level" % i, "pips", MARGIN + 1236, y - 33, 5 * 57 - 12, 45,
-          slot=i, n=5, size=45, gap=12, color=GOLD)
+    pips(MARGIN + 1236, y - 33, 5, sized(45, 48), GOLD, sized(12, 9))
+    field("resource.%d.level" % i, "pips", MARGIN + 1236, y - 33, 5 * 57 - 12,
+          sized(45, 48), slot=i, n=5, size=sized(45, 48),
+          gap=sized(12, 9), color=GOLD)
     box(MARGIN + 1866, y - 36, 48, GOLD, 4.2, 9)
     field("resource.%d.now" % i, "text", MARGIN + 1866, y - 36, 48, 48,
           slot=i, centre=True)

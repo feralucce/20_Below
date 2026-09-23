@@ -33,7 +33,7 @@ for ci, (name, col) in enumerate(SCARS):
         line(x, y, scol - 168)
         field("scar.%s.%d.text" % (key, ri), "text", x, y - 42, scol - 168, 48,
               kindOf=key, slot=ri)
-        box(x + scol - 132, y - 36, 45, RED, 3.9, 9, 0.8)
+        box(x + scol - 132, y - 36, sized(45, 48), RED, 3.9, 9, 0.8)
         field("scar.%s.%d.below" % (key, ri), "check", x + scol - 132, y - 36, 45, 45,
               kindOf=key, slot=ri, color=RED)
 

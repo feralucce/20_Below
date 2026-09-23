@@ -42,19 +42,19 @@ for i in range(5):
     y = ay + 204 + i * sized(54, 65)
     line(MARGIN + 48, y, 800)
     field("armour.%d.name" % i, "text", MARGIN + 48, y - 42, 800, 48, slot=i)
-    box(MARGIN + 912, y - 36, 45, STEEL, 4.2, 9)
+    box(MARGIN + 912, y - 36, sized(45, 48), STEEL, 4.2, 9)
     field("armour.%d.body" % i, "check", MARGIN + 912, y - 36, 45, 45,
           slot=i, color=STEEL)
-    box(MARGIN + 1032, y - 36, 45, STEEL, 4.2, 9)
+    box(MARGIN + 1032, y - 36, sized(45, 48), STEEL, 4.2, 9)
     field("armour.%d.head" % i, "check", MARGIN + 1032, y - 36, 45, 45,
           slot=i, color=STEEL)
     slot(MARGIN + 1176, y - 39, 96, 51, STEEL)
     field("armour.%d.hardness" % i, "text", MARGIN + 1176, y - 39, 96, 51,
           slot=i, centre=True)
-    pips(MARGIN + 1350, y - 36, 5, 45, STEEL, 12)
+    pips(MARGIN + 1350, y - 36, 5, sized(45, 48), STEEL, sized(12, 9))
     field("armour.%d.health" % i, "pips", MARGIN + 1350, y - 36, 5 * 57 - 12, 45,
           slot=i, n=5, size=45, gap=12, color=STEEL)
-    box(MARGIN + 1962, y - 36, 45, RED, 4.2, 9)
+    box(MARGIN + 1962, y - 36, sized(45, 48), RED, 4.2, 9)
     field("armour.%d.broken" % i, "check", MARGIN + 1962, y - 36, 45, 45,
           slot=i, color=RED)
 

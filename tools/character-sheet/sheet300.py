@@ -38,7 +38,7 @@ PANELS = {"MOIRA": (884, 398), "EARTH": (125, 976), "AIR": (1643, 964),
 # The paper palette itself lives in papertheme, shared with sheetkit, so
 # pages 2-5 print in the same ink this one does.
 from papertheme import (PAPER, WHITE, INK, MUTED, SHADE, ONPANEL, LIFT,
-                        neutral, on_paper)      # noqa: E402
+                        neutral, on_paper, sized)   # noqa: E402
 
 CPANEL = WHITE if PAPER else "#12232E"
 
@@ -342,9 +342,15 @@ for i, (lab, col, formula, states) in enumerate(VIT):
     field("vital.%s.pips" % vid, "pips", MARGIN + 48, y + 24, 15 * 57 - 12, 45,
           n=15, size=45, gap=12, vital=vid, color=col)
     for j in range(15):
-        add('  <rect x="%g" y="%g" width="45" height="45" rx="9" fill="%s" '
-            'fill-opacity="0.16" stroke="%s" stroke-width="3.9"/>'
-            % (MARGIN + 48 + j * 57, y + 24, col, col))
+        # On screen a pip carries a 16% tint of its own colour, which
+        # reads as a track waiting to be filled. On paper that colour is
+        # ink, so the tint becomes a grey wash inside every box - and a
+        # box you tick wants clean paper in it, like every other box on
+        # the sheet.
+        add('  <rect x="%g" y="%g" width="%g" height="%g" rx="9" fill="%s" '
+            'fill-opacity="%g" stroke="%s" stroke-width="3.9"/>'
+            % (MARGIN + 48 + j * 57, y + 24, sized(45, 48), sized(45, 48),
+               SHADE if PAPER else col, BOXFILL if PAPER else 0.16, col))
     stepper(MARGIN + 936, y + 60, "-", "vital.%s.minus" % vid,
             MARGIN + 906, y + 15, vital=vid)
     line(MARGIN + 972, y + 66, 78)

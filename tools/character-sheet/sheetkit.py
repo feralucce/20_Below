@@ -23,7 +23,7 @@ BOTTOM = 3138    # every page's content ends flush here
 # The paper palette is shared with page 1's own generator, so the two
 # halves of the sheet cannot print in two different greys.
 from papertheme import (PAPER, WHITE, INK, MUTED, SHADE, ONPANEL, LIFT,
-                        on_paper)              # noqa: E402
+                        on_paper, sized)       # noqa: E402
 
 ACCENT = "#3D84C4"
 CYAN = "#3FD0E0"
@@ -105,19 +105,6 @@ def panel_path(x, y, w, h, r):
             "A%g %g 0 0 1 %g %g V%g A%g %g 0 0 1 %g %g Z"
             % (x + r, y, x + w - r, r, r, x + w, y + r, y + h - r, r, r,
                x + w - r, y + h, x + r, r, r, x, y + h - r, y + r, r, r, x + r, y))
-
-
-def sized(screen, printed):
-    """Pick a number per build.
-
-    The screen sheet renders text into its rows; the printed one is
-    written on by hand and needs more room between them. The page height
-    does not move, so the printed sheet keeps fewer rows - and the screen
-    sheet keeps all of its slots, which is why this is a fork rather than
-    a single new number. It also means the field map does not change, so
-    nothing a character has saved is lost.
-    """
-    return printed if PAPER else screen
 
 
 def box(x, y, s, col, w=4.5, r=10, op=1.0):
