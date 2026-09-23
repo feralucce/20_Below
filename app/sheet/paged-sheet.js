@@ -30,6 +30,11 @@ const PAGES = 5;
 
 let fieldMap = null;
 let repeats = [];
+// The build the map came from. Hung off every image URL below, because
+// the map is fetched fresh and an <img> is not: without it a browser
+// pairs the new field positions with the page art it already had, and
+// the result looks like a layout bug rather than a stale file.
+let artVersion = '';
 
 export async function loadFieldMap() {
   if (fieldMap) return fieldMap;
@@ -40,6 +45,7 @@ export async function loadFieldMap() {
   const res = await fetch(new URL('./fields.json', import.meta.url), { cache: 'no-cache' });
   const doc = await res.json();
   fieldMap = doc.fields;
+  artVersion = doc.version || '';
   // Pages that are templates rather than fixed pages, e.g. Gifts, which
   // repeats when a character has more than one page of them.
   repeats = doc.repeat || [];
@@ -112,66 +118,54 @@ function shortName(text) {
 // The gear the character bought, split the way the pages are: anything
 // from an Armor table goes to the Armour block, anything with a Damage
 // column goes to Weapons, everything else is just carried.
-// Conjured Armory's signature weapon is a real item from the catalogue,
-// and its Damage rises with the Gift: +1 from Level 3, +2 from Level 5,
-// capped at the weapon table's ceiling of 5. Bonded Blade adds another
-// +1 on top, for the signature weapon specifically.
+//
+// Conjured Armory's weapon is a real item from the catalogue, and its
+// Damage is that item's listed rating plus the Gift's Level, uncapped -
+// so an Armory attack keeps pace with the Gifts that attack directly
+// rather than stalling at the weapon table's ceiling of 5 while
+// Onslaught and the rest climb past it. Bonded Blade adds one more, for
+// the signature weapon specifically.
+const CONJURED_BASE = 3;
+
 function conjuredWeapon(state, catalog) {
   const gift = (state.gifts || []).find((g) => g.name === 'Conjured Armory' && g.level > 0);
   if (!gift) return null;
-  // What the Gift adds, whatever weapon it turns out to be.
-  let bonus = 0;
-  if (gift.level >= 5) bonus = 2;
-  else if (gift.level >= 3) bonus = 1;
-  if (bonus && (gift.adders || []).includes('Bonded Blade')) bonus += 1;
+
+  // Bonded Blade's edge starts where the Gift's own bonus used to, at
+  // Level 3 - the adder is written as "+1 higher than any other weapon
+  // you conjure", and below Level 3 there is nothing yet to be higher
+  // than.
+  const bonded = gift.level >= 3 && (gift.adders || []).includes('Bonded Blade');
+  const bonus = gift.level + (bonded ? 1 : 0);
 
   const notes = (gift.notes || []).filter(Boolean);
-  if (!notes.length) {
-    // No weapon named yet - which is a gap in the character, not a reason
-    // for the sheet to stay silent about the thing they attack with. Say
-    // what is known and what is missing.
-    return {
-      name: 'Conjured Armory - name your weapon',
-      damage: bonus ? `+${bonus}` : '',
-      range: '',
-      ammo: 'never dry',
-      reload: '',
-    };
-  }
+  const wanted = (notes[0] || '').trim().toLowerCase();
+  const item = wanted && wanted !== 'needs name'
+    ? [...catalog.values()].find((x) => x.name.toLowerCase() === wanted)
+    : null;
 
-  const wanted = notes[0].trim().toLowerCase();
-  const item = [...catalog.values()].find((x) => x.name.toLowerCase() === wanted);
+  // A weapon nobody has named yet, or one the catalogue has never heard
+  // of. Either way the character still swings something, and a row that
+  // cannot be rolled is worse than one carrying the catalogue's own
+  // middle rating until the real weapon is filled in. Three is that
+  // middle: the most common Damage across the 91 weapons in the tables,
+  // and their median.
+  const base = item ? Number(item.Damage) : CONJURED_BASE;
+  const damage = String((Number.isFinite(base) ? base : CONJURED_BASE) + bonus);
+
   const called = notes[1] ? notes[1].trim() : '';
-  // A name the catalogue does not know still belongs on the sheet - the
-  // Armory of Anything adder exists precisely to allow that - it just
-  // cannot carry numbers nobody wrote down.
-  const label = called ? `${notes[0].trim()} - ${shortName(called)}` : notes[0].trim();
-  if (!item) {
-    // Armory of Anything conjures things the catalogue never listed, and
-    // the rules hand their stats to the GM "using the closest catalog
-    // equivalent". So the base is not ours to invent - but what the Gift
-    // adds to it is known, and is the half a player would forget.
-    return {
-      name: label,
-      damage: bonus ? `+${bonus} over base` : '',
-      range: '',
-      ammo: 'never dry',
-      reload: '-',
-    };
-  }
-
-  const base = Number(item.Damage);
-  const damage = Number.isFinite(base) && bonus
-    ? String(Math.min(5, base + bonus))
-    : (item.Damage || '');
+  const named = notes[0] && wanted !== 'needs name';
+  const label = named
+    ? (called ? `${notes[0].trim()} - ${shortName(called)}` : notes[0].trim())
+    : 'Conjured Armory - needs name';
 
   return {
     name: label,
     damage,
-    range: item['Range (Normal / Long)'] || item.Range || '',
+    range: item ? (item['Range (Normal / Long)'] || item.Range || '') : 'as listed',
     // Level 1 already says it never runs dry, whatever the weapon is.
     ammo: 'never dry',
-    reload: item.Reload || '',
+    reload: item ? (item.Reload || '') : '-',
   };
 }
 
@@ -275,7 +269,28 @@ function splitGear(state, data) {
 
   // Where one named thing belongs: the Armour block if it is armour, the
   // Weapons block if it has a Damage column, and carried otherwise.
-  function file(name, category) {
+  function file(name, category, own) {
+    // Something written in by hand has no catalogue entry to look up, so
+    // it brings its own Damage and range with it.
+    if (own && own.damage) {
+      weapons.push({
+        name,
+        damage: String(own.damage),
+        range: own.range || '',
+        ammo: own.ammo || '',
+        reload: own.reload || '',
+      });
+      return;
+    }
+    if (own && own.hardness) {
+      armour.push({
+        name,
+        zone: own.zone || '',
+        hardness: String(own.hardness),
+        health: Number(own.health) || 0,
+      });
+      return;
+    }
     const item = catalog.get(name);
     const parent = item?._cat?.parent || category || '';
     if (/armor|armour/i.test(parent)) {
@@ -298,7 +313,7 @@ function splitGear(state, data) {
     }
   }
 
-  (state.gearPurchases || []).forEach((p) => file(p.name, p.category));
+  (state.gearPurchases || []).forEach((p) => file(p.name, p.category, p));
 
   // A conjured weapon is not gear a character bought, but it is a weapon
   // they fight with, so it goes where the weapons are - first, because
@@ -559,6 +574,40 @@ function place(node, f) {
 // low one on purpose: raise it much past the height of the box the value
 // sits in and the text starts overrunning the art around it, which costs
 // more than the size gains.
+
+// Two ten-sided dice, drawn inline rather than loaded from
+// app/icons/dice-2d10.svg as an image: it takes its colour from the pill
+// around it through currentColor, and an <img> cannot.
+const DICE_2D10 = `<svg viewBox="0 0 54 42" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round">
+  <defs>
+    <g id="pill-d10">
+      <path d="M17 2 L32.64 17.56 L32.64 22.28 L17 38 L1.36 22.28 L1.36 17.56 Z"/>
+      <path d="M17 2 L6.7 20 L17 25.11 L27.3 20 Z"/>
+      <path d="M6.7 20 L1.36 22.28"/>
+      <path d="M27.3 20 L32.64 22.28"/>
+      <path d="M17 25.11 L17 38"/>
+    </g>
+  </defs>
+
+  <mask id="pill-d10-cut">
+    <rect width="54" height="42" fill="white"/>
+    <g transform="translate(22 4) scale(0.86)">
+      <path d="M17 2 L32.64 17.56 L32.64 22.28 L17 38 L1.36 22.28 L1.36 17.56 Z"
+            fill="black" stroke="black" stroke-width="5.5" stroke-linejoin="round"/>
+    </g>
+  </mask>
+
+  <g mask="url(#pill-d10-cut)">
+    <g transform="translate(2 2) scale(0.68) rotate(-14 17 20)">
+      <use href="#pill-d10" stroke-width="3.4"/>
+    </g>
+  </g>
+
+  <g transform="translate(22 4) scale(0.86)">
+    <use href="#pill-d10" stroke-width="2.7"/>
+  </g>
+</svg>`;
+
 const FLOOR = 10;
 
 function typeSize(units, floor = FLOOR) {
@@ -630,7 +679,9 @@ function checkControl(f, on) {
 // ---------------------------------------------------------------------------
 
 export function buildPagedSheet(state, data, opts = {}) {
-  const { refresh = () => {}, persist = () => {}, onRoll = () => {} } = opts;
+  const {
+    refresh = () => {}, persist = () => {}, onRoll = () => {}, onAddItem = () => {},
+  } = opts;
   if (!fieldMap) throw new Error('loadFieldMap() must resolve before building the sheet');
 
   const figured = computeFiguredCharacteristics(state);
@@ -742,6 +793,24 @@ export function buildPagedSheet(state, data, opts = {}) {
       return;
     }
 
+    // Adding kit belongs in the block the kit lands in. The art draws
+    // the pill; this is only the hit target over it.
+    const ADDS = {
+      'weapon.add': ['weapon', 'Add a weapon'],
+      'armour.add': ['armour', 'Add armour'],
+      'equipment.add': ['equipment', 'Add equipment'],
+    };
+    if (ADDS[id]) {
+      const [kind, title] = ADDS[id];
+      host.appendChild(place(el('button', {
+        type: 'button',
+        class: 'sf sf-roll',
+        title,
+        onClick: () => onAddItem(kind),
+      }), f));
+      return;
+    }
+
     // Resting is the one thing that moves several tracks at once, so it
     // is a button on the sheet rather than a number to walk down by hand.
     if (id === 'rest.short' || id === 'rest.long') {
@@ -772,15 +841,58 @@ export function buildPagedSheet(state, data, opts = {}) {
     }
   }
 
+  // Whether a field is something you can roll, and what rolling it means.
+  // Asked twice: once to reserve room at the end of the row for the dice,
+  // and once to put them there. One answer, so the two cannot disagree.
+  //
+  // An attack's to-hit is the Element you describe swinging with, not a
+  // Skill and not the thing in your hand - so the Element panel is where
+  // an attack starts. Moira has no attack roll, so it is left alone
+  // rather than offering a roller it cannot fill.
+  function rollSpecFor(part) {
+    // The Element's own roll target, drawn beside its name rather than on
+    // the rating - a rating is a number to read, not a button.
+    if (part[0] === 'attribute' && part[2] === 'roll') {
+      return { kind: 'attack', label: part[1] };
+    }
+    const [group, idx, leaf] = part;
+    if (leaf !== 'name') return null;
+    const i = Number(idx);
+    if (group === 'skill' && ctx.skills[i]) return { kind: 'skill', label: ctx.skills[i].name };
+    if (group === 'gift' && ctx.gifts[i]) return { kind: 'gift', label: ctx.gifts[i].name };
+    if (group === 'resource' && ctx.resources[i]?.pushable) {
+      return { kind: 'resource', label: ctx.resources[i].name };
+    }
+    if (group === 'weapon' && ctx.weapons[i]) {
+      // The row already knows what it hits for; the roller should not
+      // make anyone read it off the sheet and type it back in.
+      return { kind: 'weapon', label: ctx.weapons[i].name, damage: ctx.weapons[i].damage };
+    }
+    return null;
+  }
+
   // Whole-row hit targets that open a roller, laid over the row rather
   // than over any one field in it.
-  function rollTarget(f, kind, label) {
+  //
+  // The target used to be invisible - the row lit up under the pointer and
+  // said nothing before you got there, so nobody knew the sheet rolled at
+  // all. The dice sit in it now: a row you can roll looks like a row you
+  // can roll, whether or not anyone hovers it.
+  function rollTarget(f, spec) {
+    const { kind, label } = spec;
+    const pill = el('span', { class: 'roll-pill', 'aria-hidden': 'true' });
+    pill.innerHTML = DICE_2D10;
     const node = place(el('button', {
       type: 'button',
-      class: 'sf sf-roll',
+      class: kind === 'attack' ? 'sf sf-roll sf-roll-attack' : 'sf sf-roll',
       title: `Roll ${label}`,
-      onClick: () => onRoll(kind, label),
-    }), f);
+      onClick: () => onRoll(kind, label, spec),
+    }, pill), f);
+    // The dice belong to the box they sit in, which the generator already
+    // knows the colour of - green for Skills, gold for Resources, the
+    // Element's own for an attack.
+    const tint = f.color || f.rollColor;
+    if (tint) node.style.color = tint;
     return node;
   }
 
@@ -800,10 +912,11 @@ export function buildPagedSheet(state, data, opts = {}) {
   views.forEach((view, index) => {
     const { page } = view;
     const pageEl = el('div', { class: 'sheet-page' });
-    pageEl.style.backgroundImage = `url(${new URL(`./bg${page}.jpg`, import.meta.url)})`;
+    const stamp = artVersion ? `?v=${artVersion}` : '';
+    pageEl.style.backgroundImage = `url(${new URL(`./bg${page}.jpg${stamp}`, import.meta.url)})`;
     pageEl.appendChild(el('img', {
       class: 'sheet-art',
-      src: String(new URL(`./page${page}.svg`, import.meta.url)),
+      src: String(new URL(`./page${page}.svg${stamp}`, import.meta.url)),
       alt: `Character sheet page ${index + 1}`,
     }));
 
@@ -826,7 +939,12 @@ export function buildPagedSheet(state, data, opts = {}) {
         overlay.appendChild(editControl(f, editable, persist,
           id.startsWith('scar.') ? refresh : null));
       }
-      else if (f.kind === 'text') overlay.appendChild(textControl(f, value));
+      else if (f.kind === 'text') {
+        const node = textControl(f, value);
+        // A row with dice at its end has that much less room for its name.
+        if (rollSpecFor(id.split('.'))) node.classList.add('sf-roll-room');
+        overlay.appendChild(node);
+      }
       else if (f.kind === 'para') overlay.appendChild(paraControl(f, value));
       else if (f.kind === 'pips') overlay.appendChild(pipControl(f, Number(value) || 0));
       else if (f.kind === 'tiers') overlay.appendChild(tierControl(f, Number(value) || 0));
@@ -838,27 +956,8 @@ export function buildPagedSheet(state, data, opts = {}) {
     // target covers the row's name field, which is the part a finger
     // goes for.
     onPage.forEach((f) => {
-      const part = shift(f.id, view).split('.');
-      // An attack's to-hit is the Element you describe swinging with, not
-      // a Skill and not the thing in your hand - so the Element panel is
-      // where an attack starts. Moira has no attack roll, so it is left
-      // alone rather than opening a roller it cannot fill.
-      if (part[0] === 'attribute' && part[1] !== 'Moira') {
-        overlay.appendChild(rollTarget(f, 'attack', part[1]));
-        return;
-      }
-      const [group, idx, leaf] = part;
-      if (leaf !== 'name') return;
-      const i = Number(idx);
-      if (group === 'skill' && ctx.skills[i]) {
-        overlay.appendChild(rollTarget(f, 'skill', ctx.skills[i].name));
-      } else if (group === 'gift' && ctx.gifts[i]) {
-        overlay.appendChild(rollTarget(f, 'gift', ctx.gifts[i].name));
-      } else if (group === 'resource' && ctx.resources[i]?.pushable) {
-        overlay.appendChild(rollTarget(f, 'resource', ctx.resources[i].name));
-      } else if (group === 'weapon' && ctx.weapons[i]) {
-        overlay.appendChild(rollTarget(f, 'weapon', ctx.weapons[i].name));
-      }
+      const spec = rollSpecFor(shift(f.id, view).split('.'));
+      if (spec) overlay.appendChild(rollTarget(f, spec));
     });
 
     pageEl.appendChild(overlay);

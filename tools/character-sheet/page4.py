@@ -15,6 +15,9 @@ open_page(4, 5, "The weapons and armour a character carries, and everything else
 wy = TOP
 WH = 720
 frame(MARGIN, wy, INNER, WH, FIRE, "WEAPONS")
+# Kit picked up in play goes on where it goes on the sheet, not in a
+# toolbar at the bottom of the page.
+action(MARGIN + INNER - 42 - 300, wy + 18, 300, 66, FIRE, "+ ADD WEAPON", "weapon.add")
 heads(MARGIN, wy + 126, ((48, "WEAPON"), (1010, "DAMAGE"), (1260, "RANGE N / L"),
                          (1660, "AMMO"), (1960, "RELOAD")))
 line(MARGIN + 42, wy + 144, INNER - 84, FIRE, 0.35)
@@ -23,13 +26,15 @@ for i in range(10):
     for off, wid, key in ((48, 920, "name"), (1010, 210, "damage"), (1260, 360, "range"),
                           (1660, 250, "ammo"), (1960, 260, "reload")):
         line(MARGIN + off, y, wid)
-        field("weapon.%d.%s" % (i, key), "text", MARGIN + off, y - 42, wid, 48, slot=i)
+        field("weapon.%d.%s" % (i, key), "text", MARGIN + off, y - 42, wid, 48,
+              slot=i, **({"rollColor": FIRE} if key == "name" else {}))
 
 # --- armour ---------------------------------------------------------------
 ay = 1044
 AH = 450
-frame(MARGIN, ay, INNER, AH, STEEL, "ARMOUR",
-      "HARDNESS IS THE DAMAGE THRESHOLD - ARMOUR HEALTH IS REMOVED BEFORE YOURS")
+frame(MARGIN, ay, INNER, AH, STEEL, "ARMOUR")
+action(MARGIN + INNER - 42 - 300, ay + 18, 300, 66, STEEL, "+ ADD ARMOUR",
+       "armour.add")
 heads(MARGIN, ay + 126, ((48, "ITEM"), (900, "BODY"), (1020, "HEAD"), (1140, "HARDNESS"),
                          (1350, "ARMOUR HEALTH LEVELS"), (1950, "BROKEN")))
 line(MARGIN + 42, ay + 144, INNER - 84, STEEL, 0.35)
@@ -57,6 +62,8 @@ for i in range(5):
 qy = 1524
 QH = BOTTOM - qy
 frame(MARGIN, qy, INNER, QH, GOLD, "EQUIPMENT")
+action(MARGIN + INNER - 42 - 330, qy + 18, 330, 66, GOLD, "+ ADD EQUIPMENT",
+       "equipment.add")
 qcol = (INNER - 96) / 3.0
 for ci in range(3):
     for ri in range(27):

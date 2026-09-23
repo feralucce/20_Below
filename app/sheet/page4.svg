@@ -6,6 +6,9 @@
   <path d="M159 294 H2391 A42 42 0 0 1 2433 336 V972 A42 42 0 0 1 2391 1014 H159 A42 42 0 0 1 117 972 V336 A42 42 0 0 1 159 294 Z" fill="#01050A" fill-opacity="0.55"/>
   <path d="M159 294 H2391 A42 42 0 0 1 2433 336 V972 A42 42 0 0 1 2391 1014 H159 A42 42 0 0 1 117 972 V336 A42 42 0 0 1 159 294 Z" fill="none" stroke="#E0663F" stroke-width="5"/>
   <text x="159" y="360" font-family="'Segoe UI Semibold', 'Segoe UI', Montserrat, system-ui, sans-serif" font-size="45" font-weight="600" letter-spacing="1.8" fill="#FFFFFF" text-anchor="start">WEAPONS</text>
+  <path d="M2124 312 H2358 A33 33 0 0 1 2391 345 V345 A33 33 0 0 1 2358 378 H2124 A33 33 0 0 1 2091 345 V345 A33 33 0 0 1 2124 312 Z" fill="#01050A" fill-opacity="0.55"/>
+  <path d="M2124 312 H2358 A33 33 0 0 1 2391 345 V345 A33 33 0 0 1 2358 378 H2124 A33 33 0 0 1 2091 345 V345 A33 33 0 0 1 2124 312 Z" fill="none" stroke="#E0663F" stroke-width="4.5"/>
+  <text x="2241" y="355.56" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="31" letter-spacing="3.6" fill="#ECA38C" text-anchor="middle">+ ADD WEAPON</text>
   <text x="165" y="420" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="start">WEAPON</text>
   <text x="1127" y="420" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="start">DAMAGE</text>
   <text x="1377" y="420" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="start">RANGE N / L</text>
@@ -65,7 +68,9 @@
   <path d="M159 1044 H2391 A42 42 0 0 1 2433 1086 V1452 A42 42 0 0 1 2391 1494 H159 A42 42 0 0 1 117 1452 V1086 A42 42 0 0 1 159 1044 Z" fill="#01050A" fill-opacity="0.55"/>
   <path d="M159 1044 H2391 A42 42 0 0 1 2433 1086 V1452 A42 42 0 0 1 2391 1494 H159 A42 42 0 0 1 117 1452 V1086 A42 42 0 0 1 159 1044 Z" fill="none" stroke="#9FB4C4" stroke-width="5"/>
   <text x="159" y="1110" font-family="'Segoe UI Semibold', 'Segoe UI', Montserrat, system-ui, sans-serif" font-size="45" font-weight="600" letter-spacing="1.8" fill="#FFFFFF" text-anchor="start">ARMOUR</text>
-  <text x="2391" y="1107" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="32" letter-spacing="4.8" fill="#BCCAD6" text-anchor="end">HARDNESS IS THE DAMAGE THRESHOLD - ARMOUR HEALTH IS REMOVED BEFORE YOURS</text>
+  <path d="M2124 1062 H2358 A33 33 0 0 1 2391 1095 V1095 A33 33 0 0 1 2358 1128 H2124 A33 33 0 0 1 2091 1095 V1095 A33 33 0 0 1 2124 1062 Z" fill="#01050A" fill-opacity="0.55"/>
+  <path d="M2124 1062 H2358 A33 33 0 0 1 2391 1095 V1095 A33 33 0 0 1 2358 1128 H2124 A33 33 0 0 1 2091 1095 V1095 A33 33 0 0 1 2124 1062 Z" fill="none" stroke="#9FB4C4" stroke-width="4.5"/>
+  <text x="2241" y="1105.56" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="31" letter-spacing="3.6" fill="#C5D2DC" text-anchor="middle">+ ADD ARMOUR</text>
   <text x="165" y="1170" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="start">ITEM</text>
   <text x="1017" y="1170" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="start">BODY</text>
   <text x="1137" y="1170" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="start">HEAD</text>
@@ -126,6 +131,9 @@
   <path d="M159 1524 H2391 A42 42 0 0 1 2433 1566 V3096 A42 42 0 0 1 2391 3138 H159 A42 42 0 0 1 117 3096 V1566 A42 42 0 0 1 159 1524 Z" fill="#01050A" fill-opacity="0.55"/>
   <path d="M159 1524 H2391 A42 42 0 0 1 2433 1566 V3096 A42 42 0 0 1 2391 3138 H159 A42 42 0 0 1 117 3096 V1566 A42 42 0 0 1 159 1524 Z" fill="none" stroke="#E0A85C" stroke-width="5"/>
   <text x="159" y="1590" font-family="'Segoe UI Semibold', 'Segoe UI', Montserrat, system-ui, sans-serif" font-size="45" font-weight="600" letter-spacing="1.8" fill="#FFFFFF" text-anchor="start">EQUIPMENT</text>
+  <path d="M2094 1542 H2358 A33 33 0 0 1 2391 1575 V1575 A33 33 0 0 1 2358 1608 H2094 A33 33 0 0 1 2061 1575 V1575 A33 33 0 0 1 2094 1542 Z" fill="#01050A" fill-opacity="0.55"/>
+  <path d="M2094 1542 H2358 A33 33 0 0 1 2391 1575 V1575 A33 33 0 0 1 2358 1608 H2094 A33 33 0 0 1 2061 1575 V1575 A33 33 0 0 1 2094 1542 Z" fill="none" stroke="#E0A85C" stroke-width="4.5"/>
+  <text x="2226" y="1585.56" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="31" letter-spacing="3.6" fill="#ECCB9D" text-anchor="middle">+ ADD EQUIPMENT</text>
   <rect x="165" y="1674" width="668" height="3" fill="#5C7488" fill-opacity="0.7"/>
   <rect x="165" y="1728" width="668" height="3" fill="#5C7488" fill-opacity="0.7"/>
   <rect x="165" y="1782" width="668" height="3" fill="#5C7488" fill-opacity="0.7"/>

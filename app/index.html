@@ -36,17 +36,24 @@
 </head>
 <body>
 <header class="app-header">
-  <button id="btn-reset" type="button" class="reset-btn">Reset</button>
   <div class="header-links">
-    <a class="file-link" href="https://20belowrpg.com/home.html" target="_blank" rel="noopener">&larr; 20 Below</a>
-    <a href="file.html" class="file-link">Save / Load / Import</a>
+    <a class="file-link" href="https://20belowrpg.com/home.html" target="_blank" rel="noopener">&larr; 20 Below Website</a>
+    <button id="btn-save" type="button" class="file-link">Save</button>
+    <button id="btn-import" type="button" class="file-link">Import</button>
+    <select id="load-select" class="file-link" aria-label="Load a saved character"></select>
+    <button id="btn-export" type="button" class="file-link">Export</button>
+    <button id="btn-edit" type="button" class="file-link">Character Creator</button>
+    <button id="btn-new" type="button" class="file-link new-btn">New Character</button>
   </div>
-  <h1><img src="../docs/assets/brand/favicon-32.png" alt="" width="28" height="28" class="header-icon" /> 20 Below</h1>
-  <p class="subtitle">Character Creator</p>
-  <p id="version-led" class="version-led" hidden></p>
-  <p id="rules-led" class="version-led" hidden></p>
-  <button type="button" id="get-update" class="get-update" hidden>Get the update</button>
-  <p id="app-version" class="app-version"></p>
+  <div class="header-brand">
+    <h1><img src="../docs/assets/brand/favicon-32.png" alt="" width="28" height="28" class="header-icon" /> 20 Below</h1>
+    <p class="subtitle">Character Creator</p>
+    <p id="version-led" class="version-led" hidden></p>
+    <p id="rules-led" class="version-led" hidden></p>
+    <button type="button" id="get-update" class="get-update" hidden>Get the update</button>
+    <p id="app-version" class="app-version"></p>
+  </div>
+  <p id="file-status" class="file-status-line" hidden></p>
 </header>
 
 <nav id="step-nav" class="step-nav" aria-label="Character creation steps"></nav>

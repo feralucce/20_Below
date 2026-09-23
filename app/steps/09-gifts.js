@@ -42,6 +42,21 @@ function catalogueFor(kind, data) {
   return names.sort();
 }
 
+// The describe slots a Gift cannot do without. Only the first slot, and
+// only when it is empty: this is a prompt made visible, not a value.
+const PLACEHOLDER = { 'Conjured Armory': 'needs name' };
+
+function fillPlaceholders(state, giftName) {
+  const text = PLACEHOLDER[giftName];
+  if (!text) return false;
+  const g = state.gifts.find((x) => x.name === giftName);
+  if (!g) return false;
+  const notes = g.notes || (g.notes = []);
+  if (notes[0]) return false;
+  setGiftNote(state, giftName, 0, text);
+  return true;
+}
+
 export default {
   id: 'gifts',
   title: 'Gifts',
@@ -71,6 +86,11 @@ export default {
         get: () => gState.level,
         set: (v) => {
           gState.level = v;
+          // A slot that has to be filled in before the sheet can say
+          // anything is a slot that should say so on the sheet. Taking
+          // the Gift writes the placeholder; typing over it is the whole
+          // interaction, and leaving it still leaves a playable row.
+          if (v > 0) fillPlaceholders(state, gift.name);
         },
         min: 0,
         max: () => Math.min(5, gState.level + Math.floor(remaining / perLevel)),
@@ -239,6 +259,10 @@ export default {
       const giftState = getOrCreateGiftState(state, gift.name);
       const fields = giftState.level > 0
         ? describeFields('gift', gift.name, giftState) : 0;
+      // Builds made before the Gift asked this question have an empty
+      // slot and no way to know it matters, so the placeholder goes in
+      // on the way past rather than only when a Level is bought.
+      if (fields && giftState.level > 0 && fillPlaceholders(state, gift.name)) persist?.();
       if (fields) {
         card.append(describeBoxes({
           count: fields,

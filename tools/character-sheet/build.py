@@ -6,7 +6,7 @@ it - the Creator, the print variant, the fillable PDF, a shared character
 URL, the web app. Art and map are emitted from the same numbers in the
 same run, so they cannot drift.
 """
-import io, os, json, shutil, subprocess, sys
+import hashlib, io, os, json, shutil, subprocess, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(HERE))
@@ -38,10 +38,19 @@ if dupes:
 # than it holds gets another copy of it, with the slot numbers offset.
 # Everything downstream - the app, the print variant, the PDF - reads
 # this rather than knowing about Gifts.
+# The art and the map are rebuilt together, so a stamp taken from the map
+# is a stamp on that build of the pages. The app hangs it off every image
+# URL, which is what stops a browser pairing today's field positions with
+# yesterday's picture - the field map is fetched fresh every time, an
+# <img> never is, and the mismatch reads as a layout bug rather than a
+# stale file.
+stamp = hashlib.sha1(json.dumps(fields, sort_keys=True).encode()).hexdigest()[:10]
+
 doc = {
     "width": W,
     "height": H,
     "pages": 5,
+    "version": stamp,
     "repeat": [{"page": 3, "group": "gift", "slots": page3.SLOTS}],
     "fields": fields,
 }

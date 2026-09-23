@@ -26,6 +26,13 @@
   box-sizing: border-box;
 }
 
+/* The step nav and the Back/Next bar are laid out with display:flex, which
+   outranks the UA rule behind the hidden attribute - so hiding them from
+   script did nothing at all until this. */
+[hidden] {
+  display: none !important;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -35,31 +42,136 @@ body {
   flex-direction: column;
 }
 
+/* The buttons are a bar across the top and the brand sits under them.
+   Squeezing seven of them into a column beside the title only decided
+   how many lines they wrapped onto. */
 .app-header {
   position: relative;
-  padding: 1.25rem 1.5rem 0.5rem;
+  padding: 1rem 1.5rem 0.5rem;
   text-align: center;
 }
 
-.reset-btn {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.5rem;
-  background: var(--panel);
-  border: 1px solid var(--danger);
+/* Starting a new character is the ordinary, welcome thing to do here -
+   it was red when it was called Reset and meant losing your work. It is
+   still the button that discards, so it turns red for the one click that
+   actually does. */
+.file-link.new-btn {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+.file-link.new-btn:hover {
+  background: var(--ok);
+  color: var(--bg);
+}
+.file-link.new-btn.armed {
+  border-color: var(--danger);
   color: var(--danger);
-  border-radius: var(--radius);
-  padding: 0.4rem 0.9rem;
+}
+.file-link.new-btn.armed:hover {
+  background: var(--danger);
+  color: var(--bg);
+}
+/* The header-links row is buttons now rather than links, so they need the
+   button reset that an <a> never needed. */
+button.file-link {
+  font: inherit;
+  font-size: 0.75rem;
   cursor: pointer;
-  font-size: 0.85rem;
+}
+
+.file-status-line {
+  margin: 0.55rem 0 0;
+  font-size: 0.82rem;
+  color: var(--ok);
+}
+.file-status-line.error {
+  color: var(--danger);
+}
+
+/* The saved characters sit in the bar as a dropdown, wearing the same
+   blue as the buttons either side of it so the row reads as one thing. */
+select.file-link {
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+  color-scheme: dark;
+  appearance: none;
+  padding-right: 1.5rem;
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: right 0.75rem center, right 0.55rem center;
+  background-size: 4px 4px, 4px 4px;
+  background-repeat: no-repeat;
+}
+select.file-link:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+select.file-link:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+select.file-link:disabled:hover {
+  background-color: var(--panel);
+  color: var(--accent);
+}
+
+.character-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.character-pick {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.character-pick:hover,
+.character-pick:focus-visible {
+  background: var(--accent-dim);
+  outline: none;
+}
+
+/* The one screen with no character behind it. */
+.start-panel {
+  max-width: 34rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+.start-panel h2 {
+  margin: 0 0 0.5rem;
+}
+.start-note {
+  margin: 0 0 1.25rem;
+  opacity: 0.8;
+}
+.start-panel .character-list {
+  text-align: left;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--accent-dim);
+  border-radius: var(--radius);
+  padding: 0.35rem;
+}
+.start-actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
 }
 
 .header-links {
-  position: absolute;
-  top: 1.25rem;
-  left: 1.5rem;
   display: flex;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
 }
 
 .file-link {
@@ -67,8 +179,10 @@ body {
   border: 1px solid var(--accent);
   color: var(--accent);
   border-radius: var(--radius);
-  padding: 0.4rem 0.9rem;
-  font-size: 0.85rem;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  white-space: nowrap;
   text-decoration: none;
 }
 
@@ -77,19 +191,9 @@ body {
   color: var(--bg);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .app-header {
     padding-top: 0.75rem;
-  }
-  .header-links {
-    position: static;
-    display: block;
-  }
-  .reset-btn,
-  .file-link {
-    position: static;
-    display: inline-block;
-    margin: 0 0.35rem 0.5rem;
   }
 }
 
@@ -1182,11 +1286,19 @@ tr.purchased td {
 .roll-btn {
   background: var(--accent-dim);
   color: var(--text);
-  border: none;
-  border-radius: var(--radius);
-  padding: 0.5rem 1.5rem;
-  font-size: 0.95rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.45rem 1.6rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   cursor: pointer;
+}
+.roll-btn:hover,
+.roll-btn:focus-visible {
+  background: var(--accent);
+  color: var(--bg);
+  outline: none;
 }
 
 .roller-result {
@@ -1213,11 +1325,11 @@ tr.purchased td {
 
 .roller-panel > h4,
 .roller-gift-check h4 {
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.35rem;
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-dim);
+  letter-spacing: 0.09em;
+  color: var(--accent);
 }
 
 .roller-gift-check p {
@@ -1401,6 +1513,72 @@ tr.purchased td {
   border-radius: calc(var(--u) * 9);
   cursor: pointer;
   padding: 0;
+  /* The dice sit at the end of the row, where its own text has run out.
+     The button is still the whole row - this only says where its one
+     visible mark goes. */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--accent);
+}
+
+/* An Element's rating is a single tall digit in a wide box, which leaves
+   a clear column down each side. The dice go in the right-hand one -
+   under the number, and they are on top of it. */
+
+/* The dice carry the colour of the block they sit in - currentColor is
+   set on the button from the field map - so everything here is a shade
+   of that one colour rather than a new one. The fill is what makes them
+   read as a control instead of a line drawing. */
+.roll-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* A row is 48 units tall and the next one starts 54 below, so the pill
+     has to finish inside 48 or consecutive rows collide. The height is
+     fixed and the border counts inside it: a browser will not draw a
+     border thinner than 1px, which at small render widths is worth more
+     than the 2 units asked for, and padding alone let that overflow the
+     row. */
+  box-sizing: border-box;
+  height: calc(var(--u) * 45);
+  padding: 0 calc(var(--u) * 12);
+  border: calc(var(--u) * 2) solid currentColor;
+  border-radius: 999px;
+  background: color-mix(in srgb, currentColor 16%, transparent);
+  opacity: 0.8;
+  pointer-events: none;
+}
+.sf-roll:hover .roll-pill,
+.sf-roll:focus-visible .roll-pill {
+  opacity: 1;
+  background: color-mix(in srgb, currentColor 30%, transparent);
+  box-shadow: 0 0 calc(var(--u) * 12) color-mix(in srgb, currentColor 45%, transparent);
+}
+.roll-pill svg {
+  display: block;
+  width: calc(var(--u) * 40);
+  height: calc(var(--u) * 31);
+}
+/* The Element pill has a field of its own on the title line, so it can
+   be the size the thing it opens deserves. */
+.sf-roll-attack {
+  justify-content: center;
+}
+.sf-roll-attack .roll-pill {
+  height: calc(var(--u) * 90);
+  padding: 0 calc(var(--u) * 20);
+  border-width: calc(var(--u) * 3);
+  opacity: 0.9;
+}
+.sf-roll-attack .roll-pill svg {
+  width: calc(var(--u) * 84);
+  height: calc(var(--u) * 65);
+}
+
+/* A row with dice at the end has that much less room for its own name. */
+.sf-text.sf-roll-room > .sf-clip {
+  padding-right: calc(var(--u) * 82);
 }
 
 .sf-roll:hover,
@@ -1419,14 +1597,63 @@ tr.purchased td {
   z-index: 50;
 }
 
+/* The roller is the sheet's own window, so it wears the sheet's own
+   language: the deep panel fill, a rounded frame in the accent, and the
+   same hero lettering the block headings use. It was a plain grey box
+   over a page that looks nothing like one. */
 .sheet-roller-panel {
-  background: var(--panel, #12232e);
-  border: 1px solid var(--accent, #3d84c4);
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
+  position: relative;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(61, 132, 196, 0.13), transparent 70%),
+    #0b1620;
+  border: 2px solid var(--accent);
+  border-radius: 18px;
+  padding: 1.15rem 1.4rem 1.3rem;
   max-width: min(46rem, 92vw);
   max-height: 88vh;
   overflow: auto;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+}
+.sheet-roller-panel > h3 {
+  margin: 0 0 0.2rem;
+  font-family: "Segoe UI Semibold", "Segoe UI", Montserrat, system-ui, sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.03em;
+  color: var(--text);
+}
+/* A rule under the title, the way every block on the printed page has
+   one under its heading. */
+.sheet-roller-panel > h3::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 0.5rem;
+  background: linear-gradient(90deg, var(--accent), rgba(61, 132, 196, 0.06));
+}
+.sheet-roller-panel > button:last-child {
+  margin-top: 1rem;
+  background: transparent;
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  color: var(--text-dim);
+  padding: 0.35rem 1.1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.sheet-roller-panel > button:last-child:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+/* The line under a section heading that says what the form is for. */
+.roller-howto {
+  margin: 0 0 0.75rem;
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  max-width: 44rem;
 }
 
 /* One page at a time, with the pages and Advancement as tabs. */
@@ -1451,4 +1678,94 @@ tr.purchased td {
 .sheet-page[hidden],
 .sheet-advancement[hidden] {
   display: none;
+}
+
+/* Adding kit the character picked up in play. */
+.sheet-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.sheet-added-note {
+  font-size: 0.85rem;
+  color: var(--ok);
+}
+.item-picker-search {
+  width: 100%;
+  margin: 0.5rem 0 1rem;
+  padding: 0.45rem 0.7rem;
+  background: var(--bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font: inherit;
+}
+.item-picker-body {
+  max-height: 55vh;
+  overflow: auto;
+}
+.item-picker-cat {
+  margin: 1rem 0 0.35rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.item-picker-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.item-picker-table th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+}
+.item-picker-table td {
+  padding: 0.25rem 0.5rem;
+  border-top: 1px solid var(--panel-border);
+}
+.item-picker-table td:last-child {
+  text-align: right;
+}
+
+/* Writing in something the catalogue has never heard of. */
+.item-picker-custom {
+  margin: 0.5rem 0 0.25rem;
+  padding: 0.6rem 0.75rem 0.4rem;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.02);
+}
+.item-picker-custom-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.item-picker-custom .attr-caption {
+  margin: 0.4rem 0 0;
+}
+.item-picker-field {
+  flex: 1 1 10rem;
+  padding: 0.35rem 0.6rem;
+  background: var(--bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.85rem;
+}
+.item-picker-small {
+  flex: 0 0 6rem;
+}
+.item-picker-error {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--danger);
 }

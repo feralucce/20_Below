@@ -3,6 +3,14 @@ import { el, poolBadge } from './ui.js';
 import { loadRulesData } from './rules-data.js';
 import { isDesktopApp } from './desktop-storage.js';
 import { isServingBundledRules } from './parse/markdown.js';
+import {
+  listNames,
+  loadByName,
+  saveCharacter,
+  pickCharacterFile,
+  adopt,
+  downloadJson,
+} from './file-actions.js';
 
 import stepIdentity from './steps/01-identity.js';
 import stepNature from './steps/02-nature.js';
@@ -42,12 +50,49 @@ const STEPS = [
 
 const STORAGE_KEY = '20below-character-draft';
 
+// The sheet is both the last step of the wizard and, now, the app's
+// resting state - what you see when you open it with a character in hand.
+// Creation is somewhere you go, not the front door.
+const SHEET_STEP = STEPS.length - 1;
+// Creation runs up to Equipment. The sheet is where it comes out, not
+// another stop on the way - so it is not a pill, and Next on the last
+// step leaves the wizard rather than walking into it with the pills
+// still overhead.
+const LAST_CREATE_STEP = SHEET_STEP - 1;
+
 const panel = document.getElementById('step-panel');
 const nav = document.getElementById('step-nav');
+const footer = document.querySelector('.wizard-controls');
 const poolSummary = document.getElementById('pool-summary');
 const btnBack = document.getElementById('btn-back');
 const btnNext = document.getElementById('btn-next');
-const btnReset = document.getElementById('btn-reset');
+const btnNew = document.getElementById('btn-new');
+const btnSave = document.getElementById('btn-save');
+const loadSelect = document.getElementById('load-select');
+const btnImport = document.getElementById('btn-import');
+const btnExport = document.getElementById('btn-export');
+const btnEdit = document.getElementById('btn-edit');
+const fileStatus = document.getElementById('file-status');
+
+let statusTimer = null;
+function say(message, isError = false) {
+  if (!fileStatus) return;
+  fileStatus.textContent = message;
+  fileStatus.className = isError ? 'file-status-line error' : 'file-status-line';
+  fileStatus.hidden = false;
+  clearTimeout(statusTimer);
+  // An error is something to read; a confirmation has been read by the
+  // time it matters, and lingering turns the header into a changelog.
+  if (!isError) statusTimer = setTimeout(() => { fileStatus.hidden = true; }, 4000);
+}
+
+function hasDraft() {
+  try {
+    return localStorage.getItem(STORAGE_KEY) !== null;
+  } catch {
+    return false;
+  }
+}
 
 function loadSavedState(data) {
   try {
@@ -239,8 +284,11 @@ async function main() {
     return;
   }
 
-  const state = loadSavedState(data);
+  let state = loadSavedState(data);
   let currentStep = 0;
+  // 'sheet' is the resting state, 'create' is the wizard, and 'start' is
+  // the one screen with no character behind it at all.
+  let mode = hasDraft() ? 'sheet' : 'start';
 
   // A save can carry Boons that have since been renamed, folded into
   // another Boon, or moved out of the chapter entirely. mergeCharacterState
@@ -278,21 +326,86 @@ async function main() {
     // Steps can widen the panel for themselves; none of them should
     // inherit another step's width.
     panel.className = 'step-panel';
+
+    if (mode === 'start') {
+      nav.hidden = true;
+      footer.hidden = true;
+      btnEdit.hidden = true;
+      renderStart();
+      return;
+    }
+    btnEdit.hidden = false;
+
+    // The step pills and the Back/Next pair belong to creation. On the
+    // sheet they are scenery for a journey the character has finished.
+    const creating = mode === 'create';
+    nav.hidden = !creating;
+    footer.hidden = !creating;
+    // Creation is not a one-way door: somebody always finds out at the
+    // table that they never spent their Wealth. The same button goes both
+    // ways, so it is always obvious which side of it you are on.
+    btnEdit.textContent = creating ? 'Back to Sheet' : 'Character Creator';
+
     // Writing the draft without redrawing. Everything else persists as a
     // side effect of rerenderPools, which is fine when the control that
     // changed is a button. A text field cannot rerender on input without
     // throwing away the caret, so it needs to save on its own.
     const ctx = { state, data, rerenderStep, rerenderPools, persist: () => saveState(state) };
-    STEPS[currentStep].render(panel, ctx);
-    renderNav();
-    btnBack.disabled = currentStep === 0;
-    btnNext.disabled = currentStep === STEPS.length - 1;
+    STEPS[creating ? currentStep : SHEET_STEP].render(panel, ctx);
+    if (creating) {
+      renderNav();
+      btnBack.disabled = currentStep === 0;
+      btnNext.disabled = false;
+      btnNext.textContent = currentStep === LAST_CREATE_STEP ? 'Finish' : 'Next';
+    }
     rerenderPools();
+  }
+
+  // Nothing is open. Either there are saved characters to choose from, or
+  // there are not - and if there are not, the way in is an import or a new
+  // build, because a character made in the web app arrives as a file.
+  async function renderStart() {
+    let names = [];
+    try {
+      names = await listNames();
+    } catch (err) {
+      console.error('Failed to list saved characters', err);
+    }
+
+    const box = el('div', { class: 'start-panel' });
+    if (names.length) {
+      box.append(
+        el('h2', {}, 'Open a character'),
+        el('p', { class: 'start-note' }, 'Pick one of your saved characters, bring one in from a file, or start from scratch.'),
+        characterList(names),
+      );
+    } else {
+      box.append(
+        el('h2', {}, 'No characters saved yet'),
+        el('p', { class: 'start-note' }, 'Nothing is saved on this device. Import a character you made elsewhere, or build a new one.'),
+      );
+    }
+    box.append(el('div', { class: 'start-actions' }, [
+      el('button', { type: 'button', class: 'file-link', text: 'Import Character', onClick: doImport }),
+      el('button', { type: 'button', class: 'file-link new-btn', text: 'New Character', onClick: startNew }),
+    ]));
+    panel.appendChild(box);
+  }
+
+  function characterList(names) {
+    return el('ul', { class: 'character-list' }, names.map((name) => el('li', {}, [
+      el('button', {
+        type: 'button',
+        class: 'character-pick',
+        text: name,
+        onClick: () => openSaved(name),
+      }),
+    ])));
   }
 
   function renderNav() {
     nav.innerHTML = '';
-    STEPS.forEach((step, i) => {
+    STEPS.slice(0, LAST_CREATE_STEP + 1).forEach((step, i) => {
       const btn = el('button', {
         type: 'button',
         text: step.title,
@@ -306,6 +419,67 @@ async function main() {
     });
   }
 
+  async function openSaved(name) {
+    try {
+      state = adopt(data, await loadByName(name));
+      saveState(state);
+      resetLoadSelect();
+      mode = 'sheet';
+      rerenderStep();
+      say(`Opened "${name}".`);
+    } catch (err) {
+      console.error(err);
+      say(`Could not open "${name}".`, true);
+    }
+  }
+
+  async function doImport() {
+    try {
+      const picked = await pickCharacterFile();
+      if (!picked) return;
+      state = adopt(data, picked.character);
+      saveState(state);
+      resetLoadSelect();
+      mode = 'sheet';
+      rerenderStep();
+      say(`Imported "${state.name || picked.name}".`);
+    } catch (err) {
+      console.error(err);
+      say('That file is not a character the creator can read.', true);
+    }
+  }
+
+  function startNew() {
+    state = createInitialState(data);
+    saveState(state);
+    resetLoadSelect();
+    currentStep = 0;
+    mode = 'create';
+    rerenderStep();
+  }
+
+  // The saved characters, in the bar itself. A menu that had to be opened
+  // first hid the one thing somebody comes to this row to do.
+  async function fillLoadSelect() {
+    let names = [];
+    try {
+      names = await listNames();
+    } catch (err) {
+      console.error('Failed to list saved characters', err);
+    }
+    loadSelect.innerHTML = '';
+    loadSelect.appendChild(el('option', { value: '' },
+      names.length ? 'Load Character' : 'No saved characters'));
+    names.forEach((name) => loadSelect.appendChild(el('option', { value: name }, name)));
+    loadSelect.disabled = !names.length;
+  }
+
+  // Opening a character leaves its name sitting in the box, which reads
+  // as a filter rather than a thing that already happened.
+  function resetLoadSelect() {
+    loadSelect.value = '';
+  }
+
   btnBack.addEventListener('click', () => {
     if (currentStep > 0) {
       currentStep -= 1;
@@ -313,29 +487,88 @@ async function main() {
     }
   });
   btnNext.addEventListener('click', () => {
-    if (currentStep < STEPS.length - 1) {
+    if (currentStep < LAST_CREATE_STEP) {
       currentStep += 1;
       rerenderStep();
-    }
-  });
-  let resetArmed = false;
-  let resetTimer = null;
-  btnReset.addEventListener('click', () => {
-    if (!resetArmed) {
-      resetArmed = true;
-      btnReset.textContent = 'Click again to confirm';
-      clearTimeout(resetTimer);
-      resetTimer = setTimeout(() => {
-        resetArmed = false;
-        btnReset.textContent = 'Reset';
-      }, 4000);
       return;
     }
-    clearTimeout(resetTimer);
-    localStorage.removeItem(STORAGE_KEY);
-    window.location.reload();
+    // The end of the last step is the end of creation.
+    mode = 'sheet';
+    rerenderStep();
+  });
+  // Starting a new character throws away whatever is open, so it asks
+  // once - but only when there is something to lose. From the start
+  // screen there is nothing behind it and the second click is just a
+  // toll on the way in.
+  let newArmed = false;
+  let newTimer = null;
+  function disarmNew() {
+    clearTimeout(newTimer);
+    newArmed = false;
+    btnNew.textContent = 'New Character';
+    btnNew.classList.remove('armed');
+  }
+  btnNew.addEventListener('click', () => {
+    if (mode === 'start') {
+      startNew();
+      return;
+    }
+    if (!newArmed) {
+      newArmed = true;
+      btnNew.textContent = 'Discard this one?';
+      btnNew.classList.add('armed');
+      clearTimeout(newTimer);
+      newTimer = setTimeout(disarmNew, 4000);
+      return;
+    }
+    disarmNew();
+    startNew();
   });
 
+  btnSave.addEventListener('click', async () => {
+    if (mode === 'start') {
+      say('There is no character open to save.', true);
+      return;
+    }
+    try {
+      const savedAs = await saveCharacter(state);
+      await fillLoadSelect();
+      say(`Saved as "${savedAs}".`);
+    } catch (err) {
+      console.error(err);
+      say('Save failed.', true);
+    }
+  });
+
+  loadSelect.addEventListener('change', () => {
+    const name = loadSelect.value;
+    if (name) openSaved(name);
+  });
+
+  btnEdit.addEventListener('click', () => {
+    if (mode === 'create') {
+      mode = 'sheet';
+    } else {
+      mode = 'create';
+      // Back at the beginning, because what was forgotten could be
+      // anywhere - and the pills are right there to jump with.
+      currentStep = 0;
+    }
+    resetLoadSelect();
+    rerenderStep();
+  });
+
+  btnImport.addEventListener('click', doImport);
+
+  btnExport.addEventListener('click', () => {
+    if (mode === 'start') {
+      say('There is no character open to export.', true);
+      return;
+    }
+    downloadJson(state);
+  });
+
+  await fillLoadSelect();
   rerenderStep();
 }
 

@@ -2,6 +2,7 @@
  "width": 2550,
  "height": 3300,
  "pages": 5,
+ "version": "364fc85a78",
  "repeat": [
   {
    "page": 3,
@@ -94,6 +95,17 @@
    "element": "Moira"
   },
   {
+   "id": "attribute.Air.roll",
+   "kind": "roll",
+   "page": 1,
+   "x": 2137.0,
+   "y": 990.7,
+   "w": 240.3,
+   "h": 93.5,
+   "element": "Air",
+   "color": "#A8C9E0"
+  },
+  {
    "id": "attribute.Air",
    "kind": "text",
    "page": 1,
@@ -126,6 +138,17 @@
    "h": 93.5,
    "sub": "Psyche",
    "element": "Air"
+  },
+  {
+   "id": "attribute.Fire.roll",
+   "kind": "roll",
+   "page": 1,
+   "x": 2014.0,
+   "y": 1748.7,
+   "w": 240.3,
+   "h": 93.5,
+   "element": "Fire",
+   "color": "#E0663F"
   },
   {
    "id": "attribute.Fire",
@@ -162,6 +185,17 @@
    "element": "Fire"
   },
   {
+   "id": "attribute.Water.roll",
+   "kind": "roll",
+   "page": 1,
+   "x": 743.0,
+   "y": 1748.7,
+   "w": 240.3,
+   "h": 93.5,
+   "element": "Water",
+   "color": "#078F9B"
+  },
+  {
    "id": "attribute.Water",
    "kind": "text",
    "page": 1,
@@ -194,6 +228,17 @@
    "h": 93.5,
    "sub": "Health",
    "element": "Water"
+  },
+  {
+   "id": "attribute.Earth.roll",
+   "kind": "roll",
+   "page": 1,
+   "x": 619.0,
+   "y": 1002.7,
+   "w": 240.3,
+   "h": 93.5,
+   "element": "Earth",
+   "color": "#8A6D4E"
   },
   {
    "id": "attribute.Earth",
@@ -737,7 +782,8 @@
    "y": 1074,
    "w": 464.0,
    "h": 48,
-   "slot": 0
+   "slot": 0,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.0.tier",
@@ -762,7 +808,8 @@
    "y": 1128,
    "w": 464.0,
    "h": 48,
-   "slot": 1
+   "slot": 1,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.1.tier",
@@ -787,7 +834,8 @@
    "y": 1182,
    "w": 464.0,
    "h": 48,
-   "slot": 2
+   "slot": 2,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.2.tier",
@@ -812,7 +860,8 @@
    "y": 1236,
    "w": 464.0,
    "h": 48,
-   "slot": 3
+   "slot": 3,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.3.tier",
@@ -837,7 +886,8 @@
    "y": 1290,
    "w": 464.0,
    "h": 48,
-   "slot": 4
+   "slot": 4,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.4.tier",
@@ -862,7 +912,8 @@
    "y": 1344,
    "w": 464.0,
    "h": 48,
-   "slot": 5
+   "slot": 5,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.5.tier",
@@ -887,7 +938,8 @@
    "y": 1398,
    "w": 464.0,
    "h": 48,
-   "slot": 6
+   "slot": 6,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.6.tier",
@@ -912,7 +964,8 @@
    "y": 1452,
    "w": 464.0,
    "h": 48,
-   "slot": 7
+   "slot": 7,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.7.tier",
@@ -937,7 +990,8 @@
    "y": 1506,
    "w": 464.0,
    "h": 48,
-   "slot": 8
+   "slot": 8,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.8.tier",
@@ -962,7 +1016,8 @@
    "y": 1560,
    "w": 464.0,
    "h": 48,
-   "slot": 9
+   "slot": 9,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.9.tier",
@@ -987,7 +1042,8 @@
    "y": 1614,
    "w": 464.0,
    "h": 48,
-   "slot": 10
+   "slot": 10,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.10.tier",
@@ -1012,7 +1068,8 @@
    "y": 1668,
    "w": 464.0,
    "h": 48,
-   "slot": 11
+   "slot": 11,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.11.tier",
@@ -1037,7 +1094,8 @@
    "y": 1722,
    "w": 464.0,
    "h": 48,
-   "slot": 12
+   "slot": 12,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.12.tier",
@@ -1062,7 +1120,8 @@
    "y": 1776,
    "w": 464.0,
    "h": 48,
-   "slot": 13
+   "slot": 13,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.13.tier",
@@ -1087,7 +1146,8 @@
    "y": 1830,
    "w": 464.0,
    "h": 48,
-   "slot": 14
+   "slot": 14,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.14.tier",
@@ -1112,7 +1172,8 @@
    "y": 1074,
    "w": 464.0,
    "h": 48,
-   "slot": 15
+   "slot": 15,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.15.tier",
@@ -1137,7 +1198,8 @@
    "y": 1128,
    "w": 464.0,
    "h": 48,
-   "slot": 16
+   "slot": 16,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.16.tier",
@@ -1162,7 +1224,8 @@
    "y": 1182,
    "w": 464.0,
    "h": 48,
-   "slot": 17
+   "slot": 17,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.17.tier",
@@ -1187,7 +1250,8 @@
    "y": 1236,
    "w": 464.0,
    "h": 48,
-   "slot": 18
+   "slot": 18,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.18.tier",
@@ -1212,7 +1276,8 @@
    "y": 1290,
    "w": 464.0,
    "h": 48,
-   "slot": 19
+   "slot": 19,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.19.tier",
@@ -1237,7 +1302,8 @@
    "y": 1344,
    "w": 464.0,
    "h": 48,
-   "slot": 20
+   "slot": 20,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.20.tier",
@@ -1262,7 +1328,8 @@
    "y": 1398,
    "w": 464.0,
    "h": 48,
-   "slot": 21
+   "slot": 21,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.21.tier",
@@ -1287,7 +1354,8 @@
    "y": 1452,
    "w": 464.0,
    "h": 48,
-   "slot": 22
+   "slot": 22,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.22.tier",
@@ -1312,7 +1380,8 @@
    "y": 1506,
    "w": 464.0,
    "h": 48,
-   "slot": 23
+   "slot": 23,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.23.tier",
@@ -1337,7 +1406,8 @@
    "y": 1560,
    "w": 464.0,
    "h": 48,
-   "slot": 24
+   "slot": 24,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.24.tier",
@@ -1362,7 +1432,8 @@
    "y": 1614,
    "w": 464.0,
    "h": 48,
-   "slot": 25
+   "slot": 25,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.25.tier",
@@ -1387,7 +1458,8 @@
    "y": 1668,
    "w": 464.0,
    "h": 48,
-   "slot": 26
+   "slot": 26,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.26.tier",
@@ -1412,7 +1484,8 @@
    "y": 1722,
    "w": 464.0,
    "h": 48,
-   "slot": 27
+   "slot": 27,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.27.tier",
@@ -1437,7 +1510,8 @@
    "y": 1776,
    "w": 464.0,
    "h": 48,
-   "slot": 28
+   "slot": 28,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.28.tier",
@@ -1462,7 +1536,8 @@
    "y": 1830,
    "w": 464.0,
    "h": 48,
-   "slot": 29
+   "slot": 29,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.29.tier",
@@ -1487,7 +1562,8 @@
    "y": 1074,
    "w": 464.0,
    "h": 48,
-   "slot": 30
+   "slot": 30,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.30.tier",
@@ -1512,7 +1588,8 @@
    "y": 1128,
    "w": 464.0,
    "h": 48,
-   "slot": 31
+   "slot": 31,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.31.tier",
@@ -1537,7 +1614,8 @@
    "y": 1182,
    "w": 464.0,
    "h": 48,
-   "slot": 32
+   "slot": 32,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.32.tier",
@@ -1562,7 +1640,8 @@
    "y": 1236,
    "w": 464.0,
    "h": 48,
-   "slot": 33
+   "slot": 33,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.33.tier",
@@ -1587,7 +1666,8 @@
    "y": 1290,
    "w": 464.0,
    "h": 48,
-   "slot": 34
+   "slot": 34,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.34.tier",
@@ -1612,7 +1692,8 @@
    "y": 1344,
    "w": 464.0,
    "h": 48,
-   "slot": 35
+   "slot": 35,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.35.tier",
@@ -1637,7 +1718,8 @@
    "y": 1398,
    "w": 464.0,
    "h": 48,
-   "slot": 36
+   "slot": 36,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.36.tier",
@@ -1662,7 +1744,8 @@
    "y": 1452,
    "w": 464.0,
    "h": 48,
-   "slot": 37
+   "slot": 37,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.37.tier",
@@ -1687,7 +1770,8 @@
    "y": 1506,
    "w": 464.0,
    "h": 48,
-   "slot": 38
+   "slot": 38,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.38.tier",
@@ -1712,7 +1796,8 @@
    "y": 1560,
    "w": 464.0,
    "h": 48,
-   "slot": 39
+   "slot": 39,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.39.tier",
@@ -1737,7 +1822,8 @@
    "y": 1614,
    "w": 464.0,
    "h": 48,
-   "slot": 40
+   "slot": 40,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.40.tier",
@@ -1762,7 +1848,8 @@
    "y": 1668,
    "w": 464.0,
    "h": 48,
-   "slot": 41
+   "slot": 41,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.41.tier",
@@ -1787,7 +1874,8 @@
    "y": 1722,
    "w": 464.0,
    "h": 48,
-   "slot": 42
+   "slot": 42,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.42.tier",
@@ -1812,7 +1900,8 @@
    "y": 1776,
    "w": 464.0,
    "h": 48,
-   "slot": 43
+   "slot": 43,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.43.tier",
@@ -1837,7 +1926,8 @@
    "y": 1830,
    "w": 464.0,
    "h": 48,
-   "slot": 44
+   "slot": 44,
+   "rollColor": "#7BC47F"
   },
   {
    "id": "skill.44.tier",
@@ -2184,7 +2274,8 @@
    "y": 2694,
    "w": 1140,
    "h": 48,
-   "slot": 0
+   "slot": 0,
+   "rollColor": "#E0A85C"
   },
   {
    "id": "resource.0.level",
@@ -2230,7 +2321,8 @@
    "y": 2746,
    "w": 1140,
    "h": 48,
-   "slot": 1
+   "slot": 1,
+   "rollColor": "#E0A85C"
   },
   {
    "id": "resource.1.level",
@@ -2276,7 +2368,8 @@
    "y": 2798,
    "w": 1140,
    "h": 48,
-   "slot": 2
+   "slot": 2,
+   "rollColor": "#E0A85C"
   },
   {
    "id": "resource.2.level",
@@ -2322,7 +2415,8 @@
    "y": 2850,
    "w": 1140,
    "h": 48,
-   "slot": 3
+   "slot": 3,
+   "rollColor": "#E0A85C"
   },
   {
    "id": "resource.3.level",
@@ -2368,7 +2462,8 @@
    "y": 2902,
    "w": 1140,
    "h": 48,
-   "slot": 4
+   "slot": 4,
+   "rollColor": "#E0A85C"
   },
   {
    "id": "resource.4.level",
@@ -2414,7 +2509,8 @@
    "y": 2954,
    "w": 1140,
    "h": 48,
-   "slot": 5
+   "slot": 5,
+   "rollColor": "#E0A85C"
   },
   {
    "id": "resource.5.level",
@@ -2460,7 +2556,8 @@
    "y": 3006,
    "w": 1140,
    "h": 48,
-   "slot": 6
+   "slot": 6,
+   "rollColor": "#E0A85C"
   },
   {
    "id": "resource.6.level",
@@ -2506,7 +2603,8 @@
    "y": 3058,
    "w": 1140,
    "h": 48,
-   "slot": 7
+   "slot": 7,
+   "rollColor": "#E0A85C"
   },
   {
    "id": "resource.7.level",
@@ -2563,7 +2661,8 @@
    "y": 420,
    "w": 1020,
    "h": 48,
-   "slot": 0
+   "slot": 0,
+   "rollColor": "#A06FD1"
   },
   {
    "id": "gift.0.level",
@@ -2629,7 +2728,8 @@
    "y": 966,
    "w": 1020,
    "h": 48,
-   "slot": 1
+   "slot": 1,
+   "rollColor": "#A06FD1"
   },
   {
    "id": "gift.1.level",
@@ -2695,7 +2795,8 @@
    "y": 1512,
    "w": 1020,
    "h": 48,
-   "slot": 2
+   "slot": 2,
+   "rollColor": "#A06FD1"
   },
   {
    "id": "gift.2.level",
@@ -2761,7 +2862,8 @@
    "y": 2058,
    "w": 1020,
    "h": 48,
-   "slot": 3
+   "slot": 3,
+   "rollColor": "#A06FD1"
   },
   {
    "id": "gift.3.level",
@@ -2827,7 +2929,8 @@
    "y": 2604,
    "w": 1020,
    "h": 48,
-   "slot": 4
+   "slot": 4,
+   "rollColor": "#A06FD1"
   },
   {
    "id": "gift.4.level",
@@ -2897,6 +3000,15 @@
    "align": "end"
   },
   {
+   "id": "weapon.add",
+   "kind": "button",
+   "page": 4,
+   "x": 2091,
+   "y": 312,
+   "w": 300,
+   "h": 66
+  },
+  {
    "id": "weapon.0.name",
    "kind": "text",
    "page": 4,
@@ -2904,7 +3016,8 @@
    "y": 456,
    "w": 920,
    "h": 48,
-   "slot": 0
+   "slot": 0,
+   "rollColor": "#E0663F"
   },
   {
    "id": "weapon.0.damage",
@@ -2954,7 +3067,8 @@
    "y": 510,
    "w": 920,
    "h": 48,
-   "slot": 1
+   "slot": 1,
+   "rollColor": "#E0663F"
   },
   {
    "id": "weapon.1.damage",
@@ -3004,7 +3118,8 @@
    "y": 564,
    "w": 920,
    "h": 48,
-   "slot": 2
+   "slot": 2,
+   "rollColor": "#E0663F"
   },
   {
    "id": "weapon.2.damage",
@@ -3054,7 +3169,8 @@
    "y": 618,
    "w": 920,
    "h": 48,
-   "slot": 3
+   "slot": 3,
+   "rollColor": "#E0663F"
   },
   {
    "id": "weapon.3.damage",
@@ -3104,7 +3220,8 @@
    "y": 672,
    "w": 920,
    "h": 48,
-   "slot": 4
+   "slot": 4,
+   "rollColor": "#E0663F"
   },
   {
    "id": "weapon.4.damage",
@@ -3154,7 +3271,8 @@
    "y": 726,
    "w": 920,
    "h": 48,
-   "slot": 5
+   "slot": 5,
+   "rollColor": "#E0663F"
   },
   {
    "id": "weapon.5.damage",
@@ -3204,7 +3322,8 @@
    "y": 780,
    "w": 920,
    "h": 48,
-   "slot": 6
+   "slot": 6,
+   "rollColor": "#E0663F"
   },
   {
    "id": "weapon.6.damage",
@@ -3254,7 +3373,8 @@
    "y": 834,
    "w": 920,
    "h": 48,
-   "slot": 7
+   "slot": 7,
+   "rollColor": "#E0663F"
   },
   {
    "id": "weapon.7.damage",
@@ -3304,7 +3424,8 @@
    "y": 888,
    "w": 920,
    "h": 48,
-   "slot": 8
+   "slot": 8,
+   "rollColor": "#E0663F"
   },
   {
    "id": "weapon.8.damage",
@@ -3354,7 +3475,8 @@
    "y": 942,
    "w": 920,
    "h": 48,
-   "slot": 9
+   "slot": 9,
+   "rollColor": "#E0663F"
   },
   {
    "id": "weapon.9.damage",
@@ -3395,6 +3517,15 @@
    "w": 260,
    "h": 48,
    "slot": 9
+  },
+  {
+   "id": "armour.add",
+   "kind": "button",
+   "page": 4,
+   "x": 2091,
+   "y": 1062,
+   "w": 300,
+   "h": 66
   },
   {
    "id": "armour.0.name",
@@ -3735,6 +3866,15 @@
    "h": 45,
    "slot": 4,
    "color": "#D9574A"
+  },
+  {
+   "id": "equipment.add",
+   "kind": "button",
+   "page": 4,
+   "x": 2061,
+   "y": 1542,
+   "w": 330,
+   "h": 66
   },
   {
    "id": "gear.0",

@@ -59,6 +59,13 @@ function diceSummary(rollResult) {
 // the top - a from-scratch roll against an unpurchased Skill is already
 // covered by that Untrained option, so listing every unpurchased Skill by
 // name too would just be a long wall of redundant Untrained entries.
+// Each section opens with the one sentence somebody needs to act on it.
+// The rules are elsewhere and at length; this is the caption on the form
+// in front of them, not a rules summary.
+function howTo(text) {
+  return el('p', { class: 'roller-howto' }, text);
+}
+
 export function buildSkillRollSection(state, data, refreshHeader = () => {}, preselect = null) {
   const section = el('div', { class: 'roller-gift-check' });
   const resultEl = el('div', { class: 'roller-result' });
@@ -276,6 +283,8 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}, pre
 
   section.append(
     el('h4', {}, 'Skill Roll'),
+    howTo('Pick the Skill, the Element you are doing it through, and how hard '
+      + 'the GM says it is. You want 2d10 under that total.'),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Skill'), skillSelect]),
     attributeGroup,
     attributeNote,
@@ -451,6 +460,8 @@ export function buildResourceCheckSection(state, data, preselect = null) {
 
   section.append(
     el('h4', {}, 'Resource Check'),
+    howTo('Say what you are asking the Resource for. Asking within its Level is '
+      + 'safe; reaching past it can cost you the Resource itself.'),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Resource'), resourceSelect]),
     el('div', { class: 'roller-row' }, [indexLabelEl, resourceIndexSelect]),
     summaryEl,
@@ -601,6 +612,8 @@ export function buildAttackRollSection(state, data, refreshHeader, onCritical = 
 
   section.append(
     el('h4', {}, 'Attack Roll'),
+    howTo('Your Element against their Defense - not a Skill, and not the thing '
+      + 'in your hand. Set the Defense the GM gives you, then roll to hit.'),
     attributeGroup,
     el('div', { class: 'roller-row' }, [el('label', {}, "Target's Defense"), defenseSelect]),
     togglesRow,
@@ -616,11 +629,14 @@ export function buildAttackRollSection(state, data, refreshHeader, onCritical = 
 // Dice count and the target's wall value are typed in directly rather than
 // looked up from a weapon/Gift catalog - see the discussion in
 // character-creator.notes.md for why that's out of scope for this pass.
-export function buildDamageRollSection(state, data, refreshHeader, heading = 'Damage Roll') {
+export function buildDamageRollSection(state, data, refreshHeader, heading = 'Damage Roll',
+                                       presetDice = null) {
   const section = el('div', { class: 'roller-gift-check' });
 
   let attackType = 'Physical';
-  let diceCount = 3;
+  // Opened from a weapon row, the dice start at that weapon's Damage.
+  // Three was only ever a placeholder for having nothing to go on.
+  let diceCount = Math.max(1, Math.min(15, Number(presetDice) || 3));
   let wall = 5;
   let boostedDice = new Set();
 
@@ -782,6 +798,9 @@ export function buildDamageRollSection(state, data, refreshHeader, heading = 'Da
 
   section.append(
     el('h4', {}, heading),
+    howTo('One die per point of Damage, each rolled against the wall that '
+      + 'resists it. Ki can boost dice before you roll; a critical is set for '
+      + 'you if the to-hit crits.'),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Attack Type'), typeSelect]),
     el('div', { class: 'roller-row' }, [el('label', {}, 'Dice'), diceInput]),
     el('div', { class: 'roller-row' }, [el('label', {}, "Target's Wall"), wallInput]),
@@ -837,6 +856,11 @@ export function buildGiftCheckSection(state, data, refreshKiDependents) {
     },
   });
 
-  section.append(el('h4', {}, 'Gift Check'), summary, rollBtn, resultEl);
+  section.append(
+    el('h4', {}, 'Gift Check'),
+    howTo("2d10 under your current Ki. It costs the Gift's Ki either way - "
+      + 'failing is what makes it cost 1 more.'),
+    summary, rollBtn, resultEl,
+  );
   return section;
 }

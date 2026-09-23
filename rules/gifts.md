@@ -186,21 +186,21 @@ You can perceive distant places, objects or people without being physically pres
 
 Somewhere, just the other side of the world, your weapon waits for the moment you call it forth. With a flicker of thought, it slips through the gaps in reality and into your grasp, ready for battle. You don't own the weapon so much as call a mystical DoorDash to deliver one.
 
-Chosen once, at creation: your signature weapon, any single item from the catalog in Weapons & Equipment.
-
 Chosen once, at creation: your **signature weapon**, any single item from [weapons.md](weapons.md)'s catalog.
+
+A conjured weapon's Damage is its listed rating **plus this Gift's Level**, with no ceiling - the weapon table's cap of 5 binds what a smith can forge, not what you call out of the air. A Damage 4 hatchet conjured at Level 3 deals **7**.
 
 | Level | Effect |
 |---|---|
-| 1 | Summon your signature weapon into your hand as a **Fast action**, no Ki cost. It deals its normal listed Damage and range. Dismissing it is free and instant. It never runs dry - ammo, if any, is never actually a concern, though you're free to roleplay reloading. |
+| 1 | Summon your signature weapon into your hand as a **Fast action**, no Ki cost. It arrives with its listed range. Dismissing it is free and instant. It never runs dry - ammo, if any, is never actually a concern, though you're free to roleplay reloading. |
 | 2 | You may now conjure **any** weapon from the full catalog, not just your signature - reselect freely each time you summon. |
-| 3 | The conjured weapon's Damage rises **+1** above its normal listed rating, capped at the weapon table's ceiling of **5**. |
+| 3 | You can throw the conjured weapon. The throw is an attack like any other; calling it back to your hand afterwards is a **free action** on your turn, from any distance. A weapon you let go of on purpose does not vanish the way one knocked from your grip does. |
 | 4 | Summoning becomes a **free action** - no action cost at all, folding seamlessly into any attack. You're never caught without a weapon in hand. |
-| 5 | The Damage bonus (Level 3) rises to **+2** above the weapon's normal rating, still capped at 5. Once per Scene, spend **1 Ki** to conjure a weapon so precise it ignores **3** points of the target's Soak for that single attack. |
+| 5 | Once per Scene, spend **1 Ki** to conjure a weapon so precise it ignores **3** points of the target's Soak for that single attack. |
 
 **Adders**:
 
-- **Bonded Blade** (Lesser, 3 pts): your signature weapon carries a permanent edge no other conjured weapon does - its Damage bonus (Level 3+) is always **+1** higher than any other weapon you conjure, forged specifically for your hand.
+- **Bonded Blade** (Lesser, 3 pts): your signature weapon carries a permanent edge no other conjured weapon does - its Damage is always **+1** higher than any other weapon you conjure, from Level 3 on, forged specifically for your hand.
 - **Armory of Anything** (Lesser, 3 pts): your conjured weapons can include improvised or exotic options beyond the standard catalog (a chainsaw, a fire axe, a katana pulled from pure aesthetic) - GM's call on stats, using the closest catalog equivalent.
 - **Twin Draw** (Greater, 6 pts): once per Scene, conjure a second weapon alongside your first at no extra cost, usable for a second attack within the same Normal action bracket.
 

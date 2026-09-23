@@ -25,7 +25,7 @@
 // Images and fonts stay stale-while-revalidate. They are heavy, they do
 // not parse anything, and a one-load-old icon breaks nothing.
 
-const VERSION = "v13";
+const VERSION = "v15";
 const SHELL = `20below-shell-${VERSION}`;
 const ASSETS = `20below-assets-${VERSION}`;
 const RULES = `20below-rules-${VERSION}`;

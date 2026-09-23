@@ -121,6 +121,20 @@ def frame(x, y, w, h, col, title=None, note=None, r=42):
         label(x + w - 42, y + 63, note, 32, mix(col, "#FFFFFF", 0.3), 4.8, "end")
 
 
+def action(x, y, w, h, col, text, fid):
+    """A pill in a block's header that the app turns into a button.
+
+    The art draws the pill and its caption; the field map says where it
+    is, so the app lays a hit target over it without knowing anything
+    about how it looks. Same arrangement as the rest buttons on page 1.
+    """
+    pp = panel_path(x, y, w, h, h / 2.0)
+    add('  <path d="%s" fill="#01050A" fill-opacity="0.55"/>' % pp,
+        '  <path d="%s" fill="none" stroke="%s" stroke-width="4.5"/>' % (pp, col))
+    label(x + w / 2.0, y + h * 0.66, text, 31, mix(col, "#FFFFFF", 0.4), 3.6, "middle")
+    field(fid, "button", x, y, w, h)
+
+
 def pips(x, y, n, s, col, gap=12, op=1.0):
     for i in range(n):
         box(x + i * (s + gap), y, s, col, 4.2, 9, op)

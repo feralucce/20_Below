@@ -196,6 +196,14 @@ for i, (name, col, domain, subs) in enumerate(ELEMENTS):
         '  <path d="%s" fill="none" stroke="%s" stroke-width="7"/>' % (pp, col))
     hero(x + 42 * S, y + 90 * S, name, 78 * S, WHITE)
     label(x + 44 * S, y + 132 * S, domain, 30 * S, lit, 6.6 * S)
+    # Where an attack starts. It belongs on the title line, beside the
+    # Element's own name - the rating below is a number to read, not a
+    # button, and dice sitting on it said otherwise. Moira has no attack
+    # roll, so it gets no target rather than one that opens empty.
+    if name.title() != "Moira":
+        field("attribute.%s.roll" % name.title(), "roll",
+              x + PANEL_W - 258 * S, y + 24 * S, 216 * S, 84 * S,
+              element=name.title(), color=col)
     # No box and no caption: the Element's rating is what the panel is for,
     # so it is simply set large in the space to the right of the sub-stats.
     field("attribute.%s" % name.title(), "text",

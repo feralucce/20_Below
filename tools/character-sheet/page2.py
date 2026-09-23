@@ -55,7 +55,8 @@ for ci in range(3):
         y = sy + 216 + ri * 54
         n = ci * 15 + ri
         line(x, y, scol - 276, RULE, 0.5)
-        field("skill.%d.name" % n, "text", x, y - 42, scol - 276, 48, slot=n)
+        field("skill.%d.name" % n, "text", x, y - 42, scol - 276, 48, slot=n,
+              rollColor=GREEN)
         for j in range(4):
             box(x + scol - 252 + j * 60, y - 30, 36, GREEN, 3.6, 8, 0.72)
         field("skill.%d.tier" % n, "tiers", x + scol - 252, y - 30, 4 * 60 - 24, 36,
@@ -108,7 +109,8 @@ line(MARGIN + 42, ry + 144, INNER - 84, GOLD, 0.35)
 for i in range(8):
     y = ry + 204 + i * 52
     line(MARGIN + 48, y, 1140)
-    field("resource.%d.name" % i, "text", MARGIN + 48, y - 42, 1140, 48, slot=i)
+    field("resource.%d.name" % i, "text", MARGIN + 48, y - 42, 1140, 48, slot=i,
+          rollColor=GOLD)
     pips(MARGIN + 1236, y - 33, 5, 45, GOLD, 12)
     field("resource.%d.level" % i, "pips", MARGIN + 1236, y - 33, 5 * 57 - 12, 45,
           slot=i, n=5, size=45, gap=12, color=GOLD)

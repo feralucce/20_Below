@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" role="img" aria-label="Ten-sided die">
+  <path d="M17 2 L32.64 17.56 L32.64 22.28 L17 38 L1.36 22.28 L1.36 17.56 Z"/>
+  <path d="M17 2 L6.7 20 L17 25.11 L27.3 20 Z"/>
+  <path d="M6.7 20 L1.36 22.28"/>
+  <path d="M27.3 20 L32.64 22.28"/>
+  <path d="M17 25.11 L17 38"/>
+</svg>

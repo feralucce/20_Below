@@ -16,9 +16,9 @@ import {
   elementAutoSuccesses,
   fateTokenCap,
 } from '../state.js';
-import { downloadJson } from '../export/toJson.js';
 import { SIGNATURE_MOVE, signatureMoves } from '../state.js';
 import buildAdvancementTab from './tab-advancement.js';
+import buildItemPicker from './add-item.js';
 import { buildPagedSheet, loadFieldMap } from '../sheet/paged-sheet.js';
 import {
   buildAttackRollSection,
@@ -611,7 +611,15 @@ export default {
       draw();
     }
 
-    function rollerPanel(kind, label) {
+    // A weapon's Damage is written as a bare number for a catalogue item
+    // and as "4 vs Soak" for a Gift that attacks, so the roller takes the
+    // first number it finds and leaves anything it cannot read alone.
+    function damageDice(extra) {
+      const found = String(extra?.damage ?? '').match(/\d+/);
+      return found ? Number(found[0]) : null;
+    }
+
+    function rollerPanel(kind, label, extra) {
       switch (kind) {
         case 'skill':
           return [el('h3', {}, `Roll ${label}`),
@@ -624,7 +632,8 @@ export default {
           return [el('h3', {}, `${label} - Resource Check`),
             buildResourceCheckSection(state, data, label)];
         case 'weapon': {
-          const damage = buildDamageRollSection(state, data, draw);
+          const damage = buildDamageRollSection(state, data, draw, 'Damage Roll',
+            damageDice(extra));
           return [el('h3', {}, `Attack with ${label}`),
             buildAttackRollSection(state, data, draw, (crit) => damage?.armCritical?.(crit)),
             damage];
@@ -643,10 +652,26 @@ export default {
       }
     }
 
-    function openRoller(kind, label) {
+    function openRoller(kind, label, extra) {
+      openModal(rollerPanel(kind, label, extra));
+    }
+
+    // Kit acquired after creation. The same overlay the roller uses -
+    // there is no reason for a second kind of window on one sheet.
+    function openPicker(kind) {
+      openModal(buildItemPicker(state, data, kind, (name) => {
+        // The draft is written on a redraw, and a redraw is not a save -
+        // without this the item was on the sheet and gone on reload.
+        persistSheet();
+        closeRoller();
+        say(`${name} added.`);
+      }));
+    }
+
+    function openModal(contents) {
       modal?.remove();
       const panel = el('div', { class: 'sheet-roller-panel' }, [
-        ...rollerPanel(kind, label),
+        ...contents,
         el('button', { type: 'button', text: 'Close', onClick: closeRoller }),
       ]);
       modal = el('div', {
@@ -656,12 +681,21 @@ export default {
       document.body.appendChild(modal);
     }
 
+    const added = el('span', { class: 'sheet-added-note' });
+    let addedTimer = null;
+    function say(text) {
+      added.textContent = text;
+      clearTimeout(addedTimer);
+      addedTimer = setTimeout(() => { added.textContent = ''; }, 4000);
+    }
+
     function draw() {
       pagesHost.innerHTML = '';
       const stack = buildPagedSheet(state, data, {
         refresh: draw,
         persist: persistSheet,
         onRoll: openRoller,
+        onAddItem: openPicker,
       });
       pagesHost.appendChild(stack);
 
@@ -708,9 +742,7 @@ export default {
       tabBar,
       pagesHost,
       advancementHost,
-      el('div', { style: 'display:flex;gap:0.75rem;margin-top:1rem;' }, [
-        el('button', { type: 'button', text: 'Download JSON', onClick: () => downloadJson(state) }),
-      ]),
+      el('div', { class: 'sheet-actions' }, [added]),
     );
 
   },
