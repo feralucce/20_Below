@@ -28,7 +28,7 @@ cx = MARGIN + 42
 cw = INNER - 84
 for i in range(SLOTS):
     cy = gy + 120 + i * PITCH
-    frame(cx, cy, cw, CARD_H, mix(MOIRA, "#FFFFFF", 0.1), r=24)
+    frame(cx, cy, cw, CARD_H, mix(MOIRA, LIFT, 0.1), r=24)
     # name, Level, Ki per use
     label(cx + 36, cy + 66, "GIFT", 30, DIM, 3.6)
     line(cx + 132, cy + 48, 1020)
@@ -48,10 +48,10 @@ for i in range(SLOTS):
     for j in range(6):
         line(cx + 132, cy + 114 + j * 48, cw - 180)
     # adders and limiters, a row each
-    label(cx + 36, cy + 432, "ADDERS", 30, mix(GREEN, "#FFFFFF", 0.3), 3.6)
+    label(cx + 36, cy + 432, "ADDERS", 30, mix(GREEN, LIFT, 0.3), 3.6)
     line(cx + 204, cy + 414, cw - 252)
     field("gift.%d.adders" % i, "text", cx + 204, cy + 372, cw - 252, 48, slot=i)
-    label(cx + 36, cy + 480, "LIMITERS", 30, mix(RED, "#FFFFFF", 0.3), 3.6)
+    label(cx + 36, cy + 480, "LIMITERS", 30, mix(RED, LIFT, 0.3), 3.6)
     line(cx + 240, cy + 462, cw - 288)
     field("gift.%d.limiters" % i, "text", cx + 240, cy + 420, cw - 288, 48, slot=i)
 

@@ -24,7 +24,7 @@ frame(MARGIN, sy, INNER, SH, RED, "SCARS",
 scol = (INNER - 96) / 3.0
 for ci, (name, col) in enumerate(SCARS):
     x = MARGIN + 48 + ci * scol
-    label(x, sy + 126, name, 34, mix(col, "#FFFFFF", 0.4), 3.6)
+    label(x, sy + 126, name, 34, mix(col, LIFT, 0.4), 3.6)
     label(x + scol - 132, sy + 126, "BELOW 0", 29, DIM, 3.0, "end")
     line(x, sy + 144, scol - 72, col, 0.35)
     for ri in range(7):

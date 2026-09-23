@@ -20,7 +20,11 @@ INNER = W - 2 * MARGIN
 TOP = 294        # first block starts here, under the rule
 BOTTOM = 3138    # every page's content ends flush here
 
-WHITE = "#FFFFFF"
+# The paper palette is shared with page 1's own generator, so the two
+# halves of the sheet cannot print in two different greys.
+from papertheme import (PAPER, WHITE, INK, MUTED, SHADE, ONPANEL, LIFT,
+                        on_paper)              # noqa: E402
+
 ACCENT = "#3D84C4"
 CYAN = "#3FD0E0"
 DIM = "#8FADBE"
@@ -40,7 +44,26 @@ RED = "#D9574A"
 STEEL = "#9FB4C4"
 C_OK, C_GOLD, C_AIR = "#6FBF73", "#E0A85C", "#6FB8E0"
 
-BOXFILL = 0.55
+# Every page module does `from sheetkit import *`, which copies these
+# names at import time - so the switch has to happen here, while sheetkit
+# is still loading, rather than anywhere downstream. Page 1 learned that
+# the hard way: its rebinding sat below the lists that read the palette,
+# and Figured and the Vitals pips printed in colour on a black-and-white
+# sheet.
+if PAPER:
+    ACCENT = CYAN = GREEN = GOLD = RED = INK
+    EARTH = AIR = FIRE = WATER = MOIRA = INK
+    C_OK = C_GOLD = C_AIR = INK
+    # Secondary text stays one grey rather than going to full ink, so a
+    # caption still reads as a caption with no colour left to say so.
+    DIM = RULE = STEEL = MUTED
+
+# On screen these are veils of near-black over the background art; on
+# paper they are veils of white over it, so the art still shows between
+# the blocks. A box goes nearly solid either way on paper, because a box
+# is somewhere to write and needs clean paper inside it.
+VEIL = 0.78 if PAPER else 0.55
+BOXFILL = 0.82 if PAPER else 0.55
 
 P = []
 FIELDS = []
@@ -85,14 +108,15 @@ def panel_path(x, y, w, h, r):
 
 
 def box(x, y, s, col, w=4.5, r=10, op=1.0):
-    add('  <rect x="%g" y="%g" width="%g" height="%g" rx="%g" fill="#01050A" '
+    add('  <rect x="%g" y="%g" width="%g" height="%g" rx="%g" fill="%s" '
         'fill-opacity="%g" stroke="%s" stroke-width="%g" stroke-opacity="%g"/>'
-        % (x, y, s, s, r, BOXFILL, col, w, op))
+        % (x, y, s, s, r, SHADE, BOXFILL, col, w, op))
 
 
 def slot(x, y, w, h, col, r=10):
-    add('  <rect x="%g" y="%g" width="%g" height="%g" rx="%g" fill="#01050A" '
-        'fill-opacity="%g" stroke="%s" stroke-width="4.5"/>' % (x, y, w, h, r, BOXFILL, col))
+    add('  <rect x="%g" y="%g" width="%g" height="%g" rx="%g" fill="%s" '
+        'fill-opacity="%g" stroke="%s" stroke-width="4.5"/>'
+        % (x, y, w, h, r, SHADE, BOXFILL, col))
 
 
 def label(x, y, t, size, col, ls=0, anchor="start"):
@@ -113,12 +137,12 @@ def line(x, y, w, col=RULE, op=0.7, th=3):
 
 def frame(x, y, w, h, col, title=None, note=None, r=42):
     pp = panel_path(x, y, w, h, r)
-    add('  <path d="%s" fill="#01050A" fill-opacity="0.55"/>' % pp,
+    add('  <path d="%s" fill="%s" fill-opacity="%g"/>' % (pp, SHADE, VEIL),
         '  <path d="%s" fill="none" stroke="%s" stroke-width="5"/>' % (pp, col))
     if title:
-        hero(x + 42, y + 66, title, 45, WHITE)
+        hero(x + 42, y + 66, title, 45, ONPANEL)
     if note:
-        label(x + w - 42, y + 63, note, 32, mix(col, "#FFFFFF", 0.3), 4.8, "end")
+        label(x + w - 42, y + 63, note, 32, mix(col, LIFT, 0.3), 4.8, "end")
 
 
 def action(x, y, w, h, col, text, fid):
@@ -129,9 +153,15 @@ def action(x, y, w, h, col, text, fid):
     about how it looks. Same arrangement as the rest buttons on page 1.
     """
     pp = panel_path(x, y, w, h, h / 2.0)
-    add('  <path d="%s" fill="#01050A" fill-opacity="0.55"/>' % pp,
-        '  <path d="%s" fill="none" stroke="%s" stroke-width="4.5"/>' % (pp, col))
-    label(x + w / 2.0, y + h * 0.66, text, 31, mix(col, "#FFFFFF", 0.4), 3.6, "middle")
+    # An action is a button the app presses. On paper there is nothing to
+    # press, so the pill does not print - the field is still registered,
+    # and costs the paper build nothing, since it writes no field map.
+    if not PAPER:
+        add('  <path d="%s" fill="%s" fill-opacity="%g"/>' % (pp, SHADE, VEIL),
+            '  <path d="%s" fill="none" stroke="%s" stroke-width="4.5"/>'
+            % (pp, col))
+        label(x + w / 2.0, y + h * 0.66, text, 31, mix(col, LIFT, 0.4), 3.6,
+              "middle")
     field(fid, "button", x, y, w, h)
 
 
@@ -158,6 +188,10 @@ def open_page(page, total, desc):
     ms = io.open(MARK, encoding="utf-8").read()
     mw, mh = [float(v) for v in re.search(r'viewBox="([\d.\s-]+)"', ms).group(1).split()[2:]]
     mpath = re.search(r"(<path\b[^>]*/>)", ms).group(1)
+    # The mark carries its own fill, and it is white - drawn for a dark
+    # page. On paper it would print white on white.
+    if PAPER:
+        mpath = mpath.replace('fill="#FFFFFF"', 'fill="%s"' % INK)
     mark_h = 108
     add('  <svg x="%g" y="96" width="%g" height="%d" viewBox="0 0 %g %g" '
         'preserveAspectRatio="xMidYMid meet" overflow="visible">%s</svg>'
@@ -172,6 +206,10 @@ def open_page(page, total, desc):
 def write(name, note=""):
     add('</svg>')
     os.makedirs(OUT, exist_ok=True)
+    # The paper build is the same geometry in a different palette, so it
+    # writes beside the screen one rather than over it.
+    if PAPER:
+        name = name.replace(".svg", "-paper.svg")
     io.open(os.path.join(OUT, name), "w", encoding="utf-8",
             newline="\n").write("\n".join(P) + "\n")
     print("wrote %s  %d fields%s" % (name, len(FIELDS), ("  " + note) if note else ""))
