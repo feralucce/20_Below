@@ -20,6 +20,11 @@ main() is the composite, and it does need the PSD and psd_tools. That is
 why the import sits inside the function that uses it - so the guard costs
 the screen build no dependency it did not already have.
 
+THE PDF
+
+The last step packs the five pages into one Letter-sized greyscale PDF,
+which is the thing you hand to a printer.
+
 WHERE EACH BACKGROUND COMES FROM
 
 Page 1's is hand work. The author inverted it and took the colour out by
@@ -139,10 +144,10 @@ def psd_background():
         im = layer.composite()
         if im is None:
             continue
+        # composite() has already applied the layer's opacity. Applying it
+        # again here squared it: the pentagram layers, set at 42% and 45%,
+        # printed at 18% and 20%.
         im = im.convert("RGBA")
-        if layer.opacity < 255:
-            a = im.split()[3].point(lambda v, o=layer.opacity: v * o // 255)
-            im.putalpha(a)
         # A layer can hang off the top or left of the page; crop what falls
         # outside rather than sliding it back on, which would move the art.
         x, y = layer.offset
@@ -203,6 +208,7 @@ def main():
     print()
 
     coloured_total = 0
+    pages = []
     for n in range(1, 6):
         if n == 1:
             bg = reference = psd_background()
@@ -217,6 +223,7 @@ def main():
 
         out = os.path.join(OUT, "character-sheet-page%d-print.png" % n)
         page.save(out, dpi=(300, 300))
+        pages.append(page)
 
         coloured = sum(page.convert("HSV").split()[1].histogram()[1:])
         coloured_total += coloured
@@ -228,6 +235,33 @@ def main():
         raise SystemExit("not black and white - %d coloured pixels"
                          % coloured_total)
     print("five pages, 2550 x 3300 at 300dpi, no colour anywhere")
+
+    write_pdf(pages)
+
+
+def write_pdf(pages):
+    """The five pages as one Letter-sized greyscale PDF.
+
+    Saved in mode L rather than RGB. The pages carry no colour, so three
+    channels would be three copies of the same one: it multiplies the
+    file for nothing and leaves the printer to work out that the greys
+    are grey.
+
+    At 300dpi, 2550 x 3300 px is exactly 8.5 x 11 inches, so `resolution`
+    is what sets the page size. Get it wrong and the whole sheet prints
+    scaled, with the margins eaten.
+    """
+    from PIL import Image                                   # noqa: F401
+
+    out = os.path.join(OUT, "20-below-character-sheet-print.pdf")
+    grey = [p.convert("L") for p in pages]
+    grey[0].save(out, "PDF", resolution=300.0, save_all=True,
+                 append_images=grey[1:], title="20 Below character sheet")
+    print()
+    print("wrote %s" % os.path.basename(out))
+    print("  %d pages, %.1f x %.1f in, greyscale, %.1f MB"
+          % (len(grey), grey[0].width / 300.0, grey[0].height / 300.0,
+             os.path.getsize(out) / 1e6))
 
 
 if __name__ == "__main__":
