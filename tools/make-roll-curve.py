@@ -88,9 +88,10 @@ add('<svg width="%d" height="%d" viewBox="0 0 %d %d" '
 add("<title>The roll curve, with Advantage and Disadvantage</title>")
 add("<desc>Every core roll is 2d10 under a target, so lower is better. A normal "
     "roll centres on 11. Advantage keeps the lowest two of three dice and centres "
-    "near 8.5; Disadvantage keeps the highest two and centres near 13.5. The shape "
-    "is the same in each case - only its position moves, by about two and a half "
-    "points either way.</desc>")
+    "near 8.5; Disadvantage keeps the highest two and centres near 13.5. Drawn "
+    "simply: an extra die slides the odds about two and a half points either way. "
+    "The real Advantage and Disadvantage curves are a little narrower and lean "
+    "toward the middle.</desc>")
 
 # horizontal rules, behind everything
 for frac in (0.25, 0.5, 0.75, 1.0):

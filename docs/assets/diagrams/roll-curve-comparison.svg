@@ -1,6 +1,6 @@
 <svg width="680" height="320" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" role="img">
 <title>The roll curve, with Advantage and Disadvantage</title>
-<desc>Every core roll is 2d10 under a target, so lower is better. A normal roll centres on 11. Advantage keeps the lowest two of three dice and centres near 8.5; Disadvantage keeps the highest two and centres near 13.5. The shape is the same in each case - only its position moves, by about two and a half points either way.</desc>
+<desc>Every core roll is 2d10 under a target, so lower is better. A normal roll centres on 11. Advantage keeps the lowest two of three dice and centres near 8.5; Disadvantage keeps the highest two and centres near 13.5. Drawn simply: an extra die slides the odds about two and a half points either way. The real Advantage and Disadvantage curves are a little narrower and lean toward the middle.</desc>
 <line x1="46" y1="218.5" x2="662" y2="218.5" stroke="#3a4552" stroke-width="1" opacity="0.25"/>
 <line x1="46" y1="168.9" x2="662" y2="168.9" stroke="#3a4552" stroke-width="1" opacity="0.25"/>
 <line x1="46" y1="119.4" x2="662" y2="119.4" stroke="#3a4552" stroke-width="1" opacity="0.25"/>

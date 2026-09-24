@@ -113,7 +113,7 @@ But what does all of this mean? I am glad you asked.
 
 <figure class="figure" markdown="1">
 
-![Three overlapping curves. A normal 2d10 roll centres on 11; Advantage, keeping the lowest two of three dice, centres near 8.5; Disadvantage, keeping the highest two, centres near 13.5. The shape is the same in each case and only its position moves.](/docs/assets/diagrams/roll-curve-comparison.svg)
+![Three overlapping curves. A normal 2d10 roll centres on 11; Advantage, keeping the lowest two of three dice, centres near 8.5; Disadvantage, keeping the highest two, centres near 13.5. The curves are drawn simply to show the one thing that matters: an extra die slides the odds about two and a half points either way.](/docs/assets/diagrams/roll-curve-comparison.svg)
 
 <p class="caption">The roll curve, with Advantage and Disadvantage</p>
 
@@ -201,7 +201,7 @@ The gift you are using
 
 Your Training Tier in the Skill you are using, for a social attack.
 
-Roll those dice. All of them at once. Then compare each one to the appropriate wall (Soak for Physical, Psyche for Social, and Presence for Mental). Any die that rolls higher than the wall, does a level of damage to the appropriate Vital Statistic (Health for Physical, Poise for Social and Sanity for Mental).
+Roll those dice. All of them at once. Then compare each one to the appropriate wall (Soak for Physical, Presence for Social, and Psyche for Mental). Any die that rolls higher than the wall, does a level of damage to the appropriate Vital Statistic (Health for Physical, Poise for Social and Sanity for Mental).
 
 **Critical Success in Combat.** Most TTRPGs handle critical hits by doubling the damage dice rolled or something similar. The effectiveness of the Damage Walls would make doubling the dice pretty ineffective. Instead, when you roll a total of 2 on your To-hit Roll, and you are guaranteed to deal some damage.
 
