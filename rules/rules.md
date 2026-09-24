@@ -57,7 +57,7 @@ This is intentional: under the 2d10 curve, an untrained character faces poor odd
 
 ### Time Bands
 
-A standard ladder of duration used wherever a rule needs to name "how long": **Round → Minute → Scene → Day → Month → Year**. A **Round** is about **6 seconds**, so a Minute is exactly 10 of them. The **Round** is the base unit - any duration described elsewhere in the rules is stated in Rounds unless a longer band is explicitly named.
+A standard ladder of duration used wherever a rule needs to name "how long": **Round → Minute → Hour → Scene → Day → Month → Year → Decade → Century**. A **Round** is about **6 seconds**, so a Minute is exactly 10 of them. The **Round** is the base unit - any duration described elsewhere in the rules is stated in Rounds unless a longer band is explicitly named.
 
 ### Rests
 
@@ -541,7 +541,9 @@ Venom, toxin, or a drug in the blood. Venomous creatures in the [bestiary](adver
 
 **An Envenomed character rolls at Disadvantage on Physical rolls, and it does not clear on a rest.** The body cannot sleep this one off.
 
-Ends with treatment - a Medicine roll against a Difficulty the GM sets by the venom - or with **1 Ki**, spent to burn it out.
+**Once a day, starting the day after, roll Water + 8. One success ends it.** The roll is never at Disadvantage, from Envenomed or anything else, and a successful Medicine roll by whoever is tending the victim that day gives it **Advantage**. Medicine never ends it on its own.
+
+**[Antitoxin](weapons.md) always ends it. Ki cannot.** A creature whose venom works differently says so in its own entry: the [recluses](adversary-index.md#spider), for one, take three successes to shake off.
 
 A creature that envenomates and holds on imposes Envenomed and [Grabbed](#grabbed) together, rather than needing a rule of its own.
 
@@ -555,15 +557,15 @@ Stopping it takes a Normal action, spent by the character or by somebody who rea
 
 #### Common Hazards
 
-Environmental damage uses the same per-die machinery as an attack, resolved against **Soak**, a connecting die costing one [Health Level](#health-levels). The [weapon table](weapons.md) is the scale: fists 1, knife or handgun 5, anti-materiel rifle 10.
+Environmental damage uses the same per-die machinery as an attack, resolved against **Soak**, a connecting die costing one [Health Level](#health-levels). The [weapon table](weapons.md) is the scale: fists 1, knife 3, anti-materiel rifle 5.
 
 | Hazard | Dice |
 |---|---|
-| **Falling** | **1 per 2m**, capped at 10. Halved for water, deep snow, or similar |
-| **Burning room** | **1** at the end of each round in it |
+| **Falling** | **1 per 4m**, capped at 5. Halved for water, deep snow, or similar |
+| **Burning room** | **1** per round, at the end of each round in it |
 | **On fire** | **2** per round until extinguished (a Normal action, or a Fast one from a helper) |
-| **Vehicle, city speed** | **5** |
-| **Vehicle, at speed** | **10** |
+| **Vehicle, city speed** | **3** |
+| **Vehicle, at speed** | **5**. Faster than that isn't a roll |
 
 **No air** (drowning, smoke, suffocation) is the exception: the character lasts **Stamina rounds**, then loses **1 Health Level per round** with **no dice and no Soak** - there is nothing to soak.
 

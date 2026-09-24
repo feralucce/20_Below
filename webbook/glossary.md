@@ -461,7 +461,7 @@ The number a core roll has to hit or come under: your Attribute plus the Difficu
 <div class="gloss" markdown="1">
 <span class="gloss-term">Time Bands</span>
 
-The standard ladder the rules use whenever something needs a duration: Round, Minute, Scene, Day, Month, Year. A Round is about 6 seconds, so a Minute is exactly ten of them. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
+The standard ladder the rules use whenever something needs a duration: Round, Minute, Hour, Scene, Day, Month, Year, Decade, Century. A Round is about 6 seconds, so a Minute is exactly ten of them. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
 </div>
 
 <div class="gloss" markdown="1">

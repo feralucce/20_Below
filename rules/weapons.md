@@ -203,7 +203,7 @@ Purpose-built protective gear only - ordinary clothing, even sturdy clothing, do
 |---|---|---|
 | Adrenaline shot (epi-pen) | Consumed on use: clears one Exhausted level instantly and negates a severe allergic reaction, no roll | 1 |
 | Advanced trauma kit | Consumed on use: Advantage on treating Health Levels, usable even to stabilize someone at or below 0 | 2 |
-| Antitoxin | Consumed on use: Advantage resisting a specific known poison | 2 |
+| Antitoxin | Consumed on use: ends Envenomed from the venom it's made for | 2 |
 | Burn gel / dressing | Consumed on use: Advantage on treating a burn injury specifically | 1 |
 | Chemical analysis kit | Required tool for identifying unknown substances; Advantage on related Research/Science rolls | 2 |
 | Defibrillator (AED) | Consumed on use: can revive a target from Unconscious at 0 Health Levels, no roll, if used within the same Scene they went down | 2 |

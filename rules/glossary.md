@@ -154,7 +154,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Target Number** - The number a core roll has to hit or come under: your Attribute plus the Difficulty. See Core Roll.
 
-**Time Bands** - The standard ladder the rules use whenever something needs a duration: Round, Minute, Scene, Day, Month, Year. A Round is about 6 seconds, so a Minute is exactly ten of them. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
+**Time Bands** - The standard ladder the rules use whenever something needs a duration: Round, Minute, Hour, Scene, Day, Month, Year, Decade, Century. A Round is about 6 seconds, so a Minute is exactly ten of them. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
 
 **Untrained Roll** - A roll for something you have no Skill in. Your Attribute doesn’t help here - the target number is just the Difficulty.
 

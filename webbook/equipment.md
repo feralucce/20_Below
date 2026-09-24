@@ -2205,7 +2205,7 @@ A vial and a syringe in a cold pack, with the venom it answers written on the la
 
 </div>
 
-Consumed on use: Advantage resisting a specific known poison.
+Consumed on use: ends Envenomed from the venom it's made for.
 
 </div>
 

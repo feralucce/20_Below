@@ -578,7 +578,7 @@ Every bite in the mass carries something that outlasts the bite itself. The rats
 
 **Notable Skills**: Stealth 8
 
-**Traits**: **Swarm** - immune to single-target Physical attacks (they connect with mostly empty space); any attack that hits an area instead deals double dice against it. **Toxic Bite/Sting** - a target hit by its bite must succeed a Water + Difficulty roll (GM sets Difficulty) or gain a level of Exhausted, until treated with an Antitoxin or First Aid Kit.
+**Traits**: **Swarm** - immune to single-target Physical attacks (they connect with mostly empty space); any attack that hits an area instead deals double dice against it. **Toxic Bite/Sting** - a target hit by its bite is [Envenomed](rules.md#envenomed).
 
 ---
 
@@ -1728,7 +1728,7 @@ The venom now carries an extra sting that lingers well past the bite itself. It 
 
 **Notable Skills**: Stealth 6
 
-**Traits**: **Toxic Bite/Sting** - a target hit by its bite must also succeed a Water + Difficulty roll (GM sets Difficulty) or gain a level of Exhausted, until treated with an Antitoxin or First Aid Kit.
+**Traits**: **Toxic Bite/Sting** - a target hit by its bite is [Envenomed](rules.md#envenomed).
 
 ---
 
@@ -1914,7 +1914,7 @@ One bite carries two different kinds of trouble now, and the second doesn't come
 
 **Notable Skills**: Stealth 9
 
-**Traits**: **Warning Display** - always rattles before striking unless it's been stepped on or grabbed directly. **Toxic Bite/Sting** - a target hit by its bite must also succeed a Water + Difficulty roll (GM sets Difficulty) or gain a level of Exhausted, until treated with an Antitoxin or First Aid Kit.
+**Traits**: **Warning Display** - always rattles before striking unless it's been stepped on or grabbed directly. **Toxic Bite/Sting** - a target hit by its bite is [Envenomed](rules.md#envenomed).
 
 </td></tr></table>
 
@@ -2162,6 +2162,15 @@ The exoskeleton has thickened into something closer to armor plate, and a blade 
 
 ### Spider
 
+**Necrotic Venom** (every recluse). The bite's dice are boosted: **+2 to each die** against Soak. If any die costs a Health Level, the target is [Envenomed](rules.md#envenomed) and the flesh around the bite starts to die. The venom never costs another Health Level.
+
+- **From day 2**, roll **Water + 8** once a day. This roll is never at Disadvantage, from Exhausted or from Envenomed. A successful **Medicine** roll by whoever is tending the victim that day gives it **Advantage**; Medicine doesn't end the venom on its own.
+- **Succeed on day 2**, and it's over.
+- **Fail on day 2**, and gain 1 [Exhausted](rules.md#exhausted) level. From then on it takes **three successful days** to shake off, not necessarily in a row. Each failed day adds another Exhausted level.
+- Exhausted levels from the venom don't clear with rest while the victim is Envenomed.
+- **Antitoxin** ends it at once. **Ki can't.** Damage already done stays.
+- **Supernatural healing** negates the venom, but the tissue is already dead: it leaves a permanent scar unless the healing can regrow a limb.
+
 **Spider**: [Black Widow](#black-widow) · [Brown Recluse](#brown-recluse) · [Dire Black Widow](#dire-black-widow) · [Dire Brown Recluse](#dire-brown-recluse) · [Giant Black Widow](#giant-black-widow) · [Giant Brown Recluse](#giant-brown-recluse) · [Mutated Black Widow](#mutated-black-widow) · [Mutated Brown Recluse](#mutated-brown-recluse)
 
 <table class="adversary-card"><tr><td markdown="1">
@@ -2182,11 +2191,11 @@ Small enough to go unnoticed until the bite already happened. Glossy black with 
 
 #### Brown Recluse
 
-Its bite rarely hurts in the moment - the real damage comes later. Dull brown with a faint violin-shaped mark on its back, it hides in boxes, folded clothes, and dark undisturbed spaces rather than webs out in the open. The bite feels like nothing worse than an insect sting at first, easy to dismiss. Days later the tissue around the wound starts breaking down, and by then the animal that caused it is long gone.
+Its bite is easy to shrug off in the moment - the worst of it comes later. Dull brown with a faint violin-shaped mark on its back, it hides in boxes, folded clothes, and dark undisturbed spaces rather than webs out in the open. The bite feels like nothing worse than an insect sting at first, easy to dismiss. Days later the tissue around the wound starts breaking down, and by then the animal that caused it is long gone.
 
 **Soak** 0 · **Attack** 3 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 2m
 
-**Bite**: 1, Melee, **Venom**: no immediate Health Level loss - the target is [Envenomed](rules.md#envenomed), and the wound worsens without treatment over the following days, severity the GM's call.
+**Bite**: 1, Melee, [Necrotic Venom](#spider).
 
 **Notable Skills**: Stealth 10
 
@@ -2210,11 +2219,11 @@ The hourglass marking is now visible from across a room, on a body that shouldn'
 
 #### Dire Brown Recluse
 
-The bite is the same shape as always, just delivered by something considerably harder to miss. The violin marking across its back has stretched along with the rest of it, easy to spot even in bad light, though the animal is exactly as shy as its ordinary-sized relatives and would rather retreat into a wall cavity than fight. Problems start when someone corners it in a boot or a stack of boxes without realizing what they've reached into. The bite itself does little in the moment - the real danger shows up days later, when the tissue around it hasn't started healing right.
+The bite is the same shape as always, just delivered by something considerably harder to miss. The violin marking across its back has stretched along with the rest of it, easy to spot even in bad light, though the animal is exactly as shy as its ordinary-sized relatives and would rather retreat into a wall cavity than fight. Problems start when someone corners it in a boot or a stack of boxes without realizing what they've reached into. The bite hurts about as much as it looks like it should - the real danger shows up days later, when the tissue around it hasn't started healing right.
 
 **Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 2m
 
-**Bite**: 2, Melee, **Venom**: no immediate Health Level loss - the target is [Envenomed](rules.md#envenomed), and the wound worsens without treatment over the following days, severity the GM's call.
+**Bite**: 2, Melee, [Necrotic Venom](#spider).
 
 **Notable Skills**: Stealth 10
 
@@ -2242,7 +2251,7 @@ Found under boards in an old shed, in a size that makes the whole shed worth avo
 
 **Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 2m
 
-**Bite**: 3, Melee, **Venom**: no immediate Health Level loss - the target is [Envenomed](rules.md#envenomed), and the wound worsens without treatment over the following days, severity the GM's call.
+**Bite**: 3, Melee, [Necrotic Venom](#spider).
 
 **Notable Skills**: Stealth 10
 
@@ -2268,15 +2277,15 @@ Crushing it doesn't end the encounter cleanly - whatever's in its body finds its
 
 #### Mutated Brown Recluse
 
-Whatever it carries in its bite now works faster and meaner than the necrosis it's known for. Physically it's unremarkable, smaller than its Dire and Giant kin and easy to miss in a woodpile or a dark closet, which is exactly the problem. Where the ordinary bite is a slow-building wound, this one drops a target into exhaustion within the hour, chemistry doing in minutes what necrosis used to take days to manage. It's just as reluctant to fight as any recluse, but a single unlucky bite now carries consequences that show up long before anyone thinks to treat it.
+Whatever it carries in its bite now works faster and meaner than the necrosis it's known for. Physically it's unremarkable, smaller than its Dire and Giant kin and easy to miss in a woodpile or a dark closet, which is exactly the problem. Where the ordinary bite is a slow-building wound, this one is wearing the body down within hours, chemistry doing in an afternoon what necrosis used to take days to manage. Antitoxin only buys a better chance against it, and nursing does nothing. It's just as reluctant to fight as any recluse, but a single unlucky bite now carries consequences that show up long before anyone thinks to treat it.
 
 **Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 2m
 
-**Bite**: 1, Melee, **Venom**: no immediate Health Level loss - the target is [Envenomed](rules.md#envenomed), and the wound worsens without treatment over the following days, severity the GM's call.
+**Bite**: 1, Melee, [Necrotic Venom](#spider).
 
 **Notable Skills**: Stealth 10
 
-**Traits**: **Toxic Bite/Sting** - a target hit by its bite must also succeed a Water + Difficulty roll (GM sets Difficulty) or gain a level of Exhausted, until treated with an Antitoxin or First Aid Kit.
+**Traits**: **Fast-Acting** - its Necrotic Venom rolls **every 6 hours** instead of once a day, the first 6 hours after the bite. **Antitoxin only gives Advantage** on those rolls rather than ending it, and **Medicine has no effect** on them.
 
 </td></tr></table>
 
@@ -3178,7 +3187,7 @@ Roll or pick one per Mutated creature - varying the pick keeps a table of mutate
 
 | # | Mutation | Effect |
 |---|---|---|
-| 1 | **Toxic Bite/Sting** | A target hit by its natural weapon must succeed a Water + Difficulty roll (GM sets Difficulty) or gain a level of Exhausted, until treated with an Antitoxin or First Aid Kit. |
+| 1 | **Toxic Bite/Sting** | A target hit by its natural weapon is [Envenomed](rules.md#envenomed). |
 | 2 | **Regenerating** | Heals 1 Health Level at the start of each of its turns. |
 | 3 | **Radioactive Touch** | Anyone within Melee range at the start of its turn takes 1 unsoakable Health Level, unless wearing radiation-rated protection (GM's call). |
 | 4 | **Extra Limb(s)** | Makes two separate natural-weapon attacks per round instead of one, each its own to-hit roll. |

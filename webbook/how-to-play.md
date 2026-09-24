@@ -339,7 +339,7 @@ Short Rest**. You heal Health Levels equal to half your Health, rounded up, mini
 
 ## How Time Works
 
-Time is divided into discreet segments. In order of length, they are a Round, Minute, Scene, Day, Month, and year.
+Time is divided into discrete segments. In order of length, they are a Round, Minute, Hour, Scene, Day, Month, Year, Decade and Century.
 
 **Round.** About six seconds, and the base unit everything else is measured against: one pass through the turn order, long enough for everyone present to do one thing.
 
