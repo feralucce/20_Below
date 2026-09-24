@@ -37,6 +37,9 @@ def game_commits():
         paths = [f for f in files.split("\n") if f.strip()]
         if paths and all(PORTFOLIO.match(p) for p in paths):
             continue
+        # Notes that correct the record describe the history; they aren't work.
+        if body.startswith("Record correction:"):
+            continue
         out.append((date, "co-authored-by: claude" in body.lower()))
     return out
 
