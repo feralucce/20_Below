@@ -226,17 +226,36 @@ A catalog of threats a party might face outside of other player characters - not
 
 ---
 
-**How to read a stat block:**
+### How to read a stat block
 
-- **Soak** and **Defense** work exactly as they do for a PC - Soak resolves per-die against an attack (rules.md#physical-attacks---weapon-damage--per-die-resolution), Defense is the target number for an attacker's to-hit roll.
-- **Attack** is the creature's own Attribute rating (1-10) for making that to-hit roll - roll 2d10 against Attack + the target's Defense (used as Difficulty, per rules.md#the-passive-wall-triad---soak-presence-psyche), standard critical results apply.
-- **Health Levels** work exactly as they do for a PC, with no below-0 range - a creature is out of the fight the instant it crosses 0.
-- **Movement Rate** is in meters, same as a PC's.
-- Each **Natural Weapon** lists a Damage rating (d10 count, same 1-10 scale as [weapons.md](weapons.md)) and a range.
-- **Notable Skills** come in two forms. **Opposed** skills read `Stealth 6 vs. Perception`: the number is the **Difficulty for the player's roll**, so a character trying to spot this creature rolls Perception against their Attribute + 6. The lower the number, the harder the creature is to beat. Everything else reads `Athletics Target Number 9`: the creature's own roll, 2d10 against that number, standard critical results applying like any other roll. **A trait that gives a creature Advantage on an opposed skill** ("Advantage on Stealth checks") means the player rolls against it at **Disadvantage** instead, and Disadvantage the other way round.
-- A **Social** attack line (a Snarl, a Hiss, a Howl) works like a natural weapon aimed at the mind's composure instead of the body: to-hit with the creature's Attack against the target's [Social Defense](rules.md#defense-derived-stat), then each die against the target's **Presence**, a connecting die costing a level of [Poise](rules.md#poise). It can't kill - Poise has no death threshold - but a character at 0 Poise is [Flustered](rules.md#flustered).
-- **Traits** describe anything that doesn't fit the fields above, written in terms of mechanics that already exist (Advantage/Disadvantage, Range Bands, Ki, etc.) rather than new ones.
-- **A small number of entries have an ability marked "no to-hit roll required."** Every attack normally starts with a to-hit roll against the target's Defense (rules.md#the-passive-wall-triad---soak-presence-psyche) - but a small handful of entries (things that affect you by being perceived rather than by striking you, like a banshee-style wail) don't fit that shape. For those specific abilities only, perceiving the source (a Perception check, or simply being in range and aware of it, GM's call) triggers the effect instead of a to-hit roll. Everything downstream of that - the dice resolving per-die against the relevant wall stat, Ki Spend to Preserve options for the target - works exactly like any other attack. Nothing else about the resolution changes.
+Every card answers one question: **who rolls, and against which number.** Here's a real one, then what each line of it means at the table.
+
+<table class="adversary-card key-example"><tr><td markdown="1">
+
+#### Example: Guard Dog
+
+**Soak** 1 · **Attack** 7 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 9m
+
+**Bite**: 3 dice, Melee
+
+**Snarl**: 2 dice, Close, **Social** - dice against the target's Presence, each one over costing a level of Poise.
+
+**Notable Skills**: Perception 7 vs. Stealth
+
+**Traits**: **Trained to Hold** - immune to being Surprised by a target it's already been set to guard against.
+
+</td></tr></table>
+
+<div class="key-cards">
+<div class="key-card key-it"><div class="key-head"><span class="key-title">It attacks you</span><span class="key-pill">It rolls</span></div><p>It rolls 2d10. At or under its <strong>Attack</strong> + your Defense, it hits.</p><p class="key-uses"><span>On the card</span> Attack 7</p></div>
+<div class="key-card key-it"><div class="key-head"><span class="key-title">Its hit lands</span><span class="key-pill">It rolls</span></div><p>A creature's natural weapons are <strong>boosted</strong>: +2 to each die, then each one over your <strong>Soak</strong> costs you a Health Level.</p><p class="key-uses"><span>On the card</span> Bite: 3 dice, Melee</p></div>
+<div class="key-card key-it"><div class="key-head"><span class="key-title">It snarls, hisses or howls</span><span class="key-pill">It rolls</span></div><p>A <strong>Social</strong> line: it rolls against your <a href="rules.html#defense-derived-stat">Social Defense</a>, then each die over your Presence costs you a level of <a href="rules.html#poise">Poise</a>. It can't kill, but at 0 Poise you're <a href="rules.html#flustered">Flustered</a>.</p><p class="key-uses"><span>On the card</span> Snarl: 2 dice, Close, Social</p></div>
+<div class="key-card key-you"><div class="key-head"><span class="key-title">You attack it</span><span class="key-pill">You roll</span></div><p>Your Element + its <strong>Defense</strong> to hit. Each die over its <strong>Soak</strong> costs it a Health Level. At 0 it's out: creatures have no below-zero range.</p><p class="key-uses"><span>On the card</span> Defense 6 &middot; Soak 1 &middot; Health Levels 4</p></div>
+<div class="key-card key-you"><div class="key-head"><span class="key-title">You spot it, sneak past it, see through it</span><span class="key-pill">You roll</span></div><p>Roll the skill after &ldquo;vs.&rdquo;, with the number as your Difficulty: your Attribute + that number. Lower is harder. If a trait gives it Advantage, you roll at Disadvantage.</p><p class="key-uses"><span>On the card</span> Perception 7 vs. Stealth</p></div>
+<div class="key-card key-it"><div class="key-head"><span class="key-title">It does anything else</span><span class="key-pill">It rolls</span></div><p>It rolls 2d10. At or under the number, it succeeds.</p><p class="key-uses"><span>On the card</span> Athletics Target Number 9</p></div>
+</div>
+
+<p class="key-note"><strong>Movement Rate</strong> is in meters, like a PC's. <strong>Traits</strong> are written in rules you already know. A few abilities say <strong>&ldquo;no to-hit roll required&rdquo;</strong>: they work by being perceived, not by striking, so seeing or hearing the source triggers them, and everything after that resolves like any other attack.</p>
 
 ---
 
@@ -257,9 +276,9 @@ Ordinary animals, native to a modern-day setting. None of these are supernatural
 
 A stray or pack-abandoned dog, unpredictable more than dangerous - but a hungry or cornered one will bite. Ribs show under a matted coat, and it moves in a low, stiff trot that speeds up the moment it decides a person is prey rather than a threat. Most encounters end with barking, snapping, and a retreat the second it takes real damage. The ones that don't back off are usually running with two or three others, circling wide before one commits.
 
-**Soak** 1 · **Attack** 3 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 9m
+**Soak** 1 · **Attack** 7 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 9m
 
-**Bite**: 1, Melee
+**Bite**: 3 dice, Melee
 
 **Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
@@ -273,11 +292,11 @@ A stray or pack-abandoned dog, unpredictable more than dangerous - but a hungry 
 
 Bred or trained to hold a line, not just to threaten one. It's well-fed, muscled through the shoulders, and silent right up until the moment it commits, unlike a feral dog that barks its intentions first. A PC gets one good look at the posture change before the bite lands. It won't chase past the boundary it's been set to hold, but inside that boundary it doesn't stop for pain or numbers.
 
-**Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 9m
+**Soak** 1 · **Attack** 7 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 9m
 
-**Bite**: 2, Melee
+**Bite**: 3 dice, Melee
 
-**Snarl**: 2, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
+**Snarl**: 2 dice, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Notable Skills**: Perception 7 vs. Stealth
 
@@ -291,9 +310,9 @@ Bred or trained to hold a line, not just to threaten one. It's well-fed, muscled
 
 Something in the litter came out wrong - bigger jaw, bigger frame, none of the usual skittishness around people. It stands hip-high on an adult and carries itself like it already knows it can win a fight it used to lose. It still runs with whatever pack it can find, and a Dire dog leading a pack of ordinary strays turns a nuisance encounter into something that draws blood. Expect it to press an attack rather than break off, and to keep circling instead of scattering when the party fights back.
 
-**Soak** 2 · **Attack** 4 · **Defense** 7 · **Health Levels** 6 · **Movement Rate** 11m
+**Soak** 2 · **Attack** 8 · **Defense** 7 · **Health Levels** 6 · **Movement Rate** 11m
 
-**Bite**: 2, Melee
+**Bite**: 4 dice, Melee
 
 **Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
@@ -307,11 +326,11 @@ Something in the litter came out wrong - bigger jaw, bigger frame, none of the u
 
 Whoever trained it either didn't know when to stop or wanted exactly this. It's built like a Dire Feral Dog but moves with a trained animal's discipline instead of a stray's opportunism - it holds a line, doesn't bark a warning it doesn't mean, and doesn't scatter when the fight turns against it. Its handler, if it has one, rarely needs to give a second command. Anyone it's set to guard against gets no benefit from catching it off guard.
 
-**Soak** 2 · **Attack** 5 · **Defense** 7 · **Health Levels** 7 · **Movement Rate** 11m
+**Soak** 2 · **Attack** 8 · **Defense** 7 · **Health Levels** 7 · **Movement Rate** 11m
 
-**Bite**: 3, Melee
+**Bite**: 4 dice, Melee
 
-**Snarl**: 2, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
+**Snarl**: 2 dice, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Notable Skills**: Perception 7 vs. Stealth
 
@@ -325,9 +344,9 @@ Whoever trained it either didn't know when to stop or wanted exactly this. It's 
 
 Animal control gets a call about a "bear" and finds this instead, chained to a fence post it long ago outgrown. The chain is usually snapped or dragging by the time anyone with a weapon meets it. Up close it's built wrong for a dog - shoulders too wide, head too heavy - the kind of animal that shouldn't move as fast as it does. It still runs pack tactics if there's another canine nearby, turning a straightforward brawl into a coordinated mauling. Most people who see it once don't stick around to describe it accurately.
 
-**Soak** 3 · **Attack** 4 · **Defense** 8 · **Health Levels** 9 · **Movement Rate** 12m
+**Soak** 3 · **Attack** 8 · **Defense** 8 · **Health Levels** 9 · **Movement Rate** 12m
 
-**Bite**: 4, Melee
+**Bite**: 5 dice, Melee
 
 **Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
@@ -341,11 +360,11 @@ Animal control gets a call about a "bear" and finds this instead, chained to a f
 
 A property line marked by a chain-link fence and a shape on the other side that makes the fence look optional. It's the size of a small horse and was trained before it got that big, which means its aggression was never recalibrated to match. Whoever set it loose on a property line usually doesn't come out to call it off. It doesn't retreat, and it doesn't need to be surprised twice.
 
-**Soak** 3 · **Attack** 5 · **Defense** 8 · **Health Levels** 10 · **Movement Rate** 12m
+**Soak** 3 · **Attack** 8 · **Defense** 8 · **Health Levels** 10 · **Movement Rate** 12m
 
-**Bite**: 4, Melee
+**Bite**: 5 dice, Melee
 
-**Snarl**: 2, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
+**Snarl**: 2 dice, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Notable Skills**: Perception 7 vs. Stealth
 
@@ -359,9 +378,9 @@ A property line marked by a chain-link fence and a shape on the other side that 
 
 Every scar on it has already closed by the time you notice it was there. Its coat is a patchwork of half-healed wounds that never quite finish healing, layered scar over scar. It fights with the same pack instincts as any feral dog but doesn't slow down the way a hurt animal should, which makes a fight against it run longer than the numbers suggest. Landing a solid hit buys almost nothing - by its next turn the damage is already receding.
 
-**Soak** 2 · **Attack** 4 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 9m
+**Soak** 2 · **Attack** 8 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 9m
 
-**Bite**: 1, Melee
+**Bite**: 3 dice, Melee
 
 **Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
@@ -375,11 +394,11 @@ Every scar on it has already closed by the time you notice it was there. Its coa
 
 It stopped needing rest between shifts a while ago, and nobody who feeds it has asked why. Wounds that would put an ordinary guard dog out of commission close over by the next watch. It patrols with the same trained discipline it always had, just without the downtime that used to give intruders a window. A fight against it is a fight against something that doesn't run out of stamina on any timeline the party can count on.
 
-**Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 9m
+**Soak** 2 · **Attack** 8 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 9m
 
-**Bite**: 2, Melee
+**Bite**: 3 dice, Melee
 
-**Snarl**: 2, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
+**Snarl**: 2 dice, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Notable Skills**: Perception 7 vs. Stealth
 
@@ -397,9 +416,9 @@ It stopped needing rest between shifts a while ago, and nobody who feeds it has 
 
 Small, fast, and almost never worth the fight it can put up if actually cornered. It reads a room before a person does, and the default response to anything larger than a rat is to be somewhere else. What a PC notices is motion at the edge of vision, a shape already on top of a fence or halfway up a wall by the time anyone reacts. Corner one anyway and it goes for eyes and hands, claws first, then disappears through whatever gap let it in.
 
-**Soak** 0 · **Attack** 2 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 8m
+**Soak** 0 · **Attack** 5 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 8m
 
-**Claws**: 1, Melee
+**Claws**: 1 die, Melee
 
 **Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 9
 
@@ -413,9 +432,9 @@ Small, fast, and almost never worth the fight it can put up if actually cornered
 
 Still fast, still small for its kind, but the claws now leave a wound worth stitches. It's barely bigger than an ordinary stray, just denser and meaner, which makes it easy to underestimate until it's already climbed something no one expected it to reach. It strikes and retreats rather than committing to a straight fight, using rooftops and fences as cover between passes. Cornering it does nothing useful - it treats a dead end as just another surface to climb.
 
-**Soak** 1 · **Attack** 3 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 10m
+**Soak** 1 · **Attack** 6 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 10m
 
-**Claws**: 2, Melee
+**Claws**: 2 dice, Melee
 
 **Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 9
 
@@ -429,9 +448,9 @@ Still fast, still small for its kind, but the claws now leave a wound worth stit
 
 House-cat proportions on something the size of a dog, which is somehow worse than either. It moves with all the twitchy, sudden quickness of a housecat, scaled up to something that can knock a person flat. It hunts the same way a normal feral cat does - low, quiet, then a single committed rush - except now the rush actually ends fights. It still treats any vertical surface as an escape route, so cornering it in a yard or alley is rarely as final as it looks.
 
-**Soak** 2 · **Attack** 3 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 11m
+**Soak** 2 · **Attack** 6 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 11m
 
-**Claws**: 3, Melee
+**Claws**: 3 dice, Melee
 
 **Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 9
 
@@ -445,9 +464,9 @@ House-cat proportions on something the size of a dog, which is somehow worse tha
 
 It sits on a fence rail in plain daylight and takes people a solid minute to actually see. Its coat has taken on a mottled, uneven texture that breaks up its outline against brick, wood, and foliage alike. It doesn't hide so much as simply not register, watching a target from somewhere in plain sight before it moves. Once it does move, it's gone as fast as any feral cat, and finding it again after that first strike is its own problem.
 
-**Soak** 1 · **Attack** 3 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 8m
+**Soak** 1 · **Attack** 6 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 8m
 
-**Claws**: 1, Melee
+**Claws**: 1 die, Melee
 
 **Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 9
 
@@ -465,9 +484,9 @@ It sits on a fence rail in plain daylight and takes people a solid minute to act
 
 Bold around people, genuinely dangerous only if rabid. It has no fear of humans to begin with, which reads as aggression even when it's just curiosity about an unattended bag. Hands are surprisingly dexterous, and it'll paw open latches, packs, and doors before it ever bares teeth. A rabid one is a different animal entirely: no hesitation, no retreat, foaming and biting at anything that moves.
 
-**Soak** 1 · **Attack** 3 · **Defense** 7 · **Health Levels** 2 · **Movement Rate** 6m
+**Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 2 · **Movement Rate** 6m
 
-**Bite / Claws**: 1, Melee
+**Bite / Claws**: 1 die, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception, Perception 9 vs. Stealth
 
@@ -481,9 +500,9 @@ Bold around people, genuinely dangerous only if rabid. It has no fear of humans 
 
 Twice the usual weight and none of the usual hesitation about approaching a lit porch. It moves with a raccoon's same deliberate, methodical curiosity, just heavier on its feet and slower to spook. Left alone it still won't start anything, but cornering it, threatening young, or catching it rabid turns a nuisance animal into a real problem fast. Its bite carries enough weight now to matter.
 
-**Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 5 · **Movement Rate** 8m
+**Soak** 2 · **Attack** 6 · **Defense** 8 · **Health Levels** 5 · **Movement Rate** 8m
 
-**Bite / Claws**: 2, Melee
+**Bite / Claws**: 2 dice, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception, Perception 9 vs. Stealth
 
@@ -497,9 +516,9 @@ Twice the usual weight and none of the usual hesitation about approaching a lit 
 
 Tips over a dumpster instead of digging through it, and doesn't run when the lid clangs. It's built like a small bear wearing a raccoon's face, with the same ringed tail and masked eyes on a frame that no longer needs to be subtle about scavenging. Noise that would send an ordinary raccoon bolting barely registers. It's still not looking for a fight, but its size alone makes cornering it a genuinely bad idea.
 
-**Soak** 3 · **Attack** 4 · **Defense** 9 · **Health Levels** 8 · **Movement Rate** 9m
+**Soak** 3 · **Attack** 6 · **Defense** 9 · **Health Levels** 8 · **Movement Rate** 9m
 
-**Bite / Claws**: 3, Melee
+**Bite / Claws**: 3 dice, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception, Perception 9 vs. Stealth
 
@@ -513,9 +532,9 @@ Tips over a dumpster instead of digging through it, and doesn't run when the lid
 
 It works a latch in the dark faster than most people manage in daylight. Nothing about its size or shape has changed much - it's the eyes and the hands that are different, both working with an unnatural precision in conditions that should slow it down. It still avoids conflict when it can, but it also can't be caught flat-footed by anyone relying on darkness or cover to approach. A locked door or latched cage isn't the safeguard it should be.
 
-**Soak** 2 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 6m
+**Soak** 2 · **Attack** 6 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 6m
 
-**Bite / Claws**: 1, Melee
+**Bite / Claws**: 1 die, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception, Perception 9 vs. Stealth
 
@@ -533,9 +552,9 @@ It works a latch in the dark faster than most people manage in daylight. Nothing
 
 A mass of small bodies, not a single creature - what it lacks in individual danger it makes up in sheer numbers. It moves as a rippling brown mass across floors and through walls, squealing loud enough to be heard before it's seen. A PC standing in the middle of one feels dozens of small bites and scrabbling claws at once, none of them serious alone. Swinging a weapon at any single rat accomplishes almost nothing; the swarm just closes back around the gap.
 
-**Soak** 0 · **Attack** 3 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 6m
+**Soak** 0 · **Attack** 6 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 6m
 
-**Bite**: 1, Melee
+**Bite**: 1 die, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception
 
@@ -549,9 +568,9 @@ A mass of small bodies, not a single creature - what it lacks in individual dang
 
 Bigger bodies than a rat swarm should have, moving with the same coordination as always. Individually each rat is pushing the size of a small cat, but they still move and bite as one mass, flowing around corners and through gaps like the swarm never noticed the size increase. Nothing about how you fight it changes - area attacks work, single-target ones don't - it just costs more to survive contact with it. The sound it makes crossing a room is different too, less scuttle and more thud.
 
-**Soak** 1 · **Attack** 4 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 8m
+**Soak** 1 · **Attack** 7 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 8m
 
-**Bite**: 2, Melee
+**Bite**: 2 dice, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception
 
@@ -565,9 +584,9 @@ Bigger bodies than a rat swarm should have, moving with the same coordination as
 
 What used to be a hundred small bodies is now a few dozen large ones, and the sound they make is different. Each individual rat is closer to a small dog than a rodent, though the swarm still moves and attacks as a single coordinated mass. It's easier to spot coming than an ordinary rat swarm, but that head start doesn't help much once it closes the distance. The bites land harder, and there are still more of them than anyone wants to count.
 
-**Soak** 2 · **Attack** 4 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 9m
+**Soak** 2 · **Attack** 7 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 9m
 
-**Bite**: 3, Melee
+**Bite**: 3 dice, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception
 
@@ -581,9 +600,9 @@ What used to be a hundred small bodies is now a few dozen large ones, and the so
 
 Every bite in the mass carries something that outlasts the bite itself. The rats themselves look unremarkable, no bigger or stranger than any other swarm, until someone gets bitten and realizes the mass is carrying something. It still swarms and bites the same way it always has, but a target who gets nipped even once needs treatment afterward or spends the rest of the encounter running on fumes. The swarm itself doesn't care whether that treatment is available.
 
-**Soak** 1 · **Attack** 4 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 6m
+**Soak** 1 · **Attack** 7 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 6m
 
-**Bite**: 1, Melee
+**Bite**: 1 die, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception
 
@@ -603,7 +622,7 @@ Every bite in the mass carries something that outlasts the bite itself. The rats
 
 No interest in a fight - just in being left alone. It moves at an unhurried waddle and gives every warning it can before doing anything drastic: stamping feet, a raised tail, a hiss if that doesn't land. What a PC notices first is usually the smell of a previous encounter it already won. Ignore the display and it turns around, and there's no version of that fight worth having.
 
-**Soak** 0 · **Attack** 1 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 4m
+**Soak** 0 · **Attack** 3 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 4m
 
 **Spray** (once per encounter, no Health Level cost): every target within Close range must wash off or take Disadvantage on all rolls for the rest of the Scene.
 
@@ -619,7 +638,7 @@ No interest in a fight - just in being left alone. It moves at an unhurried wadd
 
 The stripe runs down a body twice the usual length, and the smell carries proportionally. It's not faster or more aggressive than an ordinary skunk, just bigger, and its warning stomp is correspondingly louder and easier to miss under pressure. Anyone who ignores that warning gets sprayed at a range and duration that outlasts what the smell usually implies. It would rather waddle off than fight, but the cloud it leaves behind lingers on gear and clothes long after it's gone.
 
-**Soak** 1 · **Attack** 2 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 4m
+**Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 4m
 
 **Spray** (once per encounter, no Health Level cost): the cloud reaches farther and lingers longer than an ordinary skunk's - GM's call on exact range, but Close is a floor, not a ceiling.
 
@@ -635,7 +654,7 @@ The stripe runs down a body twice the usual length, and the smell carries propor
 
 Nobody's ever gotten close enough to measure it - the smell arrives first and settles the question. What little anyone's actually seen of it suggests something built more like a badger than a skunk, low and heavy and unhurried. It still gives fair warning before it sprays, but the spray itself covers ground an ordinary skunk's never could, and residue left on gear too close doesn't wash out easy. Most encounters end with the party retreating rather than the skunk.
 
-**Soak** 2 · **Attack** 2 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 4m
+**Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 4m
 
 **Spray** (once per encounter, no Health Level cost): covers a full Range Band instead of just Close, and the residue is potent enough to ruin gear left nearby.
 
@@ -651,7 +670,7 @@ Nobody's ever gotten close enough to measure it - the smell arrives first and se
 
 It doesn't wait for the warning stomp anymore - one gland has taken over for the other. Its usual black-and-white coloring has gone patchy and duller, like something about the gland changes underneath it too. It's lost the polite habit of announcing itself before it sprays, and what comes out now does more than smell bad. Anyone caught in range without protection is in for a genuinely bad afternoon, not just an inconvenient one.
 
-**Soak** 1 · **Attack** 2 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 4m
+**Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 4m
 
 **Spray** (once per encounter, no Health Level cost): every target within Close range must wash off or take Disadvantage on all rolls for the rest of the Scene.
 
@@ -673,11 +692,11 @@ It doesn't wait for the warning stomp anymore - one gland has taken over for the
 
 Absurd on paper, genuinely relentless in practice. It hisses, lowers its neck, and comes at a flat run with wings half-spread, and the noise alone is enough to make most people give ground. The bite itself is minor, but it's backed by a wing strike that has real force behind it and a willingness to keep pressing well past the point any sensible animal would quit. Nobody at the table takes it seriously until it's the third round and their character still hasn't managed to leave its territory.
 
-**Soak** 0 · **Attack** 2 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 6m
+**Soak** 0 · **Attack** 3 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 6m
 
-**Bite / Wing Buffet**: 1, Melee
+**Bite / Wing Buffet**: 1 die, Melee
 
-**Hiss**: 4, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
+**Hiss**: 4 dice, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Traits**: **Relentless** - keeps attacking after taking damage with no hesitation; only stops if it actually runs out of Health Levels or the target leaves its territory entirely.
 
@@ -689,11 +708,11 @@ Absurd on paper, genuinely relentless in practice. It hisses, lowers its neck, a
 
 Same territorial streak, considerably more weight behind the wing that hits you. It's still recognizably a goose, just built like it's been eating better than any goose should. It doesn't back down from a fight it starts, and it doesn't stop chasing a target who's already left its territory the way an ordinary goose eventually does. Getting hit by that wing at full extension leaves a mark.
 
-**Soak** 1 · **Attack** 3 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 8m
+**Soak** 1 · **Attack** 4 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 8m
 
-**Bite / Wing Buffet**: 2, Melee
+**Bite / Wing Buffet**: 2 dice, Melee
 
-**Hiss**: 4, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
+**Hiss**: 4 dice, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Traits**: **Relentless** - keeps attacking after taking damage with no hesitation; only stops if it actually runs out of Health Levels or the target leaves its territory entirely.
 
@@ -705,11 +724,11 @@ Same territorial streak, considerably more weight behind the wing that hits you.
 
 Nobody believes the story until they see the pond it now considers its property. It stands taller than most people's waists and hisses with a volume to match. It claims a stretch of shoreline the way an ordinary goose claims a nest, and it treats anyone who wanders too close, on purpose or not, exactly the same. It keeps attacking long after a normal animal would've backed off.
 
-**Soak** 2 · **Attack** 3 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 9m
+**Soak** 2 · **Attack** 4 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 9m
 
-**Bite / Wing Buffet**: 3, Melee
+**Bite / Wing Buffet**: 3 dice, Melee
 
-**Hiss**: 4, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
+**Hiss**: 4 dice, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Traits**: **Relentless** - keeps attacking after taking damage with no hesitation; only stops if it actually runs out of Health Levels or the target leaves its territory entirely.
 
@@ -721,11 +740,11 @@ Nobody believes the story until they see the pond it now considers its property.
 
 It doesn't seem to tire the way a goose should, and the neighbors have stopped mowing near the pond. There's nothing visibly wrong with it beyond how long it stays in a fight - it just doesn't wear down. Wounds that would send a normal goose retreating barely register, and it keeps coming back for another pass instead of giving up territory. Nobody local goes near that pond anymore without checking first.
 
-**Soak** 1 · **Attack** 3 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 6m
+**Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 6m
 
-**Bite / Wing Buffet**: 1, Melee
+**Bite / Wing Buffet**: 1 die, Melee
 
-**Hiss**: 4, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
+**Hiss**: 4 dice, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Traits**: **Relentless** - keeps attacking after taking damage with no hesitation; only stops if it actually runs out of Health Levels or the target leaves its territory entirely. **Regenerating** - heals 1 Health Level at the start of each of its turns.
 
@@ -743,7 +762,7 @@ Placid until it isn't - and a full charge is genuinely lethal. It grazes with it
 
 **Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 10m
 
-**Gore**: 3, Melee
+**Gore**: 3 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -759,7 +778,7 @@ The fence it broke through wasn't the first, and the farmer stopped repairing th
 
 **Soak** 4 · **Attack** 7 · **Defense** 6 · **Health Levels** 9 · **Movement Rate** 12m
 
-**Gore**: 4, Melee
+**Gore**: 4 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -775,7 +794,7 @@ A silhouette in the field that people mistake for a shed until it moves. It's ge
 
 **Soak** 5 · **Attack** 7 · **Defense** 7 · **Health Levels** 12 · **Movement Rate** 13m
 
-**Gore**: 5, Melee
+**Gore**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -791,7 +810,7 @@ Fence posts snap clean against its shoulder and it barely slows down. Its hide h
 
 **Soak** 4 · **Attack** 7 · **Defense** 5 · **Health Levels** 8 · **Movement Rate** 10m
 
-**Gore**: 3, Melee
+**Gore**: 3 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -809,9 +828,9 @@ Fence posts snap clean against its shoulder and it barely slows down. Its hide h
 
 Territorial and stubborn, more nuisance than threat on its own. It plants its feet on high, uneven ground and doesn't give it up easily, watching an approach with flat yellow eyes before deciding whether to bluff or charge. The headbutt is a short, hard run rather than anything with real buildup, and it recovers fast enough to try again immediately. Most people walk away from one with a bruise and a grudge, not an injury.
 
-**Soak** 1 · **Attack** 3 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 8m
+**Soak** 1 · **Attack** 5 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 8m
 
-**Headbutt**: 1, Melee
+**Headbutt**: 1 die, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -825,9 +844,9 @@ Territorial and stubborn, more nuisance than threat on its own. It plants its fe
 
 Bigger horns, bigger frame, same willingness to plant its feet and not back down. It carries itself with the same stubborn confidence as any feral goat, just with enough mass behind the horns now to actually hurt someone. It doesn't run from a fight and doesn't need much provocation to start one on rough terrain where it has the advantage. Chasing it up a slope is a losing proposition either way.
 
-**Soak** 2 · **Attack** 4 · **Defense** 7 · **Health Levels** 6 · **Movement Rate** 10m
+**Soak** 2 · **Attack** 6 · **Defense** 7 · **Health Levels** 6 · **Movement Rate** 10m
 
-**Headbutt**: 2, Melee
+**Headbutt**: 2 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -841,9 +860,9 @@ Bigger horns, bigger frame, same willingness to plant its feet and not back down
 
 It stands on a rock outcrop that most animals its size couldn't reach, let alone hold. It's built like a boulder with legs, thick through the shoulders in a way that shouldn't let it climb the way it does. It holds high ground out of pure habit and defends it the same way an ordinary goat defends a ledge, just with a headbutt that can put someone over the edge for real. Fighting it anywhere but flat, open ground favors the goat.
 
-**Soak** 3 · **Attack** 4 · **Defense** 8 · **Health Levels** 9 · **Movement Rate** 11m
+**Soak** 3 · **Attack** 6 · **Defense** 8 · **Health Levels** 9 · **Movement Rate** 11m
 
-**Headbutt**: 4, Melee
+**Headbutt**: 4 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -857,9 +876,9 @@ It stands on a rock outcrop that most animals its size couldn't reach, let alone
 
 Its hide has taken on a texture closer to bark than fur, and a knife doesn't do what it should against it. The change is easy to spot up close - patches of its coat have hardened into something rough and plated, most of it concentrated across the shoulders and flanks. It still fights the way any feral goat does, headbutting from a braced stance on uneven ground. The difference is that a precisely placed hit doesn't work the way it should, and there's no soft spot left to aim for.
 
-**Soak** 2 · **Attack** 4 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 8m
+**Soak** 2 · **Attack** 6 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 8m
 
-**Headbutt**: 1, Melee
+**Headbutt**: 1 die, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -879,9 +898,9 @@ Its hide has taken on a texture closer to bark than fur, and a knife doesn't do 
 
 Not a predator - a large, panicked animal is dangerous mostly by accident. Something has already set it off before a PC gets involved: a loud noise, a snake underfoot, fire nearby. It runs in whatever direction feels like away, eyes wide and rolling, and anyone standing in that direction gets run down or kicked without the horse ever meaning to attack them specifically. Calming it, not fighting it, is usually the actual problem to solve.
 
-**Soak** 1 · **Attack** 4 · **Defense** 5 · **Health Levels** 5 · **Movement Rate** 14m
+**Soak** 1 · **Attack** 5 · **Defense** 5 · **Health Levels** 5 · **Movement Rate** 14m
 
-**Kick / Trample**: 2, Melee
+**Kick / Trample**: 2 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -895,9 +914,9 @@ Not a predator - a large, panicked animal is dangerous mostly by accident. Somet
 
 A panicked animal that's outgrown its own stable and still hasn't calmed down. It's built bigger through the chest and legs than any horse should be, and whatever spooked it originally never really wore off. It doesn't need to plant and kick to hurt someone - just running through the space a person occupies does the job. Getting it to calm down takes more than the usual patience, if it's even possible anymore.
 
-**Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 8 · **Movement Rate** 16m
+**Soak** 2 · **Attack** 6 · **Defense** 6 · **Health Levels** 8 · **Movement Rate** 16m
 
-**Kick / Trample**: 3, Melee
+**Kick / Trample**: 3 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -911,9 +930,9 @@ A panicked animal that's outgrown its own stable and still hasn't calmed down. I
 
 What starts as a runaway plow horse story usually ends with someone describing something the size of a delivery truck. It's too large for any stable or paddock built for a normal horse, which is usually how it ended up loose in the first place. Its panic hasn't diminished with its size, so it runs through fences, crowds, and anything else in its path with the same blind momentum. Standing in its way doesn't slow it down, it just adds to the wreckage.
 
-**Soak** 3 · **Attack** 5 · **Defense** 7 · **Health Levels** 11 · **Movement Rate** 17m
+**Soak** 3 · **Attack** 6 · **Defense** 7 · **Health Levels** 11 · **Movement Rate** 17m
 
-**Kick / Trample**: 5, Melee
+**Kick / Trample**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -927,9 +946,9 @@ What starts as a runaway plow horse story usually ends with someone describing s
 
 It bolts at sounds nothing else in the field even registers, and it hears you coming long before you see it. Physically it looks like any spooked horse, lathered and wide-eyed, nothing obviously changed. What's different is what sets it off - it reacts to things well outside a normal horse's hearing, which means it's rarely caught by surprise and rarely stays put long enough to be approached quietly. Anyone trying to sneak up on it should assume that's already failed.
 
-**Soak** 2 · **Attack** 5 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 14m
+**Soak** 2 · **Attack** 6 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 14m
 
-**Kick / Trample**: 2, Melee
+**Kick / Trample**: 2 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -947,9 +966,9 @@ It bolts at sounds nothing else in the field even registers, and it hears you co
 
 Low, fast, and willing to press an attack that a smarter animal would break off. It's built close to the ground, all shoulder and muscle, with tusks that curve up and out rather than down. Where a bull telegraphs its charge, a boar just comes, head low, aiming to slash upward on the way past. It keeps coming after taking a hit that would send most animals running, which is exactly what makes it worse to fight than its size suggests.
 
-**Soak** 2 · **Attack** 5 · **Defense** 5 · **Health Levels** 4 · **Movement Rate** 8m
+**Soak** 2 · **Attack** 6 · **Defense** 5 · **Health Levels** 4 · **Movement Rate** 8m
 
-**Tusks**: 2, Melee
+**Tusks**: 2 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -963,9 +982,9 @@ Low, fast, and willing to press an attack that a smarter animal would break off.
 
 It's put on enough weight to stop caring what's in its way, tusks included. Its tusks have grown to match the rest of it, curling out past where a normal boar's would stop. It doesn't spook and doesn't retreat once it's committed to a target, barreling through brush and fencing the same way it goes through flesh. Knocking it down takes real effort - its low, wide stance makes it hard to trip even when it's bleeding.
 
-**Soak** 3 · **Attack** 6 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 10m
+**Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 10m
 
-**Tusks**: 3, Melee
+**Tusks**: 3 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -979,9 +998,9 @@ It's put on enough weight to stop caring what's in its way, tusks included. Its 
 
 Hunters who've seen it describe something closer to a small truck than a hog. Its tusks alone are the size of a person's forearm, and the rest of it is built to match. It charges with the same low-slung, unstoppable momentum as any boar, just carrying enough mass now to flip a parked car if it connects wrong. Nobody who's actually faced one recommends standing your ground.
 
-**Soak** 4 · **Attack** 6 · **Defense** 7 · **Health Levels** 10 · **Movement Rate** 11m
+**Soak** 4 · **Attack** 7 · **Defense** 7 · **Health Levels** 10 · **Movement Rate** 11m
 
-**Tusks**: 4, Melee
+**Tusks**: 4 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -995,9 +1014,9 @@ Hunters who've seen it describe something closer to a small truck than a hog. It
 
 A tusk wound only makes it push harder into whatever caused it. Physically it doesn't look far off from an ordinary boar, maybe a little leaner, a little wilder around the eyes. Every hit it takes seems to feed something in it rather than slow it down, and its next attack after getting hurt comes in faster and meaner than the one before. Wounding it early in a fight is worse than not touching it at all.
 
-**Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 8m
+**Soak** 3 · **Attack** 7 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 8m
 
-**Tusks**: 2, Melee
+**Tusks**: 2 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -1017,9 +1036,9 @@ A tusk wound only makes it push harder into whatever caused it. Physically it do
 
 Cautious and opportunistic - rarely presses a fight it isn't sure it can win. It trots rather than charges, testing distance and watching for weakness before ever closing in, and a single coyote that's spotted usually just leaves. The trouble starts when there's more than one in earshot; a yip from off in the brush means backup is coming, and a pack works in loose relay, one darting in while the others wait for an opening. Anything that fights back hard enough usually just gets left alone for something easier.
 
-**Soak** 1 · **Attack** 3 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m
+**Soak** 1 · **Attack** 7 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m
 
-**Bite**: 1, Melee
+**Bite**: 3 dice, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
@@ -1033,9 +1052,9 @@ Cautious and opportunistic - rarely presses a fight it isn't sure it can win. It
 
 A genuine apex predator in its own territory, especially in numbers. It moves in an easy, tireless lope that can eat up distance for miles, and a pack coordinates without much visible signal, spreading out to cut off retreat before the first one commits to an attack. The bite is built to shear rather than puncture, going for tendons and throats rather than a single crushing hold. A lone wolf is dangerous; a pack that's already flanked its target is close to a foregone conclusion.
 
-**Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 11m
+**Soak** 2 · **Attack** 7 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 11m
 
-**Bite**: 2, Melee
+**Bite**: 3 dice, Melee
 
 **Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
@@ -1049,9 +1068,9 @@ A genuine apex predator in its own territory, especially in numbers. It moves in
 
 Bolder than a coyote has any right to be, and considerably harder to discourage. It's noticeably larger than the coyotes that usually work a territory, and it doesn't scatter at the first sign of resistance the way the species is known for. It still runs with whatever pack it can find and fights smarter for it, working a target from multiple angles instead of committing alone. Driving it off takes more than a shout and a thrown rock.
 
-**Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m
+**Soak** 2 · **Attack** 8 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m
 
-**Bite**: 2, Melee
+**Bite**: 4 dice, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
@@ -1065,9 +1084,9 @@ Bolder than a coyote has any right to be, and considerably harder to discourage.
 
 Old bones turn up in the region that are too large for any wolf on record, and the tracks nearby are fresh. It stands at a person's shoulder even before it rears up, with a bite built to match. It runs with a pack the way any wolf does, but its presence alone changes how the pack fights - once it's engaged a target, every other wolf in the group presses that same target instead of spreading thin. It's the animal that turns an ordinary wolf pack encounter into something the party doesn't walk away from lightly.
 
-**Soak** 3 · **Attack** 6 · **Defense** 7 · **Health Levels** 7 · **Movement Rate** 13m
+**Soak** 3 · **Attack** 8 · **Defense** 7 · **Health Levels** 7 · **Movement Rate** 13m
 
-**Bite**: 3, Melee
+**Bite**: 4 dice, Melee
 
 **Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
@@ -1081,9 +1100,9 @@ Old bones turn up in the region that are too large for any wolf on record, and t
 
 Ranchers who lose stock to it stop calling it a coyote at all. It's built close to wolf-sized, with a coyote's rangy frame stretched to match. It hunts in loose packs the same way coyotes always have, but a pack anchored by something this size takes down prey that should be well outside its range. Livestock losses attributed to it tend to be larger and more frequent than anything an ordinary pack manages.
 
-**Soak** 3 · **Attack** 4 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m
+**Soak** 3 · **Attack** 8 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m
 
-**Bite**: 4, Melee
+**Bite**: 5 dice, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
@@ -1097,9 +1116,9 @@ Ranchers who lose stock to it stop calling it a coyote at all. It's built close 
 
 A pack led by something the size of a horse doesn't behave like a normal pack anymore - it just wins faster. It's built at a scale that makes the rest of its pack look like pups by comparison, and it moves with the same easy confidence a horse-sized predator would have every right to. The pack organizes around it, and once it's committed to a target every wolf nearby gets the same advantage without needing to coordinate the attack directly. Fights against it end quickly, one way or the other.
 
-**Soak** 4 · **Attack** 6 · **Defense** 8 · **Health Levels** 10 · **Movement Rate** 14m
+**Soak** 4 · **Attack** 8 · **Defense** 8 · **Health Levels** 10 · **Movement Rate** 14m
 
-**Bite**: 5, Melee
+**Bite**: 5 dice, Melee
 
 **Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
@@ -1113,9 +1132,9 @@ A pack led by something the size of a horse doesn't behave like a normal pack an
 
 It crosses open ground in full moonlight and somehow still isn't the thing you notice first. There's no obvious deformity to point at - it just doesn't stand out the way something moving across open ground should. It still hunts in loose coordination with any other canines nearby, using that same invisibility to set up an attack nobody sees coming until it's already landed. Spotting it early is the whole fight, because once it's close, it isn't giving that advantage back.
 
-**Soak** 2 · **Attack** 4 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 10m
+**Soak** 2 · **Attack** 8 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 10m
 
-**Bite**: 1, Melee
+**Bite**: 3 dice, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
@@ -1129,9 +1148,9 @@ It crosses open ground in full moonlight and somehow still isn't the thing you n
 
 A second, smaller jaw has grown along its flank, and it uses both without missing a beat. The extra jaw is visible even at a distance, a second mouth set into muscle where a wolf's ribs should be, opening and closing independently of the first. It still hunts and fights within a pack the way any wolf does, but it's effectively fighting two targets' worth of attacks out of one body. Anyone assuming it fights like an ordinary wolf finds out otherwise on the second bite of the round.
 
-**Soak** 3 · **Attack** 6 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 11m
+**Soak** 3 · **Attack** 8 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 11m
 
-**Bite**: 2, Melee
+**Bite**: 3 dice, Melee
 
 **Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
@@ -1149,9 +1168,9 @@ A second, smaller jaw has grown along its flank, and it uses both without missin
 
 Small for what it's willing to fight, and it doesn't quit. Barely the size of a mid-sized dog, it has a reputation for taking on animals many times its weight and not backing down first. It moves in short, powerful bursts rather than a sustained chase, closing distance fast and going straight for a grip with teeth and claws together. There's no bluff phase and no warning display - it's already committed by the time anyone notices it, and it stays committed long after a smarter animal would have cut its losses.
 
-**Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 5 · **Movement Rate** 8m
+**Soak** 3 · **Attack** 7 · **Defense** 5 · **Health Levels** 5 · **Movement Rate** 8m
 
-**Bite / Claws**: 2, Melee
+**Bite / Claws**: 3 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -1165,9 +1184,9 @@ Small for what it's willing to fight, and it doesn't quit. Barely the size of a 
 
 It was already willing to fight anything - now it's willing to fight anything and win. It's built noticeably thicker through the shoulders and forelimbs than a normal wolverine, with claws to match. It doesn't retreat, doesn't de-escalate, and doesn't seem to calculate odds the way most predators do before committing. A fight against it only ends when one side is out of Health Levels or has genuinely broken contact - there's no middle option.
 
-**Soak** 4 · **Attack** 7 · **Defense** 6 · **Health Levels** 8 · **Movement Rate** 10m
+**Soak** 4 · **Attack** 8 · **Defense** 6 · **Health Levels** 8 · **Movement Rate** 10m
 
-**Bite / Claws**: 3, Melee
+**Bite / Claws**: 4 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -1181,9 +1200,9 @@ It was already willing to fight anything - now it's willing to fight anything an
 
 Small for a bear and large for a wolverine, which puts it somewhere no one wants to meet in a den. It's built low and dense, more like a small bear than the weasel it descends from, with the same disproportionate strength wolverines are known for scaled up to match. It still fights with total commitment, no retreat and no bluff, which at this size makes it one of the more dangerous things in these woods pound for pound. Finding its den is the real warning sign - it means there's more than one encounter coming.
 
-**Soak** 5 · **Attack** 7 · **Defense** 7 · **Health Levels** 11 · **Movement Rate** 11m
+**Soak** 5 · **Attack** 8 · **Defense** 7 · **Health Levels** 11 · **Movement Rate** 11m
 
-**Bite / Claws**: 5, Melee
+**Bite / Claws**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -1197,9 +1216,9 @@ Small for a bear and large for a wolverine, which puts it somewhere no one wants
 
 Every wound just seems to make it angrier, and it was already the wrong animal to make angry. It doesn't look substantially different from an ordinary wolverine, just as compact and mean as always. What changes is the fight itself - every Health Level it loses feeds directly into its next attack, so hurting it without finishing it is worse than leaving it alone. Committing to a fight against it means committing all the way through.
 
-**Soak** 4 · **Attack** 7 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 8m
+**Soak** 4 · **Attack** 8 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 8m
 
-**Bite / Claws**: 2, Melee
+**Bite / Claws**: 3 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -1221,9 +1240,9 @@ Every wound just seems to make it angrier, and it was already the wrong animal t
 
 Smaller and warier than a mountain lion, same basic approach. It relies on brush and shadow rather than raw size, staying low and still until a target passes close enough. The claws do fast, shallow damage rather than one crushing blow, and it's quick to break contact and vanish back into cover if the ambush doesn't go cleanly. Most people never see the one that was watching them.
 
-**Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m
+**Soak** 1 · **Attack** 7 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m
 
-**Claws**: 2, Melee
+**Claws**: 3 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception
 
@@ -1237,9 +1256,9 @@ Smaller and warier than a mountain lion, same basic approach. It relies on brush
 
 Built for cold terrain, hunts the same way a bobcat does. Wide, padded paws let it move over snow that would slow down almost anything chasing it, and tufted ears give it away as something other than an ordinary cat if a PC gets a good look. It waits in drifts or low branches for something to pass underneath, then drops in fast and quiet. Once the ambush fails, it's gone across terrain nothing on two legs can follow easily.
 
-**Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m
+**Soak** 1 · **Attack** 7 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m
 
-**Claws**: 2, Melee
+**Claws**: 3 dice, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
@@ -1253,9 +1272,9 @@ Built for cold terrain, hunts the same way a bobcat does. Wide, padded paws let 
 
 Rarely seen before it attacks - that's the point. It stalks in complete silence, using cover and elevation to close the gap unnoticed, and the first sign of it is usually the weight landing between the shoulders. A single strike from ambush does most of the work; if that doesn't end things, it tends to disengage and reposition rather than slug it out in the open. A PC who spots it first, tracks in dust or a low branch creaking under weight, has already avoided the worst version of this fight.
 
-**Soak** 2 · **Attack** 6 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 12m
+**Soak** 2 · **Attack** 8 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 12m
 
-**Claws / Bite**: 3, Melee
+**Claws / Bite**: 3 dice, Melee
 
 **Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 10
 
@@ -1269,9 +1288,9 @@ Rarely seen before it attacks - that's the point. It stalks in complete silence,
 
 Twice the size of a normal bobcat and no less willing to launch from a branch overhead. Its tufted ears and stubby tail are unmistakably bobcat, just scaled to something that can knock a grown adult flat from a standing leap. It hunts from cover the same way it always has, dropping onto a target rather than chasing one down. The added weight behind that first strike is the whole difference.
 
-**Soak** 2 · **Attack** 5 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m
+**Soak** 2 · **Attack** 8 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m
 
-**Claws**: 3, Melee
+**Claws**: 4 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception
 
@@ -1285,9 +1304,9 @@ Twice the size of a normal bobcat and no less willing to launch from a branch ov
 
 The wide paws that keep a lynx on top of snow now carry considerably more weight. Everything about it is built to the same proportions as an ordinary lynx, just larger - the ruff, the tufted ears, the oversized paws that shouldn't work as well as they do in deep snow. It hunts from ambush the way any lynx does, using drifts and treeline for cover before closing the distance fast. It moves across terrain that should slow it down without losing any of that speed.
 
-**Soak** 2 · **Attack** 5 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m
+**Soak** 2 · **Attack** 8 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m
 
-**Claws**: 3, Melee
+**Claws**: 4 dice, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
@@ -1301,9 +1320,9 @@ The wide paws that keep a lynx on top of snow now carry considerably more weight
 
 Bigger paws leave bigger prints, and the deer it's been taking down lately are elk-sized. Its frame is stretched noticeably longer than an ordinary mountain lion's, with the same lean muscle just scaled up. It hunts the way mountain lions always have, from cover, from above, from wherever the prey isn't looking, and that first strike lands with considerably more force behind it. Whatever's been feeding it lately has clearly been enough.
 
-**Soak** 3 · **Attack** 7 · **Defense** 7 · **Health Levels** 8 · **Movement Rate** 14m
+**Soak** 3 · **Attack** 9 · **Defense** 7 · **Health Levels** 8 · **Movement Rate** 14m
 
-**Claws / Bite**: 4, Melee
+**Claws / Bite**: 4 dice, Melee
 
 **Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 10
 
@@ -1317,9 +1336,9 @@ Bigger paws leave bigger prints, and the deer it's been taking down lately are e
 
 Drags a whole deer carcass up a tree with the ease of a normal bobcat carrying a rabbit. It's built with the same short-tailed, tufted-eared silhouette as an ordinary bobcat, just at a scale that changes what counts as normal prey. It still hunts from ambush and still favors cover over open ground, but there's very little in these woods it can't drag up a tree once it's caught. Encountering it usually means finding what it's already killed before finding the animal itself.
 
-**Soak** 3 · **Attack** 5 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m
+**Soak** 3 · **Attack** 8 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m
 
-**Claws**: 4, Melee
+**Claws**: 5 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception
 
@@ -1333,9 +1352,9 @@ Drags a whole deer carcass up a tree with the ease of a normal bobcat carrying a
 
 Tracks in fresh snow that look right in every way except the size. It's built at a scale that makes those tracks span twice what anyone expects from the shape alone, still perfectly proportioned to a lynx's paw. It hunts the same ambush-and-close pattern as any lynx, just with reach and weight behind the strike that an ordinary one never had. Following those tracks back to their source is not usually a good idea.
 
-**Soak** 3 · **Attack** 5 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m
+**Soak** 3 · **Attack** 8 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m
 
-**Claws**: 4, Melee
+**Claws**: 5 dice, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
@@ -1349,9 +1368,9 @@ Tracks in fresh snow that look right in every way except the size. It's built at
 
 The kind of animal state wildlife agencies quietly stop confirming exists once the reports get consistent. It's built at a scale that makes an ordinary mountain lion look like a house cat by comparison, but it moves with the same silent, low patience. It still hunts almost entirely from ambush, and a first strike from something this size against an unaware target is often the only strike that matters. The agencies that stop commenting on it usually have a reason.
 
-**Soak** 4 · **Attack** 7 · **Defense** 8 · **Health Levels** 11 · **Movement Rate** 15m
+**Soak** 4 · **Attack** 9 · **Defense** 8 · **Health Levels** 11 · **Movement Rate** 15m
 
-**Claws / Bite**: 5, Melee
+**Claws / Bite**: 5 dice, Melee
 
 **Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 10
 
@@ -1365,9 +1384,9 @@ The kind of animal state wildlife agencies quietly stop confirming exists once t
 
 It goes flat against a rock face and simply isn't there anymore, even to a trained eye. Its coat has taken on a mottled, uneven pattern that breaks its silhouette apart against stone and brush in a way an ordinary bobcat's spots never quite manage. It still hunts from ambush, but the ambush starts well before anyone realizes there's something to be ambushed by. A party that isn't actively searching for it usually doesn't find it until it's already struck.
 
-**Soak** 2 · **Attack** 5 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 10m
+**Soak** 2 · **Attack** 8 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 10m
 
-**Claws**: 2, Melee
+**Claws**: 3 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception
 
@@ -1381,9 +1400,9 @@ It goes flat against a rock face and simply isn't there anymore, even to a train
 
 It hunts just as well against a bright snowfield as it does in the dark of a pine stand, though the glare seems to throw it off. There's little visibly different about it beyond a slightly wilder look in the eyes. Its ambush hunting works best from shadow and treeline, and a fight that starts in full daylight or reflected snow glare goes noticeably worse for it than one that starts at dusk. Anyone who can force the encounter into open, bright terrain has an edge they wouldn't get against an ordinary lynx.
 
-**Soak** 2 · **Attack** 5 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 10m
+**Soak** 2 · **Attack** 8 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 10m
 
-**Claws**: 2, Melee
+**Claws**: 3 dice, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
@@ -1399,9 +1418,9 @@ It hunts just as well against a bright snowfield as it does in the dark of a pin
 
 It hears a held breath from across a clearing, which is the only warning anyone gets. Nothing about its size or build is unusual - it's the senses that have changed, sharp enough to pick a hiding target out of total darkness or heavy brush without effort. It still hunts from ambush the way any mountain lion does, except now there's effectively no such thing as hiding from it. Trying to go unnoticed around it is a bet the party will lose.
 
-**Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 12m
+**Soak** 3 · **Attack** 9 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 12m
 
-**Claws / Bite**: 3, Melee
+**Claws / Bite**: 3 dice, Melee
 
 **Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 10
 
@@ -1421,9 +1440,9 @@ It hears a held breath from across a clearing, which is the only warning anyone 
 
 Strong enough to be dangerous, but genuinely avoidant by nature. It's more likely to stand up, huff, and pop its jaw as a warning than to actually close the distance, and most encounters end with it wandering off once it's satisfied the threat has passed. What changes that is surprise at close range or cubs nearby, and either one turns a slow, cautious animal into something that closes fast and swings hard. The claws do real damage, but the fight is usually short: it either backs off almost immediately or commits completely.
 
-**Soak** 3 · **Attack** 5 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 9m
+**Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 9m
 
-**Claws**: 3, Melee
+**Claws**: 3 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8, Perception 9 vs. Stealth
 
@@ -1439,7 +1458,7 @@ Nothing about it is avoidant once it's decided to engage. It's bigger through th
 
 **Soak** 4 · **Attack** 8 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 10m
 
-**Claws**: 4, Melee
+**Claws**: 4 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -1455,7 +1474,7 @@ The largest land predator that actually hunts people as prey. It's built for col
 
 **Soak** 4 · **Attack** 8 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 9m (no penalty in water)
 
-**Claws / Bite**: 4, Melee
+**Claws / Bite**: 4 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9, Perception 8 vs. Stealth (scent)
 
@@ -1469,9 +1488,9 @@ The largest land predator that actually hunts people as prey. It's built for col
 
 Stands taller than a grizzly should and still keeps the black bear's habit of avoiding a fight when it can. Its shoulders and skull are built noticeably larger than a black bear's usual proportions, closer to what people expect from a grizzly. Despite the size it keeps the same temperament as any black bear - it wants distance, not a confrontation, and will usually retreat if given the chance. The danger is what happens if that chance doesn't come, because it's no longer the more forgiving bear to corner.
 
-**Soak** 4 · **Attack** 6 · **Defense** 6 · **Health Levels** 10 · **Movement Rate** 11m
+**Soak** 4 · **Attack** 7 · **Defense** 6 · **Health Levels** 10 · **Movement Rate** 11m
 
-**Claws**: 4, Melee
+**Claws**: 4 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8, Perception 9 vs. Stealth
 
@@ -1487,7 +1506,7 @@ Already the animal you don't want to surprise - this one just has more mass behi
 
 **Soak** 5 · **Attack** 9 · **Defense** 6 · **Health Levels** 12 · **Movement Rate** 12m
 
-**Claws**: 5, Melee
+**Claws**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -1503,7 +1522,7 @@ Already the largest thing that hunts people as food - this one just makes the ma
 
 **Soak** 5 · **Attack** 9 · **Defense** 6 · **Health Levels** 12 · **Movement Rate** 11m (no penalty in water)
 
-**Claws / Bite**: 5, Melee
+**Claws / Bite**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9, Perception 8 vs. Stealth (scent)
 
@@ -1517,9 +1536,9 @@ Already the largest thing that hunts people as food - this one just makes the ma
 
 Even avoidant, something this size can knock a car onto its side just by leaning on it wrong. It's built at a scale that makes its usual mild temperament almost beside the point - its sheer mass does damage just by existing in a space. It still avoids conflict when it can and still prefers to retreat over engaging, but startling it at close range or cornering it is a mistake with consequences an ordinary black bear could never deliver. Most of the damage it causes isn't even deliberate.
 
-**Soak** 5 · **Attack** 6 · **Defense** 7 · **Health Levels** 13 · **Movement Rate** 12m
+**Soak** 5 · **Attack** 7 · **Defense** 7 · **Health Levels** 13 · **Movement Rate** 12m
 
-**Claws**: 5, Melee
+**Claws**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8, Perception 9 vs. Stealth
 
@@ -1535,7 +1554,7 @@ The kind of thing that leaves claw marks on a tree at a height that makes hikers
 
 **Soak** 6 · **Attack** 9 · **Defense** 7 · **Health Levels** 15 · **Movement Rate** 13m
 
-**Claws**: 5, Melee
+**Claws**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -1551,7 +1570,7 @@ Ice researchers who've filmed it from a distance still argue about the scale in 
 
 **Soak** 6 · **Attack** 9 · **Defense** 7 · **Health Levels** 15 · **Movement Rate** 12m (no penalty in water)
 
-**Claws / Bite**: 5, Melee
+**Claws / Bite**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9, Perception 8 vs. Stealth (scent)
 
@@ -1565,9 +1584,9 @@ Ice researchers who've filmed it from a distance still argue about the scale in 
 
 A gash that should have laid it up for a season closes over in a matter of hours. It doesn't look obviously different from an ordinary black bear beyond how quickly a fresh wound stops looking fresh. It keeps the same avoidant temperament, retreating rather than fighting when it has the option, but a fight it does get pulled into runs longer than expected because damage just doesn't stick to it the way it should. Wearing it down takes patience most people don't have time for.
 
-**Soak** 4 · **Attack** 6 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 9m
+**Soak** 4 · **Attack** 7 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 9m
 
-**Claws**: 3, Melee
+**Claws**: 3 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8, Perception 9 vs. Stealth
 
@@ -1583,7 +1602,7 @@ Standing near it too long leaves a low ache that won't go away until you've put 
 
 **Soak** 5 · **Attack** 9 · **Defense** 5 · **Health Levels** 11 · **Movement Rate** 10m
 
-**Claws**: 4, Melee
+**Claws**: 4 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -1599,7 +1618,7 @@ Anyone who manages to land a hit on it comes away burned as much as bitten. Phys
 
 **Soak** 5 · **Attack** 9 · **Defense** 5 · **Health Levels** 11 · **Movement Rate** 9m (no penalty in water)
 
-**Claws / Bite**: 4, Melee
+**Claws / Bite**: 4 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9, Perception 8 vs. Stealth (scent)
 
@@ -1621,9 +1640,9 @@ Anyone who manages to land a hit on it comes away burned as much as bitten. Phys
 
 Nearly invisible at the waterline until it isn't. Floating with just eyes and nostrils above the surface, it looks like a log or a shadow right up until it isn't one anymore. The attack itself is a short, explosive lunge from stillness, not a chase, and once the jaws close they don't open again until whatever's caught stops moving. Anyone dragged under is fighting the water as much as the animal.
 
-**Soak** 3 · **Attack** 6 · **Defense** 4 · **Health Levels** 6 · **Movement Rate** 6m (12m in water)
+**Soak** 3 · **Attack** 8 · **Defense** 4 · **Health Levels** 6 · **Movement Rate** 6m (12m in water)
 
-**Bite**: 3, Melee
+**Bite**: 3 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception (lying in wait)
 
@@ -1637,9 +1656,9 @@ Nearly invisible at the waterline until it isn't. Floating with just eyes and no
 
 The waterline hides more of it than usual, simply because there's more to hide. Only the eyes and the ridge of its back usually break the surface, and both sit noticeably higher and wider apart than an ordinary alligator's. It hunts the same way any alligator does, holding perfectly still until a target wades or wanders close enough, then closing the distance in a single committed lunge. Its bite and the drag that follows carry more force behind them than the same move from a smaller animal.
 
-**Soak** 4 · **Attack** 7 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 8m (14m in water)
+**Soak** 4 · **Attack** 9 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 8m (14m in water)
 
-**Bite**: 4, Melee
+**Bite**: 4 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception (lying in wait)
 
@@ -1653,9 +1672,9 @@ The waterline hides more of it than usual, simply because there's more to hide. 
 
 Old-timers around the bayou have a name for this one and a firm rule about which stretch of water to avoid. It's large enough that its usual lying-in-wait posture leaves a wake even at rest, though most people never notice until it's too late to matter. It hunts with the same patience as any alligator, waiting for something to come to the water rather than chasing it on land. Whatever it drags under doesn't usually come back up on its own.
 
-**Soak** 5 · **Attack** 7 · **Defense** 6 · **Health Levels** 12 · **Movement Rate** 9m (15m in water)
+**Soak** 5 · **Attack** 9 · **Defense** 6 · **Health Levels** 12 · **Movement Rate** 9m (15m in water)
 
-**Bite**: 5, Melee
+**Bite**: 5 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception (lying in wait)
 
@@ -1669,9 +1688,9 @@ Old-timers around the bayou have a name for this one and a firm rule about which
 
 Its hide has gone from tough to genuinely impenetrable in places, thick plates where scutes used to be. The change is visible along its back and flanks, where the normal bony scutes have thickened into something closer to armor plate. It still hunts from ambush the same patient way, waiting in shallow water for a target to come within reach. Those thickened plates mean there's no longer a soft seam to aim for once the fight's underway.
 
-**Soak** 4 · **Attack** 7 · **Defense** 4 · **Health Levels** 8 · **Movement Rate** 6m (12m in water)
+**Soak** 4 · **Attack** 9 · **Defense** 4 · **Health Levels** 8 · **Movement Rate** 6m (12m in water)
 
-**Bite**: 3, Melee
+**Bite**: 3 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception (lying in wait)
 
@@ -1689,9 +1708,9 @@ Its hide has gone from tough to genuinely impenetrable in places, thick plates w
 
 Slow-moving, but its bite doesn't easily let go. Thick-bodied and patterned in black and orange-pink beads, it looks slow because it is slow, ambling rather than striking from ambush. The danger isn't speed, it's persistence: once it bites down, the jaw locks and it tends to hang on and chew rather than let go on the first try, working venom deeper the longer it stays attached. Prying it off is its own separate problem from the bite itself.
 
-**Soak** 1 · **Attack** 3 · **Defense** 5 · **Health Levels** 2 · **Movement Rate** 3m
+**Soak** 1 · **Attack** 5 · **Defense** 5 · **Health Levels** 2 · **Movement Rate** 3m
 
-**Bite**: 1, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
+**Bite**: 1 die, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
 
 **Notable Skills**: Stealth 10 vs. Perception
 
@@ -1703,9 +1722,9 @@ Slow-moving, but its bite doesn't easily let go. Thick-bodied and patterned in b
 
 It moves no faster than before, but once it clamps down the grip is considerably harder to break. It's noticeably larger and heavier than an ordinary Gila monster, though it keeps the same slow, deliberate movement that makes it easy to avoid until it's already latched on. Once its jaws close, they don't open again without a real fight to pry them loose. The venom hasn't changed, but the extra size behind the bite means the grip itself is now the bigger problem.
 
-**Soak** 2 · **Attack** 4 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 3m
+**Soak** 2 · **Attack** 6 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 3m
 
-**Bite**: 2, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
+**Bite**: 2 dice, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
 
 **Notable Skills**: Stealth 10 vs. Perception
 
@@ -1717,9 +1736,9 @@ It moves no faster than before, but once it clamps down the grip is considerably
 
 Its coloring is unmistakable even at a distance, which does nothing to help once you're in reach of it. The bright banded pattern that warns people off an ordinary Gila monster is just as visible on this one, stretched across a body big enough to be mistaken for something else entirely. It's no faster than a normal Gila monster and still telegraphs itself from a distance, but that warning does little good once someone's actually within its reach. Breaking free of its grip once it's bitten down takes considerably more effort than it used to.
 
-**Soak** 3 · **Attack** 4 · **Defense** 7 · **Health Levels** 8 · **Movement Rate** 3m
+**Soak** 3 · **Attack** 6 · **Defense** 7 · **Health Levels** 8 · **Movement Rate** 3m
 
-**Bite**: 4, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
+**Bite**: 4 dice, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
 
 **Notable Skills**: Stealth 10 vs. Perception
 
@@ -1731,9 +1750,9 @@ Its coloring is unmistakable even at a distance, which does nothing to help once
 
 The venom now carries an extra sting that lingers well past the bite itself. It looks like any Gila monster, same slow gait, same warning coloring, nothing about its size or shape has changed. The bite itself is where the difference shows up - on top of the usual grip and venom, whatever's changed in it leaves a lingering effect that doesn't clear up as quickly as the wound does. Treating a bite from it takes more than just prying the jaws loose.
 
-**Soak** 2 · **Attack** 4 · **Defense** 5 · **Health Levels** 4 · **Movement Rate** 3m
+**Soak** 2 · **Attack** 6 · **Defense** 5 · **Health Levels** 4 · **Movement Rate** 3m
 
-**Bite**: 1, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
+**Bite**: 1 die, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
 
 **Notable Skills**: Stealth 10 vs. Perception
 
@@ -1753,9 +1772,9 @@ The venom now carries an extra sting that lingers well past the bite itself. It 
 
 Camouflages well enough that the warning display is easy to miss. Its banded coloring blends almost perfectly into dead leaves and mottled ground, and unlike a rattlesnake it doesn't always bother rattling a warning first. Most bites happen because someone put a hand or foot down without looking. The strike is quick and low, and it's usually already retreating back into cover before anyone registers what happened.
 
-**Soak** 0 · **Attack** 4 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 3m
+**Soak** 0 · **Attack** 7 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 3m
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 2 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 6 vs. Perception
 
@@ -1767,9 +1786,9 @@ Camouflages well enough that the warning display is easy to miss. Its banded col
 
 Aquatic, territorial, and willing to stand its ground rather than flee into deeper water. It's often found coiled at the water's edge or draped over a low branch, and when confronted it gapes its mouth open, showing the pale interior that gives it its name, as a warning before striking. Unlike most snakes, it doesn't reliably retreat when approached; a cornered cottonmouth is as likely to hold position as to swim off. That stubbornness is exactly what leads to most bites.
 
-**Soak** 0 · **Attack** 4 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 3m (6m in water)
+**Soak** 0 · **Attack** 7 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 3m (6m in water)
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 2 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 7 vs. Perception
 
@@ -1781,9 +1800,9 @@ Aquatic, territorial, and willing to stand its ground rather than flee into deep
 
 Would rather warn than strike - the warning is the only mercy it offers. The rattle itself is unmistakable once heard, a dry buzz that means stop moving and back away slowly. It strikes in a single fast lunge, bite and retreat, and doesn't pursue afterward. The venom is the real threat, not the wound itself; anyone bitten feels fine for a few minutes before the effects start setting in.
 
-**Soak** 0 · **Attack** 5 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 3m
+**Soak** 0 · **Attack** 7 · **Defense** 7 · **Health Levels** 1 · **Movement Rate** 3m
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 2 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 7 vs. Perception
 
@@ -1797,9 +1816,9 @@ Would rather warn than strike - the warning is the only mercy it offers. The rat
 
 Its camouflage pattern has stretched with the extra length, and it's harder than ever to spot in leaf litter. It's noticeably longer than an ordinary copperhead but keeps the same banded, leaf-colored pattern, just stretched across more body to hide in. It doesn't rattle a warning the way a rattlesnake does, so the first sign of it is usually the strike itself. Its bite delivers the same venom as always, just with more force and reach behind it.
 
-**Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m
+**Soak** 1 · **Attack** 8 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m
 
-**Bite**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 3 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 6 vs. Perception
 
@@ -1811,9 +1830,9 @@ Its camouflage pattern has stretched with the extra length, and it's harder than
 
 It holds its ground in shallow water even against threats that would send an ordinary cottonmouth diving. It's built heavier and longer than a normal cottonmouth, thick enough through the body that it doesn't need to retreat the way the species usually does when threatened. It still hunts and strikes from shallow water and mud, using the same ambush patience, but it's far less willing to give up that ground once it's claimed it. Wading through its territory is a worse idea than it used to be.
 
-**Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m (8m in water)
+**Soak** 1 · **Attack** 8 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m (8m in water)
 
-**Bite**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 3 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 7 vs. Perception
 
@@ -1825,9 +1844,9 @@ It holds its ground in shallow water even against threats that would send an ord
 
 Longer than any rattler has a right to be, and the rattle itself sounds wrong - too deep, too slow. It coils into loops that take up more ground than a rattlesnake should need, and the extra length behind the strike makes its range genuinely deceptive. It still gives the same courtesy warning before striking, rattling unless it's been grabbed or stepped on directly, but by the time that rattle registers as unusually low it's often too late to matter. The bite itself carries the same venom, just delivered with more force behind it.
 
-**Soak** 1 · **Attack** 6 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m
+**Soak** 1 · **Attack** 8 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 3m
 
-**Bite**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 3 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 7 vs. Perception
 
@@ -1841,9 +1860,9 @@ Longer than any rattler has a right to be, and the rattle itself sounds wrong - 
 
 Big enough now to take small game whole, which changes how it hunts more than how it looks. Its coloring and pattern are unmistakably copperhead, just wrapped around a body that's outgrown its usual prey list entirely. It hunts with more patience now, willing to wait out something bigger than a rodent, and it still gives no warning before it strikes. The venom hasn't changed, but the size behind the bite has.
 
-**Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m
+**Soak** 2 · **Attack** 8 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m
 
-**Bite**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 4 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 6 vs. Perception
 
@@ -1855,9 +1874,9 @@ Big enough now to take small game whole, which changes how it hunts more than ho
 
 Fishermen who've hooked something in the shallows and reeled up a snake instead usually don't go back. It's thick enough through the body to be mistaken for a submerged log even when half-visible in the shallows. It hunts the same ambush pattern as any cottonmouth, holding still in muddy water until something wanders close enough to strike. Its size means that strike now covers more distance than anyone wading nearby is likely to expect.
 
-**Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m (9m in water)
+**Soak** 2 · **Attack** 8 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m (9m in water)
 
-**Bite**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 4 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 7 vs. Perception
 
@@ -1869,9 +1888,9 @@ Fishermen who've hooked something in the shallows and reeled up a snake instead 
 
 A rockslide of coiled muscle that people mistake for a fallen log until the log moves. At rest it genuinely looks like terrain, a dead branch or a fallen log, until something disturbs it and the whole coil shifts at once. It still rattles before striking out of the same instinct as any rattlesnake, but the warning window is shorter relative to its reach. Getting struck by something this size delivers both more raw damage and the same venom an ordinary rattler carries.
 
-**Soak** 2 · **Attack** 6 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m
+**Soak** 2 · **Attack** 8 · **Defense** 9 · **Health Levels** 7 · **Movement Rate** 3m
 
-**Bite**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 4 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 7 vs. Perception
 
@@ -1885,9 +1904,9 @@ A rockslide of coiled muscle that people mistake for a fallen log until the log 
 
 A second set of fangs has grown behind the first, doubling every strike it lands. The extra fangs are visible on a close look, a second pair set just behind the first along the same jawline. It strikes the way any copperhead does, without warning, but now delivers two separate bites in the time it used to take for one. Anyone who gets hit once by it should assume they got hit twice.
 
-**Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 3m
+**Soak** 1 · **Attack** 8 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 3m
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 2 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 6 vs. Perception
 
@@ -1901,9 +1920,9 @@ A second set of fangs has grown behind the first, doubling every strike it lands
 
 It can flood a stretch of shallow water with something in the air alone, no bite required. Visually it's unremarkable for a cottonmouth, same dark coloring, same low profile in the water. What's changed is that it doesn't need to land a bite to make an encounter with it dangerous - whatever it releases into the air around it spreads through a stretch of shallow water on its own. Wading in without noticing it there first is enough to start the clock.
 
-**Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 3m (6m in water)
+**Soak** 1 · **Attack** 8 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 3m (6m in water)
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 2 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 7 vs. Perception
 
@@ -1917,9 +1936,9 @@ It can flood a stretch of shallow water with something in the air alone, no bite
 
 One bite carries two different kinds of trouble now, and the second doesn't come with a rattle to warn you. It looks like an ordinary rattlesnake in every visible way, same coloring, same size, same rattle. What it delivers on a bite is different - the usual venom plus something else entirely, something that doesn't announce itself the way the rattle does. Treating a bite from it takes more than the usual antivenom response.
 
-**Soak** 1 · **Attack** 6 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 3m
+**Soak** 1 · **Attack** 8 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 3m
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 2 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 7 vs. Perception
 
@@ -1937,9 +1956,9 @@ One bite carries two different kinds of trouble now, and the second doesn't come
 
 Slow, low, and armored - the shell does most of the work. On land it moves at an unhurried, deliberate crawl that makes it look harmless right up until something gets within striking range of that neck, which extends much farther than the shell suggests it should. The bite itself is a fast, hard snap rather than a grip, capable of taking off a finger without much effort. Threatened badly enough, it just pulls in and waits the danger out rather than trying to flee.
 
-**Soak** 4 · **Attack** 4 · **Defense** 3 · **Health Levels** 4 · **Movement Rate** 3m
+**Soak** 4 · **Attack** 5 · **Defense** 3 · **Health Levels** 4 · **Movement Rate** 3m
 
-**Bite**: 2, Melee
+**Bite**: 2 dice, Melee
 
 **Traits**: **Withdraw** - as a Fast action, pulls into its shell, raising Soak to 7 until its next action.
 
@@ -1951,9 +1970,9 @@ Slow, low, and armored - the shell does most of the work. On land it moves at an
 
 The shell alone is the size of a manhole cover, and the bite behind it hasn't gotten any gentler. Its shell has the rough, ridged look of an ordinary snapper's, just scaled up to something that could double as a table. It still spends most of its time buried in mud and silt, only becoming a problem once something steps too close or reaches into the water near it. Its bite hasn't lost any of the speed that makes snapping turtles dangerous out of proportion to how slow they look.
 
-**Soak** 5 · **Attack** 5 · **Defense** 4 · **Health Levels** 7 · **Movement Rate** 3m
+**Soak** 5 · **Attack** 6 · **Defense** 4 · **Health Levels** 7 · **Movement Rate** 3m
 
-**Bite**: 3, Melee
+**Bite**: 3 dice, Melee
 
 **Traits**: **Withdraw** - as a Fast action, pulls into its shell, raising Soak to 8 until its next action.
 
@@ -1965,9 +1984,9 @@ The shell alone is the size of a manhole cover, and the bite behind it hasn't go
 
 Kayakers give the deep bend in the river a wide berth after word gets around about what's living in it. What surfaces from that bend is easily mistaken for a boulder until it moves under its own power. It hunts the same patient, buried-in-the-silt way any snapping turtle does, and its bite closes with the same sudden speed, just carrying enough force now to take a paddle, or a hand, clean off. Pulling into its shell still buys it real protection while it waits out an attack.
 
-**Soak** 6 · **Attack** 5 · **Defense** 5 · **Health Levels** 10 · **Movement Rate** 3m
+**Soak** 6 · **Attack** 6 · **Defense** 5 · **Health Levels** 10 · **Movement Rate** 3m
 
-**Bite**: 4, Melee
+**Bite**: 4 dice, Melee
 
 **Traits**: **Withdraw** - as a Fast action, pulls into its shell, raising Soak to 9 until its next action.
 
@@ -1979,9 +1998,9 @@ Kayakers give the deep bend in the river a wide berth after word gets around abo
 
 A cracked shell is back to full thickness within days, no scar to show for it. Nothing looks different about it beyond how fast a fresh crack in its shell stops being a weak point. It still withdraws into that shell the same way any snapping turtle does when threatened, using the extra protection to wait out an attack. The difference is that any damage it does take barely slows down its recovery, so an extended fight favors it more than it should.
 
-**Soak** 5 · **Attack** 5 · **Defense** 3 · **Health Levels** 6 · **Movement Rate** 3m
+**Soak** 5 · **Attack** 6 · **Defense** 3 · **Health Levels** 6 · **Movement Rate** 3m
 
-**Bite**: 2, Melee
+**Bite**: 2 dice, Melee
 
 **Traits**: **Withdraw** - as a Fast action, pulls into its shell, raising Soak to 7 until its next action. **Regenerating** - heals 1 Health Level at the start of each of its turns.
 
@@ -1999,9 +2018,9 @@ A cracked shell is back to full thickness within days, no scar to show for it. N
 
 More aggressive and far more persistent than an ordinary hive. It doesn't take much to set one off, a loud noise or a vibration near the nest is often enough, and once triggered it doesn't calm back down the way a normal hive does. It follows a target well past the point where an ordinary swarm would give up and turn back, sometimes for a genuinely uncomfortable distance. Outrunning it in a straight line rarely works; breaking line of sight and getting indoors does.
 
-**Soak** 0 · **Attack** 4 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 6m (flight)
+**Soak** 0 · **Attack** 6 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 6m (flight)
 
-**Stings**: 2, Melee
+**Stings**: 2 dice, Melee
 
 **Traits**: **Swarm** (as Rat Swarm). **Relentless** - once provoked, pursues a target across several Range Bands rather than breaking off at the hive's edge.
 
@@ -2013,9 +2032,9 @@ More aggressive and far more persistent than an ordinary hive. It doesn't take m
 
 Individually harmless, collectively a real threat if provoked. A single wasp is a minor irritation; a disturbed nest empties out fast and comes at whatever set it off as one buzzing mass. There's no negotiating with it once it's out, no warning display to read, just a wall of stings from every direction at once. Getting clear of the area matters more than fighting back.
 
-**Soak** 0 · **Attack** 4 · **Defense** 7 · **Health Levels** 2 · **Movement Rate** 6m (flight)
+**Soak** 0 · **Attack** 6 · **Defense** 7 · **Health Levels** 2 · **Movement Rate** 6m (flight)
 
-**Stings**: 1, Melee
+**Stings**: 1 die, Melee
 
 **Traits**: **Swarm** (as Rat Swarm).
 
@@ -2027,9 +2046,9 @@ Individually harmless, collectively a real threat if provoked. A single wasp is 
 
 Already more aggressive than a normal hive, and now large enough to blot out a doorway. The hive itself has grown to match, a dense mass wedged into whatever gap it found first, wall cavity or hollow trunk alike. Provoke it and it doesn't stop at the property line the way most stinging insects do - it follows, crossing yards and rooflines to keep on a fleeing target. Outrunning it means putting real distance between the hive and whoever set it off, not just ducking around a corner.
 
-**Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 8m (flight)
+**Soak** 1 · **Attack** 7 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 8m (flight)
 
-**Stings**: 3, Melee
+**Stings**: 3 dice, Melee
 
 **Traits**: **Swarm** (as Rat Swarm). **Relentless** - once provoked, pursues a target across several Range Bands rather than breaking off at the hive's edge.
 
@@ -2041,9 +2060,9 @@ Already more aggressive than a normal hive, and now large enough to blot out a d
 
 Individual wasps the size of a thumb, still moving and stinging as one body. The nest producing them scales with the wasps, a papery structure the size of a beach ball tucked under eaves or in a hollow tree. They swarm exactly the way ordinary wasps do, boiling out in a mass the instant the nest is disturbed, just with each sting landing like a solid jab instead of a prick. Running is still the right answer, but outrunning a swarm this size takes more distance than people expect.
 
-**Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 5 · **Movement Rate** 8m (flight)
+**Soak** 1 · **Attack** 7 · **Defense** 8 · **Health Levels** 5 · **Movement Rate** 8m (flight)
 
-**Stings**: 2, Melee
+**Stings**: 2 dice, Melee
 
 **Traits**: **Swarm** (as Rat Swarm).
 
@@ -2055,9 +2074,9 @@ Individual wasps the size of a thumb, still moving and stinging as one body. The
 
 The hum alone is audible from a full block away, and it doesn't stop at property lines. At this scale the swarm reads less like insects and more like a moving weather front, a dark mass rolling low over rooftops toward whatever set it off. Individual bees are large enough to see wings and legs without squinting, and the sting that comes with that size leaves more of a mark than a normal hive's would. Its pursuit habit means the smart move is never engaging the hive in the first place.
 
-**Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 9m (flight)
+**Soak** 2 · **Attack** 7 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 9m (flight)
 
-**Stings**: 4, Melee
+**Stings**: 4 dice, Melee
 
 **Traits**: **Swarm** (as Rat Swarm). **Relentless** - once provoked, pursues a target across several Range Bands rather than breaking off at the hive's edge.
 
@@ -2069,9 +2088,9 @@ The hum alone is audible from a full block away, and it doesn't stop at property
 
 The nest that produced it is the size of a car, and nobody's gone back to check on it twice. Individual wasps are now roughly the size of a forearm, visible from a distance as a moving cloud rather than a blur, and the sound alone is enough to clear a field. Tactics don't change from the ordinary swarm - overwhelm, sting, retreat if scattered - but the sheer mass involved means there's no outrunning it across open ground. Anyone who finds the nest before the swarm finds them has the only real advantage available.
 
-**Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 8 · **Movement Rate** 9m (flight)
+**Soak** 2 · **Attack** 7 · **Defense** 9 · **Health Levels** 8 · **Movement Rate** 9m (flight)
 
-**Stings**: 4, Melee
+**Stings**: 4 dice, Melee
 
 **Traits**: **Swarm** (as Rat Swarm).
 
@@ -2083,9 +2102,9 @@ The nest that produced it is the size of a car, and nobody's gone back to check 
 
 It carries a payload beyond the sting now, one it can loose all at once against anyone standing too close. The swarm itself looks like any aggressive hive, no larger than usual, so the danger isn't obvious until the cloud goes off. Once released, whatever it carries lingers over the area rather than dissipating with the bees, catching anyone who stayed close after the initial sting exchange. It still chases a fleeing target the way any Africanized hive does, which makes the cloud a parting gift as much as an opener.
 
-**Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 6m (flight)
+**Soak** 1 · **Attack** 7 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 6m (flight)
 
-**Stings**: 2, Melee
+**Stings**: 2 dice, Melee
 
 **Traits**: **Swarm** (as Rat Swarm). **Relentless** - once provoked, pursues a target across several Range Bands rather than breaking off at the hive's edge. **Toxic Cloud** - once per encounter, releases a cloud at Close range - anyone inside without protection is at Disadvantage on all rolls for the rest of the Scene (same shape as the Skunk's own Spray ability).
 
@@ -2097,9 +2116,9 @@ It carries a payload beyond the sting now, one it can loose all at once against 
 
 Every wasp in the mass carries two stingers instead of one, and both find their mark. Individually the wasps look ordinary, no bigger than a normal specimen, which means the swarm is easy to underestimate right up until it closes in. Where a standard sting lands once, this variant doubles its output on anyone within reach, working through a target's guard twice as fast as expected. It's not tougher than a normal swarm in a fight, but it ends that fight faster than most people account for.
 
-**Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 6m (flight)
+**Soak** 1 · **Attack** 7 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 6m (flight)
 
-**Stings**: 1, Melee
+**Stings**: 1 die, Melee
 
 **Traits**: **Swarm** (as Rat Swarm). **Extra Limb(s)** - makes two separate Sting attacks per round instead of one, each its own to-hit roll.
 
@@ -2115,9 +2134,9 @@ Every wasp in the mass carries two stingers instead of one, and both find their 
 
 Small, easy to miss, and painful rather than lethal in most cases. It hides under rocks, logs, and boots left outside overnight, pale and low to the ground, tail curled up and ready over its back. The sting itself is a quick jab rather than a sustained attack, delivered the instant something presses against it. Most encounters are accidents: a hand under a rock, a foot into an unchecked shoe.
 
-**Soak** 1 · **Attack** 3 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 4m
+**Soak** 1 · **Attack** 5 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 4m
 
-**Sting**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Sting**: 1 die, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 8 vs. Perception
 
@@ -2129,9 +2148,9 @@ Small, easy to miss, and painful rather than lethal in most cases. It hides unde
 
 Big enough now that the tail arcing overhead is the first thing anyone notices about it. The whole body has scaled up to match, claws included, so it reads less like something startled underfoot and more like something that has to be walked around. It still hunts the way scorpions always have, waiting low and striking fast with the tail rather than closing to grapple range. The venom hasn't changed potency, just delivery - a hit from a stinger this size lands with considerably more force behind the same disadvantage it always caused.
 
-**Soak** 2 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 4m
+**Soak** 2 · **Attack** 6 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 4m
 
-**Sting**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Sting**: 2 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 8 vs. Perception
 
@@ -2143,9 +2162,9 @@ Big enough now that the tail arcing overhead is the first thing anyone notices a
 
 It doesn't hide under a rock anymore - there isn't a rock big enough. What passes for cover at this size is a rock outcropping or a collapsed structure, and it's visible well before it's within striking range if anyone's looking. The tail strike is the same motion as ever, just heavier, driven by a body with real mass behind it. Most people who run into one do so because they didn't believe the tracks were real until they saw what left them.
 
-**Soak** 3 · **Attack** 4 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 4m
+**Soak** 3 · **Attack** 6 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 4m
 
-**Sting**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Sting**: 3 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 8 vs. Perception
 
@@ -2157,9 +2176,9 @@ It doesn't hide under a rock anymore - there isn't a rock big enough. What passe
 
 The exoskeleton has thickened into something closer to armor plate, and a blade skates off it more often than not. It's smaller overall than its Dire and Giant kin, closer to the size everyone expects a scorpion to be, which makes the armor easy to miss until a weapon that should have landed clean just glances off instead. The sting is weaker than a normal scorpion's in raw force, but nobody gets a clean called shot at a vital spot to make up the difference. It fights like it knows the shell will hold, standing its ground longer than a scorpion this size usually would.
 
-**Soak** 2 · **Attack** 4 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 4m
+**Soak** 2 · **Attack** 6 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 4m
 
-**Sting**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Sting**: 1 die, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 8 vs. Perception
 
@@ -2171,7 +2190,7 @@ The exoskeleton has thickened into something closer to armor plate, and a blade 
 
 ### Spider
 
-**Necrotic Venom** (every recluse). The bite's dice are boosted: **+2 to each die** against Soak. If any die costs a Health Level, the target is [Envenomed](rules.md#envenomed) and the flesh around the bite starts to die. The venom never costs another Health Level.
+**Necrotic Venom** (every recluse). Like every creature's natural weapon, the bite's dice are boosted: **+2 to each die** against Soak. If any die costs a Health Level, the target is [Envenomed](rules.md#envenomed) and the flesh around the bite starts to die. The venom never costs another Health Level.
 
 - **From day 2**, roll **Water + 8** once a day. This roll is never at Disadvantage, from Exhausted or from Envenomed. A successful **Medicine** roll by whoever is tending the victim that day gives it **Advantage**; Medicine doesn't end the venom on its own.
 - **Succeed on day 2**, and it's over.
@@ -2188,9 +2207,9 @@ The exoskeleton has thickened into something closer to armor plate, and a blade 
 
 Small enough to go unnoticed until the bite already happened. Glossy black with a red hourglass mark on the underside, it's rarely seen in the open, favoring dark corners, woodpiles, and undisturbed clutter. It doesn't chase or defend territory aggressively; most bites happen when a hand closes around wherever it's hiding. The bite itself barely registers at first, which is exactly the problem.
 
-**Soak** 0 · **Attack** 3 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 2m
+**Soak** 0 · **Attack** 5 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 2m
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 1 die, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 6 vs. Perception
 
@@ -2202,9 +2221,9 @@ Small enough to go unnoticed until the bite already happened. Glossy black with 
 
 Its bite is easy to shrug off in the moment - the worst of it comes later. Dull brown with a faint violin-shaped mark on its back, it hides in boxes, folded clothes, and dark undisturbed spaces rather than webs out in the open. The bite feels like nothing worse than an insect sting at first, easy to dismiss. Days later the tissue around the wound starts breaking down, and by then the animal that caused it is long gone.
 
-**Soak** 0 · **Attack** 3 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 2m
+**Soak** 0 · **Attack** 5 · **Defense** 6 · **Health Levels** 1 · **Movement Rate** 2m
 
-**Bite**: 1, Melee, [Necrotic Venom](#spider).
+**Bite**: 1 die, Melee, [Necrotic Venom](#spider).
 
 **Notable Skills**: Stealth 6 vs. Perception
 
@@ -2216,9 +2235,9 @@ Its bite is easy to shrug off in the moment - the worst of it comes later. Dull 
 
 The hourglass marking is now visible from across a room, on a body that shouldn't fit in most corners anymore. Legs alone can span a dinner plate, and the abdomen has gone glossy and swollen with venom sacs that never used to show. It still prefers ambush over pursuit, dropping from a web overhead rather than closing distance on the ground. The venom itself hasn't changed, just the size of the fangs delivering it - a single bite lands harder and closer to center mass. Anyone who's dealt with the ordinary version will recognize the shape of the threat immediately; it's the scale that throws them.
 
-**Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 2m
+**Soak** 1 · **Attack** 6 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 2m
 
-**Bite**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 2 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 6 vs. Perception
 
@@ -2230,9 +2249,9 @@ The hourglass marking is now visible from across a room, on a body that shouldn'
 
 The bite is the same shape as always, just delivered by something considerably harder to miss. The violin marking across its back has stretched along with the rest of it, easy to spot even in bad light, though the animal is exactly as shy as its ordinary-sized relatives and would rather retreat into a wall cavity than fight. Problems start when someone corners it in a boot or a stack of boxes without realizing what they've reached into. The bite hurts about as much as it looks like it should - the real danger shows up days later, when the tissue around it hasn't started healing right.
 
-**Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 2m
+**Soak** 1 · **Attack** 6 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 2m
 
-**Bite**: 2, Melee, [Necrotic Venom](#spider).
+**Bite**: 2 dice, Melee, [Necrotic Venom](#spider).
 
 **Notable Skills**: Stealth 6 vs. Perception
 
@@ -2244,9 +2263,9 @@ The bite is the same shape as always, just delivered by something considerably h
 
 Its web spans a doorway rather than a corner, strong enough to catch more than insects. The silk itself has thickened enough to snag birds and small dogs, and dead prey - some of it well beyond spider-sized - hangs wrapped in the strands like decorations nobody wants to look at closely. The spider rarely leaves the web at all, letting things wander in and die there before it bothers moving. Its size makes the bite proportionally worse, tearing as much as it punctures. Most people find the web before they find the spider, which is usually enough warning if they're paying attention.
 
-**Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 2m
+**Soak** 2 · **Attack** 6 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 2m
 
-**Bite**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 3 dice, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 6 vs. Perception
 
@@ -2258,9 +2277,9 @@ Its web spans a doorway rather than a corner, strong enough to catch more than i
 
 Found under boards in an old shed, in a size that makes the whole shed worth avoiding. It's built the same as any recluse, just scaled up past what the name implies, and it keeps to the same dark, undisturbed corners a normal one would favor. Encounters tend to happen the way they always have - somebody moves the wrong board or reaches into the wrong stack - except this time the bite comes from something the size of a dinner plate. The necrotic wound that follows is proportionally worse, and a lot harder to convince anyone it started that small.
 
-**Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 2m
+**Soak** 2 · **Attack** 6 · **Defense** 8 · **Health Levels** 7 · **Movement Rate** 2m
 
-**Bite**: 3, Melee, [Necrotic Venom](#spider).
+**Bite**: 3 dice, Melee, [Necrotic Venom](#spider).
 
 **Notable Skills**: Stealth 6 vs. Perception
 
@@ -2272,9 +2291,9 @@ Found under boards in an old shed, in a size that makes the whole shed worth avo
 
 Crushing it doesn't end the encounter cleanly - whatever's in its body finds its way onto whoever did the crushing. It's smaller than its Dire and Giant cousins, closer to a fist than a plate, and it knows it's outmatched in a straight fight, favoring retreat into cracks and gaps over standing ground. The bite itself is almost an afterthought compared to what happens if someone actually manages to land a solid hit on it. Anyone used to stomping spiders learns fast that this one punishes exactly that instinct.
 
-**Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 2m
+**Soak** 1 · **Attack** 6 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 2m
 
-**Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
+**Bite**: 1 die, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
 **Notable Skills**: Stealth 6 vs. Perception
 
@@ -2288,9 +2307,9 @@ Crushing it doesn't end the encounter cleanly - whatever's in its body finds its
 
 Whatever it carries in its bite now works faster and meaner than the necrosis it's known for. Physically it's unremarkable, smaller than its Dire and Giant kin and easy to miss in a woodpile or a dark closet, which is exactly the problem. Where the ordinary bite is a slow-building wound, this one is wearing the body down within hours, chemistry doing in an afternoon what necrosis used to take days to manage. Antitoxin only buys a better chance against it, and nursing does nothing. It's just as reluctant to fight as any recluse, but a single unlucky bite now carries consequences that show up long before anyone thinks to treat it.
 
-**Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 2m
+**Soak** 1 · **Attack** 6 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 2m
 
-**Bite**: 1, Melee, [Necrotic Venom](#spider).
+**Bite**: 1 die, Melee, [Necrotic Venom](#spider).
 
 **Notable Skills**: Stealth 6 vs. Perception
 
@@ -2310,9 +2329,9 @@ Whatever it carries in its bite now works faster and meaner than the necrosis it
 
 Silent wings make it one of the few genuinely hard-to-detect predators in the sky. Feathers along its wing edges break up the air enough that it makes almost no sound in flight, which means the first indication of an attack is often the strike itself. It hunts at night, relying on darkness and that silence together rather than speed or size. A target that's already spotted it in daylight has taken away most of what makes it dangerous.
 
-**Soak** 0 · **Attack** 5 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 14m (flight)
+**Soak** 0 · **Attack** 7 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 14m (flight)
 
-**Talons**: 1, Melee
+**Talons**: 2 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception, Perception 7 vs. Stealth
 
@@ -2326,9 +2345,9 @@ Silent wings make it one of the few genuinely hard-to-detect predators in the sk
 
 Still silent on the wing, which is somehow more unsettling given how much bigger the wing has gotten. The feather structure that mutes a normal owl's flight scales up right along with the body, so something the size of a large dog can close the last few meters without a sound. It hunts exactly the way a great horned owl always has, waiting on a high perch until dark and dropping onto anything that hasn't noticed it yet. The talons alone are enough to put someone on the ground before they've registered what hit them.
 
-**Soak** 1 · **Attack** 6 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 16m (flight)
+**Soak** 1 · **Attack** 8 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 16m (flight)
 
-**Talons**: 2, Melee
+**Talons**: 3 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception, Perception 7 vs. Stealth
 
@@ -2342,9 +2361,9 @@ Still silent on the wing, which is somehow more unsettling given how much bigger
 
 A shape passes overhead at dusk large enough to blot out the last of the light. Wingspan at this size rivals a small plane, and the silence it keeps despite that size is the detail that unsettles people who've seen it and lived to describe it. It still favors the same ambush-from-above approach as any great horned owl, using darkness and its own quiet flight to close before a target reacts. Livestock losses at dusk in owl territory this large tend to go unexplained for a while, since nobody's looking up for something that quiet.
 
-**Soak** 2 · **Attack** 6 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 17m (flight)
+**Soak** 2 · **Attack** 8 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 17m (flight)
 
-**Talons**: 4, Melee
+**Talons**: 5 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception, Perception 7 vs. Stealth
 
@@ -2358,9 +2377,9 @@ A shape passes overhead at dusk large enough to blot out the last of the light. 
 
 Daylight seems to throw off its aim in a way darkness never does. It's smaller than its Dire and Giant relatives, closer to a normal owl's size, but something about its eyes has gone wrong enough that bright light visibly bothers it - squinting, misjudged distances, hesitation before a strike. After dark it's a different animal entirely, silent and precise the way any great horned owl is at night, just with an edge that makes its nocturnal strikes land harder than they should. Anyone dealing with it in daylight has a real advantage; anyone caught out after dusk doesn't.
 
-**Soak** 1 · **Attack** 6 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 14m (flight)
+**Soak** 1 · **Attack** 8 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 14m (flight)
 
-**Talons**: 1, Melee
+**Talons**: 2 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception, Perception 7 vs. Stealth
 
@@ -2378,9 +2397,9 @@ Daylight seems to throw off its aim in a way darkness never does. It's smaller t
 
 Exceptional eyesight, and a dive that closes distance faster than it looks. It circles high overhead on wide, motionless wings, watching the ground for anything smaller than itself that moves wrong. The attack starts as a distant silhouette and ends as a body slamming in at speed, talons out, before most targets even register the dive has started. Once it's missed or been driven off, it climbs back to altitude rather than pressing the fight at ground level.
 
-**Soak** 0 · **Attack** 5 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 15m (flight)
+**Soak** 0 · **Attack** 7 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 15m (flight)
 
-**Talons**: 1, Melee
+**Talons**: 2 dice, Melee
 
 **Notable Skills**: Perception 6 vs. Stealth
 
@@ -2394,9 +2413,9 @@ Exceptional eyesight, and a dive that closes distance faster than it looks. It c
 
 Wingspan closer to a small aircraft, and the dive it drops into hits with a lot more behind it. Feathers and coloring are unmistakably hawk, just stretched across a frame that casts a real shadow when it circles overhead. It still hunts the way any red-tail does, riding thermals and watching for movement before committing to a stoop, but the impact at the bottom of that stoop can knock a grown man off his feet. Anyone caught in open ground when it starts circling has maybe a few seconds of warning before it's already committed.
 
-**Soak** 1 · **Attack** 6 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 17m (flight)
+**Soak** 1 · **Attack** 8 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 17m (flight)
 
-**Talons**: 2, Melee
+**Talons**: 3 dice, Melee
 
 **Notable Skills**: Perception 6 vs. Stealth
 
@@ -2410,9 +2429,9 @@ Wingspan closer to a small aircraft, and the dive it drops into hits with a lot 
 
 Farmers report livestock disappearing from open pasture in broad daylight, no drag marks anywhere - it simply carries them off. At this size the talons alone are the length of a hand, capable of closing around prey a normal hawk wouldn't consider. It still hunts in daylight, still relies on the same dive-and-strike approach, but the targets it's willing to go after now include things that walk on two legs. The absence of drag marks is the tell - anything it wants badly enough, it doesn't need to drag.
 
-**Soak** 2 · **Attack** 6 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 18m (flight)
+**Soak** 2 · **Attack** 8 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 18m (flight)
 
-**Talons**: 4, Melee
+**Talons**: 5 dice, Melee
 
 **Notable Skills**: Perception 6 vs. Stealth
 
@@ -2426,9 +2445,9 @@ Farmers report livestock disappearing from open pasture in broad daylight, no dr
 
 It picks out movement through fog and brush that would hide it from any normal set of eyes. It's leaner and smaller than its Dire and Giant kin, built more for tracking than raw impact, and its eyes have gone slightly too large for its skull in a way that's obvious up close. Concealment that would stop a normal predator cold barely slows it down, which means ambush tactics that work on everything else in the wilds tend to fail against this one specifically. It still dives to strike, just with a target already picked out long before anyone thought they'd been spotted.
 
-**Soak** 1 · **Attack** 6 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 15m (flight)
+**Soak** 1 · **Attack** 8 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 15m (flight)
 
-**Talons**: 1, Melee
+**Talons**: 2 dice, Melee
 
 **Notable Skills**: Perception 6 vs. Stealth
 
@@ -2446,9 +2465,9 @@ It picks out movement through fog and brush that would hide it from any normal s
 
 Not a combat threat under any normal circumstance. It circles on broad, unsteady-looking wings, tilting side to side as it rides thermals, and its interest in anything is almost always about what's already dead rather than what's still moving. Up close it's an ugly, hunched bird with a bald red head built for reaching into carrion without fouling feathers. Provoke one directly and it can vomit as a defense, which is unpleasant but not dangerous, and its actual response to almost anything is just to fly off.
 
-**Soak** 0 · **Attack** 1 · **Defense** 7 · **Health Levels** 2 · **Movement Rate** 12m (flight)
+**Soak** 0 · **Attack** 3 · **Defense** 7 · **Health Levels** 2 · **Movement Rate** 12m (flight)
 
-**Beak**: 1, Melee
+**Beak**: 1 die, Melee
 
 **Notable Skills**: Perception 7 vs. Stealth (smell)
 
@@ -2462,9 +2481,9 @@ Not a combat threat under any normal circumstance. It circles on broad, unsteady
 
 Circles higher and stays longer than a normal vulture would, patient in a way that reads as deliberate. The body underneath that patience has scaled up considerably, a wingspan wide enough that the circling shadow is visible from a long way off. It's still exactly what a turkey vulture has always been - a scavenger, not a hunter - and it won't engage unless cornered or repeatedly provoked. The unease it causes has less to do with any real threat and more with what it means that something's dying nearby, and that this is watching it happen.
 
-**Soak** 1 · **Attack** 2 · **Defense** 8 · **Health Levels** 5 · **Movement Rate** 14m (flight)
+**Soak** 1 · **Attack** 4 · **Defense** 8 · **Health Levels** 5 · **Movement Rate** 14m (flight)
 
-**Beak**: 2, Melee
+**Beak**: 2 dice, Melee
 
 **Notable Skills**: Perception 7 vs. Stealth (smell)
 
@@ -2478,9 +2497,9 @@ Circles higher and stays longer than a normal vulture would, patient in a way th
 
 A wingspan wide enough to cast a shadow you notice before you notice the bird. It's built the same as any turkey vulture, bald red head and all, just scaled to a size that makes the silhouette genuinely startling the first time someone clocks it overhead. Like its smaller relatives it avoids conflict entirely, content to wait out whatever's dying rather than hasten it along. The real hazard is incidental - a bird this size landing near a camp or a road tends to draw attention nobody wants, provoked or not.
 
-**Soak** 2 · **Attack** 2 · **Defense** 9 · **Health Levels** 8 · **Movement Rate** 15m (flight)
+**Soak** 2 · **Attack** 4 · **Defense** 9 · **Health Levels** 8 · **Movement Rate** 15m (flight)
 
-**Beak**: 3, Melee
+**Beak**: 3 dice, Melee
 
 **Notable Skills**: Perception 7 vs. Stealth (smell)
 
@@ -2494,9 +2513,9 @@ A wingspan wide enough to cast a shadow you notice before you notice the bird. I
 
 Even provoked, it rarely bites - it lets whatever's already wrong with its stomach do the work for it. Size-wise it's unremarkable, closer to a normal vulture than its Dire and Giant kin, and it keeps the same scavenger instincts, avoiding a fight unless there's no way around one. What's changed is under the skin - anyone who actually lands a solid hit on it gets splashed with whatever's circulating in its blood, which is reason enough to leave this one alone even when it isn't reason to be afraid of the beak.
 
-**Soak** 1 · **Attack** 2 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 12m (flight)
+**Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 12m (flight)
 
-**Beak**: 1, Melee
+**Beak**: 1 die, Melee
 
 **Notable Skills**: Perception 7 vs. Stealth (smell)
 
@@ -2518,7 +2537,7 @@ Even provoked, it rarely bites - it lets whatever's already wrong with its stoma
 
 Doesn't need to bite when it can simply stop a target from acting. Long, dark, and eel-shaped despite not actually being an eel, it stays mostly still in murky water rather than actively chasing anything down. The shock comes without warning and without contact, a jolt through the water itself that locks up muscles and drops whatever it hits. It doesn't need to follow up with a bite; the real danger is what happens to someone who goes rigid and sinks.
 
-**Soak** 0 · **Attack** 3 · **Defense** 6 · **Health Levels** 2 · **Movement Rate** 6m (water only)
+**Soak** 0 · **Attack** 5 · **Defense** 6 · **Health Levels** 2 · **Movement Rate** 6m (water only)
 
 **Shock**: Close range, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls until the end of their next turn.
 
@@ -2532,7 +2551,7 @@ Doesn't need to bite when it can simply stop a target from acting. Long, dark, a
 
 Longer than any recorded specimen, and the charge it puts out lasts noticeably longer too. Length is the obvious change, easily doubling what anyone would expect from the species, coiled along a riverbed or drifting through flooded channels. It hunts the same way any electric eel does, discharging at close range without needing to touch a target directly, but whatever it hits stays disadvantaged for the better part of a scene instead of shaking it off quickly. Murky water hides it completely until the current in the water gives it away.
 
-**Soak** 1 · **Attack** 4 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 8m (water only)
+**Soak** 1 · **Attack** 6 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 8m (water only)
 
 **Shock**: Close range, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls for a full Scene instead of just until the end of their next turn.
 
@@ -2546,7 +2565,7 @@ Longer than any recorded specimen, and the charge it puts out lasts noticeably l
 
 Whole sections of a flooded channel go dead quiet around it, fish and birds alike giving it a wide berth. Its reach has extended along with its length - the discharge now covers a stretch of water well beyond arm's reach, meaning proximity alone is enough to put someone in danger. Wildlife gives it space instinctively, which is often the only warning people get before wading into a channel that's gone unnaturally silent. The shock itself fades faster than the Dire variant's, but it happens from much further away.
 
-**Soak** 2 · **Attack** 4 · **Defense** 8 · **Health Levels** 8 · **Movement Rate** 9m (water only)
+**Soak** 2 · **Attack** 6 · **Defense** 8 · **Health Levels** 8 · **Movement Rate** 9m (water only)
 
 **Shock**: extends out to Short range instead of just Close, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls until the end of their next turn.
 
@@ -2560,7 +2579,7 @@ Whole sections of a flooded channel go dead quiet around it, fish and birds alik
 
 Even out of the water, standing near it too long leaves a faint prickling under the skin. It's shorter than its Dire and Giant relatives, easy to mistake for an ordinary specimen at a glance, and it still discharges the same close-range shock any electric eel does. What's new is a low, constant hazard that has nothing to do with the shock - something in its tissue is actively harmful to anyone who lingers too close, whether or not it's actively attacking. Pulling one out of the water to examine it is a worse idea than it's ever been.
 
-**Soak** 1 · **Attack** 4 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 6m (water only)
+**Soak** 1 · **Attack** 6 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 6m (water only)
 
 **Shock**: Close range, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls until the end of their next turn.
 
@@ -2582,9 +2601,9 @@ Even out of the water, standing near it too long leaves a faint prickling under 
 
 Intelligent, coordinated, and the only predator on this list that hunts great white sharks. It travels in a pod that communicates and coordinates in ways closer to strategy than instinct, herding prey, taking turns, cutting off escape routes with what looks like deliberate planning. Black and white markings make it unmistakable at the surface, and the sheer size of it, easily outweighing a great white many times over, becomes obvious fast once it's close. A pod that's decided to hunt something specific rarely fails to get it.
 
-**Soak** 4 · **Attack** 9 · **Defense** 5 · **Health Levels** 10 · **Movement Rate** 16m (water only)
+**Soak** 4 · **Attack** 8 · **Defense** 5 · **Health Levels** 10 · **Movement Rate** 16m (water only)
 
-**Bite / Ram**: 5, Melee
+**Bite / Ram**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -2598,9 +2617,9 @@ Intelligent, coordinated, and the only predator on this list that hunts great wh
 
 Even among orcas this one stands out, and the pod defers to it without hesitation. It's larger and more heavily built than any pod member around it, a difference visible even from a boat, and it moves through the water like something used to being obeyed. Orcas already hunt cooperatively, and this one coordinates its pod with a precision that goes well beyond instinct - flanking, herding, timing strikes together in ways that read as planned rather than reactive. Anyone who assumes they're dealing with one animal instead of a coordinated group is making the mistake that gets people killed around orcas generally.
 
-**Soak** 5 · **Attack** 10 · **Defense** 6 · **Health Levels** 13 · **Movement Rate** 18m (water only)
+**Soak** 5 · **Attack** 9 · **Defense** 6 · **Health Levels** 13 · **Movement Rate** 18m (water only)
 
-**Bite / Ram**: 5, Melee
+**Bite / Ram**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -2614,9 +2633,9 @@ Even among orcas this one stands out, and the pod defers to it without hesitatio
 
 The only predator that hunts great white sharks, now scaled up to a size that makes the comparison almost unfair. Its bulk alone displaces enough water to be felt before it's seen, and a ram from something this size can stove in a hull that would survive a normal orca strike without much trouble. It leads its pod with the same coordinated intelligence any orca shows, just backed by considerably more physical force when the plan calls for a direct hit. Whatever the pod is hunting, this one is usually the reason it doesn't get away.
 
-**Soak** 6 · **Attack** 10 · **Defense** 7 · **Health Levels** 16 · **Movement Rate** 19m (water only)
+**Soak** 6 · **Attack** 9 · **Defense** 7 · **Health Levels** 16 · **Movement Rate** 19m (water only)
 
-**Bite / Ram**: 5, Melee
+**Bite / Ram**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -2630,9 +2649,9 @@ The only predator that hunts great white sharks, now scaled up to a size that ma
 
 It tracks a boat's engine noise from a distance no sonar operator expects, and reacts to it before anyone sees a fin. It's smaller than its Dire and Giant kin, closer to a normal orca in size, but its senses have sharpened well past what the species is already known for. Coordinated pod tactics still apply, and this one seems to use its extra awareness to call the pod's timing rather than just its own strikes. Ambushing it, or hiding from it in murky water, doesn't work the way it would against anything else in the water.
 
-**Soak** 5 · **Attack** 10 · **Defense** 5 · **Health Levels** 12 · **Movement Rate** 16m (water only)
+**Soak** 5 · **Attack** 9 · **Defense** 5 · **Health Levels** 12 · **Movement Rate** 16m (water only)
 
-**Bite / Ram**: 5, Melee
+**Bite / Ram**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -2650,9 +2669,9 @@ It tracks a boat's engine noise from a distance no sonar operator expects, and r
 
 Not a single fish worth worrying about - the school is the threat. Dozens of small, silver-sided bodies hold together in loose formation, largely ignoring anything in the water until blood hits it. The first bite is what changes everything: once one fish draws blood, the whole school reacts almost instantly, and what was a background presence becomes a feeding frenzy converging from every direction at once. Getting out of the water fast, before that first cut happens, is the only real strategy.
 
-**Soak** 0 · **Attack** 4 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m (water only)
+**Soak** 0 · **Attack** 7 · **Defense** 7 · **Health Levels** 3 · **Movement Rate** 10m (water only)
 
-**Bite**: 2, Melee
+**Bite**: 3 dice, Melee
 
 **Traits**: **Swarm** (as Rat Swarm, water-only). **Frenzy** - once any Health Level damage lands on a target in the water, the school's Bite rises to 5 for the rest of the encounter.
 
@@ -2664,9 +2683,9 @@ Not a single fish worth worrying about - the school is the threat. Dozens of sma
 
 The individual fish have grown past what any aquarium description would call a piranha. Each one in the school is now closer to a large trout in size, and the school itself moves as a single boiling mass the way piranha always have, just with considerably more bite behind every pass. The first wound drawn in the water sets the whole school off, and its bite gets noticeably worse for the rest of the encounter once that happens. Getting out of the water fast, before the first hit lands, matters more with this variant than almost any other.
 
-**Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m (water only)
+**Soak** 1 · **Attack** 8 · **Defense** 8 · **Health Levels** 6 · **Movement Rate** 12m (water only)
 
-**Bite**: 3, Melee
+**Bite**: 4 dice, Melee
 
 **Traits**: **Swarm** (as Rat Swarm, water-only). **Frenzy** - once any Health Level damage lands on a target in the water, the school's Bite rises to 7 for the rest of the encounter.
 
@@ -2678,9 +2697,9 @@ The individual fish have grown past what any aquarium description would call a p
 
 A stretch of river that strips a carcass to bone in under a minute, no matter the size of the carcass. The individual fish are large enough now that the school reads as a single churning shape rather than countless small silver bodies, and the water itself seems to boil wherever it's feeding. Blood in the water triggers the same frenzy response as any piranha school, except at this scale the bite that follows is enough to take a limb rather than a chunk. Nothing that goes still in that stretch of river stays recognizable for long.
 
-**Soak** 2 · **Attack** 5 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m (water only)
+**Soak** 2 · **Attack** 8 · **Defense** 9 · **Health Levels** 9 · **Movement Rate** 13m (water only)
 
-**Bite**: 4, Melee
+**Bite**: 5 dice, Melee
 
 **Traits**: **Swarm** (as Rat Swarm, water-only). **Frenzy** - once any Health Level damage lands on a target in the water, the school's Bite rises to 10 for the rest of the encounter.
 
@@ -2692,9 +2711,9 @@ A stretch of river that strips a carcass to bone in under a minute, no matter th
 
 Bites that should have killed half the school instead seem to close over within the hour. Individually the fish look ordinary, no larger than a normal piranha, and the school still frenzies the instant blood hits the water the way any piranha school does. What's different is how little damage sticks - wounds that should thin the school out over a fight instead seem to knit back together, so a school that looks beaten one round is back at full strength the next. Wearing it down through attrition doesn't work the way it does against a normal school.
 
-**Soak** 1 · **Attack** 5 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 10m (water only)
+**Soak** 1 · **Attack** 8 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 10m (water only)
 
-**Bite**: 2, Melee
+**Bite**: 3 dice, Melee
 
 **Traits**: **Swarm** (as Rat Swarm, water-only). **Frenzy** - once any Health Level damage lands on a target in the water, the school's Bite rises to 5 for the rest of the encounter. **Regenerating** - heals 1 Health Level at the start of each of its turns.
 
@@ -2710,9 +2729,9 @@ Bites that should have killed half the school instead seem to close over within 
 
 Tolerates brackish and shallow water better than most sharks - which means it turns up closer to shore. It's stockier and less streamlined than a great white, built for murkier water where visibility is poor and encounters happen at close range without warning. Unlike most sharks, it doesn't reliably back off after an inconclusive first strike; it keeps pressing. Finding one in a river mouth or a flooded lowland, well away from open ocean, is exactly the kind of thing that catches people off guard.
 
-**Soak** 2 · **Attack** 6 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 12m (water only, including shallows)
+**Soak** 2 · **Attack** 8 · **Defense** 5 · **Health Levels** 6 · **Movement Rate** 12m (water only, including shallows)
 
-**Bite**: 3, Melee
+**Bite**: 3 dice, Melee
 
 **Notable Skills**: Perception 9 vs. Stealth
 
@@ -2726,9 +2745,9 @@ Tolerates brackish and shallow water better than most sharks - which means it tu
 
 The apex predator of open water, full stop. It's often close before it's noticed, a gray shape passing beneath a boat or a swimmer that vanishes as fast as it appeared. The attack itself is a single explosive strike from below or behind, meant to do maximum damage on the first pass rather than commit to a prolonged fight. If that first bite doesn't end things immediately, it tends to circle off and reassess rather than press forward blindly.
 
-**Soak** 3 · **Attack** 7 · **Defense** 5 · **Health Levels** 8 · **Movement Rate** 14m (water only)
+**Soak** 3 · **Attack** 8 · **Defense** 5 · **Health Levels** 8 · **Movement Rate** 14m (water only)
 
-**Bite**: 4, Melee
+**Bite**: 4 dice, Melee
 
 **Notable Skills**: Perception 8 vs. Stealth
 
@@ -2742,9 +2761,9 @@ The apex predator of open water, full stop. It's often close before it's noticed
 
 Comfortable in the same shallow water it always was, just a great deal harder to miss now. It keeps to the murky rivers and shallows bull sharks are known for, a habitat most people don't associate with anything shark-sized until they're already in the water with it. It never breaks off an engagement once started, which makes it considerably more dangerous than its size alone would suggest - there's no waiting it out or hoping it loses interest. Wading in bull shark territory this size means committing to a fight it won't willingly end.
 
-**Soak** 3 · **Attack** 7 · **Defense** 6 · **Health Levels** 9 · **Movement Rate** 14m (water only, including shallows)
+**Soak** 3 · **Attack** 9 · **Defense** 6 · **Health Levels** 9 · **Movement Rate** 14m (water only, including shallows)
 
-**Bite**: 4, Melee
+**Bite**: 4 dice, Melee
 
 **Notable Skills**: Perception 9 vs. Stealth
 
@@ -2758,9 +2777,9 @@ Comfortable in the same shallow water it always was, just a great deal harder to
 
 Boat captains who've clocked its length on sonar stop taking clients out past the point. It's built like any great white, just considerably longer, and it hunts the same way - a silent approach from below followed by a single committed strike. Once it's decided a target is worth attacking, there's no reasoning it out of the pass; the bite alone is often enough to end an encounter before a second attack is needed. It never leaves the water, which at least means the danger has a clear boundary.
 
-**Soak** 4 · **Attack** 8 · **Defense** 6 · **Health Levels** 11 · **Movement Rate** 16m (water only)
+**Soak** 4 · **Attack** 9 · **Defense** 6 · **Health Levels** 11 · **Movement Rate** 16m (water only)
 
-**Bite**: 5, Melee
+**Bite**: 5 dice, Melee
 
 **Notable Skills**: Perception 8 vs. Stealth
 
@@ -2774,9 +2793,9 @@ Boat captains who've clocked its length on sonar stop taking clients out past th
 
 Turns up in a river channel miles from the coast, in water that shouldn't hold anything this size. Its tolerance for fresh water hasn't changed, just the scale of what that tolerance allows it to bring inland - bridges, boat ramps, and swimming holes that were never considered shark territory suddenly are. It fights the same relentless way any bull shark does, refusing to disengage once committed, and a body this size backing that instinct up makes retreat the only reliable answer. Nobody expects to find one this far from open water, which is usually how it gets the first strike in.
 
-**Soak** 4 · **Attack** 7 · **Defense** 7 · **Health Levels** 12 · **Movement Rate** 15m (water only, including shallows)
+**Soak** 4 · **Attack** 9 · **Defense** 7 · **Health Levels** 12 · **Movement Rate** 15m (water only, including shallows)
 
-**Bite**: 5, Melee
+**Bite**: 5 dice, Melee
 
 **Notable Skills**: Perception 9 vs. Stealth
 
@@ -2790,9 +2809,9 @@ Turns up in a river channel miles from the coast, in water that shouldn't hold a
 
 The apex predator of open water just got a size class nothing else in that water can match. Length and girth both have scaled up well past any recorded great white, enough that boats its size would normally avoid become viable targets instead of obvious mismatches. It hunts with the same ambush-from-below approach as any great white, using size now instead of surprise to close the fight quickly once it commits. Confined to the water, but that's cold comfort to anything caught swimming, wading, or boating when it decides to surface.
 
-**Soak** 5 · **Attack** 8 · **Defense** 7 · **Health Levels** 14 · **Movement Rate** 17m (water only)
+**Soak** 5 · **Attack** 9 · **Defense** 7 · **Health Levels** 14 · **Movement Rate** 17m (water only)
 
-**Bite**: 5, Melee
+**Bite**: 5 dice, Melee
 
 **Notable Skills**: Perception 8 vs. Stealth
 
@@ -2806,9 +2825,9 @@ The apex predator of open water just got a size class nothing else in that water
 
 A second row of fins has grown along its underside, letting it turn and strike in the same motion. It's smaller than its Dire and Giant relatives, but the extra fins make it dramatically more maneuverable in tight water, capable of reversing direction and biting again before a target has repositioned. Like any bull shark it won't break off once it's committed to a fight. In the shallow, murky water it favors, that maneuverability means two attacks can come from angles that look like they should only allow one.
 
-**Soak** 3 · **Attack** 7 · **Defense** 5 · **Health Levels** 8 · **Movement Rate** 12m (water only, including shallows)
+**Soak** 3 · **Attack** 9 · **Defense** 5 · **Health Levels** 8 · **Movement Rate** 12m (water only, including shallows)
 
-**Bite**: 3, Melee
+**Bite**: 3 dice, Melee
 
 **Notable Skills**: Perception 9 vs. Stealth
 
@@ -2822,9 +2841,9 @@ A second row of fins has grown along its underside, letting it turn and strike i
 
 The first taste of blood in the water only sharpens whatever comes next. It's smaller than its Dire and Giant kin, though still every bit a great white in shape and behavior, ambushing from below and committing hard once it strikes. The difference shows up mid-fight - every Health Level it loses seems to accelerate it rather than slow it down, turning a wounded shark into a faster, more aggressive one instead of a dying one. Drawing blood early is usually the wrong call against this variant.
 
-**Soak** 4 · **Attack** 8 · **Defense** 5 · **Health Levels** 10 · **Movement Rate** 14m (water only)
+**Soak** 4 · **Attack** 9 · **Defense** 5 · **Health Levels** 10 · **Movement Rate** 14m (water only)
 
-**Bite**: 4, Melee
+**Bite**: 4 dice, Melee
 
 **Notable Skills**: Perception 8 vs. Stealth
 
@@ -2846,7 +2865,7 @@ Placid in a herd, catastrophic when charging. A full-grown bison looks slow and 
 
 **Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 11m
 
-**Gore / Trample**: 3, Melee
+**Gore / Trample**: 3 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -2862,7 +2881,7 @@ A herd animal that's outgrown the herd, and it doesn't wait for the rest to catc
 
 **Soak** 4 · **Attack** 7 · **Defense** 6 · **Health Levels** 10 · **Movement Rate** 13m
 
-**Gore / Trample**: 4, Melee
+**Gore / Trample**: 4 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -2878,7 +2897,7 @@ The ground shakes before it's even visible over the ridge line. At this size a s
 
 **Soak** 5 · **Attack** 7 · **Defense** 7 · **Health Levels** 13 · **Movement Rate** 14m
 
-**Gore / Trample**: 5, Melee
+**Gore / Trample**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -2894,7 +2913,7 @@ Dropping it doesn't end the danger - what happens next is best watched from well
 
 **Soak** 4 · **Attack** 7 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 11m
 
-**Gore / Trample**: 3, Melee
+**Gore / Trample**: 3 dice, Melee
 
 **Notable Skills**: Athletics Target Number 9
 
@@ -2914,7 +2933,7 @@ Smaller and less consistently aggressive than a moose, same basic shape. It trav
 
 **Soak** 2 · **Attack** 5 · **Defense** 6 · **Health Levels** 5 · **Movement Rate** 12m
 
-**Antlers / Hooves**: 2, Melee
+**Antlers / Hooves**: 2 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -2930,7 +2949,7 @@ The largest deer species, and surprisingly willing to fight when provoked. It st
 
 **Soak** 3 · **Attack** 6 · **Defense** 5 · **Health Levels** 7 · **Movement Rate** 11m
 
-**Antlers / Hooves**: 3, Melee
+**Antlers / Hooves**: 3 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -2946,7 +2965,7 @@ Bigger, louder during rut, and considerably less likely to back off from a road 
 
 **Soak** 3 · **Attack** 6 · **Defense** 7 · **Health Levels** 8 · **Movement Rate** 14m
 
-**Antlers / Hooves**: 3, Melee
+**Antlers / Hooves**: 3 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -2962,7 +2981,7 @@ The rack alone is wider than most doorframes, and it's just as willing to fight 
 
 **Soak** 4 · **Attack** 7 · **Defense** 6 · **Health Levels** 10 · **Movement Rate** 13m
 
-**Antlers / Hooves**: 4, Melee
+**Antlers / Hooves**: 4 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -2978,7 +2997,7 @@ A rack that would need its own trailer, on an animal that's stopped being camera
 
 **Soak** 4 · **Attack** 6 · **Defense** 8 · **Health Levels** 11 · **Movement Rate** 15m
 
-**Antlers / Hooves**: 5, Melee
+**Antlers / Hooves**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -2994,7 +3013,7 @@ Drivers who've hit a normal moose describe the damage as bad. Nobody's walked aw
 
 **Soak** 5 · **Attack** 7 · **Defense** 7 · **Health Levels** 13 · **Movement Rate** 14m
 
-**Antlers / Hooves**: 5, Melee
+**Antlers / Hooves**: 5 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -3010,7 +3029,7 @@ It stands motionless at the treeline for so long that most people walk right pas
 
 **Soak** 3 · **Attack** 6 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 12m
 
-**Antlers / Hooves**: 2, Melee
+**Antlers / Hooves**: 2 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -3028,7 +3047,7 @@ The hide over its chest and flanks has hardened into something closer to bark th
 
 **Soak** 4 · **Attack** 7 · **Defense** 5 · **Health Levels** 9 · **Movement Rate** 11m
 
-**Antlers / Hooves**: 3, Melee
+**Antlers / Hooves**: 3 dice, Melee
 
 **Notable Skills**: Athletics Target Number 8
 
@@ -3048,9 +3067,9 @@ The hide over its chest and flanks has hardened into something closer to bark th
 
 Small, camouflaged, and no real combat threat. Its coat shifts with the season, white against snow in winter and a mottled brown-gray the rest of the year, which does most of the work of keeping it unseen. It's curious rather than aggressive, often approaching a camp or a person out of interest in food rather than any intent to fight. A PC is far more likely to lose a boot or a food bag to one than to take a bite.
 
-**Soak** 0 · **Attack** 2 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 10m
+**Soak** 0 · **Attack** 3 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 10m
 
-**Bite**: 1, Melee
+**Bite**: 1 die, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception, Perception 8 vs. Stealth
 
@@ -3064,9 +3083,9 @@ Small, camouflaged, and no real combat threat. Its coat shifts with the season, 
 
 Bigger than the terrain usually allows, though the coat and the caution are exactly the same. It's closer to wolf-sized than fox-sized, a mismatch that throws off anyone tracking it by old assumptions about how big the prints should be. It keeps the same skittish, opportunistic temperament as any arctic fox, preferring to scavenge and retreat over engaging directly, and its white coat still vanishes against snow the instant it goes still. The size mostly matters when it decides not to retreat.
 
-**Soak** 1 · **Attack** 3 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 12m
+**Soak** 1 · **Attack** 4 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 12m
 
-**Bite**: 2, Melee
+**Bite**: 2 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception, Perception 8 vs. Stealth
 
@@ -3080,9 +3099,9 @@ Bigger than the terrain usually allows, though the coat and the caution are exac
 
 Tracks in fresh snow the size of a wolf's, from an animal that's never been mistaken for one before. At this scale the proportions are still unmistakably fox - short legs, rounded ears, thick coat - just stretched well past anything the species should reach. It's cautious by nature like any arctic fox, more likely to shadow a group from a distance than approach directly, which makes the size discrepancy in the tracks the first real clue something's wrong. Cornering one is a worse idea than the caution it usually shows would suggest.
 
-**Soak** 2 · **Attack** 3 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 13m
+**Soak** 2 · **Attack** 4 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 13m
 
-**Bite**: 3, Melee
+**Bite**: 3 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception, Perception 8 vs. Stealth
 
@@ -3096,9 +3115,9 @@ Tracks in fresh snow the size of a wolf's, from an animal that's never been mist
 
 Against a snowfield it simply isn't there until it wants to be, coat and all. It's smaller than its Dire and Giant relatives, close to a normal arctic fox's size, which only helps it disappear more completely against open snow. Its coat has gone past simple seasonal white into something that actively breaks up its outline, layering on top of the camouflage every arctic fox already has. Tracking it by sight in its own territory is close to pointless; anyone relying on eyes alone in the snow is going to lose it.
 
-**Soak** 1 · **Attack** 3 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 10m
+**Soak** 1 · **Attack** 4 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 10m
 
-**Bite**: 1, Melee
+**Bite**: 1 die, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception, Perception 8 vs. Stealth
 
@@ -3116,9 +3135,9 @@ Against a snowfield it simply isn't there until it wants to be, coat and all. It
 
 Unlike most owls, hunts by day as often as by night. Nearly pure white with a round, expressionless face and piercing yellow eyes, it perches openly on high ground rather than hiding in tree cover the way most owls do. That daytime visibility makes it easier to spot coming than a great horned owl, but it still strikes in a fast, silent dive that closes distance before most targets react. Once it's missed its attack, it tends to return to open, elevated ground rather than pressing a fight at close range.
 
-**Soak** 0 · **Attack** 4 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 14m (flight)
+**Soak** 0 · **Attack** 7 · **Defense** 8 · **Health Levels** 2 · **Movement Rate** 14m (flight)
 
-**Talons**: 1, Melee
+**Talons**: 2 dice, Melee
 
 **Notable Skills**: Perception 7 vs. Stealth
 
@@ -3132,9 +3151,9 @@ Unlike most owls, hunts by day as often as by night. Nearly pure white with a ro
 
 The wingspan alone casts a shadow across the snow that most prey mistake for a cloud passing over. Everything about it is scaled-up snowy owl - white plumage, yellow eyes, the same broad silent wings - just large enough that the shadow it throws crossing open tundra is the first sign anything's overhead. It hunts in daylight as readily as at night, unlike its darkness-bound relatives, striking anything that hasn't noticed it coming. The talons alone are enough to put a person down in the first pass.
 
-**Soak** 1 · **Attack** 5 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 16m (flight)
+**Soak** 1 · **Attack** 8 · **Defense** 9 · **Health Levels** 5 · **Movement Rate** 16m (flight)
 
-**Talons**: 2, Melee
+**Talons**: 3 dice, Melee
 
 **Notable Skills**: Perception 7 vs. Stealth
 
@@ -3148,9 +3167,9 @@ The wingspan alone casts a shadow across the snow that most prey mistake for a c
 
 Research stations that track it by transponder alone still don't believe the wingspan readings. At this size it's less a bird overhead than a shape blotting out a section of sky, silent despite the wingspan the way snowy owls always manage regardless of size. It hunts day or night with equal effectiveness, striking without the warning a darkness-only predator would give. Open tundra offers no real cover from something that can spot movement from that high and close the distance before anyone reacts.
 
-**Soak** 2 · **Attack** 5 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 17m (flight)
+**Soak** 2 · **Attack** 8 · **Defense** 10 · **Health Levels** 8 · **Movement Rate** 17m (flight)
 
-**Talons**: 4, Melee
+**Talons**: 5 dice, Melee
 
 **Notable Skills**: Perception 7 vs. Stealth
 
@@ -3164,9 +3183,9 @@ Research stations that track it by transponder alone still don't believe the win
 
 It hunts equally well against the glare of open snow at noon or in the dead dark of a polar night, though never both in the same breath. It's smaller than its Dire and Giant kin, close to a normal snowy owl's size, and its round yellow eyes seem to shift almost imperceptibly between the two states. Like any snowy owl it strikes regardless of light level, but this one hits harder in full dark or full glare and noticeably softer in between, an inconsistency that's easy to miss until it's already been tested in a fight.
 
-**Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 14m (flight)
+**Soak** 1 · **Attack** 8 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 14m (flight)
 
-**Talons**: 1, Melee
+**Talons**: 2 dice, Melee
 
 **Notable Skills**: Perception 7 vs. Stealth
 

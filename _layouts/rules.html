@@ -84,6 +84,44 @@
     border-radius: var(--radius);
     border: 1px solid var(--panel-border);
   }
+  /* The bestiary's "how to read a stat block" key: one card per line of
+     an example stat block, each saying who rolls. A solid pill is the
+     player's roll, an outline is the creature's. */
+  .key-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 0.9rem;
+    margin: 1.2rem 0;
+  }
+  .key-card {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 0.8rem 1rem;
+  }
+  .key-card p { margin: 0.45rem 0 0; }
+  .key-head { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+  .key-title { font-weight: 600; }
+  .key-pill {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+  }
+  .key-you .key-pill { background: var(--accent); color: var(--bg); }
+  .key-uses { font-size: 0.85rem; color: var(--text-dim); }
+  .key-uses span {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.72rem;
+    margin-right: 0.4rem;
+  }
+  .key-note { color: var(--text-dim); font-size: 0.92rem; }
   table.adversary-card {
     width: 100%;
     border-collapse: separate;
