@@ -1,0 +1,146 @@
+<svg width="680" height="600" viewBox="0 0 680 600" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>The exact odds of a 2d10 roll, with Advantage and Disadvantage</title>
+<desc>Computed from every possible roll. Top: the chance of each total from 2 to 20. A normal 2d10 is a symmetric triangle peaking at 11. Advantage (3d10, keep the lowest two) and Disadvantage (3d10, keep the highest two) peak at 8 and 14, are narrower, and lean, with a long tail toward the middle; all three peak at exactly 10 percent. Means are 8.525, 11 and 13.475. Bottom: the chance to succeed at each target number, rolling equal to or under it. At a target of 11, Advantage succeeds 78.5 percent of the time, a normal roll 55 percent, Disadvantage 29 percent.</desc>
+<line x1="56" y1="22" x2="74" y2="22" stroke="#4caf7d" stroke-width="3"/>
+<text x="80.0" y="26.0" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf5fb" text-anchor="start">Advantage</text>
+<text x="152.6" y="26.0" font-family="sans-serif" font-size="11" font-weight="normal" fill="#5c7d92" text-anchor="start">mean 8.525</text>
+<line x1="261" y1="22" x2="279" y2="22" stroke="#8fadbe" stroke-width="3"/>
+<text x="285.0" y="26.0" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf5fb" text-anchor="start">Normal</text>
+<text x="335.4" y="26.0" font-family="sans-serif" font-size="11" font-weight="normal" fill="#5c7d92" text-anchor="start">mean 11</text>
+<line x1="466" y1="22" x2="484" y2="22" stroke="#d1584f" stroke-width="3"/>
+<text x="490.0" y="26.0" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf5fb" text-anchor="start">Disadvantage</text>
+<text x="584.8" y="26.0" font-family="sans-serif" font-size="11" font-weight="normal" fill="#5c7d92" text-anchor="start">mean 13.475</text>
+<text x="56.0" y="54.0" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf5fb" text-anchor="start">Chance of rolling each total</text>
+<line x1="56" y1="229.1" x2="660" y2="229.1" stroke="#3a4552" stroke-width="1" opacity="0.45"/>
+<text x="48.0" y="233.1" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="end">2%</text>
+<line x1="56" y1="190.3" x2="660" y2="190.3" stroke="#3a4552" stroke-width="1" opacity="0.45"/>
+<text x="48.0" y="194.3" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="end">4%</text>
+<line x1="56" y1="151.4" x2="660" y2="151.4" stroke="#3a4552" stroke-width="1" opacity="0.45"/>
+<text x="48.0" y="155.4" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="end">6%</text>
+<line x1="56" y1="112.6" x2="660" y2="112.6" stroke="#3a4552" stroke-width="1" opacity="0.45"/>
+<text x="48.0" y="116.6" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="end">8%</text>
+<line x1="56" y1="73.7" x2="660" y2="73.7" stroke="#3a4552" stroke-width="1" opacity="0.45"/>
+<text x="48.0" y="77.7" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="end">10%</text>
+<line x1="56" y1="268" x2="660" y2="268" stroke="#3a4552" stroke-width="1"/>
+<text x="56.0" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">2</text>
+<text x="89.6" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">3</text>
+<text x="123.1" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">4</text>
+<text x="156.7" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">5</text>
+<text x="190.2" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">6</text>
+<text x="223.8" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">7</text>
+<text x="257.3" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">8</text>
+<text x="290.9" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">9</text>
+<text x="324.4" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">10</text>
+<text x="358.0" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">11</text>
+<text x="391.6" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">12</text>
+<text x="425.1" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">13</text>
+<text x="458.7" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">14</text>
+<text x="492.2" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">15</text>
+<text x="525.8" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">16</text>
+<text x="559.3" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">17</text>
+<text x="592.9" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">18</text>
+<text x="626.4" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">19</text>
+<text x="660.0" y="284.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">20</text>
+<polyline points="56.0,248.6 89.6,229.1 123.1,209.7 156.7,190.3 190.2,170.9 223.8,151.4 257.3,132.0 290.9,112.6 324.4,93.1 358.0,73.7 391.6,93.1 425.1,112.6 458.7,132.0 492.2,151.4 525.8,170.9 559.3,190.3 592.9,209.7 626.4,229.1 660.0,248.6" fill="none" stroke="#8fadbe" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="56.0" cy="248.6" r="2.6" fill="#8fadbe"/>
+<circle cx="89.6" cy="229.1" r="2.6" fill="#8fadbe"/>
+<circle cx="123.1" cy="209.7" r="2.6" fill="#8fadbe"/>
+<circle cx="156.7" cy="190.3" r="2.6" fill="#8fadbe"/>
+<circle cx="190.2" cy="170.9" r="2.6" fill="#8fadbe"/>
+<circle cx="223.8" cy="151.4" r="2.6" fill="#8fadbe"/>
+<circle cx="257.3" cy="132.0" r="2.6" fill="#8fadbe"/>
+<circle cx="290.9" cy="112.6" r="2.6" fill="#8fadbe"/>
+<circle cx="324.4" cy="93.1" r="2.6" fill="#8fadbe"/>
+<circle cx="358.0" cy="73.7" r="2.6" fill="#8fadbe"/>
+<circle cx="391.6" cy="93.1" r="2.6" fill="#8fadbe"/>
+<circle cx="425.1" cy="112.6" r="2.6" fill="#8fadbe"/>
+<circle cx="458.7" cy="132.0" r="2.6" fill="#8fadbe"/>
+<circle cx="492.2" cy="151.4" r="2.6" fill="#8fadbe"/>
+<circle cx="525.8" cy="170.9" r="2.6" fill="#8fadbe"/>
+<circle cx="559.3" cy="190.3" r="2.6" fill="#8fadbe"/>
+<circle cx="592.9" cy="209.7" r="2.6" fill="#8fadbe"/>
+<circle cx="626.4" cy="229.1" r="2.6" fill="#8fadbe"/>
+<circle cx="660.0" cy="248.6" r="2.6" fill="#8fadbe"/>
+<polyline points="56.0,213.6 89.6,168.9 123.1,132.0 156.7,104.8 190.2,85.4 223.8,75.7 257.3,73.7 290.9,81.5 324.4,97.0 358.0,122.3 391.6,149.5 425.1,174.7 458.7,196.1 492.2,215.5 525.8,231.1 559.3,244.7 592.9,254.4 626.4,262.2 660.0,266.1" fill="none" stroke="#4caf7d" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="56.0" cy="213.6" r="2.6" fill="#4caf7d"/>
+<circle cx="89.6" cy="168.9" r="2.6" fill="#4caf7d"/>
+<circle cx="123.1" cy="132.0" r="2.6" fill="#4caf7d"/>
+<circle cx="156.7" cy="104.8" r="2.6" fill="#4caf7d"/>
+<circle cx="190.2" cy="85.4" r="2.6" fill="#4caf7d"/>
+<circle cx="223.8" cy="75.7" r="2.6" fill="#4caf7d"/>
+<circle cx="257.3" cy="73.7" r="2.6" fill="#4caf7d"/>
+<circle cx="290.9" cy="81.5" r="2.6" fill="#4caf7d"/>
+<circle cx="324.4" cy="97.0" r="2.6" fill="#4caf7d"/>
+<circle cx="358.0" cy="122.3" r="2.6" fill="#4caf7d"/>
+<circle cx="391.6" cy="149.5" r="2.6" fill="#4caf7d"/>
+<circle cx="425.1" cy="174.7" r="2.6" fill="#4caf7d"/>
+<circle cx="458.7" cy="196.1" r="2.6" fill="#4caf7d"/>
+<circle cx="492.2" cy="215.5" r="2.6" fill="#4caf7d"/>
+<circle cx="525.8" cy="231.1" r="2.6" fill="#4caf7d"/>
+<circle cx="559.3" cy="244.7" r="2.6" fill="#4caf7d"/>
+<circle cx="592.9" cy="254.4" r="2.6" fill="#4caf7d"/>
+<circle cx="626.4" cy="262.2" r="2.6" fill="#4caf7d"/>
+<circle cx="660.0" cy="266.1" r="2.6" fill="#4caf7d"/>
+<polyline points="56.0,266.1 89.6,262.2 123.1,254.4 156.7,244.7 190.2,231.1 223.8,215.5 257.3,196.1 290.9,174.7 324.4,149.5 358.0,122.3 391.6,97.0 425.1,81.5 458.7,73.7 492.2,75.7 525.8,85.4 559.3,104.8 592.9,132.0 626.4,168.9 660.0,213.6" fill="none" stroke="#d1584f" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="56.0" cy="266.1" r="2.6" fill="#d1584f"/>
+<circle cx="89.6" cy="262.2" r="2.6" fill="#d1584f"/>
+<circle cx="123.1" cy="254.4" r="2.6" fill="#d1584f"/>
+<circle cx="156.7" cy="244.7" r="2.6" fill="#d1584f"/>
+<circle cx="190.2" cy="231.1" r="2.6" fill="#d1584f"/>
+<circle cx="223.8" cy="215.5" r="2.6" fill="#d1584f"/>
+<circle cx="257.3" cy="196.1" r="2.6" fill="#d1584f"/>
+<circle cx="290.9" cy="174.7" r="2.6" fill="#d1584f"/>
+<circle cx="324.4" cy="149.5" r="2.6" fill="#d1584f"/>
+<circle cx="358.0" cy="122.3" r="2.6" fill="#d1584f"/>
+<circle cx="391.6" cy="97.0" r="2.6" fill="#d1584f"/>
+<circle cx="425.1" cy="81.5" r="2.6" fill="#d1584f"/>
+<circle cx="458.7" cy="73.7" r="2.6" fill="#d1584f"/>
+<circle cx="492.2" cy="75.7" r="2.6" fill="#d1584f"/>
+<circle cx="525.8" cy="85.4" r="2.6" fill="#d1584f"/>
+<circle cx="559.3" cy="104.8" r="2.6" fill="#d1584f"/>
+<circle cx="592.9" cy="132.0" r="2.6" fill="#d1584f"/>
+<circle cx="626.4" cy="168.9" r="2.6" fill="#d1584f"/>
+<circle cx="660.0" cy="213.6" r="2.6" fill="#d1584f"/>
+<text x="358.0" y="302.0" font-family="sans-serif" font-size="11" font-weight="normal" fill="#5c7d92" text-anchor="middle">Roll total</text>
+<text x="56.0" y="336.0" font-family="sans-serif" font-size="12" font-weight="bold" fill="#eaf5fb" text-anchor="start">Chance to succeed, by target number (roll equal to or under it)</text>
+<line x1="56" y1="491.5" x2="660" y2="491.5" stroke="#3a4552" stroke-width="1" opacity="0.45"/>
+<text x="48.0" y="495.5" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="end">25%</text>
+<line x1="56" y1="443.0" x2="660" y2="443.0" stroke="#3a4552" stroke-width="1" opacity="0.45"/>
+<text x="48.0" y="447.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="end">50%</text>
+<line x1="56" y1="394.5" x2="660" y2="394.5" stroke="#3a4552" stroke-width="1" opacity="0.45"/>
+<text x="48.0" y="398.5" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="end">75%</text>
+<line x1="56" y1="346.0" x2="660" y2="346.0" stroke="#3a4552" stroke-width="1" opacity="0.45"/>
+<text x="48.0" y="350.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="end">100%</text>
+<line x1="56" y1="540" x2="660" y2="540" stroke="#3a4552" stroke-width="1"/>
+<text x="56.0" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">2</text>
+<text x="89.6" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">3</text>
+<text x="123.1" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">4</text>
+<text x="156.7" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">5</text>
+<text x="190.2" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">6</text>
+<text x="223.8" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">7</text>
+<text x="257.3" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">8</text>
+<text x="290.9" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">9</text>
+<text x="324.4" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">10</text>
+<text x="358.0" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">11</text>
+<text x="391.6" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">12</text>
+<text x="425.1" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">13</text>
+<text x="458.7" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">14</text>
+<text x="492.2" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">15</text>
+<text x="525.8" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">16</text>
+<text x="559.3" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">17</text>
+<text x="592.9" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">18</text>
+<text x="626.4" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">19</text>
+<text x="660.0" y="556.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="middle">20</text>
+<polyline points="56.0,538.1 89.6,534.2 123.1,528.4 156.7,520.6 190.2,510.9 223.8,499.3 257.3,485.7 290.9,470.2 324.4,452.7 358.0,433.3 391.6,415.8 425.1,400.3 458.7,386.7 492.2,375.1 525.8,365.4 559.3,357.6 592.9,351.8 626.4,347.9 660.0,346.0" fill="none" stroke="#8fadbe" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="56.0,534.6 89.6,524.7 123.1,511.1 156.7,494.8 190.2,476.6 223.8,457.4 257.3,438.0 290.9,419.3 324.4,402.3 358.0,387.7 391.6,375.9 425.1,366.6 458.7,359.4 492.2,354.1 525.8,350.5 559.3,348.1 592.9,346.8 626.4,346.2 660.0,346.0" fill="none" stroke="#4caf7d" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="56.0,539.8 89.6,539.2 123.1,537.9 156.7,535.5 190.2,531.9 223.8,526.6 257.3,519.4 290.9,510.1 324.4,498.3 358.0,483.7 391.6,466.7 425.1,448.0 458.7,428.6 492.2,409.4 525.8,391.2 559.3,374.9 592.9,361.3 626.4,351.4 660.0,346.0" fill="none" stroke="#d1584f" stroke-width="2" stroke-linejoin="round"/>
+<line x1="358.0" y1="346" x2="358.0" y2="540" stroke="#3a4552" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="358.0" cy="387.7" r="3.5" fill="#4caf7d"/>
+<text x="365.0" y="391.7" font-family="sans-serif" font-size="10" font-weight="bold" fill="#4caf7d" text-anchor="start">78.5%</text>
+<circle cx="358.0" cy="433.3" r="3.5" fill="#8fadbe"/>
+<text x="365.0" y="437.3" font-family="sans-serif" font-size="10" font-weight="bold" fill="#8fadbe" text-anchor="start">55.0%</text>
+<circle cx="358.0" cy="483.7" r="3.5" fill="#d1584f"/>
+<text x="365.0" y="487.7" font-family="sans-serif" font-size="10" font-weight="bold" fill="#d1584f" text-anchor="start">29.0%</text>
+<text x="358.0" y="574.0" font-family="sans-serif" font-size="11" font-weight="normal" fill="#5c7d92" text-anchor="middle">Target number</text>
+<text x="660.0" y="594.0" font-family="sans-serif" font-size="10" font-weight="normal" fill="#5c7d92" text-anchor="end">Lower is better. Every total from all 100 two-die and 1,000 three-die rolls.</text>
+</svg>
