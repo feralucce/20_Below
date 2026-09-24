@@ -61,6 +61,26 @@
     li.addEventListener('focusout', scheduleClose);
   });
 
+  /* A menu that would run past the right edge opens leftward instead
+   * (.align-right in site-nav.css). Measured rather than fixed to one
+   * menu, because the bar wraps and which menu sits near the edge
+   * depends on the window. The mobile panel lists menus in place, where
+   * they are static and this does nothing. */
+  function alignMenus() {
+    var edge = document.documentElement.clientWidth - 8;
+    Array.prototype.forEach.call(items, function (li) {
+      var menu = li.querySelector('.dropdown');
+      if (!menu) return;
+      menu.classList.remove('align-right');
+      if (getComputedStyle(menu).position !== 'absolute') return;
+      if (li.getBoundingClientRect().left + menu.offsetWidth > edge) {
+        menu.classList.add('align-right');
+      }
+    });
+  }
+  alignMenus();
+  window.addEventListener('resize', alignMenus);
+
   /* Escape closes whatever is open and returns focus somewhere sensible. */
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;

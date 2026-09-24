@@ -208,6 +208,15 @@
      This works now where it did not before: the lip belongs to the panel,
      which is only pointer-events:auto while open, and opening is now the
      script's job rather than something the lip has to accomplish. */
+  /* A menu near the right edge opens leftward from its item instead of
+     running off the window. Hidden menus still take up room, so without
+     this the right-most one widened every page and scrolled it sideways.
+     site-nav.js sets .align-right by measuring, on load and on resize,
+     because the bar wraps and which menu is near the edge changes. */
+  .dropdown.align-right {
+    left: auto;
+    right: 0;
+  }
   .dropdown::before {
     content: "";
     position: absolute;
