@@ -90,7 +90,10 @@
     margin: 1.5rem 0;
     font-size: 1rem;
   }
+  /* A card is a one-cell table, so the site-wide td:first-child nowrap
+     would stop its text wrapping and push the card off the page. */
   table.adversary-card td {
+    white-space: normal;
     border: 1px solid var(--panel-border);
     border-radius: var(--radius);
     padding: 1.25rem 1.5rem;
