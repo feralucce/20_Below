@@ -7,7 +7,7 @@ nav_section: gm
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>20 Below - GM References</title>
-<meta name="description" content="Ready-to-run stat blocks for GMs - mundane animals, American folklore cryptids, and original urban-fantasy Nightmare Creatures." />
+<meta name="description" content="For GMs: quick reference sheets for every core rule, ready-to-run stat blocks from mundane animals to Nightmare Creatures, and the table tools." />
 {% include brand-head.html %}
 <style>
   /* Colour, type and the shared components live in
@@ -27,6 +27,22 @@ nav_section: gm
   .intro {
     line-height: 1.5;
   }
+  .sheet-group { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-dim); margin: 1.6rem 0 0.6rem; }
+  .sheets { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.9rem; }
+  .sheet { display: block; text-decoration: none; color: var(--text); background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius); overflow: hidden; }
+  .sheet:hover, .sheet:focus-visible { border-color: var(--accent); }
+  .sheet img { display: block; width: 100%; height: auto; aspect-ratio: 560 / 725; object-fit: cover; object-position: top; }
+  .sheet .cap { padding: 0.5rem 0.65rem 0.65rem; }
+  .sheet .name { font-weight: 600; font-size: 0.88rem; }
+  .sheet .desc { font-size: 0.78rem; color: var(--text-dim); line-height: 1.4; margin-top: 0.15rem; }
+  .viewer { padding: 0; border: 1px solid var(--panel-border); border-radius: var(--radius); background: var(--bg); color: var(--text); max-width: min(95vw, 900px); width: 100%; }
+  .viewer::backdrop { background: rgba(3, 8, 12, 0.85); }
+  .viewer-bar { display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--panel-border); position: sticky; top: 0; background: var(--bg); }
+  .viewer-bar .title { font-weight: 600; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .viewer-bar a { font-size: 0.85rem; white-space: nowrap; }
+  .viewer-bar button { font: inherit; font-size: 0.85rem; color: var(--text); background: var(--panel); border: 1px solid var(--panel-border); border-radius: 6px; padding: 0.3rem 0.7rem; cursor: pointer; }
+  .viewer-bar button:hover, .viewer-bar button:focus-visible { border-color: var(--accent); }
+  .viewer img { display: block; width: 100%; height: auto; }
   .note {
     line-height: 1.5;
   }
@@ -38,7 +54,7 @@ nav_section: gm
   <header>
     <p class="eyebrow">Running the Game</p>
     <h1>GM References</h1>
-    <p class="subtitle">Ready-to-run stat blocks, from mundane animals to things that shouldn't exist.</p>
+    <p class="subtitle">Quick reference sheets, ready-to-run stat blocks, and the tools for the table.</p>
   </header>
 
   <h2>Running the Game</h2>
@@ -47,6 +63,43 @@ nav_section: gm
       <div class="name">Running the Game</div>
       <div class="desc">The GM chapter of the Player's Guide. Setting Difficulty and what the dice curve actually does to it, ruling on the fly, building antagonists, running the consensus, and what to do with the pile of Fate Tokens the players keep handing you.</div>
     </a>
+  </div>
+
+  <h2>Quick Reference Sheets</h2>
+  <p class="intro">One topic per page, built to be read in one look at the table. Select a sheet to open it, and use the arrows to flip through the rest.</p>
+  <h3 class="sheet-group">The Basics</h3>
+  <div class="sheets">
+    <a class="sheet" href="/docs/assets/portfolio/how-it-works.webp"><img src="/docs/assets/portfolio/how-it-works-thumb.webp" alt="How 20 Below Works reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">How 20 Below Works</div><div class="desc">The whole game in seven steps, for a new player.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/core-roll.webp"><img src="/docs/assets/portfolio/core-roll-thumb.webp" alt="Core Roll reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Core Roll</div><div class="desc">The one mechanic, and every modifier to it.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/advantage-disadvantage.webp"><img src="/docs/assets/portfolio/advantage-disadvantage-thumb.webp" alt="Advantage &amp; Disadvantage reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Advantage &amp; Disadvantage</div><div class="desc">Where an extra die moves the odds.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/difficulty-ladder.webp"><img src="/docs/assets/portfolio/difficulty-ladder-thumb.webp" alt="Difficulty Chart reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Difficulty Chart</div><div class="desc">Eleven rungs, with examples on each.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/time.webp"><img src="/docs/assets/portfolio/time-thumb.webp" alt="Time reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Time</div><div class="desc">How long things last, and what rest brings back.</div></div></a>
+  </div>
+  <h3 class="sheet-group">Characters</h3>
+  <div class="sheets">
+    <a class="sheet" href="/docs/assets/portfolio/character-creation.webp"><img src="/docs/assets/portfolio/character-creation-thumb.webp" alt="Character Creation reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Character Creation</div><div class="desc">Fifteen steps as one path.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/elements-x-skills.webp"><img src="/docs/assets/portfolio/elements-x-skills-thumb.webp" alt="Elements &times; Skills reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Elements &times; Skills</div><div class="desc">One Skill, read through each Element.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/skill-fan.webp"><img src="/docs/assets/portfolio/skill-fan-thumb.webp" alt="One Skill, Five Elements reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">One Skill, Five Elements</div><div class="desc">The default pairing, and how to argue for another.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/fate-triangle.webp"><img src="/docs/assets/portfolio/fate-triangle-thumb.webp" alt="The Fate Triangle reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">The Fate Triangle</div><div class="desc">Nature, Fate Tokens and Ki together.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/ki.webp"><img src="/docs/assets/portfolio/ki-thumb.webp" alt="Ki reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Ki</div><div class="desc">One pool, three jobs.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/using-a-gift.webp"><img src="/docs/assets/portfolio/using-a-gift-thumb.webp" alt="Using a Gift reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Using a Gift</div><div class="desc">Levels, the Gift Check, and attack dice.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/resources-ladder.webp"><img src="/docs/assets/portfolio/resources-ladder-thumb.webp" alt="Resources Ladder reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Resources Ladder</div><div class="desc">What each Resource Level gets you.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/resource-index.webp"><img src="/docs/assets/portfolio/resource-index-thumb.webp" alt="The Resource Index reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">The Resource Index</div><div class="desc">Why a lower index is the easier check.</div></div></a>
+  </div>
+  <h3 class="sheet-group">Combat</h3>
+  <div class="sheets">
+    <a class="sheet" href="/docs/assets/portfolio/the-round.webp"><img src="/docs/assets/portfolio/the-round-thumb.webp" alt="The Round reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">The Round</div><div class="desc">Turn order you can follow with a finger.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/combat-flow.webp"><img src="/docs/assets/portfolio/combat-flow-thumb.webp" alt="The Combat Flow reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">The Combat Flow</div><div class="desc">All of a fight as one decision tree.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/making-an-attack.webp"><img src="/docs/assets/portfolio/making-an-attack-thumb.webp" alt="Making an Attack reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Making an Attack</div><div class="desc">Approach, Defense, and where the dice come from.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/taking-damage.webp"><img src="/docs/assets/portfolio/taking-damage-thumb.webp" alt="Taking Damage reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Taking Damage</div><div class="desc">Hit, then every die on its own.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/weapons-armor.webp"><img src="/docs/assets/portfolio/weapons-armor-thumb.webp" alt="Weapons &amp; Armor reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Weapons &amp; Armor</div><div class="desc">The damage ladder, range, and four armor Zones.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/range-and-movement.webp"><img src="/docs/assets/portfolio/range-and-movement-thumb.webp" alt="Range &amp; Movement reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Range &amp; Movement</div><div class="desc">Four bands and three speeds.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/the-vitals.webp"><img src="/docs/assets/portfolio/the-vitals-thumb.webp" alt="The Vitals reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">The Vitals</div><div class="desc">Health, Poise and Sanity side by side.</div></div></a>
+    <a class="sheet" href="/docs/assets/portfolio/status-effects.webp"><img src="/docs/assets/portfolio/status-effects-thumb.webp" alt="Status Effects reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Status Effects</div><div class="desc">Every condition, and how it ends.</div></div></a>
+  </div>
+  <h3 class="sheet-group">The World</h3>
+  <div class="sheets">
+    <a class="sheet" href="/docs/assets/portfolio/hazards.webp"><img src="/docs/assets/portfolio/hazards-thumb.webp" alt="Hazards reference sheet" loading="lazy" width="560" height="725" /><div class="cap"><div class="name">Hazards</div><div class="desc">Falling, fire, air, cold, venom and Corruption.</div></div></a>
   </div>
 
   <h2>Adversary Catalog</h2>
@@ -91,6 +144,52 @@ nav_section: gm
     <a href="https://github.com/feralucce/20_Below" target="_blank" rel="noopener">github.com/feralucce/20_Below</a>.
   </p>
 </main>
+<dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+  <div class="viewer-bar">
+    <span class="title" id="viewer-title"></span>
+    <button type="button" id="viewer-prev" aria-label="Previous sheet">&larr;</button>
+    <button type="button" id="viewer-next" aria-label="Next sheet">&rarr;</button>
+    <a id="viewer-full" href="#" target="_blank" rel="noopener">Full size &#8599;</a>
+    <button type="button" id="viewer-close">Close &times;</button>
+  </div>
+  <img id="viewer-img" alt="" />
+</dialog>
+<script>
+(() => {
+  // Sheets open in a viewer on the page, and the arrows (or arrow keys) step
+  // through them in the order they're listed, so a GM can flip between them.
+  const dlg = document.getElementById("viewer");
+  if (!dlg.showModal) return;
+  const img = document.getElementById("viewer-img");
+  const full = document.getElementById("viewer-full");
+  const title = document.getElementById("viewer-title");
+  const links = [...document.querySelectorAll(".sheets a.sheet")];
+  let at = 0;
+  const show = i => {
+    at = (i + links.length) % links.length;
+    const a = links[at];
+    img.src = a.getAttribute("href");
+    img.alt = a.querySelector("img").alt;
+    full.href = a.getAttribute("href");
+    title.textContent = a.querySelector(".name").textContent;
+  };
+  links.forEach((a, i) => a.addEventListener("click", e => {
+    e.preventDefault();
+    show(i);
+    dlg.showModal();
+  }));
+  document.getElementById("viewer-prev").addEventListener("click", () => show(at - 1));
+  document.getElementById("viewer-next").addEventListener("click", () => show(at + 1));
+  document.getElementById("viewer-close").addEventListener("click", () => dlg.close());
+  dlg.addEventListener("keydown", e => {
+    if (e.key === "ArrowLeft") show(at - 1);
+    if (e.key === "ArrowRight") show(at + 1);
+  });
+  dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener("close", () => { img.removeAttribute("src"); links[at].focus(); });
+})();
+</script>
+
 
 <script src="/docs/assets/js/site-nav.js"></script>
 </body>
