@@ -63,6 +63,15 @@
   .item .name { font-weight: 600; font-size: 1.05rem; margin-bottom: 0.3rem; }
   .item .desc { font-size: 0.9rem; color: var(--text-dim); }
 
+  .viewer { padding: 0; border: 1px solid var(--panel-border); border-radius: var(--radius); background: var(--bg); color: var(--text); max-width: min(95vw, 900px); width: 100%; }
+  .viewer::backdrop { background: rgba(3, 8, 12, 0.85); }
+  .viewer-bar { display: flex; align-items: center; gap: 1rem; padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--panel-border); position: sticky; top: 0; background: var(--bg); }
+  .viewer-bar .title { font-weight: 600; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .viewer-bar a { font-size: 0.85rem; white-space: nowrap; }
+  .viewer-bar button { font: inherit; font-size: 0.85rem; color: var(--text); background: var(--panel); border: 1px solid var(--panel-border); border-radius: 6px; padding: 0.3rem 0.7rem; cursor: pointer; }
+  .viewer-bar button:hover { border-color: var(--accent); }
+  .viewer img { display: block; width: 100%; height: auto; }
+
   footer { text-align: center; padding: 3rem 1rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
   footer a { color: var(--text-dim); }
 </style>
@@ -135,7 +144,7 @@
     <div class="compare-arrow" aria-hidden="true">&rarr;</div>
     <figure>
       <div class="stage">Finished &middot; reference sheet</div>
-      <a href="/docs/assets/portfolio/combat-flow.webp"><img src="/docs/assets/portfolio/combat-flow-thumb.webp" alt="The Combat Flow reference sheet: six numbered neon panels running from Initiative, once, through declaring a Fast, Normal or Slow band, acting in band order, rolling to hit with red Miss and green Hit branches, and resolving each die against the wall, where a die at or under the wall is absorbed and a die over it costs one Level of Health, Poise or Sanity." loading="lazy" width="560" height="725" /></a>
+      <a href="/docs/assets/portfolio/combat-flow.webp" data-title="The Combat Flow"><img src="/docs/assets/portfolio/combat-flow-thumb.webp" alt="The Combat Flow reference sheet: six numbered neon panels running from Initiative, once, through declaring a Fast, Normal or Slow band, acting in band order, rolling to hit with red Miss and green Hit branches, and resolving each die against the wall, where a die at or under the wall is absorbed and a die over it costs one Level of Health, Poise or Sanity." loading="lazy" width="560" height="725" /></a>
       <figcaption>The same flow as a letter-size sheet at 600 dpi, built on the reference-sheet template, with the full to-hit rule and the three bands named.</figcaption>
     </figure>
   </div>
@@ -171,6 +180,38 @@
 
   <footer>20 Below &middot; 20belowrpg.com<br /><a href="/docs/id-portfolio.html">Instructional Design Portfolio</a> &middot; <a href="/docs/pm-portfolio.html">Project Management Portfolio</a></footer>
 </main>
+<dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+  <div class="viewer-bar">
+    <span class="title" id="viewer-title"></span>
+    <a id="viewer-full" href="#" target="_blank" rel="noopener">Full size &#8599;</a>
+    <button type="button" id="viewer-close">Close &times;</button>
+  </div>
+  <img id="viewer-img" alt="" />
+</dialog>
+<script>
+(() => {
+  const dlg = document.getElementById("viewer");
+  if (!dlg.showModal) return;
+  const img = document.getElementById("viewer-img");
+  const full = document.getElementById("viewer-full");
+  const title = document.getElementById("viewer-title");
+  document.querySelectorAll('a[href$=".webp"]').forEach(a => {
+    a.addEventListener("click", e => {
+      e.preventDefault();
+      const thumb = a.querySelector("img");
+      const name = a.querySelector(".name") || a.closest("figure")?.querySelector(".stage");
+      img.src = a.getAttribute("href");
+      img.alt = thumb ? thumb.alt : "";
+      full.href = a.getAttribute("href");
+      title.textContent = a.dataset.title || (name ? name.textContent : "Reference sheet");
+      dlg.showModal();
+    });
+  });
+  document.getElementById("viewer-close").addEventListener("click", () => dlg.close());
+  dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener("close", () => { img.removeAttribute("src"); });
+})();
+</script>
 <script src="/docs/assets/js/site-nav.js"></script>
 </body>
 </html>
