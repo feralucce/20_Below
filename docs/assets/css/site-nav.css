@@ -94,8 +94,12 @@
     justify-content: flex-end;
     min-width: 0;
   }
+  /* margin: 0 because a page's own list styles reach these items too:
+     the case studies set li { margin-bottom: 0.75rem }, which lifted the
+     plain links above the dropdown ones and left the bar unlevel. */
   .nav-links > li {
     position: relative;
+    margin: 0;
   }
   .nav-links a {
     color: var(--text-dim);
@@ -196,7 +200,7 @@
      Extending the list item's own box downward does work - the pointer
      never leaves .has-dropdown in the first place. Negative margin
      keeps the bar's layout unchanged. */
-  .has-dropdown {
+  .nav-links > .has-dropdown {
     padding-bottom: 0.7rem;
     margin-bottom: -0.7rem;
   }
@@ -328,7 +332,7 @@
     }
     /* No gap to bridge when the list is static, and the negative margin
        would pull the next item up over this one. */
-    .has-dropdown { padding-bottom: 0; margin-bottom: 0; }
+    .nav-links > .has-dropdown { padding-bottom: 0; margin-bottom: 0; }
     .dropdown::before { content: none; }
     .dropdown a { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-dim); }
   }
