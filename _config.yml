@@ -8,22 +8,10 @@ defaults:
       path: "webbook"
     values:
       layout: "webbook"
-  - scope:
-      path: "foundation"
-    values:
-      layout: "rules"
-  # The register's README renders as foundation/index.html, and "Readme" is
-  # not what that page is called.
-  - scope:
-      path: "foundation/README.md"
-    values:
-      title: "The Foundation"
 
-# The keep list is working material and is a CC BY-SA derivative of the [source redacted]
-# wiki. The register it produced is original and ORC; the notes are not, and
-# they do not go on the site.
 # Jekyll replaces this list rather than adding to it, so its own defaults
 # have to be repeated here or vendor/ starts getting published.
+# archive/ is superseded working material, not the published game.
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -35,4 +23,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby
-  - foundation/mining-notes.md
+  - archive/
