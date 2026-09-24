@@ -332,3 +332,16 @@
     .dropdown::before { content: none; }
     .dropdown a { padding: 0.4rem 0; font-size: 0.85rem; color: var(--text-dim); }
   }
+
+/* The license link every 20 Below page carries (_includes/site-footer.html).
+   The portfolio pages have their own footers and don't include it. */
+.site-footer {
+  text-align: center;
+  padding: 2.5rem 1rem 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--text-dim, #8fadbe);
+}
+.site-footer p { margin: 0; }
+.site-footer a { color: var(--text-dim, #8fadbe); }
+.site-footer a:hover, .site-footer a:focus-visible { color: var(--accent, #3d84c4); }
