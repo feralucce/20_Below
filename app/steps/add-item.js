@@ -95,8 +95,11 @@ export default function buildItemPicker(state, data, kind, onAdded) {
     const hardness = small('Hardness');
     const health = small('Health');
     const zone = el('select', { class: 'item-picker-field item-picker-small' }, [
-      el('option', { value: 'Body' }, 'Body'),
+      el('option', { value: 'Center of Mass' }, 'Center of Mass'),
       el('option', { value: 'Head' }, 'Head'),
+      el('option', { value: 'Arms' }, 'Arms'),
+      el('option', { value: 'Legs' }, 'Legs'),
+      el('option', { value: 'All four' }, 'All four'),
     ]);
     const err = el('span', { class: 'item-picker-error' });
 

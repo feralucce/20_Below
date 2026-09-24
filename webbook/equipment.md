@@ -939,7 +939,7 @@ A long wool coat with panels sewn between the lining and the shell. Heavier than
 
 </div>
 
-Body. Hardness 3, 2 Health Levels. Reads as clothing; no penalty.
+Center of Mass. Hardness 3, 2 Health Levels. Reads as clothing; no penalty.
 
 </div>
 
@@ -953,7 +953,7 @@ Soft panels tailored into a two-piece. Somebody was paid well to make it hang ri
 
 </div>
 
-Body. Hardness 2, 2 Health Levels. Tailored into a suit; survives a glance, not a pat-down.
+Center of Mass. Hardness 2, 2 Health Levels. Tailored into a suit; survives a glance, not a pat-down.
 
 </div>
 
@@ -981,7 +981,7 @@ A slab of laminate with a viewport and two handles, about the size of a door pan
 
 </div>
 
-Body. Hardness 6, 4 Health Levels. Front arc only, requires both hands.
+Center of Mass. Hardness 6, 4 Health Levels. Front arc only, requires both hands.
 
 </div>
 
@@ -995,7 +995,7 @@ Steel plates riveted between canvas and leather. The rivet heads show in rows.
 
 </div>
 
-Body. Hardness 4, 3 Health Levels.
+Center of Mass. Hardness 4, 3 Health Levels.
 
 </div>
 
@@ -1009,7 +1009,7 @@ Riveted rings, twenty pounds of them, worn over padding because the alternative 
 
 </div>
 
-Body. Hardness 4, 3 Health Levels. Disadvantage on Stealth rolls while worn.
+Center of Mass + Arms. Hardness 4, 3 Health Levels. Disadvantage on Stealth rolls while worn.
 
 </div>
 
@@ -1023,7 +1023,7 @@ Soft panels in a carrier that goes under a shirt. Hot, and everybody who wears o
 
 </div>
 
-Body. Hardness 3, 2 Health Levels. Worn under clothing, no penalty.
+Center of Mass. Hardness 3, 2 Health Levels. Worn under clothing, no penalty.
 
 </div>
 
@@ -1037,7 +1037,7 @@ Plate carrier, helmet, throat and groin protection. Everything, and it weighs ev
 
 </div>
 
-Body + Head. Hardness 6, 5 Health Levels. Single item, sets both Zones; Disadvantage on Stealth rolls; Movement Rate -2 while worn.
+Center of Mass + Head. Hardness 6, 5 Health Levels. Single item, sets both Zones; Disadvantage on Stealth rolls; Movement Rate -2 while worn.
 
 </div>
 
@@ -1051,7 +1051,7 @@ Quilted linen stuffed with tow. Worn alone it is a coat; worn under steel it is 
 
 </div>
 
-Body. Hardness 2, 2 Health Levels. Worn under other armor without penalty.
+Center of Mass. Hardness 2, 2 Health Levels. Worn under other armor without penalty.
 
 </div>
 
@@ -1065,7 +1065,7 @@ Articulated plates over leather gloves, fingers and all.
 
 </div>
 
-Body (arms). Hardness 2, 1 Health Levels. Advantage resisting disarm attempts.
+Arms. Hardness 2, 1 Health Levels. Advantage resisting disarm attempts.
 
 </div>
 
@@ -1079,7 +1079,7 @@ Shaped plates strapped over the shins.
 
 </div>
 
-Body (legs). Hardness 2, 1 Health Levels.
+Legs. Hardness 2, 1 Health Levels.
 
 </div>
 
@@ -1093,7 +1093,7 @@ Sealed coveralls, taped cuffs, a hood and a filter. Single use if it is ever act
 
 </div>
 
-Body + Head. Hardness 3, 2 Health Levels. Negates Disadvantage from toxic/biological hazards; Movement Rate -2.
+All four. Hardness 3, 2 Health Levels. Negates Disadvantage from toxic/biological hazards; Movement Rate -2.
 
 </div>
 
@@ -1107,7 +1107,7 @@ Hardened leather, front and back, laced at the sides.
 
 </div>
 
-Body. Hardness 2, 2 Health Levels. No Stealth penalty.
+Center of Mass. Hardness 2, 2 Health Levels. No Stealth penalty.
 
 </div>
 
@@ -1121,7 +1121,7 @@ Textile with CE armour in the shoulders, elbows and back. Reads as a jacket beca
 
 </div>
 
-Body. Hardness 3, 2 Health Levels. Worn openly, no Stealth penalty, doesn’t look like armor.
+Center of Mass + Arms. Hardness 3, 2 Health Levels. Worn openly, no Stealth penalty, doesn’t look like armor.
 
 </div>
 
@@ -1135,7 +1135,7 @@ Articulated steel over the whole body. Distributes its weight properly and is st
 
 </div>
 
-Body. Hardness 6, 4 Health Levels. Movement Rate -2 while worn.
+Center of Mass + Arms + Legs. Hardness 6, 4 Health Levels. Movement Rate -2 while worn.
 
 </div>
 
@@ -1149,7 +1149,7 @@ A powered frame worn outside the armour, motors at the joints, a battery on the 
 
 </div>
 
-Body. Hardness 5, 4 Health Levels. Powered frame; Advantage on any roll of raw physical force; Disadvantage on Stealth rolls.
+Center of Mass + Arms + Legs. Hardness 5, 4 Health Levels. Powered frame; Advantage on any roll of raw physical force; Disadvantage on Stealth rolls.
 
 </div>
 
@@ -1177,7 +1177,7 @@ Clear polycarbonate, body length, with a horizontal grip and a forearm cuff.
 
 </div>
 
-Body. Hardness 6, 4 Health Levels. Front arc only, requires both hands.
+Center of Mass. Hardness 6, 4 Health Levels. Front arc only, requires both hands.
 
 </div>
 
@@ -1191,7 +1191,7 @@ Hard shell, sealed seams, its own air on the back and a faceplate that fogs at t
 
 </div>
 
-Body + Head. Hardness 5, 4 Health Levels. Single item, sets both Zones; own air supply, immune to gas, smoke and contaminated water; Movement Rate -1.
+All four. Hardness 5, 4 Health Levels. Single item, sets all four Zones; own air supply, immune to gas, smoke and contaminated water; Movement Rate -1.
 
 </div>
 
@@ -1205,7 +1205,7 @@ Layered mail and laminate. Built for blades, and honest about it.
 
 </div>
 
-Body. Hardness 3, 2 Health Levels. Blade-only protection, no bonus vs. firearms.
+Center of Mass. Hardness 3, 2 Health Levels. Blade-only protection, no bonus vs. firearms.
 
 </div>
 
@@ -1219,7 +1219,7 @@ A plate carrier with hard plates front and back and pouches across the front.
 
 </div>
 
-Body. Hardness 5, 3 Health Levels. Disadvantage on Stealth rolls while worn.
+Center of Mass. Hardness 5, 3 Health Levels. Disadvantage on Stealth rolls while worn.
 
 </div>
 
@@ -4045,7 +4045,7 @@ Ninety pounds of layered aramid and plate, with a fan in the helmet and a wire t
 
 </div>
 
-Body + Head. Hardness 8, 6 Health Levels. Movement Rate -4; Disadvantage on all Physical rolls except resisting damage. Requires Black Market Access 2.
+All four. Hardness 8, 6 Health Levels. Movement Rate -4; Disadvantage on all Physical rolls except resisting damage. Requires Black Market Access 2.
 
 </div>
 
@@ -4541,7 +4541,7 @@ A harness of emitter pods that throws a shell which burns away as it is hit.
 
 </div>
 
-Body. Hardness 7, 4 Health Levels. A projected barrier on a worn rig; spent for the Scene once its Health Levels are gone. Requires Black Market Access 5.
+Center of Mass. Hardness 7, 4 Health Levels. A projected barrier on a worn rig; spent for the Scene once its Health Levels are gone. Requires Black Market Access 5.
 
 </div>
 
@@ -4555,7 +4555,7 @@ A sealed powered suit, a foot taller than its wearer, with its own reactor and a
 
 </div>
 
-Body + Head. Hardness 8, 6 Health Levels. Single item, sets both Zones; sealed with its own air; Disadvantage on Stealth rolls; Movement Rate -1. Nobody mistakes you for a person. Requires Black Market Access 5.
+All four. Hardness 8, 6 Health Levels. Single item, sets all four Zones; sealed with its own air; Disadvantage on Stealth rolls; Movement Rate -1. Nobody mistakes you for a person. Requires Black Market Access 5.
 
 </div>
 

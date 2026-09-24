@@ -35,19 +35,22 @@ AH = sized(450, 494)
 frame(MARGIN, ay, INNER, AH, STEEL, "ARMOUR")
 action(MARGIN + INNER - 42 - 300, ay + 18, 300, 66, STEEL, "+ ADD ARMOUR",
        "armour.add")
-heads(MARGIN, ay + 126, ((48, "ITEM"), (900, "BODY"), (1020, "HEAD"), (1140, "HARDNESS"),
+heads(MARGIN, ay + 126, ((48, "ITEM"), (1140, "HARDNESS"),
                          (1350, "ARMOUR HEALTH LEVELS"), (1950, "BROKEN")))
+# Four Zones since 2026-09-24, so their headings run a size down to fit over a checkbox each.
+# Each heading is centred on its own checkbox; the numbers are the box centres.
+ZONE_COLS = ((700, "C. MASS", "com"), (820, "HEAD", "head"), (940, "ARMS", "arms"), (1060, "LEGS", "legs"))
+for zc, zl, _ in ZONE_COLS:
+    label(MARGIN + zc + 1.2, ay + 126, zl, 24, DIM, 2.4, "middle")
 line(MARGIN + 42, ay + 144, INNER - 84, STEEL, 0.35)
 for i in range(5):
     y = ay + 204 + i * sized(54, 65)
-    line(MARGIN + 48, y, 800)
-    field("armour.%d.name" % i, "text", MARGIN + 48, y - 42, 800, 48, slot=i)
-    box(MARGIN + 912, y - 36, sized(45, 48), STEEL, 4.2, 9)
-    field("armour.%d.body" % i, "check", MARGIN + 912, y - 36, 45, 45,
-          slot=i, color=STEEL)
-    box(MARGIN + 1032, y - 36, sized(45, 48), STEEL, 4.2, 9)
-    field("armour.%d.head" % i, "check", MARGIN + 1032, y - 36, 45, 45,
-          slot=i, color=STEEL)
+    line(MARGIN + 48, y, 560)
+    field("armour.%d.name" % i, "text", MARGIN + 48, y - 42, 560, 48, slot=i)
+    for zc, _, key in ZONE_COLS:
+        box(MARGIN + zc - 22.5, y - 36, sized(45, 48), STEEL, 4.2, 9)
+        field("armour.%d.%s" % (i, key), "check", MARGIN + zc - 22.5, y - 36, 45, 45,
+              slot=i, color=STEEL)
     slot(MARGIN + 1176, y - 39, 96, 51, STEEL)
     field("armour.%d.hardness" % i, "text", MARGIN + 1176, y - 39, 96, 51,
           slot=i, centre=True)

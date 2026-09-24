@@ -1,3 +1,15 @@
+// Which of the four armour Zones an item's Zone text covers. Characters saved
+// before the Zones were split still say "Body", "Body (arms)", "Body + Head".
+function coversZone(zone, which) {
+  const z = String(zone || '').toLowerCase();
+  if (/all four/.test(z)) return true;
+  if (which === 'com') return /center of mass/.test(z) || (/\bbody\b/.test(z) && !/\((arms|legs)\)/.test(z));
+  if (which === 'head') return /head/.test(z);
+  if (which === 'arms') return /arms/.test(z);
+  if (which === 'legs') return /legs/.test(z);
+  return false;
+}
+
 // The character sheet as the five printed pages, filled in live.
 //
 // The art and the field map are generated together from one set of
@@ -461,8 +473,7 @@ function readField(id, ctx) {
       const a = ctx.armour[Number(part[1])];
       if (!a) return part[2] === 'health' ? 0 : '';
       if (part[2] === 'health') return a.health;
-      if (part[2] === 'body') return /body/i.test(a.zone);
-      if (part[2] === 'head') return /head/i.test(a.zone);
+      if (['com', 'head', 'arms', 'legs'].includes(part[2])) return coversZone(a.zone, part[2]);
       if (part[2] === 'broken') return !!a.broken;
       if (part[2] === 'hardness') return a.hardness;
       return a.name;

@@ -177,7 +177,7 @@ After the attacker's [to-hit roll](#the-passive-wall-triad---soak-presence-psych
 
 #### Armor & Called Shots
 
-Worn or carried armor (see [Weapons & Equipment](weapons.md#armor)) has its own **Hardness** (a threshold on the same 0-10 scale as Soak) and its own **Health Levels**, both tracked separately from the wearer's. Every armor item covers one of two **Zones**: **Body** or **Head**.
+Worn or carried armor (see [Weapons & Equipment](weapons.md#armor)) has its own **Hardness** (a threshold on the same 0-10 scale as Soak) and its own **Health Levels**, both tracked separately from the wearer's. Every armor item covers one or more of four **Zones**: **Center of Mass**, **Head**, **Arms** and **Legs**. An item that covers several Zones is still one item, with one Hardness and one set of Health Levels, whichever Zone a die arrives at.
 
 While it still has Health Levels remaining, armor intercepts every die aimed at the Zone it covers, before the wearer's own Soak ever comes into play:
 
@@ -189,8 +189,8 @@ While it still has Health Levels remaining, armor intercepts every die aimed at 
 **Ki Spend to Preserve** (see [above](#ki-spend-to-preserve-a-level)) only ever applies to the wearer's own [Vitals](#the-vitals---health-poise-sanity) - it can't prevent or undo an armor Health Level loss.
 
 - **Armor doesn't stack within a Zone.** If a character owns more than one item covering the same Zone, only one can be worn there at a time - their choice which.
-- **A normal attack always resolves against Body-Zone armor.** Head-Zone armor does nothing against it.
-- **A called shot** - an attack aimed at something specific rather than at the target generally: a hand, a knee, a strap, a weapon, a sensor. It's declared as part of a [Slow Action](#action-brackets), and spending Ki to [bump the bracket](#action-brackets) carries it along rather than cancelling it. What a successful called shot accomplishes is the GM's call, and depends on what was aimed at. Where it interacts with armor, a called shot to the **Head Zone** resolves against the defender's Head-Zone armor (or no armor at all, if they have none), and Body-Zone armor doesn't apply to it.
+- **A normal attack always resolves against Center of Mass armor.** Armor that covers only the Head, Arms or Legs does nothing against it.
+- **A called shot** - an attack aimed at something specific rather than at the target generally: a hand, a knee, a strap, a weapon, a sensor. It's declared as part of a [Slow Action](#action-brackets), and spending Ki to [bump the bracket](#action-brackets) carries it along rather than cancelling it. What a successful called shot accomplishes is the GM's call, and depends on what was aimed at. Where it interacts with armor, a called shot to the **Head**, **Arms** or **Legs** resolves against whatever the defender wears on that Zone (or no armor at all, if nothing covers it), and armor that covers only the Center of Mass doesn't apply to it.
 
 #### Potence
 
@@ -282,7 +282,7 @@ A social attack resolves exactly like a [Physical one](#physical-attacks---weapo
 | 4 | Expert | **5** |
 | 5 | Master | **6** |
 
-Untrained rolls 1 for the same reason bare fists do. Master reaches 6, one past the heaviest weapon in [weapons.md](weapons.md), and that is deliberate: Poise has no death threshold, so nothing on this ladder can kill.
+Untrained rolls 1 for the same reason bare fists do. Master reaches 6, one past the heaviest ordinary weapon in [weapons.md](weapons.md), and that is deliberate: Poise has no death threshold, so nothing on this ladder can kill.
 
 **The Skill also sets the Element.** Every Skill has a home Element ([skills.md](skills.md#skills-default-to-an-element)), so naming what you are doing settles the dice and the to-hit Attribute together. **Fire** carries Ridicule, Intimidation, Persuasion, Public Speaking, Performance, Leadership and Deception; **Moira** carries Insight. A Descriptor can still argue for a different Element, as with any Skill roll.
 

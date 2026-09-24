@@ -52,7 +52,7 @@ None of the three is automatic. Each Gift, and each level of it, says which it u
 
 A Gift that attacks rolls **its Level plus half the sub-stat that powers it**, rounded down. The sub-stat is the one Ki Infusion already uses, so there is never a second question about which stat a Gift runs on: **Ferocity** for dice against Soak, **Presence** against Presence, **Psyche** against Psyche.
 
-This is why a Gift is worth its points. A weapon rolls what it rolls forever - the heaviest thing in the book is 5 dice and always will be. A Gift at Level 1 with a middling sub-stat rolls fewer dice than something you could buy, and a Gift you have actually invested in leaves every weapon behind. The points buy the curve, not the number.
+This is why a Gift is worth its points. A weapon rolls what it rolls forever - the heaviest ordinary weapon in the book is 5 dice and always will be. A Gift at Level 1 with a middling sub-stat rolls fewer dice than something you could buy, and a Gift you have actually invested in leaves every weapon behind. The points buy the curve, not the number.
 
 Dice built by a device or rolled by something you raised - a Gadgeteer gadget, a Necromancy thrall - are the exception, and stay on the ordinary scale. Those dice come from the thing, not from you.
 
@@ -800,7 +800,7 @@ Even when there is no one around, you are not alone. You have a swarm of small m
 
 **Drone Types** (chosen per drone, reconfigurable per the Level 1 rule):
 
-1. **Combat**: mounted weapon. Attack dice equal to its Output Rating, capped at **5** so a drone never outguns the heaviest thing a person can carry, resolved per-die vs. the target’s Soak, Presence, or Psyche as fits the attack. The **Jack In** bonus ignores that cap - it is the only thing that does, and it costs you your body to use.
+1. **Combat**: mounted weapon. Attack dice equal to its Output Rating, capped at **5** so a drone never outguns the heaviest ordinary weapon a person can carry, resolved per-die vs. the target’s Soak, Presence, or Psyche as fits the attack. The **Jack In** bonus ignores that cap - it is the only thing that does, and it costs you your body to use.
 2. **Healing**: as its action, touch a willing target within Melee range and restore Health Levels equal to half its Output Rating, round up.
 3. **Shielding**: as its action, project a barrier over one ally within Melee range, granting them Soak equal to its Output Rating until the start of your next turn (stacks with their own Soak).
 4. **Remote Operation**: as its action, route one roll through the drone instead of acting in person - make a Skill check or device interaction as if you were standing where it is, using your own stats.
@@ -1270,7 +1270,7 @@ Chosen once, at creation: your Forcefield’s **Form**.
 
 1. **Wielded Shield** - held in one hand, front arc only, matching a real ballistic shield’s own limits. Hardness and Health Levels are always **+1** above the numbers below. Covers only yourself - never projects onto an ally, at any Level.
 2. **Bubble Barrier** - no hands required. Instead of a single target, it covers **everyone** within its current range, including you - starting at Melee (Level 1), extending to Close (Level 3) and Near (Level 4), same range numbers as below just read as a radius. Hardness and Health Levels are always **-2** below the numbers listed.
-3. **Personal Barrier** - exactly as below: full Hardness and Health Levels, covers both Zones, a single target (yourself, or one ally within range once Level 3+).
+3. **Personal Barrier** - exactly as below: full Hardness and Health Levels, covers all four Zones, a single target (yourself, or one ally within range once Level 3+).
 
 The barrier occupies the same Zone(s) as any worn armor and follows the normal rule that **armor doesn’t stack within a Zone** - raising it over a Zone that’s already covered by real armor replaces that armor’s protection for as long as the barrier holds, it doesn’t add to it. **Maintaining the barrier requires a Gift Check every turn it stays up - failure costs 1 Ki, at any Level.**
 
@@ -1298,7 +1298,7 @@ The barrier occupies the same Zone(s) as any worn armor and follows the normal r
 
 <div class="gift-level gift-level--1" markdown="1">
 
-<span class="gift-n">1</span>- As a **Normal action**, no Ki cost, raise the barrier: **Hardness 3**, **Health Levels 2** (before your Form's modifier), resolved with the exact same two-stage mechanic as **worn armor** - it covers **both** Body and Head Zones at once. Lasts until depleted or dismissed (a Fast action to drop early).
+<span class="gift-n">1</span>- As a **Normal action**, no Ki cost, raise the barrier: **Hardness 3**, **Health Levels 2** (before your Form's modifier), resolved with the exact same two-stage mechanic as **worn armor** - it covers **all four** Zones at once. Lasts until depleted or dismissed (a Fast action to drop early).
 
 </div>
 
