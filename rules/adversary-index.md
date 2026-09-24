@@ -233,7 +233,8 @@ A catalog of threats a party might face outside of other player characters - not
 - **Health Levels** work exactly as they do for a PC, with no below-0 range - a creature is out of the fight the instant it crosses 0.
 - **Movement Rate** is in meters, same as a PC's.
 - Each **Natural Weapon** lists a Damage rating (d10 count, same 1-10 scale as [weapons.md](weapons.md)) and a range.
-- **Notable Skills** give a single number - treat it as the creature's full roll target whenever that Skill matters. Roll 2d10 against it, standard critical results apply, exactly like any other roll.
+- **Notable Skills** come in two forms. **Opposed** skills read `Stealth 6 vs. Perception`: the number is the **Difficulty for the player's roll**, so a character trying to spot this creature rolls Perception against their Attribute + 6. The lower the number, the harder the creature is to beat. Everything else reads `Athletics Target Number 9`: the creature's own roll, 2d10 against that number, standard critical results applying like any other roll. **A trait that gives a creature Advantage on an opposed skill** ("Advantage on Stealth checks") means the player rolls against it at **Disadvantage** instead, and Disadvantage the other way round.
+- A **Social** attack line (a Snarl, a Hiss, a Howl) works like a natural weapon aimed at the mind's composure instead of the body: to-hit with the creature's Attack against the target's [Social Defense](rules.md#defense-derived-stat), then each die against the target's **Presence**, a connecting die costing a level of [Poise](rules.md#poise). It can't kill - Poise has no death threshold - but a character at 0 Poise is [Flustered](rules.md#flustered).
 - **Traits** describe anything that doesn't fit the fields above, written in terms of mechanics that already exist (Advantage/Disadvantage, Range Bands, Ki, etc.) rather than new ones.
 - **A small number of entries have an ability marked "no to-hit roll required."** Every attack normally starts with a to-hit roll against the target's Defense (rules.md#the-passive-wall-triad---soak-presence-psyche) - but a small handful of entries (things that affect you by being perceived rather than by striking you, like a banshee-style wail) don't fit that shape. For those specific abilities only, perceiving the source (a Perception check, or simply being in range and aware of it, GM's call) triggers the effect instead of a to-hit roll. Everything downstream of that - the dice resolving per-die against the relevant wall stat, Ki Spend to Preserve options for the target - works exactly like any other attack. Nothing else about the resolution changes.
 
@@ -260,7 +261,7 @@ A stray or pack-abandoned dog, unpredictable more than dangerous - but a hungry 
 
 **Bite**: 1, Melee
 
-**Notable Skills**: Perception 8, Athletics 8
+**Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
 **Traits**: **Pack Tactics** - gains Advantage on an attack roll when at least one other canine is also attacking the same target.
 
@@ -276,7 +277,9 @@ Bred or trained to hold a line, not just to threaten one. It's well-fed, muscled
 
 **Bite**: 2, Melee
 
-**Notable Skills**: Intimidation 8, Perception 9
+**Snarl**: 2, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
+
+**Notable Skills**: Perception 7 vs. Stealth
 
 **Traits**: **Trained to Hold** - immune to being Surprised by a target it's already been set to guard against, and doesn't break off an attack from fear alone.
 
@@ -292,7 +295,7 @@ Something in the litter came out wrong - bigger jaw, bigger frame, none of the u
 
 **Bite**: 2, Melee
 
-**Notable Skills**: Perception 8, Athletics 8
+**Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
 **Traits**: **Pack Tactics** - gains Advantage on an attack roll when at least one other canine is also attacking the same target.
 
@@ -308,7 +311,9 @@ Whoever trained it either didn't know when to stop or wanted exactly this. It's 
 
 **Bite**: 3, Melee
 
-**Notable Skills**: Intimidation 8, Perception 9
+**Snarl**: 2, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
+
+**Notable Skills**: Perception 7 vs. Stealth
 
 **Traits**: **Trained to Hold** - immune to being Surprised by a target it's already been set to guard against, and doesn't break off an attack from fear alone.
 
@@ -324,7 +329,7 @@ Animal control gets a call about a "bear" and finds this instead, chained to a f
 
 **Bite**: 4, Melee
 
-**Notable Skills**: Perception 8, Athletics 8
+**Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
 **Traits**: **Pack Tactics** - gains Advantage on an attack roll when at least one other canine is also attacking the same target.
 
@@ -340,7 +345,9 @@ A property line marked by a chain-link fence and a shape on the other side that 
 
 **Bite**: 4, Melee
 
-**Notable Skills**: Intimidation 8, Perception 9
+**Snarl**: 2, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
+
+**Notable Skills**: Perception 7 vs. Stealth
 
 **Traits**: **Trained to Hold** - immune to being Surprised by a target it's already been set to guard against, and doesn't break off an attack from fear alone.
 
@@ -356,7 +363,7 @@ Every scar on it has already closed by the time you notice it was there. Its coa
 
 **Bite**: 1, Melee
 
-**Notable Skills**: Perception 8, Athletics 8
+**Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
 **Traits**: **Pack Tactics** - gains Advantage on an attack roll when at least one other canine is also attacking the same target. **Regenerating** - heals 1 Health Level at the start of each of its turns.
 
@@ -372,7 +379,9 @@ It stopped needing rest between shifts a while ago, and nobody who feeds it has 
 
 **Bite**: 2, Melee
 
-**Notable Skills**: Intimidation 8, Perception 9
+**Snarl**: 2, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
+
+**Notable Skills**: Perception 7 vs. Stealth
 
 **Traits**: **Trained to Hold** - immune to being Surprised by a target it's already been set to guard against, and doesn't break off an attack from fear alone. **Regenerating** - heals 1 Health Level at the start of each of its turns.
 
@@ -392,7 +401,7 @@ Small, fast, and almost never worth the fight it can put up if actually cornered
 
 **Claws**: 1, Melee
 
-**Notable Skills**: Stealth 10, Athletics 9
+**Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 9
 
 **Traits**: **Hard to Corner** - climbs and leaps at no penalty; treat any vertical surface or gap within its Movement Rate as normal ground for the purpose of escaping.
 
@@ -408,7 +417,7 @@ Still fast, still small for its kind, but the claws now leave a wound worth stit
 
 **Claws**: 2, Melee
 
-**Notable Skills**: Stealth 10, Athletics 9
+**Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 9
 
 **Traits**: **Hard to Corner** - climbs and leaps at no penalty; treat any vertical surface or gap within its Movement Rate as normal ground for the purpose of escaping.
 
@@ -424,7 +433,7 @@ House-cat proportions on something the size of a dog, which is somehow worse tha
 
 **Claws**: 3, Melee
 
-**Notable Skills**: Stealth 10, Athletics 9
+**Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 9
 
 **Traits**: **Hard to Corner** - climbs and leaps at no penalty; treat any vertical surface or gap within its Movement Rate as normal ground for the purpose of escaping.
 
@@ -440,7 +449,7 @@ It sits on a fence rail in plain daylight and takes people a solid minute to act
 
 **Claws**: 1, Melee
 
-**Notable Skills**: Stealth 10, Athletics 9
+**Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 9
 
 **Traits**: **Hard to Corner** - climbs and leaps at no penalty; treat any vertical surface or gap within its Movement Rate as normal ground for the purpose of escaping. **Camouflaged Growths** - Advantage on Stealth rolls; blends unnaturally well into its environment.
 
@@ -460,7 +469,7 @@ Bold around people, genuinely dangerous only if rabid. It has no fear of humans 
 
 **Bite / Claws**: 1, Melee
 
-**Notable Skills**: Stealth 8, Perception 7
+**Notable Skills**: Stealth 8 vs. Perception, Perception 9 vs. Stealth
 
 **Traits**: **Rarely Aggressive** - won't initiate an attack unless cornered, defending young, or rabid. A rabid raccoon gains Advantage on its bite.
 
@@ -476,7 +485,7 @@ Twice the usual weight and none of the usual hesitation about approaching a lit 
 
 **Bite / Claws**: 2, Melee
 
-**Notable Skills**: Stealth 8, Perception 7
+**Notable Skills**: Stealth 8 vs. Perception, Perception 9 vs. Stealth
 
 **Traits**: **Rarely Aggressive** - won't initiate an attack unless cornered, defending young, or rabid. A rabid raccoon gains Advantage on its bite.
 
@@ -492,7 +501,7 @@ Tips over a dumpster instead of digging through it, and doesn't run when the lid
 
 **Bite / Claws**: 3, Melee
 
-**Notable Skills**: Stealth 8, Perception 7
+**Notable Skills**: Stealth 8 vs. Perception, Perception 9 vs. Stealth
 
 **Traits**: **Rarely Aggressive** - won't initiate an attack unless cornered, defending young, or rabid. A rabid raccoon gains Advantage on its bite.
 
@@ -508,7 +517,7 @@ It works a latch in the dark faster than most people manage in daylight. Nothing
 
 **Bite / Claws**: 1, Melee
 
-**Notable Skills**: Stealth 8, Perception 7
+**Notable Skills**: Stealth 8 vs. Perception, Perception 9 vs. Stealth
 
 **Traits**: **Rarely Aggressive** - won't initiate an attack unless cornered, defending young, or rabid. A rabid raccoon gains Advantage on its bite. **Unnatural Senses** - Advantage on Perception checks in darkness/smoke/concealment; can't be Surprised via Stealth.
 
@@ -528,7 +537,7 @@ A mass of small bodies, not a single creature - what it lacks in individual dang
 
 **Bite**: 1, Melee
 
-**Notable Skills**: Stealth 8
+**Notable Skills**: Stealth 8 vs. Perception
 
 **Traits**: **Swarm** - immune to single-target Physical attacks (they connect with mostly empty space); any attack that hits an area instead deals double dice against it.
 
@@ -544,7 +553,7 @@ Bigger bodies than a rat swarm should have, moving with the same coordination as
 
 **Bite**: 2, Melee
 
-**Notable Skills**: Stealth 8
+**Notable Skills**: Stealth 8 vs. Perception
 
 **Traits**: **Swarm** - immune to single-target Physical attacks (they connect with mostly empty space); any attack that hits an area instead deals double dice against it.
 
@@ -560,7 +569,7 @@ What used to be a hundred small bodies is now a few dozen large ones, and the so
 
 **Bite**: 3, Melee
 
-**Notable Skills**: Stealth 8
+**Notable Skills**: Stealth 8 vs. Perception
 
 **Traits**: **Swarm** - immune to single-target Physical attacks (they connect with mostly empty space); any attack that hits an area instead deals double dice against it.
 
@@ -576,7 +585,7 @@ Every bite in the mass carries something that outlasts the bite itself. The rats
 
 **Bite**: 1, Melee
 
-**Notable Skills**: Stealth 8
+**Notable Skills**: Stealth 8 vs. Perception
 
 **Traits**: **Swarm** - immune to single-target Physical attacks (they connect with mostly empty space); any attack that hits an area instead deals double dice against it. **Toxic Bite/Sting** - a target hit by its bite is [Envenomed](rules.md#envenomed).
 
@@ -598,7 +607,7 @@ No interest in a fight - just in being left alone. It moves at an unhurried wadd
 
 **Spray** (once per encounter, no Health Level cost): every target within Close range must wash off or take Disadvantage on all rolls for the rest of the Scene.
 
-**Notable Skills**: Perception 6
+**Notable Skills**: Perception 10 vs. Stealth
 
 **Traits**: **Warning Display** - always gets one clearly-telegraphed round of stomping/hissing before spraying, unless directly attacked first.
 
@@ -614,7 +623,7 @@ The stripe runs down a body twice the usual length, and the smell carries propor
 
 **Spray** (once per encounter, no Health Level cost): the cloud reaches farther and lingers longer than an ordinary skunk's - GM's call on exact range, but Close is a floor, not a ceiling.
 
-**Notable Skills**: Perception 6
+**Notable Skills**: Perception 10 vs. Stealth
 
 **Traits**: **Warning Display** - always gets one clearly-telegraphed round of stomping/hissing before spraying, unless directly attacked first.
 
@@ -630,7 +639,7 @@ Nobody's ever gotten close enough to measure it - the smell arrives first and se
 
 **Spray** (once per encounter, no Health Level cost): covers a full Range Band instead of just Close, and the residue is potent enough to ruin gear left nearby.
 
-**Notable Skills**: Perception 6
+**Notable Skills**: Perception 10 vs. Stealth
 
 **Traits**: **Warning Display** - always gets one clearly-telegraphed round of stomping/hissing before spraying, unless directly attacked first.
 
@@ -646,7 +655,7 @@ It doesn't wait for the warning stomp anymore - one gland has taken over for the
 
 **Spray** (once per encounter, no Health Level cost): every target within Close range must wash off or take Disadvantage on all rolls for the rest of the Scene.
 
-**Notable Skills**: Perception 6
+**Notable Skills**: Perception 10 vs. Stealth
 
 **Traits**: **Warning Display** - always gets one clearly-telegraphed round of stomping/hissing before spraying, unless directly attacked first. **Toxic Cloud** - once per encounter, releases a cloud at Close range - anyone inside without protection is at Disadvantage on all rolls for the rest of the Scene (same shape as the Skunk's own Spray ability, and may be triggered in addition to it).
 
@@ -668,7 +677,7 @@ Absurd on paper, genuinely relentless in practice. It hisses, lowers its neck, a
 
 **Bite / Wing Buffet**: 1, Melee
 
-**Notable Skills**: Intimidation 7
+**Hiss**: 4, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Traits**: **Relentless** - keeps attacking after taking damage with no hesitation; only stops if it actually runs out of Health Levels or the target leaves its territory entirely.
 
@@ -684,7 +693,7 @@ Same territorial streak, considerably more weight behind the wing that hits you.
 
 **Bite / Wing Buffet**: 2, Melee
 
-**Notable Skills**: Intimidation 7
+**Hiss**: 4, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Traits**: **Relentless** - keeps attacking after taking damage with no hesitation; only stops if it actually runs out of Health Levels or the target leaves its territory entirely.
 
@@ -700,7 +709,7 @@ Nobody believes the story until they see the pond it now considers its property.
 
 **Bite / Wing Buffet**: 3, Melee
 
-**Notable Skills**: Intimidation 7
+**Hiss**: 4, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Traits**: **Relentless** - keeps attacking after taking damage with no hesitation; only stops if it actually runs out of Health Levels or the target leaves its territory entirely.
 
@@ -716,7 +725,7 @@ It doesn't seem to tire the way a goose should, and the neighbors have stopped m
 
 **Bite / Wing Buffet**: 1, Melee
 
-**Notable Skills**: Intimidation 7
+**Hiss**: 4, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Traits**: **Relentless** - keeps attacking after taking damage with no hesitation; only stops if it actually runs out of Health Levels or the target leaves its territory entirely. **Regenerating** - heals 1 Health Level at the start of each of its turns.
 
@@ -736,7 +745,7 @@ Placid until it isn't - and a full charge is genuinely lethal. It grazes with it
 
 **Gore**: 3, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Charge** - if it moves its full Movement Rate directly at a target before attacking, its Gore rolls one additional die that round.
 
@@ -752,7 +761,7 @@ The fence it broke through wasn't the first, and the farmer stopped repairing th
 
 **Gore**: 4, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Charge** - if it moves its full Movement Rate directly at a target before attacking, its Gore rolls one additional die that round.
 
@@ -768,7 +777,7 @@ A silhouette in the field that people mistake for a shed until it moves. It's ge
 
 **Gore**: 5, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Charge** - if it moves its full Movement Rate directly at a target before attacking, its Gore rolls one additional die that round.
 
@@ -784,7 +793,7 @@ Fence posts snap clean against its shoulder and it barely slows down. Its hide h
 
 **Gore**: 3, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Charge** - if it moves its full Movement Rate directly at a target before attacking, its Gore rolls one additional die that round. **Chitinous Plating** - can't be targeted by a called shot (immune to the Armor & Called Shots mechanic's targeting).
 
@@ -804,7 +813,7 @@ Territorial and stubborn, more nuisance than threat on its own. It plants its fe
 
 **Headbutt**: 1, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Sure-Footed** - Advantage on any roll to keep its footing on unstable or steep terrain.
 
@@ -820,7 +829,7 @@ Bigger horns, bigger frame, same willingness to plant its feet and not back down
 
 **Headbutt**: 2, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Sure-Footed** - Advantage on any roll to keep its footing on unstable or steep terrain.
 
@@ -836,7 +845,7 @@ It stands on a rock outcrop that most animals its size couldn't reach, let alone
 
 **Headbutt**: 4, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Sure-Footed** - Advantage on any roll to keep its footing on unstable or steep terrain.
 
@@ -852,7 +861,7 @@ Its hide has taken on a texture closer to bark than fur, and a knife doesn't do 
 
 **Headbutt**: 1, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Sure-Footed** - Advantage on any roll to keep its footing on unstable or steep terrain. **Chitinous Plating** - can't be targeted by a called shot (immune to the Armor & Called Shots mechanic's targeting).
 
@@ -874,7 +883,7 @@ Not a predator - a large, panicked animal is dangerous mostly by accident. Somet
 
 **Kick / Trample**: 2, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Trample** - if its movement this round passes through a Close-range space a target occupies, it can make its attack as part of that movement instead of spending a separate action.
 
@@ -890,7 +899,7 @@ A panicked animal that's outgrown its own stable and still hasn't calmed down. I
 
 **Kick / Trample**: 3, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Trample** - if its movement this round passes through a Close-range space a target occupies, it can make its attack as part of that movement instead of spending a separate action.
 
@@ -906,7 +915,7 @@ What starts as a runaway plow horse story usually ends with someone describing s
 
 **Kick / Trample**: 5, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Trample** - if its movement this round passes through a Close-range space a target occupies, it can make its attack as part of that movement instead of spending a separate action.
 
@@ -922,7 +931,7 @@ It bolts at sounds nothing else in the field even registers, and it hears you co
 
 **Kick / Trample**: 2, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Trample** - if its movement this round passes through a Close-range space a target occupies, it can make its attack as part of that movement instead of spending a separate action. **Unnatural Senses** - Advantage on Perception checks in darkness/smoke/concealment; can't be Surprised via Stealth.
 
@@ -942,7 +951,7 @@ Low, fast, and willing to press an attack that a smarter animal would break off.
 
 **Tusks**: 2, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Low Profile** - Advantage on any roll to resist being tripped or knocked down.
 
@@ -958,7 +967,7 @@ It's put on enough weight to stop caring what's in its way, tusks included. Its 
 
 **Tusks**: 3, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Low Profile** - Advantage on any roll to resist being tripped or knocked down.
 
@@ -974,7 +983,7 @@ Hunters who've seen it describe something closer to a small truck than a hog. It
 
 **Tusks**: 4, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Low Profile** - Advantage on any roll to resist being tripped or knocked down.
 
@@ -990,7 +999,7 @@ A tusk wound only makes it push harder into whatever caused it. Physically it do
 
 **Tusks**: 2, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Low Profile** - Advantage on any roll to resist being tripped or knocked down. **Frenzied Metabolism** - gains Advantage on its next attack roll whenever it loses a Health Level.
 
@@ -1012,7 +1021,7 @@ Cautious and opportunistic - rarely presses a fight it isn't sure it can win. It
 
 **Bite**: 1, Melee
 
-**Notable Skills**: Stealth 8, Perception 8
+**Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
 **Traits**: **Pack Tactics** (as Feral Dog).
 
@@ -1028,7 +1037,7 @@ A genuine apex predator in its own territory, especially in numbers. It moves in
 
 **Bite**: 2, Melee
 
-**Notable Skills**: Perception 8, Athletics 8
+**Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
 **Traits**: **Pack Tactics** (as Feral Dog) - a wolf attacking a target already engaged by another wolf this Scene gains Advantage even without a second wolf attacking the same round.
 
@@ -1044,7 +1053,7 @@ Bolder than a coyote has any right to be, and considerably harder to discourage.
 
 **Bite**: 2, Melee
 
-**Notable Skills**: Stealth 8, Perception 8
+**Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
 **Traits**: **Pack Tactics** (as Feral Dog).
 
@@ -1060,7 +1069,7 @@ Old bones turn up in the region that are too large for any wolf on record, and t
 
 **Bite**: 3, Melee
 
-**Notable Skills**: Perception 8, Athletics 8
+**Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
 **Traits**: **Pack Tactics** (as Feral Dog) - a wolf attacking a target already engaged by another wolf this Scene gains Advantage even without a second wolf attacking the same round.
 
@@ -1076,7 +1085,7 @@ Ranchers who lose stock to it stop calling it a coyote at all. It's built close 
 
 **Bite**: 4, Melee
 
-**Notable Skills**: Stealth 8, Perception 8
+**Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
 **Traits**: **Pack Tactics** (as Feral Dog).
 
@@ -1092,7 +1101,7 @@ A pack led by something the size of a horse doesn't behave like a normal pack an
 
 **Bite**: 5, Melee
 
-**Notable Skills**: Perception 8, Athletics 8
+**Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
 **Traits**: **Pack Tactics** (as Feral Dog) - a wolf attacking a target already engaged by another wolf this Scene gains Advantage even without a second wolf attacking the same round.
 
@@ -1108,7 +1117,7 @@ It crosses open ground in full moonlight and somehow still isn't the thing you n
 
 **Bite**: 1, Melee
 
-**Notable Skills**: Stealth 8, Perception 8
+**Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
 **Traits**: **Pack Tactics** (as Feral Dog). **Camouflaged Growths** - Advantage on Stealth rolls; blends unnaturally well into its environment.
 
@@ -1124,7 +1133,7 @@ A second, smaller jaw has grown along its flank, and it uses both without missin
 
 **Bite**: 2, Melee
 
-**Notable Skills**: Perception 8, Athletics 8
+**Notable Skills**: Perception 8 vs. Stealth, Athletics Target Number 8
 
 **Traits**: **Pack Tactics** (as Feral Dog) - a wolf attacking a target already engaged by another wolf this Scene gains Advantage even without a second wolf attacking the same round. **Extra Limb(s)** - makes two separate natural-weapon attacks per round instead of one, each its own to-hit roll.
 
@@ -1144,7 +1153,7 @@ Small for what it's willing to fight, and it doesn't quit. Barely the size of a 
 
 **Bite / Claws**: 2, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Ferocious** - never the one to break off an engagement voluntarily; fights until it or its target is out of Health Levels or the target escapes outright.
 
@@ -1160,7 +1169,7 @@ It was already willing to fight anything - now it's willing to fight anything an
 
 **Bite / Claws**: 3, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Ferocious** - never the one to break off an engagement voluntarily; fights until it or its target is out of Health Levels or the target escapes outright.
 
@@ -1176,7 +1185,7 @@ Small for a bear and large for a wolverine, which puts it somewhere no one wants
 
 **Bite / Claws**: 5, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Ferocious** - never the one to break off an engagement voluntarily; fights until it or its target is out of Health Levels or the target escapes outright.
 
@@ -1192,7 +1201,7 @@ Every wound just seems to make it angrier, and it was already the wrong animal t
 
 **Bite / Claws**: 2, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Ferocious** - never the one to break off an engagement voluntarily; fights until it or its target is out of Health Levels or the target escapes outright. **Frenzied Metabolism** - gains Advantage on its next attack roll whenever it loses a Health Level.
 
@@ -1216,7 +1225,7 @@ Smaller and warier than a mountain lion, same basic approach. It relies on brush
 
 **Claws**: 2, Melee
 
-**Notable Skills**: Stealth 9
+**Notable Skills**: Stealth 7 vs. Perception
 
 **Traits**: **Ambush Predator** (as Mountain Lion).
 
@@ -1232,7 +1241,7 @@ Built for cold terrain, hunts the same way a bobcat does. Wide, padded paws let 
 
 **Claws**: 2, Melee
 
-**Notable Skills**: Stealth 8, Perception 8
+**Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
 **Traits**: **Ambush Predator** (as Mountain Lion).
 
@@ -1248,7 +1257,7 @@ Rarely seen before it attacks - that's the point. It stalks in complete silence,
 
 **Claws / Bite**: 3, Melee
 
-**Notable Skills**: Stealth 10, Athletics 10
+**Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 10
 
 **Traits**: **Ambush Predator** - Advantage on its first attack roll if it began the encounter undetected.
 
@@ -1264,7 +1273,7 @@ Twice the size of a normal bobcat and no less willing to launch from a branch ov
 
 **Claws**: 3, Melee
 
-**Notable Skills**: Stealth 9
+**Notable Skills**: Stealth 7 vs. Perception
 
 **Traits**: **Ambush Predator** (as Mountain Lion).
 
@@ -1280,7 +1289,7 @@ The wide paws that keep a lynx on top of snow now carry considerably more weight
 
 **Claws**: 3, Melee
 
-**Notable Skills**: Stealth 8, Perception 8
+**Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
 **Traits**: **Ambush Predator** (as Mountain Lion).
 
@@ -1296,7 +1305,7 @@ Bigger paws leave bigger prints, and the deer it's been taking down lately are e
 
 **Claws / Bite**: 4, Melee
 
-**Notable Skills**: Stealth 10, Athletics 10
+**Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 10
 
 **Traits**: **Ambush Predator** - Advantage on its first attack roll if it began the encounter undetected.
 
@@ -1312,7 +1321,7 @@ Drags a whole deer carcass up a tree with the ease of a normal bobcat carrying a
 
 **Claws**: 4, Melee
 
-**Notable Skills**: Stealth 9
+**Notable Skills**: Stealth 7 vs. Perception
 
 **Traits**: **Ambush Predator** (as Mountain Lion).
 
@@ -1328,7 +1337,7 @@ Tracks in fresh snow that look right in every way except the size. It's built at
 
 **Claws**: 4, Melee
 
-**Notable Skills**: Stealth 8, Perception 8
+**Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
 **Traits**: **Ambush Predator** (as Mountain Lion).
 
@@ -1344,7 +1353,7 @@ The kind of animal state wildlife agencies quietly stop confirming exists once t
 
 **Claws / Bite**: 5, Melee
 
-**Notable Skills**: Stealth 10, Athletics 10
+**Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 10
 
 **Traits**: **Ambush Predator** - Advantage on its first attack roll if it began the encounter undetected.
 
@@ -1360,7 +1369,7 @@ It goes flat against a rock face and simply isn't there anymore, even to a train
 
 **Claws**: 2, Melee
 
-**Notable Skills**: Stealth 9
+**Notable Skills**: Stealth 7 vs. Perception
 
 **Traits**: **Ambush Predator** (as Mountain Lion). **Camouflaged Growths** - Advantage on Stealth rolls; blends unnaturally well into its environment.
 
@@ -1376,7 +1385,7 @@ It hunts just as well against a bright snowfield as it does in the dark of a pin
 
 **Claws**: 2, Melee
 
-**Notable Skills**: Stealth 8, Perception 8
+**Notable Skills**: Stealth 8 vs. Perception, Perception 8 vs. Stealth
 
 **Traits**: **Ambush Predator** (as Mountain Lion). **Photophobic Frenzy** - Advantage on attacks made in darkness; Disadvantage on attacks made in direct bright light.
 
@@ -1394,7 +1403,7 @@ It hears a held breath from across a clearing, which is the only warning anyone 
 
 **Claws / Bite**: 3, Melee
 
-**Notable Skills**: Stealth 10, Athletics 10
+**Notable Skills**: Stealth 6 vs. Perception, Athletics Target Number 10
 
 **Traits**: **Ambush Predator** - Advantage on its first attack roll if it began the encounter undetected. **Unnatural Senses** - Advantage on Perception checks in darkness/smoke/concealment; can't be Surprised via Stealth.
 
@@ -1416,7 +1425,7 @@ Strong enough to be dangerous, but genuinely avoidant by nature. It's more likel
 
 **Claws**: 3, Melee
 
-**Notable Skills**: Athletics 8, Perception 7
+**Notable Skills**: Athletics Target Number 8, Perception 9 vs. Stealth
 
 **Traits**: **Avoidant** - only attacks if cornered, startled at close range, or defending cubs (GM's call).
 
@@ -1432,7 +1441,7 @@ Nothing about it is avoidant once it's decided to engage. It's bigger through th
 
 **Claws**: 4, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Hard to Put Down** - Advantage on any roll to resist being knocked back, tripped, or grappled.
 
@@ -1448,7 +1457,7 @@ The largest land predator that actually hunts people as prey. It's built for col
 
 **Claws / Bite**: 4, Melee
 
-**Notable Skills**: Athletics 9, Perception 8 (scent)
+**Notable Skills**: Athletics Target Number 9, Perception 8 vs. Stealth (scent)
 
 **Traits**: **Strong Swimmer** - no Movement Rate penalty in water. **Ambush Predator** (as Mountain Lion) when attacking from open water or through ice.
 
@@ -1464,7 +1473,7 @@ Stands taller than a grizzly should and still keeps the black bear's habit of av
 
 **Claws**: 4, Melee
 
-**Notable Skills**: Athletics 8, Perception 7
+**Notable Skills**: Athletics Target Number 8, Perception 9 vs. Stealth
 
 **Traits**: **Avoidant** - only attacks if cornered, startled at close range, or defending cubs (GM's call).
 
@@ -1480,7 +1489,7 @@ Already the animal you don't want to surprise - this one just has more mass behi
 
 **Claws**: 5, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Hard to Put Down** - Advantage on any roll to resist being knocked back, tripped, or grappled.
 
@@ -1496,7 +1505,7 @@ Already the largest thing that hunts people as food - this one just makes the ma
 
 **Claws / Bite**: 5, Melee
 
-**Notable Skills**: Athletics 9, Perception 8 (scent)
+**Notable Skills**: Athletics Target Number 9, Perception 8 vs. Stealth (scent)
 
 **Traits**: **Strong Swimmer** - no Movement Rate penalty in water. **Ambush Predator** (as Mountain Lion) when attacking from open water or through ice.
 
@@ -1512,7 +1521,7 @@ Even avoidant, something this size can knock a car onto its side just by leaning
 
 **Claws**: 5, Melee
 
-**Notable Skills**: Athletics 8, Perception 7
+**Notable Skills**: Athletics Target Number 8, Perception 9 vs. Stealth
 
 **Traits**: **Avoidant** - only attacks if cornered, startled at close range, or defending cubs (GM's call).
 
@@ -1528,7 +1537,7 @@ The kind of thing that leaves claw marks on a tree at a height that makes hikers
 
 **Claws**: 5, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Hard to Put Down** - Advantage on any roll to resist being knocked back, tripped, or grappled.
 
@@ -1544,7 +1553,7 @@ Ice researchers who've filmed it from a distance still argue about the scale in 
 
 **Claws / Bite**: 5, Melee
 
-**Notable Skills**: Athletics 9, Perception 8 (scent)
+**Notable Skills**: Athletics Target Number 9, Perception 8 vs. Stealth (scent)
 
 **Traits**: **Strong Swimmer** - no Movement Rate penalty in water. **Ambush Predator** (as Mountain Lion) when attacking from open water or through ice.
 
@@ -1560,7 +1569,7 @@ A gash that should have laid it up for a season closes over in a matter of hours
 
 **Claws**: 3, Melee
 
-**Notable Skills**: Athletics 8, Perception 7
+**Notable Skills**: Athletics Target Number 8, Perception 9 vs. Stealth
 
 **Traits**: **Avoidant** - only attacks if cornered, startled at close range, or defending cubs (GM's call). **Regenerating** - heals 1 Health Level at the start of each of its turns.
 
@@ -1576,7 +1585,7 @@ Standing near it too long leaves a low ache that won't go away until you've put 
 
 **Claws**: 4, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Hard to Put Down** - Advantage on any roll to resist being knocked back, tripped, or grappled. **Radioactive Touch** - anyone within Melee range at the start of its turn takes 1 unsoakable Health Level, unless wearing radiation-rated protection (GM's call).
 
@@ -1592,7 +1601,7 @@ Anyone who manages to land a hit on it comes away burned as much as bitten. Phys
 
 **Claws / Bite**: 4, Melee
 
-**Notable Skills**: Athletics 9, Perception 8 (scent)
+**Notable Skills**: Athletics Target Number 9, Perception 8 vs. Stealth (scent)
 
 **Traits**: **Strong Swimmer** - no Movement Rate penalty in water. **Ambush Predator** (as Mountain Lion) when attacking from open water or through ice. **Acidic Blood** - anyone who lands a Melee hit against it takes 1 unsoakable Health Level from splashback.
 
@@ -1616,7 +1625,7 @@ Nearly invisible at the waterline until it isn't. Floating with just eyes and no
 
 **Bite**: 3, Melee
 
-**Notable Skills**: Stealth 9 (lying in wait)
+**Notable Skills**: Stealth 7 vs. Perception (lying in wait)
 
 **Traits**: **Death Roll** - on a successful bite, may spend 1 Ki to drag a grabbed target into deep water; what happens next is the GM's call.
 
@@ -1632,7 +1641,7 @@ The waterline hides more of it than usual, simply because there's more to hide. 
 
 **Bite**: 4, Melee
 
-**Notable Skills**: Stealth 9 (lying in wait)
+**Notable Skills**: Stealth 7 vs. Perception (lying in wait)
 
 **Traits**: **Death Roll** - on a successful bite, may spend 1 Ki to drag a grabbed target into deep water; what happens next is the GM's call.
 
@@ -1648,7 +1657,7 @@ Old-timers around the bayou have a name for this one and a firm rule about which
 
 **Bite**: 5, Melee
 
-**Notable Skills**: Stealth 9 (lying in wait)
+**Notable Skills**: Stealth 7 vs. Perception (lying in wait)
 
 **Traits**: **Death Roll** - on a successful bite, may spend 1 Ki to drag a grabbed target into deep water; what happens next is the GM's call.
 
@@ -1664,7 +1673,7 @@ Its hide has gone from tough to genuinely impenetrable in places, thick plates w
 
 **Bite**: 3, Melee
 
-**Notable Skills**: Stealth 9 (lying in wait)
+**Notable Skills**: Stealth 7 vs. Perception (lying in wait)
 
 **Traits**: **Death Roll** - on a successful bite, may spend 1 Ki to drag a grabbed target into deep water; what happens next is the GM's call. **Chitinous Plating** - can't be targeted by a called shot (immune to the Armor & Called Shots mechanic's targeting).
 
@@ -1684,7 +1693,7 @@ Slow-moving, but its bite doesn't easily let go. Thick-bodied and patterned in b
 
 **Bite**: 1, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
 
-**Notable Skills**: Stealth 6
+**Notable Skills**: Stealth 10 vs. Perception
 
 </td></tr></table>
 
@@ -1698,7 +1707,7 @@ It moves no faster than before, but once it clamps down the grip is considerably
 
 **Bite**: 2, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
 
-**Notable Skills**: Stealth 6
+**Notable Skills**: Stealth 10 vs. Perception
 
 </td></tr></table>
 
@@ -1712,7 +1721,7 @@ Its coloring is unmistakable even at a distance, which does nothing to help once
 
 **Bite**: 4, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
 
-**Notable Skills**: Stealth 6
+**Notable Skills**: Stealth 10 vs. Perception
 
 </td></tr></table>
 
@@ -1726,7 +1735,7 @@ The venom now carries an extra sting that lingers well past the bite itself. It 
 
 **Bite**: 1, Melee, **Venom / Grip**: a target bitten is [Envenomed](rules.md#envenomed) and [Grabbed](rules.md#grabbed) - escaping is contested against the Gila Monster's Potence.
 
-**Notable Skills**: Stealth 6
+**Notable Skills**: Stealth 10 vs. Perception
 
 **Traits**: **Toxic Bite/Sting** - a target hit by its bite is [Envenomed](rules.md#envenomed).
 
@@ -1748,7 +1757,7 @@ Camouflages well enough that the warning display is easy to miss. Its banded col
 
 **Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 10
+**Notable Skills**: Stealth 6 vs. Perception
 
 </td></tr></table>
 
@@ -1762,7 +1771,7 @@ Aquatic, territorial, and willing to stand its ground rather than flee into deep
 
 **Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 9
+**Notable Skills**: Stealth 7 vs. Perception
 
 </td></tr></table>
 
@@ -1776,7 +1785,7 @@ Would rather warn than strike - the warning is the only mercy it offers. The rat
 
 **Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 9
+**Notable Skills**: Stealth 7 vs. Perception
 
 **Traits**: **Warning Display** - always rattles before striking unless it's been stepped on or grabbed directly.
 
@@ -1792,7 +1801,7 @@ Its camouflage pattern has stretched with the extra length, and it's harder than
 
 **Bite**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 10
+**Notable Skills**: Stealth 6 vs. Perception
 
 </td></tr></table>
 
@@ -1806,7 +1815,7 @@ It holds its ground in shallow water even against threats that would send an ord
 
 **Bite**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 9
+**Notable Skills**: Stealth 7 vs. Perception
 
 </td></tr></table>
 
@@ -1820,7 +1829,7 @@ Longer than any rattler has a right to be, and the rattle itself sounds wrong - 
 
 **Bite**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 9
+**Notable Skills**: Stealth 7 vs. Perception
 
 **Traits**: **Warning Display** - always rattles before striking unless it's been stepped on or grabbed directly.
 
@@ -1836,7 +1845,7 @@ Big enough now to take small game whole, which changes how it hunts more than ho
 
 **Bite**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 10
+**Notable Skills**: Stealth 6 vs. Perception
 
 </td></tr></table>
 
@@ -1850,7 +1859,7 @@ Fishermen who've hooked something in the shallows and reeled up a snake instead 
 
 **Bite**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 9
+**Notable Skills**: Stealth 7 vs. Perception
 
 </td></tr></table>
 
@@ -1864,7 +1873,7 @@ A rockslide of coiled muscle that people mistake for a fallen log until the log 
 
 **Bite**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 9
+**Notable Skills**: Stealth 7 vs. Perception
 
 **Traits**: **Warning Display** - always rattles before striking unless it's been stepped on or grabbed directly.
 
@@ -1880,7 +1889,7 @@ A second set of fangs has grown behind the first, doubling every strike it lands
 
 **Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 10
+**Notable Skills**: Stealth 6 vs. Perception
 
 **Traits**: **Extra Limb(s)** - makes two separate bite attacks per round instead of one, each its own to-hit roll.
 
@@ -1896,7 +1905,7 @@ It can flood a stretch of shallow water with something in the air alone, no bite
 
 **Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 9
+**Notable Skills**: Stealth 7 vs. Perception
 
 **Traits**: **Toxic Cloud** - once per encounter, releases a cloud at Close range - anyone inside without protection is at Disadvantage on all rolls for the rest of the Scene (same shape as the Skunk's own Spray ability).
 
@@ -1912,7 +1921,7 @@ One bite carries two different kinds of trouble now, and the second doesn't come
 
 **Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 9
+**Notable Skills**: Stealth 7 vs. Perception
 
 **Traits**: **Warning Display** - always rattles before striking unless it's been stepped on or grabbed directly. **Toxic Bite/Sting** - a target hit by its bite is [Envenomed](rules.md#envenomed).
 
@@ -2110,7 +2119,7 @@ Small, easy to miss, and painful rather than lethal in most cases. It hides unde
 
 **Sting**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 8
+**Notable Skills**: Stealth 8 vs. Perception
 
 </td></tr></table>
 
@@ -2124,7 +2133,7 @@ Big enough now that the tail arcing overhead is the first thing anyone notices a
 
 **Sting**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 8
+**Notable Skills**: Stealth 8 vs. Perception
 
 </td></tr></table>
 
@@ -2138,7 +2147,7 @@ It doesn't hide under a rock anymore - there isn't a rock big enough. What passe
 
 **Sting**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 8
+**Notable Skills**: Stealth 8 vs. Perception
 
 </td></tr></table>
 
@@ -2152,7 +2161,7 @@ The exoskeleton has thickened into something closer to armor plate, and a blade 
 
 **Sting**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 8
+**Notable Skills**: Stealth 8 vs. Perception
 
 **Traits**: **Chitinous Plating** - can't be targeted by a called shot (immune to the Armor & Called Shots mechanic's targeting).
 
@@ -2183,7 +2192,7 @@ Small enough to go unnoticed until the bite already happened. Glossy black with 
 
 **Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 10
+**Notable Skills**: Stealth 6 vs. Perception
 
 </td></tr></table>
 
@@ -2197,7 +2206,7 @@ Its bite is easy to shrug off in the moment - the worst of it comes later. Dull 
 
 **Bite**: 1, Melee, [Necrotic Venom](#spider).
 
-**Notable Skills**: Stealth 10
+**Notable Skills**: Stealth 6 vs. Perception
 
 </td></tr></table>
 
@@ -2211,7 +2220,7 @@ The hourglass marking is now visible from across a room, on a body that shouldn'
 
 **Bite**: 2, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 10
+**Notable Skills**: Stealth 6 vs. Perception
 
 </td></tr></table>
 
@@ -2225,7 +2234,7 @@ The bite is the same shape as always, just delivered by something considerably h
 
 **Bite**: 2, Melee, [Necrotic Venom](#spider).
 
-**Notable Skills**: Stealth 10
+**Notable Skills**: Stealth 6 vs. Perception
 
 </td></tr></table>
 
@@ -2239,7 +2248,7 @@ Its web spans a doorway rather than a corner, strong enough to catch more than i
 
 **Bite**: 3, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 10
+**Notable Skills**: Stealth 6 vs. Perception
 
 </td></tr></table>
 
@@ -2253,7 +2262,7 @@ Found under boards in an old shed, in a size that makes the whole shed worth avo
 
 **Bite**: 3, Melee, [Necrotic Venom](#spider).
 
-**Notable Skills**: Stealth 10
+**Notable Skills**: Stealth 6 vs. Perception
 
 </td></tr></table>
 
@@ -2267,7 +2276,7 @@ Crushing it doesn't end the encounter cleanly - whatever's in its body finds its
 
 **Bite**: 1, Melee, **Venom**: on a successful hit, the target is [Envenomed](rules.md#envenomed).
 
-**Notable Skills**: Stealth 10
+**Notable Skills**: Stealth 6 vs. Perception
 
 **Traits**: **Acidic Blood** - anyone who lands a Melee hit against it takes 1 unsoakable Health Level from splashback.
 
@@ -2283,7 +2292,7 @@ Whatever it carries in its bite now works faster and meaner than the necrosis it
 
 **Bite**: 1, Melee, [Necrotic Venom](#spider).
 
-**Notable Skills**: Stealth 10
+**Notable Skills**: Stealth 6 vs. Perception
 
 **Traits**: **Fast-Acting** - its Necrotic Venom rolls **every 6 hours** instead of once a day, the first 6 hours after the bite. **Antitoxin only gives Advantage** on those rolls rather than ending it, and **Medicine has no effect** on them.
 
@@ -2305,7 +2314,7 @@ Silent wings make it one of the few genuinely hard-to-detect predators in the sk
 
 **Talons**: 1, Melee
 
-**Notable Skills**: Stealth 9, Perception 9
+**Notable Skills**: Stealth 7 vs. Perception, Perception 7 vs. Stealth
 
 **Traits**: **Nocturnal Ambush** - Advantage on an attack made in darkness against a target that hasn't detected it.
 
@@ -2321,7 +2330,7 @@ Still silent on the wing, which is somehow more unsettling given how much bigger
 
 **Talons**: 2, Melee
 
-**Notable Skills**: Stealth 9, Perception 9
+**Notable Skills**: Stealth 7 vs. Perception, Perception 7 vs. Stealth
 
 **Traits**: **Nocturnal Ambush** - Advantage on an attack made in darkness against a target that hasn't detected it.
 
@@ -2337,7 +2346,7 @@ A shape passes overhead at dusk large enough to blot out the last of the light. 
 
 **Talons**: 4, Melee
 
-**Notable Skills**: Stealth 9, Perception 9
+**Notable Skills**: Stealth 7 vs. Perception, Perception 7 vs. Stealth
 
 **Traits**: **Nocturnal Ambush** - Advantage on an attack made in darkness against a target that hasn't detected it.
 
@@ -2353,7 +2362,7 @@ Daylight seems to throw off its aim in a way darkness never does. It's smaller t
 
 **Talons**: 1, Melee
 
-**Notable Skills**: Stealth 9, Perception 9
+**Notable Skills**: Stealth 7 vs. Perception, Perception 7 vs. Stealth
 
 **Traits**: **Nocturnal Ambush** - Advantage on an attack made in darkness against a target that hasn't detected it. **Photophobic Frenzy** - Advantage on attacks made in darkness; Disadvantage on attacks made in direct bright light.
 
@@ -2373,7 +2382,7 @@ Exceptional eyesight, and a dive that closes distance faster than it looks. It c
 
 **Talons**: 1, Melee
 
-**Notable Skills**: Perception 10
+**Notable Skills**: Perception 6 vs. Stealth
 
 **Traits**: **Dive Attack** - Advantage on an attack made immediately after diving in from Far range.
 
@@ -2389,7 +2398,7 @@ Wingspan closer to a small aircraft, and the dive it drops into hits with a lot 
 
 **Talons**: 2, Melee
 
-**Notable Skills**: Perception 10
+**Notable Skills**: Perception 6 vs. Stealth
 
 **Traits**: **Dive Attack** - Advantage on an attack made immediately after diving in from Far range.
 
@@ -2405,7 +2414,7 @@ Farmers report livestock disappearing from open pasture in broad daylight, no dr
 
 **Talons**: 4, Melee
 
-**Notable Skills**: Perception 10
+**Notable Skills**: Perception 6 vs. Stealth
 
 **Traits**: **Dive Attack** - Advantage on an attack made immediately after diving in from Far range.
 
@@ -2421,7 +2430,7 @@ It picks out movement through fog and brush that would hide it from any normal s
 
 **Talons**: 1, Melee
 
-**Notable Skills**: Perception 10
+**Notable Skills**: Perception 6 vs. Stealth
 
 **Traits**: **Dive Attack** - Advantage on an attack made immediately after diving in from Far range. **Unnatural Senses** - Advantage on Perception checks in darkness/smoke/concealment; can't be Surprised via Stealth.
 
@@ -2441,7 +2450,7 @@ Not a combat threat under any normal circumstance. It circles on broad, unsteady
 
 **Beak**: 1, Melee
 
-**Notable Skills**: Perception 9 (smell)
+**Notable Skills**: Perception 7 vs. Stealth (smell)
 
 **Traits**: **Scavenger** - avoids conflict entirely unless directly and repeatedly provoked.
 
@@ -2457,7 +2466,7 @@ Circles higher and stays longer than a normal vulture would, patient in a way th
 
 **Beak**: 2, Melee
 
-**Notable Skills**: Perception 9 (smell)
+**Notable Skills**: Perception 7 vs. Stealth (smell)
 
 **Traits**: **Scavenger** - avoids conflict entirely unless directly and repeatedly provoked.
 
@@ -2473,7 +2482,7 @@ A wingspan wide enough to cast a shadow you notice before you notice the bird. I
 
 **Beak**: 3, Melee
 
-**Notable Skills**: Perception 9 (smell)
+**Notable Skills**: Perception 7 vs. Stealth (smell)
 
 **Traits**: **Scavenger** - avoids conflict entirely unless directly and repeatedly provoked.
 
@@ -2489,7 +2498,7 @@ Even provoked, it rarely bites - it lets whatever's already wrong with its stoma
 
 **Beak**: 1, Melee
 
-**Notable Skills**: Perception 9 (smell)
+**Notable Skills**: Perception 7 vs. Stealth (smell)
 
 **Traits**: **Scavenger** - avoids conflict entirely unless directly and repeatedly provoked. **Acidic Blood** - anyone who lands a Melee hit against it takes 1 unsoakable Health Level from splashback.
 
@@ -2513,7 +2522,7 @@ Doesn't need to bite when it can simply stop a target from acting. Long, dark, a
 
 **Shock**: Close range, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls until the end of their next turn.
 
-**Notable Skills**: Stealth 8
+**Notable Skills**: Stealth 8 vs. Perception
 
 </td></tr></table>
 
@@ -2527,7 +2536,7 @@ Longer than any recorded specimen, and the charge it puts out lasts noticeably l
 
 **Shock**: Close range, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls for a full Scene instead of just until the end of their next turn.
 
-**Notable Skills**: Stealth 8
+**Notable Skills**: Stealth 8 vs. Perception
 
 </td></tr></table>
 
@@ -2541,7 +2550,7 @@ Whole sections of a flooded channel go dead quiet around it, fish and birds alik
 
 **Shock**: extends out to Short range instead of just Close, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls until the end of their next turn.
 
-**Notable Skills**: Stealth 8
+**Notable Skills**: Stealth 8 vs. Perception
 
 </td></tr></table>
 
@@ -2555,7 +2564,7 @@ Even out of the water, standing near it too long leaves a faint prickling under 
 
 **Shock**: Close range, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls until the end of their next turn.
 
-**Notable Skills**: Stealth 8
+**Notable Skills**: Stealth 8 vs. Perception
 
 **Traits**: **Radioactive Touch** - anyone within Melee range at the start of its turn takes 1 unsoakable Health Level, unless wearing radiation-rated protection (GM's call).
 
@@ -2577,7 +2586,7 @@ Intelligent, coordinated, and the only predator on this list that hunts great wh
 
 **Bite / Ram**: 5, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Pack Tactics** (as Feral Dog, applies within a pod). **Highly Intelligent** - coordinated tactics beyond a simple attack are the GM's call, not a fixed mechanical bonus.
 
@@ -2593,7 +2602,7 @@ Even among orcas this one stands out, and the pod defers to it without hesitatio
 
 **Bite / Ram**: 5, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Pack Tactics** (as Feral Dog, applies within a pod). **Highly Intelligent** - coordinated tactics beyond a simple attack are the GM's call, not a fixed mechanical bonus.
 
@@ -2609,7 +2618,7 @@ The only predator that hunts great white sharks, now scaled up to a size that ma
 
 **Bite / Ram**: 5, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Pack Tactics** (as Feral Dog, applies within a pod). **Highly Intelligent** - coordinated tactics beyond a simple attack are the GM's call, not a fixed mechanical bonus.
 
@@ -2625,7 +2634,7 @@ It tracks a boat's engine noise from a distance no sonar operator expects, and r
 
 **Bite / Ram**: 5, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Pack Tactics** (as Feral Dog, applies within a pod). **Highly Intelligent** - coordinated tactics beyond a simple attack are the GM's call, not a fixed mechanical bonus. **Unnatural Senses** - Advantage on Perception checks in darkness/smoke/concealment; can't be Surprised via Stealth.
 
@@ -2705,7 +2714,7 @@ Tolerates brackish and shallow water better than most sharks - which means it tu
 
 **Bite**: 3, Melee
 
-**Notable Skills**: Perception 7
+**Notable Skills**: Perception 9 vs. Stealth
 
 **Traits**: **Ambush Predator** (as Mountain Lion). **Aggressive** - never the one to break off an engagement.
 
@@ -2721,7 +2730,7 @@ The apex predator of open water, full stop. It's often close before it's noticed
 
 **Bite**: 4, Melee
 
-**Notable Skills**: Perception 8
+**Notable Skills**: Perception 8 vs. Stealth
 
 **Traits**: **Ambush Predator** (as Mountain Lion). Cannot leave the water.
 
@@ -2737,7 +2746,7 @@ Comfortable in the same shallow water it always was, just a great deal harder to
 
 **Bite**: 4, Melee
 
-**Notable Skills**: Perception 7
+**Notable Skills**: Perception 9 vs. Stealth
 
 **Traits**: **Ambush Predator** (as Mountain Lion). **Aggressive** - never the one to break off an engagement.
 
@@ -2753,7 +2762,7 @@ Boat captains who've clocked its length on sonar stop taking clients out past th
 
 **Bite**: 5, Melee
 
-**Notable Skills**: Perception 8
+**Notable Skills**: Perception 8 vs. Stealth
 
 **Traits**: **Ambush Predator** (as Mountain Lion). Cannot leave the water.
 
@@ -2769,7 +2778,7 @@ Turns up in a river channel miles from the coast, in water that shouldn't hold a
 
 **Bite**: 5, Melee
 
-**Notable Skills**: Perception 7
+**Notable Skills**: Perception 9 vs. Stealth
 
 **Traits**: **Ambush Predator** (as Mountain Lion). **Aggressive** - never the one to break off an engagement.
 
@@ -2785,7 +2794,7 @@ The apex predator of open water just got a size class nothing else in that water
 
 **Bite**: 5, Melee
 
-**Notable Skills**: Perception 8
+**Notable Skills**: Perception 8 vs. Stealth
 
 **Traits**: **Ambush Predator** (as Mountain Lion). Cannot leave the water.
 
@@ -2801,7 +2810,7 @@ A second row of fins has grown along its underside, letting it turn and strike i
 
 **Bite**: 3, Melee
 
-**Notable Skills**: Perception 7
+**Notable Skills**: Perception 9 vs. Stealth
 
 **Traits**: **Ambush Predator** (as Mountain Lion). **Aggressive** - never the one to break off an engagement. **Extra Limb(s)** - makes two separate Bite attacks per round instead of one, each its own to-hit roll.
 
@@ -2817,7 +2826,7 @@ The first taste of blood in the water only sharpens whatever comes next. It's sm
 
 **Bite**: 4, Melee
 
-**Notable Skills**: Perception 8
+**Notable Skills**: Perception 8 vs. Stealth
 
 **Traits**: **Ambush Predator** (as Mountain Lion). Cannot leave the water. **Frenzied Metabolism** - gains Advantage on its next attack roll whenever it loses a Health Level.
 
@@ -2839,7 +2848,7 @@ Placid in a herd, catastrophic when charging. A full-grown bison looks slow and 
 
 **Gore / Trample**: 3, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Charge** (as Bull).
 
@@ -2855,7 +2864,7 @@ A herd animal that's outgrown the herd, and it doesn't wait for the rest to catc
 
 **Gore / Trample**: 4, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Charge** (as Bull).
 
@@ -2871,7 +2880,7 @@ The ground shakes before it's even visible over the ridge line. At this size a s
 
 **Gore / Trample**: 5, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Charge** (as Bull).
 
@@ -2887,7 +2896,7 @@ Dropping it doesn't end the danger - what happens next is best watched from well
 
 **Gore / Trample**: 3, Melee
 
-**Notable Skills**: Athletics 9
+**Notable Skills**: Athletics Target Number 9
 
 **Traits**: **Charge** (as Bull). **Explosive Death** - on dropping to 0 Health Levels, deals 3 dice of Physical damage to everyone within Melee range.
 
@@ -2907,7 +2916,7 @@ Smaller and less consistently aggressive than a moose, same basic shape. It trav
 
 **Antlers / Hooves**: 2, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Seasonal Aggression** (as Moose, milder).
 
@@ -2923,7 +2932,7 @@ The largest deer species, and surprisingly willing to fight when provoked. It st
 
 **Antlers / Hooves**: 3, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Seasonal Aggression** - genuinely dangerous during rut; avoidant like Black Bear the rest of the year (GM's call on timing).
 
@@ -2939,7 +2948,7 @@ Bigger, louder during rut, and considerably less likely to back off from a road 
 
 **Antlers / Hooves**: 3, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Seasonal Aggression** (as Moose, milder).
 
@@ -2955,7 +2964,7 @@ The rack alone is wider than most doorframes, and it's just as willing to fight 
 
 **Antlers / Hooves**: 4, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Seasonal Aggression** - genuinely dangerous during rut; avoidant like Black Bear the rest of the year (GM's call on timing).
 
@@ -2971,7 +2980,7 @@ A rack that would need its own trailer, on an animal that's stopped being camera
 
 **Antlers / Hooves**: 5, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Seasonal Aggression** (as Moose, milder).
 
@@ -2987,7 +2996,7 @@ Drivers who've hit a normal moose describe the damage as bad. Nobody's walked aw
 
 **Antlers / Hooves**: 5, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Seasonal Aggression** - genuinely dangerous during rut; avoidant like Black Bear the rest of the year (GM's call on timing).
 
@@ -3003,7 +3012,7 @@ It stands motionless at the treeline for so long that most people walk right pas
 
 **Antlers / Hooves**: 2, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Seasonal Aggression** (as Moose, milder). **Camouflaged Growths** - Advantage on Stealth rolls; blends unnaturally well into its environment.
 
@@ -3021,7 +3030,7 @@ The hide over its chest and flanks has hardened into something closer to bark th
 
 **Antlers / Hooves**: 3, Melee
 
-**Notable Skills**: Athletics 8
+**Notable Skills**: Athletics Target Number 8
 
 **Traits**: **Seasonal Aggression** - genuinely dangerous during rut; avoidant like Black Bear the rest of the year (GM's call on timing). **Chitinous Plating** - can't be targeted by a called shot (immune to the Armor & Called Shots mechanic's targeting).
 
@@ -3043,7 +3052,7 @@ Small, camouflaged, and no real combat threat. Its coat shifts with the season, 
 
 **Bite**: 1, Melee
 
-**Notable Skills**: Stealth 9, Perception 8
+**Notable Skills**: Stealth 7 vs. Perception, Perception 8 vs. Stealth
 
 **Traits**: **Snow Camouflage** - Advantage on Stealth rolls while in snowy terrain.
 
@@ -3059,7 +3068,7 @@ Bigger than the terrain usually allows, though the coat and the caution are exac
 
 **Bite**: 2, Melee
 
-**Notable Skills**: Stealth 9, Perception 8
+**Notable Skills**: Stealth 7 vs. Perception, Perception 8 vs. Stealth
 
 **Traits**: **Snow Camouflage** - Advantage on Stealth rolls while in snowy terrain.
 
@@ -3075,7 +3084,7 @@ Tracks in fresh snow the size of a wolf's, from an animal that's never been mist
 
 **Bite**: 3, Melee
 
-**Notable Skills**: Stealth 9, Perception 8
+**Notable Skills**: Stealth 7 vs. Perception, Perception 8 vs. Stealth
 
 **Traits**: **Snow Camouflage** - Advantage on Stealth rolls while in snowy terrain.
 
@@ -3091,7 +3100,7 @@ Against a snowfield it simply isn't there until it wants to be, coat and all. It
 
 **Bite**: 1, Melee
 
-**Notable Skills**: Stealth 9, Perception 8
+**Notable Skills**: Stealth 7 vs. Perception, Perception 8 vs. Stealth
 
 **Traits**: **Snow Camouflage** - Advantage on Stealth rolls while in snowy terrain. **Camouflaged Growths** - Advantage on Stealth rolls; blends unnaturally well into its environment.
 
@@ -3111,7 +3120,7 @@ Unlike most owls, hunts by day as often as by night. Nearly pure white with a ro
 
 **Talons**: 1, Melee
 
-**Notable Skills**: Perception 9
+**Notable Skills**: Perception 7 vs. Stealth
 
 **Traits**: **Ambush Hunter** - Advantage on an attack made against a target that hasn't detected it, day or night (unlike Great Horned Owl, not limited to darkness).
 
@@ -3127,7 +3136,7 @@ The wingspan alone casts a shadow across the snow that most prey mistake for a c
 
 **Talons**: 2, Melee
 
-**Notable Skills**: Perception 9
+**Notable Skills**: Perception 7 vs. Stealth
 
 **Traits**: **Ambush Hunter** - Advantage on an attack made against a target that hasn't detected it, day or night (unlike Great Horned Owl, not limited to darkness).
 
@@ -3143,7 +3152,7 @@ Research stations that track it by transponder alone still don't believe the win
 
 **Talons**: 4, Melee
 
-**Notable Skills**: Perception 9
+**Notable Skills**: Perception 7 vs. Stealth
 
 **Traits**: **Ambush Hunter** - Advantage on an attack made against a target that hasn't detected it, day or night (unlike Great Horned Owl, not limited to darkness).
 
@@ -3159,7 +3168,7 @@ It hunts equally well against the glare of open snow at noon or in the dead dark
 
 **Talons**: 1, Melee
 
-**Notable Skills**: Perception 9
+**Notable Skills**: Perception 7 vs. Stealth
 
 **Traits**: **Ambush Hunter** - Advantage on an attack made against a target that hasn't detected it, day or night (unlike Great Horned Owl, not limited to darkness). **Photophobic Frenzy** - Advantage on attacks made in darkness; Disadvantage on attacks made in direct bright light.
 

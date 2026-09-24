@@ -29,7 +29,8 @@ Urban-fantasy and horror archetypes, built entirely on this system's own mechani
 - **Health Levels** work exactly as they do for a PC, with no below-0 range - a creature is out of the fight the instant it crosses 0.
 - **Movement Rate** is in meters, same as a PC's.
 - Each **Natural Weapon** lists a Damage rating (d10 count, same 1-10 scale as [weapons.md](weapons.md)) and a range.
-- **Notable Skills** give a single number - treat it as the creature's full roll target whenever that Skill matters. Roll 2d10 against it, standard critical results apply, exactly like any other roll.
+- **Notable Skills** come in two forms. **Opposed** skills read `Stealth 6 vs. Perception`: the number is the **Difficulty for the player's roll**, so a character trying to spot this creature rolls Perception against their Attribute + 6. The lower the number, the harder the creature is to beat. Everything else reads `Athletics Target Number 9`: the creature's own roll, 2d10 against that number, standard critical results applying like any other roll. **A trait that gives a creature Advantage on an opposed skill** ("Advantage on Stealth checks") means the player rolls against it at **Disadvantage** instead, and Disadvantage the other way round.
+- A **Social** attack line (a Snarl, a Hiss, a Howl) works like a natural weapon aimed at the mind's composure instead of the body: to-hit with the creature's Attack against the target's [Social Defense](rules.md#defense-derived-stat), then each die against the target's **Presence**, a connecting die costing a level of [Poise](rules.md#poise). It can't kill - Poise has no death threshold - but a character at 0 Poise is [Flustered](rules.md#flustered).
 - **Traits** describe anything that doesn't fit the fields above, written in terms of mechanics that already exist (Advantage/Disadvantage, Range Bands, Ki, etc.) rather than new ones.
 - **A small number of entries have an ability marked "no to-hit roll required."** Every attack normally starts with a to-hit roll against the target's Defense (rules.md#the-passive-wall-triad---soak-presence-psyche) - but a small handful of entries (things that affect you by being perceived rather than by striking you, like a banshee-style wail) don't fit that shape. For those specific abilities only, perceiving the source (a Perception check, or simply being in range and aware of it, GM's call) triggers the effect instead of a to-hit roll. Everything downstream of that - the dice resolving per-die against the relevant wall stat, Ki Spend to Preserve options for the target - works exactly like any other attack. Nothing else about the resolution changes.
 
@@ -45,7 +46,7 @@ Passes for human right up until it doesn't need to anymore. The skin runs a shad
 
 **Bite / Claws**: 2, Melee. **Blood Drain**: against a target it has Grappled, a successful bite heals it 1 Health Level at the start of each of its turns for the rest of the Scene.
 
-**Notable Skills**: Persuasion 9, Stealth 8
+**Notable Skills**: Persuasion 7 vs. Insight, Stealth 8 vs. Perception
 
 **Traits**: **Predatory Charm** - Advantage on Persuasion and Deception rolls made to get close to a target who hasn't been warned about it. **Sunlight-Averse** - Disadvantage on all rolls made in direct daylight.
 
@@ -61,7 +62,7 @@ Whatever it was before doesn't matter once the shape has finished changing. The 
 
 **Claws / Bite**: 3, Melee
 
-**Notable Skills**: Athletics 9, Perception 8
+**Notable Skills**: Athletics Target Number 9, Perception 8 vs. Stealth
 
 **Traits**: **Regeneration** - heals 1 Health Level at the start of each of its turns. **Silver Vulnerable** - damage from a silver weapon against it is unsoakable.
 
@@ -77,7 +78,7 @@ Lives off what the cemetery and the morgue don't miss, and what its bite leaves 
 
 **Claws / Bite**: 2, Melee. **Fouled Wound**: a target hit and left untreated takes Disadvantage on Physical rolls until the wound is properly cleaned.
 
-**Notable Skills**: Stealth 8
+**Notable Skills**: Stealth 8 vs. Perception
 
 **Traits**: **Carrion Sense** - Advantage on Perception rolls to locate fresh graves, corpses, or already-wounded targets.
 
@@ -107,7 +108,7 @@ Doesn't need to win the fight if it can talk someone else into losing it for the
 
 **Claws / Horns**: 2, Melee
 
-**Notable Skills**: Persuasion 9, Deception 8
+**Notable Skills**: Persuasion 7 vs. Insight, Deception 8 vs. Insight
 
 **Traits**: **Goading** - Advantage on Persuasion rolls made to provoke a target into a rash or reckless action. **Fire Vulnerable** - fire damage against it is unsoakable.
 
@@ -123,7 +124,7 @@ Wears a borrowed face well enough that the real question isn't whether it's lyin
 
 **Knife** (only if cornered): 2, Melee
 
-**Notable Skills**: Deception 10, Persuasion 9
+**Notable Skills**: Deception 6 vs. Insight, Persuasion 7 vs. Insight
 
 **Traits**: **Glamour** - Advantage on any Deception roll made to pass as a specific person it has studied closely. **Cracks Both Ways** - a target who succeeds on a Perception roll to see through the glamour gains Advantage on their next roll against it.
 
@@ -139,7 +140,7 @@ Ordinary until the ritual finishes. The trick is stopping it before that happens
 
 **Athame** (only if cornered): 1, Melee. **Hex** (once per Scene, requires several uninterrupted rounds to complete - GM's call on timing): a single target within Sight range takes Disadvantage on all rolls for the rest of the Scene once the ritual completes.
 
-**Notable Skills**: Perception 7
+**Notable Skills**: Perception 9 vs. Stealth
 
 **Traits**: **Fragile Without Preparation** - has no combat trait beyond the above; entirely dependent on allies, terrain, or fleeing if interrupted mid-ritual.
 
@@ -155,7 +156,7 @@ A full night of watching is all it needs before it can wear someone else's face 
 
 **Claws**: 2, Melee
 
-**Notable Skills**: Deception 10, Stealth 8
+**Notable Skills**: Deception 6 vs. Insight, Stealth 8 vs. Perception
 
 **Traits**: **Perfect Copy** - after studying a specific target overnight, can take on their appearance and voice; noticing anything wrong requires a Perception roll at Disadvantage. **Reverts Under Stress** - snaps back to its true, indistinct form the instant it takes any Health Level damage.
 
@@ -199,7 +200,7 @@ Almost never lays a hand on anyone. It doesn't need to. Something closer to a gh
 
 **Cry** (once per Scene, Mental attack, dice pool 3, Far range, no to-hit roll required - triggered by hearing it): dice resolve per-die against Psyche as normal, a connecting die costing a Sanity Level same as any other Mental attack, and can push a target to Overwhelmed on repeated failures in the same Scene.
 
-**Notable Skills**: Perception 9
+**Notable Skills**: Perception 7 vs. Stealth
 
 **Traits**: **Rarely Physical** - almost never closes to melee; the cry is the entire threat.
 
@@ -229,7 +230,7 @@ Runs a scent down for miles and doesn't lose interest once it's found what it wa
 
 **Bite**: 3, Melee. 1 point of damage from a successful bite is unsoakable (the wound smolders).
 
-**Notable Skills**: Perception 9, Athletics 9
+**Notable Skills**: Perception 7 vs. Stealth, Athletics Target Number 9
 
 **Traits**: **Pack Tactics** (as Feral Dog). **Hunts by Scent** - once it has a target's scent, Advantage on Perception rolls to track them across any terrain short of open water.
 
@@ -245,7 +246,7 @@ Furniture, cargo, a parked car, anything still enough to be overlooked - until s
 
 **Bite / Engulf**: 3, Melee. Advantage on its first attack against a target that approached believing it was ordinary terrain or an object.
 
-**Notable Skills**: Stealth 10
+**Notable Skills**: Stealth 6 vs. Perception
 
 **Traits**: **Grapple on Contact** - a target hit by its first attack is automatically Grappled; breaking free uses the standard contested Grapple rule.
 
@@ -261,7 +262,9 @@ Shows up wherever something is already going wrong and makes sure it keeps going
 
 **Cane / Blade**: 2, Melee. **Contagion**: on a successful hit, the target must resist or take Disadvantage on Physical rolls until treated, worsening rather than healing without care.
 
-**Notable Skills**: Intimidation 7, Perception 8
+**Menace**: 2, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
+
+**Notable Skills**: Perception 8 vs. Stealth
 
 **Traits**: **Wading Through Sickness** - immune to any disease or poison effect, including its own.
 

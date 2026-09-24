@@ -454,7 +454,7 @@ A character who loses a Health Level or is the target of a Kotodama effect while
 
 #### Surprised
 
-A character who hasn't noticed a threat before combat begins is **Surprised** - typically because an opposing Stealth roll succeeded against their Perception, or the GM judges the fiction warrants it.
+A character who hasn't noticed a threat before combat begins is **Surprised** - typically because they failed to spot it: a Perception roll against the threat's Stealth, which a creature lists as the Difficulty (`Stealth 6 vs. Perception` - see [how to read a stat block](adversary-index.md)), or an opposing character's Stealth roll. The GM can also judge that the fiction warrants it.
 
 **A Surprised character rolls at Disadvantage on everything** - attacks, and any other roll where the defender's readiness matters - for the remainder of the round they're caught in. Ends automatically once that round ends. [Alertness](boons.md) grants immunity to being Surprised while conscious.
 
