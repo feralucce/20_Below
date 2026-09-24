@@ -1,0 +1,96 @@
+<svg width="680" height="822" viewBox="0 0 680 822" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Making an attack</title>
+<desc>The attacker's approach picks the Element: Earth, Air, Fire, Water, or Moira for Social and Mental attacks only. The target is that Element plus the defender's Defense: Physical 10 minus Atropos, Social 10 minus Psyche, Mental 10 minus Presence. Roll 2d10: over the target misses; at or under hits. A hit rolls damage dice from a weapon's Damage Rating, a Gift's Level plus half its sub-stat, or the Training Tier for a social attack, and mental attacks come only from Gifts. Each die then meets the matching wall - Soak, Presence or Psyche - costing Health, Poise or Sanity.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5c7d92"/></marker></defs>
+<rect x="220" y="20" width="240" height="56" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="340.0" y="39.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Your approach</text>
+<text x="340.0" y="57.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">how you attack, said before the roll</text>
+<line x1="340" y1="76" x2="340" y2="104" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="20" y="106" width="120" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="80.0" y="122.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Earth</text>
+<text x="80.0" y="140.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">Force</text>
+<rect x="150" y="106" width="120" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="210.0" y="122.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Air</text>
+<text x="210.0" y="140.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">Precision</text>
+<rect x="280" y="106" width="120" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="340.0" y="122.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Fire</text>
+<text x="340.0" y="140.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">Intensity</text>
+<rect x="410" y="106" width="120" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="470.0" y="122.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Water</text>
+<text x="470.0" y="140.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">Adaptation</text>
+<rect x="540" y="106" width="120" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="600.0" y="122.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Moira*</text>
+<text x="600.0" y="140.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">Fate</text>
+<text x="340" y="176" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">* Moira carries Social and Mental attacks only, never a Physical one. The weapon never decides.</text>
+<line x1="340" y1="184" x2="340" y2="208" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="180" y="210" width="320" height="56" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="340.0" y="229.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Target = Element + the defender's Defense</text>
+<text x="340.0" y="247.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">which Defense depends on the attack</text>
+<line x1="340" y1="266" x2="340" y2="280" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="120" y1="280" x2="560" y2="280" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="120" y1="280" x2="120" y2="300" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="340" y1="280" x2="340" y2="300" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="560" y1="280" x2="560" y2="300" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="20" y="302" width="200" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="120.0" y="318.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Physical Defense</text>
+<text x="120.0" y="336.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">10 − Atropos</text>
+<rect x="240" y="302" width="200" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="340.0" y="318.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Social Defense</text>
+<text x="340.0" y="336.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">10 − Psyche</text>
+<rect x="460" y="302" width="200" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="560.0" y="318.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Mental Defense</text>
+<text x="560.0" y="336.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">10 − Presence</text>
+<line x1="120" y1="352" x2="120" y2="366" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="340" y1="352" x2="340" y2="366" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="560" y1="352" x2="560" y2="366" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="120" y1="366" x2="560" y2="366" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="340" y1="366" x2="340" y2="386" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="230" y="388" width="220" height="46" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="340.0" y="411.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Roll 2d10</text>
+<line x1="300" y1="434" x2="200" y2="460" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="380" y1="434" x2="480" y2="460" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="80" y="462" width="220" height="46" rx="8" fill="#3a2226" stroke="#d1584f" stroke-width="1"/>
+<text x="190.0" y="476.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Miss</text>
+<text x="190.0" y="494.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#e39a92">over the target: nothing happens</text>
+<rect x="380" y="462" width="220" height="46" rx="8" fill="#1f3a2c" stroke="#4caf7d" stroke-width="1"/>
+<text x="490.0" y="476.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Hit</text>
+<text x="490.0" y="494.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#9fd4b5">at or under: roll damage dice</text>
+<text x="498" y="534" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">the dice come from one of:</text>
+<line x1="490" y1="508" x2="490" y2="544" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="120" y1="544" x2="560" y2="544" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="120" y1="544" x2="120" y2="566" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="340" y1="544" x2="340" y2="566" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="560" y1="544" x2="560" y2="566" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="20" y="568" width="200" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="120.0" y="584.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Weapon</text>
+<text x="120.0" y="602.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">Damage Rating, 1 to 5</text>
+<rect x="240" y="568" width="200" height="74" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="340.0" y="596.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Gift</text>
+<text x="340.0" y="614.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">Level + ½ sub-stat, round down</text>
+<rect x="460" y="568" width="200" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="560.0" y="584.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Social attack</text>
+<text x="560.0" y="602.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">Training Tier, 1 to 6</text>
+<text x="340.0" y="629" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#b79ad6">the only source of mental dice</text>
+<line x1="120" y1="618" x2="120" y2="652" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="560" y1="618" x2="560" y2="652" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="120" y1="652" x2="560" y2="652" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="340" y1="652" x2="340" y2="664" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="340" y1="642" x2="340" y2="652" stroke="#5c7d92" stroke-width="1.5"/>
+<rect x="170" y="666" width="340" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="340.0" y="682.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Each die vs. the matching wall</text>
+<text x="340.0" y="700.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">at or under: absorbed • over: 1 Level</text>
+<line x1="340" y1="716" x2="340" y2="730" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="120" y1="730" x2="560" y2="730" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="120" y1="730" x2="120" y2="750" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="340" y1="730" x2="340" y2="750" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="560" y1="730" x2="560" y2="750" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="20" y="752" width="200" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="120.0" y="768.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Physical → Soak</text>
+<text x="120.0" y="786.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">costs Health</text>
+<rect x="240" y="752" width="200" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="340.0" y="768.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Social → Presence</text>
+<text x="340.0" y="786.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">costs Poise</text>
+<rect x="460" y="752" width="200" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="560.0" y="768.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Mental → Psyche</text>
+<text x="560.0" y="786.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">costs Sanity</text>
+</svg>
