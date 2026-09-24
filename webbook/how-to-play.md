@@ -451,3 +451,19 @@ The world hurts people without anybody swinging anything, and all of it runs on 
 **Heat.** The same ladder from the other end. Working hard in real heat is a level an hour. With no water it is a level an hour whatever you are doing, and nothing clears until you drink. Enclosed, airless and with no shade, a level every half hour.
 
 Neither one costs you a Health Level. They put you at Exhausted 5, which puts you on the ground, and out there that is the same thing. A blizzard is dangerous to somebody nobody has laid a finger on.
+
+**Corruption.** Some things get their hooks into you: a presence, an otherworldly thing, a place. It changes you slowly. At first you don’t notice it. Eventually, you don’t mind. It isn’t damage, and it costs no Sanity - it’s a track of its own, zero to five, kept separately for each thing that’s doing it to you.
+
+Every time you’re exposed - you look at it, touch it, breathe it, sleep near it, whatever that source feeds on - it rolls its dice against your Klotho. If any die gets over, you slide one level. Only one, however many got over. A rare few are worse than that, and your GM will know which.
+
+**One, Tell.** A small sign, and everyone sees it but you. A day away and it’s gone.
+
+**Two, Pull.** You want to go back. You’re Distracted near it, or when something keeps you from it. Each day away takes a level off, but the wanting lasts a week for every day you spent at Pull or worse.
+
+**Three, Marked.** A mark you may or may not notice, and anyone who touches it risks catching it too. Only a cure clears it - something rare, and somebody out there knows what.
+
+**Four, Conduit.** You read as unnatural, and reality goes thin around you: Kotodama costs less near you, for everyone. Only destroying the source brings you back from here.
+
+**Five, Claimed.** It has you. Getting you back takes the party’s Kotodama - six Fate Tokens or more. Whether the character leaves play is up to you and your GM. If you keep playing, it’s steering you now.
+
+Up to Conduit, you can burn a Fate Token per level to claw your way back down, all the way to nothing. The pull stays either way.

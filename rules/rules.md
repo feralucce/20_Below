@@ -582,3 +582,38 @@ Environmental damage uses the same per-die machinery as an attack, resolved agai
 
 Exposure kills by reaching **Exhausted 5** - unconscious - rather than by spending Health, which is how a blizzard threatens a character nobody has touched.
 
+#### Corruption
+
+Something has gotten its hooks into you: a presence, an otherworldly thing, a place. It changes you slowly. At first you don't notice it. Eventually, you don't mind.
+
+Corruption is not damage and not a Vital. It is its own track, **0 to 5**, kept **separately for each source**: Corruption (the lake), Corruption (the radio). Being Corrupted by one thing does nothing to your standing with another.
+
+**Building a source.** The GM decides five things when a source of Corruption enters the game:
+
+- **Intensity** - **1 to 5 dice**, on the same scale as everything else: 1 is a lingering wrongness, 5 is something that should not exist.
+- **Exposure** - how it gets in: seeing it, touching it, breathing or eating it, sleeping near it, or simply being near it.
+- **Schedule** - **once, on contact** (a touch, a look, a mouthful), or **once per Day, Hour or Minute** while exposed, on the same [Time Band](#time-bands) ladder as [cold and heat](#common-hazards).
+- **Its signs** - what its Tell looks like, what its Pull wants, and what its Mark is.
+- **Its cure** - the rare thing that clears Marked. Somebody in the world knows it. Finding them is the story.
+
+**Each exposure**, roll the source's dice against your **[Klotho](#klotho)**. **If any die gets over it, gain 1 level of Corruption** - one level, however many dice got over. A bigger source catches you more often, not further. **A rare source is stronger than that, and says so when it is built**: with it, each die that gets over adds a level.
+
+| Level | Name | What it does |
+|---|---|---|
+| **1** | **Tell** | A small sign. The GM tells the other players, not you. |
+| **2** | **Pull** | You want to go back. [Distracted](#distracted) near the source, or while kept from it. |
+| **3** | **Marked** | A visible mark you may or may not notice. Anyone who touches it takes one exposure: the source's dice against their own Klotho. |
+| **4** | **Conduit** | You read as unnatural, and reality around you is thin: [Kotodama](fate.md#kotodama) costs less near you, for everyone, the same as a [thin place](fate.md#thin-places). |
+| **5** | **Claimed** | It has you. The character leaves play if the player and the GM agree. With the GM's agreement the player can keep playing a Claimed character, but it is directly influenced at all times - the GM's call. Suggestions: once a Scene, the GM can make them Distracted, or push them toward the source. |
+
+**Getting better:**
+
+- **Tell** clears after **24 hours** away from the source.
+- **Pull** drops **one level per 24 hours** away. The pull itself stays for **a number of weeks equal to the days spent at Pull or worse**, like an addiction, whatever the track says.
+- **Marked** needs **the cure** set when the source was built.
+- **Conduit** needs **the source destroyed**.
+- **Claimed** needs a major **Kotodama**: **6 or more Fate Tokens**, pooled by the party, to disentangle the character from the source.
+- **At levels 1 to 4, the player can burn [Fate Tokens](fate.md), one per level, to remove levels**, all the way to 0. The pull stays, and its timer doesn't reset.
+
+Corruption costs no Sanity. Sanity is for shock, and the Corrupted are rarely shocked - they're calm, and they explain it away. Everyone else notices first.
+
