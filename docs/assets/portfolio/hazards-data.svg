@@ -1,0 +1,111 @@
+<svg width="680" height="1096" viewBox="0 0 680 1096" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Hazards</title>
+<desc>A hazard has no attacker but uses the same machinery, with the weapon table as the scale. Dice hazards roll against Soak, each die over costing a Health Level: falling is 1 die per 4 meters to a maximum of 5, halved into water or snow; a burning room is 1 die per round; being on fire is 2 dice per round until put out; a vehicle is 3 dice at city speed and 5 at speed. With no air a character lasts Stamina rounds, then loses 1 Health Level per round with no dice and no Soak. Cold and heat cost Exhausted levels at rates from one per hour to one per minute, and Exhausted 5 is unconscious. Two hazards stay with you: venom and gas make you Envenomed, Disadvantage on Physical rolls that no rest clears; a daily Water + 8 roll ends it on one success, Antitoxin always ends it, and Ki never does; and Corruption, where each die over your Klotho adds a level, from Tell through Pull, Marked and Conduit to Claimed, each harder to clear than the last.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5c7d92"/></marker></defs>
+<rect x="200" y="20" width="280" height="56" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="340.0" y="39.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Hazard</text>
+<text x="340.0" y="57.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">no attacker, the same machinery</text>
+<text x="340" y="96" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">the weapon table is the scale: fists 1 • knife 3 • anti-materiel rifle 5</text>
+<line x1="340" y1="104" x2="340" y2="116" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="115" y1="116" x2="565" y2="116" stroke="#5c7d92" stroke-width="1.5"/>
+<line x1="115" y1="116" x2="115" y2="136" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="340" y1="116" x2="340" y2="136" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="565" y1="116" x2="565" y2="136" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="10" y="138" width="210" height="50" rx="8" fill="#3a2226" stroke="#d1584f" stroke-width="1"/>
+<text x="115.0" y="154.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Dice vs. Soak</text>
+<text x="115.0" y="172.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#e39a92">each die over costs 1 Health</text>
+<rect x="235" y="138" width="210" height="50" rx="8" fill="#1d3439" stroke="#4fb8c8" stroke-width="1"/>
+<text x="340.0" y="154.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">No air</text>
+<text x="340.0" y="172.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#9fd9e2">drowning, smoke, suffocation</text>
+<rect x="460" y="138" width="210" height="50" rx="8" fill="#3a3020" stroke="#c9954a" stroke-width="1"/>
+<text x="565.0" y="154.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Cold and heat</text>
+<text x="565.0" y="172.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#e2c08c">Exhausted levels, not Health</text>
+<line x1="115" y1="188" x2="115" y2="210" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="10" y="212" width="210" height="204" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="22" y="238" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Falling</text>
+<text x="22" y="255" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">1 die per 4m, 5 max</text>
+<text x="22" y="276" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Burning room</text>
+<text x="22" y="293" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">1 die per round you stay</text>
+<text x="22" y="314" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">On fire</text>
+<text x="22" y="331" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">2 dice per round until put out</text>
+<text x="22" y="352" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Vehicle, city speed</text>
+<text x="22" y="369" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">3 dice</text>
+<text x="22" y="390" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Vehicle, at speed</text>
+<text x="22" y="407" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">5 dice</text>
+<text x="115" y="440" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">falling: halved into water or snow</text>
+<text x="115" y="458" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">putting a fire out: a Normal action,</text>
+<text x="115" y="476" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">or a Fast one from a helper</text>
+<text x="115" y="494" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">faster than “at speed” isn't a roll</text>
+<line x1="340" y1="188" x2="340" y2="210" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="235" y="212" width="210" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="340.0" y="228.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Hold your breath</text>
+<text x="340.0" y="246.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">for Stamina rounds</text>
+<line x1="340" y1="262" x2="340" y2="284" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="235" y="286" width="210" height="58" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="340.0" y="306.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Then 1 Health per round</text>
+<text x="340.0" y="324.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">no dice, no Soak</text>
+<text x="340" y="368" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">nothing to soak:</text>
+<text x="340" y="386" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">armor is no use here</text>
+<line x1="565" y1="188" x2="565" y2="210" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="460" y="212" width="210" height="242" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="472" y="238" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Underdressed for cold</text>
+<text x="472" y="255" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">1 per hour</text>
+<text x="472" y="276" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Wet, windy or −20°</text>
+<text x="472" y="293" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">1 per half hour</text>
+<text x="472" y="314" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">In cold water</text>
+<text x="472" y="331" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">1 per minute</text>
+<text x="472" y="352" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Hard work in real heat</text>
+<text x="472" y="369" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">1 per hour</text>
+<text x="472" y="390" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">No water</text>
+<text x="472" y="407" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">1 per hour, any exertion</text>
+<text x="472" y="428" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Enclosed, airless heat</text>
+<text x="472" y="445" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">1 per half hour</text>
+<line x1="565" y1="454" x2="565" y2="476" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="460" y="478" width="210" height="50" rx="8" fill="#3a2226" stroke="#d1584f" stroke-width="1"/>
+<text x="565.0" y="494.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Exhausted 5</text>
+<text x="565.0" y="512.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#e39a92">unconscious</text>
+<text x="565" y="552" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">dressed for cold: nothing happens</text>
+<text x="565" y="570" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">no clearing it while still in it</text>
+<text x="565" y="588" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">no water: nothing clears until they drink</text>
+<line x1="10" y1="624" x2="670" y2="624" stroke="#5f89a3" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="340" y="650" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#eaf5fb">and two that stay with you after you leave</text>
+<rect x="10" y="668" width="325" height="50" rx="8" fill="#1f3a2c" stroke="#4caf7d" stroke-width="1"/>
+<text x="172.5" y="684.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Venom and gas</text>
+<text x="172.5" y="702.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#9fd4b5">you are Envenomed</text>
+<rect x="345" y="668" width="325" height="50" rx="8" fill="#2e2440" stroke="#a06fd1" stroke-width="1"/>
+<text x="507.5" y="684.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Corruption</text>
+<text x="507.5" y="702.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#c8abe4">each die over your Klotho adds 1</text>
+<line x1="172" y1="718" x2="172" y2="740" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="10" y="742" width="325" height="204" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="22" y="768" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Envenomed</text>
+<text x="22" y="785" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Disadvantage on Physical rolls</text>
+<text x="22" y="806" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Doesn't clear on a rest</text>
+<text x="22" y="823" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">the body can't sleep it off</text>
+<text x="22" y="844" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Daily: Water + 8</text>
+<text x="22" y="861" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">one success ends it; never at Disadvantage</text>
+<text x="22" y="882" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Antitoxin always ends it; Ki can't</text>
+<text x="22" y="899" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Medicine gives Advantage on the daily roll</text>
+<text x="22" y="920" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Gas and spores</text>
+<text x="22" y="937" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">a mask stops them</text>
+<text x="172" y="970" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">a creature's entry can make it harder:</text>
+<text x="172" y="988" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">the recluse takes three successes</text>
+<line x1="507" y1="718" x2="507" y2="740" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="345" y="742" width="325" height="294" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="357" y="768" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">1  Tell</text>
+<text x="357" y="785" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">a sign the others see, not you</text>
+<text x="357" y="802" text-anchor="start" font-family="sans-serif" font-size="12" fill="#c8abe4">clears: 24 hours away</text>
+<text x="357" y="824" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">2  Pull</text>
+<text x="357" y="841" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Distracted near it, or kept from it</text>
+<text x="357" y="858" text-anchor="start" font-family="sans-serif" font-size="12" fill="#c8abe4">clears: 1 level per 24 hours away</text>
+<text x="357" y="880" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">3  Marked</text>
+<text x="357" y="897" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">a mark; a touch can spread it</text>
+<text x="357" y="914" text-anchor="start" font-family="sans-serif" font-size="12" fill="#c8abe4">clears: something rare, set by the GM</text>
+<text x="357" y="936" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">4  Conduit</text>
+<text x="357" y="953" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">unnatural; Kotodama cheap near you</text>
+<text x="357" y="970" text-anchor="start" font-family="sans-serif" font-size="12" fill="#c8abe4">clears: destroy the source</text>
+<text x="357" y="992" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">5  Claimed</text>
+<text x="357" y="1009" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">it has you, and influences you always</text>
+<text x="357" y="1026" text-anchor="start" font-family="sans-serif" font-size="12" fill="#c8abe4">clears: Kotodama, 6+ Fate Tokens</text>
+<text x="507" y="1060" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">levels 1-4: burn 1 Fate Token per level</text>
+<text x="507" y="1078" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">the pull lasts 1 week per day spent at 2+</text>
+</svg>

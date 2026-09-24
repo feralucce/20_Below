@@ -1,0 +1,88 @@
+<svg width="680" height="1032" viewBox="0 0 680 1032" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Time</title>
+<desc>The Time Bands run from the Round; a Round is about 6 seconds and a Minute is 10 rounds; then Hour, Scene, Day, Month, Year, Decade and Century. Each band lists what happens on it: bleeding and fire per round, cold water per minute, Fate Token spends capped at Stamina per Scene, a Fate Token at sunrise and the venom roll per day, and scars cleared over a month. A Short Rest of about an hour, once per night, restores half of Health, Poise and Sanity, Klotho Ki and one Exhausted level; a Full Night's Rest restores all of them. Sustained exertion is free for Stamina units of time, then a Water roll per extra unit, each failure costing an Exhausted level.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5c7d92"/></marker></defs>
+<text x="340" y="22" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#eaf5fb">the Time Bands: every duration in the rules is one of these</text>
+<rect x="10" y="38" width="170" height="46" rx="8" fill="#1d3040" stroke="#5f9fd6" stroke-width="1"/>
+<text x="95.0" y="52.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Round</text>
+<text x="95.0" y="70.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#a9cdef">about 6 seconds</text>
+<text x="198" y="58" text-anchor="start" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">Bleeding: 1 die vs Soak • on fire: 2 dice</text>
+<text x="198" y="76" text-anchor="start" font-family="sans-serif" font-size="12.5" fill="#8fadbe">no air: Stamina rounds, then 1 Health per round</text>
+<line x1="95" y1="84" x2="95" y2="98" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="10" y="100" width="170" height="46" rx="8" fill="#1d3040" stroke="#5f9fd6" stroke-width="1"/>
+<text x="95.0" y="114.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Minute</text>
+<text x="95.0" y="132.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#a9cdef">10 rounds</text>
+<text x="198" y="128" text-anchor="start" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">in cold water: 1 Exhausted per minute</text>
+<line x1="95" y1="146" x2="95" y2="160" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="10" y="162" width="170" height="46" rx="8" fill="#1d3040" stroke="#5f9fd6" stroke-width="1"/>
+<text x="95.0" y="176.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Hour</text>
+<text x="95.0" y="194.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#a9cdef">60 minutes</text>
+<text x="198" y="182" text-anchor="start" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">a Short Rest takes about an hour</text>
+<text x="198" y="200" text-anchor="start" font-family="sans-serif" font-size="12.5" fill="#8fadbe">cold and heat: 1 Exhausted per hour or half hour</text>
+<line x1="95" y1="208" x2="95" y2="222" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="10" y="224" width="170" height="46" rx="8" fill="#1d3040" stroke="#5f9fd6" stroke-width="1"/>
+<text x="95.0" y="238.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Scene</text>
+<text x="95.0" y="256.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#a9cdef">one encounter or situation</text>
+<text x="198" y="244" text-anchor="start" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">spend Fate Tokens at most Stamina times</text>
+<text x="198" y="262" text-anchor="start" font-family="sans-serif" font-size="12.5" fill="#8fadbe">Frightened, Flustered and object activations end</text>
+<line x1="95" y1="270" x2="95" y2="284" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="10" y="286" width="170" height="46" rx="8" fill="#1d3040" stroke="#5f9fd6" stroke-width="1"/>
+<text x="95.0" y="300.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Day</text>
+<text x="95.0" y="318.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#a9cdef">sunrise to sunrise</text>
+<text x="198" y="306" text-anchor="start" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">regain 1 Fate Token at sunrise • Full Night's Rest</text>
+<text x="198" y="324" text-anchor="start" font-family="sans-serif" font-size="12.5" fill="#8fadbe">venom: Water + 8 • Corruption: 24 hours away</text>
+<line x1="95" y1="332" x2="95" y2="346" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="10" y="348" width="170" height="46" rx="8" fill="#1d3040" stroke="#5f9fd6" stroke-width="1"/>
+<text x="95.0" y="371.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Month</text>
+<text x="198" y="376" text-anchor="start" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">Healing or Regeneration clears a below-zero Flaw-scar</text>
+<line x1="95" y1="394" x2="95" y2="408" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="10" y="410" width="170" height="46" rx="8" fill="#1d3040" stroke="#5f9fd6" stroke-width="1"/>
+<text x="95.0" y="433.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Year</text>
+<text x="198" y="438" text-anchor="start" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">nothing in the rules runs a year or longer yet</text>
+<line x1="95" y1="456" x2="95" y2="470" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="10" y="472" width="170" height="46" rx="8" fill="#1d3040" stroke="#5f9fd6" stroke-width="1"/>
+<text x="95.0" y="495.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Decade</text>
+<line x1="95" y1="518" x2="95" y2="532" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="10" y="534" width="170" height="46" rx="8" fill="#1d3040" stroke="#5f9fd6" stroke-width="1"/>
+<text x="95.0" y="557.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Century</text>
+<text x="340" y="612" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#eaf5fb">rests: how much comes back</text>
+<rect x="150" y="626" width="255" height="46" rx="8" fill="#1f3a2c" stroke="#4caf7d" stroke-width="1"/>
+<text x="277.5" y="640.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Short Rest</text>
+<text x="277.5" y="658.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#9fd4b5">about 1 hour, once per night</text>
+<rect x="415" y="626" width="255" height="46" rx="8" fill="#1f3a2c" stroke="#4caf7d" stroke-width="1"/>
+<text x="542.5" y="640.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Full Night's Rest</text>
+<text x="542.5" y="658.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#9fd4b5">a full, mostly unbroken sleep</text>
+<rect x="10" y="684" width="660" height="178" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="22" y="708" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Health</text>
+<text x="277" y="708" text-anchor="middle" font-family="sans-serif" font-size="12.5" fill="#8fadbe">Health ÷ 2</text>
+<text x="542" y="708" text-anchor="middle" font-family="sans-serif" font-size="12.5" fill="#8fadbe">all of it</text>
+<text x="22" y="736" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Poise</text>
+<text x="277" y="736" text-anchor="middle" font-family="sans-serif" font-size="12.5" fill="#8fadbe">Presence ÷ 2</text>
+<text x="542" y="736" text-anchor="middle" font-family="sans-serif" font-size="12.5" fill="#8fadbe">all of it</text>
+<text x="22" y="764" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Sanity</text>
+<text x="277" y="764" text-anchor="middle" font-family="sans-serif" font-size="12.5" fill="#8fadbe">Psyche ÷ 2</text>
+<text x="542" y="764" text-anchor="middle" font-family="sans-serif" font-size="12.5" fill="#8fadbe">all of it</text>
+<text x="22" y="792" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Ki</text>
+<text x="277" y="792" text-anchor="middle" font-family="sans-serif" font-size="12.5" fill="#8fadbe">Klotho (min 1)</text>
+<text x="542" y="792" text-anchor="middle" font-family="sans-serif" font-size="12.5" fill="#8fadbe">all of it</text>
+<text x="22" y="820" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Exhausted</text>
+<text x="277" y="820" text-anchor="middle" font-family="sans-serif" font-size="12.5" fill="#8fadbe">−1 level</text>
+<text x="542" y="820" text-anchor="middle" font-family="sans-serif" font-size="12.5" fill="#8fadbe">cleared</text>
+<text x="22" y="848" text-anchor="start" font-family="sans-serif" font-size="13" fill="#eaf5fb">Below 0 Health</text>
+<text x="277" y="848" text-anchor="middle" font-family="sans-serif" font-size="12.5" fill="#8fadbe">nothing</text>
+<text x="542" y="848" text-anchor="middle" font-family="sans-serif" font-size="12.5" fill="#8fadbe">1 Health Level</text>
+<text x="340" y="884" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">halves round up, minimum 1 • rest doesn't clear Envenomed,</text>
+<text x="340" y="902" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8fadbe">or Exhausted taken from a place you're still in</text>
+<text x="340" y="942" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#eaf5fb">sustained exertion: holding your breath, marching, hard labor, running flat out</text>
+<rect x="10" y="958" width="200" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="110.0" y="974.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Free for Stamina units</text>
+<text x="110.0" y="992.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">rounds, minutes or hours</text>
+<line x1="210" y1="983" x2="238" y2="983" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="240" y="958" width="200" height="50" rx="8" fill="#2b4a5e" stroke="#5f89a3" stroke-width="1"/>
+<text x="340.0" y="974.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Then Water + Difficulty</text>
+<text x="340.0" y="992.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#8fadbe">once per extra unit</text>
+<line x1="440" y1="983" x2="468" y2="983" stroke="#5c7d92" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="470" y="958" width="200" height="50" rx="8" fill="#3a3020" stroke="#c9954a" stroke-width="1"/>
+<text x="570.0" y="974.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Fail: +1 Exhausted</text>
+<text x="570.0" y="992.0" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#e2c08c">each check 1 Difficulty harder</text>
+</svg>
