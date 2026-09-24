@@ -5,8 +5,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Case Study: Fourteen People, Twelve Deliverables, One Hub - 20 Below</title>
-<meta name="description" content="How 20 Below - a rulebook, four apps, three extensions and a campaign setting - is run with a fourteen-person team through one central hub, with an AI assistant in the loop." />
+<title>Case Study: Fifteen People, Twelve Deliverables, One Hub - 20 Below</title>
+<meta name="description" content="How 20 Below - a rulebook, four apps, three extensions and a campaign setting - is run with a fifteen-person team through one central hub, with an AI assistant in the loop." />
 <link rel="icon" type="image/x-icon" href="/docs/assets/brand/favicon.ico" />
 <link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/brand/favicon-32.png" />
 <link rel="apple-touch-icon" href="/docs/assets/brand/favicon-128.png" />
@@ -60,23 +60,23 @@
 
   <header>
     <p class="eyebrow">Case Study</p>
-    <h1>Fourteen People, Twelve Deliverables, One Hub</h1>
+    <h1>Fifteen People, Twelve Deliverables, One Hub</h1>
   </header>
 
   <h2>The Problem</h2>
   <p>A tabletop RPG sounds like one thing. It isn't. It's a lot of different deliverables that all have to agree with each other, and a lot of people with opinions about every one of them.</p>
   <p>20 Below grew into a rulebook manuscript that feeds a web book, a reference document, and a print PDF. It has four apps, each shipped as both a web build and a desktop build: a character creator, a battle tracker, an encounter calculator, and a page-layout tool. There are three extensions for a virtual tabletop, each in its own repository. There's a campaign setting in its own repository too, and a brand library of reference sheets, diagrams and dividers. Change one rule and it can land in eight places. If you miss one, a player finds it at the table.</p>
-  <p>The team is fourteen people: a communications lead, a language expert, an engineer, four game designers, and seven playtesters. Everyone is looking at the same rules, and everyone sees something different in them.</p>
+  <p>The team is fifteen people: a communications lead, a language expert, an engineer, a web development consultant, four game designers, and seven playtesters. Everyone is looking at the same rules, and everyone sees something different in them.</p>
 
   <h2>Analysis</h2>
-  <p>Fourteen people who all care about a game will pull it in fourteen directions. If each of them edits the rules directly, the rules fork. If feedback goes through layers, it arrives late and watered down. And the rulebook has to read like one voice wrote it, because a rulebook that argues with itself can't be played.</p>
+  <p>Fifteen people who all care about a game will pull it in fifteen directions. If each of them edits the rules directly, the rules fork. If feedback goes through layers, it arrives late and watered down. And the rulebook has to read like one voice wrote it, because a rulebook that argues with itself can't be played.</p>
   <p>Then there's the AI. An AI assistant is fast and tireless, and it's confidently wrong often enough that "it said it's done" can't mean "it's done." Its risk is a quieter version of the team's: output you trust because it sounds sure of itself.</p>
   <p>Both problems have the same answer. Everyone gets to see everything and say anything. Decisions go through one person, and that person checks every change against the source before it ships.</p>
 
   <h2>Design Decisions</h2>
   <ul>
     <li><strong>A roundtable with direct dissemination.</strong> Every pushed update and every rules change goes to the whole team at the same moment, not filtered down a chain. Nobody works from last week's version, and nobody hears about a change from someone else's summary of it.</li>
-    <li><strong>Feedback comes in directly, and one pen goes out.</strong> Every team member brings their feedback straight to me, and I make the changes to the rules, the prose, and the authorship. I'm the hub for decisions and communication. That's why all 1,298 commits in the repository are under my name. Fourteen people feed in, the book keeps one voice, and there's never a question of which version is real.</li>
+    <li><strong>Feedback comes in directly, and one pen goes out.</strong> Every team member brings their feedback straight to me, and I make the changes to the rules, the prose, and the authorship. I'm the hub for decisions and communication. That's why all 1,298 commits in the repository are under my name. Fifteen people feed in, the book keeps one voice, and there's never a question of which version is real.</li>
     <li><strong>One source of truth, many outputs.</strong> The Scrivener manuscript is canonical. The web book, the print PDF, and the layout tool's input are all generated from it by script, not maintained by hand. When they drift, it gets fixed at the source and then run through a "rules-sync" pass, not patched in whichever copy someone noticed.</li>
     <li><strong>Change control before every edit pass.</strong> Every rewrite of a print chapter started with a named snapshot: <em>before-rules-sync</em>, <em>before-literacy-cut</em>, <em>before-element-rebalance</em>. That's fifty-two of them in the two weeks leading up to the print build. Any pass that went wrong could be put back exactly as it was before that pass, not approximately, and the name says what the pass was for.</li>
     <li><strong>Small, scoped, versioned releases.</strong> Every change is its own commit with a plain-language reason, and the apps ship as tagged versions, 113 so far. When a team member reports a problem, I can name the release it appeared in.</li>
@@ -94,7 +94,7 @@
   </div>
 
   <div class="stats">
-    <div class="stat"><div class="n">14</div><div class="l">people on the team, one hub</div></div>
+    <div class="stat"><div class="n">15</div><div class="l">people on the team, one hub</div></div>
     <div class="stat"><div class="n">1,298</div><div class="l">commits, Jul 11 &ndash; Sep 23, 2026</div></div>
     <div class="stat"><div class="n">113</div><div class="l">tagged releases</div></div>
     <div class="stat"><div class="n">68%</div><div class="l">of commits co-written with an AI, and credited in the commit itself</div></div>
@@ -102,7 +102,7 @@
   <p class="stats-note">Figures are from the project's version history. The design work goes back further than the version history does.</p>
 
   <h2>Outcome</h2>
-  <p>A system with a lot of moving parts ships as one thing and holds together: one set of rules behind every app, and a print book and web book built from the same source. Fourteen people shape it, and it still reads in one voice. The team brings the problems, the AI speeds up the work, and the decisions and the final check stay with the hub. That's the job: keep everyone informed, keep one version real, and don't ship anything you haven't checked.</p>
+  <p>A system with a lot of moving parts ships as one thing and holds together: one set of rules behind every app, and a print book and web book built from the same source. Fifteen people shape it, and it still reads in one voice. The team brings the problems, the AI speeds up the work, and the decisions and the final check stay with the hub. That's the job: keep everyone informed, keep one version real, and don't ship anything you haven't checked.</p>
 
   <h2>The Team</h2>
   <table class="team">
