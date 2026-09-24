@@ -1,0 +1,40 @@
+<svg width="680" height="324" viewBox="0 0 680 324" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>One Giant recluse bite: share of Health lost</title>
+<desc>With 1, 2 and 3 dice by size, a Giant bite takes 60 percent of Frankie's Health, 39 percent of Annie's, 20 percent of Tony's and 6 percent of Maggie's. With 1, 3 and 5 dice it takes all of Frankie's Health, knocking Frankie out, 64 percent of Annie's, 33 percent of Tony's and 10 percent of Maggie's. The team chose 1, 2 and 3.</desc>
+<text x="10" y="22" text-anchor="start" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">One Giant recluse bite: share of Health lost</text>
+<rect x="10" y="36" width="11" height="11" rx="2" fill="#3d84c4"/>
+<text x="26" y="46" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">1 / 2 / 3 dice (chosen)</text>
+<rect x="197" y="36" width="11" height="11" rx="2" fill="#8fadbe"/>
+<text x="213" y="46" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">1 / 3 / 5 dice</text>
+<line x1="150.0" y1="58" x2="150.0" y2="286" stroke="#24404f" stroke-width="1"/>
+<text x="150.0" y="302" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">0%</text>
+<line x1="252.5" y1="58" x2="252.5" y2="286" stroke="#24404f" stroke-width="1"/>
+<text x="252.5" y="302" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">25%</text>
+<line x1="355.0" y1="58" x2="355.0" y2="286" stroke="#24404f" stroke-width="1"/>
+<text x="355.0" y="302" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">50%</text>
+<line x1="457.5" y1="58" x2="457.5" y2="286" stroke="#24404f" stroke-width="1"/>
+<text x="457.5" y="302" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">75%</text>
+<line x1="560.0" y1="58" x2="560.0" y2="286" stroke="#24404f" stroke-width="1"/>
+<text x="560.0" y="302" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">100%</text>
+<text x="138" y="86.0" text-anchor="end" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">Fragile Frankie</text>
+<rect x="150" y="64" width="246.0" height="14" rx="3" fill="#3d84c4"/>
+<text x="402.0" y="75" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">60%</text>
+<rect x="150" y="82" width="410.0" height="14" rx="3" fill="#8fadbe"/>
+<text x="566.0" y="93" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">100%  unconscious</text>
+<text x="138" y="140.0" text-anchor="end" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">Average Annie</text>
+<rect x="150" y="118" width="159.9" height="14" rx="3" fill="#3d84c4"/>
+<text x="315.9" y="129" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">39%</text>
+<rect x="150" y="136" width="262.4" height="14" rx="3" fill="#8fadbe"/>
+<text x="418.4" y="147" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">64%</text>
+<text x="138" y="194.0" text-anchor="end" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">Tough Tony</text>
+<rect x="150" y="172" width="82.0" height="14" rx="3" fill="#3d84c4"/>
+<text x="238.0" y="183" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">20%</text>
+<rect x="150" y="190" width="135.3" height="14" rx="3" fill="#8fadbe"/>
+<text x="291.3" y="201" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">33%</text>
+<text x="138" y="248.0" text-anchor="end" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">Maxed Maggie</text>
+<rect x="150" y="226" width="24.6" height="14" rx="3" fill="#3d84c4"/>
+<text x="180.6" y="237" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">6%</text>
+<rect x="150" y="244" width="41.0" height="14" rx="3" fill="#8fadbe"/>
+<text x="197.0" y="255" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">10%</text>
+<text x="10" y="320" text-anchor="start" font-family="sans-serif" font-size="11" fill="#8fadbe">Flat +2 per die, unarmored, 100,000 bites per character.</text>
+</svg>

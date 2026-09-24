@@ -1,0 +1,155 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Case Study: One Spider, Checked Three Ways - 20 Below</title>
+<meta name="description" content="A case study in real-time design and collaboration: how a playtester, a game designer and an AI assistant caught the same gap in one monster's venom, and how the fix was tested with simulation before it reached the table." />
+<link rel="icon" type="image/x-icon" href="/docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="/docs/assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --radius: 10px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+  main { max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+  .back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+  .back-row { font-size: 0.9rem; color: var(--text-dim); }
+  header { margin: 1.5rem 0 2.5rem; }
+  .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin: 0 0 0.6rem; }
+  h1 { margin: 0; font-size: 1.9rem; letter-spacing: 0.01em; line-height: 1.3; }
+  .intro { color: var(--text-dim); margin: 0.8rem 0 0; }
+
+  h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border-bottom: 1px solid var(--panel-border); padding-bottom: 0.5rem; margin: 2.75rem 0 1.1rem; }
+  p { font-size: 1rem; }
+  ul, ol { padding-left: 1.25rem; }
+  li { margin-bottom: 0.75rem; }
+  a { color: var(--accent); }
+  blockquote { margin: 1rem 0; padding: 0.6rem 1rem; border-left: 3px solid var(--panel-border); color: var(--text-dim); }
+
+  .checks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; margin: 1.2rem 0; }
+  .check { background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius); padding: 0.9rem 1rem; }
+  .check .who { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.3rem; }
+  .check p { margin: 0; font-size: 0.92rem; }
+
+  figure { margin: 1.6rem 0; }
+  figure img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--panel-border); background: var(--panel); }
+  figure.chart img { padding: 0.8rem; }
+  figcaption { font-size: 0.88rem; color: var(--text-dim); margin-top: 0.55rem; }
+  .pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; align-items: start; }
+  .stage { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.4rem; }
+
+  .credits { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .credits td { padding: 0.55rem 0.5rem 0.55rem 0; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
+  .credits td:first-child { color: var(--text-dim); width: 42%; }
+
+  footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+</style>
+<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <p class="back-row">&larr; <a class="back-link" href="/docs/pm-portfolio.html">Project Management</a> &middot; <a class="back-link" href="/docs/id-portfolio.html">Instructional Design</a> &middot; <a class="back-link" href="/docs/visual-portfolio.html">Visual Information</a></p>
+
+  <header>
+    <p class="eyebrow">Case Study</p>
+    <h1>One Spider, Checked Three Ways</h1>
+    <p class="intro">Real-time design and collaboration on 20 Below, a tabletop RPG I've built over the past year: a gap in one monster's venom, caught by three separate checks, fixed in the open, and tested with simulation before it ever reached a table.</p>
+  </header>
+
+  <h2>The Problem</h2>
+  <p>The Brown Recluse's stat card said its bite did no immediate damage, left the target Envenomed, and that <em>&ldquo;the wound worsens without treatment over the following days, severity the GM's call.&rdquo;</em></p>
+  <p>That last clause looks like a rule but doesn't do anything. Worsens how, for how long, and what stops it? Every GM would answer differently. And the one creature in the book known entirely for its necrotic bite did nothing a player could feel.</p>
+
+  <h2>How It Surfaced</h2>
+  <p>Two people and an AI edit pass found it separately.</p>
+  <div class="checks">
+    <div class="check"><div class="who">From the table</div><p>A GM playtester brought it back from a session: the bite had no weight in play.</p></div>
+    <div class="check"><div class="who">From design</div><p>George Szabo, one of the game designers, questioned how the venom would actually work.</p></div>
+    <div class="check"><div class="who">From an edit pass</div><p>The AI assistant I work with flagged it while mining sources for a Hazards reference sheet: the only disease-like effect in the book with no rule behind it.</p></div>
+  </div>
+  <p>I didn't catch it myself. What I did was check the AI's flag against the team's feedback and confirm that all three were pointing at the same gap. That's the part of the process I'd defend: a machine's flag counts once a person has checked it against what the team is saying.</p>
+
+  <h2>Analysis</h2>
+  <p>Naming the problem showed it was bigger than one spider.</p>
+  <ul>
+    <li><strong>The book had two poison rules.</strong> The official condition, Envenomed, gave Disadvantage on Physical rolls. A separate bestiary trait had its own Water roll and cost an Exhausted level instead. I made Envenomed the only one, and the bestiary was updated to match.</li>
+    <li><strong>The recluse is necrotic, but its card did no damage.</strong> Whatever the fix was, the bite itself had to hurt.</li>
+    <li><strong>&ldquo;GM's call&rdquo; was carrying a rule's weight.</strong> A GM's call is fine for judgment. It isn't fine for a mechanic players will want to plan around.</li>
+  </ul>
+
+  <h2>Design Decisions</h2>
+  <ol>
+    <li><strong>Mine sources, then propose.</strong> The assistant mined sources for concepts and found one pattern again and again: slow harm with a treatment window that closes. It proposed five mechanics built only from rules the game already had. My feedback was that it was too complicated. We wanted depth, but not excessive crunch.</li>
+    <li><strong>Take the pieces that worked.</strong> My revision:
+      <ul>
+        <li>The bite does damage, with more dice for bigger spiders, and it counts as boosted.</li>
+        <li>From day 2, the victim rolls Water + 8 once a day. Succeed on day 2 and it's over. Fail, and it takes three successful days to shake off. Each failed day costs an Exhausted level.</li>
+        <li>Antitoxin ends it.</li>
+        <li>Supernatural healing negates the venom, but the tissue is already dead, so it leaves a scar unless the healing can regrow a limb.</li>
+      </ul>
+    </li>
+    <li><strong>Throw dice before accepting anything.</strong> I asked for a simulation: 100,000 bites against four test characters, from a frail one (Fragile Frankie) to a maxed one (Maxed Maggie). The first question was how hard the bite should hit.</li>
+  </ol>
+
+  <figure class="chart">
+    <a href="/docs/assets/portfolio/recluse-injury.svg"><img src="/docs/assets/portfolio/recluse-injury.svg" alt="One Giant recluse bite, share of Health lost. With 1, 2 and 3 dice by size: Frankie 60 percent, Annie 39, Tony 20, Maggie 6. With 1, 3 and 5 dice: Frankie 100 percent and unconscious, Annie 64, Tony 33, Maggie 10." loading="lazy" /></a>
+    <figcaption>At 1/3/5 dice, a Giant bite knocks the frailest character out in one go. We chose 1/2/3, serious but survivable, and a flat +2 per die as the boost, so a bite can still reach even Maxed Maggie.</figcaption>
+  </figure>
+
+  <ol start="4">
+    <li><strong>The numbers found a spiral nobody had seen.</strong> Exhausted 2 means Disadvantage on every roll, including the roll to resist the venom. Each failed day made the next one harder, and 56% of Frankies ended unconscious. My ruling was that the resist roll is never at Disadvantage. We also tested letting Envenomed's own Disadvantage apply. That pushed Frankie to 80%, so it was rejected.</li>
+    <li><strong>Make care worth getting.</strong> Medicine gives Advantage on the daily roll, but it never ends the venom on its own. With someone tending Frankie every day, the chance of ending up unconscious falls from 40% to 6%.</li>
+  </ol>
+
+  <figure class="chart">
+    <a href="/docs/assets/portfolio/recluse-recovery.svg"><img src="/docs/assets/portfolio/recluse-recovery.svg" alt="Chance the venom leaves you unconscious. Fragile Frankie: first draft 56 percent, rejected version 80, final rule 40, final rule with Medicine 6. Average Annie: 7, 21, 1.6 and 0. Tough Tony: 0.7, 3, 0.1 and 0. Maxed Maggie: 0 in every version." loading="lazy" /></a>
+    <figcaption>Each bar is a version of the rule. The simulation showed where each one landed, and every decision was made with those numbers in hand.</figcaption>
+  </figure>
+
+  <ol start="6">
+    <li><strong>Let one fix become the rule.</strong> Writing the recluse's rule exposed a gap everywhere else. Ordinary venom had no roll to resist it, so without Antitoxin a snakebite lasted forever. Every venom now gets a daily Water + 8, and one success ends it. The recluse is the tougher version, needing three. Along the way, Ki stopped being able to end any venom, Antitoxin's equipment entry was rewritten to end it outright, and the Mutated recluse became the exception: it rolls every 6 hours, Antitoxin only gives Advantage, and Medicine does nothing.</li>
+  </ol>
+  <p>The assistant's work was checked the same way. Its first odds table for the Water roll assumed Attributes ran from 1 to 5; they run to 10. The assistant caught its own mistake while setting up the simulation, said so, and the correction went into the record alongside everything else.</p>
+
+  <div class="pair">
+    <figure>
+      <div class="stage">Before</div>
+      <a href="/docs/assets/portfolio/recluse-card-before.webp"><img src="/docs/assets/portfolio/recluse-card-before.webp" alt="The old Brown Recluse card: a bite with no immediate Health loss that leaves the target Envenomed, with the wound worsening over the following days, severity the GM's call." loading="lazy" width="1520" height="880" /></a>
+      <figcaption>The rule was &ldquo;the GM's call.&rdquo;</figcaption>
+    </figure>
+    <figure>
+      <div class="stage">After</div>
+      <a href="/docs/assets/portfolio/recluse-card-after.webp"><img src="/docs/assets/portfolio/recluse-card-after.webp" alt="The new card and its shared Necrotic Venom rule: the bite's dice are boosted by 2, any Health lost leaves the target Envenomed, a daily Water plus 8 roll from day 2 with three successes needed after a failure, Medicine giving Advantage, Antitoxin ending it, Ki unable to, and supernatural healing leaving a scar." loading="lazy" width="1520" height="1544" /></a>
+      <figcaption>One shared rule block for every recluse. The card only names it.</figcaption>
+    </figure>
+  </div>
+
+  <h2>Outcome</h2>
+  <p>A clause that left everything to the GM became a rule players can feel and plan around. It was tested against the weakest and strongest characters before anyone rolled it for real, and it became the standard for every venom in the bestiary. The rules, the book, the status-effects page, the equipment chapter and the printable bestiary changed together, in one pass.</p>
+  <p>The process is the point. A playtester, a designer and an AI edit pass each caught the gap on their own, and a person confirmed they matched. The AI mined sources, proposed and simulated. Every decision stayed with the team, and each one was made with the numbers in front of us.</p>
+
+  <h2>Credits</h2>
+  <table class="credits">
+    <tr><td>Raised the problem</td><td>A GM playtester (uncredited by request); George Szabo, game design</td></tr>
+    <tr><td>Decisions and rulings</td><td>Me, as producer</td></tr>
+    <tr><td>Mining sources, proposals and simulation</td><td>Claude (AI assistant), checked by the team</td></tr>
+  </table>
+
+  <footer>20 Below &middot; 20belowrpg.com</footer>
+</main>
+<script src="/docs/assets/js/site-nav.js"></script>
+</body>
+</html>

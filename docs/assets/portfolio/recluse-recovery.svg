@@ -1,0 +1,60 @@
+<svg width="680" height="468" viewBox="0 0 680 468" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Chance the venom leaves you unconscious (Exhausted 5)</title>
+<desc>In the first draft Frankie ended unconscious 56 percent of the time and Annie 7. If Envenomed's Disadvantage had applied to the resist roll, that would have risen to 80 and 21, so it was rejected. Under the final rule, where the resist roll is never at Disadvantage, it is 40 and 1.6, and with daily Medicine it falls to 6 and 0. Tony stays under 3 percent and Maggie at 0 throughout.</desc>
+<text x="10" y="22" text-anchor="start" font-family="sans-serif" font-size="14" font-weight="500" fill="#eaf5fb">Chance the venom leaves you unconscious (Exhausted 5)</text>
+<rect x="10" y="36" width="11" height="11" rx="2" fill="#8fadbe"/>
+<text x="26" y="46" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">First draft</text>
+<rect x="113" y="36" width="11" height="11" rx="2" fill="#d1584f"/>
+<text x="129" y="46" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Rejected: Envenomed applies</text>
+<rect x="328" y="36" width="11" height="11" rx="2" fill="#3d84c4"/>
+<text x="344" y="46" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Final rule</text>
+<rect x="424" y="36" width="11" height="11" rx="2" fill="#4caf7d"/>
+<text x="440" y="46" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Final rule + Medicine</text>
+<line x1="150.0" y1="58" x2="150.0" y2="430" stroke="#24404f" stroke-width="1"/>
+<text x="150.0" y="446" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">0%</text>
+<line x1="252.5" y1="58" x2="252.5" y2="430" stroke="#24404f" stroke-width="1"/>
+<text x="252.5" y="446" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">25%</text>
+<line x1="355.0" y1="58" x2="355.0" y2="430" stroke="#24404f" stroke-width="1"/>
+<text x="355.0" y="446" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">50%</text>
+<line x1="457.5" y1="58" x2="457.5" y2="430" stroke="#24404f" stroke-width="1"/>
+<text x="457.5" y="446" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">75%</text>
+<line x1="560.0" y1="58" x2="560.0" y2="430" stroke="#24404f" stroke-width="1"/>
+<text x="560.0" y="446" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">100%</text>
+<text x="138" y="104.0" text-anchor="end" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">Fragile Frankie</text>
+<rect x="150" y="64" width="229.6" height="14" rx="3" fill="#8fadbe"/>
+<text x="385.6" y="75" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">56%</text>
+<rect x="150" y="82" width="328.0" height="14" rx="3" fill="#d1584f"/>
+<text x="484.0" y="93" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">80%</text>
+<rect x="150" y="100" width="164.0" height="14" rx="3" fill="#3d84c4"/>
+<text x="320.0" y="111" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">40%</text>
+<rect x="150" y="118" width="24.6" height="14" rx="3" fill="#4caf7d"/>
+<text x="180.6" y="129" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">6%</text>
+<text x="138" y="194.0" text-anchor="end" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">Average Annie</text>
+<rect x="150" y="154" width="28.7" height="14" rx="3" fill="#8fadbe"/>
+<text x="184.7" y="165" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">7%</text>
+<rect x="150" y="172" width="86.1" height="14" rx="3" fill="#d1584f"/>
+<text x="242.1" y="183" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">21%</text>
+<rect x="150" y="190" width="6.6" height="14" rx="3" fill="#3d84c4"/>
+<text x="162.56" y="201" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">1.6%</text>
+<rect x="150" y="208" width="1.5" height="14" rx="3" fill="#4caf7d"/>
+<text x="157.5" y="219" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#8fadbe">0%</text>
+<text x="138" y="284.0" text-anchor="end" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">Tough Tony</text>
+<rect x="150" y="244" width="2.9" height="14" rx="3" fill="#8fadbe"/>
+<text x="158.87" y="255" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">0.7%</text>
+<rect x="150" y="262" width="12.3" height="14" rx="3" fill="#d1584f"/>
+<text x="168.3" y="273" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">3%</text>
+<rect x="150" y="280" width="1.5" height="14" rx="3" fill="#3d84c4"/>
+<text x="157.5" y="291" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">0.1%</text>
+<rect x="150" y="298" width="1.5" height="14" rx="3" fill="#4caf7d"/>
+<text x="157.5" y="309" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#8fadbe">0%</text>
+<text x="138" y="374.0" text-anchor="end" font-family="sans-serif" font-size="12.5" fill="#eaf5fb">Maxed Maggie</text>
+<rect x="150" y="334" width="1.5" height="14" rx="3" fill="#8fadbe"/>
+<text x="157.5" y="345" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#8fadbe">0%</text>
+<rect x="150" y="352" width="1.5" height="14" rx="3" fill="#d1584f"/>
+<text x="157.5" y="363" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#8fadbe">0%</text>
+<rect x="150" y="370" width="1.5" height="14" rx="3" fill="#3d84c4"/>
+<text x="157.5" y="381" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#8fadbe">0%</text>
+<rect x="150" y="388" width="1.5" height="14" rx="3" fill="#4caf7d"/>
+<text x="157.5" y="399" text-anchor="start" font-family="sans-serif" font-size="11.5" fill="#8fadbe">0%</text>
+<text x="10" y="464" text-anchor="start" font-family="sans-serif" font-size="11" fill="#8fadbe">Water + 8 once a day from day 2; three successes after a failed first roll. 100,000 runs per bar.</text>
+</svg>
