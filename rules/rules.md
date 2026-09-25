@@ -211,31 +211,39 @@ Potence (Earth's other sub-stat: raw physical power/strength - carrying capacity
      | 8 | 640 kg (~1,411 lbs) |
      | 9 | 810 kg (~1,786 lbs) |
      | 10 | 1,000 kg (~2,205 lbs) |
-   - **Break Threshold** (the bar an object's resistance must sit under to be forced open/broken with no contest involved): no separate number, just a direct comparison. If a character's **Potence is equal to or greater than the target object's Soak**, it breaks or forces open automatically, no roll. If Potence is lower, it isn't a no-contest job anymore; that's what the contested dice pool below is for.
-2. **Contested dice pool** - when forcing, breaking, or moving something that's actively resisting (a grapple, a door someone's holding shut, a struggling creature), **Potence itself sets how many d10 are rolled**. Each die is compared individually against the target's relevant resistance: a grappled/restrained creature's own **Soak**, or - for inanimate resisting objects - the object's own **Soak** (GM-set, same 0-10 scale and mechanic as a character's Soak, just held by the object instead). Each connecting die represents one increment of success, costing the object one of its **Health Levels** - same binary hit-box shape as a character's, just scaled to the object's durability instead of a body.
+   - **Break Threshold** (the bar an object's resistance must sit under to be forced open/broken with no contest involved): no separate number, just a direct comparison. If a character's **Potence is equal to or greater than the target item's [Hardness](#materials-hardness-and-health-levels)**, it breaks or forces open automatically, no roll. If Potence is lower, it isn't a no-contest job anymore; that's what the contested dice pool below is for.
+2. **Contested dice pool** - when forcing, breaking, or moving something that's actively resisting (a grapple, a door someone's holding shut, a struggling creature), **Potence itself sets how many d10 are rolled**. Each die is compared individually against the target's relevant resistance: a grappled/restrained creature's own **Soak**, or - for inanimate resisting things - the item's own **Hardness** (GM-set, on the same 0-10 scale as Soak - see [Materials](#materials-hardness-and-health-levels)). Each connecting die represents one increment of success, costing the object one of its **Health Levels** - same binary hit-box shape as a character's, just scaled to the object's durability instead of a body.
 
-**Object Soak and Health Level reference chart**, low to high, for GM calibration:
+#### Materials: Hardness and Health Levels
 
-| Object | Soak | Health Levels |
-|---|---|---|
-| Sheet of paper / cardboard | 0 | 1 |
-| Glass pane / window | 1 | 1 |
-| Rope / zip ties | 2 | 1 |
-| Drywall interior wall | 2 | 2 |
-| Wooden chair | 2 | 2 |
-| Padlock (cheap) | 3 | 1 |
-| Chain-link fence | 3 | 2 |
-| Interior wooden door | 3 | 2 |
-| Handcuffs (standard) | 4 | 1 |
-| Car door | 5 | 3 |
-| Exterior wooden door (reinforced) | 5 | 3 |
-| Brick wall (residential) | 6 | 4 |
-| Boulder / natural stone | 7 | 5 |
-| Steel security door | 7 | 4 |
-| Reinforced concrete wall | 8 | 5 |
-| Bank vault door | 9 | 6 |
-| Castle gate / fortress wall | 9 | 8 |
-| High-security modern vault | 10 | 8 |
+Living bodies have **Soak**. Items and armor have **Hardness**, on the same 0-10 scale. The numbers below are for a piece about the size of a person: a door, a section of wall, a car door.
+
+- **Attacking or breaking an item** costs it one Health Level for each die over its Hardness. At 0 it's broken. Armor that is shielding someone is the exception: it never loses more than one Health Level per attack - see [Armor & Called Shots](#armor--called-shots).
+- **Cover can be shot down, where that's plausible** (GM's call). Attack the cover as an item; at 0 Health Levels it stops being cover. A knife won't dig through a concrete wall, and a pistol won't move a boulder.
+
+| Material | Hardness | Health Levels | Examples |
+|---|---|---|---|
+| Paper, cardboard, cloth, canvas | 0 | 1 | Tent wall, curtain, boxes |
+| Packed snow | 1 | 3 | Snowbank, snow wall |
+| Plain glass | 1 | 1 | Window, glass door |
+| Rope, zip ties | 2 | 1 | |
+| Drywall | 2 | 2 | Interior wall |
+| Light wood | 2 | 2 | Chair, fence board |
+| Ice | 3 | 2 | Frozen pond, ice sheet |
+| Thin wood | 3 | 2 | Interior door, table |
+| Chain-link, cheap locks | 3 | 1-2 | Fence, padlock |
+| Sandbags, packed earth | 4 | 4 | Berm, sandbag wall |
+| Hardware steel | 4 | 1 | Handcuffs, a chain |
+| Sheet metal | 5 | 3 | Car door, vending machine |
+| Solid wood | 5 | 3 | Reinforced exterior door, tree trunk |
+| Brick | 6 | 4 | House wall, chimney |
+| Stone | 7 | 5 | Boulder, stone wall |
+| Steel plate | 7 | 4 | Security door, dumpster |
+| Bulletproof glass | 7 | 3 | Bank teller window |
+| Reinforced concrete | 8 | 5 | Bunker, parking garage pillar |
+| Vault steel | 9 | 6 | Bank vault door |
+| Fortress stone | 9 | 8 | Castle gate, fortress wall |
+| Modern vault | 10 | 8 | High-security vault |
 
 ### Air
 
@@ -498,7 +506,7 @@ Held: a hand, a jaw, a coil, a will.
 
 **A Grabbed character's Movement Rate is 0, and they roll at Disadvantage on everything except escaping or attacking whatever holds them.**
 
-Escaping is a contested roll against the grabber's **Potence** - or against its Soak where the grip is a thing rather than a person, GM's call - the same contest [Psychokinesis / Telekinesis](gifts.md#psychokinesis--telekinesis) already uses.
+Escaping is a contested roll against the grabber's **Potence** - or against its Hardness where the grip is a thing rather than a person, GM's call - the same contest [Psychokinesis / Telekinesis](gifts.md#psychokinesis--telekinesis) already uses.
 
 #### Prone
 

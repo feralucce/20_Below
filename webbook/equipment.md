@@ -4491,7 +4491,7 @@ A factory car with the doors, pillars and glass replaced. It sits low on its spr
 
 </div>
 
-Soak 4, 3 Health Levels (executive-protection grade). Requires Black Market Access 2.
+Hardness 4, 3 Health Levels (executive-protection grade). Requires Black Market Access 2.
 
 </div>
 
@@ -4505,7 +4505,7 @@ A cash-in-transit van with gun ports and a door nobody opens from outside.
 
 </div>
 
-Soak 6, 4 Health Levels (per the object reference chart), several passengers ride behind that Soak. Requires Black Market Access 2.
+Hardness 6, 4 Health Levels (per the materials table), several passengers ride behind that Hardness. Requires Black Market Access 2.
 
 </div>
 
@@ -4519,7 +4519,7 @@ Eight wheels, a hull, and no explaining it to anybody who sees it.
 
 </div>
 
-Soak 7, 5 Health Levels (per the object reference chart), several passengers ride behind that Soak. Requires Black Market Access 4.
+Hardness 7, 5 Health Levels (per the materials table), several passengers ride behind that Hardness. Requires Black Market Access 4.
 
 </div>
 

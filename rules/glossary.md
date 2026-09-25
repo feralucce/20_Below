@@ -82,6 +82,8 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Gift Check** - The risk some Gifts carry when you use them. Roll 2d10 against your current Ki, under to pass. Pass and it’s free; fail and it costs you a point of Ki.
 
+**Hardness** - How hard an item or a piece of armor is to get through, on the same 0-10 scale as Soak. Living bodies have Soak; things have Hardness. Hitting an item costs it a Health Level for each die over its Hardness; armor shielding someone loses at most one per attack. See Materials.
+
 **Health** - One of Water’s two sub-stats, the depth of the well you draw endurance from. It sets your Health Levels - 5 plus your Health - which is how many hits you can take before you drop. How far past 0 you can be carried before you die mirrors that same number, so a character with 8 Levels is out at 0 and dead at −8. Sample descriptors: Hale, Resilient, Stalwart, Unbreakable, Hard-to-Kill, and so on.
 
 **Health Levels** - How many hits you can take, as a row of boxes rather than a pool of points. You have 5 plus your Health. Each solid hit checks one off; at zero, you’re out, and below zero you’re Dying. The row runs the same distance again below zero, and the far end of it is where you die.

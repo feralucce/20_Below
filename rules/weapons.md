@@ -490,9 +490,9 @@ Some things have no counter to walk up to. The price is the easy half - the hard
 
 | Item | Notes | Wealth | Black Market |
 |---|---|---|---|
-| Armored sedan | Soak 4, 3 Health Levels (executive-protection grade) | 4 | 2 |
-| Armored transport van | Soak 6, 4 Health Levels (per the object reference chart), several passengers ride behind that Soak | 4 | 2 |
-| Armored personnel carrier | Soak 7, 5 Health Levels (per the object reference chart), several passengers ride behind that Soak | 5 | 4 |
+| Armored sedan | Hardness 4, 3 Health Levels (executive-protection grade) | 4 | 2 |
+| Armored transport van | Hardness 6, 4 Health Levels (per the materials table), several passengers ride behind that Hardness | 4 | 2 |
+| Armored personnel carrier | Hardness 7, 5 Health Levels (per the materials table), several passengers ride behind that Hardness | 5 | 4 |
 
 ## Beyond the Ordinary
 

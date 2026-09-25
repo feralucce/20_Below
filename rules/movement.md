@@ -82,6 +82,8 @@ One rule for every action that gets you behind something. The GM calls the grade
 - **Full cover** - attacks that need to see or reach you can't.
 - **Partial cover** (a corner, a car door, a low wall) - attacks against you are at **Disadvantage**.
 
+**Cover wears down.** Where it's plausible (GM's call), cover can be shot down: attack it as an item, and at 0 Health Levels it stops being cover. See the [materials table](rules.md#materials-hardness-and-health-levels) for what a wall, a car door or a sandbag berm can take.
+
 Advantage and Disadvantage [count sources](rules.md#advantage--disadvantage). Belly Down behind partial cover is two sources against a ranged attack: no harder to hit than partial cover alone, but a shooter who Aims (+1) is still left at Disadvantage.
 
 ## Terrain and Footing
