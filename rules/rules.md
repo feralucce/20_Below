@@ -424,14 +424,14 @@ What an action actually *lets you do*, beyond a plain Attack or Move - filling i
 
 | Band | Distance | What it looks like |
 |---|---|---|
-| **Melee** | Contact, out to ~2m | Arm's reach |
-| **Close** | 2 to 10m | The same room, across a bar, the width of an alley |
+| **Melee** | Contact, out to ~1m | Arm's reach |
+| **Close** | 1 to 10m | The same room, across a bar, the width of an alley |
 | **Near** | 10 to 50m | Across a street, the length of a corridor, the far side of a car park |
 | **Far** | Beyond 50m | Rooftop to rooftop, the far end of a warehouse |
 
 **Movement Rate**: `5 + Air`, in **meters** - the same flat-floor-plus-Attribute shape as [Health Levels](#health-levels). A character can move up to their Movement Rate as part of a Fast action's one action or a Normal action's move component, and a Normal action may spend **both** of its actions moving for **2x Movement Rate**. **Movement is measured in meters and the band follows from where you end up.** One move carries a character out of Melee into Close; a double move reaches into Near.
 
-**Sprint**: an all-out run, **5x Movement Rate**, is a **Slow action** and the only thing that character does that round - no attack, no second half, and they act last as Slow always does. A sprint crosses Near in a single turn and closes from Far in one or two.
+**Sprint**: an all-out run, **5x Movement Rate**, is a **Slow action** and the only thing that character does that round - no attack, no second half, and they act last as Slow always does.
 
 *The status effects defined so far - [Off Balance](#off-balance), [Distracted](#distracted), [Surprised](#surprised), [Flustered](#flustered), [Humiliated](#humiliated), [Exhausted](#exhausted), [Staggered](#staggered), [Blinded](#blinded), [Deafened](#deafened), [Grabbed](#grabbed), [Prone](#prone), [Frightened](#frightened), [Envenomed](#envenomed) and [Bleeding](#bleeding), plus [Overwhelmed and Shattered](#sanity), which Sanity defines. More are expected as combat rules develop further; this isn't the full list.*
 

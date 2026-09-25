@@ -45,14 +45,14 @@ One point of Difficulty is worth ~10 points of probability mid-curve, ~2 at the 
 
 | | |
 |---|---|
-| **Melee** | Contact, to ~2m |
-| **Close** | 2-10m |
+| **Melee** | Contact, to ~1m |
+| **Close** | 1-10m |
 | **Near** | 10-50m |
 | **Far** | 50m+ |
 
 Movement Rate is **5 + Air** in metres; you move in metres and the band follows. One move clears Melee into Close. A Normal action can spend both halves moving, for **2x**.
 
-**Sprint** - 5x Movement Rate, a Slow action, and the only thing you do that round. Crosses Near in one turn, closes from Far in one or two.
+**Sprint** - 5x Movement Rate, a Slow action, and the only thing you do that round.
 
 **Weapon range** - no penalty inside **Normal**, Disadvantage out to **Long**, no shot past it.
 
