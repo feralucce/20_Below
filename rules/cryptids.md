@@ -92,6 +92,7 @@ Ranchers lose livestock to it long before anyone gets a clear look. It's low-slu
 **Bite / Talons**: 3 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception, Perception 9 vs. Stealth, Athletics TN 9
+
 **Traits**: **Livestock Predator** - Advantage on attacks against domestic and farm animals, and on Stealth rolls made while moving through a pen or pasture at night.
 
 </td></tr></table>
@@ -109,6 +110,7 @@ Shows up before something goes wrong, or that's how the stories always get told 
 **Claws**: 1 die, Melee (rarely used)
 
 **Notable Skills**: Stealth 8 vs. Perception, Perception 6 vs. Stealth, Athletics TN 8
+
 **Traits**: **Ill Omen** - anyone who gets a clear, sustained look at it takes Disadvantage on their next roll, unnerved rather than harmed. **Avoidant** - flees at the first sign of real conflict and almost never initiates one.
 
 </td></tr></table>
@@ -128,6 +130,7 @@ Hooved, winged, and loud about it - the scream carries farther than the sighting
 **Shriek**: 2 dice, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Notable Skills**: Stealth 8 vs. Perception, Athletics TN 9
+
 **Traits**: **Shriek** (once per encounter) - everyone within Close range takes Disadvantage on their next Perception roll, startled badly enough to lose track of where it went.
 
 </td></tr></table>
@@ -163,6 +166,7 @@ Wingspan alone is enough to convince most witnesses they saw something that shou
 **Talons**: 3 dice, Melee
 
 **Notable Skills**: Perception 7 vs. Stealth, Athletics TN 8
+
 **Traits**: **Storm Cover** - Advantage on Stealth while flying through cloud or storm cover, and Perception rolls made to track it at range take Disadvantage in poor weather.
 
 </td></tr></table>
@@ -214,6 +218,7 @@ Two legs, no visible arms or head, and no recorded case of it ever doing anythin
 **Potence** 1 · **Initiative** 0 · **Psyche** 3 · **Ferocity** 1 · **Stamina** 4
 
 **Notable Skills**: Stealth 6 vs. Perception, Athletics TN 6
+
 **Traits**: **Utterly Nonaggressive** - never attacks under any circumstance. This entry exists for encounters built on observation and unease, not combat.
 
 </td></tr></table>
@@ -231,6 +236,7 @@ Hisses, hovers, and leaves behind a smell that lingers for hours after it's gone
 **Noxious Mist** (once per encounter, no Health Level cost): everyone within Close range must resist or take Disadvantage on Physical rolls for the rest of the Scene.
 
 **Notable Skills**: Stealth 8 vs. Perception, Athletics TN 5
+
 **Traits**: **Avoidant** - retreats into its own mist the moment it's directly engaged.
 
 </td></tr></table>
@@ -282,6 +288,7 @@ They knock, they ask to come in, and the wrongness is entirely in how ordinary t
 **Potence** 2 · **Initiative** 2 · **Psyche** 3 · **Ferocity** 1 · **Presence** 3 · **Stamina** 10
 
 **Notable Skills**: Persuasion 7 vs. Insight, Athletics TN 7
+
 **Traits**: **Wrong in a Way You Can't Name** - anyone who holds eye contact with one, or lets one inside, takes Disadvantage on their next roll. That's the full extent of what they do; if actually attacked, they flee rather than fight.
 
 </td></tr></table>
@@ -299,6 +306,7 @@ Small, pale, all-limbs humanoids that come out at night in numbers and don't sca
 **Claws / Small Blades**: 1 die, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception, Athletics TN 9
+
 **Traits**: **Pack Tactics** (as Feral Dog). **Floats Oddly** - Advantage on Stealth while moving along rooflines, fences, or low structures.
 
 </td></tr></table>
@@ -334,6 +342,7 @@ Lives on and under a rail trestle, and the voice it throws is the only reason an
 **Claws / Hooves**: 3 dice, Melee
 
 **Notable Skills**: Stealth 8 vs. Perception, Athletics TN 9
+
 **Traits**: **Voice Mimicry** - imitates a familiar voice or sound from a distance; a Perception roll made to pinpoint its actual location takes Disadvantage as long as it keeps calling. **High Ground** - Advantage on an attack made from an elevated perch against a target below.
 
 </td></tr></table>
@@ -351,6 +360,7 @@ North Carolina livestock turn up dead with barely a mark on them and no tracks w
 **Bite**: 3 dice, Melee
 
 **Notable Skills**: Stealth 7 vs. Perception, Athletics TN 10
+
 **Traits**: **Silent Kill** - Advantage on an attack made against a target that hasn't detected it.
 
 </td></tr></table>
@@ -370,6 +380,7 @@ The howl reaches farther than the animal ever does, which is exactly why nobody 
 **Howl**: 2 dice, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Notable Skills**: Stealth 9 vs. Perception, Athletics TN 9
+
 **Traits**: **Howl** (once per encounter) - anyone within Close range takes Disadvantage on their next roll, rattled by a sound with nothing visibly behind it.
 
 </td></tr></table>

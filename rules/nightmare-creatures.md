@@ -71,6 +71,7 @@ Passes for human right up until it doesn't need to anymore. The skin runs a shad
 **Bite / Claws**: 2 dice, Melee. **Blood Drain**: against a target it has Grappled, a successful bite heals it 1 Health Level at the start of each of its turns for the rest of the Scene.
 
 **Notable Skills**: Persuasion 7 vs. Insight, Stealth 8 vs. Perception, Athletics TN 10
+
 **Traits**: **Predatory Charm** - Advantage on Persuasion and Deception rolls made to get close to a target who hasn't been warned about it. **Sunlight-Averse** - Disadvantage on all rolls made in direct daylight.
 
 </td></tr></table>
@@ -106,6 +107,7 @@ Lives off what the cemetery and the morgue don't miss, and what its bite leaves 
 **Claws / Bite**: 3 dice, Melee. **Fouled Wound**: a target hit and left untreated takes Disadvantage on Physical rolls until the wound is properly cleaned.
 
 **Notable Skills**: Stealth 8 vs. Perception, Athletics TN 8
+
 **Traits**: **Carrion Sense** - Advantage on Perception rolls to locate fresh graves, corpses, or already-wounded targets.
 
 </td></tr></table>
@@ -141,6 +143,7 @@ Doesn't need to win the fight if it can talk someone else into losing it for the
 **Claws / Horns**: 2 dice, Melee
 
 **Notable Skills**: Persuasion 7 vs. Insight, Deception 8 vs. Insight, Athletics TN 8
+
 **Traits**: **Goading** - Advantage on Persuasion rolls made to provoke a target into a rash or reckless action. **Fire Vulnerable** - fire damage against it is unsoakable.
 
 </td></tr></table>
@@ -158,6 +161,7 @@ Wears a borrowed face well enough that the real question isn't whether it's lyin
 **Knife** (only if cornered): 2, Melee
 
 **Notable Skills**: Deception 6 vs. Insight, Persuasion 7 vs. Insight, Athletics TN 8
+
 **Traits**: **Glamour** - Advantage on any Deception roll made to pass as a specific person it has studied closely. **Cracks Both Ways** - a target who succeeds on a Perception roll to see through the glamour gains Advantage on their next roll against it.
 
 </td></tr></table>
@@ -175,6 +179,7 @@ Ordinary until the ritual finishes. The trick is stopping it before that happens
 **Athame** (only if cornered): 1, Melee. **Hex** (once per Scene, requires several uninterrupted rounds to complete - GM's call on timing): a single target within Sight range takes Disadvantage on all rolls for the rest of the Scene once the ritual completes.
 
 **Notable Skills**: Perception 9 vs. Stealth, Athletics TN 6
+
 **Traits**: **Fragile Without Preparation** - has no combat trait beyond the above; entirely dependent on allies, terrain, or fleeing if interrupted mid-ritual.
 
 </td></tr></table>
@@ -192,6 +197,7 @@ A full night of watching is all it needs before it can wear someone else's face 
 **Claws**: 3 dice, Melee
 
 **Notable Skills**: Deception 6 vs. Insight, Stealth 8 vs. Perception, Athletics TN 9
+
 **Traits**: **Perfect Copy** - after studying a specific target overnight, can take on their appearance and voice; noticing anything wrong requires a Perception roll at Disadvantage. **Reverts Under Stress** - snaps back to its true, indistinct form the instant it takes any Health Level damage.
 
 </td></tr></table>
@@ -245,6 +251,7 @@ Almost never lays a hand on anyone. It doesn't need to. Something closer to a gh
 **Cry** (once per Scene, Mental attack, dice pool 3, Far range, no to-hit roll required - triggered by hearing it): dice resolve per-die against Psyche as normal, a connecting die costing a Sanity Level same as any other Mental attack, and can push a target to Overwhelmed on repeated failures in the same Scene.
 
 **Notable Skills**: Perception 7 vs. Stealth, Athletics TN 6
+
 **Traits**: **Rarely Physical** - almost never closes to melee; the cry is the entire threat.
 
 </td></tr></table>
@@ -296,6 +303,7 @@ Furniture, cargo, a parked car, anything still enough to be overlooked - until s
 **Bite / Engulf**: 3 dice, Melee. Advantage on its first attack against a target that approached believing it was ordinary terrain or an object.
 
 **Notable Skills**: Stealth 6 vs. Perception, Athletics TN 7
+
 **Traits**: **Grapple on Contact** - a target hit by its first attack is automatically Grappled; breaking free uses the standard contested Grapple rule.
 
 </td></tr></table>
@@ -315,6 +323,7 @@ Shows up wherever something is already going wrong and makes sure it keeps going
 **Menace**: 2 dice, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
 **Notable Skills**: Perception 8 vs. Stealth, Athletics TN 6
+
 **Traits**: **Wading Through Sickness** - immune to any disease or poison effect, including its own.
 
 </td></tr></table>
