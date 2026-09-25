@@ -32,6 +32,8 @@ Every card answers one question: **who rolls, and against which number.** Here's
 
 **Soak** 1 · **Attack** 7 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 9m
 
+**Potence** 2 · **Initiative** 3 · **Psyche** 3 · **Ferocity** 2 · **Presence** 3 · **Stamina** 6
+
 **Bite**: 3 dice, Melee
 
 **Snarl**: 2 dice, Close, **Social** - dice against the target's Presence, each one over costing a level of Poise.
@@ -44,14 +46,15 @@ Every card answers one question: **who rolls, and against which number.** Here's
 
 <div class="key-cards">
 <div class="key-card key-it"><div class="key-head"><span class="key-title">It attacks you</span><span class="key-pill">It rolls</span></div><p>It rolls 2d10. At or under its <strong>Attack</strong> + your Defense, it hits.</p><p class="key-uses"><span>On the card</span> Attack 7</p></div>
-<div class="key-card key-it"><div class="key-head"><span class="key-title">Its hit lands</span><span class="key-pill">It rolls</span></div><p>A creature's natural weapons are <strong>boosted</strong>: +2 to each die, then each one over your <strong>Soak</strong> costs you a Health Level.</p><p class="key-uses"><span>On the card</span> Bite: 3 dice, Melee</p></div>
+<div class="key-card key-it"><div class="key-head"><span class="key-title">Its hit lands</span><span class="key-pill">It rolls</span></div><p>A creature's natural weapons are <strong>boosted</strong>: its <strong>Ferocity</strong> is added to each die, then each one over your <strong>Soak</strong> costs you a Health Level.</p><p class="key-uses"><span>On the card</span> Bite: 3 dice, Melee &middot; Ferocity 2</p></div>
 <div class="key-card key-it"><div class="key-head"><span class="key-title">It snarls, hisses or howls</span><span class="key-pill">It rolls</span></div><p>A <strong>Social</strong> line: it rolls against your <a href="rules.html#defense-derived-stat">Social Defense</a>, then each die over your Presence costs you a level of <a href="rules.html#poise">Poise</a>. It can't kill, but at 0 Poise you're <a href="rules.html#flustered">Flustered</a>.</p><p class="key-uses"><span>On the card</span> Snarl: 2 dice, Close, Social</p></div>
 <div class="key-card key-you"><div class="key-head"><span class="key-title">You attack it</span><span class="key-pill">You roll</span></div><p>Your Element + its <strong>Defense</strong> to hit. Each die over its <strong>Soak</strong> costs it a Health Level. At 0 it's out: creatures have no below-zero range.</p><p class="key-uses"><span>On the card</span> Defense 6 &middot; Soak 1 &middot; Health Levels 4</p></div>
+<div class="key-card key-you"><div class="key-head"><span class="key-title">You rattle it or reach its mind</span><span class="key-pill">You roll</span></div><p><strong>Social:</strong> your Element + 10 &minus; its Psyche to hit, then each die over its <strong>Presence</strong> costs it a level of Poise. No Presence on the card means it's immune. <strong>Mental:</strong> your Element + its <strong>Mental Defense</strong> (10 &minus; Presence when it has one), then each die over its <strong>Psyche</strong> costs it a level of Sanity.</p><p class="key-uses"><span>On the card</span> Psyche 3 &middot; Presence 3</p></div>
 <div class="key-card key-you"><div class="key-head"><span class="key-title">You spot it, sneak past it, see through it</span><span class="key-pill">You roll</span></div><p>Roll the skill after &ldquo;vs.&rdquo;, with the number as your Difficulty: your Attribute + that number. Lower is harder. If a trait gives it Advantage, you roll at Disadvantage.</p><p class="key-uses"><span>On the card</span> Perception 7 vs. Stealth</p></div>
-<div class="key-card key-it"><div class="key-head"><span class="key-title">It does anything else</span><span class="key-pill">It rolls</span></div><p>It rolls 2d10. At or under the number, it succeeds.</p><p class="key-uses"><span>On the card</span> Athletics Target Number 9</p></div>
+<div class="key-card key-it"><div class="key-head"><span class="key-title">It does anything else</span><span class="key-pill">It rolls</span></div><p>It rolls 2d10. At or under its <strong>TN</strong> (Target Number), it succeeds.</p><p class="key-uses"><span>On the card</span> Athletics TN 9</p></div>
 </div>
 
-<p class="key-note"><strong>Movement Rate</strong> is in meters, like a PC's. <strong>Traits</strong> are written in rules you already know. A few abilities say <strong>&ldquo;no to-hit roll required&rdquo;</strong>: they work by being perceived, not by striking, so seeing or hearing the source triggers them, and everything after that resolves like any other attack.</p>
+<p class="key-note"><strong>Movement Rate</strong> is in meters, like a PC's. It rolls <strong>1d10 + Initiative</strong> once at the start of combat, like a PC. <strong>Potence</strong> and <strong>Stamina</strong> work as a PC's do: Potence for grabs, shoves and breaking things, Stamina for the free Rounds of a chase. <strong>Traits</strong> are written in rules you already know. A few abilities say <strong>&ldquo;no to-hit roll required&rdquo;</strong>: they work by being perceived, not by striking, so seeing or hearing the source triggers them, and everything after that resolves like any other attack.</p>
 
 ---
 
@@ -63,10 +66,11 @@ Passes for human right up until it doesn't need to anymore. The skin runs a shad
 
 **Soak** 2 · **Attack** 8 · **Defense** 7 · **Health Levels** 6 · **Movement Rate** 10m
 
+**Potence** 7 · **Initiative** 7 · **Psyche** 6 · **Ferocity** 3 · **Presence** 6 · **Stamina** 6
+
 **Bite / Claws**: 2 dice, Melee. **Blood Drain**: against a target it has Grappled, a successful bite heals it 1 Health Level at the start of each of its turns for the rest of the Scene.
 
-**Notable Skills**: Persuasion 7 vs. Insight, Stealth 8 vs. Perception
-
+**Notable Skills**: Persuasion 7 vs. Insight, Stealth 8 vs. Perception, Athletics TN 10
 **Traits**: **Predatory Charm** - Advantage on Persuasion and Deception rolls made to get close to a target who hasn't been warned about it. **Sunlight-Averse** - Disadvantage on all rolls made in direct daylight.
 
 </td></tr></table>
@@ -79,9 +83,11 @@ Whatever it was before doesn't matter once the shape has finished changing. The 
 
 **Soak** 3 · **Attack** 8 · **Defense** 6 · **Health Levels** 7 · **Movement Rate** 12m
 
+**Potence** 8 · **Initiative** 5 · **Psyche** 6 · **Ferocity** 3 · **Presence** 6 · **Stamina** 6
+
 **Claws / Bite**: 3 dice, Melee
 
-**Notable Skills**: Athletics Target Number 9, Perception 8 vs. Stealth
+**Notable Skills**: Athletics TN 9, Perception 8 vs. Stealth
 
 **Traits**: **Regeneration** - heals 1 Health Level at the start of each of its turns. **Silver Vulnerable** - damage from a silver weapon against it is unsoakable.
 
@@ -95,10 +101,11 @@ Lives off what the cemetery and the morgue don't miss, and what its bite leaves 
 
 **Soak** 2 · **Attack** 7 · **Defense** 5 · **Health Levels** 5 · **Movement Rate** 8m
 
+**Potence** 3 · **Initiative** 5 · **Psyche** 5 · **Ferocity** 2 · **Presence** 5 · **Stamina** 4
+
 **Claws / Bite**: 3 dice, Melee. **Fouled Wound**: a target hit and left untreated takes Disadvantage on Physical rolls until the wound is properly cleaned.
 
-**Notable Skills**: Stealth 8 vs. Perception
-
+**Notable Skills**: Stealth 8 vs. Perception, Athletics TN 8
 **Traits**: **Carrion Sense** - Advantage on Perception rolls to locate fresh graves, corpses, or already-wounded targets.
 
 </td></tr></table>
@@ -109,9 +116,13 @@ Lives off what the cemetery and the morgue don't miss, and what its bite leaves 
 
 Something is still using the body. The body itself stopped being the important part a while ago. Slack joints and a gait that doesn't track right are usually the first things anyone notices, along with a cold that radiates off it before it's within arm's reach. It moves toward its target in a straight line with no hesitation, because whatever's inside it isn't afraid of losing the shell. Putting it down for the Scene doesn't end it - the remains still have to be found and dealt with, or it re-forms and comes back.
 
-**Soak** 3 · **Attack** 6 · **Defense** 4 · **Health Levels** 6 · **Movement Rate** 7m
+**Soak** 3 · **Attack** 6 · **Defense** 4 · **Mental Defense** 2 · **Health Levels** 6 · **Movement Rate** 7m
+
+**Potence** 3 · **Initiative** 1 · **Psyche** 5 · **Ferocity** 2 · **Stamina** 10
 
 **Whatever It's Carrying**: 2 dice, Melee
+
+**Notable Skills**: Athletics TN 5
 
 **Traits**: **Tethered, Not Alive** - immune to Fear and Intimidation, doesn't need to breathe, and taking it past 0 Health Levels only disperses it for the Scene; it re-forms at the corpse's resting place unless the remains themselves are destroyed or the tether is broken by other means (GM's call). **Cold Presence** - anyone within Close range takes Disadvantage on Perception rolls.
 
@@ -125,10 +136,11 @@ Doesn't need to win the fight if it can talk someone else into losing it for the
 
 **Soak** 2 · **Attack** 6 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 10m (short flight)
 
+**Potence** 3 · **Initiative** 4 · **Psyche** 5 · **Ferocity** 2 · **Presence** 4 · **Stamina** 10
+
 **Claws / Horns**: 2 dice, Melee
 
-**Notable Skills**: Persuasion 7 vs. Insight, Deception 8 vs. Insight
-
+**Notable Skills**: Persuasion 7 vs. Insight, Deception 8 vs. Insight, Athletics TN 8
 **Traits**: **Goading** - Advantage on Persuasion rolls made to provoke a target into a rash or reckless action. **Fire Vulnerable** - fire damage against it is unsoakable.
 
 </td></tr></table>
@@ -141,10 +153,11 @@ Wears a borrowed face well enough that the real question isn't whether it's lyin
 
 **Soak** 1 · **Attack** 5 · **Defense** 8 · **Health Levels** 3 · **Movement Rate** 9m
 
+**Potence** 2 · **Initiative** 3 · **Psyche** 4 · **Ferocity** 2 · **Presence** 4 · **Stamina** 4
+
 **Knife** (only if cornered): 2, Melee
 
-**Notable Skills**: Deception 6 vs. Insight, Persuasion 7 vs. Insight
-
+**Notable Skills**: Deception 6 vs. Insight, Persuasion 7 vs. Insight, Athletics TN 8
 **Traits**: **Glamour** - Advantage on any Deception roll made to pass as a specific person it has studied closely. **Cracks Both Ways** - a target who succeeds on a Perception roll to see through the glamour gains Advantage on their next roll against it.
 
 </td></tr></table>
@@ -157,10 +170,11 @@ Ordinary until the ritual finishes. The trick is stopping it before that happens
 
 **Soak** 0 · **Attack** 5 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 8m
 
+**Potence** 3 · **Initiative** 2 · **Psyche** 4 · **Ferocity** 2 · **Presence** 4 · **Stamina** 4
+
 **Athame** (only if cornered): 1, Melee. **Hex** (once per Scene, requires several uninterrupted rounds to complete - GM's call on timing): a single target within Sight range takes Disadvantage on all rolls for the rest of the Scene once the ritual completes.
 
-**Notable Skills**: Perception 9 vs. Stealth
-
+**Notable Skills**: Perception 9 vs. Stealth, Athletics TN 6
 **Traits**: **Fragile Without Preparation** - has no combat trait beyond the above; entirely dependent on allies, terrain, or fleeing if interrupted mid-ritual.
 
 </td></tr></table>
@@ -173,10 +187,11 @@ A full night of watching is all it needs before it can wear someone else's face 
 
 **Soak** 1 · **Attack** 7 · **Defense** 7 · **Health Levels** 4 · **Movement Rate** 9m
 
+**Potence** 3 · **Initiative** 6 · **Psyche** 5 · **Ferocity** 2 · **Presence** 5 · **Stamina** 4
+
 **Claws**: 3 dice, Melee
 
-**Notable Skills**: Deception 6 vs. Insight, Stealth 8 vs. Perception
-
+**Notable Skills**: Deception 6 vs. Insight, Stealth 8 vs. Perception, Athletics TN 9
 **Traits**: **Perfect Copy** - after studying a specific target overnight, can take on their appearance and voice; noticing anything wrong requires a Perception roll at Disadvantage. **Reverts Under Stress** - snaps back to its true, indistinct form the instant it takes any Health Level damage.
 
 </td></tr></table>
@@ -187,9 +202,13 @@ A full night of watching is all it needs before it can wear someone else's face 
 
 Rats and roaches don't usually hunt in formation. This mass does, flowing as a single carpet of bodies that pours around obstacles and up walls instead of over them. It doesn't scatter the way a normal pest problem would when struck, and once it's tasted blood on a target it keeps coming, drawing every other scavenger nearby to finish what it started. The sound - thousands of small feet and mandibles - is usually the first warning, arriving just ahead of the smell.
 
-**Soak** 0 · **Attack** 7 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 7m
+**Soak** 0 · **Attack** 7 · **Defense** 8 · **Mental Defense** 4 · **Health Levels** 4 · **Movement Rate** 7m
+
+**Potence** 1 · **Initiative** 1 · **Psyche** 5 · **Ferocity** 2 · **Stamina** 4
 
 **Bites / Stings**: 3 dice, Melee
+
+**Notable Skills**: Athletics TN 6
 
 **Traits**: **Swarm** (as Rat Swarm). **Unnatural Hunger** - actively pursues rather than scatters, and anything else drawn to a fresh kill gets Advantage on Perception rolls to track a target it has already fed on this Scene.
 
@@ -201,9 +220,13 @@ Rats and roaches don't usually hunt in formation. This mass does, flowing as a s
 
 Stone, clay, or scrap, animated and given exactly one job. It moves in slow, deliberate strides, has no expression to read and no hesitation to exploit, and doesn't stop for pain, fear, or reasoning because it has neither. Every attack is a heavy, telegraphed slam that an attentive party can see coming from across the room, but the damage behind it is real. Somewhere on its body - a rune, a seam, a fist-sized core - is the one point that isn't armored like the rest, and finding it under fire is usually the actual fight.
 
-**Soak** 6 · **Attack** 6 · **Defense** 3 · **Health Levels** 8 · **Movement Rate** 6m
+**Soak** 6 · **Attack** 6 · **Defense** 3 · **Mental Defense** 2 · **Health Levels** 8 · **Movement Rate** 6m
+
+**Potence** 2 · **Initiative** 1 · **Psyche** 5 · **Ferocity** 2 · **Stamina** 10
 
 **Slam**: 3 dice, Melee
+
+**Notable Skills**: Athletics TN 5
 
 **Traits**: **Unliving** - immune to Fear, poison, and disease. **One Weak Point** - a Called Shot against its anchor (a rune, seam, or core, set by the GM on introduction) bypasses its Soak entirely.
 
@@ -217,10 +240,11 @@ Almost never lays a hand on anyone. It doesn't need to. Something closer to a gh
 
 **Soak** 1 · **Attack** 3 · **Defense** 6 · **Health Levels** 3 · **Movement Rate** 8m (drifts)
 
+**Potence** 2 · **Initiative** 2 · **Psyche** 3 · **Ferocity** 1 · **Presence** 3 · **Stamina** 10
+
 **Cry** (once per Scene, Mental attack, dice pool 3, Far range, no to-hit roll required - triggered by hearing it): dice resolve per-die against Psyche as normal, a connecting die costing a Sanity Level same as any other Mental attack, and can push a target to Overwhelmed on repeated failures in the same Scene.
 
-**Notable Skills**: Perception 7 vs. Stealth
-
+**Notable Skills**: Perception 7 vs. Stealth, Athletics TN 6
 **Traits**: **Rarely Physical** - almost never closes to melee; the cry is the entire threat.
 
 </td></tr></table>
@@ -232,6 +256,8 @@ Almost never lays a hand on anyone. It doesn't need to. Something closer to a gh
 Bound to one room, one object, one unfinished business - and everything not nailed down in that space is a weapon. There's rarely a body to look at, just cold spots, flickering lights, and objects sliding or flying with no visible hand behind them. It can't chase anyone past the edges of its space, so the longer anyone lingers, the worse it gets - throws come faster and land harder the more rounds pass without someone walking out the door. Finding and dealing with the anchor object is the only way to actually end the encounter rather than just outlast it.
 
 **Soak** 1 · **Attack** 6 · **Defense** 8 · **Health Levels** 4 · **Movement Rate** 0m (cannot leave the bound location)
+
+**Potence** 4 · **Initiative** 0 · **Psyche** 5 · **Ferocity** 2 · **Presence** 4 · **Stamina** 10
 
 **Thrown Objects**: 2 dice, Close to Far
 
@@ -245,11 +271,13 @@ Bound to one room, one object, one unfinished business - and everything not nail
 
 Runs a scent down for miles and doesn't lose interest once it's found what it was chasing. Black-furred, low and rangy, with a faint smell of char that arrives before it does, it doesn't posture or circle the way a normal animal would - it closes distance fast and bites hard. Wounds from that bite keep smoking after the fight, a smell no one at the table forgets. Once it has a scent, distance and doors don't shake it; it tracks a target across almost anything short of open water, which makes running a much shorter-term plan than it looks like.
 
-**Soak** 3 · **Attack** 8 · **Defense** 6 · **Health Levels** 6 · **Movement Rate** 14m
+**Soak** 3 · **Attack** 8 · **Defense** 6 · **Mental Defense** 2 · **Health Levels** 6 · **Movement Rate** 14m
+
+**Potence** 3 · **Initiative** 6 · **Psyche** 6 · **Ferocity** 3 · **Stamina** 10
 
 **Bite**: 3 dice, Melee. 1 point of damage from a successful bite is unsoakable (the wound smolders).
 
-**Notable Skills**: Perception 7 vs. Stealth, Athletics Target Number 9
+**Notable Skills**: Perception 7 vs. Stealth, Athletics TN 9
 
 **Traits**: **Pack Tactics** (as Feral Dog). **Hunts by Scent** - once it has a target's scent, Advantage on Perception rolls to track them across any terrain short of open water.
 
@@ -263,10 +291,11 @@ Furniture, cargo, a parked car, anything still enough to be overlooked - until s
 
 **Soak** 2 · **Attack** 7 · **Defense** 7 · **Health Levels** 5 · **Movement Rate** 3m (until it strikes)
 
+**Potence** 3 · **Initiative** 2 · **Psyche** 5 · **Ferocity** 2 · **Presence** 5 · **Stamina** 4
+
 **Bite / Engulf**: 3 dice, Melee. Advantage on its first attack against a target that approached believing it was ordinary terrain or an object.
 
-**Notable Skills**: Stealth 6 vs. Perception
-
+**Notable Skills**: Stealth 6 vs. Perception, Athletics TN 7
 **Traits**: **Grapple on Contact** - a target hit by its first attack is automatically Grappled; breaking free uses the standard contested Grapple rule.
 
 </td></tr></table>
@@ -279,12 +308,13 @@ Shows up wherever something is already going wrong and makes sure it keeps going
 
 **Soak** 1 · **Attack** 5 · **Defense** 6 · **Health Levels** 4 · **Movement Rate** 8m
 
+**Potence** 3 · **Initiative** 2 · **Psyche** 4 · **Ferocity** 2 · **Presence** 4 · **Stamina** 4
+
 **Cane / Blade**: 2 dice, Melee. **Contagion**: on a successful hit, the target must resist or take Disadvantage on Physical rolls until treated, worsening rather than healing without care.
 
 **Menace**: 2 dice, Close, **Social** - dice against the target's Presence, each one over costing a level of [Poise](rules.md#poise).
 
-**Notable Skills**: Perception 8 vs. Stealth
-
+**Notable Skills**: Perception 8 vs. Stealth, Athletics TN 6
 **Traits**: **Wading Through Sickness** - immune to any disease or poison effect, including its own.
 
 </td></tr></table>

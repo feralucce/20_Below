@@ -154,7 +154,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Surprised** - Getting caught before a fight starts with no idea it’s coming. Until the round ends, you roll everything at Disadvantage.
 
-**Target Number** - The number a core roll has to hit or come under: your Attribute plus the Difficulty. See Core Roll.
+**Target Number (TN)** - The number a core roll has to hit or come under: your Attribute plus the Difficulty. Creature cards shorten it to TN. See Core Roll.
 
 **Time Bands** - The standard ladder the rules use whenever something needs a duration: Round, Minute, Hour, Scene, Day, Month, Year, Decade, Century. A Round is about 6 seconds, so a Minute is exactly ten of them. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
 

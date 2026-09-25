@@ -459,9 +459,9 @@ Getting caught before a fight starts with no idea it’s coming. Until the round
 </div>
 
 <div class="gloss" markdown="1">
-<span class="gloss-term">Target Number</span>
+<span class="gloss-term">Target Number (TN)</span>
 
-The number a core roll has to hit or come under: your Attribute plus the Difficulty. See Core Roll.
+The number a core roll has to hit or come under: your Attribute plus the Difficulty. Creature cards shorten it to TN. See Core Roll.
 </div>
 
 <div class="gloss" markdown="1">
