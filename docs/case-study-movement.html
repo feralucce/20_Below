@@ -1,0 +1,153 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Case Study: One Chapter, Taught Two Ways - 20 Below</title>
+<meta name="description" content="A case study in instructional design and project management: rebuilding a tabletop RPG's movement rules so one rule teaches both map players and theater-of-the-mind players, decided one ruling at a time and tested with simulation." />
+<link rel="icon" type="image/x-icon" href="/docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="/docs/assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --radius: 10px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+  main { max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+  .back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+  .back-row { font-size: 0.9rem; color: var(--text-dim); }
+  header { margin: 1.5rem 0 2.5rem; }
+  .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin: 0 0 0.6rem; }
+  h1 { margin: 0; font-size: 1.9rem; letter-spacing: 0.01em; line-height: 1.3; }
+  .intro { color: var(--text-dim); margin: 0.8rem 0 0; }
+
+  h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border-bottom: 1px solid var(--panel-border); padding-bottom: 0.5rem; margin: 2.75rem 0 1.1rem; }
+  p { font-size: 1rem; }
+  ul, ol { padding-left: 1.25rem; }
+  li { margin-bottom: 0.75rem; }
+  a { color: var(--accent); }
+  blockquote { margin: 1rem 0; padding: 0.6rem 1rem; border-left: 3px solid var(--panel-border); color: var(--text-dim); }
+
+  .checks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; margin: 1.2rem 0; }
+  .check { background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius); padding: 0.9rem 1rem; }
+  .check .who { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.3rem; }
+  .check p { margin: 0; font-size: 0.92rem; }
+
+  figure { margin: 1.6rem 0; }
+  figure img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--panel-border); background: var(--panel); }
+  figure.chart img { padding: 0.8rem; }
+  figcaption { font-size: 0.88rem; color: var(--text-dim); margin-top: 0.55rem; }
+  .pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; align-items: start; }
+  .stage { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.4rem; }
+
+  .credits { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .credits td { padding: 0.55rem 0.5rem 0.55rem 0; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
+  .credits td:first-child { color: var(--text-dim); width: 42%; }
+
+  footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+</style>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <p class="back-row">&larr; <a class="back-link" href="/docs/id-portfolio.html">Instructional Design</a> &middot; <a class="back-link" href="/docs/pm-portfolio.html">Project Management</a></p>
+
+  <header>
+    <p class="eyebrow">Case Study</p>
+    <h1>One Chapter, Taught Two Ways</h1>
+    <p class="intro">Rebuilding the movement rules for 20 Below, a tabletop RPG I've built over the past year, so the same rule works whether a table plays on a map or entirely in their heads. The work went one decision at a time, with every number simulated, and it was written once for two very different learners.</p>
+  </header>
+
+  <h2>The Problem</h2>
+  <p>The movement rules fit in a few paragraphs, and they had drifted. The same all-out run appeared twice, as "Run" at four times your Movement Rate and "Sprint" at five. A line claiming a sprint "crosses Near in a single turn" wasn't true for the slowest characters. Climbing, swimming, jumping, bad ground, chases and travel had no rules at all, even though equipment and creature cards already assumed them. Snowshoes cancelled a deep-snow penalty that didn't exist. A motorcycle gave Advantage on Chase rolls with no chase rules to roll. Creature cards listed flying, swimming and burrowing speeds with nothing saying how to use them.</p>
+  <p>And the rules assumed readers knew what "theater of the mind" meant. Half of the tables who'd pick up this book have never played without a map, and the other half have never played with one.</p>
+
+  <h2>Two Learners, One Rule</h2>
+  <p>The instructional-design decision that shaped everything else: <strong>every rule is stated once, then applied two ways.</strong></p>
+  <div class="checks">
+    <div class="check"><div class="who">Theater of the mind</div><p>No map. The GM keeps rough distances in meters, and the range band follows from where you end up. The chapter now explains what that is and how it runs on the numbers already on the sheet.</p></div>
+    <div class="check"><div class="who">Tactical</div><p>A map where one hex is one meter, so Movement Rate is simply the number of hexes. Nothing to convert, and a map printed at an inch to the meter stays to scale.</p></div>
+  </div>
+  <p>Because both tracks use the same numbers, a table can switch mid-session: a map for the warehouse fight, no map for the rooftop chase after it. Every section ends with the same worked example played both ways.</p>
+
+  <h2>How the Work Ran</h2>
+  <ul>
+    <li><strong>Sequenced simple to complex.</strong> Seven steps: the basics, a single round, leaving Melee, terrain, climbing and swimming, chases, travel. Each step used only what came before. Two more, combat actions and special actions, were added to the scope as the work surfaced them.</li>
+    <li><strong>One ruling at a time.</strong> Partway through, I asked for decisions to come to me one question per message instead of in bundles. It made the pace slower per message and faster overall.</li>
+    <li><strong>Scope logged as it grew.</strong> Seven additions came up mid-step, from a materials table to stats for every creature. Each went straight onto the running to-do list instead of derailing the step in progress.</li>
+    <li><strong>Visualize everything.</strong> Every ladder and simulation got a chart, and every chart was checked against the text before it was trusted.</li>
+  </ul>
+
+  <h2>Benchmark Learners</h2>
+  <p>Every simulation ran against the same five test characters: Fragile Frankie, Mediocre Mike, Average Annie, Tough Tony and Maxed Maggie. Each has the same score in every attribute (1, 3, 5, 7 and 10). They're simulants: fixed benchmarks for design rather than characters anyone would build. Mike was added partway through, to fill the gap between Frankie and Annie, and he turned out to mark exactly where one finding flipped.</p>
+
+  <h2>Design Decisions</h2>
+  <ol>
+    <li><strong>Bad ground, tested at every skill level.</strong> Rough ground costs double, Wild Land triple, and an Athletics roll at Difficulty 6 pushes through. The simulation ran every character at every training tier. It exposed a problem well beyond movement: at low attributes, a Novice rolls <em>worse</em> than someone with no training at all, because the Novice's Disadvantage costs more than the attribute adds. Mike sits exactly on the crossover. The finding went on the to-do list for its own ruling.</li>
+  </ol>
+
+  <figure class="chart">
+    <a href="/docs/assets/portfolio/movement-athletics-pass-rate.svg"><img src="/docs/assets/portfolio/movement-athletics-pass-rate.svg" alt="Chance to cross Rough ground at full speed by Training Tier, at Difficulty 5 to 8, for the five test characters. Adept, Expert and Master are identical. At Difficulty 7, Frankie succeeds 21 percent untrained but only 11 percent as a Novice." loading="lazy" /></a>
+    <figcaption>Frankie's line dips at Novice in every panel. Mike's runs level with Untrained. The chart made the problem obvious in a way the rule text never did.</figcaption>
+  </figure>
+
+  <ol start="2">
+    <li><strong>Chases: from a footrace to a chase.</strong> The first simulation said speed decided everything: from 20 meters, a slower character never escaped a guard dog, and a faster one nearly always did. My ruling made escape mean getting out of sight, then winning a Stealth roll against the pursuer's Perception. Now where you run matters, and so does being sneaky. Stealth training roughly doubles an average character's chances.</li>
+  </ol>
+
+  <figure class="chart">
+    <a href="/docs/assets/portfolio/movement-chase-guard-dog.svg"><img src="/docs/assets/portfolio/movement-chase-guard-dog.svg" alt="Chance to shake a Guard Dog by breaking sight and winning a Stealth roll, in tight streets, open streets and open ground, with Stealth trained and untrained. Average Annie gets away 48 percent of the time in tight streets with Stealth trained, and 25 percent untrained." loading="lazy" /></a>
+    <figcaption>100,000 simulated chases per bar. The fast get away, and so do the sneaky. Everyone else needs a plan.</figcaption>
+  </figure>
+
+  <ol start="3">
+    <li><strong>Travel, grounded in the real world.</strong> I asked for the pace to come from real walking data, not a guess. Real-world benchmarks were mined from the web, and three candidate rules were charted against them. The best pace still let the frailest character walk a fit hiker's day, and the cause was the fixed eight-hour day, not the speed. Making the travel day four hours plus Stamina put every test character inside the real-world range that matches them.</li>
+  </ol>
+
+  <figure class="chart">
+    <a href="/docs/assets/portfolio/movement-travel-day.svg"><img src="/docs/assets/portfolio/movement-travel-day.svg" alt="A day's walk for each test character at 3 plus a fifth of Air kilometers an hour. On a fixed 8-hour day: Frankie 26 km, Mike 29, Annie 32, Tony 35, Maggie 40. On a day of 4 plus Stamina hours: Frankie 16, Mike 22, Annie 28, Tony 31, Maggie 45, each inside the matching real-world range." loading="lazy" /></a>
+    <figcaption>Outline bars are the fixed day; solid bars are the rule we adopted. Gray bands are the real-world benchmarks.</figcaption>
+  </figure>
+
+  <ol start="4">
+    <li><strong>Actions: say what each one is for.</strong> A Slow round had quietly promised both a called shot and Advantage. That's two bonuses for one choice. It became a list of empowered actions: Aim gives Advantage, a Called Shot doesn't, and Study a Target this round gives next round's Called Shot its Advantage. Two rounds of commitment buy what one can't. Cautious Attack folded into Full Defense. A charge, Bulldoze, came from a concept mined from outside sources and was rebuilt entirely from rules the game already had. Cover got one rule for everything.</li>
+  </ol>
+
+  <figure class="chart">
+    <a href="/docs/assets/portfolio/movement-cover.svg"><img src="/docs/assets/portfolio/movement-cover.svg" alt="A gunman's chance to hit each test character in the open, behind partial cover, belly down behind partial cover, and the same two when he aims. Behind partial cover Annie is hit 38 percent of the time. When the gunman aims, partial cover alone goes back to 64 percent, while belly down plus partial cover holds at 38." loading="lazy" /></a>
+    <figcaption>Getting low adds nothing behind cover, until the shooter takes time to aim. Then it's the only thing still protecting you.</figcaption>
+  </figure>
+
+  <h2>Checks and Balances</h2>
+  <p>The work ran as a conversation, and both sides caught each other.</p>
+  <div class="checks">
+    <div class="check"><div class="who">AI held its ground</div><p>I read a table as off by a factor of 1.5. The assistant checked the formula in the rules, the book and the app's code, showed the numbers were right, and then fixed what was actually wrong: the table was correct but needed a second read. The lesson carried forward: always say what each end of a range means.</p></div>
+    <div class="check"><div class="who">I caught the AI</div><p>The assistant wrote "a Sprint goes last" as an absolute. I asked whether a Sprint could be boosted. It could, with Ki, like any Slow action, and both drafts were corrected. It also framed movement as a "budget" that blurred the Dash rule; I corrected that too.</p></div>
+    <div class="check"><div class="who">The AI caught itself</div><p>Its first chart descriptions carried numbers it had guessed before running anything. It re-derived every description from the computed results before any chart was shown.</p></div>
+  </div>
+
+  <h2>Outcome</h2>
+  <p>One chapter now teaches movement to both kinds of table with the same numbers. It covers a single round, leaving a fight, getting low and taking cover, bad ground, climbing, jumping, swimming, creatures that move differently, chases and travel, plus every action a round can buy. The rules page, the book chapter, the print file, the glossary, the status-effects page, the quick references and two reference sheets changed together, and the project's consistency checks passed on every file.</p>
+  <p>Next is the part no simulation replaces: the team's review and a playtest this weekend. What the table finds goes into the record the same way everything else did.</p>
+
+  <h2>Credits</h2>
+  <table class="credits">
+    <tr><td>Decisions and rulings</td><td>Me, as producer</td></tr>
+    <tr><td>Audits, drafts, mining sources, simulation and charts</td><td>Claude (AI assistant), checked by me</td></tr>
+    <tr><td>Team review and playtest</td><td>The 20 Below team and playtesters, scheduled</td></tr>
+  </table>
+
+  <footer>20 Below &middot; 20belowrpg.com</footer>
+</main>
+<script src="/docs/assets/js/site-nav.js"></script>
+</body>
+</html>

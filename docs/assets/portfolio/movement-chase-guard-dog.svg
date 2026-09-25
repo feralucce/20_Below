@@ -1,0 +1,112 @@
+<svg width="960" height="380" viewBox="0 0 960 380" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Chases: chance to shake a Guard Dog</title>
+<desc>Each test character flees a Guard Dog from 8 meters, both sprinting. To get away they break sight, then roll Stealth against the dog's Perception 7. Stealth trained: Tight streets (15 m): Frankie 2%, Annie 48%, Tony 78%, Maggie 93%, Mike 10%; Open streets (30 m): Frankie 0%, Annie 39%, Tony 78%, Maggie 94%, Mike 2%; Open ground (60 m): Frankie 0%, Annie 17%, Tony 74%, Maggie 94%, Mike 0%. Stealth untrained: Tight streets (15 m): Frankie 2%, Annie 25%, Tony 46%, Maggie 85%, Mike 5%; Open streets (30 m): Frankie 0%, Annie 20%, Tony 51%, Maggie 86%, Mike 1%; Open ground (60 m): Frankie 0%, Annie 8%, Tony 44%, Maggie 85%, Mike 0%. Assumed: the sight lines, and the dog's placeholder Target Number 12.</desc>
+<rect width="960" height="380" fill="#0a1720"/>
+<text x="10.0" y="24.0" text-anchor="start" font-family="sans-serif" font-size="15" font-weight="500" fill="#eaf5fb">Chases: chance to shake a Guard Dog</text>
+<text x="10.0" y="43.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Break sight, then Stealth vs. its Perception 7. Start 8 m, both Sprint. Assumed: sight lines; dog Target Number 12, doesn't tire.</text>
+<circle cx="15.0" cy="62.0" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/>
+<text x="25.0" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Frankie (1)</text>
+<rect x="96.4" y="57.8" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/>
+<text x="110.6" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Annie (5)</text>
+<path d="M175.0 56.5 L180.5 62.0 L175.0 67.5 L169.5 62.0 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/>
+<text x="185.0" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Tony (7)</text>
+<path d="M243.8 56.5 L249.3 66.5 L238.3 66.5 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/>
+<text x="253.8" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Maggie (10)</text>
+<path d="M329.4 67.5 L334.9 57.5 L323.9 57.5 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/>
+<text x="339.4" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Mike (3)</text>
+<text x="55.0" y="100.0" text-anchor="start" font-family="sans-serif" font-size="12.5" font-weight="500" fill="#eaf5fb">Stealth Trained</text>
+<line x1="55" y1="290.0" x2="455" y2="290.0" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="294.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">0%</text>
+<line x1="55" y1="245.0" x2="455" y2="245.0" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="249.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">25%</text>
+<line x1="55" y1="200.0" x2="455" y2="200.0" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="204.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">50%</text>
+<line x1="55" y1="155.0" x2="455" y2="155.0" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="159.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">75%</text>
+<line x1="55" y1="110.0" x2="455" y2="110.0" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="114.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">100%</text>
+<text x="121.7" y="306.0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">Tight streets</text>
+<text x="121.7" y="319.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#6f8a99">sight 15 m</text>
+<g><title>Frankie, Tight streets (15 m): 2% got away</title><path d="M62.7 290.0 V290.0 Q62.7 286.0 66.7 286.0 H80.7 Q84.7 286.0 84.7 290.0 V290.0 Z" fill="#3987e5"/></g>
+<text x="73.7" y="281.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">2</text>
+<g><title>Annie, Tight streets (15 m): 48% got away</title><path d="M86.7 290.0 V208.0 Q86.7 204.0 90.7 204.0 H104.7 Q108.7 204.0 108.7 208.0 V290.0 Z" fill="#d95926"/></g>
+<text x="97.7" y="199.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">48</text>
+<g><title>Tony, Tight streets (15 m): 78% got away</title><path d="M110.7 290.0 V154.1 Q110.7 150.1 114.7 150.1 H128.7 Q132.7 150.1 132.7 154.1 V290.0 Z" fill="#199e70"/></g>
+<text x="121.7" y="145.1" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">78</text>
+<g><title>Maggie, Tight streets (15 m): 93% got away</title><path d="M134.7 290.0 V125.7 Q134.7 121.7 138.7 121.7 H152.7 Q156.7 121.7 156.7 125.7 V290.0 Z" fill="#c98500"/></g>
+<text x="145.7" y="116.7" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">93</text>
+<g><title>Mike, Tight streets (15 m): 10% got away</title><path d="M158.7 290.0 V276.4 Q158.7 272.4 162.7 272.4 H176.7 Q180.7 272.4 180.7 276.4 V290.0 Z" fill="#9085e9"/></g>
+<text x="169.7" y="267.4" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">10</text>
+<text x="255.0" y="306.0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">Open streets</text>
+<text x="255.0" y="319.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#6f8a99">sight 30 m</text>
+<g><title>Frankie, Open streets (30 m): 0% got away</title><path d="M196.0 290.0 V290.0 Q196.0 289.5 196.5 289.5 H217.5 Q218.0 289.5 218.0 290.0 V290.0 Z" fill="#3987e5"/></g>
+<text x="207.0" y="284.5" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">0</text>
+<g><title>Annie, Open streets (30 m): 39% got away</title><path d="M220.0 290.0 V224.4 Q220.0 220.4 224.0 220.4 H238.0 Q242.0 220.4 242.0 224.4 V290.0 Z" fill="#d95926"/></g>
+<text x="231.0" y="215.4" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">39</text>
+<g><title>Tony, Open streets (30 m): 78% got away</title><path d="M244.0 290.0 V153.8 Q244.0 149.8 248.0 149.8 H262.0 Q266.0 149.8 266.0 153.8 V290.0 Z" fill="#199e70"/></g>
+<text x="255.0" y="144.8" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">78</text>
+<g><title>Maggie, Open streets (30 m): 94% got away</title><path d="M268.0 290.0 V125.4 Q268.0 121.4 272.0 121.4 H286.0 Q290.0 121.4 290.0 125.4 V290.0 Z" fill="#c98500"/></g>
+<text x="279.0" y="116.4" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">94</text>
+<g><title>Mike, Open streets (30 m): 2% got away</title><path d="M292.0 290.0 V290.0 Q292.0 286.2 295.8 286.2 H310.2 Q314.0 286.2 314.0 290.0 V290.0 Z" fill="#9085e9"/></g>
+<text x="303.0" y="281.2" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">2</text>
+<text x="388.3" y="306.0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">Open ground</text>
+<text x="388.3" y="319.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#6f8a99">sight 60 m</text>
+<g><title>Frankie, Open ground (60 m): 0% got away</title><path d="M329.3 290.0 V290.0 Q329.3 289.5 329.8 289.5 H350.8 Q351.3 289.5 351.3 290.0 V290.0 Z" fill="#3987e5"/></g>
+<text x="340.3" y="284.5" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">0</text>
+<g><title>Annie, Open ground (60 m): 17% got away</title><path d="M353.3 290.0 V263.9 Q353.3 259.9 357.3 259.9 H371.3 Q375.3 259.9 375.3 263.9 V290.0 Z" fill="#d95926"/></g>
+<text x="364.3" y="254.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">17</text>
+<g><title>Tony, Open ground (60 m): 74% got away</title><path d="M377.3 290.0 V160.2 Q377.3 156.2 381.3 156.2 H395.3 Q399.3 156.2 399.3 160.2 V290.0 Z" fill="#199e70"/></g>
+<text x="388.3" y="151.2" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">74</text>
+<g><title>Maggie, Open ground (60 m): 94% got away</title><path d="M401.3 290.0 V125.5 Q401.3 121.5 405.3 121.5 H419.3 Q423.3 121.5 423.3 125.5 V290.0 Z" fill="#c98500"/></g>
+<text x="412.3" y="116.5" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">94</text>
+<g><title>Mike, Open ground (60 m): 0% got away</title><path d="M425.3 290.0 V290.0 Q425.3 289.5 425.8 289.5 H446.8 Q447.3 289.5 447.3 290.0 V290.0 Z" fill="#9085e9"/></g>
+<text x="436.3" y="284.5" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">0</text>
+<text x="535.0" y="100.0" text-anchor="start" font-family="sans-serif" font-size="12.5" font-weight="500" fill="#eaf5fb">Stealth Untrained (Difficulty alone)</text>
+<line x1="535" y1="290.0" x2="935" y2="290.0" stroke="#24404f" stroke-width="1"/>
+<text x="529.0" y="294.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">0%</text>
+<line x1="535" y1="245.0" x2="935" y2="245.0" stroke="#24404f" stroke-width="1"/>
+<text x="529.0" y="249.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">25%</text>
+<line x1="535" y1="200.0" x2="935" y2="200.0" stroke="#24404f" stroke-width="1"/>
+<text x="529.0" y="204.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">50%</text>
+<line x1="535" y1="155.0" x2="935" y2="155.0" stroke="#24404f" stroke-width="1"/>
+<text x="529.0" y="159.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">75%</text>
+<line x1="535" y1="110.0" x2="935" y2="110.0" stroke="#24404f" stroke-width="1"/>
+<text x="529.0" y="114.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">100%</text>
+<text x="601.7" y="306.0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">Tight streets</text>
+<text x="601.7" y="319.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#6f8a99">sight 15 m</text>
+<g><title>Frankie, Tight streets (15 m): 2% got away</title><path d="M542.7 290.0 V290.0 Q542.7 287.0 545.7 287.0 H561.6 Q564.7 287.0 564.7 290.0 V290.0 Z" fill="#3987e5"/></g>
+<text x="553.7" y="282.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">2</text>
+<g><title>Annie, Tight streets (15 m): 25% got away</title><path d="M566.7 290.0 V248.6 Q566.7 244.6 570.7 244.6 H584.7 Q588.7 244.6 588.7 248.6 V290.0 Z" fill="#d95926"/></g>
+<text x="577.7" y="239.6" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">25</text>
+<g><title>Tony, Tight streets (15 m): 46% got away</title><path d="M590.7 290.0 V212.0 Q590.7 208.0 594.7 208.0 H608.7 Q612.7 208.0 612.7 212.0 V290.0 Z" fill="#199e70"/></g>
+<text x="601.7" y="203.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">46</text>
+<g><title>Maggie, Tight streets (15 m): 85% got away</title><path d="M614.7 290.0 V140.9 Q614.7 136.9 618.7 136.9 H632.7 Q636.7 136.9 636.7 140.9 V290.0 Z" fill="#c98500"/></g>
+<text x="625.7" y="131.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">85</text>
+<g><title>Mike, Tight streets (15 m): 5% got away</title><path d="M638.7 290.0 V285.3 Q638.7 281.3 642.7 281.3 H656.7 Q660.7 281.3 660.7 285.3 V290.0 Z" fill="#9085e9"/></g>
+<text x="649.7" y="276.3" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">5</text>
+<text x="735.0" y="306.0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">Open streets</text>
+<text x="735.0" y="319.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#6f8a99">sight 30 m</text>
+<g><title>Frankie, Open streets (30 m): 0% got away</title><path d="M676.0 290.0 V290.0 Q676.0 289.5 676.5 289.5 H697.5 Q698.0 289.5 698.0 290.0 V290.0 Z" fill="#3987e5"/></g>
+<text x="687.0" y="284.5" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">0</text>
+<g><title>Annie, Open streets (30 m): 20% got away</title><path d="M700.0 290.0 V257.3 Q700.0 253.3 704.0 253.3 H718.0 Q722.0 253.3 722.0 257.3 V290.0 Z" fill="#d95926"/></g>
+<text x="711.0" y="248.3" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">20</text>
+<g><title>Tony, Open streets (30 m): 51% got away</title><path d="M724.0 290.0 V202.8 Q724.0 198.8 728.0 198.8 H742.0 Q746.0 198.8 746.0 202.8 V290.0 Z" fill="#199e70"/></g>
+<text x="735.0" y="193.8" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">51</text>
+<g><title>Maggie, Open streets (30 m): 86% got away</title><path d="M748.0 290.0 V139.4 Q748.0 135.4 752.0 135.4 H766.0 Q770.0 135.4 770.0 139.4 V290.0 Z" fill="#c98500"/></g>
+<text x="759.0" y="130.4" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">86</text>
+<g><title>Mike, Open streets (30 m): 1% got away</title><path d="M772.0 290.0 V290.0 Q772.0 288.2 773.8 288.2 H792.2 Q794.0 288.2 794.0 290.0 V290.0 Z" fill="#9085e9"/></g>
+<text x="783.0" y="283.2" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">1</text>
+<text x="868.3" y="306.0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">Open ground</text>
+<text x="868.3" y="319.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#6f8a99">sight 60 m</text>
+<g><title>Frankie, Open ground (60 m): 0% got away</title><path d="M809.3 290.0 V290.0 Q809.3 289.5 809.8 289.5 H830.8 Q831.3 289.5 831.3 290.0 V290.0 Z" fill="#3987e5"/></g>
+<text x="820.3" y="284.5" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">0</text>
+<g><title>Annie, Open ground (60 m): 8% got away</title><path d="M833.3 290.0 V279.8 Q833.3 275.8 837.3 275.8 H851.3 Q855.3 275.8 855.3 279.8 V290.0 Z" fill="#d95926"/></g>
+<text x="844.3" y="270.8" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">8</text>
+<g><title>Tony, Open ground (60 m): 44% got away</title><path d="M857.3 290.0 V215.3 Q857.3 211.3 861.3 211.3 H875.3 Q879.3 211.3 879.3 215.3 V290.0 Z" fill="#199e70"/></g>
+<text x="868.3" y="206.3" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">44</text>
+<g><title>Maggie, Open ground (60 m): 85% got away</title><path d="M881.3 290.0 V141.3 Q881.3 137.3 885.3 137.3 H899.3 Q903.3 137.3 903.3 141.3 V290.0 Z" fill="#c98500"/></g>
+<text x="892.3" y="132.3" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">85</text>
+<g><title>Mike, Open ground (60 m): 0% got away</title><path d="M905.3 290.0 V290.0 Q905.3 289.5 905.8 289.5 H926.8 Q927.3 289.5 927.3 290.0 V290.0 Z" fill="#9085e9"/></g>
+<text x="916.3" y="284.5" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">0</text>
+<text x="10.0" y="366.0" text-anchor="start" font-family="sans-serif" font-size="11" fill="#8fadbe">Sprints: Frankie 30 m, Annie 50, Tony 60, Maggie 75; the dog 45. A failed Stealth roll puts the dog back on the trail at the edge of sight.</text>
+</svg>

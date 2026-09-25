@@ -1,0 +1,247 @@
+<svg width="940" height="590" viewBox="0 0 940 590" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Chance to cross Rough ground at full speed, by Training Tier</title>
+<desc>An Athletics roll (Earth plus Difficulty) at Difficulty 5, 6, 7 and 8, for the four test characters at every Training Tier. Untrained ignores Earth, so all four share one number. Adept, Expert and Master are identical here. At every Difficulty shown, a Novice Frankie does worse than an Untrained one: at Difficulty 7, 11 percent against 21.</desc>
+<rect width="940" height="590" fill="#0a1720"/>
+<text x="10.0" y="24.0" text-anchor="start" font-family="sans-serif" font-size="15" font-weight="500" fill="#eaf5fb">Chance to cross Rough ground at full speed, by Training Tier</text>
+<text x="10.0" y="43.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Athletics: Earth + Difficulty. Exact odds, checked against 100,000 rolls per cell.</text>
+<g><title>Frankie</title><circle cx="15.0" cy="62.0" r="0" fill="transparent"/><circle cx="15.0" cy="62.0" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<text x="25.0" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Frankie (Earth 1)</text>
+<g><title>Annie</title><circle cx="139.0" cy="62.0" r="0" fill="transparent"/><rect x="134.8" y="57.8" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<text x="149.0" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Annie (Earth 5)</text>
+<g><title>Tony</title><circle cx="251.0" cy="62.0" r="0" fill="transparent"/><path d="M251.0 56.5 L256.5 62.0 L251.0 67.5 L245.5 62.0 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<text x="261.0" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Tony (Earth 7)</text>
+<g><title>Maggie</title><circle cx="357.0" cy="62.0" r="0" fill="transparent"/><path d="M357.0 56.5 L362.5 66.5 L351.5 66.5 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<text x="367.0" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Maggie (Earth 10)</text>
+<g><title>Mike</title><circle cx="481.0" cy="62.0" r="0" fill="transparent"/><path d="M481.0 67.5 L486.5 57.5 L475.5 57.5 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<text x="491.0" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Mike (Earth 3)</text>
+<text x="55.0" y="100.0" text-anchor="start" font-family="sans-serif" font-size="12.5" font-weight="500" fill="#eaf5fb">Difficulty 5</text>
+<line x1="55" y1="280.0" x2="375" y2="280.0" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="284.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">0%</text>
+<line x1="55" y1="237.5" x2="375" y2="237.5" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="241.5" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">25%</text>
+<line x1="55" y1="195.0" x2="375" y2="195.0" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="199.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">50%</text>
+<line x1="55" y1="152.5" x2="375" y2="152.5" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="156.5" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">75%</text>
+<line x1="55" y1="110.0" x2="375" y2="110.0" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="114.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">100%</text>
+<text x="85.0" y="295.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Untrained</text>
+<text x="140.6" y="295.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Novice</text>
+<text x="196.2" y="295.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Trained</text>
+<text x="251.8" y="295.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Adept</text>
+<text x="307.4" y="295.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Expert</text>
+<text x="363.0" y="295.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Master</text>
+<polyline points="85.0,263.0 140.6,272.9 196.2,254.5 251.8,224.4 307.4,224.4 363.0,224.4" fill="none" stroke="#3987e5" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Frankie, Untrained: 10%</title><circle cx="85.0" cy="263.0" r="10" fill="transparent"/><circle cx="85.0" cy="263.0" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Novice: 4%</title><circle cx="140.6" cy="272.9" r="10" fill="transparent"/><circle cx="140.6" cy="272.9" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Trained: 15%</title><circle cx="196.2" cy="254.5" r="10" fill="transparent"/><circle cx="196.2" cy="254.5" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Adept: 33%</title><circle cx="251.8" cy="224.4" r="10" fill="transparent"/><circle cx="251.8" cy="224.4" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Expert: 33%</title><circle cx="307.4" cy="224.4" r="10" fill="transparent"/><circle cx="307.4" cy="224.4" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Master: 33%</title><circle cx="363.0" cy="224.4" r="10" fill="transparent"/><circle cx="363.0" cy="224.4" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="85.0,263.0 140.6,243.4 196.2,203.5 251.8,159.3 307.4,159.3 363.0,159.3" fill="none" stroke="#d95926" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Annie, Untrained: 10%</title><circle cx="85.0" cy="263.0" r="10" fill="transparent"/><rect x="80.8" y="258.8" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Novice: 22%</title><circle cx="140.6" cy="243.4" r="10" fill="transparent"/><rect x="136.4" y="239.2" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Trained: 45%</title><circle cx="196.2" cy="203.5" r="10" fill="transparent"/><rect x="192.0" y="199.3" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Adept: 71%</title><circle cx="251.8" cy="159.3" r="10" fill="transparent"/><rect x="247.6" y="155.1" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Expert: 71%</title><circle cx="307.4" cy="159.3" r="10" fill="transparent"/><rect x="303.2" y="155.1" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Master: 71%</title><circle cx="363.0" cy="159.3" r="10" fill="transparent"/><rect x="358.8" y="155.1" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="85.0,263.0 140.6,215.7 196.2,171.2 251.8,136.2 307.4,136.2 363.0,136.2" fill="none" stroke="#199e70" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Tony, Untrained: 10%</title><circle cx="85.0" cy="263.0" r="10" fill="transparent"/><path d="M85.0 257.5 L90.5 263.0 L85.0 268.5 L79.5 263.0 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Novice: 38%</title><circle cx="140.6" cy="215.7" r="10" fill="transparent"/><path d="M140.6 210.2 L146.1 215.7 L140.6 221.2 L135.1 215.7 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Trained: 64%</title><circle cx="196.2" cy="171.2" r="10" fill="transparent"/><path d="M196.2 165.7 L201.7 171.2 L196.2 176.7 L190.7 171.2 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Adept: 85%</title><circle cx="251.8" cy="136.2" r="10" fill="transparent"/><path d="M251.8 130.7 L257.3 136.2 L251.8 141.7 L246.3 136.2 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Expert: 85%</title><circle cx="307.4" cy="136.2" r="10" fill="transparent"/><path d="M307.4 130.7 L312.9 136.2 L307.4 141.7 L301.9 136.2 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Master: 85%</title><circle cx="363.0" cy="136.2" r="10" fill="transparent"/><path d="M363.0 130.7 L368.5 136.2 L363.0 141.7 L357.5 136.2 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="85.0,263.0 140.6,165.6 196.2,135.5 251.8,117.1 307.4,117.1 363.0,117.1" fill="none" stroke="#c98500" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Maggie, Untrained: 10%</title><circle cx="85.0" cy="263.0" r="10" fill="transparent"/><path d="M85.0 257.5 L90.5 267.5 L79.5 267.5 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Novice: 67%</title><circle cx="140.6" cy="165.6" r="10" fill="transparent"/><path d="M140.6 160.1 L146.1 170.1 L135.1 170.1 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Trained: 85%</title><circle cx="196.2" cy="135.5" r="10" fill="transparent"/><path d="M196.2 130.0 L201.7 140.0 L190.7 140.0 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Adept: 96%</title><circle cx="251.8" cy="117.1" r="10" fill="transparent"/><path d="M251.8 111.6 L257.3 121.6 L246.3 121.6 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Expert: 96%</title><circle cx="307.4" cy="117.1" r="10" fill="transparent"/><path d="M307.4 111.6 L312.9 121.6 L301.9 121.6 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Master: 96%</title><circle cx="363.0" cy="117.1" r="10" fill="transparent"/><path d="M363.0 111.6 L368.5 121.6 L357.5 121.6 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="85.0,263.0 140.6,262.0 196.2,232.4 251.8,190.6 307.4,190.6 363.0,190.6" fill="none" stroke="#9085e9" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Mike, Untrained: 10%</title><circle cx="85.0" cy="263.0" r="10" fill="transparent"/><path d="M85.0 268.5 L90.5 258.5 L79.5 258.5 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Novice: 11%</title><circle cx="140.6" cy="262.0" r="10" fill="transparent"/><path d="M140.6 267.5 L146.1 257.5 L135.1 257.5 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Trained: 28%</title><circle cx="196.2" cy="232.4" r="10" fill="transparent"/><path d="M196.2 237.9 L201.7 227.9 L190.7 227.9 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Adept: 53%</title><circle cx="251.8" cy="190.6" r="10" fill="transparent"/><path d="M251.8 196.1 L257.3 186.1 L246.3 186.1 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Expert: 53%</title><circle cx="307.4" cy="190.6" r="10" fill="transparent"/><path d="M307.4 196.1 L312.9 186.1 L301.9 186.1 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Master: 53%</title><circle cx="363.0" cy="190.6" r="10" fill="transparent"/><path d="M363.0 196.1 L368.5 186.1 L357.5 186.1 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<text x="383.0" y="121.1" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Maggie 96%</text>
+<text x="383.0" y="140.2" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Tony 85%</text>
+<text x="383.0" y="163.3" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Annie 71%</text>
+<text x="383.0" y="194.6" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Mike 53%</text>
+<text x="383.0" y="228.4" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Frankie 33%</text>
+<text x="520.0" y="100.0" text-anchor="start" font-family="sans-serif" font-size="12.5" font-weight="500" fill="#eaf5fb">Difficulty 6</text>
+<line x1="520" y1="280.0" x2="840" y2="280.0" stroke="#24404f" stroke-width="1"/>
+<text x="514.0" y="284.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">0%</text>
+<line x1="520" y1="237.5" x2="840" y2="237.5" stroke="#24404f" stroke-width="1"/>
+<text x="514.0" y="241.5" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">25%</text>
+<line x1="520" y1="195.0" x2="840" y2="195.0" stroke="#24404f" stroke-width="1"/>
+<text x="514.0" y="199.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">50%</text>
+<line x1="520" y1="152.5" x2="840" y2="152.5" stroke="#24404f" stroke-width="1"/>
+<text x="514.0" y="156.5" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">75%</text>
+<line x1="520" y1="110.0" x2="840" y2="110.0" stroke="#24404f" stroke-width="1"/>
+<text x="514.0" y="114.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">100%</text>
+<text x="550.0" y="295.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Untrained</text>
+<text x="605.6" y="295.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Novice</text>
+<text x="661.2" y="295.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Trained</text>
+<text x="716.8" y="295.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Adept</text>
+<text x="772.4" y="295.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Expert</text>
+<text x="828.0" y="295.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Master</text>
+<polyline points="550.0,254.5 605.6,268.3 661.2,244.3 716.8,207.6 772.4,207.6 828.0,207.6" fill="none" stroke="#3987e5" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Frankie, Untrained: 15%</title><circle cx="550.0" cy="254.5" r="10" fill="transparent"/><circle cx="550.0" cy="254.5" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Novice: 7%</title><circle cx="605.6" cy="268.3" r="10" fill="transparent"/><circle cx="605.6" cy="268.3" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Trained: 21%</title><circle cx="661.2" cy="244.3" r="10" fill="transparent"/><circle cx="661.2" cy="244.3" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Adept: 43%</title><circle cx="716.8" cy="207.6" r="10" fill="transparent"/><circle cx="716.8" cy="207.6" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Expert: 43%</title><circle cx="772.4" cy="207.6" r="10" fill="transparent"/><circle cx="772.4" cy="207.6" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Master: 43%</title><circle cx="828.0" cy="207.6" r="10" fill="transparent"/><circle cx="828.0" cy="207.6" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="550.0,254.5 605.6,230.7 661.2,186.5 716.8,146.6 772.4,146.6 828.0,146.6" fill="none" stroke="#d95926" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Annie, Untrained: 15%</title><circle cx="550.0" cy="254.5" r="10" fill="transparent"/><rect x="545.8" y="250.3" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Novice: 29%</title><circle cx="605.6" cy="230.7" r="10" fill="transparent"/><rect x="601.4" y="226.5" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Trained: 55%</title><circle cx="661.2" cy="186.5" r="10" fill="transparent"/><rect x="657.0" y="182.3" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Adept: 78%</title><circle cx="716.8" cy="146.6" r="10" fill="transparent"/><rect x="712.6" y="142.4" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Expert: 78%</title><circle cx="772.4" cy="146.6" r="10" fill="transparent"/><rect x="768.2" y="142.4" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Master: 78%</title><circle cx="828.0" cy="146.6" r="10" fill="transparent"/><rect x="823.8" y="142.4" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="550.0,254.5 605.6,199.4 661.2,157.6 716.8,128.0 772.4,128.0 828.0,128.0" fill="none" stroke="#199e70" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Tony, Untrained: 15%</title><circle cx="550.0" cy="254.5" r="10" fill="transparent"/><path d="M550.0 249.0 L555.5 254.5 L550.0 260.0 L544.5 254.5 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Novice: 47%</title><circle cx="605.6" cy="199.4" r="10" fill="transparent"/><path d="M605.6 193.9 L611.1 199.4 L605.6 204.9 L600.1 199.4 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Trained: 72%</title><circle cx="661.2" cy="157.6" r="10" fill="transparent"/><path d="M661.2 152.1 L666.7 157.6 L661.2 163.1 L655.7 157.6 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Adept: 89%</title><circle cx="716.8" cy="128.0" r="10" fill="transparent"/><path d="M716.8 122.5 L722.3 128.0 L716.8 133.5 L711.3 128.0 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Expert: 89%</title><circle cx="772.4" cy="128.0" r="10" fill="transparent"/><path d="M772.4 122.5 L777.9 128.0 L772.4 133.5 L766.9 128.0 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Master: 89%</title><circle cx="828.0" cy="128.0" r="10" fill="transparent"/><path d="M828.0 122.5 L833.5 128.0 L828.0 133.5 L822.5 128.0 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="550.0,254.5 605.6,149.6 661.2,127.0 716.8,113.9 772.4,113.9 828.0,113.9" fill="none" stroke="#c98500" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Maggie, Untrained: 15%</title><circle cx="550.0" cy="254.5" r="10" fill="transparent"/><path d="M550.0 249.0 L555.5 259.0 L544.5 259.0 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Novice: 77%</title><circle cx="605.6" cy="149.6" r="10" fill="transparent"/><path d="M605.6 144.1 L611.1 154.1 L600.1 154.1 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Trained: 90%</title><circle cx="661.2" cy="127.0" r="10" fill="transparent"/><path d="M661.2 121.5 L666.7 131.5 L655.7 131.5 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Adept: 98%</title><circle cx="716.8" cy="113.9" r="10" fill="transparent"/><path d="M716.8 108.4 L722.3 118.4 L711.3 118.4 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Expert: 98%</title><circle cx="772.4" cy="113.9" r="10" fill="transparent"/><path d="M772.4 108.4 L777.9 118.4 L766.9 118.4 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Master: 98%</title><circle cx="828.0" cy="113.9" r="10" fill="transparent"/><path d="M828.0 108.4 L833.5 118.4 L822.5 118.4 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="550.0,254.5 605.6,253.8 661.2,218.8 716.8,174.3 772.4,174.3 828.0,174.3" fill="none" stroke="#9085e9" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Mike, Untrained: 15%</title><circle cx="550.0" cy="254.5" r="10" fill="transparent"/><path d="M550.0 260.0 L555.5 250.0 L544.5 250.0 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Novice: 15%</title><circle cx="605.6" cy="253.8" r="10" fill="transparent"/><path d="M605.6 259.3 L611.1 249.3 L600.1 249.3 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Trained: 36%</title><circle cx="661.2" cy="218.8" r="10" fill="transparent"/><path d="M661.2 224.3 L666.7 214.3 L655.7 214.3 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Adept: 62%</title><circle cx="716.8" cy="174.3" r="10" fill="transparent"/><path d="M716.8 179.8 L722.3 169.8 L711.3 169.8 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Expert: 62%</title><circle cx="772.4" cy="174.3" r="10" fill="transparent"/><path d="M772.4 179.8 L777.9 169.8 L766.9 169.8 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Master: 62%</title><circle cx="828.0" cy="174.3" r="10" fill="transparent"/><path d="M828.0 179.8 L833.5 169.8 L822.5 169.8 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<text x="848.0" y="117.9" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Maggie 98%</text>
+<text x="848.0" y="132.0" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Tony 89%</text>
+<text x="848.0" y="150.6" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Annie 78%</text>
+<text x="848.0" y="178.3" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Mike 62%</text>
+<text x="848.0" y="211.6" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Frankie 43%</text>
+<text x="55.0" y="360.0" text-anchor="start" font-family="sans-serif" font-size="12.5" font-weight="500" fill="#eaf5fb">Difficulty 7 (Easy, recommended)</text>
+<line x1="55" y1="540.0" x2="375" y2="540.0" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="544.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">0%</text>
+<line x1="55" y1="497.5" x2="375" y2="497.5" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="501.5" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">25%</text>
+<line x1="55" y1="455.0" x2="375" y2="455.0" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="459.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">50%</text>
+<line x1="55" y1="412.5" x2="375" y2="412.5" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="416.5" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">75%</text>
+<line x1="55" y1="370.0" x2="375" y2="370.0" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="374.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">100%</text>
+<text x="85.0" y="555.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Untrained</text>
+<text x="140.6" y="555.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Novice</text>
+<text x="196.2" y="555.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Trained</text>
+<text x="251.8" y="555.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Adept</text>
+<text x="307.4" y="555.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Expert</text>
+<text x="363.0" y="555.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Master</text>
+<polyline points="85.0,504.3 140.6,522.0 196.2,492.4 251.8,450.6 307.4,450.6 363.0,450.6" fill="none" stroke="#3987e5" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Frankie, Untrained: 21%</title><circle cx="85.0" cy="504.3" r="10" fill="transparent"/><circle cx="85.0" cy="504.3" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Novice: 11%</title><circle cx="140.6" cy="522.0" r="10" fill="transparent"/><circle cx="140.6" cy="522.0" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Trained: 28%</title><circle cx="196.2" cy="492.4" r="10" fill="transparent"/><circle cx="196.2" cy="492.4" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Adept: 53%</title><circle cx="251.8" cy="450.6" r="10" fill="transparent"/><circle cx="251.8" cy="450.6" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Expert: 53%</title><circle cx="307.4" cy="450.6" r="10" fill="transparent"/><circle cx="307.4" cy="450.6" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Master: 53%</title><circle cx="363.0" cy="450.6" r="10" fill="transparent"/><circle cx="363.0" cy="450.6" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="85.0,504.3 140.6,475.7 196.2,431.2 251.8,396.2 307.4,396.2 363.0,396.2" fill="none" stroke="#d95926" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Annie, Untrained: 21%</title><circle cx="85.0" cy="504.3" r="10" fill="transparent"/><rect x="80.8" y="500.1" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Novice: 38%</title><circle cx="140.6" cy="475.7" r="10" fill="transparent"/><rect x="136.4" y="471.5" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Trained: 64%</title><circle cx="196.2" cy="431.2" r="10" fill="transparent"/><rect x="192.0" y="427.0" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Adept: 85%</title><circle cx="251.8" cy="396.2" r="10" fill="transparent"/><rect x="247.6" y="392.0" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Expert: 85%</title><circle cx="307.4" cy="396.2" r="10" fill="transparent"/><rect x="303.2" y="392.0" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Master: 85%</title><circle cx="363.0" cy="396.2" r="10" fill="transparent"/><rect x="358.8" y="392.0" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="85.0,504.3 140.6,442.4 196.2,405.7 251.8,381.7 307.4,381.7 363.0,381.7" fill="none" stroke="#199e70" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Tony, Untrained: 21%</title><circle cx="85.0" cy="504.3" r="10" fill="transparent"/><path d="M85.0 498.8 L90.5 504.3 L85.0 509.8 L79.5 504.3 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Novice: 57%</title><circle cx="140.6" cy="442.4" r="10" fill="transparent"/><path d="M140.6 436.9 L146.1 442.4 L140.6 447.9 L135.1 442.4 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Trained: 79%</title><circle cx="196.2" cy="405.7" r="10" fill="transparent"/><path d="M196.2 400.2 L201.7 405.7 L196.2 411.2 L190.7 405.7 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Adept: 93%</title><circle cx="251.8" cy="381.7" r="10" fill="transparent"/><path d="M251.8 376.2 L257.3 381.7 L251.8 387.2 L246.3 381.7 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Expert: 93%</title><circle cx="307.4" cy="381.7" r="10" fill="transparent"/><path d="M307.4 376.2 L312.9 381.7 L307.4 387.2 L301.9 381.7 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Master: 93%</title><circle cx="363.0" cy="381.7" r="10" fill="transparent"/><path d="M363.0 376.2 L368.5 381.7 L363.0 387.2 L357.5 381.7 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="85.0,504.3 140.6,395.3 196.2,380.2 251.8,371.9 307.4,371.9 363.0,371.9" fill="none" stroke="#c98500" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Maggie, Untrained: 21%</title><circle cx="85.0" cy="504.3" r="10" fill="transparent"/><path d="M85.0 498.8 L90.5 508.8 L79.5 508.8 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Novice: 85%</title><circle cx="140.6" cy="395.3" r="10" fill="transparent"/><path d="M140.6 389.8 L146.1 399.8 L135.1 399.8 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Trained: 94%</title><circle cx="196.2" cy="380.2" r="10" fill="transparent"/><path d="M196.2 374.7 L201.7 384.7 L190.7 384.7 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Adept: 99%</title><circle cx="251.8" cy="371.9" r="10" fill="transparent"/><path d="M251.8 366.4 L257.3 376.4 L246.3 376.4 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Expert: 99%</title><circle cx="307.4" cy="371.9" r="10" fill="transparent"/><path d="M307.4 366.4 L312.9 376.4 L301.9 376.4 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Master: 99%</title><circle cx="363.0" cy="371.9" r="10" fill="transparent"/><path d="M363.0 366.4 L368.5 376.4 L357.5 376.4 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="85.0,504.3 140.6,503.4 196.2,463.5 251.8,419.3 307.4,419.3 363.0,419.3" fill="none" stroke="#9085e9" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Mike, Untrained: 21%</title><circle cx="85.0" cy="504.3" r="10" fill="transparent"/><path d="M85.0 509.8 L90.5 499.8 L79.5 499.8 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Novice: 22%</title><circle cx="140.6" cy="503.4" r="10" fill="transparent"/><path d="M140.6 508.9 L146.1 498.9 L135.1 498.9 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Trained: 45%</title><circle cx="196.2" cy="463.5" r="10" fill="transparent"/><path d="M196.2 469.0 L201.7 459.0 L190.7 459.0 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Adept: 71%</title><circle cx="251.8" cy="419.3" r="10" fill="transparent"/><path d="M251.8 424.8 L257.3 414.8 L246.3 414.8 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Expert: 71%</title><circle cx="307.4" cy="419.3" r="10" fill="transparent"/><path d="M307.4 424.8 L312.9 414.8 L301.9 414.8 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Master: 71%</title><circle cx="363.0" cy="419.3" r="10" fill="transparent"/><path d="M363.0 424.8 L368.5 414.8 L357.5 414.8 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<text x="383.0" y="375.9" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Maggie 99%</text>
+<text x="383.0" y="388.9" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Tony 93%</text>
+<text x="383.0" y="401.9" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Annie 85%</text>
+<text x="383.0" y="423.3" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Mike 71%</text>
+<text x="383.0" y="454.6" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Frankie 53%</text>
+<line x1="140.6" y1="530.0" x2="158.6" y2="534.0" stroke="#8fadbe" stroke-width="1"/>
+<text x="161.6" y="538.0" text-anchor="start" font-family="sans-serif" font-size="10" fill="#eaf5fb">Novice below Untrained</text>
+<text x="520.0" y="360.0" text-anchor="start" font-family="sans-serif" font-size="12.5" font-weight="500" fill="#eaf5fb">Difficulty 8</text>
+<line x1="520" y1="540.0" x2="840" y2="540.0" stroke="#24404f" stroke-width="1"/>
+<text x="514.0" y="544.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">0%</text>
+<line x1="520" y1="497.5" x2="840" y2="497.5" stroke="#24404f" stroke-width="1"/>
+<text x="514.0" y="501.5" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">25%</text>
+<line x1="520" y1="455.0" x2="840" y2="455.0" stroke="#24404f" stroke-width="1"/>
+<text x="514.0" y="459.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">50%</text>
+<line x1="520" y1="412.5" x2="840" y2="412.5" stroke="#24404f" stroke-width="1"/>
+<text x="514.0" y="416.5" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">75%</text>
+<line x1="520" y1="370.0" x2="840" y2="370.0" stroke="#24404f" stroke-width="1"/>
+<text x="514.0" y="374.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">100%</text>
+<text x="550.0" y="555.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Untrained</text>
+<text x="605.6" y="555.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Novice</text>
+<text x="661.2" y="555.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Trained</text>
+<text x="716.8" y="555.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Adept</text>
+<text x="772.4" y="555.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Expert</text>
+<text x="828.0" y="555.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Master</text>
+<polyline points="550.0,492.4 605.6,513.8 661.2,478.8 716.8,434.3 772.4,434.3 828.0,434.3" fill="none" stroke="#3987e5" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Frankie, Untrained: 28%</title><circle cx="550.0" cy="492.4" r="10" fill="transparent"/><circle cx="550.0" cy="492.4" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Novice: 15%</title><circle cx="605.6" cy="513.8" r="10" fill="transparent"/><circle cx="605.6" cy="513.8" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Trained: 36%</title><circle cx="661.2" cy="478.8" r="10" fill="transparent"/><circle cx="661.2" cy="478.8" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Adept: 62%</title><circle cx="716.8" cy="434.3" r="10" fill="transparent"/><circle cx="716.8" cy="434.3" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Expert: 62%</title><circle cx="772.4" cy="434.3" r="10" fill="transparent"/><circle cx="772.4" cy="434.3" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Frankie, Master: 62%</title><circle cx="828.0" cy="434.3" r="10" fill="transparent"/><circle cx="828.0" cy="434.3" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="550.0,492.4 605.6,459.4 661.2,417.6 716.8,388.0 772.4,388.0 828.0,388.0" fill="none" stroke="#d95926" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Annie, Untrained: 28%</title><circle cx="550.0" cy="492.4" r="10" fill="transparent"/><rect x="545.8" y="488.2" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Novice: 47%</title><circle cx="605.6" cy="459.4" r="10" fill="transparent"/><rect x="601.4" y="455.2" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Trained: 72%</title><circle cx="661.2" cy="417.6" r="10" fill="transparent"/><rect x="657.0" y="413.4" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Adept: 89%</title><circle cx="716.8" cy="388.0" r="10" fill="transparent"/><rect x="712.6" y="383.8" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Expert: 89%</title><circle cx="772.4" cy="388.0" r="10" fill="transparent"/><rect x="768.2" y="383.8" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Annie, Master: 89%</title><circle cx="828.0" cy="388.0" r="10" fill="transparent"/><rect x="823.8" y="383.8" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="550.0,492.4 605.6,425.6 661.2,395.5 716.8,377.1 772.4,377.1 828.0,377.1" fill="none" stroke="#199e70" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Tony, Untrained: 28%</title><circle cx="550.0" cy="492.4" r="10" fill="transparent"/><path d="M550.0 486.9 L555.5 492.4 L550.0 497.9 L544.5 492.4 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Novice: 67%</title><circle cx="605.6" cy="425.6" r="10" fill="transparent"/><path d="M605.6 420.1 L611.1 425.6 L605.6 431.1 L600.1 425.6 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Trained: 85%</title><circle cx="661.2" cy="395.5" r="10" fill="transparent"/><path d="M661.2 390.0 L666.7 395.5 L661.2 401.0 L655.7 395.5 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Adept: 96%</title><circle cx="716.8" cy="377.1" r="10" fill="transparent"/><path d="M716.8 371.6 L722.3 377.1 L716.8 382.6 L711.3 377.1 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Expert: 96%</title><circle cx="772.4" cy="377.1" r="10" fill="transparent"/><path d="M772.4 371.6 L777.9 377.1 L772.4 382.6 L766.9 377.1 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Tony, Master: 96%</title><circle cx="828.0" cy="377.1" r="10" fill="transparent"/><path d="M828.0 371.6 L833.5 377.1 L828.0 382.6 L822.5 377.1 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="550.0,492.4 605.6,383.4 661.2,375.1 716.8,370.7 772.4,370.7 828.0,370.7" fill="none" stroke="#c98500" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Maggie, Untrained: 28%</title><circle cx="550.0" cy="492.4" r="10" fill="transparent"/><path d="M550.0 486.9 L555.5 496.9 L544.5 496.9 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Novice: 92%</title><circle cx="605.6" cy="383.4" r="10" fill="transparent"/><path d="M605.6 377.9 L611.1 387.9 L600.1 387.9 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Trained: 97%</title><circle cx="661.2" cy="375.1" r="10" fill="transparent"/><path d="M661.2 369.6 L666.7 379.6 L655.7 379.6 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Adept: 100%</title><circle cx="716.8" cy="370.7" r="10" fill="transparent"/><path d="M716.8 365.2 L722.3 375.2 L711.3 375.2 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Expert: 100%</title><circle cx="772.4" cy="370.7" r="10" fill="transparent"/><path d="M772.4 365.2 L777.9 375.2 L766.9 375.2 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Maggie, Master: 100%</title><circle cx="828.0" cy="370.7" r="10" fill="transparent"/><path d="M828.0 365.2 L833.5 375.2 L822.5 375.2 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/></g>
+<polyline points="550.0,492.4 605.6,490.7 661.2,446.5 716.8,406.6 772.4,406.6 828.0,406.6" fill="none" stroke="#9085e9" stroke-width="2" stroke-linejoin="round"/>
+<g><title>Mike, Untrained: 28%</title><circle cx="550.0" cy="492.4" r="10" fill="transparent"/><path d="M550.0 497.9 L555.5 487.9 L544.5 487.9 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Novice: 29%</title><circle cx="605.6" cy="490.7" r="10" fill="transparent"/><path d="M605.6 496.2 L611.1 486.2 L600.1 486.2 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Trained: 55%</title><circle cx="661.2" cy="446.5" r="10" fill="transparent"/><path d="M661.2 452.0 L666.7 442.0 L655.7 442.0 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Adept: 78%</title><circle cx="716.8" cy="406.6" r="10" fill="transparent"/><path d="M716.8 412.1 L722.3 402.1 L711.3 402.1 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Expert: 78%</title><circle cx="772.4" cy="406.6" r="10" fill="transparent"/><path d="M772.4 412.1 L777.9 402.1 L766.9 402.1 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<g><title>Mike, Master: 78%</title><circle cx="828.0" cy="406.6" r="10" fill="transparent"/><path d="M828.0 412.1 L833.5 402.1 L822.5 402.1 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/></g>
+<text x="848.0" y="374.7" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Maggie 100%</text>
+<text x="848.0" y="387.7" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Tony 96%</text>
+<text x="848.0" y="400.7" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Annie 89%</text>
+<text x="848.0" y="413.7" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Mike 78%</text>
+<text x="848.0" y="438.3" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#eaf5fb">Frankie 62%</text>
+</svg>

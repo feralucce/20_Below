@@ -1,0 +1,85 @@
+<svg width="960" height="380" viewBox="0 0 960 380" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Cover: a gunman's chance to hit you</title>
+<desc>A gunman (Attack 5) shooting at each test character. In the open: Frankie 79%, Mike 72%, Annie 64%, Tony 64%, Maggie 72%. Behind partial cover: Frankie 57%, Mike 47%, Annie 38%, Tony 38%, Maggie 47%. Belly Down behind partial cover counts two Disadvantages, so even an Aimed shot stays at Disadvantage.</desc>
+<rect width="960" height="380" fill="#0a1720"/>
+<text x="10.0" y="24.0" text-anchor="start" font-family="sans-serif" font-size="15" font-weight="500" fill="#eaf5fb">Cover: a gunman's chance to hit you</text>
+<text x="10.0" y="43.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">His Attack 5 + your Defense. Sources count: partial cover -1, Belly Down -1 (ranged), Aim +1. Full cover: he can't shoot at all.</text>
+<circle cx="15.0" cy="62.0" r="4.5" fill="#3987e5" stroke="#0a1720" stroke-width="2"/>
+<text x="25.0" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Frankie (1)</text>
+<rect x="96.4" y="57.8" width="8.4" height="8.4" rx="1.5" fill="#d95926" stroke="#0a1720" stroke-width="2"/>
+<text x="110.6" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Annie (5)</text>
+<path d="M175.0 56.5 L180.5 62.0 L175.0 67.5 L169.5 62.0 Z" fill="#199e70" stroke="#0a1720" stroke-width="2"/>
+<text x="185.0" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Tony (7)</text>
+<path d="M243.8 56.5 L249.3 66.5 L238.3 66.5 Z" fill="#c98500" stroke="#0a1720" stroke-width="2"/>
+<text x="253.8" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Maggie (10)</text>
+<path d="M329.4 67.5 L334.9 57.5 L323.9 57.5 Z" fill="#9085e9" stroke="#0a1720" stroke-width="2"/>
+<text x="339.4" y="66.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Mike (3)</text>
+<line x1="55" y1="300.0" x2="915" y2="300.0" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="304.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">0%</text>
+<line x1="55" y1="252.5" x2="915" y2="252.5" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="256.5" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">25%</text>
+<line x1="55" y1="205.0" x2="915" y2="205.0" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="209.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">50%</text>
+<line x1="55" y1="157.5" x2="915" y2="157.5" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="161.5" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">75%</text>
+<line x1="55" y1="110.0" x2="915" y2="110.0" stroke="#24404f" stroke-width="1"/>
+<text x="49.0" y="114.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">100%</text>
+<text x="141.0" y="316.0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">In the open</text>
+<g><title>Frankie, In the open: 79%</title><rect x="72.0" y="149.9" width="26" height="150.1" rx="3" fill="#3987e5"/></g>
+<text x="85.0" y="144.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">79</text>
+<g><title>Mike, In the open: 72%</title><rect x="100.0" y="163.2" width="26" height="136.8" rx="3" fill="#9085e9"/></g>
+<text x="113.0" y="158.2" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">72</text>
+<g><title>Annie, In the open: 64%</title><rect x="128.0" y="178.4" width="26" height="121.6" rx="3" fill="#d95926"/></g>
+<text x="141.0" y="173.4" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">64</text>
+<g><title>Tony, In the open: 64%</title><rect x="156.0" y="178.4" width="26" height="121.6" rx="3" fill="#199e70"/></g>
+<text x="169.0" y="173.4" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">64</text>
+<g><title>Maggie, In the open: 72%</title><rect x="184.0" y="163.2" width="26" height="136.8" rx="3" fill="#c98500"/></g>
+<text x="197.0" y="158.2" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">72</text>
+<text x="313.0" y="316.0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">Partial cover</text>
+<g><title>Frankie, Partial cover: 57%</title><rect x="244.0" y="190.9" width="26" height="109.1" rx="3" fill="#3987e5"/></g>
+<text x="257.0" y="185.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">57</text>
+<g><title>Mike, Partial cover: 47%</title><rect x="272.0" y="209.9" width="26" height="90.1" rx="3" fill="#9085e9"/></g>
+<text x="285.0" y="204.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">47</text>
+<g><title>Annie, Partial cover: 38%</title><rect x="300.0" y="228.2" width="26" height="71.8" rx="3" fill="#d95926"/></g>
+<text x="313.0" y="223.2" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">38</text>
+<g><title>Tony, Partial cover: 38%</title><rect x="328.0" y="228.2" width="26" height="71.8" rx="3" fill="#199e70"/></g>
+<text x="341.0" y="223.2" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">38</text>
+<g><title>Maggie, Partial cover: 47%</title><rect x="356.0" y="209.9" width="26" height="90.1" rx="3" fill="#c98500"/></g>
+<text x="369.0" y="204.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">47</text>
+<text x="485.0" y="316.0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">Belly Down,</text>
+<text x="485.0" y="329.0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">partial cover</text>
+<g><title>Frankie, Belly Down, partial cover: 57%</title><rect x="416.0" y="190.9" width="26" height="109.1" rx="3" fill="#3987e5"/></g>
+<text x="429.0" y="185.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">57</text>
+<g><title>Mike, Belly Down, partial cover: 47%</title><rect x="444.0" y="209.9" width="26" height="90.1" rx="3" fill="#9085e9"/></g>
+<text x="457.0" y="204.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">47</text>
+<g><title>Annie, Belly Down, partial cover: 38%</title><rect x="472.0" y="228.2" width="26" height="71.8" rx="3" fill="#d95926"/></g>
+<text x="485.0" y="223.2" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">38</text>
+<g><title>Tony, Belly Down, partial cover: 38%</title><rect x="500.0" y="228.2" width="26" height="71.8" rx="3" fill="#199e70"/></g>
+<text x="513.0" y="223.2" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">38</text>
+<g><title>Maggie, Belly Down, partial cover: 47%</title><rect x="528.0" y="209.9" width="26" height="90.1" rx="3" fill="#c98500"/></g>
+<text x="541.0" y="204.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">47</text>
+<text x="657.0" y="316.0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">He Aims,</text>
+<text x="657.0" y="329.0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">partial cover</text>
+<g><title>Frankie, He Aims, partial cover: 79%</title><rect x="588.0" y="149.9" width="26" height="150.1" rx="3" fill="#3987e5"/></g>
+<text x="601.0" y="144.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">79</text>
+<g><title>Mike, He Aims, partial cover: 72%</title><rect x="616.0" y="163.2" width="26" height="136.8" rx="3" fill="#9085e9"/></g>
+<text x="629.0" y="158.2" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">72</text>
+<g><title>Annie, He Aims, partial cover: 64%</title><rect x="644.0" y="178.4" width="26" height="121.6" rx="3" fill="#d95926"/></g>
+<text x="657.0" y="173.4" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">64</text>
+<g><title>Tony, He Aims, partial cover: 64%</title><rect x="672.0" y="178.4" width="26" height="121.6" rx="3" fill="#199e70"/></g>
+<text x="685.0" y="173.4" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">64</text>
+<g><title>Maggie, He Aims, partial cover: 72%</title><rect x="700.0" y="163.2" width="26" height="136.8" rx="3" fill="#c98500"/></g>
+<text x="713.0" y="158.2" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">72</text>
+<text x="829.0" y="316.0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">He Aims, Belly</text>
+<text x="829.0" y="329.0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8fadbe">Down + partial</text>
+<g><title>Frankie, He Aims, Belly Down + partial: 57%</title><rect x="760.0" y="190.9" width="26" height="109.1" rx="3" fill="#3987e5"/></g>
+<text x="773.0" y="185.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">57</text>
+<g><title>Mike, He Aims, Belly Down + partial: 47%</title><rect x="788.0" y="209.9" width="26" height="90.1" rx="3" fill="#9085e9"/></g>
+<text x="801.0" y="204.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">47</text>
+<g><title>Annie, He Aims, Belly Down + partial: 38%</title><rect x="816.0" y="228.2" width="26" height="71.8" rx="3" fill="#d95926"/></g>
+<text x="829.0" y="223.2" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">38</text>
+<g><title>Tony, He Aims, Belly Down + partial: 38%</title><rect x="844.0" y="228.2" width="26" height="71.8" rx="3" fill="#199e70"/></g>
+<text x="857.0" y="223.2" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">38</text>
+<g><title>Maggie, He Aims, Belly Down + partial: 47%</title><rect x="872.0" y="209.9" width="26" height="90.1" rx="3" fill="#c98500"/></g>
+<text x="885.0" y="204.9" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#eaf5fb">47</text>
+</svg>

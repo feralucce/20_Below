@@ -1,0 +1,55 @@
+<svg width="940" height="400" viewBox="0 0 940 400" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>A day's walk: fixed 8 hours vs 4 + Stamina hours</title>
+<desc>Kilometers in a travel day at 3 + Air/5 km/h. Fixed 8-hour day: Frankie 26, Mike 29, Annie 32, Tony 35, Maggie 40. Day of 4 + Stamina hours: Frankie 16, Mike 22, Annie 28, Tony 31, Maggie 45. Real-world: beginner 12-18 km, fit hiker or army march 20-32, serious multi-day effort 40-45.</desc>
+<rect width="940" height="400" fill="#0a1720"/>
+<text x="10.0" y="24.0" text-anchor="start" font-family="sans-serif" font-size="15" font-weight="500" fill="#eaf5fb">A day's walk: fixed 8 hours vs 4 + Stamina hours</text>
+<text x="10.0" y="43.0" text-anchor="start" font-family="sans-serif" font-size="12" fill="#8fadbe">Pace 3 + Air/5 km/h. Outline bar: 8-hour day. Solid bar: 4 + Stamina hours. Gray bands: real-world benchmarks.</text>
+<rect x="60" y="253.6" width="620" height="28.8" fill="#8fadbe" fill-opacity="0.10"/>
+<text x="688.0" y="272.0" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#8fadbe">Beginner hiker 12-18 km</text>
+<rect x="60" y="186.4" width="620" height="57.6" fill="#8fadbe" fill-opacity="0.10"/>
+<text x="688.0" y="219.2" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#8fadbe">Fit hiker or army march 20-32 km</text>
+<rect x="60" y="124.0" width="620" height="24.0" fill="#8fadbe" fill-opacity="0.10"/>
+<text x="688.0" y="140.0" text-anchor="start" font-family="sans-serif" font-size="10.5" fill="#8fadbe">Serious multi-day effort 40-45 km</text>
+<line x1="60" y1="340.0" x2="680" y2="340.0" stroke="#24404f" stroke-width="1"/>
+<text x="54.0" y="344.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">0 km</text>
+<line x1="60" y1="292.0" x2="680" y2="292.0" stroke="#24404f" stroke-width="1"/>
+<text x="54.0" y="296.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">10 km</text>
+<line x1="60" y1="244.0" x2="680" y2="244.0" stroke="#24404f" stroke-width="1"/>
+<text x="54.0" y="248.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">20 km</text>
+<line x1="60" y1="196.0" x2="680" y2="196.0" stroke="#24404f" stroke-width="1"/>
+<text x="54.0" y="200.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">30 km</text>
+<line x1="60" y1="148.0" x2="680" y2="148.0" stroke="#24404f" stroke-width="1"/>
+<text x="54.0" y="152.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">40 km</text>
+<line x1="60" y1="100.0" x2="680" y2="100.0" stroke="#24404f" stroke-width="1"/>
+<text x="54.0" y="104.0" text-anchor="end" font-family="sans-serif" font-size="10.5" fill="#8fadbe">50 km</text>
+<text x="122.0" y="356.0" text-anchor="middle" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">Frankie</text>
+<text x="122.0" y="370.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#6f8a99">Air 1, Stamina 1</text>
+<g><title>Frankie, 8-hour day: 26 km</title><rect x="91.0" y="217.1" width="30" height="122.9" rx="3" fill="#0a1720" stroke="#3987e5" stroke-width="2"/></g>
+<text x="106.0" y="212.1" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#eaf5fb">26</text>
+<g><title>Frankie, 5-hour day: 16 km</title><rect x="123.0" y="263.2" width="30" height="76.8" rx="3" fill="#3987e5"/></g>
+<text x="138.0" y="258.2" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#eaf5fb">16</text>
+<text x="246.0" y="356.0" text-anchor="middle" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">Mike</text>
+<text x="246.0" y="370.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#6f8a99">Air 3, Stamina 2</text>
+<g><title>Mike, 8-hour day: 29 km</title><rect x="215.0" y="201.8" width="30" height="138.2" rx="3" fill="#0a1720" stroke="#9085e9" stroke-width="2"/></g>
+<text x="230.0" y="196.8" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#eaf5fb">29</text>
+<g><title>Mike, 6-hour day: 22 km</title><rect x="247.0" y="236.3" width="30" height="103.7" rx="3" fill="#9085e9"/></g>
+<text x="262.0" y="231.3" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#eaf5fb">22</text>
+<text x="370.0" y="356.0" text-anchor="middle" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">Annie</text>
+<text x="370.0" y="370.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#6f8a99">Air 5, Stamina 3</text>
+<g><title>Annie, 8-hour day: 32 km</title><rect x="339.0" y="186.4" width="30" height="153.6" rx="3" fill="#0a1720" stroke="#d95926" stroke-width="2"/></g>
+<text x="354.0" y="181.4" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#eaf5fb">32</text>
+<g><title>Annie, 7-hour day: 28 km</title><rect x="371.0" y="205.6" width="30" height="134.4" rx="3" fill="#d95926"/></g>
+<text x="386.0" y="200.6" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#eaf5fb">28</text>
+<text x="494.0" y="356.0" text-anchor="middle" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">Tony</text>
+<text x="494.0" y="370.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#6f8a99">Air 7, Stamina 3</text>
+<g><title>Tony, 8-hour day: 35 km</title><rect x="463.0" y="171.0" width="30" height="169.0" rx="3" fill="#0a1720" stroke="#199e70" stroke-width="2"/></g>
+<text x="478.0" y="166.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#eaf5fb">35</text>
+<g><title>Tony, 7-hour day: 31 km</title><rect x="495.0" y="192.2" width="30" height="147.8" rx="3" fill="#199e70"/></g>
+<text x="510.0" y="187.2" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#eaf5fb">31</text>
+<text x="618.0" y="356.0" text-anchor="middle" font-family="sans-serif" font-size="11.5" fill="#eaf5fb">Maggie</text>
+<text x="618.0" y="370.0" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#6f8a99">Air 10, Stamina 5</text>
+<g><title>Maggie, 8-hour day: 40 km</title><rect x="587.0" y="148.0" width="30" height="192.0" rx="3" fill="#0a1720" stroke="#c98500" stroke-width="2"/></g>
+<text x="602.0" y="143.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#eaf5fb">40</text>
+<g><title>Maggie, 9-hour day: 45 km</title><rect x="619.0" y="124.0" width="30" height="216.0" rx="3" fill="#c98500"/></g>
+<text x="634.0" y="119.0" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#eaf5fb">45</text>
+</svg>
