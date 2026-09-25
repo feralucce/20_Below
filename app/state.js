@@ -238,10 +238,18 @@ export function mergeCharacterState(data, loaded) {
 
 // ---- Pools ----
 
+// What was bought with XP after creation was paid in XP, not from a
+// creation pool, so every pool below counts only the part of a stat that
+// Advancement didn't buy. Without this an XP purchase is charged twice and
+// the pool goes negative.
+function advBought(state, kind, name) {
+  return state.advancementPurchases?.[kind]?.[name] ?? 0;
+}
+
 export function attributePointsSpent(state, data) {
   let spent = 0;
   data.attributes.forEach((a) => {
-    spent += state.attributes[a.name] - data.attributeFloor;
+    spent += state.attributes[a.name] - advBought(state, 'Attributes', a.name) - data.attributeFloor;
   });
   return spent;
 }
@@ -275,7 +283,7 @@ export function skillsPointsSpent(state, data) {
   let spent = 0;
   data.skillCatalog.forEach((s) => {
     const baseline = data.everymanSkills.includes(s.name) ? 2 : 0;
-    spent += skillPointCost(data, state.skills[s.name], baseline);
+    spent += skillPointCost(data, state.skills[s.name] - advBought(state, 'Skills', s.name), baseline);
   });
   return spent;
 }
@@ -309,7 +317,7 @@ export function boonsPoolRemaining(state, data) {
 export function resourcesPointsSpent(state, data) {
   let spent = 0;
   data.resources.forEach((r) => {
-    spent += state.resources[r.name] * data.resourceLevelCost;
+    spent += (state.resources[r.name] - advBought(state, 'Resources', r.name)) * data.resourceLevelCost;
   });
   return spent;
 }
@@ -506,8 +514,19 @@ export function giftPointsSpent(gift, data) {
   return levelCost + adderCost;
 }
 
+// The Gift as it stood at creation: Levels and Adders bought with XP taken
+// back out, one entry per purchase.
+function giftAtCreation(state, g) {
+  const adders = [...g.adders];
+  (state.advancementPurchases?.GiftAdders?.[g.name] ?? []).forEach((name) => {
+    const i = adders.lastIndexOf(name);
+    if (i !== -1) adders.splice(i, 1);
+  });
+  return { ...g, level: g.level - advBought(state, 'Gifts', g.name), adders };
+}
+
 export function giftsPointsSpent(state, data) {
-  return state.gifts.reduce((sum, g) => sum + giftPointsSpent(g, data), 0);
+  return state.gifts.reduce((sum, g) => sum + giftPointsSpent(giftAtCreation(state, g), data), 0);
 }
 
 export function giftsPoolRemaining(state, data) {
