@@ -153,6 +153,28 @@
        an h3 gets by default even though it is an h4 inside a family. */
     color: var(--accent);
   }
+  /* Section cards for a long contents list, in the web book's contents
+     style. Unlike the book's, the whole card is not the link: the body
+     holds its own links, one per creature. */
+  .toc { display: grid; gap: 0.9rem; margin: 1.2rem 0 2rem; }
+  .toc-card {
+    background: var(--panel);
+    border-left: 4px solid #078f9b;
+    padding: 0.9rem 1.1rem;
+  }
+  .toc-card .block-title {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #078f9b;
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+  }
+  .toc-card .block-title a { color: inherit; text-decoration: none; }
+  .toc-card .block-title a:hover { text-decoration: underline; }
+  .toc-num { display: inline-block; min-width: 1.6em; color: var(--text-dim); }
+  .toc-card p { margin: 0; color: var(--text); }
 </style>
 </head>
 <body>
