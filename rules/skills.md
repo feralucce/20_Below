@@ -140,7 +140,7 @@ A starting Skill list scoped to a **modern-world base campaign**. **This list is
 | Streetwise | Moira | Navigating criminal culture, gangs, and underworld contacts. |
 | Surveillance | Water | Observing a target or location without being detected, and spotting when somebody is doing it to you - physical stakeouts and technical monitoring both. |
 | Survival | Earth | Foraging, shelter, water, and enduring somewhere that offers no help. |
-| Swimming | Earth | Moving efficiently and enduring in open water. |
+| Swimming | Earth | Moving efficiently and enduring in open water. **Can't be used untrained:** without it you can't swim - see [Swimming](movement.md#swimming). |
 | Systems Operation | Water | Operating and interpreting complex consoles, sensors, and industrial or vehicle control systems. |
 | Thrown Weapons | Earth | Which thrown weapons you are trained on, by Category: balanced blade, then thrown axe, shafted, returning, and the sling at Master. Never rolled for an attack - see [Weapon Skills Are Not Attack Skills](#weapon-skills-are-not-attack-skills). |
 | Tracking | Moira | Following physical trails. |

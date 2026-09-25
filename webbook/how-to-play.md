@@ -369,46 +369,158 @@ Then it **resolves band by band.** Everyone in Fast goes, then everyone in Norma
 
 ## Action Brackets
 
-**Fast** gets one action. You go first, and that’s all you do - a snap shot, a move, one Skill use.
+**Fast** gets one action. You go first, and that’s all you do - a move, an attack, one Skill use.
 
 **Normal** gets two actions. The balanced middle. A move and an attack, usually.
 
-**Slow** gets one concentrated action. You go last, but the action is stronger - called shots are allowed, or you attack at Advantage.
+**Slow** gets one empowered action. You go last, but the action is stronger - you Aim for Advantage, line up a Called Shot, study your target - and you can still take a single step, one meter, before or after it.
 
 Fast trades what you can do for when you do it. Slow trades the other direction - you go last, but the one thing you do, you do properly. Normal doesn’t trade anything away, which is why most people spend most of their rounds there.
 
-You can spend **1 Ki per step** to bump the band you declared - Slow to Normal, or Normal to Fast. Two Ki moves two steps.
+You can spend **1 Ki per step** to bump the band you declared - Slow to Normal, or Normal to Fast. Two Ki moves two steps. A bumped action keeps everything it was: a Called Shot bumped to Fast is still a Called Shot.
+
+## Two Ways to Play
+
+20 Below plays with a map or without one, and the rules are the same either way. Only how you keep track of where everyone stands changes. A table can switch in the same session: a map for the fight in the warehouse, no map for the chase across the rooftops after it.
+
+**Theater of the mind** has no map. The GM describes the scene, you say what you do, and the picture lives in everyone’s head. It still runs on your sheet. The GM keeps rough distances in meters - the dog is about thirty meters off, across the car park - and when you need to know whether you can reach something, you ask how far it is. Close enough is fine. Nobody measures.
+
+**Tactical** play puts the scene on a map. **One hex is one meter**, so your Movement Rate is simply the number of hexes you can move. Print a map at an inch to the meter and the tokens stay true to scale.
+
+Either way, distance falls into four bands, and the band follows from where you end up.
+
+**Melee** is contact, out to about one meter - arm’s reach. On a map, the next hex. 
+**Close** is one to ten meters: the same room, across a bar, the width of an alley. 
+**Near** is ten to fifty - across a street, the length of a corridor, the far side of a car park. 
+**Far** is anything past fifty meters, rooftop to rooftop.
+
+## Moving in a Round
+
+Your **Movement Rate** is 5 plus your Air, in meters. One move takes you that far. Which band you declare decides how many moves you get.
+
+**Fast:** one action. Move your Movement Rate, or do something else and don’t move. 
+**Normal:** a move and one other action. Or two moves - a **Dash**, twice your Movement Rate. Or two other actions and no move at all. 
+**Slow:** one empowered action and a one-meter step. Or a **Sprint**: five times your Movement Rate, and nothing else.
+
+In a Normal round you can split your move around the other action: move, then shoot; shoot, then move; or move, shoot, and move again, as long as the total stays inside your Movement Rate. A Dash and a Sprint don’t split. They’re all movement.
+
+A Sprint goes last, because Slow does - unless you pay for it. Bump it with Ki like any Slow action: one Ki and it runs in the Normal band, two and it runs in Fast. It’s still a Sprint. It just happens sooner.
+
+## Leaving Melee
+
+**You can always just move away.** Nobody gets a free swing at you as you go, and there’s no roll to break off. What it costs you is time. Whatever you were fighting hasn’t gone anywhere, and if it hasn’t acted yet this round, it can follow you and attack - as long as its move reaches you.
+
+So getting clear comes down to **when you go** and **how far you get**. A Fast move goes before anything in the Normal or Slow bands. A long enough move leaves it short. A Sprint gets you furthest, but it goes last unless you bump it, so the thing you’re running from bites first.
+
+If something has you **Grabbed**, you’re not going anywhere until you escape the hold.
+
+You can move through a friend’s space but not an enemy’s, and you never stop in a space someone else is standing in - unless you **Bulldoze** them out of it.
+
+## Getting Low and Taking Cover
+
+**Belly Down** is getting down on purpose, and it costs you nothing. Flat on the ground, you’re a smaller target: **ranged attacks against you are at Disadvantage**. Up close it’s the other way round - **your Melee attacks are at Disadvantage** and **Melee attacks against you gain Advantage**. You can still shoot. Standing back up takes an action.
+
+While you’re Belly Down you can **Crawl**, at two meters of movement for every one you cover.
+
+**Prone** is different. Nobody chooses Prone - it’s what happens when a blow, a fall, or bad footing puts you on the ground. Prone, you **can’t attack** and **every attack against you gains Advantage**, and you can’t crawl. Getting yourself together takes an action.
+
+**Cover** comes in two kinds, and the GM tells you which. Behind **full cover**, anything that needs to see or reach you can’t. Behind **partial cover** - a corner, a car door, a low wall - attacks against you are at **Disadvantage**. Belly Down behind partial cover doesn’t stack into anything worse, but it does hold up when a shooter takes the time to Aim.
+
+## Bad Ground
+
+Not every meter costs a meter.
+
+**Clear** ground - a floor, a road, a lawn - costs what it says. 
+**Rough** ground - mud, deep snow, rubble, undergrowth, knee-deep water - costs two meters of movement for every one. 
+**Wild Land** - bog, a collapsed building, a thicket, drifts past your waist - costs three.
+
+You can push through it. Once a turn, when your movement takes you onto bad ground, roll **Athletics at Difficulty 6**. A success crosses Rough as if it were clear, and Wild Land as if it were Rough - never better. A failure pays the full cost. Athletics is Earth by default, but your Descriptors can argue for another Element, the same as any Skill.
+
+**Footing** is different from ground. Ice, a slick deck, loose scree - walk across it carefully and nothing happens. Dash, Sprint or Bulldoze across it and you roll Athletics at 6, and a failure puts you down Prone.
+
+**Tight spaces** - a crawlspace, a vent, the gap between two buildings - cost double to squeeze through, and while you’re squeezed you can’t attack, and anything attacking you is at Disadvantage. Crawling ignores Rough ground entirely; you crawl through plowed dirt as easily as grass. Wild Land still costs you its three.
+
+## Climbing, Jumping and Swimming
+
+**Climbing** costs two meters for every one you go up. Roll Athletics once a turn at the surface’s Difficulty: a success climbs at your full rate, a failure at double cost, and a roll of 20 means you fall.
+
+**10** - a stepladder, a waist-high wall 
+**9** - a ladder 
+**8** - a tree with low branches, a chain-link fence 
+**7** - a sturdy rope with knots tied in it 
+**6** - a rock face with good holds, a drainpipe 
+**5** - a plain rope, a brick wall with crumbling mortar 
+**4** - a rough stone wall, a rope while carrying someone 
+**3** - an overhang, a crumbling cliff 
+**2** - a sheer, rain-slicked cliff face 
+**1** - smooth concrete, bare ice without tools 
+**0** - vertical glass
+
+Rain, wind or darkness make any of it a step or two harder. Nearly Impossible isn’t impossible, though. The strongest people in this game can climb glass.
+
+**Jumping.** A running long jump clears your Air in meters. Standing, it’s half that. A high jump gets half as high as you can jump forward. To go further, roll Athletics: one extra meter is Difficulty 8, two is 6, three is 4, four is 2, and five is 0. Fall short and you land at your Air distance - and if that’s over the drop, you go down it, unless you land next to an edge. Then you get Athletics at 6 to catch yourself, and climbing out is a climb.
+
+**Swimming** can’t be done untrained. If you don’t have the Swimming Skill and you end up in deep water, the No-air clock starts right away, unless you’ve got hold of something that floats.
+
+If you can swim, you swim at your Movement Rate. Staying up is the hard part. In calm water you get your Stamina in Hours for free; in rough water - a current, waves, or swimming with weight - your Stamina in Minutes. After that, roll Water plus Difficulty once an Hour (or a Minute), starting at 8 in calm water and 6 in rough, one step harder every roll. Each failure is a level of Exhausted, and Exhausted 5 means you go under. Cold water piles its own Exhausted on top, which is how a winter river kills a strong swimmer.
+
+Creatures that fly, swim, climb or burrow do it at the rate on their card, with no extra cost and no roll - unless you changed the ground. Bring the building down, flood the room, throw the caltrops: then it pays like anyone else. When something outclasses you on its own ground, change the ground.
+
+## Chases
+
+A chase is ordinary movement, round after round, with a roll for the route. Everyone declares their movement as usual. Then everyone makes a **Chase roll at Difficulty 6** - Athletics on foot, Driving in a car, Piloting in the air or on the water - and the GM makes it a step or two harder when the route is bad. Being faster doesn’t earn you a bonus; the meters already count your speed.
+
+**One side succeeds and the other fails:** the side that failed hits the fruit stand, and moves at half this round. 
+**Both succeed, or both fail:** everyone moves in full. 
+**A critical success:** you move half again as far.
+
+At a meter or less, you’re caught. Get out of sight - around the corner the GM just described - and you roll **Stealth** against your pursuer’s Perception. Win, and you’ve lost them. Lose, and they’re back on your trail. When you’re the ones chasing, you roll Perception or Tracking against the quarry’s Stealth.
+
+Running is exhausting. A Sprint is running flat out: your Stamina in Rounds for free, then a roll of Water plus Difficulty every Round, starting at 6 and getting harder, with a level of Exhausted for each failure. The fast get away, and so do the sneaky. Everyone else needs a plan.
+
+## Travel
+
+Over hours and days you stop counting rounds and start counting kilometers. You walk **3 plus a fifth of your Air** kilometers an hour on a road or a trail, and your **travel day is 4 plus your Stamina in hours**. That puts a fragile character at about sixteen kilometers a day and the toughest at forty-five - which, not by accident, is what real people manage. A group goes at its slowest member’s pace and stops when its shortest day runs out.
+
+Rough ground halves the day’s distance and Wild Land cuts it to a third. Nobody rolls for it; a whole day on bad ground isn’t one lucky stride.
+
+Walking past your travel day is a **forced march**. Every extra Hour, roll Water plus Difficulty, starting at 7 and one step harder each Hour, and take a level of Exhausted for every failure. A night’s sleep clears it.
+
+Nobody gets lost unless the GM says the country, the weather, or the dark makes it a question. Then it’s a Navigation roll - unless you brought a compass and a map.
 
 ## What an Action Buys You
 
 Beyond attacking or moving, these are what you can spend an action on. Anything a Gift or a weapon says about its own action cost overrides this list.
 
-**Dash** (Normal) - both actions on movement. Up to twice your Movement Rate, nothing else.
+**Empowered actions** are what a Slow round buys. You get one of them, plus your one-meter step.
 
-**Run** (Slow) - the whole action on movement, giving up the called shot and the Advantage. Up to four times your Movement Rate. You cover more ground than anyone, and you still resolve last, because you committed to a sprint instead of watching the room.
+**Aim** - Advantage on the attack. 
+**Called Shot** - you hit something specific: a hand, a strap, the weapon they’re pointing at you. No Advantage. 
+**Study a Target** - no roll; the round is the price. Next round, your first attack on it has Advantage, and that includes a Called Shot. 
+**Careful Work** - Advantage on a Skill roll made with your whole attention, and it holds round after round on the same job until something interrupts you. 
+**Brace** - until your next turn, nothing can Bulldoze you, shove you or knock you down. 
+**Bulldoze** - charge at least five meters, and no more than twice your Movement Rate, to drive something out of its space. Roll your Potence in dice against its Soak; each one over shoves it back a meter, and you step in behind it. If nothing gets through, you stop beside it.
 
-**Dive for Cover** (Fast) - move up to your Movement Rate right now. Fast resolves first, so you’re already gone before Normal and Slow act. If that puts you behind real cover, things that need to see or reach you can’t. It’s your only action, and until you spend an action getting back up you’re at Disadvantage on anything needing your feet under you.
+You can’t Aim and take a Called Shot in the same round. You can take two rounds over it: Study a Target, then take the shot with Advantage.
 
-**Reckless** - free, just declared. Advantage on your attacks this round, and Advantage on everyone’s attacks against you. It is exactly as stupid as it sounds, and every so often it is exactly the right call.
+**Special actions** belong to one band.
 
-**Cautious Attack** (Normal) - your attacks at Disadvantage, attacks against you at Disadvantage, until your next turn.
+**Attack on the Run** (Fast only) - a full move and an attack, with a gun or a blade, anywhere along the way. The attack is at Disadvantage. 
+**Snap to Cover** (Fast only) - a single step into cover beside you, still on your feet. 
+**Dive for Cover** (Fast or Normal) - Fast, you move up to your Movement Rate before anyone slower acts, and land Belly Down. Normal, you make a full move first and then dive. 
+**Sprint** (Slow only) - five times your Movement Rate, and nothing else.
 
-**Full Defense** (Normal) - you can’t attack. Your other action can still move you. Attacks against you are at Disadvantage and your Defense drops by 4, floored at 0.
+And the rest:
 
+**Dash** (Normal) - both actions on movement. Up to twice your Movement Rate, nothing else. 
+**Reckless** - free, just declared. Advantage on your attacks this round, and Advantage on everyone’s attacks against you. It is exactly as stupid as it sounds, and every so often it is exactly the right call. 
+**Full Defense** (Normal) - you can’t attack. Your other action can still move you. Attacks against you are at Disadvantage and your Defense drops by 4, floored at 0. 
+**Grab** - from Melee, an attack, then your Potence in dice against its Soak. Any one over and it’s Grabbed. 
+**Disarm** - a Called Shot at what they’re holding, then Potence against Potence to knock it loose. 
+**Help** - your action goes into someone else’s, and their next roll has Advantage. 
+**Ready** - name a trigger and hold your action for it: when it comes through the door. 
+**Draw, swap, stow, use** - getting a weapon out, putting one away, or using a simple item takes an action. 
 **Reload** - depends on the weapon. Magazines, speed-loaders and crossbow cranks take one action. A tube-fed shotgun, loaded shell by shell, takes a full Slow action. A bow pulled from a quiver is free. Each weapon lists its own cost.
-
-## Movement and Range
-
-There’s no grid and no measuring tape. Distance is four bands - **Melee, Close, Near and Far** - and each one covers a real span of meters. The GM says which band a target is in, and these are what those words mean.
-
-**Melee** is contact, out to about one meter - arm’s reach. 
-**Close** is one to ten: the same room, across a bar, the width of an alley. 
-**Near** is ten to fifty - across a street, the length of a corridor, the far side of a car park. 
-**Far** is anything past fifty meters, rooftop to rooftop.
-
-Your **Movement Rate** is 5 plus your Air, in meters. You can move that far as your Fast action, or as the move half of a Normal one - and a Normal action can spend both of its halves moving, which covers twice your Movement Rate. You move in meters and the band follows from where you end up. One move carries you out of Melee into Close; a double move reaches into Near.
-
-**Sprint.** An all-out run - five times your Movement Rate - is a Slow action, and it is the only thing you do that round. No attack, no second half, nothing held back, and you go last, because that is what Slow means.
 
 ## Conditions
 

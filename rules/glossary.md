@@ -26,7 +26,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Bump Action Bracket** - Spend 1 Ki to move a declared action up a step - Slow to Normal, or Normal to Fast. Two Ki jumps two steps. No roll, no check; you’re just buying speed with Ki.
 
-**Called Shot** - Picking out something specific to hit instead of just hitting them - a hand, a knee, the strap holding their pack on, the camera housing on a drone, the weapon they’re pointing at you. A Called Shot is a Slow Action. What landing it does depends on what you aimed at, and that’s the GM’s call.
+**Called Shot** - Picking out something specific to hit instead of just hitting them - a hand, a knee, the strap holding their pack on, the camera housing on a drone, the weapon they’re pointing at you. A Called Shot is one of the empowered actions a Slow Action buys, and it doesn’t come with Advantage - that’s Aim. What landing it does depends on what you aimed at, and that’s the GM’s call.
 
 **Carrying Capacity** - How much you can lift, carry, or drag without straining: your Potence squared, times ten, in kilograms. Squared rather than flat, so a strong character pulls dramatically ahead of an ordinary one.
 
@@ -50,9 +50,11 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Discretionary Points** - A loose pool - 10 to start, plus whatever your Flaws hand you - that you can spend at creation on almost anything: Resources, Skills, Fate Tokens, Boons, Gifts, or Attributes.
 
-**Distracted** - What happens when you take a hit, or catch a Kotodama effect, part-way through a Slow Action. Roll Atropos + Difficulty to keep your focus; miss it and the action drops to a Normal one, losing the called shot and the Advantage that made going Slow worth it.
+**Distracted** - What happens when you take a hit, or catch a Kotodama effect, part-way through a Slow Action. Roll Atropos + Difficulty to keep your focus; miss it and the action drops to a Normal one, losing whatever its empowered action gave - the thing that made going Slow worth it.
 
 **Earth** - One of the five Elements that defines the essence of a character - flesh and stone, the solid ground under everything else. Earth is the Attribute that covers raw physical force, endurance and mass, how strong you are, how hard you hit, and how much you can take before you stop being able to take it. It is further divided into Soak and Potence.
+
+**Empowered Action** - What a Slow Action buys: one action, done properly. Aim for Advantage, line up a Called Shot, Study a Target, work carefully, Brace, or Bulldoze. One per round, with a one-meter step before or after it.
 
 **Everyman Skills** - A short list, set by the GM, of things everyone can just do - the competence any working adult picks up by living in the world. Every character gets them free, at Trained.
 
@@ -106,7 +108,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Moira** - One of the five Elements that defines the essence of a character - fate, and the threads nobody living gets to see. Moira is the Attribute that covers luck, destiny, and the supernatural itself, how the world bends around you, and whether it bends your way. It is further divided into Atropos and Klotho.
 
-**Movement Rate** - How far you can move in a step, in meters: 5 plus your Air. That’s the move on a Fast Action, or the move half of a Normal one.
+**Movement Rate** - How far you can move in a step, in meters: 5 plus your Air. That’s the move on a Fast Action, or the move half of a Normal one. On a map it’s hexes. A Dash is twice it and a Sprint five times.
 
 **Nature** - A short label for what drives your character, or how they meet the world - picked from a list or written yourself. Lean into it at the right dramatic moment and you earn a Fate Token.
 
@@ -142,7 +144,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Skill Training Tier** - How good you are at a Skill, on a six-step ladder: Untrained, Novice, Trained, Adept, Expert, Master. Each step changes how you build the roll - from no Attribute at all, up to rolling with Advantage and a wider critical range. It also sets your damage dice on a Social attack: one at Untrained, rising to six at Master.
 
-**Slow Action** - The Slow bracket. One action, and you go last - but it’s a better action. It can be a called shot and it rolls with Advantage. You’re trading speed for one concentrated, harder-hitting move. (All spellcasting is Slow.)
+**Slow Action** - The Slow bracket. One action, and you go last - but it’s a better action. It’s an empowered action - Aim for Advantage, a Called Shot, Study a Target and the rest - plus a one-meter step. You’re trading speed for one concentrated, harder-hitting move. (All spellcasting is Slow.)
 
 **Soak** - One of Earth’s two sub-stats, the hide the world’s hits don’t quite get through. It’s your wall against physical damage - the number an attacker’s dice have to clear to actually hurt you. Sample descriptors: Hardy, Rugged, Unyielding, Thick-Skinned, Battle-Worn, and so on.
 

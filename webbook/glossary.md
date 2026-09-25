@@ -77,7 +77,7 @@ Spend 1 Ki to move a declared action up a step - Slow to Normal, or Normal to Fa
 <div class="gloss" markdown="1">
 <span class="gloss-term">Called Shot</span>
 
-Picking out something specific to hit instead of just hitting them - a hand, a knee, the strap holding their pack on, the camera housing on a drone, the weapon they’re pointing at you. A Called Shot is a Slow Action. What landing it does depends on what you aimed at, and that’s the GM’s call.
+Picking out something specific to hit instead of just hitting them - a hand, a knee, the strap holding their pack on, the camera housing on a drone, the weapon they’re pointing at you. A Called Shot is one of the empowered actions a Slow Action buys, and it doesn’t come with Advantage - that’s Aim. What landing it does depends on what you aimed at, and that’s the GM’s call.
 </div>
 
 <div class="gloss" markdown="1">
@@ -143,7 +143,7 @@ A loose pool - 10 to start, plus whatever your Flaws hand you - that you can spe
 <div class="gloss" markdown="1">
 <span class="gloss-term">Distracted</span>
 
-What happens when you take a hit, or catch a Kotodama effect, part-way through a Slow Action. Roll Atropos + Difficulty to keep your focus; miss it and the action drops to a Normal one, losing the called shot and the Advantage that made going Slow worth it.
+What happens when you take a hit, or catch a Kotodama effect, part-way through a Slow Action. Roll Atropos + Difficulty to keep your focus; miss it and the action drops to a Normal one, losing whatever its empowered action gave - the thing that made going Slow worth it.
 </div>
 
 <div class="gloss" markdown="1">
@@ -156,6 +156,12 @@ Where you are below 0 Health Levels: unconscious, still losing ground, and out o
 <span class="gloss-term">Earth</span>
 
 One of the five Elements that defines the essence of a character - flesh and stone, the solid ground under everything else. Earth is the Attribute that covers raw physical force, endurance and mass, how strong you are, how hard you hit, and how much you can take before you stop being able to take it. It is further divided into Soak and Potence.
+</div>
+
+<div class="gloss" markdown="1">
+<span class="gloss-term">Empowered Action</span>
+
+What a Slow Action buys: one action, done properly. Aim for Advantage, line up a Called Shot, Study a Target, work carefully, Brace, or Bulldoze. One per round, with a one-meter step before or after it.
 </div>
 
 <div class="gloss" markdown="1">
@@ -317,7 +323,7 @@ One of the five Elements that defines the essence of a character - fate, and the
 <div class="gloss" markdown="1">
 <span class="gloss-term">Movement Rate</span>
 
-How far you can move in a step, in meters: 5 plus your Air. That’s the move on a Fast Action, or the move half of a Normal one.
+How far you can move in a step, in meters: 5 plus your Air. That’s the move on a Fast Action, or the move half of a Normal one. On a map it’s hexes. A Dash is twice it and a Sprint five times.
 </div>
 
 <div class="gloss" markdown="1">
@@ -425,7 +431,7 @@ How good you are at a Skill, on a six-step ladder: Untrained, Novice, Trained, A
 <div class="gloss" markdown="1">
 <span class="gloss-term">Slow Action</span>
 
-The Slow bracket. One action, and you go last - but it’s a better action. It can be a called shot and it rolls with Advantage. You’re trading speed for one concentrated, harder-hitting move. (All spellcasting is Slow.)
+The Slow bracket. One action, and you go last - but it’s a better action. It’s an empowered action - Aim for Advantage, a Called Shot, Study a Target and the rest - plus a one-meter step. You’re trading speed for one concentrated, harder-hitting move. (All spellcasting is Slow.)
 </div>
 
 <div class="gloss" markdown="1">

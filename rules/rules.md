@@ -190,7 +190,7 @@ While it still has Health Levels remaining, armor intercepts every die aimed at 
 
 - **Armor doesn't stack within a Zone.** If a character owns more than one item covering the same Zone, only one can be worn there at a time - their choice which.
 - **A normal attack always resolves against Center of Mass armor.** Armor that covers only the Head, Arms or Legs does nothing against it.
-- **A called shot** - an attack aimed at something specific rather than at the target generally: a hand, a knee, a strap, a weapon, a sensor. It's declared as part of a [Slow Action](#action-brackets), and spending Ki to [bump the bracket](#action-brackets) carries it along rather than cancelling it. What a successful called shot accomplishes is the GM's call, and depends on what was aimed at. Where it interacts with armor, a called shot to the **Head**, **Arms** or **Legs** resolves against whatever the defender wears on that Zone (or no armor at all, if nothing covers it), and armor that covers only the Center of Mass doesn't apply to it.
+- **A called shot** - an attack aimed at something specific rather than at the target generally: a hand, a knee, a strap, a weapon, a sensor. It's an [empowered action](movement.md#empowered-actions) - declared as a [Slow Action](#action-brackets), with **no Advantage** (Aim is the empowered action that gives Advantage) - and spending Ki to [bump the bracket](#action-brackets) carries it along rather than cancelling it. What a successful called shot accomplishes is the GM's call, and depends on what was aimed at. Where it interacts with armor, a called shot to the **Head**, **Arms** or **Legs** resolves against whatever the defender wears on that Zone (or no armor at all, if nothing covers it), and armor that covers only the Center of Mass doesn't apply to it.
 
 #### Potence
 
@@ -398,9 +398,9 @@ Note that the [Skill Training Tiers](skills.md#training-tiers) that widen the cr
 
 | Band | Also called | Actions | Notes |
 |---|---|---|---|
-| **Fast** | Reactive | One action | A snap shot, a move, a single Skill use. Acts first, but only gets the one action. |
+| **Fast** | Reactive | One action | A move, an attack, a single Skill use - or a [special action](movement.md#special-actions) such as Attack on the Run. Acts first, but only gets the one action. |
 | **Normal** | Active | Two actions | E.g. a move and an attack. Acts second. |
-| **Slow** | Measured | One action, with concentration | Acts last, but the single action is empowered: allows called shots, grants **Advantage** on the attack, and (once magic exists) all spellcasting is always a Slow action. |
+| **Slow** | Measured | One action, with concentration | Acts last, but the single action is an [empowered action](movement.md#empowered-actions) - Aim for **Advantage**, a Called Shot, Study a Target, and others - plus a 1m step. (Once magic exists, all spellcasting is a Slow action.) |
 
 The tradeoff across all three: **Fast trades action count for going first**, **Normal is the balanced middle (two actions, middling position)**, **Slow trades speed for a single, more powerful, concentrated action**.
 
@@ -408,30 +408,11 @@ A player can spend **1 Ki per step** to bump their declared band up (Slow → No
 
 #### Combat Actions
 
-What an action actually *lets you do*, beyond a plain Attack or Move - filling in Fast's one action, either of Normal's two, or Slow's single empowered action. A Gift or weapon that states its own action cost always overrides these.
-
-- **Dash** (Normal) - spend both actions on movement. Move up to **2× Movement Rate**, nothing else this round.
-- **Run** (Slow) - spend the single action purely on movement, forgoing the called-shot/Advantage benefit entirely. Move up to **4× Movement Rate**, nothing else this round. The tradeoff is real: Running covers the most ground of any option, but Slow still resolves last - full commitment to a sprint means you're not reacting quickly to anything else.
-- **Diving for Cover** (Fast) - throw yourself out of the line of danger. Move up to your Movement Rate immediately; since Fast resolves first, you're already repositioned before anyone in the Normal or Slow bands acts against you this round. If that move puts you behind real cover or breaks line of sight, GM's call, attacks that need to see or reach you simply can't this round. It's Fast's only action - no attack, no called shot, nothing else - and because you went down in a hurry, you're at **Disadvantage** on anything needing stable footing until you spend an action getting back up.
-- **Reckless** - no action cost, just declared for the round. **Advantage** on all your attack rolls this round; attacks against you gain **Advantage** this round too.
-- **Cautious Attack** (Normal) - your attack rolls at **Disadvantage**; attacks against you suffer **Disadvantage** until your next turn.
-- **Full Defense** (Normal) - you cannot attack this round; your other Normal action can still be spent moving. Attacks against you suffer **Disadvantage**, and your **Defense drops by 4** (floored at 0) until your next turn.
-- **Reload** - refills a [ranged weapon](weapons.md#basic-weapons)'s Ammo back to full once it runs dry. Action cost depends on how that weapon actually loads, not a single flat cost: a magazine, speed-loader, or chain-fed weapon (every firearm on the list except the tube-fed shotguns) takes **one action**; a crossbow's crank/cocking mechanism also takes **one action**; a tube-fed pump or sawed-off shotgun, loaded shell by shell, takes a full **Slow action**; a bow drawn from a quiver (Recurve, Compound, or English longbow) reloads **free**, no action spent at all. See each weapon's own **Reload** column in weapons.md for the specific cost.
+The full list - combat actions, [empowered actions](movement.md#empowered-actions) and [special actions](movement.md#special-actions) - is in [Movement: Actions](movement.md#actions): Dash, Reckless, Full Defense, Reload, Grab, Disarm, Help, Ready, and the small actions. A Gift or weapon that states its own action cost always overrides them.
 
 #### Movement & Range
 
-**Range Bands**: four bands - **Melee, Close, Near, Far** - used for weapon reach, targeting, and spotting. There is no grid and no measuring tape, but each band is a defined span in meters, so the call means the same thing at every table and a weapon's range tells you what it reaches.
-
-| Band | Distance | What it looks like |
-|---|---|---|
-| **Melee** | Contact, out to ~1m | Arm's reach |
-| **Close** | 1 to 10m | The same room, across a bar, the width of an alley |
-| **Near** | 10 to 50m | Across a street, the length of a corridor, the far side of a car park |
-| **Far** | Beyond 50m | Rooftop to rooftop, the far end of a warehouse |
-
-**Movement Rate**: `5 + Air`, in **meters** - the same flat-floor-plus-Attribute shape as [Health Levels](#health-levels). A character can move up to their Movement Rate as part of a Fast action's one action or a Normal action's move component, and a Normal action may spend **both** of its actions moving for **2x Movement Rate**. **Movement is measured in meters and the band follows from where you end up.** One move carries a character out of Melee into Close; a double move reaches into Near.
-
-**Sprint**: an all-out run, **5x Movement Rate**, is a **Slow action** and the only thing that character does that round - no attack, no second half, and they act last as Slow always does.
+**Movement Rate**: `5 + Air`, in **meters** - the same flat-floor-plus-Attribute shape as [Health Levels](#health-levels). **Range Bands**: Melee (contact, out to ~1m), Close (1 to 10m), Near (10 to 50m), Far (beyond 50m). Everything else - moving in a round, leaving Melee, cover, terrain, climbing, jumping, swimming, chases and travel, for theater of the mind and a 1m-hex map alike - is in [Movement](movement.md).
 
 *The status effects defined so far - [Off Balance](#off-balance), [Distracted](#distracted), [Surprised](#surprised), [Flustered](#flustered), [Humiliated](#humiliated), [Exhausted](#exhausted), [Staggered](#staggered), [Blinded](#blinded), [Deafened](#deafened), [Grabbed](#grabbed), [Prone](#prone), [Frightened](#frightened), [Envenomed](#envenomed) and [Bleeding](#bleeding), plus [Overwhelmed and Shattered](#sanity), which Sanity defines. More are expected as combat rules develop further; this isn't the full list.*
 
@@ -448,7 +429,7 @@ A Fate Token spent on [Shrug Off an Effect](fate.md#fate-triggers) clears it imm
 A character who loses a Health Level or is the target of a Kotodama effect while resolving a **Slow** Action Bracket action becomes **Distracted**, and must roll **Atropos + Difficulty** to hold focus.
 
 - **Success** - the action resolves as declared.
-- **Failure** - the action downgrades to a **Normal** action (loses the called-shot/Advantage benefit).
+- **Failure** - the action downgrades to a **Normal** action, and loses whatever its [empowerment](movement.md#empowered-actions) gave.
 
 **Other sources can impose Distracted too** - a Gift, an environmental hazard (a collapsing building, a deafening explosion), or GM fiat, whether or not a Slow action is involved. The same **Atropos + Difficulty** roll applies; outside a Slow action, failure instead imposes **Disadvantage** on the triggering roll. [Concentration](boons.md) grants immunity to being Distracted regardless of source.
 
@@ -491,7 +472,7 @@ A **Short Rest** clears one level; a **Full Night's Rest** clears all of them. A
 
 Something has knocked the rhythm out of a character: a blow that lands wrong, a shock, a moment of not knowing which way is up. Whatever causes it says so.
 
-**A Staggered character's declared [Action Bracket](#action-brackets) drops one step** - Fast becomes Normal, Normal becomes Slow. A character who declared Slow still acts, but loses the called shot and the Advantage that Slow normally grants.
+**A Staggered character's declared [Action Bracket](#action-brackets) drops one step** - Fast becomes Normal, Normal becomes Slow. A character who declared Slow still acts, but loses whatever their [empowered action](movement.md#empowered-actions) would have given.
 
 **Ki buys it straight back at the usual rate**: 1 Ki per step, the same spend that bumps a band up in the first place. Otherwise it clears at the end of that character's next turn. Staggered does not stack - a second source while already Staggered does nothing further.
 
@@ -521,11 +502,11 @@ Escaping is a contested roll against the grabber's **Potence** - or against its 
 
 #### Prone
 
-On the ground, whether they dived, were put there, or fell.
+Knocked flat: put there by a blow, a fall, or footing that gave out. **Prone is always inflicted.** Going down on purpose is [Belly Down](movement.md#getting-low), which is a different thing.
 
-**A Prone character's own attacks are at Disadvantage, and Melee attacks against them gain Advantage.** Attacks from further out are unaffected - being flat is a problem at arm's reach and an inconvenience everywhere else.
+**A Prone character can't attack, and every attack against them gains Advantage.** They can't Crawl.
 
-Standing up costs one action, which is a Fast character's entire turn. [Diving for Cover](#combat-actions) already charges exactly this.
+**Recovering from Prone costs one action**, which is a Fast character's entire turn.
 
 #### Frightened
 

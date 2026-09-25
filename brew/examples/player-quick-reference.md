@@ -52,7 +52,7 @@ One point of Difficulty is worth ~10 points of probability mid-curve, ~2 at the 
 
 Movement Rate is **5 + Air** in metres; you move in metres and the band follows. One move clears Melee into Close. A Normal action can spend both halves moving, for **2x**.
 
-**Sprint** - 5x Movement Rate, a Slow action, and the only thing you do that round.
+**Sprint** - 5x Movement Rate, a Slow action, and the only thing you do that round. Ki can bump it to Normal (1) or Fast (2).
 
 **Weapon range** - no penalty inside **Normal**, Disadvantage out to **Long**, no shot past it.
 
@@ -81,7 +81,7 @@ Roll Initiative, declare your Action Bracket, act in order. Fast goes first, Slo
 |---|---|---|
 | **Fast** | 1 | You go first, and that is all you do |
 | **Normal** | 2 | A move and an attack, usually |
-| **Slow** | 1 | You go last. Called shots allowed, and you attack at Advantage |
+| **Slow** | 1 | You go last. One empowered action: Aim (Advantage), a Called Shot, Study a Target, and more |
 
 Spend **1 Ki per step** to bump the Bracket you declared - Slow to Normal, or Normal to Fast.
 
