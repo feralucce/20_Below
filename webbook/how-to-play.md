@@ -22,7 +22,9 @@ Yes, the first half. I spent a long time trying to make the Core Roll do the who
 
 So there’s a second mechanic. It only comes up when something is trying to hurt you - or you’re trying to hurt something.
 
-## The Core Roll
+## Rolling the Dice
+
+### The Core Roll
 
 Roll two ten-sided dice and add them together. If the total is equal to or under your **Target Number**, you succeed at whatever you were trying to do.
 
@@ -60,7 +62,7 @@ Neither one cares what your target number was. A critical success on a hopeless 
 
 Each skill has an Element attached to it. This Element is the default number you will use to perform that skill. That is, unless you argue to use a different element for the roll. That argument is what you use Descriptors for.
 
-## Setting the Difficulty
+### Setting the Difficulty
 
 The GM decides the Difficulty of any task. The Difficulty tiers are below
 
@@ -92,7 +94,7 @@ Don’t agonize over assigning a difficulty. Pick the number that describes what
 
 </div>
 
-## Advantage and Disadvantage
+### Advantage and Disadvantage
 
 Most of the time, there is a level playing field. However, sometimes the balance of events leans to one sire or another. 20 Below uses a single mechanic for that in all situations - Advantage and Disadvantage.
 
@@ -123,7 +125,7 @@ Yes. Lower is better. Advantage gives you a third chance to get a smaller number
 
 **Off-hand.** Doing something that needs manual dexterity or precision with your off-hand - attacking, picking a lock, anything where which hand is doing it actually matters - is at Disadvantage. The Ambidextrous Boon removes that penalty.
 
-## Untrained Skill Usage
+### Rolling Without the Skill
 
 Sometimes you want to do something that you just aren’t prepared for. In game terms, this means you don’t have a skill that applies in the specific situation. When this happens, you still get to roll - you just don’t get to add your Element to the Target Number.
 
@@ -131,57 +133,9 @@ That’s right - your target number for an Untrained Skill is the Difficulty of 
 
 You might have noticed that this means you could have a Target Number that is impossible to roll - 0 or 1. Don’t despair. Make the roll anyway. There is always a chance - a critical success will always succeed.
 
-## Ki
+## Attacks
 
-More than Gifts or Boons, Ki is what sets your character aside from the rest of the world. It is the fuel tank you pull from when the ordinary just isn’t going to cut it. Ki is what takes you from ordinary to extraordinary.
-
-**Ki Pool**: The thing that defines you - your strongest element - is also what defines your Ki Pool. At the start of play, your **Ki Pool is your strongest element+8**. This was an intentional design choice. Nothing else about your build effects your Ki Pool. The Nerdy Hacker and the Brick draw from the same font of power and every character in the game starts with a Ki Pool somewhere between 13 and 18.
-
-This is deliberate. Everyone in 20 Below is supposed to have plenty of Ki to draw upon.
-
-Why is Ki so important? Ki is used in the following ways:
-
-**Gift usage.** Most gifts cost Ki points to use
-
-**Gift Check.** When gift calls for a Gift Check, you roll 2d10 and your current Ki is your target number. There is no Advantage or Disadvantage on this roll. Yes, with experience points, it is possible to have a Ki over 20. Remember - a roll of 20 is a catastrophic failure and will fail even if your target number is 25.
-
-**Preventing Damage**. When you would take damage to one of your vitals (Health, Poise, or Sanity) - you can prevent that damage at the cost of 1 Ki per level of damage.
-
-**Recovering from Vitals Loss**. When one of your Vitals is at zero or below, you may spend 1 Ki point to recover from Dying, Humiliated or Shattered state and gain 1 point of that Vital.
-
-**Boosting Damage**. After you land an attack with a successful 2d10 roll, you can Boost your Damage Dice. To do so, spend 1 Ki point per boosted die and add Ferocity (Physical), Psyche (Mental), or Poise (Social) to the number rolled on the die.
-
-**Bump your Action Bracket**. You can spend Ki points to move quicker. You can bump yourself from a Slow Action to a Normal Action for 1 Ki point and from a Normal Action to a Fast Action for 1 Ki point. This means you can take a Slow Action in the Fast Action Band for 2 Ki points.
-
-**Recovering Ki**: Recover Ki by resting. A Short Rest restores a number of Ki points equal to your Klotho rating, minimum of 1. A Full Night’s Rest recovers all of your Ki. You are playing the big damn heroes of this universe. Ki fuels you. It isn’t a limited resource that you horde.
-
-## The Three Walls
-
-There are three types of damage in 20 Below: Physical, Social, and Mental. When someone lands an attack, the next step is to determine how much (if any) damage gets through. They roll their damage dice for the attack and compare the results of each die to the appropriate wall: **Soak vs. Physical** attacks, **Presence vs Social** attacks, and **Psyche vs Mental** attacks.
-
-All three of these walls are similar to a levee - it stops damage from getting through. Anything that goes over the top deals damage. When an attacker rolls for damage, he throws a fistful of dice. Each die is compared to the wall. If the number on the die is higher than the wall, it deals damage.
-
-A high Soak, Presence or Psyche makes you extremely resilient and difficult to harm. Any of these sub-stats at 10 means that a rolled die effectively can’t harm you sine you can’t roll higher than a 10 on a d10. This means that someone who dumps 10 points into earth and dedicates those 10 sub-stat points into Soak is going to be relatively indestructible. This is intentional. Anime is stuffed with characters like this.
-
-## Spending Ki on the Dice
-
-While anime is rife with characters that are *Nigh Indestructible™,* it’s also crammed full of characters that can over come it. You’ve seen it - “This isn’t my true power!”
-
-That is why you can boost your damage with Ki. It allows you to roll numbers that are higher than that 10. Roll the damage dice first. With them on the table, you pick which ones to boost, at **1 Ki each**. A boosted die adds your matching sub-stat to its own result - Ferocity for Physical, Presence for Social, Psyche for Mental.
-
-This is how damage gets over the levees. A boosted die from a character with a 10 in Ferocity will deal damage 100% of the time, and a 2 in Ferocity has a 20% chance of topping that wall. The second one isn’t good odds, but it is immeasurably better than the 0% chance you had a second ago.
-
-## Defense and How it is Calculated
-
-Defense is one of the most important numbers to consider in combat. Combat is the one time where the GM isn’t determining the difficulty part of the Target Number equation. When you make an attack, your Target Number is calculated as the Your Element+Target’s Defense.
-
-**Physical Defense**: Physical Defense=10-your Atropos score. Your Fate decides when it is your time and it’s not your time… yet.
-
-**Social Defense**: Social Defense=10-your Psyche score. Insight into human behavior helps a character recognize motives, read intentions, and see through social deception.
-
-**Mental Defense**: Mental Defense=10-your Presence score. A strong sense of self and personal identity provides an anchor against manipulation, intimidation, and psychological intrusion.
-
-## Making an Attack
+### Making an Attack
 
 The two mechanics in 20 Below meet here. Each attack has 2 steps
 
@@ -221,7 +175,7 @@ NOTE: A Critical Hit can’t kill on its own. No matter how devastating it is, a
 
 </figure>
 
-## Which Element Are You Attacking With
+### Which Element Are You Attacking With
 
 Your weapon doesn’t decide. Your approach does.
 
@@ -239,13 +193,31 @@ Same sword in the first four. Describe what you’re doing before you roll, and 
 
 NOTE: Moira never governs a Physical attack. Fate doesn’t swing a bat. It carries a Social or a Mental one readily, because finding the one word that lands is exactly what fate is for.
 
-## Social Attacks
+### Defense and How It’s Calculated
+
+Defense is one of the most important numbers to consider in combat. Combat is the one time where the GM isn’t determining the difficulty part of the Target Number equation. When you make an attack, your Target Number is calculated as the Your Element+Target’s Defense.
+
+**Physical Defense**: Physical Defense=10-your Atropos score. Your Fate decides when it is your time and it’s not your time… yet.
+
+**Social Defense**: Social Defense=10-your Psyche score. Insight into human behavior helps a character recognize motives, read intentions, and see through social deception.
+
+**Mental Defense**: Mental Defense=10-your Presence score. A strong sense of self and personal identity provides an anchor against manipulation, intimidation, and psychological intrusion.
+
+### The Three Walls
+
+There are three types of damage in 20 Below: Physical, Social, and Mental. When someone lands an attack, the next step is to determine how much (if any) damage gets through. They roll their damage dice for the attack and compare the results of each die to the appropriate wall: **Soak vs. Physical** attacks, **Presence vs Social** attacks, and **Psyche vs Mental** attacks.
+
+All three of these walls are similar to a levee - it stops damage from getting through. Anything that goes over the top deals damage. When an attacker rolls for damage, he throws a fistful of dice. Each die is compared to the wall. If the number on the die is higher than the wall, it deals damage.
+
+A high Soak, Presence or Psyche makes you extremely resilient and difficult to harm. Any of these sub-stats at 10 means that a rolled die effectively can’t harm you sine you can’t roll higher than a 10 on a d10. This means that someone who dumps 10 points into earth and dedicates those 10 sub-stat points into Soak is going to be relatively indestructible. This is intentional. Anime is stuffed with characters like this.
+
+### Social Attacks
 
 A social attack goes after somebody’s standing. Ridicule, intimidation, manipulation, public pressure, whatever undermines their ability to deal with the people around them.
 
 A weapon has a Damage Rating. Nothing on your belt tells you how hard you can hit someone with a sentence, so that number has to come from somewhere else. It comes from you.
 
-## Your Dice Are Your Training
+#### Your Dice Are Your Training
 
 Whatever Skill you’re using, its Training Tier is how many dice you roll.
 
@@ -265,7 +237,7 @@ Untrained gets one die for the same reason bare fists do. Anyone can say somethi
 
 That’s the whole calculation. Nobody at the table has to rate how good your line was, and you don’t have to be quick on your feet in real life to play somebody who is. Your sheet already said how good they are at this.
 
-## Which Skill, and Which Element
+#### Which Skill, and Which Element
 
 Say what you’re doing and you’ve named the Skill. Name the Skill and you’ve settled the Element too, because every Skill already rolls off a home Element.
 
@@ -277,7 +249,7 @@ As with any Skill, you can argue for a different Element in the moment if you’
 
 After that it runs like a punch. Your Element against their Social Defense to land it, then your dice one at a time against their Presence, rolling high. Every die that gets through costs them a Poise.
 
-## Example
+#### Example: A Social Attack
 
 <div class="box box--text" markdown="1">
 
@@ -287,7 +259,7 @@ Vance has Presence 4, so that is what each die has to beat. Aiden rolls 3, 7, 5 
 
 </div>
 
-## Mental Attacks
+### Mental Attacks
 
 **A Gift is the only way you will ever make one.** That’s the whole rule, and the rest of this section is what it means.
 
@@ -299,7 +271,43 @@ If your character doesn’t have one, Psyche is a wall you have no way to push o
 
 Plenty of things out there are better equipped than you. A nightmare’s cry doesn’t bother with a to-hit roll and throws more dice than any person could bring to bear. Psyche is the wall you will spend the most time hiding behind and the least time attacking.
 
-## Depleting Vital Statistics
+## Ki
+
+### What Ki Is
+
+More than Gifts or Boons, Ki is what sets your character aside from the rest of the world. It is the fuel tank you pull from when the ordinary just isn’t going to cut it. Ki is what takes you from ordinary to extraordinary.
+
+**Ki Pool**: The thing that defines you - your strongest element - is also what defines your Ki Pool. At the start of play, your **Ki Pool is your strongest element+8**. This was an intentional design choice. Nothing else about your build effects your Ki Pool. The Nerdy Hacker and the Brick draw from the same font of power and every character in the game starts with a Ki Pool somewhere between 13 and 18.
+
+This is deliberate. Everyone in 20 Below is supposed to have plenty of Ki to draw upon.
+
+Why is Ki so important? Ki is used in the following ways:
+
+**Gift usage.** Most gifts cost Ki points to use
+
+**Gift Check.** When gift calls for a Gift Check, you roll 2d10 and your current Ki is your target number. There is no Advantage or Disadvantage on this roll. Yes, with experience points, it is possible to have a Ki over 20. Remember - a roll of 20 is a catastrophic failure and will fail even if your target number is 25.
+
+**Preventing Damage**. When you would take damage to one of your vitals (Health, Poise, or Sanity) - you can prevent that damage at the cost of 1 Ki per level of damage.
+
+**Recovering from Vitals Loss**. When one of your Vitals is at zero or below, you may spend 1 Ki point to recover from Dying, Humiliated or Shattered state and gain 1 point of that Vital.
+
+**Boosting Damage**. After you land an attack with a successful 2d10 roll, you can Boost your Damage Dice. To do so, spend 1 Ki point per boosted die and add Ferocity (Physical), Psyche (Mental), or Poise (Social) to the number rolled on the die.
+
+**Bump your Action Bracket**. You can spend Ki points to move quicker. You can bump yourself from a Slow Action to a Normal Action for 1 Ki point and from a Normal Action to a Fast Action for 1 Ki point. This means you can take a Slow Action in the Fast Action Band for 2 Ki points.
+
+**Recovering Ki**: Recover Ki by resting. A Short Rest restores a number of Ki points equal to your Klotho rating, minimum of 1. A Full Night’s Rest recovers all of your Ki. You are playing the big damn heroes of this universe. Ki fuels you. It isn’t a limited resource that you horde.
+
+### Spending Ki on the Dice
+
+While anime is rife with characters that are *Nigh Indestructible™,* it’s also crammed full of characters that can over come it. You’ve seen it - “This isn’t my true power!”
+
+That is why you can boost your damage with Ki. It allows you to roll numbers that are higher than that 10. Roll the damage dice first. With them on the table, you pick which ones to boost, at **1 Ki each**. A boosted die adds your matching sub-stat to its own result - Ferocity for Physical, Presence for Social, Psyche for Mental.
+
+This is how damage gets over the levees. A boosted die from a character with a 10 in Ferocity will deal damage 100% of the time, and a 2 in Ferocity has a 20% chance of topping that wall. The second one isn’t good odds, but it is immeasurably better than the 0% chance you had a second ago.
+
+## Harm and Recovery
+
+### Losing Health, Poise and Sanity
 
 The three health statistics are collectively called the Vital Statistics. Each level you have in Health, Sanity and Poise represent one level of damage. As mentioned above, each Damage Die that makes it over a wall deals knocks out one level of damage. It’s pretty straightforward.
 
@@ -317,7 +325,7 @@ What we haven’t covered is what happens at 0 and below.
 
 So dying here is a thing somebody decides to do to you. Something has to want you dead and be given the time to manage it.
 
-## Recovery
+### Recovery
 
 Recovery takes time. The rules outline three different time frames for recovery.
 
@@ -337,7 +345,9 @@ Short Rest**. You heal Health Levels equal to half your Health, rounded up, mini
 
 **Full Night's Rest.** A full night gets you one Health Level, and only one, however tough you are. At −6 that is six nights before you are back to 0, and only then do the normal rates start again. Poise and Sanity come back to 1, the same as they would on a Short Rest. Nothing down here speeds up with a better night's sleep. Climbing out is meant to cost you time you would rather have spent on something else.
 
-## How Time Works
+## Time
+
+### How Time Works
 
 Time is divided into discrete segments. In order of length, they are a Round, Minute, Hour, Scene, Day, Month, Year, Decade and Century.
 
@@ -359,7 +369,7 @@ Combat is both mechanics with a turn order bolted on. Nothing in this section re
 
 If you skipped straight here because you wanted to hit something, go back and read the two mechanics first. I’ll wait.
 
-## Combat Order
+### Combat Order
 
 **Roll Initiative once**, at the start of the fight: 1d10 plus your Initiative sub-stat, highest first. You do not re-roll it every round. That order holds for the whole fight.
 
@@ -367,7 +377,7 @@ Then, each round, **everyone declares an Action Bracket** - Fast, Normal, or Slo
 
 Then it **resolves band by band.** Everyone in Fast goes, then everyone in Normal, then everyone in Slow. Inside a band, your Initiative order decides who goes first.
 
-## Action Brackets
+### Action Brackets
 
 **Fast** gets one action. You go first, and that’s all you do - a move, an attack, one Skill use.
 
@@ -379,116 +389,7 @@ Fast trades what you can do for when you do it. Slow trades the other direction 
 
 You can spend **1 Ki per step** to bump the band you declared - Slow to Normal, or Normal to Fast. Two Ki moves two steps. A bumped action keeps everything it was: a Called Shot bumped to Fast is still a Called Shot.
 
-## Two Ways to Play
-
-20 Below plays with a map or without one, and the rules are the same either way. Only how you keep track of where everyone stands changes. A table can switch in the same session: a map for the fight in the warehouse, no map for the chase across the rooftops after it.
-
-**Theater of the mind** has no map. The GM describes the scene, you say what you do, and the picture lives in everyone’s head. It still runs on your sheet. The GM keeps rough distances in meters - the dog is about thirty meters off, across the car park - and when you need to know whether you can reach something, you ask how far it is. Close enough is fine. Nobody measures.
-
-**Tactical** play puts the scene on a map. **One hex is one meter**, so your Movement Rate is simply the number of hexes you can move. Print a map at an inch to the meter and the tokens stay true to scale.
-
-Either way, distance falls into four bands, and the band follows from where you end up.
-
-**Melee** is contact, out to about one meter - arm’s reach. On a map, the next hex. 
-**Close** is one to ten meters: the same room, across a bar, the width of an alley. 
-**Near** is ten to fifty - across a street, the length of a corridor, the far side of a car park. 
-**Far** is anything past fifty meters, rooftop to rooftop.
-
-## Moving in a Round
-
-Your **Movement Rate** is 5 plus your Air, in meters. One move takes you that far. Which band you declare decides how many moves you get.
-
-**Fast:** one action. Move your Movement Rate, or do something else and don’t move. 
-**Normal:** a move and one other action. Or two moves - a **Dash**, twice your Movement Rate. Or two other actions and no move at all. 
-**Slow:** one empowered action and a one-meter step. Or a **Sprint**: five times your Movement Rate, and nothing else.
-
-In a Normal round you can split your move around the other action: move, then shoot; shoot, then move; or move, shoot, and move again, as long as the total stays inside your Movement Rate. A Dash and a Sprint don’t split. They’re all movement.
-
-A Sprint goes last, because Slow does - unless you pay for it. Bump it with Ki like any Slow action: one Ki and it runs in the Normal band, two and it runs in Fast. It’s still a Sprint. It just happens sooner.
-
-## Leaving Melee
-
-**You can always just move away.** Nobody gets a free swing at you as you go, and there’s no roll to break off. What it costs you is time. Whatever you were fighting hasn’t gone anywhere, and if it hasn’t acted yet this round, it can follow you and attack - as long as its move reaches you.
-
-So getting clear comes down to **when you go** and **how far you get**. A Fast move goes before anything in the Normal or Slow bands. A long enough move leaves it short. A Sprint gets you furthest, but it goes last unless you bump it, so the thing you’re running from bites first.
-
-If something has you **Grabbed**, you’re not going anywhere until you escape the hold.
-
-You can move through a friend’s space but not an enemy’s, and you never stop in a space someone else is standing in - unless you **Bulldoze** them out of it.
-
-## Getting Low and Taking Cover
-
-**Belly Down** is getting down on purpose, and it costs you nothing. Flat on the ground, you’re a smaller target: **ranged attacks against you are at Disadvantage**. Up close it’s the other way round - **your Melee attacks are at Disadvantage** and **Melee attacks against you gain Advantage**. You can still shoot. Standing back up takes an action.
-
-While you’re Belly Down you can **Crawl**, at two meters of movement for every one you cover.
-
-**Prone** is different. Nobody chooses Prone - it’s what happens when a blow, a fall, or bad footing puts you on the ground. Prone, you **can’t attack** and **every attack against you gains Advantage**, and you can’t crawl. Getting yourself together takes an action.
-
-**Cover** comes in two kinds, and the GM tells you which. Behind **full cover**, anything that needs to see or reach you can’t. Behind **partial cover** - a corner, a car door, a low wall - attacks against you are at **Disadvantage**. Belly Down behind partial cover doesn’t stack into anything worse, but it does hold up when a shooter takes the time to Aim.
-
-## Bad Ground
-
-Not every meter costs a meter.
-
-**Clear** ground - a floor, a road, a lawn - costs what it says. 
-**Rough** ground - mud, deep snow, rubble, undergrowth, knee-deep water - costs two meters of movement for every one. 
-**Wild Land** - bog, a collapsed building, a thicket, drifts past your waist - costs three.
-
-You can push through it. Once a turn, when your movement takes you onto bad ground, roll **Athletics at Difficulty 6**. A success crosses Rough as if it were clear, and Wild Land as if it were Rough - never better. A failure pays the full cost. Athletics is Earth by default, but your Descriptors can argue for another Element, the same as any Skill.
-
-**Footing** is different from ground. Ice, a slick deck, loose scree - walk across it carefully and nothing happens. Dash, Sprint or Bulldoze across it and you roll Athletics at 6, and a failure puts you down Prone.
-
-**Tight spaces** - a crawlspace, a vent, the gap between two buildings - cost double to squeeze through, and while you’re squeezed you can’t attack, and anything attacking you is at Disadvantage. Crawling ignores Rough ground entirely; you crawl through plowed dirt as easily as grass. Wild Land still costs you its three.
-
-## Climbing, Jumping and Swimming
-
-**Climbing** costs two meters for every one you go up. Roll Athletics once a turn at the surface’s Difficulty: a success climbs at your full rate, a failure at double cost, and a roll of 20 means you fall.
-
-**10** - a stepladder, a waist-high wall 
-**9** - a ladder 
-**8** - a tree with low branches, a chain-link fence 
-**7** - a sturdy rope with knots tied in it 
-**6** - a rock face with good holds, a drainpipe 
-**5** - a plain rope, a brick wall with crumbling mortar 
-**4** - a rough stone wall, a rope while carrying someone 
-**3** - an overhang, a crumbling cliff 
-**2** - a sheer, rain-slicked cliff face 
-**1** - smooth concrete, bare ice without tools 
-**0** - vertical glass
-
-Rain, wind or darkness make any of it a step or two harder. Nearly Impossible isn’t impossible, though. The strongest people in this game can climb glass.
-
-**Jumping.** A running long jump clears your Air in meters. Standing, it’s half that. A high jump gets half as high as you can jump forward. To go further, roll Athletics: one extra meter is Difficulty 8, two is 6, three is 4, four is 2, and five is 0. Fall short and you land at your Air distance - and if that’s over the drop, you go down it, unless you land next to an edge. Then you get Athletics at 6 to catch yourself, and climbing out is a climb.
-
-**Swimming** can’t be done untrained. If you don’t have the Swimming Skill and you end up in deep water, the No-air clock starts right away, unless you’ve got hold of something that floats.
-
-If you can swim, you swim at your Movement Rate. Staying up is the hard part. In calm water you get your Stamina in Hours for free; in rough water - a current, waves, or swimming with weight - your Stamina in Minutes. After that, roll Water plus Difficulty once an Hour (or a Minute), starting at 8 in calm water and 6 in rough, one step harder every roll. Each failure is a level of Exhausted, and Exhausted 5 means you go under. Cold water piles its own Exhausted on top, which is how a winter river kills a strong swimmer.
-
-Creatures that fly, swim, climb or burrow do it at the rate on their card, with no extra cost and no roll - unless you changed the ground. Bring the building down, flood the room, throw the caltrops: then it pays like anyone else. When something outclasses you on its own ground, change the ground.
-
-## Chases
-
-A chase is ordinary movement, round after round, with a roll for the route. Everyone declares their movement as usual. Then everyone makes a **Chase roll at Difficulty 6** - Athletics on foot, Driving in a car, Piloting in the air or on the water - and the GM makes it a step or two harder when the route is bad. Being faster doesn’t earn you a bonus; the meters already count your speed.
-
-**One side succeeds and the other fails:** the side that failed hits the fruit stand, and moves at half this round. 
-**Both succeed, or both fail:** everyone moves in full. 
-**A critical success:** you move half again as far.
-
-At a meter or less, you’re caught. Get out of sight - around the corner the GM just described - and you roll **Stealth** against your pursuer’s Perception. Win, and you’ve lost them. Lose, and they’re back on your trail. When you’re the ones chasing, you roll Perception or Tracking against the quarry’s Stealth.
-
-Running is exhausting. A Sprint is running flat out: your Stamina in Rounds for free, then a roll of Water plus Difficulty every Round, starting at 6 and getting harder, with a level of Exhausted for each failure. The fast get away, and so do the sneaky. Everyone else needs a plan.
-
-## Travel
-
-Over hours and days you stop counting rounds and start counting kilometers. You walk **3 plus a fifth of your Air** kilometers an hour on a road or a trail, and your **travel day is 4 plus your Stamina in hours**. That puts a fragile character at about sixteen kilometers a day and the toughest at forty-five - which, not by accident, is what real people manage. A group goes at its slowest member’s pace and stops when its shortest day runs out.
-
-Rough ground halves the day’s distance and Wild Land cuts it to a third. Nobody rolls for it; a whole day on bad ground isn’t one lucky stride.
-
-Walking past your travel day is a **forced march**. Every extra Hour, roll Water plus Difficulty, starting at 7 and one step harder each Hour, and take a level of Exhausted for every failure. A night’s sleep clears it.
-
-Nobody gets lost unless the GM says the country, the weather, or the dark makes it a question. Then it’s a Navigation roll - unless you brought a compass and a map.
-
-## What an Action Buys You
+### What an Action Buys You
 
 Beyond attacking or moving, these are what you can spend an action on. Anything a Gift or a weapon says about its own action cost overrides this list.
 
@@ -522,7 +423,120 @@ And the rest:
 **Draw, swap, stow, use** - getting a weapon out, putting one away, or using a simple item takes an action. 
 **Reload** - depends on the weapon. Magazines, speed-loaders and crossbow cranks take one action. A tube-fed shotgun, loaded shell by shell, takes a full Slow action. A bow pulled from a quiver is free. Each weapon lists its own cost.
 
-## Conditions
+## Movement
+
+### Map or No Map
+
+20 Below plays with a map or without one, and the rules are the same either way. Only how you keep track of where everyone stands changes. A table can switch in the same session: a map for the fight in the warehouse, no map for the chase across the rooftops after it.
+
+**Theater of the mind** has no map. The GM describes the scene, you say what you do, and the picture lives in everyone’s head. It still runs on your sheet. The GM keeps rough distances in meters - the dog is about thirty meters off, across the car park - and when you need to know whether you can reach something, you ask how far it is. Close enough is fine. Nobody measures.
+
+**Tactical** play puts the scene on a map. **One hex is one meter**, so your Movement Rate is simply the number of hexes you can move. Print a map at an inch to the meter and the tokens stay true to scale.
+
+Either way, distance falls into four bands, and the band follows from where you end up.
+
+**Melee** is contact, out to about one meter - arm’s reach. On a map, the next hex. 
+**Close** is one to ten meters: the same room, across a bar, the width of an alley. 
+**Near** is ten to fifty - across a street, the length of a corridor, the far side of a car park. 
+**Far** is anything past fifty meters, rooftop to rooftop.
+
+### Moving in a Round
+
+Your **Movement Rate** is 5 plus your Air, in meters. One move takes you that far. Which band you declare decides how many moves you get.
+
+**Fast:** one action. Move your Movement Rate, or do something else and don’t move. 
+**Normal:** a move and one other action. Or two moves - a **Dash**, twice your Movement Rate. Or two other actions and no move at all. 
+**Slow:** one empowered action and a one-meter step. Or a **Sprint**: five times your Movement Rate, and nothing else.
+
+In a Normal round you can split your move around the other action: move, then shoot; shoot, then move; or move, shoot, and move again, as long as the total stays inside your Movement Rate. A Dash and a Sprint don’t split. They’re all movement.
+
+A Sprint goes last, because Slow does - unless you pay for it. Bump it with Ki like any Slow action: one Ki and it runs in the Normal band, two and it runs in Fast. It’s still a Sprint. It just happens sooner.
+
+### Leaving Melee
+
+**You can always just move away.** Nobody gets a free swing at you as you go, and there’s no roll to break off. What it costs you is time. Whatever you were fighting hasn’t gone anywhere, and if it hasn’t acted yet this round, it can follow you and attack - as long as its move reaches you.
+
+So getting clear comes down to **when you go** and **how far you get**. A Fast move goes before anything in the Normal or Slow bands. A long enough move leaves it short. A Sprint gets you furthest, but it goes last unless you bump it, so the thing you’re running from bites first.
+
+If something has you **Grabbed**, you’re not going anywhere until you escape the hold.
+
+You can move through a friend’s space but not an enemy’s, and you never stop in a space someone else is standing in - unless you **Bulldoze** them out of it.
+
+### Getting Low and Taking Cover
+
+**Belly Down** is getting down on purpose, and it costs you nothing. Flat on the ground, you’re a smaller target: **ranged attacks against you are at Disadvantage**. Up close it’s the other way round - **your Melee attacks are at Disadvantage** and **Melee attacks against you gain Advantage**. You can still shoot. Standing back up takes an action.
+
+While you’re Belly Down you can **Crawl**, at two meters of movement for every one you cover.
+
+**Prone** is different. Nobody chooses Prone - it’s what happens when a blow, a fall, or bad footing puts you on the ground. Prone, you **can’t attack** and **every attack against you gains Advantage**, and you can’t crawl. Getting yourself together takes an action.
+
+**Cover** comes in two kinds, and the GM tells you which. Behind **full cover**, anything that needs to see or reach you can’t. Behind **partial cover** - a corner, a car door, a low wall - attacks against you are at **Disadvantage**. Belly Down behind partial cover doesn’t stack into anything worse, but it does hold up when a shooter takes the time to Aim.
+
+### Bad Ground
+
+Not every meter costs a meter.
+
+**Clear** ground - a floor, a road, a lawn - costs what it says. 
+**Rough** ground - mud, deep snow, rubble, undergrowth, knee-deep water - costs two meters of movement for every one. 
+**Wild Land** - bog, a collapsed building, a thicket, drifts past your waist - costs three.
+
+You can push through it. Once a turn, when your movement takes you onto bad ground, roll **Athletics at Difficulty 6**. A success crosses Rough as if it were clear, and Wild Land as if it were Rough - never better. A failure pays the full cost. Athletics is Earth by default, but your Descriptors can argue for another Element, the same as any Skill.
+
+**Footing** is different from ground. Ice, a slick deck, loose scree - walk across it carefully and nothing happens. Dash, Sprint or Bulldoze across it and you roll Athletics at 6, and a failure puts you down Prone.
+
+**Tight spaces** - a crawlspace, a vent, the gap between two buildings - cost double to squeeze through, and while you’re squeezed you can’t attack, and anything attacking you is at Disadvantage. Crawling ignores Rough ground entirely; you crawl through plowed dirt as easily as grass. Wild Land still costs you its three.
+
+### Climbing, Jumping and Swimming
+
+**Climbing** costs two meters for every one you go up. Roll Athletics once a turn at the surface’s Difficulty: a success climbs at your full rate, a failure at double cost, and a roll of 20 means you fall.
+
+**10** - a stepladder, a waist-high wall 
+**9** - a ladder 
+**8** - a tree with low branches, a chain-link fence 
+**7** - a sturdy rope with knots tied in it 
+**6** - a rock face with good holds, a drainpipe 
+**5** - a plain rope, a brick wall with crumbling mortar 
+**4** - a rough stone wall, a rope while carrying someone 
+**3** - an overhang, a crumbling cliff 
+**2** - a sheer, rain-slicked cliff face 
+**1** - smooth concrete, bare ice without tools 
+**0** - vertical glass
+
+Rain, wind or darkness make any of it a step or two harder. Nearly Impossible isn’t impossible, though. The strongest people in this game can climb glass.
+
+**Jumping.** A running long jump clears your Air in meters. Standing, it’s half that. A high jump gets half as high as you can jump forward. To go further, roll Athletics: one extra meter is Difficulty 8, two is 6, three is 4, four is 2, and five is 0. Fall short and you land at your Air distance - and if that’s over the drop, you go down it, unless you land next to an edge. Then you get Athletics at 6 to catch yourself, and climbing out is a climb.
+
+**Swimming** can’t be done untrained. If you don’t have the Swimming Skill and you end up in deep water, the No-air clock starts right away, unless you’ve got hold of something that floats.
+
+If you can swim, you swim at your Movement Rate. Staying up is the hard part. In calm water you get your Stamina in Hours for free; in rough water - a current, waves, or swimming with weight - your Stamina in Minutes. After that, roll Water plus Difficulty once an Hour (or a Minute), starting at 8 in calm water and 6 in rough, one step harder every roll. Each failure is a level of Exhausted, and Exhausted 5 means you go under. Cold water piles its own Exhausted on top, which is how a winter river kills a strong swimmer.
+
+Creatures that fly, swim, climb or burrow do it at the rate on their card, with no extra cost and no roll - unless you changed the ground. Bring the building down, flood the room, throw the caltrops: then it pays like anyone else. When something outclasses you on its own ground, change the ground.
+
+### Chases
+
+A chase is ordinary movement, round after round, with a roll for the route. Everyone declares their movement as usual. Then everyone makes a **Chase roll at Difficulty 6** - Athletics on foot, Driving in a car, Piloting in the air or on the water - and the GM makes it a step or two harder when the route is bad. Being faster doesn’t earn you a bonus; the meters already count your speed.
+
+**One side succeeds and the other fails:** the side that failed hits the fruit stand, and moves at half this round. 
+**Both succeed, or both fail:** everyone moves in full. 
+**A critical success:** you move half again as far.
+
+At a meter or less, you’re caught. Get out of sight - around the corner the GM just described - and you roll **Stealth** against your pursuer’s Perception. Win, and you’ve lost them. Lose, and they’re back on your trail. When you’re the ones chasing, you roll Perception or Tracking against the quarry’s Stealth.
+
+Running is exhausting. A Sprint is running flat out: your Stamina in Rounds for free, then a roll of Water plus Difficulty every Round, starting at 6 and getting harder, with a level of Exhausted for each failure. The fast get away, and so do the sneaky. Everyone else needs a plan.
+
+### Travel
+
+Over hours and days you stop counting rounds and start counting kilometers. You walk **3 plus a fifth of your Air** kilometers an hour on a road or a trail, and your **travel day is 4 plus your Stamina in hours**. That puts a fragile character at about sixteen kilometers a day and the toughest at forty-five - which, not by accident, is what real people manage. A group goes at its slowest member’s pace and stops when its shortest day runs out.
+
+Rough ground halves the day’s distance and Wild Land cuts it to a third. Nobody rolls for it; a whole day on bad ground isn’t one lucky stride.
+
+Walking past your travel day is a **forced march**. Every extra Hour, roll Water plus Difficulty, starting at 7 and one step harder each Hour, and take a level of Exhausted for every failure. A night’s sleep clears it.
+
+Nobody gets lost unless the GM says the country, the weather, or the dark makes it a question. Then it’s a Navigation roll - unless you brought a compass and a map.
+
+## Conditions and Hazards
+
+### Conditions
 
 Eight states you can be put into. Most of them hurt you by taking dice away. Three of them go further.
 
@@ -546,7 +560,7 @@ Your Poise track runs as far below zero as it does above it - eight Poise means 
 
 **Exhausted.** The only one that stacks. You take levels of it, one through five, from pushing an effort past what your Stamina covers, or from cold, or from heat. **One** is Disadvantage on Physical rolls. **Two** is Disadvantage on everything. **Three** halves your Movement Rate and takes Fast actions away from you. **Four** adds 1 to the cost of every Ki spend. **Five** puts you on the ground, unconscious, until somebody gets you warm, cool, or rested. A Short Rest clears one level. A full night clears the lot.
 
-## Common Hazards
+### Common Hazards
 
 The world hurts people without anybody swinging anything, and all of it runs on the same machinery: a number of d10, one at a time against your Soak, every die that gets through costing a Health Level. The weapon table is the scale. Fists are 1, a knife is 3, an anti-materiel rifle is 5. A hazard is a number on that same line.
 
