@@ -25,6 +25,7 @@ function coversZone(zone, which) {
 
 import { el } from '../ui.js';
 import {
+  adderLabels,
   applyRest,
   boonNotes,
   flawNotes,
@@ -462,7 +463,7 @@ function readField(id, ctx) {
       if (part[2] === 'name') return named(g.name, giftNotes(g));
       if (part[2] === 'ki') return ctx.giftKi(g);
       if (part[2] === 'does') return ctx.giftText(g);
-      if (part[2] === 'adders') return (g.adders || []).join(', ');
+      if (part[2] === 'adders') return adderLabels(g.adders).join(', ');
       return (g.limiters || []).join(', ');
     }
     case 'weapon': {

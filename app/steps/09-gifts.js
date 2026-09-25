@@ -17,6 +17,8 @@ import {
   setSignatureField,
   addSignatureMove,
   removeSignatureMove,
+  adderCount,
+  removeOneAdder,
 } from '../state.js';
 
 function getOrCreateGiftState(state, name) {
@@ -110,6 +112,27 @@ export default {
       if (gift.adders.length) {
         const addersRow = el('div', { style: 'margin:0.25rem 0 0.5rem 0.5rem;' });
         gift.adders.forEach((adder) => {
+          // A repeatable Adder is a count, not a tick: each purchase is one
+          // more entry (Roll Call's roster grows by one soul per purchase).
+          if (adder.repeatable) {
+            const n = adderCount(gState, adder.name);
+            addersRow.appendChild(
+              el('div', { style: 'display:flex;gap:0.4rem;align-items:center;font-size:0.85rem;' }, [
+                el('button', {
+                  type: 'button', text: '-', 'aria-label': `One fewer ${adder.name}`,
+                  disabled: n === 0 ? '' : undefined,
+                  onClick: () => { removeOneAdder(gState, adder.name); rerenderStep(); rerenderPools(); },
+                }),
+                el('span', {}, `${n}`),
+                el('button', {
+                  type: 'button', text: '+', 'aria-label': `One more ${adder.name}`,
+                  onClick: () => { gState.adders.push(adder.name); rerenderStep(); rerenderPools(); },
+                }),
+                el('span', {}, ` ${adder.name} (${adder.tier}, ${adder.points} pts each, can be bought more than once)`),
+              ]),
+            );
+            return;
+          }
           const checked = gState.adders.includes(adder.name);
           addersRow.appendChild(
             el('label', { style: 'display:block;font-size:0.85rem;' }, [

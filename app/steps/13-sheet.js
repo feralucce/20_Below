@@ -16,7 +16,7 @@ import {
   elementAutoSuccesses,
   fateTokenCap,
 } from '../state.js';
-import { SIGNATURE_MOVE, signatureMoves } from '../state.js';
+import { SIGNATURE_MOVE, signatureMoves, adderCount } from '../state.js';
 import buildAdvancementTab from './tab-advancement.js';
 import buildItemPicker from './add-item.js';
 import { buildPagedSheet, loadFieldMap } from '../sheet/paged-sheet.js';
@@ -170,7 +170,7 @@ function buildGiftEntries(state, data) {
         adderTexts.length
           ? el('p', {}, [
               el('strong', {}, 'Adders: '),
-              el('span', { html: adderTexts.map((a) => `${a.name} (${a.tier}) - ${inline(a.text)}`).join('; ') }),
+              el('span', { html: adderTexts.map((a) => { const n = adderCount(g, a.name); return `${a.name}${n > 1 ? ` ×${n}` : ''} (${a.tier}) - ${inline(a.text)}`; }).join('; ') }),
             ])
           : null,
         limiterTexts.length

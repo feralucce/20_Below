@@ -21,6 +21,7 @@ import {
   fateTokensBuyable,
   startingFateTokens,
   canBuyWealthAtCreation,
+  adderCount,
 } from '../state.js';
 import { renderBoonPicker } from './07-boons.js';
 
@@ -231,18 +232,19 @@ export default {
           const addersRow = el('div', { style: 'margin:0.25rem 0 0.5rem 0.5rem;' });
           gift.adders.forEach((adder) => {
             const owned = gState?.adders.includes(adder.name);
+            const count = adderCount(gState, adder.name);
             const boughtHere = (state.discretionaryPurchases.GiftAdders[gift.name] ?? []).includes(adder.name);
             const adderCost = Math.round((adder.points / data.giftLevelCost) * rateGifts);
             addersRow.appendChild(
               el('div', { style: 'display:flex;gap:0.5rem;align-items:center;margin:0.15rem 0;font-size:0.85rem;' }, [
-                el('span', {}, `${adder.name} (${adder.tier}, ${adderCost} Discretionary)${owned ? ' - owned' : ''}`),
-                !owned
+                el('span', {}, `${adder.name} (${adder.tier}, ${adderCost} Discretionary)${owned ? (count > 1 ? ` - owned ×${count}` : ' - owned') : ''}`),
+                !owned || adder.repeatable
                   ? el('button', {
                       type: 'button',
-                      text: 'Buy',
+                      text: owned ? 'Buy another' : 'Buy',
                       disabled: adderCost > discretionaryRemaining(state, data) ? '' : undefined,
                       onClick: () => {
-                        buyDiscretionaryGiftAdder(state, gift.name, adder.name);
+                        buyDiscretionaryGiftAdder(state, gift.name, adder.name, adder.repeatable);
                         rerenderStep();
                         rerenderPools();
                       },

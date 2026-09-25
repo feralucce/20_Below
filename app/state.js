@@ -477,6 +477,24 @@ export function giftLevelCost(data, limiterCount) {
   return Math.max(data.giftLimiterFloor, data.giftLevelCost - limiterCount * data.giftLimiterDiscount);
 }
 
+// A repeatable Adder (Roll Call) appears once in a Gift's `adders` list per
+// purchase, so undoing one purchase takes out one entry, never all of them.
+export function removeOneAdder(gift, adderName) {
+  const i = gift.adders.lastIndexOf(adderName);
+  if (i !== -1) gift.adders.splice(i, 1);
+}
+
+export function adderCount(gift, adderName) {
+  return (gift?.adders ?? []).filter((a) => a === adderName).length;
+}
+
+// "Roll Call ×2" rather than the name twice, wherever Adders are listed.
+export function adderLabels(names) {
+  const counts = new Map();
+  (names ?? []).forEach((n) => counts.set(n, (counts.get(n) ?? 0) + 1));
+  return [...counts].map(([n, c]) => (c > 1 ? `${n} ×${c}` : n));
+}
+
 export function giftPointsSpent(gift, data) {
   const perLevel = giftLevelCost(data, gift.limiters.length);
   const levelCost = gift.level * perLevel;
@@ -679,9 +697,9 @@ export function refundGiftLevel(state, giftName) {
 // Adders bought via Discretionary are tracked separately from a Gift's own
 // `adders` array entry (which just needs the name for display/effect
 // text), same pattern as Advancement's buyAdvancementGiftAdder.
-export function buyDiscretionaryGiftAdder(state, giftName, adderName) {
+export function buyDiscretionaryGiftAdder(state, giftName, adderName, repeatable = false) {
   const g = state.gifts.find((x) => x.name === giftName);
-  if (g && !g.adders.includes(adderName)) g.adders.push(adderName);
+  if (g && (repeatable || !g.adders.includes(adderName))) g.adders.push(adderName);
   const list = (state.discretionaryPurchases.GiftAdders[giftName] ??= []);
   list.push(adderName);
 }
@@ -692,7 +710,7 @@ export function refundDiscretionaryGiftAdder(state, giftName, adderName) {
   if (idx === -1) return;
   list.splice(idx, 1);
   const g = state.gifts.find((x) => x.name === giftName);
-  if (g) g.adders = g.adders.filter((a) => a !== adderName);
+  if (g) removeOneAdder(g, adderName);
 }
 
 export function giftsDiscretionaryContribution(state, data) {
@@ -1219,9 +1237,9 @@ function giftsLevelAdvancementXpSpent(state, data) {
 // `adders` array entry (which just needs the name for display/effect
 // text) so they can be refunded specifically, distinct from any Adder the
 // same Gift already had from creation.
-export function buyAdvancementGiftAdder(state, giftName, adderName) {
+export function buyAdvancementGiftAdder(state, giftName, adderName, repeatable = false) {
   const g = getOrCreateGift(state, giftName);
-  if (!g.adders.includes(adderName)) g.adders.push(adderName);
+  if (repeatable || !g.adders.includes(adderName)) g.adders.push(adderName);
   if (!state.advancementPurchases.GiftAdders) state.advancementPurchases.GiftAdders = {};
   const list = (state.advancementPurchases.GiftAdders[giftName] ??= []);
   list.push(adderName);
@@ -1233,7 +1251,7 @@ export function refundAdvancementGiftAdder(state, giftName, adderName) {
   if (idx === -1) return;
   list.splice(idx, 1);
   const g = state.gifts.find((x) => x.name === giftName);
-  if (g) g.adders = g.adders.filter((a) => a !== adderName);
+  if (g) removeOneAdder(g, adderName);
 }
 
 function giftAddersAdvancementXpSpent(state, data) {

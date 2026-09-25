@@ -93,7 +93,10 @@ export function parseGifts(giftsMd, giftAdderCost) {
           console.warn(`Gift "${title}": Adder line didn't match expected pattern: "${line}"`);
           return null;
         }
-        return { name: m[1], tier: m[2], points: giftAdderCost[m[2]], text: m[3] };
+        // "can be bought more than once" in an Adder's text makes it repeatable:
+        // each purchase is its own entry in the Gift's `adders` list.
+        const repeatable = /can be bought more than once/i.test(m[3]);
+        return { name: m[1], tier: m[2], points: giftAdderCost[m[2]], text: m[3], repeatable };
       })
       .filter(Boolean);
 
