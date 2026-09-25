@@ -115,23 +115,21 @@ export default {
           // A repeatable Adder is a count, not a tick: each purchase is one
           // more entry (Roll Call's roster grows by one soul per purchase).
           if (adder.repeatable) {
-            const n = adderCount(gState, adder.name);
-            addersRow.appendChild(
-              el('div', { style: 'display:flex;gap:0.4rem;align-items:center;font-size:0.85rem;' }, [
-                el('button', {
-                  type: 'button', text: '-', 'aria-label': `One fewer ${adder.name}`,
-                  disabled: n === 0 ? '' : undefined,
-                  onClick: () => { removeOneAdder(gState, adder.name); rerenderStep(); rerenderPools(); },
-                }),
-                el('span', {}, `${n}`),
-                el('button', {
-                  type: 'button', text: '+', 'aria-label': `One more ${adder.name}`,
-                  disabled: adder.points > remaining ? '' : undefined,
-                  onClick: () => { gState.adders.push(adder.name); rerenderStep(); rerenderPools(); },
-                }),
-                el('span', {}, ` ${adder.name} (${adder.tier}, ${adder.points} pts each, can be bought more than once)`),
-              ]),
-            );
+            // The same counter the Gift Levels use, so it looks and behaves
+            // like every other count in the creator. The cap is what the pool
+            // can still pay for.
+            addersRow.appendChild(counterRow({
+              name: adder.name,
+              hint: `${adder.tier}, ${adder.points} pts each, can be bought more than once`,
+              get: () => adderCount(gState, adder.name),
+              set: (v) => {
+                while (adderCount(gState, adder.name) < v) gState.adders.push(adder.name);
+                while (adderCount(gState, adder.name) > v) removeOneAdder(gState, adder.name);
+              },
+              min: 0,
+              max: () => adderCount(gState, adder.name) + Math.floor(remaining / adder.points),
+              onChange: () => { rerenderStep(); rerenderPools(); },
+            }));
             return;
           }
           const checked = gState.adders.includes(adder.name);
