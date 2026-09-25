@@ -53,6 +53,11 @@
   .credits { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
   .credits td { padding: 0.55rem 0.5rem 0.55rem 0; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
   .credits td:first-child { color: var(--text-dim); width: 42%; }
+  h3 { font-size: 1.05rem; margin: 2rem 0 0.7rem; }
+  .decisions { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
+  .decisions th { text-align: left; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); font-weight: 600; padding: 0 0.6rem 0.5rem 0; border-bottom: 1px solid var(--panel-border); }
+  .decisions td { padding: 0.6rem 0.6rem 0.6rem 0; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
+  .decisions td:nth-child(2) { color: var(--text-dim); }
 
   footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
 </style>
@@ -129,8 +134,63 @@
     <figcaption>Getting low adds nothing behind cover, until the shooter takes time to aim. Then it's the only thing still protecting you.</figcaption>
   </figure>
 
+  <h2>How Design Choices Get Made</h2>
+  <p>More than sixty rulings went into this chapter. None of them started as a blank page, and none of them were made by the assistant. Every one followed the same loop.</p>
+  <ol>
+    <li><strong>Audit what the book already promises.</strong> Before any new rule, the assistant read everything the rulebook already said on the subject, including the places that pointed at rules that didn't exist. Snowshoes, a motorcycle's "Chase rolls," gauntlets that resist a "disarm attempt," and a compass that means you're "never lost" are all promises made to players. A new rule has to keep them, so they narrow the options before anyone proposes anything.</li>
+    <li><strong>Lay out real options, with a recommendation.</strong> Each decision came to me as two to four concrete options. Each option had a one-line trade-off and a number where one mattered, like "Frankie 28%, Annie 64%." One was marked as the assistant's recommendation, with its reason.</li>
+    <li><strong>I rule.</strong> Often it's one of the options. Often it isn't: "2, with the conditions in 1," or a version nobody offered. The ruling goes into the decision log with the date and the reason.</li>
+    <li><strong>Throw dice before it's final.</strong> Anything with numbers is simulated against the five benchmark characters and charted. If the chart shows a problem, the problem goes back to step 2.</li>
+  </ol>
+
+  <h3>The principles behind the rulings</h3>
+  <div class="checks">
+    <div class="check"><div class="who">Depth without excess crunch</div><p>Leaving a fight had four options, from "nothing extra" to a contested break-away roll. I chose nothing extra. The turn order already makes running away cost something, so a new roll would add work without adding any decisions.</p></div>
+    <div class="check"><div class="who">Real where it grounds you</div><p>For travel pace I asked for real walking data instead of a guess. The assistant mined real-world benchmarks, and the rule was tuned until every test character landed in the matching real-world range.</p></div>
+    <div class="check"><div class="who">Heroic where it's fun</div><p>The simulation showed the strongest character climbing vertical glass almost half the time. The assistant flagged it as a possible problem. My ruling: "this is anime." Nearly Impossible stays possible for the best.</p></div>
+    <div class="check"><div class="who">A cost is a choice</div><p>Study a Target has no roll: "spending a round is enough. That is a huge spend in combat." A turn given up is already the price. Charging a roll on top would make players pay twice.</p></div>
+    <div class="check"><div class="who">One rule, many uses</div><p>Cover has one rule for every action that gets you behind something. Diving, stepping and crawling into cover all use the same full or partial grades, so players learn it once.</p></div>
+    <div class="check"><div class="who">Counterplay for the outmatched</div><p>A creature ignores terrain it lives in, unless the characters changed the ground. Bring the building down or flood the room, and it pays like anyone else. Players always get a way to fight back.</p></div>
+  </div>
+
+  <h3>Reuse before inventing</h3>
+  <p>A new rule is a new thing to learn, so the first question for any gap was whether a rule the game already had could fill it.</p>
+  <ul>
+    <li><strong>The endurance rule</strong> the book already had (free time, then a roll that gets harder each time) became swimming, running flat out and forced marching. Only the time unit and the starting Difficulty change.</li>
+    <li><strong>Rough ground's "costs double"</strong> became climbing, crawling, squeezing through a gap, and what happens when you fumble a chase roll.</li>
+    <li><strong>The strength contest</strong> used for breaking free of a grip became Grab, Disarm and Bulldoze. Bulldoze came from a concept mined from outside sources and was rebuilt entirely from these parts.</li>
+    <li><strong>The stat-block format</strong> from an earlier revision ("Perception 7 vs. Stealth") became how a chase ends: only the player rolls, with the creature's number as the Difficulty.</li>
+    <li><strong>Advantage's existing stacking rule</strong> already settled how cover and getting low combine. No new rule was needed, only a chart that showed it.</li>
+  </ul>
+
+  <h3>When the numbers push back</h3>
+  <p>Three times a simulation said a draft was wrong. Each time, the fix changed a parameter and kept the idea.</p>
+  <ul>
+    <li><strong>Swimming.</strong> Counted in minutes, nearly everyone had gone under within twenty minutes of calm water. The rule was fine; the clock was wrong. Calm water now runs in hours and rough water in minutes.</li>
+    <li><strong>Chases.</strong> With escape set at a fixed distance, speed decided everything. Changing escape to "out of sight, then Stealth" turned a footrace into a chase.</li>
+    <li><strong>Travel.</strong> The best pace still gave the frailest character a fit hiker's day. The fix was the length of the day, four hours plus Stamina, not the pace.</li>
+  </ul>
+
+  <h3>Where the ruling differed from the recommendation</h3>
+  <p>The assistant recommends and I decide, and the record shows it's not a rubber stamp.</p>
+  <table class="decisions">
+    <thead><tr><th>Question</th><th>Assistant recommended</th><th>I ruled</th></tr></thead>
+    <tbody>
+      <tr><td>Should Full Defense keep its Defense bonus on top of Disadvantage?</td><td>Cut it; the Disadvantage alone is enough</td><td>Keep both. Against a guard dog, Annie is hit 22% of the time instead of 79%.</td></tr>
+      <tr><td>Is Dive for Cover Fast only?</td><td>Yes</td><td>No. In a Normal round you can move in, then hit the deck.</td></tr>
+      <tr><td>Do we need more band-specific actions?</td><td>None</td><td>Add Snap to Cover: a single step into cover, staying on your feet.</td></tr>
+      <tr><td>How should a chase be tracked?</td><td>A range-band track</td><td>Counted in meters, with the band track's end conditions.</td></tr>
+      <tr><td>What does a critical Chase roll do?</td><td>Halve the other side's movement</td><td>Move 1.5 times as far yourself.</td></tr>
+      <tr><td>Where does the forced-march clock start?</td><td>Endurance rolls right after 8 hours</td><td>Stamina hours free past 8. That later became the Stamina-length day, which the assistant proposed and I adopted.</td></tr>
+      <tr><td>What does a creature need when it grabs or gets grabbed?</td><td>Use its Soak as a stand-in for Potence</td><td>Give every creature real sub-stats. A bigger job, added to the to-do list.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Naming is a design choice</h3>
+  <p>A name teaches the rule before the text does, so names got options too. "Attack on the Run" won over "Running Attack" because it fits a pistol and a machete equally, and doesn't suggest a Dash's distance. "Bulldoze" was picked from fourteen candidates. "Belly Down" separates choosing to get low from being knocked flat, which is still "Prone," and that split became a rule of its own: Prone is only ever something that happens to you.</p>
+
   <h2>Checks and Balances</h2>
-  <p>The work ran as a conversation, and both sides caught each other.</p>
+  <p>The work ran as a conversation, and both sides caught each other's mistakes.</p>
   <div class="checks">
     <div class="check"><div class="who">AI held its ground</div><p>I read a table as off by a factor of 1.5. The assistant checked the formula in the rules, the book and the app's code, showed the numbers were right, and then fixed what was actually wrong: the table was correct but needed a second read. The lesson carried forward: always say what each end of a range means.</p></div>
     <div class="check"><div class="who">I caught the AI</div><p>The assistant wrote "a Sprint goes last" as an absolute. I asked whether a Sprint could be boosted. It could, with Ki, like any Slow action, and both drafts were corrected. It also framed movement as a "budget" that blurred the Dash rule; I corrected that too.</p></div>
