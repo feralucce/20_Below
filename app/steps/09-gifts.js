@@ -126,6 +126,7 @@ export default {
                 el('span', {}, `${n}`),
                 el('button', {
                   type: 'button', text: '+', 'aria-label': `One more ${adder.name}`,
+                  disabled: adder.points > remaining ? '' : undefined,
                   onClick: () => { gState.adders.push(adder.name); rerenderStep(); rerenderPools(); },
                 }),
                 el('span', {}, ` ${adder.name} (${adder.tier}, ${adder.points} pts each, can be bought more than once)`),
@@ -134,11 +135,14 @@ export default {
             return;
           }
           const checked = gState.adders.includes(adder.name);
+          // Same guard the Level counter has: nothing the pool can't pay for.
+          const cantAfford = !checked && adder.points > remaining;
           addersRow.appendChild(
             el('label', { style: 'display:block;font-size:0.85rem;' }, [
               el('input', {
                 type: 'checkbox',
                 checked: checked ? '' : undefined,
+                disabled: cantAfford ? '' : undefined,
                 onChange: (e) => {
                   if (e.target.checked) gState.adders.push(adder.name);
                   else gState.adders = gState.adders.filter((a) => a !== adder.name);
@@ -156,11 +160,16 @@ export default {
         const limitersRow = el('div', { style: 'margin:0 0 0.5rem 0.5rem;' });
         gift.limiters.forEach((limiter) => {
           const checked = gState.limiters.includes(limiter.name);
+          // Dropping a Limiter raises the price of every Level already
+          // bought, so it is blocked when the pool can't cover the rise.
+          const rise = gState.level * (giftLevelCost(data, gState.limiters.length - 1) - giftLevelCost(data, gState.limiters.length));
+          const cantDrop = checked && rise > remaining;
           limitersRow.appendChild(
             el('label', { style: 'display:block;font-size:0.85rem;' }, [
               el('input', {
                 type: 'checkbox',
                 checked: checked ? '' : undefined,
+                disabled: cantDrop ? '' : undefined,
                 onChange: (e) => {
                   if (e.target.checked) gState.limiters.push(limiter.name);
                   else gState.limiters = gState.limiters.filter((l) => l !== limiter.name);
