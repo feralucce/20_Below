@@ -919,6 +919,7 @@ Chosen once, at creation, purely cosmetic: the form your raised dead take (bone 
 - **Hungry Grave** (Greater, 6 pts): whenever a thrall you command is destroyed, spend 1 Ki to raise a replacement immediately as a Fast action, instead of waiting for your next Slow action.
 - **Bonecrafter** (Greater, 6 pts): as a Normal action, meld every thrall you currently command into a single, larger creature - a bone giant, a mass of fused corpses, whatever form you choose. Its Health Levels equal the sum of the merged thralls' current Health Levels **+3**; its Attack still uses the same dice rating an individual thrall has at your current Gift Level (Soak and Defense unchanged). It counts as one creature taking one action in the turn order, replacing every merged thrall until it's destroyed - raise a fresh batch of thralls normally afterward.
 - **Shared Suffering** (Greater, 6 pts): once per Scene, when you would drop to 0 Health Levels, spend 2 Ki to instead sacrifice every thrall you currently command and stay at 1 Health Level.
+- **Roll Call** (Greater, 6 pts): when you Raise the Dead, you may instead call **one specific soul** out of the Fray: a named person on your roster. **Roll Call can be bought more than once**, and each purchase adds one soul to the roster. They rise in your Form as a Greater Thrall (Soak 2, Defense 5, Health Levels 3, your Movement Rate, Command Rating = your Gift Level + 1) and keep **every Skill they had in life**, rolled at their Command Rating. They remember, they talk, and they are loyal, but they **never act unless you prompt them**: one prompt per round, Fast or Normal actions only. They can't go more than **Near range** from you. If destroyed, they go back to the Fray, and you can call them again next Scene.
 
 **Limiters**:
 
@@ -926,6 +927,7 @@ Chosen once, at creation, purely cosmetic: the form your raised dead take (bone 
 - **One at a Time**: Necrotic Touch and commanding thralls can't be used in the same round - using one locks out the other until your next turn.
 - **Grave-Bound**: your thralls can never move more than Close range from you - stray past that and they collapse instantly.
 - **No Whispers**: Necrotic Touch's healing never applies - it still deals damage, but grants you nothing back.
+- **Lone Servant**: you never command more than one thrall at a time. Raise the Dead raises one, whatever your Level.
 
 ### Oathbinder
 

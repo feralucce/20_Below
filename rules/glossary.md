@@ -76,6 +76,8 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Flustered** - Where you land at 0 Poise. Every Social roll - and anything else that needs composure - is at Disadvantage until the Scene ends. You can spend an action and a Presence + Difficulty roll to shake it off early.
 
+**The Fray** - The spirit realm, where the dead go.
+
 **Game Master (GM)** - The person running the game. They set the scenes, play everyone who isn’t a player character, decide when to roll and how hard, and have the final call on the rules. Everyone else runs a single character.
 
 **Gift** - A genuinely supernatural ability - magic, psionics, a mutation, a blessing, whatever suits the setting. Each one is a single, specific, named thing rather than a broad category, and each has five levels that stack, the effect getting bigger or stronger as you climb.

@@ -225,6 +225,12 @@ Where you land at 0 Poise. Every Social roll - and anything else that needs comp
 </div>
 
 <div class="gloss" markdown="1">
+<span class="gloss-term">The Fray</span>
+
+The spirit realm, where the dead go.
+</div>
+
+<div class="gloss" markdown="1">
 <span class="gloss-term">Game Master (GM)</span>
 
 The person running the game. They set the scenes, play everyone who isn’t a player character, decide when to roll and how hard, and have the final call on the rules. Everyone else runs a single character.
