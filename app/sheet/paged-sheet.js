@@ -208,7 +208,7 @@ function giftAttack(entry, gift, subStats) {
   if (!source) return null;
   const wall = /(?:vs\.?|against) \*\*(Soak|Presence|Psyche)\*\*/.exec(text)?.[1]
     || WALL_FOR[source];
-  const range = /\*\*(Melee|Near|Far|Distant)\*\* range/.exec(text)?.[1] || '';
+  const range = /\*\*(Melee|Close|Near|Far)\*\* range/.exec(text)?.[1] || '';
   // Level plus half the sub-stat that powers it, rounded down.
   const dice = gift.level + Math.floor((subStats[source] || 0) / 2);
   return { dice, wall, range };
