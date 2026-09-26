@@ -109,6 +109,14 @@ def split_flavour(body):
 def plain(base, takes_title=True):
     """A card: an optional title, then the body."""
     def render(title, body, variant):
+        # "Dash (Normal)" - a plain title with a trailing parenthetical gets
+        # the same label pill a skill's Element does. A bolded title such as
+        # "**Ferocity** (Fire)" is left exactly as written.
+        m = TITLED.match(title.strip()) if "**" not in title else None
+        if takes_title and m:
+            head = title_line(m.group(1).strip())
+            head = head[:-len("</p>")] + '<span class="block-pill">%s</span></p>' % esc(m.group(2).strip())
+            return wrap(cls(base, variant), head + "\n\n" + body.strip())
         head = (title_line(title) + "\n\n") if takes_title and title.strip() else ""
         return wrap(cls(base, variant), head + body.strip())
     return render

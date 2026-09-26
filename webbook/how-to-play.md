@@ -427,18 +427,51 @@ Beyond attacking or moving, these are what you can spend an action on. Anything 
 
 Empowered actions are what a Slow round buys. You get one of them, plus your one-meter step.
 
-<div class="wide" markdown="1">
+<div class="aside aside--pc" markdown="1">
 
-<p class="block-title" markdown="span">Empowered actions</p>
+<p class="block-title" markdown="span">Aim</p>
 
-| Action | What it does |
-|---|---|
-| **Aim** | Advantage on the attack. |
-| **Called Shot** | You hit something specific: a hand, a strap, the weapon they’re pointing at you. No Advantage. |
-| **Study a Target** | No roll; the round is the price. Next round, your first attack on it has Advantage, and that includes a Called Shot. |
-| **Careful Work** | Advantage on a Skill roll made with your whole attention, and it holds round after round on the same job until something interrupts you. |
-| **Brace** | Until your next turn, nothing can Bulldoze you, shove you or knock you down. |
-| **Bulldoze** | Charge at least five meters, and no more than twice your Movement Rate, to drive something out of its space. Roll your Potence in dice against its Soak; each one over shoves it back a meter, and you step in behind it. If nothing gets through, you stop beside it. |
+Advantage on the attack.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Called Shot</p>
+
+You hit something specific: a hand, a strap, the weapon they’re pointing at you. No Advantage.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Study a Target</p>
+
+No roll; the round is the price. Next round, your first attack on it has Advantage, and that includes a Called Shot.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Careful Work</p>
+
+Advantage on a Skill roll made with your whole attention, and it holds round after round on the same job until something interrupts you.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Brace</p>
+
+Until your next turn, nothing can Bulldoze you, shove you or knock you down.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Bulldoze</p>
+
+Charge at least five meters, and no more than twice your Movement Rate, to drive something out of its space. Roll your Potence in dice against its Soak; each one over shoves it back a meter, and you step in behind it. If nothing gets through, you stop beside it.
 
 </div>
 
@@ -448,36 +481,109 @@ You can’t Aim and take a Called Shot in the same round. You can take two round
 
 Special actions belong to one band.
 
-<div class="wide" markdown="1">
+<div class="aside aside--pc" markdown="1">
 
-<p class="block-title" markdown="span">Special actions</p>
+<p class="block-title" markdown="span">Attack on the Run<span class="block-pill">Fast only</span></p>
 
-| Action | Band | What it does |
-|---|---|---|
-| **Attack on the Run** | Fast only | A full move and an attack, with a gun or a blade, anywhere along the way. The attack is at Disadvantage. |
-| **Snap to Cover** | Fast only | A single step into cover beside you, still on your feet. |
-| **Dive for Cover** | Fast or Normal | Fast, you move up to your Movement Rate before anyone slower acts, and land Belly Down. Normal, you make a full move first and then dive. |
-| **Sprint** | Slow only | Five times your Movement Rate, and nothing else. |
+A full move and an attack, with a gun or a blade, anywhere along the way. The attack is at Disadvantage.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Snap to Cover<span class="block-pill">Fast only</span></p>
+
+A single step into cover beside you, still on your feet.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Dive for Cover<span class="block-pill">Fast or Normal</span></p>
+
+Fast, you move up to your Movement Rate before anyone slower acts, and land Belly Down. Normal, you make a full move first and then dive.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Sprint<span class="block-pill">Slow only</span></p>
+
+Five times your Movement Rate, and nothing else.
 
 </div>
 
 #### Everything else
 
-<div class="wide" markdown="1">
+<div class="aside aside--pc" markdown="1">
 
-<p class="block-title" markdown="span">Other actions</p>
+<p class="block-title" markdown="span">Dash<span class="block-pill">Normal</span></p>
 
-| Action | Band | What it does |
-|---|---|---|
-| **Dash** | Normal | Both actions on movement. Up to twice your Movement Rate, nothing else. |
-| **Reckless** |  | free, just declared. Advantage on your attacks this round, and Advantage on everyone’s attacks against you. It is exactly as stupid as it sounds, and every so often it is exactly the right call. |
-| **Full Defense** | Normal | You can’t attack. Your other action can still move you. Attacks against you are at Disadvantage and your Defense drops by 4, floored at 0. |
-| **Grab** |  | from Melee, an attack, then your Potence in dice against its Soak. Any one over and it’s Grabbed. |
-| **Disarm** |  | a Called Shot at what they’re holding, then Potence against Potence to knock it loose. |
-| **Help** |  | your action goes into someone else’s, and their next roll has Advantage. |
-| **Ready** |  | name a trigger and hold your action for it: when it comes through the door. |
-| **Draw, swap, stow, use** |  | getting a weapon out, putting one away, or using a simple item takes an action. |
-| **Reload** |  | depends on the weapon. Magazines, speed-loaders and crossbow cranks take one action. A tube-fed shotgun, loaded shell by shell, takes a full Slow action. A bow pulled from a quiver is free. Each weapon lists its own cost. |
+Both actions on movement. Up to twice your Movement Rate, nothing else.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Reckless</p>
+
+free, just declared. Advantage on your attacks this round, and Advantage on everyone’s attacks against you. It is exactly as stupid as it sounds, and every so often it is exactly the right call.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Full Defense<span class="block-pill">Normal</span></p>
+
+You can’t attack. Your other action can still move you. Attacks against you are at Disadvantage and your Defense drops by 4, floored at 0.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Grab</p>
+
+from Melee, an attack, then your Potence in dice against its Soak. Any one over and it’s Grabbed.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Disarm</p>
+
+a Called Shot at what they’re holding, then Potence against Potence to knock it loose.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Help</p>
+
+your action goes into someone else’s, and their next roll has Advantage.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Ready</p>
+
+name a trigger and hold your action for it: when it comes through the door.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Draw, swap, stow, use</p>
+
+getting a weapon out, putting one away, or using a simple item takes an action.
+
+</div>
+
+<div class="aside aside--pc" markdown="1">
+
+<p class="block-title" markdown="span">Reload</p>
+
+depends on the weapon. Magazines, speed-loaders and crossbow cranks take one action. A tube-fed shotgun, loaded shell by shell, takes a full Slow action. A bow pulled from a quiver is free. Each weapon lists its own cost.
 
 </div>
 
