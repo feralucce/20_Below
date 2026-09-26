@@ -1,11 +1,13 @@
 import { el, counterRow, renderMarkdown, renderSelectedAvailable, describeBoxes } from '../ui.js';
 import {
-  describeFields, describePrompt, describePrompts, describeOptionSlots,
+  describeFields, describePrompt, describePrompts, describeOptionSlots, optionChoiceSpecs,
 } from '../describe-spec.js';
 import {
   setGiftNote,
   giftNotes,
   forcefieldForms,
+  optionChoice,
+  setOptionChoice,
   giftsPoolRemaining,
   giftLevelCost,
   giftPointsSpent,
@@ -314,6 +316,33 @@ export default {
           },
         }));
       }
+      // An Adder or Limiter that asks for an answer at creation gets its
+      // field here, beside the Gift's own, as soon as it is taken.
+      optionChoiceSpecs(gift, giftState).forEach((spec) => {
+        const answers = optionChoice(giftState, spec.option);
+        const prompts = Array.from({ length: spec.count }, (_, i) =>
+          `${spec.option}: ${spec.prompt}${spec.count > 1 ? ` (${i + 1})` : ''}`);
+        card.append(describeBoxes({
+          count: spec.count,
+          prompt: prompts[0],
+          prompts,
+          notes: answers,
+          // Three of nine means three different ones: each slot offers
+          // what the other slots have not already taken.
+          optionsFor: (slot) => {
+            const others = answers.filter((a, i) => i !== slot && a);
+            const list = spec.list.filter((o) => !others.includes(o));
+            return spec.strict ? { list, strict: true } : list;
+          },
+          onChange: (slot, value) => {
+            setOptionChoice(state, gift.name, spec.option, slot, value);
+            persist?.();
+            // A dropdown can redraw without losing anyone's place, and the
+            // other slots need to drop what this one just took.
+            if (spec.strict) rerenderStep();
+          },
+        }));
+      });
       return card;
     }
 

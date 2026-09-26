@@ -752,6 +752,20 @@ tr.purchased td {
   border-style: solid;
 }
 
+/* A closed choice (Forcefield's Form) is a dropdown. Its list is drawn by
+   the system, which paints it light unless told the page is dark - pale
+   options on white, unreadable. Dark scheme, and the panel's own colours
+   on every option. */
+select.describe-box {
+  color-scheme: dark;
+  background-color: var(--panel);
+  cursor: pointer;
+}
+select.describe-box option {
+  background-color: var(--panel);
+  color: var(--text);
+}
+
 /* More than one field on the same entry - a second Animal Companion, a
    fourth Feature - stacked with a little air between them. */
 .describe-list > .describe-box + .describe-box {

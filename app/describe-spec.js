@@ -99,7 +99,9 @@ export const GIFT_DESCRIBE = {
   'Necromancy': { prompt: 'What do your raised dead look like?', count: one },
   'Salvo': { prompt: 'What crosses the gap?', count: one },
   'Swarm': { prompt: 'What do you come apart into?', count: one },
-  'Transmutation': { prompt: 'What do you change, and into what?', count: one },
+  // The rules fix the ritual at creation; what gets changed is decided
+  // each time.
+  'Transmutation': { prompt: 'How do you perform the ritual?', count: one },
 };
 
 /* The fields one entry should show right now: its prompt, and how many
@@ -138,4 +140,72 @@ export function describePrompts(kind, name) {
     : kind === 'flaw' ? FLAW_DESCRIBE
       : GIFT_DESCRIBE;
   return table[name]?.prompts ?? null;
+}
+
+/* Choices an Adder or Limiter makes once, at creation. The rules name
+ * them inside the option's own text ("choose Bleeding or Envenomed at
+ * creation"), so taking the option is not the end of it: the answer has
+ * to be written down somewhere, and the sheet has to say it.
+ *
+ * `strict` lists are the whole answer - the option does something
+ * different for each, so it is a dropdown. The rest suggest the rules'
+ * own examples and leave room to write anything. `count` is how many
+ * answers the option asks for. `from` reads a list out of the Gift's own
+ * rules text, so it follows the book. */
+const DRONE_TYPES = (gift) => [...String(gift?.markdown || '').matchAll(/^\d+\.\s+\*\*([^*:]+)\*\*/gm)]
+  .map((m) => m[1].trim());
+
+export const OPTION_CHOICES = {
+  'Alternate Form': {
+    'Involuntary Trigger': { prompt: 'What sets it off?', list: ['mortal danger', 'strong emotion'] },
+    'Keyed Trigger': { prompt: 'Which item?', list: ['a mask', 'a charm', 'a card'] },
+    'Carried Weakness': { prompt: 'Which weakness?', list: ['fire', 'silver', 'cold iron', 'loud noise'] },
+  },
+  'Conjured Armory': {
+    'Elemental Edge': { prompt: 'Which condition?', list: ['Bleeding', 'Envenomed'], strict: true },
+  },
+  'Drone Swarm': {
+    'Narrow Fabrication': { prompt: 'Which drone type?', from: DRONE_TYPES, strict: true, count: 3 },
+  },
+  'Elemental Manipulation': {
+    'Second Domain': { prompt: 'Which second domain?' },
+  },
+  'Marked for the Hunt': {
+    'Chosen Prey': { prompt: 'Which quarry?', list: ['a species', 'a faction', 'a kind of creature'] },
+  },
+  'Regeneration': {
+    'Bane': { prompt: 'Which source?', list: ['fire', 'silver', 'acid', 'blessed weapons'] },
+  },
+  'Size Change': {
+    'Fixed Direction': { prompt: 'Grow or shrink?', list: ['Only grow', 'Only shrink'], strict: true },
+  },
+  'Swarm': {
+    'Fire Bane': { prompt: 'Which element?', list: ['fire'] },
+  },
+  'Threadspace': {
+    'Chosen Threshold': { prompt: 'Which surface?', list: ['a shadow', 'a mirror', 'a doorframe', 'running water'] },
+  },
+  'Transmutation': {
+    'Single Material': { prompt: 'Which material family?', list: ['earth and stone', 'metal', 'wood and plant fiber', 'water and ice'] },
+  },
+  'Undying Vigor': {
+    'Specific Bane': { prompt: 'Which substance?', list: ['silver', 'a certain herb', 'blessed water'] },
+  },
+};
+
+/* The choice fields one Gift should show now: one entry per Adder or
+ * Limiter it has taken that asks for an answer. */
+export function optionChoiceSpecs(gift, gState) {
+  const table = OPTION_CHOICES[gift?.name];
+  if (!table || !gState) return [];
+  const taken = new Set([...(gState.adders || []), ...(gState.limiters || [])]);
+  return Object.entries(table)
+    .filter(([option]) => taken.has(option))
+    .map(([option, s]) => ({
+      option,
+      prompt: s.prompt,
+      count: s.count || 1,
+      strict: !!s.strict,
+      list: s.from ? s.from(gift) : (s.list || []),
+    }));
 }

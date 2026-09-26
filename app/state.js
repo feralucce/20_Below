@@ -858,6 +858,28 @@ export function boonNotes(boon) { return noteList(boon) ?? []; }
 export function flawNotes(flaw) { return noteList(flaw) ?? []; }
 export function giftNotes(gift) { return noteList(gift) ?? []; }
 
+// Answers an Adder or Limiter asks for at creation (describe-spec.js,
+// OPTION_CHOICES), kept per option on the Gift as a list, because Narrow
+// Fabrication asks for three.
+export function optionChoice(gift, option) {
+  return gift?.choices?.[option] ?? [];
+}
+
+export function setOptionChoice(state, giftName, option, slot, value) {
+  const g = state.gifts.find((x) => x.name === giftName);
+  if (!g) return;
+  g.choices = g.choices || {};
+  const list = [...(g.choices[option] || [])];
+  list[slot] = value;
+  g.choices[option] = list;
+}
+
+// "Elemental Edge (Bleeding)" - an option with its answer, for the sheet.
+export function optionWithChoice(gift, label, option = label) {
+  const picked = optionChoice(gift, option).filter(Boolean);
+  return picked.length ? `${label} (${picked.join(', ')})` : label;
+}
+
 // Forcefield's three Forms, read off the numbered list in its rules text
 // ("1. **Wielded Shield** - ...") so the choice follows the book.
 export function forcefieldForms(data) {

@@ -26,6 +26,7 @@ function coversZone(zone, which) {
 import { el } from '../ui.js';
 import {
   adderLabels,
+  optionWithChoice,
   applyRest,
   applyVitalFloor,
   healthStatus,
@@ -512,8 +513,11 @@ function readField(id, ctx) {
       if (part[2] === 'name') return named(g.name, giftNotes(g));
       if (part[2] === 'ki') return ctx.giftKi(g);
       if (part[2] === 'does') return ctx.giftText(g);
-      if (part[2] === 'adders') return adderLabels(g.adders).join(', ');
-      return (g.limiters || []).join(', ');
+      // An option that made a choice at creation says what it chose.
+      if (part[2] === 'adders') {
+        return adderLabels(g.adders).map((l) => optionWithChoice(g, l, l.replace(/ ×\d+$/, ''))).join(', ');
+      }
+      return (g.limiters || []).map((l) => optionWithChoice(g, l)).join(', ');
     }
     case 'weapon': {
       const w = ctx.weapons[Number(part[1])];
