@@ -235,14 +235,17 @@ field("concept", "para", CONCEPT_X, 204, W - MARGIN - CONCEPT_X, 96, lines=2)
 # low enough to clear the header outright.
 # Resting is a button the app presses. On paper there is nothing to
 # press and nothing to write, so the pills do not print.
-for i, (lab, fid) in enumerate(() if PAPER else
-                               (("SHORT REST", "rest.short"),
-                                ("LONG REST", "rest.long"))):
+# New Scene sits under them in Moira's purple: it clears the Fate Token
+# tally, which is the one count on the sheet that belongs to a Scene.
+for i, (lab, fid, col) in enumerate(() if PAPER else
+                                    (("SHORT REST", "rest.short", ACCENT),
+                                     ("LONG REST", "rest.long", ACCENT),
+                                     ("NEW SCENE", "scene.new", MOIRA))):
     byy = 336 + i * 84
     pp = panel_path(MARGIN, byy, 294, 66, 33)
     add('  <path d="%s" fill="%s" fill-opacity="%g"/>' % (pp, SHADE, VEIL),
-        '  <path d="%s" fill="none" stroke="%s" stroke-width="4.5"/>' % (pp, ACCENT))
-    label(MARGIN + 147, byy + 42, lab, 31, mix(ACCENT, LIFT, 0.4), 3.6, "middle")
+        '  <path d="%s" fill="none" stroke="%s" stroke-width="4.5"/>' % (pp, col))
+    label(MARGIN + 147, byy + 42, lab, 31, mix(col, LIFT, 0.4), 3.6, "middle")
     field(fid, "button", MARGIN, byy, 294, 66)
 
 # --- the centre pentagon, on the emblem's own crossings -------------------

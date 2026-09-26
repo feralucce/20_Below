@@ -1042,6 +1042,21 @@ export function buildPagedSheet(state, data, opts = {}) {
 
     // Resting is the one thing that moves several tracks at once, so it
     // is a button on the sheet rather than a number to walk down by hand.
+    // A new Scene clears the Fate Token tally - the per-Scene limit is
+    // Stamina spends, and this is where the count starts over.
+    if (id === 'scene.new') {
+      host.appendChild(place(el('button', {
+        type: 'button',
+        class: 'sf sf-roll',
+        title: 'New Scene: Fate Tokens spent this Scene back to 0',
+        onClick: () => set(() => {
+          state.fateSpentThisScene = 0;
+          sheetNotice('New Scene: Fate Token spends reset.');
+        }),
+      }), f));
+      return;
+    }
+
     if (id === 'rest.short' || id === 'rest.long') {
       const full = id === 'rest.long';
       host.appendChild(place(el('button', {
