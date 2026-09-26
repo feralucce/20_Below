@@ -83,6 +83,9 @@ export function createInitialState(data) {
     // pool's book total. A table starting above the standard build sets
     // these once at the first step and then builds normally - nothing
     // downstream knows the difference, it just has more to spend.
+    // Set when creation ends with Finish as NPC: whatever each pool still
+    // held at that moment, taken off it for good (see markNpc).
+    npc: null,
     bonusPoints: {
       Attributes: 0,
       Skills: 0,
@@ -260,9 +263,14 @@ export function bonusFor(state, pool) {
   return Number(state.bonusPoints?.[pool]) || 0;
 }
 
+// What an NPC gave up at the end of creation. Zero for a PC.
+export function forfeitFor(state, pool) {
+  return Number(state.npc?.forfeit?.[pool]) || 0;
+}
+
 export function attributePoolRemaining(state, data) {
   const total = data.attributePoolTotal + state.discretionaryExtra.Attributes
-    + bonusFor(state, 'Attributes');
+    + bonusFor(state, 'Attributes') - forfeitFor(state, 'Attributes');
   return total - attributePointsSpent(state, data);
 }
 
@@ -272,7 +280,8 @@ export function subStatPoolRemaining(state, data, attributeName) {
   const attr = data.attributes.find((a) => a.name === attributeName);
   const [subA, subB] = attr.splitsInto;
   const spent = state.subStats[subA] + state.subStats[subB];
-  return state.attributes[attributeName] - spent;
+  return state.attributes[attributeName] - spent
+    - (Number(state.npc?.forfeit?.SubStats?.[attributeName]) || 0);
 }
 
 export function skillPointCost(data, tier, baselineTier) {
@@ -300,7 +309,7 @@ export function skillsPoolRemaining(state, data) {
     return 0 - skillsPointsSpent(state, data);
   }
   const total = data.skillsPoolTotal + state.discretionaryExtra.Skills
-    + bonusFor(state, 'Skills');
+    + bonusFor(state, 'Skills') - forfeitFor(state, 'Skills');
   return total - skillsPointsSpent(state, data);
 }
 
@@ -310,7 +319,7 @@ export function boonsPointsSpent(state) {
 
 export function boonsPoolRemaining(state, data) {
   const total = data.boonsPoolTotal + state.discretionaryExtra.Boons
-    + bonusFor(state, 'Boons');
+    + bonusFor(state, 'Boons') - forfeitFor(state, 'Boons');
   return total - boonsPointsSpent(state);
 }
 
@@ -324,7 +333,7 @@ export function resourcesPointsSpent(state, data) {
 
 export function resourcesPoolRemaining(state, data) {
   const total = data.resourcesPoolTotal + state.discretionaryExtra.Resources
-    + bonusFor(state, 'Resources');
+    + bonusFor(state, 'Resources') - forfeitFor(state, 'Resources');
   return total - resourcesPointsSpent(state, data);
 }
 
@@ -543,7 +552,7 @@ export function giftsPointsSpent(state, data) {
 
 export function giftsPoolRemaining(state, data) {
   const total = data.giftsPoolTotal + giftsDiscretionaryContribution(state, data)
-    + bonusFor(state, 'Gifts');
+    + bonusFor(state, 'Gifts') - forfeitFor(state, 'Gifts');
   return total - giftsPointsSpent(state, data);
 }
 
@@ -874,7 +883,9 @@ export function unspentBoonsPoolPoints(state, data) {
 // genuinely unspent base-pool points, not just "room the pool total was
 // puffed up to allow." Floored at 0 the same way Boons is, defensively.
 export function unspentGiftsPoolPoints(state, data) {
-  return Math.max(0, giftsPoolRemaining(state, data));
+  // An NPC's forfeit only clears the Gifts badge; the leftover it hides
+  // still converts, and is forfeited once, as Discretionary.
+  return Math.max(0, giftsPoolRemaining(state, data) + forfeitFor(state, 'Gifts'));
 }
 
 // The GM's cap (see the Discretionary Points step) applies only to Flaw-earned Discretionary,
@@ -905,7 +916,40 @@ export function discretionaryPointsSpent(state, data) {
 }
 
 export function discretionaryRemaining(state, data) {
-  return discretionaryTotal(state, data) - discretionaryPointsSpent(state, data);
+  return discretionaryTotal(state, data) - discretionaryPointsSpent(state, data)
+    - forfeitFor(state, 'Discretionary');
+}
+
+// ---- NPCs ----
+// An NPC is built on the same pools as a PC but is not owed the whole
+// build: a GM stops when the character is done, and whatever is left is
+// simply not theirs. Finish as NPC takes every pool's remainder off it.
+// Boons and Gifts leftovers already convert into Discretionary, so their
+// badges are cleared but the points themselves are forfeited once, as
+// part of Discretionary. Unmarking gives it all back.
+const NPC_POOLS = ['Attributes', 'Skills', 'Boons', 'Resources', 'Gifts'];
+
+export function markNpc(state, data) {
+  const forfeit = { SubStats: {} };
+  state.npc = { forfeit };
+  NPC_POOLS.forEach((pool) => {
+    const left = allPoolsSummary(state, data).find((p) => p.label === pool).remaining;
+    forfeit[pool] = Math.max(0, left);
+  });
+  data.attributes.forEach((a) => {
+    forfeit.SubStats[a.name] = Math.max(0, subStatPoolRemaining(state, data, a.name));
+  });
+  forfeit.Discretionary = Math.max(0, discretionaryRemaining(state, data));
+}
+
+export function unmarkNpc(state) {
+  state.npc = null;
+}
+
+export function npcPointsRemoved(state) {
+  const f = state.npc?.forfeit ?? {};
+  const sub = Object.values(f.SubStats ?? {}).reduce((a, b) => a + b, 0);
+  return (f.Attributes || 0) + (f.Skills || 0) + (f.Resources || 0) + (f.Discretionary || 0) + sub;
 }
 
 export function skillTierName(data, tier) {

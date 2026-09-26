@@ -1,4 +1,4 @@
-import { createInitialState, mergeCharacterState, allPoolsSummary, clampFateTokenPurchases } from './state.js';
+import { createInitialState, mergeCharacterState, allPoolsSummary, clampFateTokenPurchases, markNpc } from './state.js';
 import { el, poolBadge } from './ui.js';
 import { loadRulesData } from './rules-data.js';
 import { isDesktopApp } from './desktop-storage.js';
@@ -68,6 +68,7 @@ const footer = document.querySelector('.wizard-controls');
 const poolSummary = document.getElementById('pool-summary');
 const btnBack = document.getElementById('btn-back');
 const btnNext = document.getElementById('btn-next');
+const btnNpc = document.getElementById('btn-npc');
 const btnNew = document.getElementById('btn-new');
 const btnSave = document.getElementById('btn-save');
 const loadSelect = document.getElementById('load-select');
@@ -359,6 +360,7 @@ async function main() {
       btnBack.disabled = currentStep === 0;
       btnNext.disabled = false;
       btnNext.textContent = currentStep === LAST_CREATE_STEP ? 'Finish' : 'Next';
+      btnNpc.hidden = currentStep !== LAST_CREATE_STEP;
     }
     rerenderPools();
   }
@@ -495,6 +497,12 @@ async function main() {
       return;
     }
     // The end of the last step is the end of creation.
+    mode = 'sheet';
+    rerenderStep();
+  });
+  // An NPC ends creation the same way, minus whatever it did not spend.
+  btnNpc.addEventListener('click', () => {
+    markNpc(state, data);
     mode = 'sheet';
     rerenderStep();
   });

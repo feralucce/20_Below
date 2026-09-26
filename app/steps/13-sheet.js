@@ -15,6 +15,8 @@ import {
   elementCritSteps,
   elementAutoSuccesses,
   fateTokenCap,
+  npcPointsRemoved,
+  unmarkNpc,
 } from '../state.js';
 import { SIGNATURE_MOVE, signatureMoves, adderCount } from '../state.js';
 import buildAdvancementTab from './tab-advancement.js';
@@ -591,7 +593,7 @@ export default {
   // Advancement stays below the pages: spending XP is building a
   // character, not playing one, and there is nowhere on a printed page to
   // put it.
-  async render(container, { state, data, persist }) {
+  async render(container, { state, data, persist, rerenderStep, rerenderPools }) {
     persistSheet = persist ?? (() => {});
     initPlayState(state, data);
     // A page wants the window, not the reading column the forms use.
@@ -734,7 +736,30 @@ export default {
     await loadFieldMap();
     draw();
 
+    // Finish as NPC took the leftovers; this says so, and gives them back
+    // if the character turns out to be a PC after all.
+    const removed = npcPointsRemoved(state);
+    const npcNote = state.npc ? el('div', { class: 'npc-notice' }, [
+      el('p', {}, [
+        el('strong', {}, 'NPC. '),
+        removed
+          ? `${removed} unspent point${removed === 1 ? ' was' : 's were'} removed at the end of creation.`
+          : 'Every point was spent, so nothing was removed.',
+      ]),
+      el('button', {
+        type: 'button',
+        class: 'file-link',
+        text: 'Make a PC again',
+        onClick: () => {
+          unmarkNpc(state);
+          rerenderStep?.();
+          rerenderPools?.();
+        },
+      }),
+    ]) : '';
+
     container.append(
+      npcNote,
       el('h2', {}, 'Character Sheet'),
       el('p', { class: 'attr-caption' },
         'Click a Skill, a Gift, a Resource or a weapon to roll it. The − and + '

@@ -329,8 +329,31 @@ select.file-link:disabled:hover {
   75% { opacity: 1; }
 }
 
+/* Finish as NPC throws points away, so it wears the update LED's look -
+   the same glow and flicker - rather than passing for a second Finish. */
+.wizard-controls #btn-npc {
+  font-family: "Consolas", monospace;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--danger);
+  background: transparent;
+  border: 1px solid var(--danger);
+  text-shadow: 0 0 6px var(--danger), 0 0 14px var(--danger);
+  box-shadow: 0 0 8px var(--danger);
+  animation: version-led-flicker 3.2s infinite steps(1, end);
+}
+
+.wizard-controls #btn-npc:hover,
+.wizard-controls #btn-npc:focus-visible {
+  color: #fff;
+  background: var(--danger);
+  animation: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .version-led.needs-update { animation: none; opacity: 0.6; }
+  .wizard-controls #btn-npc { animation: none; }
 }
 
 .step-nav {
@@ -1791,4 +1814,22 @@ tr.purchased td {
 .bonus-base {
   font-size: 0.8rem;
   color: var(--text-dim);
+}
+
+.npc-notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border: 1px solid var(--panel-border);
+  border-left: 4px solid var(--accent-dim);
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 0.6rem 1rem;
+  margin: 0 0 1rem;
+}
+
+.npc-notice p {
+  margin: 0;
 }
