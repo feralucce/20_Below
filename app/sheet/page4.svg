@@ -91,6 +91,9 @@
   <rect x="1581" y="1212" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="1638" y="1212" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="1695" y="1212" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
+  <rect x="1752" y="1212" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
+  <text x="1857" y="1248" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">-</text>
+  <text x="1947" y="1248" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">+</text>
   <rect x="2079" y="1212" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="165" y="1302" width="560" height="3" fill="#5C7488" fill-opacity="0.7"/>
   <rect x="794.5" y="1266" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
@@ -103,6 +106,9 @@
   <rect x="1581" y="1266" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="1638" y="1266" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="1695" y="1266" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
+  <rect x="1752" y="1266" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
+  <text x="1857" y="1302" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">-</text>
+  <text x="1947" y="1302" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">+</text>
   <rect x="2079" y="1266" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="165" y="1356" width="560" height="3" fill="#5C7488" fill-opacity="0.7"/>
   <rect x="794.5" y="1320" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
@@ -115,6 +121,9 @@
   <rect x="1581" y="1320" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="1638" y="1320" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="1695" y="1320" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
+  <rect x="1752" y="1320" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
+  <text x="1857" y="1356" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">-</text>
+  <text x="1947" y="1356" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">+</text>
   <rect x="2079" y="1320" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="165" y="1410" width="560" height="3" fill="#5C7488" fill-opacity="0.7"/>
   <rect x="794.5" y="1374" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
@@ -127,6 +136,9 @@
   <rect x="1581" y="1374" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="1638" y="1374" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="1695" y="1374" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
+  <rect x="1752" y="1374" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
+  <text x="1857" y="1410" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">-</text>
+  <text x="1947" y="1410" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">+</text>
   <rect x="2079" y="1374" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="165" y="1464" width="560" height="3" fill="#5C7488" fill-opacity="0.7"/>
   <rect x="794.5" y="1428" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
@@ -139,6 +151,9 @@
   <rect x="1581" y="1428" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="1638" y="1428" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
   <rect x="1695" y="1428" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
+  <rect x="1752" y="1428" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#9FB4C4" stroke-width="4.2" stroke-opacity="1"/>
+  <text x="1857" y="1464" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">-</text>
+  <text x="1947" y="1464" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">+</text>
   <rect x="2079" y="1428" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="4.2" stroke-opacity="1"/>
   <path d="M159 1524 H2391 A42 42 0 0 1 2433 1566 V3096 A42 42 0 0 1 2391 3138 H159 A42 42 0 0 1 117 3096 V1566 A42 42 0 0 1 159 1524 Z" fill="#01050A" fill-opacity="0.55"/>
   <path d="M159 1524 H2391 A42 42 0 0 1 2433 1566 V3096 A42 42 0 0 1 2391 3138 H159 A42 42 0 0 1 117 3096 V1566 A42 42 0 0 1 159 1524 Z" fill="none" stroke="#E0A85C" stroke-width="5"/>

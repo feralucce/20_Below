@@ -54,9 +54,17 @@ for i in range(5):
     slot(MARGIN + 1176, y - 39, 96, 51, STEEL)
     field("armour.%d.hardness" % i, "text", MARGIN + 1176, y - 39, 96, 51,
           slot=i, centre=True)
-    pips(MARGIN + 1350, y - 36, 5, sized(45, 48), STEEL, sized(12, 9))
-    field("armour.%d.health" % i, "pips", MARGIN + 1350, y - 36, 5 * 57 - 12, 45,
-          slot=i, n=5, size=45, gap=12, color=STEEL)
+    # Six, not five: the heaviest suits in the book carry 6 Health Levels.
+    pips(MARGIN + 1350, y - 36, 6, sized(45, 48), STEEL, sized(12, 9))
+    field("armour.%d.health" % i, "pips", MARGIN + 1350, y - 36, 6 * 57 - 12, 45,
+          slot=i, n=6, size=45, gap=12, color=STEEL)
+    # Armour takes damage one Level an attack, so it gets the Vitals' -
+    # and +. Screen only: on paper the pips are crossed off by hand.
+    for gx, glyph, key in ((1740, "-", "minus"), (1830, "+", "plus")):
+        if not PAPER:
+            label(MARGIN + gx, y, glyph, 42, DIM, 0, "middle")
+        field("armour.%d.health.%s" % (i, key), "button", MARGIN + gx - 30, y - 45,
+              60, 60, slot=i)
     box(MARGIN + 1962, y - 36, sized(45, 48), RED, 4.2, 9)
     field("armour.%d.broken" % i, "check", MARGIN + 1962, y - 36, 45, 45,
           slot=i, color=RED)

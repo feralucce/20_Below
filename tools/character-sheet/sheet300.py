@@ -58,6 +58,9 @@ BODY = "Montserrat, 'Segoe UI', system-ui, sans-serif"
 EARTH, AIR, FIRE, WATER, MOIRA = "#8A6D4E", "#A8C9E0", "#E0663F", "#078F9B", "#A06FD1"
 SOC, MENT = "#D99A3D", "#A06FD1"
 C_OK, C_GOLD, C_AIR = "#6FBF73", "#E0A85C", "#6FB8E0"
+# Exhausted is the one Pool that only ever hurts. It wore Earth brown,
+# which sat dull and flat beside Ki and Fate; red says what it is.
+EXH = "#E0685C"
 GREEN = "#7BC47F"
 
 # On screen these are veils of near-black over the background art. On
@@ -91,7 +94,7 @@ def mix(a, b, t):
 if PAPER:
     ACCENT = CYAN = GREEN = on_paper(ACCENT)
     EARTH = AIR = FIRE = WATER = MOIRA = INK
-    SOC = MENT = C_OK = C_GOLD = C_AIR = INK
+    SOC = MENT = C_OK = C_GOLD = C_AIR = EXH = INK
     # Secondary text stays one grey rather than going to full ink, so a
     # caption still reads as a caption with no colour left to say so.
     DIM = RULE = READ = MUTED
@@ -106,9 +109,9 @@ ELEMENTS = [
 FIGURED = [("DEFENCE", "10 - Atropos", ACCENT), ("SOCIAL DEF", "10 - Psyche", SOC),
            ("MENTAL DEF", "10 - Presence", MENT), ("MOVEMENT", "5 + Air, metres", GREEN),
            ("CARRY", "Potence^2 x 10 kg", EARTH)]
-VIT = [("HEALTH LEVELS", C_OK, "5 + HEALTH", "0 UNCONSCIOUS, BELOW DYING"),
-       ("POISE", C_GOLD, "5 + PRESENCE", "0 FLUSTERED, BELOW HUMILIATED"),
-       ("SANITY", C_AIR, "5 + PSYCHE", "0 OVERWHELMED, BELOW SHATTERED")]
+VIT = [("HEALTH LEVELS", C_OK, "5 + HEALTH", "UNCONSCIOUS, DYING"),
+       ("POISE", C_GOLD, "5 + PRESENCE", "FLUSTERED, HUMILIATED"),
+       ("SANITY", C_AIR, "5 + PSYCHE", "OVERWHELMED, SHATTERED")]
 
 P = []
 FIELDS = []
@@ -215,12 +218,15 @@ field("page.number", "text", W - MARGIN - 600, 150, 600, 48, size=33, align="end
 
 # Who this is, before anything it can do. No rules under either one:
 # they are printed from the character, not written on.
-label(MARGIN + mark_w + 63, 252, "NAME", 31, DIM, 3.9)
-field("name", "text", MARGIN + mark_w + 207, 216, 723, 48, size=33)
 # A concept is a sentence, not a word. It starts where the title ends -
 # measured off the rendered art at 957 - which lines the two up and
 # leaves it the whole width of the page for two comfortable lines.
 CONCEPT_X = 957
+label(MARGIN + mark_w + 63, 252, "NAME", 31, DIM, 3.9)
+# The name stops short of the CONCEPT label. It used to run 723 wide,
+# straight over the label and into the concept itself.
+NAME_X = MARGIN + mark_w + 207
+field("name", "text", NAME_X, 216, CONCEPT_X - 174 - 24 - NAME_X, 48, size=33)
 label(CONCEPT_X - 174, 252, "CONCEPT", 31, DIM, 3.9)
 field("concept", "para", CONCEPT_X, 204, W - MARGIN - CONCEPT_X, 96, lines=2)
 
@@ -368,8 +374,8 @@ frame(px0, by, PW, BH, CYAN, "POOLS")
 # Spaced off the block rather than off a pitch: the boxes are 72 deep and
 # the caption above the next row needs its own air, so each row is placed
 # where it actually clears the one before it.
-for lab, col, note, dy in (("KI", CYAN, "TOP ELEMENT + 8", 126),
-                           ("FATE TOKENS", MOIRA, "HELD: STAMINA x 3", 270)):
+for lab, col, note, dy in (("KI", CYAN, "TOP ELEMENT + 8", 120),
+                           ("FATE TOKENS", MOIRA, "HELD: STAMINA x 3", 255)):
     y = by + dy
     label(px0 + 48, y, lab, 33, mix(col, LIFT, 0.45), 4.2)
     label(px0 + 348, y, note, 29, DIM, 2.7)
@@ -395,13 +401,15 @@ for lab, col, note, dy in (("KI", CYAN, "TOP ELEMENT + 8", 126),
         field("pool.fate.spent", "text", px0 + 672, y + 24, 72, 72,
               pool="fate", readonly=True)
 
-ey = by + 414
-label(px0 + 48, ey, "EXHAUSTED", 33, mix(EARTH, LIFT, 0.45), 4.2)
+# Exhausted sat 12 units off the frame's bottom edge, which read as
+# crowded. All three rows move up so it clears the edge by 36.
+ey = by + 390
+label(px0 + 48, ey, "EXHAUSTED", 33, mix(EXH, LIFT, 0.45), 4.2)
 label(px0 + 348, ey, "STACKS 1-5", 29, DIM, 2.7)
 field("exhausted", "pips", px0 + 48, ey + 24, 5 * 72 - 18, 54, n=5, size=54, gap=18,
-      color=EARTH)
+      color=EXH)
 for i in range(5):
-    box(px0 + 48 + i * 72, ey + 24, 54, EARTH)
+    box(px0 + 48 + i * 72, ey + 24, 54, EXH)
 stepper(px0 + 450, ey + 63, "-", "exhausted.minus", px0 + 420, ey + 21)
 stepper(px0 + 534, ey + 63, "+", "exhausted.plus", px0 + 504, ey + 21)
 

@@ -90,7 +90,7 @@
   <text x="159" y="2700" font-family="'Segoe UI Semibold', 'Segoe UI', Montserrat, system-ui, sans-serif" font-size="45" font-weight="700" fill="#FFFFFF" text-anchor="start">VITALS</text>
   <text x="165" y="2766" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="33" letter-spacing="4.2" fill="#6FBF73" text-anchor="start">HEALTH LEVELS</text>
   <text x="597" y="2766" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.3" fill="#8CCC8F" text-anchor="start">5 + HEALTH</text>
-  <text x="867" y="2766" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="29" letter-spacing="2.7" fill="#8FADBE" text-anchor="start">0 UNCONSCIOUS, BELOW DYING</text>
+  <text x="867" y="2766" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="29" letter-spacing="2.7" fill="#8FADBE" text-anchor="start">UNCONSCIOUS, DYING</text>
   <rect x="165" y="2790" width="45" height="45" rx="9" fill="#6FBF73" fill-opacity="0.16" stroke="#6FBF73" stroke-width="3.9"/>
   <rect x="222" y="2790" width="45" height="45" rx="9" fill="#6FBF73" fill-opacity="0.16" stroke="#6FBF73" stroke-width="3.9"/>
   <rect x="279" y="2790" width="45" height="45" rx="9" fill="#6FBF73" fill-opacity="0.16" stroke="#6FBF73" stroke-width="3.9"/>
@@ -113,7 +113,7 @@
   <text x="1317" y="2826" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">+</text>
   <text x="165" y="2886" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="33" letter-spacing="4.2" fill="#E0A85C" text-anchor="start">POISE</text>
   <text x="597" y="2886" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.3" fill="#E6B97D" text-anchor="start">5 + PRESENCE</text>
-  <text x="867" y="2886" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="29" letter-spacing="2.7" fill="#8FADBE" text-anchor="start">0 FLUSTERED, BELOW HUMILIATED</text>
+  <text x="867" y="2886" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="29" letter-spacing="2.7" fill="#8FADBE" text-anchor="start">FLUSTERED, HUMILIATED</text>
   <rect x="165" y="2910" width="45" height="45" rx="9" fill="#E0A85C" fill-opacity="0.16" stroke="#E0A85C" stroke-width="3.9"/>
   <rect x="222" y="2910" width="45" height="45" rx="9" fill="#E0A85C" fill-opacity="0.16" stroke="#E0A85C" stroke-width="3.9"/>
   <rect x="279" y="2910" width="45" height="45" rx="9" fill="#E0A85C" fill-opacity="0.16" stroke="#E0A85C" stroke-width="3.9"/>
@@ -136,7 +136,7 @@
   <text x="1317" y="2946" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">+</text>
   <text x="165" y="3006" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="33" letter-spacing="4.2" fill="#6FB8E0" text-anchor="start">SANITY</text>
   <text x="597" y="3006" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.3" fill="#8CC6E6" text-anchor="start">5 + PSYCHE</text>
-  <text x="867" y="3006" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="29" letter-spacing="2.7" fill="#8FADBE" text-anchor="start">0 OVERWHELMED, BELOW SHATTERED</text>
+  <text x="867" y="3006" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="29" letter-spacing="2.7" fill="#8FADBE" text-anchor="start">OVERWHELMED, SHATTERED</text>
   <rect x="165" y="3030" width="45" height="45" rx="9" fill="#6FB8E0" fill-opacity="0.16" stroke="#6FB8E0" stroke-width="3.9"/>
   <rect x="222" y="3030" width="45" height="45" rx="9" fill="#6FB8E0" fill-opacity="0.16" stroke="#6FB8E0" stroke-width="3.9"/>
   <rect x="279" y="3030" width="45" height="45" rx="9" fill="#6FB8E0" fill-opacity="0.16" stroke="#6FB8E0" stroke-width="3.9"/>
@@ -160,30 +160,30 @@
   <path d="M1701 2634 H2391 A42 42 0 0 1 2433 2676 V3096 A42 42 0 0 1 2391 3138 H1701 A42 42 0 0 1 1659 3096 V2676 A42 42 0 0 1 1701 2634 Z" fill="#01050A" fill-opacity="0.55"/>
   <path d="M1701 2634 H2391 A42 42 0 0 1 2433 2676 V3096 A42 42 0 0 1 2391 3138 H1701 A42 42 0 0 1 1659 3096 V2676 A42 42 0 0 1 1701 2634 Z" fill="none" stroke="#3FD0E0" stroke-width="5"/>
   <text x="1701" y="2700" font-family="'Segoe UI Semibold', 'Segoe UI', Montserrat, system-ui, sans-serif" font-size="45" font-weight="700" fill="#FFFFFF" text-anchor="start">POOLS</text>
-  <text x="1707" y="2760" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="33" letter-spacing="4.2" fill="#95E5EE" text-anchor="start">KI</text>
-  <text x="2007" y="2760" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="29" letter-spacing="2.7" fill="#8FADBE" text-anchor="start">TOP ELEMENT + 8</text>
-  <rect x="1707" y="2784" width="72" height="72" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="5.4"/>
-  <text x="1797" y="2835" font-family="Montserrat, 'Segoe UI', system-ui, sans-serif" font-size="36" font-weight="500" fill="#8FADBE" text-anchor="start">/</text>
-  <rect x="1833" y="2784" width="72" height="72" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="5.4"/>
-  <text x="1959" y="2832" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">-</text>
-  <text x="2043" y="2832" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">+</text>
-  <text x="1707" y="2904" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="33" letter-spacing="4.2" fill="#CBB0E6" text-anchor="start">FATE TOKENS</text>
-  <text x="2007" y="2904" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="29" letter-spacing="2.7" fill="#8FADBE" text-anchor="start">HELD: STAMINA x 3</text>
-  <rect x="1707" y="2928" width="72" height="72" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#A06FD1" stroke-width="5.4"/>
-  <text x="1797" y="2979" font-family="Montserrat, 'Segoe UI', system-ui, sans-serif" font-size="36" font-weight="500" fill="#8FADBE" text-anchor="start">/</text>
-  <rect x="1833" y="2928" width="72" height="72" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#A06FD1" stroke-width="5.4"/>
-  <text x="1959" y="2976" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">-</text>
-  <text x="2043" y="2976" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">+</text>
-  <text x="2103" y="2958" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="start">SPENT</text>
-  <text x="2103" y="2988" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="start">THIS SCENE</text>
-  <rect x="2331" y="2928" width="72" height="72" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#A06FD1" stroke-width="5.4"/>
-  <text x="1707" y="3048" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="33" letter-spacing="4.2" fill="#BFAF9E" text-anchor="start">EXHAUSTED</text>
-  <text x="2007" y="3048" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="29" letter-spacing="2.7" fill="#8FADBE" text-anchor="start">STACKS 1-5</text>
-  <rect x="1707" y="3072" width="54" height="54" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#8A6D4E" stroke-width="5.4"/>
-  <rect x="1779" y="3072" width="54" height="54" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#8A6D4E" stroke-width="5.4"/>
-  <rect x="1851" y="3072" width="54" height="54" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#8A6D4E" stroke-width="5.4"/>
-  <rect x="1923" y="3072" width="54" height="54" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#8A6D4E" stroke-width="5.4"/>
-  <rect x="1995" y="3072" width="54" height="54" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#8A6D4E" stroke-width="5.4"/>
-  <text x="2109" y="3111" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">-</text>
-  <text x="2193" y="3111" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">+</text>
+  <text x="1707" y="2754" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="33" letter-spacing="4.2" fill="#95E5EE" text-anchor="start">KI</text>
+  <text x="2007" y="2754" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="29" letter-spacing="2.7" fill="#8FADBE" text-anchor="start">TOP ELEMENT + 8</text>
+  <rect x="1707" y="2778" width="72" height="72" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="5.4"/>
+  <text x="1797" y="2829" font-family="Montserrat, 'Segoe UI', system-ui, sans-serif" font-size="36" font-weight="500" fill="#8FADBE" text-anchor="start">/</text>
+  <rect x="1833" y="2778" width="72" height="72" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#3FD0E0" stroke-width="5.4"/>
+  <text x="1959" y="2826" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">-</text>
+  <text x="2043" y="2826" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">+</text>
+  <text x="1707" y="2889" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="33" letter-spacing="4.2" fill="#CBB0E6" text-anchor="start">FATE TOKENS</text>
+  <text x="2007" y="2889" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="29" letter-spacing="2.7" fill="#8FADBE" text-anchor="start">HELD: STAMINA x 3</text>
+  <rect x="1707" y="2913" width="72" height="72" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#A06FD1" stroke-width="5.4"/>
+  <text x="1797" y="2964" font-family="Montserrat, 'Segoe UI', system-ui, sans-serif" font-size="36" font-weight="500" fill="#8FADBE" text-anchor="start">/</text>
+  <rect x="1833" y="2913" width="72" height="72" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#A06FD1" stroke-width="5.4"/>
+  <text x="1959" y="2961" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">-</text>
+  <text x="2043" y="2961" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">+</text>
+  <text x="2103" y="2943" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="start">SPENT</text>
+  <text x="2103" y="2973" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3.6" fill="#8FADBE" text-anchor="start">THIS SCENE</text>
+  <rect x="2331" y="2913" width="72" height="72" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#A06FD1" stroke-width="5.4"/>
+  <text x="1707" y="3024" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="33" letter-spacing="4.2" fill="#EEACA5" text-anchor="start">EXHAUSTED</text>
+  <text x="2007" y="3024" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="29" letter-spacing="2.7" fill="#8FADBE" text-anchor="start">STACKS 1-5</text>
+  <rect x="1707" y="3048" width="54" height="54" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#E0685C" stroke-width="5.4"/>
+  <rect x="1779" y="3048" width="54" height="54" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#E0685C" stroke-width="5.4"/>
+  <rect x="1851" y="3048" width="54" height="54" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#E0685C" stroke-width="5.4"/>
+  <rect x="1923" y="3048" width="54" height="54" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#E0685C" stroke-width="5.4"/>
+  <rect x="1995" y="3048" width="54" height="54" rx="14" fill="#01050A" fill-opacity="0.55" stroke="#E0685C" stroke-width="5.4"/>
+  <text x="2109" y="3087" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">-</text>
+  <text x="2193" y="3087" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="42" letter-spacing="0" fill="#8FADBE" text-anchor="middle">+</text>
 </svg>

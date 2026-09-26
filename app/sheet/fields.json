@@ -2,7 +2,7 @@
  "width": 2550,
  "height": 3300,
  "pages": 5,
- "version": "c711ba9a09",
+ "version": "2d9d5c6819",
  "repeat": [
   {
    "page": 3,
@@ -28,7 +28,7 @@
    "page": 1,
    "x": 435.3,
    "y": 216,
-   "w": 723,
+   "w": 323.7,
    "h": 48,
    "size": 33
   },
@@ -534,7 +534,7 @@
    "kind": "text",
    "page": 1,
    "x": 1707,
-   "y": 2784,
+   "y": 2778,
    "w": 72,
    "h": 72,
    "pool": "ki"
@@ -544,7 +544,7 @@
    "kind": "text",
    "page": 1,
    "x": 1833,
-   "y": 2784,
+   "y": 2778,
    "w": 72,
    "h": 72,
    "pool": "ki",
@@ -555,7 +555,7 @@
    "kind": "button",
    "page": 1,
    "x": 1929,
-   "y": 2787,
+   "y": 2781,
    "w": 60,
    "h": 60,
    "pool": "ki"
@@ -565,7 +565,7 @@
    "kind": "button",
    "page": 1,
    "x": 2013,
-   "y": 2787,
+   "y": 2781,
    "w": 60,
    "h": 60,
    "pool": "ki"
@@ -575,7 +575,7 @@
    "kind": "text",
    "page": 1,
    "x": 1707,
-   "y": 2928,
+   "y": 2913,
    "w": 72,
    "h": 72,
    "pool": "fate"
@@ -585,7 +585,7 @@
    "kind": "text",
    "page": 1,
    "x": 1833,
-   "y": 2928,
+   "y": 2913,
    "w": 72,
    "h": 72,
    "pool": "fate",
@@ -596,7 +596,7 @@
    "kind": "button",
    "page": 1,
    "x": 1929,
-   "y": 2931,
+   "y": 2916,
    "w": 60,
    "h": 60,
    "pool": "fate"
@@ -606,7 +606,7 @@
    "kind": "button",
    "page": 1,
    "x": 2013,
-   "y": 2931,
+   "y": 2916,
    "w": 60,
    "h": 60,
    "pool": "fate"
@@ -616,7 +616,7 @@
    "kind": "text",
    "page": 1,
    "x": 2331,
-   "y": 2928,
+   "y": 2913,
    "w": 72,
    "h": 72,
    "pool": "fate",
@@ -627,20 +627,20 @@
    "kind": "pips",
    "page": 1,
    "x": 1707,
-   "y": 3072,
+   "y": 3048,
    "w": 342,
    "h": 54,
    "n": 5,
    "size": 54,
    "gap": 18,
-   "color": "#8A6D4E"
+   "color": "#E0685C"
   },
   {
    "id": "exhausted.minus",
    "kind": "button",
    "page": 1,
    "x": 2079,
-   "y": 3069,
+   "y": 3045,
    "w": 60,
    "h": 60
   },
@@ -649,7 +649,7 @@
    "kind": "button",
    "page": 1,
    "x": 2163,
-   "y": 3069,
+   "y": 3045,
    "w": 60,
    "h": 60
   },
@@ -3598,13 +3598,33 @@
    "page": 4,
    "x": 1467,
    "y": 1212,
-   "w": 273,
+   "w": 330,
    "h": 45,
    "slot": 0,
-   "n": 5,
+   "n": 6,
    "size": 45,
    "gap": 12,
    "color": "#9FB4C4"
+  },
+  {
+   "id": "armour.0.health.minus",
+   "kind": "button",
+   "page": 4,
+   "x": 1827,
+   "y": 1203,
+   "w": 60,
+   "h": 60,
+   "slot": 0
+  },
+  {
+   "id": "armour.0.health.plus",
+   "kind": "button",
+   "page": 4,
+   "x": 1917,
+   "y": 1203,
+   "w": 60,
+   "h": 60,
+   "slot": 0
   },
   {
    "id": "armour.0.broken",
@@ -3688,13 +3708,33 @@
    "page": 4,
    "x": 1467,
    "y": 1266,
-   "w": 273,
+   "w": 330,
    "h": 45,
    "slot": 1,
-   "n": 5,
+   "n": 6,
    "size": 45,
    "gap": 12,
    "color": "#9FB4C4"
+  },
+  {
+   "id": "armour.1.health.minus",
+   "kind": "button",
+   "page": 4,
+   "x": 1827,
+   "y": 1257,
+   "w": 60,
+   "h": 60,
+   "slot": 1
+  },
+  {
+   "id": "armour.1.health.plus",
+   "kind": "button",
+   "page": 4,
+   "x": 1917,
+   "y": 1257,
+   "w": 60,
+   "h": 60,
+   "slot": 1
   },
   {
    "id": "armour.1.broken",
@@ -3778,13 +3818,33 @@
    "page": 4,
    "x": 1467,
    "y": 1320,
-   "w": 273,
+   "w": 330,
    "h": 45,
    "slot": 2,
-   "n": 5,
+   "n": 6,
    "size": 45,
    "gap": 12,
    "color": "#9FB4C4"
+  },
+  {
+   "id": "armour.2.health.minus",
+   "kind": "button",
+   "page": 4,
+   "x": 1827,
+   "y": 1311,
+   "w": 60,
+   "h": 60,
+   "slot": 2
+  },
+  {
+   "id": "armour.2.health.plus",
+   "kind": "button",
+   "page": 4,
+   "x": 1917,
+   "y": 1311,
+   "w": 60,
+   "h": 60,
+   "slot": 2
   },
   {
    "id": "armour.2.broken",
@@ -3868,13 +3928,33 @@
    "page": 4,
    "x": 1467,
    "y": 1374,
-   "w": 273,
+   "w": 330,
    "h": 45,
    "slot": 3,
-   "n": 5,
+   "n": 6,
    "size": 45,
    "gap": 12,
    "color": "#9FB4C4"
+  },
+  {
+   "id": "armour.3.health.minus",
+   "kind": "button",
+   "page": 4,
+   "x": 1827,
+   "y": 1365,
+   "w": 60,
+   "h": 60,
+   "slot": 3
+  },
+  {
+   "id": "armour.3.health.plus",
+   "kind": "button",
+   "page": 4,
+   "x": 1917,
+   "y": 1365,
+   "w": 60,
+   "h": 60,
+   "slot": 3
   },
   {
    "id": "armour.3.broken",
@@ -3958,13 +4038,33 @@
    "page": 4,
    "x": 1467,
    "y": 1428,
-   "w": 273,
+   "w": 330,
    "h": 45,
    "slot": 4,
-   "n": 5,
+   "n": 6,
    "size": 45,
    "gap": 12,
    "color": "#9FB4C4"
+  },
+  {
+   "id": "armour.4.health.minus",
+   "kind": "button",
+   "page": 4,
+   "x": 1827,
+   "y": 1419,
+   "w": 60,
+   "h": 60,
+   "slot": 4
+  },
+  {
+   "id": "armour.4.health.plus",
+   "kind": "button",
+   "page": 4,
+   "x": 1917,
+   "y": 1419,
+   "w": 60,
+   "h": 60,
+   "slot": 4
   },
   {
    "id": "armour.4.broken",
