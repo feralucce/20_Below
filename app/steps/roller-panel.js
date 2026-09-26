@@ -148,8 +148,8 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}, pre
     const defaultEl = defaultElementFor(selectedSkill);
     attributeNote.textContent =
       selectedAttribute === defaultEl
-        ? `Using ${defaultEl}, this Skill's default.`
-        : `Challenging the default (${defaultEl}) with ${selectedAttribute} - needs a matching Descriptor.`;
+        ? `Using ${defaultEl}, this Skill's default. Use your Descriptors to argue a different Element.`
+        : `Using ${selectedAttribute} instead of ${defaultEl} - argued with one of your Descriptors.`;
   }
 
   const attributeGroup = el('div', { class: 'attribute-radio-group' });

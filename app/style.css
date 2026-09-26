@@ -1621,6 +1621,24 @@ select.describe-box option {
   padding-right: calc(var(--u) * 82);
 }
 
+/* A Skill row carries its Element after the name. The dice's room moves
+   to the row so the tag sits before them, and the name gives way first. */
+.sf-text.sf-skill.sf-roll-room {
+  padding-right: calc(var(--u) * 82);
+}
+.sf-text.sf-skill.sf-roll-room > .sf-clip {
+  padding-right: 0;
+}
+.sf-el {
+  flex: none;
+  margin-left: 0.45em;
+  font-size: 0.6em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
 .sf-roll:hover,
 .sf-roll:focus-visible {
   background: rgba(61, 132, 196, 0.28);
@@ -1957,4 +1975,15 @@ select.describe-box option {
 .sf-edit:focus {
   outline: none;
   border-color: var(--accent);
+}
+
+/* Backstory and Notes are where a player writes at length. Every other
+   multi-line box on the sheet clips at its edge; these scroll instead,
+   so the page holds as much as anyone wants to write, a line at a time
+   on the printed rules. */
+textarea.sf-edit {
+  overflow-y: auto;
+  resize: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--panel-border) transparent;
 }

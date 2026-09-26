@@ -25,6 +25,7 @@ function coversZone(zone, which) {
 
 import { el } from '../ui.js';
 import {
+  retiredSkills,
   adderLabels,
   optionWithChoice,
   giftMenuBuilds,
@@ -101,10 +102,40 @@ function pageSequence(counts) {
 // the order they should print, so slot N on the page is entry N here.
 // ---------------------------------------------------------------------------
 
+// Each Element's colour as the sheet's own panels print it, lifted a
+// little so a small word still reads against the page.
+const SKILL_ELEMENT_COLOURS = {
+  Earth: '#c2a27e',
+  Air: '#a8c9e0',
+  Fire: '#f08a63',
+  Water: '#3fbcc6',
+  Moira: '#b98ce0',
+  Retired: '#e0685c',
+};
+
+// Jack of all Trades (boons.md): every Skill is at least Trained, and Tier
+// 1 (5 points) also caps every Skill at Trained. The sheet cannot list all
+// 77, so it shows what was bought at the tier it actually rolls at, and
+// one row for the rest.
+function jackOfAllTrades(state) {
+  const b = (state.boons || []).find((x) => x.name === 'Jack of all Trades');
+  return b ? { capped: b.points === 5 } : null;
+}
+
 function takenSkills(state, data) {
+  const joat = jackOfAllTrades(state);
+  const rolled = (tier) => {
+    if (!joat) return tier;
+    const floored = Math.max(tier, 2);
+    return joat.capped ? Math.min(floored, 2) : floored;
+  };
   return data.skillCatalog
     .filter((s) => state.skills[s.name] > 0)
-    .map((s) => ({ name: s.name, tier: state.skills[s.name] }));
+    .map((s) => ({ name: s.name, tier: rolled(state.skills[s.name]), element: s.defaultElement }))
+    .concat(joat ? [{ name: 'Every other Skill (Jack of all Trades)', tier: 2, joat: true }] : [])
+    // A Skill that has left the rules is still on the character until the
+    // player removes it, so it is still on the sheet - marked.
+    .concat(retiredSkills(state, data).map((r) => ({ ...r, element: 'Retired', retired: true })));
 }
 
 function takenResources(state, data) {
@@ -1140,7 +1171,11 @@ export function buildPagedSheet(state, data, opts = {}) {
     const [group, idx, leaf] = part;
     if (leaf !== 'name') return null;
     const i = Number(idx);
-    if (group === 'skill' && ctx.skills[i]) return { kind: 'skill', label: ctx.skills[i].name };
+    // A retired Skill has no Element and no place in the roller, and the
+    // Jack of all Trades row is every Skill at once, not one to roll.
+    if (group === 'skill' && ctx.skills[i] && !ctx.skills[i].retired && !ctx.skills[i].joat) {
+      return { kind: 'skill', label: ctx.skills[i].name };
+    }
     if (group === 'gift' && ctx.gifts[i]) return { kind: 'gift', label: ctx.gifts[i].name };
     if (group === 'resource' && ctx.resources[i]?.pushable) {
       return { kind: 'resource', label: ctx.resources[i].name };
@@ -1232,6 +1267,19 @@ export function buildPagedSheet(state, data, opts = {}) {
         const node = textControl(f, value);
         // A row with dice at its end has that much less room for its name.
         if (rollSpecFor(id.split('.'))) node.classList.add('sf-roll-room');
+        // A Skill says which Element it rolls on, beside its name - the
+        // number a player adds is the Element's, so it has to be in reach.
+        const skillRow = id.match(/^skill\.(\d+)\.name$/);
+        const skill = skillRow && ctx.skills[Number(skillRow[1])];
+        if (skill?.element) {
+          const known = SKILL_ELEMENT_COLOURS[skill.element];
+          const tag = el('span', { class: 'sf-el' }, known || skill.retired ? skill.element : 'Any');
+          tag.title = skill.retired ? `${skill.name} is ${skill.note}`
+            : known ? `Rolls on ${skill.element}` : 'Rolls on whichever Element fits';
+          if (known) tag.style.color = known;
+          node.classList.add('sf-skill');
+          node.appendChild(tag);
+        }
         overlay.appendChild(node);
       }
       else if (f.kind === 'para') overlay.appendChild(paraControl(f, value));
