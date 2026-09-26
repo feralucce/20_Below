@@ -630,57 +630,81 @@ Nobody gets lost unless the GM says the country, the weather, or the dark makes 
 
 Eight states you can be put into. Most of them hurt you by taking dice away. Three of them go further.
 
-#### Off Balance
+<div class="aside aside--danger" markdown="1">
+
+<p class="block-title" markdown="span">Off Balance</p>
 
 You rolled a catastrophic failure in combat. You roll everything at Disadvantage until the end of your next turn. It does not stack, it clears on its own, and a Fate Token spent to Shrug Off an Effect clears it early - though it never undoes whatever else went wrong on that roll. The Never Off Balance Boon lets you reroll the failure that caused it.
 
-#### Distracted
+</div>
+
+<div class="aside aside--danger" markdown="1">
+
+<p class="block-title" markdown="span">Distracted</p>
 
 You lose a Health Level, or get hit by a Kotodama, while resolving a Slow action. Roll Atropos plus Difficulty to hold your concentration. Succeed and the action goes off as declared. Fail and it drops to a Normal action, losing whatever its empowered action gave.
 
 Other things can make you Distracted too - a Gift, a collapsing building, an explosion right next to your head. Same roll. Outside a Slow action, failing means Disadvantage on whatever triggered it instead. The Concentration Boon makes you immune to all of it.
 
-#### Surprised
+</div>
+
+<div class="aside aside--danger" markdown="1">
+
+<p class="block-title" markdown="span">Surprised</p>
 
 You didn’t see it coming, usually because someone’s Stealth beat your Perception. You roll everything at Disadvantage for the rest of that round. It clears when the round ends. The Alertness Boon makes you immune while you’re conscious.
 
-#### Flustered
+</div>
+
+<div class="aside aside--danger" markdown="1">
+
+<p class="block-title" markdown="span">Flustered</p>
 
 Your Poise hit 0. You roll all Social rolls at Disadvantage, and anything else where keeping your composure matters, for the rest of the Scene. You can spend an action on a Presence plus Difficulty roll to pull yourself together early.
 
-#### Humiliated
+</div>
+
+<div class="aside aside--danger" markdown="1">
+
+<p class="block-title" markdown="span">Humiliated</p>
 
 Your Poise went below 0, and this is the one that doesn’t just cost you dice. You can’t take the lead, you can’t negotiate, and nobody is going to let you speak for the group - you defer and you comply. Your body works fine. You’ll swing a sword all day. This is social paralysis, not physical. It clears when your Poise climbs back to 0.
 
 Your Poise track runs as far below zero as it does above it - eight Poise means Humiliated all the way down to minus seven. **Hit the bottom of it and something gives.** Your Poise resets to 0, which puts you back to Flustered rather than back on your feet, and you take **a point of Sanity**. No roll, no wall - your Psyche does not defend against this, because this is not something being done to your mind. It is your standing in the room finally coming apart, and taking a piece of you with it. A point of Ki still stops it, the same as it stops anything else.
 
-#### Overwhelmed
+</div>
+
+<div class="aside aside--danger" markdown="1">
+
+<p class="block-title" markdown="span">Overwhelmed</p>
 
 Your Sanity hit 0. You pick up a temporary mental Flaw - you and the GM agree what it is - and you roll everything at Disadvantage. You can still act, and you’re still yourself. It clears when you’re out of whatever did it to you and get a chance to rest, or for 1 Ki, which refills your Sanity on the way out.
 
-#### Shattered
+</div>
+
+<div class="aside aside--danger" markdown="1">
+
+<p class="block-title" markdown="span">Shattered</p>
 
 Your Sanity went below 0, and this is the other one that doesn’t just cost you dice. You’re panicky and babbling and you can’t act on your own - somebody has to lead you, or drag you. It clears for 1 Ki or a rest, but either one only brings your Sanity back to 1, not full, and going below 0 always leaves a permanent mental scar however you climb out of it.
 
-#### Exhausted
+</div>
 
-The only one that stacks. You take levels of it, one through five, from pushing an effort past what your Stamina covers, or from cold, or from heat. 
-
-<div class="wide" markdown="1">
+<div class="aside aside--danger" markdown="1">
 
 <p class="block-title" markdown="span">Exhausted</p>
 
-| Level | Effect |
-|---|---|
-| **1** | Disadvantage on Physical rolls |
-| **2** | Disadvantage on everything |
-| **3** | Your Movement Rate is halved, and you lose Fast actions |
-| **4** | Every Ki spend costs 1 more |
-| **5** | On the ground, unconscious, until somebody gets you warm, cool, or rested |
+The only one that stacks. You take levels of it, one through five, from pushing an effort past what your Stamina covers, or from cold, or from heat. 
 
-</div>
+- **1**: Disadvantage on Physical rolls
+- **2**: Disadvantage on everything
+- **3**: Your Movement Rate is halved, and you lose Fast actions
+- **4**: Every Ki spend costs 1 more
+- **5**: On the ground, unconscious, until somebody gets you warm, cool, or rested
 
 A Short Rest clears one level. A full night clears the lot.
+
+</div>
 
 ### Common Hazards
 
