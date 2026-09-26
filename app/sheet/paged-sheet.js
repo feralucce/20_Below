@@ -1279,6 +1279,15 @@ export function buildPagedSheet(state, data, opts = {}) {
           if (known) tag.style.color = known;
           node.classList.add('sf-skill');
           node.appendChild(tag);
+          // Name and tag share the row with the dice. A long name gives up
+          // type size rather than letters, so "Combat Driving/Piloting"
+          // is read whole instead of ending in an ellipsis. The widths are
+          // Montserrat's average letter and the tag's small capitals, in em.
+          const room = f.w - (rollSpecFor(id.split('.')) ? 82 : 0);
+          const ems = skill.name.length * 0.62 + 0.5 + tag.textContent.length * 0.6 * 0.8;
+          const base = Math.min(f.h * 0.7, 42);
+          const fit = Math.min(base, (room * 0.97) / ems);
+          if (fit < base) node.style.fontSize = typeSize(fit, 7, fit);
         }
         overlay.appendChild(node);
       }
