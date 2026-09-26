@@ -959,6 +959,34 @@ Center of Mass. Hardness 2, 2 Health Levels. Tailored into a suit; survives a gl
 
 <div class="item" markdown="1">
 
+<p class="item-name" markdown="span">Ballistic briefcase<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Leather over rated panels. One tug on the handle and it drops open into a shield as long as your torso.
+
+</div>
+
+Center of Mass. Hardness 4, 2 Health Levels. Front arc only, one hand; a Fast action to unfold, and folded it's a briefcase.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Ballistic cap insert<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A curved plate of hard fiber cut to sit inside an ordinary baseball cap.
+
+</div>
+
+Head. Hardness 2, 1 Health Level. Hidden in a baseball cap; no penalty.
+
+</div>
+
+<div class="item" markdown="1">
+
 <p class="item-name" markdown="span">Ballistic helmet<span class="item-wr">WR 2</span></p>
 
 <div class="item-flavour" markdown="1">
@@ -1010,6 +1038,20 @@ Riveted rings, twenty pounds of them, worn over padding because the alternative 
 </div>
 
 Center of Mass + Arms. Hardness 4, 3 Health Levels. Disadvantage on Stealth rolls while worn.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Chainmail dive suit<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Stainless steel mesh from scalp to ankle, made for divers who work among sharks.
+
+</div>
+
+All four. Hardness 4, 3 Health Levels. Blades, claws and teeth only, no bonus vs. firearms; worn in water without penalty.
 
 </div>
 
@@ -1099,6 +1141,20 @@ All four. Hardness 3, 2 Health Levels. Negates Disadvantage from toxic/biologica
 
 <div class="item" markdown="1">
 
+<p class="item-name" markdown="span">Knee and elbow pads<span class="item-wr">WR 1</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Hard caps on neoprene sleeves, the kind a skater or a SWAT team buys in bulk.
+
+</div>
+
+Arms + Legs. Hardness 2, 1 Health Level. Worn over or under clothing; no penalty.
+
+</div>
+
+<div class="item" markdown="1">
+
 <p class="item-name" markdown="span">Leather cuirass<span class="item-wr">WR 1</span></p>
 
 <div class="item-flavour" markdown="1">
@@ -1122,6 +1178,20 @@ Textile with CE armour in the shoulders, elbows and back. Reads as a jacket beca
 </div>
 
 Center of Mass + Arms. Hardness 3, 2 Health Levels. Worn openly, no Stealth penalty, doesn’t look like armor.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Motorcycle leathers<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A one-piece race suit, armor sewn in at the spine, shoulders, elbows and knees, scuffed from the last time it met the road.
+
+</div>
+
+Center of Mass + Arms + Legs. Hardness 3, 2 Health Levels. One-piece; worn openly, no Stealth penalty, doesn't look like armor.
 
 </div>
 
@@ -1220,6 +1290,20 @@ A plate carrier with hard plates front and back and pouches across the front.
 </div>
 
 Center of Mass. Hardness 5, 3 Health Levels. Disadvantage on Stealth rolls while worn.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Turnout gear<span class="item-wr">WR 2</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Firefighter's bunker gear: coat, trousers, hood and helmet, heavy, reflective, and rated to walk into a fire.
+
+</div>
+
+All four. Hardness 3, 2 Health Levels. Movement Rate -2; Disadvantage on Stealth rolls; its Hardness also stands against Burning room and On fire dice, and it negates Exhausted from heat the way cold-weather gear negates cold (not from going without water).
 
 </div>
 
@@ -4049,6 +4133,20 @@ All four. Hardness 8, 6 Health Levels. Movement Rate -4; Disadvantage on all Phy
 
 </div>
 
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Covert plate vest<span class="item-wr">WR 3</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Thin rifle plates in a carrier cut to vanish under a jacket, bought from a man who does not ask what size you are.
+
+</div>
+
+Center of Mass. Hardness 5, 2 Health Levels. Worn under a jacket, no penalty; survives a glance, not a pat-down. Requires Black Market Access 2.
+
+</div>
+
 ### The Black Market - Basic Weapons
 
 <div class="item" markdown="1">
@@ -4547,15 +4645,43 @@ Center of Mass. Hardness 7, 4 Health Levels. A projected barrier on a worn rig; 
 
 <div class="item" markdown="1">
 
-<p class="item-name" markdown="span">Powered combat armor<span class="item-wr">WR 5</span></p>
+<p class="item-name" markdown="span">Deployable armor case<span class="item-wr">WR 5</span></p>
 
 <div class="item-flavour" markdown="1">
 
-A sealed powered suit, a foot taller than its wearer, with its own reactor and air.
+A hard-shell case the size of carry-on luggage that unfolds around you, plate by plate, and seals at the throat.
 
 </div>
 
-All four. Hardness 8, 6 Health Levels. Single item, sets all four Zones; sealed with its own air; Disadvantage on Stealth rolls; Movement Rate -1. Nobody mistakes you for a person. Requires Black Market Access 5.
+All four. Hardness 6, 4 Health Levels. Single item, sets all four Zones; carried as a hard case, a Slow action to climb into, a Normal action to shed; Movement Rate -1. Requires Black Market Access 5.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Reactive plate vest<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+Tiles of explosive laminate over a steel back plate. It stops the round by throwing itself at it.
+
+</div>
+
+Center of Mass. Hardness 8, 2 Health Levels. Each time it loses a Health Level it blows outward: everyone else in Melee range takes 1 die against Soak; Disadvantage on Stealth rolls. Requires Black Market Access 5.
+
+</div>
+
+<div class="item" markdown="1">
+
+<p class="item-name" markdown="span">Shear-thickening suit<span class="item-wr">WR 4</span></p>
+
+<div class="item-flavour" markdown="1">
+
+A suit of ordinary-looking cloth soaked in a fluid that goes hard as stone the instant anything hits it.
+
+</div>
+
+Center of Mass + Arms + Legs. Hardness 5, 3 Health Levels. Soft as cloth until it's struck; reads as clothing, no penalty. Requires Black Market Access 4.
 
 </div>
 

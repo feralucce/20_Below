@@ -100,18 +100,23 @@ Purpose-built protective gear only - ordinary clothing, even sturdy clothing, do
 |---|---|---|---|---|---|
 | Armored coat | Center of Mass | 3 | 2 | Reads as clothing; no penalty | 2 |
 | Armored suit lining | Center of Mass | 2 | 2 | Tailored into a suit; survives a glance, not a pat-down | 2 |
+| Ballistic briefcase | Center of Mass | 4 | 2 | Front arc only, one hand; a Fast action to unfold, and folded it's a briefcase | 2 |
+| Ballistic cap insert | Head | 2 | 1 | Hidden in a baseball cap; no penalty | 1 |
 | Ballistic helmet | Head | 4 | 2 |  | 2 |
 | Ballistic shield | Center of Mass | 6 | 4 | Front arc only, requires both hands | 3 |
 | Brigandine | Center of Mass | 4 | 3 |  | 2 |
 | Chainmail | Center of Mass + Arms | 4 | 3 | Disadvantage on Stealth rolls while worn | 2 |
+| Chainmail dive suit | All four | 4 | 3 | Blades, claws and teeth only, no bonus vs. firearms; worn in water without penalty | 2 |
 | Concealable vest | Center of Mass | 3 | 2 | Worn under clothing, no penalty | 2 |
 | Full tactical rig | Center of Mass + Head | 6 | 5 | Single item, sets both Zones; Disadvantage on Stealth rolls; Movement Rate -2 while worn | 2 |
 | Gambeson | Center of Mass | 2 | 2 | Worn under other armor without penalty | 1 |
 | Gauntlets | Arms | 2 | 1 | Advantage resisting disarm attempts | 1 |
 | Greaves | Legs | 2 | 1 |  | 1 |
 | Hazmat suit | All four | 3 | 2 | Negates Disadvantage from toxic/biological hazards; Movement Rate -2 | 2 |
+| Knee and elbow pads | Arms + Legs | 2 | 1 | Worn over or under clothing; no penalty | 1 |
 | Leather cuirass | Center of Mass | 2 | 2 | No Stealth penalty | 1 |
 | Motorcycle armor jacket | Center of Mass + Arms | 3 | 2 | Worn openly, no Stealth penalty, doesn't look like armor | 2 |
+| Motorcycle leathers | Center of Mass + Arms + Legs | 3 | 2 | One-piece; worn openly, no Stealth penalty, doesn't look like armor | 2 |
 | Plate armor | Center of Mass + Arms + Legs | 6 | 4 | Movement Rate -2 while worn | 2 |
 | Riot exoskeleton | Center of Mass + Arms + Legs | 5 | 4 | Powered frame; Advantage on any roll of raw physical force; Disadvantage on Stealth rolls | 4 |
 | Riot helmet | Head | 4 | 2 | Full-face visor, Advantage resisting Blinded | 1 |
@@ -119,6 +124,7 @@ Purpose-built protective gear only - ordinary clothing, even sturdy clothing, do
 | Sealed environment armor | All four | 5 | 4 | Single item, sets all four Zones; own air supply, immune to gas, smoke and contaminated water; Movement Rate -1 | 4 |
 | Stab vest | Center of Mass | 3 | 2 | Blade-only protection, no bonus vs. firearms | 2 |
 | Tactical vest | Center of Mass | 5 | 3 | Disadvantage on Stealth rolls while worn | 2 |
+| Turnout gear | All four | 3 | 2 | Movement Rate -2; Disadvantage on Stealth rolls; its Hardness also stands against Burning room and On fire dice, and it negates Exhausted from heat the way cold-weather gear negates cold (not from going without water) | 2 |
 
 ## Tech & Electronics
 
@@ -430,6 +436,7 @@ Some things have no counter to walk up to. The price is the easy half - the hard
 | Item | Zone | Hardness | Health Levels | Notes | Wealth | Black Market |
 |---|---|---|---|---|---|---|
 | Bomb disposal suit | All four | 8 | 6 | Movement Rate -4; Disadvantage on all Physical rolls except resisting damage | 3 | 2 |
+| Covert plate vest | Center of Mass | 5 | 2 | Worn under a jacket, no penalty; survives a glance, not a pat-down | 3 | 2 |
 
 ### The Black Market - Basic Weapons
 
@@ -505,7 +512,9 @@ Where a GM does allow it, it is bought like anything else - and where a Black Ma
 | Item | Zone | Hardness | Health Levels | Notes | Wealth | Black Market |
 |---|---|---|---|---|---|---|
 | Ablative shield harness | Center of Mass | 7 | 4 | A projected barrier on a worn rig; spent for the Scene once its Health Levels are gone | 5 | 5 |
-| Powered combat armor | All four | 8 | 6 | Single item, sets all four Zones; sealed with its own air; Disadvantage on Stealth rolls; Movement Rate -1. Nobody mistakes you for a person | 5 | 5 |
+| Deployable armor case | All four | 6 | 4 | Single item, sets all four Zones; carried as a hard case, a Slow action to climb into, a Normal action to shed; Movement Rate -1 | 5 | 5 |
+| Reactive plate vest | Center of Mass | 8 | 2 | Each time it loses a Health Level it blows outward: everyone else in Melee range takes 1 die against Soak; Disadvantage on Stealth rolls | 4 | 5 |
+| Shear-thickening suit | Center of Mass + Arms + Legs | 5 | 3 | Soft as cloth until it's struck; reads as clothing, no penalty | 4 | 4 |
 
 ### Beyond the Ordinary - Weapons
 
