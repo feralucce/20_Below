@@ -1,5 +1,5 @@
 import { el, counterRow, renderSelectedAvailable, renderMarkdownInline as inline } from '../ui.js';
-import { skillsPoolRemaining, skillTierName } from '../state.js';
+import { skillsPoolRemaining, skillTierName, retiredSkills, removeRetiredSkill } from '../state.js';
 
 export default {
   id: 'skills',
@@ -24,6 +24,28 @@ export default {
       ...data.skillTiers.map((t) => el('tr', {}, [el('td', {}, t.name), el('td', { html: inline(t.roll) })])),
     ]);
     container.append(el('div', { class: 'detail', style: 'margin-bottom:1rem;' }, tierTable));
+
+    // Skills the save still holds that the list no longer has. Nothing
+    // changes them but the player: each says what became of it, and goes
+    // only when Remove is pressed.
+    const retired = retiredSkills(state, data);
+    if (retired.length) {
+      container.append(el('div', { class: 'migration-notice' }, [
+        el('p', { html: '<strong>Skills that have left the rules.</strong> This character still has them, and they still count against the Skills pool. Removing one gives its points back to spend on what replaced it.' }),
+        el('ul', {}, retired.map((r) => el('li', {}, [
+          el('strong', {}, r.name), ` (${skillTierName(data, r.tier)}) - ${r.note} `,
+          el('button', {
+            type: 'button',
+            text: 'Remove',
+            onClick: () => {
+              removeRetiredSkill(state, r.name);
+              rerenderStep();
+              rerenderPools();
+            },
+          }),
+        ]))),
+      ]));
+    }
 
     container.append(
       el('div', { class: 'field' }, [
@@ -69,7 +91,7 @@ export default {
             { class: 'detail', style: 'color:var(--text-dim);font-size:0.85rem;margin:0.15rem 0 0.5rem;' },
             s.defaultElement === 'Context-dependent'
               ? 'Default Element: set for this weapon when defined.'
-              : `Default Element: ${s.defaultElement} - challenge it with a Descriptor to use a different Attribute.`,
+              : `Default Element: ${s.defaultElement}. Use your Descriptors to argue a different Element.`,
           ),
         );
       }

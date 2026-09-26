@@ -293,14 +293,17 @@ async function main() {
   // the one screen with no character behind it at all.
   let mode = hasDraft() ? 'sheet' : 'start';
 
-  // A save can carry Boons that have since been renamed, folded into
-  // another Boon, or moved out of the chapter entirely. mergeCharacterState
-  // fixes the character up; this is where the player finds out it did.
-  // Shown once - the notices are cleared as soon as they are drawn, so
-  // reloading does not nag about a migration already explained.
-  if (Array.isArray(state.migrationNotices) && state.migrationNotices.length) {
-    const banner = el('div', { class: 'migration-notice' }, [
-      el('p', { html: '<strong>Some Boons on this character have changed.</strong>' }),
+  // A save can carry Boons or Skills that have since been renamed, folded
+  // into another, or moved out of the rules entirely. mergeCharacterState
+  // fixes the character up; this is where the player finds out it did -
+  // on opening the app, and on every Import and Open, which run the same
+  // fix-up. Shown once: the notices are cleared as soon as they are drawn,
+  // so reloading does not nag about a migration already explained.
+  function showMigrationNotices() {
+    document.querySelector('.migration-notice.app-level')?.remove();
+    if (!Array.isArray(state.migrationNotices) || !state.migrationNotices.length) return;
+    const banner = el('div', { class: 'migration-notice app-level' }, [
+      el('p', { html: '<strong>Some things on this character have changed with the rules.</strong>' }),
       el('ul', {}, state.migrationNotices.map((text) => el('li', { text }))),
       el('button', {
         type: 'button',
@@ -310,7 +313,9 @@ async function main() {
     ]);
     panel.parentNode.insertBefore(banner, panel);
     state.migrationNotices = [];
+    saveState(state);
   }
+  showMigrationNotices();
 
   // The Fate Token cap moves with Stamina, which is reallocable, so any
   // change can strand Tokens above the new cap - lowering it has to refund
@@ -426,6 +431,7 @@ async function main() {
   async function openSaved(name) {
     try {
       state = adopt(data, await loadByName(name));
+      showMigrationNotices();
       saveState(state);
       resetLoadSelect();
       mode = 'sheet';
@@ -442,6 +448,7 @@ async function main() {
       const picked = await pickCharacterFile();
       if (!picked) return;
       state = adopt(data, picked.character);
+      showMigrationNotices();
       saveState(state);
       resetLoadSelect();
       mode = 'sheet';
