@@ -46,14 +46,23 @@ Encounter Difficulty Calculator or the Battle Tracker can run. Those are
 reported as carried rather than as a release. tools/jsreach.py does the
 walk, and anything it cannot follow counts as reachable.
 
-Exits 1 if code changed or a version disagrees, so it can gate a release
-step. The paths below must match each app's scripts/stage-frontend.ps1.
+It also checks the two Owlbear Rodeo extensions. They are not released
+from tags; each is a separate repo that a sync script copies this repo's
+engine into (scripts/sync-roster.mjs, scripts/sync-dice.mjs), and rooms
+load whatever that repo serves. So the question for them is simpler: does
+what is published match what the sync would write today? Battle Tracker
+went three weeks stale that way before anyone looked.
+
+Exits 1 if code changed, a version disagrees or an extension is stale, so
+it can gate a release step. The paths below must match each app's
+scripts/stage-frontend.ps1 and each extension's sync script.
 """
 import io
 import os
 import re
 import subprocess
 import sys
+import urllib.request
 
 import jsreach
 
@@ -298,6 +307,84 @@ def split_by_reach(name, tag, files):
     return needs, carried
 
 
+# The Owlbear Rodeo extensions: what each sync script copies, source ->
+# published path. Must match scripts/sync-roster.mjs and scripts/sync-dice.mjs.
+ROSTER_PAGE_IMPORTS = (('"../app/combat/model.js"', '"./lib/combat/model.js"'),
+                       ('"../app/media.js"', '"./lib/media.js"'))
+
+EXTENSIONS = [
+    ("Battle Tracker (Owlbear)", "feralucce/20_Below_Roster", "20 Below Roster",
+     "sync-roster.mjs",
+     [("app/state.js", "lib/state.js"),
+      ("app/roller/core.js", "lib/roller/core.js"),
+      ("app/combat/model.js", "lib/combat/model.js"),
+      ("app/media.js", "lib/media.js"),
+      ("tracker/index.html", "index.html")]),
+    ("Dice (Owlbear)", "feralucce/20_Below_Dice", "20 Below Dice",
+     "sync-dice.mjs",
+     [("app/roller/core.js", "lib/roller/core.js"),
+      ("app/roller/damage.js", "lib/roller/damage.js"),
+      ("app/state.js", "lib/state.js")]),
+]
+
+
+def norm(text):
+    return text.replace("\r\n", "\n") if text is not None else None
+
+
+def expected(src, dest):
+    """What the sync script would write for this file today."""
+    text = norm(on_disk(src))
+    if text is not None and dest == "index.html" and src == "tracker/index.html":
+        for old, new in ROSTER_PAGE_IMPORTS:
+            text = text.replace(old, new)
+    return text
+
+
+def published(repo, folder, dest):
+    """The file as the extension serves it, from GitHub; the local clone
+    beside this repo if GitHub cannot be reached. Returns (text, where)."""
+    url = "https://raw.githubusercontent.com/%s/main/%s" % (repo, dest)
+    try:
+        with urllib.request.urlopen(url, timeout=15) as r:
+            text = r.read().decode("utf-8")
+        where = "published"
+    except Exception:
+        path = os.path.join(os.path.dirname(ROOT), folder, *dest.split("/"))
+        if not os.path.isfile(path):
+            return None, "unreachable"
+        text = io.open(path, encoding="utf-8").read()
+        where = "local clone"
+    text = norm(text)
+    # The generated page carries a banner above <!doctype html>.
+    if dest == "index.html" and "<!doctype html>" in text:
+        text = text[text.index("<!doctype html>"):]
+    return text, where
+
+
+def check_extensions():
+    stale = 0
+    for name, repo, folder, script, files in EXTENSIONS:
+        behind, where = [], set()
+        for src, dest in files:
+            want = expected(src, dest)
+            got, source = published(repo, folder, dest)
+            where.add(source)
+            if want is None or got is None or want != got:
+                behind.append(dest)
+        via = "" if where == {"published"} else "  (checked against %s)" % ", ".join(sorted(where))
+        if behind:
+            stale += 1
+            print("%-32s NEEDS A SYNC - %d file(s) behind:%s" % (name, len(behind), via))
+            for f in behind:
+                print("%-34s %s" % ("", f))
+            print("%-34s node scripts/%s, then commit and push %s"
+                  % ("", script, repo.split("/")[1]))
+        else:
+            print("%-32s current%s" % (name, via))
+    return stale
+
+
 def main():
     if "--versions" in sys.argv:
         return 1 if check_versions() else 0
@@ -339,7 +426,10 @@ def main():
 
     print()
     mismatched = check_versions()
-    return 1 if (needs_release or mismatched) else 0
+
+    print()
+    stale = check_extensions()
+    return 1 if (needs_release or mismatched or stale) else 0
 
 
 sys.exit(main())
