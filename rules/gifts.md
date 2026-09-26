@@ -1286,7 +1286,7 @@ You don't disappear. You don't need to. People just overlook you. Eyes pass over
 
 | Level | Effect |
 |---|---|
-| 1 | Activating is a Fast action and triggers a **Gift Check** - success free, failure costs 1 Ki, the effect happens either way. For the rest of the Scene, anyone not already actively focused on you must beat a **Perception + Difficulty** roll to notice what you're doing, and even on a success, they're at **Disadvantage** recalling details about you afterward. |
+| 1 | Activating is a Fast action and triggers a **Gift Check** - success free, failure costs 1 Ki, the effect happens either way. **You decide who it works on: anyone, everyone, or everyone but the people you name. You can change your mind as a Fast action.** For the rest of the Scene, anyone it's working on who isn't already actively focused on you must beat a **Perception + Difficulty** roll to notice what you're doing, and even on a success, they're at **Disadvantage** recalling details about you afterward. |
 | 2 | Anyone who briefly loses sight of you (you leave a room, turn a corner, get lost in a crowd) forgets they saw you at all within a few minutes, unless something jogs their memory. |
 | 3 | The effect now holds even mid-conversation - if you go quiet or step back, people naturally lose their conversational thread about you and move on, without it feeling unnatural to them. |
 | 4 | You may extend the effect to one other person you're touching, bringing them into your own obscurity for as long as contact holds. |
@@ -1294,7 +1294,6 @@ You don't disappear. You don't need to. People just overlook you. Eyes pass over
 
 **Adders**:
 
-- **Selective Presence** (Lesser, 3 pts): choose specific individuals to be exempt from the effect at will - they perceive and remember you normally, everyone else doesn't.
 - **Fading Trail** (Lesser, 3 pts): physical evidence you leave behind (footprints, fingerprints, a dropped item) is similarly overlooked or dismissed, not just your presence itself.
 - **Group Obscurity** (Greater, 6 pts): Level 4's touch-extension covers everyone in a chain of physical contact at once, not just one other person.
 - **Blind Spot** (Lesser, 3 pts): while the effect is active, your first attack against someone who hasn't noticed you treats them as Surprised. The effect then ends for that person.
@@ -1310,6 +1309,8 @@ You don't disappear. You don't need to. People just overlook you. Eyes pass over
 - **Gifted See True**: anyone who holds a Gift of their own ignores the effect completely.
 - **Hollow Voice**: while the effect is active you cannot make Social rolls - your words slide off people with the rest of you.
 - **Can't Turn It Off**: once activated, the effect runs the whole Scene. Allies must beat Perception + Difficulty to find you, aid you or notice you're hurt.
+- **Always On**: the effect never stops. There is nothing to activate and no Gift Check to make; it is simply how people see you, including when you'd rather be seen. Can't be taken with **Can't Turn It Off**.
+- **No Targeting**: the effect works on everyone who can see you, friend and stranger alike - you can't choose who it touches, and you can't leave anyone out.
 
 ### Possession
 
