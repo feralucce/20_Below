@@ -795,7 +795,19 @@ export default {
       // rather than playing one.
       const pages = [...stack.querySelectorAll('.sheet-page')];
       const panes = [...pages, advancementHost];
-      const labels = [...pages.map((p, i) => `Page ${i + 1}`), 'Advancement'];
+      // A tab says what is on its page, not which number it is. A page that
+      // repeats (more Gifts than one page holds) numbers its copies.
+      const PAGE_NAMES = {
+        1: 'Elements & Vitals',
+        2: 'Skills, Boons & Flaws',
+        3: 'Gifts',
+        4: 'Weapons & Gear',
+        5: 'Scars & Notes',
+      };
+      const labels = [...pages.map((p, i) => {
+        const name = PAGE_NAMES[p.dataset.page] || `Page ${i + 1}`;
+        return p.dataset.copies ? `${name} ${p.dataset.copy}` : name;
+      }), 'Advancement (XP)'];
       if (activeTab >= panes.length) activeTab = 0;
 
       function show(i) {

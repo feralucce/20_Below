@@ -1194,6 +1194,13 @@ export function buildPagedSheet(state, data, opts = {}) {
   views.forEach((view, index) => {
     const { page } = view;
     const pageEl = el('div', { class: 'sheet-page' });
+    // Which printed page this is, and which copy of it - the tabs name
+    // pages by what is on them.
+    pageEl.dataset.page = String(page);
+    if (view.copies > 1) {
+      pageEl.dataset.copy = String(view.copy + 1);
+      pageEl.dataset.copies = String(view.copies);
+    }
     const stamp = artVersion ? `?v=${artVersion}` : '';
     pageEl.style.backgroundImage = `url(${new URL(`./bg${page}.jpg${stamp}`, import.meta.url)})`;
     pageEl.appendChild(el('img', {
