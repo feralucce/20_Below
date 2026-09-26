@@ -1,5 +1,8 @@
 :root {
-  color-scheme: light dark;
+  /* The app is dark whatever the system is set to. "light dark" let a
+     system in light mode paint every unstyled text box white, under text
+     the app had already made light - white on white. */
+  color-scheme: dark;
   --bg: #0a1720;
   --panel: #12232e;
   --panel-border: #24404f;
@@ -1928,4 +1931,30 @@ select.describe-box option {
 
 @media (prefers-reduced-motion: reduce) {
   .sheet-status-lit { animation: none; }
+}
+
+/* Every text box starts dark with light text. :where() keeps this at no
+   specificity, so a box styled on purpose - the quiet dashed describe
+   line, the header's blue dropdown - still wins. */
+:where(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]),
+       textarea, select) {
+  background-color: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--panel-border);
+}
+
+/* The boxes laid over the character sheet had no style of their own, so
+   they took the system's default - a white box. They are solid, near
+   black, so what is written in them reads against nothing. */
+.sf-edit {
+  background: #03070a;
+  color: var(--text);
+  border: 1px solid rgba(143, 173, 190, 0.35);
+  border-radius: 4px;
+  padding: 0 0.3em;
+  box-sizing: border-box;
+}
+.sf-edit:focus {
+  outline: none;
+  border-color: var(--accent);
 }
