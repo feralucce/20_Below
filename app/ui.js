@@ -261,6 +261,19 @@ export function flavourHtml(entry) {
  * the focus out of the field being typed in.
  */
 export function describeBox(value, onChange, placeholder, options) {
+  // A closed list is a real dropdown: the answer has to be one of these,
+  // because something downstream reads it by name.
+  if (options && !Array.isArray(options) && options.strict) {
+    const list = options.list || [];
+    const select = el('select', {
+      class: 'describe-box',
+      onChange: (e) => onChange(e.target.value),
+    }, [
+      el('option', { value: '' }, placeholder ?? 'Choose one'),
+      ...list.map((o) => el('option', { value: o, selected: o === value ? '' : undefined }, o)),
+    ]);
+    return select;
+  }
   const input = el('input', {
     type: 'text',
     class: 'describe-box',

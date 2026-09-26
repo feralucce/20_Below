@@ -86,7 +86,14 @@ export const GIFT_DESCRIBE = {
   'Drone Swarm': { prompt: 'What are the drones?', count: one },
   'Elemental Aura': { prompt: 'Which element, and what does it look like?', count: one },
   'Elemental Manipulation': { prompt: 'Which domain do you command?', count: one },
-  'Forcefield': { prompt: 'Which Form, and what does it look like?', count: one },
+  // The Form is one of three the rules list, and it changes Hardness and
+  // Health Levels, so it is picked, not typed. What it looks like is the
+  // player's own.
+  'Forcefield': {
+    prompts: ['Which Form?', 'What does it look like?'],
+    optionSlots: ['forcefield-form', null],
+    count: () => 2,
+  },
   'Heightened Senses': { prompt: 'Which sense?', count: one },
   'Onslaught': { prompt: 'What do you hit them with?', count: one },
   'Necromancy': { prompt: 'What do your raised dead look like?', count: one },

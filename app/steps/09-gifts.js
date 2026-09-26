@@ -5,6 +5,7 @@ import {
 import {
   setGiftNote,
   giftNotes,
+  forcefieldForms,
   giftsPoolRemaining,
   giftLevelCost,
   giftPointsSpent,
@@ -35,6 +36,7 @@ function getOrCreateGiftState(state, name) {
 // only the entries that actually carry Damage - a first-aid kit is in
 // the equipment tables too and is not something anyone conjures.
 function catalogueFor(kind, data) {
+  if (kind === 'forcefield-form') return { list: forcefieldForms(data), strict: true };
   if (kind !== 'weapons' || !data) return null;
   const names = [];
   (data.equipment || []).forEach((cat) => {

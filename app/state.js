@@ -222,6 +222,15 @@ export function mergeCharacterState(data, loaded) {
   // Saves made before the GM bonus step have no such object at all.
   merged.bonusPoints = { ...fresh.bonusPoints, ...(loaded.bonusPoints || {}) };
   merged.migrationNotices = migrateBoons(merged);
+  // Forcefield used to ask for its Form and its look in one line. The Form
+  // is its own pick now, so an old answer that is not a Form moves down to
+  // the look line - nothing the player wrote is lost.
+  const ff = (merged.gifts || []).find((g) => g.name === 'Forcefield');
+  const forms = forcefieldForms(data);
+  if (ff && Array.isArray(ff.notes) && ff.notes[0] && forms.length
+      && !forms.includes(ff.notes[0]) && !ff.notes[1]) {
+    ff.notes = ['', ff.notes[0], ...ff.notes.slice(2)];
+  }
   // Packages used to be a single pick for the whole character. Move an old
   // save's one package into the Level slot it was taken from.
   if (merged.everymanGearPackage && !Object.keys(merged.everymanGearPackages || {}).length) {
@@ -848,6 +857,13 @@ function setNote(holder, index, value) {
 export function boonNotes(boon) { return noteList(boon) ?? []; }
 export function flawNotes(flaw) { return noteList(flaw) ?? []; }
 export function giftNotes(gift) { return noteList(gift) ?? []; }
+
+// Forcefield's three Forms, read off the numbered list in its rules text
+// ("1. **Wielded Shield** - ...") so the choice follows the book.
+export function forcefieldForms(data) {
+  const md = (data?.gifts || []).find((g) => g.name === 'Forcefield')?.markdown || '';
+  return [...md.matchAll(/^\d+\.\s+\*\*([^*]+)\*\*/gm)].map((m) => m[1].trim());
+}
 
 export function setBoonNote(state, index, slot, value) {
   setNote(state.boons[index], slot, value);
