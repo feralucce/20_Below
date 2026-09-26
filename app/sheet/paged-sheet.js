@@ -27,6 +27,9 @@ import { el } from '../ui.js';
 import {
   adderLabels,
   optionWithChoice,
+  giftMenuBuilds,
+  giftMenuBuildName,
+  giftMenuPurchases,
   applyRest,
   applyVitalFloor,
   healthStatus,
@@ -855,6 +858,15 @@ export function buildPagedSheet(state, data, opts = {}) {
       const entry = (data.gifts || []).find((d) => d.name === g.name);
       if (!entry) return '';
       const row = (entry.levels || []).find((l) => l.level === g.level);
+      // A menu Gift is what was bought from the menu, build by build.
+      if (entry.menu && (g.buildPurchases || []).length) {
+        const builds = giftMenuBuilds(g);
+        const list = (b) => giftMenuPurchases(g, b)
+          .map((p) => (p.note ? `${p.option} (${p.note})` : p.option)).join(', ') || 'nothing yet';
+        return builds.length > 1
+          ? builds.map((b) => `${giftMenuBuildName(g, b)}: ${list(b)}`).join('. ')
+          : list(1);
+      }
       // Gifts built from a menu have no Level table, so their text comes
       // from the body - but the first line of a body is a heading, a rule
       // or a table row as often as it is prose.

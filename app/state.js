@@ -581,22 +581,48 @@ export function giftMenuPool(gift, giftData) {
   return row ? row.pool : 0;
 }
 
-export function giftMenuSpent(gift) {
-  return (gift.buildPurchases ?? []).reduce((sum, p) => sum + p.cost, 0);
+// Two Gifts can buy a second build with an Adder - Alternate Form's
+// Second Form, Cybernetics' Battle Configuration. Each build gets the
+// whole pool for the Gift's Level (ruling, 2026-09-26): the Adder buys a
+// second build, not a split of the first one. A purchase with no `build`
+// belongs to the first.
+const SECOND_BUILD = {
+  'Alternate Form': { adder: 'Second Form', names: ['First form', 'Second form'] },
+  'Cybernetics': { adder: 'Battle Configuration', names: ['First loadout', 'Second loadout'] },
+};
+
+export function giftMenuBuilds(gift) {
+  const spec = SECOND_BUILD[gift?.name];
+  const two = spec && (gift.adders || []).includes(spec.adder);
+  return two ? [1, 2] : [1];
 }
 
-export function giftMenuRemaining(gift, giftData) {
-  return giftMenuPool(gift, giftData) - giftMenuSpent(gift);
+export function giftMenuBuildName(gift, build) {
+  return SECOND_BUILD[gift?.name]?.names[build - 1] ?? 'Build';
+}
+
+export function giftMenuPurchases(gift, build = 1) {
+  return (gift.buildPurchases ?? []).filter((p) => (p.build || 1) === build);
+}
+
+export function giftMenuSpent(gift, build = 1) {
+  return giftMenuPurchases(gift, build).reduce((sum, p) => sum + p.cost, 0);
+}
+
+export function giftMenuRemaining(gift, giftData, build = 1) {
+  return giftMenuPool(gift, giftData) - giftMenuSpent(gift, build);
 }
 
 function nextBuildPurchaseId(gift) {
   return (gift.buildPurchases ?? []).reduce((max, p) => Math.max(max, p.id), 0) + 1;
 }
 
-export function addGiftMenuPurchase(state, giftName, { option, cost, note = '' }) {
+export function addGiftMenuPurchase(state, giftName, { option, cost, note = '', build = 1 }) {
   const g = state.gifts.find((x) => x.name === giftName);
   const id = nextBuildPurchaseId(g);
-  (g.buildPurchases ??= []).push({ id, option, cost, note });
+  const entry = { id, option, cost, note };
+  if (build !== 1) entry.build = build;
+  (g.buildPurchases ??= []).push(entry);
 }
 
 export function updateGiftMenuPurchaseNote(state, giftName, purchaseId, note) {
