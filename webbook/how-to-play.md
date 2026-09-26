@@ -313,11 +313,41 @@ The three health statistics are collectively called the Vital Statistics. Each l
 
 What we haven’t covered is what happens at 0 and below.
 
-**Health**. When your Health reaches 0, you are unconscious. You can take more damage after you are rendered unconscious. These levels of damage represent real, devastating, life-threatening injuries. Each health level you possess gives you one negative health level. If you have 8 health levels, you can take 8 levels of damage below zero. Take one more, and you are dead.
+<div class="wide" markdown="1">
 
-**Poise**. When your Poise reaches 0, you are Flustered. Every Social roll, and anything else that needs you steady, is at Disadvantage until the Scene ends. You can take more damage after you are Flustered. These levels represent your standing coming apart in front of the people whose opinion you needed, and it does not quietly repair itself. Below 0 you are Humiliated. You cannot take the lead, negotiate, or speak for the group, and you defer until your Poise climbs back to 0. Each Poise level you possess gives you one negative Poise level. If you have 9 Poise, you can take 9 levels of damage below zero. Take one more and your Poise resets to 0 and it costs you a Sanity Level. This level of Sanity damage can’t be soaked, but can be prevented by spending a point of Ki. Poise damage cannot kill you.
+<p class="block-title" markdown="span">At zero and below</p>
 
-**Sanity**. When your Sanity reaches 0, you are Overwhelmed. You pick up a temporary negative mental trait and every roll is at Disadvantage, though you are still acting under your own power. You can take more damage after you are Overwhelmed. These levels represent your grip on your own mind giving way, and going below 0 always leaves a permanent mental scar no matter how you recover afterward. Below 0 you are Shattered. You are panicky and babbling and cannot act on your own, so somebody else has to lead you or drag you. Each Sanity level you possess gives you one negative Sanity level. If you have 9 Sanity, you can take 9 levels of damage below zero. Take one more and you pick up a temporary mental health condition and your Sanity resets to 0. Sanity damage cannot kill you either.
+| | At 0 | Below 0 | One past the bottom | Can it kill? |
+|---|---|---|---|---|
+| **Health** | Unconscious | Real, devastating, life-threatening injuries | Dead | Yes |
+| **Poise** | Flustered | Humiliated | Poise resets to 0 and costs a Sanity Level | No |
+| **Sanity** | Overwhelmed | Shattered | A temporary mental health condition; Sanity resets to 0 | No |
+
+</div>
+
+Each Level you have gives you one negative Level on the same track. If you have 8 Health Levels, you can take 8 levels of damage below zero.
+
+#### Health
+
+- **At 0**, you are unconscious. You can take more damage after you are rendered unconscious.
+- **Below 0**, these levels of damage represent real, devastating, life-threatening injuries.
+- **Take one more** than your negative Levels, and you are dead.
+
+#### Poise
+
+- **At 0**, you are Flustered. Every Social roll, and anything else that needs you steady, is at Disadvantage until the Scene ends. You can take more damage after you are Flustered.
+- **Below 0**, you are Humiliated. These levels represent your standing coming apart in front of the people whose opinion you needed, and it does not quietly repair itself. You cannot take the lead, negotiate, or speak for the group, and you defer until your Poise climbs back to 0.
+- **Take one more** and your Poise resets to 0 and it costs you a Sanity Level. This level of Sanity damage can’t be soaked, but can be prevented by spending a point of Ki.
+- Poise damage cannot kill you.
+
+#### Sanity
+
+- **At 0**, you are Overwhelmed. You pick up a temporary negative mental trait and every roll is at Disadvantage, though you are still acting under your own power. You can take more damage after you are Overwhelmed.
+- **Below 0**, you are Shattered. These levels represent your grip on your own mind giving way. You are panicky and babbling and cannot act on your own, so somebody else has to lead you or drag you. Going below 0 always leaves a permanent mental scar no matter how you recover afterward.
+- **Take one more** and you pick up a temporary mental health condition and your Sanity resets to 0.
+- Sanity damage cannot kill you either.
+
+#### Going down, and staying down
 
 **One attack can never carry you past 0.** However many dice connect, you land exactly at zero. A bear that rolls ten dice at someone with three Levels left doesn’t tear them apart. It drops them.
 
@@ -329,18 +359,18 @@ So dying here is a thing somebody decides to do to you. Something has to want yo
 
 Recovery takes time. The rules outline three different time frames for recovery.
 
-**Short Rest**. An hour of genuine downtime, and you only get one of them between full nights.
+- **Short Rest**: an hour of genuine downtime, and you only get one of them between full nights.
+- **Full Night's Rest**: a full, largely uninterrupted night's sleep.
+- **A Month**: the time it takes for Wealth to recover from failed wealth rolls.
 
-**Full Night's Rest**. A full, largely uninterrupted night's sleep.
+#### Above zero
 
-**A Month.** The time it takes for Wealth to recover from failed wealth rolls.
+**Short Rest.** You heal Health Levels equal to half your Health, rounded up, minimum 1. Poise comes back at half your Presence and Sanity at half your Psyche, both rounded up, minimum 1. Ki comes back equal to your Klotho, minimum 1. One level of Exhausted lifts, unless you are still standing in whatever caused it.
 
-**Vital Statistic Above Zero
-Short Rest**. You heal Health Levels equal to half your Health, rounded up, minimum 1. Poise comes back at half your Presence and Sanity at half your Psyche, both rounded up, minimum 1. Ki comes back equal to your Klotho, minimum 1. One level of Exhausted lifts, unless you are still standing in whatever caused it.
+**Full Night’s Rest.** Health, Poise and Sanity all go back to full, and Ki refills completely. Every level of Exhausted clears, with the same exception: a level you took from the cold does not clear while you are still in the cold. Fate Tokens are not part of any of this. You gain one at sunrise whether you slept or not.
 
-**Full Night’s Rest**. Health, Poise and Sanity all go back to full, and Ki refills completely. Every level of Exhausted clears, with the same exception: a level you took from the cold does not clear while you are still in the cold. Fate Tokens are not part of any of this. You gain one at sunrise whether you slept or not.
+#### Below zero
 
-**Vital Statistic Below Zero**
 **Short Rest.** An hour does not put a body back together. Below 0 Health Levels a Short Rest gives you nothing at all, and you stay Dying until you get a real night. Poise and Sanity work differently, because a reputation and a mind can turn a corner faster than a wound can close. A Short Rest brings either of them back to 1, not to full, and the normal rates start again from there on the next rest. A point of Ki does the same for either one immediately, without waiting for a rest at all.
 
 **Full Night's Rest.** A full night gets you one Health Level, and only one, however tough you are. At −6 that is six nights before you are back to 0, and only then do the normal rates start again. Poise and Sanity come back to 1, the same as they would on a Short Rest. Nothing down here speeds up with a better night's sleep. Climbing out is meant to cost you time you would rather have spent on something else.
@@ -393,35 +423,63 @@ You can spend **1 Ki per step** to bump the band you declared - Slow to Normal, 
 
 Beyond attacking or moving, these are what you can spend an action on. Anything a Gift or a weapon says about its own action cost overrides this list.
 
-**Empowered actions** are what a Slow round buys. You get one of them, plus your one-meter step.
+#### Empowered actions
 
-**Aim** - Advantage on the attack. 
-**Called Shot** - you hit something specific: a hand, a strap, the weapon they’re pointing at you. No Advantage. 
-**Study a Target** - no roll; the round is the price. Next round, your first attack on it has Advantage, and that includes a Called Shot. 
-**Careful Work** - Advantage on a Skill roll made with your whole attention, and it holds round after round on the same job until something interrupts you. 
-**Brace** - until your next turn, nothing can Bulldoze you, shove you or knock you down. 
-**Bulldoze** - charge at least five meters, and no more than twice your Movement Rate, to drive something out of its space. Roll your Potence in dice against its Soak; each one over shoves it back a meter, and you step in behind it. If nothing gets through, you stop beside it.
+Empowered actions are what a Slow round buys. You get one of them, plus your one-meter step.
+
+<div class="wide" markdown="1">
+
+<p class="block-title" markdown="span">Empowered actions</p>
+
+| Action | What it does |
+|---|---|
+| **Aim** | Advantage on the attack. |
+| **Called Shot** | You hit something specific: a hand, a strap, the weapon they’re pointing at you. No Advantage. |
+| **Study a Target** | No roll; the round is the price. Next round, your first attack on it has Advantage, and that includes a Called Shot. |
+| **Careful Work** | Advantage on a Skill roll made with your whole attention, and it holds round after round on the same job until something interrupts you. |
+| **Brace** | Until your next turn, nothing can Bulldoze you, shove you or knock you down. |
+| **Bulldoze** | Charge at least five meters, and no more than twice your Movement Rate, to drive something out of its space. Roll your Potence in dice against its Soak; each one over shoves it back a meter, and you step in behind it. If nothing gets through, you stop beside it. |
+
+</div>
 
 You can’t Aim and take a Called Shot in the same round. You can take two rounds over it: Study a Target, then take the shot with Advantage.
 
-**Special actions** belong to one band.
+#### Special actions
 
-**Attack on the Run** (Fast only) - a full move and an attack, with a gun or a blade, anywhere along the way. The attack is at Disadvantage. 
-**Snap to Cover** (Fast only) - a single step into cover beside you, still on your feet. 
-**Dive for Cover** (Fast or Normal) - Fast, you move up to your Movement Rate before anyone slower acts, and land Belly Down. Normal, you make a full move first and then dive. 
-**Sprint** (Slow only) - five times your Movement Rate, and nothing else.
+Special actions belong to one band.
 
-And the rest:
+<div class="wide" markdown="1">
 
-**Dash** (Normal) - both actions on movement. Up to twice your Movement Rate, nothing else. 
-**Reckless** - free, just declared. Advantage on your attacks this round, and Advantage on everyone’s attacks against you. It is exactly as stupid as it sounds, and every so often it is exactly the right call. 
-**Full Defense** (Normal) - you can’t attack. Your other action can still move you. Attacks against you are at Disadvantage and your Defense drops by 4, floored at 0. 
-**Grab** - from Melee, an attack, then your Potence in dice against its Soak. Any one over and it’s Grabbed. 
-**Disarm** - a Called Shot at what they’re holding, then Potence against Potence to knock it loose. 
-**Help** - your action goes into someone else’s, and their next roll has Advantage. 
-**Ready** - name a trigger and hold your action for it: when it comes through the door. 
-**Draw, swap, stow, use** - getting a weapon out, putting one away, or using a simple item takes an action. 
-**Reload** - depends on the weapon. Magazines, speed-loaders and crossbow cranks take one action. A tube-fed shotgun, loaded shell by shell, takes a full Slow action. A bow pulled from a quiver is free. Each weapon lists its own cost.
+<p class="block-title" markdown="span">Special actions</p>
+
+| Action | Band | What it does |
+|---|---|---|
+| **Attack on the Run** | Fast only | A full move and an attack, with a gun or a blade, anywhere along the way. The attack is at Disadvantage. |
+| **Snap to Cover** | Fast only | A single step into cover beside you, still on your feet. |
+| **Dive for Cover** | Fast or Normal | Fast, you move up to your Movement Rate before anyone slower acts, and land Belly Down. Normal, you make a full move first and then dive. |
+| **Sprint** | Slow only | Five times your Movement Rate, and nothing else. |
+
+</div>
+
+#### Everything else
+
+<div class="wide" markdown="1">
+
+<p class="block-title" markdown="span">Other actions</p>
+
+| Action | Band | What it does |
+|---|---|---|
+| **Dash** | Normal | Both actions on movement. Up to twice your Movement Rate, nothing else. |
+| **Reckless** |  | free, just declared. Advantage on your attacks this round, and Advantage on everyone’s attacks against you. It is exactly as stupid as it sounds, and every so often it is exactly the right call. |
+| **Full Defense** | Normal | You can’t attack. Your other action can still move you. Attacks against you are at Disadvantage and your Defense drops by 4, floored at 0. |
+| **Grab** |  | from Melee, an attack, then your Potence in dice against its Soak. Any one over and it’s Grabbed. |
+| **Disarm** |  | a Called Shot at what they’re holding, then Potence against Potence to knock it loose. |
+| **Help** |  | your action goes into someone else’s, and their next roll has Advantage. |
+| **Ready** |  | name a trigger and hold your action for it: when it comes through the door. |
+| **Draw, swap, stow, use** |  | getting a weapon out, putting one away, or using a simple item takes an action. |
+| **Reload** |  | depends on the weapon. Magazines, speed-loaders and crossbow cranks take one action. A tube-fed shotgun, loaded shell by shell, takes a full Slow action. A bow pulled from a quiver is free. Each weapon lists its own cost. |
+
+</div>
 
 ## Movement
 
@@ -488,27 +546,59 @@ You can push through it. Once a turn, when your movement takes you onto bad grou
 
 ### Climbing, Jumping and Swimming
 
-**Climbing** costs two meters for every one you go up. Roll Athletics once a turn at the surface’s Difficulty: a success climbs at your full rate, a failure at double cost, and a roll of 20 means you fall.
+#### Climbing
 
-**10** - a stepladder, a waist-high wall 
-**9** - a ladder 
-**8** - a tree with low branches, a chain-link fence 
-**7** - a sturdy rope with knots tied in it 
-**6** - a rock face with good holds, a drainpipe 
-**5** - a plain rope, a brick wall with crumbling mortar 
-**4** - a rough stone wall, a rope while carrying someone 
-**3** - an overhang, a crumbling cliff 
-**2** - a sheer, rain-slicked cliff face 
-**1** - smooth concrete, bare ice without tools 
-**0** - vertical glass
+Climbing costs two meters for every one you go up. Roll Athletics once a turn at the surface’s Difficulty: a success climbs at your full rate, a failure at double cost, and a roll of 20 means you fall.
+
+<div class="wide" markdown="1">
+
+<p class="block-title" markdown="span">How hard the climb is</p>
+
+| Difficulty | Surface |
+|---|---|
+| **10** | a stepladder, a waist-high wall |
+| **9** | a ladder |
+| **8** | a tree with low branches, a chain-link fence |
+| **7** | a sturdy rope with knots tied in it |
+| **6** | a rock face with good holds, a drainpipe |
+| **5** | a plain rope, a brick wall with crumbling mortar |
+| **4** | a rough stone wall, a rope while carrying someone |
+| **3** | an overhang, a crumbling cliff |
+| **2** | a sheer, rain-slicked cliff face |
+| **1** | smooth concrete, bare ice without tools |
+| **0** | vertical glass |
+
+</div>
 
 Rain, wind or darkness make any of it a step or two harder. Nearly Impossible isn’t impossible, though. The strongest people in this game can climb glass.
 
-**Jumping.** A running long jump clears your Air in meters. Standing, it’s half that. A high jump gets half as high as you can jump forward. To go further, roll Athletics: one extra meter is Difficulty 8, two is 6, three is 4, four is 2, and five is 0. Fall short and you land at your Air distance - and if that’s over the drop, you go down it, unless you land next to an edge. Then you get Athletics at 6 to catch yourself, and climbing out is a climb.
+#### Jumping
 
-**Swimming** can’t be done untrained. If you don’t have the Swimming Skill and you end up in deep water, the No-air clock starts right away, unless you’ve got hold of something that floats.
+A running long jump clears your Air in meters. Standing, it’s half that. A high jump gets half as high as you can jump forward.
+
+<div class="wide" markdown="1">
+
+<p class="block-title" markdown="span">Jumping further</p>
+
+| Extra distance | Athletics Difficulty |
+|---|---|
+| +1 m | 8 |
+| +2 m | 6 |
+| +3 m | 4 |
+| +4 m | 2 |
+| +5 m | 0 |
+
+</div>
+
+Fall short and you land at your Air distance - and if that’s over the drop, you go down it, unless you land next to an edge. Then you get Athletics at 6 to catch yourself, and climbing out is a climb.
+
+#### Swimming
+
+Swimming can’t be done untrained. If you don’t have the Swimming Skill and you end up in deep water, the No-air clock starts right away, unless you’ve got hold of something that floats.
 
 If you can swim, you swim at your Movement Rate. Staying up is the hard part. In calm water you get your Stamina in Hours for free; in rough water - a current, waves, or swimming with weight - your Stamina in Minutes. After that, roll Water plus Difficulty once an Hour (or a Minute), starting at 8 in calm water and 6 in rough, one step harder every roll. Each failure is a level of Exhausted, and Exhausted 5 means you go under. Cold water piles its own Exhausted on top, which is how a winter river kills a strong swimmer.
+
+#### Creatures that move differently
 
 Creatures that fly, swim, climb or burrow do it at the rate on their card, with no extra cost and no roll - unless you changed the ground. Bring the building down, flood the room, throw the caltrops: then it pays like anyone else. When something outclasses you on its own ground, change the ground.
 
@@ -540,56 +630,135 @@ Nobody gets lost unless the GM says the country, the weather, or the dark makes 
 
 Eight states you can be put into. Most of them hurt you by taking dice away. Three of them go further.
 
-**Off Balance.** You rolled a catastrophic failure in combat. You roll everything at Disadvantage until the end of your next turn. It does not stack, it clears on its own, and a Fate Token spent to Shrug Off an Effect clears it early - though it never undoes whatever else went wrong on that roll. The Never Off Balance Boon lets you reroll the failure that caused it.
+#### Off Balance
 
-**Distracted.** You lose a Health Level, or get hit by a Kotodama, while resolving a Slow action. Roll Atropos plus Difficulty to hold your concentration. Succeed and the action goes off as declared. Fail and it drops to a Normal action, losing the called shot and the Advantage.
+You rolled a catastrophic failure in combat. You roll everything at Disadvantage until the end of your next turn. It does not stack, it clears on its own, and a Fate Token spent to Shrug Off an Effect clears it early - though it never undoes whatever else went wrong on that roll. The Never Off Balance Boon lets you reroll the failure that caused it.
+
+#### Distracted
+
+You lose a Health Level, or get hit by a Kotodama, while resolving a Slow action. Roll Atropos plus Difficulty to hold your concentration. Succeed and the action goes off as declared. Fail and it drops to a Normal action, losing whatever its empowered action gave.
 
 Other things can make you Distracted too - a Gift, a collapsing building, an explosion right next to your head. Same roll. Outside a Slow action, failing means Disadvantage on whatever triggered it instead. The Concentration Boon makes you immune to all of it.
 
-**Surprised.** You didn’t see it coming, usually because someone’s Stealth beat your Perception. You roll everything at Disadvantage for the rest of that round. It clears when the round ends. The Alertness Boon makes you immune while you’re conscious.
+#### Surprised
 
-**Flustered.** Your Poise hit 0. You roll all Social rolls at Disadvantage, and anything else where keeping your composure matters, for the rest of the Scene. You can spend an action on a Presence plus Difficulty roll to pull yourself together early.
+You didn’t see it coming, usually because someone’s Stealth beat your Perception. You roll everything at Disadvantage for the rest of that round. It clears when the round ends. The Alertness Boon makes you immune while you’re conscious.
 
-**Humiliated.** Your Poise went below 0, and this is the one that doesn’t just cost you dice. You can’t take the lead, you can’t negotiate, and nobody is going to let you speak for the group - you defer and you comply. Your body works fine. You’ll swing a sword all day. This is social paralysis, not physical. It clears when your Poise climbs back to 0.
+#### Flustered
+
+Your Poise hit 0. You roll all Social rolls at Disadvantage, and anything else where keeping your composure matters, for the rest of the Scene. You can spend an action on a Presence plus Difficulty roll to pull yourself together early.
+
+#### Humiliated
+
+Your Poise went below 0, and this is the one that doesn’t just cost you dice. You can’t take the lead, you can’t negotiate, and nobody is going to let you speak for the group - you defer and you comply. Your body works fine. You’ll swing a sword all day. This is social paralysis, not physical. It clears when your Poise climbs back to 0.
 
 Your Poise track runs as far below zero as it does above it - eight Poise means Humiliated all the way down to minus seven. **Hit the bottom of it and something gives.** Your Poise resets to 0, which puts you back to Flustered rather than back on your feet, and you take **a point of Sanity**. No roll, no wall - your Psyche does not defend against this, because this is not something being done to your mind. It is your standing in the room finally coming apart, and taking a piece of you with it. A point of Ki still stops it, the same as it stops anything else.
 
-**Overwhelmed.** Your Sanity hit 0. You pick up a temporary mental Flaw - you and the GM agree what it is - and you roll everything at Disadvantage. You can still act, and you’re still yourself. It clears when you’re out of whatever did it to you and get a chance to rest, or for 1 Ki, which refills your Sanity on the way out.
+#### Overwhelmed
 
-**Shattered.** Your Sanity went below 0, and this is the other one that doesn’t just cost you dice. You’re panicky and babbling and you can’t act on your own - somebody has to lead you, or drag you. It clears for 1 Ki or a rest, but either one only brings your Sanity back to 1, not full, and going below 0 always leaves a permanent mental scar however you climb out of it.
+Your Sanity hit 0. You pick up a temporary mental Flaw - you and the GM agree what it is - and you roll everything at Disadvantage. You can still act, and you’re still yourself. It clears when you’re out of whatever did it to you and get a chance to rest, or for 1 Ki, which refills your Sanity on the way out.
 
-**Exhausted.** The only one that stacks. You take levels of it, one through five, from pushing an effort past what your Stamina covers, or from cold, or from heat. **One** is Disadvantage on Physical rolls. **Two** is Disadvantage on everything. **Three** halves your Movement Rate and takes Fast actions away from you. **Four** adds 1 to the cost of every Ki spend. **Five** puts you on the ground, unconscious, until somebody gets you warm, cool, or rested. A Short Rest clears one level. A full night clears the lot.
+#### Shattered
+
+Your Sanity went below 0, and this is the other one that doesn’t just cost you dice. You’re panicky and babbling and you can’t act on your own - somebody has to lead you, or drag you. It clears for 1 Ki or a rest, but either one only brings your Sanity back to 1, not full, and going below 0 always leaves a permanent mental scar however you climb out of it.
+
+#### Exhausted
+
+The only one that stacks. You take levels of it, one through five, from pushing an effort past what your Stamina covers, or from cold, or from heat. 
+
+<div class="wide" markdown="1">
+
+<p class="block-title" markdown="span">Exhausted</p>
+
+| Level | Effect |
+|---|---|
+| **1** | Disadvantage on Physical rolls |
+| **2** | Disadvantage on everything |
+| **3** | Your Movement Rate is halved, and you lose Fast actions |
+| **4** | Every Ki spend costs 1 more |
+| **5** | On the ground, unconscious, until somebody gets you warm, cool, or rested |
+
+</div>
+
+A Short Rest clears one level. A full night clears the lot.
 
 ### Common Hazards
 
 The world hurts people without anybody swinging anything, and all of it runs on the same machinery: a number of d10, one at a time against your Soak, every die that gets through costing a Health Level. The weapon table is the scale. Fists are 1, a knife is 3, an anti-materiel rifle is 5. A hazard is a number on that same line.
 
-**Falling.** One die per four meters, up to five. Off a kitchen counter isn’t worth rolling. A flight of stairs is about one. Three storeys down a stairwell is three, which is the same as being stabbed. Past twenty meters you are throwing five dice and there is nothing worse to throw. Landing in water, deep snow or a hedge halves it.
+<div class="wide" markdown="1">
 
-**Fire.** A burning room is one die at the end of every round you are still in it, and it doesn’t stop until you leave. Being on fire yourself is two, and it doesn’t stop until you put it out - a Normal action for you, a Fast one for somebody helping.
+<p class="block-title" markdown="span">Hazards at a glance</p>
 
-**Getting hit by a vehicle.** Three dice at city speed. Five at speed. Faster than that isn’t a roll, and your GM will say so before you step into the road.
+| Hazard | What it does |
+|---|---|
+| **Falling** | 1 die per 4 meters, up to 5 dice. Halved into water, deep snow or a hedge |
+| **Fire** | A burning room: 1 die per round you stay. On fire yourself: 2 dice per round until it's out |
+| **Vehicle** | 3 dice at city speed, 5 at speed |
+| **No air** | Stamina rounds free, then 1 Health Level per round. Soak doesn't help |
+| **Cold and heat** | Levels of Exhausted, not Health |
+| **Corruption** | A track of its own, 0 to 5, per source |
 
-**No air.** Drowning, smoke, a bag over your head - you have Stamina rounds. After that it is one Health Level per round, and **Soak doesn’t help**, because there is nothing to soak. It is the one hazard armour is no use against.
+</div>
+
+#### Falling
+
+One die per four meters, up to five. Off a kitchen counter isn’t worth rolling. A flight of stairs is about one. Three storeys down a stairwell is three, which is the same as being stabbed. Past twenty meters you are throwing five dice and there is nothing worse to throw. Landing in water, deep snow or a hedge halves it.
+
+#### Fire
+
+A burning room is one die at the end of every round you are still in it, and it doesn’t stop until you leave. Being on fire yourself is two, and it doesn’t stop until you put it out - a Normal action for you, a Fast one for somebody helping.
+
+#### Getting hit by a vehicle
+
+Three dice at city speed. Five at speed. Faster than that isn’t a roll, and your GM will say so before you step into the road.
+
+#### No air
+
+Drowning, smoke, a bag over your head - you have Stamina rounds. After that it is one Health Level per round, and **Soak doesn’t help**, because there is nothing to soak. It is the one hazard armour is no use against.
+
+#### Cold and heat
 
 **Cold.** This is the one the game is named after, and it doesn’t take Health. It takes **Exhausted** levels, and gear is the whole defence. Dressed for it, nothing happens. Underdressed, a level an hour. Wet, or in a wind, or genuinely twenty below, a level every half hour. In cold water, a level a minute. And you cannot clear cold Exhausted while you are still cold - a Short Rest in a snowdrift is not a rest.
 
 **Heat.** The same ladder from the other end. Working hard in real heat is a level an hour. With no water it is a level an hour whatever you are doing, and nothing clears until you drink. Enclosed, airless and with no shade, a level every half hour.
 
+<div class="wide" markdown="1">
+
+<p class="block-title" markdown="span">Exhaustion from cold and heat</p>
+
+| Conditions | Exhausted |
+|---|---|
+| Dressed for the cold | Nothing happens |
+| Underdressed | 1 level per hour |
+| Wet, in a wind, or genuinely twenty below | 1 level per half hour |
+| In cold water | 1 level per minute |
+| Working hard in real heat | 1 level per hour |
+| No water in the heat | 1 level per hour, whatever you are doing; nothing clears until you drink |
+| Enclosed, airless, no shade | 1 level per half hour |
+
+</div>
+
 Neither one costs you a Health Level. They put you at Exhausted 5, which puts you on the ground, and out there that is the same thing. A blizzard is dangerous to somebody nobody has laid a finger on.
 
-**Corruption.** Some things get their hooks into you: a presence, an otherworldly thing, a place. It changes you slowly. At first you don’t notice it. Eventually, you don’t mind. It isn’t damage, and it costs no Sanity - it’s a track of its own, zero to five, kept separately for each thing that’s doing it to you.
+#### Corruption
+
+Some things get their hooks into you: a presence, an otherworldly thing, a place. It changes you slowly. At first you don’t notice it. Eventually, you don’t mind. It isn’t damage, and it costs no Sanity - it’s a track of its own, zero to five, kept separately for each thing that’s doing it to you.
 
 Every time you’re exposed - you look at it, touch it, breathe it, sleep near it, whatever that source feeds on - it rolls its dice against your Klotho. If any die gets over, you slide one level. Only one, however many got over. A rare few are worse than that, and your GM will know which.
 
-**One, Tell.** A small sign, and everyone sees it but you. A day away and it’s gone.
+<div class="wide" markdown="1">
 
-**Two, Pull.** You want to go back. You’re Distracted near it, or when something keeps you from it. Each day away takes a level off, but the wanting lasts a week for every day you spent at Pull or worse.
+<p class="block-title" markdown="span">The five levels of Corruption</p>
 
-**Three, Marked.** A mark you may or may not notice, and anyone who touches it risks catching it too. Only a cure clears it - something rare, and somebody out there knows what.
+| Level | Name | What it means | How it clears |
+|---|---|---|---|
+| 1 | **Tell** | A small sign, and everyone sees it but you. | A day away and it’s gone. |
+| 2 | **Pull** | You want to go back. You’re Distracted near it, or when something keeps you from it. | Each day away takes a level off, but the wanting lasts a week for every day you spent at Pull or worse. |
+| 3 | **Marked** | A mark you may or may not notice, and anyone who touches it risks catching it too. | Only a cure - something rare, and somebody out there knows what. |
+| 4 | **Conduit** | You read as unnatural, and reality goes thin around you: Kotodama costs less near you, for everyone. | Only destroying the source brings you back from here. |
+| 5 | **Claimed** | It has you. If you keep playing, it’s steering you now. | The party’s Kotodama - six Fate Tokens or more. Whether the character leaves play is up to you and your GM. |
 
-**Four, Conduit.** You read as unnatural, and reality goes thin around you: Kotodama costs less near you, for everyone. Only destroying the source brings you back from here.
-
-**Five, Claimed.** It has you. Getting you back takes the party’s Kotodama - six Fate Tokens or more. Whether the character leaves play is up to you and your GM. If you keep playing, it’s steering you now.
+</div>
 
 Up to Conduit, you can burn a Fate Token per level to claw your way back down, all the way to nothing. The pull stays either way.
