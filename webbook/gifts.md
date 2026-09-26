@@ -80,7 +80,7 @@ The alternate form is built once, at creation, spending a points pool (below) on
 
 - **Partial Shift** (Lesser, 3 pts): shift a single body part (hands to claws, eyes, wings) without a full transformation - no action cost, no Gift Check - but only one build-menu option's benefit applies at a time, not the whole form.
 - **Extended Reserve** (Greater, 6 pts): the build-menu pool at every Level is permanently +3 points bigger.
-- **Second Form** (Greater, 6 pts): build a second alternate form on the same pool, chosen independently at creation. Switching still triggers the Gift Check each time.
+- **Second Form** (Greater, 6 pts): build a second alternate form at creation, chosen independently, with its own full pool for your Level. Switching still triggers the Gift Check each time.
 - **Snap Change** (Lesser, 3 pts): transforming is a Fast action instead of a Slow one. The Gift Check still applies.
 - **Shed Skin** (Greater, 6 pts): once per Scene, when a hit would cost you a Health Level while transformed, you drop back to your normal form instead and ignore that Health Level. You can't transform again until the Scene ends.
 - **Terrifying Visage** (Lesser, 3 pts): the first time per Scene you transform in sight of enemies, roll your Level plus half your Presence against the Presence of every enemy within Close; a connecting die leaves that enemy Frightened until the end of their next turn.
@@ -602,7 +602,7 @@ The build is set once at creation, spending a points pool (below) on the build m
 - **Governor Override** (Greater, 6 pts): Once per Scene, spend 2 Ki as a Fast action to cut your safety governors for the rest of the Scene: every Subdermal Plating, Armored Plating, Myomer Fiber and Linear Frame bonus you have is doubled. When the Scene ends you take 1 Health Level and are Exhausted.
 - **Rocket Fist** (Lesser, 3 pts): Spend 1 Ki to launch a cybernetic hand on its cable and make an unarmed or Integrated Weapon attack against a target at Near range. The hand reels back in before your next turn.
 - **Sacrificial Part** (Lesser, 3 pts): Once per Scene, when an attack would take Health Levels from you, a piece of hardware takes the hit instead: ignore that attack's damage, and one build-menu option of your choice goes offline until you spend an hour repairing it.
-- **Battle Configuration** (Greater, 6 pts): Build a second loadout from your pool at creation. As a Normal action, fold one away and deploy the other - only one is ever active, and the second counts as Visible Hardware whether or not you took that Limiter.
+- **Battle Configuration** (Greater, 6 pts): Build a second loadout at creation, with its own full pool for your Level. As a Normal action, fold one away and deploy the other - only one is ever active, and the second counts as Visible Hardware whether or not you took that Limiter.
 - **Onboard AI** (Greater, 6 pts): Your hardware has a voice and a personality of its own. Once per round it takes one Fast action using only your installed augmentations (fire the Chem Injector, run a scan, key the Comms Array) without costing you an action, and it keeps doing so while you are unconscious.
 - **Threat Response Loop** (Lesser, 3 pts): Your targeting suite never sleeps: you can't be Surprised, and once per Scene you may take your turn first in a round regardless of Initiative.
 - **Hidden Arsenal** (Lesser, 3 pts): The first time in a Scene you attack with an Integrated Weapon or Integrated Heavy Weapon, a target who didn't know it was there is Surprised against that attack.
