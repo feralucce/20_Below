@@ -492,6 +492,18 @@ export function removeOneAdder(gift, adderName) {
   if (i !== -1) gift.adders.splice(i, 1);
 }
 
+// Why an Adder or Limiter can't be taken right now, or null if it can: it
+// contradicts something already chosen on this Gift, or it needs a Level or
+// another Adder the character doesn't have yet. Only ever blocks adding.
+export function optionBlock(gState, option) {
+  const chosen = new Set([...(gState?.adders ?? []), ...(gState?.limiters ?? [])]);
+  const clash = (option.conflicts ?? []).find((n) => chosen.has(n));
+  if (clash) return `can't be taken with ${clash}`;
+  if (option.requiresLevel && (gState?.level ?? 0) < option.requiresLevel) return `needs Level ${option.requiresLevel}`;
+  if (option.requiresAdder && !chosen.has(option.requiresAdder)) return `needs ${option.requiresAdder}`;
+  return null;
+}
+
 export function adderCount(gift, adderName) {
   return (gift?.adders ?? []).filter((a) => a === adderName).length;
 }

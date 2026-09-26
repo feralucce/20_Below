@@ -19,6 +19,7 @@ import {
   removeSignatureMove,
   adderCount,
   removeOneAdder,
+  optionBlock,
 } from '../state.js';
 
 function getOrCreateGiftState(state, name) {
@@ -120,14 +121,16 @@ export default {
             // can still pay for.
             addersRow.appendChild(counterRow({
               name: adder.name,
-              hint: `${adder.tier}, ${adder.points} pts each, can be bought more than once`,
+              hint: `${adder.tier}, ${adder.points} pts each, can be bought more than once${adderCount(gState, adder.name) === 0 && optionBlock(gState, adder) ? ` - ${optionBlock(gState, adder)}` : ''}`,
               get: () => adderCount(gState, adder.name),
               set: (v) => {
                 while (adderCount(gState, adder.name) < v) gState.adders.push(adder.name);
                 while (adderCount(gState, adder.name) > v) removeOneAdder(gState, adder.name);
               },
               min: 0,
-              max: () => adderCount(gState, adder.name) + Math.floor(remaining / adder.points),
+              max: () => (adderCount(gState, adder.name) === 0 && optionBlock(gState, adder)
+                ? 0
+                : adderCount(gState, adder.name) + Math.floor(remaining / adder.points)),
               onChange: () => { rerenderStep(); rerenderPools(); },
             }));
             return;
@@ -135,12 +138,14 @@ export default {
           const checked = gState.adders.includes(adder.name);
           // Same guard the Level counter has: nothing the pool can't pay for.
           const cantAfford = !checked && adder.points > remaining;
+          // Contradicts something already chosen, or needs a Level or Adder first.
+          const blocked = !checked && optionBlock(gState, adder);
           addersRow.appendChild(
             el('label', { style: 'display:block;font-size:0.85rem;' }, [
               el('input', {
                 type: 'checkbox',
                 checked: checked ? '' : undefined,
-                disabled: cantAfford ? '' : undefined,
+                disabled: cantAfford || blocked ? '' : undefined,
                 onChange: (e) => {
                   if (e.target.checked) gState.adders.push(adder.name);
                   else gState.adders = gState.adders.filter((a) => a !== adder.name);
@@ -148,7 +153,7 @@ export default {
                   rerenderPools();
                 },
               }),
-              ` ${adder.name} (${adder.tier}, ${adder.points} pts)`,
+              ` ${adder.name} (${adder.tier}, ${adder.points} pts)${blocked ? ` - ${blocked}` : ''}`,
             ]),
           );
         });
@@ -162,12 +167,13 @@ export default {
           // bought, so it is blocked when the pool can't cover the rise.
           const rise = gState.level * (giftLevelCost(data, gState.limiters.length - 1) - giftLevelCost(data, gState.limiters.length));
           const cantDrop = checked && rise > remaining;
+          const blockedL = !checked && optionBlock(gState, limiter);
           limitersRow.appendChild(
             el('label', { style: 'display:block;font-size:0.85rem;' }, [
               el('input', {
                 type: 'checkbox',
                 checked: checked ? '' : undefined,
-                disabled: cantDrop ? '' : undefined,
+                disabled: cantDrop || blockedL ? '' : undefined,
                 onChange: (e) => {
                   if (e.target.checked) gState.limiters.push(limiter.name);
                   else gState.limiters = gState.limiters.filter((l) => l !== limiter.name);
@@ -175,7 +181,7 @@ export default {
                   rerenderPools();
                 },
               }),
-              ` ${limiter.name} (-1 pt/Level)`,
+              ` ${limiter.name} (-1 pt/Level)${blockedL ? ` - ${blockedL}` : ''}`,
             ]),
           );
         });

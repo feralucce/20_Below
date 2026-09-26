@@ -22,6 +22,7 @@ import {
   startingFateTokens,
   canBuyWealthAtCreation,
   adderCount,
+  optionBlock,
 } from '../state.js';
 import { renderBoonPicker } from './07-boons.js';
 
@@ -233,16 +234,17 @@ export default {
           gift.adders.forEach((adder) => {
             const owned = gState?.adders.includes(adder.name);
             const count = adderCount(gState, adder.name);
+            const blocked = !owned && optionBlock(gState, adder);
             const boughtHere = (state.discretionaryPurchases.GiftAdders[gift.name] ?? []).includes(adder.name);
             const adderCost = Math.round((adder.points / data.giftLevelCost) * rateGifts);
             addersRow.appendChild(
               el('div', { style: 'display:flex;gap:0.5rem;align-items:center;margin:0.15rem 0;font-size:0.85rem;' }, [
-                el('span', {}, `${adder.name} (${adder.tier}, ${adderCost} Discretionary)${owned ? (count > 1 ? ` - owned ×${count}` : ' - owned') : ''}`),
+                el('span', {}, `${adder.name} (${adder.tier}, ${adderCost} Discretionary)${owned ? (count > 1 ? ` - owned ×${count}` : ' - owned') : ''}${blocked ? ` - ${blocked}` : ''}`),
                 !owned || adder.repeatable
                   ? el('button', {
                       type: 'button',
                       text: owned ? 'Buy another' : 'Buy',
-                      disabled: adderCost > discretionaryRemaining(state, data) ? '' : undefined,
+                      disabled: adderCost > discretionaryRemaining(state, data) || blocked ? '' : undefined,
                       onClick: () => {
                         buyDiscretionaryGiftAdder(state, gift.name, adder.name, adder.repeatable);
                         rerenderStep();
@@ -270,11 +272,13 @@ export default {
           const limitersRow = el('div', { style: 'margin:0 0 1rem 0.5rem;' });
           gift.limiters.forEach((limiter) => {
             const checked = gState?.limiters.includes(limiter.name);
+            const blockedL = !checked && optionBlock(gState, limiter);
             limitersRow.appendChild(
               el('label', { style: 'display:block;font-size:0.85rem;' }, [
                 el('input', {
                   type: 'checkbox',
                   checked: checked ? '' : undefined,
+                  disabled: blockedL ? '' : undefined,
                   onChange: (e) => {
                     if (e.target.checked) gState.limiters.push(limiter.name);
                     else gState.limiters = gState.limiters.filter((l) => l !== limiter.name);
@@ -282,7 +286,7 @@ export default {
                     rerenderPools();
                   },
                 }),
-                ` ${limiter.name} (free, -1 pt/Level)`,
+                ` ${limiter.name} (free, -1 pt/Level)${blockedL ? ` - ${blockedL}` : ''}`,
               ]),
             );
           });

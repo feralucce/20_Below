@@ -3,6 +3,28 @@ import { findSection, splitByHeading, extractTableAfter } from './markdown.js';
 const ADDER_ITEM = /^- \*\*(.+?)\*\* \((Lesser|Greater), \d+ ?pts?\):?\s*(.*)$/;
 const LIMITER_ITEM = /^- \*\*(.+?)\*\*:?\s*(.*)$/;
 
+// Two sentences an Adder or Limiter can end with, written the same way
+// everywhere so the creator can act on them:
+//   "Can't be taken with **A** or **B**."  - the options contradict; blocked both ways.
+//   "Requires Level 3." / "Requires **Roll Call**." - an Adder that needs a Level
+//   of its Gift, or another of its Adders, before it can be bought.
+function optionRules(text) {
+  const excl = /Can't be taken with (.+?)\.(?:\s|$)/.exec(text);
+  const excludes = excl ? [...excl[1].matchAll(/\*\*([^*]+)\*\*/g)].map((m) => m[1]) : [];
+  const lvl = /Requires Level (\d)/.exec(text);
+  const adder = /Requires \*\*([^*]+)\*\*/.exec(text);
+  return { excludes, requiresLevel: lvl ? Number(lvl[1]) : null, requiresAdder: adder ? adder[1] : null };
+}
+
+// Every option learns what it conflicts with, whichever side the sentence
+// was written on.
+function linkConflicts(adders, limiters) {
+  const all = [...adders, ...limiters];
+  const map = new Map(all.map((o) => [o.name, new Set(o.excludes)]));
+  all.forEach((o) => o.excludes.forEach((n) => { if (map.has(n)) map.get(n).add(o.name); }));
+  all.forEach((o) => { o.conflicts = [...map.get(o.name)]; });
+}
+
 function extractBulletsBetween(body, startLabel, endLabel) {
   const startIdx = body.indexOf(startLabel);
   if (startIdx === -1) return { items: [], found: false };
@@ -96,7 +118,7 @@ export function parseGifts(giftsMd, giftAdderCost) {
         // "can be bought more than once" in an Adder's text makes it repeatable:
         // each purchase is its own entry in the Gift's `adders` list.
         const repeatable = /can be bought more than once/i.test(m[3]);
-        return { name: m[1], tier: m[2], points: giftAdderCost[m[2]], text: m[3], repeatable };
+        return { name: m[1], tier: m[2], points: giftAdderCost[m[2]], text: m[3], repeatable, ...optionRules(m[3]) };
       })
       .filter(Boolean);
 
@@ -115,9 +137,10 @@ export function parseGifts(giftsMd, giftAdderCost) {
           console.warn(`Gift "${title}": Limiter line didn't match expected pattern: "${line}"`);
           return null;
         }
-        return { name: m[1], text: m[2] };
+        return { name: m[1], text: m[2], ...optionRules(m[2]) };
       })
       .filter(Boolean);
+    linkConflicts(adders, limiters);
 
     // Most Gifts have a standard "| Level | Effect |" table right after the
     // intro prose. A few (Alternate Form, Cybernetics) use a custom
