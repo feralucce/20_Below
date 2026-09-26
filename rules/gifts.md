@@ -777,6 +777,7 @@ The barrier occupies the same Zone(s) as any worn armor and follows the normal r
 - **Standing Wall** (Greater, 6 pts): raise the barrier as a flat wall anywhere within Close range instead of on a body; it blocks passage and attacks across it, with the same Hardness and Health Levels.
 - **Rebound** (Greater, 6 pts): when the barrier's Hardness stops every die of an attack, spend 1 Ki to throw it back: roll your Forcefield Level + half your Ferocity against the attacker's Soak.
 - **Barrier Cage** (Greater, 6 pts): spend 1 Ki to raise the barrier around one foe at Close range instead: they can't leave it or attack out of it until its Health Levels are broken from either side.
+- **Fortification** (Greater, 6 pts): spend 2 Ki to lock down the place you are standing in for a Scene. Every door, window, vent and other way in or out is sealed by the barrier, each one with the barrier's Hardness and Health Levels, tracked separately. Walls, floor and ceiling use your barrier's Hardness in place of their own if it is higher. Nothing passes a sealed opening, and attacks can't be made through one, until its Health Levels are broken; you know the instant one is struck. The lockdown covers a room at Levels 1-2, a floor of a building at Level 3, and a whole building at Level 4 and up. It lasts until the Scene ends, you leave, or you drop it as a Fast action. The Gift Check to keep the barrier up still applies each turn. Requires Level 2.
 
 **Limiters**:
 
@@ -786,7 +787,7 @@ The barrier occupies the same Zone(s) as any worn armor and follows the normal r
 - **Exhausting Maintenance**: the Gift Check's failure cost rises to 2 Ki instead of 1, at every Level.
 - **Cracks Run Deep**: when the barrier loses its last Health Level, you lose 1 Health Level too.
 - **Planted**: you can't move from where you stand while the barrier is up.
-- **Sealed In**: while the barrier covers you, attacks made by you and anyone it covers are at Disadvantage.
+- **Sealed In**: the barrier gets in your way too. While it covers you, any attack you or anyone else inside it makes against a target outside the barrier is at Disadvantage. Attacks between people inside the barrier are made normally.
 
 ### Gadgeteer
 
