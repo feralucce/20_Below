@@ -636,8 +636,13 @@ export default {
         case 'weapon': {
           const damage = buildDamageRollSection(state, data, draw, 'Damage Roll',
             damageDice(extra));
+          // A Gift that attacks names its wall ("4 vs Presence"), and the
+          // wall says what kind of attack it is. A weapon is Physical.
+          const wall = String(extra?.damage ?? '');
+          const kind = /presence/i.test(wall) ? 'Social' : /psyche/i.test(wall) ? 'Mental' : 'Physical';
           return [el('h3', {}, `Attack with ${label}`),
-            buildAttackRollSection(state, data, draw, (crit) => damage?.armCritical?.(crit)),
+            buildAttackRollSection(state, data, draw, (crit) => damage?.armCritical?.(crit), null,
+              { kind, onSetup: ({ type }) => damage?.setAttack?.({ type }) }),
             damage];
         }
         case 'attack': {
@@ -646,12 +651,87 @@ export default {
           const damage = buildDamageRollSection(state, data, draw);
           return [el('h3', {}, `Attack on ${label}`),
             buildAttackRollSection(state, data, draw,
-              (crit) => damage?.armCritical?.(crit), label),
+              (crit) => damage?.armCritical?.(crit), label,
+              { onSetup: (setup) => damage?.setAttack?.(setup) }),
             damage];
         }
+        case 'movement':
+          return movementPanel(extra);
+        case 'initiative':
+          return initiativePanel(extra);
         default:
           return [];
       }
+    }
+
+    // 1d10 + Initiative, once at the start of a fight. Two dice keeping
+    // the higher for Enhanced Speed 3, or when something grants Advantage
+    // on it (Danger Instinct) - the box is there for that one.
+    function initiativePanel({ initiative, speed }) {
+      let advantage = speed >= 3;
+      const result = el('div', { class: 'roller-result' });
+      const d10 = () => 1 + Math.floor(Math.random() * 10);
+      const adv = el('label', { class: 'roller-row' }, [
+        el('input', {
+          type: 'checkbox',
+          checked: advantage ? '' : undefined,
+          onChange: (e) => { advantage = e.target.checked; },
+        }),
+        speed >= 3
+          ? ' Roll 2d10, keep the higher (Enhanced Speed 3)'
+          : ' Roll 2d10, keep the higher (Advantage, e.g. Danger Instinct)',
+      ]);
+      const roll = el('button', {
+        type: 'button',
+        class: 'roll-btn',
+        text: 'Roll Initiative',
+        onClick: () => {
+          const dice = advantage ? [d10(), d10()] : [d10()];
+          const kept = Math.max(...dice);
+          result.innerHTML = '';
+          result.append(
+            el('p', {}, dice.length > 1 ? `Rolled ${dice.join(', ')}, kept ${kept}` : `Rolled ${kept}`),
+            el('p', { class: 'status-ok' }, [el('strong', {}, `Initiative ${kept + initiative}`),
+              ` (${kept} + ${initiative}). Tell the GM; it holds for the whole fight.`]),
+          );
+        },
+      });
+      return [
+        el('h3', {}, 'Initiative'),
+        el('p', { class: 'roller-howto' },
+          `Rolled once, at the start of a fight: 1d10 + your Initiative (${initiative}). Higher goes first within each band.`),
+        adv, roll, result,
+      ];
+    }
+
+    // movement.md, laid out for this character. Nothing to roll: these are
+    // the distances, so nobody has to multiply at the table.
+    function movementPanel(m) {
+      const n = (v) => String(Number(v.toFixed(2)));
+      const why = [
+        ...m.slowedBy.map((a) => `${a.name} -${a.by}`),
+        m.exhausted ? 'Exhausted 3: halved' : null,
+      ].filter(Boolean);
+      const row = (what, how, value) => el('tr', {}, [
+        el('td', {}, [el('strong', {}, what)]), el('td', {}, how), el('td', {}, value)]);
+      return [
+        el('h3', {}, 'Movement'),
+        el('p', { class: 'roller-howto' }, why.length
+          ? `Movement Rate ${m.base}, down to ${m.rate}: ${why.join(', ')}.`
+          : `Movement Rate ${m.rate}: 5 + Air.`),
+        el('table', { class: 'menu-table movement-table' }, [
+          el('tr', {}, [el('th', {}, 'In combat'), el('th', {}, 'Action'), el('th', {}, 'Distance')]),
+          row('Move', 'Part of any action', `${m.rate} m`),
+          row('Dash', 'Normal: both actions on movement', `${m.dash} m`),
+          row('Sprint', 'Slow: nothing else; 1 Ki to Normal, 2 to Fast', `${m.sprint} m`),
+          el('tr', {}, [el('th', {}, 'Jumping'), el('th', {}, ''), el('th', {}, '')]),
+          row('Long jump', 'Running / standing', `${n(m.runJump)} m / ${n(m.standJump)} m`),
+          row('High jump', 'Running / standing', `${n(m.highRun)} m / ${n(m.highStand)} m`),
+          el('tr', {}, [el('th', {}, 'Travel'), el('th', {}, ''), el('th', {}, '')]),
+          row('Pace', 'Clear ground, 3 + Air/5', `${n(m.pace)} km per hour`),
+          row('Travel day', '4 + Stamina hours of walking', `${m.day} hours, ${Math.round(m.pace * m.day)} km`),
+        ]),
+      ];
     }
 
     function openRoller(kind, label, extra) {
@@ -692,6 +772,10 @@ export default {
     }
 
     function draw() {
+      // Every change on this page comes back through here, including the
+      // XP tab's, which had no save of its own - an XP purchase lasted
+      // until the next reload unless something else happened to save.
+      persistSheet();
       pagesHost.innerHTML = '';
       const stack = buildPagedSheet(state, data, {
         refresh: draw,

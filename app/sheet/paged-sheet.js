@@ -27,6 +27,10 @@ import { el } from '../ui.js';
 import {
   adderLabels,
   applyRest,
+  applyVitalFloor,
+  healthStatus,
+  poiseStatus,
+  sanityStatus,
   boonNotes,
   flawNotes,
   giftNotes,
@@ -305,13 +309,20 @@ function splitGear(state, data) {
       return;
     }
     const item = catalog.get(name);
+    // Armour is whatever has a Zone to cover and a Hardness to cover it
+    // with, not whatever sits under a heading called Armor - the Black
+    // Market and Beyond the Ordinary suits live under their own headings
+    // and were landing in carried gear. Vehicles have a Hardness too, but
+    // no Zone, so they stay where they were.
     const parent = item?._cat?.parent || category || '';
-    if (/armor|armour/i.test(parent)) {
+    if ((item?.Zone && item?.Hardness) || (!item && /armor|armour/i.test(parent))) {
       armour.push({
         name,
         zone: item?.Zone || '',
         hardness: item?.Hardness || '',
         health: Number(item?.['Health Levels']) || 0,
+        // "Movement Rate -2" in the Notes is what the suit costs you.
+        slows: Number(String(item?.Notes || '').match(/Movement Rate\s*[-−](\d+)/)?.[1]) || 0,
       });
     } else if (item && item.Damage) {
       weapons.push({
@@ -349,6 +360,18 @@ function splitGear(state, data) {
     });
   (state.flavorItems || []).forEach((t) => gear.push(t));
 
+  // Damage is remembered by item, not by row: a row number moves when
+  // something is bought or dropped, and the dent would move with it. Two
+  // of the same thing are told apart by which one it is.
+  const seen = {};
+  armour.forEach((a) => {
+    seen[a.name] = (seen[a.name] ?? 0) + 1;
+    a.key = `${a.name}#${seen[a.name]}`;
+    const lost = Number(state.armourDamage?.[a.key]) || 0;
+    a.current = Math.max(0, a.health - lost);
+    if (a.health > 0 && a.current === 0) a.broken = true;
+  });
+
   return { weapons, armour, gear };
 }
 
@@ -383,6 +406,31 @@ const FIGURED_KEYS = {
   Carry: 'Carrying Capacity',
 };
 
+// Everything movement.md derives from Movement Rate, Air and Stamina, with
+// what slows it applied: worn armour's Movement Rate penalty first, then
+// Exhausted 3 halving what is left (rules.md, Exhausted), rounded up the
+// way the book rounds every half.
+function movementFigures(state, figured, armour = []) {
+  const base = figured['Movement Rate'];
+  const slowedBy = armour.filter((a) => a.slows && !a.broken).map((a) => ({ name: a.name, by: a.slows }));
+  let rate = Math.max(1, base - slowedBy.reduce((n, a) => n + a.by, 0));
+  const exhausted = (Number(state.exhausted) || 0) >= 3;
+  if (exhausted) rate = Math.ceil(rate / 2);
+  const air = Number(state.attributes?.Air) || 0;
+  const stamina = Number(state.subStats?.Stamina) || 0;
+  return {
+    base, slowedBy, exhausted, rate,
+    dash: rate * 2,
+    sprint: rate * 5,
+    runJump: air,
+    standJump: air / 2,
+    highRun: air / 2,
+    highStand: air / 4,
+    pace: 3 + air / 5,
+    day: 4 + stamina,
+  };
+}
+
 function readField(id, ctx) {
   const { state, data, figured } = ctx;
   const part = id.split('.');
@@ -397,6 +445,7 @@ function readField(id, ctx) {
     case 'descriptors':
       return (state.descriptors[part[1]] || []).filter(Boolean).join(', ');
     case 'figured':
+      if (part[1] === 'Movement') return movementFigures(state, figured, ctx.armour).rate;
       return figured[FIGURED_KEYS[part[1]]];
     case 'nature': {
       // A picked Nature keeps its Drive and its example trigger in the
@@ -473,7 +522,7 @@ function readField(id, ctx) {
     case 'armour': {
       const a = ctx.armour[Number(part[1])];
       if (!a) return part[2] === 'health' ? 0 : '';
-      if (part[2] === 'health') return a.health;
+      if (part[2] === 'health') return a.current ?? a.health;
       if (['com', 'head', 'arms', 'legs'].includes(part[2])) return coversZone(a.zone, part[2]);
       if (part[2] === 'broken') return !!a.broken;
       if (part[2] === 'hardness') return a.hardness;
@@ -565,12 +614,80 @@ function editControl(f, binding, persist, rebuild) {
   node.value = binding.get();
   if (multi) {
     const pitch = f.h / (f.lines || 1);
-    node.style.fontSize = typeSize(pitch * 0.52, 9);
-    node.style.lineHeight = typeSize(pitch, 11);
+    node.style.fontSize = typeSize(pitch * 0.52, 9, pitch * 0.8);
+    node.style.lineHeight = `calc(var(--u) * ${pitch})`;
   } else {
-    node.style.fontSize = typeSize(Math.min(f.h * 0.7, 42));
+    // Sized for two figures at least, so typing a second digit does not
+    // make the box jump.
+    const sample = binding.numeric ? String(binding.get()).padStart(2, '0') : binding.get();
+    node.style.fontSize = fitSize(f, Math.min(f.h * 0.7, 42), sample);
   }
   return place(node, f);
+}
+
+// The art already prints what 0 and below mean beside each Vital. This
+// lights the word that is true right now, in the Vital's own colour, by
+// laying an identical line over the printed one with every other word
+// left transparent - so it lines up to the letter without the art
+// having to know anything. Dead has no word of its own on the line and
+// is added to the end of it.
+const VITAL_LINES = [
+  { y: 2766, colour: '#6FBF73', words: ['UNCONSCIOUS', ', ', 'DYING'] },
+  { y: 2886, colour: '#E0A85C', words: ['FLUSTERED', ', ', 'HUMILIATED'] },
+  { y: 3006, colour: '#6FB8E0', words: ['OVERWHELMED', ', ', 'SHATTERED'] },
+];
+const SVG_NS = 'http://www.w3.org/2000/svg';
+
+function vitalStatusLayer(state, figured) {
+  const unstoppable = (state.boons || []).some((b) => b.name === 'Unstoppable');
+  let health = healthStatus(state.currentHealth, figured['Health Levels']);
+  // Unstoppable keeps a character on their feet at 0 and below.
+  if (unstoppable && health === 'Unconscious') health = null;
+  const statuses = [health, poiseStatus(state.currentPoise), sanityStatus(state.currentSanity)];
+
+  const svg = document.createElementNS(SVG_NS, 'svg');
+  svg.setAttribute('viewBox', '0 0 2550 3300');
+  svg.setAttribute('class', 'sheet-status');
+  svg.setAttribute('aria-hidden', 'true');
+  VITAL_LINES.forEach((line, i) => {
+    const status = statuses[i];
+    if (!status) return;
+    const text = document.createElementNS(SVG_NS, 'text');
+    Object.entries({
+      x: 867, y: line.y, 'font-size': 29, 'letter-spacing': 2.7,
+      'font-family': "'Segoe UI', Montserrat, system-ui, sans-serif",
+    }).forEach(([k, v]) => text.setAttribute(k, v));
+    const lit = status === 'Dead' ? 'DYING' : status.toUpperCase();
+    line.words.forEach((word) => {
+      const span = document.createElementNS(SVG_NS, 'tspan');
+      span.textContent = word;
+      if (word === lit && status !== 'Dead') {
+        span.setAttribute('fill', line.colour);
+        span.style.color = line.colour;
+        span.setAttribute('class', 'sheet-status-lit');
+      } else {
+        span.setAttribute('fill', 'transparent');
+      }
+      text.appendChild(span);
+    });
+    if (status === 'Dead') {
+      const dead = document.createElementNS(SVG_NS, 'tspan');
+      dead.textContent = '  DEAD';
+      dead.setAttribute('fill', '#E0685C');
+      dead.style.color = '#E0685C';
+      dead.setAttribute('class', 'sheet-status-lit');
+      text.appendChild(dead);
+    }
+    svg.appendChild(text);
+  });
+  return svg;
+}
+
+function sheetNotice(text) {
+  document.querySelector('.sheet-notice')?.remove();
+  const node = el('div', { class: 'sheet-notice', role: 'status' }, text);
+  document.body.appendChild(node);
+  setTimeout(() => node.remove(), 6000);
 }
 
 function place(node, f) {
@@ -622,8 +739,27 @@ const DICE_2D10 = `<svg viewBox="0 0 54 42" fill="none" stroke="currentColor" st
 
 const FLOOR = 10;
 
-function typeSize(units, floor = FLOOR) {
-  return `max(${floor}px, calc(var(--u) * ${units}))`;
+// The floor is for a page drawn at a readable size. On a phone the whole
+// page shrinks with the screen, and a 10px floor there is taller and wider
+// than the box it sits in - a two-digit number came out as "1..". So the
+// floor never wins against the box: `cap` is the largest the value can be
+// and still fit, and it is measured in page units, so it shrinks with the
+// page like everything else.
+function typeSize(units, floor = FLOOR, cap = units) {
+  return `min(calc(var(--u) * ${cap}), max(${floor}px, calc(var(--u) * ${units})))`;
+}
+
+// Montserrat's figures run a little over 0.6em wide. A value is sized to
+// its own length, so "10" in an Element panel shrinks to fit rather than
+// losing its second digit. Short values only - anything longer than a
+// number is a name, and a name is allowed its ellipsis rather than being
+// shrunk to nothing.
+const FIGURE_EM = 0.64;
+function fitSize(f, units, text) {
+  let fit = f.h * 0.85;
+  const chars = String(text).length;
+  if (chars > 0 && chars <= 4) fit = Math.min(fit, (f.w * 0.92) / (chars * FIGURE_EM));
+  return typeSize(Math.min(units, fit), FLOOR, fit);
 }
 
 function textControl(f, value) {
@@ -633,8 +769,7 @@ function textControl(f, value) {
   const node = el('div', { class: 'sf sf-text', title: text }, el('span', { class: 'sf-clip' }, text));
   // A field can ask for its own size - an Element's rating is the whole
   // point of its panel and is set far larger than a row of text.
-  const units = f.size ?? Math.min(f.h * 0.7, 42);
-  node.style.fontSize = typeSize(units);
+  node.style.fontSize = fitSize(f, f.size ?? Math.min(f.h * 0.7, 42), text);
   if (f.align === 'end') node.classList.add('sf-right');
   else if (f.centre || f.w <= 120) node.classList.add('sf-centre');
   return place(node, f);
@@ -643,8 +778,8 @@ function textControl(f, value) {
 function paraControl(f, value) {
   const node = el('div', { class: 'sf sf-para' }, String(value ?? ''));
   const pitch = f.h / (f.lines || 1);
-  node.style.fontSize = typeSize(pitch * 0.52, 9);
-  node.style.lineHeight = typeSize(pitch, 11);
+  node.style.fontSize = typeSize(pitch * 0.52, 9, pitch * 0.8);
+  node.style.lineHeight = `calc(var(--u) * ${pitch})`;
   return place(node, f);
 }
 
@@ -741,6 +876,16 @@ export function buildPagedSheet(state, data, opts = {}) {
   };
 
   const set = (fn) => { fn(); persist(); refresh(); };
+
+  // The floor rules live in state.js, shared with the GM's combat
+  // tracker. What they did is said out loud for a few seconds, because a
+  // Vital that jumps from -7 to 0 looks like a bug otherwise.
+  function floor(track, max) {
+    state.floorNote = null;
+    applyVitalFloor(state, track, max, figured);
+    if (state.floorNote) sheetNotice(state.floorNote);
+    delete state.floorNote;
+  }
   const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
   // The art draws a - and a + beside every count that moves, and the
@@ -752,16 +897,17 @@ export function buildPagedSheet(state, data, opts = {}) {
       set: (v) => { state.currentHealth = v; },
       lo: () => -figured['Health Levels'], hi: () => figured['Health Levels'],
     },
-    // Poise has no below-zero range of its own to step into here; it
-    // floors at 0 and the Flaw-scar is what carries on from there.
+    // Poise and Sanity run as far below 0 as above it. Reaching the bottom
+    // is not a stop but a reset (rules.md, Poise and Sanity): back to 0,
+    // and a Poise floor costs a Sanity Level on the way.
     'vital.poise': {
       get: () => state.currentPoise,
-      set: (v) => { state.currentPoise = v; },
-      lo: () => 0, hi: () => figured.Poise,
+      set: (v) => { state.currentPoise = v; floor('Poise', figured.Poise); },
+      lo: () => -figured.Poise, hi: () => figured.Poise,
     },
     'vital.sanity': {
       get: () => state.currentSanity,
-      set: (v) => { state.currentSanity = v; },
+      set: (v) => { state.currentSanity = v; floor('Sanity', figured.Sanity); },
       lo: () => -figured.Sanity, hi: () => figured.Sanity,
     },
     'pool.ki': {
@@ -773,12 +919,23 @@ export function buildPagedSheet(state, data, opts = {}) {
     // down and the Scene's tally goes up together, and the + undoes both.
     // The cap that matters is per Scene, so the tally has to be right
     // without anyone remembering to keep it.
+    // Earning a Token and spending one are different events (fate.md):
+    // the - spends, and counts against the Scene's limit of Stamina
+    // spends; the + only ever earns. It used to undo a spend, so a Token
+    // earned mid-Scene quietly erased one already used.
     'pool.fate': {
       get: () => state.currentFateTokens,
       set: (v) => {
-        const spent = v < state.currentFateTokens ? 1 : -1;
+        if (v < state.currentFateTokens) {
+          const spent = state.fateSpentThisScene ?? 0;
+          const limit = Number(state.subStats?.Stamina) || 0;
+          if (spent >= limit) {
+            sheetNotice(`Stamina ${limit}: that's ${limit} Fate Token spend${limit === 1 ? '' : 's'} this Scene, the most you can make. Click Spent This Scene to start a new Scene.`);
+            return;
+          }
+          state.fateSpentThisScene = spent + 1;
+        }
         state.currentFateTokens = v;
-        state.fateSpentThisScene = Math.max(0, (state.fateSpentThisScene ?? 0) + spent);
       },
       lo: () => 0, hi: () => fateTokenCap(state, data),
     },
@@ -791,6 +948,66 @@ export function buildPagedSheet(state, data, opts = {}) {
 
   function decorate(f, host) {
     const id = f.id;
+
+    // Initiative is rolled once a fight, by the player (rules.md, Combat
+    // Order). Enhanced Speed 3 rolls it as 2d10, keeping the higher die.
+    if (id === 'substat.Initiative.value') {
+      const speed = (state.gifts || []).find((g) => g.name === 'Enhanced Speed')?.level || 0;
+      host.appendChild(place(el('button', {
+        type: 'button',
+        class: 'sf sf-roll',
+        title: 'Roll Initiative',
+        onClick: () => onRoll('initiative', 'Initiative', {
+          initiative: Number(state.subStats?.Initiative) || 0, speed,
+        }),
+      }), f));
+      return;
+    }
+
+    // Movement Rate is one number on the page and seven at the table.
+    // Clicking it opens the rest, worked out for this character.
+    if (id === 'figured.Movement') {
+      host.appendChild(place(el('button', {
+        type: 'button',
+        class: 'sf sf-roll',
+        title: 'Movement: Dash, Sprint, jumps and travel',
+        onClick: () => onRoll('movement', 'Movement', movementFigures(state, figured, armour)),
+      }), f));
+      return;
+    }
+
+    // Armour loses at most one Health Level an attack and breaks at 0
+    // (rules.md, Armor & Called Shots). The - takes one, the + repairs one.
+    const dent = id.match(/^armour\.(\d+)\.health\.(minus|plus)$/);
+    if (dent) {
+      const a = armour[Number(dent[1])];
+      if (!a || !a.health) return;
+      host.appendChild(place(el('button', {
+        type: 'button',
+        class: 'sf sf-step',
+        title: dent[2] === 'minus' ? 'take one Health Level' : 'repair one Health Level',
+        onClick: () => set(() => {
+          state.armourDamage = state.armourDamage || {};
+          const lost = Number(state.armourDamage[a.key]) || 0;
+          const next = clamp(lost + (dent[2] === 'minus' ? 1 : -1), 0, a.health);
+          if (next) state.armourDamage[a.key] = next;
+          else delete state.armourDamage[a.key];
+        }),
+      }), f));
+      return;
+    }
+
+    // A new Scene clears the tally. The box is the one thing on the page
+    // that is only ever about this Scene, so it is what gets clicked.
+    if (id === 'pool.fate.spent') {
+      host.appendChild(place(el('button', {
+        type: 'button',
+        class: 'sf sf-roll',
+        title: 'New Scene: reset the Fate Tokens spent this Scene to 0',
+        onClick: () => set(() => { state.fateSpentThisScene = 0; }),
+      }), f));
+      return;
+    }
 
     const step = id.match(/^(.*)\.(minus|plus)$/);
     if (step && STEPPERS[step[1]]) {
@@ -831,7 +1048,29 @@ export function buildPagedSheet(state, data, opts = {}) {
         type: 'button',
         class: 'sf sf-roll',
         title: full ? "A full night's rest" : 'A short rest',
-        onClick: () => set(() => applyRest(state, full)),
+        onClick: () => {
+          // One Short Rest's worth between full nights (rules.md, Rests).
+          if (!full && state.shortRestTaken) {
+            sheetNotice("Already had a Short Rest. A Full Night's Rest resets it.");
+            return;
+          }
+          set(() => {
+            applyRest(state, full);
+            if (!full) {
+              state.shortRestTaken = true;
+              return;
+            }
+            state.shortRestTaken = false;
+            // A Fate Token comes up with the sun (fate.md), and one earned
+            // at the holding cap is lost rather than banked.
+            const cap = fateTokenCap(state, data);
+            const before = state.currentFateTokens ?? 0;
+            state.currentFateTokens = Math.min(cap, before + 1);
+            sheetNotice(state.currentFateTokens > before
+              ? 'Morning: +1 Fate Token.'
+              : `Morning: at the cap of ${cap} Fate Tokens, so the sunrise Token is lost.`);
+          });
+        },
       }), f));
       return;
     }
@@ -972,6 +1211,7 @@ export function buildPagedSheet(state, data, opts = {}) {
       if (spec) overlay.appendChild(rollTarget(f, spec));
     });
 
+    if (page === 1) pageEl.appendChild(vitalStatusLayer(state, figured));
     pageEl.appendChild(overlay);
     stack.appendChild(pageEl);
   });

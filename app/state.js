@@ -390,8 +390,10 @@ export function clearResourcePenalty(state, resourceName) {
 // name alone proves nothing and the level has to be checked. Without this,
 // merely visiting the Flaws step made every character Destitute.
 export function isDestitute(state) {
+  // Creation-only, both callers: a Destitute bought off with XP later
+  // was still Destitute when the character was made.
   const destitute = state.flaws.find((f) => f.name === 'Destitute');
-  return Boolean(destitute && destitute.level > 0);
+  return Boolean(destitute && flawCreationLevel(destitute) > 0);
 }
 
 export function creationWealthBase(state) {
@@ -860,8 +862,41 @@ export function setGiftNote(state, name, slot, value) {
 }
 
 // Every Flaw in flaws.md is Leveled; points granted equal the level taken.
+// A Level bought off with XP after creation still granted its point at
+// creation, so the grant counts it - buying off a Flaw costs XP, not the
+// Discretionary it paid for back then.
+export function flawCreationLevel(f) {
+  return f.level + (Number(f.boughtOff) || 0);
+}
+
 export function flawsPointsGranted(state) {
-  return state.flaws.reduce((sum, f) => sum + f.level, 0);
+  return state.flaws.reduce((sum, f) => sum + flawCreationLevel(f), 0);
+}
+
+// ---- Flaw buy-off (costs.md, Advancement) ----
+// XP per Level, the multiplier times the one point each Level granted.
+// The Flaw drops a Level at a time; its level is what everything else
+// reads, so a Flaw bought off to 0 is simply not held any more.
+export function flawBuyoffCost(data) {
+  return data.advancement.flawBuyoffXpMultiplier;
+}
+
+export function buyOffFlawLevel(state, name) {
+  const f = state.flaws.find((x) => x.name === name);
+  if (!f || f.level <= 0) return;
+  f.level -= 1;
+  f.boughtOff = (Number(f.boughtOff) || 0) + 1;
+}
+
+export function restoreFlawLevel(state, name) {
+  const f = state.flaws.find((x) => x.name === name);
+  if (!f || !(Number(f.boughtOff) > 0)) return;
+  f.level += 1;
+  f.boughtOff -= 1;
+}
+
+export function flawBuyoffXpSpent(state, data) {
+  return state.flaws.reduce((sum, f) => sum + (Number(f.boughtOff) || 0), 0) * flawBuyoffCost(data);
 }
 
 // Unspent points from the base 10-point Boons Pool convert 1:1 into
@@ -1171,6 +1206,12 @@ export function applyRest(state, isFullRest) {
   state.currentKi = isFullRest
     ? figured.Ki
     : Math.min(figured.Ki, state.currentKi + Math.max(1, s.Klotho));
+  // A Short Rest clears one level of Exhausted, a full night all of them
+  // (rules.md, Exhausted). A level from cold or heat does not clear while
+  // you are still in it - the sheet cannot know where you are standing,
+  // so that one is the player's to put back with the +.
+  const exhausted = Number(state.exhausted) || 0;
+  state.exhausted = isFullRest ? 0 : Math.max(0, exhausted - 1);
 }
 
 // ---- Advancement (post-creation XP spend, see rules/costs.md) ----
@@ -1401,7 +1442,8 @@ export function xpSpent(state, data) {
     giftsLevelAdvancementXpSpent(state, data) +
     giftAddersAdvancementXpSpent(state, data) +
     boonsAdvancementXpSpent(state, data) +
-    kiAdvancementXpSpent(state, data)
+    kiAdvancementXpSpent(state, data) +
+    flawBuyoffXpSpent(state, data)
   );
 }
 

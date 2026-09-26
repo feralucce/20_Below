@@ -75,7 +75,8 @@ function render(host, state, data, name, note) {
       case 'weapon': {
         const damage = buildDamageRollSection(state, data, draw);
         return [el('h3', {}, `Attack with ${label}`),
-          buildAttackRollSection(state, data, draw, (crit) => damage?.armCritical?.(crit)),
+          buildAttackRollSection(state, data, draw, (crit) => damage?.armCritical?.(crit), null,
+            { onSetup: ({ type }) => damage?.setAttack?.({ type }) }),
           damage];
       }
       case 'attack': {
@@ -84,7 +85,8 @@ function render(host, state, data, name, note) {
         const damage = buildDamageRollSection(state, data, draw);
         return [el('h3', {}, `Attack on ${label}`),
           buildAttackRollSection(state, data, draw,
-            (crit) => damage?.armCritical?.(crit), label),
+            (crit) => damage?.armCritical?.(crit), label,
+            { onSetup: (setup) => damage?.setAttack?.(setup) }),
           damage];
       }
       default:

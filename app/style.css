@@ -1679,6 +1679,41 @@ tr.purchased td {
   max-width: 44rem;
 }
 
+/* The attack roller's numbered steps. Open the first time, one click to
+   fold away once a player knows them. */
+.roller-help {
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--panel-border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--panel);
+  max-width: 44rem;
+}
+
+.roller-help summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.roller-steps {
+  margin: 0.5rem 0 0;
+  padding-left: 1.3rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.roller-steps li {
+  margin-bottom: 0.3rem;
+}
+
+/* A plain caption over a row of radio buttons. */
+.roller-label {
+  margin: 0.75rem 0 0.35rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
 /* One page at a time, with the pages and Advancement as tabs. */
 .sheet-tabs {
   display: flex;
@@ -1832,4 +1867,51 @@ tr.purchased td {
 
 .npc-notice p {
   margin: 0;
+}
+
+/* Said when a Vital hits its floor and resets - see paged-sheet.js. */
+.sheet-notice {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  z-index: 50;
+  max-width: min(90vw, 32rem);
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--gold);
+  border-left-width: 4px;
+  border-radius: var(--radius);
+  background: var(--panel);
+  color: var(--text);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* The Vital that is true right now, lit over the printed line. */
+.sheet-status {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Stroked in its own colour to thicken it without moving a letter (a
+   bolder weight would widen the word off the printed one), and a
+   three-deep glow so it reads from across the table. */
+.sheet-status-lit {
+  stroke: currentColor;
+  stroke-width: 1.6px;
+  paint-order: stroke;
+  filter: drop-shadow(0 0 3px currentColor) drop-shadow(0 0 8px currentColor)
+    drop-shadow(0 0 16px currentColor);
+  animation: sheet-status-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes sheet-status-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet-status-lit { animation: none; }
 }

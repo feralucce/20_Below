@@ -25,6 +25,9 @@ import {
   refundAdvancementGiftAdder,
   adderCount,
   optionBlock,
+  flawBuyoffCost,
+  buyOffFlawLevel,
+  restoreFlawLevel,
 } from '../state.js';
 import { renderBoonPicker } from './07-boons.js';
 
@@ -372,6 +375,41 @@ function kiSection(state, data, refresh) {
   }));
   return details;
 }
+// Buying a Flaw off takes it down a Level at a time for XP. Only Flaws
+// the character holds, or once held and bought off, are listed - the
+// Flaws they never took are nothing to buy.
+function flawsSection(state, data, refresh) {
+  const cost = flawBuyoffCost(data);
+  const { details, content } = sectionWrap(`Flaws (buy off one Level for ${cost} XP)`);
+  const held = (state.flaws || []).filter((f) => f.level > 0 || Number(f.boughtOff) > 0);
+  if (!held.length) {
+    content.appendChild(briefDetail('No Flaws to buy off.'));
+    return details;
+  }
+  content.appendChild(briefDetail(
+    `Each Level of a Flaw granted one point at creation. Buying it back costs ${cost} XP a Level; `
+    + 'the - takes the Flaw down a Level, the + undoes a buy-off and refunds the XP.',
+  ));
+  held.forEach((f) => {
+    const row = counterRow({
+      name: f.name,
+      hint: f.level > 0 ? `${cost} XP to lower` : 'bought off',
+      get: () => f.level,
+      set: (v) => {
+        if (v < f.level) buyOffFlawLevel(state, f.name);
+        else restoreFlawLevel(state, f.name);
+      },
+      min: () => (f.level > 0 && xpRemaining(state, data) >= cost ? f.level - 1 : f.level),
+      max: () => f.level + (Number(f.boughtOff) || 0),
+      format: (v) => (v > 0 ? `Level ${v}` : 'gone'),
+      onChange: refresh,
+    });
+    row.classList.add('counter-row-compact');
+    content.appendChild(row);
+  });
+  return details;
+}
+
 export default function buildAdvancementTab(state, data, refresh) {
   const wrap = el('div', {});
   const summary = el('p', {});
@@ -406,6 +444,7 @@ export default function buildAdvancementTab(state, data, refresh) {
     giftsSection(state, data, refresh),
     boonsSection(state, data, refresh),
     kiSection(state, data, refresh),
+    flawsSection(state, data, refresh),
   );
   return [wrap];
 }

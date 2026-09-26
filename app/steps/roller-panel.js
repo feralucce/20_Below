@@ -25,6 +25,29 @@ const ATTACK_TYPES = {
 
 const UNTRAINED_VALUE = '__untrained__';
 
+// Exhausted (rules.md): 1 is Disadvantage on Physical rolls, 2 and up on
+// every roll. A roller starts with the box already ticked when Exhausted
+// calls for it, and says so - the player can still untick it, because
+// the table may know something the sheet does not.
+function exhaustedLevel(state) {
+  return Number(state.exhausted) || 0;
+}
+
+function exhaustionNote(state, physical) {
+  const level = exhaustedLevel(state);
+  if (!level) return null;
+  let text;
+  if (level >= 2) text = `Exhausted ${level}: Disadvantage on every roll, already ticked below.`;
+  else if (physical) text = 'Exhausted 1: Disadvantage on Physical rolls, already ticked below.';
+  else text = 'Exhausted 1: Disadvantage if this is a Physical roll - tick it below if it is.';
+  return el('p', { class: 'hint roller-exhausted' }, text);
+}
+
+// Every Ki spend costs 1 more at Exhausted 4.
+function kiSpendCost(state) {
+  return exhaustedLevel(state) >= 4 ? 2 : 1;
+}
+
 function toggleBox(label, checked, onClick) {
   return el('div', { class: 'toggle-box', onClick }, [
     el('div', { class: checked ? 'pip' : 'pip pip-empty', style: '--pip-color:var(--accent)' }),
@@ -88,7 +111,9 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}, pre
   let selectedAttribute = defaultElementFor(selectedSkill);
   let selectedDifficulty = 5;
   let advantageOn = false;
-  let disadvantageOn = false;
+  // A Skill can be Physical or not, and the sheet cannot tell which, so
+  // Exhausted 1 only reminds here; 2 and up is every roll.
+  let disadvantageOn = exhaustedLevel(state) >= 2;
   // Jack of All Trades (boons.md): Tier 1 grants a Trained baseline in
   // every Skill. Rather than tracking which Boons a character owns, this
   // is a manual override - checking it floors the roll's effective Tier at
@@ -291,6 +316,7 @@ export function buildSkillRollSection(state, data, refreshHeader = () => {}, pre
     joatCheckbox,
     el('div', { class: 'roller-row' }, [el('label', {}, 'Difficulty'), difficultySelect]),
     tierGrantNote,
+    exhaustionNote(state, false),
     togglesRow,
     rollBtn,
     resultEl,
@@ -471,55 +497,156 @@ export function buildResourceCheckSection(state, data, preselect = null) {
   return section;
 }
 
-// Attack Roll - rules.md#the-passive-wall-triad---soak-presence-psyche's
-// to-hit step: a straight Attribute-vs-Defense roll, no Skill involved at
-// all. Only Earth/Air/Fire/Water are offered - Moira (Fate/the
-// supernatural) isn't a combat Attribute and never applies to a to-hit
-// roll. Reuses the core roll engine with a fixed Tier of 2 (Trained): that
+// Attack Roll - the to-hit step (rules.md, Choosing the Attacking Element
+// and the three attack sections under it). Three kinds of attack, one
+// shape: an Element against the matching Defense to hit, then dice one at
+// a time against the matching wall. What changes between them is which
+// Elements may carry it, which Defense it rolls against, and where the
+// dice come from - a weapon, a Skill's Tier, or a Gift.
+//
+// Reuses the core roll engine with a fixed Tier of 2 (Trained): that
 // Tier's shape is exactly "use the Attribute, no auto Advantage/
 // Disadvantage, no crit widening, no Master reroll" - precisely a plain
 // Attribute-vs-Difficulty roll with no Skill-Tier modifiers layered on.
-const ATTACK_ATTRIBUTES = ['Earth', 'Air', 'Fire', 'Water'];
 const PLAIN_ATTACK_TIER = 2;
 
+const ATTACK_KINDS = {
+  Physical: {
+    elements: ['Earth', 'Air', 'Fire', 'Water'],
+    defense: 'Defense',
+  },
+  Social: {
+    elements: ['Earth', 'Air', 'Fire', 'Water', 'Moira'],
+    defense: 'Social Defense',
+  },
+  Mental: {
+    elements: ['Earth', 'Air', 'Fire', 'Water', 'Moira'],
+    defense: 'Mental Defense',
+  },
+};
+
+const KIND_NOTES = {
+  Physical: 'A weapon, a fist, a thrown brick. Rolls against Defense; the dice come from the weapon and go against Soak.',
+  Social: "Words used as a weapon. Rolls against Social Defense; you roll your Skill's Tier + 1 in dice, against Presence. Moira can carry it.",
+  Mental: 'Only a Gift or a creature can make one - there is no ordinary way to push on a mind. Rolls against Mental Defense; the dice come from the Gift and go against Psyche.',
+};
+
+// The Skills rules.md names as Social attacks, with Etiquette last: it is
+// the GM's call whether naming a broken protocol lands as one.
+const SOCIAL_ATTACK_SKILLS = ['Ridicule', 'Intimidation', 'Persuasion', 'Public Speaking',
+  'Performance', 'Leadership', 'Deception', 'Insight', 'Etiquette'];
+
+// The steps a player actually takes, in order. Short enough to read at
+// the table; the rules have the rest.
+function attackSteps() {
+  const list = el('ol', { class: 'roller-steps' }, [
+    el('li', { html: '<strong>Pick the kind of attack.</strong> Physical hurts the body (Health), Social hurts composure (Poise), Mental hurts the mind (Sanity).' }),
+    el('li', { html: '<strong>Say how you do it.</strong> Your approach picks the Element, and the GM confirms it before you roll.' }),
+    el('li', { html: "<strong>Set the target's Defense.</strong> The GM tells you the number." }),
+    el('li', { html: '<strong>Roll to hit.</strong> 2d10 under your Element plus their Defense.' }),
+    el('li', { html: "<strong>If it hits, roll damage below.</strong> Every die over the target's wall costs them one." }),
+  ]);
+  return el('details', { class: 'roller-help', open: '' }, [el('summary', {}, 'How an attack works'), list]);
+}
+
 export function buildAttackRollSection(state, data, refreshHeader, onCritical = () => {},
-                                      preselect = null) {
+                                      preselect = null, opts = {}) {
+  const { onSetup = () => {}, kind: presetKind = null } = opts;
   const section = el('div', { class: 'roller-gift-check' });
 
-  const attackAttributes = data.attributes.filter((a) => ATTACK_ATTRIBUTES.includes(a.name));
   // The sheet opens this by clicking an Element, so it can say which one
-  // is swinging. Moira never attacks, so a click on it falls through to
-  // the default rather than selecting something that cannot roll.
-  let selectedAttribute = attackAttributes.some((a) => a.name === preselect)
-    ? preselect
-    : attackAttributes[0]?.name;
+  // is swinging. Moira never carries a Physical attack, so a click on it
+  // opens a Social one instead - the kind it can carry.
+  let kind = presetKind && ATTACK_KINDS[presetKind] ? presetKind
+    : preselect === 'Moira' ? 'Social' : 'Physical';
+  let selectedAttribute = ATTACK_KINDS[kind].elements.includes(preselect)
+    ? preselect : ATTACK_KINDS[kind].elements[0];
+  const socialSkills = SOCIAL_ATTACK_SKILLS.filter((n) => data.skillCatalog.some((s) => s.name === n));
+  let socialSkill = socialSkills.find((n) => (state.skills[n] || 0) > 0) || socialSkills[0];
   let selectedDefense = 5;
   let advantageOn = false;
-  let disadvantageOn = false;
+  // Swinging at something is as Physical as a roll gets; a Social or
+  // Mental attack only takes Disadvantage from Exhausted 2 up.
+  let disadvantageOn = exhaustedLevel(state) >= (kind === 'Physical' ? 1 : 2);
 
+  const skillTier = (name) => Number(state.skills[name]) || 0;
+  const socialDice = () => skillTier(socialSkill) + 1;
+  function skillElement(name) {
+    const e = data.skillCatalog.find((s) => s.name === name)?.defaultElement;
+    return ATTACK_KINDS.Social.elements.includes(e) ? e : 'Fire';
+  }
+  if (kind === 'Social' && preselect !== 'Moira') selectedAttribute = skillElement(socialSkill);
+
+  // The damage panel below follows whatever is chosen here, so a Social
+  // attack arrives there with its type and its dice already set.
+  function announce() {
+    onSetup({ type: kind, dice: kind === 'Social' ? socialDice() : null });
+  }
+
+  const kindRow = el('div', { class: 'attribute-radio-group' });
+  const kindNote = el('p', { class: 'hint' });
+  const skillRow = el('div', { class: 'roller-row' });
   const attributeGroup = el('div', { class: 'attribute-radio-group' });
+  const defenseLabel = el('label', {});
+
+  function renderKind() {
+    kindRow.innerHTML = '';
+    Object.keys(ATTACK_KINDS).forEach((k) => {
+      const id = `atk-kind-${k}`;
+      kindRow.append(el('label', { class: 'attribute-radio', for: id }, [
+        el('input', {
+          type: 'radio', id, name: 'atk-kind', value: k,
+          checked: kind === k ? '' : undefined,
+          onChange: () => {
+            kind = k;
+            if (k === 'Social') selectedAttribute = skillElement(socialSkill);
+            if (!ATTACK_KINDS[k].elements.includes(selectedAttribute)) selectedAttribute = ATTACK_KINDS[k].elements[0];
+            if (exhaustedLevel(state) === 1) disadvantageOn = k === 'Physical';
+            // A result from the last kind of attack is not a result for this one.
+            toHitResultEl.innerHTML = '';
+            renderAll();
+            announce();
+          },
+        }),
+        ` ${k}`,
+      ]));
+    });
+    kindNote.textContent = KIND_NOTES[kind];
+    defenseLabel.textContent = `Target's ${ATTACK_KINDS[kind].defense}`;
+  }
+
+  function renderSkill() {
+    skillRow.innerHTML = '';
+    skillRow.style.display = kind === 'Social' ? '' : 'none';
+    if (kind !== 'Social') return;
+    const select = el('select', {
+      onChange: (e) => {
+        socialSkill = e.target.value;
+        selectedAttribute = skillElement(socialSkill);
+        renderAll();
+        announce();
+      },
+    }, socialSkills.map((n) => el('option', { value: n, selected: n === socialSkill ? '' : undefined },
+      `${n} - ${skillTierName(data, skillTier(n))}, ${skillTier(n) + 1} dice`)));
+    skillRow.append(el('label', {}, 'Skill'), select);
+  }
+
   function renderAttributeGroup() {
     attributeGroup.innerHTML = '';
-    attackAttributes.forEach((a) => {
-      const id = `atk-attr-${a.name}`;
+    ATTACK_KINDS[kind].elements.forEach((name) => {
+      const id = `atk-attr-${name}`;
       attributeGroup.append(
         el('label', { class: 'attribute-radio', for: id }, [
           el('input', {
-            type: 'radio',
-            id,
-            name: 'atk-attribute',
-            value: a.name,
-            checked: selectedAttribute === a.name ? '' : undefined,
-            onChange: () => {
-              selectedAttribute = a.name;
-            },
+            type: 'radio', id, name: 'atk-attribute', value: name,
+            checked: selectedAttribute === name ? '' : undefined,
+            onChange: () => { selectedAttribute = name; },
           }),
-          ` ${a.name} (${state.attributes[a.name]})`,
+          ` ${name} (${state.attributes[name]})`,
         ]),
       );
     });
   }
-  renderAttributeGroup();
 
   // Defense runs the same 0-10 scale as the Difficulty Chart (rules.md:
   // "Defense becomes the attacker's Difficulty"), but shown as bare
@@ -528,18 +655,10 @@ export function buildAttackRollSection(state, data, refreshHeader, onCritical = 
   // don't apply to what this dropdown means.
   const defenseSelect = el(
     'select',
-    {
-      onChange: (e) => {
-        selectedDefense = Number(e.target.value);
-      },
-    },
+    { onChange: (e) => { selectedDefense = Number(e.target.value); } },
     data.difficultyChart.map((d) =>
-      el(
-        'option',
-        { value: d.difficulty, selected: d.difficulty === selectedDefense ? '' : undefined },
-        `${d.difficulty}`,
-      ),
-    ),
+      el('option', { value: d.difficulty, selected: d.difficulty === selectedDefense ? '' : undefined },
+        `${d.difficulty}`)),
   );
 
   const togglesRow = el('div', { class: 'roller-toggles' });
@@ -558,18 +677,28 @@ export function buildAttackRollSection(state, data, refreshHeader, onCritical = 
       }),
     );
   }
-  renderToggles();
+
+  const exhaustHost = el('div', {});
+  function renderAll() {
+    renderKind();
+    renderSkill();
+    renderAttributeGroup();
+    exhaustHost.innerHTML = '';
+    const note = exhaustionNote(state, kind === 'Physical');
+    if (note) exhaustHost.append(note);
+    renderToggles();
+  }
+  renderAll();
 
   const toHitResultEl = el('div', { class: 'roller-result' });
-
   const rollBtn = el('button', {
     type: 'button',
     class: 'roll-btn',
     text: 'Roll to Hit',
     onClick: () => {
-      const attributeValue = state.attributes[selectedAttribute];
+      const info = ATTACK_KINDS[kind];
       const result = performCoreRoll({
-        attribute: attributeValue,
+        attribute: state.attributes[selectedAttribute],
         difficulty: selectedDefense,
         skillTier: PLAIN_ATTACK_TIER,
         extraAdvantage: advantageOn ? 1 : 0,
@@ -596,14 +725,17 @@ export function buildAttackRollSection(state, data, refreshHeader, onCritical = 
       toHitResultEl.append(
         ...[
           el('p', {}, [
-            el('strong', {}, `${selectedAttribute} vs Defense ${result.target}`),
+            el('strong', {}, `${kind}: ${selectedAttribute} vs ${info.defense} ${selectedDefense} - roll under ${result.target}`),
             result.mode !== 'normal' ? ` (${result.mode === 'advantage' ? 'Advantage' : 'Disadvantage'})` : '',
           ]),
           el('p', {}, diceSummary(result.roll)),
           el('p', { class: outcomeClass(result.outcome) }, [
-            el('strong', {}, hit ? `${outcomeLabel(result.outcome)} - the attack connects` : `${outcomeLabel(result.outcome)} - the attack misses`),
+            el('strong', {}, hit
+              ? `${outcomeLabel(result.outcome)} - it lands. Roll damage below.`
+              : `${outcomeLabel(result.outcome)} - it misses.`),
           ]),
-          crit ? el('p', { class: 'status-ok' }, [el('strong', {}, 'Critical hit - damage dice doubled.')]) : null,
+          crit ? el('p', { class: 'status-ok' }, [el('strong', {},
+            'Critical hit - half the damage dice connect free, and the rest add your Klotho. Already set below.')]) : null,
           result.luckyNumber ? el('p', { class: 'status-ok' }, 'Lucky Number! +1 Fate Token.') : null,
         ].filter((n) => n != null),
       );
@@ -612,14 +744,21 @@ export function buildAttackRollSection(state, data, refreshHeader, onCritical = 
 
   section.append(
     el('h4', {}, 'Attack Roll'),
-    howTo('Your Element against their Defense - not a Skill, and not the thing '
-      + 'in your hand. Set the Defense the GM gives you, then roll to hit.'),
+    attackSteps(),
+    el('p', { class: 'roller-label' }, 'Kind of attack'),
+    kindRow,
+    kindNote,
+    skillRow,
+    el('p', { class: 'roller-label' }, 'Element - how you do it'),
     attributeGroup,
-    el('div', { class: 'roller-row' }, [el('label', {}, "Target's Defense"), defenseSelect]),
+    el('div', { class: 'roller-row' }, [defenseLabel, defenseSelect]),
+    exhaustHost,
     togglesRow,
     rollBtn,
     toHitResultEl,
   );
+  // Tell the damage panel where it starts, once it exists to hear it.
+  queueMicrotask(announce);
   return section;
 }
 
@@ -646,7 +785,7 @@ export function buildDamageRollSection(state, data, refreshHeader, heading = 'Da
       onChange: (e) => {
         attackType = e.target.value;
         boostedDice = new Set();
-        renderBoostRow();
+        renderPool();
         renderSummary();
       },
     },
@@ -662,7 +801,7 @@ export function buildDamageRollSection(state, data, refreshHeader, heading = 'Da
       diceCount = Math.max(1, Math.min(15, Number(e.target.value) || 1));
       e.target.value = diceCount;
       boostedDice = new Set([...boostedDice].filter((i) => i < diceCount));
-      renderBoostRow();
+      renderPool();
     },
   });
 
@@ -729,22 +868,23 @@ export function buildDamageRollSection(state, data, refreshHeader, heading = 'Da
       dieRow.append(
         el('label', {
           class: 'boost-die' + (disabled && !chosen ? ' boost-die-disabled' : '') + (d.connects ? ' boost-die-hit' : ''),
-          title: d.connects ? 'connects' : useful ? `boost for 1 Ki: ${d.raw}+${boostAmount}` : 'too far under the wall to save',
+          title: d.connects ? 'connects' : useful ? `boost for ${kiSpendCost(state)} Ki: ${d.raw}+${boostAmount}` : 'too far under the wall to save',
         }, [
           el('input', {
             type: 'checkbox',
             checked: chosen ? '' : undefined,
             disabled: disabled && !chosen ? '' : undefined,
             onChange: (e) => {
+              const cost = kiSpendCost(state);
               if (e.target.checked) {
-                if (state.currentKi <= 0) { e.target.checked = false; return; }
+                if (state.currentKi < cost) { e.target.checked = false; return; }
                 pool.chosen.add(i);
-                state.currentKi -= 1;
-                pool.paid += 1;
+                state.currentKi -= cost;
+                pool.paid += cost;
               } else {
                 pool.chosen.delete(i);
-                state.currentKi += 1;
-                pool.paid -= 1;
+                state.currentKi += cost;
+                pool.paid -= cost;
               }
               refreshHeader();
               renderPool();
@@ -765,7 +905,7 @@ export function buildDamageRollSection(state, data, refreshHeader, heading = 'Da
             : '',
         ]),
         dieRow,
-        el('p', {}, `Tick a die to spend 1 Ki and add ${boostAmount} ${info.boostStat} to it. ${state.currentKi} Ki left.`),
+        el('p', {}, `Tick a die to spend ${kiSpendCost(state)} Ki and add ${boostAmount} ${info.boostStat} to it. ${state.currentKi} Ki left.`),
         unspent > 0
           ? el('p', { class: 'status-warn' }, `${unspent} more die${unspent === 1 ? '' : 's'} could still be carried over the wall.`)
           : null,
@@ -809,6 +949,20 @@ export function buildDamageRollSection(state, data, refreshHeader, heading = 'Da
     rollBtn,
     resultEl,
   );
+  // The to-hit roller says what kind of attack this is, and for a Social
+  // one how many dice its Skill gives. A weapon's own dice are left alone.
+  section.setAttack = ({ type, dice }) => {
+    if (!ATTACK_TYPES[type]) return;
+    attackType = type;
+    typeSelect.value = type;
+    if (dice) {
+      diceCount = Math.max(1, Math.min(15, dice));
+      diceInput.value = diceCount;
+    }
+    boostedDice = new Set();
+    renderPool();
+    renderSummary();
+  };
   // The to-hit roller arms this when it crits, so the two panels agree.
   section.armCritical = (on) => {
     critical = on;
