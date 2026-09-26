@@ -748,8 +748,6 @@ Gravity is a mere suggestion for you. You can fly somehow. Whether you manipulat
 
 You can focus your will into a barrier that stands as a bulwark between you and the world. It may manifest as a shimmering bubble, an invisible wall of force or a solid shield. Whatever form it takes, it exists for one purpose - to stop whatever the world throws at it.
 
-Chosen once, at creation: your Forcefield's Form.
-
 Chosen once, at creation: your Forcefield's **Form**.
 
 1. **Wielded Shield** - held in one hand, front arc only, matching a real ballistic shield's own limits. Hardness and Health Levels are always **+1** above the numbers below. Covers only yourself - never projects onto an ally, at any Level.
