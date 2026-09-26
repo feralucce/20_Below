@@ -231,6 +231,8 @@ Chosen once, at creation: your **signature weapon**, any single item from [weapo
 
 A conjured weapon's Damage is its listed rating **plus this Gift's Level**, with no ceiling - the weapon table's cap of 5 binds what a smith can forge, not what you call out of the air. A Damage 4 hatchet conjured at Level 3 deals **7**.
 
+**Expendables.** Anything used up when it is used - a grenade, a charge, a rocket - can be conjured **once per Scene**. After that, **1 Ki** conjures it again. A weapon that comes back is not expendable: a thrown blade called home at Level 3 can be thrown all day.
+
 | Level | Effect |
 |---|---|
 | 1 | Summon your signature weapon into your hand as a **Fast action**, no Ki cost. It arrives with its listed range. Dismissing it is free and instant. It never runs dry - ammo, if any, is never actually a concern, though you're free to roleplay reloading. |

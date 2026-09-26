@@ -438,6 +438,8 @@ Chosen once, at creation: your **signature weapon**, any single item from the ca
 
 A conjured weapon's Damage is its listed rating **plus this Gift's Level**, with no ceiling - the weapon table's cap of 5 binds what a smith can forge, not what you call out of the air. A Damage 4 hatchet conjured at Level 3 deals **7**.
 
+**Expendables.** Anything used up when it is used - a grenade, a charge, a rocket - can be conjured **once per Scene**. After that, **1 Ki** conjures it again. A weapon that comes back is not expendable: a thrown blade called home at Level 3 can be thrown all day.
+
 <p class="gift-section">Adders</p>
 
 <div class="gift-opt gift-opt--adder" markdown="1">
