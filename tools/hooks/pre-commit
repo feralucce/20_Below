@@ -35,6 +35,21 @@ if echo "$staged" | grep -qE '/src-tauri/(tauri\.conf\.json|Cargo\.(toml|lock))$
   echo "pre-commit: app versions agree with themselves."
 fi
 
+# Every Creator page pins each module to a fingerprint of its contents
+# (tools/stamp-app-modules.py), so a browser can never pair a new file
+# with an old one. A code change with a stale stamp would ship exactly
+# that mix, so it is refused here.
+if echo "$staged" | grep -qE '^app/.*\.(js|html)$'; then
+  if ! out=$(python tools/stamp-app-modules.py --check 2>&1); then
+    echo "$out"
+    echo
+    echo "pre-commit: the Creator's module stamps are out of date."
+    echo "  Run python tools/stamp-app-modules.py, stage app/*.html and commit again."
+    exit 1
+  fi
+  echo "pre-commit: module stamps current."
+fi
+
 echo "$staged" | grep -qE '^(rules/.*\.(md|json)|tools/(scriv2(web|brew)|extract-flavour)\.py)$' || exit 0
 
 # rules/flavour.json is generated from the print chapters, so a prose edit

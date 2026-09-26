@@ -287,6 +287,9 @@ async function main() {
     return;
   }
 
+  // index.html reports a module that failed to load; from here on the
+  // app is running and reports its own failures.
+  window.__creatorStarted = true;
   let state = loadSavedState(data);
   let currentStep = 0;
   // 'sheet' is the resting state, 'create' is the wizard, and 'start' is
@@ -431,6 +434,7 @@ async function main() {
   async function openSaved(name) {
     try {
       state = adopt(data, await loadByName(name));
+      document.querySelector('.load-failure')?.remove();
       showMigrationNotices();
       saveState(state);
       resetLoadSelect();
@@ -440,7 +444,28 @@ async function main() {
     } catch (err) {
       console.error(err);
       say(`Could not open "${name}".`, true);
+      showLoadFailure(`Opening "${name}"`, err);
     }
+  }
+
+  // A failed Import or Open used to flash one line in the header and leave
+  // the character that was already open on screen - which then looked like
+  // the file. That is how a player's imported Viktor came up as an older
+  // build with somebody else's Skills. A failure now says so in red, with
+  // the reason, and the character underneath is named as what it is.
+  function showLoadFailure(what, err) {
+    document.querySelector('.load-failure')?.remove();
+    const reason = (err && (err.message || String(err))) || 'unknown error';
+    const banner = el('div', { class: 'load-failure', role: 'alert' }, [
+      el('p', {}, [el('strong', {}, `${what} failed. `),
+        mode === 'start'
+          ? 'Nothing was opened.'
+          : `What is on screen is ${state.name ? `"${state.name}", ` : ''}the character that was already open - not the file.`]),
+      el('p', { class: 'load-failure-reason' }, `Reason: ${reason}`),
+      el('p', {}, 'Reload the page with Ctrl+Shift+R and try again. If it fails again, send the file and this message.'),
+      el('button', { type: 'button', text: 'Dismiss', onclick: () => banner.remove() }),
+    ]);
+    panel.parentNode.insertBefore(banner, panel);
   }
 
   async function doImport() {
@@ -448,6 +473,7 @@ async function main() {
       const picked = await pickCharacterFile();
       if (!picked) return;
       state = adopt(data, picked.character);
+      document.querySelector('.load-failure')?.remove();
       showMigrationNotices();
       saveState(state);
       resetLoadSelect();
@@ -457,6 +483,7 @@ async function main() {
     } catch (err) {
       console.error(err);
       say('That file is not a character the creator can read.', true);
+      showLoadFailure('Import', err);
     }
   }
 

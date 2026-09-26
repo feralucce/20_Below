@@ -71,7 +71,18 @@ async function networkFirst(request, cacheName) {
     // 22,122, which is how the Natures table went missing from an app
     // whose worker cache held the correct file all along.
     const fresh = await fetch(request, { cache: "no-store" });
-    if (fresh && fresh.ok) cache.put(request, fresh.clone());
+    if (fresh && fresh.ok) {
+      cache.put(request, fresh.clone());
+      // Code is addressed by version now (state.js?v=...), so each release
+      // is a new entry. Drop the older ones of the same file as the new
+      // one lands, or the cache keeps every release ever loaded.
+      const path = new URL(request.url).pathname;
+      const stale = (await cache.keys()).filter((k) => {
+        const u = new URL(k.url);
+        return u.pathname === path && k.url !== request.url;
+      });
+      await Promise.all(stale.map((k) => cache.delete(k)));
+    }
     return fresh;
   } catch (err) {
     const hit = await cache.match(request);

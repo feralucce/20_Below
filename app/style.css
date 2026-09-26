@@ -1987,3 +1987,22 @@ textarea.sf-edit {
   scrollbar-width: thin;
   scrollbar-color: var(--panel-border) transparent;
 }
+
+/* An Import, an Open or the app itself that failed - said in red, with
+   the reason, so the character on screen is never mistaken for the file. */
+.load-failure {
+  border: 1px solid var(--danger);
+  border-left-width: 4px;
+  border-radius: var(--radius);
+  background: rgba(224, 104, 92, 0.12);
+  padding: 0.85rem 1rem;
+  margin: 0 0 1rem;
+}
+.load-failure p {
+  margin: 0 0 0.45rem;
+}
+.load-failure-reason {
+  font-family: Consolas, monospace;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
