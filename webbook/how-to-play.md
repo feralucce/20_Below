@@ -725,31 +725,47 @@ The world hurts people without anybody swinging anything, and all of it runs on 
 
 </div>
 
-#### Falling
+<div class="aside aside--accent" markdown="1">
+
+<p class="block-title" markdown="span">Falling</p>
 
 One die per four meters, up to five. Off a kitchen counter isn’t worth rolling. A flight of stairs is about one. Three storeys down a stairwell is three, which is the same as being stabbed. Past twenty meters you are throwing five dice and there is nothing worse to throw. Landing in water, deep snow or a hedge halves it.
 
-#### Fire
+</div>
+
+<div class="aside aside--accent" markdown="1">
+
+<p class="block-title" markdown="span">Fire</p>
 
 A burning room is one die at the end of every round you are still in it, and it doesn’t stop until you leave. Being on fire yourself is two, and it doesn’t stop until you put it out - a Normal action for you, a Fast one for somebody helping.
 
-#### Getting hit by a vehicle
+</div>
+
+<div class="aside aside--accent" markdown="1">
+
+<p class="block-title" markdown="span">Getting hit by a vehicle</p>
 
 Three dice at city speed. Five at speed. Faster than that isn’t a roll, and your GM will say so before you step into the road.
 
-#### No air
+</div>
+
+<div class="aside aside--accent" markdown="1">
+
+<p class="block-title" markdown="span">No air</p>
 
 Drowning, smoke, a bag over your head - you have Stamina rounds. After that it is one Health Level per round, and **Soak doesn’t help**, because there is nothing to soak. It is the one hazard armour is no use against.
 
-#### Cold and heat
+</div>
+
+<div class="aside aside--accent" markdown="1">
+
+<p class="block-title" markdown="span">Cold and heat</p>
 
 **Cold.** This is the one the game is named after, and it doesn’t take Health. It takes **Exhausted** levels, and gear is the whole defence. Dressed for it, nothing happens. Underdressed, a level an hour. Wet, or in a wind, or genuinely twenty below, a level every half hour. In cold water, a level a minute. And you cannot clear cold Exhausted while you are still cold - a Short Rest in a snowdrift is not a rest.
 
 **Heat.** The same ladder from the other end. Working hard in real heat is a level an hour. With no water it is a level an hour whatever you are doing, and nothing clears until you drink. Enclosed, airless and with no shade, a level every half hour.
 
-<div class="wide" markdown="1">
-
-<p class="block-title" markdown="span">Exhaustion from cold and heat</p>
+**Exhaustion from cold and heat**
 
 | Conditions | Exhausted |
 |---|---|
@@ -761,19 +777,19 @@ Drowning, smoke, a bag over your head - you have Stamina rounds. After that it i
 | No water in the heat | 1 level per hour, whatever you are doing; nothing clears until you drink |
 | Enclosed, airless, no shade | 1 level per half hour |
 
-</div>
-
 Neither one costs you a Health Level. They put you at Exhausted 5, which puts you on the ground, and out there that is the same thing. A blizzard is dangerous to somebody nobody has laid a finger on.
 
-#### Corruption
+</div>
+
+<div class="aside aside--accent" markdown="1">
+
+<p class="block-title" markdown="span">Corruption</p>
 
 Some things get their hooks into you: a presence, an otherworldly thing, a place. It changes you slowly. At first you don’t notice it. Eventually, you don’t mind. It isn’t damage, and it costs no Sanity - it’s a track of its own, zero to five, kept separately for each thing that’s doing it to you.
 
 Every time you’re exposed - you look at it, touch it, breathe it, sleep near it, whatever that source feeds on - it rolls its dice against your Klotho. If any die gets over, you slide one level. Only one, however many got over. A rare few are worse than that, and your GM will know which.
 
-<div class="wide" markdown="1">
-
-<p class="block-title" markdown="span">The five levels of Corruption</p>
+**The five levels of Corruption**
 
 | Level | Name | What it means | How it clears |
 |---|---|---|---|
@@ -783,6 +799,6 @@ Every time you’re exposed - you look at it, touch it, breathe it, sleep near i
 | 4 | **Conduit** | You read as unnatural, and reality goes thin around you: Kotodama costs less near you, for everyone. | Only destroying the source brings you back from here. |
 | 5 | **Claimed** | It has you. If you keep playing, it’s steering you now. | The party’s Kotodama - six Fate Tokens or more. Whether the character leaves play is up to you and your GM. |
 
-</div>
-
 Up to Conduit, you can burn a Fate Token per level to claw your way back down, all the way to nothing. The pull stays either way.
+
+</div>
