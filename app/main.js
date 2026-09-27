@@ -10,6 +10,10 @@ import {
   pickCharacterFile,
   adopt,
   downloadJson,
+  listTransfers,
+  loadTransfer,
+  transferFolder,
+  changeTransferFolder,
 } from './file-actions.js';
 
 import stepBonus from './steps/00-bonus.js';
@@ -383,8 +387,24 @@ async function main() {
     } catch (err) {
       console.error('Failed to list saved characters', err);
     }
+    let fresh = [];
+    try { fresh = await listTransfers(); } catch (err) { fresh = []; }
 
     const box = el('div', { class: 'start-panel' });
+    if (fresh.length) {
+      box.append(
+        el('h2', {}, 'New from Owlbear'),
+        el('p', { class: 'start-note' }, 'Saved from the Owlbear Character Sheet into your Downloads.'),
+        el('ul', { class: 'character-list' }, fresh.map((t) => el('li', {}, [
+          el('button', {
+            type: 'button',
+            class: 'character-pick',
+            text: `${t.name || 'Unnamed'} (${t.replaces ? 'newer copy' : 'new'}, ${ago(t.modified)})`,
+            onClick: () => { transfers = fresh; openTransfer(t.file); },
+          }),
+        ]))),
+      );
+    }
     if (names.length) {
       box.append(
         el('h2', {}, 'Open a character'),
@@ -498,6 +518,24 @@ async function main() {
 
   // The saved characters, in the bar itself. A menu that had to be opened
   // first hid the one thing somebody comes to this row to do.
+  // Characters saved from the Owlbear Character Sheet (desktop only):
+  // the newest copy of each one in the download folder that the Creator
+  // does not already have. Listed in their own group so it is plain where
+  // they came from.
+  let transfers = [];
+  const TRANSFER = 'transfer:';
+  const FOLDER = '__transfer-folder__';
+
+  function ago(ms) {
+    const mins = Math.max(0, Math.round((Date.now() - ms) / 60000));
+    if (mins < 1) return 'just now';
+    if (mins < 60) return `${mins} min ago`;
+    const hours = Math.round(mins / 60);
+    if (hours < 24) return `${hours} hour${hours === 1 ? '' : 's'} ago`;
+    const days = Math.round(hours / 24);
+    return `${days} day${days === 1 ? '' : 's'} ago`;
+  }
+
   async function fillLoadSelect() {
     let names = [];
     try {
@@ -505,11 +543,74 @@ async function main() {
     } catch (err) {
       console.error('Failed to list saved characters', err);
     }
+    try {
+      transfers = await listTransfers();
+    } catch (err) {
+      transfers = [];
+      console.error('Failed to read the download folder', err);
+    }
     loadSelect.innerHTML = '';
+    const any = names.length || transfers.length;
     loadSelect.appendChild(el('option', { value: '' },
-      names.length ? 'Load Character' : 'No saved characters'));
-    names.forEach((name) => loadSelect.appendChild(el('option', { value: name }, name)));
-    loadSelect.disabled = !names.length;
+      transfers.length ? `Load Character (${transfers.length} new from Owlbear)`
+        : any ? 'Load Character' : 'No saved characters'));
+    if (transfers.length) {
+      loadSelect.appendChild(el('optgroup', { label: 'New in Downloads (from Owlbear)' },
+        transfers.map((t) => el('option', { value: TRANSFER + t.file },
+          `${t.name || 'Unnamed'} - ${t.replaces ? 'newer copy' : 'new'}, ${ago(t.modified)}`))));
+    }
+    const saved = names.map((name) => el('option', { value: name }, name));
+    if (transfers.length && saved.length) loadSelect.appendChild(el('optgroup', { label: 'Saved' }, saved));
+    else saved.forEach((o) => loadSelect.appendChild(o));
+    if (isDesktopApp) loadSelect.appendChild(el('option', { value: FOLDER }, 'Where Owlbear saves...'));
+    loadSelect.disabled = !any && !isDesktopApp;
+  }
+
+  // Opening a character from the download folder keeps it: it is saved
+  // into the Creator's own folder at once, so it is there next time even
+  // if Downloads is cleared - and it drops off the "new" list.
+  async function openTransfer(file) {
+    const entry = transfers.find((t) => t.file === file);
+    try {
+      state = adopt(data, await loadTransfer(file));
+      document.querySelector('.load-failure')?.remove();
+      showMigrationNotices();
+      saveState(state);
+      await saveCharacter(state);
+      await fillLoadSelect();
+      resetLoadSelect();
+      mode = 'sheet';
+      rerenderStep();
+      say(`Opened "${state.name || file}" from Downloads${entry ? `, saved in Owlbear ${ago(entry.modified)}` : ''}. It is in your saved characters now.`);
+    } catch (err) {
+      console.error(err);
+      say(`Could not open "${file}".`, true);
+      showLoadFailure(`Opening "${file}" from Downloads`, err);
+    }
+  }
+
+  // The browser may save somewhere other than Downloads; the player points
+  // the Creator at that folder once.
+  async function pickTransferFolder() {
+    resetLoadSelect();
+    let current = '';
+    try { current = await transferFolder(); } catch (err) { current = ''; }
+    const picked = await window.__TAURI__.dialog.open({
+      directory: true,
+      defaultPath: current || undefined,
+      title: 'The folder your browser saves downloads to',
+    });
+    if (!picked) {
+      if (current) say(`The Creator looks for Owlbear saves in ${current}.`);
+      return;
+    }
+    try {
+      const now = await changeTransferFolder(String(picked));
+      await fillLoadSelect();
+      say(`The Creator now looks for Owlbear saves in ${now}.`);
+    } catch (err) {
+      say(`That folder can't be used: ${err}`, true);
+    }
   }
 
   // Opening a character leaves its name sitting in the box, which reads
@@ -577,7 +678,9 @@ async function main() {
     try {
       const savedAs = await saveCharacter(state);
       await fillLoadSelect();
-      say(`Saved as "${savedAs}".`);
+      // The desktop Save also leaves a copy in the download folder, for the
+      // Owlbear Character Sheet's Load.
+      say(isDesktopApp ? `Saved as "${savedAs}", with a copy in Downloads for Owlbear.` : `Saved as "${savedAs}".`);
     } catch (err) {
       console.error(err);
       say('Save failed.', true);
@@ -586,6 +689,8 @@ async function main() {
 
   loadSelect.addEventListener('change', () => {
     const name = loadSelect.value;
+    if (name === FOLDER) { pickTransferFolder(); return; }
+    if (name.startsWith(TRANSFER)) { openTransfer(name.slice(TRANSFER.length)); return; }
     if (name) openSaved(name);
   });
 
@@ -611,6 +716,14 @@ async function main() {
     }
     downloadJson(state);
   });
+
+  // Save in Owlbear, switch back here: the new file is already listed.
+  if (isDesktopApp) {
+    window.addEventListener('focus', () => {
+      fillLoadSelect();
+      if (mode === 'start') rerenderStep();
+    });
+  }
 
   await fillLoadSelect();
   rerenderStep();

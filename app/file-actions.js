@@ -17,7 +17,18 @@ import {
   saveCharacterToFile,
   listSavedCharacters,
   loadCharacterFromFile,
+  listTransferCharacters,
+  loadTransferCharacter,
+  getTransferFolder,
+  setTransferFolder,
 } from './desktop-storage.js';
+
+// Only the desktop Creator can read the download folder; the browser build
+// has nothing there to offer.
+export const listTransfers = isDesktopApp ? listTransferCharacters : async () => [];
+export const loadTransfer = loadTransferCharacter;
+export const transferFolder = isDesktopApp ? getTransferFolder : async () => null;
+export const changeTransferFolder = setTransferFolder;
 import {
   saveCharacterToLocalStorage,
   listSavedCharactersLocalStorage,

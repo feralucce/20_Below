@@ -29,3 +29,25 @@ export async function loadCharacterFromFile(name) {
   const text = await window.__TAURI__.core.invoke('load_character', { name });
   return JSON.parse(text);
 }
+
+// Characters saved from the Owlbear Character Sheet land in the browser's
+// download folder; these read that folder (lib.rs, list_transfer_characters).
+// Each entry is { file, name, modified, replaces }: the newest copy of a
+// character the Creator does not have yet, or a newer one than it has.
+export async function listTransferCharacters() {
+  return window.__TAURI__.core.invoke('list_transfer_characters');
+}
+
+export async function loadTransferCharacter(file) {
+  const text = await window.__TAURI__.core.invoke('load_transfer_character', { file });
+  return JSON.parse(text);
+}
+
+export async function getTransferFolder() {
+  return window.__TAURI__.core.invoke('get_transfer_folder');
+}
+
+// null goes back to Downloads.
+export async function setTransferFolder(folder) {
+  return window.__TAURI__.core.invoke('set_transfer_folder', { folder });
+}
