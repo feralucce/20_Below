@@ -1,6 +1,6 @@
 [package]
 name = "app"
-version = "0.12.25"
+version = "0.12.26"
 description = "A Tauri App"
 authors = ["Feralucce Savage"]
 license = "UNLICENSED"
