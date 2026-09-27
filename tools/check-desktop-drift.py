@@ -346,7 +346,8 @@ EXTENSIONS = [
      [("app/%s" % f, "lib/%s" % f) for f in (
          "ui.js", "state.js", "roller/core.js", "roller/damage.js",
          "roller/giftCheck.js", "roller/resourceCheck.js",
-         "steps/roller-panel.js", "sheet/sheet-model.js", "sheet/panels.js")]
+         "steps/roller-panel.js", "sheet/sheet-model.js", "sheet/panels.js",
+         "steps/tab-advancement.js", "steps/07-boons.js", "describe-spec.js")]
      + [("playsheet/index.html", "index.html"),
         ("playsheet/playsheet.js", "playsheet.js"),
         ("playsheet/playsheet.css", "playsheet.css")]),

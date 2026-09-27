@@ -410,13 +410,29 @@ function flawsSection(state, data, refresh) {
   return details;
 }
 
-export default function buildAdvancementTab(state, data, refresh) {
+// `xpField: false` leaves out the running-total box, for a page that
+// takes XP its own way (the Owlbear Character Sheet adds a session's XP).
+export default function buildAdvancementTab(state, data, refresh, { xpField = true } = {}) {
   const wrap = el('div', {});
   const summary = el('p', {});
   function updateSummary() {
     summary.textContent = `XP Earned: ${state.xpEarned}. Spent: ${xpSpent(state, data)}. Remaining: ${xpRemaining(state, data)}.`;
   }
   updateSummary();
+
+  if (!xpField) {
+    if (!refresh) return [wrap];
+    wrap.append(
+      attributesSection(state, data, refresh),
+      skillsSection(state, data, refresh),
+      resourcesSection(state, data, refresh),
+      giftsSection(state, data, refresh),
+      boonsSection(state, data, refresh),
+      kiSection(state, data, refresh),
+      flawsSection(state, data, refresh),
+    );
+    return [wrap];
+  }
 
   wrap.append(
     el('h2', {}, 'Advancement'),

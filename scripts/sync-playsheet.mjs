@@ -43,6 +43,10 @@ export const LIB = [
   'steps/roller-panel.js',
   'sheet/sheet-model.js',
   'sheet/panels.js',
+  // Spending XP, the Creator's own Advancement sections.
+  'steps/tab-advancement.js',
+  'steps/07-boons.js',
+  'describe-spec.js',
 ];
 
 // The page's own files, and how each is rewritten for the extension.
