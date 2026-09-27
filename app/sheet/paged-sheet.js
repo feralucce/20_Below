@@ -742,39 +742,6 @@ function place(node, f) {
 // sits in and the text starts overrunning the art around it, which costs
 // more than the size gains.
 
-// Two ten-sided dice, drawn inline rather than loaded from
-// app/icons/dice-2d10.svg as an image: it takes its colour from the pill
-// around it through currentColor, and an <img> cannot.
-const DICE_2D10 = `<svg viewBox="0 0 54 42" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round">
-  <defs>
-    <g id="pill-d10">
-      <path d="M17 2 L32.64 17.56 L32.64 22.28 L17 38 L1.36 22.28 L1.36 17.56 Z"/>
-      <path d="M17 2 L6.7 20 L17 25.11 L27.3 20 Z"/>
-      <path d="M6.7 20 L1.36 22.28"/>
-      <path d="M27.3 20 L32.64 22.28"/>
-      <path d="M17 25.11 L17 38"/>
-    </g>
-  </defs>
-
-  <mask id="pill-d10-cut">
-    <rect width="54" height="42" fill="white"/>
-    <g transform="translate(22 4) scale(0.86)">
-      <path d="M17 2 L32.64 17.56 L32.64 22.28 L17 38 L1.36 22.28 L1.36 17.56 Z"
-            fill="black" stroke="black" stroke-width="5.5" stroke-linejoin="round"/>
-    </g>
-  </mask>
-
-  <g mask="url(#pill-d10-cut)">
-    <g transform="translate(2 2) scale(0.68) rotate(-14 17 20)">
-      <use href="#pill-d10" stroke-width="3.4"/>
-    </g>
-  </g>
-
-  <g transform="translate(22 4) scale(0.86)">
-    <use href="#pill-d10" stroke-width="2.7"/>
-  </g>
-</svg>`;
-
 const FLOOR = 10;
 
 // The floor is for a page drawn at a readable size. On a phone the whole
@@ -1013,21 +980,6 @@ export function buildPagedSheet(state, data, opts = {}) {
       return;
     }
 
-    // Initiative is rolled once a fight, by the player (rules.md, Combat
-    // Order). Enhanced Speed 3 rolls it as 2d10, keeping the higher die.
-    if (id === 'substat.Initiative.value') {
-      const speed = (state.gifts || []).find((g) => g.name === 'Enhanced Speed')?.level || 0;
-      host.appendChild(place(el('button', {
-        type: 'button',
-        class: 'sf sf-roll',
-        title: 'Roll Initiative',
-        onClick: () => onRoll('initiative', 'Initiative', {
-          initiative: Number(state.subStats?.Initiative) || 0, speed,
-        }),
-      }), f));
-      return;
-    }
-
     // Movement Rate is one number on the page and seven at the table.
     // Clicking it opens the rest, worked out for this character.
     if (id === 'figured.Movement') {
@@ -1108,6 +1060,18 @@ export function buildPagedSheet(state, data, opts = {}) {
     // is a button on the sheet rather than a number to walk down by hand.
     // A new Scene clears the Fate Token tally - the per-Scene limit is
     // Stamina spends, and this is where the count starts over.
+    // The one roller, on every page. Which page opened it goes along, so
+    // the roller can start on what that page is about.
+    if (id === 'dice.roll') {
+      host.appendChild(place(el('button', {
+        type: 'button',
+        class: 'sf sf-roll',
+        title: 'Roll dice',
+        onClick: () => onRoll('dice', 'Roll dice', { page: f.page }),
+      }), f));
+      return;
+    }
+
     if (id === 'scene.new') {
       host.appendChild(place(el('button', {
         type: 'button',
@@ -1175,61 +1139,6 @@ export function buildPagedSheet(state, data, opts = {}) {
   // Asked twice: once to reserve room at the end of the row for the dice,
   // and once to put them there. One answer, so the two cannot disagree.
   //
-  // An attack's to-hit is the Element you describe swinging with, not a
-  // Skill and not the thing in your hand - so the Element panel is where
-  // an attack starts. Moira has no attack roll, so it is left alone
-  // rather than offering a roller it cannot fill.
-  function rollSpecFor(part) {
-    // The Element's own roll target, drawn beside its name rather than on
-    // the rating - a rating is a number to read, not a button.
-    if (part[0] === 'attribute' && part[2] === 'roll') {
-      return { kind: 'attack', label: part[1] };
-    }
-    const [group, idx, leaf] = part;
-    if (leaf !== 'name') return null;
-    const i = Number(idx);
-    // A retired Skill has no Element and no place in the roller, and the
-    // Jack of all Trades row is every Skill at once, not one to roll.
-    if (group === 'skill' && ctx.skills[i] && !ctx.skills[i].retired && !ctx.skills[i].joat) {
-      return { kind: 'skill', label: ctx.skills[i].name };
-    }
-    if (group === 'gift' && ctx.gifts[i]) return { kind: 'gift', label: ctx.gifts[i].name };
-    if (group === 'resource' && ctx.resources[i]?.pushable) {
-      return { kind: 'resource', label: ctx.resources[i].name };
-    }
-    if (group === 'weapon' && ctx.weapons[i]) {
-      // The row already knows what it hits for; the roller should not
-      // make anyone read it off the sheet and type it back in.
-      return { kind: 'weapon', label: ctx.weapons[i].name, damage: ctx.weapons[i].damage };
-    }
-    return null;
-  }
-
-  // Whole-row hit targets that open a roller, laid over the row rather
-  // than over any one field in it.
-  //
-  // The target used to be invisible - the row lit up under the pointer and
-  // said nothing before you got there, so nobody knew the sheet rolled at
-  // all. The dice sit in it now: a row you can roll looks like a row you
-  // can roll, whether or not anyone hovers it.
-  function rollTarget(f, spec) {
-    const { kind, label } = spec;
-    const pill = el('span', { class: 'roll-pill', 'aria-hidden': 'true' });
-    pill.innerHTML = DICE_2D10;
-    const node = place(el('button', {
-      type: 'button',
-      class: kind === 'attack' ? 'sf sf-roll sf-roll-attack' : 'sf sf-roll',
-      title: `Roll ${label}`,
-      onClick: () => onRoll(kind, label, spec),
-    }, pill), f);
-    // The dice belong to the box they sit in, which the generator already
-    // knows the colour of - green for Skills, gold for Resources, the
-    // Element's own for an attack.
-    const tint = f.color || f.rollColor;
-    if (tint) node.style.color = tint;
-    return node;
-  }
-
   const stack = el('div', { class: 'sheet-pages' });
   const views = pageSequence({ gift: ctx.gifts.length });
 
@@ -1282,8 +1191,6 @@ export function buildPagedSheet(state, data, opts = {}) {
       }
       else if (f.kind === 'text') {
         const node = textControl(f, value);
-        // A row with dice at its end has that much less room for its name.
-        if (rollSpecFor(id.split('.'))) node.classList.add('sf-roll-room');
         // A Skill says which Element it rolls on, beside its name - the
         // number a player adds is the Element's, so it has to be in reach.
         const skillRow = id.match(/^skill\.(\d+)\.name$/);
@@ -1296,11 +1203,11 @@ export function buildPagedSheet(state, data, opts = {}) {
           if (known) tag.style.color = known;
           node.classList.add('sf-skill');
           node.appendChild(tag);
-          // Name and tag share the row with the dice. A long name gives up
+          // Name and tag share the row. A long name gives up
           // type size rather than letters, so "Combat Driving/Piloting"
           // is read whole instead of ending in an ellipsis. The widths are
           // Montserrat's average letter and the tag's small capitals, in em.
-          const room = f.w - (rollSpecFor(id.split('.')) ? 82 : 0);
+          const room = f.w;
           const ems = skill.name.length * 0.62 + 0.5 + tag.textContent.length * 0.6 * 0.8;
           const base = Math.min(f.h * 0.7, 42);
           const fit = Math.min(base, (room * 0.97) / ems);
@@ -1313,14 +1220,6 @@ export function buildPagedSheet(state, data, opts = {}) {
       else if (f.kind === 'tiers') overlay.appendChild(tierControl(f, Number(value) || 0));
       else if (f.kind === 'check') overlay.appendChild(checkControl(f, !!value));
       decorate({ ...f, id }, overlay);
-    });
-
-    // Click a Skill, a Gift, a Resource or a weapon to roll it. The
-    // target covers the row's name field, which is the part a finger
-    // goes for.
-    onPage.forEach((f) => {
-      const spec = rollSpecFor(shift(f.id, view).split('.'));
-      if (spec) overlay.appendChild(rollTarget(f, spec));
     });
 
     if (page === 1) pageEl.appendChild(vitalStatusLayer(state, figured));

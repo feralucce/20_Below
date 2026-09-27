@@ -248,6 +248,15 @@ for i, (lab, fid, col) in enumerate(() if PAPER else
     label(MARGIN + 147, byy + 42, lab, 31, mix(col, LIFT, 0.4), 3.6, "middle")
     field(fid, "button", MARGIN, byy, 294, 66)
 
+# Roll Dice sits across from the rests, on the same line as Short Rest:
+# the one roller, where every page puts it. Not printed either.
+if not PAPER:
+    pp = panel_path(W - MARGIN - 294, 336, 294, 66, 33)
+    add('  <path d="%s" fill="%s" fill-opacity="%g"/>' % (pp, SHADE, VEIL),
+        '  <path d="%s" fill="none" stroke="%s" stroke-width="4.5"/>' % (pp, ACCENT))
+    label(W - MARGIN - 147, 378, "ROLL DICE", 31, mix(ACCENT, LIFT, 0.4), 3.6, "middle")
+    field("dice.roll", "button", W - MARGIN - 294, 336, 294, 66)
+
 # --- the centre pentagon, on the emblem's own crossings -------------------
 # It is a separate layer in the PSD, composited over the art, which is why
 # the screen build leaves the middle empty. The printed page is one file

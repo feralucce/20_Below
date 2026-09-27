@@ -31,6 +31,8 @@ import {
   buildSkillRollSection,
   buildGiftCheckSection,
   buildResourceCheckSection,
+  buildQuickAttack,
+  buildQuickSkill,
 } from './roller-panel.js';
 
 // Click a pip to set the fill level there (clicking a filled pip drops the
@@ -589,9 +591,9 @@ export default {
   title: 'Character Sheet',
 
   // The sheet is the five printed pages now, filled in live from the
-  // character. Rolls fire from the pages themselves - a Skill row, a Gift
-  // card, a Resource row, a weapon - each opening the roller it needs over
-  // the sheet rather than sitting in a panel the player has to find.
+  // character. Every roll starts from one Roll dice button, in the same
+  // place on every page, rather than from whichever box on the sheet
+  // happens to be clickable.
   //
   // Advancement stays below the pages: spending XP is building a
   // character, not playing one, and there is nowhere on a printed page to
@@ -660,10 +662,10 @@ export default {
         }
         case 'movement':
           return movementPanel(extra);
-        case 'initiative':
-          return initiativePanel(extra);
         case 'gift-info':
           return giftInfoPanel(extra.gift);
+        case 'dice':
+          return dicePanel(extra.page);
         default:
           return [];
       }
@@ -755,7 +757,7 @@ export default {
         },
       });
       return [
-        el('h3', {}, 'Initiative'),
+        el('h4', {}, 'Initiative'),
         el('p', { class: 'roller-howto' },
           `Rolled once, at the start of a fight: 1d10 + your Initiative (${initiative}). Higher goes first within each band.`),
         adv, roll, result,
@@ -789,6 +791,25 @@ export default {
           row('Pace', 'Clear ground, 3 + Air/5', `${n(m.pace)} km per hour`),
           row('Travel day', '4 + Stamina hours of walking', `${m.day} hours, ${Math.round(m.pace * m.day)} km`),
         ]),
+      ];
+    }
+
+    // The one roller every page shares. Everything the sheet rolls starts
+    // here. It knows which page opened it, for what it offers next.
+    function dicePanel(page) {
+      // Enhanced Speed 3 rolls Initiative as 2d10, keeping the higher die.
+      const speed = (state.gifts || []).find((g) => g.name === 'Enhanced Speed')?.level || 0;
+      return [
+        el('h3', {}, 'Roll dice'),
+        // In the order a fight asks for them: who goes first, then the
+        // swing, then everything else.
+        el('div', { class: 'roller-gift-check' },
+          initiativePanel({ initiative: Number(state.subStats?.Initiative) || 0, speed })),
+        buildQuickAttack(state, data),
+        buildQuickSkill(state, data),
+        // A failed check takes 1 Ki, and the pages show Ki, so it redraws
+        // them under the window.
+        buildGiftCheckSection(state, data, draw),
       ];
     }
 
@@ -916,7 +937,7 @@ export default {
       npcNote,
       el('h2', {}, 'Character Sheet'),
       el('p', { class: 'attr-caption' },
-        'Click a Skill, a Gift, a Resource or a weapon to roll it. The − and + '
+        'Roll dice is at the top of every page. The − and + '
         + 'beside each Vital and pool move it by one.'),
       tabBar,
       pagesHost,

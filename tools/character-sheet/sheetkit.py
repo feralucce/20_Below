@@ -199,7 +199,11 @@ def open_page(page, total, desc):
     # Not printed: a character with more Gifts than one page holds gets a
     # second Gifts page, so how many pages there are is only known once a
     # character is in front of you.
-    field("page.number", "text", W - MARGIN - 600, 150, 600, 48, size=33, align="end")
+    # Roll Dice sits centred on every page, level with the mark, between
+    # it and the page number. The number keeps the corner and gives up
+    # the width it never used ("PAGE 2 OF 5" is under 300).
+    action(W / 2.0 - 147, 117, 294, 66, ACCENT, "ROLL DICE", "dice.roll")
+    field("page.number", "text", W - MARGIN - 300, 150, 300, 48, size=33, align="end")
     line(MARGIN, 240, INNER, ACCENT, 0.45)
 
 

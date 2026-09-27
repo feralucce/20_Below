@@ -1,5 +1,8 @@
 import { el } from '../ui.js';
-import { performCoreRoll, SKILL_TIERS } from '../roller/core.js';
+import {
+  performCoreRoll, SKILL_TIERS, rollThreeWays, classifyRoll, rollD10,
+  rollPlain, rollAdvantage, rollDisadvantage, resolveAdvantageState,
+} from '../roller/core.js';
 import { performGiftCheck } from '../roller/giftCheck.js';
 import { performResourceCheck } from '../roller/resourceCheck.js';
 import { rollDamagePool, applyBoosts, worthBoosting } from '../roller/damage.js';
@@ -1017,4 +1020,303 @@ export function buildGiftCheckSection(state, data, refreshKiDependents) {
     summary, rollBtn, resultEl,
   );
   return section;
+}
+// --- The Roll dice window ------------------------------------------------
+// An attack is one throw read Normal, at Advantage and at Disadvantage
+// side by side, so nobody has to know which applies before they roll. A
+// Skill is ticked boxes and one roll.
+
+const MODES = [['normal', 'Normal'], ['advantage', 'Advantage'], ['disadvantage', 'Disadvantage']];
+
+function numberSelect(from, to, value, onPick, label = (n) => `${n}`) {
+  const options = [];
+  for (let n = from; n <= to; n++) {
+    options.push(el('option', { value: n, selected: n === value ? '' : undefined }, label(n)));
+  }
+  return el('select', { onChange: (e) => onPick(Number(e.target.value)) }, options);
+}
+
+function quickField(label, control) {
+  return el('label', { class: 'quick-field' }, [el('span', {}, label), control]);
+}
+
+function keptText(r) {
+  return r.dice.length === r.kept.length ? `${r.sum}` : `${r.kept.join(' + ')} = ${r.sum}`;
+}
+
+function modeTable(heads, rows) {
+  return el('table', { class: 'menu-table quick-table' }, [
+    el('tr', {}, heads.map((h) => el('th', {}, h))),
+    ...rows,
+  ]);
+}
+
+const ATTACK_OUTCOME = {
+  'critical-success': 'Critical hit',
+  success: 'Hit',
+  failure: 'Miss',
+  'catastrophic-failure': 'Catastrophic miss',
+};
+
+function modeCell(outcome) {
+  return el('td', { class: outcomeClass(outcome) }, [el('strong', {}, ATTACK_OUTCOME[outcome])]);
+}
+
+// The damage dice after the count: green for a die that got through,
+// red for one the wall soaked. A critical's free dice go through
+// whatever they show; the rest show their face with Klotho added.
+function damageCell(parts) {
+  if (!parts) return el('td', {}, '-');
+  const through = parts.filter((p) => p.through).length;
+  const dice = [];
+  parts.forEach((p, i) => {
+    if (i) dice.push(', ');
+    dice.push(el('span', {
+      class: p.through ? 'quick-die-through' : 'quick-die-soaked',
+      title: p.free ? 'Free on a critical' : p.through ? 'Gets through' : 'Soaked',
+    }, p.free ? `${p.shown}*` : `${p.shown}`));
+  });
+  return el('td', {}, [el('strong', {}, `${through}`), ' (', ...dice, ')']);
+}
+
+// A Lucky Number is the kept two matching Klotho. Only the row that
+// counts earns the Token, so the roller marks it and leaves the Token to
+// the player.
+function luckyMark(sum, klotho) {
+  return klotho && sum === klotho ? ' ★' : '';
+}
+
+function luckyNote(throwResult, klotho) {
+  const hit = MODES.some(([m]) => klotho && throwResult[m].sum === klotho);
+  return hit ? el('p', { class: 'hint' },
+    `★ Lucky Number (${klotho}): if that is the row that counts, take 1 Fate Token.`) : null;
+}
+
+function exhaustedLine(state) {
+  const level = exhaustedLevel(state);
+  if (!level) return null;
+  return el('p', { class: 'hint roller-exhausted' }, level >= 2
+    ? `Exhausted ${level}: read the Disadvantage row, or cancel it with an Advantage.`
+    : 'Exhausted 1: a Physical roll reads the Disadvantage row, or cancels it with an Advantage.');
+}
+
+// Attack: Element against Defense to hit, then the damage dice against the
+// wall. The damage dice are thrown once and scored against each row's hit,
+// so a row that crits shows what the critical does to the same dice.
+export function buildQuickAttack(state, data) {
+  const fighting = data.attributes.map((a) => a.name);
+  let element = fighting.filter((n) => n !== 'Moira')
+    .sort((a, b) => (state.attributes[b] || 0) - (state.attributes[a] || 0))[0] || fighting[0];
+  let defense = 5;
+  let dice = 3;
+  let wall = 5;
+  const klotho = Number(state.subStats?.Klotho) || 0;
+  const result = el('div', { class: 'roller-result' });
+
+  const elementSelect = el('select', { onChange: (e) => { element = e.target.value; } },
+    fighting.map((n) => el('option', { value: n, selected: n === element ? '' : undefined },
+      `${n} (${state.attributes[n] ?? 0})`)));
+
+  function roll() {
+    const rating = Math.min(Number(state.attributes[element]) || 0, data.attributeRollCap);
+    const target = rating + defense;
+    const steps = elementCritSteps(state, data, element);
+    const toHit = rollThreeWays();
+    const faces = Array.from({ length: dice }, rollD10);
+
+    // A die over the wall connects. A critical sends half the dice,
+    // rounded up, in free, and the rest add Klotho (rules.md#critical-hits).
+    function damage(outcome) {
+      if (outcome === 'failure' || outcome === 'catastrophic-failure' || !dice) return null;
+      const crit = outcome === 'critical-success';
+      const free = crit ? Math.ceil(dice / 2) : 0;
+      return faces.map((f, i) => {
+        if (i < free) return { shown: f, free: true, through: true };
+        const shown = crit ? f + klotho : f;
+        return { shown, through: shown > wall };
+      });
+    }
+    const anyCrit = MODES.some(([m]) => classifyRoll(toHit[m].sum, target, false, steps) === 'critical-success');
+
+    result.innerHTML = '';
+    result.append(...[
+      el('p', {}, [el('strong', {}, `${element} ${rating} + Defense ${defense}: roll under ${target}`),
+        ` - dice ${toHit.dice.join(', ')}`]),
+      modeTable(['', 'To hit', 'Result', 'Damage dealt'], MODES.map(([m, name]) => {
+        const r = toHit[m];
+        const outcome = classifyRoll(r.sum, target, false, steps);
+        return el('tr', {}, [
+          el('td', {}, [el('strong', {}, name)]),
+          el('td', {}, keptText(r) + luckyMark(r.sum, klotho)),
+          modeCell(outcome),
+          damageCell(damage(outcome)),
+        ]);
+      })),
+      dice ? el('p', { class: 'hint' }, `Each damage die over the wall (${wall}) costs them one.`
+        + (anyCrit ? ` On a critical hit, * dice get through free and the rest add your Klotho (+${klotho}).` : '')) : null,
+      luckyNote(toHit, klotho),
+    ].filter(Boolean));
+  }
+
+  return el('div', { class: 'roller-gift-check' }, [
+    el('h4', {}, 'Attack'),
+    howTo('Your Element plus their Defense is the number to roll under. '
+      + 'The GM gives you their Defense and wall.'),
+    el('div', { class: 'quick-fields' }, [
+      quickField('Element', elementSelect),
+      quickField('Defense', numberSelect(0, 10, defense, (n) => { defense = n; })),
+      quickField('Damage rating', numberSelect(0, 20, dice, (n) => { dice = n; }, (n) => `${n} ${n === 1 ? 'die' : 'dice'}`)),
+      quickField('Wall', numberSelect(0, 10, wall, (n) => { wall = n; })),
+    ]),
+    exhaustedLine(state),
+    el('button', { type: 'button', class: 'roll-btn', text: 'Roll attack', onClick: roll }),
+    result,
+  ]);
+}
+
+// Skill: picked from the sheet, which sets its Element and Tier. The
+// Element stays open to a Descriptor argument; the Difficulty is the GM's.
+export function buildQuickSkill(state, data) {
+  const joat = (state.boons || []).find((b) => b.name === 'Jack of all Trades');
+  // Jack of all Trades lifts every Skill to Trained; at 5 points it also
+  // holds every one there (boons.md) - the sheet reads it the same way.
+  const tierOf = (t) => {
+    if (!joat) return t;
+    const floored = Math.max(t, 2);
+    return joat.points === 5 ? Math.min(floored, 2) : floored;
+  };
+  const skills = data.skillCatalog
+    .filter((s) => (state.skills[s.name] || 0) > 0)
+    .map((s) => ({ name: s.name, tier: tierOf(state.skills[s.name]), element: s.defaultElement }));
+  const OTHER = { name: '', tier: tierOf(0), element: null };
+  const elements = data.attributes.map((a) => a.name);
+  const defaultElement = (s) => (elements.includes(s.element) ? s.element : elements[0]);
+
+  let skill = skills[0] || OTHER;
+  let element = defaultElement(skill);
+  let difficulty = 5;
+  const klotho = Number(state.subStats?.Klotho) || 0;
+  const result = el('div', { class: 'roller-result' });
+  const note = el('p', { class: 'roller-tier-note' });
+  const tierNote = el('p', { class: 'roller-tier-note' });
+
+  const elementSelect = el('select', {
+    onChange: (e) => { element = e.target.value; renderNote(); },
+  });
+  function renderElements() {
+    elementSelect.innerHTML = '';
+    elements.forEach((n) => elementSelect.append(el('option', {
+      value: n, selected: n === element ? '' : undefined,
+    }, `${n} (${state.attributes[n] ?? 0})`)));
+  }
+  function renderNote() {
+    const d = defaultElement(skill);
+    const parts = [];
+    if (skill.tier === 0) parts.push('Untrained: your Element does not count, only the Difficulty.');
+    else if (skill.name && element !== d) parts.push(`${element} instead of ${d}: argued with a Descriptor.`);
+    else if (skill.name) parts.push(`${d} is this Skill's Element. Use your Descriptors to argue a different Element.`);
+    note.textContent = parts.join(' ');
+    tierNote.textContent = skill.tier === 1 ? 'Novice is at Disadvantage automatically.' : '';
+  }
+
+  const skillSelect = el('select', {
+    onChange: (e) => {
+      skill = skills.find((s) => s.name === e.target.value) || OTHER;
+      element = defaultElement(skill);
+      renderElements();
+      renderNote();
+      setBoxes();
+    },
+  }, [
+    ...skills.map((s) => el('option', { value: s.name, selected: s === skill ? '' : undefined },
+      `${s.name} - ${skillTierName(data, s.tier)}`)),
+    el('option', { value: '' }, joat
+      ? 'Any other Skill - Trained (Jack of all Trades)' : 'Any other Skill - Untrained'),
+  ]);
+  renderElements();
+  renderNote();
+
+  // A Skill rolls once. Adept and up start with Advantage ticked, and
+  // Exhausted 2 and up with Disadvantage. Novice's Disadvantage is not a
+  // box: it always applies, so it is counted in the roll and said in a
+  // line, and a ticked Advantage cancels it like any other source
+  // (rules.md#advantage--disadvantage).
+  let advantage = false;
+  let disadvantage = false;
+  const boxes = el('div', { class: 'quick-boxes' });
+  function setBoxes() {
+    const grant = SKILL_TIERS[skill.tier].grantsAdvantage;
+    advantage = grant === 'advantage';
+    disadvantage = exhaustedLevel(state) >= 2;
+    renderBoxes();
+  }
+  function renderBoxes() {
+    const box = (label, on, flip) => el('label', { class: 'roller-row' }, [
+      el('input', { type: 'checkbox', checked: on ? '' : undefined, onChange: (e) => flip(e.target.checked) }),
+      ` ${label}`,
+    ]);
+    boxes.innerHTML = '';
+    boxes.append(
+      box('Advantage', advantage, (v) => { advantage = v; }),
+      box('Disadvantage', disadvantage, (v) => { disadvantage = v; }),
+    );
+  }
+  setBoxes();
+
+  function roll() {
+    const tier = SKILL_TIERS[skill.tier];
+    const rating = tier.usesAttribute ? Math.min(Number(state.attributes[element]) || 0, data.attributeRollCap) : 0;
+    const target = rating + difficulty;
+    const steps = elementCritSteps(state, data, element);
+    const novice = tier.grantsAdvantage === 'disadvantage' ? 1 : 0;
+    const mode = resolveAdvantageState(advantage ? 1 : 0, (disadvantage ? 1 : 0) + novice);
+    const throwOnce = () => (mode === 'advantage' ? rollAdvantage()
+      : mode === 'disadvantage' ? rollDisadvantage() : rollPlain());
+    const r = throwOnce();
+    let outcome = classifyRoll(r.sum, target, tier.widenCrit, steps);
+    // Master's reroll only ever takes the Catastrophic off: a success on
+    // it is a plain Failure, and a failure leaves the Catastrophic.
+    let reroll = null;
+    if (outcome === 'catastrophic-failure' && tier.masterReroll) {
+      reroll = throwOnce();
+      const again = classifyRoll(reroll.sum, target, tier.widenCrit, steps);
+      if (again === 'success' || again === 'critical-success') outcome = 'failure';
+    }
+    // Lucky Number: the kept two matching Klotho is a Fate Token, and one
+    // earned at the holding cap is lost (rules/fate.md).
+    const lucky = klotho && r.sum === klotho;
+    if (lucky) {
+      state.currentFateTokens = Math.min(fateTokenCap(state, data), (state.currentFateTokens || 0) + 1);
+    }
+    result.innerHTML = '';
+    result.append(...[
+      el('p', {}, [el('strong', {}, `${skill.name || 'Any other Skill'}: `
+        + `${tier.usesAttribute ? `${element} ${rating} + ` : ''}Difficulty ${difficulty}, roll under ${target}`),
+        mode !== 'normal' ? ` (${mode === 'advantage' ? 'Advantage' : 'Disadvantage'})` : '']),
+      el('p', {}, diceSummary(r)),
+      el('p', { class: outcomeClass(outcome) }, [el('strong', {}, outcomeLabel(outcome))]),
+      reroll ? el('p', {}, `Master's reroll: ${diceSummary(reroll)}`) : null,
+      lucky ? el('p', { class: 'status-ok' }, `Lucky Number (${klotho})! +1 Fate Token.`) : null,
+    ].filter(Boolean));
+  }
+
+  return el('div', { class: 'roller-gift-check' }, [
+    el('h4', {}, 'Skill'),
+    howTo('Pick the Skill; its Element and Tier come from your sheet. '
+      + 'The GM says how hard it is.'),
+    el('div', { class: 'quick-fields' }, [
+      quickField('Skill', skillSelect),
+      quickField('Element', elementSelect),
+      quickField('Difficulty', el('select', { onChange: (e) => { difficulty = Number(e.target.value); } },
+        data.difficultyChart.map((d) => el('option', {
+          value: d.difficulty, selected: d.difficulty === difficulty ? '' : undefined,
+        }, `${d.difficulty} - ${d.label}`)))),
+    ]),
+    note,
+    tierNote,
+    exhaustionNote(state, false),
+    boxes,
+    el('button', { type: 'button', class: 'roll-btn', text: 'Roll Skill', onClick: roll }),
+    result,
+  ]);
 }

@@ -2,7 +2,7 @@
  "width": 2550,
  "height": 3300,
  "pages": 5,
- "version": "b32b760576",
+ "version": "35ebb8cf7a",
  "repeat": [
   {
    "page": 3,
@@ -66,6 +66,15 @@
    "page": 1,
    "x": 117,
    "y": 504,
+   "w": 294,
+   "h": 66
+  },
+  {
+   "id": "dice.roll",
+   "kind": "button",
+   "page": 1,
+   "x": 2139,
+   "y": 336,
    "w": 294,
    "h": 66
   },
@@ -663,12 +672,21 @@
    "h": 60
   },
   {
+   "id": "dice.roll",
+   "kind": "button",
+   "page": 2,
+   "x": 1128.0,
+   "y": 117,
+   "w": 294,
+   "h": 66
+  },
+  {
    "id": "page.number",
    "kind": "text",
    "page": 2,
-   "x": 1833,
+   "x": 2133,
    "y": 150,
-   "w": 600,
+   "w": 300,
    "h": 48,
    "size": 33,
    "align": "end"
@@ -2652,12 +2670,21 @@
    "color": "#8FADBE"
   },
   {
+   "id": "dice.roll",
+   "kind": "button",
+   "page": 3,
+   "x": 1128.0,
+   "y": 117,
+   "w": 294,
+   "h": 66
+  },
+  {
    "id": "page.number",
    "kind": "text",
    "page": 3,
-   "x": 1833,
+   "x": 2133,
    "y": 150,
-   "w": 600,
+   "w": 300,
    "h": 48,
    "size": 33,
    "align": "end"
@@ -2998,12 +3025,21 @@
    "slot": 4
   },
   {
+   "id": "dice.roll",
+   "kind": "button",
+   "page": 4,
+   "x": 1128.0,
+   "y": 117,
+   "w": 294,
+   "h": 66
+  },
+  {
    "id": "page.number",
    "kind": "text",
    "page": 4,
-   "x": 1833,
+   "x": 2133,
    "y": 150,
-   "w": 600,
+   "w": 300,
    "h": 48,
    "size": 33,
    "align": "end"
@@ -4906,12 +4942,21 @@
    "slot": 80
   },
   {
+   "id": "dice.roll",
+   "kind": "button",
+   "page": 5,
+   "x": 1128.0,
+   "y": 117,
+   "w": 294,
+   "h": 66
+  },
+  {
    "id": "page.number",
    "kind": "text",
    "page": 5,
-   "x": 1833,
+   "x": 2133,
    "y": 150,
-   "w": 600,
+   "w": 300,
    "h": 48,
    "size": 33,
    "align": "end"

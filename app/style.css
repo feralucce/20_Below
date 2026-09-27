@@ -1304,6 +1304,49 @@ select.describe-box option {
   margin: 0.25rem 0 0.9rem;
 }
 
+/* The Roll dice window: each section's choices on one row, wrapping on
+   a phone, and one table reading the throw three ways. */
+.quick-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 0 0 0.6rem;
+}
+.quick-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+.quick-table {
+  margin: 0.4rem 0;
+}
+.quick-table td,
+.quick-table th {
+  padding: 0.25rem 0.7rem 0.25rem 0;
+  /* Every figure sits under its own heading. */
+  text-align: left;
+}
+.quick-die-through {
+  color: var(--ok);
+  font-weight: 600;
+}
+.quick-die-soaked {
+  color: var(--danger);
+}
+.quick-boxes {
+  display: flex;
+  gap: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+.sheet-roller-panel .roller-gift-check + .roller-gift-check,
+.sheet-roller-panel .roller-gift-check + h4 {
+  margin-top: 1.1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--panel-border);
+}
+
 .roller-tier-note {
   margin: 0 0 0.5rem;
   color: var(--gold);
@@ -1562,73 +1605,6 @@ select.describe-box option {
   color: var(--accent);
 }
 
-/* An Element's rating is a single tall digit in a wide box, which leaves
-   a clear column down each side. The dice go in the right-hand one -
-   under the number, and they are on top of it. */
-
-/* The dice carry the colour of the block they sit in - currentColor is
-   set on the button from the field map - so everything here is a shade
-   of that one colour rather than a new one. The fill is what makes them
-   read as a control instead of a line drawing. */
-.roll-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  /* A row is 48 units tall and the next one starts 54 below, so the pill
-     has to finish inside 48 or consecutive rows collide. The height is
-     fixed and the border counts inside it: a browser will not draw a
-     border thinner than 1px, which at small render widths is worth more
-     than the 2 units asked for, and padding alone let that overflow the
-     row. */
-  box-sizing: border-box;
-  height: calc(var(--u) * 45);
-  padding: 0 calc(var(--u) * 12);
-  border: calc(var(--u) * 2) solid currentColor;
-  border-radius: 999px;
-  background: color-mix(in srgb, currentColor 16%, transparent);
-  opacity: 0.8;
-  pointer-events: none;
-}
-.sf-roll:hover .roll-pill,
-.sf-roll:focus-visible .roll-pill {
-  opacity: 1;
-  background: color-mix(in srgb, currentColor 30%, transparent);
-  box-shadow: 0 0 calc(var(--u) * 12) color-mix(in srgb, currentColor 45%, transparent);
-}
-.roll-pill svg {
-  display: block;
-  width: calc(var(--u) * 40);
-  height: calc(var(--u) * 31);
-}
-/* The Element pill has a field of its own on the title line, so it can
-   be the size the thing it opens deserves. */
-.sf-roll-attack {
-  justify-content: center;
-}
-.sf-roll-attack .roll-pill {
-  height: calc(var(--u) * 90);
-  padding: 0 calc(var(--u) * 20);
-  border-width: calc(var(--u) * 3);
-  opacity: 0.9;
-}
-.sf-roll-attack .roll-pill svg {
-  width: calc(var(--u) * 84);
-  height: calc(var(--u) * 65);
-}
-
-/* A row with dice at the end has that much less room for its own name. */
-.sf-text.sf-roll-room > .sf-clip {
-  padding-right: calc(var(--u) * 82);
-}
-
-/* A Skill row carries its Element after the name. The dice's room moves
-   to the row so the tag sits before them, and the name gives way first. */
-.sf-text.sf-skill.sf-roll-room {
-  padding-right: calc(var(--u) * 82);
-}
-.sf-text.sf-skill.sf-roll-room > .sf-clip {
-  padding-right: 0;
-}
 .sf-el {
   flex: none;
   margin-left: 0.45em;
