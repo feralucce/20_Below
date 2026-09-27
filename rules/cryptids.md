@@ -233,7 +233,7 @@ Hisses, hovers, and leaves behind a smell that lingers for hours after it's gone
 
 **Potence** 4 · **Initiative** 1 · **Psyche** 4 · **Ferocity** 2 · **Presence** 4 · **Stamina** 10
 
-**Noxious Mist** (once per encounter, no Health Level cost): everyone within Close range must resist or take Disadvantage on Physical rolls for the rest of the Scene.
+**Noxious Mist** (once per encounter, no Health Level cost): everyone within 5 m rolls **Soak or Stamina (whichever is higher) + Difficulty 5** to resist; on a failure they take Disadvantage on Physical rolls for the rest of the Scene.
 
 **Notable Skills**: Stealth 8 vs. Perception, Athletics TN 5
 

@@ -500,7 +500,7 @@ No interest in a fight - just in being left alone. It moves at an unhurried wadd
 
 **Potence** 1 · **Initiative** 0 · **Psyche** 1 · **Ferocity** 1 · **Stamina** 4
 
-**Spray** (once per encounter, no Health Level cost): every target within Close range must wash off or take Disadvantage on all rolls for the rest of the Scene.
+**Spray** (once per encounter, no Health Level cost): everyone within 3 m rolls **Soak or Stamina (whichever is higher) + Difficulty 7** to resist; on a failure they must wash off or take Disadvantage on all rolls for the rest of the Scene.
 
 **Notable Skills**: Perception 10 vs. Stealth, Athletics TN 5
 
@@ -518,7 +518,7 @@ The stripe runs down a body twice the usual length, and the smell carries propor
 
 **Potence** 2 · **Initiative** 0 · **Psyche** 1 · **Ferocity** 2 · **Stamina** 4
 
-**Spray** (once per encounter, no Health Level cost): the cloud reaches farther and lingers longer than an ordinary skunk's - GM's call on exact range, but Close is a floor, not a ceiling.
+**Spray** (once per encounter, no Health Level cost): the cloud reaches farther and lingers longer than an ordinary skunk's. Everyone within 6 m rolls **Soak or Stamina (whichever is higher) + Difficulty 4** to resist; on a failure they must wash off or take Disadvantage on all rolls for the rest of the Scene.
 
 **Notable Skills**: Perception 10 vs. Stealth, Athletics TN 5
 
@@ -536,7 +536,7 @@ Nobody's ever gotten close enough to measure it - the smell arrives first and se
 
 **Potence** 3 · **Initiative** 0 · **Psyche** 1 · **Ferocity** 2 · **Stamina** 4
 
-**Spray** (once per encounter, no Health Level cost): covers a full Range Band instead of just Close, and the residue is potent enough to ruin gear left nearby.
+**Spray** (once per encounter, no Health Level cost): everyone within 10 m rolls **Soak or Stamina (whichever is higher) + Difficulty 6** to resist; on a failure they must wash off or take Disadvantage on all rolls for the rest of the Scene. The residue is potent enough to ruin gear left nearby.
 
 **Notable Skills**: Perception 10 vs. Stealth, Athletics TN 5
 
@@ -554,7 +554,7 @@ It doesn't wait for the warning stomp anymore - one gland has taken over for the
 
 **Potence** 1 · **Initiative** 0 · **Psyche** 1 · **Ferocity** 2 · **Stamina** 4
 
-**Spray** (once per encounter, no Health Level cost): every target within Close range must wash off or take Disadvantage on all rolls for the rest of the Scene.
+**Spray** (once per encounter, no Health Level cost): everyone within 3 m rolls **Soak or Stamina (whichever is higher) + Difficulty 7** to resist; on a failure they must wash off or take Disadvantage on all rolls for the rest of the Scene.
 
 **Notable Skills**: Perception 10 vs. Stealth, Athletics TN 5
 
@@ -2679,7 +2679,7 @@ Doesn't need to bite when it can simply stop a target from acting. Long, dark, a
 
 **Potence** 1 · **Initiative** 4 · **Psyche** 2 · **Ferocity** 2 · **Stamina** 4
 
-**Shock**: Close range, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls until the end of their next turn.
+**Shock**: 3 m, no touch required in water, no Health Level cost: a target rolls **Soak or Stamina (whichever is higher) + Difficulty 7** to resist; on a failure they are Disadvantaged on all rolls until the end of their next turn.
 
 **Notable Skills**: Stealth 8 vs. Perception, Athletics TN 7
 
@@ -2695,7 +2695,7 @@ Longer than any recorded specimen, and the charge it puts out lasts noticeably l
 
 **Potence** 2 · **Initiative** 4 · **Psyche** 2 · **Ferocity** 3 · **Stamina** 4
 
-**Shock**: Close range, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls for a full Scene instead of just until the end of their next turn.
+**Shock**: 3 m, no touch required in water, no Health Level cost: a target rolls **Soak or Stamina (whichever is higher) + Difficulty 4** to resist; on a failure they are Disadvantaged on all rolls for a full Scene instead of just until the end of their next turn.
 
 **Notable Skills**: Stealth 8 vs. Perception, Athletics TN 7
 
@@ -2711,7 +2711,7 @@ Whole sections of a flooded channel go dead quiet around it, fish and birds alik
 
 **Potence** 3 · **Initiative** 4 · **Psyche** 2 · **Ferocity** 3 · **Stamina** 4
 
-**Shock**: extends out to Near range instead of just Close, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls until the end of their next turn.
+**Shock**: extends out to 15 m, into Near range instead of just Close, no touch required in water, no Health Level cost: a target rolls **Soak or Stamina (whichever is higher) + Difficulty 6** to resist; on a failure they are Disadvantaged on all rolls until the end of their next turn.
 
 **Notable Skills**: Stealth 8 vs. Perception, Athletics TN 7
 
@@ -2727,7 +2727,7 @@ Even out of the water, standing near it too long leaves a faint prickling under 
 
 **Potence** 1 · **Initiative** 4 · **Psyche** 2 · **Ferocity** 3 · **Stamina** 4
 
-**Shock**: Close range, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls until the end of their next turn.
+**Shock**: 3 m, no touch required in water, no Health Level cost: a target rolls **Soak or Stamina (whichever is higher) + Difficulty 7** to resist; on a failure they are Disadvantaged on all rolls until the end of their next turn.
 
 **Notable Skills**: Stealth 8 vs. Perception, Athletics TN 7
 
