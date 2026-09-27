@@ -162,13 +162,14 @@ export function matches(entry, { query = '', tags = [], source = 'all' } = {}, b
 // backups
 // ---------------------------------------------------------------------------
 
-export function exportLibrary(mine, bundledTags) {
+export function exportLibrary(mine, bundledTags, headings = []) {
   return {
     format: BACKUP_FORMAT,
     version: 1,
     exported: new Date().toISOString(),
     entries: mine,
     bundledTags,
+    headings,
   };
 }
 
@@ -183,7 +184,49 @@ export function mergeBackup(backup, bundledTags) {
   Object.entries(backup.bundledTags || {}).forEach(([id, list]) => {
     tags[id] = [...new Set([...(tags[id] || []), ...list])];
   });
-  return { entries, bundledTags: tags };
+  return { entries, bundledTags: tags, headings: backup.headings || [] };
+}
+
+// ---------------------------------------------------------------------------
+// headings
+// ---------------------------------------------------------------------------
+//
+// A heading is a group the GM makes in the Catalog - an enemy organization,
+// a faction, a session - shown like a pack, holding their own entries and
+// bundled creatures alike. Underneath it is a tag the list shows as a group,
+// so putting an entry under one, searching it and exporting it all work the
+// way tags already do. `headings` is the list of names, in the GM's order.
+
+// A tag renamed everywhere it is used: on the GM's entries and on the
+// bundled creatures they tagged. Returns the entries that changed.
+export function renameTag(mine, bundledTags, from, to) {
+  const changed = [];
+  mine.forEach((e) => {
+    if ((e.tags || []).includes(from)) {
+      e.tags = [...new Set(e.tags.map((t) => (t === from ? to : t)))];
+      changed.push(e);
+    }
+  });
+  Object.keys(bundledTags).forEach((id) => {
+    bundledTags[id] = [...new Set(bundledTags[id].map((t) => (t === from ? to : t)))];
+  });
+  return changed;
+}
+
+// A tag taken off everything. The entries stay.
+export function dropTag(mine, bundledTags, tag) {
+  const changed = [];
+  mine.forEach((e) => {
+    if ((e.tags || []).includes(tag)) {
+      e.tags = e.tags.filter((t) => t !== tag);
+      changed.push(e);
+    }
+  });
+  Object.keys(bundledTags).forEach((id) => {
+    bundledTags[id] = bundledTags[id].filter((t) => t !== tag);
+    if (!bundledTags[id].length) delete bundledTags[id];
+  });
+  return changed;
 }
 
 // ---------------------------------------------------------------------------

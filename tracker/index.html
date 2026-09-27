@@ -388,6 +388,12 @@
   .lib-group-count { margin-left: auto; color: var(--text-faint); font-weight: 400; font-size: 0.72rem; }
   .caret { width: 0.8rem; color: var(--accent); }
   .lib-group > .lib-item { margin: 0.3rem 0 0.3rem 0.8rem; }
+  .heading-new { display: flex; gap: 0.35rem; margin: 0 0 0.45rem; }
+  .heading-new .tag-input { flex: 1; min-width: 0; }
+  .lib-group-head.is-heading { border-color: var(--gold); }
+  .lib-group-head.is-heading .caret { color: var(--gold); }
+  .heading-tools { display: flex; gap: 0.3rem; justify-content: flex-end; margin: 0.3rem 0; }
+  .heading-empty { margin: 0.2rem 0 0.4rem 0.8rem; }
   .tag-picker { margin-top: 0.45rem; padding: 0.45rem; border: 1px solid var(--accent); border-radius: 6px; background: var(--panel-2); }
   .tag-picker-list { display: flex; flex-wrap: wrap; gap: 0.2rem 0.8rem; margin-bottom: 0.4rem; font-size: 0.76rem; }
   .tag-picker-list label { display: flex; align-items: center; gap: 0.25rem; text-transform: none; letter-spacing: 0; font-size: 0.76rem; color: var(--text); margin: 0; }
@@ -927,6 +933,7 @@
   let bestiary = [];
   let mine = [];
   let bundledTags = {};
+  let headings = []; // the GM's headings, in their order
   let lib = null;
   const filter = { query: "", tags: [], source: "all" };
 
@@ -1048,6 +1055,8 @@
         }
         bundledTags = got.bundledTags;
         await saveBundledTags();
+        headings = [...new Set([...headings, ...got.headings])];
+        await lib.setMeta("headings", headings);
         continue;
       }
       if (!kind) { failed.push(p.filename); continue; }
@@ -1069,7 +1078,7 @@
   }
 
   function exportCatalogue() {
-    const data = library.exportLibrary(mine, bundledTags);
+    const data = library.exportLibrary(mine, bundledTags, headings);
     const blob = new Blob([JSON.stringify(data)], { type: "application/json" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
@@ -1091,19 +1100,62 @@
     return entry.data.concept || "Character";
   }
 
+  // Headings: groups the GM makes - an enemy organization, a faction.
+  async function newHeading(name) {
+    const n = name.trim();
+    if (!n) return;
+    if (headings.includes(n)) { libNote(`There's already a heading called ${n}.`); return; }
+    headings = [...headings, n];
+    await lib.setMeta("headings", headings);
+    openGroups.add(`heading:${n}`);
+    libNote(`${n} made. Use Add to Heading on anything to put it there.`);
+    renderLibrary();
+  }
+
+  async function renameHeading(from) {
+    const to = (prompt(`Rename ${from} to:`, from) || "").trim();
+    if (!to || to === from) return;
+    if (headings.includes(to)) { libNote(`There's already a heading called ${to}.`); return; }
+    for (const e of library.renameTag(mine, bundledTags, from, to)) await lib.put(e);
+    headings = headings.map((h) => (h === from ? to : h));
+    await lib.setMeta("headings", headings);
+    await saveBundledTags();
+    if (openGroups.delete(`heading:${from}`)) openGroups.add(`heading:${to}`);
+    renderLibrary();
+  }
+
+  async function deleteHeading(name) {
+    if (!confirm(`Delete the heading ${name}? Everything under it stays in the Catalog.`)) return;
+    for (const e of library.dropTag(mine, bundledTags, name)) await lib.put(e);
+    headings = headings.filter((h) => h !== name);
+    await lib.setMeta("headings", headings);
+    await saveBundledTags();
+    renderLibrary();
+  }
+
   // The Catalog opens as a handful of closed groups with counts, not two
   // hundred rows: the GM's own entries, then each pack, the two animal
   // packs split again by where the animals live. Searching, or picking one
   // of the GM's tags, opens just the groups holding a match.
   const openGroups = new Set();
   let tagging = null; // the entry whose Add Tag picker is open
+  let placing = null; // the entry whose Add to Heading picker is open
 
   function groupsOf(found) {
     const groups = [];
     const add = (key, title, entries, sub = null) => {
       if (entries.length) groups.push({ key, title, entries, sub });
     };
-    add("mine", "My entries", found.filter((e) => !e.id.startsWith("bestiary:")));
+    headings.forEach((h) => {
+      const under = found.filter((e) => [...library.tagsOf(e, bundledTags).own].includes(h));
+      // A heading shows even when it is empty, so a new one is there to
+      // be filled - unless a search is narrowing things down.
+      if (under.length || !(filter.query.trim() || filter.tags.length)) {
+        groups.push({ key: `heading:${h}`, title: h, entries: under, heading: h });
+      }
+    });
+    add("mine", headings.length ? "My entries, not under a heading" : "My entries",
+      found.filter((e) => !e.id.startsWith("bestiary:") && !(e.tags || []).some((t) => headings.includes(t))));
     ["Mundane Beasts", "Beast Variants", "Cryptids", "Nightmare Creatures"].forEach((pack) => {
       const inPack = found.filter((e) => e.id.startsWith("bestiary:") && e.pack === pack);
       // The animals are many and live somewhere; the rest are few.
@@ -1117,7 +1169,7 @@
   }
 
   function entryRow(e) {
-    const { own: yours } = library.tagsOf(e, bundledTags);
+    const yours = library.tagsOf(e, bundledTags).own.filter((t) => !headings.includes(t));
     const isMine = !e.id.startsWith("bestiary:");
     const div = document.createElement("div");
     div.className = "lib-item";
@@ -1126,6 +1178,7 @@
         ${e.icon ? `<img class="ri-icon" src="${e.icon}" alt="" />` : ""}
         <span class="lib-name" data-open title="See everything on ${escapeHtml(e.name)}">${escapeHtml(e.name)}</span>
         <div class="lib-buttons">
+          ${headings.length ? `<button type="button" class="btn" data-heading>Add to Heading</button>` : ""}
           <button type="button" class="btn" data-tag>Add Tag</button>
           <button type="button" class="btn primary" data-add title="Put ${escapeHtml(e.name)} in the encounter">Add to encounter</button>
           ${isMine ? `<button type="button" class="btn danger" data-del>Remove</button>` : ""}
@@ -1139,18 +1192,25 @@
     div.querySelector("[data-del]")?.addEventListener("click", () => deleteMine(e.id));
     div.querySelector("[data-tag]").addEventListener("click", () => {
       tagging = tagging === e.id ? null : e.id;
+      placing = null;
+      renderLibrary();
+    });
+    div.querySelector("[data-heading]")?.addEventListener("click", () => {
+      placing = placing === e.id ? null : e.id;
+      tagging = null;
       renderLibrary();
     });
     div.querySelectorAll("[data-untag]").forEach((b) => b.addEventListener("click", () => removeTag(e.id, b.dataset.untag)));
     if (tagging === e.id) div.appendChild(tagPicker(e));
+    if (placing === e.id) div.appendChild(headingPicker(e));
     return div;
   }
 
   // Add Tag: every tag the GM has made, to tick on or off, and a box for a
   // new one. Pack tags are the book's and are not offered.
   function tagPicker(e) {
-    const { own: yours } = library.tagsOf(e, bundledTags);
-    const { own: every } = library.allTags(bestiary, mine, bundledTags);
+    const yours = library.tagsOf(e, bundledTags).own;
+    const every = library.allTags(bestiary, mine, bundledTags).own.filter((t) => !headings.includes(t));
     const box = document.createElement("div");
     box.className = "tag-picker";
     box.innerHTML = `
@@ -1174,6 +1234,22 @@
     return box;
   }
 
+  // Add to Heading: tick the headings this belongs under.
+  function headingPicker(e) {
+    const yours = library.tagsOf(e, bundledTags).own;
+    const box = document.createElement("div");
+    box.className = "tag-picker";
+    box.innerHTML = `
+      <div class="tag-picker-list">${headings.map((h) =>
+        `<label><input type="checkbox" data-h="${escapeHtml(h)}" ${yours.includes(h) ? "checked" : ""} /> ${escapeHtml(h)}</label>`).join("")}</div>
+      <div class="tag-picker-new"><button type="button" class="btn" data-done>Done</button></div>`;
+    box.querySelectorAll("[data-h]").forEach((c) => c.addEventListener("change", () => {
+      (c.checked ? addTag : removeTag)(e.id, c.dataset.h);
+    }));
+    box.querySelector("[data-done]").addEventListener("click", () => { placing = null; renderLibrary(); });
+    return box;
+  }
+
   function groupBlock(g, depth, searching) {
     const wrap = document.createElement("div");
     wrap.className = `lib-group depth-${depth}`;
@@ -1187,7 +1263,22 @@
       if (openGroups.has(g.key)) openGroups.delete(g.key); else openGroups.add(g.key);
       renderLibrary();
     });
+    if (g.heading) head.classList.add("is-heading");
     wrap.appendChild(head);
+    if (open && g.heading) {
+      const tools = document.createElement("div");
+      tools.className = "heading-tools";
+      tools.innerHTML = `<button type="button" class="btn" data-rename>Rename</button><button type="button" class="btn danger" data-drop>Delete heading</button>`;
+      tools.querySelector("[data-rename]").addEventListener("click", () => renameHeading(g.heading));
+      tools.querySelector("[data-drop]").addEventListener("click", () => deleteHeading(g.heading));
+      wrap.appendChild(tools);
+      if (!g.entries.length) {
+        const empty = document.createElement("div");
+        empty.className = "hint heading-empty";
+        empty.textContent = "Nothing here yet. Use Add to Heading on any entry below to put it here.";
+        wrap.appendChild(empty);
+      }
+    }
     if (open) {
       if (g.sub) g.sub.forEach((s) => wrap.appendChild(groupBlock(s, depth + 1, searching)));
       else g.entries.forEach((e) => wrap.appendChild(entryRow(e)));
@@ -1196,7 +1287,7 @@
   }
 
   function renderLibrary() {
-    const { own } = library.allTags(bestiary, mine, bundledTags);
+    const own = library.allTags(bestiary, mine, bundledTags).own.filter((t) => !headings.includes(t));
     // Only the GM's own tags are filters: the groups already sort by pack
     // and by where things live.
     filter.tags = filter.tags.filter((t) => own.includes(t));
@@ -1224,6 +1315,15 @@
 
     const list = document.getElementById("libList");
     list.innerHTML = "";
+    const make = document.createElement("div");
+    make.className = "heading-new";
+    make.innerHTML = `<input type="text" class="tag-input" placeholder="New heading, e.g. The Red Hand" data-heading-name />
+      <button type="button" class="btn" data-heading-make>New heading</button>`;
+    const nameBox = make.querySelector("[data-heading-name]");
+    const go = () => newHeading(nameBox.value);
+    make.querySelector("[data-heading-make]").addEventListener("click", go);
+    nameBox.addEventListener("keydown", (ev) => { if (ev.key === "Enter") go(); });
+    list.appendChild(make);
     const groups = groupsOf(found);
     if (!groups.length) list.innerHTML = `<div class="list-empty">Nothing matches.</div>`;
     groups.forEach((g) => list.appendChild(groupBlock(g, 0, searching)));
@@ -1257,6 +1357,7 @@
     lib = await library.openLibrary();
     mine = await lib.all();
     bundledTags = await lib.getMeta("bundledTags", {});
+    headings = await lib.getMeta("headings", []);
     // A tracker that already had characters loaded, from before there was
     // a library: they are the GM's, so they go in the catalogue once.
     if (!(await lib.getMeta("rosterMigrated", false))) {
