@@ -95,16 +95,16 @@ const data = await loadRulesData();
 writeFileSync(join(dest, 'rules-data.json'), JSON.stringify(data), 'utf8');
 console.log('  rules/*.md  ->  rules-data.json');
 
-writeFileSync(join(dest, 'manifest.json'), `${JSON.stringify({
+const MANIFEST = {
   name: '20 Below Character Sheet',
   version: '2.0.0',
   manifest_version: 1,
   author: 'Feralucce',
   homepage_url: 'https://github.com/feralucce/20_Below_Dice',
   icon: 'https://feralucce.github.io/20_Below_Dice/icon.svg',
-  description: "Your 20 Below character in Owlbear Rodeo: every number on the sheet, "
-    + 'Vitals, Ki and Fate that track themselves, and one Roll dice window whose '
-    + 'rolls the whole room sees.',
+  // Owlbear Rodeo takes 128 characters at most.
+  description: 'Your 20 Below character at the table: the full sheet, self-tracking Vitals, '
+    + 'Ki and Fate, and dice rolls the whole room sees.',
   action: {
     title: '20 Below Character Sheet',
     icon: 'https://feralucce.github.io/20_Below_Dice/icon.svg',
@@ -112,7 +112,12 @@ writeFileSync(join(dest, 'manifest.json'), `${JSON.stringify({
     height: 780,
     width: 613,
   },
-}, null, 2)}\n`, 'utf8');
+};
+if (MANIFEST.description.length > 128) {
+  console.error(`manifest description is ${MANIFEST.description.length} characters; Owlbear Rodeo allows 128`);
+  process.exit(1);
+}
+writeFileSync(join(dest, 'manifest.json'), `${JSON.stringify(MANIFEST, null, 2)}\n`, 'utf8');
 console.log('  manifest.json  (20 Below Character Sheet)');
 
 writeFileSync(
