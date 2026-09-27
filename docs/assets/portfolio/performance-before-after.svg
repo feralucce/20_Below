@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" width="900" height="580">
+<title>One attack, before and after the Roll dice window</title>
+<rect width="900" height="580" fill="#0a1720"/>
+<text x="24" y="34" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="600" fill="#eaf5fb">One attack, before and after the Roll dice window</text>
+<rect x="24" y="52" width="14" height="14" rx="3" fill="#d95926"/>
+<text x="46" y="64" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#8fadbe">v0.12.27, before</text>
+<rect x="214" y="52" width="14" height="14" rx="3" fill="#3987e5"/>
+<text x="236" y="64" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#8fadbe">v0.12.28 on, after</text>
+<line x1="24" y1="80" x2="876" y2="80" stroke="#24404f" stroke-width="1"/>
+<text x="24" y="106" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="#eaf5fb">Roll buttons on the sheet</text>
+<text x="24" y="126" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#8fadbe">fewer is better: one place to look</text>
+<g><title>Roll buttons on the sheet, before: 36</title><path d="M360 94 H786.0 Q790.0 94 790.0 98 V108 Q790.0 112 786.0 112 H360 Z" fill="#d95926"/></g>
+<g><title>Roll buttons on the sheet, after: 5</title><path d="M360 114 H415.72222222222223 Q419.72222222222223 114 419.72222222222223 118 V128 Q419.72222222222223 132 415.72222222222223 132 H360 Z" fill="#3987e5"/></g>
+<text x="798.0" y="108" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#eaf5fb">36</text>
+<text x="427.72222222222223" y="128" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#eaf5fb">5 (one per page)</text>
+<line x1="24" y1="166" x2="876" y2="166" stroke="#24404f" stroke-width="1"/>
+<text x="24" y="192" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="#eaf5fb">Actions for one attack</text>
+<text x="24" y="212" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#8fadbe">fewer is better: clicks and choices</text>
+<g><title>Actions for one attack, before: 5</title><path d="M360 180 H786.0 Q790.0 180 790.0 184 V194 Q790.0 198 786.0 198 H360 Z" fill="#d95926"/></g>
+<g><title>Actions for one attack, after: 4</title><path d="M360 200 H700.0 Q704.0 200 704.0 204 V214 Q704.0 218 700.0 218 H360 Z" fill="#3987e5"/></g>
+<text x="798.0" y="194" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#eaf5fb">5</text>
+<text x="712.0" y="214" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#eaf5fb">4</text>
+<line x1="24" y1="252" x2="876" y2="252" stroke="#24404f" stroke-width="1"/>
+<text x="24" y="278" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="#eaf5fb">When Advantage or Disadvantage applies</text>
+<text x="24" y="298" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#8fadbe">fewer is better: the old window needed a box ticked</text>
+<g><title>When Advantage or Disadvantage applies, before: 6</title><path d="M360 266 H786.0 Q790.0 266 790.0 270 V280 Q790.0 284 786.0 284 H360 Z" fill="#d95926"/></g>
+<g><title>When Advantage or Disadvantage applies, after: 4</title><path d="M360 286 H642.6666666666667 Q646.6666666666667 286 646.6666666666667 290 V300 Q646.6666666666667 304 642.6666666666667 304 H360 Z" fill="#3987e5"/></g>
+<text x="798.0" y="280" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#eaf5fb">6</text>
+<text x="654.6666666666667" y="300" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#eaf5fb">4</text>
+<line x1="24" y1="338" x2="876" y2="338" stroke="#24404f" stroke-width="1"/>
+<text x="24" y="364" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="#eaf5fb">Dice rolls</text>
+<text x="24" y="384" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#8fadbe">fewer is better: to hit, then damage, became one</text>
+<g><title>Dice rolls, before: 2</title><path d="M360 352 H786.0 Q790.0 352 790.0 356 V366 Q790.0 370 786.0 370 H360 Z" fill="#d95926"/></g>
+<g><title>Dice rolls, after: 1</title><path d="M360 372 H571.0 Q575.0 372 575.0 376 V386 Q575.0 390 571.0 390 H360 Z" fill="#3987e5"/></g>
+<text x="798.0" y="366" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#eaf5fb">2</text>
+<text x="583.0" y="386" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#eaf5fb">1</text>
+<line x1="24" y1="424" x2="876" y2="424" stroke="#24404f" stroke-width="1"/>
+<text x="24" y="450" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="#eaf5fb">Outcomes one roll answers</text>
+<text x="24" y="470" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#8fadbe">more is better: Normal, Advantage and Disadvantage</text>
+<g><title>Outcomes one roll answers, before: 1</title><path d="M360 438 H499.33333333333337 Q503.33333333333337 438 503.33333333333337 442 V452 Q503.33333333333337 456 499.33333333333337 456 H360 Z" fill="#d95926"/></g>
+<g><title>Outcomes one roll answers, after: 3</title><path d="M360 458 H786.0 Q790.0 458 790.0 462 V472 Q790.0 476 786.0 476 H360 Z" fill="#3987e5"/></g>
+<text x="511.33333333333337" y="452" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#eaf5fb">1</text>
+<text x="798.0" y="472" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#eaf5fb">3</text>
+<text x="24" y="526" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#5c7686">Measured by driving the same attack through both versions of the Character Creator: the Viktor Grave sample fires his</text>
+<text x="24" y="543" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#5c7686">Compact pistol (3 dice) through Air at Defense 5 and Soak 3. Fields already set right by default are not counted.</text>
+<text x="24" y="560" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#5c7686">Each row has its own scale.</text>
+</svg>

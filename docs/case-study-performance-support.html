@@ -1,0 +1,183 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Case Study: The Rules You Don't Have to Remember - 20 Below</title>
+<meta name="description" content="Performance support for a tabletop game: tools that do the rules' arithmetic at the table, on the screen people already have open, built on one set of rules code so they can't disagree." />
+<link rel="icon" type="image/x-icon" href="/docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="/docs/assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --radius: 10px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+  main { max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+  .back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+  .back-row { font-size: 0.9rem; color: var(--text-dim); }
+  header { margin: 1.5rem 0 2.5rem; }
+  .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin: 0 0 0.6rem; }
+  h1 { margin: 0; font-size: 1.9rem; letter-spacing: 0.01em; line-height: 1.3; }
+  .intro { color: var(--text-dim); margin: 0.8rem 0 0; }
+
+  h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border-bottom: 1px solid var(--panel-border); padding-bottom: 0.5rem; margin: 2.75rem 0 1.1rem; }
+  h3 { font-size: 1.05rem; margin: 2rem 0 0.7rem; }
+  p { font-size: 1rem; }
+  ul, ol { padding-left: 1.25rem; }
+  li { margin-bottom: 0.75rem; }
+  a { color: var(--accent); }
+  blockquote { margin: 1rem 0; padding: 0.6rem 1rem; border-left: 3px solid var(--panel-border); color: var(--text-dim); }
+
+  .checks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; margin: 1.2rem 0; }
+  .check { background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius); padding: 0.9rem 1rem; }
+  .check .who { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.3rem; }
+  .check p { margin: 0; font-size: 0.92rem; }
+
+  figure { margin: 1.6rem 0; }
+  figure img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--panel-border); background: var(--panel); }
+  figure.wide { margin-left: -6vw; margin-right: -6vw; }
+  @media (max-width: 900px) { figure.wide { margin-left: 0; margin-right: 0; } }
+  figcaption { font-size: 0.88rem; color: var(--text-dim); margin-top: 0.55rem; }
+
+  .credits { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .credits td { padding: 0.55rem 0.5rem 0.55rem 0; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
+  .credits td:first-child { color: var(--text-dim); width: 42%; }
+  .decisions { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
+  .decisions th { text-align: left; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); font-weight: 600; padding: 0 0.6rem 0.5rem 0; border-bottom: 1px solid var(--panel-border); }
+  .decisions td { padding: 0.6rem 0.6rem 0.6rem 0; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
+  .decisions td:nth-child(2) { color: var(--text-dim); }
+
+  footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+</style>
+<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <p class="back-row">&larr; <a class="back-link" href="/docs/id-portfolio.html">Instructional Design</a> &middot; <a class="back-link" href="/docs/pm-portfolio.html">Project Management</a></p>
+
+  <header>
+    <p class="eyebrow">Case Study</p>
+    <h1>The Rules You Don't Have to Remember</h1>
+    <p class="intro">Performance support for a tabletop game. Instead of teaching players to remember and calculate faster, the tools do it at the table, on the screen people already have open, and every one of them runs on the same rules code so none can disagree about a character.</p>
+  </header>
+
+  <h2>The Problem</h2>
+  <p>A fight in 20 Below asks a lot of arithmetic from people who'd rather be playing. An attack is two dice under your Element plus the target's Defense, then one die per point of damage against their wall. Advantage and Disadvantage change which dice count. Boons change what a Skill rolls at. Gifts cost Ki, and a failed check costs more.</p>
+  <p>The Character Creator's sheet already had rollers, but they were spread across it: 36 separate roll buttons on one character's sheet. An attack took two rolls in one window, to hit and then damage, and it asked for the kind of attack twice. Players using Owlbear Rodeo, the virtual tabletop our tables play on, had a dice extension and no sheet at all. The GM's Battle Tracker kept turn order and damage tracks, but every roll happened somewhere else.</p>
+
+  <h2>Analysis: The Moment of Need</h2>
+  <p>This is a performance-support problem, not a training one. The question isn't whether players can learn the attack formula; they can. It's what they need in the ten seconds after the GM says "roll."</p>
+  <div class="checks">
+    <div class="check"><div class="who">A player mid-fight</div><p>The result of the roll, not the arithmetic behind it.</p></div>
+    <div class="check"><div class="who">A new player</div><p>What their numbers mean, without opening the book.</p></div>
+    <div class="check"><div class="who">The GM</div><p>Every combatant's state and rolls, with the rules already applied.</p></div>
+    <div class="check"><div class="who">A player between sessions</div><p>Spend experience and carry the character across, without juggling files.</p></div>
+  </div>
+  <p>Those four moments set the objectives. Without opening the book, a player can roll an attack and see at once whether it hits normally, with Advantage or with Disadvantage, and how much damage gets through. They can roll a Skill with the right Element and tier, their Boons already applied. They can make a Gift Check and watch their Ki change. And they can roll Initiative and have it reach the GM without saying it aloud.</p>
+
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/performance-ecosystem.svg"><img src="/docs/assets/portfolio/performance-ecosystem.svg" alt="The 20 Below tool ecosystem. The rulebook's rules feed one set of rules code: the sheet model and the Roll dice window, written once. That code feeds three tools: the Character Creator (the player, building and advancing), the Owlbear Character Sheet (the player, at the table) and the Battle Tracker (the GM, running the fight). A character file travels between the Creator and the sheet through Downloads. The sheet sends Initiative to the tracker; the tracker sends rests and Fate Tokens back. Rolls from both go to the Owlbear room's roll log." loading="lazy" /></a>
+    <figcaption>One set of rules code, three tools, and what travels between them. Because the rules are written once, the Creator, the Owlbear sheet and the GM's tracker can't disagree about a character.</figcaption>
+  </figure>
+
+  <h2>Design Decisions</h2>
+  <p>Six principles came out of the analysis, and every change was held to them.</p>
+  <table class="decisions">
+    <thead><tr><th>Principle</th><th>What it meant in practice</th></tr></thead>
+    <tbody>
+      <tr><td>Do the calculation, show the answer</td><td>One roll, read three ways, with the damage already counted.</td></tr>
+      <tr><td>Put it where the work is</td><td>One Roll dice button on every page; Ki beside the Gifts that spend it; experience spent on the sheet.</td></tr>
+      <tr><td>Apply the rule; don't ask whether it applies</td><td>A Boon the character owns is applied, not offered.</td></tr>
+      <tr><td>Say what things are</td><td>Full names over abbreviations.</td></tr>
+      <tr><td>One source of truth</td><td>One set of rules code under every tool.</td></tr>
+      <tr><td>The rules' limits hold everywhere</td><td>No tool grants what the rules wouldn't, unless the GM does it on purpose.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>One button, one roll, three answers</h3>
+  <p>The scattered roll buttons became one "Roll dice" button on every page of the sheet, in the same place each time. Initiative, Attack, Skill and Gift Check moved into one window, in the order a fight asks for them. When I saw Initiative sitting on its own button, apart from everything else, my note was four words: "That isn't intuitive."</p>
+  <p>The attack is the heart of it. One roll of three dice is read three ways at once, because Normal, Advantage and Disadvantage only differ in which two dice count. The table sees every outcome before anyone rules on which applies.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/performance-roll-window.webp"><img src="/docs/assets/portfolio/performance-roll-window.webp" alt="The Roll dice window's attack result from a real roll: Earth 6 plus Defense 5, roll under 11, dice 1, 6 and 7. Normal: 1 plus 6 is 7, Hit, 2 damage. Advantage: 1 plus 6 is 7, Hit, 2 damage. Disadvantage: 6 plus 7 is 13, Miss. The damage dice 2, 1, 6 and 9 are shown with 2 and 1 in red, soaked by a wall of 3, and 6 and 9 in green." loading="lazy" /></a>
+    <figcaption>A real roll. The to-hit sums sit under their header, the result reads Hit or Miss, and damage shows how many got through, then every die: green over the wall, red soaked.</figcaption>
+  </figure>
+  <p>The Skill roll follows the same thinking. The Skill comes from the sheet with its Element and tier. A Novice is at Disadvantage automatically, and the window says so in a line rather than ticking a box for the player to second-guess. One sentence reminds them that a Descriptor can argue a different Element, and nothing more.</p>
+  <p>To check the change was real, I measured it. The same attack went through the Creator before and after the change, counting only the actions a player actually has to take.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/performance-before-after.svg"><img src="/docs/assets/portfolio/performance-before-after.svg" alt="One attack, before and after the Roll dice window. Roll buttons on the sheet: 36 before, 5 after, one per page. Actions for one attack: 5 before, 4 after. When Advantage or Disadvantage applies: 6 before, 4 after. Dice rolls: 2 before, 1 after. Outcomes one roll answers: 1 before, 3 after." loading="lazy" /></a>
+    <figcaption>The click saving per attack is modest. The real gains are one place to roll from instead of 36, one roll instead of two, and nobody having to decide up front whether Advantage applies.</figcaption>
+  </figure>
+
+  <h3>The sheet goes where the game is played</h3>
+  <p>Our tables play in Owlbear Rodeo, so the sheet had to live there too. The dice extension became the 20 Below Character Sheet. It isn't the printed page squeezed into a small window. It carries everything on the sheet, the Vitals and pools that track themselves, and the same Roll dice window, and every roll lands in the room's log for the whole table.</p>
+  <p>The GM's Battle Tracker got the same treatment. Every line in a fight has its own Roll dice window: a creature rolls from its printed stat block, a character from their own sheet. The GM picks Public or Secret for each roll. Health, Poise and Sanity stop at their floors, Exhausted shows its effects, armour loses Health Levels and breaks, and a combatant who's down is marked.</p>
+
+  <h3>The tools talk to each other</h3>
+  <p>Next, the tools had to talk to each other. A player's Initiative roll on their sheet fills their box in the GM's tracker; nobody reads it out and nobody types it in. The GM can send a Short Rest, a Full Night's Rest or a Fate Token to one player or everyone, and each sheet applies it and answers with what happened.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/performance-room.webp"><img src="/docs/assets/portfolio/performance-room.webp" alt="The player's Character Sheet and the GM's Battle Tracker side by side. The sheet's room log lists Viktor Grave's Initiative of 11, his attack, a hit for 4 damage, the GM's public attack roll for a wolf, and a Short Rest from the GM; the sheet shows the notice The GM gave you a Short Rest. The tracker shows Viktor's Initiative box already filled with 11 and marked PC, two wolves with empty Initiative boxes, and a Players' sheets box reporting Viktor Grave got a Short Rest and rolled Initiative 11." loading="lazy" /></a>
+    <figcaption>One short scene: the player rolls Initiative and attacks, the GM rolls for a wolf in public, then gives a Short Rest. The log shows exactly what was sent.</figcaption>
+  </figure>
+  <p>The rules' limits still hold. Fate Tokens stop at the character's cap. I ruled that the GM can give as many Short Rests as the story allows, while the player's own button stays at one between nights. And nothing else syncs from the tracker to the players. My call was simple: "I trust my players." Only what the GM chooses to give travels that way.</p>
+
+  <h3>Say what things are</h3>
+  <p>An early version of the tracker's combat line leaned on abbreviations. My first question on seeing it was "what is h2 h3?" That was the whole review. Every label became the full name: Hardness, Health Levels, and each track by name. A label the reader has to decode isn't doing its job.</p>
+
+  <h3>Apply the rule; don't ask</h3>
+  <p>Communications and the designers asked for Jack of all Trades, a Boon that makes a character at least Trained in every Skill, to apply by itself on the sheet. I rendered the sheet before the change to see what they'd seen. The Boon's catch-all row sat wherever the list of bought Skills ended, its name cut off, and in the Roll dice window it was the last of 26 choices.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/performance-jack-of-all-trades.webp"><img src="/docs/assets/portfolio/performance-jack-of-all-trades.webp" alt="The Skills box on page 2 of the character sheet, before and after. Before: the row reading Every other Skill (Jack of a..., cut off, sits in the middle of the second column after Tracking. After: a row named Jack of all Trades, ticked Trained, is first in the list, with the bought Skills following." loading="lazy" /></a>
+    <figcaption>Both versions rendered for the same character. The row that stands for every Skill not bought moved to the top and took the Boon's own name.</figcaption>
+  </figure>
+  <p>The rule is now written once and read off the character everywhere. On the sheet, the row sits first and carries the Boon's name, and the bought Skills follow at the tier they actually roll at. I made one layout call: not all 77 Skills on the page, just the ones they spent points on, with Jack of all Trades at the top for the rest. An older roller still had a manual checkbox for the Boon; it went in the same change.</p>
+
+  <h3>Put it where the work is</h3>
+  <p>Gifts run on Ki, so the sheet's Gifts tab now opens with a Ki ticker and the Gift Check. A failed Check takes its Ki at once, and the count follows. Experience is earned at the table, so the sheet gained an Advance tab. Players add a session's experience and spend it with the Creator's own spending rules, without leaving the game.</p>
+
+  <h3>No file juggling</h3>
+  <p>The last gap was the trip between the Owlbear sheet and the desktop Creator: save a file, find it, import it. There was a hard constraint. A web page can't choose where its files land, and Owlbear blocks the folder picker. So the design turned the problem around: the Creator looks where the browser saves. A character saved in Owlbear is already waiting in the Creator's Load menu, marked new or newer. The Creator's own Save leaves a copy where Owlbear's Load opens.</p>
+
+  <h2>How the Work Ran</h2>
+  <ul>
+    <li><strong>Tested where it's used.</strong> Every change was checked at the size players actually see it, Owlbear's 613-by-780-pixel window, with screenshots.</li>
+    <li><strong>Round trips, not assumptions.</strong> Anything that moves between tools (a roll to the room, Initiative to the tracker, a rest to a sheet, a character to the Creator) was tested end to end.</li>
+    <li><strong>Scope logged as it grew.</strong> Rests and Fate Tokens from the tracker, Initiative from the sheet, Jack of all Trades, Ki on the Gifts tab, experience on the sheet, and moving characters between tools all came up mid-stream. Each was logged with where it came from.</li>
+    <li><strong>A release train.</strong> The Character Creator went from v0.12.28 to v0.12.33 and the Battle Tracker from v0.3.0 to v0.3.3, with both Owlbear extensions synced alongside. A drift check confirmed every app was current after each release.</li>
+  </ul>
+
+  <h2>Checks and Balances</h2>
+  <div class="checks">
+    <div class="check"><div class="who">I caught what tests missed</div><p>Saved encounters didn't work inside Owlbear. The cause was that Owlbear silently blocks a browser's pop-up questions. Every question the tracker asked moved into its own window, and I tested it in a sandboxed frame like Owlbear's.</p></div>
+    <div class="check"><div class="who">A freeze, traced to its root</div><p>After a release, the desktop Creator froze on opening. The cause was a character saved with a sub-stat below 0, which sent a loop running forever. It was fixed at the source and released the same day.</p></div>
+    <div class="check"><div class="who">The AI corrected its own draft</div><p>An early draft of this study said players had to tick a checkbox for Jack of all Trades. Rendering the old version showed that checkbox was no longer reachable. The draft was corrected to what the sheet actually did.</p></div>
+  </div>
+
+  <h2>Outcome</h2>
+  <p>A player can now resolve an attack from one button, in one roll, and see all three outcomes. Their Boons are applied without asking, Ki sits beside the Gifts that spend it, and experience is spent where it's earned. The GM can run a fight from one panel, with players' Initiative arriving by itself and rests and Fate Tokens going out with a click. The Creator, the Owlbear sheet and the tracker share one set of rules code, so a rule fixed in one place is fixed everywhere.</p>
+  <p>What no measurement here replaces is the table itself. The next playtest sessions are the real test, and what they turn up goes into the record the same way everything else did.</p>
+
+  <h2>Credits</h2>
+  <table class="credits">
+    <tr><td>Decisions and rulings</td><td>Me, as producer</td></tr>
+    <tr><td>The Jack of all Trades request</td><td>Hillary McKey, communications, and the game designers</td></tr>
+    <tr><td>Builds, tests, measurements and figures</td><td>Claude (AI assistant), checked by me</td></tr>
+    <tr><td>Playtesting</td><td>The 20 Below playtesters, next sessions</td></tr>
+  </table>
+
+  <footer>20 Below &middot; 20belowrpg.com</footer>
+</main>
+<script src="/docs/assets/js/site-nav.js"></script>
+</body>
+</html>
