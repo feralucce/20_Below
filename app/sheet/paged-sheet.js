@@ -138,6 +138,9 @@ function readField(id, ctx) {
     case 'skill': {
       const s = ctx.skills[Number(part[1])];
       if (!s) return part[2] === 'tier' ? 0 : '';
+      // The Jack of all Trades row, first on the list, stands for every
+      // Skill not bought; its name is the Boon's, which fits the row.
+      if (part[2] !== 'tier' && s.joat) return 'Jack of all Trades';
       return part[2] === 'tier' ? s.tier : s.name;
     }
     case 'boon': {
@@ -664,6 +667,7 @@ export function buildPagedSheet(state, data, opts = {}) {
         // number a player adds is the Element's, so it has to be in reach.
         const skillRow = id.match(/^skill\.(\d+)\.name$/);
         const skill = skillRow && ctx.skills[Number(skillRow[1])];
+        if (skill?.joat) node.title = 'Jack of all Trades: every Skill not listed here rolls at Trained';
         if (skill?.element) {
           const known = SKILL_ELEMENT_COLOURS[skill.element];
           const tag = el('span', { class: 'sf-el' }, known || skill.retired ? skill.element : 'Any');
@@ -677,7 +681,7 @@ export function buildPagedSheet(state, data, opts = {}) {
           // is read whole instead of ending in an ellipsis. The widths are
           // Montserrat's average letter and the tag's small capitals, in em.
           const room = f.w;
-          const ems = skill.name.length * 0.62 + 0.5 + tag.textContent.length * 0.6 * 0.8;
+          const ems = String(value).length * 0.62 + 0.5 + tag.textContent.length * 0.6 * 0.8;
           const base = Math.min(f.h * 0.7, 42);
           const fit = Math.min(base, (room * 0.97) / ems);
           if (fit < base) node.style.fontSize = typeSize(fit, 7, fit);
