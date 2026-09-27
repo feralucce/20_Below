@@ -18,7 +18,10 @@ import {
   npcPointsRemoved,
   unmarkNpc,
 } from '../state.js';
-import { SIGNATURE_MOVE, signatureMoves, adderCount } from '../state.js';
+import {
+  SIGNATURE_MOVE, signatureMoves, adderCount, optionChoice,
+  giftMenuBuilds, giftMenuBuildName, giftMenuPurchases,
+} from '../state.js';
 import buildAdvancementTab from './tab-advancement.js';
 import buildItemPicker from './add-item.js';
 import { buildPagedSheet, loadFieldMap } from '../sheet/paged-sheet.js';
@@ -659,9 +662,64 @@ export default {
           return movementPanel(extra);
         case 'initiative':
           return initiativePanel(extra);
+        case 'gift-info':
+          return giftInfoPanel(extra.gift);
         default:
           return [];
       }
+    }
+
+    // Everything a Gift does for this character, in one place: its Level,
+    // its build if it has a menu, and its Adders and Limiters with their
+    // rules and any choice made for them.
+    function giftInfoPanel(g) {
+      const entry = (data.gifts || []).find((d) => d.name === g.name);
+      if (!entry) return [el('h3', {}, g.name), el('p', {}, 'This Gift is not in the current rules.')];
+      const md = (text) => el('div', { class: 'gift-info-text', html: renderMarkdown(text || '') });
+      const out = [el('h3', {}, `${g.name} - Level ${g.level}`)];
+      const notes = giftNotes(g).filter(Boolean);
+      if (notes.length) out.push(el('p', { class: 'roller-howto' }, notes.join(' - ')));
+
+      // Levels build on each other, so every one the character has counts.
+      (entry.levels || []).filter((l) => l.level <= g.level).forEach((l) => {
+        out.push(el('h4', {}, `Level ${l.level}`), md(l.effect));
+      });
+
+      if (entry.menu) {
+        const builds = giftMenuBuilds(g);
+        builds.forEach((b) => {
+          const bought = giftMenuPurchases(g, b);
+          out.push(el('h4', {}, builds.length > 1 ? giftMenuBuildName(g, b) : 'Build'));
+          if (!bought.length) {
+            out.push(el('p', { class: 'hint' }, 'Nothing bought from the menu yet.'));
+            return;
+          }
+          out.push(el('ul', { class: 'gift-info-list' }, bought.map((p) => {
+            const key = String(p.option).toLowerCase();
+            const item = entry.menu.items.find((i) => i.option.toLowerCase() === key);
+            return el('li', {}, [
+              el('strong', {}, p.option), p.note ? ` (${p.note})` : '', ` - ${p.cost} pt${p.cost === 1 ? '' : 's'}`,
+              item ? md(item.effect)
+                : el('p', { class: 'hint' }, "No longer on this Gift's menu in the current rules."),
+            ]);
+          })));
+        });
+      }
+
+      const section = (title, names, list) => {
+        if (!names.length) return;
+        out.push(el('h4', {}, title), el('ul', { class: 'gift-info-list' }, names.map((name) => {
+          const opt = list.find((o) => o.name === name);
+          const picked = optionChoice(g, name).filter(Boolean);
+          return el('li', {}, [
+            el('strong', {}, name), picked.length ? ` (${picked.join(', ')})` : '',
+            opt ? md(opt.text) : '',
+          ]);
+        })));
+      };
+      section('Adders', [...new Set(g.adders || [])], entry.adders || []);
+      section('Limiters', g.limiters || [], entry.limiters || []);
+      return out;
     }
 
     // 1d10 + Initiative, once at the start of a fight. Two dice keeping

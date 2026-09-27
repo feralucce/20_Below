@@ -996,6 +996,23 @@ export function buildPagedSheet(state, data, opts = {}) {
   function decorate(f, host) {
     const id = f.id;
 
+    // A Gift's description box opens the whole Gift as this character has
+    // it - the Level's effect, what was bought from a build menu, and each
+    // Adder and Limiter with its rules - because the box only has room for
+    // a line of it.
+    const giftDoes = id.match(/^gift\.(\d+)\.does$/);
+    if (giftDoes) {
+      const g = ctx.gifts[Number(giftDoes[1])];
+      if (!g) return;
+      host.appendChild(place(el('button', {
+        type: 'button',
+        class: 'sf sf-roll sf-explain',
+        title: `What ${g.name} does`,
+        onClick: () => onRoll('gift-info', g.name, { gift: g }),
+      }), f));
+      return;
+    }
+
     // Initiative is rolled once a fight, by the player (rules.md, Combat
     // Order). Enhanced Speed 3 rolls it as 2d10, keeping the higher die.
     if (id === 'substat.Initiative.value') {

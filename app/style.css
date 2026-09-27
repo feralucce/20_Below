@@ -2006,3 +2006,23 @@ textarea.sf-edit {
   font-size: 0.85rem;
   color: var(--text-dim);
 }
+
+/* A Gift's description box opens its explanation; the box says so on hover. */
+.sf-explain {
+  cursor: help;
+}
+
+.gift-info-list {
+  margin: 0.25rem 0 0.75rem;
+  padding-left: 1.2rem;
+}
+.gift-info-list li {
+  margin-bottom: 0.5rem;
+}
+.gift-info-text {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+.gift-info-text p {
+  margin: 0.2rem 0;
+}
