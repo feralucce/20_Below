@@ -1,0 +1,163 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Case Study: Learning the Game by Building a Character - 20 Below</title>
+<meta name="description" content="The Character Creator as guided onboarding: a path in the order the game needs, feedback on every choice, mistakes prevented rather than reported, and explanations where the player is." />
+<link rel="icon" type="image/x-icon" href="/docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="/docs/assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --radius: 10px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+  main { max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+  .back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+  .back-row { font-size: 0.9rem; color: var(--text-dim); }
+  header { margin: 1.5rem 0 2.5rem; }
+  .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin: 0 0 0.6rem; }
+  h1 { margin: 0; font-size: 1.9rem; letter-spacing: 0.01em; line-height: 1.3; }
+  .intro { color: var(--text-dim); margin: 0.8rem 0 0; }
+
+  h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border-bottom: 1px solid var(--panel-border); padding-bottom: 0.5rem; margin: 2.75rem 0 1.1rem; }
+  h3 { font-size: 1.05rem; margin: 2rem 0 0.7rem; }
+  p { font-size: 1rem; }
+  ul, ol { padding-left: 1.25rem; }
+  li { margin-bottom: 0.75rem; }
+  a { color: var(--accent); }
+  blockquote { margin: 1rem 0; padding: 0.6rem 1rem; border-left: 3px solid var(--panel-border); color: var(--text-dim); }
+
+  .checks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; margin: 1.2rem 0; }
+  .check { background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius); padding: 0.9rem 1rem; }
+  .check .who { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.3rem; }
+  .check p { margin: 0; font-size: 0.92rem; }
+
+  figure { margin: 1.6rem 0; }
+  figure img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--panel-border); background: var(--panel); }
+  figure.wide { margin-left: -6vw; margin-right: -6vw; }
+  @media (max-width: 900px) { figure.wide { margin-left: 0; margin-right: 0; } }
+  figcaption { font-size: 0.88rem; color: var(--text-dim); margin-top: 0.55rem; }
+
+  .credits { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .credits td { padding: 0.55rem 0.5rem 0.55rem 0; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
+  .credits td:first-child { color: var(--text-dim); width: 42%; }
+  .decisions { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
+  .decisions th { text-align: left; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); font-weight: 600; padding: 0 0.6rem 0.5rem 0; border-bottom: 1px solid var(--panel-border); }
+  .decisions td { padding: 0.6rem 0.6rem 0.6rem 0; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
+  .decisions td:nth-child(2) { color: var(--text-dim); }
+
+  footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+</style>
+<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <p class="back-row">&larr; <a class="back-link" href="/docs/id-portfolio.html">Instructional Design</a> &middot; <a class="back-link" href="/docs/pm-portfolio.html">Project Management</a></p>
+
+  <header>
+    <p class="eyebrow">Case Study</p>
+    <h1>Learning the Game by Building a Character</h1>
+    <p class="intro">For a new player, making a character is the first time they meet most of 20 Below's rules. The Character Creator is the path they walk through them. It teaches the game in the order the game needs it, gives feedback on every choice, stops mistakes before they happen, and explains things where the player is standing instead of sending them to the book.</p>
+  </header>
+
+  <h2>The Problem</h2>
+  <p>A character in 20 Below is built from five Elements, their sub-stats, Descriptors, Boons, Flaws, Skills, Resources, Gifts with their Adders and Limiters, and equipment bought with Wealth. Each draws on a pool of points, and some feed others. A new player meets all of it at once, before they've played a single scene.</p>
+  <p>A Creator can treat that as data entry: fields, numbers and a finished file. Or it can treat it as the player's first lesson. The early versions sat somewhere in between. They were accurate, but long lists buried what mattered, descriptions lived in the book, and some mistakes were only discovered once the character sheet looked wrong.</p>
+
+  <h2>Analysis: Who Walks the Path</h2>
+  <div class="checks">
+    <div class="check"><div class="who">A brand-new player</div><p>Needs the game's pieces in an order that makes sense.</p></div>
+    <div class="check"><div class="who">A player joining a campaign</div><p>Needs to start above the standard build without faking the numbers.</p></div>
+    <div class="check"><div class="who">A returning player</div><p>Needs to know what changed in the rules, and have their character follow.</p></div>
+    <div class="check"><div class="who">A player at the table</div><p>Needs the sheet, not the wizard.</p></div>
+  </div>
+  <p>By the end of creation, a new player should be able to say what their Elements and sub-stats do, explain what a Boon, a Flaw, a Resource and a Gift are and what theirs do, read their own sheet, and know what they own and what it's for.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/onboarding-path.webp"><img src="/docs/assets/portfolio/onboarding-path.webp" alt="The fourteen creation steps in seven stages. Before anything is spent: Bonus Points. Who they are: Name and Concept, Nature. What they're made of: Attributes, Sub-Stat Division, Descriptors. Traits: Boons, Flaws, ahead of the pools they feed. The pools: Skills, Resources, Gifts, Gift Menus. What's left: Discretionary Points, where unspent Boon and Gift points land. What they own: Equipment, bought with Wealth. Then finish: the character sheet, where the Creator opens from now on." loading="lazy" /></a>
+    <figcaption>The path as it runs today. Every step relies only on what came before it.</figcaption>
+  </figure>
+
+  <h2>Design Decisions</h2>
+
+  <h3>Sequence by what depends on what</h3>
+  <p>The order of the steps is the curriculum. Attributes come before the sub-stats they split into, and the sub-stats come before the Descriptors they earn. Boons and Flaws moved ahead of the pools they can feed, so no later step changes what an earlier one showed. Whatever Boon and Gift points go unspent turn into Discretionary Points, which come near the end, when the player can see what they still want.</p>
+
+  <h3>Ask first what's different</h3>
+  <p>A table starting above the standard build, such as veterans or a campaign picking up mid-story, used to have nowhere to say so. So creation now opens by asking what the GM granted, before anything is spent. Each press is one whole purchase, like a Gift Level or a Skill tier, and the step size is read from the rules' own cost table. Each row reads in both the GM's terms and the player's.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/onboarding-ask-first.webp"><img src="/docs/assets/portfolio/onboarding-ask-first.webp" alt="The Bonus Points step after a GM grants three Attribute points and two Gift Levels. The Attributes row reads 3 times rating points, pool of 23; the Gifts row reads 2 times Gift Levels, pool of 27. The running totals at the foot read Attributes 23, Skills 15, Boons 10, Resources 6, Gifts 27, Discretionary 74." loading="lazy" /></a>
+    <figcaption>&ldquo;2 &times; Gift Levels - pool of 27.&rdquo; The GM thinks in levels, the player in the pool, and nobody does the arithmetic.</figcaption>
+  </figure>
+
+  <h3>Open what's needed; keep the rest closed</h3>
+  <p>Long lists of Boons, Gifts and Resources were a wall. Now anything with points on it moves into a Selected section at the top of its step. Descriptions sit behind a click on the name. Discretionary Points opens as one collapsed section per category, each row with a one-line descriptor. Two smaller fixes mattered more than they sound. A card no longer snaps shut when a click changes its label. And a chosen entry no longer vanishes from its list: that used to close the list up behind the click, so trying to take Wealth to 5 bought five different Resources at 1, and nothing on screen said so.</p>
+
+  <h3>Explain it where the player is</h3>
+  <p>The Discretionary Points page priced everything and explained almost nothing, so working out what to spend on meant leaving to look things up. Now every row opens to say what the thing is. Boons, Flaws and Resources show their descriptions from the book. The gear shop shows every item's physical description, so the choice is between objects rather than rows of numbers.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/onboarding-explained.webp"><img src="/docs/assets/portfolio/onboarding-explained.webp" alt="The Light Sleeper Boon opened inside the Boons step: its description in the book's voice, then its three tiers and what each does, with Add buttons for each tier's cost." loading="lazy" /></a>
+    <figcaption>Click a name and the card opens where the player is: what it's like first, then the rules. The descriptions are generated from the book, and the build fails if one goes missing.</figcaption>
+  </figure>
+
+  <h3>Carry what the table decides</h3>
+  <p>A Boon, Flaw or Gift often asks the player to invent something the rules can't supply: what their Familiar is, which weapons Special Weapons bought them. It got agreed at the table, written on a napkin, and lost by the next session. The first fix put a description box on every choice, and that was wrong: Berserker was inviting players to describe an absence. It was corrected the same day. Now only the twenty entries that actually settle something about the character ask, and that list is checked against the rules text so it can't quietly drift.</p>
+
+  <h3>Prevent the mistake; don't report it</h3>
+  <p>Some mistakes used to be possible and only discovered later. Gift Adders could push the Gifts pool below zero. Options the rules say can't be combined could be ticked together. Now what can't be afforded or combined is greyed out while that's true, with the reason right beside it. The same checks run at creation, when spending Discretionary Points, and when spending experience.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/onboarding-blocked.webp"><img src="/docs/assets/portfolio/onboarding-blocked.webp" alt="The Animal Friendship Gift's Adders and Limiters, with the No Companion Limiter ticked. Seven options are greyed out, each reading can't be taken with No Companion: Beast Steed, Swarm Companion, Second Companion, Hunting Pair, Last Guard, Beast Fusion and Shared Wounds. Call of the Wild is greyed out reading needs Level 3." loading="lazy" /></a>
+    <figcaption>One choice with consequences. Every option it rules out says why, and one that's only waiting says what it's waiting for.</figcaption>
+  </figure>
+
+  <h3>When the rules change, tell the player</h3>
+  <p>A game in development changes its rules. When four Boons were renamed, merged or moved, a saved character kept paying for a Boon the book no longer described, and nothing said so. Now a saved character is fixed up to match the current rules when it's opened, and a notice says what changed, once, in plain words. The same mechanism later carried renamed Skills across.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/onboarding-migration.webp"><img src="/docs/assets/portfolio/onboarding-migration.webp" alt="A notice on an older saved character: Some things on this character have changed with the rules. Melee Combat is now Melee Weapons, moved across at the same tier. Improvised Weapons is now Melee Weapons, which you already have at an equal or higher tier. Signal and Cipher is now Cryptography, moved across at the same tier. A Got it button." loading="lazy" /></a>
+    <figcaption>A character saved before three Skills were renamed, opened in the current Creator.</figcaption>
+  </figure>
+
+  <h3>Once there's a character, the sheet is home</h3>
+  <p>The Creator used to open on step one of fourteen, with the sheet as the last step. That's right for a new character and backwards for everyone after, because at the table the sheet is what's open. So the Creator now opens on the sheet, and creation sits behind a Character Creator button that reads Back to Sheet while you're in it. With nothing saved yet, it opens on a panel that says so and offers to import a character or build a new one.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/onboarding-resting.webp"><img src="/docs/assets/portfolio/onboarding-resting.webp" alt="Before and after. Before: the Creator opened on step 1 of 14, then twelve more steps, then the sheet last with the step pills still overhead. After: the Creator opens on the character sheet, with Save, Import, the saved characters, Export, Character Creator and New Character across the top." loading="lazy" /></a>
+    <figcaption>Creation is somewhere you go back to, not the front door.</figcaption>
+  </figure>
+
+  <h2>How the Work Ran</h2>
+  <ul>
+    <li><strong>Playtesters drove the biggest change.</strong> Their feedback led to a full overhaul of how creation buys gear: three ordered steps instead of one roll for everything, on a Wealth scale where prices step by ten each level.</li>
+    <li><strong>A language review.</strong> Rilla Scarberry reviewed the gear shop's descriptions for clarity.</li>
+    <li><strong>The rules and the Creator can't drift.</strong> Descriptions, the list of entries that ask the player something, and the rules text are checked against each other, and the build fails if they disagree.</li>
+    <li><strong>Mistakes corrected in the open.</strong> The description box on every choice was undone the same day it went in, once it was clearly wrong.</li>
+  </ul>
+
+  <h2>Outcome</h2>
+  <p>Creation now runs in the order the game needs. It starts with what the GM granted, and says what each thing is where the player is choosing it. Mistakes are stopped before they happen, with the reason in view. Returning players are told what the rules changed, and once the character exists, the sheet is where they land.</p>
+  <p>What this study doesn't have yet is a timed first-character walkthrough with a new player, counting where they stop and what they ask. That's the next step, alongside the playtesters' notes.</p>
+
+  <h2>Credits</h2>
+  <table class="credits">
+    <tr><td>Decisions</td><td>Me, as producer</td></tr>
+    <tr><td>The feedback that rebuilt gear buying</td><td>The 20 Below playtesters</td></tr>
+    <tr><td>Clarity review of the gear shop</td><td>Rilla Scarberry, language expert</td></tr>
+    <tr><td>Builds and drafts</td><td>Claude (AI assistant), checked by me</td></tr>
+  </table>
+
+  <footer>20 Below &middot; 20belowrpg.com</footer>
+</main>
+<script src="/docs/assets/js/site-nav.js"></script>
+</body>
+</html>
