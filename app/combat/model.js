@@ -66,9 +66,12 @@ export function cycleRole(combat, character) {
   return e.role;
 }
 
+// Initiative is 1d10 plus a sub-stat that starts at 0, so it is never
+// below 0: a typed negative is 0, and a typed fraction is a whole number.
 export function setInitiative(combat, character, value) {
+  const n = Math.round(Number(value));
   entryFor(combat, character).initiative =
-    value === '' || value == null ? null : Number(value);
+    value === '' || value == null || !Number.isFinite(n) ? null : Math.max(0, n);
 }
 
 // Allies and NPCs roll 1d10 plus their Initiative sub-stat. PCs report what
@@ -76,7 +79,7 @@ export function setInitiative(combat, character, value) {
 export function rollInitiative(combat, character) {
   const e = entryFor(combat, character);
   const sub = (character.state.subStats && character.state.subStats.Initiative) || 0;
-  e.initiative = rollD10() + sub;
+  e.initiative = Math.max(0, rollD10() + sub);
   return e.initiative;
 }
 
