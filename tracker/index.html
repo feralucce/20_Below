@@ -64,7 +64,7 @@
   #addFile, #addFolder { display: none; }
 
   .drop-zone.dragging {
-    outline: 2px dashed var(--accent);
+    outline: 2px dashed var(--ok);
     outline-offset: 3px;
     border-radius: 6px;
   }
@@ -142,15 +142,12 @@
     border-radius: 6px;
     padding: 0.6rem 0.65rem;
   }
-  .detail-back {
-    background: none;
-    border: none;
-    color: var(--accent);
-    font-size: 0.7rem;
-    text-decoration: underline;
-    cursor: pointer;
-    padding: 0;
-    margin-bottom: 0.5rem;
+  /* Close sits at the top right and stays there while the window scrolls. */
+  .detail-top {
+    position: sticky; top: -0.6rem; z-index: 2;
+    display: flex; justify-content: flex-end;
+    margin: -0.6rem -0.65rem 0.2rem; padding: 0.45rem 0.65rem 0.35rem;
+    background: var(--panel); border-radius: 6px 6px 0 0;
   }
 
   .char-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
@@ -270,14 +267,10 @@
   }
   .role-PC { color: var(--ok); border-color: var(--ok); }
   .role-Ally { color: var(--accent); border-color: var(--accent); }
-  .role-NPC { color: var(--danger); border-color: var(--danger); }
+  .role-NPC { color: var(--text-dim); border-color: var(--text-faint); }
 
   .ri-combat {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.3rem;
     margin-top: 0.4rem;
     padding-top: 0.4rem;
     border-top: 1px solid var(--panel-2);
@@ -294,34 +287,45 @@
   }
   .mini-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-faint); }
 
+  .ri-line { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem; width: 100%; }
+  /* The tracks in even columns: name (and any status) over the - value +. */
+  .track-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+    gap: 0.3rem; width: 100%; margin-top: 0.35rem;
+  }
   .track {
     display: flex;
-    align-items: center;
-    gap: 0.15rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.05rem;
     background: var(--panel-2);
     border: 1px solid var(--panel-border);
     border-radius: 4px;
-    padding: 0.1rem 0.2rem;
+    padding: 0.15rem 0.3rem 0.1rem;
   }
-  .track .tk { font-size: 0.55rem; text-transform: uppercase; color: var(--text-faint); letter-spacing: 0.04em; }
-  .track .tv { font-size: 0.75rem; font-weight: 700; min-width: 2.2rem; text-align: center; }
+  .track .tk { font-size: 0.55rem; text-transform: uppercase; color: var(--text-faint); letter-spacing: 0.04em;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tstat { color: var(--danger); font-weight: 700; margin-left: 0.2rem; }
+  .tctl { display: flex; align-items: center; justify-content: space-between; }
+  .track .tv { font-size: 0.8rem; font-weight: 700; text-align: center; flex: 1; }
   .track button {
     background: none;
     border: none;
     color: var(--text-faint);
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1;
-    padding: 0 0.15rem;
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
   }
+  .track button:hover { background: var(--panel); }
   .track button:hover { color: var(--text); }
   .track.hurt .tv { color: var(--gold); }
   .track.down .tv { color: var(--danger); }
-  .exh-note { font-size: 0.62rem; color: #e0685c; }
-  .armour-line { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.3rem; }
-  .armour-name { font-size: 0.68rem; color: var(--text-dim); padding-right: 0.2rem; }
-  .armour-hard { color: var(--text-faint); font-size: 0.62rem; white-space: nowrap; }
-  .armour-piece .tv { min-width: 3.4rem; }
+  .exh-note { font-size: 0.66rem; color: #e0685c; margin-top: 0.3rem; width: 100%; }
+  .armour-grid { grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); }
+  .track .armour-name { text-transform: none; letter-spacing: 0; font-size: 0.66rem; color: var(--text-dim); }
+  .armour-hard { color: var(--text-faint); font-size: 0.6rem; }
   .roster-item.is-down { opacity: 0.55; }
   .roster-item.is-down .ri-name { text-decoration: line-through; }
   .floor-note {
@@ -401,7 +405,9 @@
   .lib-group-head.open { border-color: var(--accent); }
   .lib-group-count { margin-left: auto; color: var(--text-faint); font-weight: 400; font-size: 0.72rem; }
   .caret { width: 0.8rem; color: var(--accent); }
-  .lib-group > .lib-item { margin: 0.3rem 0 0.3rem 0.8rem; }
+  .lib-rows { margin: 0.3rem 0 0.45rem 0.8rem; background: var(--panel); border: 1px solid var(--panel-border); border-radius: 6px; }
+  .lib-rows > .lib-item { background: none; border: none; border-radius: 0; margin: 0; }
+  .lib-rows > .lib-item + .lib-item { border-top: 1px solid var(--panel-border); }
   .enc-saved { background: var(--panel-2); border: 1px solid var(--panel-border); border-radius: 6px; padding: 0.45rem 0.55rem; margin-bottom: 0.6rem; }
   .enc-saved-head { display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; }
   .enc-saved-title { font-size: 0.74rem; font-weight: 600; color: var(--gold); margin-right: auto; }
@@ -410,9 +416,12 @@
   .enc-row-who { color: var(--text-dim); font-size: 0.68rem; display: block; font-weight: 400; }
   .party-list { font-size: 0.74rem; color: var(--text-dim); margin-top: 0.3rem; line-height: 1.45; }
   .party-list strong { color: var(--text); }
-  .party-controls { display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.4rem; }
-  .party-to { font-size: 0.72rem; color: var(--text-dim); margin-right: auto; }
-  .party-to select { font: inherit; background: var(--panel); color: var(--text); border: 1px solid var(--panel-border); border-radius: 4px; padding: 0.15rem 0.3rem; }
+  .party-controls { margin-top: 0.45rem; }
+  .party-to { display: flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; color: var(--text-dim);
+    text-transform: none; letter-spacing: 0; margin: 0 0 0.35rem; }
+  .party-to select { flex: 1; min-width: 0; font: inherit; font-size: 0.76rem; background: #03070a; color: var(--text);
+    border: 1px solid var(--panel-border); border-radius: 4px; padding: 0.2rem 0.35rem; }
+  .party-buttons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.3rem; }
   .party-note { font-size: 0.7rem; margin-top: 0.35rem; }
   .party-note div { padding: 0.12rem 0; }
   .party-note .ok { color: var(--ok); }
@@ -486,10 +495,13 @@
     border-bottom: 1px solid var(--panel-border); color: var(--text); }
   .sheet-row-v { color: var(--text-dim); text-align: right; }
   .el-tag { font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; margin-left: 0.3rem; }
+  .two-col { columns: 2; column-gap: 1.1rem; }
+  .two-col .sheet-row { break-inside: avoid; }
+  @media (max-width: 420px) { .two-col { columns: 1; } }
   .gear-list { margin: 0; padding-left: 1.1rem; font-size: 0.76rem; color: var(--text-dim); }
   .gift-info-list { padding-left: 1.1rem; }
   .gift-info-text { font-size: 0.76rem; color: var(--text-dim); }
-  .animal-label { margin: 0.45rem 0 0.15rem 0.9rem; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+  .animal-label { margin: 0.55rem 0 0 0.9rem; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
   .heading-tools { display: flex; gap: 0.3rem; justify-content: flex-end; margin: 0.3rem 0; }
   .heading-empty { margin: 0.2rem 0 0.4rem 0.8rem; }
   .tag-picker { margin-top: 0.45rem; padding: 0.45rem; border: 1px solid var(--accent); border-radius: 6px; background: var(--panel-2); }
@@ -562,29 +574,24 @@
 
 <!-- The encounter: who is in this fight, and the fight itself. -->
 <section id="encounterView" style="display:none">
-  <div id="dropZone" class="drop-zone">
-    <label class="file-btn" for="addFile">Add character JSON(s)&hellip;</label>
-    <input type="file" id="addFile" accept="application/json,.json,image/*" multiple />
-    <label class="file-btn secondary" for="addFolder">&hellip;or pick a whole folder</label>
-    <input type="file" id="addFolder" webkitdirectory directory multiple />
+  <!-- Adding comes first, as in the Catalog; then the fight; then the
+       saved encounters and the players' sheets. -->
+  <div id="dropZone" class="lib-own drop-zone">
+    <div class="lib-own-title">Add to this encounter</div>
+    <div class="lib-actions">
+      <label class="own-btn" for="addFile">Import files</label>
+      <label class="own-btn" for="addFolder">Import a folder</label>
+      <input type="file" id="addFile" accept="application/json,.json,image/*" multiple />
+      <input type="file" id="addFolder" webkitdirectory directory multiple />
+    </div>
+    <div class="lib-own-note">Character files from the Character Creator, or drop them here. Or add from the Catalog. Anything added here is kept in your entries too.</div>
   </div>
-  <div class="empty-note" style="margin-top:-0.3rem;margin-bottom:0.6rem">Or add from the Catalog. Anything added here is kept in your entries too.</div>
 
   <div id="obrNote" class="obr-note" style="display:none"></div>
 
-  <!-- The players' Character Sheets in this room: rests and Fate Tokens go
-       to them from here, and their Initiative rolls land in the boxes below. -->
-  <div class="enc-saved" id="partyBox">
-    <div class="enc-saved-head"><span class="enc-saved-title">Players' sheets</span></div>
-    <div id="partyList" class="party-list"></div>
-    <div id="partyControls" class="party-controls" style="display:none">
-      <label class="party-to">Send to <select id="grantTo"></select></label>
-      <button type="button" class="btn" id="grantShort">Short Rest</button>
-      <button type="button" class="btn" id="grantFull">Full Night's Rest</button>
-      <button type="button" class="btn" id="grantFate">Give a Fate Token</button>
-    </div>
-    <div id="partyNote" class="party-note"></div>
-  </div>
+  <div id="combatBar" class="combat-bar"></div>
+
+  <div id="rosterList" class="roster-list"><div class="list-empty">Nobody in this encounter yet. Add them from the Catalog.</div></div>
 
   <!-- Premade fights: save this one, or add a saved one to it. -->
   <div class="enc-saved">
@@ -596,14 +603,26 @@
     <div id="encList"></div>
   </div>
 
-  <div id="combatBar" class="combat-bar"></div>
-
-  <div id="rosterList" class="roster-list"><div class="list-empty">Nobody in this encounter yet. Add them from the Catalog.</div></div>
+  <!-- The players' Character Sheets in this room: rests and Fate Tokens go
+       to them from here, and their Initiative rolls land in the boxes above. -->
+  <div class="enc-saved" id="partyBox">
+    <div class="enc-saved-head"><span class="enc-saved-title">Players' sheets</span></div>
+    <div id="partyList" class="party-list"></div>
+    <div id="partyControls" class="party-controls" style="display:none">
+      <label class="party-to">Send to <select id="grantTo"></select></label>
+      <div class="party-buttons">
+        <button type="button" class="btn" id="grantShort">Short Rest</button>
+        <button type="button" class="btn" id="grantFull">Full Night's Rest</button>
+        <button type="button" class="btn" id="grantFate">Give a Fate Token</button>
+      </div>
+    </div>
+    <div id="partyNote" class="party-note"></div>
+  </div>
 </section>
 
 <div id="detail" style="display:none" class="detail-overlay">
   <div class="detail-wrap">
-    <button class="detail-back" id="backBtn">Close</button>
+    <div class="detail-top"><button type="button" class="btn" id="backBtn">Close</button></div>
     <div id="charView"></div>
   </div>
 </div>
@@ -1256,7 +1275,7 @@
       ${section("Elements", `<div class="el-grid">${elements}</div>`)}
       ${section("Numbers", `<div class="stat-grid">${numbers}</div>`)}
       ${section(live ? "Vitals now" : "Vitals", vitals)}
-      ${section("Skills", skills)}
+      ${section("Skills", skills ? `<div class="two-col">${skills}</div>` : "")}
       ${section("Gifts", gifts)}
       ${section("Weapons", weapons ? `<table class="attack-table"><tr><th>Weapon</th><th>Damage</th><th>Range</th><th>Ammo</th></tr>${weapons}</table>` : "")}
       ${section("Armour", armour)}
@@ -1667,18 +1686,25 @@
     if (open) {
       if (g.sub) g.sub.forEach((s) => wrap.appendChild(groupBlock(s, depth + 1, searching)));
       else {
+        // The rows sit in one box with lines between them. Among the
+        // animals, each animal gets its own box under its name: Bobcat,
+        // then its Dire, Giant and Mutated versions.
         let animal = null;
+        let list = null;
         g.entries.forEach((e) => {
-          // A small label each time the animal changes: Bobcat, then its
-          // Dire, Giant and Mutated versions under it.
-          if (g.byAnimal && animalOf(e) !== animal) {
+          if (!list || (g.byAnimal && animalOf(e) !== animal)) {
             animal = animalOf(e);
-            const label = document.createElement("div");
-            label.className = "animal-label";
-            label.textContent = animal;
-            wrap.appendChild(label);
+            if (g.byAnimal) {
+              const label = document.createElement("div");
+              label.className = "animal-label";
+              label.textContent = animal;
+              wrap.appendChild(label);
+            }
+            list = document.createElement("div");
+            list.className = "lib-rows";
+            wrap.appendChild(list);
           }
-          wrap.appendChild(entryRow(e));
+          list.appendChild(entryRow(e));
         });
       }
     }
@@ -1952,7 +1978,11 @@
       r.state.exhausted = engine.exhaustedOf(combat, r);
       parts = rollDicePanel(r.state, data, {
         onKi: () => { e.currentKi = r.state.currentKi; saveCombat(); renderList(); },
-        onRolled: (rec) => rolled(name, rec),
+        onRolled: (rec) => {
+          rolled(name, rec);
+          if (rec.kind === "Initiative" && Number.isFinite(rec.initiative)) setInitiative(r, rec.initiative);
+        },
+        initiativeSent: "It goes in their Initiative box.",
       });
       parts[0].textContent = `${name}: roll dice`;
     }
@@ -2191,11 +2221,13 @@
           const status = trackStatus(name, cur, r);
           const cls = cur <= 0 ? "down" : cur < max ? "hurt" : "";
           return `<div class="track ${cls}">
-              <span class="tk">${name}</span>
-              <button data-adj="${r.id}" data-t="${name}" data-d="-1">&minus;</button>
-              <span class="tv">${cur}/${max}</span>
-              <button data-adj="${r.id}" data-t="${name}" data-d="1">+</button>
-            </div>${status ? `<span class="status-chip">${status}</span>` : ""}`;
+              <span class="tk">${name}${status ? ` <span class="tstat">${status}</span>` : ""}</span>
+              <span class="tctl">
+                <button data-adj="${r.id}" data-t="${name}" data-d="-1" title="${name} down one">&minus;</button>
+                <span class="tv">${cur}/${max}</span>
+                <button data-adj="${r.id}" data-t="${name}" data-d="1" title="${name} up one">+</button>
+              </span>
+            </div>`;
         }).join("")
       : "";
 
@@ -2211,23 +2243,30 @@
     const exhausted = combat.started
       ? `<div class="track${exh ? " down" : ""}" title="Exhausted">
           <span class="tk">Exhausted</span>
-          <button data-exh="${r.id}" data-d="-1">&minus;</button>
-          <span class="tv">${exh}/5</span>
-          <button data-exh="${r.id}" data-d="1">+</button>
-        </div>${exh ? `<span class="exh-note">${engine.EXHAUSTED_EFFECTS.slice(1, exh + 1).join("; ")}</span>` : ""}`
+          <span class="tctl">
+            <button data-exh="${r.id}" data-d="-1">&minus;</button>
+            <span class="tv">${exh}/5</span>
+            <button data-exh="${r.id}" data-d="1">+</button>
+          </span>
+        </div>`
+      : "";
+    const exhNote = combat.started && exh
+      ? `<div class="exh-note">Exhausted ${exh}: ${engine.EXHAUSTED_EFFECTS.slice(1, exh + 1).join("; ")}</div>`
       : "";
 
     // A character's armour, each piece losing a Health Level at most once
     // an attack and broken at 0. A creature's Soak is its armour already.
     const armour = combat.started && !creature ? armourOf(r) : [];
     const armourHtml = armour.length
-      ? `<div class="armour-line">${armour.map((a) => {
+      ? `<div class="track-grid armour-grid">${armour.map((a) => {
           const left = engine.armourLeft(combat, r, a.key, a.health);
           return `<div class="track armour-piece${left === 0 ? " down" : left < a.health ? " hurt" : ""}">
-            <span class="armour-name">${escapeHtml(a.name)} <span class="armour-hard">Hardness ${escapeHtml(a.hardness)}</span></span>
-            <button data-dent="${r.id}" data-key="${escapeHtml(a.key)}" data-hl="${a.health}" data-d="1" title="Take one Health Level">&minus;</button>
-            <span class="tv">${left === 0 ? "broken" : `${left}/${a.health} HL`}</span>
-            <button data-dent="${r.id}" data-key="${escapeHtml(a.key)}" data-hl="${a.health}" data-d="-1" title="Repair one Health Level">+</button>
+            <span class="tk armour-name" title="${escapeHtml(a.name)}">${escapeHtml(a.name)} <span class="armour-hard">Hardness ${escapeHtml(a.hardness)}</span></span>
+            <span class="tctl">
+              <button data-dent="${r.id}" data-key="${escapeHtml(a.key)}" data-hl="${a.health}" data-d="1" title="Take one Health Level">&minus;</button>
+              <span class="tv">${left === 0 ? "broken" : `${left}/${a.health} HL`}</span>
+              <button data-dent="${r.id}" data-key="${escapeHtml(a.key)}" data-hl="${a.health}" data-d="-1" title="Repair one Health Level">+</button>
+            </span>
           </div>`;
         }).join("")}</div>`
       : "";
@@ -2235,7 +2274,11 @@
     const floorNote = combat.started && e.floorNote
       ? `<span class="floor-note">${e.floorNote}</span>`
       : "";
-    return `<div class="ri-combat">${initCell}${brackets}${tracks}${exhausted}${floorNote}${token}</div>${armourHtml}`;
+    return `<div class="ri-combat">
+        <div class="ri-line">${initCell}${brackets}${floorNote}${token}</div>
+        ${combat.started ? `<div class="track-grid">${tracks}${exhausted}</div>` : ""}
+        ${armourHtml}${exhNote}
+      </div>`;
   }
 
   // The list stays in the order characters were added right through setup
