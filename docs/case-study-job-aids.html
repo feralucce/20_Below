@@ -1,0 +1,157 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Case Study: One Page, One Question - 20 Below</title>
+<meta name="description" content="Twenty-three quick-reference sheets built as job aids: one question per sheet, drawn from real design data, kept in step with the rules, and a test of the rules themselves." />
+<link rel="icon" type="image/x-icon" href="/docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="/docs/assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --radius: 10px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+  main { max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+  .back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+  .back-row { font-size: 0.9rem; color: var(--text-dim); }
+  header { margin: 1.5rem 0 2.5rem; }
+  .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin: 0 0 0.6rem; }
+  h1 { margin: 0; font-size: 1.9rem; letter-spacing: 0.01em; line-height: 1.3; }
+  .intro { color: var(--text-dim); margin: 0.8rem 0 0; }
+
+  h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border-bottom: 1px solid var(--panel-border); padding-bottom: 0.5rem; margin: 2.75rem 0 1.1rem; }
+  h3 { font-size: 1.05rem; margin: 2rem 0 0.7rem; }
+  p { font-size: 1rem; }
+  ul, ol { padding-left: 1.25rem; }
+  li { margin-bottom: 0.75rem; }
+  a { color: var(--accent); }
+  blockquote { margin: 1rem 0; padding: 0.6rem 1rem; border-left: 3px solid var(--panel-border); color: var(--text-dim); }
+
+  .checks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; margin: 1.2rem 0; }
+  .check { background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius); padding: 0.9rem 1rem; }
+  .check .who { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.3rem; }
+  .check p { margin: 0; font-size: 0.92rem; }
+
+  figure { margin: 1.6rem 0; }
+  figure img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--panel-border); background: var(--panel); }
+  figure.wide { margin-left: -6vw; margin-right: -6vw; }
+  @media (max-width: 900px) { figure.wide { margin-left: 0; margin-right: 0; } }
+  figcaption { font-size: 0.88rem; color: var(--text-dim); margin-top: 0.55rem; }
+
+  .credits { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .credits td { padding: 0.55rem 0.5rem 0.55rem 0; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
+  .credits td:first-child { color: var(--text-dim); width: 42%; }
+  .decisions { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
+  .decisions th { text-align: left; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); font-weight: 600; padding: 0 0.6rem 0.5rem 0; border-bottom: 1px solid var(--panel-border); }
+  .decisions td { padding: 0.6rem 0.6rem 0.6rem 0; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
+  .decisions td:nth-child(2) { color: var(--text-dim); }
+
+  footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+</style>
+<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <p class="back-row">&larr; <a class="back-link" href="/docs/id-portfolio.html">Instructional Design</a> &middot; <a class="back-link" href="/docs/visual-portfolio.html">Visual Information</a></p>
+
+  <header>
+    <p class="eyebrow">Case Study</p>
+    <h1>One Page, One Question</h1>
+    <p class="intro">Twenty-three quick-reference sheets for 20 Below, built as job aids. Each one answers a single question a player or GM asks in the middle of play. Each was drawn from real design data rather than from memory, and each is kept in step with the rules as they change. Building them turned out to test the rules too.</p>
+  </header>
+
+  <h2>The Problem</h2>
+  <p>The rulebook teaches. At the table, nobody wants teaching; they want an answer, now, while four other people wait. I'd already decided to separate the material people learn from the material they look things up in (that's <a href="/docs/case-study-rulebook-reference.html">A Rulebook You Read vs. a Rulebook You Reach For</a>). This study is about the lookup material itself: a set of reference sheets, one topic each.</p>
+  <p>A set like that fails in three quiet ways. It has gaps nobody notices until the moment someone needs the missing sheet. It rounds a number off until it's no longer true. And it drifts: the rules change, and the sheet a player trusts still shows the old rule.</p>
+
+  <h2>Analysis: When Someone Reaches for a Sheet</h2>
+  <div class="checks">
+    <div class="check"><div class="who">A new player</div><p>How does this game work, in seven steps?</p></div>
+    <div class="check"><div class="who">A player on their turn</div><p>What do I roll, and what does it take to hit?</p></div>
+    <div class="check"><div class="who">The GM, mid-fight</div><p>Who rolls what for this creature, and which number on its card?</p></div>
+    <div class="check"><div class="who">The GM, planning</div><p>How hard is this, how long does it take, what does this hazard do?</p></div>
+  </div>
+  <p>Those moments set the rules for every sheet.</p>
+  <table class="decisions">
+    <thead><tr><th>Principle</th><th>What it means on the page</th></tr></thead>
+    <tbody>
+      <tr><td>One question per sheet</td><td>A sheet is named for what it answers, not for the chapter it came from.</td></tr>
+      <tr><td>Design data first</td><td>Numbers are computed, then simplified only as far as reading them at the table needs.</td></tr>
+      <tr><td>Follow it with a finger</td><td>A process (the Round, Making an Attack) is laid out in the order it's done.</td></tr>
+      <tr><td>An example beside the rule</td><td>Each rule comes with one worked example of it, side by side.</td></tr>
+      <tr><td>Show the pattern</td><td>Things that work alike are drawn alike, like the three Vitals side by side.</td></tr>
+      <tr><td>Kept true</td><td>A rules change isn't finished until the sheets that show it agree.</td></tr>
+    </tbody>
+  </table>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/job-aids-set-map.webp"><img src="/docs/assets/portfolio/job-aids-set-map.webp" alt="All 23 quick-reference sheets as thumbnails, grouped by section, each labelled with the question it answers. The Basics: How 20 Below Works, Core Roll, Advantage and Disadvantage, Difficulty Chart, Time. Characters: Character Creation, Elements times Skills, One Skill Five Elements, The Fate Triangle, Ki, Using a Gift, Resources Ladder, The Resource Index. Combat: The Round, The Combat Flow, Making an Attack, Taking Damage, Weapons and Armor, Range and Movement, The Vitals, Status Effects. Running Creatures: Stat Blocks. The World: Hazards. Making an Attack is marked as the first sheet built to fill a gap found in the audit." loading="lazy" /></a>
+    <figcaption>The set as the GM References page groups it, with the question each sheet answers. The sheet marked in gold was the first built to fill a gap the audit found.</figcaption>
+  </figure>
+
+  <h2>Design Decisions</h2>
+
+  <h3>Audit the set before adding to it</h3>
+  <p>Before drawing anything new, the set was audited for gaps. The first it found: nothing explained how an attack is actually made, meaning how the Element is picked, the three Defenses, and where the damage dice come from. Making an Attack was built to fill it. The same day, Stat Blocks gave the GM's side its own sheet: who rolls what, and which number on a creature's card it uses.</p>
+
+  <h3>The numbers come first</h3>
+  <p>A reference sheet that rounds a number until it's wrong is worse than no sheet. So each sheet started from design data. For Advantage and Disadvantage, that meant the exact odds computed from every possible roll. The book teaches a simplified version: three curves of the same shape, slid along the dice. The finished sheet keeps that clarity for reading at the table, and puts the exact chances where a player actually uses them, at targets 8, 11 and 14.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/job-aids-stages.webp"><img src="/docs/assets/portfolio/job-aids-stages.webp" alt="Three stages side by side. One, computed: charts of the exact chance of each total from 2 to 20 and of succeeding at each target number, for Advantage, Normal and Disadvantage. Two, simplified: the book's version, three curves of the same shape centred on 8.5, 11 and 13.5. Three, finished: the Advantage and Disadvantage reference sheet, with the curves and the chance to succeed at targets 8, 11 and 14." loading="lazy" /></a>
+    <figcaption>Computed, simplified, finished. Readability wins where the job is recognizing a shape; the exact figures win where the job is making a decision.</figcaption>
+  </figure>
+
+  <h3>Drawing a sheet tests the rule</h3>
+  <p>The most useful thing the sheets did was expose problems in the rules. A job aid can't be vaguer than the rule it shows, so every place the rule was vague, missing or out of date surfaced the moment it had to fit in a box on a page.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/job-aids-exposed.webp"><img src="/docs/assets/portfolio/job-aids-exposed.webp" alt="A table of four problems caught while drawing the Hazards and Time sheets. Hazards: the rules file's hazard numbers were out of date; fixed by bringing the rules file in line with the book. Hazards: mining sources found nothing covered things that change you slowly; fixed with Corruption, a five-level track. Hazards: the edit pass found the recluse's venom worsens with no rule behind it; fixed with one venom rule for the whole bestiary, and the Brown Recluse case study. Time: the Time Bands had no Hour; Hour added, and the bands now run from Round to Century." loading="lazy" /></a>
+    <figcaption>Four problems in the rules themselves, caught while drawing the last two sheets. The venom gap had been raised by a playtester and a designer too; it became <a href="/docs/case-study-brown-recluse.html">One Spider, Checked Three Ways</a>.</figcaption>
+  </figure>
+
+  <h3>One place for the whole set</h3>
+  <p>The sheets live on the GM References page, grouped by topic: The Basics, Characters, Combat, Running Creatures and The World. Any sheet opens in a viewer on the page, and the arrow keys step through the rest in order, so the set reads as one tool rather than twenty-three downloads. I also decided the set is for the website, not print. Hole-punch margins, page order and a test print only matter if we ever print it, so they wait until then.</p>
+
+  <h3>Kept true</h3>
+  <p>A reference that drifts from the rules teaches the wrong rule with full confidence. So a rules change isn't done until the sheets that show it agree. When the bestiary changed how creatures attack, Stat Blocks followed. When the movement chapter redrew the range bands, Range &amp; Movement, The Round and the desktop app's quick reference followed.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/job-aids-kept-true.webp"><img src="/docs/assets/portfolio/job-aids-kept-true.webp" alt="Five rules changes and the sheets that followed. September 24: the bestiary's attack lines put the dice on every line; Stat Blocks updated. September 25: a bite adds the creature's Ferocity, not a flat plus 2, and Target Number becomes TN; Stat Blocks updated. September 25: Melee reaches about 1 meter, Close runs 1 to 10 meters, and a sprint claim that wasn't true is dropped; Range and Movement updated. September 25: a Slow action is an empowered action; The Round and the action-brackets diagram updated. September 25: the movement rules released in the desktop app; the Brewery's player quick reference, version 0.4.7, updated." loading="lazy" /></a>
+    <figcaption>Each rules change and the sheets that followed it.</figcaption>
+  </figure>
+
+  <h2>How the Work Ran</h2>
+  <ul>
+    <li><strong>Checked as drawn.</strong> A new sheet was checked against the rules file as it was drawn, which is how the four problems above surfaced. The project's consistency checks run on every rules change.</li>
+    <li><strong>Reviewed by communications.</strong> Hillary McKey reviewed the sheets' design, the same review the rest of the project's visuals get.</li>
+    <li><strong>Scope logged as it grew.</strong> New sheets, and the rules fixes the sheets turned up, went onto a running list with the date and where each one came from, instead of derailing the sheet in progress.</li>
+  </ul>
+  <p>How the sheets look is covered in the <a href="/docs/visual-portfolio.html">Visual Information portfolio</a>. This study is about what they're for.</p>
+
+  <h2>Outcome</h2>
+  <p>Twenty-three sheets, each answering one question, in one place, and agreeing with the rules they show. The gap the audit found was filled. The numbers behind the sheets come from computed data, and where a player decides with a number, as on Advantage and Disadvantage, it's the exact one. And four problems were fixed in the rules themselves because a sheet couldn't be drawn around them.</p>
+  <p>What this study doesn't have yet is evidence from use. The next step is a timed lookup test: the same five questions answered from the web book and from the sheets, by a new player and by an experienced one. Alongside that, playtesters' notes on which sheets actually get reached for.</p>
+  <p><a href="/gm-references.html">See the live set: GM References &rarr;</a></p>
+
+  <h2>Credits</h2>
+  <table class="credits">
+    <tr><td>Decisions</td><td>Me, as producer</td></tr>
+    <tr><td>Design review</td><td>Hillary McKey, communications</td></tr>
+    <tr><td>The audit, design data, drafts and rendering</td><td>Claude (AI assistant), checked by me</td></tr>
+  </table>
+
+  <footer>20 Below &middot; 20belowrpg.com</footer>
+</main>
+<script src="/docs/assets/js/site-nav.js"></script>
+</body>
+</html>
