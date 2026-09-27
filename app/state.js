@@ -223,6 +223,23 @@ export function migrateSkills(state, data) {
   return notices;
 }
 
+// Everyman Skills are Trained for free. A character saved before a Skill
+// joined the list (Perception, 2026-09-26) can have it lower; it comes up
+// to Trained on load, which costs nothing - the free tier is the rule, not
+// a change to what the player bought. Anything already higher is untouched,
+// and the points once spent reaching Trained are free again by the same rule.
+export function floorEverymanSkills(state, data) {
+  const notices = [];
+  (data?.everymanSkills || []).forEach((name) => {
+    if (!state?.skills || !(data.skillCatalog || []).some((s) => s.name === name)) return;
+    if ((Number(state.skills[name]) || 0) < 2) {
+      state.skills[name] = 2;
+      notices.push(`${name} is an Everyman Skill now - Trained, for free.`);
+    }
+  });
+  return notices;
+}
+
 // Retired Skills that were Everyman - free at Trained, the same as any
 // Everyman Skill, so only tiers above that were ever paid for.
 const RETIRED_EVERYMAN = ['Literacy'];
@@ -293,7 +310,8 @@ export function mergeCharacterState(data, loaded) {
   });
   // Saves made before the GM bonus step have no such object at all.
   merged.bonusPoints = { ...fresh.bonusPoints, ...(loaded.bonusPoints || {}) };
-  merged.migrationNotices = [...migrateBoons(merged), ...migrateSkills(merged, data)];
+  merged.migrationNotices = [...migrateBoons(merged), ...migrateSkills(merged, data),
+    ...floorEverymanSkills(merged, data)];
   // Forcefield used to ask for its Form and its look in one line. The Form
   // is its own pick now, so an old answer that is not a Form moves down to
   // the look line - nothing the player wrote is lost.
