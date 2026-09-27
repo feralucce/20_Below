@@ -163,6 +163,34 @@ export function parseCreatures(markdown, source) {
   return creatures;
 }
 
+// The book saves space by borrowing: "**Ambush Predator** (as Mountain
+// Lion)" means the Mountain Lion's Ambush Predator, whose words are on its
+// own card. A GM at the table should not have to go and find it, so the
+// borrowed text is written into the bracket, after the book's own words:
+// "(as Mountain Lion: Advantage on its first attack roll if ...)". A note in
+// the bracket stays ("Feral Dog, applies within a pod"), and so does
+// anything the card says after it ("... when attacking from open water").
+function traitText(creature, trait) {
+  const esc = trait.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const m = new RegExp(`\\*\\*${esc}\\*\\*\\s*[-–—:]\\s*([\\s\\S]*?)(?=\\s*\\*\\*[^*]+\\*\\*\\s*(?:[-–—:]|\\(as )|$)`)
+    .exec(creature.traits || '');
+  return m ? m[1].trim().replace(/\.$/, '') : null;
+}
+
+export function resolveBorrowedTraits(creatures) {
+  const byName = new Map(creatures.map((c) => [c.name.toLowerCase(), c]));
+  const fill = (text) => String(text || '').replace(/\*\*([^*]+)\*\*\s*\(as ([^)]+)\)/g, (whole, trait, as) => {
+    const from = byName.get(as.split(',')[0].trim().toLowerCase());
+    const words = from && traitText(from, trait.trim());
+    return words ? `**${trait}** (as ${as}: ${words})` : whole;
+  });
+  creatures.forEach((c) => {
+    c.traits = fill(c.traits);
+    c.notes = fill(c.notes);
+  });
+  return creatures;
+}
+
 // Every creature in every bestiary file. `read` fetches one rules file by
 // name and returns its markdown (fetchText in the browser, a file read in
 // the extension build).
@@ -171,5 +199,5 @@ export async function loadBestiary(read) {
   for (const source of BESTIARY_SOURCES) {
     all.push(...parseCreatures(await read(source.file), source));
   }
-  return all;
+  return resolveBorrowedTraits(all);
 }
