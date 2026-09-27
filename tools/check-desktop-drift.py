@@ -48,7 +48,7 @@ walk, and anything it cannot follow counts as reachable.
 
 It also checks the two Owlbear Rodeo extensions. They are not released
 from tags; each is a separate repo that a sync script copies this repo's
-engine into (scripts/sync-roster.mjs, scripts/sync-dice.mjs), and rooms
+engine into (scripts/sync-roster.mjs, scripts/sync-playsheet.mjs), and rooms
 load whatever that repo serves. So the question for them is simpler: does
 what is published match what the sync would write today? Battle Tracker
 went three weeks stale that way before anyone looked.
@@ -308,7 +308,7 @@ def split_by_reach(name, tag, files):
 
 
 # The Owlbear Rodeo extensions: what each sync script copies, source ->
-# published path. Must match scripts/sync-roster.mjs and scripts/sync-dice.mjs.
+# published path. Must match scripts/sync-roster.mjs and scripts/sync-playsheet.mjs.
 ROSTER_PAGE_IMPORTS = (('"../app/combat/model.js"', '"./lib/combat/model.js"'),
                        ('"../app/media.js"', '"./lib/media.js"'))
 
@@ -320,12 +320,26 @@ EXTENSIONS = [
       ("app/combat/model.js", "lib/combat/model.js"),
       ("app/media.js", "lib/media.js"),
       ("tracker/index.html", "index.html")]),
-    ("Dice (Owlbear)", "feralucce/20_Below_Dice", "20 Below Dice",
-     "sync-dice.mjs",
-     [("app/roller/core.js", "lib/roller/core.js"),
-      ("app/roller/damage.js", "lib/roller/damage.js"),
-      ("app/state.js", "lib/state.js")]),
+    # The dice extension, grown into the player's whole sheet. Its baked
+    # rules-data.json is left out: it is parsed from rules/, not copied,
+    # and a rules change that matters also changes a module listed here.
+    ("Character Sheet (Owlbear)", "feralucce/20_Below_Dice", "20 Below Dice",
+     "sync-playsheet.mjs",
+     [("app/%s" % f, "lib/%s" % f) for f in (
+         "ui.js", "state.js", "roller/core.js", "roller/damage.js",
+         "roller/giftCheck.js", "roller/resourceCheck.js",
+         "steps/roller-panel.js", "sheet/sheet-model.js", "sheet/panels.js")]
+     + [("playsheet/index.html", "index.html"),
+        ("playsheet/playsheet.js", "playsheet.js"),
+        ("playsheet/playsheet.css", "playsheet.css")]),
 ]
+
+
+# Must match forExtension() in scripts/sync-playsheet.mjs.
+def for_extension(text):
+    return (text.replace("'../app/", "'./lib/")
+            .replace('"../app/', '"./lib/')
+            .replace('"../vendor/marked.min.js"', '"./lib/marked.min.js"'))
 
 
 def norm(text):
@@ -338,6 +352,8 @@ def expected(src, dest):
     if text is not None and dest == "index.html" and src == "tracker/index.html":
         for old, new in ROSTER_PAGE_IMPORTS:
             text = text.replace(old, new)
+    if text is not None and src.startswith("playsheet/"):
+        text = for_extension(text)
     return text
 
 
