@@ -124,7 +124,8 @@ APPS = [
       # The bestiary ships inside the installer (stage-frontend.ps1).
       "rules/adversary-index.md", "rules/cryptids.md", "rules/nightmare-creatures.md",
       "app/ui.js", "app/roller/damage.js", "app/roller/giftCheck.js",
-      "app/roller/resourceCheck.js", "app/steps/roller-panel.js", "app/sheet/panels.js"],
+      "app/roller/resourceCheck.js", "app/steps/roller-panel.js", "app/sheet/panels.js",
+      "app/sheet/sheet-model.js"],
      # The Creator's rules are baked into the installer's rules-data.json
      # for NPCs' Skill and Gift rolls; a change there reaches the desktop
      # tracker with its next release.
@@ -334,6 +335,7 @@ EXTENSIONS = [
       ("app/roller/resourceCheck.js", "lib/roller/resourceCheck.js"),
       ("app/steps/roller-panel.js", "lib/steps/roller-panel.js"),
       ("app/sheet/panels.js", "lib/sheet/panels.js"),
+      ("app/sheet/sheet-model.js", "lib/sheet/sheet-model.js"),
       ("tracker/index.html", "index.html")]),
     # The dice extension, grown into the player's whole sheet. Its baked
     # rules-data.json is left out: it is parsed from rules/, not copied,

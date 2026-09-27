@@ -40,7 +40,8 @@ $files = @(
     "app\roller\giftCheck.js",
     "app\roller\resourceCheck.js",
     "app\steps\roller-panel.js",
-    "app\sheet\panels.js"
+    "app\sheet\panels.js",
+    "app\sheet\sheet-model.js"
 )
 
 foreach ($f in $files) {

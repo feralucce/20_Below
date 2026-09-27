@@ -42,6 +42,8 @@ const LIB = [
   ['app/roller/resourceCheck.js', 'lib/roller/resourceCheck.js'],
   ['app/steps/roller-panel.js', 'lib/steps/roller-panel.js'],
   ['app/sheet/panels.js', 'lib/sheet/panels.js'],
+  // What the character sheet works out: a character's armour on the line.
+  ['app/sheet/sheet-model.js', 'lib/sheet/sheet-model.js'],
 ];
 
 for (const [from, to] of LIB) {

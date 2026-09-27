@@ -317,6 +317,10 @@
   .track button:hover { color: var(--text); }
   .track.hurt .tv { color: var(--gold); }
   .track.down .tv { color: var(--danger); }
+  .exh-note { font-size: 0.62rem; color: #e0685c; }
+  .armour-line { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.3rem; }
+  .roster-item.is-down { opacity: 0.55; }
+  .roster-item.is-down .ri-name { text-decoration: line-through; }
   .floor-note {
     font-size: 0.58rem;
     text-transform: uppercase;
@@ -569,7 +573,7 @@
  "imports": {
   "../app/combat/encounter.js": "../app/combat/encounter.js?v=0ab8668b78",
   "../app/combat/library.js": "../app/combat/library.js?v=104fee9130",
-  "../app/combat/model.js": "../app/combat/model.js?v=482cc7bdcb",
+  "../app/combat/model.js": "../app/combat/model.js?v=ec52ef5ab8",
   "../app/describe-spec.js": "../app/describe-spec.js?v=76314f119c",
   "../app/desktop-storage.js": "../app/desktop-storage.js?v=367151fc27",
   "../app/export/toJson.js": "../app/export/toJson.js?v=b75d7e429d",
@@ -650,6 +654,7 @@
   import * as media from "../app/media.js";
   import * as library from "../app/combat/library.js";
   import { creatureRollPanel, rollDicePanel } from "../app/sheet/panels.js";
+  import { splitGear } from "../app/sheet/sheet-model.js";
   const { ROLES, BRACKETS, computeFiguredCharacteristics } = engine;
 
   // ---- Owlbear bridge ----
@@ -1001,7 +1006,6 @@
     if (lib) await importFiles(fileList, { quiet: true });
     const paired = await media.pairFiles(fileList);
     if (!paired.length) return;
-    let firstId = null;
     for (const p of paired) {
       const id = `c${Date.now()}${Math.random().toString(36).slice(2, 7)}`;
       const entry = parseEntry(id, p.text, p.icon);
@@ -1009,11 +1013,9 @@
         entry.icon = media.makePlaceholder(entry.state.name || "Unnamed", 128);
       }
       roster.push(entry);
-      if (entry.state && !firstId) firstId = id;
     }
     saveRoster();
     renderAll();
-    if (paired.length === 1 && firstId) selectCharacter(firstId);
   }
 
   function removeCharacter(id) {
@@ -1578,6 +1580,17 @@
     document.getElementById("detail").style.display = "";
   }
 
+  // A character's armour, as the character sheet sorts their gear. The
+  // equipment rules load with the tracker; until they have, no armour shows.
+  function armourOf(r) {
+    if (!rulesData || r.state.creature) return [];
+    try {
+      return splitGear(r.state, rulesData).armour.filter((a) => a.health > 0);
+    } catch (err) {
+      return [];
+    }
+  }
+
   // ---- Rolling for a combatant ----
   //
   // A creature rolls from its stat block; a character or NPC made in the
@@ -1661,6 +1674,15 @@
     let parts;
     if (r.state.creature) {
       parts = creatureRollPanel(r.state.creature, name, { onRolled: (rec) => rolled(name, rec) });
+      // A creature's rolls carry its Exhausted too; the GM reads the row.
+      const exh = engine.exhaustedOf(combat, r);
+      if (exh) {
+        const note = document.createElement("p");
+        note.className = "roller-tier-note roller-exhausted";
+        note.textContent = `Exhausted ${exh}: ${engine.EXHAUSTED_EFFECTS.slice(1, exh + 1).join("; ")}. `
+          + (exh >= 2 ? "Read the Disadvantage row." : "Read the Disadvantage row for a Physical attack.");
+        parts.splice(1, 0, note);
+      }
     } else {
       let data;
       try {
@@ -1674,6 +1696,7 @@
       // from there and a failed one takes it back off there.
       const e = combatEntry(r);
       r.state.currentKi = e.currentKi;
+      r.state.exhausted = engine.exhaustedOf(combat, r);
       parts = rollDicePanel(r.state, data, {
         onKi: () => { e.currentKi = r.state.currentKi; saveCombat(); renderList(); },
         onRolled: (rec) => rolled(name, rec),
@@ -1930,10 +1953,36 @@
           + `<button class="btn token-btn" data-link="${r.id}" title="Select a token already on the scene, then click">Link</button>`
       : "";
 
+    // Exhausted stacks 1-5 and each level adds to the last (rules.md).
+    const exh = engine.exhaustedOf(combat, r);
+    const exhausted = combat.started
+      ? `<div class="track${exh ? " down" : ""}" title="Exhausted">
+          <span class="tk">Exh</span>
+          <button data-exh="${r.id}" data-d="-1">&minus;</button>
+          <span class="tv">${exh}/5</span>
+          <button data-exh="${r.id}" data-d="1">+</button>
+        </div>${exh ? `<span class="exh-note">${engine.EXHAUSTED_EFFECTS.slice(1, exh + 1).join("; ")}</span>` : ""}`
+      : "";
+
+    // A character's armour, each piece losing a Health Level at most once
+    // an attack and broken at 0. A creature's Soak is its armour already.
+    const armour = combat.started && !creature ? armourOf(r) : [];
+    const armourHtml = armour.length
+      ? `<div class="armour-line">${armour.map((a) => {
+          const left = engine.armourLeft(combat, r, a.key, a.health);
+          return `<div class="track${left === 0 ? " down" : left < a.health ? " hurt" : ""}" title="${escapeHtml(a.name)}: Hardness ${escapeHtml(a.hardness)}">
+            <span class="tk">${escapeHtml(a.name.slice(0, 18))} H${escapeHtml(a.hardness)}</span>
+            <button data-dent="${r.id}" data-key="${escapeHtml(a.key)}" data-hl="${a.health}" data-d="1" title="Take one Health Level">&minus;</button>
+            <span class="tv">${left === 0 ? "broken" : `${left}/${a.health}`}</span>
+            <button data-dent="${r.id}" data-key="${escapeHtml(a.key)}" data-hl="${a.health}" data-d="-1" title="Repair one Health Level">+</button>
+          </div>`;
+        }).join("")}</div>`
+      : "";
+
     const floorNote = combat.started && e.floorNote
       ? `<span class="floor-note">${e.floorNote}</span>`
       : "";
-    return `<div class="ri-combat">${initCell}${brackets}${tracks}${floorNote}${token}</div>`;
+    return `<div class="ri-combat">${initCell}${brackets}${tracks}${exhausted}${floorNote}${token}</div>${armourHtml}`;
   }
 
   // The list stays in the order characters were added right through setup
@@ -1975,7 +2024,8 @@
       const div = document.createElement("div");
       const onTurn = combat.started && currentTurnId() === entry.id;
       const acted = hasActed(entry.id);
-      div.className = `roster-item${entry.id === activeId ? " active" : ""}${onTurn ? " on-turn" : ""}${acted ? " acted" : ""}`;
+      const down = entry.state && combat.started && engine.isDown(combat, entry);
+      div.className = `roster-item${entry.id === activeId ? " active" : ""}${onTurn ? " on-turn" : ""}${acted ? " acted" : ""}${down ? " is-down" : ""}`;
       if (entry.state) {
         const natureLabel = entry.state.nature && entry.state.nature.custom
           ? entry.state.nature.custom.label
@@ -2035,6 +2085,18 @@
           b.addEventListener("click", (ev) => {
             ev.stopPropagation();
             adjustTrack(entry, b.dataset.t, Number(b.dataset.d));
+          });
+        });
+        div.querySelectorAll("[data-exh]").forEach((b) => {
+          b.addEventListener("click", (ev) => {
+            ev.stopPropagation();
+            act(() => engine.adjustExhausted(combat, entry, Number(b.dataset.d)), renderList);
+          });
+        });
+        div.querySelectorAll("[data-dent]").forEach((b) => {
+          b.addEventListener("click", (ev) => {
+            ev.stopPropagation();
+            act(() => engine.dentArmour(combat, entry, b.dataset.key, Number(b.dataset.hl), Number(b.dataset.d)), renderList);
           });
         });
         const dropEl = div.querySelector("[data-drop]");
@@ -2169,6 +2231,8 @@
   showView(startView === "encounter" ? "encounter" : "library");
   startLibrary();
   initOBR();
+  // The equipment rules, for armour on the lines; the rollers use the same.
+  loadRules().then(() => renderList()).catch(() => {});
 </script>
 </body>
 </html>
