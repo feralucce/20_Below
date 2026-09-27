@@ -2141,7 +2141,7 @@ Whole sections of a flooded channel go dead quiet around it, fish and birds alik
 
 **Potence** 3 · **Initiative** 4 · **Psyche** 2 · **Ferocity** 3 · **Stamina** 4
 
-**Shock**: extends out to Short range instead of just Close, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls until the end of their next turn.
+**Shock**: extends out to Near range instead of just Close, no touch required in water. No Health Level cost - a target that fails to resist (GM's call on the resistance roll) is Disadvantaged on all rolls until the end of their next turn.
 
 **Notable Skills**: Stealth 8 vs. Perception, Athletics TN 7
 :::
