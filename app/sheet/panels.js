@@ -10,6 +10,7 @@ import {
 } from '../state.js';
 import {
   buildQuickAttack, buildQuickSkill, buildGiftCheckSection,
+  buildCreatureAttack, buildCreatureSkills,
 } from '../steps/roller-panel.js';
 
 // Everything a Gift does for this character, in one place: its Level,
@@ -158,4 +159,15 @@ export function rollDicePanel(state, data, { onKi = () => {}, onRolled = () => {
     buildQuickSkill(state, data, { onRolled }),
     buildGiftCheckSection(state, data, onKi, { onRolled }),
   ];
+}
+
+// A creature's Roll dice window: its printed attacks and its Notable
+// Skills, rolled from the stat block. Initiative is rolled on its line in
+// the tracker, like everyone else's.
+export function creatureRollPanel(creature, name, { onRolled = () => {} } = {}) {
+  return [
+    el('h3', {}, `${name}: roll dice`),
+    buildCreatureAttack(creature, { onRolled }),
+    buildCreatureSkills(creature, { onRolled }),
+  ].filter(Boolean);
 }

@@ -34,7 +34,13 @@ $files = @(
     "app\parse\creatures.js",
     "rules\adversary-index.md",
     "rules\cryptids.md",
-    "rules\nightmare-creatures.md"
+    "rules\nightmare-creatures.md",
+    "app\ui.js",
+    "app\roller\damage.js",
+    "app\roller\giftCheck.js",
+    "app\roller\resourceCheck.js",
+    "app\steps\roller-panel.js",
+    "app\sheet\panels.js"
 )
 
 foreach ($f in $files) {
@@ -46,5 +52,10 @@ foreach ($f in $files) {
     New-Item -ItemType Directory -Path (Split-Path $dst) -Force | Out-Null
     Copy-Item -Path $src -Destination $dst -Force
 }
+
+# The Creator's rules, baked, for rolling a character's Skills and Gifts
+# with nothing fetched.
+node (Join-Path $repoRoot "scripts\bake-rules-data.mjs") (Join-Path $stagingDir "tracker\rules-data.json")
+if ($LASTEXITCODE -ne 0) { throw "Baking the rules failed" }
 
 Write-Host "Staged frontend assets (tracker/, the engine, the library and the bestiary) to $stagingDir"

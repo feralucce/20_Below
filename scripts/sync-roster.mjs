@@ -35,6 +35,13 @@ const LIB = [
   ['app/media.js', 'lib/media.js'],
   ['app/combat/library.js', 'lib/combat/library.js'],
   ['app/parse/creatures.js', 'lib/parse/creatures.js'],
+  // The Roll dice window, the character sheet's and a creature's.
+  ['app/ui.js', 'lib/ui.js'],
+  ['app/roller/damage.js', 'lib/roller/damage.js'],
+  ['app/roller/giftCheck.js', 'lib/roller/giftCheck.js'],
+  ['app/roller/resourceCheck.js', 'lib/roller/resourceCheck.js'],
+  ['app/steps/roller-panel.js', 'lib/steps/roller-panel.js'],
+  ['app/sheet/panels.js', 'lib/sheet/panels.js'],
 ];
 
 for (const [from, to] of LIB) {
@@ -82,6 +89,11 @@ const { loadBestiary } = await import(pathToFileURL(join(repo, 'app', 'parse', '
 const bestiary = await loadBestiary(async (file) => readFileSync(join(repo, 'rules', file), 'utf8'));
 writeFileSync(join(dest, 'bestiary.json'), JSON.stringify(bestiary), 'utf8');
 console.log(`  rules/ creatures  ->  bestiary.json  (${bestiary.length})`);
+
+// The Creator's rules, for rolling a character's Skills and Gifts.
+const { bakeRulesData } = await import(pathToFileURL(join(repo, 'scripts', 'bake-rules-data.mjs')).href);
+await bakeRulesData(join(dest, 'rules-data.json'));
+console.log('  rules/*.md  ->  rules-data.json');
 
 writeFileSync(
   join(dest, 'lib', 'README.md'),

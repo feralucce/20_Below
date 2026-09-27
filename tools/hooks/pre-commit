@@ -40,12 +40,12 @@ fi
 # (tools/stamp-app-modules.py), so a browser can never pair a new file
 # with an old one. A code change with a stale stamp would ship exactly
 # that mix, so it is refused here.
-if echo "$staged" | grep -qE '^(app|playsheet)/.*\.(js|html)$'; then
+if echo "$staged" | grep -qE '^(app|playsheet|tracker)/.*\.(js|html)$'; then
   if ! out=$(python tools/stamp-app-modules.py --check 2>&1); then
     echo "$out"
     echo
     echo "pre-commit: the Creator's module stamps are out of date."
-    echo "  Run python tools/stamp-app-modules.py, stage app/*.html and playsheet/index.html, and commit again."
+    echo "  Run python tools/stamp-app-modules.py, stage app/*.html, playsheet/index.html and tracker/index.html, and commit again."
     exit 1
   fi
   echo "pre-commit: module stamps current."

@@ -122,7 +122,12 @@ APPS = [
       "app/combat/model.js", "app/media.js", "app/combat/library.js",
       "app/parse/creatures.js",
       # The bestiary ships inside the installer (stage-frontend.ps1).
-      "rules/adversary-index.md", "rules/cryptids.md", "rules/nightmare-creatures.md"],
+      "rules/adversary-index.md", "rules/cryptids.md", "rules/nightmare-creatures.md",
+      "app/ui.js", "app/roller/damage.js", "app/roller/giftCheck.js",
+      "app/roller/resourceCheck.js", "app/steps/roller-panel.js", "app/sheet/panels.js"],
+     # The Creator's rules are baked into the installer's rules-data.json
+     # for NPCs' Skill and Gift rolls; a change there reaches the desktop
+     # tracker with its next release.
      []),
 ]
 
@@ -323,6 +328,12 @@ EXTENSIONS = [
       ("app/media.js", "lib/media.js"),
       ("app/combat/library.js", "lib/combat/library.js"),
       ("app/parse/creatures.js", "lib/parse/creatures.js"),
+      ("app/ui.js", "lib/ui.js"),
+      ("app/roller/damage.js", "lib/roller/damage.js"),
+      ("app/roller/giftCheck.js", "lib/roller/giftCheck.js"),
+      ("app/roller/resourceCheck.js", "lib/roller/resourceCheck.js"),
+      ("app/steps/roller-panel.js", "lib/steps/roller-panel.js"),
+      ("app/sheet/panels.js", "lib/sheet/panels.js"),
       ("tracker/index.html", "index.html")]),
     # The dice extension, grown into the player's whole sheet. Its baked
     # rules-data.json is left out: it is parsed from rules/, not copied,
