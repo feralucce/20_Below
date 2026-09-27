@@ -158,7 +158,7 @@ Wears a borrowed face well enough that the real question isn't whether it's lyin
 
 **Potence** 2 · **Initiative** 3 · **Psyche** 4 · **Ferocity** 2 · **Presence** 4 · **Stamina** 4
 
-**Knife** (only if cornered): 2, Melee
+**Knife** (only if cornered): 2 dice, Melee
 
 **Notable Skills**: Deception 6 vs. Insight, Persuasion 7 vs. Insight, Athletics TN 8
 
@@ -176,7 +176,9 @@ Ordinary until the ritual finishes. The trick is stopping it before that happens
 
 **Potence** 3 · **Initiative** 2 · **Psyche** 4 · **Ferocity** 2 · **Presence** 4 · **Stamina** 4
 
-**Athame** (only if cornered): 1, Melee. **Hex** (once per Scene, requires several uninterrupted rounds to complete - GM's call on timing): a single target within Sight range takes Disadvantage on all rolls for the rest of the Scene once the ritual completes.
+**Athame** (only if cornered): 1 die, Melee
+
+**Hex** (once per Scene, requires several uninterrupted rounds to complete - GM's call on timing): a single target within Sight range takes Disadvantage on all rolls for the rest of the Scene once the ritual completes.
 
 **Notable Skills**: Perception 9 vs. Stealth, Athletics TN 6
 
@@ -248,7 +250,7 @@ Almost never lays a hand on anyone. It doesn't need to. Something closer to a gh
 
 **Potence** 2 · **Initiative** 2 · **Psyche** 3 · **Ferocity** 1 · **Presence** 3 · **Stamina** 10
 
-**Cry** (once per Scene, Mental attack, dice pool 3, Far range, no to-hit roll required - triggered by hearing it): dice resolve per-die against Psyche as normal, a connecting die costing a Sanity Level same as any other Mental attack, and can push a target to Overwhelmed on repeated failures in the same Scene.
+**Cry** (once per Scene): 3 dice, Far, **Mental** - no to-hit roll required; it lands on anyone who hears it. Dice resolve per-die against Psyche as normal, a connecting die costing a Sanity Level same as any other Mental attack, and repeated failures in the same Scene can push a target to Overwhelmed.
 
 **Notable Skills**: Perception 7 vs. Stealth, Athletics TN 6
 
