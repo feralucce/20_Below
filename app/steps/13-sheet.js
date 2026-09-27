@@ -18,12 +18,10 @@ import {
   npcPointsRemoved,
   unmarkNpc,
 } from '../state.js';
-import {
-  SIGNATURE_MOVE, signatureMoves, adderCount, optionChoice,
-  giftMenuBuilds, giftMenuBuildName, giftMenuPurchases,
-} from '../state.js';
+import { SIGNATURE_MOVE, signatureMoves, adderCount } from '../state.js';
 import buildAdvancementTab from './tab-advancement.js';
 import buildItemPicker from './add-item.js';
+import { giftInfoPanel, movementPanel, rollDicePanel } from '../sheet/panels.js';
 import { buildPagedSheet, loadFieldMap } from '../sheet/paged-sheet.js';
 import {
   buildAttackRollSection,
@@ -31,8 +29,6 @@ import {
   buildSkillRollSection,
   buildGiftCheckSection,
   buildResourceCheckSection,
-  buildQuickAttack,
-  buildQuickSkill,
 } from './roller-panel.js';
 
 // Click a pip to set the fill level there (clicking a filled pip drops the
@@ -663,154 +659,12 @@ export default {
         case 'movement':
           return movementPanel(extra);
         case 'gift-info':
-          return giftInfoPanel(extra.gift);
+          return giftInfoPanel(extra.gift, data);
         case 'dice':
-          return dicePanel(extra.page);
+          return rollDicePanel(state, data, { onKi: draw });
         default:
           return [];
       }
-    }
-
-    // Everything a Gift does for this character, in one place: its Level,
-    // its build if it has a menu, and its Adders and Limiters with their
-    // rules and any choice made for them.
-    function giftInfoPanel(g) {
-      const entry = (data.gifts || []).find((d) => d.name === g.name);
-      if (!entry) return [el('h3', {}, g.name), el('p', {}, 'This Gift is not in the current rules.')];
-      const md = (text) => el('div', { class: 'gift-info-text', html: renderMarkdown(text || '') });
-      const out = [el('h3', {}, `${g.name} - Level ${g.level}`)];
-      const notes = giftNotes(g).filter(Boolean);
-      if (notes.length) out.push(el('p', { class: 'roller-howto' }, notes.join(' - ')));
-
-      // Levels build on each other, so every one the character has counts.
-      (entry.levels || []).filter((l) => l.level <= g.level).forEach((l) => {
-        out.push(el('h4', {}, `Level ${l.level}`), md(l.effect));
-      });
-
-      if (entry.menu) {
-        const builds = giftMenuBuilds(g);
-        builds.forEach((b) => {
-          const bought = giftMenuPurchases(g, b);
-          out.push(el('h4', {}, builds.length > 1 ? giftMenuBuildName(g, b) : 'Build'));
-          if (!bought.length) {
-            out.push(el('p', { class: 'hint' }, 'Nothing bought from the menu yet.'));
-            return;
-          }
-          out.push(el('ul', { class: 'gift-info-list' }, bought.map((p) => {
-            const key = String(p.option).toLowerCase();
-            const item = entry.menu.items.find((i) => i.option.toLowerCase() === key);
-            return el('li', {}, [
-              el('strong', {}, p.option), p.note ? ` (${p.note})` : '', ` - ${p.cost} pt${p.cost === 1 ? '' : 's'}`,
-              item ? md(item.effect)
-                : el('p', { class: 'hint' }, "No longer on this Gift's menu in the current rules."),
-            ]);
-          })));
-        });
-      }
-
-      const section = (title, names, list) => {
-        if (!names.length) return;
-        out.push(el('h4', {}, title), el('ul', { class: 'gift-info-list' }, names.map((name) => {
-          const opt = list.find((o) => o.name === name);
-          const picked = optionChoice(g, name).filter(Boolean);
-          return el('li', {}, [
-            el('strong', {}, name), picked.length ? ` (${picked.join(', ')})` : '',
-            opt ? md(opt.text) : '',
-          ]);
-        })));
-      };
-      section('Adders', [...new Set(g.adders || [])], entry.adders || []);
-      section('Limiters', g.limiters || [], entry.limiters || []);
-      return out;
-    }
-
-    // 1d10 + Initiative, once at the start of a fight. Two dice keeping
-    // the higher for Enhanced Speed 3, or when something grants Advantage
-    // on it (Danger Instinct) - the box is there for that one.
-    function initiativePanel({ initiative, speed }) {
-      let advantage = speed >= 3;
-      const result = el('div', { class: 'roller-result' });
-      const d10 = () => 1 + Math.floor(Math.random() * 10);
-      const adv = el('label', { class: 'roller-row' }, [
-        el('input', {
-          type: 'checkbox',
-          checked: advantage ? '' : undefined,
-          onChange: (e) => { advantage = e.target.checked; },
-        }),
-        speed >= 3
-          ? ' Roll 2d10, keep the higher (Enhanced Speed 3)'
-          : ' Roll 2d10, keep the higher (Advantage, e.g. Danger Instinct)',
-      ]);
-      const roll = el('button', {
-        type: 'button',
-        class: 'roll-btn',
-        text: 'Roll Initiative',
-        onClick: () => {
-          const dice = advantage ? [d10(), d10()] : [d10()];
-          const kept = Math.max(...dice);
-          result.innerHTML = '';
-          result.append(
-            el('p', {}, dice.length > 1 ? `Rolled ${dice.join(', ')}, kept ${kept}` : `Rolled ${kept}`),
-            el('p', { class: 'status-ok' }, [el('strong', {}, `Initiative ${kept + initiative}`),
-              ` (${kept} + ${initiative}). Tell the GM; it holds for the whole fight.`]),
-          );
-        },
-      });
-      return [
-        el('h4', {}, 'Initiative'),
-        el('p', { class: 'roller-howto' },
-          `Rolled once, at the start of a fight: 1d10 + your Initiative (${initiative}). Higher goes first within each band.`),
-        adv, roll, result,
-      ];
-    }
-
-    // movement.md, laid out for this character. Nothing to roll: these are
-    // the distances, so nobody has to multiply at the table.
-    function movementPanel(m) {
-      const n = (v) => String(Number(v.toFixed(2)));
-      const why = [
-        ...m.slowedBy.map((a) => `${a.name} -${a.by}`),
-        m.exhausted ? 'Exhausted 3: halved' : null,
-      ].filter(Boolean);
-      const row = (what, how, value) => el('tr', {}, [
-        el('td', {}, [el('strong', {}, what)]), el('td', {}, how), el('td', {}, value)]);
-      return [
-        el('h3', {}, 'Movement'),
-        el('p', { class: 'roller-howto' }, why.length
-          ? `Movement Rate ${m.base}, down to ${m.rate}: ${why.join(', ')}.`
-          : `Movement Rate ${m.rate}: 5 + Air.`),
-        el('table', { class: 'menu-table movement-table' }, [
-          el('tr', {}, [el('th', {}, 'In combat'), el('th', {}, 'Action'), el('th', {}, 'Distance')]),
-          row('Move', 'Part of any action', `${m.rate} m`),
-          row('Dash', 'Normal: both actions on movement', `${m.dash} m`),
-          row('Sprint', 'Slow: nothing else; 1 Ki to Normal, 2 to Fast', `${m.sprint} m`),
-          el('tr', {}, [el('th', {}, 'Jumping'), el('th', {}, ''), el('th', {}, '')]),
-          row('Long jump', 'Running / standing', `${n(m.runJump)} m / ${n(m.standJump)} m`),
-          row('High jump', 'Running / standing', `${n(m.highRun)} m / ${n(m.highStand)} m`),
-          el('tr', {}, [el('th', {}, 'Travel'), el('th', {}, ''), el('th', {}, '')]),
-          row('Pace', 'Clear ground, 3 + Air/5', `${n(m.pace)} km per hour`),
-          row('Travel day', '4 + Stamina hours of walking', `${m.day} hours, ${Math.round(m.pace * m.day)} km`),
-        ]),
-      ];
-    }
-
-    // The one roller every page shares. Everything the sheet rolls starts
-    // here. It knows which page opened it, for what it offers next.
-    function dicePanel(page) {
-      // Enhanced Speed 3 rolls Initiative as 2d10, keeping the higher die.
-      const speed = (state.gifts || []).find((g) => g.name === 'Enhanced Speed')?.level || 0;
-      return [
-        el('h3', {}, 'Roll dice'),
-        // In the order a fight asks for them: who goes first, then the
-        // swing, then everything else.
-        el('div', { class: 'roller-gift-check' },
-          initiativePanel({ initiative: Number(state.subStats?.Initiative) || 0, speed })),
-        buildQuickAttack(state, data),
-        buildQuickSkill(state, data),
-        // A failed check takes 1 Ki, and the pages show Ki, so it redraws
-        // them under the window.
-        buildGiftCheckSection(state, data, draw),
-      ];
     }
 
     function openRoller(kind, label, extra) {

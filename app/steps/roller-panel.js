@@ -980,7 +980,7 @@ export function buildDamageRollSection(state, data, refreshHeader, heading = 'Da
 // against current Ki + Stamina. Success is free; failure costs 1 Ki,
 // deducted here immediately since there's no separate confirmation step
 // for a cost this small and automatic.
-export function buildGiftCheckSection(state, data, refreshKiDependents) {
+export function buildGiftCheckSection(state, data, refreshKiDependents, { onRolled = () => {} } = {}) {
   const section = el('div', { class: 'roller-gift-check' });
   const summary = el('p', {});
   const resultEl = el('div', { class: 'roller-result' });
@@ -1003,6 +1003,12 @@ export function buildGiftCheckSection(state, data, refreshKiDependents) {
         refreshKiDependents();
       }
       updateSummary();
+      onRolled({
+        kind: 'Gift Check',
+        headline: result.outcome === 'success' ? 'Success' : 'Failure, 1 Ki spent',
+        detail: `Rolled ${result.roll.dice.join(', ')} = ${result.roll.sum} under Ki ${result.target}`,
+        success: result.outcome === 'success',
+      });
       resultEl.innerHTML = '';
       resultEl.append(
         el('p', {}, `Rolled ${result.roll.dice.join(', ')} → ${result.roll.sum} vs target ${result.target}`),
@@ -1103,7 +1109,7 @@ function exhaustedLine(state) {
 // Attack: Element against Defense to hit, then the damage dice against the
 // wall. The damage dice are thrown once and scored against each row's hit,
 // so a row that crits shows what the critical does to the same dice.
-export function buildQuickAttack(state, data) {
+export function buildQuickAttack(state, data, { onRolled = () => {} } = {}) {
   const fighting = data.attributes.map((a) => a.name);
   let element = fighting.filter((n) => n !== 'Moira')
     .sort((a, b) => (state.attributes[b] || 0) - (state.attributes[a] || 0))[0] || fighting[0];
@@ -1138,6 +1144,18 @@ export function buildQuickAttack(state, data) {
     }
     const anyCrit = MODES.some(([m]) => classifyRoll(toHit[m].sum, target, false, steps) === 'critical-success');
 
+    // One line per row for the room: what each reading hit, and for how much.
+    onRolled({
+      kind: 'Attack',
+      headline: `${element} ${rating} + Defense ${defense}, under ${target}`,
+      detail: MODES.map(([m, name]) => {
+        const outcome = classifyRoll(toHit[m].sum, target, false, steps);
+        const dmg = damage(outcome);
+        const through = dmg ? dmg.filter((p) => p.through).length : 0;
+        return `${name} ${toHit[m].sum}: ${ATTACK_OUTCOME[outcome]}${dmg ? `, ${through} damage` : ''}`;
+      }).join(' · ') + (dice ? ` (damage dice ${faces.join(', ')} vs wall ${wall})` : ''),
+      success: true,
+    });
     result.innerHTML = '';
     result.append(...[
       el('p', {}, [el('strong', {}, `${element} ${rating} + Defense ${defense}: roll under ${target}`),
@@ -1176,7 +1194,7 @@ export function buildQuickAttack(state, data) {
 
 // Skill: picked from the sheet, which sets its Element and Tier. The
 // Element stays open to a Descriptor argument; the Difficulty is the GM's.
-export function buildQuickSkill(state, data) {
+export function buildQuickSkill(state, data, { onRolled = () => {} } = {}) {
   const joat = (state.boons || []).find((b) => b.name === 'Jack of all Trades');
   // Jack of all Trades lifts every Skill to Trained; at 5 points it also
   // holds every one there (boons.md) - the sheet reads it the same way.
@@ -1288,6 +1306,14 @@ export function buildQuickSkill(state, data) {
     if (lucky) {
       state.currentFateTokens = Math.min(fateTokenCap(state, data), (state.currentFateTokens || 0) + 1);
     }
+    onRolled({
+      kind: skill.name || 'Any other Skill',
+      headline: outcomeLabel(outcome),
+      detail: `${tier.usesAttribute ? `${element} ${rating} + ` : ''}Difficulty ${difficulty}, under ${target}`
+        + `${mode !== 'normal' ? ` at ${mode === 'advantage' ? 'Advantage' : 'Disadvantage'}` : ''}: ${diceSummary(r)}`
+        + `${reroll ? `; Master's reroll ${diceSummary(reroll)}` : ''}${lucky ? '; Lucky Number, +1 Fate Token' : ''}`,
+      success: outcome === 'success' || outcome === 'critical-success',
+    });
     result.innerHTML = '';
     result.append(...[
       el('p', {}, [el('strong', {}, `${skill.name || 'Any other Skill'}: `
