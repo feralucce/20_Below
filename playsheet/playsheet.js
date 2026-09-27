@@ -189,9 +189,9 @@ async function announceCharacter() {
 }
 
 // The GM gives a Short Rest, a Full Night's Rest or Fate Tokens. It lands
-// at once, and the sheet's own limits hold: a second Short Rest before a
-// full night is refused, and Tokens stop at the holding cap. The GM hears
-// back what happened.
+// at once. The GM can give as many Short Rests as the story allows - the
+// one-between-nights limit is only on the player's own button - but Tokens
+// still stop at the holding cap. The GM hears back what happened.
 async function fromGM(msg) {
   if (!msg || msg.type === 'result') return;
   if (msg.to && msg.to !== connectionId) return;
@@ -205,6 +205,7 @@ async function fromGM(msg) {
   let ok = true;
   if (msg.type === 'rest') {
     const label = msg.full ? "a Full Night's Rest" : 'a Short Rest';
+    if (!msg.full) state.shortRestTaken = false;
     ok = act.rest(!!msg.full);
     text = ok ? `The GM gave you ${label}.` : `The GM gave you ${label}, but it didn't apply.`;
   } else if (msg.type === 'fate') {
