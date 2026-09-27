@@ -408,6 +408,15 @@
   .enc-row { display: flex; align-items: center; gap: 0.35rem; padding: 0.3rem 0; border-top: 1px solid var(--panel-border); font-size: 0.78rem; margin-top: 0.3rem; }
   .enc-row-name { font-weight: 600; margin-right: auto; }
   .enc-row-who { color: var(--text-dim); font-size: 0.68rem; display: block; font-weight: 400; }
+  .party-list { font-size: 0.74rem; color: var(--text-dim); margin-top: 0.3rem; line-height: 1.45; }
+  .party-list strong { color: var(--text); }
+  .party-controls { display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.4rem; }
+  .party-to { font-size: 0.72rem; color: var(--text-dim); margin-right: auto; }
+  .party-to select { font: inherit; background: var(--panel); color: var(--text); border: 1px solid var(--panel-border); border-radius: 4px; padding: 0.15rem 0.3rem; }
+  .party-note { font-size: 0.7rem; margin-top: 0.35rem; }
+  .party-note div { padding: 0.12rem 0; }
+  .party-note .ok { color: var(--ok); }
+  .party-note .bad { color: var(--danger); }
   .heading-new { display: flex; gap: 0.35rem; margin: 0 0 0.45rem; }
   .heading-new .tag-input { flex: 1; min-width: 0; }
   .lib-group-head.is-heading { border-color: var(--gold); }
@@ -563,6 +572,20 @@
 
   <div id="obrNote" class="obr-note" style="display:none"></div>
 
+  <!-- The players' Character Sheets in this room: rests and Fate Tokens go
+       to them from here, and their Initiative rolls land in the boxes below. -->
+  <div class="enc-saved" id="partyBox">
+    <div class="enc-saved-head"><span class="enc-saved-title">Players' sheets</span></div>
+    <div id="partyList" class="party-list"></div>
+    <div id="partyControls" class="party-controls" style="display:none">
+      <label class="party-to">Send to <select id="grantTo"></select></label>
+      <button type="button" class="btn" id="grantShort">Short Rest</button>
+      <button type="button" class="btn" id="grantFull">Full Night's Rest</button>
+      <button type="button" class="btn" id="grantFate">Give a Fate Token</button>
+    </div>
+    <div id="partyNote" class="party-note"></div>
+  </div>
+
   <!-- Premade fights: save this one, or add a saved one to it. -->
   <div class="enc-saved">
     <div class="enc-saved-head">
@@ -619,7 +642,7 @@
   "../app/roller/wealthCheck.js": "../app/roller/wealthCheck.js?v=c5927521a6",
   "../app/rules-data.js": "../app/rules-data.js?v=b7cc5907a7",
   "../app/sheet/paged-sheet.js": "../app/sheet/paged-sheet.js?v=0db703037e",
-  "../app/sheet/panels.js": "../app/sheet/panels.js?v=6c196808da",
+  "../app/sheet/panels.js": "../app/sheet/panels.js?v=bd3748612e",
   "../app/sheet/sheet-model.js": "../app/sheet/sheet-model.js?v=e9623281f1",
   "../app/sheet/web-sheet.js": "../app/sheet/web-sheet.js?v=a9efa36156",
   "../app/state.js": "../app/state.js?v=1c8959f7b3",
@@ -693,6 +716,7 @@
       if (!OBR || !OBR.isAvailable) throw new Error("not in Owlbear");
       await new Promise((resolve) => OBR.onReady(resolve));
       obrReady = true;
+      listenToSheets();
       // A token deleted from the scene should not leave a dead link behind.
       OBR.scene.items.onChange((items) => {
         if (engine.pruneTokens(combat, items.map((i) => i.id))) {
@@ -702,6 +726,7 @@
       });
     } catch (e) {
       obrReady = false;
+      renderParty();
       const note = document.getElementById("obrNote");
       note.style.display = "";
       note.textContent =
@@ -1759,6 +1784,104 @@
       }
     }
   }
+
+  // ---- The players' Character Sheets ----
+  //
+  // Each sheet names its character in its player's metadata; the list
+  // comes from there. The GM sends a rest or Fate Tokens to one sheet or to
+  // all of them, and each sheet answers with what happened (a second Short
+  // Rest is refused, Tokens stop at the cap). An Initiative roll made on a
+  // sheet fills that character's box here, matched by name.
+  const GM_CHANNEL = "com.feralucce.twentybelow-dice/gm";
+  const CHARACTER_KEY = "com.feralucce.twentybelow-dice/character";
+  let partySheets = []; // [{ connectionId, player, character }]
+  const partyNotes = [];
+
+  function partySay(text, ok) {
+    partyNotes.unshift({ text, ok });
+    partyNotes.length = Math.min(partyNotes.length, 4);
+    const box = document.getElementById("partyNote");
+    box.innerHTML = partyNotes.map((n) => `<div class="${n.ok ? "ok" : "bad"}">${escapeHtml(n.text)}</div>`).join("");
+  }
+
+  function readParty(players) {
+    partySheets = players
+      .filter((p) => p.metadata && p.metadata[CHARACTER_KEY] && p.metadata[CHARACTER_KEY].name)
+      .map((p) => ({ connectionId: p.connectionId, player: p.name, character: p.metadata[CHARACTER_KEY].name }));
+    renderParty();
+  }
+
+  function renderParty() {
+    const list = document.getElementById("partyList");
+    const controls = document.getElementById("partyControls");
+    if (!obrReady) {
+      list.textContent = "In Owlbear Rodeo, the players' Character Sheets show here: you can give them rests and Fate Tokens, and their Initiative rolls fill in by themselves.";
+      controls.style.display = "none";
+      return;
+    }
+    if (!partySheets.length) {
+      list.textContent = "No player has a Character Sheet open with a character loaded yet.";
+      controls.style.display = "none";
+      return;
+    }
+    list.innerHTML = partySheets.map((p) => `<strong>${escapeHtml(p.character)}</strong> (${escapeHtml(p.player)})`).join(" &middot; ");
+    const select = document.getElementById("grantTo");
+    const was = select.value;
+    select.innerHTML = `<option value="">Everyone</option>` + partySheets.map((p) =>
+      `<option value="${escapeHtml(p.connectionId)}">${escapeHtml(p.character)}</option>`).join("");
+    if ([...select.options].some((o) => o.value === was)) select.value = was;
+    controls.style.display = "";
+  }
+
+  async function grant(message) {
+    if (!obrReady) return;
+    const to = document.getElementById("grantTo").value || null;
+    try {
+      await OBR.broadcast.sendMessage(GM_CHANNEL, { ...message, to }, { destination: "REMOTE" });
+    } catch (err) {
+      partySay("That didn't reach the room. Try again.", false);
+    }
+  }
+
+  // A player's Initiative, rolled on their sheet, goes in the box of the
+  // character with that name, who is then a PC (so "Roll all non-PC"
+  // leaves it alone).
+  function initiativeFromSheet(roll) {
+    const n = Number(roll.initiative);
+    if (roll.kind !== "Initiative" || !Number.isFinite(n)) return;
+    const key = String(roll.name || "").trim().toLowerCase();
+    const r = combatants().find((x) => !x.state.creature && (x.state.name || "").trim().toLowerCase() === key);
+    if (!r) {
+      partySay(`${roll.name} rolled Initiative ${n}, but nobody by that name is in this encounter.`, false);
+      return;
+    }
+    act(() => {
+      engine.entryFor(combat, r).role = "PC";
+      engine.setInitiative(combat, r, n);
+    });
+    partySay(`${roll.name} rolled Initiative ${n}; it's in their box.`, true);
+  }
+
+  function listenToSheets() {
+    OBR.party.getPlayers().then(readParty).catch(() => {});
+    OBR.party.onChange(readParty);
+    OBR.broadcast.onMessage(ROLL_CHANNEL, (event) => {
+      const roll = event.data || {};
+      sessionRolls.unshift(roll);
+      sessionRolls.length = Math.min(sessionRolls.length, 30);
+      renderRollLog();
+      initiativeFromSheet(roll);
+    });
+    OBR.broadcast.onMessage(GM_CHANNEL, (event) => {
+      const msg = event.data || {};
+      if (msg.type === "result") partySay(msg.text, msg.ok !== false);
+    });
+    renderParty();
+  }
+
+  document.getElementById("grantShort").addEventListener("click", () => grant({ type: "rest", full: false }));
+  document.getElementById("grantFull").addEventListener("click", () => grant({ type: "rest", full: true }));
+  document.getElementById("grantFate").addEventListener("click", () => grant({ type: "fate", amount: 1 }));
 
   function renderRollLog() {
     const box = document.getElementById("rollLog");
