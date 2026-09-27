@@ -119,7 +119,10 @@ APPS = [
 
     ("Battle Tracker", r"^combat-tracker-v(\d+)\.(\d+)\.(\d+)$",
      ["tracker/index.html", "app/state.js", "app/roller/core.js",
-      "app/combat/model.js", "app/media.js"],
+      "app/combat/model.js", "app/media.js", "app/combat/library.js",
+      "app/parse/creatures.js",
+      # The bestiary ships inside the installer (stage-frontend.ps1).
+      "rules/adversary-index.md", "rules/cryptids.md", "rules/nightmare-creatures.md"],
      []),
 ]
 
@@ -309,8 +312,7 @@ def split_by_reach(name, tag, files):
 
 # The Owlbear Rodeo extensions: what each sync script copies, source ->
 # published path. Must match scripts/sync-roster.mjs and scripts/sync-playsheet.mjs.
-ROSTER_PAGE_IMPORTS = (('"../app/combat/model.js"', '"./lib/combat/model.js"'),
-                       ('"../app/media.js"', '"./lib/media.js"'))
+ROSTER_PAGE_IMPORTS = (('"../app/', '"./lib/'),)
 
 EXTENSIONS = [
     ("Battle Tracker (Owlbear)", "feralucce/20_Below_Roster", "20 Below Roster",
@@ -319,6 +321,8 @@ EXTENSIONS = [
       ("app/roller/core.js", "lib/roller/core.js"),
       ("app/combat/model.js", "lib/combat/model.js"),
       ("app/media.js", "lib/media.js"),
+      ("app/combat/library.js", "lib/combat/library.js"),
+      ("app/parse/creatures.js", "lib/parse/creatures.js"),
       ("tracker/index.html", "index.html")]),
     # The dice extension, grown into the player's whole sheet. Its baked
     # rules-data.json is left out: it is parsed from rules/, not copied,

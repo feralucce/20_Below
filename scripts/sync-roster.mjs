@@ -15,7 +15,7 @@
 //   node scripts/sync-roster.mjs [path-to-20_Below_Roster]
 
 import { copyFileSync, mkdirSync, existsSync, readFileSync, writeFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -33,6 +33,8 @@ const LIB = [
   ['app/roller/core.js', 'lib/roller/core.js'],
   ['app/combat/model.js', 'lib/combat/model.js'],
   ['app/media.js', 'lib/media.js'],
+  ['app/combat/library.js', 'lib/combat/library.js'],
+  ['app/parse/creatures.js', 'lib/parse/creatures.js'],
 ];
 
 for (const [from, to] of LIB) {
@@ -54,8 +56,10 @@ if (!page.includes(SOURCE_IMPORT)) {
   );
   process.exit(1);
 }
-page = page.replace(SOURCE_IMPORT, EXTENSION_IMPORT);
-page = page.replace('"../app/media.js"', '"./lib/media.js"');
+// Every module the page reaches, the engine, the library and the creature
+// parser, sits under lib/ as it sits under app/. Must match
+// ROSTER_PAGE_IMPORTS in tools/check-desktop-drift.py.
+page = page.replaceAll('"../app/', '"./lib/');
 
 const BANNER = [
   '<!--',
@@ -71,6 +75,13 @@ page = page.replace('<!doctype html>', BANNER + '<!doctype html>');
 
 writeFileSync(join(dest, 'index.html'), page, 'utf8');
 console.log('  tracker/index.html  ->  index.html  (import rewritten)');
+
+// The bestiary, parsed from the rules the way the site reads them live,
+// so the extension opens with every creature and needs nothing fetched.
+const { loadBestiary } = await import(pathToFileURL(join(repo, 'app', 'parse', 'creatures.js')).href);
+const bestiary = await loadBestiary(async (file) => readFileSync(join(repo, 'rules', file), 'utf8'));
+writeFileSync(join(dest, 'bestiary.json'), JSON.stringify(bestiary), 'utf8');
+console.log(`  rules/ creatures  ->  bestiary.json  (${bestiary.length})`);
 
 writeFileSync(
   join(dest, 'lib', 'README.md'),

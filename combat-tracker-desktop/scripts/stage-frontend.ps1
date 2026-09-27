@@ -10,6 +10,9 @@
 # The relative layout matters: tracker/index.html imports the engine as
 # ../app/combat/model.js, and model.js imports ../state.js and
 # ../roller/core.js in turn, so those have to land in the same shape here.
+#
+# The Library reads the bestiary from ../rules/ the way the site does, so
+# the three creature files ship with the app and it opens offline.
 
 $ErrorActionPreference = "Stop"
 
@@ -26,7 +29,12 @@ $files = @(
     "app\state.js",
     "app\roller\core.js",
     "app\combat\model.js",
-    "app\media.js"
+    "app\media.js",
+    "app\combat\library.js",
+    "app\parse\creatures.js",
+    "rules\adversary-index.md",
+    "rules\cryptids.md",
+    "rules\nightmare-creatures.md"
 )
 
 foreach ($f in $files) {
@@ -39,4 +47,4 @@ foreach ($f in $files) {
     Copy-Item -Path $src -Destination $dst -Force
 }
 
-Write-Host "Staged frontend assets (tracker/, app/{state,roller/core,combat/model}.js) to $stagingDir"
+Write-Host "Staged frontend assets (tracker/, the engine, the library and the bestiary) to $stagingDir"

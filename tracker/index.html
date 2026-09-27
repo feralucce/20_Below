@@ -338,6 +338,80 @@
     margin-bottom: 0.5rem;
     line-height: 1.35;
   }
+  /* Catalog and Encounter, the tracker's two views. */
+  .views { display: flex; gap: 0.3rem; margin: 0 0 0.7rem; }
+  .view-btn {
+    flex: 1; padding: 0.4rem; border-radius: 6px; font: inherit; font-size: 0.8rem; cursor: pointer;
+    background: var(--panel); color: var(--text-dim); border: 1px solid var(--panel-border);
+  }
+  .view-btn.on { color: var(--text); border-color: var(--accent); background: var(--accent-dim, #1c3548); }
+  .lib-bar { display: flex; gap: 0.4rem; margin-bottom: 0.45rem; }
+  .lib-bar input { flex: 1; min-width: 0; }
+  .lib-bar input, .lib-bar select, .tag-input {
+    background: #03070a; color: var(--text); border: 1px solid var(--panel-border);
+    border-radius: 5px; padding: 0.3rem 0.45rem; font: inherit; font-size: 0.78rem;
+  }
+  .lib-tags { display: flex; flex-wrap: wrap; gap: 0.25rem; margin-bottom: 0.5rem; }
+  .lib-tag {
+    font: inherit; font-size: 0.66rem; padding: 0.15rem 0.45rem; border-radius: 999px; cursor: pointer;
+    background: var(--panel); color: var(--text-dim); border: 1px solid var(--panel-border);
+  }
+  .lib-tag.own { border-style: dashed; }
+  .lib-tag.on { color: var(--text); border-color: var(--accent); background: var(--accent-dim, #1c3548); }
+  .lib-actions { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; margin-bottom: 0.35rem; }
+  .lib-actions input[type=file] { display: none; }
+  .lib-own {
+    background: color-mix(in srgb, var(--ok) 14%, var(--panel-2));
+    border: 1px solid color-mix(in srgb, var(--ok) 55%, transparent);
+    border-radius: 6px; padding: 0.5rem 0.6rem; margin-bottom: 0.6rem;
+  }
+  .lib-own-title { font-size: 0.72rem; font-weight: 600; color: var(--ok); margin-bottom: 0.4rem; }
+  .own-btn {
+    display: inline-block; font: inherit; font-size: 0.74rem; cursor: pointer; margin: 0;
+    padding: 0.3rem 0.7rem; border-radius: 5px; text-transform: none; letter-spacing: 0;
+    background: transparent; color: var(--ok); border: 1px solid color-mix(in srgb, var(--ok) 70%, transparent);
+  }
+  .own-btn:hover { background: color-mix(in srgb, var(--ok) 22%, transparent); color: var(--text); }
+  .lib-own-note { font-size: 0.66rem; color: var(--text-dim); margin-top: 0.4rem; line-height: 1.4; }
+  .lib-own-note a { color: var(--ok); }
+  .lib-own-result { font-size: 0.72rem; color: var(--text); margin-top: 0.35rem; }
+  .hint { font-size: 0.7rem; color: var(--text-faint); align-self: center; }
+  .lib-group { margin-bottom: 0.3rem; }
+  .lib-group.depth-1 { margin-left: 0.8rem; }
+  .lib-group-head {
+    display: flex; align-items: center; gap: 0.4rem; width: 100%; text-align: left; cursor: pointer;
+    background: var(--panel); color: var(--text); border: 1px solid var(--panel-border); border-radius: 6px;
+    padding: 0.4rem 0.6rem; font: inherit; font-size: 0.82rem; font-weight: 600;
+  }
+  .depth-1 > .lib-group-head { font-size: 0.76rem; font-weight: 500; color: var(--text-dim); background: var(--panel-2); }
+  .lib-group-head.open { border-color: var(--accent); }
+  .lib-group-count { margin-left: auto; color: var(--text-faint); font-weight: 400; font-size: 0.72rem; }
+  .caret { width: 0.8rem; color: var(--accent); }
+  .lib-group > .lib-item { margin: 0.3rem 0 0.3rem 0.8rem; }
+  .tag-picker { margin-top: 0.45rem; padding: 0.45rem; border: 1px solid var(--accent); border-radius: 6px; background: var(--panel-2); }
+  .tag-picker-list { display: flex; flex-wrap: wrap; gap: 0.2rem 0.8rem; margin-bottom: 0.4rem; font-size: 0.76rem; }
+  .tag-picker-list label { display: flex; align-items: center; gap: 0.25rem; text-transform: none; letter-spacing: 0; font-size: 0.76rem; color: var(--text); margin: 0; }
+  .tag-picker-new { display: flex; gap: 0.3rem; }
+  .tag-picker-new .tag-input { flex: 1; min-width: 0; }
+  .lib-tags-gap { flex-basis: 100%; height: 0; }
+  .lib-count { font-size: 0.68rem; color: var(--text-faint); margin: 0.4rem 0 0.3rem; }
+  .lib-item {
+    background: var(--panel); border: 1px solid var(--panel-border); border-radius: 6px;
+    padding: 0.45rem 0.55rem; margin-bottom: 0.35rem;
+  }
+  .lib-head { display: flex; align-items: center; gap: 0.45rem; }
+  .lib-name { font-weight: 700; font-size: 0.86rem; cursor: pointer; flex: 1; min-width: 0; }
+  .lib-name:hover { color: var(--accent); }
+  .lib-kind { font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
+  .lib-sub { font-size: 0.7rem; color: var(--text-dim); margin: 0.15rem 0 0.25rem; }
+  .lib-item-tags { display: flex; flex-wrap: wrap; gap: 0.2rem; align-items: center; }
+  .chip { font-size: 0.6rem; padding: 0.05rem 0.4rem; border-radius: 999px; border: 1px solid var(--panel-border); color: var(--text-faint); }
+  .chip.own { color: var(--text-dim); border-style: dashed; }
+  .chip button { background: none; border: none; color: inherit; cursor: pointer; padding: 0 0 0 0.2rem; font: inherit; }
+  .lib-buttons { display: flex; gap: 0.3rem; margin-left: auto; }
+  .lib-more { text-align: center; margin: 0.5rem 0; }
+  .creature-stats { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.4rem 0; }
+  .creature-attack { font-size: 0.78rem; margin: 0.25rem 0; line-height: 1.4; }
   .site-back { margin: 0 0 1rem; font-size: 0.85rem; }
   .site-back a { color: var(--text-dim, #8fadbe); text-decoration: none; }
   .site-back a:hover { text-decoration: underline; }
@@ -348,22 +422,58 @@
 <h1><img src="https://feralucce.github.io/20_Below_Roster/icon.svg" alt="" width="20" height="20" /> 20 Below Battle Tracker</h1>
 <p class="site-back"><a href="https://20belowrpg.com/home.html" target="_blank" rel="noopener">&larr; 20 Below</a></p>
 
-<div id="dropZone" class="drop-zone">
-  <label class="file-btn" for="addFile">Add character JSON(s)&hellip;</label>
-  <input type="file" id="addFile" accept="application/json,.json,image/*" multiple />
-  <label class="file-btn secondary" for="addFolder">&hellip;or pick a whole folder</label>
-  <input type="file" id="addFolder" webkitdirectory directory multiple />
-</div>
-<div class="empty-note" style="margin-top:-0.3rem;margin-bottom:0.6rem">Export characters from the <a href="https://20belowrpg.com/app/" target="_blank" style="color:var(--accent)">20 Below character creator</a> (Sheet step &rarr; Save/Export) - players and NPCs both work. Read-only, no editing here.</div>
+<nav class="views">
+  <button type="button" class="view-btn on" id="viewLibrary">Catalog</button>
+  <button type="button" class="view-btn" id="viewEncounter">Encounter <span id="encCount"></span></button>
+</nav>
 
-<div id="obrNote" class="obr-note" style="display:none"></div>
+<!-- The Catalog: the bundled bestiary and the GM's own entries. -->
+<section id="libraryView">
+  <!-- Bringing your own things in comes first: it is how a GM starts. -->
+  <div class="lib-own">
+    <div class="lib-own-title">Your own characters, NPCs and creatures</div>
+    <div class="lib-actions">
+      <label class="own-btn" for="libFiles">Import files</label>
+      <input type="file" id="libFiles" accept="application/json,.json,image/*" multiple />
+      <label class="own-btn" for="libFolder">Import a folder</label>
+      <input type="file" id="libFolder" webkitdirectory directory multiple />
+      <button type="button" class="own-btn" id="libExport">Export</button>
+    </div>
+    <div class="lib-own-note">Characters and NPCs come from the <a href="https://20belowrpg.com/app/" target="_blank">Character Creator</a>. A folder's name becomes a tag on what came out of it. An export imports back in on any machine.</div>
+    <div id="libNote" class="lib-own-result" style="display:none"></div>
+  </div>
+  <div class="lib-bar">
+    <input type="search" id="libSearch" placeholder="Search names, tags and descriptions" autocomplete="off" />
+    <select id="libSource" aria-label="Show">
+      <option value="all">Everything</option>
+      <option value="bestiary">Bestiary</option>
+      <option value="mine">My entries</option>
+    </select>
+  </div>
+  <div id="libTags" class="lib-tags"></div>
+  <div id="libCount" class="lib-count"></div>
+  <div id="libList" class="lib-list"></div>
+</section>
 
-<div id="combatBar" class="combat-bar"></div>
+<!-- The encounter: who is in this fight, and the fight itself. -->
+<section id="encounterView" style="display:none">
+  <div id="dropZone" class="drop-zone">
+    <label class="file-btn" for="addFile">Add character JSON(s)&hellip;</label>
+    <input type="file" id="addFile" accept="application/json,.json,image/*" multiple />
+    <label class="file-btn secondary" for="addFolder">&hellip;or pick a whole folder</label>
+    <input type="file" id="addFolder" webkitdirectory directory multiple />
+  </div>
+  <div class="empty-note" style="margin-top:-0.3rem;margin-bottom:0.6rem">Or add from the Catalog. Anything added here is kept in your entries too.</div>
 
-<div id="rosterList" class="roster-list"><div class="list-empty">No characters loaded yet.</div></div>
+  <div id="obrNote" class="obr-note" style="display:none"></div>
+
+  <div id="combatBar" class="combat-bar"></div>
+
+  <div id="rosterList" class="roster-list"><div class="list-empty">Nobody in this encounter yet. Add them from the Catalog.</div></div>
+</section>
 
 <div id="detail" style="display:none" class="detail-wrap">
-  <button class="detail-back" id="backBtn">&larr; Back to roster</button>
+  <button class="detail-back" id="backBtn">&larr; Back</button>
   <div id="charView"></div>
 </div>
 
@@ -385,6 +495,7 @@
   // so all three can't drift on how a round actually runs.
   import * as engine from "../app/combat/model.js";
   import * as media from "../app/media.js";
+  import * as library from "../app/combat/library.js";
   const { ROLES, BRACKETS, computeFiguredCharacteristics } = engine;
 
   // ---- Owlbear bridge ----
@@ -732,6 +843,8 @@
   // the image arrived in the same batch: multi-selected, picked as a folder,
   // or dropped together. All three end up here.
   async function addFiles(fileList) {
+    // Kept in the catalogue as well, so nobody has to import it twice.
+    if (lib) await importFiles(fileList, { quiet: true });
     const paired = await media.pairFiles(fileList);
     if (!paired.length) return;
     let firstId = null;
@@ -767,14 +880,406 @@
     const entry = roster.find((r) => r.id === id);
     if (!entry || !entry.state) return;
     activeId = id;
-    renderCharacter(entry.state);
+    if (entry.state.creature) renderCreature(entry.state.creature, entry.state.name);
+    else renderCharacter(entry.state);
     document.getElementById("detail").style.display = "";
     renderList();
+  }
+
+  // A creature as the book prints it: what it is, its numbers, its attacks
+  // with their dice, and its Skills and Traits in the book's own words.
+  function inlineMd(text) {
+    return escapeHtml(text || "")
+      .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+      .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1");
+  }
+  function renderCreature(c, shownName) {
+    const s = c.stats || {};
+    const order = ["Soak", "Attack", "Defense", "Social Defense", "Mental Defense", "Health Levels", "Movement Rate",
+      "Potence", "Initiative", "Psyche", "Ferocity", "Presence", "Stamina"];
+    const chips = order.filter((k) => s[k] != null).map((k) =>
+      `<div class="stat-chip"><div class="v">${s[k]}${k === "Movement Rate" ? "m" : ""}</div><div class="k">${escapeHtml(k)}</div></div>`).join("");
+    const attacks = (c.attacks || []).map((a) =>
+      `<div class="creature-attack"><strong>${escapeHtml(a.name)}</strong>${a.when ? ` (${escapeHtml(a.when)})` : ""}: `
+      + `${a.dice} ${a.dice === 1 ? "die" : "dice"}${a.range ? `, ${escapeHtml(a.range)}` : ""} &middot; ${a.kind}, against ${a.wall}</div>`).join("");
+    const tags = (c.tags || []).map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join("");
+    document.getElementById("charView").innerHTML = `
+      <div class="char-header">
+        <div>
+          <div class="char-name">${escapeHtml(shownName || c.name)}</div>
+          <div class="tag-list" style="margin-top:0.3rem">${tags}</div>
+        </div>
+      </div>
+      ${c.description ? `<div class="char-section" style="margin-top:0"><div class="item-line" style="line-height:1.5">${inlineMd(c.description)}</div></div>` : ""}
+      <div class="char-section"><div class="char-section-title">Stat block</div><div class="stat-grid">${chips}</div></div>
+      ${attacks ? `<div class="char-section"><div class="char-section-title">Attacks</div>${attacks}</div>` : ""}
+      ${c.notes ? `<div class="char-section"><div class="char-section-title">Also</div><div class="item-line" style="line-height:1.5">${inlineMd(c.notes).replace(/\n/g, "<br>")}</div></div>` : ""}
+      ${c.skills ? `<div class="char-section"><div class="char-section-title">Notable Skills</div><div class="item-line">${inlineMd(c.skills)}</div></div>` : ""}
+      ${c.traits ? `<div class="char-section"><div class="char-section-title">Traits</div><div class="item-line" style="line-height:1.5">${inlineMd(c.traits)}</div></div>` : ""}
+    `;
+  }
+
+  // ---- The library ----
+  //
+  // The bundled bestiary (the rules' own creatures, tagged by pack) and the
+  // GM's catalogue (anything they import, kept in this browser), searched
+  // and filtered by tags, and added to the encounter from here.
+  let bestiary = [];
+  let mine = [];
+  let bundledTags = {};
+  let lib = null;
+  const filter = { query: "", tags: [], source: "all" };
+
+  // The extension ships the bestiary baked into bestiary.json. On the site
+  // and the desktop there is no such file, and the creatures are read live
+  // from the rules, so a stat fixed there is fixed here.
+  async function loadBestiary() {
+    try {
+      const res = await fetch("./bestiary.json", { cache: "no-cache" });
+      if (res.ok) return await res.json();
+    } catch (e) {}
+    const parse = await import("../app/parse/creatures.js");
+    return parse.loadBestiary(async (file) => {
+      const res = await fetch(`../rules/${file}`, { cache: "no-cache" });
+      if (!res.ok) throw new Error(`${file}: ${res.status}`);
+      return res.text();
+    });
+  }
+
+  function libNote(text) {
+    const note = document.getElementById("libNote");
+    note.textContent = text || "";
+    note.style.display = text ? "" : "none";
+  }
+
+  function entryById(id) {
+    return bestiary.find((c) => c.id === id) || mine.find((e) => e.id === id);
+  }
+
+  async function saveBundledTags() {
+    await lib.setMeta("bundledTags", bundledTags);
+  }
+
+  async function addTag(id, tag) {
+    const t = tag.trim();
+    if (!t) return;
+    if (id.startsWith("bestiary:")) {
+      const creature = bestiary.find((c) => c.id === id);
+      if ((creature.tags || []).includes(t)) return;
+      bundledTags[id] = [...new Set([...(bundledTags[id] || []), t])];
+      await saveBundledTags();
+    } else {
+      const e = mine.find((x) => x.id === id);
+      e.tags = [...new Set([...(e.tags || []), t])];
+      await lib.put(e);
+    }
+    renderLibrary();
+  }
+
+  async function removeTag(id, tag) {
+    if (id.startsWith("bestiary:")) {
+      bundledTags[id] = (bundledTags[id] || []).filter((t) => t !== tag);
+      if (!bundledTags[id].length) delete bundledTags[id];
+      await saveBundledTags();
+    } else {
+      const e = mine.find((x) => x.id === id);
+      e.tags = (e.tags || []).filter((t) => t !== tag);
+      await lib.put(e);
+    }
+    filter.tags = filter.tags.filter((t) => library.allTags(bestiary, mine, bundledTags).own.includes(t)
+      || library.allTags(bestiary, mine, bundledTags).fixed.includes(t));
+    renderLibrary();
+  }
+
+  async function deleteMine(id) {
+    const e = mine.find((x) => x.id === id);
+    if (!e || !confirm(`Remove ${e.name} from your entries? Anything already in the encounter stays there.`)) return;
+    await lib.remove(id);
+    mine = mine.filter((x) => x.id !== id);
+    renderLibrary();
+  }
+
+  // Into the encounter: a character as it is, a creature through the
+  // adapter that lets the combat engine count its printed numbers. A
+  // second of the same thing is numbered, so the turn order can tell a
+  // pack of coyotes apart.
+  function addToEncounter(id) {
+    const entry = entryById(id);
+    if (!entry) return;
+    const taken = roster.filter((r) => r.state).map((r) => r.state.name || "");
+    const creature = entry.kind === "creature" || entry.id.startsWith("bestiary:");
+    const source = creature ? (entry.data || entry) : entry.data;
+    const name = library.uniqueName(source.name || "Unnamed", taken);
+    const state = creature ? library.creatureState(source, name) : { ...source, name };
+    const rid = `c${Date.now()}${Math.random().toString(36).slice(2, 7)}`;
+    const r = parseEntry(rid, JSON.stringify(state), entry.icon || media.makePlaceholder(name, 128));
+    roster.push(r);
+    saveRoster();
+    renderAll();
+    libNote(`${name} added to the encounter.`);
+    updateEncCount();
+  }
+
+  // What came in, from where: a folder's name becomes a tag on everything
+  // that came out of it, so "Session 3/cultist.json" arrives tagged.
+  function folderTag(file) {
+    const parts = (file.webkitRelativePath || "").split("/");
+    return parts.length > 1 ? parts[parts.length - 2] : null;
+  }
+
+  async function importFiles(fileList, { quiet = false } = {}) {
+    const files = [...fileList];
+    const folders = new Map(files.map((f) => [f.name, folderTag(f)]));
+    const paired = await media.pairFiles(files);
+    let added = 0;
+    let merged = 0;
+    const failed = [];
+    const newEntries = [];
+    for (const p of paired) {
+      let data;
+      try { data = JSON.parse(p.text); } catch (e) { failed.push(p.filename); continue; }
+      const kind = library.classify(data);
+      if (kind === "backup") {
+        const got = library.mergeBackup(data, bundledTags);
+        for (const e of got.entries) {
+          await lib.put(e);
+          mine = mine.filter((x) => x.id !== e.id).concat(e);
+          merged += 1;
+        }
+        bundledTags = got.bundledTags;
+        await saveBundledTags();
+        continue;
+      }
+      if (!kind) { failed.push(p.filename); continue; }
+      const e = library.mineEntry(data, { icon: p.icon, tags: [folders.get(p.filename)] });
+      await lib.put(e);
+      mine.push(e);
+      newEntries.push(e);
+      added += 1;
+    }
+    if (!quiet) {
+      const bits = [];
+      if (added) bits.push(`${added} added to your entries`);
+      if (merged) bits.push(`${merged} restored from a backup`);
+      if (failed.length) bits.push(`couldn't read ${failed.join(", ")}`);
+      libNote(bits.join("; ") + (bits.length ? "." : "Nothing to import."));
+    }
+    renderLibrary();
+    return newEntries;
+  }
+
+  function exportCatalogue() {
+    const data = library.exportLibrary(mine, bundledTags);
+    const blob = new Blob([JSON.stringify(data)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `20-below-catalog-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  }
+
+  function summary(entry) {
+    if (entry.kind === "creature" || entry.id.startsWith("bestiary:")) {
+      const c = entry.data || entry;
+      const s = c.stats || {};
+      const atk = (c.attacks || [])[0];
+      return [`Attack ${s.Attack ?? "-"}`, `Defense ${s.Defense ?? "-"}`, `Soak ${s.Soak ?? "-"}`,
+        `Health Levels ${s["Health Levels"] ?? "-"}`,
+        atk ? `${atk.name} ${atk.dice} ${atk.dice === 1 ? "die" : "dice"}` : null].filter(Boolean).join(" · ");
+    }
+    return entry.data.concept || "Character";
+  }
+
+  // The Catalog opens as a handful of closed groups with counts, not two
+  // hundred rows: the GM's own entries, then each pack, the two animal
+  // packs split again by where the animals live. Searching, or picking one
+  // of the GM's tags, opens just the groups holding a match.
+  const openGroups = new Set();
+  let tagging = null; // the entry whose Add Tag picker is open
+
+  function groupsOf(found) {
+    const groups = [];
+    const add = (key, title, entries, sub = null) => {
+      if (entries.length) groups.push({ key, title, entries, sub });
+    };
+    add("mine", "My entries", found.filter((e) => !e.id.startsWith("bestiary:")));
+    ["Mundane Beasts", "Beast Variants", "Cryptids", "Nightmare Creatures"].forEach((pack) => {
+      const inPack = found.filter((e) => e.id.startsWith("bestiary:") && e.pack === pack);
+      // The animals are many and live somewhere; the rest are few.
+      const places = [...new Set(inPack.map((e) => (e.tags || []).find((t) => ![pack, "Dire", "Giant", "Mutated"].includes(t))).filter(Boolean))];
+      const sub = places.length > 1
+        ? places.map((p) => ({ key: `${pack}/${p}`, title: p, entries: inPack.filter((e) => (e.tags || []).includes(p)) }))
+        : null;
+      add(pack, pack, inPack, sub);
+    });
+    return groups;
+  }
+
+  function entryRow(e) {
+    const { own: yours } = library.tagsOf(e, bundledTags);
+    const isMine = !e.id.startsWith("bestiary:");
+    const div = document.createElement("div");
+    div.className = "lib-item";
+    div.innerHTML = `
+      <div class="lib-head">
+        ${e.icon ? `<img class="ri-icon" src="${e.icon}" alt="" />` : ""}
+        <span class="lib-name" data-open title="See everything on ${escapeHtml(e.name)}">${escapeHtml(e.name)}</span>
+        <div class="lib-buttons">
+          <button type="button" class="btn" data-tag>Add Tag</button>
+          <button type="button" class="btn primary" data-add title="Put ${escapeHtml(e.name)} in the encounter">Add to encounter</button>
+          ${isMine ? `<button type="button" class="btn danger" data-del>Remove</button>` : ""}
+        </div>
+      </div>
+      <div class="lib-sub">${escapeHtml(summary(e))}</div>
+      ${yours.length ? `<div class="lib-item-tags">${yours.map((t) =>
+        `<span class="chip own">${escapeHtml(t)}<button type="button" data-untag="${escapeHtml(t)}" title="Take this tag off">&times;</button></span>`).join("")}</div>` : ""}`;
+    div.querySelector("[data-open]").addEventListener("click", () => openEntry(e));
+    div.querySelector("[data-add]").addEventListener("click", () => addToEncounter(e.id));
+    div.querySelector("[data-del]")?.addEventListener("click", () => deleteMine(e.id));
+    div.querySelector("[data-tag]").addEventListener("click", () => {
+      tagging = tagging === e.id ? null : e.id;
+      renderLibrary();
+    });
+    div.querySelectorAll("[data-untag]").forEach((b) => b.addEventListener("click", () => removeTag(e.id, b.dataset.untag)));
+    if (tagging === e.id) div.appendChild(tagPicker(e));
+    return div;
+  }
+
+  // Add Tag: every tag the GM has made, to tick on or off, and a box for a
+  // new one. Pack tags are the book's and are not offered.
+  function tagPicker(e) {
+    const { own: yours } = library.tagsOf(e, bundledTags);
+    const { own: every } = library.allTags(bestiary, mine, bundledTags);
+    const box = document.createElement("div");
+    box.className = "tag-picker";
+    box.innerHTML = `
+      ${every.length ? `<div class="tag-picker-list">${every.map((t) =>
+        `<label><input type="checkbox" data-t="${escapeHtml(t)}" ${yours.includes(t) ? "checked" : ""} /> ${escapeHtml(t)}</label>`).join("")}</div>`
+        : `<div class="hint">No tags yet. Make the first one:</div>`}
+      <div class="tag-picker-new">
+        <input type="text" class="tag-input" placeholder="New tag, e.g. Session 3" data-new />
+        <button type="button" class="btn primary" data-make>Add</button>
+        <button type="button" class="btn" data-done>Done</button>
+      </div>`;
+    box.querySelectorAll("[data-t]").forEach((c) => c.addEventListener("change", () => {
+      (c.checked ? addTag : removeTag)(e.id, c.dataset.t);
+    }));
+    const input = box.querySelector("[data-new]");
+    const make = () => { if (input.value.trim()) addTag(e.id, input.value); };
+    box.querySelector("[data-make]").addEventListener("click", make);
+    input.addEventListener("keydown", (ev) => { if (ev.key === "Enter") make(); });
+    box.querySelector("[data-done]").addEventListener("click", () => { tagging = null; renderLibrary(); });
+    setTimeout(() => input.focus(), 0);
+    return box;
+  }
+
+  function groupBlock(g, depth, searching) {
+    const wrap = document.createElement("div");
+    wrap.className = `lib-group depth-${depth}`;
+    const open = searching || openGroups.has(g.key);
+    const head = document.createElement("button");
+    head.type = "button";
+    head.className = `lib-group-head${open ? " open" : ""}`;
+    head.innerHTML = `<span class="caret">${open ? "&#9662;" : "&#9656;"}</span> ${escapeHtml(g.title)} <span class="lib-group-count">${g.entries.length}</span>`;
+    head.addEventListener("click", () => {
+      if (searching) return;
+      if (openGroups.has(g.key)) openGroups.delete(g.key); else openGroups.add(g.key);
+      renderLibrary();
+    });
+    wrap.appendChild(head);
+    if (open) {
+      if (g.sub) g.sub.forEach((s) => wrap.appendChild(groupBlock(s, depth + 1, searching)));
+      else g.entries.forEach((e) => wrap.appendChild(entryRow(e)));
+    }
+    return wrap;
+  }
+
+  function renderLibrary() {
+    const { own } = library.allTags(bestiary, mine, bundledTags);
+    // Only the GM's own tags are filters: the groups already sort by pack
+    // and by where things live.
+    filter.tags = filter.tags.filter((t) => own.includes(t));
+    const tagBar = document.getElementById("libTags");
+    tagBar.innerHTML = own.length ? `<span class="hint">Your tags:</span>` : "";
+    own.forEach((t) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = `lib-tag own${filter.tags.includes(t) ? " on" : ""}`;
+      b.textContent = t;
+      b.title = filter.tags.includes(t) ? "Showing only this tag - click to show everything" : "Show only this tag";
+      b.addEventListener("click", () => {
+        filter.tags = filter.tags.includes(t) ? filter.tags.filter((x) => x !== t) : [...filter.tags, t];
+        renderLibrary();
+      });
+      tagBar.appendChild(b);
+    });
+
+    const everything = [...mine.slice().sort((a, b) => a.name.localeCompare(b.name)), ...bestiary];
+    const found = everything.filter((e) => library.matches(e, filter, bundledTags));
+    const searching = !!filter.query.trim() || filter.tags.length > 0;
+    document.getElementById("libCount").textContent = searching
+      ? `${found.length} found`
+      : `${everything.length} in the Catalog${lib && !lib.persistent ? " · this browser won't keep your entries: export them before you close" : ""}`;
+
+    const list = document.getElementById("libList");
+    list.innerHTML = "";
+    const groups = groupsOf(found);
+    if (!groups.length) list.innerHTML = `<div class="list-empty">Nothing matches.</div>`;
+    groups.forEach((g) => list.appendChild(groupBlock(g, 0, searching)));
+  }
+
+  function openEntry(e) {
+    activeId = null;
+    if (e.kind === "creature" || e.id.startsWith("bestiary:")) renderCreature(e.data || e);
+    else renderCharacter(e.data);
+    document.getElementById("detail").style.display = "";
+    document.getElementById("detail").scrollIntoView({ block: "start" });
+  }
+
+  function updateEncCount() {
+    const n = roster.filter((r) => r.state).length;
+    document.getElementById("encCount").textContent = n ? `(${n})` : "";
+  }
+
+  function showView(which) {
+    document.getElementById("libraryView").style.display = which === "library" ? "" : "none";
+    document.getElementById("encounterView").style.display = which === "encounter" ? "" : "none";
+    document.getElementById("viewLibrary").classList.toggle("on", which === "library");
+    document.getElementById("viewEncounter").classList.toggle("on", which === "encounter");
+    document.getElementById("detail").style.display = "none";
+    activeId = null;
+    try { localStorage.setItem("twentybelow-roster.view", which); } catch (e) {}
+    if (which === "encounter") renderList();
+  }
+
+  async function startLibrary() {
+    lib = await library.openLibrary();
+    mine = await lib.all();
+    bundledTags = await lib.getMeta("bundledTags", {});
+    // A tracker that already had characters loaded, from before there was
+    // a library: they are the GM's, so they go in the catalogue once.
+    if (!(await lib.getMeta("rosterMigrated", false))) {
+      for (const r of roster.filter((x) => x.state && !x.state.creature)) {
+        const e = library.mineEntry(r.state, { icon: r.icon });
+        await lib.put(e);
+        mine.push(e);
+      }
+      await lib.setMeta("rosterMigrated", true);
+    }
+    renderLibrary();
+    try {
+      bestiary = await loadBestiary();
+    } catch (err) {
+      libNote(`The bestiary couldn't be loaded (${err.message}). Your own entries still work.`);
+    }
+    renderLibrary();
   }
 
   function renderAll() {
     renderCombatBar();
     renderList();
+    updateEncCount();
   }
 
   function renderCombatBar() {
@@ -855,17 +1360,19 @@
       : `<span class="mini-label">Init</span><input class="init-box" type="number" data-init="${r.id}" value="${e.initiative ?? ""}" />
          <button class="btn" data-roll="${r.id}" title="Roll 1d10 + Initiative">Roll</button>`;
 
+    // A creature in the book has no Ki pool, so no Ki and no bump.
+    const creature = !!r.state.creature;
     const brackets = declaring
       ? BRACKETS.map((b) => `<button class="btn${e.bracket === b ? " on" : ""}" data-bracket="${r.id}" data-b="${b}">${b}</button>`).join("")
-        + `<button class="btn" data-bump="${r.id}" title="Spend 1 Ki to move up a bracket" ${
-            !e.bracket || e.currentKi <= 0 || e.bracket === "Fast" ? "disabled" : ""}>Bump (1 Ki)</button>`
+        + (creature ? "" : `<button class="btn" data-bump="${r.id}" title="Spend 1 Ki to move up a bracket" ${
+            !e.bracket || e.currentKi <= 0 || e.bracket === "Fast" ? "disabled" : ""}>Bump (1 Ki)</button>`)
       : "";
 
     const tracks = combat.started
       ? [["Health", e.currentHealth, f["Health Levels"]],
          ["Poise", e.currentPoise, f.Poise],
          ["Sanity", e.currentSanity, f.Sanity],
-         ["Ki", e.currentKi, f.Ki]].map(([name, cur, max]) => {
+         ...(creature ? [] : [["Ki", e.currentKi, f.Ki]])].map(([name, cur, max]) => {
           const status = trackStatus(name, cur, r);
           const cls = cur <= 0 ? "down" : cur < max ? "hurt" : "";
           return `<div class="track ${cls}">
@@ -1058,6 +1565,24 @@
     renderList();
   });
 
+  document.getElementById("viewLibrary").addEventListener("click", () => showView("library"));
+  document.getElementById("viewEncounter").addEventListener("click", () => showView("encounter"));
+  document.getElementById("libSearch").addEventListener("input", (e) => {
+    filter.query = e.target.value;
+    renderLibrary();
+  });
+  document.getElementById("libSource").addEventListener("change", (e) => {
+    filter.source = e.target.value;
+    renderLibrary();
+  });
+  ["libFiles", "libFolder"].forEach((id) => {
+    document.getElementById(id).addEventListener("change", async (e) => {
+      await importFiles(e.target.files);
+      e.target.value = "";
+    });
+  });
+  document.getElementById("libExport").addEventListener("click", exportCatalogue);
+
   // Load persisted roster
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -1084,6 +1609,10 @@
   } catch (e) {}
 
   renderAll();
+  let startView = "library";
+  try { startView = localStorage.getItem("twentybelow-roster.view") || "library"; } catch (e) {}
+  showView(startView === "encounter" ? "encounter" : "library");
+  startLibrary();
   initOBR();
 </script>
 </body>
