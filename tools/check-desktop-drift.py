@@ -125,7 +125,7 @@ APPS = [
       "rules/adversary-index.md", "rules/cryptids.md", "rules/nightmare-creatures.md",
       "app/ui.js", "app/roller/damage.js", "app/roller/giftCheck.js",
       "app/roller/resourceCheck.js", "app/steps/roller-panel.js", "app/sheet/panels.js",
-      "app/sheet/sheet-model.js"],
+      "app/sheet/sheet-model.js", "vendor/marked.min.js"],
      # The Creator's rules are baked into the installer's rules-data.json
      # for NPCs' Skill and Gift rolls; a change there reaches the desktop
      # tracker with its next release.
@@ -318,7 +318,8 @@ def split_by_reach(name, tag, files):
 
 # The Owlbear Rodeo extensions: what each sync script copies, source ->
 # published path. Must match scripts/sync-roster.mjs and scripts/sync-playsheet.mjs.
-ROSTER_PAGE_IMPORTS = (('"../app/', '"./lib/'),)
+ROSTER_PAGE_IMPORTS = (('"../app/', '"./lib/'),
+                       ('"../vendor/marked.min.js"', '"./lib/marked.min.js"'))
 
 EXTENSIONS = [
     ("Battle Tracker (Owlbear)", "feralucce/20_Below_Roster", "20 Below Roster",

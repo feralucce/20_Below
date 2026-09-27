@@ -69,6 +69,9 @@ if (!page.includes(SOURCE_IMPORT)) {
 // parser, sits under lib/ as it sits under app/. Must match
 // ROSTER_PAGE_IMPORTS in tools/check-desktop-drift.py.
 page = page.replaceAll('"../app/', '"./lib/');
+// The Markdown renderer a Gift's explanation is written in.
+page = page.replace('"../vendor/marked.min.js"', '"./lib/marked.min.js"');
+copyFileSync(join(repo, 'vendor', 'marked.min.js'), join(dest, 'lib', 'marked.min.js'));
 
 const BANNER = [
   '<!--',

@@ -41,7 +41,8 @@ $files = @(
     "app\roller\resourceCheck.js",
     "app\steps\roller-panel.js",
     "app\sheet\panels.js",
-    "app\sheet\sheet-model.js"
+    "app\sheet\sheet-model.js",
+    "vendor\marked.min.js"
 )
 
 foreach ($f in $files) {

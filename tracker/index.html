@@ -466,6 +466,20 @@
   .log-row.bad .log-head { color: var(--danger); }
   .secret-mark { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold);
     border: 1px solid var(--gold); border-radius: 999px; padding: 0 0.35rem; }
+  .el-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 0.3rem; }
+  .el-card { border: 1px solid var(--c); border-radius: 5px; padding: 0.25rem 0.35rem; background: var(--panel-2); }
+  .el-head { display: flex; justify-content: space-between; color: var(--c); font-size: 0.74rem; font-weight: 700; }
+  .el-head strong { color: var(--text); font-size: 1rem; }
+  .el-card .sub-row { font-size: 0.66rem; }
+  .pool-line { font-size: 0.74rem; color: var(--text-dim); margin-top: 0.3rem; }
+  .pool-line strong { color: var(--text); }
+  .sheet-row { display: flex; justify-content: space-between; gap: 0.6rem; font-size: 0.76rem; padding: 0.18rem 0;
+    border-bottom: 1px solid var(--panel-border); color: var(--text); }
+  .sheet-row-v { color: var(--text-dim); text-align: right; }
+  .el-tag { font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; margin-left: 0.3rem; }
+  .gear-list { margin: 0; padding-left: 1.1rem; font-size: 0.76rem; color: var(--text-dim); }
+  .gift-info-list { padding-left: 1.1rem; }
+  .gift-info-text { font-size: 0.76rem; color: var(--text-dim); }
   .animal-label { margin: 0.45rem 0 0.15rem 0.9rem; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
   .heading-tools { display: flex; gap: 0.3rem; justify-content: flex-end; margin: 0.3rem 0; }
   .heading-empty { margin: 0.2rem 0 0.4rem 0.8rem; }
@@ -499,6 +513,7 @@
 </style>
 </head>
 <body>
+<script src="../vendor/marked.min.js"></script>
 
 <h1><img src="https://feralucce.github.io/20_Below_Roster/icon.svg" alt="" width="20" height="20" /> 20 Below Battle Tracker</h1>
 <p class="site-back"><a href="https://20belowrpg.com/home.html" target="_blank" rel="noopener">&larr; 20 Below</a></p>
@@ -656,8 +671,9 @@
   import * as engine from "../app/combat/model.js";
   import * as media from "../app/media.js";
   import * as library from "../app/combat/library.js";
-  import { creatureRollPanel, rollDicePanel } from "../app/sheet/panels.js";
-  import { splitGear } from "../app/sheet/sheet-model.js";
+  import { creatureRollPanel, rollDicePanel, giftInfoPanel } from "../app/sheet/panels.js";
+  import { splitGear, sheetContext, named, SKILL_ELEMENT_COLOURS } from "../app/sheet/sheet-model.js";
+  import { skillTierName, boonNotes, flawNotes, giftNotes, adderLabels, optionWithChoice } from "../app/state.js";
   const { ROLES, BRACKETS, computeFiguredCharacteristics } = engine;
 
   // ---- Owlbear bridge ----
@@ -1039,12 +1055,10 @@
     const entry = roster.find((r) => r.id === id);
     if (!entry || !entry.state) return;
     activeId = id;
-    if (entry.state.creature) {
-      const e = combatEntry(entry);
-      renderCreature(entry.state.creature, entry.state.name,
-        { health: e.currentHealth, poise: e.currentPoise, sanity: e.currentSanity });
-    }
-    else renderCharacter(entry.state);
+    const e = combatEntry(entry);
+    const live = { health: e.currentHealth, poise: e.currentPoise, sanity: e.currentSanity, ki: e.currentKi };
+    if (entry.state.creature) renderCreature(entry.state.creature, entry.state.name, live);
+    else renderCharacterSheet(entry.state, { ...live, entry });
     document.getElementById("detail").style.display = "";
     renderList();
   }
@@ -1129,6 +1143,119 @@
       ${section("Notable Skills", skills ? `<div class="tag-list">${skills}</div>` : "")}
       ${section("Traits", traits)}
     `;
+  }
+
+  // A character laid out the way their sheet is, and the way a creature's
+  // stat block now is: who they are, Elements, the figured numbers, their
+  // Vitals and pools, Skills, Boons, Flaws, Resources, Gifts, gear and
+  // notes. From the encounter, `live` holds where they stand in the fight;
+  // from the Catalog it is their file. Needs the Creator's rules; until
+  // they load, the plain list shows instead.
+  function renderCharacterSheet(state, live = null) {
+    if (!rulesData) { renderCharacter(state); return; }
+    let ctx;
+    try { ctx = sheetContext(state, rulesData); } catch (err) { renderCharacter(state); return; }
+    const { figured } = ctx;
+    const r = live?.entry || null;
+    const section = (title, body) => body ? `<div class="char-section"><div class="char-section-title">${title}</div>${body}</div>` : "";
+    const box = (label, value) => `<div class="stat-chip"><div class="v">${value}</div><div class="k">${escapeHtml(label)}</div></div>`;
+
+    const nature = state.nature?.picked || state.nature?.custom?.label || "";
+    const elements = (rulesData.attributes || []).map((a) => `
+      <div class="el-card" style="--c:${SKILL_ELEMENT_COLOURS[a.name] || "#8fadbe"}">
+        <div class="el-head"><span>${escapeHtml(a.name)}</span><strong>${state.attributes?.[a.name] ?? 0}</strong></div>
+        ${(a.splitsInto || []).map((sub) => `<div class="sub-row"><span>${escapeHtml(sub)}</span><strong>${state.subStats?.[sub] ?? 0}</strong></div>`).join("")}
+      </div>`).join("");
+
+    const numbers = [box("Defense", figured.Defense), box("Social Def", figured["Social Defense"]),
+      box("Mental Def", figured["Mental Defense"]), box("Movement", `${figured["Movement Rate"]}m`),
+      box("Carry", figured["Carrying Capacity"])].join("");
+
+    // Where they stand: the fight's numbers from the encounter, the file's
+    // from the Catalog.
+    const vital = (label, cur, max, colour) => {
+      const now = cur ?? max;
+      const pips = Array.from({ length: Math.max(0, max) }, (_, i) =>
+        `<span class="pip${i < now ? " on" : ""}" style="--c:${colour}"></span>`).join("");
+      return `<div class="vital-row"><span class="vital-name" style="color:${colour}">${label}</span>
+        <span class="pips">${pips}</span><span class="vital-count">${now} / ${max}</span></div>`;
+    };
+    const exhausted = r ? engine.exhaustedOf(combat, r) : (Number(state.exhausted) || 0);
+    const vitals = vital("Health", live ? live.health : state.currentHealth, figured["Health Levels"], "#6FBF73")
+      + vital("Poise", live ? live.poise : state.currentPoise, figured.Poise, "#E0A85C")
+      + vital("Sanity", live ? live.sanity : state.currentSanity, figured.Sanity, "#6FB8E0")
+      + `<div class="pool-line">Ki <strong>${live ? live.ki : (state.currentKi ?? figured.Ki)} / ${figured.Ki}</strong>
+         &middot; Fate Tokens <strong>${state.currentFateTokens ?? 0}</strong>
+         &middot; Exhausted <strong>${exhausted}</strong>${exhausted ? ` <span class="exh-note">${engine.EXHAUSTED_EFFECTS.slice(1, exhausted + 1).join("; ")}</span>` : ""}</div>`;
+
+    const row = (name, value) => `<div class="sheet-row"><span>${name}</span><span class="sheet-row-v">${value}</span></div>`;
+    const skills = ctx.skills.map((k) => row(
+      `${escapeHtml(k.name)}${k.joat ? "" : ` <span class="el-tag" style="color:${SKILL_ELEMENT_COLOURS[k.element] || "#8fadbe"}">${escapeHtml(k.retired ? "Retired" : (SKILL_ELEMENT_COLOURS[k.element] ? k.element : "Any"))}</span>`}`,
+      escapeHtml(k.retired ? "" : skillTierName(rulesData, k.tier)))).join("");
+    const boons = (state.boons || []).map((b) => row(escapeHtml(named(b.name, boonNotes(b))), `${b.points} pts`)).join("");
+    const flaws = ctx.flaws.map((f) => row(escapeHtml(named(f.name, flawNotes(f))), `Level ${f.level}`)).join("");
+    const resources = ctx.resources.map((x) => row(escapeHtml(x.name),
+      x.zeroed ? "spent" : x.now !== x.level ? `Level ${x.now} (of ${x.level})` : `Level ${x.level}`)).join("");
+
+    const gifts = ctx.gifts.map((g, i) => {
+      const adders = adderLabels(g.adders).map((l) => optionWithChoice(g, l, l.replace(/ ×\d+$/, "")));
+      const ki = ctx.giftKi(g);
+      return `<div class="trait">
+        <div class="trait-name">${escapeHtml(named(g.name, giftNotes(g)))} <span class="hint">Level ${g.level}${ki ? ` &middot; ${ki} Ki` : ""}</span></div>
+        <div class="trait-text">${escapeHtml(ctx.giftText(g))}</div>
+        ${adders.length ? `<div class="trait-text"><strong>Adders:</strong> ${escapeHtml(adders.join(", "))}</div>` : ""}
+        ${(g.limiters || []).length ? `<div class="trait-text"><strong>Limiters:</strong> ${escapeHtml(g.limiters.map((l) => optionWithChoice(g, l)).join(", "))}</div>` : ""}
+        <button type="button" class="btn" data-gift="${i}">What it does</button>
+      </div>`;
+    }).join("");
+
+    const weapons = ctx.weapons.map((w) => `<tr><td><strong>${escapeHtml(w.name)}</strong></td><td>${escapeHtml(w.damage)}</td>
+      <td>${escapeHtml(w.range || "")}</td><td>${escapeHtml(w.ammo || "")}</td></tr>`).join("");
+    const armour = ctx.armour.map((a) => {
+      const left = r ? engine.armourLeft(combat, r, a.key, a.health) : a.current;
+      return row(`${escapeHtml(a.name)} <span class="hint">Hardness ${escapeHtml(a.hardness)}</span>`,
+        a.health ? (left === 0 ? "broken" : `${left}/${a.health} HL`) : "");
+    }).join("");
+    const gear = ctx.gear.map((g) => `<li>${escapeHtml(g)}</li>`).join("");
+    const descriptors = (rulesData.attributes || []).flatMap((a) => a.splitsInto || [])
+      .map((sub) => [sub, (state.descriptors?.[sub] || []).filter(Boolean)])
+      .filter(([, list]) => list.length)
+      .map(([sub, list]) => row(escapeHtml(sub), escapeHtml(list.join(", ")))).join("");
+
+    const view = document.getElementById("charView");
+    view.innerHTML = `
+      <div class="char-header"><div>
+        <div class="char-name">${escapeHtml(state.name || "Unnamed")}</div>
+        <div class="char-concept">${escapeHtml(state.concept || "")}${nature ? ` &middot; ${escapeHtml(nature)}` : ""}</div>
+      </div></div>
+      ${section("Elements", `<div class="el-grid">${elements}</div>`)}
+      ${section("Numbers", `<div class="stat-grid">${numbers}</div>`)}
+      ${section(live ? "Vitals now" : "Vitals", vitals)}
+      ${section("Skills", skills)}
+      ${section("Gifts", gifts)}
+      ${section("Weapons", weapons ? `<table class="attack-table"><tr><th>Weapon</th><th>Damage</th><th>Range</th><th>Ammo</th></tr>${weapons}</table>` : "")}
+      ${section("Armour", armour)}
+      ${section("Boons", boons)}
+      ${section("Flaws", flaws)}
+      ${section("Resources", resources)}
+      ${section("Equipment", gear ? `<ul class="gear-list">${gear}</ul>` : "")}
+      ${section("Descriptors", descriptors)}
+      ${section("Backstory", state.backstory ? `<div class="item-line" style="line-height:1.5">${escapeHtml(state.backstory).replace(/\n/g, "<br>")}</div>` : "")}
+      ${section("Notes", state.finishingNotes ? `<div class="item-line" style="line-height:1.5">${escapeHtml(state.finishingNotes).replace(/\n/g, "<br>")}</div>` : "")}
+    `;
+    // A Gift's whole explanation replaces the sheet in the window, with a
+    // way back to the sheet.
+    view.querySelectorAll("[data-gift]").forEach((b) => b.addEventListener("click", () => {
+      const g = ctx.gifts[Number(b.dataset.gift)];
+      view.innerHTML = "";
+      const back = document.createElement("button");
+      back.type = "button";
+      back.className = "btn";
+      back.textContent = `Back to ${state.name || "the sheet"}`;
+      back.addEventListener("click", () => renderCharacterSheet(state, live));
+      view.appendChild(back);
+      giftInfoPanel(g, rulesData).forEach((n) => view.appendChild(n));
+    }));
   }
 
   // ---- The library ----
@@ -1579,7 +1706,7 @@
   function openEntry(e) {
     activeId = null;
     if (e.kind === "creature" || e.id.startsWith("bestiary:")) renderCreature(e.data || e);
-    else renderCharacter(e.data);
+    else renderCharacterSheet(e.data);
     document.getElementById("detail").style.display = "";
   }
 
