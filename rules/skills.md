@@ -148,7 +148,7 @@ A starting Skill list scoped to a **modern-world base campaign**. **This list is
 ## A Modern Campaign's Everyman Skills
 
 
-Per [the Everyman Skills rule above](#everyman-skills), the GM sets this list per campaign - the system doesn't fix it. This is a **suggested starting list for a modern-world base campaign**: baseline competence a functional adult in the present day would plausibly have just from living in it, granted free at **Tier 2 (Trained)**. Meant to be trimmed or extended per campaign, not adopted wholesale without a look.
+Per [the Everyman Skills rule above](#everyman-skills), the GM sets this list per campaign - the system doesn't fix it. This is a **suggested starting list for a modern-world base campaign**: baseline competence a functional adult in the present day would plausibly have just from living in it, granted free at **Tier 2 (Trained)**. Meant to be trimmed or extended per campaign, not adopted wholesale without a look. **Perception is the exception: it is always on the list**, in every campaign.
 
 | Skill | Why it's baseline in a modern setting |
 |---|---|
@@ -159,6 +159,7 @@ Per [the Everyman Skills rule above](#everyman-skills), the GM sets this list pe
 | Driving | Most adults in a modern setting can operate a car. |
 | Etiquette | Enough grasp of ordinary social norms to function in public and at work. |
 | First Aid | Widely taught (school, work, licensing) - bandaging a cut, basic CPR awareness. |
+| Perception | Noticing what is in front of you - always on the list, whatever the setting. |
 | Persuasion | Everyday give-and-take - asking for a favor, making a case, haggling a little. |
 | Streetwise | A working sense of one's own neighborhood/city - what's safe, who's who, where not to go. |
 

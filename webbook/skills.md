@@ -64,9 +64,9 @@ Your mastery of a skill is reflected in Skill Tiers. Skill Tiers are a crunchy, 
 
 In every setting, there are things that any functional adult can do. These are represented by Everyman Skills. Your GM sets a list of skills that everyone in the campaign has access to automatically.
 
-Every character starts with this short list of Skills ad Tier 2 (Trained), for free.
+Every character starts with this short list of Skills at Tier 2 (Trained), for free.
 
-For a present-day game, a list of Everyman Skills might be: Athletics, Bureaucracy, Computer Use, Cooking, Driving, Etiquette, First Aid, Persuasion and Streetwise. Your GM may have a different idea of what should be on this list. This list also won’t work for a medieval high fantasy setting.
+For a present-day game, a list of Everyman Skills might be: Athletics, Bureaucracy, Computer Use, Cooking, Driving, Etiquette, First Aid, Perception, Persuasion and Streetwise. Your GM may have a different idea of what should be on this list, but Perception is always on it. This list also won’t work for a medieval high fantasy setting.
 
 ## The Skill List
 
