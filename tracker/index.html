@@ -1469,6 +1469,7 @@
     const paired = await media.pairFiles(files);
     let added = 0;
     let merged = 0;
+    let encountersIn = 0;
     const failed = [];
     const newEntries = [];
     for (const p of paired) {
@@ -1487,7 +1488,9 @@
         headings = [...new Set([...headings, ...got.headings])];
         await lib.setMeta("headings", headings);
         const had = new Set(encounters.map((x) => x.id));
-        encounters = encounters.concat(got.encounters.filter((x) => !had.has(x.id)));
+        const fresh = got.encounters.filter((x) => !had.has(x.id));
+        encountersIn += fresh.length;
+        encounters = encounters.concat(fresh);
         await lib.setMeta("encounters", encounters);
         renderEncounters();
         continue;
@@ -1503,6 +1506,7 @@
       const bits = [];
       if (added) bits.push(`${added} added to your entries`);
       if (merged) bits.push(`${merged} restored from a backup`);
+      if (encountersIn) bits.push(`${encountersIn} saved encounter${encountersIn === 1 ? "" : "s"} added (see the Encounter tab)`);
       if (failed.length) bits.push(`couldn't read ${failed.join(", ")}`);
       libNote(bits.join("; ") + (bits.length ? "." : "Nothing to import."));
     }
