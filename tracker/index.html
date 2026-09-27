@@ -319,6 +319,9 @@
   .track.down .tv { color: var(--danger); }
   .exh-note { font-size: 0.62rem; color: #e0685c; }
   .armour-line { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.3rem; }
+  .armour-name { font-size: 0.68rem; color: var(--text-dim); padding-right: 0.2rem; }
+  .armour-hard { color: var(--text-faint); font-size: 0.62rem; white-space: nowrap; }
+  .armour-piece .tv { min-width: 3.4rem; }
   .roster-item.is-down { opacity: 0.55; }
   .roster-item.is-down .ri-name { text-decoration: line-through; }
   .floor-note {
@@ -1938,7 +1941,7 @@
           const status = trackStatus(name, cur, r);
           const cls = cur <= 0 ? "down" : cur < max ? "hurt" : "";
           return `<div class="track ${cls}">
-              <span class="tk">${name === "Health" ? "HP" : name.slice(0, 3)}</span>
+              <span class="tk">${name}</span>
               <button data-adj="${r.id}" data-t="${name}" data-d="-1">&minus;</button>
               <span class="tv">${cur}/${max}</span>
               <button data-adj="${r.id}" data-t="${name}" data-d="1">+</button>
@@ -1957,7 +1960,7 @@
     const exh = engine.exhaustedOf(combat, r);
     const exhausted = combat.started
       ? `<div class="track${exh ? " down" : ""}" title="Exhausted">
-          <span class="tk">Exh</span>
+          <span class="tk">Exhausted</span>
           <button data-exh="${r.id}" data-d="-1">&minus;</button>
           <span class="tv">${exh}/5</span>
           <button data-exh="${r.id}" data-d="1">+</button>
@@ -1970,10 +1973,10 @@
     const armourHtml = armour.length
       ? `<div class="armour-line">${armour.map((a) => {
           const left = engine.armourLeft(combat, r, a.key, a.health);
-          return `<div class="track${left === 0 ? " down" : left < a.health ? " hurt" : ""}" title="${escapeHtml(a.name)}: Hardness ${escapeHtml(a.hardness)}">
-            <span class="tk">${escapeHtml(a.name.slice(0, 18))} H${escapeHtml(a.hardness)}</span>
+          return `<div class="track armour-piece${left === 0 ? " down" : left < a.health ? " hurt" : ""}">
+            <span class="armour-name">${escapeHtml(a.name)} <span class="armour-hard">Hardness ${escapeHtml(a.hardness)}</span></span>
             <button data-dent="${r.id}" data-key="${escapeHtml(a.key)}" data-hl="${a.health}" data-d="1" title="Take one Health Level">&minus;</button>
-            <span class="tv">${left === 0 ? "broken" : `${left}/${a.health}`}</span>
+            <span class="tv">${left === 0 ? "broken" : `${left}/${a.health} HL`}</span>
             <button data-dent="${r.id}" data-key="${escapeHtml(a.key)}" data-hl="${a.health}" data-d="-1" title="Repair one Health Level">+</button>
           </div>`;
         }).join("")}</div>`
