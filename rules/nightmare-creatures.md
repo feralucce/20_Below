@@ -178,7 +178,7 @@ Ordinary until the ritual finishes. The trick is stopping it before that happens
 
 **Athame** (only if cornered): 1 die, Melee
 
-**Hex** (once per Scene, requires several uninterrupted rounds to complete - GM's call on timing): a single target within Sight range takes Disadvantage on all rolls for the rest of the Scene once the ritual completes.
+**Hex** (once per Scene, requires several uninterrupted rounds to complete - GM's call on timing): a single target within sight takes Disadvantage on all rolls for the rest of the Scene once the ritual completes.
 
 **Notable Skills**: Perception 9 vs. Stealth, Athletics TN 6
 
