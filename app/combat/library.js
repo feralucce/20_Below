@@ -162,7 +162,7 @@ export function matches(entry, { query = '', tags = [], source = 'all' } = {}, b
 // backups
 // ---------------------------------------------------------------------------
 
-export function exportLibrary(mine, bundledTags, headings = []) {
+export function exportLibrary(mine, bundledTags, headings = [], encounters = []) {
   return {
     format: BACKUP_FORMAT,
     version: 1,
@@ -170,6 +170,9 @@ export function exportLibrary(mine, bundledTags, headings = []) {
     entries: mine,
     bundledTags,
     headings,
+    // Premade fights travel with everything else, which is how one made on
+    // the site or the desktop reaches the Owlbear tracker.
+    encounters,
   };
 }
 
@@ -184,7 +187,8 @@ export function mergeBackup(backup, bundledTags) {
   Object.entries(backup.bundledTags || {}).forEach(([id, list]) => {
     tags[id] = [...new Set([...(tags[id] || []), ...list])];
   });
-  return { entries, bundledTags: tags, headings: backup.headings || [] };
+  const encounters = (backup.encounters || []).filter((x) => x && x.id && Array.isArray(x.members));
+  return { entries, bundledTags: tags, headings: backup.headings || [], encounters };
 }
 
 // ---------------------------------------------------------------------------

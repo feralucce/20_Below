@@ -129,6 +129,13 @@
   .ri-broken { color: var(--danger); font-size: 0.68rem; }
   .list-empty { color: var(--text-faint); font-size: 0.75rem; font-style: italic; padding: 0.3rem 0; }
 
+  /* An entry opens in a window over the tracker, where you are, rather
+     than at the bottom of the page. */
+  .detail-overlay {
+    position: fixed; inset: 0; z-index: 20; overflow-y: auto;
+    background: rgba(2, 8, 12, 0.72); padding: 0.6rem;
+  }
+  .detail-overlay .detail-wrap { max-width: 640px; margin: 0 auto; border-color: var(--accent); }
   .detail-wrap {
     background: var(--panel);
     border: 1px solid var(--panel-border);
@@ -388,10 +395,34 @@
   .lib-group-count { margin-left: auto; color: var(--text-faint); font-weight: 400; font-size: 0.72rem; }
   .caret { width: 0.8rem; color: var(--accent); }
   .lib-group > .lib-item { margin: 0.3rem 0 0.3rem 0.8rem; }
+  .enc-saved { background: var(--panel-2); border: 1px solid var(--panel-border); border-radius: 6px; padding: 0.45rem 0.55rem; margin-bottom: 0.6rem; }
+  .enc-saved-head { display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; }
+  .enc-saved-title { font-size: 0.74rem; font-weight: 600; color: var(--gold); margin-right: auto; }
+  .enc-row { display: flex; align-items: center; gap: 0.35rem; padding: 0.3rem 0; border-top: 1px solid var(--panel-border); font-size: 0.78rem; margin-top: 0.3rem; }
+  .enc-row-name { font-weight: 600; margin-right: auto; }
+  .enc-row-who { color: var(--text-dim); font-size: 0.68rem; display: block; font-weight: 400; }
   .heading-new { display: flex; gap: 0.35rem; margin: 0 0 0.45rem; }
   .heading-new .tag-input { flex: 1; min-width: 0; }
   .lib-group-head.is-heading { border-color: var(--gold); }
   .lib-group-head.is-heading .caret { color: var(--gold); }
+  .sub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.15rem 0.8rem; font-size: 0.74rem; }
+  .sub-row { display: flex; justify-content: space-between; color: var(--text-dim); border-bottom: 1px solid var(--panel-border); padding: 0.1rem 0; }
+  .sub-row strong { color: var(--text); }
+  .vital-row { display: flex; align-items: center; gap: 0.5rem; padding: 0.2rem 0; font-size: 0.76rem; }
+  .vital-name { width: 3.6rem; font-weight: 700; }
+  .pips { display: flex; flex-wrap: wrap; gap: 2px; flex: 1; }
+  .pip { width: 11px; height: 11px; border: 1.5px solid var(--c); border-radius: 3px; opacity: 0.5; }
+  .pip.on { background: var(--c); opacity: 1; }
+  .vital-count { color: var(--text); font-weight: 700; min-width: 3rem; text-align: right; }
+  .attack-table { width: 100%; border-collapse: collapse; font-size: 0.74rem; }
+  .attack-table th { text-align: left; color: var(--text-faint); font-weight: 600; padding: 0.15rem 0.4rem 0.15rem 0; font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .attack-table td { border-top: 1px solid var(--panel-border); padding: 0.25rem 0.4rem 0.25rem 0; vertical-align: top; color: var(--text-dim); }
+  .attack-table td strong { color: var(--text); }
+  .attack-more { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.15rem; line-height: 1.4; }
+  .trait { background: var(--panel-2); border: 1px solid var(--panel-border); border-radius: 5px; padding: 0.35rem 0.5rem; margin-bottom: 0.3rem; }
+  .trait-name { font-weight: 700; font-size: 0.78rem; color: var(--text); }
+  .trait-text { font-size: 0.74rem; color: var(--text-dim); line-height: 1.45; }
+  .animal-label { margin: 0.45rem 0 0.15rem 0.9rem; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
   .heading-tools { display: flex; gap: 0.3rem; justify-content: flex-end; margin: 0.3rem 0; }
   .heading-empty { margin: 0.2rem 0 0.4rem 0.8rem; }
   .tag-picker { margin-top: 0.45rem; padding: 0.45rem; border: 1px solid var(--accent); border-radius: 6px; background: var(--panel-2); }
@@ -445,7 +476,7 @@
       <input type="file" id="libFolder" webkitdirectory directory multiple />
       <button type="button" class="own-btn" id="libExport">Export</button>
     </div>
-    <div class="lib-own-note">Characters and NPCs come from the <a href="https://20belowrpg.com/app/" target="_blank">Character Creator</a>. A folder's name becomes a tag on what came out of it. An export imports back in on any machine.</div>
+    <div class="lib-own-note">Characters and NPCs come from the <a href="https://20belowrpg.com/app/" target="_blank">Character Creator</a>. A folder's name becomes a tag on what came out of it. Export takes your entries, headings and saved encounters to another machine, or to the tracker in Owlbear: import the file there.</div>
     <div id="libNote" class="lib-own-result" style="display:none"></div>
   </div>
   <div class="lib-bar">
@@ -473,14 +504,26 @@
 
   <div id="obrNote" class="obr-note" style="display:none"></div>
 
+  <!-- Premade fights: save this one, or add a saved one to it. -->
+  <div class="enc-saved">
+    <div class="enc-saved-head">
+      <span class="enc-saved-title">Saved encounters</span>
+      <button type="button" class="btn" id="encSave">Save this encounter</button>
+      <button type="button" class="btn danger" id="encClear">Clear encounter</button>
+    </div>
+    <div id="encList"></div>
+  </div>
+
   <div id="combatBar" class="combat-bar"></div>
 
   <div id="rosterList" class="roster-list"><div class="list-empty">Nobody in this encounter yet. Add them from the Catalog.</div></div>
 </section>
 
-<div id="detail" style="display:none" class="detail-wrap">
-  <button class="detail-back" id="backBtn">&larr; Back</button>
-  <div id="charView"></div>
+<div id="detail" style="display:none" class="detail-overlay">
+  <div class="detail-wrap">
+    <button class="detail-back" id="backBtn">Close</button>
+    <div id="charView"></div>
+  </div>
 </div>
 
 <script type="module">
@@ -886,7 +929,11 @@
     const entry = roster.find((r) => r.id === id);
     if (!entry || !entry.state) return;
     activeId = id;
-    if (entry.state.creature) renderCreature(entry.state.creature, entry.state.name);
+    if (entry.state.creature) {
+      const e = combatEntry(entry);
+      renderCreature(entry.state.creature, entry.state.name,
+        { health: e.currentHealth, poise: e.currentPoise, sanity: e.currentSanity });
+    }
     else renderCharacter(entry.state);
     document.getElementById("detail").style.display = "";
     renderList();
@@ -899,16 +946,63 @@
       .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
       .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1");
   }
-  function renderCreature(c, shownName) {
+  // A creature laid out the way the character sheet is: who it is, its
+  // numbers, its Vitals, its attacks as a weapons table, its Skills, and
+  // each Trait as its own card the way a Gift is. In a fight, `live` is
+  // where its Vitals are now.
+  function renderCreature(c, shownName, live = null) {
     const s = c.stats || {};
-    const order = ["Soak", "Attack", "Defense", "Social Defense", "Mental Defense", "Health Levels", "Movement Rate",
-      "Potence", "Initiative", "Psyche", "Ferocity", "Presence", "Stamina"];
-    const chips = order.filter((k) => s[k] != null).map((k) =>
-      `<div class="stat-chip"><div class="v">${s[k]}${k === "Movement Rate" ? "m" : ""}</div><div class="k">${escapeHtml(k)}</div></div>`).join("");
-    const attacks = (c.attacks || []).map((a) =>
-      `<div class="creature-attack"><strong>${escapeHtml(a.name)}</strong>${a.when ? ` (${escapeHtml(a.when)})` : ""}: `
-      + `${a.dice} ${a.dice === 1 ? "die" : "dice"}${a.range ? `, ${escapeHtml(a.range)}` : ""} &middot; ${a.kind}, against ${a.wall}</div>`).join("");
+    const box = (label, value, unit = "") => value == null ? ""
+      : `<div class="stat-chip"><div class="v">${value}${unit}</div><div class="k">${escapeHtml(label)}</div></div>`;
+    // Poise and Sanity count the way a character's do: 5 + Presence and
+    // 5 + Psyche, from the same numbers the fight uses. A Defense the book
+    // leaves off comes the same way (10 - Psyche, 10 - Presence), because a
+    // player talking it down needs one.
+    const f = computeFiguredCharacteristics(library.creatureState(c));
+    const numbers = [
+      box("Attack", s.Attack), box("Defense", s.Defense ?? f.Defense),
+      box("Social Def", s["Social Defense"] ?? f["Social Defense"]),
+      box("Mental Def", s["Mental Defense"] ?? f["Mental Defense"]),
+      box("Movement", s["Movement Rate"] ?? f["Movement Rate"], "m"), box("Soak", s.Soak),
+    ].join("");
+    const subs = ["Potence", "Initiative", "Psyche", "Ferocity", "Presence", "Stamina"]
+      .filter((k) => s[k] != null)
+      .map((k) => `<div class="sub-row"><span>${k}</span><strong>${s[k]}</strong></div>`).join("");
+
+    const vital = (label, cur, max, colour) => {
+      const now = cur ?? max;
+      const pips = Array.from({ length: Math.max(0, max) }, (_, i) =>
+        `<span class="pip${i < now ? " on" : ""}" style="--c:${colour}"></span>`).join("");
+      return `<div class="vital-row"><span class="vital-name" style="color:${colour}">${label}</span>
+        <span class="pips">${pips}</span><span class="vital-count">${now} / ${max}</span></div>`;
+    };
+    const vitals = vital("Health", live?.health, f["Health Levels"], "#6FBF73")
+      + vital("Poise", live?.poise, f.Poise, "#E0A85C")
+      + vital("Sanity", live?.sanity, f.Sanity, "#6FB8E0");
+
+    // Some cards carry more on the same line after the attack itself -
+    // the Vampire's Blood Drain - and it goes under the attack's name.
+    const beyond = (a) => a.text.split(/\.\s+(?=\*\*|[A-Z])/).slice(1).join(". ").trim();
+    const attacks = (c.attacks || []).map((a) => `<tr>
+        <td><strong>${escapeHtml(a.name)}</strong>${a.when ? `<div class="hint">${escapeHtml(a.when)}</div>` : ""}${
+          beyond(a) ? `<div class="attack-more">${inlineMd(beyond(a))}</div>` : ""}</td>
+        <td>${a.dice} ${a.dice === 1 ? "die" : "dice"}</td><td>${escapeHtml(a.range || "")}</td>
+        <td>${a.kind} vs ${a.wall}</td></tr>`).join("");
+
+    const skills = (c.skills || "").split(/,\s*/).filter(Boolean)
+      .map((k) => `<span class="tag">${inlineMd(k)}</span>`).join("");
+
+    // "**Relentless** - keeps attacking ... **Pack Hunter** - ..." becomes
+    // one card per Trait.
+    const traits = (c.traits || "").split(/(?=\*\*[^*]+\*\*\s*[-–—:])/).map((t) => t.trim()).filter(Boolean).map((t) => {
+      const m = /^\*\*([^*]+)\*\*\s*[-–—:]\s*([\s\S]*)$/.exec(t);
+      return m
+        ? `<div class="trait"><div class="trait-name">${escapeHtml(m[1])}</div><div class="trait-text">${inlineMd(m[2])}</div></div>`
+        : `<div class="trait"><div class="trait-text">${inlineMd(t)}</div></div>`;
+    }).join("");
+
     const tags = (c.tags || []).map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join("");
+    const section = (title, body) => body ? `<div class="char-section"><div class="char-section-title">${title}</div>${body}</div>` : "";
     document.getElementById("charView").innerHTML = `
       <div class="char-header">
         <div>
@@ -916,12 +1010,14 @@
           <div class="tag-list" style="margin-top:0.3rem">${tags}</div>
         </div>
       </div>
-      ${c.description ? `<div class="char-section" style="margin-top:0"><div class="item-line" style="line-height:1.5">${inlineMd(c.description)}</div></div>` : ""}
-      <div class="char-section"><div class="char-section-title">Stat block</div><div class="stat-grid">${chips}</div></div>
-      ${attacks ? `<div class="char-section"><div class="char-section-title">Attacks</div>${attacks}</div>` : ""}
-      ${c.notes ? `<div class="char-section"><div class="char-section-title">Also</div><div class="item-line" style="line-height:1.5">${inlineMd(c.notes).replace(/\n/g, "<br>")}</div></div>` : ""}
-      ${c.skills ? `<div class="char-section"><div class="char-section-title">Notable Skills</div><div class="item-line">${inlineMd(c.skills)}</div></div>` : ""}
-      ${c.traits ? `<div class="char-section"><div class="char-section-title">Traits</div><div class="item-line" style="line-height:1.5">${inlineMd(c.traits)}</div></div>` : ""}
+      ${c.description ? `<div class="item-line" style="line-height:1.5">${inlineMd(c.description)}</div>` : ""}
+      ${section("Numbers", `<div class="stat-grid">${numbers}</div>`)}
+      ${section("Sub-stats", subs ? `<div class="sub-grid">${subs}</div>` : "")}
+      ${section(live ? "Vitals now" : "Vitals", vitals)}
+      ${section("Attacks", attacks ? `<table class="attack-table"><tr><th>Attack</th><th>Dice</th><th>Range</th><th>Against</th></tr>${attacks}</table>` : "")}
+      ${section("Also", c.notes ? `<div class="item-line" style="line-height:1.5">${inlineMd(c.notes).replace(/\n/g, "<br>")}</div>` : "")}
+      ${section("Notable Skills", skills ? `<div class="tag-list">${skills}</div>` : "")}
+      ${section("Traits", traits)}
     `;
   }
 
@@ -934,6 +1030,7 @@
   let mine = [];
   let bundledTags = {};
   let headings = []; // the GM's headings, in their order
+  let encounters = []; // the GM's saved encounters
   let lib = null;
   const filter = { query: "", tags: [], source: "all" };
 
@@ -1017,7 +1114,10 @@
     const creature = entry.kind === "creature" || entry.id.startsWith("bestiary:");
     const source = creature ? (entry.data || entry) : entry.data;
     const name = library.uniqueName(source.name || "Unnamed", taken);
-    const state = creature ? library.creatureState(source, name) : { ...source, name };
+    // The name before any number, so a saved "Wolf 2" loads as the next
+    // free Wolf rather than "Wolf 2 2".
+    const baseName = source.name || "Unnamed";
+    const state = { ...(creature ? library.creatureState(source, name) : { ...source, name }), baseName };
     const rid = `c${Date.now()}${Math.random().toString(36).slice(2, 7)}`;
     const r = parseEntry(rid, JSON.stringify(state), entry.icon || media.makePlaceholder(name, 128));
     roster.push(r);
@@ -1057,6 +1157,10 @@
         await saveBundledTags();
         headings = [...new Set([...headings, ...got.headings])];
         await lib.setMeta("headings", headings);
+        const had = new Set(encounters.map((x) => x.id));
+        encounters = encounters.concat(got.encounters.filter((x) => !had.has(x.id)));
+        await lib.setMeta("encounters", encounters);
+        renderEncounters();
         continue;
       }
       if (!kind) { failed.push(p.filename); continue; }
@@ -1078,7 +1182,7 @@
   }
 
   function exportCatalogue() {
-    const data = library.exportLibrary(mine, bundledTags, headings);
+    const data = library.exportLibrary(mine, bundledTags, headings, encounters);
     const blob = new Blob([JSON.stringify(data)], { type: "application/json" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
@@ -1141,6 +1245,21 @@
   let tagging = null; // the entry whose Add Tag picker is open
   let placing = null; // the entry whose Add to Heading picker is open
 
+  // Each animal with its versions: Bobcat, Dire Bobcat, Giant Bobcat,
+  // Mutated Bobcat, then the next animal. The book prints a family's
+  // ordinary animals first and their versions after, so the order is
+  // rebuilt here from the name without its Dire, Giant or Mutated.
+  const VARIANT_ORDER = ["", "Dire", "Giant", "Mutated"];
+  const animalOf = (e) => e.name.replace(/^(Dire|Giant|Mutated)\s+/, "");
+  const variantOf = (e) => (/^(Dire|Giant|Mutated)\s/.exec(e.name) || [, ""])[1];
+  function byAnimal(entries) {
+    const first = new Map();
+    entries.forEach((e, i) => { if (!first.has(animalOf(e))) first.set(animalOf(e), i); });
+    return entries.slice().sort((a, b) =>
+      (first.get(animalOf(a)) - first.get(animalOf(b)))
+      || (VARIANT_ORDER.indexOf(variantOf(a)) - VARIANT_ORDER.indexOf(variantOf(b))));
+  }
+
   function groupsOf(found) {
     const groups = [];
     const add = (key, title, entries, sub = null) => {
@@ -1156,14 +1275,18 @@
     });
     add("mine", headings.length ? "My entries, not under a heading" : "My entries",
       found.filter((e) => !e.id.startsWith("bestiary:") && !(e.tags || []).some((t) => headings.includes(t))));
-    ["Mundane Beasts", "Beast Variants", "Cryptids", "Nightmare Creatures"].forEach((pack) => {
-      const inPack = found.filter((e) => e.id.startsWith("bestiary:") && e.pack === pack);
-      // The animals are many and live somewhere; the rest are few.
-      const places = [...new Set(inPack.map((e) => (e.tags || []).find((t) => ![pack, "Dire", "Giant", "Mutated"].includes(t))).filter(Boolean))];
-      const sub = places.length > 1
-        ? places.map((p) => ({ key: `${pack}/${p}`, title: p, entries: inPack.filter((e) => (e.tags || []).includes(p)) }))
-        : null;
-      add(pack, pack, inPack, sub);
+    // The animals are one section, by where they live, each animal with its
+    // Dire, Giant and Mutated versions beside it: a GM looking for a
+    // bobcat finds every bobcat in one place. The book prints them in that
+    // order already, so the list keeps it.
+    const animals = found.filter((e) => e.id.startsWith("bestiary:") && ["Mundane Beasts", "Beast Variants"].includes(e.pack));
+    const placeOf = (e) => (e.tags || []).find((t) => !["Mundane Beasts", "Beast Variants", "Dire", "Giant", "Mutated"].includes(t));
+    const places = [...new Set(animals.map(placeOf).filter(Boolean))];
+    add("animals", "Animals", animals, places.length > 1
+      ? places.map((p) => ({ key: `animals/${p}`, title: p, entries: byAnimal(animals.filter((e) => placeOf(e) === p)), byAnimal: true }))
+      : null);
+    ["Cryptids", "Nightmare Creatures"].forEach((pack) => {
+      add(pack, pack, found.filter((e) => e.id.startsWith("bestiary:") && e.pack === pack));
     });
     return groups;
   }
@@ -1281,7 +1404,21 @@
     }
     if (open) {
       if (g.sub) g.sub.forEach((s) => wrap.appendChild(groupBlock(s, depth + 1, searching)));
-      else g.entries.forEach((e) => wrap.appendChild(entryRow(e)));
+      else {
+        let animal = null;
+        g.entries.forEach((e) => {
+          // A small label each time the animal changes: Bobcat, then its
+          // Dire, Giant and Mutated versions under it.
+          if (g.byAnimal && animalOf(e) !== animal) {
+            animal = animalOf(e);
+            const label = document.createElement("div");
+            label.className = "animal-label";
+            label.textContent = animal;
+            wrap.appendChild(label);
+          }
+          wrap.appendChild(entryRow(e));
+        });
+      }
     }
     return wrap;
   }
@@ -1334,7 +1471,89 @@
     if (e.kind === "creature" || e.id.startsWith("bestiary:")) renderCreature(e.data || e);
     else renderCharacter(e.data);
     document.getElementById("detail").style.display = "";
-    document.getElementById("detail").scrollIntoView({ block: "start" });
+  }
+
+  // ---- Saved encounters ----
+  //
+  // A premade fight: everyone in it and their roles. Saving keeps who is
+  // in the encounter, not how the fight is going - loading one gives fresh
+  // combatants at full Health. Adding a saved one puts its combatants
+  // beside whoever is already here, so the PCs stay loaded.
+  async function saveEncounter() {
+    const members = roster.filter((r) => r.state);
+    if (!members.length) { libNote(""); encNote("Add someone to the encounter first."); return; }
+    const name = (prompt("Name this encounter:", `Encounter ${encounters.length + 1}`) || "").trim();
+    if (!name) return;
+    const saved = {
+      id: `enc:${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`,
+      name,
+      saved: Date.now(),
+      members: members.map((r) => ({ text: r.text, icon: r.icon || null, role: combatEntry(r).role })),
+    };
+    encounters = [...encounters, saved];
+    await lib.setMeta("encounters", encounters);
+    encNote(`Saved ${name}.`);
+    renderEncounters();
+  }
+
+  function loadEncounter(id) {
+    const saved = encounters.find((x) => x.id === id);
+    if (!saved) return;
+    const taken = roster.filter((r) => r.state).map((r) => r.state.name || "");
+    saved.members.forEach((m) => {
+      let state;
+      try { state = JSON.parse(m.text); } catch (e) { return; }
+      const name = library.uniqueName(state.baseName || state.name || "Unnamed", taken);
+      taken.push(name);
+      const rid = `c${Date.now()}${Math.random().toString(36).slice(2, 7)}`;
+      const r = parseEntry(rid, JSON.stringify({ ...state, name }), m.icon);
+      roster.push(r);
+      if (r.state && m.role) combatEntry(r).role = m.role;
+    });
+    saveRoster();
+    saveCombat();
+    renderAll();
+    encNote(`${saved.name}: ${saved.members.length} added.`);
+  }
+
+  async function deleteEncounter(id) {
+    const saved = encounters.find((x) => x.id === id);
+    if (!saved || !confirm(`Delete the saved encounter ${saved.name}?`)) return;
+    encounters = encounters.filter((x) => x.id !== id);
+    await lib.setMeta("encounters", encounters);
+    renderEncounters();
+  }
+
+  function clearEncounter() {
+    if (!roster.length || !confirm("Take everyone out of this encounter? Your Catalog and saved encounters stay.")) return;
+    roster = [];
+    combat = engine.createCombat();
+    saveRoster();
+    saveCombat();
+    renderAll();
+  }
+
+  function encNote(text) {
+    const note = document.getElementById("obrNote");
+    note.style.display = text ? "" : "none";
+    note.textContent = text;
+  }
+
+  function renderEncounters() {
+    const list = document.getElementById("encList");
+    list.innerHTML = encounters.length ? "" : `<div class="hint" style="margin-top:0.3rem">None yet. Build a fight here, then Save this encounter.</div>`;
+    encounters.forEach((x) => {
+      const who = x.members.map((m) => { try { return JSON.parse(m.text).name; } catch (e) { return "?"; } });
+      const row = document.createElement("div");
+      row.className = "enc-row";
+      row.innerHTML = `
+        <span class="enc-row-name">${escapeHtml(x.name)}<span class="enc-row-who">${escapeHtml(who.join(", "))}</span></span>
+        <button type="button" class="btn primary" data-load>Add to encounter</button>
+        <button type="button" class="btn danger" data-del>Delete</button>`;
+      row.querySelector("[data-load]").addEventListener("click", () => loadEncounter(x.id));
+      row.querySelector("[data-del]").addEventListener("click", () => deleteEncounter(x.id));
+      list.appendChild(row);
+    });
   }
 
   function updateEncCount() {
@@ -1358,6 +1577,8 @@
     mine = await lib.all();
     bundledTags = await lib.getMeta("bundledTags", {});
     headings = await lib.getMeta("headings", []);
+    encounters = await lib.getMeta("encounters", []);
+    renderEncounters();
     // A tracker that already had characters loaded, from before there was
     // a library: they are the GM's, so they go in the catalogue once.
     if (!(await lib.getMeta("rosterMigrated", false))) {
@@ -1553,6 +1774,7 @@
               </div>
             </div>
             <div class="ri-meta">
+              <button class="btn" data-view="${entry.id}" title="See everything on ${escapeHtml(entry.state.name || "this one")}">View</button>
               <button class="role-chip role-${ce.role}" data-role="${entry.id}" title="Click to change role">${ce.role}</button>
               <button class="ri-remove" data-id="${entry.id}">Remove</button>
             </div>
@@ -1560,12 +1782,16 @@
           ${combatRowHtml(entry)}
         `;
         div.addEventListener("click", (e) => {
-          if (e.target.closest(".ri-remove") || e.target.closest(".ri-combat") || e.target.closest(".role-chip")) return;
+          if (e.target.closest(".ri-remove") || e.target.closest(".ri-combat") || e.target.closest(".role-chip") || e.target.closest("[data-view]")) return;
           selectCharacter(entry.id);
         });
         div.querySelector("[data-role]").addEventListener("click", (ev) => {
           ev.stopPropagation();
           cycleRole(entry);
+        });
+        div.querySelector("[data-view]").addEventListener("click", (ev) => {
+          ev.stopPropagation();
+          selectCharacter(entry.id);
         });
         const initEl = div.querySelector("[data-init]");
         if (initEl) {
@@ -1660,10 +1886,14 @@
     await addFiles(await filesFromDataTransfer(e.dataTransfer));
   });
 
-  document.getElementById("backBtn").addEventListener("click", () => {
+  function closeDetail() {
     activeId = null;
     document.getElementById("detail").style.display = "none";
     renderList();
+  }
+  document.getElementById("backBtn").addEventListener("click", closeDetail);
+  document.getElementById("detail").addEventListener("click", (e) => {
+    if (e.target.id === "detail") closeDetail();
   });
 
   document.getElementById("viewLibrary").addEventListener("click", () => showView("library"));
@@ -1683,6 +1913,8 @@
     });
   });
   document.getElementById("libExport").addEventListener("click", exportCatalogue);
+  document.getElementById("encSave").addEventListener("click", saveEncounter);
+  document.getElementById("encClear").addEventListener("click", clearEncounter);
 
   // Load persisted roster
   try {
