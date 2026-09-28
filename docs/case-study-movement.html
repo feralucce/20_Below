@@ -60,6 +60,10 @@
   .decisions td:nth-child(2) { color: var(--text-dim); }
 
   footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+  .glance { display: grid; grid-template-columns: max-content 1fr; gap: 0.55rem 1.3rem; margin: -1rem 0 0; padding: 1rem 1.25rem; background: var(--panel); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: var(--radius); font-size: 0.95rem; }
+  .glance dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); padding-top: 0.22rem; }
+  .glance dd { margin: 0; }
+  @media (max-width: 560px) { .glance { grid-template-columns: 1fr; gap: 0.1rem; } .glance dd { margin-bottom: 0.6rem; } .glance dd:last-child { margin-bottom: 0; } }
 </style>
 <link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
@@ -73,6 +77,13 @@
     <h1>One Chapter, Taught Two Ways</h1>
     <p class="intro">Rebuilding the movement rules for 20 Below, a tabletop RPG I've built over the past year, so the same rule works whether a table plays on a map or entirely in their heads. The work went one decision at a time, with every number simulated, and it was written once for two very different learners.</p>
   </header>
+
+  <dl class="glance" aria-label="At a glance">
+    <dt>Role</dt><dd>Producer: decisions and rulings.</dd>
+    <dt>Team</dt><dd>Claude (AI assistant), with team review and a playtest scheduled.</dd>
+    <dt>Timeline</dt><dd>24&ndash;26 September 2026.</dd>
+    <dt>Result</dt><dd>One movement chapter for map and theater-of-the-mind tables, every number simulated, changed in all eight places it appears at once.</dd>
+  </dl>
 
   <h2>The Problem</h2>
   <p>The movement rules fit in a few paragraphs, and they had drifted. The same all-out run appeared twice, as "Run" at four times your Movement Rate and "Sprint" at five. A line claiming a sprint "crosses Near in a single turn" wasn't true for the slowest characters. Climbing, swimming, jumping, bad ground, chases and travel had no rules at all, even though equipment and creature cards already assumed them. Snowshoes cancelled a deep-snow penalty that didn't exist. A motorcycle gave Advantage on Chase rolls with no chase rules to roll. Creature cards listed flying, swimming and burrowing speeds with nothing saying how to use them.</p>

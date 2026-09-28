@@ -55,6 +55,10 @@
   .credits td:first-child { color: var(--text-dim); width: 42%; }
 
   footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+  .glance { display: grid; grid-template-columns: max-content 1fr; gap: 0.55rem 1.3rem; margin: -1rem 0 0; padding: 1rem 1.25rem; background: var(--panel); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: var(--radius); font-size: 0.95rem; }
+  .glance dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); padding-top: 0.22rem; }
+  .glance dd { margin: 0; }
+  @media (max-width: 560px) { .glance { grid-template-columns: 1fr; gap: 0.1rem; } .glance dd { margin-bottom: 0.6rem; } .glance dd:last-child { margin-bottom: 0; } }
 </style>
 <link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
@@ -68,6 +72,13 @@
     <h1>One Spider, Checked Three Ways</h1>
     <p class="intro">Real-time design and collaboration on 20 Below, a tabletop RPG I've built over the past year: a gap in one monster's venom, caught by three separate checks, fixed in the open, and tested with simulation before it ever reached a table.</p>
   </header>
+
+  <dl class="glance" aria-label="At a glance">
+    <dt>Role</dt><dd>Producer: decisions and rulings.</dd>
+    <dt>Team</dt><dd>A GM playtester, George Szabo (game design) and Claude (AI assistant).</dd>
+    <dt>Timeline</dt><dd>One day, 24 September 2026.</dd>
+    <dt>Result</dt><dd>A rule left to the GM became one players can feel, simulated before play, and now the standard for every venom in the bestiary.</dd>
+  </dl>
 
   <h2>The Problem</h2>
   <p>The Brown Recluse's stat card said its bite did no immediate damage, left the target Envenomed, and that <em>&ldquo;the wound worsens without treatment over the following days, severity the GM's call.&rdquo;</em></p>

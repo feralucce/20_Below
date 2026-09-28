@@ -59,6 +59,10 @@
   .decisions td:nth-child(2) { color: var(--text-dim); }
 
   footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+  .glance { display: grid; grid-template-columns: max-content 1fr; gap: 0.55rem 1.3rem; margin: -1rem 0 0; padding: 1rem 1.25rem; background: var(--panel); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: var(--radius); font-size: 0.95rem; }
+  .glance dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); padding-top: 0.22rem; }
+  .glance dd { margin: 0; }
+  @media (max-width: 560px) { .glance { grid-template-columns: 1fr; gap: 0.1rem; } .glance dd { margin-bottom: 0.6rem; } .glance dd:last-child { margin-bottom: 0; } }
 </style>
 <link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
@@ -72,6 +76,13 @@
     <h1>The Rules You Don't Have to Remember</h1>
     <p class="intro">Performance support for a tabletop game. Instead of teaching players to remember and calculate faster, the tools do it at the table, on the screen people already have open, and every one of them runs on the same rules code so none can disagree about a character.</p>
   </header>
+
+  <dl class="glance" aria-label="At a glance">
+    <dt>Role</dt><dd>Producer: decisions and rulings.</dd>
+    <dt>Team</dt><dd>Hillary McKey (communications), the game designers and Claude (AI assistant).</dd>
+    <dt>Timeline</dt><dd>26&ndash;27 September 2026.</dd>
+    <dt>Result</dt><dd>An attack resolved from one button in one roll. 36 roll buttons became 5, and three tools share one set of rules code.</dd>
+  </dl>
 
   <h2>The Problem</h2>
   <p>A fight in 20 Below asks a lot of arithmetic from people who'd rather be playing. An attack is two dice under your Element plus the target's Defense, then one die per point of damage against their wall. Advantage and Disadvantage change which dice count. Boons change what a Skill rolls at. Gifts cost Ki, and a failed check costs more.</p>

@@ -59,6 +59,10 @@
   .decisions td:nth-child(2) { color: var(--text-dim); }
 
   footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+  .glance { display: grid; grid-template-columns: max-content 1fr; gap: 0.55rem 1.3rem; margin: -1rem 0 0; padding: 1rem 1.25rem; background: var(--panel); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: var(--radius); font-size: 0.95rem; }
+  .glance dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); padding-top: 0.22rem; }
+  .glance dd { margin: 0; }
+  @media (max-width: 560px) { .glance { grid-template-columns: 1fr; gap: 0.1rem; } .glance dd { margin-bottom: 0.6rem; } .glance dd:last-child { margin-bottom: 0; } }
 </style>
 <link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
@@ -73,6 +77,13 @@
     <h1>The Rung That Made Players Worse</h1>
     <p class="intro">20 Below's Skill ladder began with Novice, a first step meant to show early progress. Playtesters complained about it, and the team raised a concern. The numbers confirmed it: at low Attributes, a Novice rolled worse than someone with no training at all. I kept it at first, then retired it three days later. Retiring it well meant making sure it didn't punish players somewhere else, and carrying every saved character across.</p>
   </header>
+
+  <dl class="glance" aria-label="At a glance">
+    <dt>Role</dt><dd>Producer: rulings.</dd>
+    <dt>Team</dt><dd>The playtesters and the 20 Below team, who raised it, and Claude (AI assistant).</dd>
+    <dt>Timeline</dt><dd>25&ndash;28 September 2026.</dd>
+    <dt>Result</dt><dd>Training is never worse than not training now, and every saved character carried across with its points refunded.</dd>
+  </dl>
 
   <h2>The Problem</h2>
   <p>A Skill roll in 20 Below is 2d10, and you succeed at or under a target. An Untrained character ignores their Attribute: the target is the Difficulty alone. A Novice adds the Attribute, but rolls at Disadvantage, three dice with the highest two kept. The rules promised that each tier was strictly better than the last.</p>

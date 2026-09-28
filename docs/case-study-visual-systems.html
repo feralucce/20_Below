@@ -45,6 +45,10 @@
   .exhibit .desc { font-size: 0.9rem; color: var(--text-dim); }
 
   footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+  .glance { display: grid; grid-template-columns: max-content 1fr; gap: 0.55rem 1.3rem; margin: -1rem 0 0; padding: 1rem 1.25rem; background: var(--panel); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: var(--radius); font-size: 0.95rem; }
+  .glance dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); padding-top: 0.22rem; }
+  .glance dd { margin: 0; }
+  @media (max-width: 560px) { .glance { grid-template-columns: 1fr; gap: 0.1rem; } .glance dd { margin-bottom: 0.6rem; } .glance dd:last-child { margin-bottom: 0; } }
 </style>
 <link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
@@ -57,6 +61,12 @@
     <p class="eyebrow">Case Study</p>
     <h1>Making Two Invisible Systems Visible</h1>
   </header>
+
+  <dl class="glance" aria-label="At a glance">
+    <dt>Role</dt><dd>Producer: decisions.</dd>
+    <dt>Team</dt><dd>The full 20 Below team, 15 people.</dd>
+    <dt>Result</dt><dd>A 99-file divider library shown as one set, a map of how data moves between the apps, and a false claim on the download page caught and corrected.</dd>
+  </dl>
 
   <h2>The Problem</h2>
   <p>A system nobody can see is a system nobody can trust.</p>

@@ -59,6 +59,10 @@
   .decisions td:nth-child(2) { color: var(--text-dim); }
 
   footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+  .glance { display: grid; grid-template-columns: max-content 1fr; gap: 0.55rem 1.3rem; margin: -1rem 0 0; padding: 1rem 1.25rem; background: var(--panel); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: var(--radius); font-size: 0.95rem; }
+  .glance dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); padding-top: 0.22rem; }
+  .glance dd { margin: 0; }
+  @media (max-width: 560px) { .glance { grid-template-columns: 1fr; gap: 0.1rem; } .glance dd { margin-bottom: 0.6rem; } .glance dd:last-child { margin-bottom: 0; } }
 </style>
 <link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
@@ -72,6 +76,13 @@
     <h1>Learning the Game by Building a Character</h1>
     <p class="intro">For a new player, making a character is the first time they meet most of 20 Below's rules. The Character Creator is the path they walk through them. It teaches the game in the order the game needs it, gives feedback on every choice, stops mistakes before they happen, and explains things where the player is standing instead of sending them to the book.</p>
   </header>
+
+  <dl class="glance" aria-label="At a glance">
+    <dt>Role</dt><dd>Producer: decisions.</dd>
+    <dt>Team</dt><dd>The playtesters, Rilla Scarberry (language expert) and Claude (AI assistant).</dd>
+    <dt>Timeline</dt><dd>21 August &ndash; 25 September 2026.</dd>
+    <dt>Result</dt><dd>Character creation teaches the game in the order it&rsquo;s needed, and stops mistakes before they happen.</dd>
+  </dl>
 
   <h2>The Problem</h2>
   <p>A character in 20 Below is built from five Elements, their sub-stats, Descriptors, Boons, Flaws, Skills, Resources, Gifts with their Adders and Limiters, and equipment bought with Wealth. Each draws on a pool of points, and some feed others. A new player meets all of it at once, before they've played a single scene.</p>

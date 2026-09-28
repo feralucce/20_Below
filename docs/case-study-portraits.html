@@ -59,6 +59,10 @@
   .decisions td:nth-child(2) { color: var(--text-dim); }
 
   footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+  .glance { display: grid; grid-template-columns: max-content 1fr; gap: 0.55rem 1.3rem; margin: -1rem 0 0; padding: 1rem 1.25rem; background: var(--panel); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: var(--radius); font-size: 0.95rem; }
+  .glance dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); padding-top: 0.22rem; }
+  .glance dd { margin: 0; }
+  @media (max-width: 560px) { .glance { grid-template-columns: 1fr; gap: 0.1rem; } .glance dd { margin-bottom: 0.6rem; } .glance dd:last-child { margin-bottom: 0; } }
 </style>
 <link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
@@ -73,6 +77,13 @@
     <h1>One File That Travels</h1>
     <p class="intro">A 20 Below character is a single file. It moves between the Character Creator, the Battle Tracker and the character sheet in Owlbear Rodeo, and it gets passed around the table. When characters needed pictures, the picture had to travel the same way: inside that one file, shown the same way in every tool, and safe to open whoever made it. It was asked for, built, tested and released in one morning. The study is also honest about the part it didn't reach.</p>
   </header>
+
+  <dl class="glance" aria-label="At a glance">
+    <dt>Role</dt><dd>Producer: the request, the decision and the release ruling.</dd>
+    <dt>Team</dt><dd>Claude (AI assistant).</dd>
+    <dt>Timeline</dt><dd>One morning, 28 September 2026: asked at 08:11, released at 10:35.</dd>
+    <dt>Result</dt><dd>A character&rsquo;s picture travels inside its file, to the Creator, the Battle Tracker and the Owlbear sheet, released in four tools at once.</dd>
+  </dl>
 
   <h2>The Problem</h2>
   <p>I was setting up an Owlbear Rodeo room for a portfolio video shoot. The Battle Tracker's button for putting a character on the map placed nothing, even after a reload. The tokens had to be drawn, uploaded and linked by hand. That bug was logged as its own task instead of being fixed mid-shoot, but it raised a better question. Why doesn't a character already carry its own picture?</p>

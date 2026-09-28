@@ -59,6 +59,10 @@
   .decisions td:nth-child(2) { color: var(--text-dim); }
 
   footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+  .glance { display: grid; grid-template-columns: max-content 1fr; gap: 0.55rem 1.3rem; margin: -1rem 0 0; padding: 1rem 1.25rem; background: var(--panel); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: var(--radius); font-size: 0.95rem; }
+  .glance dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); padding-top: 0.22rem; }
+  .glance dd { margin: 0; }
+  @media (max-width: 560px) { .glance { grid-template-columns: 1fr; gap: 0.1rem; } .glance dd { margin-bottom: 0.6rem; } .glance dd:last-child { margin-bottom: 0; } }
 </style>
 <link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
@@ -72,6 +76,13 @@
     <h1>One Page, One Question</h1>
     <p class="intro">Twenty-three quick-reference sheets for 20 Below, built as job aids. Each one answers a single question a player or GM asks in the middle of play. Each was drawn from real design data rather than from memory, and each is kept in step with the rules as they change. Building them turned out to test the rules too.</p>
   </header>
+
+  <dl class="glance" aria-label="At a glance">
+    <dt>Role</dt><dd>Producer: decisions.</dd>
+    <dt>Team</dt><dd>Hillary McKey (communications, design review) and Claude (AI assistant).</dd>
+    <dt>Timeline</dt><dd>Built 24 September 2026, and kept in step with the rules since.</dd>
+    <dt>Result</dt><dd>23 one-question reference sheets. The audit&rsquo;s gap was filled, and four rule problems were fixed because a sheet couldn&rsquo;t be drawn around them.</dd>
+  </dl>
 
   <h2>The Problem</h2>
   <p>The rulebook teaches. At the table, nobody wants teaching; they want an answer, now, while four other people wait. I'd already decided to separate the material people learn from the material they look things up in (that's <a href="/docs/case-study-rulebook-reference.html">A Rulebook You Read vs. a Rulebook You Reach For</a>). This study is about the lookup material itself: a set of reference sheets, one topic each.</p>

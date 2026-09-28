@@ -50,6 +50,10 @@
   .team td:first-child { color: var(--text-dim); width: 42%; }
 
   footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+  .glance { display: grid; grid-template-columns: max-content 1fr; gap: 0.55rem 1.3rem; margin: -1rem 0 0; padding: 1rem 1.25rem; background: var(--panel); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: var(--radius); font-size: 0.95rem; }
+  .glance dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); padding-top: 0.22rem; }
+  .glance dd { margin: 0; }
+  @media (max-width: 560px) { .glance { grid-template-columns: 1fr; gap: 0.1rem; } .glance dd { margin-bottom: 0.6rem; } .glance dd:last-child { margin-bottom: 0; } }
 </style>
 <link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
@@ -62,6 +66,13 @@
     <p class="eyebrow">Case Study</p>
     <h1>Fifteen People, Twelve Deliverables, One Hub</h1>
   </header>
+
+  <dl class="glance" aria-label="At a glance">
+    <dt>Role</dt><dd>Producer and hub: every decision and the final check.</dd>
+    <dt>Team</dt><dd>15 people: communications, language, engineering, web, four game designers and seven playtesters, plus Claude (AI assistant).</dd>
+    <dt>Timeline</dt><dd>In version history, <span data-stat="range">Jul 11 &ndash; Sep 28, 2026</span>. The design work goes back further.</dd>
+    <dt>Result</dt><dd>Twelve deliverables built from one set of rules, across <span data-stat="commits">1,450</span> commits and <span data-stat="tags">149</span> tagged releases.</dd>
+  </dl>
 
   <h2>The Problem</h2>
   <p>A tabletop RPG sounds like one thing. It isn't. It's a lot of different deliverables that all have to agree with each other, and a lot of people with opinions about every one of them.</p>
