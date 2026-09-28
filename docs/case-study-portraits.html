@@ -1,0 +1,161 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Case Study: One File That Travels - 20 Below</title>
+<meta name="description" content="Character portraits carried inside the character file: framed the same way in the Character Creator, the Battle Tracker and the Owlbear sheet, safe to open from anyone at the table, and released in one morning." />
+<link rel="icon" type="image/x-icon" href="/docs/assets/brand/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/brand/favicon-32.png" />
+<link rel="apple-touch-icon" href="/docs/assets/brand/favicon-128.png" />
+<style>
+  :root {
+    --bg: #0a1720;
+    --panel: #12232e;
+    --panel-border: #24404f;
+    --text: #eaf5fb;
+    --text-dim: #8fadbe;
+    --accent: #3d84c4;
+    --radius: 10px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; }
+  main { max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+  .back-link { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+  .back-row { font-size: 0.9rem; color: var(--text-dim); }
+  header { margin: 1.5rem 0 2.5rem; }
+  .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin: 0 0 0.6rem; }
+  h1 { margin: 0; font-size: 1.9rem; letter-spacing: 0.01em; line-height: 1.3; }
+  .intro { color: var(--text-dim); margin: 0.8rem 0 0; }
+
+  h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); border-bottom: 1px solid var(--panel-border); padding-bottom: 0.5rem; margin: 2.75rem 0 1.1rem; }
+  h3 { font-size: 1.05rem; margin: 2rem 0 0.7rem; }
+  p { font-size: 1rem; }
+  ul, ol { padding-left: 1.25rem; }
+  li { margin-bottom: 0.75rem; }
+  a { color: var(--accent); }
+  blockquote { margin: 1rem 0; padding: 0.6rem 1rem; border-left: 3px solid var(--panel-border); color: var(--text-dim); }
+
+  .checks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; margin: 1.2rem 0; }
+  .check { background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius); padding: 0.9rem 1rem; }
+  .check .who { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.3rem; }
+  .check p { margin: 0; font-size: 0.92rem; }
+
+  figure { margin: 1.6rem 0; }
+  figure img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--panel-border); background: var(--panel); }
+  figure.wide { margin-left: -6vw; margin-right: -6vw; }
+  @media (max-width: 900px) { figure.wide { margin-left: 0; margin-right: 0; } }
+  figcaption { font-size: 0.88rem; color: var(--text-dim); margin-top: 0.55rem; }
+
+  .credits { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .credits td { padding: 0.55rem 0.5rem 0.55rem 0; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
+  .credits td:first-child { color: var(--text-dim); width: 42%; }
+  .decisions { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
+  .decisions th { text-align: left; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); font-weight: 600; padding: 0 0.6rem 0.5rem 0; border-bottom: 1px solid var(--panel-border); }
+  .decisions td { padding: 0.6rem 0.6rem 0.6rem 0; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
+  .decisions td:nth-child(2) { color: var(--text-dim); }
+
+  footer { text-align: center; padding: 3rem 1.5rem 0; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+</style>
+<link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+
+  <p class="back-row">&larr; <a class="back-link" href="/docs/pm-portfolio.html">Project Management</a> &middot; <a class="back-link" href="/docs/visual-portfolio.html">Visual Information</a></p>
+
+  <header>
+    <p class="eyebrow">Case Study</p>
+    <h1>One File That Travels</h1>
+    <p class="intro">A 20 Below character is a single file. It moves between the Character Creator, the Battle Tracker and the character sheet in Owlbear Rodeo, and it gets passed around the table. When characters needed pictures, the picture had to travel the same way: inside that one file, shown the same way in every tool, and safe to open whoever made it. It was asked for, built, tested and released in one morning. The study is also honest about the part it didn't reach.</p>
+  </header>
+
+  <h2>The Problem</h2>
+  <p>I was setting up an Owlbear Rodeo room for a portfolio video shoot. The Battle Tracker's button for putting a character on the map placed nothing, even after a reload. The tokens had to be drawn, uploaded and linked by hand. That bug was logged as its own task instead of being fixed mid-shoot, but it raised a better question. Why doesn't a character already carry its own picture?</p>
+  <p>The tracker could already pair an image with a character file when both were picked together, <code>Wolf.json</code> beside <code>Wolf.png</code>. But that means two files picked at once, every time, and the picture reached only the tracker. Nothing in the Creator or the Owlbear sheet knew what a character looked like.</p>
+
+  <h2>Analysis: Who It's For</h2>
+  <div class="checks">
+    <div class="check"><div class="who">A player</div><p>Wants their character to look like someone, wherever it appears.</p></div>
+    <div class="check"><div class="who">The GM running a fight</div><p>Needs to tell combatants apart at a glance in the tracker.</p></div>
+    <div class="check"><div class="who">Anyone sharing files</div><p>Wants one file to pass across the table, not a file and a picture that can get separated.</p></div>
+    <div class="check"><div class="who">Anyone opening someone else's file</div><p>Needs to trust that a shared file can't carry anything harmful.</p></div>
+  </div>
+  <p>My question at 08:11 was simple: &ldquo;Is it possible to bundle icons with the JSONs and have the extension load them? &hellip; Automatically?&rdquo; Four options were weighed. Five minutes later, the decision was one sentence: &ldquo;Build the Portrait field.&rdquo;</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/portraits-options.webp"><img src="/docs/assets/portfolio/portraits-options.webp" alt="Five ways to put a picture on a character. Pair by name, kept: reaches the Battle Tracker only, and needs two files picked every time. Rebuild a shared file with icons, not taken: only for files the tracker exported. A Portrait field in the character file, chosen: reaches the Creator, the Battle Tracker and the Owlbear sheet, released by 10:35. Host a fixed token set, not taken: map tokens, but only stock art. Found later: offer the portrait to Owlbear's assets through its own import dialog, the better route for map tokens and now the plan for the token fix." loading="lazy" /></a>
+    <figcaption>Four options weighed that morning, and a fifth found later, while this study was being written.</figcaption>
+  </figure>
+
+  <h2>Design Decisions</h2>
+
+  <h3>One file carries the character</h3>
+  <p>The portrait lives inside the character file, set once in the Creator on the Name &amp; Concept step or beside the sheet's heading. Wherever the file goes, the picture goes with it. The Battle Tracker shows it in its Catalog and its encounters from the file alone. Saved encounters and exports carry it too. The Owlbear sheet shows it beside the name. Nobody has to pick a second file.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/portraits-travels.webp"><img src="/docs/assets/portfolio/portraits-travels.webp" alt="A test character file carrying its portrait, arriving in three tools: beside the Creator's sheet heading with Change and Remove, in the Battle Tracker's encounter row, and in the Owlbear Character Sheet's header. A dashed card marks Owlbear map tokens as not yet: a token needs its picture as an Owlbear asset, and Owlbear's extension API can offer one through its own import dialog, which is the next step. Until then, upload the portrait once as a Character and use Link." loading="lazy" /></a>
+    <figcaption>One file, three places. Map tokens are marked &ldquo;not yet&rdquo;, with the route that will get there.</figcaption>
+  </figure>
+
+  <h3>Any picture in, the same portrait out</h3>
+  <p>A player can pick any picture, of any shape. Every place a portrait appears is a circle or a small square, so the Creator keeps the centred square and re-encodes it at 256 by 256 pixels. That's more than twice the largest size any tool shows it at, so it stays sharp on a high-density screen. One source picture serves every size, from 96 pixels on the Creator's first step down to 34 in a tracker row. With no portrait, each tool falls back to the character's initials.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/portraits-crop.webp"><img src="/docs/assets/portfolio/portraits-crop.webp" alt="A 900 by 600 test picture with its centred 600 by 600 square outlined. A red band on its left edge falls outside the square. The saved result is a 256 by 256 WebP. The same portrait is shown at each tool's actual size: 96 pixels on the Creator's Name and Concept step, 64 beside the sheet, 44 in the Owlbear sheet header, and 34 in a Battle Tracker row." loading="lazy" /></a>
+    <figcaption>A test picture through the Creator's own crop, shown at each tool's real size.</figcaption>
+  </figure>
+
+  <h3>A file from the table is untrusted</h3>
+  <p>Character files are made by players and passed around, and each tool puts the portrait straight onto the screen. So one shared check decides what counts as a portrait. It accepts PNG, JPEG, WebP or GIF image data, up to 400 kB. It refuses:</p>
+  <ul>
+    <li>SVG, which can carry more than a picture;</li>
+    <li>a link to a picture on someone else's server;</li>
+    <li>text that only claims to be an image;</li>
+    <li>anything too large.</li>
+  </ul>
+  <p>Anything refused counts as no portrait, and the file still opens. A picture picked in the Creator is re-encoded even when it's already small, so what the Creator writes is always a plain image and nothing else.</p>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/portraits-shared.webp"><img src="/docs/assets/portfolio/portraits-shared.webp" alt="Accepted: PNG, JPEG, WebP or GIF image data, up to 400 kB. Refused and treated as no portrait: SVG as data or plain text, a link to another server, text that isn't image data, anything over 400 kB, and anything that isn't text at all. What happens instead: the Battle Tracker shows generated initials, shown with a real test file whose portrait was an SVG; the Owlbear sheet shows the name without a picture; the Creator shows an empty circle, and picking a file that isn't a picture says: Pick a PNG, JPEG, WebP or GIF picture." loading="lazy" /></a>
+    <figcaption>Every accepted and refused row here is a tested result.</figcaption>
+  </figure>
+
+  <h3>What was chosen on purpose still wins</h3>
+  <p>The old pairing wasn't removed. If a GM picks a picture alongside a character file, that picture is used, because someone chose it deliberately. The portrait inside the file fills in only when nothing else was given.</p>
+
+  <h3>Say where it stops</h3>
+  <p>Two things were left out, on purpose, and said out loud.</p>
+  <ul>
+    <li><strong>Map tokens.</strong> A token on Owlbear's map needs its picture as an Owlbear asset, not an image tucked inside a file. That morning's answer was that an extension couldn't get it there. While writing this study, a check of Owlbear's own extension API showed that it can, through an import dialog the player confirms. That route is now the plan for the token fix. Until it's built, a portrait becomes a token by uploading it once and linking it in the tracker.</li>
+    <li><strong>The printed character sheet.</strong> Its artwork is a designed page, so a portrait on it would need a design change. That wasn't made without a design ruling.</li>
+  </ul>
+
+  <h2>How the Work Ran</h2>
+  <ul>
+    <li><strong>About ten minutes from decision to tested.</strong> One shared check, the Creator's crop, and the portrait in all three tools. Then browser tests of the crop, a non-image file, a portrait from the file alone, and a hostile file refused everywhere.</li>
+    <li><strong>Held for review.</strong> Screenshots of all three tools went to me first, and nothing was committed until I'd seen them.</li>
+    <li><strong>A bug logged, not chased.</strong> The broken token button that started this became its own task instead of widening the feature.</li>
+    <li><strong>Released everywhere at once.</strong> The Character Creator v0.12.34, the Battle Tracker v0.3.4 and both Owlbear extensions went out by 10:35, the same morning as the retirement of the Novice tier. That shared release is where two parallel workstreams overlapped, told in <a href="/docs/case-study-novice.html">The Rung That Made Players Worse</a>.</li>
+    <li><strong>A wrong answer corrected in the open.</strong> The claim that map tokens were out of reach was checked against Owlbear's extension API while this study was being written, and it was wrong. The correction changed the token fix's plan.</li>
+  </ul>
+  <figure class="wide">
+    <a href="/docs/assets/portfolio/portraits-timeline.webp"><img src="/docs/assets/portfolio/portraits-timeline.webp" alt="A timeline of 28 September. 07:53: the token button places nothing, and the bug is logged as its own task at 07:57. 08:11: the question, can icons travel with the files and load automatically. 08:16: the decision, build the Portrait field. 08:17: built in three tools. 08:21: tested in the browser. 08:25: held for review. 10:05: go-ahead, commit it, release both and sync them. 10:06: committed and pushed. 10:35: released everywhere, with extensions synced at 10:31. Later: a route for map tokens found while writing this study." loading="lazy" /></a>
+    <figcaption>From a broken button to a released feature.</figcaption>
+  </figure>
+
+  <h2>Outcome</h2>
+  <p>A character now carries its own picture. It's set once in the Creator, framed the same way everywhere, and shown in the Creator, the Battle Tracker and the Owlbear sheet with no second file. A file from the table can't slip anything but a plain picture onto the screen. The part that isn't done, map tokens, has a named route and a task behind it.</p>
+  <p>What this doesn't show yet is players using it. The next sessions will show whether portraits get set, and whether the GM's tracker reads faster for them.</p>
+
+  <h2>Credits</h2>
+  <table class="credits">
+    <tr><td>The request, the decision and the release ruling</td><td>Me, as producer</td></tr>
+    <tr><td>Options, Package Deliverables, tests and figures</td><td>Claude (AI assistant), checked by me</td></tr>
+  </table>
+
+  <footer>20 Below &middot; 20belowrpg.com</footer>
+</main>
+<script src="/docs/assets/js/site-nav.js"></script>
+</body>
+</html>
