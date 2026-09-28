@@ -1,9 +1,10 @@
 import { el } from '../ui.js';
+import buildPortraitField from './portrait-field.js';
 
 export default {
   id: 'identity',
   title: 'Name & Concept',
-  render(container, { state }) {
+  render(container, { state, persist, rerenderStep }) {
     container.append(
       el('h2', {}, 'Name'),
       el('p', {}, 'Give your character a name. Purely cosmetic, no mechanical weight.'),
@@ -33,6 +34,9 @@ export default {
           text: state.concept,
         }),
       ]),
+      el('h2', {}, 'Portrait'),
+      el('p', {}, 'Optional. A picture of your character, for the sheet and the table.'),
+      buildPortraitField(state, { persist, rerender: rerenderStep }),
     );
   },
 };

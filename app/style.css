@@ -2002,3 +2002,78 @@ textarea.sf-edit {
 .gift-info-text p {
   margin: 0.2rem 0;
 }
+
+/* The character's portrait (steps/portrait-field.js). A circle, like the
+   token it often becomes. The file input sits inside its label, out of
+   sight, so the label is the button. */
+.portrait-field {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.4rem 0 1rem;
+}
+.portrait-img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--panel-border);
+  background: var(--panel);
+  flex: none;
+}
+.portrait-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dim);
+  font-size: 2rem;
+}
+.portrait-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.portrait-pick {
+  cursor: pointer;
+}
+.portrait-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.portrait-pick:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.portrait-hint,
+.portrait-note {
+  flex-basis: 100%;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+.portrait-note:empty {
+  display: none;
+}
+.portrait-field.compact {
+  margin: 0;
+  gap: 0.6rem;
+}
+.portrait-field.compact .portrait-img {
+  width: 64px;
+  height: 64px;
+}
+.portrait-field.compact .portrait-controls {
+  flex-direction: column;
+  align-items: stretch;
+}
+/* The sheet's heading with the portrait at its right. Stacks on a phone. */
+.sheet-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

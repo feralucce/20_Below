@@ -21,6 +21,7 @@ import {
 import { SIGNATURE_MOVE, signatureMoves, adderCount } from '../state.js';
 import buildAdvancementTab from './tab-advancement.js';
 import buildItemPicker from './add-item.js';
+import buildPortraitField from './portrait-field.js';
 import { giftInfoPanel, movementPanel, rollDicePanel } from '../sheet/panels.js';
 import { buildPagedSheet, loadFieldMap } from '../sheet/paged-sheet.js';
 import {
@@ -789,10 +790,15 @@ export default {
 
     container.append(
       npcNote,
-      el('h2', {}, 'Character Sheet'),
-      el('p', { class: 'attr-caption' },
-        'Roll dice is at the top of every page. The − and + '
-        + 'beside each Vital and pool move it by one.'),
+      el('div', { class: 'sheet-heading' }, [
+        el('div', {}, [
+          el('h2', {}, 'Character Sheet'),
+          el('p', { class: 'attr-caption' },
+            'Roll dice is at the top of every page. The − and + '
+            + 'beside each Vital and pool move it by one.'),
+        ]),
+        buildPortraitField(state, { persist: persistSheet, rerender: () => rerenderStep?.(), compact: true }),
+      ]),
       tabBar,
       pagesHost,
       advancementHost,
