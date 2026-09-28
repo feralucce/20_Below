@@ -437,7 +437,7 @@ Something you’ve learned and practiced. Every Skill has a home Element it norm
 <div class="gloss" markdown="1">
 <span class="gloss-term">Skill Training Tier</span>
 
-How good you are at a Skill, on a six-step ladder: Untrained, Novice, Trained, Adept, Expert, Master. Each step changes how you build the roll - from no Attribute at all, up to rolling with Advantage and a wider critical range. It also sets your damage dice on a Social attack: one at Untrained, rising to six at Master.
+How good you are at a Skill, on a five-step ladder: Untrained, Trained, Adept, Expert, Master. Each step changes how you build the roll - from no Attribute at all, up to rolling with Advantage and a wider critical range. It also sets your damage dice on a Social attack: one at Untrained, rising to six at Master.
 </div>
 
 <div class="gloss" markdown="1">

@@ -54,7 +54,7 @@ Every number in this chapter comes out of the same file the character creator re
 
 ### Skills
 
-- New Skill, Untrained to Novice: **3 XP**
+- New Skill, Untrained to Trained: **3 XP**
 - Raising a tier after that: **current tier x 2 XP**
 
 ### Resources
@@ -81,7 +81,7 @@ Every number in this chapter comes out of the same file the character creator re
 
 - Shedding one: three times the points it granted
 
-A note on how those multipliers read: you pay for the rung you’re leaving, not the one you’re stepping onto. Trained to Adept costs 4, because Trained is tier 2. Earth 6 to Earth 7 costs 54, because you’re standing on 6.
+A note on how those multipliers read: you pay for the rung you’re leaving, not the one you’re stepping onto. Trained to Adept costs 2, because Trained is tier 1. Earth 6 to Earth 7 costs 54, because you’re standing on 6.
 
 ## What That Actually Buys
 
@@ -91,11 +91,11 @@ Call it 4 XP a session, which is a good table on an ordinary week. A weekly game
 
 - A new Resource - **4 XP** - one session
 - A Resource, Level 1 to 2 - **3 XP** - one session
-- A Skill tier, Trained to Adept - **4 XP** - one session
-- A new Skill, up to Novice - **3 XP** - one session
+- A Skill tier, Trained to Adept - **2 XP** - one session
+- A new Skill, up to Trained - **3 XP** - one session
 - A Greater Boon - **10 XP** - three sessions
 - A new Gift at Level 1 - **7 XP** - two sessions
-- One Skill, Untrained to Master - **23 XP** - six sessions
+- One Skill, Untrained to Master - **15 XP** - four sessions
 - A Gift from Level 1 to 5 - **50 XP** - three months
 - An Attribute, 5 to 6 - **45 XP** - three months
 - An Attribute, 7 to 8 - **63 XP** - four months
@@ -108,13 +108,13 @@ That spread is the point. If everything cost about the same, every character wou
 
 Skills are the cheapest thing on the sheet and they always will be. This is where a new character should spend most of their first fifty XP.
 
-The one purchase worth calling out is the first one. Untrained isn’t the bottom rung of the ladder - it’s the ground the ladder is standing on. An Untrained roll doesn’t get your Attribute at all; your target number is the Difficulty by itself. Novice gets you the Attribute, at Disadvantage.
+The one purchase worth calling out is the first one. Untrained isn’t the bottom rung of the ladder - it’s the ground the ladder is standing on. An Untrained roll doesn’t get your Attribute at all; your target number is the Difficulty by itself. Trained gets you the Attribute.
 
-Watch what that does. Ronan has Earth 8 and wants to climb a knotted rope, Difficulty 7. Untrained, he needs a 7 or under, which the dice give him about one time in five. Novice, he needs 15 or under and rolls three dice keeping the worst two, which lands about two times in three.
+Watch what that does. Ronan has Earth 8 and wants to climb a knotted rope, Difficulty 7. Untrained, he needs a 7 or under, which the dice give him about one time in five. Trained, he needs 15 or under, which lands about six times in seven.
 
 **Three XP.** That is the best purchase in this book, and it stays the best purchase every time you make it.
 
-Everything after it is the same ladder Skills always describe, one tier at a time, no skipping. Novice to Trained is 2. Trained to Adept is 4. Adept to Expert is 6. Expert to Master is 8. **Twenty-three XP** takes any Skill from nothing to Master, which is under six sessions of a single player’s XP, and it is entirely reasonable to spend a whole campaign never doing it once.
+Everything after it is the same ladder Skills always describe, one tier at a time, no skipping. Trained to Adept is 2. Adept to Expert is 4. Expert to Master is 6. **Fifteen XP** takes any Skill from nothing to Master, which is under four sessions of a single player’s XP, and it is entirely reasonable to spend a whole campaign never doing it once.
 
 ## Resources
 

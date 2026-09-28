@@ -50,21 +50,19 @@ Your mastery of a skill is reflected in Skill Tiers. Skill Tiers are a crunchy, 
 
 **0 - Untrained**: You have no training in this skill. If you aren’t trained in a skill, you don’t get to add your Element to the Target Number - you roll Difficulty only.
 
-**1 - Novice**: You’ve played around enough that you can perform some of the most basic tasks associated with the skill. You roll your Element+Difficulty. The Novice Tier rolls at Disadvantage. You know enough to try. You don’t know enough to be trusted.
+**1 - Trained**: You are competent with this skill. You are the person people hire to get a job done. You roll your Element+Difficulty.
 
-**2 - Trained**: You are competent with this skill. You are the person people hire to get a job done. You roll your Element+Difficulty.
+**2 - Adept**: You are good at what you do and it shows. You roll your Element+Difficulty, at Advantage.
 
-**3 - Adept**: You are good at what you do and it shows. You roll your Element+Difficulty, at Advantage.
+**3 - Expert**: You are the guy that the adepts come to for answers. You aren’t just good -  you are *damn* good. You roll your Element+Difficulty, at Advantage. Additionally, while using this skill, you score a Critical Success when you roll a 2 or a 3.
 
-**4 - Expert**: You are the guy that the adepts come to for answers. You aren’t just good -  you are *damn* good. You roll your Element+Difficulty, at Advantage. Additionally, while using this skill, you score a Critical Success when you roll a 2 or a 3.
-
-**5 - Master**: You have truly mastered this skill. You have spent thousands of hours honing your craft. You might have invented the skill. You roll with all the benefits of an Expert. Additionally, if you roll a Catastrophic Falure (20 on the dice), you can avoid the negative consequences. Immediately roll the dice again. If your second roll succeeds, the Catastrophic Failure is canceled and you simply fail the roll.
+**4 - Master**: You have truly mastered this skill. You have spent thousands of hours honing your craft. You might have invented the skill. You roll with all the benefits of an Expert. Additionally, if you roll a Catastrophic Falure (20 on the dice), you can avoid the negative consequences. Immediately roll the dice again. If your second roll succeeds, the Catastrophic Failure is canceled and you simply fail the roll.
 
 ## Everyman Skills
 
 In every setting, there are things that any functional adult can do. These are represented by Everyman Skills. Your GM sets a list of skills that everyone in the campaign has access to automatically.
 
-Every character starts with this short list of Skills at Tier 2 (Trained), for free.
+Every character starts with this short list of Skills at Tier 1 (Trained), for free.
 
 For a present-day game, a list of Everyman Skills might be: Athletics, Bureaucracy, Computer Use, Cooking, Driving, Etiquette, First Aid, Perception, Persuasion and Streetwise. Your GM may have a different idea of what should be on this list, but Perception is always on it. This list also won’t work for a medieval high fantasy setting.
 
@@ -150,15 +148,13 @@ Which bows you are trained to draw, by Category: a hand crossbow first, then a c
 
 Each tier adds to the ones under it.
 
-**1 - Novice**: Hand crossbow.
+**1 - Trained**: Hand crossbow, Crossbow.
 
-**2 - Trained**: Crossbow.
+**2 - Adept**: Recurve bow.
 
-**3 - Adept**: Recurve bow.
+**3 - Expert**: Compound bow.
 
-**4 - Expert**: Compound bow.
-
-**5 - Master**: Warbow. An English longbow, and anything else that asks that much of a back.
+**4 - Master**: Warbow. An English longbow, and anything else that asks that much of a back.
 
 **Care, repair and building.** Waxing a string, fletching your own arrows, tuning a rest or a nock point: no roll. Repair is a roll of this Skill - a delaminated limb, a cracked riser, the prod of a crossbow, a string served badly by somebody else. From **Expert** you can build a bow from a prepared stave and fittings; at **Master**, from a stave you cut and cured yourself.
 
@@ -528,15 +524,13 @@ Which firearms you are trained on, by Category: a handgun first, then a shotgun,
 
 Each tier adds to the ones under it.
 
-**1 - Novice**: Handgun. A compact pistol, a heavy revolver, a derringer, a black powder pistol.
+**1 - Trained**: Handgun, Shotgun. A compact pistol, a heavy revolver, a derringer, a black powder pistol; a pump shotgun, a sawed-off.
 
-**2 - Trained**: Shotgun. A pump shotgun, a sawed-off.
+**2 - Adept**: Submachine gun. A compact SMG.
 
-**3 - Adept**: Submachine gun. A compact SMG.
+**3 - Expert**: Rifle. A hunting rifle, a tactical carbine, a revolver rifle, a muzzleloader.
 
-**4 - Expert**: Rifle. A hunting rifle, a tactical carbine, a revolver rifle, a muzzleloader.
-
-**5 - Master**: Heavy. A squad automatic weapon, a grenade launcher, an anti-materiel rifle, a harpoon gun.
+**4 - Master**: Heavy. A squad automatic weapon, a grenade launcher, an anti-materiel rifle, a harpoon gun.
 
 **Care, repair and building.** Cleaning it, clearing a jam, swapping a spring or a firing pin: no roll, that is just owning the thing. A real repair is a roll of this Skill - a cracked frame, a shot-out barrel, a receiver somebody dropped off a roof - at a Difficulty the GM sets from the damage. From **Expert** you can assemble one from parts; at **Master** you can machine what you cannot buy, which is how a weapon with no serial number comes to exist.
 
@@ -808,15 +802,13 @@ Which melee weapons you are trained on, by Category: improvised things and knive
 
 Each tier adds to the ones under it.
 
-**1 - Novice**: Improvised, Knife. A baseball bat, a metal pipe, a sap, a garrote; a combat knife, a switchblade, a trench knife, a bayonet.
+**1 - Trained**: Improvised, Knife, One-handed blunt, Large blade. A baseball bat, a metal pipe, a sap, a garrote; a combat knife, a switchblade, a trench knife, a bayonet; a mace, a flail, a tonfa; a machete, a kukri.
 
-**2 - Trained**: One-handed blunt, Large blade. A mace, a flail, a tonfa; a machete, a kukri.
+**2 - Adept**: One-handed blade. A short sword, a rapier, a katana, a war axe, a hatchet, a kama, a sai.
 
-**3 - Adept**: One-handed blade. A short sword, a rapier, a katana, a war axe, a hatchet, a kama, a sai.
+**3 - Expert**: Polearm / two-handed, Two-handed, Two-handed blunt. A battle spear, a glaive, a halberd, a two-handed sword; a sledgehammer; a warhammer.
 
-**4 - Expert**: Polearm / two-handed, Two-handed, Two-handed blunt. A battle spear, a glaive, a halberd, a two-handed sword; a sledgehammer; a warhammer.
-
-**5 - Master**: Exotic (melee). A whip, a chain whip, a nunchaku, a war fan.
+**4 - Master**: Exotic (melee). A whip, a chain whip, a nunchaku, a war fan.
 
 **Care, repair and building.** Keeping your own weapons in working order takes no roll. If you are trained on it you sharpen it, oil it, re-wrap a grip and re-seat a head without being told to. Fixing something actually broken is a roll of this Skill, at a Difficulty the GM sets from the damage - a sprung rivet is not a cracked tang - and your tier already says how that goes. From **Expert** you can build one from prepared stock and fittings; at **Master**, from raw material and the time it takes.
 
@@ -1186,15 +1178,13 @@ Which thrown weapons you are trained on, by Category: a balanced blade first, th
 
 Each tier adds to the ones under it.
 
-**1 - Novice**: Balanced blade. A throwing knife.
+**1 - Trained**: Balanced blade, Thrown axe. A throwing knife; a hand axe.
 
-**2 - Trained**: Thrown axe. A hand axe.
+**2 - Adept**: Shafted. A javelin.
 
-**3 - Adept**: Shafted. A javelin.
+**3 - Expert**: Returning. A boomerang.
 
-**4 - Expert**: Returning. A boomerang.
-
-**5 - Master**: Sling.
+**4 - Master**: Sling.
 
 **Care, repair and building.** Keeping an edge, checking a haft, re-weighting a knife that has started to fly wrong: no roll. Repair is a roll of this Skill - a split haft, a bent blade, a sling gone brittle. From **Expert** you can make them from prepared stock; at **Master**, from raw material, matched to your own hand and the way you actually throw.
 

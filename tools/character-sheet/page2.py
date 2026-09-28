@@ -42,13 +42,13 @@ SH = sized(1002, 961)
 frame(MARGIN, sy, INNER, SH, GREEN, "SKILLS", "TICK TRAINED AND UP")
 lx = MARGIN + 42
 label(lx, sy + 120, "TIER", 31, DIM, 3.6)
-for i, t in enumerate(("2 TRAINED", "3 ADEPT", "4 EXPERT", "5 MASTER")):
+for i, t in enumerate(("1 TRAINED", "2 ADEPT", "3 EXPERT", "4 MASTER")):
     box(lx + 126 + i * 300, sy + 90, sized(36, 48), GREEN, 4.2, 8)
     # The legend box grows on paper, so its caption moves with it -
     # otherwise the two end up 3px apart and read as one smudge.
     label(lx + sized(177, 189) + i * 300, sy + 120, t, 31,
           mix(GREEN, LIFT, 0.4), 3.0)
-label(MARGIN + INNER - 42, sy + 120, "UNTRAINED AND NOVICE STAY BLANK", 30, DIM, 3.0, "end")
+label(MARGIN + INNER - 42, sy + 120, "UNTRAINED STAYS BLANK", 30, DIM, 3.0, "end")
 line(MARGIN + 42, sy + 144, INNER - 84, GREEN, 0.35)
 
 scol = (INNER - 96) / 3.0
@@ -63,7 +63,7 @@ for ci in range(3):
         for j in range(4):
             box(x + scol - 252 + j * 60, y - 30, sized(36, 48), GREEN, 3.6, 8, 0.72)
         field("skill.%d.tier" % n, "tiers", x + scol - 252, y - 30, 4 * 60 - 24,
-              sized(36, 48), slot=n, n=4, base=2, size=sized(36, 48),
+              sized(36, 48), slot=n, n=4, base=1, size=sized(36, 48),
               gap=sized(24, 12), color=GREEN)
 
 # --- boons and flaws ------------------------------------------------------

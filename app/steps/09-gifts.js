@@ -3,6 +3,8 @@ import {
   describeFields, describePrompt, describePrompts, describeOptionSlots, optionChoiceSpecs,
 } from '../describe-spec.js';
 import {
+  boughtOutsidePool,
+  adderBoughtOutsidePool,
   setGiftNote,
   giftNotes,
   forcefieldForms,
@@ -99,7 +101,7 @@ export default {
           // interaction, and leaving it still leaves a playable row.
           if (v > 0) fillPlaceholders(state, gift.name);
         },
-        min: 0,
+        min: boughtOutsidePool(state, 'Gifts', gift.name),
         max: () => Math.min(5, gState.level + Math.floor(remaining / perLevel)),
         onChange: () => {
           rerenderStep();
@@ -131,7 +133,7 @@ export default {
                 while (adderCount(gState, adder.name) < v) gState.adders.push(adder.name);
                 while (adderCount(gState, adder.name) > v) removeOneAdder(gState, adder.name);
               },
-              min: 0,
+              min: adderBoughtOutsidePool(state, gift.name, adder.name),
               max: () => (adderCount(gState, adder.name) === 0 && optionBlock(gState, adder)
                 ? 0
                 : adderCount(gState, adder.name) + Math.floor(remaining / adder.points)),
@@ -144,12 +146,14 @@ export default {
           const cantAfford = !checked && adder.points > remaining;
           // Contradicts something already chosen, or needs a Level or Adder first.
           const blocked = !checked && optionBlock(gState, adder);
+          // Bought with Discretionary points or XP: taken back there, not here.
+          const heldElsewhere = checked && adderBoughtOutsidePool(state, gift.name, adder.name) > 0;
           addersRow.appendChild(
             el('label', { style: 'display:block;font-size:0.85rem;' }, [
               el('input', {
                 type: 'checkbox',
                 checked: checked ? '' : undefined,
-                disabled: cantAfford || blocked ? '' : undefined,
+                disabled: cantAfford || blocked || heldElsewhere ? '' : undefined,
                 onChange: (e) => {
                   if (e.target.checked) gState.adders.push(adder.name);
                   else gState.adders = gState.adders.filter((a) => a !== adder.name);
@@ -157,7 +161,7 @@ export default {
                   rerenderPools();
                 },
               }),
-              ` ${adder.name} (${adder.tier}, ${adder.points} pts)${blocked ? ` - ${blocked}` : ''}`,
+              ` ${adder.name} (${adder.tier}, ${adder.points} pts)${blocked ? ` - ${blocked}` : ''}${heldElsewhere ? ' - bought with Discretionary points or XP, and refunded there' : ''}`,
             ]),
           );
         });

@@ -129,12 +129,11 @@ Every Skill you take, Everyman or otherwise, comes with a **default Attribute/El
 | Persuasion | Everyday give-and-take - asking a favor, making a case, haggling a little. |
 | Streetwise | A working sense of your own neighborhood/city - what's safe, who's who, where not to go. |
 
-Beyond Everyman, you have a **15-point Skills Pool**. Each training tier costs a flat 1 point, cumulative with every lower tier already climbed - reaching Trained costs 2 points total (Novice + Trained), Adept costs 3, Expert 4, Master 5.
+Beyond Everyman, you have a **15-point Skills Pool**. Each training tier costs a flat 1 point, cumulative with every lower tier already climbed - Trained costs 1 point, Adept 2 in total, Expert 3, Master 4.
 
 | Tier | What it does |
 |---|---|
 | Untrained | Roll Difficulty alone - your Attribute doesn't apply. |
-| Novice | Attribute + Difficulty, with Disadvantage. |
 | Trained | Attribute + Difficulty. |
 | Adept | Attribute + Difficulty, with Advantage. |
 | Expert | Same as Adept, plus critical success widens to a roll of 2 or 3. |

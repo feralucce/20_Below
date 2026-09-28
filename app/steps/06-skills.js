@@ -1,5 +1,8 @@
 import { el, counterRow, renderSelectedAvailable, renderMarkdownInline as inline } from '../ui.js';
-import { skillsPoolRemaining, skillTierName, retiredSkills, removeRetiredSkill } from '../state.js';
+import {
+  skillsPoolRemaining, skillTierName, retiredSkills, removeRetiredSkill, TRAINED_TIER, MASTER_TIER,
+  boughtOutsidePool, resetSkills,
+} from '../state.js';
 
 export default {
   id: 'skills',
@@ -18,6 +21,19 @@ export default {
           : `Everyman Skills (${data.everymanSkills.join(', ')}) start Trained for free. Beyond that, a ${data.skillsPoolTotal}-point pool, 1 point per tier climbed. Remaining: ${remaining}.`,
       ),
     );
+
+    container.append(el('p', {}, [
+      el('button', {
+        type: 'button',
+        text: 'Reset Skills',
+        onClick: () => {
+          if (!window.confirm('Put every Skill back where a new character starts - Everyman Skills at Trained, everything else Untrained - and give back every point spent on Skills: the Skills pool, Discretionary points and XP. This can\'t be undone.')) return;
+          resetSkills(state, data);
+          rerenderStep();
+          rerenderPools();
+        },
+      }),
+    ]));
 
     const tierTable = el('table', {}, [
       el('tr', {}, [el('th', {}, 'Tier'), el('th', {}, 'Roll')]),
@@ -61,7 +77,7 @@ export default {
     );
 
     let filterValue = '';
-    const baselineOf = (s) => (data.everymanSkills.includes(s.name) ? 2 : 0);
+    const baselineOf = (s) => (data.everymanSkills.includes(s.name) ? TRAINED_TIER : 0);
     const isSelected = (s) => state.skills[s.name] > baselineOf(s);
 
     function renderCard(s) {
@@ -75,8 +91,8 @@ export default {
           set: (v) => {
             state.skills[s.name] = v;
           },
-          min: baseline,
-          max: () => Math.min(5, state.skills[s.name] + rem),
+          min: baseline + boughtOutsidePool(state, 'Skills', s.name),
+          max: () => Math.min(MASTER_TIER, state.skills[s.name] + rem),
           format: (v) => skillTierName(data, v),
           onChange: () => {
             rerenderPools();

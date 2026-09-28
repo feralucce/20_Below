@@ -284,11 +284,10 @@ A social attack resolves exactly like a [Physical one](#physical-attacks---weapo
 | Tier | | Dice |
 |---|---|---|
 | 0 | Untrained | **1** |
-| 1 | Novice | **2** |
-| 2 | Trained | **3** |
-| 3 | Adept | **4** |
-| 4 | Expert | **5** |
-| 5 | Master | **6** |
+| 1 | Trained | **3** |
+| 2 | Adept | **4** |
+| 3 | Expert | **5** |
+| 4 | Master | **6** |
 
 Untrained rolls 1 for the same reason bare fists do. Master reaches 6, one past the heaviest ordinary weapon in [weapons.md](weapons.md), and that is deliberate: Poise has no death threshold, so nothing on this ladder can kill.
 

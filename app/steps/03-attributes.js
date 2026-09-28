@@ -1,5 +1,5 @@
 import { el, counterRow } from '../ui.js';
-import { attributePointsSpent } from '../state.js';
+import { attributePointsSpent, boughtOutsidePool } from '../state.js';
 
 export default {
   id: 'attributes',
@@ -26,7 +26,7 @@ export default {
           set: (v) => {
             state.attributes[a.name] = v;
           },
-          min: data.attributeFloor,
+          min: data.attributeFloor + boughtOutsidePool(state, 'Attributes', a.name),
           max: () => Math.min(data.attributeCap, state.attributes[a.name] + remaining),
           onChange: () => {
             rerenderStep();

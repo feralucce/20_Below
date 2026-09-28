@@ -76,7 +76,8 @@ export function parseCosts(costsMd) {
       giftLimiterDiscount: adv['Gift Limiter Discount, Advancement (per Limiter)'],
       giftLimiterFloor: adv['Gift Limiter Floor, Advancement (minimum XP)'],
       giftAdderXp: { Lesser: adv['Gift Adder XP - Lesser'], Greater: adv['Gift Adder XP - Greater'] },
-      newSkillXp: adv['New Skill (Untrained → Novice) - flat XP'],
+      // Novice was retired 2026-09-28; the row was named for it until then.
+      newSkillXp: adv['New Skill (Untrained → Trained) - flat XP'] ?? adv['New Skill (Untrained → Novice) - flat XP'],
       flawBuyoffXpMultiplier: adv['Flaw Buy-off - XP multiplier (× points granted)'],
       kiXpMultiplier: adv['Ki - XP multiplier (current Ki × N)'],
       kiMaxMultiplier: adv['Ki maximum (× figured Ki)'],

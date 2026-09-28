@@ -156,6 +156,7 @@ Generated from the same source the printed sheet uses.</p>
 """
 
 TAIL = """</main>
+{% include site-footer.html %}
 <script src="/docs/assets/js/site-nav.js"></script>
 </body>
 </html>

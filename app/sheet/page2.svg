@@ -26,14 +26,14 @@
   <text x="2391" y="963" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="32" letter-spacing="4.8" fill="#A3D6A5" text-anchor="end">TICK TRAINED AND UP</text>
   <text x="159" y="1020" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="31" letter-spacing="3.6" fill="#8FADBE" text-anchor="start">TIER</text>
   <rect x="285" y="990" width="36" height="36" rx="8" fill="#01050A" fill-opacity="0.55" stroke="#7BC47F" stroke-width="4.2" stroke-opacity="1"/>
-  <text x="336" y="1020" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="31" letter-spacing="3" fill="#B0DCB2" text-anchor="start">2 TRAINED</text>
+  <text x="336" y="1020" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="31" letter-spacing="3" fill="#B0DCB2" text-anchor="start">1 TRAINED</text>
   <rect x="585" y="990" width="36" height="36" rx="8" fill="#01050A" fill-opacity="0.55" stroke="#7BC47F" stroke-width="4.2" stroke-opacity="1"/>
-  <text x="636" y="1020" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="31" letter-spacing="3" fill="#B0DCB2" text-anchor="start">3 ADEPT</text>
+  <text x="636" y="1020" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="31" letter-spacing="3" fill="#B0DCB2" text-anchor="start">2 ADEPT</text>
   <rect x="885" y="990" width="36" height="36" rx="8" fill="#01050A" fill-opacity="0.55" stroke="#7BC47F" stroke-width="4.2" stroke-opacity="1"/>
-  <text x="936" y="1020" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="31" letter-spacing="3" fill="#B0DCB2" text-anchor="start">4 EXPERT</text>
+  <text x="936" y="1020" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="31" letter-spacing="3" fill="#B0DCB2" text-anchor="start">3 EXPERT</text>
   <rect x="1185" y="990" width="36" height="36" rx="8" fill="#01050A" fill-opacity="0.55" stroke="#7BC47F" stroke-width="4.2" stroke-opacity="1"/>
-  <text x="1236" y="1020" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="31" letter-spacing="3" fill="#B0DCB2" text-anchor="start">5 MASTER</text>
-  <text x="2391" y="1020" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3" fill="#8FADBE" text-anchor="end">UNTRAINED AND NOVICE STAY BLANK</text>
+  <text x="1236" y="1020" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="31" letter-spacing="3" fill="#B0DCB2" text-anchor="start">4 MASTER</text>
+  <text x="2391" y="1020" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="30" letter-spacing="3" fill="#8FADBE" text-anchor="end">UNTRAINED STAYS BLANK</text>
   <rect x="159" y="1044" width="2232" height="3" fill="#7BC47F" fill-opacity="0.35"/>
   <rect x="165" y="1116" width="464" height="3" fill="#5C7488" fill-opacity="0.5"/>
   <rect x="653" y="1086" width="36" height="36" rx="8" fill="#01050A" fill-opacity="0.55" stroke="#7BC47F" stroke-width="3.6" stroke-opacity="0.72"/>

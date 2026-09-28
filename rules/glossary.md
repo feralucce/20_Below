@@ -146,7 +146,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Skill** - Something you’ve learned and practiced. Every Skill has a home Element it normally rolls off, but you can argue for a different one in the moment - as long as you can point to a Descriptor that backs the pairing and sell it to the GM.
 
-**Skill Training Tier** - How good you are at a Skill, on a six-step ladder: Untrained, Novice, Trained, Adept, Expert, Master. Each step changes how you build the roll - from no Attribute at all, up to rolling with Advantage and a wider critical range. It also sets your damage dice on a Social attack: one at Untrained, rising to six at Master.
+**Skill Training Tier** - How good you are at a Skill, on a five-step ladder: Untrained, Trained, Adept, Expert, Master. Each step changes how you build the roll - from no Attribute at all, up to rolling with Advantage and a wider critical range. It also sets your damage dice on a Social attack: one at Untrained, rising to six at Master.
 
 **Slow Action** - The Slow bracket. One action, and you go last - but it’s a better action. It’s an empowered action - Aim for Advantage, a Called Shot, Study a Target and the rest - plus a one-meter step. You’re trading speed for one concentrated, harder-hitting move. (All spellcasting is Slow.)
 

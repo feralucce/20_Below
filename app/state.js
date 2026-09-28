@@ -413,6 +413,43 @@ function advBought(state, kind, name) {
   return state.advancementPurchases?.[kind]?.[name] ?? 0;
 }
 
+// Levels of one thing paid for with Discretionary points or XP rather than
+// its own creation pool. A creation step may only take back what that pool
+// paid for: lowering below this would leave the Discretionary or XP
+// purchase refundable against a level that is already gone, and refunding
+// it then drops the value under its floor and the pool below zero.
+export function boughtOutsidePool(state, kind, name) {
+  return (Number(state.discretionaryPurchases?.[kind]?.[name]) || 0) + advBought(state, kind, name);
+}
+
+// The same for one Gift Adder, which is bought by name rather than by
+// Level: how many copies of it on this Gift came from Discretionary or XP.
+export function adderBoughtOutsidePool(state, giftName, adderName) {
+  const count = (list) => (list || []).filter((n) => n === adderName).length;
+  return count(state.discretionaryPurchases?.GiftAdders?.[giftName])
+    + count(state.advancementPurchases?.GiftAdders?.[giftName]);
+}
+
+// Every Skill back to where a new character starts - Everyman Skills at
+// Trained, everything else Untrained - with every point that paid for them
+// returned: the Skills pool, the Discretionary points (Skill tiers bought
+// there), and the XP (Skill tiers bought in Advancement). Skills that have
+// left the rules go too, since they cannot be bought back. For players
+// testing builds, and a way out for a save whose Skill bookkeeping has
+// come apart.
+export function resetSkills(state, data) {
+  const listed = new Set(data.skillCatalog.map((s) => s.name));
+  Object.keys(state.skills).forEach((name) => {
+    if (!listed.has(name)) delete state.skills[name];
+  });
+  data.skillCatalog.forEach((s) => {
+    state.skills[s.name] = data.everymanSkills.includes(s.name) ? TRAINED_TIER : 0;
+  });
+  state.discretionaryPurchases.Skills = {};
+  state.discretionaryExtra.Skills = 0;
+  state.advancementPurchases.Skills = {};
+}
+
 export function attributePointsSpent(state, data) {
   let spent = 0;
   data.attributes.forEach((a) => {

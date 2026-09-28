@@ -223,8 +223,6 @@ Whatever Skill you’re using, its Training Tier is how many dice you roll.
 
 **Untrained.** One die
 
-**Novice.** Two dice.
-
 **Trained.** Three.
 
 **Adept.** Four.

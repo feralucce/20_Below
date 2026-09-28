@@ -581,13 +581,11 @@ The GM presents everyone with a list of **Everyman Skills.** These are skills th
 
 A modern day campaign may have Athletics, Bureaucracy, Computer Use, Cooking, Driving, Etiquette, First Aid, Perception, Persuasion, and Streetwise as its Everyman Skills. The rest of the list is up to your GM, but Perception is always on it.
 
-You have **15-points** to spend on **Purchased Skills.** Each tier costs 1 point and you climb through them in order, so reaching Trained costs 2 points total, Adept costs 3, Expert 4, and Master 5. Those 15 points won’t go as far as you would like. As with everything else in 20 Below, this is intentional. You can have one skill at Master tier and a couple at Trained, or 5 at Adept, or a wide spread of moderate skill. What you can’t have is everything and choosing makes it interesting.
+You have **15-points** to spend on **Purchased Skills.** Each tier costs 1 point and you climb through them in order, so Trained costs 1 point, Adept costs 2 in total, Expert 3, and Master 4. Those 15 points won’t go as far as you would like. As with everything else in 20 Below, this is intentional. You can have two skills at Master tier and a few at Adept, or 7 at Adept, or a wide spread of moderate skill. What you can’t have is everything and choosing makes it interesting.
 
 Every Skill has an Element attached to it. This is the default Element that is used to calculate the Target Number for your roll when using the skill.
 
 **Untrained**: your target number is just the Difficulty, you don’t get to add your attribute.
-
-**Novice**: Attribute plus Difficulty, at Disadvantage.
 
 **Trained**: Attribute plus Difficulty.
 

@@ -424,7 +424,7 @@ function pipControl(f, filled) {
   return place(wrap, f);
 }
 
-// Tier boxes start at Trained, so a tier of 3 fills the first two.
+// Tier boxes start at Trained (tier 1), so a tier of 2 (Adept) fills two.
 function tierControl(f, tier) {
   const wrap = el('div', { class: 'sf sf-pips' });
   if (f.color) wrap.style.color = f.color;

@@ -17,11 +17,10 @@ A Skill's **training tier** changes *how* the [core roll](rules.md#core-mechanic
 | Tier | Name | Roll |
 |---|---|---|
 | 0 | Untrained | Difficulty only (no Attribute - see [Untrained Rolls](rules.md#untrained-rolls)) |
-| 1 | Novice | Attribute + Difficulty, with **Disadvantage** |
-| 2 | Trained | Attribute + Difficulty |
-| 3 | Adept | Attribute + Difficulty, with **Advantage** |
-| 4 | Expert | Attribute + Difficulty, with Advantage, and **critical success widens to a roll of 2 or 3** |
-| 5 | Master | Same as Expert, plus: **on a catastrophic failure, roll again** - if the second roll succeeds, it's treated as a normal failure, not a catastrophic failure |
+| 1 | Trained | Attribute + Difficulty |
+| 2 | Adept | Attribute + Difficulty, with **Advantage** |
+| 3 | Expert | Attribute + Difficulty, with Advantage, and **critical success widens to a roll of 2 or 3** |
+| 4 | Master | Same as Expert, plus: **on a catastrophic failure, roll again** - if the second roll succeeds, it's treated as a normal failure, not a catastrophic failure |
 
 Each tier is strictly better than the last. Master's reroll only ever *removes the "critical" severity* from a failure (downgrading it to an ordinary failure on a second success) - it never turns a catastrophic failure into any kind of success, and if the reroll also fails, the catastrophic failure stands.
 
@@ -39,11 +38,10 @@ Each tier adds to the ones below it.
 
 | Tier | Melee Weapons | Firearms | Archery | Thrown Weapons |
 |---|---|---|---|---|
-| 1 Novice | Improvised, Knife | Handgun | Hand crossbow | Balanced blade |
-| 2 Trained | One-handed blunt, Large blade | Shotgun | Crossbow | Thrown axe |
-| 3 Adept | One-handed blade | Submachine gun | Recurve bow | Shafted |
-| 4 Expert | Polearm / two-handed, Two-handed, Two-handed blunt | Rifle | Compound bow | Returning |
-| 5 Master | Exotic (melee) | Heavy | Warbow | Sling |
+| 1 Trained | Improvised, Knife, One-handed blunt, Large blade | Handgun, Shotgun | Hand crossbow, Crossbow | Balanced blade, Thrown axe |
+| 2 Adept | One-handed blade | Submachine gun | Recurve bow | Shafted |
+| 3 Expert | Polearm / two-handed, Two-handed, Two-handed blunt | Rifle | Compound bow | Returning |
+| 4 Master | Exotic (melee) | Heavy | Warbow | Sling |
 
 **Unarmed is not on the list.** Fists and feet need no permission from anyone, and there is nothing there to be trained on. Fighting that way is [Onslaught](gifts.md), which is a Gift rather than a Skill.
 
@@ -53,7 +51,7 @@ These are the one place a tier buys access rather than a better roll, which is w
 
 ## Everyman Skills
 
-A short list of ordinary, baseline skills that every character starts with at no cost, reflecting the basic competence any functional adult in the setting would have. 20 Below doesn't fix this list in the core rules - **the GM decides the Everyman Skills list for their own campaign/setting**, since "what any ordinary person can do" depends heavily on genre and setting. Every Everyman Skill is granted at **Tier 2 (Trained)** - full Attribute + Difficulty, no flat bonus or Advantage, reflecting genuine baseline competence rather than a bare exposure.
+A short list of ordinary, baseline skills that every character starts with at no cost, reflecting the basic competence any functional adult in the setting would have. 20 Below doesn't fix this list in the core rules - **the GM decides the Everyman Skills list for their own campaign/setting**, since "what any ordinary person can do" depends heavily on genre and setting. Every Everyman Skill is granted at **Tier 1 (Trained)** - full Attribute + Difficulty, no flat bonus or Advantage, reflecting genuine baseline competence.
 
 Everything else about Skills (whether there's a fixed list beyond Everyman Skills, breadth) is still open. XP costs per tier are tracked in the [Advancement chapter](../webbook/advancement.html), not here.
 
@@ -148,7 +146,7 @@ A starting Skill list scoped to a **modern-world base campaign**. **This list is
 ## A Modern Campaign's Everyman Skills
 
 
-Per [the Everyman Skills rule above](#everyman-skills), the GM sets this list per campaign - the system doesn't fix it. This is a **suggested starting list for a modern-world base campaign**: baseline competence a functional adult in the present day would plausibly have just from living in it, granted free at **Tier 2 (Trained)**. Meant to be trimmed or extended per campaign, not adopted wholesale without a look. **Perception is the exception: it is always on the list**, in every campaign.
+Per [the Everyman Skills rule above](#everyman-skills), the GM sets this list per campaign - the system doesn't fix it. This is a **suggested starting list for a modern-world base campaign**: baseline competence a functional adult in the present day would plausibly have just from living in it, granted free at **Tier 1 (Trained)**. Meant to be trimmed or extended per campaign, not adopted wholesale without a look. **Perception is the exception: it is always on the list**, in every campaign.
 
 | Skill | Why it's baseline in a modern setting |
 |---|---|

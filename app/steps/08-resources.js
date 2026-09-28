@@ -1,5 +1,5 @@
 import { counterRow, el, flavourHtml, renderMarkdown, renderSelectedAvailable } from '../ui.js';
-import { resourcesPoolRemaining, canBuyWealthAtCreation } from '../state.js';
+import { resourcesPoolRemaining, canBuyWealthAtCreation, boughtOutsidePool } from '../state.js';
 
 export default {
   id: 'resources',
@@ -22,7 +22,7 @@ export default {
         set: (v) => {
           state.resources[r.name] = v;
         },
-        min: 0,
+        min: boughtOutsidePool(state, 'Resources', r.name),
         // Destitute holds Wealth at 0 for the whole of creation - the Flaw
         // has to be bought off before any Wealth can be bought.
         max: () =>

@@ -15,6 +15,7 @@ import {
   buyDiscretionaryGiftAdder,
   refundDiscretionaryGiftAdder,
   skillTierName,
+  MASTER_TIER,
   unspentBoonsPoolPoints,
   unspentGiftsPoolPoints,
   fateTokenCap,
@@ -332,7 +333,7 @@ export default {
               min: state.skills[s.name] - bought,
               max: () =>
                 Math.min(
-                  5,
+                  MASTER_TIER,
                   state.skills[s.name] + Math.floor(discretionaryRemaining(state, data) / rateSkills),
                 ),
               format: (v) => skillTierName(data, v),

@@ -65,7 +65,7 @@ times 2, an Attribute point costs 8, and so on.
 | Gift Limiter Floor, Advancement (minimum XP) | 1 |
 | Gift Adder XP - Lesser | 6 |
 | Gift Adder XP - Greater | 12 |
-| New Skill (Untrained → Novice) - flat XP | 3 |
+| New Skill (Untrained → Trained) - flat XP | 3 |
 | Flaw Buy-off - XP multiplier (× points granted) | 3 |
 | Ki - XP multiplier (current Ki × N) | 1 |
 | Ki maximum (× figured Ki) | 2 |

@@ -65,11 +65,10 @@ Movement Rate is **5 + Air** in metres; you move in metres and the band follows.
 | | Tier | The roll you make |
 |---|---|---|
 | **0** | Untrained | Difficulty only. No Element. |
-| **1** | Novice | Element + Difficulty, at Disadvantage |
-| **2** | Trained | Element + Difficulty |
-| **3** | Adept | Element + Difficulty, at Advantage |
-| **4** | Expert | As Adept, and a **2 or 3** is a critical success |
-| **5** | Master | As Expert, and a catastrophic failure gets one reroll, which can only soften it to an ordinary failure |
+| **1** | Trained | Element + Difficulty |
+| **2** | Adept | Element + Difficulty, at Advantage |
+| **3** | Expert | As Adept, and a **2 or 3** is a critical success |
+| **4** | Master | As Expert, and a catastrophic failure gets one reroll, which can only soften it to an ordinary failure |
 
 ## In a Fight
 
@@ -123,11 +122,10 @@ Same two steps as any attack. Element vs their **Social Defense** (10-Psyche) to
 | | | |
 |---|---|---|
 | **0** | Untrained | 1 die |
-| **1** | Novice | 2 |
-| **2** | Trained | 3 |
-| **3** | Adept | 4 |
-| **4** | Expert | 5 |
-| **5** | Master | 6 |
+| **1** | Trained | 3 |
+| **2** | Adept | 4 |
+| **3** | Expert | 5 |
+| **4** | Master | 6 |
 
 **The Skill picks the Element too.** Fire carries Ridicule, Intimidation, Persuasion, Public Speaking, Performance and Leadership. Water carries Deception. Moira carries Insight.
 

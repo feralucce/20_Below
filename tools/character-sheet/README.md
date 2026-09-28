@@ -32,7 +32,7 @@ space, plus whatever that kind needs. The kinds:
 | `text` | a single line - a name, a number, a short list |
 | `para` | a ruled block that wraps - Backstory, Notes, what a Gift does |
 | `pips` | a run of boxes filled up to a value - Vitals, Levels |
-| `tiers` | the Skill training boxes, which start at Trained rather than 1 |
+| `tiers` | the Skill training boxes, one per tier from Trained (1) to Master (4) |
 | `check` | one box, on or off |
 | `button` | a `-` or `+` glyph the art already draws, registered so a click lands on it |
 

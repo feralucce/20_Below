@@ -274,7 +274,7 @@ You saw a man fold himself into an acrylic box on The Gong Show and decided you 
 
 </div>
 
-For Escapology rolls, treat your Skill Training Tier as one tier higher than your actual tier, with a minimum of Trained - even an Untrained or Novice character rolls Escapology as if Trained. Trained rolls as if Adept, Adept as if Expert, Expert as if Master. (Master stays Master.)
+For Escapology rolls, treat your Skill Training Tier as one tier higher than your actual tier, with a minimum of Trained - even an Untrained character rolls Escapology as if Trained. Trained rolls as if Adept, Adept as if Expert, Expert as if Master. (Master stays Master.)
 
 </div>
 
