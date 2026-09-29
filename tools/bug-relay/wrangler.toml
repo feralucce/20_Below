@@ -9,7 +9,7 @@ compatibility_date = "2026-09-01"
 # Windows and macOS, and the local preview server used for testing.
 ALLOWED_ORIGINS = "https://20belowrpg.com,https://www.20belowrpg.com,https://feralucce.github.io,http://tauri.localhost,https://tauri.localhost,tauri://localhost,http://localhost:8792"
 # The id of the forum channel's "New" tag, filled in during setup (step 4).
-NEW_TAG_ID = ""
+NEW_TAG_ID = "1554503018014310430"
 
 # Ticket counter and rate limits. Replace the id after `wrangler kv namespace create TICKETS`.
 [[kv_namespaces]]
