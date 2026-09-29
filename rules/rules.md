@@ -233,13 +233,13 @@ Living bodies have **Soak**. Items and armor have **Hardness**, on the same 0-10
 | Thin wood | 3 | 2 | Interior door, table |
 | Chain-link, cheap locks | 3 | 1-2 | Fence, padlock |
 | Sandbags, packed earth | 4 | 4 | Berm, sandbag wall |
-| Hardware steel | 4 | 1 | Handcuffs, a chain |
 | Sheet metal | 5 | 3 | Car door, vending machine |
 | Solid wood | 5 | 3 | Reinforced exterior door, tree trunk |
 | Brick | 6 | 4 | House wall, chimney |
 | Stone | 7 | 5 | Boulder, stone wall |
 | Steel plate | 7 | 4 | Security door, dumpster |
 | Bulletproof glass | 7 | 3 | Bank teller window |
+| Hardened steel | 8 | 3 | Handcuffs, a chain |
 | Reinforced concrete | 8 | 5 | Bunker, parking garage pillar |
 | Vault steel | 9 | 6 | Bank vault door |
 | Fortress stone | 9 | 8 | Castle gate, fortress wall |
