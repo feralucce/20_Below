@@ -2,6 +2,7 @@ import { createInitialState, mergeCharacterState, allPoolsSummary, clampFateToke
 import { el, poolBadge } from './ui.js';
 import { loadRulesData } from './rules-data.js';
 import { isDesktopApp } from './desktop-storage.js';
+import { requireCurrentVersion } from './update-gate.js';
 import { isServingBundledRules } from './parse/markdown.js';
 import {
   listNames,
@@ -279,6 +280,9 @@ function showRulesSource() {
 }
 
 async function main() {
+  // An outdated desktop copy stops here with an update screen, before it
+  // reads rules it may not understand. Web builds pass straight through.
+  if (!(await requireCurrentVersion('creator'))) return;
   showAppVersion();
   addBugReportButton(document.querySelector('.header-links'), { app: 'Character Creator' });
   checkVersionStatus();

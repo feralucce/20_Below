@@ -34,7 +34,7 @@ if (-not (Test-Path $prep)) {
 Copy-Item -Path $prep -Destination (Join-Path $stagingDir "prep") -Recurse -Force
 
 New-Item -ItemType Directory -Path (Join-Path $stagingDir "app\combat") -Force | Out-Null
-foreach ($file in @("app\state.js", "app\combat\encounter.js")) {
+foreach ($file in @("app\state.js", "app\combat\encounter.js", "app\update-gate.js")) {
     $source = Join-Path $repoRoot $file
     if (-not (Test-Path $source)) {
         throw "Missing source file: $source"
@@ -42,4 +42,4 @@ foreach ($file in @("app\state.js", "app\combat\encounter.js")) {
     Copy-Item -Path $source -Destination (Join-Path $stagingDir $file) -Force
 }
 
-Write-Host "Staged frontend assets (prep/, app/state.js, app/combat/encounter.js) to $stagingDir"
+Write-Host "Staged frontend assets (prep/, app/state.js, app/combat/encounter.js, app/update-gate.js) to $stagingDir"

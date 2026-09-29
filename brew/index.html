@@ -116,6 +116,9 @@ const v = Date.now();
    together. */
 document.querySelector('link[rel="stylesheet"]').href = `brew.css?v=${v}`;
 import(`./main.js?v=${v}`);
+/* The desktop app shows an update screen over everything when this copy
+   is older than app-versions.json allows. */
+import(`../app/update-gate.js?v=${v}`).then((m) => m.requireCurrentVersion('brewery'));
 </script>
 </body>
 </html>

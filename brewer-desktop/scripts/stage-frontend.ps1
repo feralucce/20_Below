@@ -32,10 +32,19 @@ foreach ($folder in @("brew", "vendor")) {
     Copy-Item -Path $source -Destination (Join-Path $stagingDir $folder) -Recurse -Force
 }
 
+# The update gate lives with the Creator's modules; brew/index.html loads it
+# from ../app/, so it lands in the same place here.
+$gate = Join-Path $repoRoot "app\update-gate.js"
+if (-not (Test-Path $gate)) {
+    throw "Missing source file: $gate"
+}
+New-Item -ItemType Directory -Path (Join-Path $stagingDir "app") -Force | Out-Null
+Copy-Item -Path $gate -Destination (Join-Path $stagingDir "app") -Force
+
 $license = Join-Path $repoRoot "license.html"
 if (-not (Test-Path $license)) {
     throw "Missing source file: $license"
 }
 Copy-Item -Path $license -Destination $stagingDir -Force
 
-Write-Host "Staged frontend assets (brew/, vendor/, license.html) to $stagingDir"
+Write-Host "Staged frontend assets (brew/, vendor/, app/update-gate.js, license.html) to $stagingDir"

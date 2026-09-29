@@ -114,6 +114,8 @@ async fn save_pdf(_path: String, _width_in: f64, _height_in: f64) -> Result<(), 
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_dialog::init())
+        // Opens the installer in the real browser from the update screen.
+        .plugin(tauri_plugin_opener::init())
         .invoke_handler(tauri::generate_handler![save_pdf])
         .setup(|app| {
             if cfg!(debug_assertions) {

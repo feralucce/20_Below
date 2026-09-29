@@ -36,6 +36,8 @@ $files = @(
     "rules\cryptids.md",
     "rules\nightmare-creatures.md",
     "app\ui.js",
+    "app\bug-report.js",
+    "app\update-gate.js",
     "app\roller\damage.js",
     "app\roller\giftCheck.js",
     "app\roller\resourceCheck.js",
