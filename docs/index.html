@@ -60,7 +60,7 @@
   .btn.primary { background: var(--accent); color: #fff; }
   .btn:hover { filter: brightness(1.1); }
 
-  .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+  .quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
   @media (max-width: 900px) { .quotes { grid-template-columns: 1fr; } }
   .quote { margin: 0; background: var(--panel); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 1.1rem 1.25rem; }
   .quote blockquote { margin: 0 0 0.7rem; font-size: 0.98rem; }
@@ -156,20 +156,24 @@
   <!-- Testimonials. Each card stays hidden while it has class "pending".
        To publish one: paste the quote, name and role, and remove "pending".
        When at least one is filled, remove "all-pending" from the section. -->
-  <section class="quotes-section all-pending" aria-labelledby="quotes-h">
+  <section class="quotes-section" aria-labelledby="quotes-h">
     <h2 id="quotes-h">From the Team</h2>
     <div class="quotes">
-      <figure class="quote pending">
-        <blockquote>[Quote from Hillary McKey]</blockquote>
-        <figcaption><b>Hillary McKey</b> &middot; Communications, 20 Below<br /><a href="/docs/case-study-job-aids.html">Related: One Page, One Question</a></figcaption>
+      <figure class="quote">
+        <blockquote>&ldquo;I review everything visual on 20 Below, down to type that smears and an arrow a few pixels low, and Feral treats every note like it matters. When I asked for Jack of all Trades to apply itself instead of making players do the math, it went from a request to working in the tools, and Feral kept me in the loop the whole way. I always know what&rsquo;s changing and why.&rdquo;</blockquote>
+        <figcaption><b>Hillary McKey</b> &middot; Communications, 20 Below<br /><a href="/docs/case-study-performance-support.html">Related: The Rules You Don&rsquo;t Have to Remember</a></figcaption>
       </figure>
-      <figure class="quote pending">
-        <blockquote>[Quote from Rilla Scarberry]</blockquote>
+      <figure class="quote">
+        <blockquote>&ldquo;When I reviewed the gear shop in the Character Creator, the rules were right but the wording made new players stop and reread. Feral took every note I flagged, rewrote the steps in plain language, and had the new version back to me to check before it shipped. What stood out was how seriously feedback got taken: nothing was waved off, and nothing went out until it read clearly.&rdquo;</blockquote>
         <figcaption><b>Rilla Scarberry</b> &middot; Language Expert, 20 Below<br /><a href="/docs/case-study-onboarding.html">Related: Learning the Game by Building a Character</a></figcaption>
       </figure>
       <figure class="quote pending">
         <blockquote>[Quote from George Szabo]</blockquote>
         <figcaption><b>George Szabo</b> &middot; Game Designer, 20 Below<br /><a href="/docs/case-study-brown-recluse.html">Related: One Spider, Checked Three Ways</a></figcaption>
+      </figure>
+      <figure class="quote pending">
+        <blockquote>[Quote from Jordan Sorrick]</blockquote>
+        <figcaption><b>Jordan Sorrick</b> &middot; Game Designer and Player, 20 Below<br /><a href="/docs/case-study-onboarding.html">Related: Learning the Game by Building a Character</a></figcaption>
       </figure>
     </div>
   </section>
