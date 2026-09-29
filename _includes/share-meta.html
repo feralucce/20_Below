@@ -1,0 +1,33 @@
+{%- comment -%}
+  Link previews: what Discord, Bluesky, Reddit, Facebook and messaging
+  apps show when someone pastes a 20 Below link - a title, a line of
+  description and the share card - instead of a bare URL.
+
+  brand-head.html includes this, so every page that uses it gets
+  previews. A page can name itself:
+
+      {% include brand-head.html title="Downloads" description="..." %}
+
+  Otherwise the title comes from the chapter (the rules and web book
+  layouts set it) and the description from the site default below.
+  The four tools outside Jekyll (app/, tracker/, prep/, brew/) carry
+  the same tags written out by hand; keep them in step with this.
+{%- endcomment -%}
+{%- assign share_title = include.title | default: page_title | default: page.title -%}
+{%- if share_title -%}
+  {%- assign share_title = share_title | strip | append: " | 20 Below" -%}
+{%- else -%}
+  {%- assign share_title = "20 Below: a free fated-heroes tabletop RPG" -%}
+{%- endif -%}
+{%- assign share_desc = include.description | default: page.description | default: "A fated-heroes tabletop RPG: a 2d10 roll-under core, five elemental Attributes and supernatural Gifts, in any world you bring to it. Free rules, a free setting and free tools." -%}
+{%- assign share_url = page.url | replace: "index.html", "" | prepend: "https://20belowrpg.com" -%}
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="20 Below" />
+<meta property="og:title" content="{{ share_title | escape }}" />
+<meta property="og:description" content="{{ share_desc | escape }}" />
+<meta property="og:url" content="{{ share_url }}" />
+<meta property="og:image" content="https://20belowrpg.com/docs/assets/brand/share-card.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="20 Below: a fated-heroes tabletop RPG. Free rules, free setting, free tools." />
+<meta name="twitter:card" content="summary_large_image" />
