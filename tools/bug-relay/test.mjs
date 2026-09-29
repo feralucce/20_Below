@@ -1,7 +1,7 @@
 // Tests for the bug relay, with a fake KV store and a fake Discord.
 //   node tools/bug-relay/test.mjs
 import assert from 'node:assert/strict';
-import worker, { clean, plain, discordPost, LIMITS } from './worker.js';
+import worker, { clean, plain, discordPost, webhookFrom, LIMITS } from './worker.js';
 
 function fakeKV() {
   const m = new Map();
@@ -15,7 +15,7 @@ globalThis.fetch = async (url, init) => {
 };
 
 const env = () => ({
-  DISCORD_WEBHOOK: 'https://discord.example/api/webhooks/1/abc',
+  DISCORD_WEBHOOK: 'https://discord.com/api/webhooks/1/abc',
   NEW_TAG_ID: '555',
   ALLOWED_ORIGINS: 'https://20belowrpg.com,https://feralucce.github.io',
   TICKETS: fakeKV(),
@@ -118,6 +118,20 @@ await t('a Discord failure is reported back, not hidden', async () => {
   const r = await worker.fetch(req(good), e);
   globalThis.fetch = real;
   assert.equal(r.status, 502);
+});
+
+await t('the webhook is found inside a messy secret', async () => {
+  const url = 'https://discord.com/api/webhooks/123/abc-DEF_9';
+  assert.equal(webhookFrom('﻿' + url + '\r\n'), url);
+  assert.equal(webhookFrom('Bug reports webhook: ' + url + '\nmade 9/29'), url);
+  assert.equal(webhookFrom('not a webhook'), '');
+});
+
+await t('a missing webhook is refused before anything is sent', async () => {
+  const before = sent.length;
+  const r = await worker.fetch(req(good), { ...env(), DISCORD_WEBHOOK: 'oops' });
+  assert.equal(r.status, 500);
+  assert.equal(sent.length, before);
 });
 
 console.log(`\n${passed} passed`);

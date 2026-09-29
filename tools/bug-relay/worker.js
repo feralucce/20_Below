@@ -63,19 +63,37 @@ export default {
       return json({ error: 'Too many reports in a short time. Please wait a few minutes and try again.' }, 429, cors);
     }
 
+    // The secret may arrive with a byte-order mark, a label or extra lines
+    // around the address. Pick out the webhook itself; never echo it back.
+    const hook = webhookFrom(env.DISCORD_WEBHOOK);
+    if (!hook) {
+      return json({ error: 'The relay is not set up yet.', stage: 'webhook' }, 500, cors);
+    }
+
     const ticket = await nextTicket(env.TICKETS);
     const post = discordPost(ticket, report, env.NEW_TAG_ID);
-    const sent = await fetch(env.DISCORD_WEBHOOK + '?wait=true', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(post),
-    });
+    let sent;
+    try {
+      sent = await fetch(hook + '?wait=true', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(post),
+      });
+    } catch {
+      return json({ error: 'The report could not be delivered. Please try again later.', stage: 'send' }, 502, cors);
+    }
     if (!sent.ok) {
+      console.log('Discord refused the post', sent.status, (await sent.text()).slice(0, 300));
       return json({ error: 'The report could not be delivered. Please try again later.' }, 502, cors);
     }
     return json({ ticket }, 200, cors);
   },
 };
+
+export function webhookFrom(secret) {
+  const m = String(secret || '').match(/https:\/\/(?:canary\.|ptb\.)?discord(?:app)?\.com\/api\/webhooks\/\d+\/[\w-]+/);
+  return m ? m[0] : '';
+}
 
 export function corsHeaders(origin, env) {
   const allowed = String(env.ALLOWED_ORIGINS || '').split(',').map((s) => s.trim()).filter(Boolean);

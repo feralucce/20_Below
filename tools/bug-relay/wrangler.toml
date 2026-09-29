@@ -14,4 +14,4 @@ NEW_TAG_ID = ""
 # Ticket counter and rate limits. Replace the id after `wrangler kv namespace create TICKETS`.
 [[kv_namespaces]]
 binding = "TICKETS"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "02b033d154784321ad46249d2dba3f50"

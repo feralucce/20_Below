@@ -14,7 +14,7 @@
 //   addBugReportButton(container, { app: 'Battle Tracker' });
 
 // Set once the relay is deployed (tools/bug-relay/README.md, step 6).
-export const BUG_RELAY_URL = '';
+export const BUG_RELAY_URL = 'https://20below-bugs.20below.workers.dev/report';
 
 // A test page can point the dialog at a local relay instead.
 function relayUrl() {
