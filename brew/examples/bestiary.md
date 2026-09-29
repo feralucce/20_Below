@@ -34,11 +34,13 @@ That is also why big creatures make a coarse dial. With stray dogs you can tune 
 
 When you want a number rather than a feel, there is one.
 
-**A creature’s Threat** is its damage dice, times its Health Levels, divided by ten minus its Soak. **A pack of them** is that, times the number of creatures, times the number again. **Your party’s Budget** is 0.7, times their combined damage dice, times their combined Health Levels, divided by ten minus their average Soak.
+**A creature’s Threat** is its damage dice, times its Health Levels, divided by ten minus its Soak. **A pack of them** is that, times the number of creatures, times the number again. **Your party’s Budget** is 0.7, times their combined damage dice, times their combined Health Levels, divided by ten plus the creature’s Ferocity minus their average Soak - never by more than ten. Ferocity is there because teeth and claws add it to every die against Soak; a creature swinging a carried weapon adds nothing.
 
 Threat over Budget is what the fight costs you. **Under 0.35**, nobody goes down. **Up to 0.75**, about one character drops. **Up to 1.4**, two or three drop. **Up to 3.0**, most of the party ends up on the floor. **Past that**, all of them.
 
-Work your party’s Budget out once and write it inside the cover. It only changes when they do.
+Work your party’s Budget out once for each Ferocity you use - most creatures have 2 - and write them inside the cover. They only change when the party does.
+
+\page
 
 **These bands count bodies on the floor, not funerals.** Going down is what a fight does to you; dying is a separate thing, done deliberately, by something standing over you afterward with the time to finish. A party can lose every member of a fight and walk away from it, and that is the game working rather than the numbers failing.
 
