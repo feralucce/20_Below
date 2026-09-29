@@ -31,6 +31,7 @@ import stepGiftMenus from './steps/10-gift-menus.js';
 import stepDiscretionary from './steps/12-discretionary.js';
 import stepEquipment from './steps/12a-equipment.js';
 import stepSheet from './steps/13-sheet.js';
+import { addBugReportButton } from './bug-report.js';
 
 // Order is deliberately not the same as the file numbering (01-14, historical
 // build order) - this is the actual wizard sequence shown to the user, last
@@ -279,6 +280,7 @@ function showRulesSource() {
 
 async function main() {
   showAppVersion();
+  addBugReportButton(document.querySelector('.header-links'), { app: 'Character Creator' });
   checkVersionStatus();
 
   let data;

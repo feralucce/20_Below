@@ -44,6 +44,8 @@ const LIB = [
   ['app/sheet/panels.js', 'lib/sheet/panels.js'],
   // What the character sheet works out: a character's armour on the line.
   ['app/sheet/sheet-model.js', 'lib/sheet/sheet-model.js'],
+  // The Report a bug dialog.
+  ['app/bug-report.js', 'lib/bug-report.js'],
 ];
 
 for (const [from, to] of LIB) {

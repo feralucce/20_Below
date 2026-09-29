@@ -47,6 +47,8 @@ export const LIB = [
   'steps/tab-advancement.js',
   'steps/07-boons.js',
   'describe-spec.js',
+  // The Report a bug dialog.
+  'bug-report.js',
 ];
 
 // The page's own files, and how each is rewritten for the extension.
