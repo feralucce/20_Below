@@ -32,7 +32,7 @@ Eighteen entries bend that rule, and I’d rather flag each one where it sits in
 
 **A Boon almost never hands you a bonus on a roll.** It’s usually a rule exception, an option you didn’t have before, or a standing fact about your body or your reputation. If you came here looking for +2 to something, you’re in the wrong chapter.
 
-Flaws are the mirror image of all this - built the same way, no levels, mostly non-numeric, and they pay you points instead of charging them.
+Flaws are the mirror image of all this - mostly non-numeric, and they pay you points instead of charging them. The difference is that every Flaw comes in Levels, 1 to 5.
 
 ## The Boon List
 

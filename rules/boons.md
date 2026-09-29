@@ -5,7 +5,7 @@ Boons are a **grab bag** - small advantages that don't fit under Skills (learned
 - **Have no levels or ranks.** A character either has a Boon or doesn't - there's no 1-10 scale, no dots, no tiers. 18 entries in the list below bend that, offering two, three or four tiers to pick between; each is marked where it sits, and a higher tier already includes every lower one. [Special Movement](#boon-list) bends it differently - not tiered at all, but **purchased multiple times**, once per locomotion mode. (The resource-type entries that *do* scale - Wealth, Contacts, Fringe Benefit, etc. - live in [resources.md](resources.md).)
 - **Do not grant numerical bonuses to rolls.** A Boon is usually a rule exception, an unlocked narrative option, or a standing fact about the character's body or reputation - not a flat +N to some roll.
 
-Boons have a mirror-image counterpart, [Flaws](flaws.md) - character-creation disadvantages built the same way (no levels, mostly non-numeric).
+Boons have a mirror-image counterpart, [Flaws](flaws.md) - character-creation disadvantages, mostly non-numeric like Boons, but every Flaw is Leveled 1-5.
 
 **Points**: every Boon costs a flat number of points from the [Boons pool](character-creation.md#8-boons), in one of four tiers - **Trivial (1)**, **Lesser (3)**, **Greater (5)**, **Legendary (7)**.
 
