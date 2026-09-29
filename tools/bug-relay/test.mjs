@@ -120,6 +120,12 @@ await t('a Discord failure is reported back, not hidden', async () => {
   assert.equal(r.status, 502);
 });
 
+await t('the section is shown in the post and titled by its last part', async () => {
+  const post = discordPost(7, clean({ ...good, app: 'Character Creator', section: 'Creating a character: Skills' }), '');
+  assert.equal(post.thread_name, '#7 · Character Creator · Skills · ' + good.summary);
+  assert.ok(post.content.includes('**Section:** Creating a character: Skills'));
+});
+
 await t('the webhook is found inside a messy secret', async () => {
   const url = 'https://discord.com/api/webhooks/123/abc-DEF_9';
   assert.equal(webhookFrom('﻿' + url + '\r\n'), url);

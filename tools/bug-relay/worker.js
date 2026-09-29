@@ -15,6 +15,7 @@
 
 export const LIMITS = {
   summary: 100,       // becomes the post title
+  section: 80,        // where in the app, picked from a list
   happened: 2000,
   expected: 1000,
   steps: 1500,
@@ -118,6 +119,7 @@ export function clean(body) {
   const report = {
     app: APPS.has(body.app) ? body.app : 'Other',
     summary: text(body.summary, LIMITS.summary),
+    section: text(body.section, LIMITS.section).replace(/\s+/g, ' '),
     happened: text(body.happened, LIMITS.happened),
     expected: text(body.expected, LIMITS.expected),
     steps: text(body.steps, LIMITS.steps),
@@ -140,8 +142,9 @@ export function plain(value) {
 export function discordPost(ticket, r, newTagId) {
   const lines = [
     `**App:** ${plain(r.app)}`,
+    ...(r.section ? [`**Section:** ${plain(r.section)}`] : []),
     '',
-    '**What happened**',
+    '**Description**',
     plain(r.happened),
   ];
   if (r.expected) lines.push('', '**What they expected**', plain(r.expected));
@@ -151,7 +154,8 @@ export function discordPost(ticket, r, newTagId) {
   let content = lines.join('\n');
   if (content.length > 1990) content = content.slice(0, 1985) + '\n...';
   const post = {
-    thread_name: `#${ticket} · ${r.app} · ${r.summary}`.slice(0, 100),
+    // "Creating a character: Skills" is titled by its last part, "Skills".
+    thread_name: [`#${ticket}`, r.app, r.section.split(': ').pop(), r.summary].filter(Boolean).join(' · ').slice(0, 100),
     content,
     username: '20 Below Bug Reports',
     allowed_mentions: { parse: [] },

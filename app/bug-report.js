@@ -21,6 +21,30 @@ function relayUrl() {
   return (typeof window !== 'undefined' && window.__BUG_RELAY_URL__) || BUG_RELAY_URL;
 }
 
+// The Section list in the dialog, per app: each tool's own tab and step
+// names, so a report lands where the team will look for it.
+const TRACKER_SECTIONS = [
+  ['Catalog', ['Browsing and searching', 'Headings and tags', 'Adding or editing a creature', 'Import or export']],
+  ['Encounter', ['Building the encounter', 'Initiative', 'Rounds and resolving', 'Rolling dice', 'Rests and Fate Tokens', 'Tokens on the scene', 'Saved encounters']],
+];
+export const SECTIONS = {
+  'Character Creator': [
+    ['Creating a character', ['Bonus Points', 'Name & Concept', 'Nature', 'Attributes (Elements)', 'Sub-Stat Division', 'Descriptors', 'Boons', 'Flaws', 'Skills', 'Resources', 'Gifts', 'Gift Menus', 'Discretionary Points', 'Equipment']],
+    ['Character sheet', ['Vitals', 'Skills', 'Gifts', 'Boons/Flaws', 'Resources', 'Equipment', 'Biography', 'XP']],
+    ['Around the app', ['Dice roller', 'Saving and loading', 'Printing or PDF']],
+  ],
+  'Owlbear Character Sheet': [
+    ['Sheet', ['Vitals', 'Skills', 'Gifts', 'Gear', 'Notes', 'Advance', 'Log']],
+    ['Around the sheet', ['Rolling dice', 'Loading and saving']],
+  ],
+  'Battle Tracker': TRACKER_SECTIONS,
+  'Owlbear Battle Tracker': TRACKER_SECTIONS,
+  'Website': [
+    ['Website', ['Rules pages', 'Quick reference sheets', 'Downloads', 'Links and menus', 'How a page looks on my screen']],
+  ],
+};
+const ANYWHERE = 'Something else';
+
 const STYLE_ID = 'bug-report-style';
 const CSS = `
 .bug-report-btn { font: inherit; font-size: 0.85em; cursor: pointer; background: transparent; color: inherit; border: 1px solid currentColor; border-radius: 999px; padding: 0.2em 0.8em; opacity: 0.8; }
@@ -32,9 +56,9 @@ dialog.bug-report::backdrop { background: rgba(0, 0, 0, 0.6); }
 .bug-report .intro { margin: 0; color: #8fadbe; font-size: 0.9rem; }
 .bug-report label { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.88rem; font-weight: 600; }
 .bug-report label span.opt { font-weight: 400; color: #8fadbe; }
-.bug-report input, .bug-report textarea { font: inherit; font-weight: 400; font-size: 0.95rem; color: #eaf5fb; background: #0a1720; border: 1px solid #24404f; border-radius: 6px; padding: 0.45rem 0.55rem; }
+.bug-report input, .bug-report textarea, .bug-report select { font: inherit; font-weight: 400; font-size: 0.95rem; color: #eaf5fb; background: #0a1720; border: 1px solid #24404f; border-radius: 6px; padding: 0.45rem 0.55rem; }
 .bug-report textarea { resize: vertical; min-height: 4.5rem; }
-.bug-report input:focus, .bug-report textarea:focus { outline: 2px solid #3d84c4; outline-offset: 1px; }
+.bug-report input:focus, .bug-report textarea:focus, .bug-report select:focus { outline: 2px solid #3d84c4; outline-offset: 1px; }
 .bug-report details { font-size: 0.82rem; color: #8fadbe; }
 .bug-report details pre { white-space: pre-wrap; margin: 0.4rem 0 0; font-size: 0.8rem; background: #0a1720; border-radius: 6px; padding: 0.5rem; }
 .bug-report .row { display: flex; gap: 0.5rem; justify-content: flex-end; flex-wrap: wrap; }
@@ -97,6 +121,30 @@ function field(labelText, control, optional) {
   return label;
 }
 
+function sectionSelect(app) {
+  const select = document.createElement('select');
+  select.name = 'section'; select.required = true;
+  const prompt = document.createElement('option');
+  prompt.value = ''; prompt.textContent = 'Choose where it happened…';
+  prompt.disabled = true; prompt.selected = true;
+  select.append(prompt);
+  for (const [group, names] of SECTIONS[app] || []) {
+    const og = document.createElement('optgroup');
+    og.label = group;
+    for (const name of names) {
+      const o = document.createElement('option');
+      o.value = group === 'Website' ? name : group + ': ' + name;
+      o.textContent = name;
+      og.append(o);
+    }
+    select.append(og);
+  }
+  const other = document.createElement('option');
+  other.value = other.textContent = ANYWHERE;
+  select.append(other);
+  return select;
+}
+
 function textarea(name, rows, placeholder) {
   const t = document.createElement('textarea');
   t.name = name; t.rows = rows; t.placeholder = placeholder || '';
@@ -106,8 +154,9 @@ function textarea(name, rows, placeholder) {
 export function reportAsText(report) {
   return [
     'BUG REPORT: ' + report.summary,
+    'Section: ' + (report.section || ANYWHERE),
     '',
-    'What happened:', report.happened,
+    'Description:', report.happened,
     report.expected ? '\nWhat I expected:\n' + report.expected : '',
     report.steps ? '\nSteps to reproduce:\n' + report.steps : '',
     report.contact ? '\nContact: ' + report.contact : '',
@@ -134,7 +183,8 @@ export async function openBugReport({ app, extraContext = '' } = {}) {
   const summary = document.createElement('input');
   summary.name = 'summary'; summary.maxLength = 100; summary.required = true;
   summary.placeholder = 'e.g. Initiative order doesn’t update';
-  const happened = textarea('happened', 4, 'What did you see?');
+  const section = sectionSelect(app);
+  const happened = textarea('happened', 4, 'What were you doing, and what went wrong?');
   happened.required = true; happened.maxLength = 2000;
   const expected = textarea('expected', 2, 'What should have happened?');
   expected.maxLength = 1000;
@@ -169,7 +219,8 @@ export async function openBugReport({ app, extraContext = '' } = {}) {
 
   form.append(title, intro,
     field('Short title', summary),
-    field('What happened', happened),
+    field('Section', section),
+    field('Description', happened),
     field('What you expected', expected, true),
     field('Steps to make it happen again', steps, true),
     field('How to reach you', contact, true),
@@ -180,6 +231,7 @@ export async function openBugReport({ app, extraContext = '' } = {}) {
   const collect = () => ({
     app: app || 'Other',
     summary: summary.value.trim(),
+    section: section.value,
     happened: happened.value.trim(),
     expected: expected.value.trim(),
     steps: steps.value.trim(),
@@ -206,9 +258,9 @@ export async function openBugReport({ app, extraContext = '' } = {}) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const report = collect();
-    if (report.summary.length < 3 || report.happened.length < 5) {
+    if (report.summary.length < 3 || !report.section || report.happened.length < 5) {
       status.className = 'status error';
-      status.textContent = 'Please add a short title and say what happened.';
+      status.textContent = 'Please add a short title, choose a section and describe the bug.';
       return;
     }
     const url = relayUrl();
