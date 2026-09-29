@@ -40,7 +40,10 @@ def game_commits():
         # Notes that correct the record describe the history; they aren't work.
         if body.startswith("Record correction:"):
             continue
-        out.append((date, "co-authored-by: claude" in body.lower()))
+        # AI-assisted commits: the old "Co-Authored-By: Claude" trailer, and
+        # from 2026-09-29 "Assisted-by: Claude (AI), data research and collation".
+        low = body.lower()
+        out.append((date, "co-authored-by: claude" in low or "assisted-by: claude" in low))
     return out
 
 
