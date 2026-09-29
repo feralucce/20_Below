@@ -140,8 +140,11 @@ nav_section: start
     <h2>Questions</h2>
     <ol>
       <li><a href="#starting-wealth">What is my wealth at character creation?</a></li>
-      <li><a href="#buying-gear">How do I buy an item?</a></li>
-      <li><a href="#outcomes">What happens after I roll?</a></li>
+      <li><a href="#packages">What do I get before I spend anything?</a></li>
+      <li><a href="#free-items">What can I simply have?</a></li>
+      <li><a href="#rolling">When do I roll?</a></li>
+      <li><a href="#above">What if I want something above my Wealth?</a></li>
+      <li><a href="#black-market">What about the Black Market?</a></li>
       <li><a href="#after-creation">Does this affect my Wealth once play begins?</a></li>
     </ol>
   </nav>
@@ -149,34 +152,53 @@ nav_section: start
   <section class="xp-section" id="starting-wealth">
     <h2>What is my wealth at character creation?</h2>
     <div class="roll-box">2, unless you bought the Wealth Resource</div>
-    <p>Every character starts creation shopping with a creation-Wealth of <strong>2</strong>. If you spent Resources Pool points on the <strong>Wealth</strong> Resource during creation, your purchased Level replaces that flat 2 outright - it's not the higher of the two, just whichever one actually applies.</p>
-    <div class="example"><strong>Example:</strong> a character who put no Resources Pool points into Wealth shops with a creation-Wealth of 2. A character who bought Wealth up to Level 4 shops with a creation-Wealth of 4 instead.</div>
+    <p>Every character starts creation shopping with a creation-Wealth of <strong>2</strong>. If you spent Resources Pool points on the <strong>Wealth</strong> Resource, the Level you bought replaces that 2 outright - it's not the higher of the two, just whichever one applies.</p>
+    <p>The <a href="../rules/flaws.md#destitute">Destitute</a> Flaw overrides both: a Destitute character's creation-Wealth is <strong>0</strong>, and they can't spend points on Wealth during creation at all.</p>
+    <p>Every item in the catalog carries a <strong>Wealth rating</strong>. Shopping happens in three steps, in order: take your packages, take your free items, then roll for the rest.</p>
   </section>
 
-  <section class="xp-section" id="buying-gear">
-    <h2>How do I buy an item?</h2>
-    <p>Every item on the gear catalog carries its own <strong>Wealth rating</strong>. Buying one is a three-step check, and <strong>every purchase requires a roll</strong> - there's no automatic free item, even one at or under your current creation-Wealth.</p>
-    <div class="chart-frame">
-      <img src="assets/diagrams/wealth-at-creation-flow.svg" alt="Pick an item, find the gap between its Wealth rating and current creation-Wealth. If the gap is more than creation-Wealth, the item can't be afforded at all - no roll. Otherwise, roll a Wealth Check: 2d10 against creation-Wealth plus 6, roll-under. Success means the item is free. Failure still gets the item, but creation-Wealth drops by the gap, floored at 1, doubled on a catastrophic failure." />
-    </div>
-    <p><strong>1. Find the gap</strong> - the item's Wealth rating minus your current creation-Wealth. This can be zero, or even negative, for an item at or under what you've got.</p>
-    <p><strong>2. Check you can afford it</strong> - if the gap is more than your current creation-Wealth, the item is out of reach entirely. No roll happens.</p>
-    <p><strong>3. Roll a Wealth Check</strong> - <span class="roll-box">2d10 vs. creation-Wealth + 6</span>, roll-under, standard critical results apply.</p>
-    <div class="example"><strong>Example:</strong> starting creation-Wealth 2, eyeing a Bomb disposal suit (Wealth 5). Gap = 5 &minus; 2 = 3, which is more than the current creation-Wealth of 2 - out of reach, no roll possible this pass. A Compact SMG (Wealth 3) has a gap of only 1, well within reach - roll away.</div>
+  <section class="xp-section" id="packages">
+    <h2>What do I get before I spend anything?</h2>
+    <div class="roll-box">A Starting Package from every Level up to your creation-Wealth</div>
+    <p>Take one <a href="../rules/weapons.md#starting-packages">Starting Package</a> from every Level up to and including your creation-Wealth - one from each Level, not several from the top. Free, no roll.</p>
   </section>
 
-  <section class="xp-section" id="outcomes">
-    <h2>What happens after I roll?</h2>
-    <p><strong>Success:</strong> the item is free - creation-Wealth doesn't move at all.</p>
-    <p><strong>Failure:</strong> you still get the item either way - but creation-Wealth drops by the gap, <strong>floored at a minimum loss of 1</strong>. Even an item with no real gap still costs at least 1 Level on a failed roll. A <strong>catastrophic failure</strong> doubles that loss.</p>
-    <div class="example"><strong>Example:</strong> a character who bought Wealth up to Level 4 shops for a Tactical vest (also Wealth 4) - the gap is 0, since it matches exactly. The roll still happens (target: creation-Wealth 4 + 6 = 10). On success, the vest is free. On a plain failure, the floored-at-1 minimum still applies even though the gap was 0 - creation-Wealth drops from 4 to 3. On a catastrophic failure, that loss doubles to 2, dropping creation-Wealth to 2.</div>
-    <p class="aside">Creation-Wealth carries across every purchase made during this shopping pass - it keeps dropping (or staying put on successes) until nothing left on the list is affordable via a viable roll, at which point gear shopping for this character is over.</p>
+  <section class="xp-section" id="free-items">
+    <h2>What can I simply have?</h2>
+    <p>Money stops being a decision long before it stops mattering. What you can simply have depends on how far the item sits below you:</p>
+    <p><strong>Two or more Levels below your creation-Wealth:</strong> free, as many as you can reasonably carry and justify. A Wealth 5 character doesn't count flashlights.</p>
+    <p><strong>At your creation-Wealth, or one Level below it:</strong> free, up to a number of items equal to your creation-Wealth.</p>
+    <p><strong>Above your creation-Wealth:</strong> never free - and not a roll either. See <a href="#above">below</a>.</p>
+    <div class="example"><strong>Example:</strong> a Wealth 3 character walks away with everything they want at Wealth 1, any three items at Wealth 2 or 3, and a decision to make about anything above that.</div>
+  </section>
+
+  <section class="xp-section" id="rolling">
+    <h2>When do I roll?</h2>
+    <div class="roll-box">2d10 vs. creation-Wealth + 10</div>
+    <p>Only for one more item from the band your free picks are already spent on - at your creation-Wealth or one Level below it. That's a <strong>Wealth Check</strong>: roll-under, standard critical results apply.</p>
+    <p><strong>Success:</strong> the item is free.</p>
+    <p><strong>Failure:</strong> you still get the item, and creation-Wealth drops by <strong>1</strong>.</p>
+    <p><strong>Critical failure:</strong> the same, except creation-Wealth drops by <strong>2</strong>.</p>
+    <div class="example"><strong>Example:</strong> the Wealth 3 character above has taken their three free items at Wealth 2 and 3, and wants a fourth. They roll 2d10 against 13. A success and it's free; a failure and it's theirs anyway, with creation-Wealth now 2; a critical failure leaves it at 1.</div>
+  </section>
+
+  <section class="xp-section" id="above">
+    <h2>What if I want something above my Wealth?</h2>
+    <div class="roll-box">No roll. It costs everything.</div>
+    <p>The item can be had, and having it drops creation-Wealth straight to <strong>0</strong>. A character who reaches that far walks away with their Starting Packages, their free items, and that one thing. The ask always goes through. What it costs is the ability to make the next one.</p>
+    <p class="aside"><strong>At creation-Wealth 0 the rolling stops, but the free items don't.</strong> Both free bands are measured against the Level you actually bought, not what's left of the pool - so a character who spent themselves down to nothing can still take anything two or more Levels below their Wealth, along with any of their free allowance they hadn't used yet.</p>
+  </section>
+
+  <section class="xp-section" id="black-market">
+    <h2>What about the Black Market?</h2>
+    <div class="roll-box">Never free</div>
+    <p>None of the steps above apply to <a href="../rules/weapons.md#the-black-market">The Black Market</a>. Every purchase there is a transaction whatever it costs, gated by <a href="../rules/resources.md#black-market-access">Black Market Access</a> as well as by Wealth. Nobody hands you a jammer because you're rich.</p>
   </section>
 
   <section class="xp-section" id="after-creation">
     <h2>Does this affect my Wealth once play begins?</h2>
     <div class="roll-box">No - it's temporary bookkeeping only</div>
-    <p>Whatever your creation-Wealth ends up at after shopping has <strong>no effect</strong> on your actual Wealth Resource once play starts - that stays at whatever Level you actually purchased with Resources Pool points (or 0, if you didn't buy any). Once character creation ends, this whole procedure stops applying. Every Wealth purchase from then on uses the general <a href="../rules/resources.md#pushing-a-resource">Pushing a Resource</a> rule instead, completely unaffected by anything that happened during creation shopping.</p>
+    <p>Creation-Wealth carries across every purchase in this shopping pass, and then it's gone. It has <strong>no effect</strong> on your actual Wealth Resource, which stays at whatever Level you bought. Once creation ends this whole procedure stops applying: every purchase from then on uses the general <a href="../rules/resources.md#pushing-a-resource">Pushing a Resource</a> rule instead.</p>
   </section>
 
 </main>
