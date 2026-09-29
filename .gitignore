@@ -41,3 +41,6 @@ _preview/
 # real characters, not sample data, and they are nobody else's business.
 app/sheet/sample/
 tools/character-sheet/__pycache__/
+
+# Secrets kept on this machine only (webhook URLs, keys). Never commit.
+PRIVATE/
