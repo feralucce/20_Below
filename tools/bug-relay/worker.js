@@ -1,4 +1,6 @@
 // 20 Below bug relay: a Cloudflare Worker between the apps and Discord.
+// It also keeps the email list: POST /subscribe stores an address until
+// the team picks a newsletter service (see README.md, "Email signups").
 //
 // The apps POST a report here. The Worker checks it, gives it the next
 // ticket number and posts it to a Discord forum channel, where each post
@@ -12,6 +14,8 @@
 //   NEW_TAG_ID       var     id of the forum's "New" tag (optional)
 //   ALLOWED_ORIGINS  var     comma-separated origins allowed to report
 //   TICKETS          KV      ticket counter and per-sender rate limits
+//   SUBSCRIBERS      KV      email signups: key = address, metadata =
+//                            where they signed up and when. Nothing else.
 
 export const LIMITS = {
   summary: 100,       // becomes the post title
@@ -23,6 +27,8 @@ export const LIMITS = {
   context: 1500,      // everything the app fills in by itself
   perWindow: 5,       // reports one sender may send...
   windowSeconds: 600, // ...in this many seconds
+  email: 254,         // the longest valid address
+  source: 40,         // which signup box, e.g. "footer"
 };
 
 export const APPS = new Set([
@@ -39,10 +45,11 @@ export default {
       return new Response(null, { status: cors ? 204 : 403, headers: cors || {} });
     }
     const url = new URL(request.url);
-    if (url.pathname !== '/report' || request.method !== 'POST') {
+    if (request.method !== 'POST' || !['/report', '/subscribe'].includes(url.pathname)) {
       return json({ error: 'Not found.' }, 404, cors);
     }
     if (!cors) return json({ error: 'This site is not allowed to send reports.' }, 403, null);
+    if (url.pathname === '/subscribe') return subscribe(request, env, cors);
 
     let body;
     try {
@@ -94,6 +101,40 @@ export default {
 export function webhookFrom(secret) {
   const m = String(secret || '').match(/https:\/\/(?:canary\.|ptb\.)?discord(?:app)?\.com\/api\/webhooks\/\d+\/[\w-]+/);
   return m ? m[0] : '';
+}
+
+// A deliberately plain check: something@something.something, no spaces.
+// The real test is the confirmation a newsletter service sends later.
+export function cleanEmail(value) {
+  const email = text(value, LIMITS.email).toLowerCase();
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? email : '';
+}
+
+async function subscribe(request, env, cors) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return json({ error: 'The signup could not be read.' }, 400, cors);
+  }
+  // Same trap as reports: a filled-in hidden field is a bot.
+  if (body && typeof body.website === 'string' && body.website.trim()) {
+    return json({ ok: true }, 200, cors);
+  }
+  const email = cleanEmail(body && body.email);
+  if (!email) return json({ error: 'Please enter a valid email address.' }, 400, cors);
+
+  const who = await senderKey(request);
+  if (!(await allow(env.TICKETS, who, 'subrate:'))) {
+    return json({ error: 'Too many signups in a short time. Please wait a few minutes and try again.' }, 429, cors);
+  }
+  // Signing up twice is harmless: the first date is kept.
+  const existing = await env.SUBSCRIBERS.getWithMetadata(email);
+  if (!existing || existing.value === null) {
+    const source = text(body.source, LIMITS.source).replace(/[^\w -]/g, '') || 'site';
+    await env.SUBSCRIBERS.put(email, '1', { metadata: { source, at: new Date().toISOString() } });
+  }
+  return json({ ok: true }, 200, cors);
 }
 
 export function corsHeaders(origin, env) {
@@ -190,8 +231,8 @@ async function senderKey(request) {
   return [...new Uint8Array(digest)].slice(0, 12).map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
-export async function allow(kv, who) {
-  const key = 'rate:' + who;
+export async function allow(kv, who, prefix = 'rate:') {
+  const key = prefix + who;
   const count = parseInt((await kv.get(key)) || '0', 10);
   if (count >= LIMITS.perWindow) return false;
   await kv.put(key, String(count + 1), { expirationTtl: LIMITS.windowSeconds });

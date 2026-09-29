@@ -248,6 +248,8 @@ nav_section: home
       </a>
     </div>
 
+    <div id="signup" class="home-signup"></div>
+
     <footer>
       <p>
         20 Below is in active playtest
@@ -257,5 +259,9 @@ nav_section: home
   </main>
 
   <script src="/docs/assets/js/site-nav.js"></script>
+  <script type="module">
+    import { addSignup } from "/app/signup.js";
+    addSignup(document.getElementById("signup"), { source: "home" });
+  </script>
 </body>
 </html>

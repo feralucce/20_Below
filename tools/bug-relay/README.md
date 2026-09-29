@@ -64,3 +64,31 @@ This runs the Worker against a fake Discord and a fake KV store. Nothing leaves 
 - the local preview on port 8792
 
 Size limits and the rate limit are set in `LIMITS` at the top of `worker.js`. After changing either file, run `npx wrangler deploy` again.
+
+## Email signups
+
+The site's "Get 20 Below News" box (`app/signup.js`, in the footer of
+every page and on the home page) posts to `/subscribe` on this Worker.
+Addresses are kept in the `SUBSCRIBERS` KV namespace until the team
+picks a newsletter service: the key is the address, and its metadata is
+where it came from and when. Nothing else is stored. Signups have the
+same origin check, honeypot and rate limit as reports (a separate
+limit, so neither uses up the other).
+
+To move the list into a newsletter service (MailerLite, Kit, Buttondown
+and others all import CSV):
+
+```
+node export-subscribers.mjs
+```
+
+That writes `subscribers.csv` here (email, source, signed_up). It holds
+people's addresses: `*.csv` is git-ignored in this folder, and the file
+should be deleted once the import is done.
+
+Removal requests come by email (the address is shown under the form).
+Delete one with:
+
+```
+npx wrangler kv key delete "person@example.com" --binding SUBSCRIBERS --remote
+```

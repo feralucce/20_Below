@@ -15,3 +15,9 @@ NEW_TAG_ID = "1554503018014310430"
 [[kv_namespaces]]
 binding = "TICKETS"
 id = "02b033d154784321ad46249d2dba3f50"
+
+# Email signups, until the team picks a newsletter service. Export them
+# with `node export-subscribers.mjs` (README.md, "Email signups").
+[[kv_namespaces]]
+binding = "SUBSCRIBERS"
+id = "169c3c737e0842208c81665bb0b5d6f4"

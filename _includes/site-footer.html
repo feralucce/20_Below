@@ -1,7 +1,10 @@
 <footer class="site-footer">
+  <div id="signup" class="site-signup"></div>
   <p>20 Below &middot; <a href="/license.html">ORC License &amp; attribution</a> &middot; <span id="site-bug-report"></span></p>
   <script type="module">
     import { addBugReportButton } from "/app/bug-report.js";
     addBugReportButton(document.getElementById("site-bug-report"), { app: "Website" });
+    import { addSignup } from "/app/signup.js";
+    addSignup(document.getElementById("signup"), { source: "footer" });
   </script>
 </footer>

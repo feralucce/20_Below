@@ -5,7 +5,13 @@ import worker, { clean, plain, discordPost, webhookFrom, defang, LIMITS } from '
 
 function fakeKV() {
   const m = new Map();
-  return { get: async (k) => m.get(k) ?? null, put: async (k, v) => { m.set(k, v); }, map: m };
+  const meta = new Map();
+  return {
+    get: async (k) => m.get(k) ?? null,
+    getWithMetadata: async (k) => ({ value: m.get(k) ?? null, metadata: meta.get(k) ?? null }),
+    put: async (k, v, o = {}) => { m.set(k, v); if (o.metadata) meta.set(k, o.metadata); },
+    map: m, meta,
+  };
 }
 
 const sent = [];
@@ -19,6 +25,7 @@ const env = () => ({
   NEW_TAG_ID: '555',
   ALLOWED_ORIGINS: 'https://20belowrpg.com,https://feralucce.github.io',
   TICKETS: fakeKV(),
+  SUBSCRIBERS: fakeKV(),
 });
 
 function req(body, { origin = 'https://20belowrpg.com', ip = '1.2.3.4', method = 'POST', path = '/report' } = {}) {
@@ -138,6 +145,35 @@ await t('links in a report are not clickable', async () => {
   const post = discordPost(9, clean({ ...good, summary: 'Go to https://evil.example', happened: 'Open https://evil.example now', context: 'Page: https://x.example' }), '');
   assert.ok(!/https:\/\//i.test(post.content + post.thread_name));
   assert.ok(post.content.includes('evil.example'));
+});
+
+await t('a signup is stored once, lowercased, with where and when', async () => {
+  const e = env();
+  const r = await worker.fetch(req({ email: '  Fan@Example.COM ', source: 'footer' }, { path: '/subscribe' }), e);
+  assert.equal(r.status, 200);
+  assert.equal(e.SUBSCRIBERS.map.get('fan@example.com'), '1');
+  const first = e.SUBSCRIBERS.meta.get('fan@example.com');
+  assert.equal(first.source, 'footer');
+  await worker.fetch(req({ email: 'fan@example.com', source: 'store' }, { path: '/subscribe', ip: '9.9.9.9' }), e);
+  assert.deepEqual(e.SUBSCRIBERS.meta.get('fan@example.com'), first);
+  assert.equal(e.SUBSCRIBERS.map.size, 1);
+});
+
+await t('a bad address, a bot or another site is refused, and nothing is stored', async () => {
+  const e = env();
+  assert.equal((await worker.fetch(req({ email: 'not an email' }, { path: '/subscribe' }), e)).status, 400);
+  assert.equal((await worker.fetch(req({ email: 'bot@example.com', website: 'spam' }, { path: '/subscribe' }), e)).status, 200);
+  assert.equal((await worker.fetch(req({ email: 'x@example.com' }, { path: '/subscribe', origin: 'https://evil.example' }), e)).status, 403);
+  assert.equal(e.SUBSCRIBERS.map.size, 0);
+});
+
+await t('signups are rate-limited separately from bug reports', async () => {
+  const e = env();
+  for (let i = 0; i < LIMITS.perWindow; i++) {
+    assert.equal((await worker.fetch(req({ email: `p${i}@example.com` }, { path: '/subscribe' }), e)).status, 200);
+  }
+  assert.equal((await worker.fetch(req({ email: 'late@example.com' }, { path: '/subscribe' }), e)).status, 429);
+  assert.equal((await worker.fetch(req(good), e)).status, 200);
 });
 
 await t('the webhook is found inside a messy secret', async () => {
