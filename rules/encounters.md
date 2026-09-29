@@ -50,7 +50,7 @@ Bounds and meanings, in the order that avoids trouble.
 | **Initiative** | (Movement Rate − 5) × 0.7, +3 for an ambush hunter | when it acts: 1d10 + Initiative |
 | **Psyche** | Apex 4, Predator and Fighter 3, Cornered 2, Nuisance 1; +2 supernatural | its Mental wall, and its Social Defense (10 − Psyche) |
 | **Presence** | only if it has a Social or Mental attack, or a mind to read; as Psyche, but Fighter 2 | its Social wall. None means immune to Social attacks |
-| **Mental Defense** | 10 − Presence; with no Presence, by temperament: `9` a guard dog, `5` a wolf, `2` a wolverine | how hard its mind is to reach |
+| **Mental Defense** | 10 − Presence; with no Presence, by temperament: `8` a feral dog, `5` a wolf, `2` a wolverine | how hard its mind is to reach |
 | **Stamina** | burst hunter 2, generalist 4, endurance runner 6, never tires 10 | free Rounds in a chase |
 | **Athletics TN** | `10` a cat, `8` a dog, `5` a snake | climbing, jumping, swimming, the Chase roll |
 
