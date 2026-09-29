@@ -133,6 +133,30 @@ That’s right - your target number for an Untrained Skill is the Difficulty of 
 
 You might have noticed that this means you could have a Target Number that is impossible to roll - 0 or 1. Don’t despair. Make the roll anyway. There is always a chance - a critical success will always succeed.
 
+### Opposed Rolls
+
+When two characters want opposite things - one sneaking, one watching, one hiding a lie and one looking for it - you both roll, against the same Difficulty, each with your own Element and Skill. If only one of you succeeds, that one wins. If you both succeed, whoever came in further under their target number wins. A tie goes to whoever is resisting, and so does both of you failing: nothing changes.
+
+A creature doesn't roll its side. Its card gives you the number - *Stealth 6 vs. Perception* means you roll Perception at Difficulty 6.
+
+### Helping
+
+Somebody who is at least Trained in the Skill you're rolling can help, and that gives you Advantage. A second helper doesn't give you more of it - Advantage doesn't stack - but it can cancel out something working against you. If you're Adept or better you already roll with Advantage, so help only matters when something is making it harder.
+
+Helping means being there when it goes wrong. On a catastrophic failure, whoever was helping is caught in it too.
+
+### Trying Again
+
+You don't get to roll again because you didn't like the result. A failed roll stands until something changes - a different approach, a better tool, somebody helping, more time. Then it's a new roll, and a new chance at a catastrophic failure.
+
+### Group Rolls
+
+When everyone has to pull it off - sneaking past a guard, crossing a ledge together - everyone rolls. If at least half of you succeed, the group makes it: the ones who are good at it cover for the ones who aren't. A catastrophic failure spoils it for everyone, however the rest of you rolled.
+
+### Taking Your Time
+
+If nothing is coming and nobody is watching, you can trade time for a better chance. Take the next Time Band up - a Minute instead of a Round, an Hour instead of a Minute - and roll with Advantage. If failing wouldn't cost anything either, you probably don't need to roll at all. Ask your GM.
+
 ## Attacks
 
 ### Making an Attack

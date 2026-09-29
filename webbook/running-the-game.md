@@ -106,7 +106,7 @@ Two rules of thumb. Nothing costs Sanity twice - the second time you see it, you
 
 Say the number out loud before the dice come out. A table will accept almost any ruling made in advance and almost none made afterward.
 
-**There are more enemies than you want to roll for.** Don’t roll for all of them. Decide how many connect - two of the six, say, because the other four are in each other’s way - and roll only those. Unnamed opposition dies at zero, so a crowd of them is a threat that shrinks fast once the party starts landing hits, and the interesting question is almost never which specific guard hit whom. If the fiction says a mob overwhelms somebody, let it overwhelm them and spend your dice on the part the players can still change.
+**There are more enemies than you want to roll for.** Don’t roll for all of them. Decide how many connect - two of the six, say, because the other four are in each other’s way - and roll only those. Unnamed opposition is out of the fight at zero, so a crowd of them is a threat that shrinks fast once the party starts landing hits, and the interesting question is almost never which specific guard hit whom. If the fiction says a mob overwhelms somebody, let it overwhelm them and spend your dice on the part the players can still change.
 
 **And when none of that helps.** Rule in the direction that keeps the scene moving, tell the table it’s a ruling rather than a rule, and write it down if you liked it. A ruling you make twice the same way has become a house rule, and a house rule you can name is worth more than a page of mine.
 
@@ -114,7 +114,7 @@ Say the number out loud before the dice come out. A table will accept almost any
 
 Player characters and named NPCs are extraordinary. Everyone else isn’t, and the rules treat them differently at exactly one point: what happens at zero.
 
-**Unless an NPC has a name, being reduced to zero kills most things.** A nameless guard who drops is done - out of the fight and out of the story. That’s what makes a critical hit decisive against ordinary opposition, and it’s why the combat rules say that against most opponents, zero is the end of it.
+**Unless an NPC has a name, zero is the end of them.** A nameless guard who drops is done - out of the fight and out of the story. Whether they’re dead or just not getting up again is yours to decide, and the rules can’t tell the difference: nobody tracks a nameless guard’s recovery. That’s what makes a critical hit decisive against ordinary opposition.
 
 Named NPCs and player characters get the full treatment instead: unconscious at zero, dying below it, and every rule about recovery, Scars and lasting harm applies to them. Giving an NPC a name is therefore a mechanical decision as much as a narrative one. Name the ones who should be able to survive.
 

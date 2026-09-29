@@ -55,6 +55,28 @@ If a character has no applicable Skill for the task, they still roll - but **the
 
 This is intentional: under the 2d10 curve, an untrained character faces poor odds at anything above Difficulty 5 or so, and Difficulty 0 (Nearly Impossible) is a flat impossibility untrained (target 0 is below 2d10's minimum roll of 2).
 
+### Opposed Rolls
+
+When two characters want opposite things - one sneaking, one watching; one hiding a lie, one looking for it - **both roll**, against the **same Difficulty**, each on their own Element and Skill. If only one succeeds, that one wins. If both succeed, whoever beat their target number by more wins. **A tie, or both failing, goes to whoever is resisting**: nothing changes.
+
+A creature doesn't roll its side. Its card prints the number - `Stealth 6 vs. Perception` means the character rolls Perception at Difficulty 6 (see [how to read a stat block](adversary-index.md)).
+
+### Helping
+
+A character who is at least **Trained** in the Skill being rolled can help, giving the roller **Advantage**. It is one source like any other (see [Advantage / Disadvantage](#advantage--disadvantage)): a second helper adds no further Advantage but can cancel a source of Disadvantage, and a roller who is Adept or better already has Advantage, so help only matters to them when something is working against them. **A helper shares the consequences**: on a catastrophic failure, they are caught in it too.
+
+### Trying Again
+
+A failed roll **stands until something changes** - a different approach, a better tool, someone helping, more time. Then it is a new roll, with its own chance of a catastrophic failure. Rolling the same thing again because the first result was disappointing isn't an option.
+
+### Group Rolls
+
+When everyone has to pull something off - sneaking past a guard, crossing a ledge - **everyone rolls**, and **the group succeeds if at least half of them succeed**. The ones who are good at it cover for the ones who aren't. **A catastrophic failure spoils it for the whole group**, however the rest rolled.
+
+### Taking Your Time
+
+With nothing coming and nobody watching, a character can trade time for a better chance: take the **next [Time Band](#time-bands) up** - a Minute instead of a Round, an Hour instead of a Minute - and roll with **Advantage**. Where failing wouldn't cost anything either, there usually shouldn't be a roll at all.
+
 ### Time Bands
 
 A standard ladder of duration used wherever a rule needs to name "how long": **Round → Minute → Hour → Scene → Day → Month → Year → Decade → Century**. A **Round** is about **6 seconds**, so a Minute is exactly 10 of them. The **Round** is the base unit - any duration described elsewhere in the rules is stated in Rounds unless a longer band is explicitly named.
