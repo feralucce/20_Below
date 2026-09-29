@@ -284,7 +284,7 @@ A Mental attack resolves exactly like a [Physical](#physical-attacks---weapon-da
 
 Sanity mirrors Health Levels too, tracking a character's grip on their own mind against Mental attack.
 
-- **`PC Sanity = 5 + Psyche`.** NPCs default to a flat 5. Each Level is a binary hit-box.
+- **`PC Sanity = 5 + Psyche`.** Each Level is a binary hit-box.
 - **Crossing zero** works identically to Health Levels.
 - **The negative range mirrors the positive one**, exactly as [Health Levels](#health-levels) and [Poise](#poise) do: a character with 9 Sanity is Overwhelmed at 0 and Shattered from −1 down to −8. **Reaching −(full Sanity) is the floor.** The character picks up a temporary mental health condition - the same mechanic Overwhelmed's own trait uses, still to be defined - and Sanity resets to **0**: Overwhelmed again, not restored. The permanent mental scar from having gone below 0 stands regardless.
 - **General recovery** matches Health/Poise: Short Rest heals `Psyche ÷ 2` (round up, minimum 1); Full Night's Rest heals fully.
@@ -324,7 +324,7 @@ Untrained rolls 1 for the same reason bare fists do. Master reaches 6, one past 
 
 Poise mirrors [Health Levels](#health-levels), tracking composure under Social attack instead of Physical.
 
-- **`PC Poise = 5 + Presence`.** NPCs default to a flat 5. Each Level is a binary hit-box, same shape as Health.
+- **`PC Poise = 5 + Presence`.** Each Level is a binary hit-box, same shape as Health.
 - **At 0 Poise**, a character becomes [Flustered](#flustered).
 - **Crossing zero** works identically to Health Levels: a single attack can never carry a character straight past 0 into negative territory - excess connecting dice are discarded, landing exactly at 0. Once already at 0, any further attack can only remove 1 Poise, total, regardless of how many dice connect.
 - **Below 0 Poise**, a character becomes [Humiliated](#humiliated). **There is no death threshold for Poise** - social trauma can leave lasting damage, but never kills on its own.
@@ -346,7 +346,7 @@ Poise mirrors [Health Levels](#health-levels), tracking composure under Social a
 Every character starts with **5 Health Levels**, flat, before anything else is added.
 
 - **`PC Health Levels = 5 + Health (sub-stat)`** - the flat baseline, plus whatever a PC invests in Water's Health sub-stat.
-- **NPCs will most often just be the flat 5**, with no Health sub-stat added - minor/"weenie" NPCs go down in a single connecting hit, while PCs are built tougher by default.
+- **NPCs are built the same way as PCs** - most with the Character Creator, at the power level the GM chooses - so their Health Levels follow the same formula. A Gifted NPC has Ki; only a special NPC holds Fate Tokens of their own.
 
 At **0 Health Levels**, a character falls unconscious and can't act. **Below 0 they are Dying**: still unconscious, still losing ground, and out of the fight until something stops it. Health Levels can still be tracked into negative territory from further damage, and **the negative range mirrors the positive one** - a character with 7 Health Levels is unconscious at 0, Dying from −1, and dead at −7. Whatever it took to put them down, it takes that much again to finish them. Ordinarily that range plays out off-screen, since an unconscious character can't act or be aware of it; [Unstoppable](boons.md#boon-list) is the exception that lets a character stay conscious and act throughout it instead of blacking out at 0.
 

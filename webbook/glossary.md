@@ -353,7 +353,7 @@ The Normal bracket - the middle option. Two actions this round, usually a move a
 <div class="gloss" markdown="1">
 <span class="gloss-term">NPC</span>
 
-Anyone the GM plays instead of a player - short for non-player character. They run on trimmed-down stats; their walls sit at a flat 5 unless the GM says otherwise.
+Anyone the GM plays instead of a player - short for non-player character. Most are built the same way as a player character, at whatever power level the GM chooses. A Gifted NPC has Ki; only a special NPC has Fate Tokens of their own.
 </div>
 
 <div class="gloss" markdown="1">
@@ -497,7 +497,7 @@ Health, Poise and Sanity: the three things an attack can take from you. Each is 
 <div class="gloss" markdown="1">
 <span class="gloss-term">Wall</span>
 
-The number an attack’s dice have to beat to do anything to you. You have three, one for each kind of attack - Soak against Physical, Presence against Social, Psyche against Mental. Once an attack has connected, its dice are checked one at a time: any die over your Wall gets through and costs you a Level, and any die at or under it is absorbed completely. A Wall of 10 can’t be beaten by an ordinary die at all - the only way through is Ki Infusion. NPCs run on a flat 5 unless the GM says otherwise.
+The number an attack’s dice have to beat to do anything to you. You have three, one for each kind of attack - Soak against Physical, Presence against Social, Psyche against Mental. Once an attack has connected, its dice are checked one at a time: any die over your Wall gets through and costs you a Level, and any die at or under it is absorbed completely. A Wall of 10 can’t be beaten by an ordinary die at all - the only way through is Ki Infusion.
 </div>
 
 <div class="gloss" markdown="1">

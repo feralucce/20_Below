@@ -118,7 +118,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Normal Action** - The Normal bracket - the middle option. Two actions this round, usually a move and something else, resolved after the Fast crowd and before the Slow one.
 
-**NPC** - Anyone the GM plays instead of a player - short for non-player character. They run on trimmed-down stats; their walls sit at a flat 5 unless the GM says otherwise.
+**NPC** - Anyone the GM plays instead of a player - short for non-player character. Most are built the same way as a player character, at whatever power level the GM chooses. A Gifted NPC has Ki; only a special NPC has Fate Tokens of their own.
 
 **Overwhelmed** - Where you land at 0 Sanity. You pick up a temporary bad mental trait and roll everything at Disadvantage, but you’re still yourself and still acting. It lifts once you’re away from whatever caused it and get to rest - or you spend 1 Ki, which also fills Sanity back up.
 
@@ -166,6 +166,6 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Vitals** - Health, Poise and Sanity: the three things an attack can take from you. Each is 5 plus a sub-stat, counted in Levels rather than points, and each runs the same distance below zero as it does above. A connecting Physical die costs Health, a Social die costs Poise, a Mental die costs Sanity, and a point of Ki preserves a Level on any of them. Ki itself is not a Vital - it’s the pool you spend, not a row you lose. See Wall for the other side of the same exchange.
 
-**Wall** - The number an attack’s dice have to beat to do anything to you. You have three, one for each kind of attack - Soak against Physical, Presence against Social, Psyche against Mental. Once an attack has connected, its dice are checked one at a time: any die over your Wall gets through and costs you a Level, and any die at or under it is absorbed completely. A Wall of 10 can’t be beaten by an ordinary die at all - the only way through is Ki Infusion. NPCs run on a flat 5 unless the GM says otherwise.
+**Wall** - The number an attack’s dice have to beat to do anything to you. You have three, one for each kind of attack - Soak against Physical, Presence against Social, Psyche against Mental. Once an attack has connected, its dice are checked one at a time: any die over your Wall gets through and costs you a Level, and any die at or under it is absorbed completely. A Wall of 10 can’t be beaten by an ordinary die at all - the only way through is Ki Infusion.
 
 **Water** - One of the five Elements that defines the essence of a character - tide and undertow. Water is the Attribute that covers perception and empathy, patience and staying power, how tuned in you are to the world and the people in it, and how much you can weather before it wears you down. It is further divided into Stamina and Health.

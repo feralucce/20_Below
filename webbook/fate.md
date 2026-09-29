@@ -254,6 +254,8 @@ Nothing is created and nothing is destroyed. It only ever changes sides.
 
 Rather than Fate Tokens just draining from players into nothing, **when a player spends a Fate Token, the GM gains one** in a separate GM-side pool - spending isn’t just depletion, it’s a transfer of leverage from the players’ side of the table to the GM’s.
 
+**A special NPC’s own Tokens never reach the pool.** An NPC who holds Fate Tokens of their own spends them the way a player does, but a Token an NPC spends is simply gone. If it went into the GM’s pool, the GM could fill their own bowl.
+
 The pool buys three things, and every one of them is the world acting rather than a bonus bolted onto somebody’s die roll.
 
 **A Twist - 1, 3, or 5+ Tokens.** Escalate what is already in motion. One Token is a small complication - the door was alarmed after all. Three is a real turn in the scene - the ambush was a distraction. Five or more reshapes the arc - the ally you saved owed somebody else a debt first, and they have come to collect.

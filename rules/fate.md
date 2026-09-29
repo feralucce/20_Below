@@ -177,6 +177,8 @@ The GM's [Hardening](#the-gms-own-pool) is the opposite number to this.
 
 Rather than Fate Tokens just draining from players into nothing, **when a player spends a Fate Token, the GM gains one** in a separate GM-side pool - spending isn't just depletion, it's a transfer of leverage from the players' side of the table to the GM's.
 
+**A special NPC's own Fate Tokens never reach the pool.** An NPC who holds Tokens of their own spends them the way a player does, but a Token an NPC spends is simply gone - otherwise the GM could fill their own pool.
+
 The pool buys three things, and every one of them is the world acting rather than a bonus bolted onto somebody's die roll.
 
 - **A Twist** - **1, 3, or 5+ Tokens.** Escalate what is already in motion. One Token is a small complication; three is a real turn in the scene; five or more reshapes the arc.
