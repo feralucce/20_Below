@@ -24,8 +24,10 @@ import { computeFiguredCharacteristics } from '../state.js';
 
 // A creature's natural weapons live in its entry prose rather than in
 // structured fields, in the same shape the bestiary prints them:
-// "**Bite**: 5, Melee". Character exports carry that text in finishingNotes.
-const NATURAL_WEAPON = /^\*\*([A-Z][^*]*)\*\*:\s*(\d+),/gm;
+// "**Bite**: 3 dice, Melee" (older cards: "**Bite**: 3, Melee", sometimes
+// with a condition first). Character exports carry that text in
+// finishingNotes. Social and Mental lines are not damage dice.
+const NATURAL_WEAPON = /^\*\*([A-Z][^*]*)\*\*\s*(?:\([^)]*\))?:\s*(\d+)(?:\s+(?:dice|die)\b)?\s*,([^\n]*)/gm;
 
 // Fallback when nothing else can be worked out. Fists and feet are 1 die
 // in weapons.md, and someone carrying nothing really is swinging at that -
@@ -48,15 +50,39 @@ export function bandFor(ratio) {
 // with several attacks use the worst one: the GM is asking what this thing
 // can do to someone, not what it does on average.
 export function naturalDice(state) {
+  // A creature from the Battle Tracker's library carries its attacks already read.
+  const attacks = state && state.creature && state.creature.attacks;
+  if (Array.isArray(attacks)) {
+    const dice = attacks.filter((a) => a.kind === 'Physical').map((a) => Number(a.dice))
+      .filter((n) => Number.isFinite(n) && n > 0);
+    return dice.length ? Math.max(...dice) : null;
+  }
   const text = (state && state.finishingNotes) || '';
   // Only read this as a creature block. A player's notes are free prose and
   // can happen to start a line with a bold word and a number, which would
   // otherwise be taken as a bite.
   if (!text.includes('**Soak**')) return null;
   const found = [...text.matchAll(NATURAL_WEAPON)]
+    .filter((m) => !/\*\*(Social|Mental)\*\*/.test(m[3]))
     .map((m) => Number(m[2]))
     .filter((n) => Number.isFinite(n) && n > 0);
   return found.length ? Math.max(...found) : null;
+}
+
+// A creature's natural weapons are boosted: each die adds its Ferocity
+// against Soak, the way a character's Ki Infusion does (encounters.md,
+// Attack by Role). Weapons a creature or person carries are not, so the
+// boost only counts when the natural-weapon text is what supplies the dice.
+export function ferocityOf(state, weaponDice = null) {
+  if (!state) return 0;
+  if (Number.isFinite(state.encounterDice) && state.encounterDice > 0) return 0;
+  if (weaponDice) {
+    const carried = (state.gearPurchases || []).some((g) => Number(weaponDice[g.name]) > 0);
+    if (carried) return 0;
+  }
+  if (naturalDice(state) === null) return 0;
+  const f = Number(state.subStats && state.subStats.Ferocity);
+  return Number.isFinite(f) && f > 0 ? f : 0;
 }
 
 // A player character's dice come from what they are carrying, which needs
@@ -137,9 +163,13 @@ export function threatOf(state, count = 1, weaponDice = null) {
 // lands near seven rolls in ten. It is the one term not read off a sheet.
 export const HIT_RATE = 0.7;
 
-export function budgetOf(states, weaponDice = null) {
+// 0.7 x party dice x party Health Levels / min(10, 10 + Ferocity - average
+// party Soak). `ferocity` is the boost on the opposition's natural weapons:
+// a boosted die gets past more of the party's Soak, so the party can take
+// less. The min holds it at 10, since a die can't connect more than always.
+export function budgetOf(states, weaponDice = null, ferocity = 0) {
   const live = states.filter(Boolean);
-  if (!live.length) return { value: 0, dice: 0, health: 0, soak: 0 };
+  if (!live.length) return { value: 0, dice: 0, health: 0, soak: 0, ferocity };
   let dice = 0;
   let health = 0;
   let soakTotal = 0;
@@ -150,24 +180,40 @@ export function budgetOf(states, weaponDice = null) {
     soakTotal += soak;
   });
   const soak = soakTotal / live.length;
-  return { value: HIT_RATE * dice * health / (10 - soak), dice, health, soak };
+  const reach = Math.min(10, 10 + ferocity - soak);
+  // Nothing the opposition swings gets past the party's Soak: no fight to weigh.
+  const value = reach > 0 ? HIT_RATE * dice * health / reach : Infinity;
+  return { value, dice, health, soak, ferocity };
 }
 
 // The whole verdict for a table full of creatures against a party.
 // `opposition` is [{ state, count }].
+//
+// Each kind is weighed against the Budget at its own Ferocity, and the
+// shares are added. With one kind, or one Ferocity, that is exactly
+// Threat / Budget; with a mix, a claw and a carried knife each count at the
+// rate they actually get through. `budget.value` is reported as the single
+// Budget that gives the same verdict, so the page can show one number.
 export function weigh(party, opposition, weaponDice = null) {
-  const budget = budgetOf(party, weaponDice);
   const parts = opposition
     .filter((o) => o.state && o.count > 0)
-    .map((o) => ({ ...o, threat: threatOf(o.state, o.count, weaponDice) }));
+    .map((o) => {
+      const ferocity = ferocityOf(o.state, weaponDice);
+      return { ...o, ferocity, threat: threatOf(o.state, o.count, weaponDice),
+        budget: budgetOf(party, weaponDice, ferocity) };
+    });
+  const ferocities = [...new Set(parts.map((p) => p.ferocity))].sort((a, b) => a - b);
+  const budget = budgetOf(party, weaponDice, ferocities.length ? ferocities[ferocities.length - 1] : 0);
+  budget.ferocities = ferocities;
 
   if (parts.some((p) => p.threat.untouchable)) {
     return { budget, parts, total: Infinity, ratio: Infinity, untouchable: true };
   }
   const total = parts.reduce((n, p) => n + p.threat.value, 0);
-  if (!budget.value || !total) {
+  const ratio = parts.reduce((n, p) => n + (p.budget.value > 0 ? p.threat.value / p.budget.value : 0), 0);
+  if (!total || !ratio) {
     return { budget, parts, total, ratio: 0, band: BANDS[0] };
   }
-  const ratio = total / budget.value;
+  budget.value = total / ratio;
   return { budget, parts, total, ratio, band: bandFor(ratio) };
 }

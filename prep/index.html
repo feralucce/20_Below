@@ -199,9 +199,11 @@ Character files come from the <a href="https://20belowrpg.com/app/" style="color
   function renderFoes() {
     const el = document.getElementById("foeList");
     if (!foes.length) { el.innerHTML = '<div class="empty">Nothing on the table yet.</div>'; return; }
-    const budget = encounter.budgetOf(party.map((p) => p.state), weaponDice).value;
     el.innerHTML = foes.map((f) => {
       const t = encounter.threatOf(f.state, f.count, weaponDice);
+      // Each kind is weighed at its own Ferocity, the boost its natural weapons get.
+      const fer = encounter.ferocityOf(f.state, weaponDice);
+      const budget = encounter.budgetOf(party.map((p) => p.state), weaponDice, fer).value;
       const each = t.untouchable ? "&infin;" : Math.round(t.each);
       // How many of this one creature reaches each band on its own - the
       // quickest way to size a fight around a single kind of thing.
@@ -223,7 +225,7 @@ Character files come from the <a href="https://20belowrpg.com/app/" style="color
       return `<div class="row" style="align-items:flex-start">
         <div style="min-width:0">
           <div class="nm">${esc(f.state.name || "Unnamed")}</div>
-          <div class="sub">Soak ${t.soak} &middot; ${t.health} Health Levels &middot; ${t.dice} dice &middot; threat ${each} each</div>
+          <div class="sub">Soak ${t.soak} &middot; ${t.health} Health Levels &middot; ${t.dice} dice${fer ? " +" + fer + " Ferocity" : ""} &middot; threat ${each} each</div>
           ${ladder}
         </div>
         <div style="display:flex;align-items:center;gap:0.4rem">
@@ -257,10 +259,20 @@ Character files come from the <a href="https://20belowrpg.com/app/" style="color
       `<div class="says">${w.band.says}.</div>`,
       `<div class="math">${names}<br />`,
       `Threat ${Math.round(w.total)} against a Budget of ${Math.round(w.budget.value)}. `,
-      `Party: ${w.budget.dice} damage dice, ${w.budget.health} Health Levels, average Soak ${w.budget.soak.toFixed(1)}.<br />`,
+      `Party: ${w.budget.dice} damage dice, ${w.budget.health} Health Levels, average Soak ${w.budget.soak.toFixed(1)}. `,
+      `${ferocityLine(w.budget.ferocities)}<br />`,
       `Bands count who goes down, not who dies.</div>`,
       weaponsFailed ? '<div class="warn">weapons.md could not be reached, so carried weapons count as fists. Set each character\'s dice by hand.</div>' : "",
     ].join("");
+  }
+
+  // Natural weapons add Ferocity to each die against Soak; say what was counted.
+  function ferocityLine(list) {
+    const boosted = (list || []).filter((f) => f > 0);
+    if (!boosted.length) return "No natural weapons, so no Ferocity against Soak.";
+    const lo = boosted[0];
+    const hi = boosted[boosted.length - 1];
+    return `Natural weapons add Ferocity ${lo === hi ? lo : lo + "-" + hi} to each die against Soak.`;
   }
 
   function render() {
