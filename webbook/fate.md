@@ -146,7 +146,7 @@ Everything above is what one person’s will manages on its own. Past that, the 
 
 **Five and up always takes more than one of you.** It also works differently from the tiers above it - you don’t read the price off a list. Tell the GM what you’re claiming, and they will tell you what it costs. At this scale the size of the change sets the number, and no table is going to anticipate what your table just decided to rewrite.
 
-**5** - Past any one person - A district keeps its power through a night it had no business surviving; an organization’s records of you’re wrong in every copy at once; the storm breaks over the whole valley exactly when it’s needed; everyone who died in one specific event is found alive; a standing order changes and nobody can name who gave it
+**5** - Past any one person - A district keeps its power through a night it had no business surviving; an organization’s records of you are wrong in every copy at once; the storm breaks over the whole valley exactly when it’s needed; everyone who died in one specific event is found alive; a standing order changes and nobody can name who gave it
 
 **6+** - Universe-altering - The dead of a war aren’t dead, and never were; a language nobody has spoken in three hundred years is the one everyone grew up speaking; a continent that was on no map has always been there; a law of physics has an exception, and always did
 

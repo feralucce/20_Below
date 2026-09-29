@@ -103,28 +103,56 @@ Four tiers, one person acting alone, each step more exhausting than the last.
 | 3 | Decisive, unmistakable feat | A structure collapses or appears exactly where it's needed; a patrol's morale breaks all at once; a faction's loyalty visibly flips in the moment; the crowd's fear turns to anger, aimed at exactly the right target; the bridge holds together just long enough |
 | 4 | Solo ceiling | An NPC's true nature or history is revealed to everyone present at once; a building that should be collapsing suddenly isn't; a faction's allegiance flips for good, not just the moment; a locked-down facility's systems glitch out all at once; an entire crowd's memory of what just happened is uncertain afterward |
 
-**Pooled magnitude (5+ tokens), not yet detailed**: since 1-4 is explicitly what one person can do alone, nothing solo ever reaches 5 - pooling is just what happens once a group's combined total exceeds any single member's ceiling. **Tier 5** is its own step; **Tier 6+** is a flat ceiling where the exact token count stops mattering mechanically. Examples for both still TBD.
+#### Magnitude - pooled range (5+ tokens)
 
-#### Range - personal scale (1-4 tokens)
+**Five and up always takes more than one character**, pooling their Tokens, and it isn't read off a list: the player says what they're claiming and **the GM sets the cost**. At this scale the size of the change sets the number.
 
-A second, independent component for how far a Kotodama reaches. Only the "personal" end (bound to the character's own body/location) is defined so far - scene/district/city/setting-scale range isn't worked out yet.
-
-| Tier | Range | Example |
+| Tier | | Examples |
 |---|---|---|
-| 1 | Self / on your person | The flashlight in *your* pack |
-| 2 | Touch / arm's reach | The door didn't latch; the key's under the mat |
-| 3 | Immediate vicinity / line of sight | The stolen motorcycle just around the corner; a hidden door across the room |
-| 4 | The space you're in | The whole room, vehicle, or block you're standing in - still bound to your own location |
+| 5 | Past any one person | A district keeps its power through a night it had no business surviving; an organization's records of you are wrong in every copy at once; the storm breaks over the whole valley exactly when it's needed; everyone who died in one specific event is found alive |
+| 6+ | Universe-altering | The dead of a war aren't dead, and never were; a language nobody has spoken in three hundred years is the one everyone grew up speaking; a continent that was on no map has always been there; a law of physics has an exception, and always did |
+
+At six and beyond the claim stops changing what happened and changes what was always true - and everyone alive remembers it that way.
+
+#### Range - how far it has to hold
+
+**Everything within your own reach is free**: Magnitude already pays for a claim about the world where you're standing. Past that, the claim has to hold somewhere whose agreement you aren't standing in, and **the GM prices it**, the same way they price Magnitude 5 and up.
+
+| Range | Cost | Example |
+|---|---|---|
+| Self / on your person | Free | The flashlight in *your* pack |
+| Touch / arm's reach | Free | The door didn't latch; the key's under the mat |
+| Immediate vicinity / line of sight | Free | The stolen motorcycle just around the corner; a hidden door across the room |
+| The space you're in | Free | The whole room, vehicle, or block you're standing in - still bound to your own location |
+| Anywhere you're not | GM prices it | Another district, another city, a place you've only heard of |
 
 #### Plausibility
 
-A third component: how deniable the claim is, independent of how big it is. **Three tiers, token costs not yet assigned**:
+How hard the claim is to explain away afterward, independent of how big it is.
 
-| Tier | Description | Example |
+| Tier | Cost | Description | Example |
+|---|---|---|---|
+| Whisper | +0 | Entirely within the range of normal luck - a witness wouldn't think twice | The door happened to not latch |
+| Murmur | +1 | Technically still possible, a notable stroke of luck a skeptic would talk themselves out of suspecting | Every camera on this block happened to be pointed the wrong way |
+| Shout | +3 | Flatly breaks what anyone present believes is possible - no rationalizing it away, and it's remembered | A locked vault door swings open with no one touching it |
+
+**A Shout is +3, not +2, because it costs twice**: once to overrule what everyone agrees is possible, and again for everyone who watched it now believing something impossible happened.
+
+**Who is watching decides the tier, not what you did.** The same claim is a Whisper alone in a stairwell and a Shout in a crowded bar. **If nobody sees it at all, drop one tier**, to a minimum of Whisper.
+
+#### Adding it up
+
+Magnitude, plus Range if the claim reaches past you, plus Plausibility, plus a Duration surcharge if it isn't permanent.
+
+| Tokens | Claim | Built from |
 |---|---|---|
-| Whisper | Entirely within the range of normal luck - a witness wouldn't think twice | The door happened to not latch |
-| Murmur | Technically still possible, a notable stroke of luck a skeptic would talk themselves out of suspecting | Every camera on this block happened to be pointed the wrong way |
-| Shout | Flatly breaks what anyone present believes is possible - no rationalizing it away, and it's remembered | A locked vault door swings open with no one touching it |
+| 1 | Your phone has signal down here | Magnitude 1, Whisper |
+| 2 | The key is under the mat, and nobody is around to see you use it | Magnitude 2, Whisper |
+| 3 | The camera on this corner happened to be pointed the other way | Magnitude 2, Murmur |
+| 4 | The vault door swings open, empty building | Magnitude 3, Murmur |
+| 6 | The vault door swings open, crowded lobby | Magnitude 3, Shout |
+| 7 | The building that should be coming down isn't | Magnitude 4, Shout |
+| Pooled | Everyone who died in the fire is found alive | Magnitude 5, the GM sets the number |
 
 #### Duration (optional surcharge)
 
