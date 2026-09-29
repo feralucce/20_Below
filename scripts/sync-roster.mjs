@@ -46,6 +46,9 @@ const LIB = [
   ['app/sheet/sheet-model.js', 'lib/sheet/sheet-model.js'],
   // The Report a bug dialog.
   ['app/bug-report.js', 'lib/bug-report.js'],
+  // The desktop update gate. The tracker page imports it; in Owlbear it
+  // does nothing.
+  ['app/update-gate.js', 'lib/update-gate.js'],
 ];
 
 for (const [from, to] of LIB) {
