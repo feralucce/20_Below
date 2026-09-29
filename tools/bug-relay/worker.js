@@ -108,10 +108,28 @@ export function corsHeaders(origin, env) {
   };
 }
 
-function text(value, max) {
+// Characters nobody can see: zero-width and direction-changing marks,
+// and the Unicode "tag" and variation blocks that can carry whole hidden
+// sentences, or make text read differently from how it looks. A report
+// may say only what shows on screen.
+const INVISIBLE = /[\u00AD\u034F\u061C\u115F\u1160\u17B4\u17B5\u180B-\u180F\u200B-\u200F\u202A-\u202E\u2060-\u206F\u3164\uFE00-\uFE0F\uFEFF\uFFA0\uFFF0-\uFFF8]|[\u{E0000}-\u{E0FFF}]/gu;
+
+export function text(value, max) {
   if (typeof value !== 'string') return '';
-  // Drop control characters except line breaks and tabs, then trim to size.
-  return value.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '').trim().slice(0, max);
+  // Drop control characters except line breaks and tabs, and anything
+  // invisible, then trim to size.
+  return value
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '')
+    .replace(INVISIBLE, '')
+    .trim()
+    .slice(0, max);
+}
+
+// "https://x" -> "https[:]//x": still readable, but not clickable in
+// Discord, so a link in a report can't be a phishing trap. Links in a
+// report are evidence to look at, not places to go.
+export function defang(value) {
+  return value.replace(/\b([a-z][a-z0-9+.-]{1,15}):\/\//gi, '$1[:]//');
 }
 
 export function clean(body) {
@@ -134,7 +152,7 @@ export function clean(body) {
 // Discord would turn "@everyone" or "<@123>" into pings, and markdown
 // links into clickable ones. Reports are shown as plain text.
 export function plain(value) {
-  return value
+  return defang(value)
     .replace(/@/g, '@​')
     .replace(/([\\`*_~|>\[\]()#-])/g, '\\$1');
 }
@@ -150,12 +168,12 @@ export function discordPost(ticket, r, newTagId) {
   if (r.expected) lines.push('', '**What they expected**', plain(r.expected));
   if (r.steps) lines.push('', '**Steps to reproduce**', plain(r.steps));
   if (r.contact) lines.push('', `**Contact:** ${plain(r.contact)}`);
-  if (r.context) lines.push('', '**Details from the app**', '```', r.context.replace(/```/g, "'''"), '```');
+  if (r.context) lines.push('', '**Details from the app**', '```', defang(r.context).replace(/```/g, "'''"), '```');
   let content = lines.join('\n');
   if (content.length > 1990) content = content.slice(0, 1985) + '\n...';
   const post = {
     // "Creating a character: Skills" is titled by its last part, "Skills".
-    thread_name: [`#${ticket}`, r.app, r.section.split(': ').pop(), r.summary].filter(Boolean).join(' · ').slice(0, 100),
+    thread_name: [`#${ticket}`, r.app, r.section.split(': ').pop(), defang(r.summary)].filter(Boolean).join(' · ').slice(0, 100),
     content,
     username: '20 Below Bug Reports',
     allowed_mentions: { parse: [] },

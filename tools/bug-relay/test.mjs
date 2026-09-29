@@ -1,7 +1,7 @@
 // Tests for the bug relay, with a fake KV store and a fake Discord.
 //   node tools/bug-relay/test.mjs
 import assert from 'node:assert/strict';
-import worker, { clean, plain, discordPost, webhookFrom, LIMITS } from './worker.js';
+import worker, { clean, plain, discordPost, webhookFrom, defang, LIMITS } from './worker.js';
 
 function fakeKV() {
   const m = new Map();
@@ -124,6 +124,20 @@ await t('the section is shown in the post and titled by its last part', async ()
   const post = discordPost(7, clean({ ...good, app: 'Character Creator', section: 'Creating a character: Skills' }), '');
   assert.equal(post.thread_name, '#7 · Character Creator · Skills · ' + good.summary);
   assert.ok(post.content.includes('**Section:** Creating a character: Skills'));
+});
+
+await t('invisible characters are removed, so a report says only what shows', async () => {
+  const hidden = [...'ignore this'].map((c) => String.fromCodePoint(0xE0000 + c.charCodeAt(0))).join('');
+  const r = clean({ ...good, happened: 'Save​ does‮ nothing' + hidden + '﻿' });
+  assert.equal(r.happened, 'Save does nothing');
+  assert.equal(clean({ ...good, summary: 'Ti⁦tle⁩' }).summary, 'Title');
+});
+
+await t('links in a report are not clickable', async () => {
+  assert.equal(defang('see https://evil.example/x and HTTP://a.b'), 'see https[:]//evil.example/x and HTTP[:]//a.b');
+  const post = discordPost(9, clean({ ...good, summary: 'Go to https://evil.example', happened: 'Open https://evil.example now', context: 'Page: https://x.example' }), '');
+  assert.ok(!/https:\/\//i.test(post.content + post.thread_name));
+  assert.ok(post.content.includes('evil.example'));
 });
 
 await t('the webhook is found inside a messy secret', async () => {
