@@ -228,15 +228,15 @@ Buy off the Flaw when the story has finished with it. Not when it’s inconvenie
 
 Ronan’s table plays most weeks and averages a little under four XP a session. Across a year he banked **170**.
 
-- Firearms, Untrained to Adept - **9 XP**
-- Athletics, Trained to Expert - **10 XP**
+- Firearms, Untrained to Adept - **5 XP**
+- Athletics, Trained to Expert - **6 XP**
 - Contacts, Level 2 to 4 - **15 XP**
 - Danger Sense, a Greater Boon - **10 XP**
 - Second Sight, a new Gift, to Level 3 **22 XP**
 - A Lesser Adder on it - **6 XP**
 - Shedding a Moderate Flaw - **9 XP**
 - Earth 6 to 7 - **54 XP**
-- Banked toward Earth 7 to 8 - **35 XP**
+- Banked toward Earth 7 to 8 - **43 XP**
 
 Look at the bottom two lines. More than half of Ronan’s year went into one Attribute, and he isn’t finished. The other half bought him a gun he can actually use, a network that answers the phone, a supernatural ability he didn’t have in session one, and the end of something that had been following him since character creation.
 
