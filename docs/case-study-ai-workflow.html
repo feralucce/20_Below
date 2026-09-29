@@ -54,6 +54,10 @@
   .glance dt { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); padding-top: 0.22rem; }
   .glance dd { margin: 0; }
   @media (max-width: 560px) { .glance { grid-template-columns: 1fr; gap: 0.1rem; } .glance dd { margin-bottom: 0.6rem; } .glance dd:last-child { margin-bottom: 0; } }
+  .testimonial { margin: 2.2rem 0 0; background: var(--panel); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 1.1rem 1.3rem; }
+  .testimonial blockquote { margin: 0 0 0.6rem; padding: 0; border: 0; color: var(--text); font-size: 1rem; }
+  .testimonial figcaption { font-size: 0.88rem; color: var(--text-dim); margin: 0; }
+  .testimonial figcaption b { color: var(--text); font-weight: 600; }
 </style>
 <link rel="stylesheet" href="/docs/assets/css/site-nav.css" />
 </head>
@@ -114,6 +118,11 @@
 
   <h2>Outcome</h2>
   <p>A system with a lot of moving parts ships as one thing and holds together: one set of rules behind every app, and a print book and web book built from the same source. Fifteen people shape it, and it still reads in one voice. The team brings the problems, the AI speeds up the work, and the decisions and the final check stay with the hub. That's the job: keep everyone informed, keep one version real, and don't ship anything you haven't checked.</p>
+
+  <figure class="testimonial">
+    <blockquote>&ldquo;I found a link in the Character Creator that led nowhere, the kind of small thing that makes a new player lose trust in a tool. Feral had it fixed and released quickly, and thanked me for catching it. On 20 Below, a bug report from anyone on the team gets the same attention as a design decision, and everyone can see when it&rsquo;s done.&rdquo;</blockquote>
+    <figcaption><b>Louis Leboeuf</b> &middot; Engineer, 20 Below</figcaption>
+  </figure>
 
   <h2>The Team</h2>
   <table class="team">
