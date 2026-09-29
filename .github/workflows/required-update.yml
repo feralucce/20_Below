@@ -1,0 +1,52 @@
+# Required updates, raised by themselves.
+#
+# When a desktop release is published with "Required update" anywhere in
+# its notes, this raises that app's minimum in app-versions.json to the
+# new version. Every older copy then shows the update screen
+# (app/update-gate.js). Releases without the phrase change nothing.
+#
+# It runs only after the release is published, so players are never told
+# to update before the new installer exists. It never lowers a minimum.
+
+name: Required update
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: app-versions
+  cancel-in-progress: false
+
+jobs:
+  raise-minimum:
+    if: ${{ !github.event.release.prerelease && contains(github.event.release.body, 'Required update') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Raise the minimum
+        id: raise
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: node tools/raise-min-version.mjs "$TAG"
+
+      - name: Commit and push
+        if: ${{ steps.raise.outputs.changed == 'true' }}
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app-versions.json
+          git commit -m "Required update: $TAG is now the minimum"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1
