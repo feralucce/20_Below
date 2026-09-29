@@ -14,6 +14,7 @@ The list of starter Natures, and the guide to writing your own, are in [Creating
 - **Voluntary Disadvantage** - a player may choose to take [Disadvantage](rules.md#advantage--disadvantage) on a roll in exchange for a Fate Token.
 - **Flaws** - every character has Flaws. When the GM *or* the player invokes a Flaw in a scene, the invoking side's choice grants the player a Fate Token.
 - **Daily Regeneration** - characters regain **1 Fate Token** at sunrise, every day.
+- **Lucky Number** - whenever one of a character's own core rolls comes up exactly equal to their Klotho rating, they gain **1 Fate Token**, automatically (see [Klotho](rules.md#klotho)).
 - **Milestone Award** - when the party overcomes a significant challenge (a session's climactic fight, defeating a notable threat, a decisive turning point in the story), the GM awards **1 Fate Token to every PC**, roughly once per session - rarer than that and it stops feeling like a beat worth marking; more often and it stops feeling like a milestone.
 - **GM Discretion** - the GM can directly award a Fate Token for good roleplay or a clever idea, independent of the other triggers above.
 

@@ -156,13 +156,13 @@ The Fate chapter tells the players what the consensus is. This is your half of i
 
 ## Awarding XP and Fate
 
-Both of the currencies your players run on come from you, and the rules for both are already written down - five XP categories in Advancement, six sources of Fate in the Fate chapter. This is about actually using them.
+Both of the currencies your players run on come from you, and the rules for both are already written down - five XP categories in Advancement, seven sources of Fate in the Fate chapter. This is about actually using them.
 
 **Award XP for what you want more of.** The five categories are deliberately not about winning. Nobody gets XP for killing the thing or finding the treasure. They get it for showing up, playing the character, taking a risk, learning something, and doing one thing everyone remembers. That’s the game telling your table what it values, once a week, in public. If you hand out Standout Moment to the same person every session, you’ve told the other four something you probably didn’t mean to.
 
 **Say what each point was for.** Out loud, by name, at the end of the session. It takes ninety seconds and it’s the single best teaching tool you have - a player who hears why somebody else earned Heroism and Risk Faced now knows what that category is worth, and you’ll see it in their play next week.
 
-**Three of the six Fate sources are yours.** Nature, voluntary Disadvantage and daily regeneration all happen without you. Invoking a Flaw, the Milestone Award and plain discretion are your call, and they’re the ones that go unused when a GM is busy.
+**Three of the seven Fate sources are yours.** Nature, voluntary Disadvantage, daily regeneration and the Lucky Number all happen without you. Invoking a Flaw, the Milestone Award and plain discretion are your call, and they’re the ones that go unused when a GM is busy.
 
 **Invoking a Flaw is a gift, not a punishment.** It looks like you’re making somebody’s night worse, and it pays them a Token for the trouble. New GMs sit on this because it feels mean. It isn’t - it’s the mechanism by which a Flaw stops being free points, and a player who took Short Fuse wants you to use it. Ask them once at session zero how hard they want it pushed, then push it that hard.
 
