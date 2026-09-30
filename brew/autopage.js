@@ -30,7 +30,7 @@ const { paginate, spills } = await import('./render.js' + V);
 
 const PAGE_MARKER = /^\\page[ \t]*(.*)$/;
 const HEADING = /^#{1,6} /;
-const MAX_PASSES = 6;
+const MAX_PASSES = 30;
 
 /* The opening line of a ::: block, and the mark a split one carries.
  *
@@ -542,14 +542,32 @@ export async function autoPaginate(src, container, render) {
         // continuation already there rather than starting a second one, or
         // the entry would arrive in three pieces to gain two lines.
         const parts = blockParts(sheet.chunks[0]);
-        if (!parts || parts.paras.length < 2) return;
-        const last = parts.paras.pop();
+        if (!parts) return;
+        // A bullet list is one paragraph, and an entry's Adders list can be
+        // most of the sheet. Handing the whole list on would empty the page,
+        // and refusing leaves it overflowing - so take its last item only.
+        let last;
+        const tailPara = parts.paras[parts.paras.length - 1] || '';
+        const items = tailPara.split(/\n(?=\s*[-*+] )/);
+        if (/^\s*[-*+] /.test(tailPara) && items.length > 1) {
+          last = items.pop();
+          parts.paras[parts.paras.length - 1] = items.join('\n');
+        } else {
+          if (parts.paras.length < 2) return;
+          last = parts.paras.pop();
+        }
         sheet.chunks = [blockFrom(parts.name, parts.label, parts.paras)];
         const cont = parts.label.replace(/ \(continued\)$/, '') + CONTINUED;
         const next = sheets[i + 1];
         const after = next ? blockParts(next.chunks[0] || '') : null;
         if (after && after.name === parts.name && after.label === cont.trim()) {
-          next.chunks[0] = blockFrom(parts.name, after.label, [last].concat(after.paras));
+          // An item joins the list the continuation opens with, rather than
+          // standing as a one-item list of its own.
+          const listy = (p) => /^\s*[-*+] /.test(p || '');
+          const joined = listy(last) && listy(after.paras[0])
+            ? [last + '\n' + after.paras[0]].concat(after.paras.slice(1))
+            : [last].concat(after.paras);
+          next.chunks[0] = blockFrom(parts.name, after.label, joined);
         } else {
           sheets.splice(i + 1, 0, {
             options: spillOptions(sheet.options),
