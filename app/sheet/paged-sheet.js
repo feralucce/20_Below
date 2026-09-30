@@ -509,14 +509,15 @@ export function buildPagedSheet(state, data, opts = {}) {
       return;
     }
 
-    // A new Scene clears the tally. The box is the one thing on the page
-    // that is only ever about this Scene, so it is what gets clicked.
+    // The tally counts the spends that count against Stamina + 1: a
+    // Kotodama, a share of a pooled one, a level of Corruption burned.
+    // Click it to count one; New Scene clears it.
     if (id === 'pool.fate.spent') {
       host.appendChild(place(el('button', {
         type: 'button',
         class: 'sf sf-roll',
-        title: 'New Scene: reset the Fate Tokens spent this Scene to 0',
-        onClick: () => set(() => { state.fateSpentThisScene = 0; }),
+        title: 'Count a spend against Stamina + 1: a Kotodama, a share of a pooled one, or a level of Corruption burned. New Scene clears it.',
+        onClick: () => set(() => act.countSpend()),
       }), f));
       return;
     }

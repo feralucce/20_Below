@@ -387,7 +387,7 @@ frame(px0, by, PW, BH, CYAN, "POOLS")
 # the caption above the next row needs its own air, so each row is placed
 # where it actually clears the one before it.
 for lab, col, note, dy in (("KI", CYAN, "TOP ELEMENT + 8", 120),
-                           ("FATE TOKENS", MOIRA, "HELD: STAMINA x 3", 255)):
+                           ("FATE TOKENS", MOIRA, "HELD: STAMINA x 3 + 1", 255)):
     y = by + dy
     label(px0 + 48, y, lab, 33, mix(col, LIFT, 0.45), 4.2)
     label(px0 + 348, y, note, 29, DIM, 2.7)
@@ -405,11 +405,12 @@ for lab, col, note, dy in (("KI", CYAN, "TOP ELEMENT + 8", 120),
     stepper(px0 + 384, y + 72, "+", "pool.%s.plus" % pid,
             px0 + 354, y + 27, pool=pid)
     if lab == "FATE TOKENS":
-        label(px0 + 444, y + 54, "SPENT", 30, DIM, 3.6)
+        label(px0 + 444, y + 54, "COUNTED", 30, DIM, 3.6)
         label(px0 + 444, y + 84, "THIS SCENE", 30, DIM, 3.6)
         box(px0 + 672, y + 24, 72, col)
-        # No controls of its own: spending a Token with the - beside the
-        # held count is what fills this, and the + puts it back.
+        # Only a Kotodama or a burned level of Corruption counts against
+        # Stamina + 1, so this is counted by clicking the box itself, not
+        # by the - beside the held count. New Scene clears it.
         field("pool.fate.spent", "text", px0 + 672, y + 24, 72, 72,
               pool="fate", readonly=True)
 

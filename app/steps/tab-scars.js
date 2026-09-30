@@ -1,12 +1,28 @@
 import { el } from '../ui.js';
 
+// The three kinds, one per Vital (rules.md#scars). The keys are the ones
+// the sheet's page 5 already writes - 'battle' for Health and 'poise' for
+// Poise predate the Social name, and saved characters carry them.
+const KINDS = [
+  { kind: 'battle', label: 'Physical', vital: 'Health', example: 'Bad Knee, Shaky Hand, Night Blind...' },
+  { kind: 'poise', label: 'Social', vital: 'Poise', example: 'The Nickname, Burned Bridge, Stammer...' },
+  { kind: 'mental', label: 'Mental', vital: 'Sanity', example: 'The Trigger, Night Terrors, Phobia...' },
+];
+
 function nextScarId(state) {
   return state.scars.reduce((max, s) => Math.max(max, s.id), 0) + 1;
 }
 
-function scarList(state, physical, refresh) {
+// A scar saved before the Social split only recorded physical or not, so
+// the flag stands in for the kind when there isn't one - the same reading
+// the sheet uses (sheet-model.js, scarsOfKind).
+function kindOf(scar) {
+  return scar.kind ?? (scar.physical ? 'battle' : 'mental');
+}
+
+function scarList(state, k, refresh) {
   const list = el('div', { class: 'pick-list' });
-  const entries = state.scars.filter((s) => s.physical === physical);
+  const entries = state.scars.filter((s) => kindOf(s) === k.kind);
   if (entries.length === 0) {
     list.append(el('p', { class: 'detail' }, 'None yet.'));
   }
@@ -22,7 +38,7 @@ function scarList(state, physical, refresh) {
         el('input', {
           type: 'text',
           value: scar.title,
-          placeholder: 'Name (a scar, a limp, a changed voice...)',
+          placeholder: `Name (${k.example})`,
           style: 'flex:1;',
           onInput: (e) => {
             scar.title = e.target.value;
@@ -39,7 +55,7 @@ function scarList(state, physical, refresh) {
       ]),
       el('textarea', {
         rows: 2,
-        placeholder: 'Description',
+        placeholder: 'What it does, and the moment it came from',
         text: scar.description,
         onInput: (e) => {
           scar.description = e.target.value;
@@ -58,35 +74,23 @@ export default function buildScarsTab(state, data, refresh) {
     el(
       'p',
       { class: 'detail' },
-      'Battle Scars are purely cosmetic, no mechanical effect - a scar, a limp, a changed voice, whatever fits the wound (see rules.md#battle-scars). Dropping below 0 Health can instead impose a real Flaw until healed; note that below if it happens.',
+      "At 0, a Vital leaves a mark that is only for show - a scar, a nervous habit, a tic. Below 0 it leaves a real scar: one narrow, lasting effect, Physical from Health, Social from Poise, Mental from Sanity. One per crossing, picked by the GM or agreed with them, and permanent until healed. A Social scar can't be healed - a reputation has to be rebuilt. See rules.md#scars for the lists and how each one heals.",
     ),
-    el('h3', {}, 'Physical'),
-    scarList(state, true, refresh),
   );
-  if (refresh) {
-    wrap.append(
-      el('button', {
-        type: 'button',
-        text: 'Add Physical Scar',
-        onClick: () => {
-          state.scars.push({ id: nextScarId(state), physical: true, title: '', description: '' });
-          refresh();
-        },
-      }),
-    );
-  }
-  wrap.append(el('h3', {}, 'Mental'), scarList(state, false, refresh));
-  if (refresh) {
-    wrap.append(
-      el('button', {
-        type: 'button',
-        text: 'Add Mental Scar',
-        onClick: () => {
-          state.scars.push({ id: nextScarId(state), physical: false, title: '', description: '' });
-          refresh();
-        },
-      }),
-    );
-  }
+  KINDS.forEach((k) => {
+    wrap.append(el('h3', {}, `${k.label} (${k.vital})`), scarList(state, k, refresh));
+    if (refresh) {
+      wrap.append(
+        el('button', {
+          type: 'button',
+          text: `Add ${k.label} Scar`,
+          onClick: () => {
+            state.scars.push({ id: nextScarId(state), kind: k.kind, physical: k.kind === 'battle', title: '', description: '' });
+            refresh();
+          },
+        }),
+      );
+    }
+  });
   return [wrap];
 }

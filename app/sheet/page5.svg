@@ -9,8 +9,8 @@
   <path d="M159 294 H2391 A42 42 0 0 1 2433 336 V810 A42 42 0 0 1 2391 852 H159 A42 42 0 0 1 117 810 V336 A42 42 0 0 1 159 294 Z" fill="#01050A" fill-opacity="0.55"/>
   <path d="M159 294 H2391 A42 42 0 0 1 2433 336 V810 A42 42 0 0 1 2391 852 H159 A42 42 0 0 1 117 810 V336 A42 42 0 0 1 159 294 Z" fill="none" stroke="#D9574A" stroke-width="5"/>
   <text x="159" y="360" font-family="'Segoe UI Semibold', 'Segoe UI', Montserrat, system-ui, sans-serif" font-size="45" font-weight="600" letter-spacing="1.8" fill="#FFFFFF" text-anchor="start">SCARS</text>
-  <text x="2391" y="357" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="32" letter-spacing="4.8" fill="#E48980" text-anchor="end">AT 0 IT IS COSMETIC - BELOW 0 IT IS A FLAW UNTIL IT HEALS</text>
-  <text x="165" y="420" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="34" letter-spacing="3.6" fill="#A9D9AB" text-anchor="start">BATTLE SCARS</text>
+  <text x="2391" y="357" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="32" letter-spacing="4.8" fill="#E48980" text-anchor="end">AT 0 IT IS COSMETIC - BELOW 0 IT LASTS UNTIL IT HEALS</text>
+  <text x="165" y="420" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="34" letter-spacing="3.6" fill="#A9D9AB" text-anchor="start">PHYSICAL SCARS</text>
   <text x="773" y="420" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="29" letter-spacing="3" fill="#8FADBE" text-anchor="end">BELOW 0</text>
   <rect x="165" y="438" width="668" height="3" fill="#6FBF73" fill-opacity="0.35"/>
   <rect x="165" y="498" width="572" height="3" fill="#5C7488" fill-opacity="0.7"/>
@@ -27,7 +27,7 @@
   <rect x="773" y="732" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="3.9" stroke-opacity="0.8"/>
   <rect x="165" y="822" width="572" height="3" fill="#5C7488" fill-opacity="0.7"/>
   <rect x="773" y="786" width="45" height="45" rx="9" fill="#01050A" fill-opacity="0.55" stroke="#D9574A" stroke-width="3.9" stroke-opacity="0.8"/>
-  <text x="905" y="420" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="34" letter-spacing="3.6" fill="#ECCB9D" text-anchor="start">POISE SCARS</text>
+  <text x="905" y="420" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="34" letter-spacing="3.6" fill="#ECCB9D" text-anchor="start">SOCIAL SCARS</text>
   <text x="1513" y="420" font-family="'Segoe UI', Montserrat, system-ui, sans-serif" font-size="29" letter-spacing="3" fill="#8FADBE" text-anchor="end">BELOW 0</text>
   <rect x="905" y="438" width="668" height="3" fill="#E0A85C" fill-opacity="0.35"/>
   <rect x="905" y="498" width="572" height="3" fill="#5C7488" fill-opacity="0.7"/>
