@@ -10,14 +10,17 @@ compatibility_date = "2026-09-01"
 ALLOWED_ORIGINS = "https://20belowrpg.com,https://www.20belowrpg.com,https://feralucce.github.io,http://tauri.localhost,https://tauri.localhost,tauri://localhost,http://localhost:8792"
 # The id of the forum channel's "New" tag, filled in during setup (step 4).
 NEW_TAG_ID = "1554503018014310430"
+# The Kit form that newsletter signups join (README.md, "Email signups").
+# Empty means signups are only kept in SUBSCRIBERS.
+KIT_FORM_ID = "9984113"
 
 # Ticket counter and rate limits. Replace the id after `wrangler kv namespace create TICKETS`.
 [[kv_namespaces]]
 binding = "TICKETS"
 id = "02b033d154784321ad46249d2dba3f50"
 
-# Email signups, until the team picks a newsletter service. Export them
-# with `node export-subscribers.mjs` (README.md, "Email signups").
+# Email signups: every address, whether or not it has reached Kit yet.
+# Export them with `node export-subscribers.mjs` (README.md, "Email signups").
 [[kv_namespaces]]
 binding = "SUBSCRIBERS"
 id = "169c3c737e0842208c81665bb0b5d6f4"

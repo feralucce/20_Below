@@ -176,6 +176,29 @@ await t('signups are rate-limited separately from bug reports', async () => {
   assert.equal((await worker.fetch(req(good), e)).status, 200);
 });
 
+await t('a new signup goes to Kit once, unconfirmed, then onto the form', async () => {
+  const e = { ...env(), KIT_API_KEY: 'kit_test', KIT_FORM_ID: '42' };
+  const before = sent.length;
+  await worker.fetch(req({ email: 'Fan@Example.com', source: 'footer' }, { path: '/subscribe' }), e);
+  const kit = sent.slice(before);
+  assert.equal(kit.length, 2);
+  assert.equal(kit[0].url, 'https://api.kit.com/v4/subscribers');
+  assert.deepEqual(kit[0].body, { email_address: 'fan@example.com', state: 'inactive' });
+  assert.equal(kit[1].url, 'https://api.kit.com/v4/forms/42/subscribers');
+  assert.equal(kit[1].body.email_address, 'fan@example.com');
+  assert.ok(e.SUBSCRIBERS.meta.get('fan@example.com').kit);
+  await worker.fetch(req({ email: 'fan@example.com' }, { path: '/subscribe', ip: '9.9.9.9' }), e);
+  assert.equal(sent.length, before + 2);
+});
+
+await t('without Kit set up, a signup is only kept', async () => {
+  const before = sent.length;
+  const e = env();
+  assert.equal((await worker.fetch(req({ email: 'solo@example.com' }, { path: '/subscribe' }), e)).status, 200);
+  assert.equal(sent.length, before);
+  assert.ok(!e.SUBSCRIBERS.meta.get('solo@example.com').kit);
+});
+
 await t('the webhook is found inside a messy secret', async () => {
   const url = 'https://discord.com/api/webhooks/123/abc-DEF_9';
   assert.equal(webhookFrom('﻿' + url + '\r\n'), url);

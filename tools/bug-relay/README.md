@@ -69,14 +69,37 @@ Size limits and the rate limit are set in `LIMITS` at the top of `worker.js`. Af
 
 The site's "Get 20 Below News" box (`app/signup.js`, in the footer of
 every page and on the home page) posts to `/subscribe` on this Worker.
-Addresses are kept in the `SUBSCRIBERS` KV namespace until the team
-picks a newsletter service: the key is the address, and its metadata is
-where it came from and when. Nothing else is stored. Signups have the
-same origin check, honeypot and rate limit as reports (a separate
-limit, so neither uses up the other).
+The Worker keeps the address in the `SUBSCRIBERS` KV namespace (key =
+address; metadata = where it came from, when, and when it reached Kit)
+and hands it to **Kit** (kit.com), which sends the newsletters.
 
-To move the list into a newsletter service (MailerLite, Kit, Buttondown
-and others all import CSV):
+Kit gets each address once, through its double opt-in: the Worker
+creates the subscriber as *inactive*, then adds them to the Kit form in
+`KIT_FORM_ID`, and Kit emails them a confirmation link. Nobody receives
+a newsletter until they click it. If Kit is down or not set up, the
+address is still kept here and goes over on the person's next signup.
+
+### Connecting Kit (one time)
+
+1. In Kit, **Grow → Landing Pages & Forms → Create new → Form**. Name it
+   `20belowrpg.com signup`. In its **Settings → Incentive**, turn on
+   **Send incentive email** (this is Kit's double opt-in) and save.
+2. The form's id is the number in its address bar
+   (`app.kit.com/forms/1234567/edit`). Put it in `wrangler.toml` as
+   `KIT_FORM_ID`.
+3. **Settings → Developer → Add a new key** (v4 API key). Store it as a
+   secret, pasting the key when asked. It goes straight to Cloudflare;
+   never put it in chat or in a file here.
+   ```
+   npx wrangler secret put KIT_API_KEY
+   ```
+4. `npx wrangler deploy`, then sign up on the site with a test address
+   and check that the confirmation email arrives.
+
+### The list outside Kit
+
+To copy the kept addresses into a CSV (any newsletter service imports
+email plus extra columns):
 
 ```
 node export-subscribers.mjs
@@ -84,10 +107,10 @@ node export-subscribers.mjs
 
 That writes `subscribers.csv` here (email, source, signed_up). It holds
 people's addresses: `*.csv` is git-ignored in this folder, and the file
-should be deleted once the import is done.
+should be deleted once it has been used.
 
 Removal requests come by email (the address is shown under the form).
-Delete one with:
+Unsubscribe them in Kit, and delete the kept copy with:
 
 ```
 npx wrangler kv key delete "person@example.com" --binding SUBSCRIBERS --remote

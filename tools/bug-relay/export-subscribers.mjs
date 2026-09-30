@@ -16,7 +16,8 @@ const raw = execSync('npx wrangler kv key list --binding SUBSCRIBERS --remote', 
   encoding: 'utf8',
   maxBuffer: 64 * 1024 * 1024,
 });
-const keys = JSON.parse(raw.slice(raw.indexOf('[')));
+// Wrangler may print warnings first; the list is the line that starts with [.
+const keys = JSON.parse(raw.slice(raw.search(/^\[/m)));
 
 const cell = (v) => {
   const s = String(v ?? '');

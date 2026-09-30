@@ -1,6 +1,7 @@
 // 20 Below bug relay: a Cloudflare Worker between the apps and Discord.
-// It also keeps the email list: POST /subscribe stores an address until
-// the team picks a newsletter service (see README.md, "Email signups").
+// It also takes newsletter signups: POST /subscribe keeps the address
+// and hands it to Kit, which emails the person to confirm (see README.md,
+// "Email signups").
 //
 // The apps POST a report here. The Worker checks it, gives it the next
 // ticket number and posts it to a Discord forum channel, where each post
@@ -15,7 +16,10 @@
 //   ALLOWED_ORIGINS  var     comma-separated origins allowed to report
 //   TICKETS          KV      ticket counter and per-sender rate limits
 //   SUBSCRIBERS      KV      email signups: key = address, metadata =
-//                            where they signed up and when. Nothing else.
+//                            where they signed up, when, and whether Kit
+//                            has it yet. Nothing else.
+//   KIT_API_KEY      secret  Kit (kit.com) v4 API key
+//   KIT_FORM_ID      var     the Kit form new signups join (double opt-in)
 
 export const LIMITS = {
   summary: 100,       // becomes the post title
@@ -130,11 +134,42 @@ async function subscribe(request, env, cors) {
   }
   // Signing up twice is harmless: the first date is kept.
   const existing = await env.SUBSCRIBERS.getWithMetadata(email);
-  if (!existing || existing.value === null) {
+  let meta = existing && existing.value !== null ? existing.metadata || {} : null;
+  if (!meta) {
     const source = text(body.source, LIMITS.source).replace(/[^\w -]/g, '') || 'site';
-    await env.SUBSCRIBERS.put(email, '1', { metadata: { source, at: new Date().toISOString() } });
+    meta = { source, at: new Date().toISOString() };
+    await env.SUBSCRIBERS.put(email, '1', { metadata: meta });
+  }
+  // Hand it to Kit once. If Kit is down or not set up yet, the address is
+  // still kept here and goes over on the person's next signup.
+  if (!meta.kit && env.KIT_API_KEY && env.KIT_FORM_ID && (await toKit(email, meta.source, env))) {
+    await env.SUBSCRIBERS.put(email, '1', { metadata: { ...meta, kit: new Date().toISOString() } });
   }
   return json({ ok: true }, 200, cors);
+}
+
+// Kit's double opt-in, through its v4 API: create the subscriber as
+// inactive (the API would otherwise mark them confirmed), then add them
+// to a double opt-in form, which sends Kit's confirmation email. Nobody
+// gets newsletters until they click it.
+export async function toKit(email, source, env) {
+  const call = (path, payload) => fetch('https://api.kit.com/v4' + path, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Kit-Api-Key': String(env.KIT_API_KEY).trim() },
+    body: JSON.stringify(payload),
+  });
+  try {
+    const made = await call('/subscribers', { email_address: email, state: 'inactive' });
+    if (!made.ok) return false;
+    const form = String(env.KIT_FORM_ID).trim();
+    const added = await call(`/forms/${encodeURIComponent(form)}/subscribers`, {
+      email_address: email,
+      referrer: 'https://20belowrpg.com/#' + (source || 'site'),
+    });
+    return added.ok;
+  } catch {
+    return false;
+  }
 }
 
 export function corsHeaders(origin, env) {
