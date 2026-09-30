@@ -451,6 +451,13 @@ button[aria-pressed="true"]{background:var(--ui-accent-dim); border-color:var(--
    flow, so content after it resumes in fresh columns below it. */
 .page .wide{column-span:all; margin:0 0 .8em}
 .page .wide > :last-child{margin-bottom:0}
+/* A wide table spans the page, and equal columns there leave a cost column
+   as broad as its description - a sixty-row menu then ran eight pages of
+   rows wrapped four lines deep. Sized to their content instead. */
+.page .wide table{table-layout:auto}
+/* Break only between words there, or auto sizing squeezes a column down to
+   one letter and "Cost" sets as "Cos / t". */
+.page .wide th,.page .wide td{overflow-wrap:break-word}
 /* A wide block has no frame, so its title sits straight on the page and
    has to be kept with the table it names - a heading stranded at the foot
    of a sheet is worse than no heading. */

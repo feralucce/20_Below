@@ -180,6 +180,17 @@ export function mergeContinuations(src) {
         while (j < lines.length && !lines[j].trim()) j++;
       }
       if (j < lines.length && isContinuation(lines[j])) {
+        // A table cut across the seam reopened with its header row. Join
+        // the rows back into one table rather than leaving two.
+        if (/^\s*\|/.test(out[out.length - 1] || '')) {
+          let k = out.length - 1;
+          while (k > 0 && /^\s*\|/.test(out[k - 1])) k--;
+          if (lines[j + 1] === out[k] && lines[j + 2] === out[k + 1] && TABLE_SEP.test(out[k + 1] || '')) {
+            i = j + 2;
+            merged += 1;
+            continue;
+          }
+        }
         out.push('');
         i = j;
         merged += 1;
@@ -293,10 +304,38 @@ const LABEL_ONLY = /^\*\*[^*\n]+\*\*:?\s*$/;
  * Rejoined with a single newline where both sides are list items, so the
  * list stays tight. Blank lines between them would make markdown set a
  * loose list, which is a different thing on the page. */
+/* A table is one paragraph too, and a build menu of sixty options is far
+   taller than a sheet. Its rows are pieces like list items are, and the
+   piece that opens the next sheet gets the header row put back on it, so
+   a reader overleaf still knows which column is which. The header travels
+   with the first row - a header with nothing under it is a label on its
+   own by another name. */
+const TABLE_SEP = /^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?\s*$/;
+
+function tableOf(p) {
+  const lines = String(p || '').split('\n');
+  if (lines.length < 3 || !/^\s*\|/.test(lines[0]) || !TABLE_SEP.test(lines[1])) return null;
+  return { header: lines.slice(0, 2).join('\n'), rows: lines.slice(2) };
+}
+
+/* A cut point that opens a sheet should read as the start of something. */
+function reopen(part) {
+  return part && part.opens === 'tr'
+    ? { ...part, text: part.header + '\n' + part.text, opens: false }
+    : part;
+}
+
 function cutPoints(paras) {
   const out = [];
   for (const p of paras) {
     const lines = p.split('\n');
+    const table = tableOf(p);
+    if (table) {
+      table.rows.forEach((row, i) => out.push(i === 0
+        ? { text: table.header + '\n' + row, opens: false, closes: 'tr', header: table.header }
+        : { text: row, opens: 'tr', closes: 'tr', header: table.header }));
+      continue;
+    }
     if (!/^\s*[-*+] /.test(lines[0])) {
       out.push({ text: p, opens: false, closes: false });
       continue;
@@ -304,12 +343,12 @@ function cutPoints(paras) {
     let cur = [];
     for (const line of lines) {
       if (/^\s*[-*+] /.test(line) && cur.length) {
-        out.push({ text: cur.join('\n'), opens: true, closes: true });
+        out.push({ text: cur.join('\n'), opens: 'li', closes: 'li' });
         cur = [];
       }
       cur.push(line);
     }
-    if (cur.length) out.push({ text: cur.join('\n'), opens: true, closes: true });
+    if (cur.length) out.push({ text: cur.join('\n'), opens: 'li', closes: 'li' });
   }
   // A label belongs to what it introduces, so the two are one piece and
   // the cut can never fall between them. Bonding beats cutting there and
@@ -340,7 +379,7 @@ function cutPoints(paras) {
 function joinCuts(parts) {
   return parts.reduce((acc, u, i) => (
     i === 0 ? u.text
-            : acc + (parts[i - 1].closes && u.opens ? '\n' : '\n\n') + u.text
+            : acc + (parts[i - 1].closes && parts[i - 1].closes === u.opens ? '\n' : '\n\n') + u.text
   ), '');
 }
 
@@ -366,7 +405,13 @@ function fillSheet(cur, chunk, preamble, marker, container, render) {
   const minHead = filling ? SPLIT_MIN_HEAD : 1;
 
   const paras = lines.slice(1, -1).join('\n').split(/\n\s*\n/).filter((p) => p.trim());
-  if (paras.length < minParas) return null;
+  // Table rows count toward the threshold; list items still do not, so a
+  // callout with a short list is moved whole rather than cut as before.
+  const weight = paras.reduce((n, p) => {
+    const t = tableOf(p);
+    return n + (t ? t.rows.length : 1);
+  }, 0);
+  if (weight < minParas) return null;
   const parts = cutPoints(paras);
 
   const name = open[1];
@@ -393,7 +438,7 @@ function fillSheet(cur, chunk, preamble, marker, container, render) {
 
   return {
     head: piece(headLabel, joinCuts(parts.slice(0, take))),
-    tail: piece(title + CONTINUED, joinCuts(parts.slice(take))),
+    tail: piece(title + CONTINUED, joinCuts([reopen(parts[take])].concat(parts.slice(take + 1)))),
   };
 }
 
@@ -499,16 +544,19 @@ export async function autoPaginate(src, container, render) {
       // its start finishes the page - and keep cutting while what is left
       // is still taller than a sheet of its own.
       let rest = chunk;
-      for (let guard = 0; guard < MAX_PIECES; guard++) {
-        const filled = fillSheet(cur, rest, preamble, marker, container, render);
-        if (!filled) break;
-        split += 1;
-        sheets.push({ options: open(), chunks: cur.concat([filled.head]) });
-        cur = [];
-        rest = filled.tail;
-        render(preamble + marker + rest, container);
-        if (!overhanging(container).length) break;
-      }
+      const cutWhileTall = () => {
+        for (let guard = 0; guard < MAX_PIECES; guard++) {
+          const filled = fillSheet(cur, rest, preamble, marker, container, render);
+          if (!filled) break;
+          split += 1;
+          sheets.push({ options: open(), chunks: cur.concat([filled.head]) });
+          cur = [];
+          rest = filled.tail;
+          render(preamble + marker + rest, container);
+          if (!overhanging(container).length) break;
+        }
+      };
+      cutWhileTall();
       if (cur.length) {
         // Nothing was cut. A heading stranded at the foot belongs with the
         // text it introduces, so it travels with it.
@@ -516,6 +564,12 @@ export async function autoPaginate(src, container, render) {
         while (cur.length && HEADING.test(cur[cur.length - 1])) carried.unshift(cur.pop());
         if (cur.length) sheets.push({ options: open(), chunks: cur });
         cur = carried;
+        // Moved whole to a fresh sheet, it may still be taller than one.
+        // Cut it there, or it goes out with its end clipped off - the
+        // verify pass can only hand on a paragraph at a time, and a table
+        // is one paragraph.
+        render(preamble + marker + cur.concat([rest]).join('\n\n'), container);
+        if (overhanging(container).length) cutWhileTall();
       }
       cur.push(rest);
     });
@@ -547,9 +601,16 @@ export async function autoPaginate(src, container, render) {
         // most of the sheet. Handing the whole list on would empty the page,
         // and refusing leaves it overflowing - so take its last item only.
         let last;
+        let row = null;
         const tailPara = parts.paras[parts.paras.length - 1] || '';
         const items = tailPara.split(/\n(?=\s*[-*+] )/);
-        if (/^\s*[-*+] /.test(tailPara) && items.length > 1) {
+        const table = tableOf(tailPara);
+        if (table && table.rows.length > 1) {
+          // Same for a table, a row at a time, header kept on both sides.
+          row = { header: table.header, text: table.rows.pop() };
+          last = table.header + '\n' + row.text;
+          parts.paras[parts.paras.length - 1] = table.header + '\n' + table.rows.join('\n');
+        } else if (/^\s*[-*+] /.test(tailPara) && items.length > 1) {
           last = items.pop();
           parts.paras[parts.paras.length - 1] = items.join('\n');
         } else {
@@ -564,9 +625,16 @@ export async function autoPaginate(src, container, render) {
           // An item joins the list the continuation opens with, rather than
           // standing as a one-item list of its own.
           const listy = (p) => /^\s*[-*+] /.test(p || '');
-          const joined = listy(last) && listy(after.paras[0])
-            ? [last + '\n' + after.paras[0]].concat(after.paras.slice(1))
-            : [last].concat(after.paras);
+          const nextTable = tableOf(after.paras[0]);
+          let joined;
+          if (row && nextTable && nextTable.header === row.header) {
+            joined = [[row.header, row.text].concat(nextTable.rows).join('\n')]
+              .concat(after.paras.slice(1));
+          } else if (listy(last) && listy(after.paras[0])) {
+            joined = [last + '\n' + after.paras[0]].concat(after.paras.slice(1));
+          } else {
+            joined = [last].concat(after.paras);
+          }
           next.chunks[0] = blockFrom(parts.name, after.label, joined);
         } else {
           sheets.splice(i + 1, 0, {
