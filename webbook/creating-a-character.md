@@ -406,7 +406,7 @@ Your wall against Social attacks, and what a boosted die adds when you make one.
 
 <p class="block-title" markdown="span">**Stamina** (Water)</p>
 
-Caps how many Fate Tokens you can hold (three times your Stamina) and how many you can spend in a Scene, and carries you against exhaustion outside a fight.
+Caps how many Fate Tokens you can hold (three times your Stamina, plus one) and how many counted spends you can make in a Scene (your Stamina, plus one), and carries you against exhaustion outside a fight.
 
 </div>
 
@@ -649,7 +649,7 @@ Now spend them. The rate gets worse the closer you get to raw power.
 
 **An Attribute point**: 8 points.
 
-Fate Tokens have a ceiling. You can’t hold more than three times your Stamina, so buying past that number gets you nothing.
+Fate Tokens have a ceiling. You can’t hold more than three times your Stamina, plus one, so buying past that number gets you nothing.
 
 Eight points for a single Attribute point is brutal, and it’s supposed to be. Discretionary points are for finishing a character, not rebuilding one. If you want a higher Attribute, go back to step 4 and buy it there, where it costs you one.
 
@@ -683,7 +683,7 @@ Work them out and write them down. If one of these numbers is an unpleasant surp
 
 ## 15. Finishing Touches
 
-You start play with **1 Fate Token**. That’s the same as your daily refill, so you’re starting topped up rather than ahead. If you want a cushion, buy more back at step 12 - up to three times your Stamina, which is as many as you can hold at once.
+You start play with **1 Fate Token**. That’s the same as your daily refill, so you’re starting topped up rather than ahead. If you want a cushion, buy more back at step 12 - up to three times your Stamina, plus one, which is as many as you can hold at once.
 
 Everything that doesn’t have a number attached goes here. What they look like. How they talk. All the little details that grew out of your step 2 concept while you were busy doing arithmetic.
 

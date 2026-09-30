@@ -30,7 +30,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Carrying Capacity** - How much you can lift, carry, or drag without straining: your Potence squared, times ten, in kilograms. Squared rather than flat, so a strong character pulls dramatically ahead of an ordinary one.
 
-**Condition** - The catch-all for a temporary bad state you can be put into - Distracted, Surprised, Flustered, Exhausted, Overwhelmed, Dying, and the rest. Each has its own trigger and its own way out, under its own entry. A Fate Token can shrug any of them off for a moment.
+**Condition** - The catch-all for a temporary bad state you can be put into - Distracted, Surprised, Flustered, Exhausted, Overwhelmed, and the rest. Each has its own trigger and its own way out, under its own entry. A Fate Token can shrug any of them off for a moment. Dying isn’t one: it’s where your Health Levels are, and a Token gets you up from it instead.
 
 **Core Roll** - The basic move of the whole system. Roll 2d10, add them up, and check the total against your target number (your Attribute plus the Difficulty). Land on or under it and you succeed; go over and you don’t.
 
@@ -46,7 +46,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Difficulty** - A 0-to-10 dial the GM sets for each roll - 0 is nearly impossible, 10 is trivial. It gets added to your Attribute to form the target number. In a fight, the target’s Defense takes Difficulty’s place.
 
-**Dying** - Where you are below 0 Health Levels: unconscious, still losing ground, and out of the fight until somebody stops it. The row runs the same distance below zero as above, so a character with 7 Health Levels is Dying from −1 and dead at −7 - whatever it took to put them down, it takes that much again to finish them.
+**Dying** - Where you are below 0 Health Levels: unconscious and out of the fight. It doesn’t get worse on its own - only more damage moves you toward death. A Fate Token puts you back up at 1 Health Level, even while you’re out cold, and stabilizing you brings you to 0. The row runs the same distance below zero as above, so a character with 7 Health Levels is Dying from −1 and dead at −7 - whatever it took to put them down, it takes that much again to finish them.
 
 **Discretionary Points** - A loose pool - 10 to start, plus whatever your Flaws hand you - that you can spend at creation on almost anything: Resources, Skills, Fate Tokens, Boons, Gifts, or Attributes.
 
@@ -62,9 +62,9 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Fast Action** - The Fast bracket. You go before everyone in Normal or Slow, but you only get the one action - a move, an attack, or a single Skill use. You’re trading how much you do for going first.
 
-**Fate Token** - The currency you earn and spend. You pick them up from your Nature, from taking Disadvantage on purpose, from your Flaws, from a daily top-up, from story Milestones, or whenever the GM hands one over. You spend them on Kotodama or the Fate Triggers. You can hold three times your Stamina and no more - anything earned at that cap is lost rather than banked.
+**Fate Token** - The currency you earn and spend. You pick them up from your Nature, from taking Disadvantage on purpose, from your Flaws, from a daily top-up, from story Milestones, or whenever the GM hands one over. You spend them on Kotodama or the Fate Triggers. You can hold three times your Stamina, plus one, and no more - anything earned at that cap is lost rather than banked.
 
-**Fate Triggers** - The things a Fate Token buys: a Kotodama, shrugging off one of your Flaws for a Scene, an automatic success, Advantage on a roll, shrugging off a condition, or a full Ki refill. Spending the Token is the whole cost - nothing else is rolled.
+**Fate Triggers** - The things a Fate Token buys: a Kotodama, shrugging off one of your Flaws for a Scene, an automatic success, shrugging off a condition, a full Ki refill, or getting back up from Dying. Spending the Token is the whole cost - nothing else is rolled. Only a Kotodama counts against the per-Scene cap; the flat ones don’t.
 
 **Ferocity** - One of Fire’s two sub-stats, will burned down to an ember. When you spend Ki to put more behind a physical strike - that’s Ki Infusion - Ferocity is what you’re adding. Sample descriptors: Brutal, Savage, Relentless, Merciless, Feral, and so on.
 
@@ -94,7 +94,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Initiative** - One of Air’s two sub-stats, the flick of readiness that decides who moves first. You roll it once at the start of a fight - 1d10 plus your Initiative - and that order holds for the whole thing. Sample descriptors: Alert, Reflexive, Vigilant, Sharp-Eyed, Quick, and so on.
 
-**Ki** - The pool that powers everything supernatural. It’s your strongest Element plus 8, so every character has one worth spending - 13 at the least, 18 at the most. You spend it to save a Health, Poise or Sanity Level, to put more behind an attack, to move up an Action Bracket, and to use most Gifts. Below 0 it brings Poise or Sanity back to 1 without waiting for a rest. A Short Rest brings back Klotho points of it; a full night brings it all back.
+**Ki** - The pool that powers everything supernatural. It’s your strongest Element plus 8, so every character has one worth spending - 13 at the least, 18 at the most. Ordinary people without a Gift have 1, for the one moment they need it. You spend it to save a Health, Poise or Sanity Level, to put more behind an attack, to move up an Action Bracket, and to use most Gifts. Below 0 it brings Poise or Sanity back to 1 without waiting for a rest. A Short Rest brings back Klotho points of it; a full night brings it all back.
 
 **Ki Infusion** - Paying 1 Ki per die to add a sub-stat - Ferocity, Presence, or Psyche, whichever matches the attack - to that die. You roll the damage dice first and then choose which to boost, so nothing is spent on a die that already got through. It’s how you push a hit through a wall that would otherwise stop it cold.
 
@@ -114,13 +114,15 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Movement Rate** - How far you can move in a step, in meters: 5 plus your Air. That’s the move on a Fast Action, or the move half of a Normal one. On a map it’s hexes. A Dash is twice it and a Sprint five times.
 
+**Named** - A player character, or an NPC the GM has given a name. Named characters go Dying below 0 Health Levels, recover, and carry scars. An unnamed NPC who reaches 0 is out of the fight and out of the story, dead or down at the GM’s call.
+
 **Nature** - A short label for what drives your character, or how they meet the world - picked from a list or written yourself. Lean into it at the right dramatic moment and you earn a Fate Token.
 
 **Normal Action** - The Normal bracket - the middle option. Two actions this round, usually a move and something else, resolved after the Fast crowd and before the Slow one.
 
-**NPC** - Anyone the GM plays instead of a player - short for non-player character. Most are built the same way as a player character, at whatever power level the GM chooses. A Gifted NPC has Ki; only a special NPC has Fate Tokens of their own.
+**NPC** - Anyone the GM plays instead of a player - short for non-player character. Most are built the same way as a player character, at whatever power level the GM chooses. A Gifted NPC has Ki the way a player character does, an ordinary one has 1, and only a special NPC has Fate Tokens of their own.
 
-**Overwhelmed** - Where you land at 0 Sanity. You pick up a temporary bad mental trait and roll everything at Disadvantage, but you’re still yourself and still acting. It lifts once you’re away from whatever caused it and get to rest - or you spend 1 Ki, which also fills Sanity back up.
+**Overwhelmed** - Where you land at 0 Sanity. You pick up a temporary Mental scar effect and roll everything at Disadvantage, but you’re still yourself and still acting. It lifts once you’re away from whatever caused it and get to rest - or you spend 1 Ki, which also fills Sanity back up.
 
 **PC** - The one character at the table that’s yours - short for player character.
 
@@ -138,11 +140,13 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Rests** - Two ways to recover. A Short Rest is about an hour of real downtime, and you only get the benefit of one between full nights. A Full Night’s Rest is a proper night’s sleep. Above 0 a Short Rest gives back half the governing sub-stat, rounded up, and a full night gives everything back. Below 0 the rates stop: Health gets nothing from a Short Rest and exactly one Level from a full night, while Poise and Sanity come back to 1 on either, or for 1 Ki.
 
-**Sanity** - Your grip on your own mind under a Mental attack, tracked as boxes like Health. You have 5 plus your Psyche. At 0 you’re Overwhelmed; below 0, Shattered. The row runs the same distance again below zero, and the far end of it saddles you with a temporary mental health condition and puts your Sanity back to 0.
+**Sanity** - Your grip on your own mind under a Mental attack, tracked as boxes like Health. You have 5 plus your Psyche. At 0 you’re Overwhelmed; below 0, Shattered. The row runs the same distance again below zero, and the far end of it saddles you with a temporary Mental scar effect and puts your Sanity back to 0.
+
+**Scar** - What going below 0 on a Vital leaves behind: one narrow, lasting effect - Physical from Health, Social from Poise, Mental from Sanity. One per crossing, the GM’s pick or agreed with the player. It’s permanent until healed, and a Social scar can’t be healed at all - a reputation has to be rebuilt.
 
 **Scene** - One unbroken stretch of the story in roughly one place - a fight, a conversation, a chase. It’s a rung on the Time Bands ladder, and a few limits reset when a new one starts (your Fate Token cap for the Scene, Flustered).
 
-**Shattered** - Below 0 Sanity. You’re panicking and can’t act on your own - someone has to lead you clear. A point of Ki or a rest only brings Sanity back to 1, and going below 0 always leaves a permanent mark on the character.
+**Shattered** - Below 0 Sanity. You’re panicking and can’t act on your own - someone has to lead you clear. A point of Ki or a rest only brings Sanity back to 1, and going below 0 always leaves a Mental scar.
 
 **Skill** - Something you’ve learned and practiced. Every Skill has a home Element it normally rolls off, but you can argue for a different one in the moment - as long as you can point to a Descriptor that backs the pairing and sell it to the GM.
 
@@ -152,7 +156,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Soak** - One of Earth’s two sub-stats, the hide the world’s hits don’t quite get through. It’s your wall against physical damage - the number an attacker’s dice have to clear to actually hurt you. Sample descriptors: Hardy, Rugged, Unyielding, Thick-Skinned, Battle-Worn, and so on.
 
-**Stamina** - One of Water’s two sub-stats, the reserve that keeps you going past the point most people stop. It caps how many Fate Tokens you can hold - three times your Stamina - and how many you can spend in a single Scene, and it’s what you lean on against exhaustion outside a fight. Sample descriptors: Tireless, Enduring, Dogged, Unflagging, Relentless, and so on.
+**Stamina** - One of Water’s two sub-stats, the reserve that keeps you going past the point most people stop. It caps how many Fate Tokens you can hold - three times your Stamina, plus one - and how many counted spends you can make in a single Scene - your Stamina, plus one - and it’s what you lean on against exhaustion outside a fight. Sample descriptors: Tireless, Enduring, Dogged, Unflagging, Relentless, and so on.
 
 **Sub-stat** - The two halves each Attribute splits into - Earth into Soak and Potence, Air into Initiative and Psyche, and so on down the line. Sub-stats are where your creation points actually go, where Descriptors attach, and what most of the figured stats are built from.
 
@@ -160,7 +164,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Target Number (TN)** - The number a core roll has to hit or come under: your Attribute plus the Difficulty. Creature cards shorten it to TN. See Core Roll.
 
-**Time Bands** - The standard ladder the rules use whenever something needs a duration: Round, Minute, Hour, Scene, Day, Month, Year, Decade, Century. A Round is about 6 seconds, so a Minute is exactly ten of them. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
+**Time Bands** - The standard ladder the rules use whenever something needs a duration: Round, Minute, Hour, Scene, Day, Week, Month, Year, Decade, Century. A Round is about 6 seconds, so a Minute is exactly ten of them. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
 
 **Untrained Roll** - A roll for something you have no Skill in. Your Attribute doesn’t help here - the target number is just the Difficulty.
 

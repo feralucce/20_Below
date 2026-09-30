@@ -311,9 +311,9 @@ Why is Ki so important? Ki is used in the following ways:
 
 **Preventing Damage**. When you would take damage to one of your vitals (Health, Poise, or Sanity) - you can prevent that damage at the cost of 1 Ki per level of damage.
 
-**Recovering from Vitals Loss**. When one of your Vitals is at zero or below, you may spend 1 Ki point to recover from Dying, Humiliated or Shattered state and gain 1 point of that Vital.
+**Recovering from Vitals Loss**. When your Poise or Sanity is at zero or below, you may spend 1 Ki point to recover from the Humiliated or Shattered state and go back to 1 in that Vital. Ki can’t get you up from Dying - a Fate Token can.
 
-**Boosting Damage**. After you land an attack with a successful 2d10 roll, you can Boost your Damage Dice. To do so, spend 1 Ki point per boosted die and add Ferocity (Physical), Psyche (Mental), or Poise (Social) to the number rolled on the die.
+**Boosting Damage**. After you land an attack with a successful 2d10 roll, you can Boost your Damage Dice. To do so, spend 1 Ki point per boosted die and add Ferocity (Physical), Psyche (Mental), or Presence (Social) to the number rolled on the die.
 
 **Bump your Action Bracket**. You can spend Ki points to move quicker. You can bump yourself from a Slow Action to a Normal Action for 1 Ki point and from a Normal Action to a Fast Action for 1 Ki point. This means you can take a Slow Action in the Fast Action Band for 2 Ki points.
 
@@ -339,11 +339,11 @@ What we haven’t covered is what happens at 0 and below.
 
 <p class="block-title" markdown="span">At zero and below</p>
 
-| | At 0 | Below 0 | One past the bottom | Can it kill? |
+| | At 0 | Below 0 | At the bottom | Can it kill? |
 |---|---|---|---|---|
-| **Health** | Unconscious | Real, devastating, life-threatening injuries | Dead | Yes |
+| **Health** | Unconscious | Dying | Dead | Yes |
 | **Poise** | Flustered | Humiliated | Poise resets to 0 and costs a Sanity Level | No |
-| **Sanity** | Overwhelmed | Shattered | A temporary mental health condition; Sanity resets to 0 | No |
+| **Sanity** | Overwhelmed | Shattered | A temporary Mental scar effect; Sanity resets to 0 | No |
 
 </div>
 
@@ -352,21 +352,21 @@ Each Level you have gives you one negative Level on the same track. If you have 
 #### Health
 
 - **At 0**, you are unconscious. You can take more damage after you are rendered unconscious.
-- **Below 0**, these levels of damage represent real, devastating, life-threatening injuries.
-- **Take one more** than your negative Levels, and you are dead.
+- **Below 0**, you are Dying. These levels of damage represent real, devastating, life-threatening injuries, but they don’t get worse while you lie there. Only more damage moves you closer to death.
+- **Reach the bottom** of your negative Levels, and you are dead. Seven Health Levels means dead at −7.
 
 #### Poise
 
 - **At 0**, you are Flustered. Every Social roll, and anything else that needs you steady, is at Disadvantage until the Scene ends. You can take more damage after you are Flustered.
 - **Below 0**, you are Humiliated. These levels represent your standing coming apart in front of the people whose opinion you needed, and it does not quietly repair itself. You cannot take the lead, negotiate, or speak for the group, and you defer until your Poise climbs back to 0.
-- **Take one more** and your Poise resets to 0 and it costs you a Sanity Level. This level of Sanity damage can’t be soaked, but can be prevented by spending a point of Ki.
+- **Hit the bottom** and your Poise resets to 0 and it costs you a Sanity Level. This level of Sanity damage can’t be soaked, but can be prevented by spending a point of Ki.
 - Poise damage cannot kill you.
 
 #### Sanity
 
-- **At 0**, you are Overwhelmed. You pick up a temporary negative mental trait and every roll is at Disadvantage, though you are still acting under your own power. You can take more damage after you are Overwhelmed.
-- **Below 0**, you are Shattered. These levels represent your grip on your own mind giving way. You are panicky and babbling and cannot act on your own, so somebody else has to lead you or drag you. Going below 0 always leaves a permanent mental scar no matter how you recover afterward.
-- **Take one more** and you pick up a temporary mental health condition and your Sanity resets to 0.
+- **At 0**, you are Overwhelmed. You pick up a temporary Mental scar effect for as long as it lasts, and every roll is at Disadvantage, though you are still acting under your own power. You can take more damage after you are Overwhelmed.
+- **Below 0**, you are Shattered. These levels represent your grip on your own mind giving way. You are panicky and babbling and cannot act on your own, so somebody else has to lead you or drag you. Going below 0 leaves a Mental scar no matter how you recover afterward.
+- **Hit the bottom** and you pick up a temporary Mental scar effect and your Sanity resets to 0.
 - Sanity damage cannot kill you either.
 
 #### Going down, and staying down
@@ -376,6 +376,10 @@ Each Level you have gives you one negative Level on the same track. If you have 
 **Once you’re at 0, any further attack takes one Level. Total.** Not one per die - one. A body on the ground absorbs a grizzly’s entire turn for a single box. That is why people who go down usually get back up: finishing an unconscious character takes something standing over them, working at it, round after round, while everyone else is still swinging.
 
 So dying here is a thing somebody decides to do to you. Something has to want you dead and be given the time to manage it.
+
+**Getting back up.** Two things end Dying. Spend a Fate Token and you’re back at 1 Health Level, conscious and able to act - and you can spend it while you’re out cold, because fate doesn’t need you awake. Or somebody stabilizes you - First Aid, a trauma kit, a Gift that says so - and you’re at 0: not Dying any more, still unconscious, and healing at the normal rates from there.
+
+**Named and unnamed.** All of this is for player characters and the NPCs your GM has given a name. An unnamed NPC who hits 0 is out of the fight and out of the story, and whether that’s dead or down is the GM’s call.
 
 ### Recovery
 
@@ -395,13 +399,112 @@ Recovery takes time. The rules outline three different time frames for recovery.
 
 **Short Rest.** An hour does not put a body back together. Below 0 Health Levels a Short Rest gives you nothing at all, and you stay Dying until you get a real night. Poise and Sanity work differently, because a reputation and a mind can turn a corner faster than a wound can close. A Short Rest brings either of them back to 1, not to full, and the normal rates start again from there on the next rest. A point of Ki does the same for either one immediately, without waiting for a rest at all.
 
-**Full Night's Rest.** A full night gets you one Health Level, and only one, however tough you are. At −6 that is six nights before you are back to 0, and only then do the normal rates start again. Poise and Sanity come back to 1, the same as they would on a Short Rest. Nothing down here speeds up with a better night's sleep. Climbing out is meant to cost you time you would rather have spent on something else.
+**Full Night's Rest.** A full night gets you one Health Level, and only one, however tough you are. At −6 that is six nights before you are back to 0, and only then do the normal rates start again - unless somebody stabilizes you, which puts you at 0 straight away. Poise and Sanity come back to 1, the same as they would on a Short Rest. Nothing down here speeds up with a better night's sleep. Climbing out is meant to cost you time you would rather have spent on something else.
+
+### Scars
+
+Going to 0 leaves a mark. Going below it leaves something that lasts.
+
+**At 0**, whichever Vital it was leaves a mark that’s only for show: a scar, a limp or a changed voice from Health; a nervous habit or a reputation quirk from Poise; a tic, an intrusive thought or a private ritual from Sanity. The Healing and Regeneration Gifts stop the Health one from happening at all.
+
+**Below 0**, you take a **scar**: one narrow, lasting effect from the lists below. Health leaves a Physical scar, Poise a Social one, Sanity a Mental one. Your GM picks it, or the two of you talk it over and decide.
+
+- **One scar per crossing.** Go below 0, heal back up, go below again, and that’s a second scar. Going deeper in one fall doesn’t add another, and you can’t take the same one twice.
+- **A scar isn’t a Flaw.** It gives you no points, and a scar getting in your way never earns you a Fate Token.
+- **It’s permanent** until something heals it.
+
+**Healing a scar** always counts how far below 0 you went: −1 is one, −7 is seven.
+
+| Scar | By Gift | By Adder | By Skill |
+|---|---|---|---|
+| Physical | Healing or Regeneration: that many Days | - | Medicine: that many Months |
+| Mental | Restoration: that many Days | Talking Down or Taking the Edge Off: that many Weeks | Psychology: that many Months |
+| Social | - | - | Networking: that many Months |
+
+A Skill takes regular work across that time from someone Trained in it - and for Networking, that someone is you. **A scarred reputation can’t be treated or healed - it has to be rebuilt.**
+
+**Physical scars**
+
+| Scar | Effect |
+|---|---|
+| Bad Knee | Movement Rate −1m. Disadvantage on Athletics to jump. |
+| Stiff Shoulder | Disadvantage on Thrown Weapons and Archery. |
+| Shaky Hand | Disadvantage on Sleight of Hand, and on Firearms past Close. |
+| Ribs That Set Wrong | Your Stamina baseline for holding breath and running flat-out is halved. |
+| Ringing Ear | Disadvantage on Perception by sound. |
+| Clouded Eye | Disadvantage on Perception by sight past Close. |
+| Weak Grip | Disadvantage on Potence contests to hold on: grapples, climbing, a hand on a ledge. |
+| Missing Fingers | Disadvantage on Crafting, Electronics and Security by hand. |
+| Limp | Disadvantage on Acrobatics, and in chases on foot. |
+| Scarred Lungs | Disadvantage on endurance checks in smoke, cold or thin air. |
+| Weather in the Joints | In cold or rain, Disadvantage on Athletics and Acrobatics. |
+| Tender Spot | Ki can’t preserve the first Health Level you lose in a Scene. |
+| Disfigured | Disadvantage on Disguise. People who’ve seen you once remember you. |
+| Bad Back | Disadvantage on Athletics to lift, carry or drag. |
+| Slow to Clot | First Aid and Medicine on you are at Disadvantage. |
+| Night Blind | Disadvantage on Perception and Driving in the dark. |
+| Chronic Pain | Your baseline for any sustained exertion is one unit shorter. |
+| Burn Scars | Soak counts 1 lower against fire and heat. |
+| Old Break | A hit that costs 2 or more Health Levels also leaves you Off Balance. |
+| Wheeze | Disadvantage on Stealth when you’ve moved this round. |
+
+**Social scars**
+
+| Scar | Effect |
+|---|---|
+| The Story Goes Around | Disadvantage on Intimidation against anyone who’s heard what happened. |
+| Known Face | Disadvantage on Disguise and Stealth where it happened. |
+| Stammer | Disadvantage on Public Speaking and Performance in front of an audience. |
+| Sore Spot | A Social attack that brings it up gets 1 extra die. |
+| Burned Bridge | Disadvantage on Networking with one Contact or faction who saw it. |
+| Eyes Down | Disadvantage on Leadership when the person who did it is present. |
+| Tell | Insight to read you is at Advantage. |
+| Gives Ground | Disadvantage on Barter and Bribery. |
+| Rattled | Losing a Poise Level leaves you Distracted. |
+| The Nickname | Ridicule that uses it is at Advantage against you. |
+| Out of Place | Disadvantage on Etiquette at anything formal. |
+| It’s on Video | Once a session the GM can say someone in the Scene has seen it. Disadvantage on Persuasion with them. |
+| Can’t Let It Go | When it’s thrown at you in public, Disadvantage on everything else until you answer it. |
+| Nervous Laugh | Disadvantage on Charm and Seduction when it matters. |
+| Quiet Voice | Disadvantage on Intimidation. |
+| Flushes | Disadvantage on Deception about yourself. |
+| Won’t Ask | You can’t be Helped on Social rolls. |
+| On the Record | Disadvantage on Bureaucracy and Law wherever the record exists. |
+| Stage Freeze | Your first Social roll in front of a crowd each Scene is at Disadvantage. |
+| Touchy Subject | Ki can’t preserve Poise against a Social attack that brings it up. |
+
+**Mental scars**
+
+| Scar | Effect |
+|---|---|
+| The Trigger | One sound, smell or sight leaves you Distracted when it turns up. |
+| Night Terrors | A Full Night’s Rest refills Ki only as a Short Rest does, unless somebody keeps watch with you. |
+| Hypervigilant | You can’t be Surprised, and you can’t take a Short Rest anywhere unsecured. |
+| Phobia | Disadvantage on every roll while the thing is within Close. |
+| Lost Time | A stretch of memory is gone. The GM knows what’s in it. |
+| Intrusive Memory | A catastrophic failure also leaves you Distracted. |
+| Checks the Exits | Your first action in each Scene is at Slow. |
+| Flat | Disadvantage on Performance and Charm. |
+| Paranoid | You can’t be Helped by anyone you haven’t known a Month. |
+| Startle | A sudden loud noise costs you Fast for the round. |
+| Drifts | Once a session the GM can say you drift. Disadvantage on Perception for that Scene. |
+| Insomnia | Miss a Full Night’s Rest and you wake Exhausted. |
+| The Voice | You answer it under your breath. Disadvantage on Stealth. |
+| Survivor’s Guilt | While an ally is Dying, you can’t spend a Fate Token on yourself. |
+| Freezes | Surprised lasts a round longer. |
+| Tunnel Vision | Under Mental attack, you can’t Help or be Helped. |
+| It Knows You | Mental attacks from the thing that did it get 1 extra die. |
+| The Dark | Disadvantage on every roll in darkness without a light. |
+| Fixated | While it’s in the Scene, Disadvantage on anything that isn’t about it. |
+| Cracks | Disadvantage on Academics, Research and Law in combat. |
+
+**None of these fit?** Your GM can make one. It should come from the moment you were hurt, bite about once a session, and never touch every roll you make.
 
 ## Time
 
 ### How Time Works
 
-Time is divided into discrete segments. In order of length, they are a Round, Minute, Hour, Scene, Day, Month, Year, Decade and Century.
+Time is divided into discrete segments. In order of length, they are a Round, Minute, Hour, Scene, Day, Week, Month, Year, Decade and Century.
 
 **Round.** About six seconds, and the base unit everything else is measured against: one pass through the turn order, long enough for everyone present to do one thing.
 
@@ -410,6 +513,8 @@ Time is divided into discrete segments. In order of length, they are a Round, Mi
 **Scene.** However long the thing you are currently doing takes, from the moment it starts mattering to the moment it stops, and the GM calls the edges.
 
 **Day.** A full cycle including a night's sleep, which is the shortest band that lets you recover properly and the longest one you can plan inside.
+
+**Week.** Seven Days, and the span for anything that takes regular work to fix: a habit, a debt, a mind being talked back from somewhere.
 
 **Month.** Long enough for wounds to close, for people to hear things, and for a reputation to settle into whatever shape it is going to keep.
 
@@ -762,7 +867,7 @@ Eight states you can be put into. Most of them hurt you by taking dice away. Thr
 
 <p class="block-title" markdown="span">Off Balance</p>
 
-You rolled a catastrophic failure in combat. You roll everything at Disadvantage until the end of your next turn. It does not stack, it clears on its own, and a Fate Token spent to Shrug Off an Effect clears it early - though it never undoes whatever else went wrong on that roll. The Never Off Balance Boon lets you reroll the failure that caused it.
+You rolled a catastrophic failure in combat. You roll everything at Disadvantage until the end of your next turn. It does not stack, it clears on its own, and a Fate Token spent to Shrug Off an Effect clears it early - though it never undoes whatever else went wrong on that roll. The Never Off Balance Boon lets you reroll the failure that caused it: on attack rolls at its first tier, on any roll in combat at its second, and on any roll at all at its third.
 
 </div>
 
@@ -806,7 +911,7 @@ Your Poise track runs as far below zero as it does above it - eight Poise means 
 
 <p class="block-title" markdown="span">Overwhelmed</p>
 
-Your Sanity hit 0. You pick up a temporary mental Flaw - you and the GM agree what it is - and you roll everything at Disadvantage. You can still act, and you’re still yourself. It clears when you’re out of whatever did it to you and get a chance to rest, or for 1 Ki, which refills your Sanity on the way out.
+Your Sanity hit 0. You pick up a temporary Mental scar effect - your GM picks it, or you agree it together - and you roll everything at Disadvantage. You can still act, and you’re still yourself. It clears when you’re out of whatever did it to you and get a chance to rest, or for 1 Ki, which refills your Sanity on the way out.
 
 </div>
 
@@ -814,7 +919,7 @@ Your Sanity hit 0. You pick up a temporary mental Flaw - you and the GM agree wh
 
 <p class="block-title" markdown="span">Shattered</p>
 
-Your Sanity went below 0, and this is the other one that doesn’t just cost you dice. You’re panicky and babbling and you can’t act on your own - somebody has to lead you, or drag you. It clears for 1 Ki or a rest, but either one only brings your Sanity back to 1, not full, and going below 0 always leaves a permanent mental scar however you climb out of it.
+Your Sanity went below 0, and this is the other one that doesn’t just cost you dice. You’re panicky and babbling and you can’t act on your own - somebody has to lead you, or drag you. It clears for 1 Ki or a rest, but either one only brings your Sanity back to 1, not full, and going below 0 leaves a Mental scar however you climb out of it.
 
 </div>
 
@@ -846,10 +951,10 @@ The world hurts people without anybody swinging anything, and all of it runs on 
 |---|---|
 | **Falling** | 1 die per 4 meters, up to 5 dice. Halved into water, deep snow or a hedge |
 | **Fire** | A burning room: 1 die per round you stay. On fire yourself: 2 dice per round until it's out |
-| **Vehicle** | 3 dice at city speed, 5 at speed |
+| **Vehicle** | 1 die per 10 MPH / 16 km/h, no cap |
 | **No air** | Stamina rounds free, then 1 Health Level per round. Soak doesn't help |
 | **Cold and heat** | Levels of Exhausted, not Health |
-| **Corruption** | A track of its own, 0 to 5, per source |
+| **Corruption** | A track of its own, 0 to 5 |
 
 </div>
 
@@ -873,7 +978,7 @@ A burning room is one die at the end of every round you are still in it, and it 
 
 <p class="block-title" markdown="span">Getting hit by a vehicle</p>
 
-Three dice at city speed. Five at speed. Faster than that isn’t a roll, and your GM will say so before you step into the road.
+One die per 10 MPH, or per 16 km/h. Clipped in a parking lot is 1. A city street is 3. The highway is 7, and it doesn’t stop there - there is no cap. What still holds is the rule that one attack never carries you past 0, so the truck puts you on the ground rather than under it. Anime is full of people who get up from that.
 
 </div>
 
@@ -913,20 +1018,22 @@ Neither one costs you a Health Level. They put you at Exhausted 5, which puts yo
 
 <p class="block-title" markdown="span">Corruption</p>
 
-Some things get their hooks into you: a presence, an otherworldly thing, a place. It changes you slowly. At first you don’t notice it. Eventually, you don’t mind. It isn’t damage, and it costs no Sanity - it’s a track of its own, zero to five, kept separately for each thing that’s doing it to you.
+Some things get their hooks into you: a presence, an otherworldly thing, a place. It changes you slowly. At first you don’t notice it. Eventually, you don’t mind. It isn’t damage, and it costs no Sanity - it’s a track of its own, zero to five, and you only have one.
 
-Every time you’re exposed - you look at it, touch it, breathe it, sleep near it, whatever that source feeds on - it rolls its dice against your Klotho. If any die gets over, you slide one level. Only one, however many got over. A rare few are worse than that, and your GM will know which.
+There is only one thing doing this. What you meet is one of the places it gets through - a lake, a radio, a thing in a basement - and each of those is a **locus**. Get caught by the lake and then by the radio, and it’s the same track going up. Whichever locus pushed you up last is yours: that’s the one you want to go back to, and that’s whose mark you carry. Near any of the others you’re Distracted, and you know them for what they are.
+
+Every time you’re exposed - you look at it, touch it, breathe it, sleep near it, whatever that source feeds on - it rolls its dice against your Klotho. If any die gets over, you slide one level. Only one, however many got over. A rare few are worse than that, and your GM will know which. Some loci are creatures, and a creature can put its will behind those dice the way you put Ki behind an attack. Nothing else gets through a Klotho of 10.
 
 **The five levels of Corruption**
 
 | Level | Name | What it means | How it clears |
 |---|---|---|---|
-| 1 | **Tell** | A small sign, and everyone sees it but you. | A day away and it’s gone. |
-| 2 | **Pull** | You want to go back. You’re Distracted near it, or when something keeps you from it. | Each day away takes a level off, but the wanting lasts a week for every day you spent at Pull or worse. |
-| 3 | **Marked** | A mark you may or may not notice, and anyone who touches it risks catching it too. | Only a cure - something rare, and somebody out there knows what. |
-| 4 | **Conduit** | You read as unnatural, and reality goes thin around you: Kotodama costs less near you, for everyone. | Only destroying the source brings you back from here. |
+| 1 | **Tell** | A small sign of your locus, and everyone sees it but you. | A day away and it’s gone. |
+| 2 | **Pull** | You want to go back to your locus. You’re Distracted near it, or when something keeps you from it. | Each day away takes a level off, but the wanting lasts a week for every day you spent at Pull or worse. |
+| 3 | **Marked** | Your locus’s mark, which you may or may not notice, and anyone who touches it risks catching it too. | Only your locus’s cure - something rare, and somebody out there knows what. |
+| 4 | **Conduit** | You read as unnatural, and reality goes thin around you: Kotodama costs less near you, for everyone. | Only destroying or sealing your locus brings you back from here. |
 | 5 | **Claimed** | It has you. If you keep playing, it’s steering you now. | The party’s Kotodama - six Fate Tokens or more. Whether the character leaves play is up to you and your GM. |
 
-Up to Conduit, you can burn a Fate Token per level to claw your way back down, all the way to nothing. The pull stays either way.
+Up to Conduit, you can burn a Fate Token per level to claw your way back down, all the way to nothing. Every level you burn counts against the spends you can make in a Scene, because Corruption is meant to be that hard to shake. The pull stays either way.
 
 </div>

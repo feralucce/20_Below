@@ -168,7 +168,7 @@ Both of the currencies your players run on come from you, and the rules for both
 
 **Take the Milestone seriously, including the weeks it feels small.** One Token to every player, roughly once a session, when the group clears a real hurdle. The temptation is to skip it when the session was quiet, but a quiet session that ends with a decision made is a milestone. Skip it too often and the daily regeneration becomes the whole economy, which is a slower and worse game.
 
-**Watch the cap.** A character holds at most Stamina x 3, and Tokens earned at the cap are gone rather than banked. A player sitting at cap is a player who isn’t spending, and that’s worth saying out loud to them - not as a rule reminder but as an invitation. They are holding a resource that is currently earning them nothing.
+**Watch the cap.** A character holds at most (Stamina x 3) + 1, and Tokens earned at the cap are gone rather than banked. A player sitting at cap is a player who isn’t spending, and that’s worth saying out loud to them - not as a rule reminder but as an invitation. They are holding a resource that is currently earning them nothing.
 
 **And remember which way the transfer runs.** Every Token they spend lands in your pool. Being generous with Fate isn’t charity. It’s how you get paid.
 
@@ -236,7 +236,7 @@ Two things it deliberately doesn’t do.
 
 **It does not put a sword through your own foot, or the person beside you.** A character who trained for years doesn’t do that because two dice came up ten. What they do is lose their weapon, their footing or their advantage, and then live with the next few seconds.
 
-Two things reach this roll. Master Training Tier doesn’t, because an attack uses no Skill and there’s no tier to lean on. The Never Off Balance Boon does exactly what its name says.
+Two things reach this roll. On a Skill roll, Master Training Tier lets you roll again, and a second success turns the disaster into an ordinary miss. An attack uses no Skill, so no tier reaches it - that’s what the Never Off Balance Boon is for: attack rolls at its first tier, every roll in combat at its second, and every roll at all at its third.
 
 ## Pacing
 

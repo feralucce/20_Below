@@ -748,7 +748,7 @@ Bought as one of four tiers (each includes every lower tier’s benefit - no nee
 
 <div class="boon" markdown="1">
 
-<p class="boon-name" markdown="span">Never Off Balance<span class="boon-cost">3, Lesser</span></p>
+<p class="boon-name" markdown="span">Never Off Balance<span class="boon-cost">3, 5, or 7</span></p>
 
 <div class="boon-flavour" markdown="1">
 
@@ -756,7 +756,25 @@ You've fallen (or been knocked down) enough times to have an opinion about it. Y
 
 </div>
 
-On a catastrophic failure on an attack roll, roll again. If the second roll succeeds, the catastrophic failure is downgraded to an ordinary miss - it never becomes a hit, and if the second roll also fails the catastrophic failure stands. The same shape as Master, for the one roll no Training Tier reaches.
+Bought as one of three tiers, each including the one below it. On a catastrophic failure, roll again. If the second roll succeeds, the catastrophic failure is downgraded to an ordinary miss or failure - it never becomes a success, and if the second roll also fails the catastrophic failure stands.
+
+<div class="boon-tier" markdown="1">
+
+**Tier 1 (3, Lesser)**: attack rolls. The same shape as Master, for the one roll no Training Tier reaches.
+
+</div>
+
+<div class="boon-tier" markdown="1">
+
+**Tier 2 (5, Greater)**: every roll in combat.
+
+</div>
+
+<div class="boon-tier" markdown="1">
+
+**Tier 3 (7, Legendary)**: every roll.
+
+</div>
 
 </div>
 

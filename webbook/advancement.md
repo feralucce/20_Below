@@ -194,7 +194,7 @@ So past ten, an Element stops making you accurate and starts making you formidab
 
 Three more things accumulate as you climb, each on its own step.
 
-**Every 3 points past ten** raises your Fate Token ceiling by 1 above the usual Stamina x 3. These stack across Attributes: one Element at 20 and another at 15 is four extra Tokens you can hold.
+**Every 3 points past ten** raises your Fate Token ceiling by 1 above the usual (Stamina x 3) + 1. These stack across Attributes: one Element at 20 and another at 15 is four extra Tokens you can hold.
 
 **Every 4 points past ten** grants one automatic success per scene on a roll using that Element, at Difficulty 6 or better. You don’t roll; the easy thing simply works. Hard rolls still get rolled. Each Element tracks its own.
 
@@ -206,7 +206,7 @@ Three more things accumulate as you climb, each on its own step.
 
 | Every | Grants | At Attribute 20 |
 |---|---|---|
-| 3 points past 10 | +1 to your Fate Token ceiling, above the usual Stamina x 3. Stacks across Attributes. | +3 |
+| 3 points past 10 | +1 to your Fate Token ceiling, above the usual (Stamina x 3) + 1. Stacks across Attributes. | +3 |
 | 4 points past 10 | One automatic success per scene on a roll using that Element, at Difficulty 6 or better. Each Element tracks its own. | 2 per scene |
 | 5 points past 10 | +1 to your critical success band on any roll using that Element. | Critical on 2-4 |
 

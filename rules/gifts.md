@@ -869,7 +869,7 @@ With a touch, you remind the body of what it is. Sickness fades and wounds close
 | 4 | Reaches supernatural-origin poisons, curses, and conditions too, not just mundane ones. Ki cost for a supernatural cure rises to **2**. |
 | 5 | Given a full **Day** of dedicated care and **3 Ki**, you can heal even normally-permanent harm on someone else: a lost limb, lasting disfigurement. |
 
-Additionally, given a full **Month** of thorough, repeated application (regular dedicated sessions across that Month, GM's call on frequency), you can heal away a below-zero Flaw-scar (Health, Sanity, or Poise - see [Battle Scars](rules.md#battle-scars)) entirely, on someone else.
+Additionally, given dedicated care each Day, you can heal away a Physical [scar](rules.md#scars) entirely, on someone else, in **Days equal to how far below 0 their Health went**. Healing never touches a Mental or Social scar.
 
 **Adders**:
 
@@ -1149,6 +1149,7 @@ Memories are stories that your mind whispers to itself. You've learned how to st
 - **Buried Deep** (Lesser, 3 pts): spend 1 Ki to bury one of your own memories. Telepathy, interrogation and other Gifts can't reach it until you choose to dig it back up.
 - **Sleeper Trigger** (Greater, 6 pts): an implanted memory (Level 2+) can stay dormant until a trigger you set - a phrase, a place, a face - then surfaces all at once as though just recalled. Requires Level 2.
 - **Forgotten Craft** (Greater, 6 pts): a connecting die can make the target forget how to use one Skill until the end of the Scene; they roll it as Untrained.
+- **Taking the Edge Off** (Lesser, 3 pts): with one session each Week, rework the memory behind a Mental [scar](rules.md#scars) until it stops biting, in **Weeks equal to how far below 0 their Sanity went**. They keep the memory; it only stops hurting. Works on you as well as on someone else. Requires Level 3.
 
 **Limiters**:
 
@@ -1494,7 +1495,7 @@ You get knocked down, but you get up again. And again. And again. Your body refu
 | 4 | Passive recovery improves further to 1 Health Level per **Round** of dedicated rest (near-instant between exchanges). The Ki-spend combat heal from Level 3 can now be used twice per Round. |
 | 5 | Given a full **Day** of rest, you can recover from even normally-permanent harm - a lost limb, lasting disfigurement. Ki cost for the combat heal drops to **0**. |
 
-Additionally, given a full **Month** of rest, you can heal away a below-zero Flaw-scar (Health, Sanity, or Poise - see [Battle Scars](rules.md#battle-scars)) entirely, on yourself only.
+Additionally, given rest each Day, you can heal away a Physical [scar](rules.md#scars) entirely, on yourself only, in **Days equal to how far below 0 your Health went**. Regeneration never touches a Mental or Social scar.
 
 **Adders**:
 
@@ -1515,6 +1516,40 @@ Additionally, given a full **Month** of rest, you can heal away a below-zero Fla
 - **Bane**: choose one source at creation (fire, silver, acid, blessed weapons). Health Levels it takes never regenerate - not passively, not with Ki - and heal only at the normal rate.
 - **Burning Through**: after the third combat heal in a Scene, you're Exhausted.
 - **Borrowed Flesh**: at the end of any Scene you used the combat heal, you lose again half the Health Levels it restored, rounded down.
+
+### Restoration
+
+Minds break the way bodies do, and some of them can be set. You reach the part of a person that stopped holding together - the panic, the lost hours, the thing they can't stop seeing - and you put it back where it goes. It doesn't make them forget. It makes them able to carry it.
+
+**This Gift always costs Ki, at every Level. There is no mastery discount to free.**
+
+| Level | Effect |
+|---|---|
+| 1 | Touch a willing or Shattered target and spend **1 Ki** to instantly restore 1 Sanity Level. Usable once per Round. No Gift Check. |
+| 2 | The same touch and Ki spend can instead restore 1 Poise, or clear Overwhelmed or Distracted. |
+| 3 | Restores **2 Levels** per use instead of 1. Touch is no longer required, range extends to **Close**. |
+| 4 | Reaches what was done to a mind on purpose: the same use can end domination, possession or enthrallment, or restore a memory erased or rewritten by a Gift. Ki cost for these rises to **2**. [Corruption](rules.md#corruption) is beyond it - it's its own thing. |
+| 5 | Given a full **Day** of dedicated care and **3 Ki**, you can restore what a mind has lost for good: memories taken by injury, illness or age, a self worn away. |
+
+Additionally, given dedicated time each Day, you can heal away a Mental [scar](rules.md#scars) entirely, on yourself or someone else, in **Days equal to how far below 0 their Sanity went**. Restoration never touches a Physical or Social scar.
+
+**Adders**:
+
+- **Read the Damage** (Lesser, 3 pts): as a Fast action, touch a target to learn their current Sanity and Poise, every Mental scar they carry, and anything working on their mind, hidden things included. No Ki.
+- **Lingering Calm** (Lesser, 3 pts): a Level you restore gains a one-time buffer: the next Mental hit that would take it away is negated instead.
+- **Borrowed Calm** (Lesser, 3 pts): a willing target may pay any Ki cost of this Gift from their own Ki instead of yours.
+- **Quiet Room** (Greater, 6 pts): as a Slow action, spend 3 Ki to restore 1 Sanity to every willing ally within Close range (Near at Level 3+). It counts as your use for the Round.
+- **Caught Before the Fall** (Greater, 6 pts): once per Scene, when a target within your range loses Sanity, spend 2 Ki as a reaction, outside your turn, to restore it at once, even if you've already used this Gift this Round.
+- **Unravel** (Greater, 6 pts): run the Gift backward: spend 1 Ki and make a Mental attack that rolls your Level plus half your Psyche in dice against Psyche, pulling at the seams you'd otherwise mend.
+
+**Limiters**:
+
+- **Cost to Self**: restoring another person costs you 1 Sanity of your own per use, in addition to the Ki cost.
+- **Willing Only**: you can never restore an unwilling or Shattered target. Level 1's "willing or Shattered" narrows to willing only.
+- **Talk It Through**: every use of this Gift is a Slow action, at every Level, and the target has to be able to hear you.
+- **Can't Heal Yourself**: this Gift never works on you, at any Level.
+- **Must Know Them**: you can only restore someone you've shared at least one full Scene with before.
+- **Carry It Home**: after each use you're Distracted until the end of your next turn, holding what you took from them.
 
 ### Salvo
 
@@ -1559,6 +1594,36 @@ What crosses the gap is chosen at creation, and described however you like. The 
 - **Burned Channel**: every shot after the second in a Scene also costs 1 unsoakable Health Level, the hands or eyes it leaves through scorching.
 - **Falls Off**: at Far range the shot rolls 2 fewer dice.
 - **Called Aloud**: you must shout the attack's name and have a free hand to fire; no shot while Grabbed, gagged or bound, and every shot gives away your position.
+
+### Sanctuary
+
+You can put a person out of reach. Not behind a wall - anyone could still swing at them - but past the point where anyone wants to. Hands falter, aim drifts, the shot goes wide. At its height, a place you ward becomes somewhere violence has to pay to start.
+
+**This Gift always costs Ki, at every Level.**
+
+| Level | Effect |
+|---|---|
+| 1 | Touch a willing target, yourself included, and spend **1 Ki** as a Slow action to ward them until the end of the Scene. Anyone who tries to make a Physical attack on them must first roll **Air + Difficulty 5**. On a failure the attack goes to another target of the attacker's choice, or is lost. The ward doesn't stop harm that isn't aimed at them - a blast, a fire, a falling roof. It ends at once if the warded person attacks anyone. |
+| 2 | Range extends to **Close**, touch no longer required. The roll to attack drops to **Air + Difficulty 4**. |
+| 3 | Ward up to **3 people** with the same Slow action and **1 Ki** each. The roll drops to **Air + Difficulty 3**. A warded person who attacks ends only their own ward. |
+| 4 | **Ward a place**: the space you're in, out to Close, for **3 Ki**. Everyone inside is warded while they stay inside, at **Air + Difficulty 2**. It lasts until the end of the Scene or until you leave it. |
+| 5 | The warded place becomes a true sanctuary, out to **Near**, until the next sunrise. There's no roll: anyone who wants to start violence inside it spends **1 Ki** first, once, and then fights as normal. Someone with no Ki can't start it at all. Anyone already attacked inside can answer without paying. |
+
+**Adders**:
+
+- **Guarded Mind** (Lesser, 3 pts): the ward covers Mental attacks as well as Physical ones. Social attacks are never covered - words are rarely counted as violence.
+- **Turned Aside** (Lesser, 3 pts): an attacker who fails the roll is also Distracted until the end of their next turn.
+- **Tripwire** (Lesser, 3 pts): you know, wherever you are, the moment one of your wards is broken or tested, and by whom.
+- **Hallowed Ground** (Greater, 6 pts): a Level 4+ ward stays for a Week, whether you're there or not. Requires Level 4.
+- **No Second Try** (Greater, 6 pts): an attacker who fails the roll can't try against that warded person again this Scene.
+
+**Limiters**:
+
+- **Vow of Peace**: while any ward of yours stands, you can't attack anyone, anywhere.
+- **Others Only**: you can never ward yourself.
+- **Fragile Peace**: a ward ends the first time anyone inside it loses a Health Level, from any source.
+- **Consecrated**: warding a place (Level 4+) takes a full Hour of preparation there first.
+- **Must Stay**: a place ward ends the moment you leave it, at every Level, including Level 5.
 
 ### Shapeshift
 
@@ -1804,6 +1869,7 @@ Other people's minds are an open book to you. You can hear thoughts they haven't
 - **Hear the Lie** (Lesser, 3 pts): when someone within your range lies aloud, make a Gift Check (no Ki); on a success you know it was a lie.
 - **Empathic Anchor** (Greater, 6 pts): once per Scene per ally, spend 1 Ki to restore 1 Poise or 1 Sanity to someone you are linked to, or end their Frightened or Flustered.
 - **Thought Before Deed** (Greater, 6 pts): spend 1 Ki: against one target whose surface thoughts you have read this Scene, you have Advantage on defense rolls until the end of the round.
+- **Talking Down** (Lesser, 3 pts): through a two-way link (Level 4+), with dedicated time each Week, heal away a Mental [scar](rules.md#scars), on yourself or someone you're linked to, in **Weeks equal to how far below 0 their Sanity went**. Requires Level 4.
 
 **Limiters**:
 

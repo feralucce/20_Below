@@ -48,15 +48,15 @@ The list of starter Natures, and the guide to writing your own, are in **Creatin
 
 ## Holding Fate Tokens
 
-A character can hold at most **[Stamina score] x 3** Fate Tokens at once. A Token earned while already at that cap is lost rather than banked - including the daily regeneration and Milestone awards.
+A character can hold at most **([Stamina score] x 3) + 1** Fate Tokens at once. A Token earned while already at that cap is lost rather than banked - including the daily regeneration and Milestone awards.
 
-Both Fate Token limits come from Stamina, and they are deliberately the same stat at two scales: **Stamina x 3 is how many you can hold; Stamina is how many you can spend in a single Scene.** So whatever a character’s Stamina, they are carrying about three Scenes’ worth of Fate Tokens and no more. Banking across a quiet stretch of play is possible, but it tops out quickly, and it tops out sooner for the character who could least afford to spend them anyway.
+Both Fate Token limits come from Stamina, and they are deliberately the same stat at two scales: **(Stamina x 3) + 1 is how many you can hold; Stamina + 1 is how many counted spends you can make in a single Scene.** Banking across a quiet stretch of play is possible, but it tops out quickly, and it tops out sooner for the character who could least afford to spend them anyway.
 
-A character with **Stamina 0 holds no Fate Tokens at all**, and cannot spend any either, since the per-Scene cap is the same score. Fate Tokens are simply not a resource that character has. That is the same shape as every other dumped sub-stat in the game - the floor is a wall, not a gentle slope.
+A character with **Stamina 0 holds 1 Fate Token at most**, and can spend it. The +1 on both caps is there so that nobody is shut out of Fate entirely: the Token that arrives at sunrise always has somewhere to go.
 
 ## Fate Triggers
 
-Fate Tokens are spent on Kotodama, or on any of the following, each a flat **1 Fate Token**:
+Fate Tokens are spent on Kotodama, or on any of the following, each a flat **1 Fate Token**. None of these flat triggers count against Stamina’s per-Scene cap; only what you’re holding limits them.
 
 **Overcome a Flaw** - one of your Flaws doesn’t apply for the rest of the current scene.
 
@@ -66,15 +66,19 @@ Fate Tokens are spent on Kotodama, or on any of the following, each a flat **1 F
 
 **Refill Ki** - your Ki pool refills completely, right there in the moment, no need to wait for a rest.
 
+**Get Back Up** - spent while Dying, it puts you at **1 Health Level**, conscious and able to act. You can spend it while unconscious.
+
 Characters with Iron Will may also spend 1 Fate Token to **Assert Your Will** - declare “my will is my own” and flatly negate an attempt to intimidate or dominate you, no roll. A micro-Kotodama: same shape as the main mechanic, but flat-costed and scoped narrowly to defending your own mind.
 
 ## Ki (the pool)
 
 **Fate Tokens are the resource players earn and spend; Ki is the pool that powers everything superhuman a character does.** Ki is deliberately common: **Ki = your strongest Element + 8**, which puts every character between **13 and 18** regardless of how they built the rest of the sheet. Whatever a character is *most* is what channels their Ki - the frail specialist draws on as much as the bruiser.
 
-Ki has three jobs, all of them direct spends - no roll, no check, and none of them interact with Stamina’s per-Scene Fate Token cap:
+**Ordinary people have 1 Ki.** Anyone without a Gift - the ordinary NPC, the bystander, the child - has a single point, and it’s there for one moment past what they should be able to manage: the grandmother who lifts the car off a child, the runner who finds one more mile.
 
-1 point from Ki preserves one Health Level or Sanity Level that would otherwise be lost to an unsoaked hit. Poise works differently - see Poise. 1 Ki per step to move up one Action Bracket (Slow → Normal, or Normal → Fast; 2 Ki moves two steps at once). 1 Ki per die to boost an attack die - see Ki Infusion, covering all three attack types (Physical/Ferocity, Social/Presence, Mental/Psyche).
+Ki has three jobs, all of them direct spends - no roll, no check, and none of them interact with Stamina’s per-Scene cap:
+
+1 point from Ki preserves one Vital Level - Health, Poise or Sanity - that would otherwise be lost to a die that got through the wall. At or below 0, 1 Ki instead restores Poise or Sanity to 1, without waiting for a rest. 1 Ki per step to move up one Action Bracket (Slow → Normal, or Normal → Fast; 2 Ki moves two steps at once). 1 Ki per die to boost an attack die - see Ki Infusion, covering all three attack types (Physical/Ferocity, Social/Presence, Mental/Psyche).
 
 Most Gifts also cost Ki to use, called out per Gift and per Level, and some of them additionally call for a Gift Check rolled against current Ki.
 
@@ -84,7 +88,7 @@ Most Gifts also cost Ki to use, called out per Gift and per Level, and some of t
 
 Action Brackets themselves (Fast/Normal/Slow) cost nothing to declare - that’s just normal combat flow, not something Stamina governs. Instead, Stamina does three things:
 
-**Hard cap on how many Fate Tokens a character can hold.** At most **[Stamina score] x 3** at once - see Holding Fate Tokens. **Hard cap on Fate Token spends per Scene.** A character can spend Fate Tokens **at most [Stamina score] times per Scene** - the Time Band a combat encounter is contained within - regardless of how many Fate Tokens they actually have banked. **General endurance/exhaustion-resistance gauge.** Stamina sets a free baseline duration for any single sustained exertion (holding breath, forced marching, sustained labor, running flat-out) - Stamina Rounds, Minutes, Hours, or whatever Time Band unit fits the activity, GM’s call. Past that baseline, roll **Water + Difficulty** once per additional unit of time, with Difficulty dropping by 1 each successive check. Failure imposes one level of **Exhausted**.
+**Hard cap on how many Fate Tokens a character can hold.** At most **([Stamina score] x 3) + 1** at once - see Holding Fate Tokens. **Hard cap on counted spends per Scene.** A character can make **at most [Stamina score] + 1 counted spends per Scene** - the Time Band a combat encounter is contained within - regardless of how many Fate Tokens they actually have banked. It counts spends, not Tokens: a 7-Token Kotodama is one spend. **Counted:** a Kotodama of any size; your share of a pooled Kotodama, one spend for each character who puts in, including a Claimed rescue; and burning off Corruption, one spend per level burned. **Not counted:** every flat Fate Trigger - Overcome a Flaw, Automatic Success, Shrug Off an Effect, Refill Ki, Get Back Up, and Assert Your Will. **General endurance/exhaustion-resistance gauge.** Stamina sets a free baseline duration for any single sustained exertion (holding breath, forced marching, sustained labor, running flat-out) - Stamina Rounds, Minutes, Hours, or whatever Time Band unit fits the activity, GM’s call. Past that baseline, roll **Water + Difficulty** once per additional unit of time, with Difficulty dropping by 1 each successive check. Failure imposes one level of **Exhausted**.
 
 **Exhausted** is cumulative, each level stacking on top of the last:
 
@@ -126,7 +130,7 @@ So that’s the cost curve, and it’s why the prices climb the way they do. You
 
 Which is why the biggest claims can’t be made alone. One person’s will against the reality of the masses only reaches so far.
 
-A claim’s total Fate Token cost is the **sum of independent components**, not one flat lookup on a single scale. Multiple players may **pool** their Fate Tokens together for a total no single character could afford alone.
+A claim’s total Fate Token cost is the **sum of independent components**, not one flat lookup on a single scale. Multiple players may **pool** their Fate Tokens together for a total no single character could afford alone. Each character who puts in uses one of their own counted spends.
 
 **Four components**: **Magnitude**, **Range**, **Plausibility**, and an optional **Duration** surcharge.
 

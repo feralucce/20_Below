@@ -79,7 +79,7 @@ With nothing coming and nobody watching, a character can trade time for a better
 
 ### Time Bands
 
-A standard ladder of duration used wherever a rule needs to name "how long": **Round → Minute → Hour → Scene → Day → Month → Year → Decade → Century**. A **Round** is about **6 seconds**, so a Minute is exactly 10 of them. The **Round** is the base unit - any duration described elsewhere in the rules is stated in Rounds unless a longer band is explicitly named.
+A standard ladder of duration used wherever a rule needs to name "how long": **Round → Minute → Hour → Scene → Day → Week → Month → Year → Decade → Century**. A **Round** is about **6 seconds**, so a Minute is exactly 10 of them. The **Round** is the base unit - any duration described elsewhere in the rules is stated in Rounds unless a longer band is explicitly named.
 
 ### Rests
 
@@ -286,14 +286,14 @@ Sanity mirrors Health Levels too, tracking a character's grip on their own mind 
 
 - **`PC Sanity = 5 + Psyche`.** Each Level is a binary hit-box.
 - **Crossing zero** works identically to Health Levels.
-- **The negative range mirrors the positive one**, exactly as [Health Levels](#health-levels) and [Poise](#poise) do: a character with 9 Sanity is Overwhelmed at 0 and Shattered from −1 down to −8. **Reaching −(full Sanity) is the floor.** The character picks up a temporary mental health condition - the same mechanic Overwhelmed's own trait uses, still to be defined - and Sanity resets to **0**: Overwhelmed again, not restored. The permanent mental scar from having gone below 0 stands regardless.
+- **The negative range mirrors the positive one**, exactly as [Health Levels](#health-levels) and [Poise](#poise) do: a character with 9 Sanity is Overwhelmed at 0 and Shattered from −1 down to −8. **Reaching −(full Sanity) is the floor.** The character picks up a temporary [Mental scar](#scars) effect, the same way Overwhelmed does, and Sanity resets to **0**: Overwhelmed again, not restored. The permanent Mental scar from having gone below 0 stands regardless.
 - **General recovery** matches Health/Poise: Short Rest heals `Psyche ÷ 2` (round up, minimum 1); Full Night's Rest heals fully.
 
-**At 0 Sanity, a character is Overwhelmed**: they gain a temporary negative mental trait (a Flaw - exact mechanic to be defined later) and are at Disadvantage on rolls. They can still act on their own. Overwhelmed clears when the character is removed from the stimulus that caused it and given a chance to rest, or by spending 1 Ki, which also refills Sanity to full.
+**At 0 Sanity, a character is Overwhelmed**: they take one [Mental scar](#scars) effect, GM's pick, for as long as they stay Overwhelmed, and are at Disadvantage on rolls. They can still act on their own. Overwhelmed clears when the character is removed from the stimulus that caused it and given a chance to rest, or by spending 1 Ki, which also refills Sanity to full.
 
 **Below 0, a character is Shattered**: panicky, babbling, unable to act on their own - they have to be led or dragged. Shattered clears when 1 Ki is spent or a Short Rest or Full Night's Rest passes, either of which restores Sanity only to 1, not fully - normal recovery resumes from there on the next rest.
 
-**Mental scars**: dropping to 0 Sanity leaves a purely cosmetic mental tell (a tic, an intrusive thought, a private ritual), no mechanical effect beyond Overwhelmed's own temporary trait above. **Dropping below 0 always leaves a permanent mental scar**, regardless of how the character recovers afterward - even a Ki-funded refill doesn't erase it. This scar can instead be a genuine, lasting [Flaw](flaws.md), GM's call in consultation with the player on which fits (Anxiety, Short Fuse, Amnesia, Soft-Hearted, Overconfident, and Secret are natural fits), distinct from Overwhelmed's own temporary trait and lasting until Sanity is healed back to 0 the slow way - same shape [Battle Scars](#battle-scars) and [Poise](#poise)'s below-zero rule both use.
+**Mental scars**: dropping to 0 Sanity leaves a purely cosmetic mental tell (a tic, an intrusive thought, a private ritual), no mechanical effect beyond Overwhelmed's own temporary effect above. **Dropping below 0 leaves a Mental scar**, however the character recovers afterward - even a Ki-funded refill doesn't erase it. See [Scars](#scars) for the list and how one heals.
 
 ### Fire
 
@@ -335,7 +335,7 @@ Poise mirrors [Health Levels](#health-levels), tracking composure under Social a
 
 **There is no full refill.** Ki buys a Poise Level back as it is lost, the same as Health or Sanity - see [Ki Spend to Preserve a Level](#ki-spend-to-preserve-a-level). **Below 0, spending 1 Ki - or taking a Short Rest or Full Night's Rest - restores Poise to 1, not to full**, exactly the shape [Sanity](#sanity)'s Shattered recovery uses; normal recovery resumes from there.
 
-**Poise scars**: dropping to 0 leaves a purely cosmetic social tell (a nervous habit, a reputation quirk), no mechanical effect. No Gift currently grants immunity to this - intentional. **Dropping below 0 - and certainly reaching the floor - can instead impose a genuine [Flaw](flaws.md)**, lasting until Poise is healed back to 0 the slow way - GM's call, in consultation with the player, on which Flaw fits (Notoriety, Pariah, Secret, Speech Impediment, Short Fuse, and the purpose-built [Shaken Confidence](flaws.md#shaken-confidence) are natural fits).
+**Poise scars**: dropping to 0 leaves a purely cosmetic social tell (a nervous habit, a reputation quirk), no mechanical effect. No Gift grants immunity to this - intentional. **Dropping below 0 leaves a Social scar** - see [Scars](#scars). Poise damage never leaves a physical mark, and no Gift heals a Social scar: a scarred reputation can't be treated or healed - it has to be rebuilt.
 
 ### Water
 
@@ -346,13 +346,17 @@ Poise mirrors [Health Levels](#health-levels), tracking composure under Social a
 Every character starts with **5 Health Levels**, flat, before anything else is added.
 
 - **`PC Health Levels = 5 + Health (sub-stat)`** - the flat baseline, plus whatever a PC invests in Water's Health sub-stat.
-- **NPCs are built the same way as PCs** - most with the Character Creator, at the power level the GM chooses - so their Health Levels follow the same formula. A Gifted NPC has Ki; only a special NPC holds Fate Tokens of their own.
+- **NPCs are built the same way as PCs** - most with the Character Creator, at the power level the GM chooses - so their Health Levels follow the same formula. A Gifted NPC has Ki the way a PC does; an ordinary one has [1 Ki](fate.md#ki-the-pool). Only a special NPC holds Fate Tokens of their own.
 
-At **0 Health Levels**, a character falls unconscious and can't act. **Below 0 they are Dying**: still unconscious, still losing ground, and out of the fight until something stops it. Health Levels can still be tracked into negative territory from further damage, and **the negative range mirrors the positive one** - a character with 7 Health Levels is unconscious at 0, Dying from −1, and dead at −7. Whatever it took to put them down, it takes that much again to finish them. Ordinarily that range plays out off-screen, since an unconscious character can't act or be aware of it; [Unstoppable](boons.md#boon-list) is the exception that lets a character stay conscious and act throughout it instead of blacking out at 0.
+At **0 Health Levels**, a character falls unconscious and can't act. **Below 0 they are Dying**: still unconscious, and out of the fight until something gets them up. **Dying doesn't get worse on its own** - only further damage moves a character toward death. Health Levels can still be tracked into negative territory from further damage, and **the negative range mirrors the positive one** - a character with 7 Health Levels is unconscious at 0, Dying from −1, and dead at −7. Whatever it took to put them down, it takes that much again to finish them. Ordinarily that range plays out off-screen, since an unconscious character can't act or be aware of it; [Unstoppable](boons.md#boon-list) is the exception that lets a character stay conscious and act throughout it instead of blacking out at 0.
+
+**Getting up.** A Dying character can spend a Fate Token on [Get Back Up](fate.md#fate-triggers) - even while unconscious - and is at **1 Health Level**, conscious and able to act. **Stabilizing** them - First Aid, a trauma kit, or a Gift that says so - brings them to **0** instead: no longer Dying, still unconscious, and healing at the normal rates from there.
 
 Falling unconscious at 0 is unconditional - it happens on the way down no matter how tough a character is. **The symmetry below zero is the point.** Everyone gets the same second chance their own toughness already earned them, rather than a separate allowance bolted on beside it. A character who put nothing into Health still has five Levels and five more below zero: quick to drop, but never one unlucky round from a funeral because of a choice made at creation. Every point of Health is still worth two hits - one before they drop, one after.
 
 **Crossing zero**: a single attack can never carry a character straight past 0 into negative territory. If enough connecting dice from one attack would carry a character's Health Levels below 0, the excess is simply discarded - they land exactly at 0, no further, no matter how many dice connected. **Once a character is already at 0 Health Levels** - unconscious under the rule above, or still conscious via Unstoppable - **any further attack can only remove 1 Health Level, total, regardless of how many dice connect.**
+
+**Named and Unnamed.** Player characters and named NPCs get everything above: unconscious at 0, Dying below it, recovery and [scars](#scars). An unnamed NPC who reaches 0 is out - of the fight and of the story - and whether that's dead or down is the GM's call. Giving an NPC a name is how the GM says they can survive.
 
 #### Health Level Recovery
 
@@ -360,13 +364,109 @@ Falling unconscious at 0 is unconditional - it happens on the way down no matter
 - **Full Night's Rest**: heal all lost Health Levels, back to full.
 - **Reduced below 0 Health Levels**: the rates above stop applying. A Short Rest recovers **nothing**. A Full Night's Rest recovers **1 Health Level**, and only one, until back to 0.
 
-#### Battle Scars
+#### Scars
 
-Dropping to 0 Health Levels leaves a permanent mark - a scar, a limp, a changed voice, whatever fits the wound. **Purely cosmetic, no mechanical effect.** The [Healing](gifts.md#healing) and [Regeneration](gifts.md#regeneration) Gifts both grant immunity to it, for the target they're used on.
+Going to 0 leaves a mark. Going below it leaves something that lasts.
 
-Dropping below 0 Health Levels can instead impose a genuine [Flaw](flaws.md), lasting until the character is fully healed back to 0. GM's call, in consultation with the player, on which Flaw fits the harm taken.
+**At 0**, any Vital leaves a purely cosmetic mark, with no mechanical effect: a scar, a limp or a changed voice from Health; a nervous habit or a reputation quirk from [Poise](#poise); a tic, an intrusive thought or a private ritual from [Sanity](#sanity). The [Healing](gifts.md#healing) and [Regeneration](gifts.md#regeneration) Gifts both grant immunity to the Health one, for the target they're used on.
 
-**Scars accumulate** - each fresh crossing of a 0 or below-0 threshold (Health, Sanity, or Poise), after healing back up in between, adds a new scar rather than replacing the last one. A below-zero Flaw-scar grants no Flaw points of its own - it's a consequence the GM imposes, not a creation-time build choice. Healing and Regeneration's immunity (above) only ever covers the cosmetic tier - it can't prevent or undo a below-zero Flaw-scar. That Flaw-scar can instead be healed away entirely given a full **Month**: see [Regeneration](gifts.md#regeneration) and [Healing](gifts.md#healing) for how each Gift handles it.
+**Below 0**, the character takes a **scar**: one effect from the matching list below. Health leaves a **Physical** scar, Poise a **Social** one, Sanity a **Mental** one. The GM picks it, or the GM and the player talk it over and decide together.
+
+- **One scar per crossing.** Each fresh crossing below 0, after healing back up in between, adds one more. Going deeper in one crossing doesn't add a second, and the same scar can't be taken twice.
+- **A scar isn't a [Flaw](flaws.md).** It grants no Flaw points, and a scar causing trouble never earns a Fate Token.
+- **A scar is permanent** until something heals it.
+
+**Healing a scar.** The count is how far below 0 the character went: −1 is one, −7 is seven.
+
+| Scar | By Gift | By Adder | By Skill |
+|---|---|---|---|
+| Physical | [Healing](gifts.md#healing) or [Regeneration](gifts.md#regeneration): that many **Days** | - | Medicine: that many **Months** |
+| Mental | [Restoration](gifts.md#restoration): that many **Days** | Talking Down ([Telepathy/Empathy](gifts.md#telepathyempathy)) or Taking the Edge Off ([Memory Manipulation](gifts.md#memory-manipulation)): that many **Weeks** | Psychology: that many **Months** |
+| Social | - | - | Networking: that many **Months** |
+
+A Gift or Adder needs dedicated time across that span, as its own entry says. A Skill needs regular work across it from someone Trained in that Skill - for Networking, the scarred character themselves. **A scarred reputation can't be treated or healed - it has to be rebuilt.** No Gift reaches a Social scar.
+
+**Physical scars**
+
+| Scar | Effect |
+|---|---|
+| Bad Knee | Movement Rate −1m. Disadvantage on Athletics to jump. |
+| Stiff Shoulder | Disadvantage on Thrown Weapons and Archery. |
+| Shaky Hand | Disadvantage on Sleight of Hand, and on Firearms past Close. |
+| Ribs That Set Wrong | Your Stamina baseline for holding breath and running flat-out is halved. |
+| Ringing Ear | Disadvantage on Perception by sound. |
+| Clouded Eye | Disadvantage on Perception by sight past Close. |
+| Weak Grip | Disadvantage on Potence contests to hold on: grapples, climbing, a hand on a ledge. |
+| Missing Fingers | Disadvantage on Crafting, Electronics and Security by hand. |
+| Limp | Disadvantage on Acrobatics, and in chases on foot. |
+| Scarred Lungs | Disadvantage on endurance checks in smoke, cold or thin air. |
+| Weather in the Joints | In cold or rain, Disadvantage on Athletics and Acrobatics. |
+| Tender Spot | Ki can't preserve the first Health Level you lose in a Scene. |
+| Disfigured | Disadvantage on Disguise. People who've seen you once remember you. |
+| Bad Back | Disadvantage on Athletics to lift, carry or drag. |
+| Slow to Clot | First Aid and Medicine on you are at Disadvantage. |
+| Night Blind | Disadvantage on Perception and Driving in the dark. |
+| Chronic Pain | Your baseline for any sustained exertion is one unit shorter. |
+| Burn Scars | Soak counts 1 lower against fire and heat. |
+| Old Break | A hit that costs 2 or more Health Levels also leaves you [Off Balance](#off-balance). |
+| Wheeze | Disadvantage on Stealth when you've moved this round. |
+
+**Social scars**
+
+| Scar | Effect |
+|---|---|
+| The Story Goes Around | Disadvantage on Intimidation against anyone who's heard what happened. |
+| Known Face | Disadvantage on Disguise and Stealth where it happened. |
+| Stammer | Disadvantage on Public Speaking and Performance in front of an audience. |
+| Sore Spot | A Social attack that brings it up gets 1 extra die. |
+| Burned Bridge | Disadvantage on Networking with one Contact or faction who saw it. |
+| Eyes Down | Disadvantage on Leadership when the person who did it is present. |
+| Tell | Insight to read you is at Advantage. |
+| Gives Ground | Disadvantage on Barter and Bribery. |
+| Rattled | Losing a Poise Level leaves you [Distracted](#distracted). |
+| The Nickname | Ridicule that uses it is at Advantage against you. |
+| Out of Place | Disadvantage on Etiquette at anything formal. |
+| It's on Video | Once a session the GM can say someone in the Scene has seen it. Disadvantage on Persuasion with them. |
+| Can't Let It Go | When it's thrown at you in public, Disadvantage on everything else until you answer it. |
+| Nervous Laugh | Disadvantage on Charm and Seduction when it matters. |
+| Quiet Voice | Disadvantage on Intimidation. |
+| Flushes | Disadvantage on Deception about yourself. |
+| Won't Ask | You can't be Helped on Social rolls. |
+| On the Record | Disadvantage on Bureaucracy and Law wherever the record exists. |
+| Stage Freeze | Your first Social roll in front of a crowd each Scene is at Disadvantage. |
+| Touchy Subject | Ki can't preserve Poise against a Social attack that brings it up. |
+
+**Mental scars**
+
+| Scar | Effect |
+|---|---|
+| The Trigger | One sound, smell or sight leaves you [Distracted](#distracted) when it turns up. |
+| Night Terrors | A Full Night's Rest refills Ki only as a Short Rest does (Klotho), unless somebody keeps watch with you. |
+| Hypervigilant | You can't be [Surprised](#surprised), and you can't take a Short Rest anywhere unsecured. |
+| Phobia | Disadvantage on every roll while the thing is within Close. |
+| Lost Time | A stretch of memory is gone. The GM knows what's in it. |
+| Intrusive Memory | A catastrophic failure also leaves you Distracted. |
+| Checks the Exits | Your first action in each Scene is at Slow. |
+| Flat | Disadvantage on Performance and Charm. |
+| Paranoid | You can't be Helped by anyone you haven't known a Month. |
+| Startle | A sudden loud noise costs you Fast for the round. |
+| Drifts | Once a session the GM can say you drift. Disadvantage on Perception for that Scene. |
+| Insomnia | Miss a Full Night's Rest and you wake [Exhausted](#exhausted). |
+| The Voice | You answer it under your breath. Disadvantage on Stealth. |
+| Survivor's Guilt | While an ally is Dying, you can't spend a Fate Token on yourself. |
+| Freezes | Surprised lasts a round longer. |
+| Tunnel Vision | Under Mental attack, you can't Help or be Helped. |
+| It Knows You | Mental attacks from the thing that did it get 1 extra die. |
+| The Dark | Disadvantage on every roll in darkness without a light. |
+| Fixated | While it's in the Scene, Disadvantage on anything that isn't about it. |
+| Cracks | Disadvantage on Academics, Research and Law in combat. |
+
+**Making a new scar.** The lists are a starting point. When none of them fits what happened, make one.
+
+- **Tie it to the harm.** A scar comes from one moment - the knife that went in under the ribs, the speech that fell apart in front of the whole room, the thing in the basement. The best ones are the ones anybody at the table can point back to.
+- **Match the Vital.** A Social scar is never a wound, and a Physical scar never changes what anybody thinks of you.
+- **Keep it narrow.** A scar should bite about once a session, not every roll. Build it from Disadvantage on one or two named Skills or one kind of situation; a Condition that one specific trigger sets off; one extra die for a particular kind of attack against you; a small cut, in one narrow case, to something you'd otherwise always have - a Rest, your Movement Rate, your Fast Bracket, a Ki use, being Helped; or plain story - a lost memory, a name that sticks, a door that's closed to you.
+- **Never** a penalty on every roll, a lost Attribute or sub-stat point, fewer Health Levels, or anything that ends the character. Scars stack, and a scar that hits everything turns three bad nights into a character nobody wants to play.
 
 ### Moira
 
@@ -415,7 +515,7 @@ A creature has no Klotho. Its critical is the automatic half, and the rest roll 
 
 A critical still cannot kill on its own. The [crossing-zero](#health-levels) rule applies to the free dice and the rolled ones alike: however many connect, a single attack can only ever bring a target to **0**, never past it. Against a player character, or anyone else who survives being dropped, a critical is what takes them out of the fight rather than what ends their life.
 
-Note that the [Skill Training Tiers](skills.md#training-tiers) that widen the critical range do **not** apply here: an attack is a straight Attribute-vs-Defense roll with no Skill involved, so a critical hit lands on a natural 2 for everyone. What does move the odds is **Advantage** - which a [Slow action](#action-brackets) grants, taking a critical from a 1% chance to roughly 2.8%.
+Note that the [Skill Training Tiers](skills.md#training-tiers) that widen the critical range do **not** apply here: an attack is a straight Attribute-vs-Defense roll with no Skill involved, so a critical hit lands on a natural 2 for everyone. What does move the odds is **Advantage** - which Aim, a [Slow action](#action-brackets), grants, taking a critical from a 1% chance to roughly 2.8%.
 
 ### Combat Order
 
@@ -451,7 +551,7 @@ A character who rolls a **catastrophic failure** on any roll during combat becom
 
 **An Off Balance character rolls everything at Disadvantage.** The condition does not stack - a character is either Off Balance or is not, however many catastrophic failures they roll in a round - and it clears on its own with no action or roll required.
 
-A Fate Token spent on [Shrug Off an Effect](fate.md#fate-triggers) clears it immediately. That spend never undoes the separate consequence the catastrophic failure caused. [Never Off Balance](boons.md) grants a reroll of the triggering failure itself.
+A Fate Token spent on [Shrug Off an Effect](fate.md#fate-triggers) clears it immediately. That spend never undoes the separate consequence the catastrophic failure caused. [Never Off Balance](boons.md) grants a reroll of the triggering failure itself - on attack rolls at its first tier, on every roll in combat at its second, and on every roll at its third.
 
 #### Distracted
 
@@ -574,8 +674,7 @@ Environmental damage uses the same per-die machinery as an attack, resolved agai
 | **Falling** | **1 per 4m**, capped at 5. Halved for water, deep snow, or similar |
 | **Burning room** | **1** per round, at the end of each round in it |
 | **On fire** | **2** per round until extinguished (a Normal action, or a Fast one from a helper) |
-| **Vehicle, city speed** | **3** |
-| **Vehicle, at speed** | **5**. Faster than that isn't a roll |
+| **Vehicle** | **1 per 10 MPH / 16 km/h**, no cap. [Crossing zero](#health-levels) still applies: one impact never carries anyone past 0 |
 
 **No air** (drowning, smoke, suffocation) is the exception: the character lasts **Stamina rounds**, then loses **1 Health Level per round** with **no dice and no Soak** - there is nothing to soak.
 
@@ -596,34 +695,38 @@ Exposure kills by reaching **Exhausted 5** - unconscious - rather than by spendi
 
 Something has gotten its hooks into you: a presence, an otherworldly thing, a place. It changes you slowly. At first you don't notice it. Eventually, you don't mind.
 
-Corruption is not damage and not a Vital. It is its own track, **0 to 5**, kept **separately for each source**: Corruption (the lake), Corruption (the radio). Being Corrupted by one thing does nothing to your standing with another.
+Corruption is not damage and not a Vital. It is its own track, **0 to 5**, and a character has only one. **There is one source of Corruption.** What the table meets is its **loci** - the lake, the radio, the thing in the basement - the places it gets through. Caught by the lake and then by the radio, a character is one track going up, not two.
 
-**Building a source.** The GM decides five things when a source of Corruption enters the game:
+**Building a locus.** The GM decides five things when a locus of Corruption enters the game:
 
 - **Intensity** - **1 to 5 dice**, on the same scale as everything else: 1 is a lingering wrongness, 5 is something that should not exist.
 - **Exposure** - how it gets in: seeing it, touching it, breathing or eating it, sleeping near it, or simply being near it.
 - **Schedule** - **once, on contact** (a touch, a look, a mouthful), or **once per Day, Hour or Minute** while exposed, on the same [Time Band](#time-bands) ladder as [cold and heat](#common-hazards).
-- **Its signs** - what its Tell looks like, what its Pull wants, and what its Mark is.
-- **Its cure** - the rare thing that clears Marked. Somebody in the world knows it. Finding them is the story.
+- **Its signs** - what its Tell looks like, what its Pull wants, and what its Mark is. Every locus has its own.
+- **Its cure** - the rare thing that clears a Mark this locus made. Somebody in the world knows it. Finding them is the story.
 
-**Each exposure**, roll the source's dice against your **[Klotho](#klotho)**. **If any die gets over it, gain 1 level of Corruption** - one level, however many dice got over. A bigger source catches you more often, not further. **A rare source is stronger than that, and says so when it is built**: with it, each die that gets over adds a level.
+**Some loci are creatures.** A creature that wields Corruption has a **Corruption** stat, **1 to 10**, and a Ki pool. Once its exposure dice are rolled it can boost them with [Ki Infusion](#ki-infusion), exactly as any attacker does: 1 Ki per die, each boosted die adding its Corruption. A place or an object can't, which is why nothing but a creature ever gets through a Klotho of 10.
+
+**Each exposure**, roll the locus's dice against your **[Klotho](#klotho)**. **If any die gets over it, gain 1 level of Corruption** - one level, however many dice got over. A bigger source catches you more often, not further. **A rare locus is stronger than that, and says so when it is built**: with it, each die that gets over adds a level.
 
 | Level | Name | What it does |
 |---|---|---|
-| **1** | **Tell** | A small sign. The GM tells the other players, not you. |
-| **2** | **Pull** | You want to go back. [Distracted](#distracted) near the source, or while kept from it. |
-| **3** | **Marked** | A visible mark you may or may not notice. Anyone who touches it takes one exposure: the source's dice against their own Klotho. |
+| **1** | **Tell** | A small sign, in your locus's colour. The GM tells the other players, not you. |
+| **2** | **Pull** | You want to go back to your locus. [Distracted](#distracted) near it, or while kept from it - and near any other locus, which you know for what it is. |
+| **3** | **Marked** | A visible mark of your locus, which you may or may not notice. Anyone who touches it takes one exposure: your locus's dice against their own Klotho. |
 | **4** | **Conduit** | You read as unnatural, and reality around you is thin: [Kotodama](fate.md#kotodama) costs less near you, for everyone, the same as a [thin place](fate.md#thin-places). |
-| **5** | **Claimed** | It has you. The character leaves play if the player and the GM agree. With the GM's agreement the player can keep playing a Claimed character, but it is directly influenced at all times - the GM's call. Suggestions: once a Scene, the GM can make them Distracted, or push them toward the source. |
+| **5** | **Claimed** | It has you. The character leaves play if the player and the GM agree. With the GM's agreement the player can keep playing a Claimed character, but it is directly influenced at all times - the GM's call. Suggestions: once a Scene, the GM can make them Distracted, or push them toward their locus. |
+
+**Your locus** is whichever one last pushed you up a level. Your Pull draws you back to it and your Mark is its Mark, whatever made the last one - one thing wearing a new face.
 
 **Getting better:**
 
-- **Tell** clears after **24 hours** away from the source.
+- **Tell** clears after **24 hours** away from your locus.
 - **Pull** drops **one level per 24 hours** away. The pull itself stays for **a number of weeks equal to the days spent at Pull or worse**, like an addiction, whatever the track says.
-- **Marked** needs **the cure** set when the source was built.
-- **Conduit** needs **the source destroyed**.
-- **Claimed** needs a major **Kotodama**: **6 or more Fate Tokens**, pooled by the party, to disentangle the character from the source.
-- **At levels 1 to 4, the player can burn [Fate Tokens](fate.md), one per level, to remove levels**, all the way to 0. The pull stays, and its timer doesn't reset.
+- **Marked** needs **your locus's cure**.
+- **Conduit** needs **your locus destroyed or sealed** - bound, buried, cut off. The source itself is never destroyed.
+- **Claimed** needs a major **Kotodama**: **6 or more Fate Tokens**, pooled by the party, to disentangle the character from the source. Each character who puts in uses one [counted spend](fate.md#staminas-job).
+- **At levels 1 to 4, the player can burn [Fate Tokens](fate.md), one per level, to remove levels**, all the way to 0. **Each level burned is one [counted spend](fate.md#staminas-job)** - Corruption is serious. The pull stays, and its timer doesn't reset.
 
 Corruption costs no Sanity. Sanity is for shock, and the Corrupted are rarely shocked - they're calm, and they explain it away. Everyone else notices first.
 

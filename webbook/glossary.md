@@ -89,7 +89,7 @@ How much you can lift, carry, or drag without straining: your Potence squared, t
 <div class="gloss" markdown="1">
 <span class="gloss-term">Condition</span>
 
-The catch-all for a temporary bad state you can be put into - Distracted, Surprised, Flustered, Exhausted, Overwhelmed, Dying, and the rest. Each has its own trigger and its own way out, under its own entry. A Fate Token can shrug any of them off for a moment.
+The catch-all for a temporary bad state you can be put into - Distracted, Surprised, Flustered, Exhausted, Overwhelmed, and the rest. Each has its own trigger and its own way out, under its own entry. A Fate Token can shrug any of them off for a moment. Dying isn’t one: it’s where your Health Levels are, and a Token gets you up from it instead.
 </div>
 
 <div class="gloss" markdown="1">
@@ -149,7 +149,7 @@ What happens when you take a hit, or catch a Kotodama effect, part-way through a
 <div class="gloss" markdown="1">
 <span class="gloss-term">Dying</span>
 
-Where you are below 0 Health Levels: unconscious, still losing ground, and out of the fight until somebody stops it. The row runs the same distance below zero as above, so a character with 7 Health Levels is Dying from −1 and dead at −7 - whatever it took to put them down, it takes that much again to finish them.
+Where you are below 0 Health Levels: unconscious and out of the fight. It doesn’t get worse on its own - only more damage moves you toward death. A Fate Token puts you back up at 1 Health Level, even while you’re out cold, and stabilizing you brings you to 0. The row runs the same distance below zero as above, so a character with 7 Health Levels is Dying from −1 and dead at −7 - whatever it took to put them down, it takes that much again to finish them.
 </div>
 
 <div class="gloss" markdown="1">
@@ -185,13 +185,13 @@ The Fast bracket. You go before everyone in Normal or Slow, but you only get the
 <div class="gloss" markdown="1">
 <span class="gloss-term">Fate Token</span>
 
-The currency you earn and spend. You pick them up from your Nature, from taking Disadvantage on purpose, from your Flaws, from a daily top-up, from story Milestones, or whenever the GM hands one over. You spend them on Kotodama or the Fate Triggers. You can hold three times your Stamina and no more - anything earned at that cap is lost rather than banked.
+The currency you earn and spend. You pick them up from your Nature, from taking Disadvantage on purpose, from your Flaws, from a daily top-up, from story Milestones, or whenever the GM hands one over. You spend them on Kotodama or the Fate Triggers. You can hold three times your Stamina, plus one, and no more - anything earned at that cap is lost rather than banked.
 </div>
 
 <div class="gloss" markdown="1">
 <span class="gloss-term">Fate Triggers</span>
 
-The things a Fate Token buys: a Kotodama, shrugging off one of your Flaws for a Scene, an automatic success, Advantage on a roll, shrugging off a condition, or a full Ki refill. Spending the Token is the whole cost - nothing else is rolled.
+The things a Fate Token buys: a Kotodama, shrugging off one of your Flaws for a Scene, an automatic success, shrugging off a condition, a full Ki refill, or getting back up from Dying. Spending the Token is the whole cost - nothing else is rolled. Only a Kotodama counts against the per-Scene cap; the flat ones don’t.
 </div>
 
 <div class="gloss" markdown="1">
@@ -281,7 +281,7 @@ One of Air’s two sub-stats, the flick of readiness that decides who moves firs
 <div class="gloss" markdown="1">
 <span class="gloss-term">Ki</span>
 
-The pool that powers everything supernatural. It’s your strongest Element plus 8, so every character has one worth spending - 13 at the least, 18 at the most. You spend it to save a Health, Poise or Sanity Level, to put more behind an attack, to move up an Action Bracket, and to use most Gifts. Below 0 it brings Poise or Sanity back to 1 without waiting for a rest. A Short Rest brings back Klotho points of it; a full night brings it all back.
+The pool that powers everything supernatural. It’s your strongest Element plus 8, so every character has one worth spending - 13 at the least, 18 at the most. Ordinary people without a Gift have 1, for the one moment they need it. You spend it to save a Health, Poise or Sanity Level, to put more behind an attack, to move up an Action Bracket, and to use most Gifts. Below 0 it brings Poise or Sanity back to 1 without waiting for a rest. A Short Rest brings back Klotho points of it; a full night brings it all back.
 </div>
 
 <div class="gloss" markdown="1">
@@ -339,6 +339,12 @@ How far you can move in a step, in meters: 5 plus your Air. That’s the move on
 </div>
 
 <div class="gloss" markdown="1">
+<span class="gloss-term">Named</span>
+
+A player character, or an NPC the GM has given a name. Named characters go Dying below 0 Health Levels, recover, and carry scars. An unnamed NPC who reaches 0 is out of the fight and out of the story, dead or down at the GM’s call.
+</div>
+
+<div class="gloss" markdown="1">
 <span class="gloss-term">Nature</span>
 
 A short label for what drives your character, or how they meet the world - picked from a list or written yourself. Lean into it at the right dramatic moment and you earn a Fate Token.
@@ -353,13 +359,13 @@ The Normal bracket - the middle option. Two actions this round, usually a move a
 <div class="gloss" markdown="1">
 <span class="gloss-term">NPC</span>
 
-Anyone the GM plays instead of a player - short for non-player character. Most are built the same way as a player character, at whatever power level the GM chooses. A Gifted NPC has Ki; only a special NPC has Fate Tokens of their own.
+Anyone the GM plays instead of a player - short for non-player character. Most are built the same way as a player character, at whatever power level the GM chooses. A Gifted NPC has Ki the way a player character does, an ordinary one has 1, and only a special NPC has Fate Tokens of their own.
 </div>
 
 <div class="gloss" markdown="1">
 <span class="gloss-term">Overwhelmed</span>
 
-Where you land at 0 Sanity. You pick up a temporary bad mental trait and roll everything at Disadvantage, but you’re still yourself and still acting. It lifts once you’re away from whatever caused it and get to rest - or you spend 1 Ki, which also fills Sanity back up.
+Where you land at 0 Sanity. You pick up a temporary Mental scar effect and roll everything at Disadvantage, but you’re still yourself and still acting. It lifts once you’re away from whatever caused it and get to rest - or you spend 1 Ki, which also fills Sanity back up.
 </div>
 
 <div class="gloss" markdown="1">
@@ -413,7 +419,13 @@ Two ways to recover. A Short Rest is about an hour of real downtime, and you onl
 <div class="gloss" markdown="1">
 <span class="gloss-term">Sanity</span>
 
-Your grip on your own mind under a Mental attack, tracked as boxes like Health. You have 5 plus your Psyche. At 0 you’re Overwhelmed; below 0, Shattered. The row runs the same distance again below zero, and the far end of it saddles you with a temporary mental health condition and puts your Sanity back to 0.
+Your grip on your own mind under a Mental attack, tracked as boxes like Health. You have 5 plus your Psyche. At 0 you’re Overwhelmed; below 0, Shattered. The row runs the same distance again below zero, and the far end of it saddles you with a temporary Mental scar effect and puts your Sanity back to 0.
+</div>
+
+<div class="gloss" markdown="1">
+<span class="gloss-term">Scar</span>
+
+What going below 0 on a Vital leaves behind: one narrow, lasting effect - Physical from Health, Social from Poise, Mental from Sanity. One per crossing, the GM’s pick or agreed with the player. It’s permanent until healed, and a Social scar can’t be healed at all - a reputation has to be rebuilt.
 </div>
 
 <div class="gloss" markdown="1">
@@ -425,7 +437,7 @@ One unbroken stretch of the story in roughly one place - a fight, a conversation
 <div class="gloss" markdown="1">
 <span class="gloss-term">Shattered</span>
 
-Below 0 Sanity. You’re panicking and can’t act on your own - someone has to lead you clear. A point of Ki or a rest only brings Sanity back to 1, and going below 0 always leaves a permanent mark on the character.
+Below 0 Sanity. You’re panicking and can’t act on your own - someone has to lead you clear. A point of Ki or a rest only brings Sanity back to 1, and going below 0 always leaves a Mental scar.
 </div>
 
 <div class="gloss" markdown="1">
@@ -455,7 +467,7 @@ One of Earth’s two sub-stats, the hide the world’s hits don’t quite get th
 <div class="gloss" markdown="1">
 <span class="gloss-term">Stamina</span>
 
-One of Water’s two sub-stats, the reserve that keeps you going past the point most people stop. It caps how many Fate Tokens you can hold - three times your Stamina - and how many you can spend in a single Scene, and it’s what you lean on against exhaustion outside a fight. Sample descriptors: Tireless, Enduring, Dogged, Unflagging, Relentless, and so on.
+One of Water’s two sub-stats, the reserve that keeps you going past the point most people stop. It caps how many Fate Tokens you can hold - three times your Stamina, plus one - and how many counted spends you can make in a single Scene - your Stamina, plus one - and it’s what you lean on against exhaustion outside a fight. Sample descriptors: Tireless, Enduring, Dogged, Unflagging, Relentless, and so on.
 </div>
 
 <div class="gloss" markdown="1">
@@ -479,7 +491,7 @@ The number a core roll has to hit or come under: your Attribute plus the Difficu
 <div class="gloss" markdown="1">
 <span class="gloss-term">Time Bands</span>
 
-The standard ladder the rules use whenever something needs a duration: Round, Minute, Hour, Scene, Day, Month, Year, Decade, Century. A Round is about 6 seconds, so a Minute is exactly ten of them. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
+The standard ladder the rules use whenever something needs a duration: Round, Minute, Hour, Scene, Day, Week, Month, Year, Decade, Century. A Round is about 6 seconds, so a Minute is exactly ten of them. The Round is the base - if a rule doesn’t name a bigger band, it means Rounds.
 </div>
 
 <div class="gloss" markdown="1">

@@ -30,7 +30,7 @@ Party Budget    = 0.7 × party damage dice × party Health Levels ÷ min(10, 10 
 | 1.4 - 3.0 | Deadly | most of the party is on the floor |
 | over 3.0 | Overwhelming | all of them |
 
-**Bands count characters reduced to 0 Health Levels, not deaths.** Death requires deliberate further attacks on a downed character past `−(Health Levels)` - see [Going Down](rules.md#health-levels).
+**Bands count characters reduced to 0 Health Levels, not deaths.** Death requires deliberate further attacks on a downed character, down to `−(Health Levels)` - see [Going Down](rules.md#health-levels).
 
 A creature with **Soak 10** has no finite Threat against ordinary weapons: no damage die can connect. It is not a band, it is a wall.
 
