@@ -3,7 +3,7 @@
 Every 20 Below tool has a **Report a bug** button. It opens a short form (`app/bug-report.js`) and sends the report here. This Cloudflare Worker checks the report, numbers it, and posts it to the team's Discord forum channel.
 
 - **Each forum post is a ticket,** titled `#12 · Battle Tracker · Initiative doesn't sort`.
-- **Tags are the status:** New, Confirmed, Fixed, Won't fix. Change them by hand.
+- **Tags are the status:** New, Confirmed, Fixed, Won't fix, Duplicate. Change them by hand.
 - **The post's thread is where the team discusses it.**
 
 The Discord webhook address stays secret inside the Worker. The Worker also:
@@ -19,7 +19,7 @@ Reports never include a player's character file. The form lists exactly what els
 ## One-time setup (Feral)
 
 1. **Discord forum.** In the team server, create a **Forum** channel, for example `#bug-reports`.
-   - Add the tags **New**, **Confirmed**, **Fixed** and **Won't fix**.
+   - Add the tags **New**, **Confirmed**, **Fixed**, **Won't fix** and **Duplicate**.
    - Leave "Require tags" off. A new report arrives untagged, and untagged means new.
 2. **Webhook.** Open the forum's **Edit Channel → Integrations → Webhooks → New Webhook**, name it `20 Below Bug Reports`, and **Copy Webhook URL**.
    - Treat that URL like a password. Don't paste it into chat or into any file in this repo.
