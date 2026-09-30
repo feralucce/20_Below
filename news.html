@@ -1,0 +1,191 @@
+---
+title: "News"
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>20 Below - News</title>
+<meta name="description" content="Every 20 Below newsletter: playtest rounds, new releases, design notes and word when print is ready." />
+{% include brand-head.html %}
+<style>
+  /* Colour, type and the shared components live in
+     docs/assets/css/20below.css. What is left here is
+     this page's own. */
+  :root { --measure: 760px; }
+
+  body { min-height: 100vh; }
+  .eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-dim);
+    margin: 1.5rem 0 0.5rem;
+  }
+  .intro {
+    color: var(--text-dim);
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+  }
+  #news-signup { margin: 0 0 2.5rem; }
+  /* The signup sits at the top of this page, so the footer's copy is
+     not needed twice. */
+  .site-footer .site-signup { display: none; }
+  .news-status { color: var(--text-dim); line-height: 1.6; }
+
+  /* One newsletter issue. The body is the issue as written in Kit,
+     cleaned (see render below) and set in the site's own type. */
+  .issue {
+    border-top: 1px solid var(--panel-border);
+    padding: 2rem 0 1rem;
+    scroll-margin-top: 5.5rem;
+  }
+  .issue h2 { margin: 0 0 0.35rem; }
+  .issue h2 a { color: inherit; text-decoration: none; }
+  .issue h2 a:hover, .issue h2 a:focus-visible { color: var(--accent); }
+  .issue time {
+    display: block;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    margin-bottom: 1.2rem;
+  }
+  .issue .cover { width: 100%; height: auto; border-radius: var(--radius); margin: 0 0 1.2rem; display: block; }
+  .issue-body { line-height: 1.7; overflow-wrap: anywhere; }
+  .issue-body img { max-width: 100%; height: auto; border-radius: var(--radius); }
+  .issue-body h3, .issue-body h4 { margin: 1.6rem 0 0.5rem; }
+  .issue-body blockquote {
+    margin: 1rem 0;
+    padding: 0.2rem 1rem;
+    border-left: 3px solid var(--accent);
+    color: var(--text-dim);
+  }
+  .issue-body table { border-collapse: collapse; max-width: 100%; }
+  .issue-body td, .issue-body th { padding: 0.3rem 0.5rem; vertical-align: top; }
+  .issue-body hr { border: 0; border-top: 1px solid var(--panel-border); margin: 1.5rem 0; }
+</style>
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <p class="eyebrow">From the Team</p>
+  <h1>News</h1>
+
+  <p class="intro">
+    Every 20 Below newsletter, newest first: playtest rounds, new releases, design notes and word
+    when print is ready. Sign up to get the next one in your inbox.
+  </p>
+
+  <div id="news-signup"></div>
+
+  <div id="news"><p class="news-status">Loading the latest news&hellip;</p></div>
+</main>
+{% include site-footer.html %}
+<script src="/docs/assets/js/site-nav.js"></script>
+<script type="module">
+  import { addSignup } from "/app/signup.js";
+  addSignup(document.getElementById("news-signup"), { source: "news" });
+
+  // Issues come from the relay (tools/bug-relay/, GET /news), which asks
+  // Kit for the newsletters sent and marked public. A test page can point
+  // this at a local relay.
+  const NEWS_URL = window.__NEWS_URL__ || "https://20below-bugs.20below.workers.dev/news";
+  const box = document.getElementById("news");
+
+  // The issue HTML is rebuilt from an allowlist before it touches the
+  // page: known tags only, no styles, no scripts, links and images over
+  // https only, and Kit's 1x1 tracking images dropped. Layout wrappers
+  // (div, span, tables used for layout in email) keep their content.
+  const KEEP = new Set(["P", "BR", "H3", "H4", "STRONG", "B", "EM", "I", "U", "S", "A", "UL", "OL",
+    "LI", "BLOCKQUOTE", "IMG", "HR", "FIGURE", "FIGCAPTION", "CODE", "PRE"]);
+  const RENAME = { H1: "H3", H2: "H3", H5: "H4", H6: "H4" };
+  const DROP = new Set(["SCRIPT", "STYLE", "IFRAME", "OBJECT", "EMBED", "FORM", "INPUT", "BUTTON",
+    "SELECT", "TEXTAREA", "LINK", "META", "SVG", "MATH", "TEMPLATE", "NOSCRIPT", "HEAD", "TITLE"]);
+
+  function clean(node, into) {
+    for (const child of node.childNodes) {
+      if (child.nodeType === Node.TEXT_NODE) { into.append(child.textContent); continue; }
+      if (child.nodeType !== Node.ELEMENT_NODE) continue;
+      const tag = RENAME[child.tagName] || child.tagName;
+      if (DROP.has(tag)) continue;
+      if (!KEEP.has(tag)) { clean(child, into); continue; }
+      if (tag === "IMG") {
+        const src = child.getAttribute("src") || "";
+        const w = parseInt(child.getAttribute("width") || "0", 10);
+        const h = parseInt(child.getAttribute("height") || "0", 10);
+        if (!/^https:\/\//i.test(src) || (w && w <= 2) || (h && h <= 2)) continue;
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = child.getAttribute("alt") || "";
+        img.loading = "lazy";
+        into.append(img);
+        continue;
+      }
+      if (tag === "A" && !/^(https:|mailto:)/i.test(child.getAttribute("href") || "")) {
+        clean(child, into); // a link that goes nowhere safe is just its text
+        continue;
+      }
+      const el = document.createElement(tag);
+      if (tag === "A") {
+        el.href = child.getAttribute("href");
+        el.rel = "noopener";
+      }
+      clean(child, el);
+      into.append(el);
+    }
+  }
+
+  function render(issues) {
+    if (!issues.length) {
+      box.innerHTML = '<p class="news-status">No issues yet. Sign up above and the first one comes straight to you.</p>';
+      return;
+    }
+    box.textContent = "";
+    for (const issue of issues) {
+      const art = document.createElement("article");
+      art.className = "issue";
+      art.id = "issue-" + issue.id;
+
+      const h2 = document.createElement("h2");
+      const link = document.createElement("a");
+      link.href = "#" + art.id;
+      link.textContent = issue.subject;
+      h2.append(link);
+
+      const time = document.createElement("time");
+      time.dateTime = issue.published_at;
+      time.textContent = new Date(issue.published_at).toLocaleDateString("en-US",
+        { year: "numeric", month: "long", day: "numeric" });
+
+      art.append(h2, time);
+      if (issue.image) {
+        const img = document.createElement("img");
+        img.className = "cover";
+        img.src = issue.image;
+        img.alt = issue.image_alt || "";
+        img.loading = "lazy";
+        art.append(img);
+      }
+      const body = document.createElement("div");
+      body.className = "issue-body";
+      const doc = new DOMParser().parseFromString(issue.html || "", "text/html");
+      clean(doc.body, body);
+      art.append(body);
+      box.append(art);
+    }
+    // Arriving at /news.html#issue-123 lands on that issue once it exists.
+    if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+  }
+
+  fetch(NEWS_URL)
+    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then((data) => render(data.issues || []))
+    .catch(() => {
+      box.innerHTML = '<p class="news-status">The news couldn&rsquo;t load just now. Please try again in a few minutes.</p>';
+    });
+</script>
+</body>
+</html>

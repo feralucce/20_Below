@@ -20,6 +20,10 @@
 //                            has it yet. Nothing else.
 //   KIT_API_KEY      secret  Kit (kit.com) v4 API key
 //   KIT_FORM_ID      var     the Kit form new signups join (double opt-in)
+//
+// GET /news lists the newsletter issues Kit has sent and marked public,
+// for the site's News page (news.html). It is cached in TICKETS for a few
+// minutes, so the site never waits on Kit and the key never leaves here.
 
 export const LIMITS = {
   summary: 100,       // becomes the post title
@@ -49,6 +53,10 @@ export default {
       return new Response(null, { status: cors ? 204 : 403, headers: cors || {} });
     }
     const url = new URL(request.url);
+    if (request.method === 'GET' && url.pathname === '/news') {
+      if (!cors) return json({ error: 'Not found.' }, 404, null);
+      return news(env, cors);
+    }
     if (request.method !== 'POST' || !['/report', '/subscribe'].includes(url.pathname)) {
       return json({ error: 'Not found.' }, 404, cors);
     }
@@ -172,12 +180,70 @@ export async function toKit(email, source, env) {
   }
 }
 
+// The public issues, newest first. Only what the page shows goes out:
+// no subscriber data, and no email address or template details. The
+// issue HTML is cleaned again in the browser (news.html) before display.
+export const NEWS_CACHE_SECONDS = 600;
+
+async function news(env, cors) {
+  const cached = await env.TICKETS.get('news:cache');
+  if (cached) return new Response(cached, { status: 200, headers: { 'Content-Type': 'application/json', ...cors } });
+  if (!env.KIT_API_KEY) return json({ issues: [] }, 200, cors);
+  let issues;
+  try {
+    issues = await publicIssues(env);
+  } catch {
+    return json({ error: 'News is unavailable right now.' }, 502, cors);
+  }
+  const body = JSON.stringify({ issues });
+  await env.TICKETS.put('news:cache', body, { expirationTtl: NEWS_CACHE_SECONDS });
+  return new Response(body, { status: 200, headers: { 'Content-Type': 'application/json', ...cors } });
+}
+
+export async function publicIssues(env) {
+  const out = [];
+  let after = '';
+  for (let page = 0; page < 10; page++) {
+    const q = new URLSearchParams({ status: 'completed', per_page: '100' });
+    if (after) q.set('after', after);
+    const r = await fetch('https://api.kit.com/v4/broadcasts?' + q, {
+      headers: { 'X-Kit-Api-Key': String(env.KIT_API_KEY).trim() },
+    });
+    if (!r.ok) throw new Error('Kit ' + r.status);
+    const data = await r.json();
+    for (const b of data.broadcasts || []) {
+      if (b.public !== true || !b.published_at) continue;
+      out.push({
+        id: String(b.id),
+        subject: text(b.subject || '', 200),
+        preview: text(b.preview_text || b.description || '', 400),
+        published_at: b.published_at,
+        image: /^https:\/\//.test(b.thumbnail_url || '') ? b.thumbnail_url : '',
+        image_alt: text(b.thumbnail_alt || '', 200),
+        html: noLiquid(b.content),
+      });
+    }
+    const pg = data.pagination || {};
+    if (!pg.has_next_page || !pg.end_cursor) break;
+    after = pg.end_cursor;
+  }
+  return out.sort((a, b) => String(b.published_at).localeCompare(String(a.published_at)));
+}
+
+// Kit's personalisation tags make no sense on a public page: a
+// conditional block goes whole, any other tag is dropped.
+export function noLiquid(html) {
+  return String(html || '')
+    .replace(/\{%-?\s*(if|unless|case|for)\b[\s\S]*?\{%-?\s*end\1\s*-?%\}/g, '')
+    .replace(/\{\{[\s\S]*?\}\}|\{%[\s\S]*?%\}/g, '');
+}
+
 export function corsHeaders(origin, env) {
   const allowed = String(env.ALLOWED_ORIGINS || '').split(',').map((s) => s.trim()).filter(Boolean);
   if (!origin || !allowed.includes(origin)) return null;
   return {
     'Access-Control-Allow-Origin': origin,
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Max-Age': '86400',
     Vary: 'Origin',

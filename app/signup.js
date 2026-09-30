@@ -1,8 +1,8 @@
 // Email signup: one small form, shared by every page that wants one.
 //
 // Addresses go to the bug relay's /subscribe (tools/bug-relay/), which
-// keeps them privately until the team picks a newsletter service; then
-// tools/bug-relay/export-subscribers.mjs turns them into a CSV to import.
+// keeps a private copy and hands them to Kit; Kit emails a confirmation
+// link, and sent newsletters also appear on news.html.
 //
 //   import { addSignup } from '/app/signup.js';
 //   addSignup(document.getElementById('signup'), { source: 'footer' });

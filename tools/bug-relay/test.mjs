@@ -1,7 +1,7 @@
 // Tests for the bug relay, with a fake KV store and a fake Discord.
 //   node tools/bug-relay/test.mjs
 import assert from 'node:assert/strict';
-import worker, { clean, plain, discordPost, webhookFrom, defang, LIMITS } from './worker.js';
+import worker, { clean, plain, discordPost, webhookFrom, defang, LIMITS, publicIssues } from './worker.js';
 
 function fakeKV() {
   const m = new Map();
@@ -15,8 +15,12 @@ function fakeKV() {
 }
 
 const sent = [];
-globalThis.fetch = async (url, init) => {
-  sent.push({ url, body: JSON.parse(init.body) });
+let kitBroadcasts = { broadcasts: [], pagination: { has_next_page: false } };
+globalThis.fetch = async (url, init = {}) => {
+  sent.push({ url, body: init.body ? JSON.parse(init.body) : null });
+  if (String(url).startsWith('https://api.kit.com/v4/broadcasts')) {
+    return new Response(JSON.stringify(kitBroadcasts), { status: 200 });
+  }
   return new Response('{}', { status: 200 });
 };
 
@@ -29,6 +33,7 @@ const env = () => ({
 });
 
 function req(body, { origin = 'https://20belowrpg.com', ip = '1.2.3.4', method = 'POST', path = '/report' } = {}) {
+  if (method === 'GET') return new Request('https://relay.example' + path, { method, headers: { Origin: origin } });
   return new Request('https://relay.example' + path, {
     method,
     headers: { 'Content-Type': 'application/json', Origin: origin, 'CF-Connecting-IP': ip },
@@ -197,6 +202,31 @@ await t('without Kit set up, a signup is only kept', async () => {
   assert.equal((await worker.fetch(req({ email: 'solo@example.com' }, { path: '/subscribe' }), e)).status, 200);
   assert.equal(sent.length, before);
   assert.ok(!e.SUBSCRIBERS.meta.get('solo@example.com').kit);
+});
+
+await t('the news lists only public, sent issues, newest first, without Kit tags', async () => {
+  kitBroadcasts = { pagination: { has_next_page: false }, broadcasts: [
+    { id: 1, subject: 'Old news', public: true, published_at: '2026-10-01T10:00:00Z', content: '<p>One</p>', thumbnail_url: 'https://x.example/a.png' },
+    { id: 2, subject: 'Private note', public: false, published_at: null, content: '<p>Two</p>' },
+    { id: 3, subject: 'New news', public: true, published_at: '2026-11-01T10:00:00Z', content: '<p>Hi {{ subscriber.first_name }}!</p>{% if x %}y{% endif %}', thumbnail_url: 'javascript:alert(1)', email_address: 'a@b.c' },
+  ] };
+  const issues = await publicIssues({ KIT_API_KEY: 'k' });
+  assert.deepEqual(issues.map((i) => i.subject), ['New news', 'Old news']);
+  assert.equal(issues[0].html, '<p>Hi !</p>');
+  assert.equal(issues[0].image, '');
+  assert.equal(issues[1].image, 'https://x.example/a.png');
+  assert.ok(!('email_address' in issues[0]));
+});
+
+await t('the news is cached, and only this site may read it', async () => {
+  const e = { ...env(), KIT_API_KEY: 'k' };
+  const before = sent.length;
+  const r1 = await worker.fetch(req(null, { method: 'GET', path: '/news' }), e);
+  assert.equal(r1.status, 200);
+  assert.equal((await r1.json()).issues.length, 2);
+  await worker.fetch(req(null, { method: 'GET', path: '/news' }), e);
+  assert.equal(sent.length, before + 1);
+  assert.equal((await worker.fetch(req(null, { method: 'GET', path: '/news', origin: 'https://evil.example' }), e)).status, 404);
 });
 
 await t('the webhook is found inside a messy secret', async () => {
