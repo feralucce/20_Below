@@ -353,6 +353,8 @@
 /* The email signup (app/signup.js) sits above the license line; on the
    home page it has its own slot above that page's footer. */
 .site-footer .site-signup { margin: 0 0 1.4rem; }
+/* Where to find the team: the community links, one line above the license line. */
+.site-footer .site-social { margin: 0 0 0.6rem; }
 .home-signup { margin: 2.5rem 0 0; }
 .site-footer a { color: var(--text-dim, #8fadbe); }
 .site-footer a:hover, .site-footer a:focus-visible { color: var(--accent, #3d84c4); }

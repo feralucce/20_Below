@@ -1,0 +1,111 @@
+---
+title: "Contact"
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>20 Below - Contact</title>
+<meta name="description" content="Talk to the 20 Below team: join the Discord, follow the game on Facebook, email us, or report a bug from any 20 Below tool." />
+{% include brand-head.html %}
+<style>
+  /* Colour, type and the shared components live in
+     docs/assets/css/20below.css. What is left here is
+     this page's own. */
+  :root { --measure: 780px; }
+
+  body { min-height: 100vh; }
+  .eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-dim);
+    margin: 1.5rem 0 0.5rem;
+  }
+  .intro {
+    color: var(--text-dim);
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+  .ways {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .way {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .way h2 { font-size: 1.15rem; margin: 0 0 0.4rem; }
+  .way p { color: var(--text-dim); line-height: 1.55; margin: 0 0 1rem; flex: 1; }
+  .way .go {
+    align-self: flex-start;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .way .go:hover, .way .go:focus-visible { background: var(--accent-dim); }
+  .note {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding-top: 1rem;
+    border-top: 1px solid var(--panel-border);
+  }
+</style>
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <p class="eyebrow">Talk to Us</p>
+  <h1>Contact</h1>
+
+  <p class="intro">
+    Questions about the rules, ideas for the game, a bug in one of the tools or a story you want
+    to cover: here is where to find the 20 Below team.
+  </p>
+
+  <div class="ways">
+    <section class="way">
+      <h2>Discord</h2>
+      <p>The community server. Ask rules questions, find a game, follow playtests and hear about releases first.</p>
+      <a class="go" href="https://discord.gg/qEpjjYKSXD" rel="noopener">Join the server</a>
+    </section>
+    <section class="way">
+      <h2>Facebook</h2>
+      <p>News, design notes and release announcements.</p>
+      <a class="go" href="https://www.facebook.com/20belowrpg" rel="noopener">Follow 20 Below</a>
+    </section>
+    <section class="way">
+      <h2>Email</h2>
+      <p>Press, licensing, partnerships and anything that isn't a quick question.</p>
+      <a class="go" href="mailto:20belowrpg@gmail.com">20belowrpg@gmail.com</a>
+    </section>
+    <section class="way">
+      <h2>Found a bug?</h2>
+      <p>Every 20 Below tool has a Report a bug button, and so does the bottom of this page. Reports go straight to the team.</p>
+      <a class="go" href="#site-bug-report">Report a bug</a>
+    </section>
+  </div>
+
+  <p class="note">
+    Want news in your inbox? Sign up at the bottom of any page. Publishing something for 20 Below?
+    See the <a href="/license.html">ORC License</a>; you don't need to ask first.
+  </p>
+</main>
+{% include site-footer.html %}
+<script src="/docs/assets/js/site-nav.js"></script>
+</body>
+</html>

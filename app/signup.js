@@ -78,8 +78,8 @@ export function addSignup(container, {
   fine.className = 'fine';
   fine.append('To be taken off the list at any time, email ');
   const mail = document.createElement('a');
-  mail.href = 'mailto:feralucce@gmail.com?subject=20%20Below%20news%3A%20remove%20me';
-  mail.textContent = 'feralucce@gmail.com';
+  mail.href = 'mailto:20belowrpg@gmail.com?subject=20%20Below%20news%3A%20remove%20me';
+  mail.textContent = '20belowrpg@gmail.com';
   fine.append(mail, '.');
 
   form.addEventListener('submit', async (e) => {
