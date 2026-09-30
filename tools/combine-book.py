@@ -17,8 +17,13 @@ so they can't simply be concatenated. What this does with them:
     \\page chapter. The flag means nothing to the renderer; it is there so the
     break carries an option, which is what makes Remove breaks keep it and
     Add page breaks treat it as a fixed point.
-  - A chapter's own \\cols becomes cols= on every one of its breaks. The
-    packer copies cols onto the sheets it spills, so that holds on re-packing.
+  - A chapter's own \\cols becomes cols= on its opening break only. The packer
+    copies cols onto every sheet it spills, so that holds on re-packing - and
+    the chapter's other breaks stay bare, so Remove breaks takes them out. A
+    break carrying an option is one it keeps, and the old hand-set pages
+    would survive every re-pack as the short pages this book keeps showing.
+    The exception is Gifts (TWO_COLUMNS below): its \\cols 1 is ignored here,
+    so it sets in two columns like the rest of the book.
   - A file with no \\ground of its own (the front matter) gets bg=none on the
     breaks that don't choose a ground, so the chapters' ground doesn't spread
     onto pages that were plain.
@@ -49,6 +54,13 @@ OUT = os.path.join(PDF_DIR, "20 Below Player's Guide.md")
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 COVER = os.path.join(ROOT, "Branding", "20Below-cover-print.png")
 FINAL = os.path.join(PDF_DIR, "20 Below Player's Guide - Playtest.pdf")
+
+# Chapters whose own \cols line is ignored, so they set in the book's default two
+# columns. Gifts is written for one, but in the combined book one column costs 13
+# more sheets, twice the half-empty pages, three more clipped pages, and lines of
+# 100 characters (tested 2026-09-30, Digital output). The chapter file is left as
+# it is; this only changes the combined copy.
+TWO_COLUMNS = {"08-gifts.md"}
 
 DIRECTIVE = re.compile(r"^\\(folio|seed|ground|cols)\b[ \t]*(.*)$")
 PAGE = re.compile(r"^\\page\b[ \t]*(.*)$")
@@ -108,7 +120,7 @@ def build():
             folio_start = settings.get("folio", "start=i")
         front = name.startswith("00")
         chapter_one = name.startswith("01-")
-        cols = settings.get("cols")
+        cols = None if name in TWO_COLUMNS else settings.get("cols")
         plain = "ground" not in settings
 
         # The page each part opens on.
@@ -120,7 +132,7 @@ def build():
                 opener = PAGE.match(body.pop(0)).group(1)
             else:
                 opener = ""
-            add = ["chapter"] + (["folio=1"] if chapter_one else [])
+            add = ["chapter"] + (["cols=%s" % cols] if cols else []) + (["folio=1"] if chapter_one else [])
             body.insert(0, "\\page " + with_options(opener, add))
 
         fence = None
@@ -132,8 +144,6 @@ def build():
             if not m:
                 continue
             add = []
-            if cols:
-                add.append("cols=%s" % cols)
             if plain and "bg=" not in m.group(1):
                 add.append("bg=none")
             if add:
@@ -185,8 +195,8 @@ def chapter_pages(reader, titles):
     at = next((k + 1 for k, t in enumerate(texts) if t.startswith("contents")), 0)
     found = {}
     for title in titles:
-        key = squash(re.sub(r"^Chapter \d+:\s*", "", title))
-        hit = next((k for k in range(at, len(texts)) if key and key in texts[k][:len(key) + 120]), None)
+        key = squash(title)
+        hit = next((k for k in range(at, len(texts)) if key and texts[k].startswith(key)), None)
         if hit is not None:
             found[title] = hit
             at = hit + 1
