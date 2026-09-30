@@ -98,6 +98,10 @@ export default {
             rerenderPools();
             picker.render();
           },
+          // Click the name for what the Skill covers - the same twirl as
+          // the Skills on the Discretionary and Advancement pages.
+          key: `skill:${s.name}`,
+          detail: el('p', { class: 'detail', style: 'color:var(--text-dim);font-size:0.85rem;margin:0 0 0.75rem;' }, s.definition),
         }),
       );
       if (s.defaultElement) {
