@@ -3889,9 +3889,21 @@ The distance between spaces doesn’t matter to you. You simply stop being at po
 
 <div class="gift-flavour" markdown="1">
 
-Just outside ordinary space - there is a place that belongs to you and you alone. It starts as a tiny pocket that you can stow a couple things into. Eventually it grows to be a private refuge that is shaped and outfitted how you choose.
+Just outside ordinary space is a place that belongs to you and you alone: a space you have carved into the Fray. It starts as a pocket you can stow a couple of things in. Eventually it's a private refuge, shaped and furnished however you choose, and at its height a way home from anywhere.
 
 </div>
+
+**How it works.**
+
+- **It's an actual place.** It's carved out of the Fray and sealed: nothing from the Fray gets in, and nothing inside wanders out, though an anomaly may be able to breach it. Inside, everything works normally. There's air, light is whatever you furnish it with (the fold and the closet are dark), time passes as it does outside, and every rule works the way it does anywhere.
+- **It's reached from ordinary space only.** No fold or door opens from inside a Threadspace, yours or anyone's.
+- **The fold** (Levels 1-2) opens anywhere within arm's reach - beside you, behind your back, under the table - and nobody sees it unless they're watching your hands.
+- **The door** (Level 3+) is a person-sized opening standing in the air within arm's reach, and anyone who sees it knows it's unnatural. Only you can open it. While it stands open, anyone can step through, and everything crosses - sight, sound, bullets, Gifts. It's a doorway. **Every time you open it, make a Gift Check:** success costs nothing, failure costs 1 Ki, and the door opens either way.
+- **You come out where you went in.** From inside, the way out is the door or fold you came in by. A door you open later, from outside, opens where you are then.
+- **Your time inside is limited,** by Level. When it's up, the Threadspace puts you out where you came in, along with everyone with you.
+- **When you can't hold it.** If you're knocked unconscious, the door stays shut, and anyone inside waits for you to wake or for their time to run out. At your death the space comes apart, puts everyone and everything inside out where you are, and is gone.
+
+**A prepared door** is a real door, frame or arch at a place you know intimately: somewhere you've spent a Month of your life, or less if the GM agrees it matters enough. Preparing it takes a full Day of dedicated work there and 3 Ki. You can have one at a time, and preparing another unmakes the first. It stays prepared until it's destroyed, and then the way home is gone.
 
 <p class="gift-section">Adders</p>
 
@@ -3905,7 +3917,7 @@ Just outside ordinary space - there is a place that belongs to you and you alone
 - **Emergency Door** (Greater, 6 pts): requires Level 3. Once per Scene, as a Fast action, open your door behind a willing ally within Close and pull them inside, out of harm until you let them out. Triggers a Gift Check. Requires Level 3.
 - **Oubliette** (Greater, 6 pts): requires Level 3. Spend 2 Ki to shove a Grabbed foe through your door into a bare antechamber and shut it. They stay there until you open the door again or the Scene ends, and come out wherever the door next opens. Requires Level 3.
 - **Home Ground** (Lesser, 3 pts): anyone inside your Threadspace without your invitation is Distracted for as long as they stay, and you always know where they are inside it.
-- **Stillwater Room** (Greater, 6 pts): requires Level 3. Nothing stored in your Threadspace spoils, rusts or ages, and a Scene of rest inside counts as a full night's rest for recovering Ki and Stamina. Requires Level 3.
+- **Stillwater Room** (Greater, 6 pts): requires Level 3. Nothing stored in your Threadspace spoils, rusts or ages, and once per Day a Scene of rest inside counts as a Full Night's Rest. Requires Level 3.
 
 </div>
 
@@ -3923,37 +3935,37 @@ Just outside ordinary space - there is a place that belongs to you and you alone
 <div class="gift-opt gift-opt--limiter" markdown="1">
 
 - **Guided Guests**: guests (Level 4+) can never navigate the Threadspace unassisted. They must be led by you at all times or risk getting lost.
-- **Fragile Weave**: if the Threadspace is ever breached by an outside supernatural force (GM's call, rare), everything currently stored inside is at risk of being lost or expelled.
+- **Fragile Weave**: if the Threadspace is ever breached by an anomaly (GM's call, rare), everything currently stored inside is at risk of being lost or expelled.
 
 </div>
 
 <div class="gift-level gift-level--1" markdown="1">
 
-<span class="gift-n">1</span>- Stash or retrieve a handful of small objects (anything that fits in two hands) in a hidden fold in space only you can reach. Doing so is a Fast action. No Ki, no Gift Check.
+<span class="gift-n">1</span>- Stash or retrieve a handful of small objects (anything that fits in two hands) through the fold. A Fast action. No Ki, no Gift Check.
 
 </div>
 
 <div class="gift-level gift-level--2" markdown="1">
 
-<span class="gift-n">2</span>- The fold grows to a closet's worth of space. You can store considerably more, and duck inside yourself briefly as a hiding spot.
+<span class="gift-n">2</span>- The fold grows to a closet's worth of space. You can store considerably more, and duck inside yourself to hide for up to **5 Minutes**.
 
 </div>
 
 <div class="gift-level gift-level--3" markdown="1">
 
-<span class="gift-n">3</span>- The fold becomes a genuine room behind its own door, big enough to live in and furnish however you like. Opening the door for the first time triggers a [Gift Check](#resolution): success costs nothing, failure costs 1 Ki, either way the door opens.
+<span class="gift-n">3</span>- The fold becomes a genuine room behind its own door, big enough to live in and furnish however you like. Up to **an Hour** inside.
 
 </div>
 
 <div class="gift-level gift-level--4" markdown="1">
 
-<span class="gift-n">4</span>- The room expands into a full dwelling of your own design, as many rooms as you want, furnished and stocked however you like. You can bring others through the door with you as guests.
+<span class="gift-n">4</span>- The room expands into a full dwelling of your own design, as many rooms as you want, furnished and stocked however you like, and you can bring others through the door as guests. Up to **a Day** inside.
 
 </div>
 
 <div class="gift-level gift-level--5" markdown="1">
 
-<span class="gift-n">5</span>- You can maintain up to two doors into the same Threadspace at once, opened wherever you choose. Stepping through one and out the other links those two real points together for as long as both doors stay open. Ki cost for opening a new door (Level 3) drops to **0**.
+<span class="gift-n">5</span>- You can hold two doors into the same Threadspace open at once, linking those two real points for as long as both stay open: in through one, out the other. Within one Scene the second door opens where you are, like any door. Beyond that, at any distance, it can only open on your **prepared door**. Up to **a Week** inside, and opening a door no longer needs a Gift Check.
 
 </div>
 
