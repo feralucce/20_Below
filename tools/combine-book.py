@@ -31,6 +31,12 @@ after changing a chapter, and don't edit it.
     python tools/combine-book.py                  build the combined document
     python tools/combine-book.py pdf EXPORT.pdf   add the cover and chapter
                                                   bookmarks to the Brewery's export
+    python tools/combine-book.py contents EXPORT.pdf
+                                                  write each chapter's printed page
+                                                  number into the contents page, then
+                                                  rebuild. Numbers don't change the
+                                                  layout, but the export is stale until
+                                                  you export it again.
 """
 import glob
 import io
@@ -170,6 +176,61 @@ def build():
     return titles
 
 
+def chapter_pages(reader, titles):
+    """Where each chapter opens in an export: {title: page index}. A chapter page
+    is one whose text begins with the chapter's title; the search starts after the
+    contents page, which names every chapter and would otherwise match first."""
+    squash = lambda s: re.sub(r"\W+", "", (s or "").lower())
+    texts = [squash(p.extract_text()) for p in reader.pages]
+    at = next((k + 1 for k, t in enumerate(texts) if t.startswith("contents")), 0)
+    found = {}
+    for title in titles:
+        key = squash(re.sub(r"^Chapter \d+:\s*", "", title))
+        hit = next((k for k in range(at, len(texts)) if key and key in texts[k][:len(key) + 120]), None)
+        if hit is not None:
+            found[title] = hit
+            at = hit + 1
+    return found
+
+
+def write_contents(folios):
+    """Put printed page numbers into the contents table in the front matter.
+    `folios` maps a chapter's number (1-13) to its page."""
+    path = os.path.join(PDF_DIR, "00.1-front-matter.md")
+    raw = io.open(path, encoding="utf-8", newline="").read()
+    crlf = "\r\n" in raw
+    s = raw.replace("\r\n", "\n")
+    changed = 0
+    for n, page in folios.items():
+        s, k = re.subn(r"(?m)^\| %d \| ([^|\n]+) \| [^|\n]* \|$" % n,
+                       lambda m: "| %d | %s | %s |" % (n, m.group(1), page), s)
+        changed += k
+    if changed != len(folios):
+        sys.exit("expected %d contents rows, matched %d - is the table the 13-chapter list?" % (len(folios), changed))
+    io.open(path, "w", encoding="utf-8", newline="").write(s.replace("\n", "\r\n") if crlf else s)
+    return changed
+
+
+def contents(export):
+    from pypdf import PdfReader
+
+    chapters = [t for n, t in build() if not n.startswith("00")]
+    reader = PdfReader(export)
+    found = chapter_pages(reader, chapters)
+    first = found.get(chapters[0])
+    if first is None:
+        sys.exit("couldn't find Chapter 1 in the export, so there's nothing to count from")
+    missing = [t for t in chapters if t not in found]
+    if missing:
+        sys.exit("no page found for: " + ", ".join(missing))
+    folios = {i + 1: found[t] - first + 1 for i, t in enumerate(chapters)}
+    write_contents(folios)
+    build()
+    for i, t in enumerate(chapters):
+        print("  %2d  %-28s %s" % (i + 1, re.sub(r"^Chapter \d+:\s*", "", t), folios[i + 1]))
+    print("contents written. Export again to put them on the page.")
+
+
 def finish(export):
     """Cover first, then the Brewery's export, with a bookmark per chapter.
     A chapter's page is the first one, after the last chapter's, whose text
@@ -194,18 +255,11 @@ def finish(export):
     for p in reader.pages:
         writer.add_page(p)
 
-    squash = lambda s: re.sub(r"\W+", "", (s or "").lower())
-    texts = [squash(p.extract_text()) for p in reader.pages]
-    at = 0
-    missing = []
+    found = chapter_pages(reader, titles)
+    missing = [t for t in titles if t not in found]
     for title in titles:
-        key = squash(re.sub(r"^Chapter \d+:\s*", "", title))
-        hit = next((k for k in range(at, len(texts)) if key and key in texts[k]), None)
-        if hit is None:
-            missing.append(title)
-            continue
-        writer.add_outline_item(re.sub(r"^Chapter \d+:\s*", "", title), hit + offset)
-        at = hit + 1
+        if title in found:
+            writer.add_outline_item(re.sub(r"^Chapter \d+:\s*", "", title), found[title] + offset)
     with open(FINAL, "wb") as fh:
         writer.write(fh)
     print("wrote %s - %d pages" % (FINAL, len(writer.pages)))
@@ -216,5 +270,7 @@ def finish(export):
 if __name__ == "__main__":
     if len(sys.argv) > 2 and sys.argv[1] == "pdf":
         finish(sys.argv[2])
+    elif len(sys.argv) > 2 and sys.argv[1] == "contents":
+        contents(sys.argv[2])
     else:
         build()
