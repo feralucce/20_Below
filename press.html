@@ -1,0 +1,316 @@
+---
+title: "Press Kit"
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Unlisted: linked from press pitches (Branding/press-course), not
+     from the site's menus, and kept out of search results. -->
+<meta name="robots" content="noindex" />
+<title>20 Below - Press Kit</title>
+<meta name="description" content="Everything a writer, reviewer or streamer needs to cover 20 Below: descriptions, a fact sheet, logos, art and screenshots." />
+{% include brand-head.html %}
+<style>
+  /* Colour, type and the shared components live in
+     docs/assets/css/20below.css. What is left here is
+     this page's own. */
+  :root { --measure: 860px; }
+
+  body { min-height: 100vh; }
+  .eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-dim);
+    margin: 1.5rem 0 0.5rem;
+  }
+  .intro {
+    color: var(--text-dim);
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+  main section { margin: 0 0 2.75rem; }
+  main h2 { margin: 0 0 0.9rem; }
+
+  /* Copy-ready text: a panel with its own Copy button. */
+  .copy-block {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1rem 1.2rem 1.1rem;
+    margin: 0 0 1rem;
+  }
+  .copy-block header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .copy-block h3 {
+    margin: 0;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+  }
+  .copy-block p { line-height: 1.65; margin: 0 0 0.7rem; }
+  .copy-block p:last-child { margin-bottom: 0; }
+  .copy-btn, .go {
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: transparent;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 0.25rem 0.85rem;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .copy-btn:hover, .copy-btn:focus-visible, .go:hover, .go:focus-visible { background: var(--accent-dim); }
+
+  /* Fact sheet */
+  .facts { width: 100%; border-collapse: collapse; }
+  .facts th, .facts td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.55rem 0.75rem 0.55rem 0;
+    border-bottom: 1px solid var(--panel-border);
+    line-height: 1.5;
+  }
+  .facts th { width: 11rem; color: var(--text-dim); font-weight: 600; }
+  @media (max-width: 560px) {
+    .facts th, .facts td { display: block; width: auto; padding-right: 0; }
+    .facts th { border-bottom: 0; padding-bottom: 0; }
+  }
+
+  .free-list { padding-left: 1.2rem; line-height: 1.6; }
+  .free-list li { margin-bottom: 0.35rem; }
+
+  /* Downloads */
+  .assets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+    gap: 1rem;
+  }
+  .asset {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .asset .thumb {
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a1720;
+  }
+  .asset .thumb.light { background: #eef4f8; }
+  .asset .thumb img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+  .asset .thumb.mark img { max-height: 70%; }
+  .asset .body { padding: 0.75rem 0.9rem 0.9rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
+  .asset .body p { margin: 0; line-height: 1.45; flex: 1; }
+  .asset .body small { color: var(--text-dim); }
+  .asset .links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+  .team { width: 100%; border-collapse: collapse; }
+  .team td { padding: 0.4rem 0.75rem 0.4rem 0; border-bottom: 1px solid var(--panel-border); vertical-align: top; }
+  .team td:first-child { color: var(--text-dim); width: 11rem; }
+
+  .contact {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.2rem 1.2rem;
+    line-height: 1.6;
+  }
+  .contact p { margin: 0 0 0.8rem; }
+</style>
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <p class="eyebrow">For Press &amp; Creators</p>
+  <h1>Press Kit</h1>
+
+  <p class="intro">
+    An independent tabletop RPG with free rules, a free setting and free tools to play it. Everything
+    here is yours to use in coverage: copy the text, download the images, and write to us if you
+    need anything else.
+  </p>
+
+  <section aria-labelledby="about">
+    <h2 id="about">About 20 Below</h2>
+
+    <div class="copy-block">
+      <header><h3>One line</h3><button class="copy-btn" type="button">Copy</button></header>
+      <p>20 Below is a fated-heroes tabletop roleplaying game that you can play in any world you bring to it. The rules, the first setting and every digital tool are free.</p>
+    </div>
+
+    <div class="copy-block">
+      <header><h3>Short description</h3><button class="copy-btn" type="button">Copy</button></header>
+      <p>20 Below is a fated-heroes tabletop RPG: a 2d10 roll-under core, five elemental Attributes, and supernatural Gifts layered over whatever world you bring to it. The core rules are free forever under the ORC License, and so is its first full setting, Backwater Static, a supernatural New Orleans built on secrecy and static.</p>
+    </div>
+
+    <div class="copy-block">
+      <header><h3>Long description</h3><button class="copy-btn" type="button">Copy</button></header>
+      <p>20 Below is a setting-agnostic tabletop roleplaying game about fated heroes. Its core is a 2d10 roll-under system built on five elemental Attributes, with supernatural Gifts that let each character bend the world in their own way. It&rsquo;s designed so first-time players and longtime veterans can sit at the same table.</p>
+      <p>The core rules are free and stay free, released under the ORC License. No paywall, no rug pull.</p>
+      <p>Backwater Static, the first full setting, shows what the system can carry: a New Orleans built on secrecy and static, where something under the city has been awake for a while. It&rsquo;s free too.</p>
+      <p>Alongside the rules, the team builds the tools to play them: a Character Creator for web, phone and desktop, a Battle Tracker, extensions for the Owlbear Rodeo virtual tabletop, an Encounter Difficulty Calculator, and the Brewery, a layout tool for homebrew. All free.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="facts">
+    <h2 id="facts">Fact Sheet</h2>
+    <table class="facts">
+      <tr><th scope="row">Name</th><td>20 Below</td></tr>
+      <tr><th scope="row">Type</th><td>Tabletop roleplaying game, setting-agnostic</td></tr>
+      <tr><th scope="row">Core mechanic</th><td>2d10 roll-under; five elemental Attributes; supernatural Gifts</td></tr>
+      <tr><th scope="row">License</th><td><a href="/license.html">ORC License</a> (open, irrevocable)</td></tr>
+      <tr><th scope="row">Price</th><td>The rules, setting, PDFs and tools are all free. Print editions are planned.</td></tr>
+      <tr><th scope="row">First setting</th><td>Backwater Static: Undertow in the Big Uneasy (a supernatural New Orleans)</td></tr>
+      <tr><th scope="row">Status</th><td>In active playtest</td></tr>
+      <tr><th scope="row">In development since</th><td>March 2021</td></tr>
+    </table>
+  </section>
+
+  <section aria-labelledby="free">
+    <h2 id="free">What&rsquo;s Free Today</h2>
+    <ul class="free-list">
+      <li><strong>The core rules:</strong> complete, on the website.</li>
+      <li><strong>Backwater Static:</strong> the full setting.</li>
+      <li><strong>The Quick Reference Guide:</strong> every player reference sheet in one printable PDF.</li>
+      <li><strong>Character Creator:</strong> runs in the browser, installs to a phone, and has a Windows app.</li>
+      <li><strong>Battle Tracker:</strong> runs in the browser, with a Windows app.</li>
+      <li><strong>Owlbear Rodeo extensions:</strong> a player character sheet and a GM battle panel for the virtual tabletop.</li>
+      <li><strong>Encounter Difficulty Calculator:</strong> runs in the browser, with a Windows app.</li>
+      <li><strong>The Brewery:</strong> write in markdown and get print-ready pages, with themes for 20 Below and Backwater Static.</li>
+      <li><strong>Coming soon:</strong> Backwater Static maps, NPCs and Anomalies, also free.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="images">
+    <h2 id="images">Logos &amp; Images</h2>
+    <div class="assets">
+      <figure class="asset">
+        <div class="thumb mark"><img src="/docs/assets/press/20below-mark-white.png" alt="The 20 Below mark in white" loading="lazy" /></div>
+        <figcaption class="body">
+          <p>The 20 Below mark, for dark backgrounds</p>
+          <div class="links">
+            <a class="go" href="/docs/assets/press/20below-mark-white.svg" download>SVG</a>
+            <a class="go" href="/docs/assets/press/20below-mark-white.png" download>PNG</a>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="asset">
+        <div class="thumb mark light"><img src="/docs/assets/press/20below-mark-navy.png" alt="The 20 Below mark in navy" loading="lazy" /></div>
+        <figcaption class="body">
+          <p>The 20 Below mark, for light backgrounds</p>
+          <div class="links">
+            <a class="go" href="/docs/assets/press/20below-mark-navy.svg" download>SVG</a>
+            <a class="go" href="/docs/assets/press/20below-mark-navy.png" download>PNG</a>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="asset">
+        <div class="thumb"><img src="/docs/assets/press/cover.jpg" alt="20 Below cover art" loading="lazy" /></div>
+        <figcaption class="body">
+          <p>20 Below cover art</p>
+          <small>900 &times; 1165 JPG</small>
+          <div class="links">
+            <a class="go" href="/docs/assets/press/cover.jpg" download>Download</a>
+            <a class="go" href="/docs/assets/press/cover-ring.jpg" download>With ring</a>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="asset">
+        <div class="thumb"><img src="/docs/assets/press/backwater-static.jpg" alt="Backwater Static: Undertow in the Big Uneasy" loading="lazy" /></div>
+        <figcaption class="body">
+          <p>Backwater Static: Undertow in the Big Uneasy</p>
+          <small>800 &times; 800 JPG</small>
+          <div class="links"><a class="go" href="/docs/assets/press/backwater-static.jpg" download>Download</a></div>
+        </figcaption>
+      </figure>
+      <figure class="asset">
+        <div class="thumb"><img src="/docs/assets/press/sheet.jpg" alt="The character sheet in the Character Creator" loading="lazy" /></div>
+        <figcaption class="body">
+          <p>The character sheet in the Character Creator</p>
+          <small>1400 &times; 875 JPG</small>
+          <div class="links"><a class="go" href="/docs/assets/press/sheet.jpg" download>Download</a></div>
+        </figcaption>
+      </figure>
+      <figure class="asset">
+        <div class="thumb"><img src="/docs/assets/press/tracker.jpg" alt="The Battle Tracker's creature catalog" loading="lazy" /></div>
+        <figcaption class="body">
+          <p>The Battle Tracker&rsquo;s creature catalog</p>
+          <small>1400 &times; 875 JPG</small>
+          <div class="links"><a class="go" href="/docs/assets/press/tracker.jpg" download>Download</a></div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="team">
+    <h2 id="team">The Team</h2>
+    <p>20 Below is built by a team of game designers and communications, language and engineering specialists, with a group of playtesters.</p>
+    <table class="team">
+      <tr><td>Producer</td><td>Feralucce Savage</td></tr>
+      <tr><td>Communications</td><td>Hillary McKey</td></tr>
+      <tr><td>Language Expert</td><td>Rilla Scarberry</td></tr>
+      <tr><td>Engineer</td><td>Louis Leboeuf</td></tr>
+      <tr><td>Game designers</td><td>George Szabo, Shawn Beatty, Jordan Sorrick, Ty Irons</td></tr>
+    </table>
+  </section>
+
+  <section aria-labelledby="links">
+    <h2 id="links">Links</h2>
+    <table class="facts">
+      <tr><th scope="row">Website and rules</th><td><a href="https://20belowrpg.com">20belowrpg.com</a></td></tr>
+      <tr><th scope="row">Downloads and tools</th><td><a href="/downloads.html">20belowrpg.com/downloads.html</a></td></tr>
+      <tr><th scope="row">Backwater Static</th><td><a href="https://feralucce.github.io/Backwater_Static/" rel="noopener">feralucce.github.io/Backwater_Static</a></td></tr>
+      <tr><th scope="row">News</th><td><a href="/news.html">20belowrpg.com/news.html</a></td></tr>
+      <tr><th scope="row">Discord</th><td><a href="https://discord.gg/qEpjjYKSXD" rel="noopener">discord.gg/qEpjjYKSXD</a></td></tr>
+      <tr><th scope="row">Facebook</th><td><a href="https://www.facebook.com/20belowrpg" rel="noopener">facebook.com/20belowrpg</a></td></tr>
+    </table>
+  </section>
+
+  <section aria-labelledby="contact">
+    <h2 id="contact">Press Contact</h2>
+    <div class="contact">
+      <p>
+        Covering 20 Below, running it on a show, or need a larger image, a quote or a one-shot to play?
+        Write to the team and we&rsquo;ll answer within two days.
+      </p>
+      <a class="go" href="mailto:20belowrpg@gmail.com">20belowrpg@gmail.com</a>
+    </div>
+  </section>
+</main>
+{% include site-footer.html %}
+<script src="/docs/assets/js/site-nav.js"></script>
+<script>
+  // Copy buttons: copy the paragraphs of their own block as plain text.
+  document.querySelectorAll(".copy-block .copy-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const text = [...btn.closest(".copy-block").querySelectorAll("p")]
+        .map((p) => p.textContent.trim()).join("\n\n");
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.textContent = "Copied";
+      } catch {
+        btn.textContent = "Select and copy";
+      }
+      setTimeout(() => { btn.textContent = "Copy"; }, 2000);
+    });
+  });
+</script>
+</body>
+</html>
