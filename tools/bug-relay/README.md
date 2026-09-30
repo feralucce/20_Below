@@ -65,6 +65,33 @@ This runs the Worker against a fake Discord and a fake KV store. Nothing leaves 
 
 Size limits and the rate limit are set in `LIMITS` at the top of `worker.js`. After changing either file, run `npx wrangler deploy` again.
 
+## Playtest feedback
+
+`playtest.html` on the site is an unlisted form (no menu link, kept out
+of search) that is shared in the playtester channel on Discord. It posts
+to `/playtest` on this Worker (`playtest.js`), which checks it the same
+way as a bug report, numbers it `P#1`, `P#2` ... (its own counter and
+its own rate limit) and posts it to the private **#playtest-feedback**
+forum: title `P#7 · Balance · Sprint costs too little Ki`, tagged
+**New** plus its kind.
+
+The kinds, which are also the forum's tags: Unclear rule, Too slow,
+Balance, Not fun, Tool issue, Session report. The status tags (New,
+Discussing, Changed, Won't change) are changed by hand, as with bugs.
+
+### Connecting the forum (one time)
+
+1. In the forum, **Edit Channel → Integrations → Webhooks → New
+   Webhook**, name it `20 Below Playtest Feedback`, copy the URL, then:
+   ```
+   npx wrangler secret put PLAYTEST_WEBHOOK
+   ```
+   and paste it when asked (never into chat or a file here).
+2. Tag ids: find each tag's id the same way the bug forum's New tag id
+   (`NEW_TAG_ID`) was found. Put them in `wrangler.toml` as `PLAYTEST_TAGS`, e.g.
+   `{"New":"123","Unclear rule":"456",...}`.
+3. `npx wrangler deploy`, then send a test from the page.
+
 ## Email signups
 
 The site's "Get 20 Below News" box (`app/signup.js`, in the footer of

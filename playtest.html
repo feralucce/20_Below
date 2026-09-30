@@ -1,0 +1,318 @@
+---
+title: "Playtest Feedback"
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Unlisted: shared in the playtester channel on Discord, not linked
+     from the site and kept out of search results. -->
+<meta name="robots" content="noindex" />
+<title>20 Below - Playtest Feedback</title>
+<meta name="description" content="Tell the 20 Below team what happened at your playtest table." />
+{% include brand-head.html %}
+<style>
+  /* Colour, type and the shared components live in
+     docs/assets/css/20below.css. What is left here is
+     this page's own. */
+  :root { --measure: 720px; }
+
+  body { min-height: 100vh; }
+  .eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-dim);
+    margin: 1.5rem 0 0.5rem;
+  }
+  .intro { color: var(--text-dim); line-height: 1.7; font-size: 1.05rem; margin-bottom: 1.8rem; }
+
+  .pt-form { display: grid; gap: 1.3rem; }
+  .pt-form fieldset {
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    background: var(--panel);
+    padding: 1rem 1.1rem 1.1rem;
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+  }
+  .pt-form legend { padding: 0 0.4rem; font-weight: 700; }
+  .field { display: grid; gap: 0.35rem; }
+  .field label, .field .label { font-weight: 600; }
+  .field .hint { color: var(--text-dim); font-size: 0.88rem; line-height: 1.4; }
+  .req { color: var(--accent); }
+  .pt-form input[type=text], .pt-form select, .pt-form textarea {
+    font: inherit;
+    font-size: 1rem;
+    color: var(--text);
+    background: #0a1720;
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .pt-form textarea { min-height: 7rem; resize: vertical; line-height: 1.5; }
+  .pt-form input:focus, .pt-form select:focus, .pt-form textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  /* The six kinds, as big buttons: one choice, easy to hit on a phone. */
+  .kinds { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: 0.5rem; }
+  .kinds label {
+    display: flex;
+    gap: 0.55rem;
+    align-items: flex-start;
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+    padding: 0.6rem 0.75rem;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .kinds label small { display: block; font-weight: 400; color: var(--text-dim); font-size: 0.82rem; line-height: 1.35; }
+  .kinds input { margin-top: 0.25rem; accent-color: var(--accent); }
+  .kinds label:has(input:checked) { border-color: var(--accent); background: var(--accent-dim); }
+
+  .session-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)); gap: 0.8rem; }
+  .roles { display: flex; gap: 1rem; flex-wrap: wrap; padding-top: 0.3rem; }
+  .roles label { font-weight: 400; display: flex; gap: 0.35rem; align-items: center; }
+
+  [hidden] { display: none !important; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+  .actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .actions button {
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.65rem 1.5rem;
+    background: var(--accent);
+    color: #fff;
+  }
+  .actions button:disabled { opacity: 0.6; cursor: default; }
+  .status { margin: 0; line-height: 1.5; }
+  .status.error { color: #ff9b8a; }
+  .done {
+    border: 1px solid var(--accent);
+    background: var(--accent-dim);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem;
+    line-height: 1.6;
+  }
+  .done h2 { margin-top: 0; }
+  .done button { font: inherit; cursor: pointer; background: none; border: 0; color: var(--accent); text-decoration: underline; padding: 0; }
+</style>
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <p class="eyebrow">Playtesters</p>
+  <h1>Playtest Feedback</h1>
+
+  <p class="intro">
+    Tell us what happened at your table: a rule nobody could read the same way, a turn that dragged,
+    a number that felt off, or a whole session's worth of notes. Each report goes straight to the
+    team's playtest channel on Discord, where we'll reply in its thread. Found a crash or a broken
+    button instead? Use <strong>Report a bug</strong> at the bottom of the page.
+  </p>
+
+  <form class="pt-form" id="ptForm" novalidate>
+    <fieldset>
+      <legend>What kind of feedback? <span class="req" aria-hidden="true">*</span></legend>
+      <div class="kinds">
+        <label><input type="radio" name="kind" value="Unclear rule" required><span>Unclear rule<small>We couldn't tell what it meant</small></span></label>
+        <label><input type="radio" name="kind" value="Too slow"><span>Too slow<small>It slowed the table down</small></span></label>
+        <label><input type="radio" name="kind" value="Balance"><span>Balance<small>Too strong, too weak, a number off</small></span></label>
+        <label><input type="radio" name="kind" value="Not fun"><span>Not fun<small>It worked, but didn't feel good</small></span></label>
+        <label><input type="radio" name="kind" value="Tool issue"><span>Tool issue<small>How play works in a tool, not a crash</small></span></label>
+        <label><input type="radio" name="kind" value="Session report"><span>Session report<small>Notes on a whole session</small></span></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>The feedback</legend>
+      <div class="field">
+        <label for="summary">One-line summary <span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="summary" name="summary" maxlength="100" required placeholder="Sprint costs too little Ki">
+      </div>
+
+      <div class="field">
+        <label for="area">Which rule or tool?</label>
+        <select id="area" name="area">
+          <option value="">Choose one (optional)</option>
+          <optgroup label="Rules">
+            <option>The core roll and Difficulty</option>
+            <option>Attributes</option>
+            <option>Creating a character</option>
+            <option>Skills</option>
+            <option>Boons</option>
+            <option>Flaws</option>
+            <option>Gifts</option>
+            <option>Resources</option>
+            <option>Equipment and weapons</option>
+            <option>Advancement</option>
+            <option>Fate</option>
+            <option>Movement</option>
+            <option>Combat</option>
+            <option>Status effects and Scars</option>
+            <option>Encounters and adversaries</option>
+            <option>Running the game</option>
+          </optgroup>
+          <optgroup label="Tools">
+            <option>Character Creator</option>
+            <option>Battle Tracker</option>
+            <option>The Brewery</option>
+            <option>Encounter Difficulty Calculator</option>
+            <option>Owlbear character sheet</option>
+            <option>Owlbear battle tracker</option>
+            <option>Reference sheets</option>
+          </optgroup>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div id="issueFields">
+        <div class="field">
+          <label for="happened">What happened at the table? <span class="req" aria-hidden="true">*</span></label>
+          <span class="hint" id="happenedHint">What were you trying to do, what happened, and how did the table react?</span>
+          <textarea id="happened" name="happened" maxlength="2000" aria-describedby="happenedHint"></textarea>
+        </div>
+        <div class="field" style="margin-top:1rem">
+          <label for="better">What would have worked better?</label>
+          <textarea id="better" name="better" maxlength="1000"></textarea>
+        </div>
+      </div>
+
+      <div id="sessionFields" hidden>
+        <p class="hint" style="margin:0">Fill in any of these. <span class="req" aria-hidden="true">*</span> At least one.</p>
+        <div class="field" style="margin-top:1rem">
+          <label for="well">What went well?</label>
+          <textarea id="well" name="well" maxlength="1500"></textarea>
+        </div>
+        <div class="field" style="margin-top:1rem">
+          <label for="dragged">What dragged or confused?</label>
+          <textarea id="dragged" name="dragged" maxlength="1500"></textarea>
+        </div>
+        <div class="field" style="margin-top:1rem">
+          <label for="other">Anything else?</label>
+          <textarea id="other" name="other" maxlength="1000"></textarea>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>About the session (optional)</legend>
+      <div class="session-row">
+        <div class="field">
+          <label for="played">Date played</label>
+          <input type="text" id="played" name="played" maxlength="40" placeholder="Oct 3">
+        </div>
+        <div class="field">
+          <label for="players">Number of players</label>
+          <input type="text" id="players" name="players" maxlength="20" inputmode="numeric" placeholder="4">
+        </div>
+        <div class="field">
+          <span class="label" id="roleLabel">You were the</span>
+          <div class="roles" role="radiogroup" aria-labelledby="roleLabel">
+            <label><input type="radio" name="role" value="GM"> GM</label>
+            <label><input type="radio" name="role" value="Player"> Player</label>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label for="contact">Your name or Discord handle</label>
+        <span class="hint" id="contactHint">So the team can follow up with you in the thread.</span>
+        <input type="text" id="contact" name="contact" maxlength="200" aria-describedby="contactHint">
+      </div>
+    </fieldset>
+
+    <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+    <div class="actions">
+      <button type="submit" id="send">Send feedback</button>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+
+  <div class="done" id="done" hidden tabindex="-1">
+    <h2>Thanks! That's ticket <span id="ticketNo"></span>.</h2>
+    <p>It's in the team's #playtest-feedback channel now. Watch for a reply in its thread on Discord.</p>
+    <p><button type="button" id="again">Send more feedback</button></p>
+  </div>
+</main>
+{% include site-footer.html %}
+<script src="/docs/assets/js/site-nav.js"></script>
+<script>
+  // Sends to the relay (tools/bug-relay/, POST /playtest). A test page
+  // can point this at a local relay.
+  const PLAYTEST_URL = window.__PLAYTEST_URL__ || "https://20below-bugs.20below.workers.dev/playtest";
+  const form = document.getElementById("ptForm");
+  const status = document.getElementById("status");
+  const send = document.getElementById("send");
+  const issueFields = document.getElementById("issueFields");
+  const sessionFields = document.getElementById("sessionFields");
+
+  // A session report asks different questions than a single issue.
+  form.addEventListener("change", (e) => {
+    if (e.target.name !== "kind") return;
+    const session = e.target.value === "Session report";
+    issueFields.hidden = session;
+    sessionFields.hidden = !session;
+  });
+
+  function say(message, isError) {
+    status.textContent = message;
+    status.className = "status" + (isError ? " error" : "");
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form));
+    const session = data.kind === "Session report";
+    if (!data.kind) return say("Please choose what kind of feedback this is.", true);
+    if (!String(data.summary || "").trim()) { form.summary.focus(); return say("Please add a one-line summary.", true); }
+    if (session && !["well", "dragged", "other"].some((k) => String(data[k] || "").trim())) {
+      form.well.focus(); return say("Please tell us something about the session.", true);
+    }
+    if (!session && !String(data.happened || "").trim()) {
+      form.happened.focus(); return say("Please describe what happened at the table.", true);
+    }
+    // Only the fields for this kind are sent.
+    for (const k of session ? ["happened", "better"] : ["well", "dragged", "other"]) delete data[k];
+
+    send.disabled = true;
+    say("Sending…");
+    try {
+      const r = await fetch(PLAYTEST_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const reply = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(reply.error || "The feedback could not be sent. Please try again.");
+      document.getElementById("ticketNo").textContent = "P#" + reply.ticket;
+      form.hidden = true;
+      const done = document.getElementById("done");
+      done.hidden = false;
+      done.focus();
+    } catch (err) {
+      say(err.message || "The feedback could not be sent. Please try again.", true);
+    } finally {
+      send.disabled = false;
+    }
+  });
+
+  document.getElementById("again").addEventListener("click", () => {
+    form.reset();
+    issueFields.hidden = false;
+    sessionFields.hidden = true;
+    say("");
+    document.getElementById("done").hidden = true;
+    form.hidden = false;
+    form.querySelector('input[name="kind"]').focus();
+  });
+</script>
+</body>
+</html>

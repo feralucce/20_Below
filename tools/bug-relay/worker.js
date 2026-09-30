@@ -25,6 +25,8 @@
 // for the site's News page (news.html). It is cached in TICKETS for a few
 // minutes, so the site never waits on Kit and the key never leaves here.
 
+import { cleanFeedback, feedbackPost } from './playtest.js';
+
 export const LIMITS = {
   summary: 100,       // becomes the post title
   section: 80,        // where in the app, picked from a list
@@ -57,11 +59,12 @@ export default {
       if (!cors) return json({ error: 'Not found.' }, 404, null);
       return news(env, cors);
     }
-    if (request.method !== 'POST' || !['/report', '/subscribe'].includes(url.pathname)) {
+    if (request.method !== 'POST' || !['/report', '/subscribe', '/playtest'].includes(url.pathname)) {
       return json({ error: 'Not found.' }, 404, cors);
     }
     if (!cors) return json({ error: 'This site is not allowed to send reports.' }, 403, null);
     if (url.pathname === '/subscribe') return subscribe(request, env, cors);
+    if (url.pathname === '/playtest') return playtest(request, env, cors);
 
     let body;
     try {
@@ -178,6 +181,46 @@ export async function toKit(email, source, env) {
   } catch {
     return false;
   }
+}
+
+// Playtest feedback (playtest.js): the same checks as a bug report, its
+// own P# counter and rate limit, and its own forum and webhook.
+async function playtest(request, env, cors) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return json({ error: 'The feedback could not be read.' }, 400, cors);
+  }
+  if (body && typeof body.website === 'string' && body.website.trim()) {
+    return json({ ticket: 0 }, 200, cors);
+  }
+  const f = cleanFeedback(body);
+  if (f.error) return json({ error: f.error }, 400, cors);
+
+  const who = await senderKey(request);
+  if (!(await allow(env.TICKETS, who, 'ptrate:'))) {
+    return json({ error: 'Too much feedback in a short time. Please wait a few minutes and try again.' }, 429, cors);
+  }
+  const hook = webhookFrom(env.PLAYTEST_WEBHOOK);
+  if (!hook) return json({ error: 'Playtest feedback is not set up yet.', stage: 'webhook' }, 500, cors);
+
+  const number = await nextTicket(env.TICKETS, 'playtest:last');
+  let sent;
+  try {
+    sent = await fetch(hook + '?wait=true', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(feedbackPost(number, f, env.PLAYTEST_TAGS)),
+    });
+  } catch {
+    return json({ error: 'The feedback could not be delivered. Please try again later.', stage: 'send' }, 502, cors);
+  }
+  if (!sent.ok) {
+    console.log('Discord refused the playtest post', sent.status, (await sent.text()).slice(0, 300));
+    return json({ error: 'The feedback could not be delivered. Please try again later.' }, 502, cors);
+  }
+  return json({ ticket: number }, 200, cors);
 }
 
 // The public issues, newest first. Only what the page shows goes out:
@@ -340,10 +383,10 @@ export async function allow(kv, who, prefix = 'rate:') {
   return true;
 }
 
-export async function nextTicket(kv) {
-  const current = parseInt((await kv.get('ticket:last')) || '0', 10);
+export async function nextTicket(kv, key = 'ticket:last') {
+  const current = parseInt((await kv.get(key)) || '0', 10);
   const next = current + 1;
-  await kv.put('ticket:last', String(next));
+  await kv.put(key, String(next));
   return next;
 }
 

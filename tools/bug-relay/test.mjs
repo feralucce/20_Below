@@ -1,6 +1,7 @@
 // Tests for the bug relay, with a fake KV store and a fake Discord.
 //   node tools/bug-relay/test.mjs
 import assert from 'node:assert/strict';
+import { cleanFeedback, feedbackPost, tagIds } from './playtest.js';
 import worker, { clean, plain, discordPost, webhookFrom, defang, LIMITS, publicIssues } from './worker.js';
 
 function fakeKV() {
@@ -227,6 +228,46 @@ await t('the news is cached, and only this site may read it', async () => {
   await worker.fetch(req(null, { method: 'GET', path: '/news' }), e);
   assert.equal(sent.length, before + 1);
   assert.equal((await worker.fetch(req(null, { method: 'GET', path: '/news', origin: 'https://evil.example' }), e)).status, 404);
+});
+
+await t('playtest feedback is numbered P#, tagged New plus its kind, and posted to its own forum', async () => {
+  const e = { ...env(), PLAYTEST_WEBHOOK: 'https://discord.com/api/webhooks/9/pt', PLAYTEST_TAGS: '{"New":"11111","Balance":"22222","Too slow":"33333"}' };
+  const before = sent.length;
+  const r = await worker.fetch(req({ kind: 'Balance', summary: 'Sprint costs too little Ki', area: 'Movement', happened: 'Everyone sprinted every round.', better: 'Cost 2 Ki', played: 'Oct 3', players: '4', role: 'GM', contact: '@tester' }, { path: '/playtest' }), e);
+  assert.equal(r.status, 200);
+  assert.equal((await r.json()).ticket, 1);
+  const post = sent[before];
+  assert.equal(post.url, 'https://discord.com/api/webhooks/9/pt?wait=true');
+  assert.equal(post.body.thread_name, 'P#1 · Balance · Sprint costs too little Ki');
+  assert.deepEqual(post.body.applied_tags, ['11111', '22222']);
+  assert.ok(post.body.content.includes('**Session:** played Oct 3, 4 players, as GM'));
+  assert.deepEqual(post.body.allowed_mentions, { parse: [] });
+  const r2 = await worker.fetch(req({ kind: 'Too slow', summary: 'x', happened: 'y' }, { path: '/playtest', ip: '5.5.5.5' }), e);
+  assert.equal((await r2.json()).ticket, 2);
+  assert.equal(e.TICKETS.map.get('ticket:last'), undefined);
+});
+
+await t('a session report needs something about the session, other kinds need what happened', async () => {
+  assert.ok(cleanFeedback({ kind: 'Session report', summary: 'Round 3 night' }).error);
+  assert.ok(!cleanFeedback({ kind: 'Session report', summary: 'Round 3 night', well: 'Fast combat' }).error);
+  assert.ok(cleanFeedback({ kind: 'Balance', summary: 'x' }).error);
+  assert.ok(cleanFeedback({ kind: 'Made up', summary: 'x', happened: 'y' }).error);
+  assert.equal(cleanFeedback({ kind: 'Balance', summary: 'x', happened: 'y', role: 'Boss' }).role, '');
+  const p = feedbackPost(3, cleanFeedback({ kind: 'Session report', summary: 'Night', well: 'Fast', dragged: 'Setup' }), '');
+  assert.ok(p.content.includes('**What went well**'));
+  assert.ok(!p.content.includes('What happened at the table'));
+  assert.ok(!('applied_tags' in p));
+});
+
+await t('playtest feedback is cleaned like a bug report and refused without its webhook', async () => {
+  const p = feedbackPost(4, cleanFeedback({ kind: 'Not fun', summary: 'See https://evil.example', happened: '@everyone look' }), '{}');
+  assert.ok(!/https:\/\//.test(p.thread_name + p.content));
+  assert.ok(!p.content.includes('@everyone'));
+  assert.deepEqual(tagIds('Balance', 'not json'), []);
+  const before = sent.length;
+  const r = await worker.fetch(req({ kind: 'Balance', summary: 'x', happened: 'y' }, { path: '/playtest' }), env());
+  assert.equal(r.status, 500);
+  assert.equal(sent.length, before);
 });
 
 await t('the webhook is found inside a messy secret', async () => {
