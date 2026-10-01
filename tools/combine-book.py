@@ -47,6 +47,7 @@ import glob
 import io
 import os
 import re
+import shutil
 import sys
 
 PDF_DIR = r"C:\Users\feral\OneDrive\Documents\20 Below Production documents\PDF"
@@ -272,7 +273,21 @@ def finish(export):
             writer.add_outline_item(re.sub(r"^Chapter \d+:\s*", "", title), found[title] + offset)
     with open(FINAL, "wb") as fh:
         writer.write(fh)
-    print("wrote %s - %d pages" % (FINAL, len(writer.pages)))
+    # Repacked without loss - every page renders identically, about a tenth
+    # smaller. The fonts are subset already and the hex grounds are unique
+    # to each page, so this is as small as it gets without changing the art.
+    import pymupdf
+    squeezed = FINAL + ".squeezed.pdf"
+    doc = pymupdf.open(FINAL)
+    doc.save(squeezed, garbage=4, deflate=True, deflate_images=True, deflate_fonts=True, use_objstms=1)
+    doc.close()
+    os.replace(squeezed, FINAL)
+    print("wrote %s - %d pages, %d KB" % (FINAL, len(writer.pages), os.path.getsize(FINAL) // 1024))
+    # Every finished deliverable also lands in the one folder they're collected in.
+    deliver = os.path.join(ROOT, "00000-deliverables")
+    os.makedirs(deliver, exist_ok=True)
+    shutil.copy2(FINAL, deliver)
+    print("copied to %s" % deliver)
     if missing:
         print("no page found for: " + ", ".join(missing) + " (no bookmark added)")
 
