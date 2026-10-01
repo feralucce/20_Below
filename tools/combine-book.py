@@ -242,6 +242,71 @@ def contents(export):
     print("contents written. Export again to put them on the page.")
 
 
+# The player reference sheets, as full pages at the end of the chapter each
+# one belongs to, in the order the chapter teaches them. They come from the
+# Quick Reference Guide, which is the same sheets already laid out at this
+# page size, and carry no folio - the contents page counts the book's own
+# pages, and a plate between them doesn't change those numbers.
+QUICK_REF = os.path.join(ROOT, "Branding", "20Below-Quick-Reference-Guide.pdf")
+CHAPTER_SHEETS = {
+    "Introduction": ["How 20 Below Works"],
+    "Creating a Character": ["Character Creation", "Elements and Sub-Stats"],
+    "How to Play": [
+        "Core Roll", "Advantage & Disadvantage", "Difficulty Chart",   # Rolling the Dice
+        "Making an Attack",                                            # Attacks
+        "Ki",
+        "Taking Damage", "The Vitals", "Scars", "Scars, continued",    # Harm and Recovery
+        "Time",
+        "The Round", "Actions", "The Combat Flow",                     # Combat
+        "Range & Movement", "Getting Around", "Chases and Travel",     # Movement
+        "Status Effects", "Hazards",                                   # Conditions and Hazards
+    ],
+    "Skills": ["Skills", "Elements x Skills", "One Skill, Five Elements"],
+    "Boons": ["Boons and Flaws"],
+    "Resources": ["Resources Ladder", "The Resource Index"],
+    "Gifts": ["Using a Gift"],
+    "Fate": ["The Fate Triangle", "Kotodama"],
+    "Weapons & Equipment": ["Weapons & Armor"],
+    "Advancement": ["Advancement"],
+}
+
+
+def chapter_name(title):
+    return re.sub(r"^Chapter \d+:\s*", "", title)
+
+
+def sheet_pages():
+    """{sheet title: page} from the Quick Reference Guide's own bookmarks."""
+    from pypdf import PdfReader
+    if not os.path.exists(QUICK_REF):
+        print("no Quick Reference Guide at %s - sheets left out" % QUICK_REF)
+        return {}
+    guide = PdfReader(QUICK_REF)
+    out = {}
+
+    def walk(items):
+        for it in items:
+            if isinstance(it, list):
+                walk(it)
+            else:
+                out.setdefault(it.title, guide.pages[guide.get_destination_page_number(it)])
+    walk(guide.outline)
+    wanted = [s for names in CHAPTER_SHEETS.values() for s in names]
+    lost = [s for s in wanted if s not in out]
+    if lost:
+        sys.exit("not in the Quick Reference Guide: " + ", ".join(lost))
+    return out
+
+
+def add_sheets(writer, sheets, title):
+    """Append a chapter's sheets; returns [(sheet title, page index)]."""
+    added = []
+    for name in CHAPTER_SHEETS.get(chapter_name(title), []) if sheets else []:
+        writer.add_page(sheets[name])
+        added.append((name, len(writer.pages) - 1))
+    return added
+
+
 def finish(export):
     """Cover first, then the Brewery's export, with a bookmark per chapter.
     A chapter's page is the first one, after the last chapter's, whose text
@@ -262,15 +327,33 @@ def finish(export):
         cover.scale_to(w, h)
         writer.add_page(cover)
         os.remove(tmp)
-    offset = len(writer.pages)
-    for p in reader.pages:
-        writer.add_page(p)
-
     found = chapter_pages(reader, titles)
     missing = [t for t in titles if t not in found]
+    sheets = sheet_pages()
+    # Which chapter each export page belongs to, so a chapter's sheets go in
+    # after its last page and before the next chapter opens.
+    starts = sorted((found[t], t) for t in titles if t in found)
+    ends = {t: (starts[k + 1][0] if k + 1 < len(starts) else len(reader.pages))
+            for k, (_, t) in enumerate(starts)}
+    opens_at = {i: t for t, i in found.items()}
+    placed, moved = {}, {}
+    for i, p in enumerate(reader.pages):
+        for t, end in ends.items():
+            if end == i:
+                placed[t] = add_sheets(writer, sheets, t)
+        writer.add_page(p)
+        if i in opens_at:
+            moved[opens_at[i]] = len(writer.pages) - 1
+    for t, end in ends.items():
+        if end == len(reader.pages):
+            placed[t] = add_sheets(writer, sheets, t)
+
     for title in titles:
-        if title in found:
-            writer.add_outline_item(re.sub(r"^Chapter \d+:\s*", "", title), found[title] + offset)
+        if title in moved:
+            parent = writer.add_outline_item(chapter_name(title), moved[title])
+            for name, page in placed.get(title, []):
+                writer.add_outline_item(name, page, parent=parent)
+    print("%d reference sheets placed in their chapters" % sum(len(v) for v in placed.values()))
     with open(FINAL, "wb") as fh:
         writer.write(fh)
     # Repacked without loss - every page renders identically, about a tenth
