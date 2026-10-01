@@ -288,6 +288,11 @@ def finish(export):
     os.makedirs(deliver, exist_ok=True)
     shutil.copy2(FINAL, deliver)
     print("copied to %s" % deliver)
+    # And the website's copy, so the download can't fall behind the book.
+    # It goes live when it's committed and pushed, not before.
+    site = os.path.join(ROOT, "docs", "assets", "downloads", "20Below-Players-Guide-Playtest.pdf")
+    shutil.copy2(FINAL, site)
+    print("copied to %s (commit and push to publish)" % site)
     if missing:
         print("no page found for: " + ", ".join(missing) + " (no bookmark added)")
 
