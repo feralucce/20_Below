@@ -1,0 +1,191 @@
+/* Training courses (training/*.html): the pieces a course is built from.
+   Each course page loads 20below.css (via brand-head.html), then this,
+   then docs/assets/js/training.js, which makes the interactive pieces
+   work. Everything still reads in order without the script. */
+
+:root { --measure: 760px; }
+
+.course-hero {
+  border-bottom: 1px solid var(--panel-border);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.course-hero .eyebrow {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
+  margin: 1.5rem 0 0.5rem;
+}
+.course-hero .intro { color: var(--text-dim); line-height: 1.7; font-size: 1.05rem; margin: 0.5rem 0 0; }
+
+/* Contents: one chip per lesson, ticked when the lesson is marked done. */
+.course-toc { margin: 0 0 2.5rem; }
+.course-toc h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-dim); margin: 0 0 0.6rem; }
+.course-toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
+.course-toc .part { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-dim); margin-top: 0.8rem; }
+.course-toc a {
+  display: flex; justify-content: space-between; gap: 1rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--text);
+  text-decoration: none;
+}
+.course-toc a:hover, .course-toc a:focus-visible { border-color: var(--accent); }
+.course-toc a .tick { color: var(--text-dim); font-size: 0.85rem; white-space: nowrap; }
+.course-toc a.done .tick { color: var(--accent); }
+.course-progress { color: var(--text-dim); font-size: 0.9rem; margin: 0.8rem 0 0; }
+
+/* A lesson */
+.lesson { border-top: 1px solid var(--panel-border); padding: 2rem 0 1rem; scroll-margin-top: 5.5rem; }
+.lesson > .lesson-num { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-dim); margin: 0; }
+.lesson > h2 { margin: 0.3rem 0 1.2rem; }
+.lesson h3 { margin: 1.8rem 0 0.6rem; }
+.lesson p, .lesson li { line-height: 1.7; }
+.lesson-done {
+  margin: 2rem 0 0;
+  font: inherit; font-weight: 700; cursor: pointer;
+  background: transparent; color: var(--accent);
+  border: 1px solid var(--accent); border-radius: 999px;
+  padding: 0.45rem 1.2rem;
+}
+.lesson-done[aria-pressed="true"] { background: var(--accent-dim); }
+
+/* Statement: one line to remember */
+.statement {
+  margin: 2rem 0;
+  padding: 1.2rem 1.4rem;
+  border-left: 4px solid var(--accent);
+  background: var(--panel);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+
+/* A quoted example */
+.example {
+  margin: 1rem 0;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+.example p { margin: 0 0 0.5rem; }
+.example p:last-child { margin: 0; }
+
+/* Accordion: native details/summary */
+.accordion { border: 1px solid var(--panel-border); border-radius: var(--radius); overflow: hidden; margin: 1rem 0; }
+.accordion details + details { border-top: 1px solid var(--panel-border); }
+.accordion summary {
+  cursor: pointer; list-style: none;
+  padding: 0.85rem 1.1rem;
+  font-weight: 700;
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  background: var(--panel);
+}
+.accordion summary::-webkit-details-marker { display: none; }
+.accordion summary::after { content: "+"; color: var(--accent); font-size: 1.3rem; line-height: 1; }
+.accordion details[open] summary::after { content: "\2212"; }
+.accordion details > div { padding: 0.2rem 1.1rem 0.9rem; }
+.accordion details > div p { margin: 0.5rem 0 0; }
+
+/* Steps: a numbered process */
+.steps { list-style: none; counter-reset: step; padding: 0; margin: 1rem 0; display: grid; gap: 0.6rem; }
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 0.8rem 1rem 0.8rem 3.4rem;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+.steps li::before {
+  content: counter(step);
+  position: absolute; left: 0.9rem; top: 0.8rem;
+  width: 1.8rem; height: 1.8rem; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--accent); color: #fff; font-weight: 700; font-size: 0.9rem;
+}
+.steps li strong { display: block; }
+
+/* Tabs */
+.tabs { border: 1px solid var(--panel-border); border-radius: var(--radius); margin: 1rem 0; overflow: hidden; }
+.tabs [role=tablist] { display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--panel-border); background: var(--panel); }
+.tabs [role=tab] {
+  font: inherit; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  background: none; border: 0; color: var(--text-dim);
+  padding: 0.75rem 0.9rem; cursor: pointer; border-bottom: 3px solid transparent;
+}
+.tabs [role=tab][aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+.tabs [role=tabpanel] { padding: 1rem 1.1rem; }
+.tabs [role=tabpanel] p { margin: 0; }
+/* Without the script, every panel shows under its own heading. */
+.tabs:not(.ready) .tab-label { display: block; font-weight: 700; margin-bottom: 0.3rem; }
+.tabs.ready .tab-label { display: none; }
+
+/* Flashcards: click to flip */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: 0.8rem; margin: 1rem 0; }
+.card {
+  font: inherit; color: var(--text); text-align: center; cursor: pointer;
+  min-height: 9rem; padding: 1rem;
+  border: 1px solid var(--panel-border); border-top: 3px solid var(--accent);
+  border-radius: var(--radius); background: var(--panel);
+  display: grid; place-items: center; gap: 0.4rem;
+}
+.card .side-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-dim); }
+.card .face { font-size: 1.05rem; line-height: 1.4; }
+.card .back { display: none; }
+.card[aria-pressed="true"] .front { display: none; }
+.card[aria-pressed="true"] .back { display: block; }
+.card[aria-pressed="true"] { border-top-color: #4fbf8a; }
+
+/* Sorting: pick a pile for each item */
+.sort { margin: 1rem 0; display: grid; gap: 0.6rem; }
+.sort-item { border: 1px solid var(--panel-border); border-radius: var(--radius); background: var(--panel); padding: 0.8rem 1rem; }
+.sort-item p { margin: 0 0 0.6rem; }
+.sort-item .choices { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.sort-item button, .kc button.check, .final button.check {
+  font: inherit; font-size: 0.88rem; cursor: pointer;
+  border: 1px solid var(--panel-border); border-radius: 999px;
+  background: #0a1720; color: var(--text);
+  padding: 0.35rem 0.85rem;
+}
+.sort-item button:hover, .sort-item button:focus-visible { border-color: var(--accent); }
+.sort-item button.right { border-color: #4fbf8a; background: rgba(79, 191, 138, 0.15); }
+.sort-item button.wrong { border-color: #ff9b8a; background: rgba(255, 155, 138, 0.12); }
+.sort-item .result, .kc .result { margin: 0.6rem 0 0; font-size: 0.92rem; line-height: 1.5; }
+.sort-score { color: var(--text-dim); margin: 0.4rem 0 0; }
+
+/* Knowledge checks and the final check */
+.kc, .final .q {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem 1.1rem;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+.kc fieldset, .final fieldset { border: 0; margin: 0; padding: 0; }
+.kc legend, .final legend { font-weight: 700; line-height: 1.5; padding: 0; margin-bottom: 0.6rem; }
+.kc .kc-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin: 0 0 0.4rem; }
+.kc label, .final label {
+  display: flex; gap: 0.6rem; align-items: flex-start;
+  padding: 0.45rem 0.6rem; margin: 0.25rem 0;
+  border: 1px solid transparent; border-radius: 8px; cursor: pointer; line-height: 1.5;
+}
+.kc label:hover, .final label:hover { border-color: var(--panel-border); }
+.kc input, .final input { margin-top: 0.3rem; accent-color: var(--accent); }
+.kc button.check, .final button.check { margin-top: 0.6rem; font-weight: 700; color: var(--accent); border-color: var(--accent); background: transparent; }
+.result.right { color: #8fe0b4; }
+.result.wrong { color: #ff9b8a; }
+.final .score {
+  padding: 1rem 1.2rem; border-radius: var(--radius);
+  border: 1px solid var(--accent); background: var(--accent-dim); line-height: 1.6;
+}
+.final .q.right { border-color: #4fbf8a; }
+.final .q.wrong { border-color: #ff9b8a; }
+
+[hidden] { display: none !important; }
