@@ -1,0 +1,317 @@
+---
+title: "The 20 Below Ticket System"
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Unlisted: linked from Discord and the playtester and team channels,
+     not from the site's menus, and kept out of search results. The
+     script is Branding/ticketing-course/storyboard.md. -->
+<meta name="robots" content="noindex" />
+<title>20 Below - The Ticket System</title>
+<meta name="description" content="How to report a bug, send playtest feedback and triage tickets for 20 Below." />
+{% include brand-head.html %}
+<link rel="stylesheet" href="/docs/assets/css/training.css" />
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <header class="course-hero">
+    <p class="eyebrow">20 Below Training</p>
+    <h1>The 20 Below Ticket System</h1>
+    <p class="intro">
+      How to report a bug, send playtest feedback and triage tickets for 20 Below. Three short parts:
+      one for every player, one for playtesters and one for the team. Each part stands alone, so start
+      with the one you need.
+    </p>
+  </header>
+
+  <nav class="course-toc" aria-labelledby="tocHead">
+    <h2 id="tocHead">Contents</h2>
+    <ol>
+      <li class="part">Part 1: Reporting a bug (everyone)</li>
+      <li><a href="#bug-feedback-or-question">1. Bug, feedback or question? <span class="tick"></span></a></li>
+      <li><a href="#a-report-that-gets-fixed">2. A report that gets fixed <span class="tick"></span></a></li>
+      <li><a href="#after-you-press-send">3. After you press Send <span class="tick"></span></a></li>
+      <li class="part">Part 2: Playtest feedback (playtesters)</li>
+      <li><a href="#what-happened-at-the-table">4. Telling us what happened at the table <span class="tick"></span></a></li>
+      <li class="part">Part 3: Triage (the team)</li>
+      <li><a href="#the-triage-loop">5. The triage loop <span class="tick"></span></a></li>
+      <li><a href="#making-the-call">6. Making the call <span class="tick"></span></a></li>
+      <li><a href="#closing-the-loop">7. Closing the loop <span class="tick"></span></a></li>
+      <li><a href="#final-check">Final check <span class="tick"></span></a></li>
+    </ol>
+    <p class="course-progress"></p>
+  </nav>
+
+  <!-- Part 1 -->
+  <section class="lesson" id="bug-feedback-or-question">
+    <p class="lesson-num">Part 1 · Lesson 1</p>
+    <h2>Bug, feedback or question?</h2>
+
+    <h3>Three kinds of "this isn't right"</h3>
+    <p>Not everything that goes wrong is a bug, and each kind has its own door. Sending it to the right
+      one gets it to the right person faster.</p>
+
+    <div class="tabs">
+      <div class="tab-panel" data-tab="Bug"><span class="tab-label">Bug</span><p>A tool did something it shouldn't: a crash, a wrong number, a button that does nothing, a page that looks broken. Use <strong>Report a bug</strong> in that tool, or at the bottom of any page on the site.</p></div>
+      <div class="tab-panel" data-tab="Playtest feedback"><span class="tab-label">Playtest feedback</span><p>The rules or tools worked as written, but something about play wasn't right: unclear, slow, unbalanced or not fun. Use the playtest form your channel links to.</p></div>
+      <div class="tab-panel" data-tab="Question"><span class="tab-label">Question</span><p>You're not sure how something works. Ask in the <a href="https://discord.gg/qEpjjYKSXD" rel="noopener">20 Below Discord</a>; someone will answer, and if it turns out to be a bug, they'll point you to the button.</p></div>
+    </div>
+
+    <h3>Where does it go?</h3>
+    <div class="sort" data-piles="Report a bug|Playtest feedback|Ask in Discord">
+      <div class="sort-item" data-answer="Report a bug"><p>The Battle Tracker froze when I added a sixth creature.</p></div>
+      <div class="sort-item" data-answer="Playtest feedback"><p>Everyone sprinted every round because it was cheap.</p></div>
+      <div class="sort-item" data-answer="Ask in Discord"><p>Can a Gift and a Boon stack?</p></div>
+      <div class="sort-item" data-answer="Report a bug"><p>The Character Creator showed 12 Ki, but my Attributes should give 14.</p></div>
+      <div class="sort-item" data-answer="Playtest feedback"><p>Nobody at the table could agree on what "cover" means.</p></div>
+      <div class="sort-item" data-answer="Report a bug"><p>The Save button on the Owlbear sheet does nothing.</p></div>
+      <div class="sort-item" data-answer="Playtest feedback"><p>Initiative took ten minutes with eight players.</p></div>
+      <div class="sort-item" data-answer="Ask in Discord"><p>Where do I find the Difficulty chart?</p></div>
+    </div>
+
+    <button type="button" class="lesson-done">Mark this lesson done</button>
+  </section>
+
+  <section class="lesson" id="a-report-that-gets-fixed">
+    <p class="lesson-num">Part 1 · Lesson 2</p>
+    <h2>A report that gets fixed</h2>
+    <p>The team reads every report, but they can only fix what they can see. A good report lets someone
+      who wasn't there make the same thing happen.</p>
+
+    <h3>The Report a bug form, field by field</h3>
+    <p>Press <strong>Report a bug</strong> in the tool where it happened. The tool fills in the technical
+      details for you, so you only write what you saw.</p>
+    <ol class="steps">
+      <li><strong>Short title</strong>Say what went wrong in a few words, specific enough to tell it apart from other bugs: "Initiative order doesn't update", not "Tracker broken".</li>
+      <li><strong>Section</strong>Pick the step or tab where it happened. It sends your ticket to the part of the tool the team will look at first.</li>
+      <li><strong>What happened</strong>What you were doing, and what went wrong. Include the numbers you saw.</li>
+      <li><strong>What you expected (optional)</strong>What should have happened. This is often how the team tells a bug from a misunderstanding.</li>
+      <li><strong>Steps to reproduce (optional)</strong>1, 2, 3 from a fresh start. If the team can make it happen, they can fix it.</li>
+      <li><strong>Contact, then Send</strong>Add a Discord name or email if you'd like a reply, then press <strong>Send report</strong>. The form shows your ticket number.</li>
+    </ol>
+
+    <h3>Weak title, strong title</h3>
+    <p>Tap a card to see the stronger version.</p>
+    <div class="cards">
+      <button type="button" class="card"><span class="side-label front">Weak</span><span class="face front">"It's broken"</span><span class="side-label back">Strong</span><span class="face back">"Battle Tracker freezes when I add a sixth creature"</span></button>
+      <button type="button" class="card"><span class="side-label front">Weak</span><span class="face front">"Wrong number"</span><span class="side-label back">Strong</span><span class="face back">"Creator shows 12 Ki; Attributes should give 14"</span></button>
+      <button type="button" class="card"><span class="side-label front">Weak</span><span class="face front">"Help!!"</span><span class="side-label back">Strong</span><span class="face back">"Owlbear sheet Save button does nothing"</span></button>
+    </div>
+
+    <div class="kc" data-correct="1"
+         data-right="Right. It names the tool, says what happened and gives steps, so anyone on the team can make it happen again."
+         data-wrong="That one leaves the team guessing. The strongest report names the tool, says what happened and gives steps to make it happen again.">
+      <p class="kc-label">Knowledge check</p>
+      <fieldset>
+        <legend>Which report can the team act on first?</legend>
+        <label><input type="radio" name="kc1"> "The tracker is buggy, please fix."</label>
+        <label><input type="radio" name="kc1"> "Battle Tracker: after I add a sixth creature, the page freezes. Steps: new encounter, add six goblins."</label>
+        <label><input type="radio" name="kc1"> "Something went wrong earlier today."</label>
+        <label><input type="radio" name="kc1"> "Same problem as my friend had."</label>
+      </fieldset>
+    </div>
+
+    <button type="button" class="lesson-done">Mark this lesson done</button>
+  </section>
+
+  <section class="lesson" id="after-you-press-send">
+    <p class="lesson-num">Part 1 · Lesson 3</p>
+    <h2>After you press Send</h2>
+    <p>Your report becomes a numbered ticket, like <strong>#12</strong>, in the team's bug forum on Discord.
+      The form shows you the number; keep it if you want to ask about it later.</p>
+
+    <h3>What the tags mean</h3>
+    <div class="accordion">
+      <details><summary>New</summary><div><p>It's arrived and hasn't been looked at yet. Every ticket gets a first look within 48 hours.</p></div></details>
+      <details><summary>Confirmed</summary><div><p>The team made it happen too. It's on the list to fix.</p></div></details>
+      <details><summary>Fixed</summary><div><p>The fix has shipped. The thread says which version.</p></div></details>
+      <details><summary>Won't fix</summary><div><p>The team decided to leave it as it is, and the thread says why. Sometimes that's because the tool is working as the rules say.</p></div></details>
+      <details><summary>Duplicate</summary><div><p>Someone reported the same thing first. The thread links to that ticket, where the conversation continues.</p></div></details>
+    </div>
+
+    <p class="statement">Nothing from your character is ever sent.</p>
+    <p>Open <strong>"Sent with your report"</strong> in the form to see exactly what goes with it: the app,
+      its version, the page, your browser, your screen size and the time.</p>
+
+    <h3>If you'd like a reply</h3>
+    <p>If you left a contact, the team may reply in the ticket's thread or reach out to ask for a detail.</p>
+    <p>If the form can't reach the team, it offers <strong>Copy report</strong> instead, so nothing you wrote is
+      lost. Paste it into the 20 Below Discord.</p>
+
+    <button type="button" class="lesson-done">Mark this lesson done</button>
+  </section>
+
+  <!-- Part 2 -->
+  <section class="lesson" id="what-happened-at-the-table">
+    <p class="lesson-num">Part 2 · Lesson 4</p>
+    <h2>Telling us what happened at the table</h2>
+    <p>Playtest feedback isn't about bugs. It's about how the game plays: the moments that confused,
+      dragged or didn't feel right. Use the link pinned in the playtester channel.</p>
+
+    <h3>Pick the kind</h3>
+    <div class="tabs">
+      <div class="tab-panel" data-tab="Unclear rule"><span class="tab-label">Unclear rule</span><p>The table couldn't agree on what a rule means. Quote the rule if you can.</p></div>
+      <div class="tab-panel" data-tab="Too slow"><span class="tab-label">Too slow</span><p>Something slowed the table down. Say roughly how long it took.</p></div>
+      <div class="tab-panel" data-tab="Balance"><span class="tab-label">Balance</span><p>Too strong, too weak, or a number felt off. Say what happened in play, not just the number.</p></div>
+      <div class="tab-panel" data-tab="Not fun"><span class="tab-label">Not fun</span><p>It worked as written but didn't feel good. Tell us the moment.</p></div>
+      <div class="tab-panel" data-tab="Tool issue"><span class="tab-label">Tool issue</span><p>How play works inside a tool, like a step that's awkward mid-session. Crashes still go to <strong>Report a bug</strong>.</p></div>
+      <div class="tab-panel" data-tab="Session report"><span class="tab-label">Session report</span><p>Notes on a whole session: what went well, what dragged or confused, and anything else.</p></div>
+    </div>
+
+    <h3>What a good report looks like</h3>
+    <div class="example">
+      <p><strong>Balance · Sprint costs too little Ki.</strong></p>
+      <p>Movement. Everyone sprinted every round from round 2 on, so nobody ever walked. Maybe Sprint should
+        cost 2 Ki? Played Oct 3, four players, I was GM.</p>
+    </div>
+
+    <h3>After you send</h3>
+    <div class="accordion">
+      <details><summary>Your ticket</summary><div><p>It becomes <strong>P#</strong> and a number, in the private playtest forum, tagged New plus its kind.</p></div></details>
+      <details><summary>Discussing</summary><div><p>The team is talking it over; watch the thread, and they may ask you a question.</p></div></details>
+      <details><summary>Changed</summary><div><p>A rule or tool was updated because of it.</p></div></details>
+      <details><summary>Won't change</summary><div><p>The team considered it and kept things as they are, and the thread says why.</p></div></details>
+    </div>
+
+    <div class="kc" data-correct="1"
+         data-right="Right. The rule itself was the problem: the table couldn't read it the same way."
+         data-wrong="Not quite. The table couldn't agree on what the rule means, so it's an Unclear rule, even though it also slowed the game down.">
+      <p class="kc-label">Knowledge check</p>
+      <fieldset>
+        <legend>Your group spent twenty minutes arguing about whether cover stacks. Which kind is it?</legend>
+        <label><input type="radio" name="kc2"> Balance</label>
+        <label><input type="radio" name="kc2"> Unclear rule</label>
+        <label><input type="radio" name="kc2"> Tool issue</label>
+        <label><input type="radio" name="kc2"> Session report</label>
+      </fieldset>
+    </div>
+
+    <button type="button" class="lesson-done">Mark this lesson done</button>
+  </section>
+
+  <!-- Part 3 -->
+  <section class="lesson" id="the-triage-loop">
+    <p class="lesson-num">Part 3 · Lesson 5</p>
+    <h2>The triage loop</h2>
+    <p>Every ticket gets a tag and a first reply within 48 hours. Feral runs triage on both forums; other
+      team members step in when a ticket is handed to them.</p>
+
+    <h3>The loop, every day or two</h3>
+    <p>Open #bug-reports and #playtest-feedback and filter by <strong>New</strong>.</p>
+    <ol class="steps">
+      <li><strong>Read it</strong>Read the whole ticket, including "Details from the app": the app, its version and the page.</li>
+      <li><strong>Reproduce it (bugs)</strong>Use the same app and version, and follow the steps. For playtest tickets, find the rule or tool it names.</li>
+      <li><strong>Tag it</strong>Bugs: Confirmed, Won't fix or Duplicate. Playtest: Discussing, or Won't change. Leave it New only while you wait for an answer.</li>
+      <li><strong>Reply in the thread</strong>Every ticket gets a human reply: "Confirmed, thanks", "Can you tell us which browser?", or the reason it won't change.</li>
+      <li><strong>Hand it off</strong>If it needs someone else, mention them in the thread and say what you need.</li>
+    </ol>
+
+    <p class="statement">A reporter should never wonder whether anyone saw their ticket.</p>
+
+    <button type="button" class="lesson-done">Mark this lesson done</button>
+  </section>
+
+  <section class="lesson" id="making-the-call">
+    <p class="lesson-num">Part 3 · Lesson 6</p>
+    <h2>Making the call</h2>
+    <p>Most tickets are easy. These are the ones to slow down for.</p>
+
+    <div class="accordion">
+      <details><summary>Can't reproduce</summary><div><p>Reply asking for what's missing (steps, version, browser) and leave it <strong>New</strong>. If there's no answer in two weeks, tag <strong>Won't fix</strong> with "Couldn't reproduce; reply here if it happens again."</p></div></details>
+      <details><summary>Working as the rules say</summary><div><p>If the tool matches the rules, it's not a bug. Tag <strong>Won't fix</strong>, quote the rule, and if the rule itself seems wrong, suggest the player send it as playtest feedback.</p></div></details>
+      <details><summary>Already reported</summary><div><p>Tag it <strong>Duplicate</strong> and link the first ticket in the thread ("Duplicate of #N"), so the conversation stays in one place and duplicates are counted separately.</p></div></details>
+    </div>
+
+    <div class="kc" data-correct="1"
+         data-right="Right. The tool is doing what the rules say, so it isn't a bug, but the player may have found a rule worth another look."
+         data-wrong="Not quite. The tool matches the rulebook, so it isn't a bug. Say so, quote the rule, and point them to playtest feedback if the rule itself seems wrong.">
+      <p class="kc-label">Knowledge check</p>
+      <fieldset>
+        <legend>A ticket says a character "should" have 14 Ki. You check, and the Creator matches the rulebook, which gives 12. What do you do?</legend>
+        <label><input type="radio" name="kc3"> Tag it Confirmed and fix the Creator.</label>
+        <label><input type="radio" name="kc3"> Tag it Won't fix, quote the rule, and suggest playtest feedback if they think the rule is wrong.</label>
+        <label><input type="radio" name="kc3"> Delete the ticket.</label>
+        <label><input type="radio" name="kc3"> Leave it New until someone else decides.</label>
+      </fieldset>
+    </div>
+
+    <div class="kc" data-correct="1"
+         data-right="Right. Ask for what you need, and leave it New while you wait."
+         data-wrong="Not yet. Ask for what you need first, and leave it New while you wait for an answer.">
+      <p class="kc-label">Knowledge check</p>
+      <fieldset>
+        <legend>A report says "the tracker broke" and nothing else. What's your first move?</legend>
+        <label><input type="radio" name="kc4"> Tag it Won't fix.</label>
+        <label><input type="radio" name="kc4"> Reply asking what they were doing and which version, and leave it New.</label>
+        <label><input type="radio" name="kc4"> Tag it Confirmed so it isn't forgotten.</label>
+        <label><input type="radio" name="kc4"> Close the thread.</label>
+      </fieldset>
+    </div>
+
+    <button type="button" class="lesson-done">Mark this lesson done</button>
+  </section>
+
+  <section class="lesson" id="closing-the-loop">
+    <p class="lesson-num">Part 3 · Lesson 7</p>
+    <h2>Closing the loop</h2>
+    <p>A ticket isn't done when the fix is merged. It's done when the reporter knows.</p>
+
+    <h3>From Confirmed to Fixed</h3>
+    <ol class="steps">
+      <li><strong>Fix and release</strong>The fix ships in a tagged release, for example Battle Tracker 0.3.8.</li>
+      <li><strong>Tag Fixed</strong>Change the ticket's tag from Confirmed to <strong>Fixed</strong>.</li>
+      <li><strong>Say which version</strong>Reply in the thread: "Fixed in Battle Tracker 0.3.8. Thanks for reporting it!"</li>
+      <li><strong>Playtest tickets</strong>When a rule or tool changes because of feedback, tag <strong>Changed</strong> and say what changed and where.</li>
+    </ol>
+
+    <p class="statement">Thank the reporter every time. People who see their reports fixed report again.</p>
+
+    <button type="button" class="lesson-done">Mark this lesson done</button>
+  </section>
+
+  <section class="lesson final" id="final-check" data-pass="4"
+           data-pass-msg="That's the whole course. Thanks for helping make 20 Below better.">
+    <p class="lesson-num">Final check</p>
+    <h2>Final check</h2>
+    <p>Five questions from all three parts. Get four right to pass.</p>
+
+    <div class="q" data-correct="0"><fieldset><legend>1. A button on the Owlbear sheet does nothing. Where does it go?</legend>
+      <label><input type="radio" name="f1"> Report a bug</label>
+      <label><input type="radio" name="f1"> Playtest feedback</label>
+      <label><input type="radio" name="f1"> Ask in Discord</label>
+      <label><input type="radio" name="f1"> Session report</label></fieldset></div>
+
+    <div class="q" data-correct="2"><fieldset><legend>2. Which title is strongest?</legend>
+      <label><input type="radio" name="f2"> "Broken"</label>
+      <label><input type="radio" name="f2"> "Help"</label>
+      <label><input type="radio" name="f2"> "Creator shows 12 Ki; Attributes should give 14"</label>
+      <label><input type="radio" name="f2"> "Issue with numbers"</label></fieldset></div>
+
+    <div class="q" data-correct="0"><fieldset><legend>3. What does the Confirmed tag mean?</legend>
+      <label><input type="radio" name="f3"> The team made it happen too, and it's on the list</label>
+      <label><input type="radio" name="f3"> It's fixed</label>
+      <label><input type="radio" name="f3"> It won't be fixed</label>
+      <label><input type="radio" name="f3"> Someone reported it first</label></fieldset></div>
+
+    <div class="q" data-correct="1"><fieldset><legend>4. Players found Sprint so cheap that nobody walked. Which kind of playtest feedback is it?</legend>
+      <label><input type="radio" name="f4"> Unclear rule</label>
+      <label><input type="radio" name="f4"> Balance</label>
+      <label><input type="radio" name="f4"> Tool issue</label>
+      <label><input type="radio" name="f4"> Session report</label></fieldset></div>
+
+    <div class="q" data-correct="0,1,2"><fieldset><legend>5. A ticket turns out to be working as the rules say. What goes in your reply? (Select all that apply.)</legend>
+      <label><input type="checkbox" name="f5"> Tag it Won't fix</label>
+      <label><input type="checkbox" name="f5"> Quote the rule</label>
+      <label><input type="checkbox" name="f5"> Suggest playtest feedback if the rule seems wrong</label>
+      <label><input type="checkbox" name="f5"> Delete the thread</label></fieldset></div>
+  </section>
+</main>
+{% include site-footer.html %}
+<script src="/docs/assets/js/site-nav.js"></script>
+<script src="/docs/assets/js/training.js"></script>
+</body>
+</html>
