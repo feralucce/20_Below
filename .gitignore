@@ -44,3 +44,6 @@ tools/character-sheet/__pycache__/
 
 # Secrets kept on this machine only (webhook URLs, keys). Never commit.
 PRIVATE/
+
+# Deliverables (PDFs shared with the team, Foundation drafts). Never commit.
+00000-deliverables/
