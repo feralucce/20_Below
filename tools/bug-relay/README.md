@@ -78,6 +78,10 @@ forum: title `P#7 · Balance · Sprint costs too little Ki`, tagged
 The kinds, which are also the forum's tags: Unclear rule, Too slow,
 Balance, Not fun, Tool issue, Session report. The status tags (New,
 Discussing, Changed, Won't change) are changed by hand, as with bugs.
+**Detailed** is also added by hand at triage, to any report that names
+the rule or tool, describes what happened in order, gives numbers, says
+how the table reacted and suggests what would work better. It is what
+the playtester NPC reward counts (Branding/playtester-course).
 
 ### Connecting the forum (one time)
 
