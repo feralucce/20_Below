@@ -2901,6 +2901,8 @@ Unattended, motion-triggered; monitors a fixed location indefinitely.
 
 ## Transport
 
+Driving/Piloting Skill required to operate; combat or pursuit use falls under Combat Driving/Piloting instead.
+
 <div class="item" markdown="1">
 
 <p class="item-name" markdown="span">Amphibious conversion vehicle<span class="item-wr">WR 5</span></p>
@@ -3252,6 +3254,8 @@ Real cargo capacity, requires a towing vehicle.
 </div>
 
 ## Less-Lethal & Self-Defense
+
+Same Damage/per-die-vs-Soak resolution as Basic Weapons above, just built around lower Damage ratings and a secondary Effect rather than raw lethality - a called shot, Trait, or GM ruling can still make one of these genuinely dangerous, same as any other weapon.
 
 <div class="item" markdown="1">
 

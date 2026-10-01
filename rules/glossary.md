@@ -64,7 +64,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **Fate Token** - The currency you earn and spend. You pick them up from your Nature, from taking Disadvantage on purpose, from your Flaws, from a daily top-up, from story Milestones, or whenever the GM hands one over. You spend them on Kotodama or the Fate Triggers. You can hold three times your Stamina, plus one, and no more - anything earned at that cap is lost rather than banked.
 
-**Fate Triggers** - The things a Fate Token buys: a Kotodama, shrugging off one of your Flaws for a Scene, an automatic success, shrugging off a condition, a full Ki refill, or getting back up from Dying. Spending the Token is the whole cost - nothing else is rolled. Only a Kotodama counts against the per-Scene cap; the flat ones don’t.
+**Fate Triggers** - The things a Fate Token buys: a Kotodama, shrugging off one of your Flaws for a Scene, an automatic success, shrugging off a condition, a full Ki refill, or getting back up from Dying. Spending the Token is the whole cost - nothing else is rolled. A Kotodama counts against the per-Scene cap, and so does burning off Corruption; the flat ones don’t.
 
 **Ferocity** - One of Fire’s two sub-stats, will burned down to an ember. When you spend Ki to put more behind a physical strike - that’s Ki Infusion - Ferocity is what you’re adding. Sample descriptors: Brutal, Savage, Relentless, Merciless, Feral, and so on.
 
@@ -122,7 +122,7 @@ Some entries have a line of flavor text along with their mechanics. That is on p
 
 **NPC** - Anyone the GM plays instead of a player - short for non-player character. Most are built the same way as a player character, at whatever power level the GM chooses. A Gifted NPC has Ki the way a player character does, an ordinary one has 1, and only a special NPC has Fate Tokens of their own.
 
-**Overwhelmed** - Where you land at 0 Sanity. You pick up a temporary Mental scar effect and roll everything at Disadvantage, but you’re still yourself and still acting. It lifts once you’re away from whatever caused it and get to rest - or you spend 1 Ki, which also fills Sanity back up.
+**Overwhelmed** - Where you land at 0 Sanity. You pick up a temporary Mental scar effect and roll everything at Disadvantage, but you’re still yourself and still acting. It lifts once you’re away from whatever caused it and get to rest - or you spend 1 Ki, which brings Sanity back to 1.
 
 **PC** - The one character at the table that’s yours - short for player character.
 

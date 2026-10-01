@@ -498,7 +498,7 @@ however cold the night is. Everybody who drinks from it says it tastes
 like something they had once and cannot place.
 
 Drink it and take **3 Fate Tokens** immediately, over your usual cap.
-These Fate Tokens don't count against the number of tokens you can spend.
+Spending them doesn't count against your counted spends for the Scene.
 For the rest of the Scene nothing can frighten you, and afterwards you
 will not be sure whether that was the mead or you.
 

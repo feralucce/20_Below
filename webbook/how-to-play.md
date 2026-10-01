@@ -911,7 +911,7 @@ Your Poise track runs as far below zero as it does above it - eight Poise means 
 
 <p class="block-title" markdown="span">Overwhelmed</p>
 
-Your Sanity hit 0. You pick up a temporary Mental scar effect - your GM picks it, or you agree it together - and you roll everything at Disadvantage. You can still act, and you’re still yourself. It clears when you’re out of whatever did it to you and get a chance to rest, or for 1 Ki, which refills your Sanity on the way out.
+Your Sanity hit 0. You pick up a temporary Mental scar effect - your GM picks it, or you agree it together - and you roll everything at Disadvantage. You can still act, and you’re still yourself. It clears when you’re out of whatever did it to you and get a chance to rest, or for 1 Ki, which brings your Sanity back to 1 on the way out.
 
 </div>
 
@@ -1024,7 +1024,11 @@ There is only one thing doing this. What you meet is one of the places it gets t
 
 Every time you’re exposed - you look at it, touch it, breathe it, sleep near it, whatever that source feeds on - it rolls its dice against your Klotho. If any die gets over, you slide one level. Only one, however many got over. A rare few are worse than that, and your GM will know which. Some loci are creatures, and a creature can put its will behind those dice the way you put Ki behind an attack. Nothing else gets through a Klotho of 10.
 
-**The five levels of Corruption**
+</div>
+
+<div class="wide" markdown="1">
+
+<p class="block-title" markdown="span">Corruption - The five levels</p>
 
 | Level | Name | What it means | How it clears |
 |---|---|---|---|

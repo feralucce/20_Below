@@ -350,7 +350,7 @@ Every element is divided into two Sub-Stats. In this step, you divide the points
 
 This step is where your character stops being a cardboard cut-out and starts becoming a person. Two characters with Fire 8 are nothing alike if one dumped it all into Ferocity and the other into Presence. The first will win the fight. The second will make sure there is no fight.
 
-There is nothing preventing you from putting all of your points into one Sub-Stat. However, caution is recommended - a Klotho rating of zero will slow your Ki regeneration to a crawl and you won’t have a lucky number while a Health rating of zero makes it harder to survive and reduces the damage you can take while unconscious to nothing.
+There is nothing preventing you from putting all of your points into one Sub-Stat. However, caution is recommended - a Klotho rating of zero will slow your Ki regeneration to a crawl and you won’t have a lucky number while a Health rating of zero leaves you with the bare 5 Health Levels, and only 5 below zero before you’re dead.
 
 Spend wisely.
 

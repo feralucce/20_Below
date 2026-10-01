@@ -28,7 +28,7 @@ That is why a failed check drops the Level instead of refusing the ask. In colle
 
 **Reaching beyond your means**: a Resource Index up to **2 higher** than the Resource's current effective Level can be attempted - anything further out of reach can't be attempted at all. Reaching that far always gets the character what they were after, but drops the Resource's Level to **0** for a Month (not just 1) regardless of whether the roll succeeded or failed - **unless the roll is a critical success**, which resolves the attempt as an ordinary free success with no cost at all.
 
-**Resource Index 6** is always treated as reaching 2 levels beyond the Resource's current Level, no matter how high that Level actually is - and it's the one case a critical success can't save: a Resource Index 6 attempt always drops the Resource to 0 for a Month, full stop, even on a critical success.
+**Resource Index 6** is always a reach, however high the Resource's Level, and below Level 4 it can't be attempted at all, since that's more than 2 above it. It's also the one case a critical success can't save: a Resource Index 6 attempt always drops the Resource to 0 for a Month, full stop, even on a critical success.
 
 ## Wealth at Character Creation
 

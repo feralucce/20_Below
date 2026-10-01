@@ -1028,7 +1028,7 @@ It happened once, in front of people who mattered, and some part of you never qu
 
 One specific humiliation took your footing in a room, and you never got it back.
 
-One specific, defining humiliation left a real mark - not on the body, on the nerve. A natural fit for the genuine Flaw a below-zero Poise scar can impose, though it can also just be taken directly at creation like any other Flaw.
+One specific, defining humiliation left a real mark - not on the body, on the nerve. It reads a lot like a Social scar, but a scar heals and this doesn’t. Take it at creation like any other Flaw.
 
 <div class="flaw-level flaw-level--1" markdown="1">
 

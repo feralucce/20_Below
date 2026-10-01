@@ -677,15 +677,6 @@ A few options are bigger versions of a cheaper one - Myomer Fiber and Linear Fra
 | Dazzler Eyes | 2 pts | Once per Scene, as a Fast action, flash one target at Close range who is looking at you - they are Blinded until the end of their next turn. Flash-filtering eyes ignore it. |
 | Adrenal Pump | 2 pts | Once per Scene, as a Fast action, flood your system and shake off Frightened, Exhausted or Staggered. |
 | Thermoptic Masking | 2 pts | Your body holds ambient temperature and damps its own signal - invisible to thermal sight, motion sensors and signal scanners. |
-
-</div>
-
-<div class="wide" markdown="1">
-
-<p class="block-title" markdown="span">Cybernetics - Build menu, continued</p>
-
-| Option | Cost | Effect |
-|---|---|---|
 | Enhanced Antibodies | 1 pt | You heal one step faster than normal on any rest. |
 | Artificial Gills | 1 pt | Breathe water indefinitely. |
 | Radiation Shielding | 1 pt | Immune to radiation, and Advantage against any environmental hazard that works on flesh rather than force. |
@@ -705,15 +696,6 @@ A few options are bigger versions of a cheaper one - Myomer Fiber and Linear Fra
 | Onboard Computer | 2 pts | Instant calculation, translation, and lookup - treat any Knowledge-Skill roll needing reference material as if you had a research library on hand. |
 | Holographic Projector | 2 pts | Project a small hologram at Close range - a decoy, a visual aid, a disguise overlay. |
 | Grapple Line | 2 pts | A retractable cable launcher built into an arm - anchor and pull yourself to a point within Near range, or yank a target or object toward you. |
-
-</div>
-
-<div class="wide" markdown="1">
-
-<p class="block-title" markdown="span">Cybernetics - Build menu, continued</p>
-
-| Option | Cost | Effect |
-|---|---|---|
 | Nanite Medkit | 2 pts | A self-contained injector loaded with one dose of field-medicine nanites - once per Scene, stabilize yourself or an adjacent ally from dying, no roll. |
 | Smartlink | 2 pts | A weapon interface - add **one bonus die** to attacks with any firearm wired to you. Someone else firing it gets nothing. |
 | Pain Editor | 2 pts | Wound Disadvantage from missing Health Levels doesn't apply to you, and torture, agony effects, and pain-based intimidation simply don't land. |

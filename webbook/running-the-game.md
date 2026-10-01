@@ -86,7 +86,7 @@ Look at the gaps rather than the numbers. From 8 to 11 is three points of target
 
 **So to actually pressure somebody who is good at this, change the situation instead.** Disadvantage takes a target of 15 from eighty-five percent down to sixty-seven. That is a real problem arriving, and it didn’t require you to invent a harder version of the task. Bad footing, bad light, no time, somebody shooting at them - all of that is Disadvantage, and all of it is easier to justify out loud than quietly deciding that this particular lock is unusually difficult.
 
-**Advantage is worth about two points of Difficulty, in the middle.** Less than that at the top, where there isn’t much room left to improve. If you’re wondering whether to grant Advantage or knock a point off the Difficulty, Advantage is the bigger gift almost everywhere, and it’s the one that reads as the world helping rather than the task shrinking.
+**Advantage is worth about two or three points of Difficulty, in the middle.** Less than that at the top, where there isn’t much room left to improve. If you’re wondering whether to grant Advantage or knock a point off the Difficulty, Advantage is the bigger gift almost everywhere, and it’s the one that reads as the world helping rather than the task shrinking.
 
 **And the practical version of all of this: don’t fine-tune.** Pick the row on the ladder that sounds like the thing and move on. If the roll still feels wrong to you after that, the answer is almost never one more point of Difficulty. It’s Advantage, or Disadvantage, or no roll at all.
 

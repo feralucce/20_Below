@@ -87,7 +87,7 @@ Each Attribute you raised in step 4 generates a pool of points equal to its own 
 
 Stamina does double duty on Fate Tokens: it caps how many the character can hold (**(Stamina × 3) + 1**) as well as how many counted spends they can make in a Scene (**Stamina + 1**) - see [Holding Fate Tokens](fate.md#holding-fate-tokens).
 
-Health is worth a second look before you leave it at 0. Every character has 5 Health Levels before the sub-stat is counted, so dumping it doesn't leave you fragile in a fight - it leaves you with nothing underneath the fight. A character with 0 Health still drops unconscious at 0 Health Levels like anyone else, but dies on the very next hit instead of bleeding out with time for someone to reach them. See [Health Levels](rules.md#health-levels).
+Health is worth a second look before you leave it at 0. Every character has 5 Health Levels before the sub-stat is counted, so dumping it doesn't leave you helpless in a fight, but it does leave you short underneath it. The range below 0 mirrors the one above, so a character with 0 Health has 5 Health Levels and is dead at -5, where a character with 3 Health would last until -8. See [Health Levels](rules.md#health-levels).
 
 ## 6. Descriptors
 
@@ -157,7 +157,7 @@ Spend your **21-point Gifts Pool** on [Gifts](gifts.md) - the supernatural power
 
 ## 11. Flaws
 
-Taking a [Flaw](flaws.md) is optional. Each one you take lists its own point value - check the Flaw itself rather than a general formula. Those points feed directly into step 12 (Discretionary points), on top of whatever you get there for free. The GM sets a per-campaign cap on how many Discretionary points you can bank this way.
+Taking a [Flaw](flaws.md) is optional. Every Flaw is Leveled 1 to 5, and its Level is the points it grants. Those points feed directly into step 12 (Discretionary points), on top of whatever you get there for free. The GM sets a per-campaign cap on how many Discretionary points you can bank this way.
 
 A Flaw with no real effect on play grants no points - if it doesn't actually make anything harder for the character, it isn't worth anything at creation.
 

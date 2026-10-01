@@ -234,7 +234,7 @@ A Slow round is **one empowered action**, plus a 1m step before or after it. A b
 - **Reload** - by the weapon: one action for a magazine, speed-loader or crossbow crank; a full Slow action for a tube-fed shotgun; free for a bow from a quiver. See each weapon's Reload column in [weapons.md](weapons.md).
 - **Grab** (one action, from Melee) - an attack roll, then your **Potence in d10s against its Soak**. Any die over, and it's [Grabbed](rules.md#grabbed).
 - **Disarm** - a **Called Shot** at a held weapon or item; on a hit, **Potence against Potence** to knock it loose. [Gauntlets](weapons.md) give the defender Advantage.
-- **Help** (one action) - an ally's next roll has **Advantage**. You must be able to reach them, or the thing they're doing.
+- **Help** (one action) - if you're at least **Trained** in the Skill, an ally's next roll has **Advantage**. You must be able to reach them, or the thing they're doing, and you share a catastrophic failure ([Helping](rules.md#helping)).
 - **Ready** (one action) - hold it for a trigger you name ("when it comes through the door"); it resolves when the trigger happens.
 - **Small actions** - drawing, swapping or stowing a weapon, or using a simple item, takes **one action**.
 - **Escape a hold** - see [Grabbed](rules.md#grabbed).

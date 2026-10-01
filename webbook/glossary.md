@@ -191,7 +191,7 @@ The currency you earn and spend. You pick them up from your Nature, from taking 
 <div class="gloss" markdown="1">
 <span class="gloss-term">Fate Triggers</span>
 
-The things a Fate Token buys: a Kotodama, shrugging off one of your Flaws for a Scene, an automatic success, shrugging off a condition, a full Ki refill, or getting back up from Dying. Spending the Token is the whole cost - nothing else is rolled. Only a Kotodama counts against the per-Scene cap; the flat ones don’t.
+The things a Fate Token buys: a Kotodama, shrugging off one of your Flaws for a Scene, an automatic success, shrugging off a condition, a full Ki refill, or getting back up from Dying. Spending the Token is the whole cost - nothing else is rolled. A Kotodama counts against the per-Scene cap, and so does burning off Corruption; the flat ones don’t.
 </div>
 
 <div class="gloss" markdown="1">
@@ -365,7 +365,7 @@ Anyone the GM plays instead of a player - short for non-player character. Most a
 <div class="gloss" markdown="1">
 <span class="gloss-term">Overwhelmed</span>
 
-Where you land at 0 Sanity. You pick up a temporary Mental scar effect and roll everything at Disadvantage, but you’re still yourself and still acting. It lifts once you’re away from whatever caused it and get to rest - or you spend 1 Ki, which also fills Sanity back up.
+Where you land at 0 Sanity. You pick up a temporary Mental scar effect and roll everything at Disadvantage, but you’re still yourself and still acting. It lifts once you’re away from whatever caused it and get to rest - or you spend 1 Ki, which brings Sanity back to 1.
 </div>
 
 <div class="gloss" markdown="1">

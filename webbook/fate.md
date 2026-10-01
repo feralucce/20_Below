@@ -74,7 +74,7 @@ Characters with Iron Will may also spend 1 Fate Token to **Assert Your Will** - 
 
 **Fate Tokens are the resource players earn and spend; Ki is the pool that powers everything superhuman a character does.** Ki is deliberately common: **Ki = your strongest Element + 8**, which puts every character between **13 and 18** regardless of how they built the rest of the sheet. Whatever a character is *most* is what channels their Ki - the frail specialist draws on as much as the bruiser.
 
-**Ordinary people have 1 Ki.** Anyone without a Gift - the ordinary NPC, the bystander, the child - has a single point, and it’s there for one moment past what they should be able to manage: the grandmother who lifts the car off a child, the runner who finds one more mile.
+**Ordinary people have 1 Ki.** Anyone without a Gift - the ordinary NPC, the bystander, the child - has a single point, and it’s there for one moment past what they should be able to manage: the grandmother who lifts the car off a child, the runner who finds one more mile. A player character always has the full pool, Gift or not.
 
 Ki has three jobs, all of them direct spends - no roll, no check, and none of them interact with Stamina’s per-Scene cap:
 

@@ -289,7 +289,7 @@ Sanity mirrors Health Levels too, tracking a character's grip on their own mind 
 - **The negative range mirrors the positive one**, exactly as [Health Levels](#health-levels) and [Poise](#poise) do: a character with 9 Sanity is Overwhelmed at 0 and Shattered from −1 down to −8. **Reaching −(full Sanity) is the floor.** The character picks up a temporary [Mental scar](#scars) effect, the same way Overwhelmed does, and Sanity resets to **0**: Overwhelmed again, not restored. The permanent Mental scar from having gone below 0 stands regardless.
 - **General recovery** matches Health/Poise: Short Rest heals `Psyche ÷ 2` (round up, minimum 1); Full Night's Rest heals fully.
 
-**At 0 Sanity, a character is Overwhelmed**: they take one [Mental scar](#scars) effect, GM's pick, for as long as they stay Overwhelmed, and are at Disadvantage on rolls. They can still act on their own. Overwhelmed clears when the character is removed from the stimulus that caused it and given a chance to rest, or by spending 1 Ki, which also refills Sanity to full.
+**At 0 Sanity, a character is Overwhelmed**: they take one [Mental scar](#scars) effect, GM's pick, for as long as they stay Overwhelmed, and are at Disadvantage on rolls. They can still act on their own. Overwhelmed clears when the character is removed from the stimulus that caused it and given a chance to rest, or by spending 1 Ki, which brings Sanity back to 1.
 
 **Below 0, a character is Shattered**: panicky, babbling, unable to act on their own - they have to be led or dragged. Shattered clears when 1 Ki is spent or a Short Rest or Full Night's Rest passes, either of which restores Sanity only to 1, not fully - normal recovery resumes from there on the next rest.
 
