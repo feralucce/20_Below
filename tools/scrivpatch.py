@@ -126,7 +126,14 @@ class Chapter(object):
             raise NotUnique("%r is not inside a paragraph" % needle)
         end = self.raw.find("\n\\par", i)
         if end < 0:
-            end = len(self.raw)
+            # The last paragraph runs to the document's own closing brace,
+            # not to the end of the file. Counting that brace as part of the
+            # paragraph meant deleting or replacing the last paragraph took
+            # the document's close with it.
+            close = self.raw.rstrip().rfind("}")
+            end = self.raw.rfind("\n", 0, close + 1)
+            if end < i:
+                end = close
         brace = self.raw.find("{", start)
         if brace < 0 or brace > end:
             raise NotUnique("%r sits in a paragraph with no runs" % needle)
