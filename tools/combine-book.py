@@ -242,12 +242,12 @@ def contents(export):
     print("contents written. Export again to put them on the page.")
 
 
-# The player reference sheets, as full pages at the end of the chapter each
-# one belongs to, in the order the chapter teaches them. They come from the
-# Quick Reference Guide, which is the same sheets already laid out at this
-# page size, and carry no folio - the contents page counts the book's own
-# pages, and a plate between them doesn't change those numbers.
-QUICK_REF = os.path.join(ROOT, "Branding", "20Below-Quick-Reference-Guide.pdf")
+# The reference sheets, as full pages at the end of the chapter each one
+# belongs to, in the order the chapter teaches them. They come from the GM
+# Reference Guide, which holds every sheet - GM and player - already laid out
+# at this page size, and carry no folio: the contents page counts the book's
+# own pages, and a plate between them doesn't change those numbers.
+SHEET_SOURCE = os.path.join(ROOT, "Branding", "20Below-GM-Reference-Guide.pdf")
 CHAPTER_SHEETS = {
     "Introduction": ["How 20 Below Works"],
     "Creating a Character": ["Character Creation", "Elements and Sub-Stats"],
@@ -268,6 +268,10 @@ CHAPTER_SHEETS = {
     "Fate": ["The Fate Triangle", "Kotodama"],
     "Weapons & Equipment": ["Weapons & Armor"],
     "Advancement": ["Advancement"],
+    "Running the Game": [
+        "Stat Blocks", "Building an Encounter", "Variant Templates",   # Antagonists
+        "Building a Creature", "Materials",
+    ],
 }
 
 
@@ -276,12 +280,12 @@ def chapter_name(title):
 
 
 def sheet_pages():
-    """{sheet title: page} from the Quick Reference Guide's own bookmarks."""
+    """{sheet title: page} from the GM Reference Guide's own bookmarks."""
     from pypdf import PdfReader
-    if not os.path.exists(QUICK_REF):
-        print("no Quick Reference Guide at %s - sheets left out" % QUICK_REF)
+    if not os.path.exists(SHEET_SOURCE):
+        print("no GM Reference Guide at %s - sheets left out" % SHEET_SOURCE)
         return {}
-    guide = PdfReader(QUICK_REF)
+    guide = PdfReader(SHEET_SOURCE)
     out = {}
 
     def walk(items):
@@ -294,7 +298,7 @@ def sheet_pages():
     wanted = [s for names in CHAPTER_SHEETS.values() for s in names]
     lost = [s for s in wanted if s not in out]
     if lost:
-        sys.exit("not in the Quick Reference Guide: " + ", ".join(lost))
+        sys.exit("not in the GM Reference Guide: " + ", ".join(lost))
     return out
 
 
