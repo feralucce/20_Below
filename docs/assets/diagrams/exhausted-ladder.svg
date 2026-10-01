@@ -19,7 +19,7 @@
 
 <text x="90" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">Phys. Disadv.</text>
 <text x="215" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8fadbe">All Disadv.</text>
-<text x="340" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e0a85c">Move &#215;&#189;</text>
-<text x="465" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e0a85c">No Slow</text>
+<text x="340" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e0a85c">Move &#215;&#189;, no Fast</text>
+<text x="465" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e0a85c">Ki spends +1</text>
 <text x="590" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e0685c">Collapse</text>
 </svg>

@@ -186,7 +186,7 @@ title: "Status Effects"
     <h2>Off Balance</h2>
     <p><strong>Trigger:</strong> rolling a catastrophic failure on any roll during combat.</p>
     <p><strong>Effect:</strong> everything you roll is at Disadvantage. It does not stack - you are Off Balance or you are not, however many catastrophic failures you roll in a round.</p>
-    <p class="aside"><strong>Clears:</strong> on its own at the end of your next turn, with no action or roll needed. A Fate Token spent to Shrug Off an Effect clears it immediately, though that never undoes the separate consequence the catastrophic failure caused. Never Off Balance grants a reroll of the triggering failure itself.</p>
+    <p class="aside"><strong>Clears:</strong> on its own at the end of your next turn, with no action or roll needed. A Fate Token spent to Shrug Off an Effect clears it immediately, though that never undoes the separate consequence the catastrophic failure caused. <a href="../rules/boons.html#boon-list">Never Off Balance</a> rerolls the triggering failure itself: attack rolls at its first tier, every roll in combat at its second, every roll at its third.</p>
   </section>
 
 <section class="status-section" id="distracted">
@@ -196,7 +196,7 @@ title: "Status Effects"
     <div class="chart-frame">
       <img src="assets/diagrams/distracted-flow.svg" alt="Losing a Health Level or being targeted by Kotodama while resolving a Slow action triggers a roll to hold focus. Success resolves the action as declared. Failure downgrades a Slow action to Normal, or imposes Disadvantage outside a Slow action." />
     </div>
-    <p><strong>Effect:</strong> if the trigger happened during a Slow action, failing the roll downgrades that action to a Normal one, losing the called-shot option and the Advantage that made it Slow in the first place. Outside a Slow action, failure instead imposes Disadvantage on whatever triggered it.</p>
+    <p><strong>Effect:</strong> if the trigger happened during a Slow action, failing the roll downgrades that action to a Normal one, losing whatever its <a href="../rules/movement.html#empowered-actions">empowered action</a> gave - the thing that made going Slow worth it. Outside a Slow action, failure instead imposes Disadvantage on whatever triggered it.</p>
     <p class="aside"><strong>Clears:</strong> resolved immediately by the roll itself - success or failure, there's nothing lingering afterward. Concentration grants immunity to being Distracted, regardless of the source.</p>
   </section>
 
@@ -223,7 +223,7 @@ title: "Status Effects"
     <h2>Flustered</h2>
     <p><strong>Trigger:</strong> your Poise reaching 0.</p>
     <div class="chart-frame">
-      <img src="assets/diagrams/poise-track.svg" alt="Poise mirrors Health Levels but cannot drop below 0. Once at 0, a character is Flustered." />
+      <img src="assets/diagrams/poise-track.svg" alt="Poise is a row of boxes, 5 plus your Presence. At 0 you are Flustered; below 0 you are Humiliated, and reaching the far end resets Poise to 0 and costs a Sanity Level." />
     </div>
     <p><strong>Effect:</strong> Disadvantage on all Social rolls, and on anything else where composure matters (GM's call), for the rest of the Scene.</p>
     <div class="roll-box">Presence + Difficulty, roll 2d10, to shake it off early</div>
@@ -243,8 +243,8 @@ title: "Status Effects"
     <div class="chart-frame">
       <img src="assets/diagrams/sanity-track.svg" alt="Sanity mirrors Health Levels. At 0 a character is Overwhelmed; below 0 they are Shattered and can't act alone." />
     </div>
-    <p><strong>Effect:</strong> a temporary negative mental trait, plus Disadvantage on your rolls. You can still act on your own.</p>
-    <p class="aside"><strong>Clears:</strong> once you're removed from whatever caused it and get a chance to rest, or by spending 1 Ki - which also refills Sanity back to full.</p>
+    <p><strong>Effect:</strong> a temporary <a href="scars.html#mental-scars">Mental scar</a> effect - the GM picks it, or you agree it together - for as long as you stay Overwhelmed, plus Disadvantage on your rolls. You can still act on your own.</p>
+    <p class="aside"><strong>Clears:</strong> once you're removed from whatever caused it and get a chance to rest, or by spending 1 Ki - which brings Sanity back to 1.</p>
   </section>
 
 <section class="status-section" id="shattered">
@@ -254,14 +254,14 @@ title: "Status Effects"
       <img src="assets/diagrams/sanity-track.svg" alt="Sanity mirrors Health Levels. At 0 a character is Overwhelmed; below 0 they are Shattered and can't act alone." />
     </div>
     <p><strong>Effect:</strong> panicky, babbling, unable to act on your own - someone has to lead or drag you.</p>
-    <p class="aside"><strong>Clears:</strong> the same two ways as Overwhelmed - removal-plus-rest, or 1 Ki - but either one only restores Sanity to 1, not fully; normal recovery resumes from there. Dropping below 0 always leaves a permanent mental scar, even if you recover with Ki.</p>
+    <p class="aside"><strong>Clears:</strong> the same two ways as Overwhelmed - removal-plus-rest, or 1 Ki - but either one only restores Sanity to 1, not fully; normal recovery resumes from there. Dropping below 0 always leaves a <a href="scars.html#mental-scars">Mental scar</a>, however you recover - even with Ki - and it lasts until something heals it.</p>
   </section>
 
   <section class="status-section" id="unconscious-dying">
     <h2>Unconscious, then Dying</h2>
     <p><strong>Trigger:</strong> your Health Levels reaching 0, and then dropping below it.</p>
-    <p><strong>Effect:</strong> at 0 you fall unconscious and cannot act. Below 0 you are Dying: still unconscious, still losing ground. The negative range mirrors the positive one, so reaching minus your full Health Levels is death.</p>
-    <p class="aside"><strong>Clears:</strong> below 0, a Short Rest recovers nothing and a Full Night's Rest buys back 1 Health Level, and only one, until you are back to 0. Unstoppable lets a character stay conscious and act throughout instead of blacking out at 0.</p>
+    <p><strong>Effect:</strong> at 0 you fall unconscious and cannot act. Below 0 you are Dying: still unconscious and out of the fight, but it doesn't get worse on its own - only more damage moves you toward death. The negative range mirrors the positive one, so a character with 7 Health Levels is dead at -7.</p>
+    <p class="aside"><strong>Clears:</strong> a Fate Token spent to <a href="../rules/fate.html#fate-triggers">Get Back Up</a> puts you at 1 Health Level, conscious and acting, even while you're out cold. Stabilizing you - First Aid, a trauma kit, or a Gift that says so - brings you to 0: no longer Dying, still unconscious. Otherwise, below 0 a Short Rest recovers nothing and a Full Night's Rest buys back 1 Health Level, and only one, until you are back to 0. Going below 0 also leaves a <a href="scars.html#physical-scars">Physical scar</a>. Unstoppable lets a character stay conscious and act throughout instead of blacking out at 0.</p>
   </section>
 
   <h2 class="group-head">From the world</h2>
@@ -303,7 +303,7 @@ title: "Status Effects"
     <h2>Grabbed</h2>
     <p><strong>Trigger:</strong> being held - a hand, a jaw, a coil, a will.</p>
     <p><strong>Effect:</strong> your Movement Rate is 0, and you roll at Disadvantage on everything except escaping or attacking whatever holds you.</p>
-    <p class="aside"><strong>Clears:</strong> a contested roll against the grabber's Potence - or against its Soak where the grip is a thing rather than a person, GM's call - or when the grabber lets go.</p>
+    <p class="aside"><strong>Clears:</strong> a contested roll against the grabber's Potence - or against its Hardness where the grip is a thing rather than a person, GM's call - or when the grabber lets go.</p>
   </section>
 
   <section class="status-section" id="prone">

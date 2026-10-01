@@ -121,6 +121,11 @@ title: "Scars"
     padding: 0.25rem 0.6rem;
     font-size: 0.85rem;
   }
+  .scar-table { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1.25rem; font-size: 0.95rem; }
+  .scar-table th, .scar-table td { text-align: left; vertical-align: top; padding: 0.45rem 0.6rem;
+    border-bottom: 1px solid var(--panel-border); }
+  .scar-table th { color: var(--text-dim); font-weight: 600; }
+  .scar-table td:first-child { white-space: nowrap; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -129,32 +134,57 @@ title: "Scars"
   <a class="back-link" href="combat-flow-reference.html">&larr; Back to Player's Quick Reference</a>
   <h1>Scars</h1>
   <p class="note">
-    What actually happens when Health, Sanity, or Poise crosses zero - the permanent mark it leaves, and a working list of flavor
-    to draw from instead of improvising one from scratch every time.
+    What happens when Health, Poise or Sanity crosses zero: the mark it leaves at 0, the scar it leaves below it,
+    how each kind heals, and every scar on the list.
   </p>
 
   <nav class="toc">
     <h2>Sections</h2>
     <ol>
       <li><a href="#how-scars-work">How Do Scars Work?</a></li>
+      <li><a href="#healing">Healing a Scar</a></li>
       <li><a href="#physical-scars">Physical Scars</a></li>
-      <li><a href="#mental-scars">Mental Scars</a></li>
       <li><a href="#social-scars">Social Scars</a></li>
+      <li><a href="#mental-scars">Mental Scars</a></li>
+      <li><a href="#making-a-scar">Making a New Scar</a></li>
     </ol>
   </nav>
 
   <section class="scar-section" id="how-scars-work">
     <h2>How Do Scars Work?</h2>
-    <p>All three tracks - <a href="../rules/rules.html#health-levels">Health</a>, <a href="../rules/rules.html#sanity">Sanity</a>, and <a href="../rules/rules.html#poise">Poise</a> - work the same way once they cross zero.</p>
-    <p><strong>At exactly 0</strong> (Unconscious, Overwhelmed, or Flustered), a fresh scar is purely cosmetic - a mark, a tell, a habit, whatever fits. No mechanical effect on its own.</p>
-    <p><strong>Dropping below 0</strong> (into negative Health, Shattered Sanity, or Humiliated Poise) always leaves a permanent scar, and the GM may impose a genuine <a href="../rules/flaws.html">Flaw</a> instead of a purely cosmetic one - lasting until that track is fully healed back to 0, GM's call in consultation with the player on which Flaw actually fits the harm taken.</p>
-    <p class="aside"><strong>Scars accumulate</strong> - each fresh crossing, after healing back up in between, adds a new one rather than replacing the last. A below-zero Flaw-scar grants no Flaw points of its own; it's a consequence the GM imposes, not a creation-time build choice. The <a href="../rules/gifts.html#healing">Healing</a> and <a href="../rules/gifts.html#regeneration">Regeneration</a> Gifts both grant immunity to the cosmetic tier only - neither can prevent or undo a below-zero Flaw-scar in the moment. That Flaw-scar can instead be healed away entirely given a full <strong>Month</strong>: Regeneration does it on yourself through rest alone; Healing does it on someone else through thorough, repeated application across that Month.</p>
+    <!-- rules:how -->
+<p>Going to 0 leaves a mark. Going below it leaves something that lasts.</p>
+<p><strong>At 0</strong>, any Vital leaves a purely cosmetic mark, with no mechanical effect: a scar, a limp or a changed voice from Health; a nervous habit or a reputation quirk from <a href="../rules/rules.html#poise">Poise</a>; a tic, an intrusive thought or a private ritual from <a href="../rules/rules.html#sanity">Sanity</a>. The <a href="../rules/gifts.html#healing">Healing</a> and <a href="../rules/gifts.html#regeneration">Regeneration</a> Gifts both grant immunity to the Health one, for the target they're used on.</p>
+<p><strong>Below 0</strong>, the character takes a <strong>scar</strong>: one effect from the matching list below. Health leaves a <strong>Physical</strong> scar, Poise a <strong>Social</strong> one, Sanity a <strong>Mental</strong> one. The GM picks it, or the GM and the player talk it over and decide together.</p>
+<ul>
+  <li><strong>One scar per crossing.</strong> Each fresh crossing below 0, after healing back up in between, adds one more. Going deeper in one crossing doesn't add a second, and the same scar can't be taken twice.</li>
+  <li><strong>A scar isn't a <a href="../rules/flaws.html">Flaw</a>.</strong> It grants no Flaw points, and a scar causing trouble never earns a Fate Token.</li>
+  <li><strong>A scar is permanent</strong> until something heals it.</li>
+</ul>
+    <!-- /rules:how -->
+  </section>
+
+  <section class="scar-section" id="healing">
+    <h2>Healing a Scar</h2>
+    <!-- rules:healing -->
+<p>The count is how far below 0 the character went: −1 is one, −7 is seven.</p>
+<table class="scar-table">
+  <thead><tr><th>Scar</th><th>By Gift</th><th>By Adder</th><th>By Skill</th></tr></thead>
+  <tbody>
+    <tr><td>Physical</td><td><a href="../rules/gifts.html#healing">Healing</a> or <a href="../rules/gifts.html#regeneration">Regeneration</a>: that many <strong>Days</strong></td><td>-</td><td>Medicine: that many <strong>Months</strong></td></tr>
+    <tr><td>Mental</td><td><a href="../rules/gifts.html#restoration">Restoration</a>: that many <strong>Days</strong></td><td>Talking Down (<a href="../rules/gifts.html#telepathyempathy">Telepathy/Empathy</a>) or Taking the Edge Off (<a href="../rules/gifts.html#memory-manipulation">Memory Manipulation</a>): that many <strong>Weeks</strong></td><td>Psychology: that many <strong>Months</strong></td></tr>
+    <tr><td>Social</td><td>-</td><td>-</td><td>Networking: that many <strong>Months</strong></td></tr>
+  </tbody>
+</table>
+<p>A Gift or Adder needs dedicated time across that span, as its own entry says. A Skill needs regular work across it from someone Trained in that Skill - for Networking, the scarred character themselves. <strong>A scarred reputation can't be treated or healed - it has to be rebuilt.</strong> No Gift reaches a Social scar.</p>
+    <!-- /rules:healing -->
   </section>
 
   <section class="scar-section" id="physical-scars">
     <h2>Physical Scars</h2>
-    <p>Triggered by <a href="../rules/rules.html#health-levels">Health Levels</a> crossing zero.</p>
-    <h3>Cosmetic (at 0 Health)</h3>
+    <p>From <a href="../rules/rules.html#health-levels">Health</a>.</p>
+    <h3>At 0: a mark</h3>
+    <p>No mechanical effect. Some ideas, if nothing better comes out of the scene:</p>
     <ol class="scar-list">
       <li>A jagged scar across the wound site, visible but doesn't impede</li>
       <li>A permanent limp on rough terrain</li>
@@ -184,20 +214,93 @@ title: "Scars"
       <li>Slightly asymmetrical features from an old fracture that reset imperfectly</li>
       <li>A permanent callus on a palm or sole from old repeated strain</li>
     </ol>
-    <h3>Flaw-Scar (below 0 Health)</h3>
-    <div class="flaw-tags">
-      <span class="flaw-tag">Lame</span>
-      <span class="flaw-tag">Impaired Senses</span>
-      <span class="flaw-tag">Notable Appearance</span>
-      <span class="flaw-tag">Fragile</span>
-      <span class="flaw-tag">Speech Impediment</span>
-    </div>
+    <h3>Below 0: the scar</h3>
+    <!-- rules:physical -->
+<table class="scar-table">
+  <thead><tr><th>Scar</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>Bad Knee</td><td>Movement Rate −1m. Disadvantage on Athletics to jump.</td></tr>
+    <tr><td>Stiff Shoulder</td><td>Disadvantage on Thrown Weapons and Archery.</td></tr>
+    <tr><td>Shaky Hand</td><td>Disadvantage on Sleight of Hand, and on Firearms past Close.</td></tr>
+    <tr><td>Ribs That Set Wrong</td><td>Your Stamina baseline for holding breath and running flat-out is halved.</td></tr>
+    <tr><td>Ringing Ear</td><td>Disadvantage on Perception by sound.</td></tr>
+    <tr><td>Clouded Eye</td><td>Disadvantage on Perception by sight past Close.</td></tr>
+    <tr><td>Weak Grip</td><td>Disadvantage on Potence contests to hold on: grapples, climbing, a hand on a ledge.</td></tr>
+    <tr><td>Missing Fingers</td><td>Disadvantage on Crafting, Electronics and Security by hand.</td></tr>
+    <tr><td>Limp</td><td>Disadvantage on Acrobatics, and in chases on foot.</td></tr>
+    <tr><td>Scarred Lungs</td><td>Disadvantage on endurance checks in smoke, cold or thin air.</td></tr>
+    <tr><td>Weather in the Joints</td><td>In cold or rain, Disadvantage on Athletics and Acrobatics.</td></tr>
+    <tr><td>Tender Spot</td><td>Ki can't preserve the first Health Level you lose in a Scene.</td></tr>
+    <tr><td>Disfigured</td><td>Disadvantage on Disguise. People who've seen you once remember you.</td></tr>
+    <tr><td>Bad Back</td><td>Disadvantage on Athletics to lift, carry or drag.</td></tr>
+    <tr><td>Slow to Clot</td><td>First Aid and Medicine on you are at Disadvantage.</td></tr>
+    <tr><td>Night Blind</td><td>Disadvantage on Perception and Driving in the dark.</td></tr>
+    <tr><td>Chronic Pain</td><td>Your baseline for any sustained exertion is one unit shorter.</td></tr>
+    <tr><td>Burn Scars</td><td>Soak counts 1 lower against fire and heat.</td></tr>
+    <tr><td>Old Break</td><td>A hit that costs 2 or more Health Levels also leaves you <a href="../rules/rules.html#off-balance">Off Balance</a>.</td></tr>
+    <tr><td>Wheeze</td><td>Disadvantage on Stealth when you've moved this round.</td></tr>
+  </tbody>
+</table>
+    <!-- /rules:physical -->
+  </section>
+
+  <section class="scar-section" id="social-scars">
+    <h2>Social Scars</h2>
+    <p>From <a href="../rules/rules.html#poise">Poise</a>.</p>
+    <h3>At 0: a mark</h3>
+    <p>No mechanical effect. Some ideas, if nothing better comes out of the scene:</p>
+    <ol class="scar-list">
+      <li>A nervous habit that surfaces under real social pressure - fidgeting, a verbal tic, avoiding eye contact</li>
+      <li>A specific phrase or turn of speech you now overuse without noticing</li>
+      <li>A reputation quirk that follows you in certain circles - "the one who choked at..."</li>
+      <li>A changed laugh - shorter, more guarded than it used to be</li>
+      <li>A tendency to over-rehearse anything important before saying it out loud</li>
+      <li>A specific social setting (a stage, a boardroom, a particular kind of crowd) that now makes you visibly stiffen</li>
+      <li>A habit of downplaying your own achievements before anyone else can</li>
+      <li>A go-to deflection joke you reach for whenever a conversation gets too real</li>
+      <li>A slightly too-careful way of choosing words around one specific topic</li>
+      <li>A physical tell - a hand to the collar, a shift in stance - that reads as discomfort to anyone paying attention</li>
+      <li>An overcorrected confidence in low-stakes situations, masking real unease in higher-stakes ones</li>
+      <li>A story you tell about the incident that's just slightly different from what actually happened</li>
+      <li>A specific compliment or criticism that visibly throws you off script, every time</li>
+      <li>A preference for written communication over face-to-face when the stakes are real</li>
+      <li>A practiced neutral expression that slips only under real, direct pressure</li>
+    </ol>
+    <h3>Below 0: the scar</h3>
+    <!-- rules:social -->
+<table class="scar-table">
+  <thead><tr><th>Scar</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>The Story Goes Around</td><td>Disadvantage on Intimidation against anyone who's heard what happened.</td></tr>
+    <tr><td>Known Face</td><td>Disadvantage on Disguise and Stealth where it happened.</td></tr>
+    <tr><td>Stammer</td><td>Disadvantage on Public Speaking and Performance in front of an audience.</td></tr>
+    <tr><td>Sore Spot</td><td>A Social attack that brings it up gets 1 extra die.</td></tr>
+    <tr><td>Burned Bridge</td><td>Disadvantage on Networking with one Contact or faction who saw it.</td></tr>
+    <tr><td>Eyes Down</td><td>Disadvantage on Leadership when the person who did it is present.</td></tr>
+    <tr><td>Tell</td><td>Insight to read you is at Advantage.</td></tr>
+    <tr><td>Gives Ground</td><td>Disadvantage on Barter and Bribery.</td></tr>
+    <tr><td>Rattled</td><td>Losing a Poise Level leaves you <a href="../rules/rules.html#distracted">Distracted</a>.</td></tr>
+    <tr><td>The Nickname</td><td>Ridicule that uses it is at Advantage against you.</td></tr>
+    <tr><td>Out of Place</td><td>Disadvantage on Etiquette at anything formal.</td></tr>
+    <tr><td>It's on Video</td><td>Once a session the GM can say someone in the Scene has seen it. Disadvantage on Persuasion with them.</td></tr>
+    <tr><td>Can't Let It Go</td><td>When it's thrown at you in public, Disadvantage on everything else until you answer it.</td></tr>
+    <tr><td>Nervous Laugh</td><td>Disadvantage on Charm and Seduction when it matters.</td></tr>
+    <tr><td>Quiet Voice</td><td>Disadvantage on Intimidation.</td></tr>
+    <tr><td>Flushes</td><td>Disadvantage on Deception about yourself.</td></tr>
+    <tr><td>Won't Ask</td><td>You can't be Helped on Social rolls.</td></tr>
+    <tr><td>On the Record</td><td>Disadvantage on Bureaucracy and Law wherever the record exists.</td></tr>
+    <tr><td>Stage Freeze</td><td>Your first Social roll in front of a crowd each Scene is at Disadvantage.</td></tr>
+    <tr><td>Touchy Subject</td><td>Ki can't preserve Poise against a Social attack that brings it up.</td></tr>
+  </tbody>
+</table>
+    <!-- /rules:social -->
   </section>
 
   <section class="scar-section" id="mental-scars">
     <h2>Mental Scars</h2>
-    <p>Triggered by <a href="../rules/rules.html#sanity">Sanity</a> crossing zero.</p>
-    <h3>Cosmetic (at 0 Sanity)</h3>
+    <p>From <a href="../rules/rules.html#sanity">Sanity</a>.</p>
+    <h3>At 0: a mark</h3>
+    <p>No mechanical effect. Some ideas, if nothing better comes out of the scene:</p>
     <ol class="scar-list">
       <li>A tic that flares under stress - touching the scar, tapping a rhythm</li>
       <li>A recurring intrusive thought about the incident, easily dismissed but never fully gone</li>
@@ -223,48 +326,47 @@ title: "Scars"
       <li>Over-explaining or over-apologizing in moments that echo the original incident</li>
       <li>A private phrase or word you use only in your own head to steady yourself</li>
     </ol>
-    <h3>Flaw-Scar (below 0 Sanity)</h3>
-    <div class="flaw-tags">
-      <span class="flaw-tag">Anxiety</span>
-      <span class="flaw-tag">Short Fuse</span>
-      <span class="flaw-tag">Amnesia</span>
-      <span class="flaw-tag">Soft-Hearted</span>
-      <span class="flaw-tag">Overconfident</span>
-      <span class="flaw-tag">Secret</span>
-    </div>
+    <h3>Below 0: the scar</h3>
+    <!-- rules:mental -->
+<table class="scar-table">
+  <thead><tr><th>Scar</th><th>Effect</th></tr></thead>
+  <tbody>
+    <tr><td>The Trigger</td><td>One sound, smell or sight leaves you <a href="../rules/rules.html#distracted">Distracted</a> when it turns up.</td></tr>
+    <tr><td>Night Terrors</td><td>A Full Night's Rest refills Ki only as a Short Rest does (Klotho), unless somebody keeps watch with you.</td></tr>
+    <tr><td>Hypervigilant</td><td>You can't be <a href="../rules/rules.html#surprised">Surprised</a>, and you can't take a Short Rest anywhere unsecured.</td></tr>
+    <tr><td>Phobia</td><td>Disadvantage on every roll while the thing is within Close.</td></tr>
+    <tr><td>Lost Time</td><td>A stretch of memory is gone. The GM knows what's in it.</td></tr>
+    <tr><td>Intrusive Memory</td><td>A catastrophic failure also leaves you Distracted.</td></tr>
+    <tr><td>Checks the Exits</td><td>Your first action in each Scene is at Slow.</td></tr>
+    <tr><td>Flat</td><td>Disadvantage on Performance and Charm.</td></tr>
+    <tr><td>Paranoid</td><td>You can't be Helped by anyone you haven't known a Month.</td></tr>
+    <tr><td>Startle</td><td>A sudden loud noise costs you Fast for the round.</td></tr>
+    <tr><td>Drifts</td><td>Once a session the GM can say you drift. Disadvantage on Perception for that Scene.</td></tr>
+    <tr><td>Insomnia</td><td>Miss a Full Night's Rest and you wake <a href="../rules/rules.html#exhausted">Exhausted</a>.</td></tr>
+    <tr><td>The Voice</td><td>You answer it under your breath. Disadvantage on Stealth.</td></tr>
+    <tr><td>Survivor's Guilt</td><td>While an ally is Dying, you can't spend a Fate Token on yourself.</td></tr>
+    <tr><td>Freezes</td><td>Surprised lasts a round longer.</td></tr>
+    <tr><td>Tunnel Vision</td><td>Under Mental attack, you can't Help or be Helped.</td></tr>
+    <tr><td>It Knows You</td><td>Mental attacks from the thing that did it get 1 extra die.</td></tr>
+    <tr><td>The Dark</td><td>Disadvantage on every roll in darkness without a light.</td></tr>
+    <tr><td>Fixated</td><td>While it's in the Scene, Disadvantage on anything that isn't about it.</td></tr>
+    <tr><td>Cracks</td><td>Disadvantage on Academics, Research and Law in combat.</td></tr>
+  </tbody>
+</table>
+    <!-- /rules:mental -->
   </section>
 
-  <section class="scar-section" id="social-scars">
-    <h2>Social Scars</h2>
-    <p>Triggered by <a href="../rules/rules.html#poise">Poise</a> crossing zero. Unlike Health and Sanity, Poise has no death threshold - social trauma can leave lasting damage, but never kills on its own.</p>
-    <h3>Cosmetic (at 0 Poise)</h3>
-    <ol class="scar-list">
-      <li>A nervous habit that surfaces under real social pressure - fidgeting, a verbal tic, avoiding eye contact</li>
-      <li>A specific phrase or turn of speech you now overuse without noticing</li>
-      <li>A reputation quirk that follows you in certain circles - "the one who choked at..."</li>
-      <li>A changed laugh - shorter, more guarded than it used to be</li>
-      <li>A tendency to over-rehearse anything important before saying it out loud</li>
-      <li>A specific social setting (a stage, a boardroom, a particular kind of crowd) that now makes you visibly stiffen</li>
-      <li>A habit of downplaying your own achievements before anyone else can</li>
-      <li>A go-to deflection joke you reach for whenever a conversation gets too real</li>
-      <li>A slightly too-careful way of choosing words around one specific topic</li>
-      <li>A physical tell - a hand to the collar, a shift in stance - that reads as discomfort to anyone paying attention</li>
-      <li>An overcorrected confidence in low-stakes situations, masking real unease in higher-stakes ones</li>
-      <li>A story you tell about the incident that's just slightly different from what actually happened</li>
-      <li>A specific compliment or criticism that visibly throws you off script, every time</li>
-      <li>A preference for written communication over face-to-face when the stakes are real</li>
-      <li>A practiced neutral expression that slips only under real, direct pressure</li>
-    </ol>
-    <h3>Flaw-Scar (below 0 Poise)</h3>
-    <div class="flaw-tags">
-      <span class="flaw-tag">Notoriety</span>
-      <span class="flaw-tag">Pariah</span>
-      <span class="flaw-tag">Secret</span>
-      <span class="flaw-tag">Speech Impediment</span>
-      <span class="flaw-tag">Short Fuse</span>
-      <span class="flaw-tag">Shaken Confidence</span>
-    </div>
-    <p class="aside"><strong>Humiliated</strong> (below 0 Poise) is the social parallel to Shattered - unable to take the lead, negotiate, or be trusted to speak for the group, though still fully able to act on your own. See <a href="../rules/rules.html#humiliated">Humiliated</a> for the full status.</p>
+  <section class="scar-section" id="making-a-scar">
+    <h2>Making a New Scar</h2>
+    <!-- rules:making -->
+<p>The lists are a starting point. When none of them fits what happened, make one.</p>
+<ul>
+  <li><strong>Tie it to the harm.</strong> A scar comes from one moment - the knife that went in under the ribs, the speech that fell apart in front of the whole room, the thing in the basement. The best ones are the ones anybody at the table can point back to.</li>
+  <li><strong>Match the Vital.</strong> A Social scar is never a wound, and a Physical scar never changes what anybody thinks of you.</li>
+  <li><strong>Keep it narrow.</strong> A scar should bite about once a session, not every roll. Build it from Disadvantage on one or two named Skills or one kind of situation; a Condition that one specific trigger sets off; one extra die for a particular kind of attack against you; a small cut, in one narrow case, to something you'd otherwise always have - a Rest, your Movement Rate, your Fast Bracket, a Ki use, being Helped; or plain story - a lost memory, a name that sticks, a door that's closed to you.</li>
+  <li><strong>Never</strong> a penalty on every roll, a lost Attribute or sub-stat point, fewer Health Levels, or anything that ends the character. Scars stack, and a scar that hits everything turns three bad nights into a character nobody wants to play.</li>
+</ul>
+    <!-- /rules:making -->
   </section>
 
 </main>

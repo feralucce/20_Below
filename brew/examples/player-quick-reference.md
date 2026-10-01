@@ -137,13 +137,13 @@ Same two steps as any attack. Element vs their **Social Defense** (10-Psyche) to
 
 | | |
 |---|---|
-| **Dying** | Health below 0. Unconscious and losing ground |
+| **Dying** | Health below 0. Unconscious and out of the fight; only more damage makes it worse |
 | **Off Balance** | Everything at Disadvantage until the end of your next turn. Doesn't stack |
 | **Distracted** | Atropos + Difficulty to hold a Slow action together |
 | **Surprised** | Everything at Disadvantage for the round |
 | **Flustered** | Poise hit 0. Social rolls at Disadvantage for the scene |
 | **Humiliated** | Poise below 0. You defer and comply |
-| **Overwhelmed** | Sanity hit 0. Disadvantage on everything, plus a temporary mental Flaw |
+| **Overwhelmed** | Sanity hit 0. Disadvantage on everything, plus a temporary Mental scar effect |
 | **Shattered** | Sanity below 0. Panicky and babbling; you have to be led |
 | **Exhausted** | Stacks 1-5: Disadvantage on Physical, then on all, then half Move and no Fast, then +1 per Ki spend, then out cold |
 
@@ -174,8 +174,9 @@ Same two steps as any attack. Element vs their **Social Defense** (10-Psyche) to
 | **Automatic Success** | One roll succeeds outright, no dice |
 | **Shrug Off an Effect** | Clear a condition for a moment |
 | **Refill Ki** | Your whole pool, right now |
+| **Get Back Up** | Up at 1 Health Level, even while out cold |
 
-**Hold at most Stamina x 3. Spend at most Stamina per Scene.** A Token earned at the cap is lost.
+**Hold at most (Stamina x 3) + 1. Make at most Stamina + 1 counted spends per Scene** - a Kotodama, or burning off Corruption; the spends above don't count. A Token earned at the cap is lost.
 
 **Kotodama** - assert a fact into the world. Cost is Magnitude + Range beyond yourself + Plausibility (Whisper 0, Murmur +1, Shout +3), and permanent is free.
 
@@ -187,9 +188,9 @@ Every Vital runs as far below zero as it runs above it.
 |---|---|---|---|
 | **Health** | Unconscious | Dying | Dead |
 | **Poise** | Flustered | Humiliated | Resets to 0, costs a Sanity |
-| **Sanity** | Overwhelmed | Shattered | Resets to 0, temporary condition |
+| **Sanity** | Overwhelmed | Shattered | Resets to 0, temporary Mental scar effect |
 
-An unnamed NPC is simply dead at 0.
+An unnamed NPC who reaches 0 is out of the fight and the story - dead or down is the GM's call.
 
 ## Resting
 
