@@ -96,6 +96,37 @@ the playtester NPC reward counts (Branding/playtester-course).
    `{"New":"123","Unclear rule":"456",...}`.
 3. `npx wrangler deploy`, then send a test from the page.
 
+## Playtester applications
+
+`apply.html` on the site is an unlisted application form (no menu link,
+kept out of search), shared on Discord, social posts and the newsletter.
+It posts to `/apply` on this Worker (`apply.js`), which checks it,
+numbers it `A#1`, `A#2` ... (its own counter and rate limit) and posts it
+to a private **#playtest-applications** forum: title
+`A#3 · Annie Average · GM`, tagged **New**.
+
+An application holds what the team needs to approve and credit a
+playtester: the name to credit, a Discord username, GM or player, in
+person or online, experience, and their agreement to the commitments
+(a Session report after every session and at least one session per
+round; keep the Foundation book and the full bestiary private until
+release; be credited in the books and on the website). Approve or
+decline by tag, then give approved playtesters the playtester channel.
+
+### Connecting the forum (one time)
+
+1. Create a private **Forum** channel, `#playtest-applications`, with the
+   tags **New**, **Approved** and **Declined**.
+2. **Edit Channel → Integrations → Webhooks → New Webhook**, name it
+   `20 Below Playtester Applications`, copy the URL, then:
+   ```
+   npx wrangler secret put APPLY_WEBHOOK
+   ```
+   and paste it when asked (never into chat or a file here).
+3. Put the New tag's id in `wrangler.toml` as `APPLY_TAGS`, e.g.
+   `{"New":"123"}`. Until then, applications arrive untagged.
+4. `npx wrangler deploy`, then send a test from the page.
+
 ## Email signups
 
 The site's "Get 20 Below News" box (`app/signup.js`, in the footer of

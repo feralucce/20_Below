@@ -2,6 +2,7 @@
 //   node tools/bug-relay/test.mjs
 import assert from 'node:assert/strict';
 import { cleanFeedback, feedbackPost, tagIds } from './playtest.js';
+import { cleanApplication, applicationPost, cleanHandle } from './apply.js';
 import worker, { clean, plain, discordPost, webhookFrom, defang, LIMITS, publicIssues } from './worker.js';
 
 function fakeKV() {
@@ -266,6 +267,47 @@ await t('playtest feedback is cleaned like a bug report and refused without its 
   assert.deepEqual(tagIds('Balance', 'not json'), []);
   const before = sent.length;
   const r = await worker.fetch(req({ kind: 'Balance', summary: 'x', happened: 'y' }, { path: '/playtest' }), env());
+  assert.equal(r.status, 500);
+  assert.equal(sent.length, before);
+});
+
+await t('a playtester application is numbered A#, tagged New, and posted to its own forum', async () => {
+  const e = { ...env(), APPLY_WEBHOOK: 'https://discord.com/api/webhooks/8/ap', APPLY_TAGS: '{"New":"44444","Approved":"55555"}' };
+  const before = sent.length;
+  const good = { credit: 'Annie Average', discord: '@annie_avg', role: 'GM', where: 'Online', experience: 'Played a few', group: '4 friends', why: 'We love horror games.', agree: true };
+  const r = await worker.fetch(req(good, { path: '/apply' }), e);
+  assert.equal(r.status, 200);
+  assert.equal((await r.json()).application, 1);
+  const post = sent[before];
+  assert.equal(post.url, 'https://discord.com/api/webhooks/8/ap?wait=true');
+  assert.equal(post.body.thread_name, 'A#1 · Annie Average · GM');
+  assert.deepEqual(post.body.applied_tags, ['44444']);
+  assert.ok(post.body.content.includes('**Discord:** annie\\_avg'));
+  assert.ok(post.body.content.includes('Agreed to the playtester commitments.'));
+  assert.deepEqual(post.body.allowed_mentions, { parse: [] });
+  assert.equal(e.TICKETS.map.get('playtest:last'), undefined);
+});
+
+await t('an application needs a credit name, a Discord handle, its choices and the agreement', async () => {
+  const ok = { credit: 'Tony', discord: 'tough.tony', role: 'Player', where: 'In person', experience: 'Played for years', agree: true };
+  assert.ok(!cleanApplication(ok).error);
+  assert.ok(cleanApplication({ ...ok, credit: '' }).error);
+  assert.ok(cleanApplication({ ...ok, discord: 'has spaces in it' }).error);
+  assert.ok(cleanApplication({ ...ok, role: 'Boss' }).error);
+  assert.ok(cleanApplication({ ...ok, where: '' }).error);
+  assert.ok(cleanApplication({ ...ok, experience: 'Some' }).error);
+  assert.ok(cleanApplication({ ...ok, agree: false }).error);
+  assert.equal(cleanHandle('@Old#1234'), 'Old#1234');
+  assert.equal(cleanHandle('x'), '');
+  const p = applicationPost(2, cleanApplication({ ...ok, credit: 'See https://evil.example', why: '@everyone hi' }), '');
+  assert.ok(!/https:\/\//.test(p.thread_name + p.content));
+  assert.ok(!p.content.includes('@everyone'));
+  assert.ok(!('applied_tags' in p));
+});
+
+await t('applications are refused without their webhook', async () => {
+  const before = sent.length;
+  const r = await worker.fetch(req({ credit: 'Tony', discord: 'tough.tony', role: 'Player', where: 'Online', experience: 'Played a few', agree: true }, { path: '/apply', ip: '7.7.7.7' }), env());
   assert.equal(r.status, 500);
   assert.equal(sent.length, before);
 });

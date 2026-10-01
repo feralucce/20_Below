@@ -1,0 +1,281 @@
+---
+title: "Become a Playtester"
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Unlisted: shared on Discord, social posts and the newsletter, not
+     linked from the site's menus and kept out of search results. -->
+<meta name="robots" content="noindex" />
+<title>20 Below - Become a Playtester</title>
+<meta name="description" content="Apply to playtest 20 Below: play each round, tell us what happened, and get credited in the books and on the website." />
+{% include brand-head.html %}
+<style>
+  /* Colour, type and the shared components live in
+     docs/assets/css/20below.css. What is left here is
+     this page's own. The form styles match playtest.html. */
+  :root { --measure: 720px; }
+
+  body { min-height: 100vh; }
+  .eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-dim);
+    margin: 1.5rem 0 0.5rem;
+  }
+  .intro { color: var(--text-dim); line-height: 1.7; font-size: 1.05rem; margin-bottom: 1.5rem; }
+
+  .perks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    gap: 0.75rem;
+    margin: 0 0 2rem;
+  }
+  .perk {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    padding: 0.9rem 1rem 1rem;
+  }
+  .perk h2 { font-size: 1.05rem; margin: 0 0 0.35rem; }
+  .perk p { margin: 0; color: var(--text-dim); line-height: 1.5; font-size: 0.93rem; }
+
+  .pt-form { display: grid; gap: 1.3rem; }
+  .pt-form fieldset {
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius);
+    background: var(--panel);
+    padding: 1rem 1.1rem 1.1rem;
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+  }
+  .pt-form legend { padding: 0 0.4rem; font-weight: 700; }
+  .field { display: grid; gap: 0.35rem; }
+  .field label, .field .label { font-weight: 600; }
+  .field .hint { color: var(--text-dim); font-size: 0.88rem; line-height: 1.4; }
+  .req { color: var(--accent); }
+  .pt-form input[type=text], .pt-form textarea {
+    font: inherit;
+    font-size: 1rem;
+    color: var(--text);
+    background: #0a1720;
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .pt-form textarea { min-height: 6rem; resize: vertical; line-height: 1.5; }
+  .pt-form input:focus, .pt-form textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  /* One-choice groups as big buttons, easy to hit on a phone. */
+  .choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); gap: 0.5rem; }
+  .choices label {
+    display: flex;
+    gap: 0.55rem;
+    align-items: center;
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+    padding: 0.6rem 0.75rem;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .choices input { accent-color: var(--accent); }
+  .choices label:has(input:checked) { border-color: var(--accent); background: var(--accent-dim); }
+
+  .agree { display: flex; gap: 0.7rem; align-items: flex-start; line-height: 1.55; cursor: pointer; }
+  .agree input { margin-top: 0.3rem; accent-color: var(--accent); width: 1.1rem; height: 1.1rem; flex: none; }
+  .agree ul { margin: 0.35rem 0 0; padding-left: 1.1rem; color: var(--text-dim); }
+
+  [hidden] { display: none !important; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+  .actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .actions button {
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.65rem 1.5rem;
+    background: var(--accent);
+    color: #fff;
+  }
+  .actions button:disabled { opacity: 0.6; cursor: default; }
+  .status { margin: 0; line-height: 1.5; }
+  .status.error { color: #ff9b8a; }
+  .done {
+    border: 1px solid var(--accent);
+    background: var(--accent-dim);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem;
+    line-height: 1.6;
+  }
+  .done h2 { margin-top: 0; }
+</style>
+</head>
+<body>
+{% include site-nav.html %}
+<main id="main">
+  <p class="eyebrow">Playtesters</p>
+  <h1>Become a Playtester</h1>
+
+  <p class="intro">
+    20 Below is in active playtest, and we need tables to play it and tell us what happened.
+    Playtesting runs in numbered rounds, each with a focus. Apply below; the team reviews every
+    application, and once you're approved we'll open the playtester channel for you on the
+    <a href="https://discord.gg/qEpjjYKSXD" rel="noopener">20 Below Discord</a>.
+  </p>
+
+  <div class="perks">
+    <section class="perk">
+      <h2>Your name in the credits</h2>
+      <p>Send at least one piece of playtest feedback and you're credited in the books and on the website.</p>
+    </section>
+    <section class="perk">
+      <h2>A copy of the main book</h2>
+      <p>Complete every round of the playtest and you get a copy of the main 20 Below book.</p>
+    </section>
+    <section class="perk">
+      <h2>A place in the world</h2>
+      <p>Complete every round with a Detailed report in each, and you'll be written into Backwater Static as an NPC.</p>
+    </section>
+  </div>
+
+  <form class="pt-form" id="applyForm" novalidate>
+    <fieldset>
+      <legend>About you</legend>
+      <div class="field">
+        <label for="credit">Name to credit you under <span class="req" aria-hidden="true">*</span></label>
+        <span class="hint" id="creditHint">Exactly as you want it to appear in the books and on the website.</span>
+        <input type="text" id="credit" name="credit" maxlength="80" required autocomplete="name" aria-describedby="creditHint">
+      </div>
+      <div class="field">
+        <label for="discord">Discord username <span class="req" aria-hidden="true">*</span></label>
+        <span class="hint" id="discordHint">So we can open the playtester channel for you, like <code>name_123</code>.</span>
+        <input type="text" id="discord" name="discord" maxlength="40" required autocomplete="off" spellcheck="false" aria-describedby="discordHint">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>How you'll play</legend>
+      <div class="field">
+        <span class="label" id="roleLabel">You'll mostly <span class="req" aria-hidden="true">*</span></span>
+        <div class="choices" role="radiogroup" aria-labelledby="roleLabel">
+          <label><input type="radio" name="role" value="GM" required> Run games (GM)</label>
+          <label><input type="radio" name="role" value="Player"> Play</label>
+          <label><input type="radio" name="role" value="Both"> Both</label>
+        </div>
+      </div>
+      <div class="field">
+        <span class="label" id="whereLabel">Where you'll play <span class="req" aria-hidden="true">*</span></span>
+        <div class="choices" role="radiogroup" aria-labelledby="whereLabel">
+          <label><input type="radio" name="where" value="In person" required> In person</label>
+          <label><input type="radio" name="where" value="Online"> Online</label>
+          <label><input type="radio" name="where" value="Both"> Both</label>
+        </div>
+      </div>
+      <div class="field">
+        <span class="label" id="expLabel">Tabletop RPG experience <span class="req" aria-hidden="true">*</span></span>
+        <div class="choices" role="radiogroup" aria-labelledby="expLabel">
+          <label><input type="radio" name="experience" value="New to tabletop RPGs" required> New to them</label>
+          <label><input type="radio" name="experience" value="Played a few"> Played a few</label>
+          <label><input type="radio" name="experience" value="Played for years"> Played for years</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="group">Your group</label>
+        <span class="hint" id="groupHint">Optional. For example, "4 friends" or "looking for a table".</span>
+        <input type="text" id="group" name="group" maxlength="40" aria-describedby="groupHint">
+      </div>
+      <div class="field">
+        <label for="why">Why do you want to playtest 20 Below?</label>
+        <textarea id="why" name="why" maxlength="1000" placeholder="Optional"></textarea>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>The commitments <span class="req" aria-hidden="true">*</span></legend>
+      <label class="agree">
+        <input type="checkbox" name="agree" value="yes" required>
+        <span>
+          I'll take part as a playtester:
+          <ul>
+            <li>I'll play at least one session per round, and send a Session report after every session I play.</li>
+            <li>I'll keep the expansions I see before release, the Foundation book and the full bestiary, to myself until they're released. The core rules and the Backwater Static campaign core are open under the ORC License, so I can share those.</li>
+            <li>I'm happy to be credited under the name above, in the 20 Below books and on the website.</li>
+          </ul>
+        </span>
+      </label>
+    </fieldset>
+
+    <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+    <div class="actions">
+      <button type="submit" id="send">Apply</button>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+
+  <div class="done" id="done" hidden tabindex="-1">
+    <h2>Thanks for applying!</h2>
+    <p>Your application is <strong id="appNo"></strong>. The team reviews every application. Once you're approved,
+      we'll open the playtester channel for you on the 20 Below Discord, so make sure you've
+      <a href="https://discord.gg/qEpjjYKSXD" rel="noopener">joined the server</a>.</p>
+  </div>
+</main>
+{% include site-footer.html %}
+<script src="/docs/assets/js/site-nav.js"></script>
+<script>
+  // Sends to the relay (tools/bug-relay/, POST /apply). A test page can
+  // point this at a local relay.
+  const APPLY_URL = window.__APPLY_URL__ || "https://20below-bugs.20below.workers.dev/apply";
+  const form = document.getElementById("applyForm");
+  const status = document.getElementById("status");
+  const send = document.getElementById("send");
+
+  function say(message, isError) {
+    status.textContent = message;
+    status.className = "status" + (isError ? " error" : "");
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form));
+    if (String(data.credit || "").trim().length < 2) { form.credit.focus(); return say("Please give the name you want to be credited under.", true); }
+    if (!/^@?[A-Za-z0-9_.]{2,32}(#\d{4})?$/.test(String(data.discord || "").trim())) {
+      form.discord.focus(); return say("Please give your Discord username, like name_123.", true);
+    }
+    if (!data.role) return say("Please say whether you'll run games, play, or both.", true);
+    if (!data.where) return say("Please say where you'll play.", true);
+    if (!data.experience) return say("Please say how much you've played tabletop RPGs.", true);
+    if (!data.agree) return say("Please agree to the playtester commitments to apply.", true);
+
+    send.disabled = true;
+    say("Sending…");
+    try {
+      const r = await fetch(APPLY_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const reply = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(reply.error || "The application could not be sent. Please try again.");
+      document.getElementById("appNo").textContent = "A#" + reply.application;
+      form.hidden = true;
+      const done = document.getElementById("done");
+      done.hidden = false;
+      done.focus();
+    } catch (err) {
+      say(err.message || "The application could not be sent. Please try again.", true);
+    } finally {
+      send.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

@@ -20,12 +20,15 @@
 //                            has it yet. Nothing else.
 //   KIT_API_KEY      secret  Kit (kit.com) v4 API key
 //   KIT_FORM_ID      var     the Kit form new signups join (double opt-in)
+//   PLAYTEST_WEBHOOK, PLAYTEST_TAGS  playtest feedback (playtest.js)
+//   APPLY_WEBHOOK, APPLY_TAGS        playtester applications (apply.js)
 //
 // GET /news lists the newsletter issues Kit has sent and marked public,
 // for the site's News page (news.html). It is cached in TICKETS for a few
 // minutes, so the site never waits on Kit and the key never leaves here.
 
 import { cleanFeedback, feedbackPost } from './playtest.js';
+import { cleanApplication, applicationPost } from './apply.js';
 
 export const LIMITS = {
   summary: 100,       // becomes the post title
@@ -59,12 +62,13 @@ export default {
       if (!cors) return json({ error: 'Not found.' }, 404, null);
       return news(env, cors);
     }
-    if (request.method !== 'POST' || !['/report', '/subscribe', '/playtest'].includes(url.pathname)) {
+    if (request.method !== 'POST' || !['/report', '/subscribe', '/playtest', '/apply'].includes(url.pathname)) {
       return json({ error: 'Not found.' }, 404, cors);
     }
     if (!cors) return json({ error: 'This site is not allowed to send reports.' }, 403, null);
     if (url.pathname === '/subscribe') return subscribe(request, env, cors);
     if (url.pathname === '/playtest') return playtest(request, env, cors);
+    if (url.pathname === '/apply') return apply(request, env, cors);
 
     let body;
     try {
@@ -221,6 +225,46 @@ async function playtest(request, env, cors) {
     return json({ error: 'The feedback could not be delivered. Please try again later.' }, 502, cors);
   }
   return json({ ticket: number }, 200, cors);
+}
+
+// Playtester applications (apply.js): the same checks again, an A#
+// counter, its own rate limit, forum and webhook.
+async function apply(request, env, cors) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return json({ error: 'The application could not be read.' }, 400, cors);
+  }
+  if (body && typeof body.website === 'string' && body.website.trim()) {
+    return json({ application: 0 }, 200, cors);
+  }
+  const a = cleanApplication(body);
+  if (a.error) return json({ error: a.error }, 400, cors);
+
+  const who = await senderKey(request);
+  if (!(await allow(env.TICKETS, who, 'aprate:'))) {
+    return json({ error: 'Too many applications in a short time. Please wait a few minutes and try again.' }, 429, cors);
+  }
+  const hook = webhookFrom(env.APPLY_WEBHOOK);
+  if (!hook) return json({ error: 'Applications are not open yet.', stage: 'webhook' }, 500, cors);
+
+  const number = await nextTicket(env.TICKETS, 'apply:last');
+  let sent;
+  try {
+    sent = await fetch(hook + '?wait=true', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(applicationPost(number, a, env.APPLY_TAGS)),
+    });
+  } catch {
+    return json({ error: 'The application could not be delivered. Please try again later.', stage: 'send' }, 502, cors);
+  }
+  if (!sent.ok) {
+    console.log('Discord refused the application post', sent.status, (await sent.text()).slice(0, 300));
+    return json({ error: 'The application could not be delivered. Please try again later.' }, 502, cors);
+  }
+  return json({ application: number }, 200, cors);
 }
 
 // The public issues, newest first. Only what the page shows goes out:

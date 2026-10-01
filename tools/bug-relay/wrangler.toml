@@ -17,6 +17,10 @@ KIT_FORM_ID = "9984113"
 # #playtest-feedback forum. Names left out are not applied.
 PLAYTEST_TAGS = '''{"New":"1554879670116155463","Discussing":"1554879695852413040","Changed":"1554879723211980872","Won't change":"1554879748084342824","Unclear rule":"1554879782964035645","Too slow":"1554879810415755356","Balance":"1554879848244318328","Not fun":"1554879872189599824","Tool issue":"1554879893404254238","Session report":"1554879920826753116","Detailed":"1555215582046195962"}'''
 
+# Playtester applications (apply.js): the New tag of the private
+# #playtest-applications forum. Empty until the forum exists.
+APPLY_TAGS = '''{}'''
+
 # Ticket counter and rate limits. Replace the id after `wrangler kv namespace create TICKETS`.
 [[kv_namespaces]]
 binding = "TICKETS"
