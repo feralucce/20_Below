@@ -756,3 +756,19 @@ ordinary person hears anything.
 
 If nobody has heard you blow it before, nothing happens at all. It only
 ever reaches people who already know the sound of you needing help.
+
+### The Bell Compass
+
+**Level 1. No Ki. Held.**
+
+A brass pocket compass on a short leather thong, the lid long gone and
+the glass scratched cloudy. Where the north mark should be, somebody has
+etched a small brass bell, the lines filled in with something that is
+still faintly tacky to the touch.
+
+The needle never points north. It always points at the nearest Taco
+Campana, and it does not care whether that one is open. Nobody has ever
+caught it being wrong. Nobody has managed to find out who would make
+something like this, or why.
+
+It costs nothing to use. You only have to look at it.
