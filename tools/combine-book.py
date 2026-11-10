@@ -54,6 +54,9 @@ PDF_DIR = r"C:\Users\feral\OneDrive\Documents\20 Below Production documents\PDF"
 OUT = os.path.join(PDF_DIR, "20 Below Player's Guide.md")
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 COVER = os.path.join(ROOT, "Branding", "20Below-cover-print.png")
+# The frontispiece goes over the export's first page, which the front matter
+# leaves empty for it (its break carries "frontispiece"). Full bleed, 300 dpi.
+FRONTIS = os.path.join(ROOT, "Branding", "20Below-frontispiece-print.png")
 FINAL = os.path.join(PDF_DIR, "20 Below Player's Guide - Playtest.pdf")
 
 # Chapters whose own \cols line is ignored, so they set in the book's default two
@@ -321,16 +324,41 @@ def finish(export):
     titles = [t for n, t in build() if not n.startswith("00")]
     reader = PdfReader(export)
     writer = PdfWriter()
-    if os.path.exists(COVER):
-        w = float(reader.pages[0].mediabox.width)
-        h = float(reader.pages[0].mediabox.height)
-        tmp = FINAL + ".cover.pdf"
-        img = Image.open(COVER).convert("RGB")
+    w = float(reader.pages[0].mediabox.width)
+    h = float(reader.pages[0].mediabox.height)
+
+    def art_page(path, name, trim_bleed=False):
+        """A full-page image the size of the export's pages. With trim_bleed,
+        art drawn with print bleed is cut down to the page's shape first rather
+        than squashed into it: the bleed comes off the top and bottom evenly and
+        off the left, which is the outside edge of a left-hand page."""
+        tmp = FINAL + "." + name + ".pdf"
+        img = Image.open(path).convert("RGB")
+        if trim_bleed and abs(img.width / img.height - w / h) > 0.002:
+            if img.width / img.height > w / h:
+                cw = round(img.height * w / h)
+                img = img.crop((img.width - cw, 0, img.width, img.height))
+            else:
+                ch = round(img.width * h / w)
+                top = (img.height - ch) // 2
+                img = img.crop((0, top, img.width, top + ch))
         img.save(tmp, "PDF", resolution=img.width / (w / 72.0))
-        cover = PdfReader(tmp).pages[0]
-        cover.scale_to(w, h)
-        writer.add_page(cover)
+        page = PdfReader(tmp).pages[0]
+        page.scale_to(w, h)
         os.remove(tmp)
+        return page
+
+    if os.path.exists(COVER):
+        writer.add_page(art_page(COVER, "cover"))
+    # The export's first page is the empty one the front matter keeps for the
+    # frontispiece. Only replace it if it really is empty, so a front matter
+    # that has changed shape can't lose a page of text to the picture.
+    frontis = None
+    if os.path.exists(FRONTIS):
+        if (reader.pages[0].extract_text() or "").strip():
+            print("frontispiece NOT placed: the export's first page has text on it")
+        else:
+            frontis = art_page(FRONTIS, "frontis", trim_bleed=True)
     found = chapter_pages(reader, titles)
     missing = [t for t in titles if t not in found]
     sheets = sheet_pages()
@@ -345,7 +373,7 @@ def finish(export):
         for t, end in ends.items():
             if end == i:
                 placed[t] = add_sheets(writer, sheets, t)
-        writer.add_page(p)
+        writer.add_page(frontis if i == 0 and frontis is not None else p)
         if i in opens_at:
             moved[opens_at[i]] = len(writer.pages) - 1
     for t, end in ends.items():
